@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>TraitMech</h1>
+  <p class="tagline">Microbial ecophysiological trait knowledge base, seeded
+    from <a href="https://w3id.org/metpo">METPO</a> and curated incrementally.</p>
+  <div class="counts">
+    <span><strong>{{ total_traits }}</strong> trait records</span>
+    <span><strong>{{ embedded_count }}</strong> with kg-microbe embedding ({{ embedding_coverage_pct }}%)</span>
+    <span><strong>{{ category_counts|length }}</strong> categories</span>
+  </div>
+</section>
+
+<section>
+  <h2>Categories</h2>
+  <div class="grid">
+    {% for cat, n in category_counts.items() %}
+    <a class="card cat-tile" href="category/{{ cat|lower }}.html">
+      <h3>{{ cat }}</h3>
+      <p class="big">{{ n }}</p>
+      <p class="meta">{{ embedding_per_category.get(cat, 0) }} with embedding</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>About</h2>
+  <p>One YAML per record under <code>data/traits/&lt;category&gt;/&lt;slug&gt;.yaml</code>;
+    each carries a stable <code>METPO:&lt;id&gt;</code> identifier, label,
+    definition, parent traits, synonyms, and an optional curation history.
+    See <a href="https://github.com/CultureBotAI/TraitMech">the GitHub repo</a>
+    for the LinkML schema and seeder.</p>
+  <p><strong>Embedding integration</strong>: each page links to the kg-microbe
+    deepwalk embedding for the matching trait node, when one exists. Coverage
+    is currently {{ embedding_coverage_pct }}% — kg-microbe's 2024-09-25
+    release predates METPO ingestion, so direct CURIE lookup returns nothing
+    and we fall back to label-match through
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe/blob/main/mappings/canonical/metpo_alias_mappings.tsv">metpo_alias_mappings.tsv</a>
+    plus normalised-label matching against kg-microbe's pre-METPO trait
+    nodes (<code>cell_shape:bacillus</code>, <code>oxygen:aerobe</code>, etc.).</p>
+</section>
+{% endblock %}

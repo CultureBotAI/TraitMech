@@ -1,0 +1,355 @@
+metpo_curie	label	category	match_method	n_kgm_nodes	kgm_nodes
+METPO:1004002	animal pathogen	ecology	no_match	0	
+METPO:1001101	biosafety level	ecology	no_match	0	
+METPO:1001102	biosafety level 1	ecology	label_match	1	BSL:1
+METPO:1001103	biosafety level 2	ecology	label_match	1	BSL:2
+METPO:1001104	biosafety level 3	ecology	label_match	1	BSL:3
+METPO:1001105	biosafety level 4	ecology	no_match	0	
+METPO:1001106	biosafety level 5	ecology	no_match	0	
+METPO:1004004	human pathogen	ecology	no_match	0	
+METPO:1004000	pathogenic to host	ecology	no_match	0	
+METPO:1004003	plant pathogen	ecology	no_match	0	
+METPO:1003003	acidophilic	environment	no_match	0	
+METPO:1003008	acidotolerant	environment	no_match	0	
+METPO:1000602	aerobic	environment	label_match	1	oxygen:aerobe
+METPO:1000609	aerotolerant	environment	alias_table	1	oxygen:aerotolerant
+METPO:1003009	alkalotolerant	environment	no_match	0	
+METPO:1003002	alkaphilic	environment	no_match	0	
+METPO:1000603	anaerobic	environment	label_match	1	oxygen:anaerobe
+METPO:1000534	delta phenotype with numerical limits	environment	no_match	0	
+METPO:1000627	euryhaline	environment	no_match	0	
+METPO:1000721	extreme hyperthermophilic	environment	no_match	0	
+METPO:1000628	extremely halophilic	environment	label_match	1	salinity:extremely_halophilic
+METPO:1000612	facultative oxygen preference	environment	no_match	0	
+METPO:1000720	facultative psychrophilic	environment	no_match	0	
+METPO:1003007	facultatively acidophilic	environment	no_match	0	
+METPO:1000608	facultatively aerobic	environment	label_match	1	oxygen:facultative_aerobe
+METPO:1003005	facultatively alkaphilic	environment	no_match	0	
+METPO:1000605	facultatively anaerobic	environment	label_match	1	oxygen:facultative_anaerobe
+METPO:1000535	growth range phenotype with numerical limits	environment	no_match	0	
+METPO:1000621	haloalkaliphilic	environment	label_match	1	salinity:haloalkaliphilic
+METPO:1000620	halophilic	environment	label_match	1	salinity:halophilic
+METPO:1000629	halophily preference	environment	no_match	0	
+METPO:1000622	halotolerant	environment	label_match	1	salinity:halotolerant
+METPO:1000617	hyperthermophilic	environment	label_match	1	temperature:hyperthermophilic
+METPO:1000615	mesophilic	environment	label_match	1	temperature:mesophilic
+METPO:1000604	microaerophilic	environment	label_match	1	oxygen:microaerophile
+METPO:1000610	microaerotolerant	environment	label_match	1	oxygen:microaerotolerant
+METPO:1000623	moderately halophilic	environment	label_match	1	salinity:moderately_halophilic
+METPO:1000335	NaCl delta	environment	no_match	0	
+METPO:1000482	NaCl delta high	environment	no_match	0	
+METPO:1000479	NaCl delta low	environment	no_match	0	
+METPO:1000480	NaCl delta mid1	environment	no_match	0	
+METPO:1000481	NaCl delta mid2	environment	no_match	0	
+METPO:1000333	NaCl optimum	environment	no_match	0	
+METPO:1000468	NaCl optimum high	environment	no_match	0	
+METPO:1000465	NaCl optimum low	environment	label_match	1	salinity:halotolerant
+METPO:1000466	NaCl optimum mid1	environment	label_match	1	salinity:halotolerant
+METPO:1000467	NaCl optimum mid2	environment	label_match	1	salinity:halotolerant
+METPO:1000334	NaCl range	environment	no_match	0	
+METPO:1000472	NaCl range high	environment	no_match	0	
+METPO:1000469	NaCl range low	environment	label_match	1	salinity:halotolerant
+METPO:1000470	NaCl range mid1	environment	label_match	1	salinity:halotolerant
+METPO:1000471	NaCl range mid2	environment	label_match	1	salinity:halotolerant
+METPO:1003001	neutrophilic	environment	no_match	0	
+METPO:1000624	non halophilic	environment	label_match	1	salinity:non_halophilic
+METPO:1003006	obligately acidophilic	environment	no_match	0	
+METPO:1000606	obligately aerobic	environment	label_match	1	oxygen:obligate_aerobe
+METPO:1003004	obligately alkaphilic	environment	no_match	0	
+METPO:1000607	obligately anaerobic	environment	label_match	1	oxygen:obligate_anaerobe
+METPO:1000536	optimum phenotype with numerical limits	environment	no_match	0	
+METPO:1000601	oxygen preference	environment	no_match	0	
+METPO:1000232	pH delta	environment	no_match	0	
+METPO:1000478	pH delta high	environment	no_match	0	
+METPO:1000474	pH delta low	environment	no_match	0	
+METPO:1000475	pH delta mid1	environment	no_match	0	
+METPO:1000476	pH delta mid2	environment	no_match	0	
+METPO:1000477	pH delta mid3	environment	no_match	0	
+METPO:1000473	pH delta very low	environment	no_match	0	
+METPO:1003000	pH growth preference	environment	no_match	0	
+METPO:1000331	pH optimum	environment	no_match	0	
+METPO:1000458	pH optimum high	environment	no_match	0	
+METPO:1000455	pH optimum low	environment	no_match	0	
+METPO:1000456	pH optimum mid1	environment	no_match	0	
+METPO:1000457	pH optimum mid2	environment	no_match	0	
+METPO:1000531	pH phenotype with numerical limits	environment	no_match	0	
+METPO:1000332	pH range	environment	no_match	0	
+METPO:1000464	pH range high	environment	no_match	0	
+METPO:1000460	pH range low	environment	no_match	0	
+METPO:1000461	pH range mid1	environment	no_match	0	
+METPO:1000462	pH range mid2	environment	no_match	0	
+METPO:1000463	pH range mid3	environment	no_match	0	
+METPO:1000459	pH range very low	environment	no_match	0	
+METPO:1000614	psychrophilic	environment	label_match	1	temperature:psychrophilic
+METPO:1000618	psychrotolerant	environment	no_match	0	
+METPO:1000532	salinity phenotype with numerical limits	environment	no_match	0	
+METPO:1000625	slightly halophilic	environment	label_match	1	salinity:slightly_halophilic
+METPO:1000626	stenohaline	environment	no_match	0	
+METPO:1000611	strictly anaerobic	environment	no_match	0	
+METPO:1000303	temperature delta	environment	no_match	0	
+METPO:1000487	temperature delta high	environment	no_match	0	
+METPO:1000484	temperature delta low	environment	no_match	0	
+METPO:1000485	temperature delta mid1	environment	no_match	0	
+METPO:1000486	temperature delta mid2	environment	no_match	0	
+METPO:1000483	temperature delta very low	environment	no_match	0	
+METPO:1000304	temperature optimum	environment	no_match	0	
+METPO:1000447	temperature optimum high	environment	no_match	0	
+METPO:1000442	temperature optimum low	environment	no_match	0	
+METPO:1000443	temperature optimum mid1	environment	no_match	0	
+METPO:1000444	temperature optimum mid2	environment	no_match	0	
+METPO:1000445	temperature optimum mid3	environment	no_match	0	
+METPO:1000446	temperature optimum mid4	environment	no_match	0	
+METPO:1000441	temperature optimum very low	environment	no_match	0	
+METPO:1000533	temperature phenotype with numerical limits	environment	no_match	0	
+METPO:1000613	temperature preference	environment	no_match	0	
+METPO:1000306	temperature range	environment	no_match	0	
+METPO:1000454	temperature range high	environment	no_match	0	
+METPO:1000449	temperature range low	environment	no_match	0	
+METPO:1000450	temperature range mid1	environment	no_match	0	
+METPO:1000451	temperature range mid2	environment	no_match	0	
+METPO:1000452	temperature range mid3	environment	no_match	0	
+METPO:1000453	temperature range mid4	environment	no_match	0	
+METPO:1000448	temperature range very low	environment	no_match	0	
+METPO:1000616	thermophilic	environment	label_match	1	temperature:thermophilic
+METPO:1000619	thermotolerant	environment	no_match	0	
+METPO:1000127	GC content	genomics	no_match	0	
+METPO:1000432	GC high	genomics	no_match	0	
+METPO:1000429	GC low	genomics	no_match	0	
+METPO:1000430	GC mid1	genomics	no_match	0	
+METPO:1000431	GC mid2	genomics	no_match	0	
+METPO:2000210	accumulates	metabolism	no_match	0	
+METPO:1000845	Acetogenesis	metabolism	no_match	0	
+METPO:1000801	Aerobic respiration	metabolism	no_match	0	
+METPO:1000802	Anaerobic respiration	metabolism	no_match	0	
+METPO:2000002	assimilates	metabolism	no_match	0	
+METPO:2000003	builds acid from	metabolism	no_match	0	
+METPO:2000004	builds base from	metabolism	no_match	0	
+METPO:2000005	builds gas from	metabolism	no_match	0	
+METPO:1002003	Cable bacteria metabolism	metabolism	no_match	0	
+METPO:2000103	capable of	metabolism	no_match	0	
+METPO:2000212	compartmentalizes	metabolism	no_match	0	
+METPO:2000007	degrades	metabolism	no_match	0	
+METPO:2000200	disproportionates	metabolism	no_match	0	
+METPO:1000806	Disproportionation	metabolism	no_match	0	
+METPO:2000230	does not accumulate	metabolism	no_match	0	
+METPO:2000027	does not assimilate	metabolism	no_match	0	
+METPO:2000028	does not build acid from	metabolism	no_match	0	
+METPO:2000029	does not build base from	metabolism	no_match	0	
+METPO:2000030	does not build gas from	metabolism	no_match	0	
+METPO:2000232	does not compartmentalize	metabolism	no_match	0	
+METPO:2000033	does not degrade	metabolism	no_match	0	
+METPO:2000220	does not disproportionate	metabolism	no_match	0	
+METPO:2000229	does not export	metabolism	no_match	0	
+METPO:2000037	does not ferment	metabolism	no_match	0	
+METPO:2000039	does not hydrolyze	metabolism	no_match	0	
+METPO:2000228	does not import	metabolism	no_match	0	
+METPO:2000042	does not oxidize	metabolism	no_match	0	
+METPO:2000222	does not produce	metabolism	no_match	0	
+METPO:2000044	does not reduce	metabolism	no_match	0	
+METPO:2000231	does not sequester	metabolism	no_match	0	
+METPO:2000303	does not show activity of	metabolism	no_match	0	
+METPO:2000227	does not transport	metabolism	no_match	0	
+METPO:2000031	does not use as carbon source	metabolism	no_match	0	
+METPO:2000034	does not use as electron acceptor	metabolism	no_match	0	
+METPO:2000035	does not use as electron donor	metabolism	no_match	0	
+METPO:2000036	does not use as energy source	metabolism	no_match	0	
+METPO:2000040	does not use as nitrogen source	metabolism	no_match	0	
+METPO:2000047	does not use as sulfur source	metabolism	no_match	0	
+METPO:2000021	does not use for aerobic catabolization	metabolism	no_match	0	
+METPO:2000022	does not use for aerobic growth	metabolism	no_match	0	
+METPO:2000023	does not use for anaerobic catabolization	metabolism	no_match	0	
+METPO:2000024	does not use for anaerobic growth	metabolism	no_match	0	
+METPO:2000025	does not use for anaerobic growth in the dark	metabolism	no_match	0	
+METPO:2000026	does not use for anaerobic growth with light	metabolism	no_match	0	
+METPO:2000038	does not use for growth	metabolism	no_match	0	
+METPO:2000046	does not use for respiration	metabolism	no_match	0	
+METPO:2000041	does not use in other way	metabolism	label_match	1	isolation_source:other
+METPO:1000805	Electron transfer	metabolism	no_match	0	
+METPO:2000301	enzyme activity analyzed	metabolism	no_match	0	
+METPO:2000209	exports	metabolism	no_match	0	
+METPO:1002005	Fermentation	metabolism	no_match	0	
+METPO:2000011	ferments	metabolism	no_match	0	
+METPO:2000508	has growth NaCl observation	metabolism	no_match	0	
+METPO:2000514	has growth oxygen observation	metabolism	no_match	0	
+METPO:2000502	has growth pH observation	metabolism	no_match	0	
+METPO:2000054	has growth temperature observation	metabolism	no_match	0	
+METPO:2000510	has NaCl delta observation	metabolism	no_match	0	
+METPO:2000506	has NaCl observation	metabolism	no_match	0	
+METPO:2000511	has observation	metabolism	no_match	0	
+METPO:2000507	has optimum NaCl observation	metabolism	no_match	0	
+METPO:2000513	has optimum oxygen observation	metabolism	no_match	0	
+METPO:2000501	has optimum pH observation	metabolism	no_match	0	
+METPO:2000053	has optimum temperature observation	metabolism	no_match	0	
+METPO:2000516	has oxygen delta observation	metabolism	no_match	0	
+METPO:2000512	has oxygen observation	metabolism	no_match	0	
+METPO:2000504	has pH delta observation	metabolism	no_match	0	
+METPO:2000239	has pH observation	metabolism	no_match	0	
+METPO:2000102	has phenotype	metabolism	no_match	0	
+METPO:2000101	has quality	metabolism	no_match	0	
+METPO:2000509	has range NaCl observation	metabolism	no_match	0	
+METPO:2000515	has range oxygen observation	metabolism	no_match	0	
+METPO:2000503	has range pH observation	metabolism	no_match	0	
+METPO:2000055	has range temperature observation	metabolism	no_match	0	
+METPO:2000056	has temperature delta observation	metabolism	no_match	0	
+METPO:2000052	has temperature observation	metabolism	no_match	0	
+METPO:1000846	Homoacetogenesis	metabolism	no_match	0	
+METPO:2000013	hydrolyzes	metabolism	no_match	0	
+METPO:2000208	imports	metabolism	no_match	0	
+METPO:2000045	is not required for growth	metabolism	no_match	0	
+METPO:1000060	metabolism	metabolism	no_match	0	
+METPO:1000844	Methanogenesis	metabolism	no_match	0	
+METPO:2000001	organism interacts with chemical	metabolism	no_match	0	
+METPO:1000803	Oxidative phosphorylation	metabolism	no_match	0	
+METPO:2000016	oxidizes	metabolism	no_match	0	
+METPO:2000202	produces	metabolism	no_match	0	
+METPO:2000017	reduces	metabolism	no_match	0	
+METPO:2000018	requires for growth	metabolism	no_match	0	
+METPO:1000800	respiration	metabolism	no_match	0	
+METPO:2000211	sequesters	metabolism	no_match	0	
+METPO:2000302	shows activity of	metabolism	no_match	0	
+METPO:1000804	Substrate-level phosphorylation	metabolism	no_match	0	
+METPO:1002006	Syntrophy	metabolism	no_match	0	
+METPO:2000207	transports	metabolism	no_match	0	
+METPO:2000006	uses as carbon source	metabolism	no_match	0	
+METPO:2000008	uses as electron acceptor	metabolism	no_match	0	
+METPO:2000009	uses as electron donor	metabolism	no_match	0	
+METPO:2000010	uses as energy source	metabolism	no_match	0	
+METPO:2000014	uses as nitrogen source	metabolism	no_match	0	
+METPO:2000020	uses as sulfur source	metabolism	no_match	0	
+METPO:2000032	uses for aerobic catabolization	metabolism	no_match	0	
+METPO:2000043	uses for aerobic growth	metabolism	no_match	0	
+METPO:2000048	uses for anaerobic catabolization	metabolism	no_match	0	
+METPO:2000049	uses for anaerobic growth	metabolism	no_match	0	
+METPO:2000050	uses for anaerobic growth in the dark	metabolism	no_match	0	
+METPO:2000051	uses for anaerobic growth with light	metabolism	no_match	0	
+METPO:2000012	uses for growth	metabolism	no_match	0	
+METPO:2000019	uses for respiration	metabolism	no_match	0	
+METPO:2000015	uses in other way	metabolism	label_match	1	isolation_source:other
+METPO:1000705	axially filamented	morphology	no_match	0	
+METPO:1000667	bacillus shaped	morphology	label_match	1	cell_shape:bacillus
+METPO:1003022	black pigmented	morphology	no_match	0	
+METPO:1000687	branched shaped	morphology	label_match	1	cell_shape:branced
+METPO:1003023	brown pigmented	morphology	no_match	0	
+METPO:1003031	carotenoid pigmentation	morphology	no_match	0	
+METPO:1000881	cell length	morphology	no_match	0	
+METPO:1000886	cell length large	morphology	no_match	0	
+METPO:1000885	cell length medium	morphology	no_match	0	
+METPO:1000884	cell length small	morphology	no_match	0	
+METPO:1000883	cell length very small	morphology	no_match	0	
+METPO:1000666	cell shape	morphology	no_match	0	
+METPO:1000882	cell width	morphology	no_match	0	
+METPO:1000890	cell width large	morphology	no_match	0	
+METPO:1000889	cell width medium	morphology	no_match	0	
+METPO:1000888	cell width small	morphology	no_match	0	
+METPO:1000887	cell width very small	morphology	no_match	0	
+METPO:1000688	coccobacillus shaped	morphology	label_match	1	cell_shape:coccobacillus
+METPO:1000668	coccus shaped	morphology	alias_table	1	cell_shape:coccus
+METPO:1003024	cream pigmented	morphology	no_match	0	
+METPO:1000669	crescent shaped	morphology	no_match	0	
+METPO:1000670	curved shaped	morphology	no_match	0	
+METPO:1000671	diplococcus shaped	morphology	no_match	0	
+METPO:1000689	disc shaped	morphology	label_match	1	cell_shape:disc 
+METPO:1000672	dumbbell shaped	morphology	no_match	0	
+METPO:1000673	ellipsoidal	morphology	label_match	1	cell_shape:ellipsoidal
+METPO:1000674	filament shaped	morphology	label_match	1	cell_shape:filament
+METPO:1000704	flagellated	morphology	no_match	0	
+METPO:1000675	flask shaped	morphology	label_match	1	cell_shape:flask
+METPO:1000690	fusiform shaped	morphology	label_match	1	cell_shape:fusiform
+METPO:1000706	gliding	morphology	no_match	0	
+METPO:1000699	gram negative	morphology	label_match	1	gram_stain:negative
+METPO:1000698	gram positive	morphology	label_match	1	gram_stain:positive
+METPO:1000697	gram stain	morphology	no_match	0	
+METPO:1000700	gram variable	morphology	label_match	1	gram_stain:variable
+METPO:1003025	green pigmented	morphology	no_match	0	
+METPO:1000676	helical shaped	morphology	no_match	0	
+METPO:1000691	irregular shaped	morphology	label_match	1	cell_shape:irregular
+METPO:1000702	motile	morphology	alias_table	1	motility:motile
+METPO:1000701	motility	morphology	no_match	0	
+METPO:1000703	non motile	morphology	alias_table	1	motility:non_motile
+METPO:1000872	non-spore forming	morphology	no_match	0	
+METPO:1003026	orange pigmented	morphology	no_match	0	
+METPO:1000678	oval shaped	morphology	no_match	0	
+METPO:1000677	ovoid shaped	morphology	no_match	0	
+METPO:1003021	pigmentation	morphology	no_match	0	
+METPO:1003027	pink pigmented	morphology	no_match	0	
+METPO:1000679	pleomorphic shaped	morphology	label_match	1	cell_shape:pleomorphic
+METPO:1003028	red pigmented	morphology	no_match	0	
+METPO:1000680	ring shaped	morphology	label_match	1	cell_shape:ring
+METPO:1000681	rod shaped	morphology	no_match	0	
+METPO:1000683	sphere shaped	morphology	no_match	0	
+METPO:1000692	spindle shaped	morphology	label_match	1	cell_shape:spindle
+METPO:1000684	spiral shaped	morphology	alias_table	1	cell_shape:spiral
+METPO:1000693	spirochete shaped	morphology	label_match	1	cell_shape:spirochete
+METPO:1000871	spore forming	morphology	label_match	1	cell_shape:spore
+METPO:1000682	spore shaped	morphology	no_match	0	
+METPO:1000870	sporulation	morphology	no_match	0	
+METPO:1000694	square shaped	morphology	label_match	1	cell_shape:square
+METPO:1000685	star shaped	morphology	label_match	1	cell_shape:star
+METPO:1000695	tailed shaped	morphology	label_match	1	cell_shape:tailed
+METPO:1000696	triangular shaped	morphology	label_match	1	cell_shape:triangular
+METPO:1000686	vibrio shaped	morphology	label_match	1	cell_shape:vibrio
+METPO:1003029	white pigmented	morphology	no_match	0	
+METPO:1003030	yellow pigmented	morphology	no_match	0	
+METPO:1001007	growth NaCl observation	observation	no_match	0	
+METPO:1001017	growth oxygen observation	observation	no_match	0	
+METPO:1001012	growth pH observation	observation	no_match	0	
+METPO:1001002	growth temperature observation	observation	no_match	0	
+METPO:1001008	NaCl delta observation	observation	no_match	0	
+METPO:1001022	NaCl observation	observation	no_match	0	
+METPO:1001009	NaCl range observation	observation	no_match	0	
+METPO:1001010	optimum NaCl observation	observation	no_match	0	
+METPO:1001016	optimum oxygen observation	observation	no_match	0	
+METPO:1001013	optimum pH observation	observation	no_match	0	
+METPO:1001001	optimum temperature observation	observation	no_match	0	
+METPO:1001019	oxygen delta observation	observation	no_match	0	
+METPO:1001020	oxygen observation	observation	no_match	0	
+METPO:1001018	oxygen range observation	observation	no_match	0	
+METPO:1001014	pH delta observation	observation	no_match	0	
+METPO:1001023	pH observation	observation	no_match	0	
+METPO:1001015	pH range observation	observation	no_match	0	
+METPO:1001004	temperature delta observation	observation	no_match	0	
+METPO:1001021	temperature observation	observation	no_match	0	
+METPO:1001003	temperature range observation	observation	no_match	0	
+METPO:1000632	autotrophic	physiology	label_match	1	trophic_type:autotrophy
+METPO:1000633	carboxydotrophic	physiology	no_match	0	
+METPO:1000634	chemoautolithotrophic	physiology	no_match	0	
+METPO:1000635	chemoautotrophic	physiology	no_match	0	
+METPO:1000636	chemoheterotrophic	physiology	no_match	0	
+METPO:1000637	chemolithoautotrophic	physiology	no_match	0	
+METPO:1000638	chemolithoheterotrophic	physiology	no_match	0	
+METPO:1000639	chemolithotrophic	physiology	no_match	0	
+METPO:1000640	chemoorganoheterotrophic	physiology	no_match	0	
+METPO:1000663	chemoorganotrophic	physiology	no_match	0	
+METPO:1000641	chemotrophic	physiology	no_match	0	
+METPO:1000642	copiotrophic	physiology	no_match	0	
+METPO:1000644	heterotrophic	physiology	no_match	0	
+METPO:1000646	hydrogenotrophic	physiology	no_match	0	
+METPO:1000647	lithoautotrophic	physiology	no_match	0	
+METPO:1000648	lithoheterotrophic	physiology	no_match	0	
+METPO:1000649	lithotrophic	physiology	no_match	0	
+METPO:1000650	methanotrophic	physiology	no_match	0	
+METPO:1000651	methylotrophic	physiology	label_match	1	trophic_type:methylotrophy
+METPO:1000652	mixotrophic	physiology	no_match	0	
+METPO:1000731	nutrient adaptation	physiology	no_match	0	
+METPO:1000654	oligotrophic	physiology	no_match	0	
+METPO:1000664	organoheterotrophic	physiology	no_match	0	
+METPO:1000655	organotrophic	physiology	no_match	0	
+METPO:1000656	photoautotrophic	physiology	no_match	0	
+METPO:1000657	photoheterotrophic	physiology	label_match	1	trophic_type:photoheterotrophy
+METPO:1000665	photolithoautotrophic	physiology	no_match	0	
+METPO:1000658	photolithotrophic	physiology	no_match	0	
+METPO:1000659	photoorganoheterotrophic	physiology	no_match	0	
+METPO:1000660	phototrophic	physiology	no_match	0	
+METPO:1000631	trophic type	physiology	no_match	0	
+METPO:2000060	has maximum observed value	quantitative_property	no_match	0	
+METPO:2000059	has minimum observed value	quantitative_property	no_match	0	
+METPO:2000058	has observed spot value	quantitative_property	no_match	0	
+METPO:2000071	has value	quantitative_property	no_match	0	
+METPO:2000061	has value comments	quantitative_property	no_match	0	
+METPO:2000062	is negative data	quantitative_property	no_match	0	
+METPO:2000063	observation data property	quantitative_property	no_match	0	
+METPO:1000630	biological process	upper	no_match	0	
+METPO:1000186	material entity	upper	no_match	0	
+METPO:1001000	observation	upper	no_match	0	
+METPO:1000059	phenotype	upper	no_match	0	
+METPO:1000188	quality	upper	no_match	0	

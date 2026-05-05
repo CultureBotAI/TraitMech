@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="{{ root }}index.html">TraitMech</a>
+      <span>›</span>
+      <a href="{{ root }}category/{{ trait.trait_category|lower }}.html">{{ trait.trait_category }}</a>
+    </p>
+    <h1>{{ trait.label }}</h1>
+    <p class="curie"><code>{{ trait.identifier }}</code> · {{ trait.term_kind }} · {{ trait.mapping_status }}</p>
+    {% if trait.definition %}
+    <p class="definition">{{ trait.definition }}</p>
+    {% endif %}
+  </header>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> ({{ metpo_version }})</dd>
+        {% if trait.created_by %}<dt>Author</dt><dd>{{ trait.created_by }}</dd>{% endif %}
+        {% if trait.definition_source %}<dt>Definition source</dt><dd>{{ trait.definition_source }}</dd>{% endif %}
+        {% if trait.subset %}<dt>Subset</dt><dd>{{ trait.subset }}</dd>{% endif %}
+        {% if trait.priority %}<dt>Priority</dt><dd>{{ trait.priority }}</dd>{% endif %}
+      </dl>
+    </div>
+
+    {% if trait.parent_traits %}
+    <div class="card">
+      <h2>Parent traits ({{ trait.parent_traits|length }})</h2>
+      <ul>
+        {% for p in trait.parent_traits %}
+        <li><a href="{{ root }}{{ parent_pages[p] }}" {% if not parent_pages[p] %}class="no-page"{% endif %}>{{ parent_labels.get(p, p) }} <code>{{ p }}</code></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if children %}
+    <div class="card">
+      <h2>Children ({{ children|length }})</h2>
+      <ul>
+        {% for c in children %}
+        <li><a href="{{ root }}{{ c.page }}">{{ c.label }} <code>{{ c.curie }}</code></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if trait.synonyms %}
+    <div class="card">
+      <h2>Synonyms ({{ trait.synonyms|length }})</h2>
+      <ul class="synonyms">
+        {% for s in trait.synonyms %}
+        <li>{{ s.synonym_text }} <span class="meta">{{ s.synonym_type }}{% if s.source %} · {{ s.source }}{% endif %}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if trait.xrefs %}
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        {% for x in trait.xrefs %}<li><code>{{ x }}</code></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+      {% if kgm_match.n_kgm_nodes > 0 %}
+      <p class="match-method">Matched <strong>{{ kgm_match.n_kgm_nodes }}</strong>
+        kg-microbe trait node{{ 's' if kgm_match.n_kgm_nodes != 1 else '' }}
+        via <em>{{ kgm_match.match_method }}</em>.</p>
+      <ul class="kgm-nodes">
+        {% for node in kgm_match.kgm_nodes %}
+        <li><code>{{ node }}</code>{% if node in node_dim_preview %} <span class="dim-preview">{{ node_dim_preview[node] }}</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+      <p class="meta">200-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2024-09-25 release).</p>
+      {% else %}
+      <p class="no-match">No kg-microbe trait node matches this METPO class. The
+        2024-09-25 deepwalk artifact predates METPO ingestion and uses
+        kg-microbe's pre-METPO trait namespace; coverage will improve when
+        kg-microbe re-trains embeddings on a METPO-typed merged graph.</p>
+      {% endif %}
+    </div>
+
+    {% if trait.curation_history %}
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+        {% for ev in trait.curation_history %}
+        <li>
+          <time>{{ ev.timestamp }}</time> ·
+          <strong>{{ ev.action }}</strong>{% if ev.curator %} · {{ ev.curator }}{% endif %}
+          {% if ev.changes %}<p class="changes">{{ ev.changes }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+  </section>
+</article>
+{% endblock %}

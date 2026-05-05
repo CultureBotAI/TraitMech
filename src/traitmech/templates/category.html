@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> {{ category }}</p>
+  <h1>{{ category }} <span class="meta">({{ traits|length }})</span></h1>
+</header>
+<table class="trait-list">
+  <thead>
+    <tr><th>Label</th><th>CURIE</th><th>Term kind</th><th>kg-microbe nodes</th><th>Synonyms</th></tr>
+  </thead>
+  <tbody>
+    {% for t in traits %}
+    <tr>
+      <td><a href="{{ root }}{{ t.page }}">{{ t.label }}</a></td>
+      <td><code>{{ t.curie }}</code></td>
+      <td class="meta">{{ t.term_kind }}</td>
+      <td>{% if t.n_kgm_nodes %}{{ t.n_kgm_nodes }}{% else %}—{% endif %}</td>
+      <td class="meta">{{ t.synonyms_count }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

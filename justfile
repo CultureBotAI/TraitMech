@@ -33,6 +33,20 @@ refresh-metpo:
     cp ../assays/assay-metadata/metpo.owl data/raw/metpo.owl
     @echo "Refreshed data/raw/metpo.owl"
 
+# Build slim deepwalk subset + METPO ↔ kg-microbe-node match table from the
+# local kg-microbe deepwalk artifact. Reads
+# ../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz
+# (latest available) and ../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv.
+build-embeddings:
+    /opt/homebrew/bin/python3.13 scripts/build_embedding_index.py
+
+# Render per-trait HTML pages + category indexes + landing into pages/.
+gen-pages *args:
+    /opt/homebrew/bin/python3.13 scripts/render_trait_pages.py {{args}}
+
+# Composite: refresh METPO → seed → build embeddings → render pages.
+gen-site: seed-apply build-embeddings gen-pages
+
 # Run tests with coverage
 test:
     uv run pytest tests/ -v
