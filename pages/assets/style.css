@@ -70,3 +70,50 @@ table.trait-list th { background: var(--accent-soft); color: var(--muted); font-
 table.trait-list tr:hover { background: var(--accent-soft); }
 
 .no-page { color: var(--muted); pointer-events: none; }
+
+/* Two-column layout used on per-trait pages — main article on the left,
+   sticky source/metadata rail on the right. Stacks on narrow viewports. */
+.layout-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 850px) {
+  .layout-2col { grid-template-columns: 1fr; }
+}
+.rail {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.rail .card { padding: 0.85rem 1rem; }
+.rail .card h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.5rem 0;
+  color: var(--muted);
+}
+.rail-path { margin: 0 0 0.5rem 0; word-break: break-all; }
+.rail-path code { background: var(--code-bg); font-size: 0.78rem; }
+.rail-links { list-style: none; padding: 0; margin: 0; }
+.rail-links li { margin: 0.25rem 0; }
+.rail-links a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.12s;
+}
+.rail-links a:hover { background: var(--accent); color: #fff; }
+.rail-meta { font-size: 0.85rem; }
+.rail-meta dt { margin-top: 0.4rem; }
+.rail-meta dd { margin-left: 0; }
+.source-card { border-color: var(--accent); }

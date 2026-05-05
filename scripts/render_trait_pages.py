@@ -43,6 +43,11 @@ RAW_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
 
+# GitHub URL bases for the right-rail source-link card.
+GH_BLOB_BASE = "https://github.com/CultureBotAI/TraitMech/blob/main"
+GH_RAW_BASE = "https://raw.githubusercontent.com/CultureBotAI/TraitMech/main"
+GH_EDIT_BASE = "https://github.com/CultureBotAI/TraitMech/edit/main"
+
 
 def slugify(label: str | None, fallback: str) -> str:
     if not label:
@@ -191,6 +196,7 @@ def render_pages(args: argparse.Namespace) -> int:
         parent_pages = {p: page_path.get(p, "") for p in (doc.get("parent_traits") or [])}
         children = sorted(children_by_parent.get(curie, []), key=lambda x: x["label"])
 
+        yaml_rel = f"data/traits/{category_dir}/{slug}.yaml"
         page_html = env.get_template("trait.html").render(
             title=f"{doc.get('label', curie)} — {doc.get('trait_category', '')}",
             root="../../",
@@ -201,6 +207,10 @@ def render_pages(args: argparse.Namespace) -> int:
             parent_labels=parent_labels,
             children=children,
             metpo_version=metpo_version,
+            yaml_path=yaml_rel,
+            yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
+            yaml_raw_url=f"{GH_RAW_BASE}/{yaml_rel}",
+            yaml_edit_url=f"{GH_EDIT_BASE}/{yaml_rel}",
             generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
