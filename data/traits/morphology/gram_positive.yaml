@@ -1,0 +1,22 @@
+identifier: METPO:1000698
+label: gram positive
+definition: A gram stain in which an organism retains crystal violet dye and appears
+  purple under microscopy due to a thick peptidoglycan cell wall.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000697
+synonyms:
+- synonym_text: G_positive
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: positive
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.902486+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

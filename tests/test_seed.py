@@ -1,0 +1,62 @@
+"""Smoke tests for the METPO seeder + schema invariants."""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import yaml
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+TRAITS_DIR = REPO_ROOT / "data" / "traits"
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from seed_from_metpo import (  # noqa: E402
+    OWL_PATH,
+    parse_owl,
+    categorize,
+    slugify,
+)
+
+
+def test_owl_parses_and_yields_terms():
+    parsed = parse_owl(OWL_PATH)
+    assert len(parsed) > 300, f"expected >300 METPO terms, got {len(parsed)}"
+    # Sentinels: known classes that must always be present.
+    assert "METPO:1000059" in parsed   # phenotype
+    assert "METPO:1000331" in parsed   # pH optimum
+    assert "METPO:1000060" in parsed   # metabolism
+
+
+def test_every_seeded_yaml_has_required_fields():
+    """Each TraitRecord YAML on disk must carry identifier, label, mapping_status."""
+    yamls = sorted(TRAITS_DIR.rglob("*.yaml"))
+    assert yamls, "no trait YAMLs found — run `just seed-apply`"
+    for p in yamls:
+        doc = yaml.safe_load(p.read_text())
+        assert isinstance(doc, dict), f"{p}: not a dict"
+        for required in ("identifier", "label", "trait_category", "term_kind", "mapping_status"):
+            assert required in doc, f"{p}: missing {required!r}"
+        assert doc["identifier"].startswith("METPO:"), f"{p}: identifier not a METPO CURIE"
+        assert doc["mapping_status"] == "SEEDED", f"{p}: status={doc['mapping_status']!r}"
+
+
+def test_no_material_entity_subtree_seeded():
+    """METPO:1000186 (material entity) and its subtree must be skipped."""
+    parsed = parse_owl(OWL_PATH)
+    parents = {c: r["parents"] for c, r in parsed.items()}
+    skipped = [
+        c for c, rec in parsed.items()
+        if categorize(c, rec, parents) is None
+    ]
+    # 3 children of material entity (chemical entity / enzyme / microbe).
+    # No DatatypeProperty / ObjectProperty / Class outside material entity
+    # should have been dropped.
+    assert "METPO:1000526" in skipped or "METPO:1000525" in skipped
+
+
+def test_slug_collision_uses_localid_suffix():
+    assert slugify("pH optimum", "fallback") == "ph_optimum"
+    assert slugify(None, "fallback") == "fallback"
+    assert slugify("", "fallback") == "fallback"
+    # Special chars get folded to underscores.
+    assert slugify("uses as carbon source!", "x") == "uses_as_carbon_source"

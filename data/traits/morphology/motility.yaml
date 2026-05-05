@@ -1,0 +1,24 @@
+identifier: METPO:1000701
+label: motility
+definition: A phenotype in which an organism has the capability to move independently
+  through its environment, typically by means of flagella, pili, gliding mechanisms,
+  or other locomotory structures.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: Morphology.cell morphology.motility
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: motility
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Jed Dongjin Kim-Ozaeta
+curation_history:
+- timestamp: '2026-05-05T01:35:46.904440+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

@@ -1,0 +1,17 @@
+identifier: METPO:2000301
+label: enzyme activity analyzed
+trait_category: METABOLISM
+term_kind: OBJECT_PROPERTY
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Physiology and metabolism.enzymes.[].activity
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+domain: https://w3id.org/metpo/1000525
+range_: https://w3id.org/metpo/1000527
+curation_history:
+- timestamp: '2026-05-05T01:35:46.990561+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
+  llm_assisted: false

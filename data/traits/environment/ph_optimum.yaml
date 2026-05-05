@@ -1,0 +1,16 @@
+identifier: METPO:1000331
+label: pH optimum
+definition: A pH phenotype with numerical limits that represents the conditions at
+  which an organism exhibits the most efficient growth and reproduction.
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000531
+- METPO:1000536
+curation_history:
+- timestamp: '2026-05-05T01:35:46.814691+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

@@ -1,0 +1,19 @@
+identifier: METPO:1001101
+label: biosafety level
+definition: A quality that categorizes biological agents according to their hazard
+  level and required containment measures.
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: Safety information.risk assessment.biosafety level
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.931935+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

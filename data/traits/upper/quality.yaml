@@ -1,0 +1,13 @@
+identifier: METPO:1000188
+label: quality
+definition: A characteristic of an entity that depends on the entity's existence,
+  size, color, and physiological traits.
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: SEEDED
+curation_history:
+- timestamp: '2026-05-05T01:35:46.812123+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

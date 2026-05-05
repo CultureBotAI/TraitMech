@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Build artifacts
+dist/
+build/
+
+# Editor noise
+.DS_Store
+.vscode/
+.idea/
+
+# Workspace / runtime
+workspace/
+.snapshots/
+
+# Generated dataclasses (regenerable from schema)
+src/traitmech/schema/traitmech_dataclasses.py

@@ -1,0 +1,32 @@
+identifier: METPO:1000455
+label: pH optimum low
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000331
+synonyms:
+- synonym_text: Acid Tolerant
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Acidophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Extreme Acidophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Facultative acidophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Obligative acidophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: pHO_0_to_6
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.826407+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

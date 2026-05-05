@@ -1,0 +1,21 @@
+identifier: METPO:1003008
+label: acidotolerant
+definition: A pH growth preference characterized by the ability to tolerate acidic
+  environments (typically pH below 5.5) while maintaining optimal growth near neutral
+  pH.
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1003000
+synonyms:
+- synonym_text: aciduric
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+created_by: Jed Dongjin Kim-Ozaeta
+curation_history:
+- timestamp: '2026-05-05T01:35:46.941434+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

@@ -1,0 +1,23 @@
+identifier: METPO:1000657
+label: photoheterotrophic
+definition: A trophic type in which an organism uses light as the energy source and
+  organic compounds as the primary carbon source for biosynthesis.
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000631
+synonyms:
+- synonym_text: photoheterotroph
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: photoheterotrophy
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Luke Wang
+curation_history:
+- timestamp: '2026-05-05T01:35:46.880718+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

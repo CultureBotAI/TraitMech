@@ -1,0 +1,23 @@
+identifier: METPO:1000467
+label: NaCl optimum mid2
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000333
+synonyms:
+- synonym_text: Halotolerant
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Moderate halophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: NaO_3_to_8
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.834715+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

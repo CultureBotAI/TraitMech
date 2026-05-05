@@ -1,0 +1,22 @@
+identifier: METPO:1000802
+label: Anaerobic respiration
+definition: A respiration in which an organism uses electron acceptors other than
+  oxygen for energy production.
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000800
+synonyms:
+- synonym_text: Anoxic respiration
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: Dissimilatory respiration (non-O₂)
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.912036+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

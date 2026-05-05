@@ -1,0 +1,17 @@
+identifier: METPO:2000018
+label: requires for growth
+trait_category: METABOLISM
+term_kind: OBJECT_PROPERTY
+mapping_status: SEEDED
+parent_traits:
+- METPO:2000001
+synonyms:
+- synonym_text: required for growth
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.958234+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
+  llm_assisted: false

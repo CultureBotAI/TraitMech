@@ -1,0 +1,29 @@
+identifier: METPO:1000463
+label: pH range mid3
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000332
+synonyms:
+- synonym_text: Alkali Tolerant
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Alkaliphile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Extreme Alkaliphile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: Facultative acidophile
+  synonym_type: EXACT_SYNONYM
+  source: metpo.owl
+- synonym_text: pHR_8_to_10
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.832120+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

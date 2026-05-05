@@ -1,0 +1,21 @@
+identifier: METPO:1000871
+label: spore forming
+definition: A sporulation in which an organism has the ability to produce endospores.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000870
+synonyms:
+- synonym_text: spore
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: 'yes'
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.917323+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

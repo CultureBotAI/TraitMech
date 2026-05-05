@@ -1,0 +1,26 @@
+identifier: METPO:1000660
+label: phototrophic
+definition: A trophic type characterized by the use of light as the primary energy
+  source for metabolic processes, regardless of carbon source.
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000631
+synonyms:
+- synonym_text: TT_phototroph
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: aerobic_anoxygenic_phototrophy
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: phototroph
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Anthea Guo
+curation_history:
+- timestamp: '2026-05-05T01:35:46.882505+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

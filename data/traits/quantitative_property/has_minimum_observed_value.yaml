@@ -1,0 +1,16 @@
+identifier: METPO:2000059
+label: has minimum observed value
+definition: The minimum temperature (°C) associated with this observation.
+trait_category: QUANTITATIVE_PROPERTY
+term_kind: DATATYPE_PROPERTY
+mapping_status: SEEDED
+parent_traits:
+- METPO:2000063
+domain: https://w3id.org/metpo/1001000
+range_: http://www.w3.org/2001/XMLSchema#decimal
+curation_history:
+- timestamp: '2026-05-05T01:35:46.978574+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (DATATYPE_PROPERTY)
+  llm_assisted: false

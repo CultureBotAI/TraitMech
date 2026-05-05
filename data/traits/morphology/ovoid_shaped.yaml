@@ -1,0 +1,23 @@
+identifier: METPO:1000677
+label: ovoid shaped
+definition: A cell shape in which an organism has an oval morphology, rounded at both
+  ends with one end often slightly broader than the other.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000666
+synonyms:
+- synonym_text: S_ovoid
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: ovoid-shaped
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Luke Wang
+curation_history:
+- timestamp: '2026-05-05T01:35:46.891106+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

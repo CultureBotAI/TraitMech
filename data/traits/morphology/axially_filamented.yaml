@@ -1,0 +1,20 @@
+identifier: METPO:1000705
+label: axially filamented
+definition: A motility where the flagellum filament of an organism is located in the
+  periplasm and does not extend past the cell envelope.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000702
+synonyms:
+- synonym_text: axial filament
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Luke Wang
+curation_history:
+- timestamp: '2026-05-05T01:35:46.907078+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

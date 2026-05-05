@@ -1,0 +1,30 @@
+identifier: METPO:1000844
+label: Methanogenesis
+definition: A metabolism in which methane is produced as the primary end product through
+  the reduction of carbon-containing compounds, formate, methanol, or acetate, exclusively
+  performed by methanogenic archaea under strictly anaerobic conditions.
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: Biological methanation
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: Biomethanation
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: Carbonate respiration
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: methanogenesis
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Luke Wang
+curation_history:
+- timestamp: '2026-05-05T01:35:46.914643+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

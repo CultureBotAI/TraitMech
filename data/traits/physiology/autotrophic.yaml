@@ -1,0 +1,27 @@
+identifier: METPO:1000632
+label: autotrophic
+definition: A trophic type in which an organism produces organic compounds from inorganic
+  carbon sources (primarily carbon dioxide or bicarbonate) using energy from light
+  (photoautotrophy) or from the oxidation of inorganic compounds (chemoautotrophy).
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000631
+synonyms:
+- synonym_text: TT_autotroph
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: autotroph
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: autotrophy
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Jed Dongjin Kim-Ozaeta
+curation_history:
+- timestamp: '2026-05-05T01:35:46.867544+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

@@ -1,0 +1,14 @@
+identifier: METPO:1000186
+label: material entity
+definition: An object or portion of a substance or mixture of substances that consists
+  of matter
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: SEEDED
+created_by: Anthea Guo
+curation_history:
+- timestamp: '2026-05-05T01:35:46.811703+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

@@ -1,0 +1,25 @@
+identifier: METPO:1000603
+label: anaerobic
+definition: An oxygen preference in which growth occurs in the absence of molecular
+  oxygen (O₂).
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000601
+synonyms:
+- synonym_text: Ox_anaerobic
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: anaerobe
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: anaerobic
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.849856+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

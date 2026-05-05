@@ -1,0 +1,13 @@
+identifier: METPO:2000001
+label: organism interacts with chemical
+trait_category: METABOLISM
+term_kind: OBJECT_PROPERTY
+mapping_status: SEEDED
+domain: https://w3id.org/metpo/1000525
+range_: https://w3id.org/metpo/1000526
+curation_history:
+- timestamp: '2026-05-05T01:35:46.950239+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
+  llm_assisted: false

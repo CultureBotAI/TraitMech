@@ -1,0 +1,21 @@
+identifier: METPO:1000721
+label: extreme hyperthermophilic
+definition: A temperature preference that grows optimally at temperatures above 90°C.
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000613
+synonyms:
+- synonym_text: extreme hyperthermophile
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: extremely hyperthermophilic
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.909279+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

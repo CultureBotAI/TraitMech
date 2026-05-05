@@ -1,0 +1,16 @@
+identifier: METPO:1000630
+label: biological process
+definition: A execution of a genetically-encoded biological module or program. It
+  consists of all the steps required to achieve the specific biological objective
+  of the module. A biological process is accomplished by a particular set of molecular
+  functions carried out by specific gene products (or macromolecular complexes), often
+  in a highly regulated manner and in a particular temporal sequence.
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: SEEDED
+curation_history:
+- timestamp: '2026-05-05T01:35:46.866352+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

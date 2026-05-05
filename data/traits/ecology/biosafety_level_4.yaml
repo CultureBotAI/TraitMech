@@ -1,0 +1,19 @@
+identifier: METPO:1001105
+label: biosafety level 4
+definition: A biosafety level that pose extreme risk of life-threatening disease through
+  aerosol transmission with no available treatment.
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1001101
+synonyms:
+- synonym_text: '4'
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+curation_history:
+- timestamp: '2026-05-05T01:35:46.934198+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

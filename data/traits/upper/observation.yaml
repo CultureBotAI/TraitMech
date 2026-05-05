@@ -1,0 +1,11 @@
+identifier: METPO:1001000
+label: observation
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: SEEDED
+curation_history:
+- timestamp: '2026-05-05T01:35:46.923123+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false

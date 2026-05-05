@@ -1,0 +1,13 @@
+identifier: METPO:2000071
+label: has value
+definition: Relates any instance to a numerical value
+trait_category: QUANTITATIVE_PROPERTY
+term_kind: DATATYPE_PROPERTY
+mapping_status: SEEDED
+range_: http://www.w3.org/2001/XMLSchema#decimal
+curation_history:
+- timestamp: '2026-05-05T01:35:46.981171+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (DATATYPE_PROPERTY)
+  llm_assisted: false

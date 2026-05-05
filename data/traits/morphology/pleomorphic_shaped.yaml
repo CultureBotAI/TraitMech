@@ -1,0 +1,26 @@
+identifier: METPO:1000679
+label: pleomorphic shaped
+definition: A cell shape characterized by variable and irregular morphology, where
+  individual cells within a population exhibit multiple distinct shapes.
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: SEEDED
+parent_traits:
+- METPO:1000666
+synonyms:
+- synonym_text: S_star_dumbbell_pleomorphic
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: pleomorphic
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+- synonym_text: pleomorphic-shaped
+  synonym_type: RELATED_SYNONYM
+  source: metpo.owl
+created_by: Jed Dongjin Kim-Ozaeta
+curation_history:
+- timestamp: '2026-05-05T01:35:46.892214+00:00'
+  curator: seed_from_metpo
+  action: SEEDED_FROM_METPO
+  changes: imported from data/raw/metpo.owl (CLASS)
+  llm_assisted: false
