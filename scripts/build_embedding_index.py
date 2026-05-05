@@ -160,15 +160,18 @@ def build_match_table(
     for norm, curie in alias_table.items():
         metpo_to_norm_labels.setdefault(curie, set()).add(norm)
 
-    # Pre-normalise deepwalk node values for fuzzy lookup.
-    # nodes_by_normvalue: norm_value -> set of full node ids
+    # Pre-normalise deepwalk node values for fuzzy lookup. Index BOTH the
+    # value-only form (`gc:high` → "high") AND the full-id form
+    # (`gc:high` → "gc_high"). The full-id form matches METPO labels that
+    # carry the prefix in their label (e.g. METPO:1000432 "GC high" →
+    # `gc_high`); the value-only form catches METPO labels that drop the
+    # prefix (e.g. METPO:1000602 "aerobic" → kg-microbe `oxygen:aerobe`).
     nodes_by_normvalue: dict[str, set[str]] = {}
     for node in deepwalk_nodes:
         if ":" in node:
             value = node.split(":", 1)[1]
-        else:
-            value = node
-        nodes_by_normvalue.setdefault(_normalise(value), set()).add(node)
+            nodes_by_normvalue.setdefault(_normalise(value), set()).add(node)
+        nodes_by_normvalue.setdefault(_normalise(node), set()).add(node)
 
     rows: list[dict[str, str]] = []
     for curie, label, synonyms, category in metpo_records:

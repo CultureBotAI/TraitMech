@@ -1,9 +1,9 @@
 metpo_curie	label	category	match_method	n_kgm_nodes	kgm_nodes
 METPO:1004002	animal pathogen	ecology	no_match	0	
 METPO:1001101	biosafety level	ecology	no_match	0	
-METPO:1001102	biosafety level 1	ecology	label_match	1	BSL:1
-METPO:1001103	biosafety level 2	ecology	label_match	1	BSL:2
-METPO:1001104	biosafety level 3	ecology	label_match	1	BSL:3
+METPO:1001102	biosafety level 1	ecology	alias_table	1	BSL:1
+METPO:1001103	biosafety level 2	ecology	alias_table	1	BSL:2
+METPO:1001104	biosafety level 3	ecology	alias_table	1	BSL:3
 METPO:1001105	biosafety level 4	ecology	no_match	0	
 METPO:1001106	biosafety level 5	ecology	no_match	0	
 METPO:1004004	human pathogen	ecology	no_match	0	
@@ -37,8 +37,8 @@ METPO:1000604	microaerophilic	environment	label_match	1	oxygen:microaerophile
 METPO:1000610	microaerotolerant	environment	label_match	1	oxygen:microaerotolerant
 METPO:1000623	moderately halophilic	environment	label_match	1	salinity:moderately_halophilic
 METPO:1000335	NaCl delta	environment	no_match	0	
-METPO:1000482	NaCl delta high	environment	no_match	0	
-METPO:1000479	NaCl delta low	environment	no_match	0	
+METPO:1000482	NaCl delta high	environment	label_match	1	NaCl_delta:high
+METPO:1000479	NaCl delta low	environment	label_match	1	NaCl_delta:low
 METPO:1000480	NaCl delta mid1	environment	no_match	0	
 METPO:1000481	NaCl delta mid2	environment	no_match	0	
 METPO:1000333	NaCl optimum	environment	no_match	0	
@@ -47,8 +47,8 @@ METPO:1000465	NaCl optimum low	environment	label_match	1	salinity:halotolerant
 METPO:1000466	NaCl optimum mid1	environment	label_match	1	salinity:halotolerant
 METPO:1000467	NaCl optimum mid2	environment	label_match	1	salinity:halotolerant
 METPO:1000334	NaCl range	environment	no_match	0	
-METPO:1000472	NaCl range high	environment	no_match	0	
-METPO:1000469	NaCl range low	environment	label_match	1	salinity:halotolerant
+METPO:1000472	NaCl range high	environment	label_match	1	NaCl_range:high
+METPO:1000469	NaCl range low	environment	label_match	2	NaCl_range:low;salinity:halotolerant
 METPO:1000470	NaCl range mid1	environment	label_match	1	salinity:halotolerant
 METPO:1000471	NaCl range mid2	environment	label_match	1	salinity:halotolerant
 METPO:1003001	neutrophilic	environment	no_match	0	
@@ -60,12 +60,12 @@ METPO:1000607	obligately anaerobic	environment	label_match	1	oxygen:obligate_ana
 METPO:1000536	optimum phenotype with numerical limits	environment	no_match	0	
 METPO:1000601	oxygen preference	environment	no_match	0	
 METPO:1000232	pH delta	environment	no_match	0	
-METPO:1000478	pH delta high	environment	no_match	0	
-METPO:1000474	pH delta low	environment	no_match	0	
-METPO:1000475	pH delta mid1	environment	no_match	0	
-METPO:1000476	pH delta mid2	environment	no_match	0	
-METPO:1000477	pH delta mid3	environment	no_match	0	
-METPO:1000473	pH delta very low	environment	no_match	0	
+METPO:1000478	pH delta high	environment	label_match	1	pH_delta:high
+METPO:1000474	pH delta low	environment	label_match	1	pH_delta:low
+METPO:1000475	pH delta mid1	environment	label_match	1	pH_delta:mid1
+METPO:1000476	pH delta mid2	environment	label_match	1	pH_delta:mid2
+METPO:1000477	pH delta mid3	environment	label_match	1	pH_delta:mid3
+METPO:1000473	pH delta very low	environment	label_match	1	pH_delta:very_low
 METPO:1003000	pH growth preference	environment	no_match	0	
 METPO:1000331	pH optimum	environment	no_match	0	
 METPO:1000458	pH optimum high	environment	no_match	0	
@@ -75,10 +75,10 @@ METPO:1000457	pH optimum mid2	environment	no_match	0
 METPO:1000531	pH phenotype with numerical limits	environment	no_match	0	
 METPO:1000332	pH range	environment	no_match	0	
 METPO:1000464	pH range high	environment	no_match	0	
-METPO:1000460	pH range low	environment	no_match	0	
-METPO:1000461	pH range mid1	environment	no_match	0	
-METPO:1000462	pH range mid2	environment	no_match	0	
-METPO:1000463	pH range mid3	environment	no_match	0	
+METPO:1000460	pH range low	environment	label_match	1	pH_range:low
+METPO:1000461	pH range mid1	environment	label_match	1	pH_range:mid1
+METPO:1000462	pH range mid2	environment	label_match	1	pH_range:mid2
+METPO:1000463	pH range mid3	environment	label_match	1	pH_range:mid3
 METPO:1000459	pH range very low	environment	no_match	0	
 METPO:1000614	psychrophilic	environment	label_match	1	temperature:psychrophilic
 METPO:1000618	psychrotolerant	environment	no_match	0	
@@ -113,10 +113,10 @@ METPO:1000448	temperature range very low	environment	no_match	0
 METPO:1000616	thermophilic	environment	label_match	1	temperature:thermophilic
 METPO:1000619	thermotolerant	environment	no_match	0	
 METPO:1000127	GC content	genomics	no_match	0	
-METPO:1000432	GC high	genomics	no_match	0	
-METPO:1000429	GC low	genomics	no_match	0	
-METPO:1000430	GC mid1	genomics	no_match	0	
-METPO:1000431	GC mid2	genomics	no_match	0	
+METPO:1000432	GC high	genomics	label_match	1	gc:high
+METPO:1000429	GC low	genomics	label_match	1	gc:low
+METPO:1000430	GC mid1	genomics	label_match	1	gc:mid1
+METPO:1000431	GC mid2	genomics	label_match	1	gc:mid2
 METPO:2000210	accumulates	metabolism	no_match	0	
 METPO:1000845	Acetogenesis	metabolism	no_match	0	
 METPO:1000801	Aerobic respiration	metabolism	no_match	0	
@@ -227,10 +227,10 @@ METPO:2000019	uses for respiration	metabolism	no_match	0
 METPO:2000015	uses in other way	metabolism	label_match	1	isolation_source:other
 METPO:1000705	axially filamented	morphology	no_match	0	
 METPO:1000667	bacillus shaped	morphology	label_match	1	cell_shape:bacillus
-METPO:1003022	black pigmented	morphology	no_match	0	
+METPO:1003022	black pigmented	morphology	label_match	1	pigment:black
 METPO:1000687	branched shaped	morphology	label_match	1	cell_shape:branced
-METPO:1003023	brown pigmented	morphology	no_match	0	
-METPO:1003031	carotenoid pigmentation	morphology	no_match	0	
+METPO:1003023	brown pigmented	morphology	label_match	1	pigment:brown
+METPO:1003031	carotenoid pigmentation	morphology	label_match	1	pigment:carotenoid
 METPO:1000881	cell length	morphology	no_match	0	
 METPO:1000886	cell length large	morphology	no_match	0	
 METPO:1000885	cell length medium	morphology	no_match	0	
@@ -244,7 +244,7 @@ METPO:1000888	cell width small	morphology	no_match	0
 METPO:1000887	cell width very small	morphology	no_match	0	
 METPO:1000688	coccobacillus shaped	morphology	label_match	1	cell_shape:coccobacillus
 METPO:1000668	coccus shaped	morphology	alias_table	1	cell_shape:coccus
-METPO:1003024	cream pigmented	morphology	no_match	0	
+METPO:1003024	cream pigmented	morphology	label_match	1	pigment:cream
 METPO:1000669	crescent shaped	morphology	no_match	0	
 METPO:1000670	curved shaped	morphology	no_match	0	
 METPO:1000671	diplococcus shaped	morphology	no_match	0	
@@ -260,20 +260,20 @@ METPO:1000699	gram negative	morphology	label_match	1	gram_stain:negative
 METPO:1000698	gram positive	morphology	label_match	1	gram_stain:positive
 METPO:1000697	gram stain	morphology	no_match	0	
 METPO:1000700	gram variable	morphology	label_match	1	gram_stain:variable
-METPO:1003025	green pigmented	morphology	no_match	0	
+METPO:1003025	green pigmented	morphology	label_match	1	pigment:green
 METPO:1000676	helical shaped	morphology	no_match	0	
 METPO:1000691	irregular shaped	morphology	label_match	1	cell_shape:irregular
 METPO:1000702	motile	morphology	alias_table	1	motility:motile
 METPO:1000701	motility	morphology	no_match	0	
 METPO:1000703	non motile	morphology	alias_table	1	motility:non_motile
 METPO:1000872	non-spore forming	morphology	no_match	0	
-METPO:1003026	orange pigmented	morphology	no_match	0	
+METPO:1003026	orange pigmented	morphology	label_match	1	pigment:orange
 METPO:1000678	oval shaped	morphology	no_match	0	
 METPO:1000677	ovoid shaped	morphology	no_match	0	
 METPO:1003021	pigmentation	morphology	no_match	0	
-METPO:1003027	pink pigmented	morphology	no_match	0	
+METPO:1003027	pink pigmented	morphology	label_match	1	pigment:pink
 METPO:1000679	pleomorphic shaped	morphology	label_match	1	cell_shape:pleomorphic
-METPO:1003028	red pigmented	morphology	no_match	0	
+METPO:1003028	red pigmented	morphology	label_match	1	pigment:red
 METPO:1000680	ring shaped	morphology	label_match	1	cell_shape:ring
 METPO:1000681	rod shaped	morphology	no_match	0	
 METPO:1000683	sphere shaped	morphology	no_match	0	
@@ -288,8 +288,8 @@ METPO:1000685	star shaped	morphology	label_match	1	cell_shape:star
 METPO:1000695	tailed shaped	morphology	label_match	1	cell_shape:tailed
 METPO:1000696	triangular shaped	morphology	label_match	1	cell_shape:triangular
 METPO:1000686	vibrio shaped	morphology	label_match	1	cell_shape:vibrio
-METPO:1003029	white pigmented	morphology	no_match	0	
-METPO:1003030	yellow pigmented	morphology	no_match	0	
+METPO:1003029	white pigmented	morphology	label_match	1	pigment:white
+METPO:1003030	yellow pigmented	morphology	label_match	1	pigment:yellow
 METPO:1001007	growth NaCl observation	observation	no_match	0	
 METPO:1001017	growth oxygen observation	observation	no_match	0	
 METPO:1001012	growth pH observation	observation	no_match	0	
