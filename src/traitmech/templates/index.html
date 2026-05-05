@@ -9,6 +9,7 @@
     <span><strong>{{ embedded_count }}</strong> with kg-microbe embedding ({{ embedding_coverage_pct }}%)</span>
     <span><strong>{{ category_counts|length }}</strong> categories</span>
   </div>
+  <p class="hero-cta"><a class="cta-link" href="umap.html">Explore the trait embedding space →</a></p>
 </section>
 
 <section>
@@ -32,12 +33,13 @@
     See <a href="https://github.com/CultureBotAI/TraitMech">the GitHub repo</a>
     for the LinkML schema and seeder.</p>
   <p><strong>Embedding integration</strong>: each page links to the kg-microbe
-    deepwalk embedding for the matching trait node, when one exists. Coverage
-    is currently {{ embedding_coverage_pct }}% — kg-microbe's 2024-09-25
-    release predates METPO ingestion, so direct CURIE lookup returns nothing
-    and we fall back to label-match through
-    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe/blob/main/mappings/canonical/metpo_alias_mappings.tsv">metpo_alias_mappings.tsv</a>
-    plus normalised-label matching against kg-microbe's pre-METPO trait
-    nodes (<code>cell_shape:bacillus</code>, <code>oxygen:aerobe</code>, etc.).</p>
+    deepwalk embedding for the matching trait, with the top 8 nearest neighbors
+    by cosine similarity. Coverage is currently {{ embedding_coverage_pct }}%
+    — sourced from kg-microbe's 2026-04-25 deepwalk (512-D, the first to
+    ingest METPO directly). The 8 unmatched records are all DatatypeProperties
+    that the graph encodes as edge attributes rather than entity nodes.</p>
+  <p>The <a href="umap.html">embedding-space scatter</a> projects all
+    {{ embedded_count }} matched traits into 2-D via UMAP, coloured by
+    category and searchable by label or CURIE.</p>
 </section>
 {% endblock %}

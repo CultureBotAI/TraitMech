@@ -12,6 +12,7 @@
     <a class="brand" href="../../index.html">TraitMech</a>
     <nav>
       <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -82,16 +83,75 @@
       <h2>kg-microbe context</h2>
       
       <p class="match-method">Matched <strong>1</strong>
-        kg-microbe trait node
-        via <em>label_match</em>.</p>
+        kg-microbe node
+        via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
         
-        <li><code>pH_range:mid3</code> <span class="dim-preview">[-3.393, -0.460, +6.754, +2.848, …]</span></li>
+        <li><code>METPO:1000463</code> <span class="dim-preview">[+1.068, -1.814, +0.347, -0.209, …]</span></li>
         
       </ul>
-      <p class="meta">200-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2024-09-25 release).</p>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
+
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
+          <span class="sim">0.887</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
+          <span class="sim">0.864</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/ph_range_low.html">pH range low</a>
+          <span class="sim">0.855</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/temperature_range_low.html">temperature range low</a>
+          <span class="sim">0.807</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/temperature_range_mid1.html">temperature range mid1</a>
+          <span class="sim">0.790</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/temperature_delta_mid2.html">temperature delta mid2</a>
+          <span class="sim">0.772</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/temperature_range_very_low.html">temperature range very low</a>
+          <span class="sim">0.765</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/temperature_range_mid4.html">temperature range mid4</a>
+          <span class="sim">0.753</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
     <div class="card">
@@ -138,7 +198,7 @@
   
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
-    <p class="meta">1 matching node (label_match)</p>
+    <p class="meta">1 matching node (direct_metpo)</p>
   </div>
   
 </aside>
@@ -147,10 +207,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:34 UTC from
+    Built 2026-05-05 04:56 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
-    · embedding coverage 24.6%
+    · embedding coverage 97.7%
     (kg-microbe deepwalk 200-D, 2024-09-25)
   </div>
 </footer>

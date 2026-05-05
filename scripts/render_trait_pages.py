@@ -40,8 +40,11 @@ EMBED_DIR = REPO_ROOT / "data" / "embeddings"
 TEMPLATES_DIR = REPO_ROOT / "src" / "traitmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 RAW_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
+UMAP_JSON = EMBED_DIR / "trait_umap.json"
+NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
+EMBEDDING_RELEASE = "2026-04-25"
 
 # GitHub URL bases for the right-rail source-link card.
 GH_BLOB_BASE = "https://github.com/CultureBotAI/TraitMech/blob/main"
@@ -181,6 +184,12 @@ def render_pages(args: argparse.Namespace) -> int:
         needed_nodes.update(v["kgm_nodes"])
     node_dim_preview = load_node_dim_preview(needed_nodes)
 
+    # Load nearest-neighbors map (built by build_embedding_index.py).
+    nn_by_curie: dict[str, list[dict]] = {}
+    if NN_JSON.exists():
+        import json as _json
+        nn_by_curie = _json.loads(NN_JSON.read_text())
+
     # Render per-trait pages.
     written = 0
     for path, doc in traits:
@@ -197,6 +206,21 @@ def render_pages(args: argparse.Namespace) -> int:
         children = sorted(children_by_parent.get(curie, []), key=lambda x: x["label"])
 
         yaml_rel = f"data/traits/{category_dir}/{slug}.yaml"
+        # Resolve nearest-neighbor records into renderable rows with page links.
+        nn_rows = []
+        for nn in nn_by_curie.get(curie, []):
+            nn_curie = nn.get("id", "")
+            nn_page = page_path.get(nn_curie)
+            if not nn_page:
+                continue
+            nn_rows.append({
+                "curie": nn_curie,
+                "label": nn.get("label", ""),
+                "category": nn.get("category", ""),
+                "similarity": nn.get("similarity", 0.0),
+                "page": nn_page,
+            })
+
         page_html = env.get_template("trait.html").render(
             title=f"{doc.get('label', curie)} — {doc.get('trait_category', '')}",
             root="../../",
@@ -206,6 +230,8 @@ def render_pages(args: argparse.Namespace) -> int:
             parent_pages=parent_pages,
             parent_labels=parent_labels,
             children=children,
+            nearest_neighbors=nn_rows,
+            embedding_release=EMBEDDING_RELEASE,
             metpo_version=metpo_version,
             yaml_path=yaml_rel,
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
@@ -242,6 +268,28 @@ def render_pages(args: argparse.Namespace) -> int:
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
         out_path.write_text(page_html)
+
+    # Render UMAP page if data exists.
+    if UMAP_JSON.exists():
+        umap_data_dst = PAGES_DIR / "data" / "trait_umap.json"
+        umap_data_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(UMAP_JSON, umap_data_dst)
+        import json as _json
+        umap_points = _json.loads(UMAP_JSON.read_text())
+        cats = sorted({p["category"] for p in umap_points})
+        umap_html = env.get_template("umap.html").render(
+            title="Trait embedding space",
+            root="",
+            data_url="data/trait_umap.json",
+            traits_root="traits/",
+            n_points=len(umap_points),
+            categories=cats,
+            metpo_version=metpo_version,
+            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            total_traits=len(traits),
+            embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+        )
+        (PAGES_DIR / "umap.html").write_text(umap_html)
 
     # Render landing page.
     category_counts = {cat: len(items) for cat, items in sorted(category_lists.items(), key=lambda x: -len(x[1]))}

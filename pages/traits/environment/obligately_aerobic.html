@@ -12,6 +12,7 @@
     <a class="brand" href="../../index.html">TraitMech</a>
     <nav>
       <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -78,16 +79,75 @@
       <h2>kg-microbe context</h2>
       
       <p class="match-method">Matched <strong>1</strong>
-        kg-microbe trait node
-        via <em>label_match</em>.</p>
+        kg-microbe node
+        via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
         
-        <li><code>oxygen:obligate_aerobe</code> <span class="dim-preview">[-1.354, -1.468, +0.723, -0.059, …]</span></li>
+        <li><code>METPO:1000606</code> <span class="dim-preview">[-0.964, -1.348, -0.595, +0.979, …]</span></li>
         
       </ul>
-      <p class="meta">200-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2024-09-25 release).</p>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
+
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/strictly_anaerobic.html">strictly anaerobic</a>
+          <span class="sim">0.961</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/motility.html">motility</a>
+          <span class="sim">0.954</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/facultatively_anaerobic.html">facultatively anaerobic</a>
+          <span class="sim">0.947</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemoheterotrophic.html">chemoheterotrophic</a>
+          <span class="sim">0.944</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/acidophilic.html">acidophilic</a>
+          <span class="sim">0.943</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/phototrophic.html">phototrophic</a>
+          <span class="sim">0.941</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic</a>
+          <span class="sim">0.941</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sporulation.html">sporulation</a>
+          <span class="sim">0.930</span>
+        </li>
+        
+      </ul>
+    </div>
+    
 
     
     <div class="card">
@@ -134,7 +194,7 @@
   
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
-    <p class="meta">1 matching node (label_match)</p>
+    <p class="meta">1 matching node (direct_metpo)</p>
   </div>
   
 </aside>
@@ -143,10 +203,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:34 UTC from
+    Built 2026-05-05 04:56 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
-    · embedding coverage 24.6%
+    · embedding coverage 97.7%
     (kg-microbe deepwalk 200-D, 2024-09-25)
   </div>
 </footer>

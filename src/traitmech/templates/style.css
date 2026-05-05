@@ -31,6 +31,17 @@ code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; fo
 .hero .tagline { color: var(--muted); margin-bottom: 1.5rem; }
 .hero .counts span { display: inline-block; margin-right: 1.5rem; color: var(--muted); }
 .hero .counts strong { color: var(--fg); font-size: 1.2rem; }
+.hero-cta { margin-top: 1.5rem; }
+.cta-link {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.cta-link:hover { background: #145289; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.25rem; }
@@ -117,3 +128,44 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 .rail-meta dt { margin-top: 0.4rem; }
 .rail-meta dd { margin-left: 0; }
 .source-card { border-color: var(--accent); }
+
+/* UMAP page */
+.umap-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.umap-controls label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+.umap-controls select, .umap-controls input[type="search"] {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+#umap-plot { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem; }
+#umap-plot circle:hover { stroke: #1a1c1f; stroke-width: 1.5; }
+.umap-tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(26, 28, 31, 0.94);
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 10;
+}
+.umap-tooltip .muted { color: #b8c2cc; font-size: 0.78rem; }
+
+/* Per-trait nearest-neighbors */
+.nn-list { list-style: none; padding: 0; margin: 0; }
+.nn-list li { padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
+.nn-list li:last-child { border-bottom: none; }
+.nn-list .sim { color: var(--muted); font-family: monospace; font-size: 0.78rem; margin-left: 0.4em; }
+.nn-list .nn-cat { display: inline-block; font-size: 0.72rem; color: var(--muted); padding: 0.1em 0.4em; border-radius: 3px; background: var(--accent-soft); margin-right: 0.3em; }

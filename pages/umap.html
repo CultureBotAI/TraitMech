@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trait embedding space — TraitMech</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">TraitMech</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<header>
+  <p class="breadcrumb"><a href="index.html">TraitMech</a> <span>›</span> Embedding space</p>
+  <h1>Trait embedding space</h1>
+  <p class="tagline">UMAP projection of <strong>346</strong> METPO trait
+    embeddings from kg-microbe's 2026-04-25 deepwalk (512-D, n_neighbors=15).
+    Hover for label, click to open the trait page.</p>
+</header>
+
+<section class="umap-controls">
+  <label>Filter category
+    <select id="category-filter">
+      <option value="">All categories</option>
+      
+      <option value="ecology">ecology</option>
+      
+      <option value="environment">environment</option>
+      
+      <option value="genomics">genomics</option>
+      
+      <option value="metabolism">metabolism</option>
+      
+      <option value="morphology">morphology</option>
+      
+      <option value="observation">observation</option>
+      
+      <option value="physiology">physiology</option>
+      
+      <option value="upper">upper</option>
+      
+    </select>
+  </label>
+  <label>Search
+    <input type="search" id="search-input" placeholder="label or CURIE…">
+  </label>
+  <span class="meta" id="visible-count">346 visible</span>
+</section>
+
+<div id="umap-plot"></div>
+<div id="umap-tooltip" class="umap-tooltip"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const TRAITS_ROOT = "traits/";  // e.g. "traits/"
+const CATEGORY_DIR = {
+  MORPHOLOGY: "morphology", PHYSIOLOGY: "physiology", ENVIRONMENT: "environment",
+  METABOLISM: "metabolism", GENOMICS: "genomics", ECOLOGY: "ecology",
+  DETECTION: "detection", QUANTITATIVE_PROPERTY: "quantitative_property",
+  OBSERVATION: "observation", UPPER: "upper", OTHER: "other",
+};
+
+fetch("data/trait_umap.json")
+  .then(r => r.json())
+  .then(points => {
+    const W = Math.min(1100, window.innerWidth - 40);
+    const H = 640;
+    const margin = { top: 20, right: 20, bottom: 30, left: 30 };
+
+    const svg = d3.select("#umap-plot").append("svg")
+      .attr("width", W).attr("height", H);
+    const g = svg.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const xExtent = d3.extent(points, d => d.umap_x);
+    const yExtent = d3.extent(points, d => d.umap_y);
+    const x = d3.scaleLinear().domain(xExtent).range([0, W - margin.left - margin.right]).nice();
+    const y = d3.scaleLinear().domain(yExtent).range([H - margin.top - margin.bottom, 0]).nice();
+
+    const cats = Array.from(new Set(points.map(d => d.category))).sort();
+    const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
+
+    const tooltip = d3.select("#umap-tooltip");
+
+    const dots = g.selectAll("circle").data(points).join("circle")
+      .attr("cx", d => x(d.umap_x))
+      .attr("cy", d => y(d.umap_y))
+      .attr("r", 4)
+      .attr("fill", d => color(d.category))
+      .attr("opacity", 0.78)
+      .style("cursor", "pointer")
+      .on("mouseover", (e, d) => {
+        tooltip.style("display", "block")
+          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category}</span>`);
+      })
+      .on("mousemove", (e) => {
+        tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
+      })
+      .on("mouseout", () => tooltip.style("display", "none"))
+      .on("click", (e, d) => {
+        const dir = CATEGORY_DIR[d.category] || "other";
+        const slug = d.label.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+        window.location.href = `${TRAITS_ROOT}${dir}/${slug}.html`;
+      });
+
+    // Legend
+    const legend = svg.append("g").attr("transform", `translate(${W - 180}, ${margin.top})`);
+    legend.selectAll("g.legend-row").data(cats).join("g")
+      .attr("class", "legend-row")
+      .attr("transform", (_, i) => `translate(0, ${i * 18})`)
+      .each(function(cat) {
+        d3.select(this).append("rect")
+          .attr("width", 11).attr("height", 11)
+          .attr("fill", color(cat));
+        d3.select(this).append("text")
+          .attr("x", 16).attr("y", 9.5)
+          .attr("font-size", "11px")
+          .text(`${cat} (${points.filter(p => p.category === cat).length})`);
+      });
+
+    // Filters
+    function update() {
+      const cat = document.getElementById("category-filter").value;
+      const q = document.getElementById("search-input").value.toLowerCase().trim();
+      let visible = 0;
+      dots.attr("opacity", d => {
+        const ok = (!cat || d.category === cat) &&
+                   (!q || d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q));
+        if (ok) visible++;
+        return ok ? 0.78 : 0.05;
+      });
+      document.getElementById("visible-count").textContent = `${visible} visible`;
+    }
+    document.getElementById("category-filter").addEventListener("change", update);
+    document.getElementById("search-input").addEventListener("input", update);
+  });
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    Built 2026-05-05 04:56 UTC from
+    <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
+    · 354 TraitRecords
+    · embedding coverage 97.7%
+    (kg-microbe deepwalk 200-D, 2024-09-25)
+  </div>
+</footer>
+</body>
+</html>

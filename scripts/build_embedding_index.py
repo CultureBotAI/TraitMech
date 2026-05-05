@@ -1,36 +1,39 @@
 #!/usr/bin/env python3
 """Vendor a slim trait subset of kg-microbe's deepwalk embeddings + build a
-METPO CURIE ↔ kg-microbe trait-node match table.
+METPO CURIE ↔ kg-microbe-node match table.
 
-Source
-------
-``../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz``
-(1.2 GB, 200-dimensional, ~1M rows). The file predates METPO ingestion in
-kg-microbe so it carries 0 METPO CURIEs directly; trait nodes appear under
-kg-microbe's pre-METPO prefixes (`cell_shape:bacillus`, `motility:motile`,
-`gram_stain:positive`, `assay:API_*`, `isolation_source:*`, etc.).
+Source priority
+---------------
+1. ``../CommunityMech/CommunityMech/data/embeddings/DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v2_2026-04-25_*.tsv.gz``
+   (5.7 GB, 512-D, latest; carries 380 METPO CURIEs DIRECTLY plus the legacy
+   pre-METPO trait nodes for backward compatibility).
+2. Fallback to the 2024-09-25 200-D file if the 2026-04-25 one isn't present.
+
+The 2026-04-25 file is the first kg-microbe-derived embedding that ingests
+METPO. Direct CURIE lookup (METPO:1000602 → that row's 512 floats) is the
+primary match path; the alias-table + label-match fallback covers METPO
+classes whose CURIEs the embedding doesn't have but whose label does.
 
 Bridge
 ------
-``../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv`` (~67 rows)
-maps text labels → METPO CURIEs ("rod-shaped" → METPO:1000681). This script
-combines that table with normalised-label matching to produce a per-METPO
-match table.
+``../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv`` (~66 rows)
+maps text labels → METPO CURIEs ("rod-shaped" → METPO:1000681). Used as a
+secondary match path for labels that match a kg-microbe legacy node (e.g.
+the 2024-09-25 file's `cell_shape:bacillus`).
 
 Outputs
 -------
 1. ``data/embeddings/deepwalk_traits.tsv.gz``
-   Slim copy of the source deepwalk: only rows whose subject is a
-   trait-relevant kg-microbe node. ~899 rows × 200 dims, ≪1MB gzipped.
+   Slim copy of the source: METPO:* rows + trait-relevant legacy prefixes.
+   1MB-class, gzipped.
 2. ``data/embeddings/metpo_to_kgm_node.tsv``
-   Per-METPO-CURIE match: one row per METPO TraitRecord, with a
-   semicolon-delimited list of matching kg-microbe trait-node IDs (may
-   be empty when no label match resolves).
+   Per-METPO match table with method tag (``direct_metpo`` /
+   ``alias_table`` / ``label_match`` / ``no_match``) and node id list.
 
 Usage
 -----
-    just build-embeddings       # uses default --kgm path
-    python3 scripts/build_embedding_index.py --kgm <path>
+    just build-embeddings       # uses defaults
+    python3 scripts/build_embedding_index.py --src <path>
 """
 from __future__ import annotations
 
@@ -43,7 +46,15 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+# Newest available kg-microbe-derived deepwalk: 512-D, 2026-04-25, includes
+# 380 METPO CURIEs directly. Source-of-truth for direct-METPO matching.
 DEFAULT_KGM_DEEPWALK = (
+    REPO_ROOT.parent / "CommunityMech" / "CommunityMech" / "data" / "embeddings"
+    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v2_2026-04-25_20_44_08.tsv.gz"
+)
+# Fallback: 2024-09-25 200-D file (pre-METPO; only useful for legacy-prefix
+# trait nodes like `cell_shape:bacillus`).
+FALLBACK_KGM_DEEPWALK = (
     REPO_ROOT.parent / "kg-microbe-projects" / "taxa_media"
     / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_200_1_wouniprot__2024-09-25_03_07_47.tsv.gz"
 )
@@ -51,10 +62,11 @@ DEFAULT_KGM_ALIASES = (
     REPO_ROOT.parent / "kg-microbe" / "mappings" / "canonical" / "metpo_alias_mappings.tsv"
 )
 
-# kg-microbe pre-METPO trait-node prefixes worth carrying into the slim subset.
-# Match the prefix universe surveyed in the deepwalk file (see
-# `awk '{split($1,a,":"); print a[1]}' | sort | uniq -c`).
+# Trait-relevant CURIE prefixes worth carrying into the slim subset. METPO is
+# the new authoritative anchor; the legacy `cell_shape:*` etc. prefixes are
+# kept for older embeddings but not present in the 2026-04-25 file.
 _TRAIT_PREFIXES: tuple[str, ...] = (
+    "METPO:",  # primary anchor in 2026-04-25 file
     "cell_shape:", "cell_length:", "cell_width:",
     "gram_stain:", "motility:",
     "gc:", "NaCl_opt:", "NaCl_range:", "NaCl_delta:",
@@ -65,14 +77,17 @@ _TRAIT_PREFIXES: tuple[str, ...] = (
     "carbon_substrates:", "isolation_source:",
     "assay:",
     "BSL:",
-    # ontology prefixes that may appear (PATO is METPO-overlap territory)
     "PATO:",
 )
 
 OUT_DIR = REPO_ROOT / "data" / "embeddings"
 OUT_DEEPWALK = OUT_DIR / "deepwalk_traits.tsv.gz"
 OUT_MATCH = OUT_DIR / "metpo_to_kgm_node.tsv"
+OUT_UMAP_JSON = OUT_DIR / "trait_umap.json"
+OUT_NN_JSON = OUT_DIR / "trait_nearest_neighbors.json"
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
+
+UMAP_NEAREST_K = 8
 
 
 def _normalise(s: str) -> str:
@@ -178,13 +193,21 @@ def build_match_table(
         candidates: set[str] = set()
         method = ""
 
-        # 1. Try alias-table reverse: METPO -> known normalised labels -> nodes
-        for norm in metpo_to_norm_labels.get(curie, set()):
-            if norm in nodes_by_normvalue:
-                candidates.update(nodes_by_normvalue[norm])
-                method = "alias_table"
+        # 1. PRIMARY: direct METPO CURIE lookup. The 2026-04-25 deepwalk has
+        #    380 METPO CURIEs; if our subject is one of them, that's the
+        #    authoritative match — nothing fuzzy needed.
+        if curie in deepwalk_nodes:
+            candidates.add(curie)
+            method = "direct_metpo"
 
-        # 2. Direct normalised-label match (METPO label or synonyms)
+        # 2. Alias-table reverse lookup: METPO → known normalised labels → nodes.
+        if not candidates:
+            for norm in metpo_to_norm_labels.get(curie, set()):
+                if norm in nodes_by_normvalue:
+                    candidates.update(nodes_by_normvalue[norm])
+                    method = "alias_table"
+
+        # 3. Direct normalised-label match (METPO label or synonyms).
         if not candidates:
             for txt in [label] + synonyms:
                 norm = _normalise(txt)
@@ -214,27 +237,143 @@ def write_match_table(rows: list[dict[str, str]], path: Path) -> None:
             w.writerow(r)
 
 
+def load_embedding_vectors(slim_deepwalk: Path) -> dict[str, list[float]]:
+    """Load the slim deepwalk into {node_id: [float, ...]}."""
+    out: dict[str, list[float]] = {}
+    with gzip.open(slim_deepwalk, "rt", encoding="utf-8") as f:
+        # Skip header
+        f.readline()
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) < 2:
+                continue
+            sid = parts[0]
+            try:
+                vec = [float(x) for x in parts[1:]]
+            except ValueError:
+                continue
+            out[sid] = vec
+    return out
+
+
+def compute_umap_and_neighbors(
+    metpo_records: list[tuple[str, str, list[str], str]],
+    match_rows: list[dict[str, str]],
+    vectors: dict[str, list[float]],
+) -> tuple[list[dict], dict[str, list[dict]]]:
+    """Project the matched-record embeddings to 2-D via UMAP and compute
+    k nearest neighbors per record. Returns (umap_points, nn_per_curie).
+
+    Records without an embedding are NOT in the UMAP output (they have no
+    coordinates) but still appear in nn_per_curie as []."""
+    try:
+        import numpy as np
+        import umap as _umap
+    except ImportError as e:
+        print(f"  UMAP / numpy not available: {e}; skipping projection", file=sys.stderr)
+        return [], {}
+
+    # Index match table by curie
+    match_by_curie = {r["metpo_curie"]: r for r in match_rows}
+    record_by_curie = {c: (lbl, syn, cat) for c, lbl, syn, cat in metpo_records}
+
+    # Build matrix: take ANY matched node's vector for each METPO record;
+    # when multiple nodes match, average them.
+    curies: list[str] = []
+    matrix: list[list[float]] = []
+    for r in match_rows:
+        nodes = [n.strip() for n in r["kgm_nodes"].split(";") if n.strip()]
+        vecs = [vectors[n] for n in nodes if n in vectors]
+        if not vecs:
+            continue
+        n = len(vecs[0])
+        avg = [sum(v[i] for v in vecs) / len(vecs) for i in range(n)]
+        curies.append(r["metpo_curie"])
+        matrix.append(avg)
+
+    if len(matrix) < 5:
+        print(f"  Only {len(matrix)} matched embeddings — UMAP skipped", file=sys.stderr)
+        return [], {}
+
+    arr = np.array(matrix, dtype=float)
+    print(f"      Running UMAP on {arr.shape[0]} × {arr.shape[1]} matrix")
+    reducer = _umap.UMAP(n_components=2, n_neighbors=min(15, len(matrix) - 1), random_state=42)
+    coords = reducer.fit_transform(arr)
+
+    # Cosine-style nearest neighbors via L2 normalisation + dot product.
+    norms = np.linalg.norm(arr, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    normed = arr / norms
+    sim = normed @ normed.T
+    np.fill_diagonal(sim, -1.0)
+    k = min(UMAP_NEAREST_K, len(matrix) - 1)
+    top_idx = np.argsort(-sim, axis=1)[:, :k]
+
+    umap_points: list[dict] = []
+    nn_map: dict[str, list[dict]] = {}
+    for i, curie in enumerate(curies):
+        lbl, _, cat = record_by_curie.get(curie, ("", [], "OTHER"))
+        umap_points.append({
+            "id": curie,
+            "label": lbl,
+            "category": cat,
+            "match_method": match_by_curie[curie]["match_method"],
+            "umap_x": float(coords[i, 0]),
+            "umap_y": float(coords[i, 1]),
+        })
+        nn_map[curie] = [
+            {
+                "id": curies[j],
+                "label": record_by_curie[curies[j]][0],
+                "category": record_by_curie[curies[j]][2],
+                "similarity": float(sim[i, j]),
+            }
+            for j in top_idx[i]
+        ]
+
+    # Records without embeddings still get an entry (empty list) so the renderer
+    # can distinguish "no embedding" from "no neighbors found".
+    for curie, _, _, _ in metpo_records:
+        nn_map.setdefault(curie, [])
+    return umap_points, nn_map
+
+
+def write_json(path: Path, payload) -> None:
+    import json
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kgm-deepwalk", type=Path, default=DEFAULT_KGM_DEEPWALK)
+    ap.add_argument("--src", type=Path, default=DEFAULT_KGM_DEEPWALK,
+                    help="path to the source deepwalk .tsv.gz")
     ap.add_argument("--kgm-aliases", type=Path, default=DEFAULT_KGM_ALIASES)
     ap.add_argument("--out-deepwalk", type=Path, default=OUT_DEEPWALK)
     ap.add_argument("--out-match", type=Path, default=OUT_MATCH)
     args = ap.parse_args()
 
-    if not args.kgm_deepwalk.exists():
-        print(f"deepwalk source missing: {args.kgm_deepwalk}", file=sys.stderr)
-        return 2
+    src = args.src
+    if not src.exists():
+        if FALLBACK_KGM_DEEPWALK.exists():
+            print(f"  Primary embedding missing ({src}); using fallback {FALLBACK_KGM_DEEPWALK.name}")
+            src = FALLBACK_KGM_DEEPWALK
+        else:
+            print(f"deepwalk source missing: {src}", file=sys.stderr)
+            return 2
 
-    print(f"[1/3] Vendoring slim deepwalk subset → {args.out_deepwalk}")
-    n_rows, nodes = vendor_slim_deepwalk(args.kgm_deepwalk, args.out_deepwalk)
-    print(f"      {n_rows} trait-relevant rows carried; {len(nodes)} unique node ids")
+    print(f"[1/4] Vendoring slim deepwalk subset → {args.out_deepwalk}")
+    print(f"      source: {src.name}")
+    n_rows, nodes = vendor_slim_deepwalk(src, args.out_deepwalk)
+    metpo_count = sum(1 for n in nodes if n.startswith("METPO:"))
+    print(f"      {n_rows} trait-relevant rows carried; {len(nodes)} unique node ids "
+          f"(METPO:* = {metpo_count})")
 
-    print(f"[2/3] Loading metpo alias table → {args.kgm_aliases}")
+    print(f"[2/4] Loading metpo alias table → {args.kgm_aliases}")
     aliases = load_alias_table(args.kgm_aliases)
     print(f"      {len(aliases)} alias rows loaded")
 
-    print(f"[3/3] Building METPO ↔ kg-microbe match table → {args.out_match}")
+    print(f"[3/4] Building METPO ↔ kg-microbe match table → {args.out_match}")
     metpo_records = load_metpo_records(TRAITS_DIR)
     rows = build_match_table(metpo_records, nodes, aliases)
     write_match_table(rows, args.out_match)
@@ -247,6 +386,15 @@ def main() -> int:
         by_method[r["match_method"]] = by_method.get(r["match_method"], 0) + 1
     for m, n in sorted(by_method.items(), key=lambda x: -x[1]):
         print(f"        {m:<15} {n}")
+
+    print(f"[4/4] UMAP projection + nearest neighbors")
+    vectors = load_embedding_vectors(args.out_deepwalk)
+    umap_points, nn_map = compute_umap_and_neighbors(metpo_records, rows, vectors)
+    write_json(OUT_UMAP_JSON, umap_points)
+    write_json(OUT_NN_JSON, nn_map)
+    print(f"      {len(umap_points)} UMAP points → {OUT_UMAP_JSON.name}")
+    nn_with_data = sum(1 for v in nn_map.values() if v)
+    print(f"      {nn_with_data} traits with ≥1 nearest neighbor → {OUT_NN_JSON.name}")
     return 0
 
 

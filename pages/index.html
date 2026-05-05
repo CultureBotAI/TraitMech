@@ -12,6 +12,7 @@
     <a class="brand" href="index.html">TraitMech</a>
     <nav>
       <a href="index.html">Home</a>
+      <a href="umap.html">Embedding space</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -25,9 +26,10 @@
     from <a href="https://w3id.org/metpo">METPO</a> and curated incrementally.</p>
   <div class="counts">
     <span><strong>354</strong> trait records</span>
-    <span><strong>87</strong> with kg-microbe embedding (24.6%)</span>
+    <span><strong>346</strong> with kg-microbe embedding (97.7%)</span>
     <span><strong>9</strong> categories</span>
   </div>
+  <p class="hero-cta"><a class="cta-link" href="umap.html">Explore the trait embedding space →</a></p>
 </section>
 
 <section>
@@ -37,37 +39,37 @@
     <a class="card cat-tile" href="category/metabolism.html">
       <h3>METABOLISM</h3>
       <p class="big">108</p>
-      <p class="meta">2 with embedding</p>
+      <p class="meta">107 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/environment.html">
       <h3>ENVIRONMENT</h3>
       <p class="big">103</p>
-      <p class="meta">39 with embedding</p>
+      <p class="meta">103 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/morphology.html">
       <h3>MORPHOLOGY</h3>
       <p class="big">65</p>
-      <p class="meta">36 with embedding</p>
+      <p class="meta">65 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/physiology.html">
       <h3>PHYSIOLOGY</h3>
       <p class="big">31</p>
-      <p class="meta">3 with embedding</p>
+      <p class="meta">31 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/observation.html">
       <h3>OBSERVATION</h3>
       <p class="big">20</p>
-      <p class="meta">0 with embedding</p>
+      <p class="meta">20 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/ecology.html">
       <h3>ECOLOGY</h3>
       <p class="big">10</p>
-      <p class="meta">3 with embedding</p>
+      <p class="meta">10 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/quantitative_property.html">
@@ -79,13 +81,13 @@
     <a class="card cat-tile" href="category/genomics.html">
       <h3>GENOMICS</h3>
       <p class="big">5</p>
-      <p class="meta">4 with embedding</p>
+      <p class="meta">5 with embedding</p>
     </a>
     
     <a class="card cat-tile" href="category/upper.html">
       <h3>UPPER</h3>
       <p class="big">5</p>
-      <p class="meta">0 with embedding</p>
+      <p class="meta">5 with embedding</p>
     </a>
     
   </div>
@@ -99,22 +101,23 @@
     See <a href="https://github.com/CultureBotAI/TraitMech">the GitHub repo</a>
     for the LinkML schema and seeder.</p>
   <p><strong>Embedding integration</strong>: each page links to the kg-microbe
-    deepwalk embedding for the matching trait node, when one exists. Coverage
-    is currently 24.6% — kg-microbe's 2024-09-25
-    release predates METPO ingestion, so direct CURIE lookup returns nothing
-    and we fall back to label-match through
-    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe/blob/main/mappings/canonical/metpo_alias_mappings.tsv">metpo_alias_mappings.tsv</a>
-    plus normalised-label matching against kg-microbe's pre-METPO trait
-    nodes (<code>cell_shape:bacillus</code>, <code>oxygen:aerobe</code>, etc.).</p>
+    deepwalk embedding for the matching trait, with the top 8 nearest neighbors
+    by cosine similarity. Coverage is currently 97.7%
+    — sourced from kg-microbe's 2026-04-25 deepwalk (512-D, the first to
+    ingest METPO directly). The 8 unmatched records are all DatatypeProperties
+    that the graph encodes as edge attributes rather than entity nodes.</p>
+  <p>The <a href="umap.html">embedding-space scatter</a> projects all
+    346 matched traits into 2-D via UMAP, coloured by
+    category and searchable by label or CURIE.</p>
 </section>
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:34 UTC from
+    Built 2026-05-05 04:56 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
-    · embedding coverage 24.6%
+    · embedding coverage 97.7%
     (kg-microbe deepwalk 200-D, 2024-09-25)
   </div>
 </footer>
