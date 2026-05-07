@@ -3,9 +3,10 @@ label: extremely halophilic
 definition: A halophily preference in which an organism requires very high salt concentrations
   (typically 15-30% NaCl or higher) for optimal growth and cannot grow at salt concentrations
   below approximately 12%.
+definition_source: PMID:11790755
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
 synonyms:
@@ -16,9 +17,18 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: PMID:11790755
+  snippet: A cytochrome in an extremely halophilic archaeon, Haloferax volcanii
+  notes: 'Organism example: Haloferax volcanii is described as extremely halophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.865176+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:15:44-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Haloferax volcanii organism example with PMID-backed evidence.
+  llm_assisted: true

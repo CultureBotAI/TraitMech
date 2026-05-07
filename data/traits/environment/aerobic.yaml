@@ -2,9 +2,10 @@ identifier: METPO:1000602
 label: aerobic
 definition: An oxygen preference in which growth occurs in the presence of molecular
   oxygen (O₂), typically using O₂ as the terminal electron acceptor.
+definition_source: PMID:21413255
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
@@ -17,9 +18,26 @@ synonyms:
 - synonym_text: aerobic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:21413255
+  snippet: aerobes require molecular oxygen as a terminal electron acceptor
+  notes: Supports aerobic growth as oxygen-dependent respiration.
+- reference: PMID:21183663
+  snippet: Bacillus subtilis is an aerobic spore-forming Gram-positive bacterium
+  notes: 'Organism example: Bacillus subtilis is described as aerobic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849227+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added definition source and evidence for oxygen-dependent aerobic growth.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Bacillus subtilis organism example with PMID-backed evidence.
+  llm_assisted: true

@@ -2,18 +2,28 @@ identifier: METPO:1000615
 label: mesophilic
 definition: A temperature preference in which growth is favored at intermediate temperatures,
   typically ~20–45 °C.
+definition_source: PMID:23931326
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
 synonyms:
 - synonym_text: mesophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:23931326
+  snippet: Escherichia coli, a mesophilic bacterium
+  notes: 'Organism example: Escherichia coli is described as mesophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:58:45-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Escherichia coli organism example with PMID-backed evidence.
+  llm_assisted: true

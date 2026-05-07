@@ -1,9 +1,10 @@
 identifier: METPO:1000606
 label: obligately aerobic
 definition: An oxygen preference that requires molecular oxygen (O₂) for growth.
+definition_source: https://www.ncbi.nlm.nih.gov/books/NBK482349/
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
@@ -13,9 +14,26 @@ synonyms:
 - synonym_text: obligate aerobic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+  snippet: require oxygen as a terminal electron acceptor
+  notes: Supports the requirement for oxygen in obligately aerobic organisms.
+- reference: PMID:27203084
+  snippet: M. tuberculosis is an obligate aerobe
+  notes: 'Organism example: Mycobacterium tuberculosis is described as obligately aerobic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851998+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added definition source and evidence for obligate oxygen requirement.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Mycobacterium tuberculosis organism example with PMID-backed evidence.
+  llm_assisted: true

@@ -2,9 +2,10 @@ identifier: METPO:1000604
 label: microaerophilic
 definition: An oxygen preference that requires molecular oxygen (O₂) at concentrations
   lower than atmospheric.
+definition_source: https://www.ncbi.nlm.nih.gov/books/NBK154539/
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
@@ -17,9 +18,26 @@ synonyms:
 - synonym_text: microaerophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: https://www.ncbi.nlm.nih.gov/books/NBK154539/
+  snippet: require oxygen to survive but require its presence in lower concentrations
+  notes: Supports microaerophily as oxygen requirement below atmospheric concentration.
+- reference: PMID:26284041
+  snippet: C. jejuni is a microaerophilic, fastidious bacterium
+  notes: 'Organism example: Campylobacter jejuni is described as microaerophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.850463+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added definition source and evidence for low-oxygen growth requirement.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Campylobacter jejuni organism example with PMID-backed evidence.
+  llm_assisted: true

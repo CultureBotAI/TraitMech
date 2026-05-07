@@ -2,9 +2,10 @@ identifier: METPO:1000623
 label: moderately halophilic
 definition: A halophily preference where growth and proliferation requires high levels
   of sodium chloride, usually above or about 0.2 M.
+definition_source: PMID:9758852
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
 synonyms:
@@ -15,9 +16,18 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: PMID:9758852
+  snippet: moderately halophilic bacterium Halomonas elongata
+  notes: 'Organism example: Halomonas elongata is described as moderately halophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.862444+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:15:44-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Halomonas elongata organism example with PMID-backed evidence.
+  llm_assisted: true

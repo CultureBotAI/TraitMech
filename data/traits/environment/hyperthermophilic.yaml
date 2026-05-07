@@ -2,9 +2,10 @@ identifier: METPO:1000617
 label: hyperthermophilic
 definition: A temperature preference in which growth is favored at very high temperatures,
   typically ≥80 °C.
+definition_source: PMID:9348040
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
 synonyms:
@@ -14,9 +15,18 @@ synonyms:
 - synonym_text: hyperthermophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:9348040
+  snippet: hyperthermophilic archaeon, Pyrococcus furiosus
+  notes: 'Organism example: Pyrococcus furiosus is described as hyperthermophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858819+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:58:45-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Pyrococcus furiosus organism example with PMID-backed evidence.
+  llm_assisted: true

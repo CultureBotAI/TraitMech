@@ -2,18 +2,28 @@ identifier: METPO:1000625
 label: slightly halophilic
 definition: A halophily preference in which an organism requires low to moderate salt
   concentrations (0.3 to 0.8 M NaCl) for optimal growth.
+definition_source: PMID:12501437
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
 synonyms:
 - synonym_text: slightly halophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:12501437
+  snippet: A slightly halophilic, extremely halotolerant, alkaliphilic
+  notes: 'Organism example: Paraliobacillus ryukyuensis strain O15-7T is described as slightly halophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863572+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:15:44-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Paraliobacillus ryukyuensis organism example with PMID-backed evidence.
+  llm_assisted: true

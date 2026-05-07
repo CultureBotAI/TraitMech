@@ -2,18 +2,28 @@ identifier: METPO:1000616
 label: thermophilic
 definition: A temperature preference in which growth is favored at elevated temperatures,
   typically ≥45 °C.
+definition_source: PMID:24058645
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
 synonyms:
 - synonym_text: thermophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:24058645
+  snippet: Geobacillus stearothermophilus is a gram-positive, thermophilic bacterium
+  notes: 'Organism example: Geobacillus stearothermophilus is described as thermophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858214+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:58:45-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Geobacillus stearothermophilus organism example with PMID-backed evidence.
+  llm_assisted: true

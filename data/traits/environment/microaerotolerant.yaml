@@ -2,18 +2,36 @@ identifier: METPO:1000610
 label: microaerotolerant
 definition: An oxygen preference that tolerates low levels of molecular oxygen (O₂)
   without requiring it.
+definition_source: DOI:10.1016/j.biortech.2011.02.011
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
 - synonym_text: microaerotolerant
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/j.biortech.2011.02.011
+  snippet: microaerotolerant or aerotolerant anaerobes can survive
+  notes: Supports microaerotolerance as survival under limited oxygen exposure.
+- reference: PMID:30113300
+  snippet: The novel strain stains Gram-negative and Congo-red-negative and is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
+  notes: 'Organism example: Simulacricoccus ruber strain MCy10636 is described as microaerotolerant.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.854338+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added source-backed evidence for microaerotolerant oxygen exposure survival.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Simulacricoccus ruber organism example with PMID-backed evidence.
+  llm_assisted: true
