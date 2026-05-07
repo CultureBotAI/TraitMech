@@ -34,6 +34,8 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from trait_causal_graph import causal_graphs_for_template
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 EMBED_DIR = REPO_ROOT / "data" / "embeddings"
@@ -225,6 +227,7 @@ def render_pages(args: argparse.Namespace) -> int:
             title=f"{doc.get('label', curie)} — {doc.get('trait_category', '')}",
             root="../../",
             trait=doc,
+            causal_graphs=causal_graphs_for_template(doc),
             kgm_match=match,
             node_dim_preview=node_dim_preview,
             parent_pages=parent_pages,
@@ -314,7 +317,7 @@ def render_pages(args: argparse.Namespace) -> int:
 
     print(f"Wrote {written} trait pages")
     print(f"Wrote {len(category_lists)} category index pages")
-    print(f"Wrote pages/index.html")
+    print("Wrote pages/index.html")
     print(f"Coverage: {embedded_count}/{len(traits)} ({_coverage_pct(match_table, len(traits))}%)")
     return 0
 

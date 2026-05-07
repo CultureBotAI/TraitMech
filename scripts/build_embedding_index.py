@@ -387,7 +387,7 @@ def main() -> int:
     for m, n in sorted(by_method.items(), key=lambda x: -x[1]):
         print(f"        {m:<15} {n}")
 
-    print(f"[4/4] UMAP projection + nearest neighbors")
+    print("[4/4] UMAP projection + nearest neighbors")
     vectors = load_embedding_vectors(args.out_deepwalk)
     umap_points, nn_map = compute_umap_and_neighbors(metpo_records, rows, vectors)
     write_json(OUT_UMAP_JSON, umap_points)

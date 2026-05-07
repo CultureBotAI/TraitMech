@@ -25,6 +25,65 @@ evidence:
 - reference: PMID:21183663
   snippet: Bacillus subtilis is an aerobic spore-forming Gram-positive bacterium
   notes: 'Organism example: Bacillus subtilis is described as aerobic.'
+causal_graphs:
+- graph_id: aerobic_trait_mechanism
+  title: Aerobic growth oxygen-use mechanism
+  description: Evidence-backed causal sketch linking the aerobic trait to oxygen-dependent
+    respiration.
+  nodes:
+  - node_id: aerobic_trait
+    label: aerobic
+    node_type: TRAIT
+    grounding: METPO:1000602
+    description: Growth occurs in the presence of molecular oxygen.
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009060
+    description: Energy release process requiring oxygen as terminal electron acceptor.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen used by aerobes as terminal electron acceptor.
+  - node_id: terminal_electron_acceptor
+    label: terminal electron acceptor
+    node_type: MOLECULAR_FUNCTION
+    description: Functional role played by oxygen in aerobic respiration.
+  edges:
+  - subject: aerobic_trait
+    predicate: requires
+    object: molecular_oxygen
+    description: Aerobic growth depends on molecular oxygen availability.
+    evidence:
+    - reference: PMID:21413255
+      snippet: aerobes require molecular oxygen
+      notes: Medical Microbiology chapter supports oxygen requirement for aerobes.
+  - subject: aerobic_trait
+    predicate: has mechanistic process
+    object: aerobic_respiration
+    description: The aerobic trait is mechanistically tied to oxygen-dependent respiration.
+    evidence:
+    - reference: GO:0009060
+      snippet: requires oxygen as the terminal electron acceptor
+      notes: Gene Ontology definition of aerobic respiration.
+  - subject: aerobic_respiration
+    predicate: requires
+    object: molecular_oxygen
+    description: Aerobic respiration requires oxygen.
+    evidence:
+    - reference: GO:0009060
+      snippet: requires oxygen as the terminal electron acceptor
+      notes: Gene Ontology definition of aerobic respiration.
+  - subject: molecular_oxygen
+    predicate: acts as
+    object: terminal_electron_acceptor
+    description: In aerobic energy metabolism, molecular oxygen acts as the terminal
+      electron acceptor.
+    evidence:
+    - reference: PMID:21413255
+      snippet: molecular oxygen as a terminal electron acceptor
+      notes: Medical Microbiology chapter supports oxygen's role in aerobic metabolism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849227+00:00'
   curator: seed_from_metpo
@@ -40,4 +99,9 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Bacillus subtilis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-07T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph for oxygen-dependent aerobic respiration.
   llm_assisted: true

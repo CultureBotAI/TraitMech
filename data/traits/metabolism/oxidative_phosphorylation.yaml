@@ -3,15 +3,103 @@ label: Oxidative phosphorylation
 definition: A metabolism that generates ATP through the transfer of electrons from
   electron donors to electron acceptors via redox reactions, coupled to the pumping
   of protons across a membrane to create an electrochemical gradient.
+definition_source: DOI:10.1038/191144a0
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1038/191144a0
+  snippet: phosphorylation to electron and hydrogen transfer
+  notes: Mitchell's chemiosmotic proposal supports coupling electron transfer to phosphorylation.
+- reference: DOI:10.1038/s41598-019-38564-0
+  snippet: energized by the proton motive force
+  notes: Supports proton motive force-driven ATP synthesis by F1Fo ATP synthase.
+causal_graphs:
+- graph_id: oxidative_phosphorylation_chemiosmotic_coupling
+  title: Oxidative phosphorylation chemiosmotic coupling
+  description: Evidence-backed causal sketch linking respiratory electron transfer,
+    proton motive force, ATP synthase, and ATP production.
+  nodes:
+  - node_id: oxidative_phosphorylation_trait
+    label: Oxidative phosphorylation
+    node_type: TRAIT
+    grounding: METPO:1000803
+    description: ATP generation coupled to redox-driven ion gradients.
+  - node_id: electron_transport_chain
+    label: electron transport chain
+    node_type: PATHWAY
+    grounding: GO:0022900
+    description: Membrane-associated electron transfer pathway.
+  - node_id: cellular_membrane
+    label: cellular membrane
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0016020
+    description: Membrane across which ions are translocated.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane electrochemical proton gradient.
+  - node_id: atp_synthase
+    label: F1Fo ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Rotary enzyme complex that synthesizes ATP using ion motive force.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:15422
+    description: Energy-rich nucleotide product.
+  edges:
+  - subject: oxidative_phosphorylation_trait
+    predicate: uses pathway
+    object: electron_transport_chain
+    description: Oxidative phosphorylation couples phosphorylation to respiratory electron transfer.
+    evidence:
+    - reference: DOI:10.1038/191144a0
+      snippet: electron and hydrogen transfer
+      notes: Mitchell paper supports coupling electron/hydrogen transfer to phosphorylation.
+  - subject: electron_transport_chain
+    predicate: localized to
+    object: cellular_membrane
+    description: Electron transfer and proton translocation are membrane-coupled.
+    evidence:
+    - reference: DOI:10.1038/191144a0
+      snippet: Chemi-Osmotic Type of Mechanism
+      notes: Chemiosmotic mechanism requires a membrane-separated ion gradient.
+  - subject: electron_transport_chain
+    predicate: generates
+    object: proton_motive_force
+    description: Respiratory electron transfer establishes a proton motive force.
+    evidence:
+    - reference: DOI:10.1038/s41598-019-38564-0
+      snippet: proton motive force (pmf) established and maintained by respiratory chain enzymes
+      notes: Supports respiratory chain generation of pmf.
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthase
+    description: Proton motive force energizes F1Fo ATP synthase.
+    evidence:
+    - reference: DOI:10.1038/s41598-019-38564-0
+      snippet: energized by the proton motive force
+      notes: Supports pmf-driven ATP synthase.
+  - subject: atp_synthase
+    predicate: produces
+    object: atp
+    description: ATP synthase synthesizes ATP from ADP and phosphate.
+    evidence:
+    - reference: DOI:10.1007/BF01923429
+      snippet: synthesis of ATP is also driven by a proton motive force
+      notes: ATP synthase review supports pmf-driven ATP synthesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912667+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-07T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for chemiosmotic coupling, proton motive force, ATP synthase, and ATP production.
+  llm_assisted: true
