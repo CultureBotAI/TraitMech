@@ -3,9 +3,10 @@ label: chemoautolithotrophic
 definition: A trophic type in which an organism uses chemical oxidation of inorganic
   compounds as the energy source and carbon dioxide as the primary carbon source for
   biosynthesis.
+definition_source: DOI:10.1016/B978-0-12-378630-2.00219-X
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -13,9 +14,136 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+  snippet: oxidize inorganic atoms or molecules
+  notes: Review supports inorganic compound oxidation as lithotrophic energy metabolism.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: autotrophic CO2 fixation
+  notes: Minireview supports microbial carbon dioxide fixation pathways.
+- reference: DOI:10.1146/annurev.micro.55.1.485
+  snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
+  notes: Review supports ammonia oxidation as a chemolithoautotrophic example.
+causal_graphs:
+- graph_id: chemoautolithotrophic_inorganic_energy_co2_fixation
+  title: Chemoautolithotrophic inorganic energy and CO2 fixation
+  description: DOI-backed graph linking inorganic chemical donors, respiratory energy
+    conservation, CO2 fixation, and biomass production.
+  nodes:
+  - node_id: chemoautolithotrophic_trait
+    label: chemoautolithotrophic
+    node_type: TRAIT
+    grounding: METPO:1000634
+    description: Trophic type using inorganic chemical donors for energy and CO2 for carbon.
+  - node_id: inorganic_electron_donor
+    label: inorganic electron donor
+    node_type: CHEMICAL
+    description: Reduced inorganic compound oxidized for energy.
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+    grounding: CHEBI:16134
+    description: Representative inorganic nitrogen electron donor.
+  - node_id: ferrous_iron
+    label: ferrous iron
+    node_type: CHEMICAL
+    description: Representative inorganic metal electron donor.
+  - node_id: respiratory_chain
+    label: respiratory chain
+    node_type: PATHWAY
+    description: Energy-conserving electron-transfer pathway.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier produced during chemotrophic growth.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source for autotrophic biosynthesis.
+  - node_id: co2_fixation_pathway
+    label: CO2-fixation pathway
+    node_type: PATHWAY
+    description: Autotrophic pathway converting CO2 into cellular carbon.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell material produced from fixed carbon.
+  edges:
+  - subject: chemoautolithotrophic_trait
+    predicate: uses electron donor
+    object: inorganic_electron_donor
+    description: Chemoautolithotrophy uses inorganic chemical electron donors for energy.
+    evidence:
+    - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+      snippet: oxidize inorganic atoms or molecules
+      notes: Supports lithotrophic oxidation of inorganic substrates.
+  - subject: ammonia
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Ammonia is an inorganic donor in chemolithoautotrophic nitrification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
+      notes: Supports ammonia oxidation as a chemolithoautotrophic example.
+  - subject: ferrous_iron
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Fe(II) is a representative inorganic electron donor.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-81412-3
+      snippet: Fe(II) as the energy source
+      notes: Supports Fe(II) oxidation as an inorganic energy source.
+  - subject: inorganic_electron_donor
+    predicate: feeds electrons into
+    object: respiratory_chain
+    description: Inorganic donor oxidation feeds respiratory energy conservation.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: membrane-bound electron transport chain
+      notes: Supports respiratory electron transfer as energy-conserving pathway.
+  - subject: respiratory_chain
+    predicate: produces
+    object: atp
+    description: Respiratory energy conservation produces ATP.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: drives ATP synthesis
+      notes: Supports ATP production from electron transport.
+  - subject: chemoautolithotrophic_trait
+    predicate: uses carbon source
+    object: carbon_dioxide
+    description: Chemoautolithotrophs use CO2 as the primary carbon source.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic CO2 fixation
+      notes: Supports inorganic carbon fixation by autotrophic pathways.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: co2_fixation_pathway
+    description: CO2 is fixed into cellular carbon by autotrophic pathways.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic carbon dioxide assimilation pathway
+      notes: Supports conversion of CO2 by microbial autotrophic pathways.
+  - subject: co2_fixation_pathway
+    predicate: produces
+    object: biomass
+    description: Fixed carbon supports biomass production.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.130
+      snippet: microbial autotrophic production
+      notes: Supports biomass production from autotrophic CO2 fixation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.868850+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: Codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed chemoautolithotrophy graph for inorganic electron
+    donors, respiratory ATP generation, CO2 fixation, and biomass.
+  llm_assisted: true
