@@ -2,18 +2,116 @@ identifier: METPO:1000647
 label: lithoautotrophic
 definition: A trophic type in which an organism obtains energy from inorganic electron
   donors and carbon from carbon dioxide.
+definition_source: DOI:10.1128/AEM.02473-10
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
 - synonym_text: lithoautotroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+  snippet: inorganic atoms or molecules
+  notes: Review supports inorganic compounds as reductants for lithotrophic growth.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: autotrophic CO2 fixation
+  notes: Review supports CO2 fixation as the autotrophic carbon-assimilation process.
+causal_graphs:
+- graph_id: lithoautotrophic_inorganic_donor_co2_fixation
+  title: Lithoautotrophic inorganic-donor CO2 fixation
+  description: DOI-backed graph linking inorganic electron donors to energy conservation,
+    reducing power, and autotrophic CO2 fixation.
+  nodes:
+  - node_id: lithoautotrophic_trait
+    label: lithoautotrophic
+    node_type: TRAIT
+    grounding: METPO:1000647
+    description: Trophic type using inorganic electron donors and CO2 as carbon source.
+  - node_id: inorganic_electron_donor
+    label: inorganic electron donor
+    node_type: CHEMICAL
+    description: Reduced inorganic compound used for energy and reducing equivalents.
+  - node_id: respiratory_energy_conservation
+    label: respiratory energy conservation
+    node_type: BIOLOGICAL_PROCESS
+    description: Conversion of redox energy into ion gradients and ATP.
+  - node_id: reducing_power
+    label: reducing power
+    node_type: CHEMICAL
+    description: Reduced electron carriers used in biosynthesis.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source for autotrophy.
+  - node_id: autotrophic_co2_fixation
+    label: autotrophic CO2 fixation
+    node_type: PATHWAY
+    description: Pathways that assimilate CO2 into cellular carbon.
+  - node_id: cellular_carbon
+    label: cellular carbon
+    node_type: BIOLOGICAL_PROCESS
+    description: Organic cellular material derived from fixed CO2.
+  edges:
+  - subject: lithoautotrophic_trait
+    predicate: uses electron donor
+    object: inorganic_electron_donor
+    description: Lithoautotrophy uses inorganic compounds as electron donors.
+    evidence:
+    - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+      snippet: inorganic atoms or molecules as a growth-supporting reductant
+      notes: Supports inorganic electron donors for lithotrophic growth.
+  - subject: inorganic_electron_donor
+    predicate: supports
+    object: respiratory_energy_conservation
+    description: Oxidation of inorganic donors supplies redox energy.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: free energy of a redox reaction
+      notes: Supports energy conservation from respiratory redox reactions.
+  - subject: respiratory_energy_conservation
+    predicate: generates
+    object: reducing_power
+    description: Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2021.125768
+      snippet: NADH, or ... NADPH
+      notes: Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: autotrophic_co2_fixation
+    description: CO2 is assimilated by autotrophic carbon fixation pathways.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic CO2 fixation
+      notes: Supports CO2 fixation as the autotrophic carbon-assimilation process.
+  - subject: reducing_power
+    predicate: supports
+    object: autotrophic_co2_fixation
+    description: Reducing equivalents support conversion of CO2 into cell carbon.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2021.125768
+      snippet: reduction of CO2 in the carbon fixation mechanisms
+      notes: Supports reductant use for CO2 reduction.
+  - subject: autotrophic_co2_fixation
+    predicate: produces
+    object: cellular_carbon
+    description: Autotrophic CO2 fixation produces cellular organic carbon.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: CO2 ... into cellular carbon
+      notes: Supports assimilation of CO2 into cellular carbon.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.874845+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for inorganic electron donors, reducing power, and autotrophic CO2 fixation.
+  llm_assisted: true
