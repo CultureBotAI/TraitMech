@@ -3,9 +3,10 @@ label: photolithotrophic
 definition: A trophic type in which an organism uses light as the energy source and
   inorganic compounds as electron donors, typically with carbon dioxide as the primary
   carbon source.
+definition_source: DOI:10.3390/antiox10060829
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -13,9 +14,127 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.3390/antiox10060829
+  snippet: anoxygenic photosynthesis
+  notes: Review supports light-driven oxidation of reduced sulfur compounds by photolithotrophic sulfur bacteria.
+- reference: DOI:10.3389/fmicb.2017.00323
+  snippet: light as an energy source and reduced iron
+  notes: Review supports Fe(II) as an inorganic electron donor for photoferrotrophy.
+causal_graphs:
+- graph_id: photolithotrophic_inorganic_electron_donors
+  title: Photolithotrophic inorganic electron donor photosynthesis
+  description: DOI-backed graph linking light capture, inorganic electron donors
+    such as sulfide and Fe(II), anoxygenic photosynthetic electron transport, and CO2 assimilation.
+  nodes:
+  - node_id: photolithotrophic_trait
+    label: photolithotrophic
+    node_type: TRAIT
+    grounding: METPO:1000658
+    description: Trophic type using light energy and inorganic electron donors.
+  - node_id: light
+    label: light
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Energy source for photolithotrophic metabolism.
+  - node_id: inorganic_electron_donor
+    label: inorganic electron donor
+    node_type: CHEMICAL
+    description: Reduced inorganic substrate supplying electrons.
+  - node_id: hydrogen_sulfide
+    label: hydrogen sulfide
+    node_type: CHEMICAL
+    grounding: CHEBI:16136
+    description: Reduced sulfur electron donor for sulfur phototrophs.
+  - node_id: ferrous_iron
+    label: ferrous iron
+    node_type: CHEMICAL
+    description: Fe(II), an inorganic electron donor in photoferrotrophy.
+  - node_id: anoxygenic_photosynthesis
+    label: anoxygenic photosynthesis
+    node_type: PATHWAY
+    description: Photosynthetic electron transport that does not evolve oxygen.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source often fixed by photolithotrophs.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell material formed from fixed carbon.
+  edges:
+  - subject: photolithotrophic_trait
+    predicate: uses energy source
+    object: light
+    description: Photolithotrophic growth is powered by light.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.00323
+      snippet: light as an energy source
+      notes: Supports light as the energy source for photoferrotrophic photolithotrophy.
+  - subject: photolithotrophic_trait
+    predicate: uses electron donor
+    object: inorganic_electron_donor
+    description: Lithotrophic phototrophs use inorganic electron donors.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: oxidizes reduced sulfur compounds
+      notes: Supports inorganic reduced sulfur compounds as electron donors.
+  - subject: hydrogen_sulfide
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Hydrogen sulfide is a representative inorganic electron donor.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: hydrogen sulfide
+      notes: Supports H2S as a photolithotrophic sulfur-bacteria substrate.
+  - subject: ferrous_iron
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Fe(II) is a representative inorganic electron donor in photoferrotrophy.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.00323
+      snippet: reduced iron [Fe(II)] as an electron donor
+      notes: Supports Fe(II) as an inorganic electron donor for anoxygenic photosynthesis.
+  - subject: inorganic_electron_donor
+    predicate: feeds electrons into
+    object: anoxygenic_photosynthesis
+    description: Inorganic donors supply electrons to anoxygenic photosynthetic metabolism.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: electron donor
+      notes: Supports donor oxidation during anoxygenic photosynthesis.
+  - subject: light
+    predicate: powers
+    object: anoxygenic_photosynthesis
+    description: Light powers anoxygenic photosynthetic electron transport.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: deriving energy from photosynthesis
+      notes: Supports photosynthetic energy capture in photolithotrophic sulfur bacteria.
+  - subject: carbon_dioxide
+    predicate: fixed during
+    object: anoxygenic_photosynthesis
+    description: Many photolithotrophs reduce CO2 during photosynthetic growth.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: carbon dioxide
+      notes: Supports CO2 use with inorganic substrate conversion to organic matter.
+  - subject: anoxygenic_photosynthesis
+    predicate: produces
+    object: biomass
+    description: Fixed carbon supports biomass formation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.00323
+      snippet: inorganic carbon is fixed into organic matter
+      notes: Supports organic matter formation from inorganic carbon in photoferrotrophy.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881359+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for light-driven anoxygenic photosynthesis with sulfide and Fe(II) as inorganic electron donors.
+  llm_assisted: true

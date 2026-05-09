@@ -2,9 +2,10 @@ identifier: METPO:1000664
 label: organoheterotrophic
 definition: A trophic type characterized by the use of organic compounds as both electron
   donors and primary carbon sources for energy generation and biosynthesis.
+definition_source: DOI:10.1016/B978-012373944-5.00083-3
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -12,9 +13,115 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1016/B978-012373944-5.00083-3
+  snippet: organic compounds as the primary sources of carbon and energy
+  notes: Encyclopedia chapter supports organic compounds as carbon and energy sources in heterotrophy.
+- reference: DOI:10.1016/j.bbabio.2008.09.008
+  snippet: free energy of a redox reaction
+  notes: Review supports energy conservation from electron donor oxidation through respiratory chains.
+causal_graphs:
+- graph_id: organoheterotrophic_organic_donor_carbon
+  title: Organoheterotrophic organic donor and carbon use
+  description: DOI-backed graph linking organic compounds as electron donors and
+    carbon sources to central metabolism, respiratory energy conservation, ATP, and biomass.
+  nodes:
+  - node_id: organoheterotrophic_trait
+    label: organoheterotrophic
+    node_type: TRAIT
+    grounding: METPO:1000664
+    description: Trophic type using organic compounds for electrons and carbon.
+  - node_id: organic_compound
+    label: organic compound
+    node_type: CHEMICAL
+    description: Reduced organic molecule serving as electron donor and carbon source.
+  - node_id: central_carbon_metabolism
+    label: central carbon metabolism
+    node_type: PATHWAY
+    description: Core metabolic routes that oxidize and assimilate organic carbon.
+  - node_id: respiratory_chain
+    label: respiratory chain
+    node_type: PATHWAY
+    description: Electron-transfer system conserving redox energy.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Oxidized carbon product of organic substrate dissimilation.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier produced during metabolism.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell material built from organic carbon.
+  edges:
+  - subject: organoheterotrophic_trait
+    predicate: uses electron donor
+    object: organic_compound
+    description: Organoheterotrophy uses organic compounds as electron donors.
+    evidence:
+    - reference: DOI:10.1021/acsomega.3c02205
+      snippet: organic molecules ... electron source
+      notes: Supports organic molecules as electron sources in organoheterotrophic categories.
+  - subject: organoheterotrophic_trait
+    predicate: uses carbon source
+    object: organic_compound
+    description: Heterotrophy uses organic compounds as carbon sources.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: organic compounds as the primary sources of carbon
+      notes: Supports organic compounds as the carbon source for heterotrophic growth.
+  - subject: organic_compound
+    predicate: metabolized by
+    object: central_carbon_metabolism
+    description: Organic compounds enter central metabolism for catabolism and biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: catabolism
+      notes: Supports breakdown of nutrients to provide energy and biosynthetic precursors.
+  - subject: central_carbon_metabolism
+    predicate: feeds electrons into
+    object: respiratory_chain
+    description: Oxidation of organic substrates supplies reducing equivalents to respiratory chains.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: electron transfer process
+      notes: Supports respiratory energy conservation through electron transfer.
+  - subject: central_carbon_metabolism
+    predicate: oxidizes carbon to
+    object: carbon_dioxide
+    description: Organic substrate oxidation can release CO2.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: dissimilation
+      notes: Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.
+  - subject: respiratory_chain
+    predicate: produces
+    object: atp
+    description: Respiratory electron transfer conserves energy as ATP.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: drives ATP synthesis
+      notes: Supports ATP synthesis from respiratory energy conservation.
+  - subject: organic_compound
+    predicate: assimilated into
+    object: biomass
+    description: Organic carbon supplies building blocks for biomass.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: incorporation of a compound into biomass
+      notes: Supports assimilation of organic nutrients into new cell material.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883809+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for organic compounds as electron donors and carbon sources supporting respiration, ATP, and biomass.
+  llm_assisted: true
