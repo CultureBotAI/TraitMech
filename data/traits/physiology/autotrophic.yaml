@@ -3,9 +3,10 @@ label: autotrophic
 definition: A trophic type in which an organism produces organic compounds from inorganic
   carbon sources (primarily carbon dioxide or bicarbonate) using energy from light
   (photoautotrophy) or from the oxidation of inorganic compounds (chemoautotrophy).
+definition_source: DOI:10.1038/nrmicro.2016.130
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -19,9 +20,131 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1038/nrmicro.2016.130
+  snippet: require only CO2 as a carbon source
+  notes: Review defines autotrophic organisms by CO2 use as carbon source for growth.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: autotrophic CO2 fixation
+  notes: Minireview supports Calvin-Benson and other microbial CO2-fixation pathways.
+causal_graphs:
+- graph_id: autotrophic_inorganic_carbon_fixation
+  title: Autotrophic inorganic carbon fixation
+  description: DOI-backed graph linking inorganic carbon, energy and reductant supply,
+    CO2-fixation pathways, carboxylating enzymes, precursor metabolites, and biomass.
+  nodes:
+  - node_id: autotrophic_trait
+    label: autotrophic
+    node_type: TRAIT
+    grounding: METPO:1000632
+    description: Trophic type producing organic compounds from inorganic carbon.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source fixed by autotrophs.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    grounding: CHEBI:17544
+    description: Dissolved inorganic carbon species used by many microbes.
+  - node_id: energy_and_reductant
+    label: energy and reductant
+    node_type: CHEMICAL
+    description: ATP and reducing equivalents required for carbon fixation.
+  - node_id: co2_fixation_pathway
+    label: CO2-fixation pathway
+    node_type: PATHWAY
+    description: Autotrophic pathway converting inorganic carbon into cellular carbon.
+  - node_id: calvin_benson_cycle
+    label: Calvin-Benson cycle
+    node_type: PATHWAY
+    description: Common autotrophic CO2-fixation pathway using RuBisCO.
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Carboxylating enzyme of the Calvin-Benson cycle.
+  - node_id: precursor_metabolites
+    label: precursor metabolites
+    node_type: CHEMICAL
+    description: Fixed-carbon intermediates feeding biosynthesis.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular material produced from fixed inorganic carbon.
+  edges:
+  - subject: autotrophic_trait
+    predicate: uses carbon source
+    object: carbon_dioxide
+    description: Autotrophs use CO2 as an inorganic carbon source.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.130
+      snippet: require only CO2 as a carbon source
+      notes: Supports CO2 as the defining autotrophic carbon source.
+  - subject: bicarbonate
+    predicate: alternative inorganic carbon source for
+    object: autotrophic_trait
+    description: Bicarbonate is another inorganic carbon species available for autotrophic fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic carbon dioxide assimilation pathway
+      notes: Supports inorganic carbon assimilation by autotrophic pathways.
+  - subject: energy_and_reductant
+    predicate: drives
+    object: co2_fixation_pathway
+    description: Autotrophic carbon fixation requires energy and reducing power.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2365
+      snippet: energy demand of the autotrophic pathways
+      notes: Supports energy requirements of autotrophic carbon fixation pathways.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: co2_fixation_pathway
+    description: CO2 is converted into organic carbon by autotrophic fixation pathways.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic CO2 fixation
+      notes: Supports CO2 fixation as the core autotrophic biosynthetic process.
+  - subject: calvin_benson_cycle
+    predicate: example of
+    object: co2_fixation_pathway
+    description: The Calvin-Benson cycle is a major autotrophic CO2-fixation pathway.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: Calvin-Benson reductive pentose phosphate cycle
+      notes: Supports the Calvin-Benson cycle as a microbial autotrophic pathway.
+  - subject: rubisco
+    predicate: catalyzes
+    object: calvin_benson_cycle
+    description: RuBisCO is the key carboxylating enzyme of the Calvin-Benson cycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: ribulose-1,5-bisphosphate carboxylase
+      notes: Supports RuBisCO as the marker enzyme for Calvin-Benson autotrophy.
+  - subject: co2_fixation_pathway
+    predicate: produces
+    object: precursor_metabolites
+    description: Fixed carbon is converted into central biosynthetic precursors.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: converted to other central intermediates
+      notes: Supports conversion of fixed carbon into central metabolites.
+  - subject: precursor_metabolites
+    predicate: incorporated into
+    object: biomass
+    description: Fixed-carbon precursors are incorporated into cellular biomass.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.130
+      snippet: microbial autotrophic production
+      notes: Supports production of biomass and products from autotrophic CO2 fixation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.867544+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for inorganic carbon fixation, Calvin-Benson cycle, RuBisCO, precursor metabolites, and biomass formation.
+  llm_assisted: true
