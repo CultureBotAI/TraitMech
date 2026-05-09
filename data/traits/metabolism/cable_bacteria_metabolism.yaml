@@ -2,14 +2,149 @@ identifier: METPO:1002003
 label: Cable bacteria metabolism
 definition: A metabolism in which electrons are transferred over centimeter-scale
   distances through multicellular filaments.
+definition_source: DOI:10.1073/pnas.1800367115
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
+evidence:
+- reference: DOI:10.1073/pnas.1800367115
+  snippet: Long-distance electron transport in individual, living cable bacteria
+  notes: Study directly demonstrates long-distance electron transport in cable bacteria.
+- reference: DOI:10.3389/fmars.2017.00028
+  snippet: oxidize sulfide in deeper sediments
+  notes: Study supports electrogenic sulfur oxidation with sulfide oxidation and oxygen reduction zones.
+causal_graphs:
+- graph_id: cable_bacteria_long_distance_electron_transport
+  title: Cable bacteria long-distance electron transport
+  description: DOI-backed graph linking sulfide oxidation, conductive multicellular
+    filaments, centimeter-scale electron transport, and oxygen reduction.
+  nodes:
+  - node_id: cable_bacteria_trait
+    label: Cable bacteria metabolism
+    node_type: TRAIT
+    grounding: METPO:1002003
+    description: Multicellular filament metabolism involving long-distance electron transport.
+  - node_id: sulfidic_sediment_zone
+    label: sulfidic sediment zone
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Anoxic sediment layer containing sulfide.
+  - node_id: oxic_sediment_zone
+    label: oxic sediment zone
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Surface sediment layer containing oxygen.
+  - node_id: sulfide
+    label: sulfide
+    node_type: CHEMICAL
+    description: Electron donor oxidized by anodic cable bacteria cells.
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Electron acceptor reduced by cathodic cable bacteria cells.
+  - node_id: multicellular_filament
+    label: multicellular filament
+    node_type: CELLULAR_LOCALIZATION
+    description: Chain of cable bacteria cells spanning redox-separated zones.
+  - node_id: conductive_fiber_network
+    label: conductive fiber network
+    node_type: CELLULAR_LOCALIZATION
+    description: Conductive cell-envelope structure supporting long-distance electron transport.
+  - node_id: long_distance_electron_transport
+    label: long-distance electron transport
+    node_type: BIOLOGICAL_PROCESS
+    description: Electron transport across millimeter-to-centimeter distances.
+  - node_id: electrogenic_sulfur_oxidation
+    label: electrogenic sulfur oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatially separated sulfide oxidation and oxygen reduction connected by electrical current.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    grounding: CHEBI:16189
+    description: Oxidized sulfur product.
+  edges:
+  - subject: cable_bacteria_trait
+    predicate: occurs in
+    object: multicellular_filament
+    description: Cable bacteria metabolism is performed by long multicellular filaments.
+    evidence:
+    - reference: DOI:10.1073/pnas.1800367115
+      snippet: centimeter-long, multicellular filamentous bacteria
+      notes: Supports multicellular filament organization.
+  - subject: sulfidic_sediment_zone
+    predicate: provides electron donor
+    object: sulfide
+    description: Deeper sulfidic sediment provides sulfide for oxidation.
+    evidence:
+    - reference: DOI:10.3389/fmars.2017.00028
+      snippet: oxidize sulfide in deeper sediments
+      notes: Supports sulfide oxidation in deeper sediment.
+  - subject: oxic_sediment_zone
+    predicate: provides electron acceptor
+    object: oxygen
+    description: The oxic sediment zone provides oxygen for electron acceptance.
+    evidence:
+    - reference: DOI:10.3389/fmars.2017.00028
+      snippet: oxic zone
+      notes: Supports electron transfer from deeper sediments to oxic zones.
+  - subject: conductive_fiber_network
+    predicate: located in
+    object: multicellular_filament
+    description: Conductive fibers run along the cable bacteria filament.
+    evidence:
+    - reference: DOI:10.1073/pnas.1800367115
+      snippet: conductive fibers
+      notes: Supports conductive filament structures.
+  - subject: sulfide
+    predicate: oxidized during
+    object: electrogenic_sulfur_oxidation
+    description: Sulfide oxidation supplies electrons to the cable.
+    evidence:
+    - reference: DOI:10.3389/fmars.2017.00028
+      snippet: Electrogenic Sulfur Oxidation
+      notes: Supports sulfide oxidation as the anodic process.
+  - subject: electrogenic_sulfur_oxidation
+    predicate: produces
+    object: sulfate
+    description: Sulfide oxidation can yield sulfate.
+    evidence:
+    - reference: DOI:10.3389/fmars.2017.00028
+      snippet: sulfide
+      notes: Source supports electrogenic sulfide oxidation; sulfate is the oxidized sulfur end product in the modeled sulfur oxidation route.
+  - subject: conductive_fiber_network
+    predicate: mediates
+    object: long_distance_electron_transport
+    description: Conductive fibers mediate long-distance electron transport.
+    evidence:
+    - reference: DOI:10.1073/pnas.1800367115
+      snippet: long-distance electron transport
+      notes: Supports electron transport over millimeter-to-centimeter distances.
+  - subject: long_distance_electron_transport
+    predicate: transfers electrons to
+    object: oxygen
+    description: Long-distance electron transport connects sulfide oxidation to oxygen reduction.
+    evidence:
+    - reference: DOI:10.1073/pnas.1800367115
+      snippet: sulfide as an electron source at one end and oxygen as an electron acceptor at the other
+      notes: Supports redox-separated sulfide-to-oxygen electron flow.
+  - subject: oxygen
+    predicate: reduced during
+    object: electrogenic_sulfur_oxidation
+    description: Oxygen reduction is the cathodic half reaction in many cable bacteria systems.
+    evidence:
+    - reference: DOI:10.3389/fmars.2017.00028
+      snippet: reduction of oxygen
+      notes: Supports oxygen reduction coupled to sulfide oxidation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.935199+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for multicellular cable filaments, conductive fibers, redox-separated sulfide oxidation and oxygen reduction, and long-distance electron transport.
+  llm_assisted: true
