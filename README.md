@@ -93,6 +93,23 @@ TraitMech/
 5. **Validate**: `just validate-all` runs `linkml-validate` over
    every record.
 
+## Deep Research
+
+TraitMech mirrors DisMech's `deep-research-client` workflow for agentic
+curation support. Use Falcon/FutureHouse research reports as source-finding
+inputs, then manually curate only DOI-backed claims into TraitRecord YAML.
+
+```bash
+export EDISON_API_KEY=...        # or FUTUREHOUSE_API_KEY; the wrapper maps it
+just research-provider falcon
+just research-trait falcon physiology autotrophic
+just research-trait falcon physiology autotrophic --dry-run
+```
+
+Reports are written under `research/traits/<category>/` with separate citation
+files. The API key is read from the environment and is never written by the
+TraitMech tooling.
+
 ## Cross-repo integration
 
 - Records preserve their METPO CURIE in `identifier` so trait references

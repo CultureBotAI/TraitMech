@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+"""Run deep research for TraitMech records via deep-research-client."""
+from __future__ import annotations
+
+import argparse
+import os
+import shlex
+import subprocess
+import sys
+from pathlib import Path
+from typing import Any
+
+import yaml
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+TRAITS_DIR = REPO_ROOT / "data" / "traits"
+DEFAULT_TEMPLATE = REPO_ROOT / "templates" / "trait_causal_graph_research.md"
+DEFAULT_RESEARCH_DIR = REPO_ROOT / "research"
+
+
+def load_trait(path: Path) -> dict[str, Any]:
+    """Load a TraitRecord YAML file."""
+    if not path.exists():
+        raise FileNotFoundError(f"Trait file not found: {path}")
+    doc = yaml.safe_load(path.read_text())
+    if not isinstance(doc, dict):
+        raise ValueError(f"Trait file is not a YAML mapping: {path}")
+    return doc
+
+
+def resolve_trait_file(category: str, slug: str) -> Path:
+    """Resolve a category/slug pair to a TraitRecord YAML path."""
+    category_slug = category.lower()
+    candidate = TRAITS_DIR / category_slug / f"{slug}.yaml"
+    if candidate.exists():
+        return candidate
+    available = sorted((TRAITS_DIR / category_slug).glob("*.yaml"))
+    hint = ", ".join(path.stem for path in available[:20])
+    raise FileNotFoundError(
+        f"Trait file not found: {candidate}. "
+        f"Available {category_slug} traits include: {hint or 'none'}"
+    )
+
+
+def _join_values(values: Any) -> str:
+    if values is None:
+        return ""
+    if isinstance(values, list):
+        return ", ".join(str(value) for value in values)
+    return str(values)
+
+
+def summarize_synonyms(doc: dict[str, Any]) -> str:
+    synonyms = []
+    for synonym in doc.get("synonyms", []) or []:
+        if isinstance(synonym, dict) and synonym.get("synonym_text"):
+            synonyms.append(str(synonym["synonym_text"]))
+    return ", ".join(synonyms)
+
+
+def summarize_evidence(doc: dict[str, Any]) -> str:
+    rows = []
+    for evidence in doc.get("evidence", []) or []:
+        if not isinstance(evidence, dict):
+            continue
+        reference = evidence.get("reference", "")
+        snippet = evidence.get("snippet", "")
+        notes = evidence.get("notes", "")
+        rows.append(f"{reference}: {snippet} ({notes})".strip())
+    return " | ".join(rows)
+
+
+def summarize_causal_graphs(doc: dict[str, Any]) -> str:
+    summaries = []
+    for graph in doc.get("causal_graphs", []) or []:
+        if not isinstance(graph, dict):
+            continue
+        graph_id = graph.get("graph_id", "")
+        title = graph.get("title", "")
+        node_count = len(graph.get("nodes", []) or [])
+        edge_count = len(graph.get("edges", []) or [])
+        summaries.append(f"{graph_id or title}: {node_count} nodes, {edge_count} edges")
+    return " | ".join(summaries)
+
+
+def template_vars(doc: dict[str, Any], category_slug: str, trait_slug: str) -> dict[str, str]:
+    return {
+        "trait_label": str(doc.get("label", trait_slug)),
+        "trait_identifier": str(doc.get("identifier", "")),
+        "trait_category": str(doc.get("trait_category", category_slug.upper())),
+        "trait_category_slug": category_slug,
+        "trait_slug": trait_slug,
+        "term_kind": str(doc.get("term_kind", "")),
+        "mapping_status": str(doc.get("mapping_status", "")),
+        "definition": str(doc.get("definition", "")),
+        "parent_traits": _join_values(doc.get("parent_traits")),
+        "synonyms": summarize_synonyms(doc),
+        "evidence_summary": summarize_evidence(doc),
+        "causal_graph_summary": summarize_causal_graphs(doc),
+    }
+
+
+def provider_args(provider: str) -> list[str]:
+    """Mirror DisMech's cborg shortcut while allowing named providers such as falcon."""
+    if provider == "cborg":
+        return ["--use-cborg"]
+    return ["--provider", provider]
+
+
+def research_env(provider: str) -> dict[str, str]:
+    """Build subprocess environment, including a FutureHouse Falcon key alias."""
+    env = os.environ.copy()
+    if provider == "falcon" and not env.get("EDISON_API_KEY") and env.get("FUTUREHOUSE_API_KEY"):
+        env["EDISON_API_KEY"] = env["FUTUREHOUSE_API_KEY"]
+    return env
+
+
+def build_command(
+    *,
+    provider: str,
+    template: Path,
+    output_file: Path,
+    citations_file: Path,
+    variables: dict[str, str],
+    passthrough_args: list[str],
+    client_command: str = "deep-research-client",
+) -> list[str]:
+    command = [
+        client_command,
+        "research",
+        "--template",
+        str(template),
+    ]
+    for key, value in variables.items():
+        command.extend(["--var", f"{key}={value}"])
+    command.extend(provider_args(provider))
+    command.extend(
+        [
+            "--output",
+            str(output_file),
+            "--separate-citations",
+            str(citations_file),
+        ]
+    )
+    command.extend(passthrough_args)
+    return command
+
+
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--provider", required=True, help="deep-research-client provider, e.g. falcon")
+    parser.add_argument("--category", required=True, help="Trait category directory, e.g. physiology")
+    parser.add_argument("--slug", required=True, help="Trait YAML slug without .yaml")
+    parser.add_argument("--template", type=Path, default=DEFAULT_TEMPLATE)
+    parser.add_argument("--research-dir", type=Path, default=DEFAULT_RESEARCH_DIR)
+    parser.add_argument("--client-command", default="deep-research-client")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the deep-research-client command without running it.",
+    )
+    parser.add_argument("passthrough_args", nargs=argparse.REMAINDER)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv or sys.argv[1:])
+    category_slug = args.category.lower()
+    trait_file = resolve_trait_file(category_slug, args.slug)
+    doc = load_trait(trait_file)
+
+    output_dir = args.research_dir / "traits" / category_slug
+    output_file = output_dir / f"{args.slug}-deep-research-{args.provider}.md"
+    citations_file = output_file.with_suffix(output_file.suffix + ".citations.md")
+    variables = template_vars(doc, category_slug, args.slug)
+    command = build_command(
+        provider=args.provider,
+        template=args.template,
+        output_file=output_file,
+        citations_file=citations_file,
+        variables=variables,
+        passthrough_args=args.passthrough_args,
+        client_command=args.client_command,
+    )
+
+    print(f"Researching: {variables['trait_label']} ({args.provider}) -> {output_file}")
+    if args.dry_run:
+        print(shlex.join(command))
+        return 0
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    subprocess.run(command, check=True, env=research_env(args.provider))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -41,6 +41,7 @@ dev = [
     "pytest>=7.4",
     "pytest-cov>=4.1",
     "ruff>=0.4",
+    "deep-research-client[cyberian]>=0.2.4; python_version >= '3.12'",
 ]
 
 [build-system]
