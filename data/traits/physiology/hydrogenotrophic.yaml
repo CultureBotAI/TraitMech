@@ -2,15 +2,130 @@ identifier: METPO:1000646
 label: hydrogenotrophic
 definition: A trophic type in which an organism uses molecular hydrogen as an electron
   donor for energy generation and carbon dioxide as the primary carbon source.
+definition_source: DOI:10.21775/cimb.006.159
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.21775/cimb.006.159
+  snippet: reversible oxidation of hydrogen gas
+  notes: Review supports hydrogenase-catalyzed H2 oxidation and microbial energy metabolism.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: assimilation of CO2
+  notes: Review supports CO2 assimilation into cellular carbon in autotrophic metabolism.
+causal_graphs:
+- graph_id: hydrogenotrophic_hydrogen_oxidation_fixation
+  title: Hydrogenotrophic H2 oxidation and CO2 fixation
+  description: DOI-backed graph linking hydrogenase-catalyzed H2 oxidation, electron
+    transport energy conservation, and autotrophic CO2 fixation.
+  nodes:
+  - node_id: hydrogenotrophic_trait
+    label: hydrogenotrophic
+    node_type: TRAIT
+    grounding: METPO:1000646
+    description: Trophic type using H2 as electron donor and CO2 as carbon source.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Electron donor oxidized by hydrogenotrophs.
+  - node_id: hydrogenase
+    label: hydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Metalloenzyme catalyzing H2 oxidation or production.
+  - node_id: protons_electrons
+    label: protons and electrons
+    node_type: CHEMICAL
+    description: Products of hydrogen oxidation.
+  - node_id: electron_transport_system
+    label: electron transport system
+    node_type: PATHWAY
+    description: Membrane-linked electron-transfer route supporting energy conservation.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Ion gradient used for energy conservation.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source.
+  - node_id: autotrophic_co2_fixation
+    label: autotrophic CO2 fixation
+    node_type: PATHWAY
+    description: Carbon fixation pathway converting inorganic carbon into cell carbon.
+  - node_id: cellular_carbon
+    label: cellular carbon
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced cell material produced from CO2.
+  edges:
+  - subject: hydrogenotrophic_trait
+    predicate: uses electron donor
+    object: molecular_hydrogen
+    description: Hydrogenotrophy uses molecular hydrogen as an electron donor.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: oxidation of hydrogen gas
+      notes: Supports H2 oxidation as a microbial energy process.
+  - subject: hydrogenase
+    predicate: oxidizes
+    object: molecular_hydrogen
+    description: Hydrogenases catalyze H2 oxidation.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: reversible oxidation of hydrogen gas
+      notes: Supports hydrogenase-catalyzed H2 oxidation.
+  - subject: molecular_hydrogen
+    predicate: oxidized to
+    object: protons_electrons
+    description: H2 oxidation yields protons and electrons.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: H2 <--> 2 H+ + 2 e-
+      notes: Supports the H2 redox half reaction.
+  - subject: hydrogenase
+    predicate: interacts with
+    object: electron_transport_system
+    description: Hydrogenases can couple H2 metabolism to membrane electron transport systems.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: interact with membrane-bound electron transport systems
+      notes: Supports coupling to electron transport.
+  - subject: electron_transport_system
+    predicate: generates
+    object: proton_motive_force
+    description: Membrane-linked H2 metabolism can conserve energy as proton motive force.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: generation of a protonmotive force
+      notes: Supports membrane-linked energy conservation.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: autotrophic_co2_fixation
+    description: CO2 supplies carbon for autotrophic hydrogenotrophic growth.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: assimilation of CO2
+      notes: Supports CO2 assimilation into cellular carbon.
+  - subject: autotrophic_co2_fixation
+    predicate: produces
+    object: cellular_carbon
+    description: Carbon fixation converts CO2 into cell carbon.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: CO2 ... into cellular carbon
+      notes: Supports the carbon-assimilation output.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.874373+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for hydrogenase-mediated H2 oxidation, membrane-linked energy conservation, and CO2 fixation.
+  llm_assisted: true
