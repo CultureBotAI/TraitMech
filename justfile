@@ -1,5 +1,7 @@
 # TraitMech - microbial trait knowledge base seeded from METPO
 
+set dotenv-load := true
+
 default:
     @just --list --unsorted
 
