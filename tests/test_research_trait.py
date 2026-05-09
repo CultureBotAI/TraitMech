@@ -10,6 +10,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from research_trait import (  # noqa: E402
     build_command,
     load_trait,
+    parse_args,
     provider_args,
     research_env,
     resolve_trait_file,
@@ -62,3 +63,19 @@ def test_research_env_maps_futurehouse_key_to_edison(monkeypatch):
     monkeypatch.setenv("FUTUREHOUSE_API_KEY", "test-key")
     env = research_env("falcon")
     assert env["EDISON_API_KEY"] == "test-key"
+
+
+def test_parse_args_passes_provider_specific_options_through():
+    args = parse_args(
+        [
+            "--provider",
+            "falcon",
+            "--category",
+            "physiology",
+            "--slug",
+            "mixotrophic",
+            "--param",
+            "max_tokens=3500",
+        ]
+    )
+    assert args.passthrough_args == ["--param", "max_tokens=3500"]

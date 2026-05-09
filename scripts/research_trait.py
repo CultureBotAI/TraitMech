@@ -159,8 +159,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Print the deep-research-client command without running it.",
     )
-    parser.add_argument("passthrough_args", nargs=argparse.REMAINDER)
-    return parser.parse_args(argv)
+    args, passthrough_args = parser.parse_known_args(argv)
+    args.passthrough_args = passthrough_args
+    return args
 
 
 def main(argv: list[str] | None = None) -> int:
