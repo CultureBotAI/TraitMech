@@ -2,14 +2,121 @@ identifier: METPO:1000804
 label: Substrate-level phosphorylation
 definition: A metabolism in which ATP is formed directly by transfer of a phosphoryl
   group from a substrate to ADP.
+definition_source: DOI:10.1111/1751-7915.13746
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
+evidence:
+- reference: DOI:10.1111/1751-7915.13746
+  snippet: Substrate-level phosphorylation is one of the main sources
+  notes: Review supports SLP as microbial energy conservation in fermentative metabolism.
+- reference: DOI:10.1128/MMBR.69.1.12-50.2005
+  snippet: phosphotransacetylase [PTA], acetate kinase [ACK]
+  notes: Review supports acetate kinase and phosphotransacetylase as central acetate-switch enzymes.
+causal_graphs:
+- graph_id: substrate_level_phosphorylation_direct_atp
+  title: Substrate-level phosphorylation direct ATP formation
+  description: DOI-backed graph connecting high-energy phosphorylated intermediates,
+    kinase reactions, ADP phosphorylation, and ATP formation.
+  nodes:
+  - node_id: substrate_level_phosphorylation_trait
+    label: Substrate-level phosphorylation
+    node_type: TRAIT
+    grounding: METPO:1000804
+    description: ATP generation by direct phosphoryl transfer from a metabolic intermediate.
+  - node_id: fermentative_condition
+    label: fermentative condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Metabolic context where SLP is a major ATP source.
+  - node_id: high_energy_phosphorylated_intermediate
+    label: high-energy phosphorylated intermediate
+    node_type: CHEMICAL
+    description: Metabolite carrying a transferable phosphoryl group.
+  - node_id: adp
+    label: ADP
+    node_type: CHEMICAL
+    description: Phosphoryl acceptor converted to ATP.
+  - node_id: kinase_reaction
+    label: kinase reaction
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic phosphoryl transfer to ADP.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier produced by SLP.
+  - node_id: acetyl_phosphate
+    label: acetyl phosphate
+    node_type: CHEMICAL
+    description: High-energy intermediate in acetate dissimilation.
+  - node_id: acetate_kinase
+    label: acetate kinase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that converts acetyl phosphate and ADP to acetate and ATP.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    grounding: CHEBI:30089
+    description: Product of the acetate kinase SLP reaction.
+  edges:
+  - subject: substrate_level_phosphorylation_trait
+    predicate: occurs in
+    object: fermentative_condition
+    description: SLP is a major ATP source in fermentative energy metabolism.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: main sources of energy under fermentative conditions
+      notes: Supports fermentative context for SLP.
+  - subject: high_energy_phosphorylated_intermediate
+    predicate: donates phosphoryl group to
+    object: adp
+    description: SLP transfers phosphoryl groups from metabolic intermediates to ADP.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: transferring a phosphate group to ADP
+      notes: Supports direct phosphoryl transfer to ADP.
+  - subject: kinase_reaction
+    predicate: produces
+    object: atp
+    description: Kinase reactions convert phosphorylated intermediates and ADP to ATP.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: kinase-catalysed reactions can be applied for SLP
+      notes: Supports kinase-mediated ATP formation.
+  - subject: acetyl_phosphate
+    predicate: substrate for
+    object: acetate_kinase
+    description: Acetyl phosphate is converted by acetate kinase during acetate dissimilation.
+    evidence:
+    - reference: DOI:10.1128/MMBR.69.1.12-50.2005
+      snippet: Acetyl phosphate ... high-energy intermediate
+      notes: Supports acetyl phosphate as the high-energy acetate-switch intermediate.
+  - subject: acetate_kinase
+    predicate: produces
+    object: acetate
+    description: Acetate kinase forms acetate from acetyl phosphate.
+    evidence:
+    - reference: DOI:10.1128/MMBR.69.1.12-50.2005
+      snippet: phosphotransacetylase [PTA], acetate kinase [ACK]
+      notes: Supports acetate kinase as a central acetate-switch component.
+  - subject: acetate_kinase
+    predicate: produces
+    object: atp
+    description: Acetate kinase contributes ATP formation through substrate-level phosphorylation.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: acetyl-phosphate to acetate
+      notes: Review lists acetyl-phosphate to acetate among SLP energy-conserving reactions.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913184+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for direct phosphoryl transfer to ADP and acetate kinase-linked ATP formation.
+  llm_assisted: true

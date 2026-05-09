@@ -2,9 +2,10 @@ identifier: METPO:1000651
 label: methylotrophic
 definition: A trophic type in which an organism obtains energy and carbon from reduced
   one-carbon compounds.
+definition_source: DOI:10.3389/fbioe.2021.787791
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -17,9 +18,128 @@ synonyms:
 - synonym_text: methylotrophy
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.3389/fbioe.2021.787791
+  snippet: methanol utilization in methylotrophy
+  notes: Review supports methanol oxidation and formaldehyde assimilation as central methylotrophy mechanisms.
+causal_graphs:
+- graph_id: methylotrophic_methanol_assimilation
+  title: Methanol-based methylotrophy mechanism
+  description: DOI-backed graph for methanol oxidation to formaldehyde and assimilation
+    through native methylotrophy pathways.
+  nodes:
+  - node_id: methylotrophic_trait
+    label: methylotrophic
+    node_type: TRAIT
+    grounding: METPO:1000651
+    description: Trophic type using reduced one-carbon compounds for carbon and energy.
+  - node_id: methanol
+    label: methanol
+    node_type: CHEMICAL
+    grounding: CHEBI:17790
+    description: Reduced C1 substrate used by many methylotrophs.
+  - node_id: methanol_dehydrogenase
+    label: methanol dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Primary enzyme oxidizing methanol in methylotrophy.
+  - node_id: pqq_dependent_mdh
+    label: PQQ-dependent methanol dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic methanol dehydrogenase class in Gram-negative methylotrophs.
+  - node_id: periplasmic_space
+    label: periplasmic space
+    node_type: CELLULAR_LOCALIZATION
+    description: Cellular compartment where PQQ-dependent MDH oxidizes methanol in Gram-negative methylotrophs.
+  - node_id: formaldehyde
+    label: formaldehyde
+    node_type: CHEMICAL
+    grounding: CHEBI:16842
+    description: Central intermediate produced by methanol oxidation.
+  - node_id: rump_cycle
+    label: ribulose monophosphate cycle
+    node_type: PATHWAY
+    description: Prokaryotic formaldehyde assimilation pathway.
+  - node_id: serine_pathway
+    label: serine pathway
+    node_type: PATHWAY
+    description: Prokaryotic formaldehyde assimilation pathway.
+  - node_id: biomass_precursor
+    label: biomass precursor
+    node_type: BIOLOGICAL_PROCESS
+    description: Assimilated cellular carbon derived from formaldehyde.
+  edges:
+  - subject: methylotrophic_trait
+    predicate: uses substrate
+    object: methanol
+    description: Methanol is a representative reduced C1 substrate for methylotrophy.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: methanol utilization in methylotrophy
+      notes: Supports methanol as a methylotrophic substrate; other C1 substrates are not modeled here.
+  - subject: methanol_dehydrogenase
+    predicate: oxidizes
+    object: methanol
+    description: Methanol dehydrogenase catalyzes the first methanol oxidation step.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: Mdh is a primary enzyme
+      notes: Supports methanol dehydrogenase as the primary methanol-utilization enzyme.
+  - subject: methanol
+    predicate: oxidized to
+    object: formaldehyde
+    description: Methanol oxidation produces formaldehyde for assimilation or further oxidation.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: converts methanol to formaldehyde
+      notes: Supports methanol-to-formaldehyde conversion.
+  - subject: pqq_dependent_mdh
+    predicate: located in
+    object: periplasmic_space
+    description: PQQ-dependent MDH oxidizes methanol in the periplasm of Gram-negative methylotrophs.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: oxidation of methanol occurs in the periplasmic space
+      notes: Supports periplasmic localization of PQQ-dependent methanol oxidation.
+  - subject: pqq_dependent_mdh
+    predicate: produces
+    object: formaldehyde
+    description: PQQ-dependent methanol dehydrogenase produces formaldehyde from methanol.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: converts methanol to formaldehyde
+      notes: Source supports formaldehyde as the product of methanol oxidation by methanol dehydrogenases.
+  - subject: formaldehyde
+    predicate: assimilated by
+    object: rump_cycle
+    description: Formaldehyde can enter the RuMP cycle for growth on methanol.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: ribulose monophosphate (RuMP) cycle
+      notes: Supports RuMP as a native formaldehyde assimilation pathway.
+  - subject: formaldehyde
+    predicate: assimilated by
+    object: serine_pathway
+    description: Formaldehyde can enter the serine pathway for growth on methanol.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: serine pathway
+      notes: Supports the serine pathway as a native formaldehyde assimilation route.
+  - subject: rump_cycle
+    predicate: produces
+    object: biomass_precursor
+    description: RuMP assimilation incorporates C1 carbon into cellular material.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: growth support of microorganisms in methanol
+      notes: Supports assimilation pathways as growth-supporting routes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.877023+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for methanol oxidation and formaldehyde assimilation in methylotrophy.
+  llm_assisted: true
