@@ -2,7 +2,7 @@ identifier: METPO:2000031
 label: does not use as carbon source
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 parent_traits:
 - METPO:2000001
 synonyms:
@@ -15,3 +15,10 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated generic chemical-use relation carrier; later replacement should
+    use more specific trait records that combine the relation with the chemical,
+    metabolic role, growth condition, and positive or negative usage context.
+  llm_assisted: true
