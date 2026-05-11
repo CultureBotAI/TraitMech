@@ -2,7 +2,7 @@ identifier: METPO:1001007
 label: growth NaCl observation
 trait_category: OBSERVATION
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 parent_traits:
 - METPO:1001000
 curation_history:
@@ -11,3 +11,10 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated generic observation/value carrier; later replacement should
+    use more specific trait records that combine the observation relation with
+    growth context, measured quantity, chemical, value range, or other entity.
+  llm_assisted: true
