@@ -21,6 +21,69 @@ evidence:
 - reference: PMID:27203084
   snippet: M. tuberculosis is an obligate aerobe
   notes: 'Organism example: Mycobacterium tuberculosis is described as obligately aerobic.'
+causal_graphs:
+- graph_id: obligate_aerobe_oxygen_respiration
+  title: Obligate aerobe oxygen-dependent respiration mechanism
+  description: Evidence-backed causal sketch linking obligate aerobic growth to
+    oxygen-dependent terminal oxidase respiration.
+  nodes:
+  - node_id: obligate_aerobic_trait
+    label: obligately aerobic
+    node_type: TRAIT
+    grounding: METPO:1000606
+    description: Growth requires molecular oxygen.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen required for respiratory growth.
+  - node_id: electron_transport_chain
+    label: electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0022900
+    description: Respiratory chain that transfers electrons to terminal acceptors.
+  - node_id: terminal_oxidases
+    label: terminal respiratory oxidases
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-reducing terminal oxidase complexes.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical gradient powering ATP synthesis.
+  edges:
+  - subject: obligate_aerobic_trait
+    predicate: requires
+    object: molecular_oxygen
+    description: Obligate aerobic growth depends on oxygen availability.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: obligate aerobe ... exposed to hypoxia, stops growing
+      notes: Mycobacterium tuberculosis example supports oxygen requirement in an
+        obligately aerobic bacterium.
+  - subject: terminal_oxidases
+    predicate: reduces
+    object: molecular_oxygen
+    description: Terminal oxidases use oxygen as the respiratory electron acceptor.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: transfer electrons from the ETC to O2
+      notes: Supports oxygen reduction by terminal oxidases in an obligate aerobe.
+  - subject: electron_transport_chain
+    predicate: includes
+    object: terminal_oxidases
+    description: Oxygen-dependent respiratory chains terminate in oxygen reductases.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2011.06.016
+      snippet: respiratory quinol:O2 oxidoreductase
+      notes: Review supports terminal oxygen reductases as respiratory chain enzymes.
+  - subject: terminal_oxidases
+    predicate: contributes to
+    object: proton_motive_force
+    description: Oxygen reductases contribute to proton motive force generation.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2011.06.016
+      snippet: production of a proton motive force
+      notes: Supports bioenergetic coupling by cytochrome bd oxygen reductases.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851998+00:00'
   curator: seed_from_metpo
@@ -36,4 +99,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Mycobacterium tuberculosis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for obligate aerobic respiration and
+    oxygen-reducing terminal oxidases.
   llm_assisted: true

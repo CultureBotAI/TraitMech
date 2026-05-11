@@ -22,6 +22,73 @@ evidence:
 - reference: PMID:16142505
   snippet: A facultative aerobic, moderately thermophilic, spore forming bacterium
   notes: 'Organism example: Anoxybacillus kamchatkensis strain JW/VK-KG4 is described as facultatively aerobic.'
+causal_graphs:
+- graph_id: facultative_aerobe_oxygen_flexible_growth
+  title: Facultative aerobe oxygen-flexible growth mechanism
+  description: Evidence-backed causal sketch linking facultative aerobic growth
+    to oxygen-responsive respiratory switching.
+  nodes:
+  - node_id: facultative_aerobic_trait
+    label: facultatively aerobic
+    node_type: TRAIT
+    grounding: METPO:1000608
+    description: Growth can occur without oxygen but is capable of aerobic growth.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen used when aerobic growth is possible.
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009060
+    description: Oxygen-dependent respiratory energy metabolism.
+  - node_id: anaerobic_metabolism
+    label: anaerobic metabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth-supporting metabolism when oxygen is unavailable.
+  - node_id: fnr_type_regulation
+    label: FNR-type oxygen-responsive regulation
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-sensing regulatory systems that tune respiratory metabolism.
+  edges:
+  - subject: molecular_oxygen
+    predicate: enables
+    object: aerobic_respiration
+    description: Facultatively aerobic organisms can use oxygen-dependent respiration
+      when oxygen is available.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: terminal oxidases transfer electrons from the ETC to O2
+      notes: Supports aerobic respiration through oxygen-reducing terminal oxidases.
+  - subject: facultative_aerobic_trait
+    predicate: has alternative process
+    object: anaerobic_metabolism
+    description: Facultative aerobic growth retains a growth mode when oxygen is
+      absent.
+    evidence:
+    - reference: DOI:10.1089/ars.2011.4051
+      snippet: utilizing other substrates as final electron acceptors
+      notes: Review describes respiratory adaptation to oxygen shortage using
+        alternative electron acceptors.
+  - subject: molecular_oxygen
+    predicate: regulates
+    object: fnr_type_regulation
+    description: Oxygen-responsive regulators tune metabolism across oxic and
+      anoxic conditions.
+    evidence:
+    - reference: DOI:10.1089/ars.2011.4051
+      snippet: Fnr-type transcriptional regulators that directly sense O2
+      notes: Supports oxygen sensing by FNR-type regulators.
+  - subject: fnr_type_regulation
+    predicate: regulates switch between
+    object: aerobic_respiration
+    description: Oxygen-sensing regulation helps switch respiratory metabolism as
+      oxygen availability changes.
+    evidence:
+    - reference: DOI:10.1089/ars.2011.4051
+      snippet: adaptation of respiratory metabolism to changing environments
+      notes: Supports regulatory switching between oxygen regimes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853277+00:00'
   curator: seed_from_metpo
@@ -37,4 +104,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Anoxybacillus kamchatkensis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for facultative aerobic oxygen-responsive
+    growth.
   llm_assisted: true
