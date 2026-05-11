@@ -59,6 +59,10 @@ causal_graphs:
     - reference: PMID:21413255
       snippet: aerobes require molecular oxygen
       notes: Medical Microbiology chapter supports oxygen requirement for aerobes.
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: obligate aerobe ... exposed to hypoxia, stops growing
+      notes: Mycobacterium tuberculosis example supports oxygen dependence for
+        aerobic growth.
   - subject: aerobic_trait
     predicate: has mechanistic process
     object: aerobic_respiration
@@ -67,6 +71,10 @@ causal_graphs:
     - reference: GO:0009060
       snippet: requires oxygen as the terminal electron acceptor
       notes: Gene Ontology definition of aerobic respiration.
+    - reference: DOI:10.1016/j.bbabio.2011.06.016
+      snippet: respiratory quinol:O2 oxidoreductase
+      notes: Review supports oxygen-reducing terminal oxidases as core aerobic
+        respiratory enzymes.
   - subject: aerobic_respiration
     predicate: requires
     object: molecular_oxygen
@@ -75,6 +83,10 @@ causal_graphs:
     - reference: GO:0009060
       snippet: requires oxygen as the terminal electron acceptor
       notes: Gene Ontology definition of aerobic respiration.
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: transfer electrons from the ETC to O2
+      notes: Supports molecular oxygen as the terminal acceptor for bacterial
+        respiratory electron transport.
   - subject: molecular_oxygen
     predicate: acts as
     object: terminal_electron_acceptor
@@ -84,6 +96,9 @@ causal_graphs:
     - reference: PMID:21413255
       snippet: molecular oxygen as a terminal electron acceptor
       notes: Medical Microbiology chapter supports oxygen's role in aerobic metabolism.
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: terminal oxidases transfer electrons from the ETC to O2
+      notes: Supports oxygen's electron-acceptor role in terminal oxidase activity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849227+00:00'
   curator: seed_from_metpo
@@ -104,4 +119,9 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph for oxygen-dependent aerobic respiration.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Added DOI-backed edge evidence to the aerobic respiration causal graph.
   llm_assisted: true

@@ -2,18 +2,97 @@ identifier: METPO:1000612
 label: facultative oxygen preference
 definition: An oxygen preference that describes a microorganism that can grow with
   or without molecular oxygen.
+definition_source: DOI:10.1111/cmi.13338
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
 - synonym_text: Ox_facultative_aerobe_anaerobe
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1111/cmi.13338
+  snippet: cope with changing oxygen levels
+  notes: Supports facultative oxygen preference as growth across oxygen regimes.
+- reference: DOI:10.1089/ars.2011.4051
+  snippet: adaptation of respiratory metabolism to changing environments
+  notes: Supports oxygen-responsive metabolic switching.
+causal_graphs:
+- graph_id: facultative_oxygen_preference_switching
+  title: Facultative oxygen preference metabolic switching mechanism
+  description: Evidence-backed causal sketch linking facultative oxygen preference
+    to oxygen-responsive switching between aerobic and oxygen-independent growth.
+  nodes:
+  - node_id: facultative_oxygen_trait
+    label: facultative oxygen preference
+    node_type: TRAIT
+    grounding: METPO:1000612
+    description: Growth can occur with or without molecular oxygen.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Environmental oxygen availability.
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009060
+    description: Oxygen-dependent respiratory energy metabolism.
+  - node_id: anaerobic_respiration_or_fermentation
+    label: anaerobic respiration or fermentation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxygen-independent growth-supporting metabolism.
+  - node_id: oxygen_sensing_regulation
+    label: oxygen-sensing regulation
+    node_type: GENE_OR_PROTEIN
+    description: Regulatory systems such as FNR-type sensors that respond to oxygen.
+  edges:
+  - subject: facultative_oxygen_trait
+    predicate: responds to
+    object: molecular_oxygen
+    description: Facultative oxygen preference depends on coping with oxygen changes.
+    evidence:
+    - reference: DOI:10.1111/cmi.13338
+      snippet: cope with changing oxygen levels
+      notes: Supports oxygen flexibility as the trait-level mechanism.
+  - subject: molecular_oxygen
+    predicate: enables
+    object: aerobic_respiration
+    description: Oxygen availability permits aerobic respiratory growth.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.112444
+      snippet: transfer electrons from the ETC to O2
+      notes: Supports oxygen use by terminal oxidases during respiration.
+  - subject: facultative_oxygen_trait
+    predicate: has alternative process
+    object: anaerobic_respiration_or_fermentation
+    description: Growth without oxygen can use alternative electron acceptors or
+      fermentation.
+    evidence:
+    - reference: DOI:10.1089/ars.2011.4051
+      snippet: utilizing other substrates as final electron acceptors
+      notes: Supports oxygen-independent respiratory alternatives under oxygen
+        shortage.
+  - subject: oxygen_sensing_regulation
+    predicate: controls adaptation to
+    object: molecular_oxygen
+    description: Oxygen-sensing regulators mediate metabolic adaptation across
+      oxygen regimes.
+    evidence:
+    - reference: DOI:10.1089/ars.2011.4051
+      snippet: Fnr-type transcriptional regulators that directly sense O2
+      notes: Supports regulatory oxygen sensing as a causal graph entity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855860+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed facultative oxygen preference and added DOI-backed definition
+    source, evidence, and causal graph for oxygen-responsive metabolic switching.
+  llm_assisted: true

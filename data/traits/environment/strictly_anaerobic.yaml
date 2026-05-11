@@ -22,6 +22,69 @@ evidence:
 - reference: PMID:39189748
   snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
   notes: 'Organism example: Clostridioides difficile is described as strictly anaerobic.'
+causal_graphs:
+- graph_id: strict_anaerobe_oxygen_sensitivity
+  title: Strict anaerobe oxygen-sensitivity mechanism
+  description: Evidence-backed causal sketch linking strict anaerobic growth to
+    anoxic environments and oxygen-sensitive cellular chemistry.
+  nodes:
+  - node_id: strictly_anaerobic_trait
+    label: strictly anaerobic
+    node_type: TRAIT
+    grounding: METPO:1000611
+    description: Does not grow in the presence of oxygen gas.
+  - node_id: anoxic_condition
+    label: anoxic condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxygen-excluding environment required for strict anaerobic growth.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen exposure that prevents strict anaerobe growth.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    grounding: CHEBI:26523
+    description: Oxygen-derived oxidants.
+  - node_id: oxygen_sensitive_enzymes
+    label: oxygen-sensitive enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Anaerobic enzymes vulnerable to oxygen or ROS.
+  edges:
+  - subject: anoxic_condition
+    predicate: enables
+    object: strictly_anaerobic_trait
+    description: Strict anaerobes require oxygen-excluding conditions for growth.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: hypoxic or anoxic conditions
+      notes: Review supports anoxic environments as the ecological context for
+        anaerobe growth.
+  - subject: molecular_oxygen
+    predicate: inhibits
+    object: strictly_anaerobic_trait
+    description: Oxygen exposure blocks strict anaerobic growth.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: oxygen blocks their growth
+      notes: Supports oxygen as an inhibitory exposure for obligate anaerobes.
+  - subject: molecular_oxygen
+    predicate: causes formation of
+    object: reactive_oxygen_species
+    description: Oxygen exposure can generate reactive oxygen stress.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: molecular oxygen and ROS
+      notes: Review links oxygen exposure to ROS stress in anaerobes.
+  - subject: reactive_oxygen_species
+    predicate: damages
+    object: oxygen_sensitive_enzymes
+    description: ROS can impair oxygen-sensitive anaerobic enzyme systems.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: poisoning by molecular oxygen and ROS
+      notes: Supports enzyme vulnerability as a mechanism of oxygen toxicity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855051+00:00'
   curator: seed_from_metpo
@@ -37,4 +100,9 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Clostridioides difficile organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for strict anaerobe oxygen sensitivity.
   llm_assisted: true

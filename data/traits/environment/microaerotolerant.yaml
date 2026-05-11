@@ -19,6 +19,78 @@ evidence:
 - reference: PMID:30113300
   snippet: The novel strain stains Gram-negative and Congo-red-negative and is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
   notes: 'Organism example: Simulacricoccus ruber strain MCy10636 is described as microaerotolerant.'
+causal_graphs:
+- graph_id: microaerotolerant_low_oxygen_defense
+  title: Microaerotolerant low-oxygen survival mechanism
+  description: Evidence-backed causal sketch linking microaerotolerance to limited
+    oxygen exposure and oxidative stress defenses.
+  nodes:
+  - node_id: microaerotolerant_trait
+    label: microaerotolerant
+    node_type: TRAIT
+    grounding: METPO:1000610
+    description: Tolerates low oxygen without requiring it.
+  - node_id: limited_oxygen_exposure
+    label: limited oxygen exposure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-level oxygen exposure tolerated by microaerotolerant organisms.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    grounding: CHEBI:26523
+    description: Oxygen-derived oxidants.
+  - node_id: oxidative_stress_defense
+    label: oxidative stress defense enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes such as SOD, catalase, or peroxidase that mitigate ROS.
+  - node_id: anaerobic_growth
+    label: anaerobic growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth that does not require oxygen.
+  edges:
+  - subject: limited_oxygen_exposure
+    predicate: tolerated by
+    object: microaerotolerant_trait
+    description: Microaerotolerant organisms survive limited oxygen exposure.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2011.02.011
+      snippet: microaerotolerant or aerotolerant anaerobes can survive
+      notes: Supports low-oxygen survival as the defining trait context.
+  - subject: microaerotolerant_trait
+    predicate: does not require
+    object: limited_oxygen_exposure
+    description: Microaerotolerance differs from microaerophily because oxygen is
+      tolerated rather than required.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2970
+      snippet: Many obligate anaerobes tolerate transient or low levels of O2
+      notes: Supports low oxygen tolerance without implying oxygen requirement.
+  - subject: limited_oxygen_exposure
+    predicate: can generate
+    object: reactive_oxygen_species
+    description: Oxygen exposure can create ROS stress that tolerant organisms must
+      manage.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: molecular oxygen and ROS
+      notes: Review links oxygen exposure with ROS stress.
+  - subject: oxidative_stress_defense
+    predicate: mitigates
+    object: reactive_oxygen_species
+    description: ROS detoxification enzymes contribute to oxygen tolerance.
+    evidence:
+    - reference: DOI:10.1128/iai.16.1.20-25.1977
+      snippet: oxygen tolerance of anaerobes is usually related to their level of SOD
+      notes: Supports antioxidant defense as a mechanism for oxygen tolerance.
+  - subject: microaerotolerant_trait
+    predicate: compatible with
+    object: anaerobic_growth
+    description: Microaerotolerant organisms can remain anaerobic while surviving
+      limited oxygen exposure.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2011.02.011
+      snippet: microaerotolerant or aerotolerant anaerobes
+      notes: Supports microaerotolerance as an anaerobe oxygen-tolerance subtype.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.854338+00:00'
   curator: seed_from_metpo
@@ -34,4 +106,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Simulacricoccus ruber organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for low-oxygen survival and oxidative
+    stress defense in microaerotolerant organisms.
   llm_assisted: true
