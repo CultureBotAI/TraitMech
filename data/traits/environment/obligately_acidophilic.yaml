@@ -2,9 +2,10 @@ identifier: METPO:1003006
 label: obligately acidophilic
 definition: A pH growth preference characterized by the requirement for acidic environments
   (pH below 5.5) for growth, with inability to grow at neutral or alkaline pH values.
+definition_source: DOI:10.3389/fmicb.2021.822229
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -15,9 +16,113 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.3389/fmicb.2021.822229
+  snippet: acidic optimal growth pH
+  notes: Supports acidophilic growth as a phenotype defined by acidic optimal pH.
+causal_graphs:
+- graph_id: obligately_acidophilic_ph_homeostasis
+  title: Obligate acidophily pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking obligate acidophily to acidic
+    external pH, proton stress, and constitutive pH homeostasis mechanisms.
+  nodes:
+  - node_id: obligately_acidophilic_trait
+    label: obligately acidophilic
+    node_type: TRAIT
+    grounding: METPO:1003006
+    description: Growth requires acidic pH and does not extend to neutral or
+      alkaline pH values.
+  - node_id: acidic_external_ph
+    label: acidic external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH in the acidic range supporting acidophile growth.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion whose high external activity drives proton stress.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of near-neutral intracellular pH during acidic growth.
+  - node_id: low_proton_permeability_membrane
+    label: low proton permeability membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell envelope properties that reduce inward proton leak.
+  - node_id: reversed_membrane_potential
+    label: reversed membrane potential
+    node_type: BIOLOGICAL_PROCESS
+    description: Positive-inside membrane potential that suppresses proton influx.
+  - node_id: proton_export_pumps
+    label: proton export pumps and antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Transport systems proposed to remove protons or exchange ions
+      during acid stress.
+  edges:
+  - subject: acidic_external_ph
+    predicate: selects for
+    object: obligately_acidophilic_trait
+    description: Acidic environments select for organisms with acidic pH growth
+      optima.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: acidic optimal growth pH
+      notes: Review supports acidophile classification by acidic optimum pH; the
+        obligate neutral-pH exclusion remains from the METPO definition.
+  - subject: acidic_external_ph
+    predicate: increases gradient of
+    object: proton
+    description: Low external pH creates a steep proton gradient across the membrane.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: proton gradient across the cytoplasmic membrane
+      notes: Supports external-to-internal proton gradient under low-pH growth.
+  - subject: low_proton_permeability_membrane
+    predicate: limits influx of
+    object: proton
+    description: Reduced membrane permeability helps obligate acidophiles maintain
+      intracellular pH.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: highly impermeable cell membranes
+      notes: Supports proton exclusion by membrane properties in acidophiles.
+  - subject: reversed_membrane_potential
+    predicate: suppresses influx of
+    object: proton
+    description: Reversed membrane potential reduces passive proton entry.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: reversed membrane potential
+      notes: Supports reversed membrane potential as a shared acidophile feature.
+  - subject: proton_export_pumps
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Proton export and antiport systems contribute to intracellular pH
+      control during acid stress.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: proton export pumps and antiporters
+      notes: Supports transporter-mediated acid resistance mechanisms.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: obligately_acidophilic_trait
+    description: Obligate acidophilic growth requires maintaining cytoplasmic pH
+      despite acidic external pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: maintain a cytoplasmic pH of approximately 6.0
+      notes: Supports intracellular pH control during extreme acidophilic growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940216+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed obligately acidophilic trait and added DOI-backed evidence and
+    causal graph for acidic pH homeostasis. The graph does not assert a specific
+    molecular cause of the obligate neutral-pH growth exclusion because that varies
+    by lineage.
+  llm_assisted: true

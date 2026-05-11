@@ -2,9 +2,10 @@ identifier: METPO:1003007
 label: facultatively acidophilic
 definition: A pH growth preference characterized by optimal growth in acidic environments
   (pH below 5.5) with the capacity to also grow at near-neutral pH values.
+definition_source: DOI:10.1099/ijs.0.066175-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -15,9 +16,116 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1099/ijs.0.066175-0
+  snippet: capable of growth at pH 4.0-7.2
+  notes: Species-level example supports acidic-to-near-neutral growth capacity in
+    a mildly acidophilic bacterium.
+causal_graphs:
+- graph_id: facultatively_acidophilic_ph_homeostasis
+  title: Facultative acidophily pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking facultative acidophily to
+    acidic growth, near-neutral growth capacity, and inducible pH homeostasis.
+  nodes:
+  - node_id: facultatively_acidophilic_trait
+    label: facultatively acidophilic
+    node_type: TRAIT
+    grounding: METPO:1003007
+    description: Optimal growth occurs under acidic conditions while near-neutral
+      growth remains possible.
+  - node_id: acidic_external_ph
+    label: acidic external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH below neutral that supports acidophilic growth.
+  - node_id: near_neutral_external_ph
+    label: near-neutral external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH near neutrality that facultative acidophiles can
+      tolerate or grow in.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion contributing to low-pH stress.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH across acidic and near-neutral
+      environments.
+  - node_id: proton_export_pumps
+    label: proton export pumps and antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Transport systems proposed to remove protons or exchange ions
+      during acid stress.
+  - node_id: cytoplasmic_buffering
+    label: cytoplasmic buffering
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular buffering and proton-consuming reactions that mitigate
+      acidification.
+  edges:
+  - subject: acidic_external_ph
+    predicate: selects for
+    object: facultatively_acidophilic_trait
+    description: Acidic pH selects for acidophilic growth capacity.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: acidic optimal growth pH
+      notes: Supports acidophilic classification by acidic growth optimum.
+  - subject: near_neutral_external_ph
+    predicate: is compatible with
+    object: facultatively_acidophilic_trait
+    description: Facultatively acidophilic growth can extend into near-neutral pH.
+    evidence:
+    - reference: DOI:10.1099/ijs.0.066175-0
+      snippet: capable of growth at pH 4.0-7.2
+      notes: Species-level evidence supports acidic-to-near-neutral growth range;
+        this edge is qualified rather than generalized to all taxa.
+  - subject: acidic_external_ph
+    predicate: increases gradient of
+    object: proton
+    description: Acidic pH imposes an external-to-internal proton gradient.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: external to internal proton gradient
+      notes: Supports proton-gradient stress during low-pH growth.
+  - subject: proton_export_pumps
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Proton export and antiport systems contribute to acid-stress
+      homeostasis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: proton export pumps and antiporters
+      notes: Supports transporter-mediated pH homeostasis mechanisms.
+  - subject: cytoplasmic_buffering
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Buffering and proton-consuming reactions reduce cytoplasmic
+      acidification.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.822229
+      snippet: cytoplasmic buffering
+      notes: Supports buffering as a proposed acid resistance mechanism.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: facultatively_acidophilic_trait
+    description: Growth across acidic and near-neutral pH requires intracellular
+      pH control.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: robust mechanisms for cytoplasmic pH homeostasis
+      notes: Supports cytoplasmic pH homeostasis for growth outside the preferred
+        cytoplasmic pH range.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940835+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed facultatively acidophilic trait and added DOI-backed evidence
+    and causal graph for acidic and near-neutral pH growth capacity. Near-neutral
+    growth evidence is species-level and should be treated as qualified.
+  llm_assisted: true

@@ -2,9 +2,10 @@ identifier: METPO:1003004
 label: obligately alkaphilic
 definition: A pH growth preference in which an organism requires alkaline conditions
   (typically pH above 8.5) for growth and cannot grow at neutral or acidic pH.
+definition_source: DOI:10.3389/fbioe.2015.00075
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -18,9 +19,115 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.3389/fbioe.2015.00075
+  snippet: grow only at pH values of ~pH 9 and above
+  notes: Supports the obligate alkaliphile definition.
+causal_graphs:
+- graph_id: obligately_alkaphilic_sodium_cycle_homeostasis
+  title: Obligate alkaliphily sodium-cycle pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking obligate alkaliphily to high
+    external pH, Na+/H+ antiport, and cytoplasmic proton accumulation.
+  nodes:
+  - node_id: obligately_alkaphilic_trait
+    label: obligately alkaphilic
+    node_type: TRAIT
+    grounding: METPO:1003004
+    description: Growth requires alkaline pH and does not extend to neutral or
+      acidic pH.
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH near or above pH 9.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29101
+    description: Sodium ion participating in alkaliphile sodium cycles.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion imported or retained to acidify the cytoplasm.
+  - node_id: sodium_proton_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Antiporter exchanging sodium ions and protons during alkaline pH
+      homeostasis.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH below strongly alkaline external
+      pH.
+  - node_id: proton_coupled_atp_synthase
+    label: proton-coupled ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: ATP synthase that remains proton-coupled in respiratory
+      alkaliphiles.
+  edges:
+  - subject: alkaline_external_ph
+    predicate: is required for
+    object: obligately_alkaphilic_trait
+    description: Obligate alkaliphiles grow only under alkaline pH conditions.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2015.00075
+      snippet: grow only at pH values of ~pH 9 and above
+      notes: Review explicitly defines obligate alkaliphiles by alkaline pH
+        restriction.
+  - subject: alkaline_external_ph
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: High external pH requires cells to maintain cytoplasmic pH below
+      the medium.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: below an external pH range of 9.5-11.0
+      notes: Supports cytoplasmic pH control under extreme alkaline external pH.
+  - subject: sodium_proton_antiporter
+    predicate: exports
+    object: sodium_ion
+    description: Na+/H+ antiport couples sodium efflux to proton accumulation.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: Na+ efflux
+      notes: Supports sodium efflux as part of the alkaliphile Na+ cycle.
+  - subject: sodium_proton_antiporter
+    predicate: accumulates
+    object: proton
+    description: Na+/H+ antiport achieves net proton accumulation for alkaline pH
+      homeostasis.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: achieve net H+ accumulation
+      notes: Supports proton accumulation by antiporters in alkaliphiles.
+  - subject: proton_coupled_atp_synthase
+    predicate: constrains
+    object: obligately_alkaphilic_trait
+    description: Proton-coupled ATP synthesis at very high pH creates a
+      bioenergetic constraint requiring alkaliphile-specific adaptations.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2010.02.028
+      snippet: robust H+-coupled ATP synthesis at external pH values > 10
+      notes: Supports the proton-coupled ATP synthesis challenge in alkaliphiles.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: obligately_alkaphilic_trait
+    description: Growth at obligately alkaline pH depends on maintaining
+      intracellular pH compatible with cell function.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: pH homeostasis ... appears to set the upper pH limit for growth
+      notes: Supports pH homeostasis as growth-limiting for alkaliphilic Bacillus.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.938910+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed obligately alkaphilic trait and added DOI-backed evidence and
+    causal graph for sodium-cycle alkaline pH homeostasis and ATP synthase
+    bioenergetic constraints.
+  llm_assisted: true
