@@ -2,9 +2,10 @@ identifier: METPO:1000649
 label: lithotrophic
 definition: A trophic type in which an organism uses inorganic compounds as electron
   donors for energy generation.
+definition_source: DOI:10.1016/B978-0-12-378630-2.00219-X
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -15,9 +16,107 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+  snippet: oxidize inorganic atoms or molecules
+  notes: Encyclopedia review supports inorganic compounds as growth-supporting reductants and energy sources.
+- reference: DOI:10.1016/j.bbabio.2008.09.008
+  snippet: generation of an electrochemical ion gradient
+  notes: Review supports respiratory energy conservation through ion gradients and ATP synthesis.
+causal_graphs:
+- graph_id: lithotrophic_inorganic_donor_energy
+  title: Lithotrophic inorganic-donor energy mechanism
+  description: DOI-backed graph linking inorganic electron donors to respiratory
+    electron transport, proton motive force, and ATP synthesis.
+  nodes:
+  - node_id: lithotrophic_trait
+    label: lithotrophic
+    node_type: TRAIT
+    grounding: METPO:1000649
+    description: Trophic type using inorganic electron donors for energy generation.
+  - node_id: inorganic_electron_donor
+    label: inorganic electron donor
+    node_type: CHEMICAL
+    description: Reduced inorganic compound used as a source of electrons.
+  - node_id: hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Example inorganic electron donor.
+  - node_id: reduced_sulfur_compound
+    label: reduced sulfur compound
+    node_type: CHEMICAL
+    description: Example inorganic electron donor class.
+  - node_id: membrane_electron_transport_chain
+    label: membrane electron transport chain
+    node_type: PATHWAY
+    description: Redox chain coupling electron flow to ion translocation.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical ion gradient used for energy conservation.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier produced from respiratory energy conservation.
+  edges:
+  - subject: lithotrophic_trait
+    predicate: uses electron donor
+    object: inorganic_electron_donor
+    description: Lithotrophic organisms use inorganic compounds as electron donors.
+    evidence:
+    - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+      snippet: inorganic atoms or molecules as a growth-supporting reductant
+      notes: Supports inorganic electron donors as the defining lithotrophic substrate class.
+  - subject: hydrogen
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Molecular hydrogen is a representative inorganic electron donor.
+    evidence:
+    - reference: DOI:10.21775/cimb.006.159
+      snippet: oxidation of hydrogen gas
+      notes: Supports hydrogen gas as a microbial inorganic electron donor.
+  - subject: reduced_sulfur_compound
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Reduced sulfur compounds are representative lithotrophic electron donors.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+      snippet: lithotrophic sulfur oxidation
+      notes: Supports sulfur oxidation as a lithotrophic process.
+  - subject: inorganic_electron_donor
+    predicate: donates electrons to
+    object: membrane_electron_transport_chain
+    description: Electrons from inorganic donors enter respiratory electron transport.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: membrane-bound electron transport chain
+      notes: Supports membrane-bound redox chains as energy-conserving electron-transfer systems.
+  - subject: membrane_electron_transport_chain
+    predicate: generates
+    object: proton_motive_force
+    description: Respiratory redox reactions are conserved as an electrochemical ion gradient.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: generation of an electrochemical ion gradient
+      notes: Supports proton motive force generation by respiratory electron transport.
+  - subject: proton_motive_force
+    predicate: drives synthesis of
+    object: atp
+    description: Proton motive force drives ATP synthesis.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: gradient ... drives ATP synthesis
+      notes: Supports ATP production from the respiratory ion gradient.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.875909+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for inorganic electron donors, respiratory electron transport, proton motive force, and ATP synthesis.
+  llm_assisted: true

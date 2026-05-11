@@ -3,9 +3,10 @@ label: Acetogenesis
 definition: A metabolism that produces acetate as the primary end product through
   the reduction of carbon dioxide or other carbon compounds using the Wood-Ljungdahl
   pathway, typically performed by acetogenic bacteria under anaerobic conditions.
+definition_source: DOI:10.1016/j.bbapap.2008.08.012
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -16,9 +17,109 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1016/j.bbapap.2008.08.012
+  snippet: Acetogenesis and the Wood-Ljungdahl Pathway of CO2 Fixation
+  notes: Review supports acetogenesis via the Wood-Ljungdahl CO2-fixation pathway.
+- reference: DOI:10.1196/annals.1419.015
+  snippet: convert carbon dioxide and CO into acetyl-CoA
+  notes: Supports acetyl-CoA formation from CO2 and CO in acetogens.
+causal_graphs:
+- graph_id: acetogenesis_wood_ljungdahl
+  title: Acetogenesis Wood-Ljungdahl mechanism
+  description: Evidence-backed causal sketch linking anaerobic carbon fixation through
+    the Wood-Ljungdahl pathway to acetate production.
+  nodes:
+  - node_id: acetogenesis_trait
+    label: Acetogenesis
+    node_type: TRAIT
+    grounding: METPO:1000845
+    description: Acetate-producing anaerobic metabolism.
+  - node_id: anaerobic_condition
+    label: anaerobic condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxygen-free condition required for many acetogenic enzymes.
+  - node_id: wood_ljungdahl_pathway
+    label: Wood-Ljungdahl pathway
+    node_type: PATHWAY
+    description: Reductive acetyl-CoA pathway used by acetogens.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Carbon substrate fixed by the Wood-Ljungdahl pathway.
+  - node_id: carbon_monoxide
+    label: carbon monoxide
+    node_type: CHEMICAL
+    grounding: CHEBI:17245
+    description: Carbon substrate or intermediate in acetyl-CoA synthesis.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    grounding: CHEBI:15351
+    description: Central product of Wood-Ljungdahl carbon fixation.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    grounding: CHEBI:30089
+    description: Primary end product of acetogenesis.
+  edges:
+  - subject: acetogenesis_trait
+    predicate: occurs under
+    object: anaerobic_condition
+    description: Acetogenesis is typically an anaerobic metabolism.
+    evidence:
+    - reference: DOI:10.1016/j.bbapap.2008.08.012
+      snippet: grow organisms and work with enzymes under strictly oxygen-free conditions
+      notes: Review emphasizes oxygen-free handling for acetogenic enzymes and organisms.
+  - subject: acetogenesis_trait
+    predicate: has mechanistic pathway
+    object: wood_ljungdahl_pathway
+    description: The Wood-Ljungdahl pathway is the central acetogenic carbon-fixation route.
+    evidence:
+    - reference: DOI:10.1016/j.bbapap.2008.08.012
+      snippet: Wood-Ljungdahl Pathway of CO2 Fixation
+      notes: Review title and scope support pathway assignment.
+  - subject: carbon_dioxide
+    predicate: input to
+    object: wood_ljungdahl_pathway
+    description: Carbon dioxide is fixed through the Wood-Ljungdahl pathway.
+    evidence:
+    - reference: DOI:10.1016/j.bbapap.2008.08.012
+      snippet: CO2 Fixation
+      notes: Supports CO2 as a pathway substrate.
+  - subject: carbon_monoxide
+    predicate: input to
+    object: wood_ljungdahl_pathway
+    description: Carbon monoxide can be converted through the acetogenic pathway.
+    evidence:
+    - reference: DOI:10.1196/annals.1419.015
+      snippet: convert carbon dioxide and CO into acetyl-CoA
+      notes: Supports CO as a substrate for acetogenic acetyl-CoA synthesis.
+  - subject: wood_ljungdahl_pathway
+    predicate: produces
+    object: acetyl_coa
+    description: The Wood-Ljungdahl pathway synthesizes acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1196/annals.1419.015
+      snippet: convert carbon dioxide and CO into acetyl-CoA
+      notes: Supports acetyl-CoA as pathway product.
+  - subject: acetyl_coa
+    predicate: precursor of
+    object: acetate
+    description: Acetyl-CoA is converted onward to acetate in acetogenesis.
+    evidence:
+    - reference: DOI:10.1016/j.bbapap.2008.08.012
+      snippet: Energy metabolism associated with acetogenesis
+      notes: Review discusses acetogenic energy metabolism downstream of acetyl-CoA synthesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.915402+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-07T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for anaerobic Wood-Ljungdahl carbon fixation and acetate production.
+  llm_assisted: true

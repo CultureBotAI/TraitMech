@@ -3,9 +3,10 @@ label: Methanogenesis
 definition: A metabolism in which methane is produced as the primary end product through
   the reduction of carbon-containing compounds, formate, methanol, or acetate, exclusively
   performed by methanogenic archaea under strictly anaerobic conditions.
+definition_source: DOI:10.1146/annurev-micro-011720-122807
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -22,9 +23,100 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1146/annurev-micro-011720-122807
+  snippet: from CO2 and H2 to methane
+  notes: Supports hydrogenotrophic methanogenesis as a methane-producing archaeal pathway.
+- reference: DOI:10.1021/acs.biochem.9b00164
+  snippet: catalyzes the reversible reduction of methyl-coenzyme M
+  notes: Supports methyl-coenzyme M reductase as the terminal methane-forming enzyme.
+causal_graphs:
+- graph_id: methanogenesis_c1_reduction
+  title: Methanogenesis C1 reduction mechanism
+  description: Evidence-backed causal sketch linking anoxic C1 reduction, methyl-coenzyme
+    M reductase, and methane formation.
+  nodes:
+  - node_id: methanogenesis_trait
+    label: Methanogenesis
+    node_type: TRAIT
+    grounding: METPO:1000844
+    description: Methane-producing archaeal metabolism.
+  - node_id: anoxic_habitat
+    label: anoxic habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxygen-depleted condition where hydrogenotrophic methanogenesis occurs.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: C1 substrate reduced during hydrogenotrophic methanogenesis.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Electron donor for hydrogenotrophic methanogenesis.
+  - node_id: methyl_coenzyme_m_reductase
+    label: methyl-coenzyme M reductase
+    node_type: GENE_OR_PROTEIN
+    description: Nickel F430 enzyme catalyzing the terminal methane-forming step.
+  - node_id: coenzyme_f430
+    label: coenzyme F430
+    node_type: CHEMICAL
+    description: Nickel-containing prosthetic group of methyl-coenzyme M reductase.
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+    grounding: CHEBI:16183
+    description: Primary reduced carbon end product.
+  edges:
+  - subject: methanogenesis_trait
+    predicate: occurs under
+    object: anoxic_habitat
+    description: Hydrogenotrophic methanogenesis is associated with anoxic habitats.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-011720-122807
+      snippet: terminal step of microbial biomass degradation in anoxic habitats
+      notes: Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.
+  - subject: carbon_dioxide
+    predicate: reduced with electron donor
+    object: molecular_hydrogen
+    description: Carbon dioxide is reduced using electrons derived from hydrogen.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-011720-122807
+      snippet: from CO2 and H2 to methane
+      notes: Supports the CO2 plus H2 substrate relationship.
+  - subject: methyl_coenzyme_m_reductase
+    predicate: has prosthetic group
+    object: coenzyme_f430
+    description: Methyl-coenzyme M reductase contains nickel coenzyme F430.
+    evidence:
+    - reference: DOI:10.1021/acs.biochem.9b00164
+      snippet: harbors the nickel(I) hydrocorphin coenzyme F-430
+      notes: Supports F430 as the prosthetic group of the enzyme.
+  - subject: methyl_coenzyme_m_reductase
+    predicate: catalyzes formation of
+    object: methane
+    description: Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.
+    evidence:
+    - reference: DOI:10.1021/acs.biochem.9b00164
+      snippet: catalyzes the reversible reduction of methyl-coenzyme M
+      notes: Source describes methane formation by methyl-coenzyme M reductase.
+  - subject: methanogenesis_trait
+    predicate: produces
+    object: methane
+    description: The defining output of methanogenesis is methane.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-011720-122807
+      snippet: from CO2 and H2 to methane
+      notes: Supports methane as the reduced product of hydrogenotrophic methanogenesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.914643+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-07T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for anoxic C1 reduction to methane and the methyl-coenzyme M reductase terminal step.
+  llm_assisted: true

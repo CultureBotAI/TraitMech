@@ -401,7 +401,7 @@ def main() -> int:
 
     print(f"OWL parsed:                 {args.owl}")
     print(f"Total terms found:          {len(parsed)}")
-    print(f"Skipped (material entity / annotation property):")
+    print("Skipped (material entity / annotation property):")
     for k, v in skipped.most_common():
         print(f"  {k:<25} {v}")
     print()
@@ -416,7 +416,7 @@ def main() -> int:
         if skipped_existing:
             print(f"Skipped (exists, no --force): {skipped_existing}")
     else:
-        print(f"Mode:                       DRY-RUN (re-run with --apply to write)")
+        print("Mode:                       DRY-RUN (re-run with --apply to write)")
     return 0
 
 

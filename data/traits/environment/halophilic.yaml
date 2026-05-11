@@ -2,18 +2,28 @@ identifier: METPO:1000620
 label: halophilic
 definition: A halophily preference in which an organism requires high concentrations
   of salt for growth and survival.
+definition_source: PMID:19329623
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
 synonyms:
 - synonym_text: halophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:19329623
+  snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
+  notes: 'Organism example: Salinicoccus albus is described as halophilic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860938+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:15:44-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Salinicoccus albus organism example with PMID-backed evidence.
+  llm_assisted: true

@@ -2,15 +2,128 @@ identifier: METPO:1000805
 label: Electron transfer
 definition: A metabolism in which electrons are transferred from an electron donor
   to an electron acceptor.
+definition_source: DOI:10.1016/j.bbabio.2008.09.008
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1016/j.bbabio.2008.09.008
+  snippet: electron transfer process
+  notes: Review supports electron donor-to-acceptor flow in membrane respiratory chains.
+- reference: DOI:10.1038/nrmicro.2016.93
+  snippet: c-type cytochromes and microbial nanowires
+  notes: Review supports extracellular electron-transfer mechanisms.
+causal_graphs:
+- graph_id: electron_transfer_redox_carriers
+  title: Electron transfer redox carrier mechanism
+  description: DOI-backed graph for electron donor/acceptor chemistry, redox proteins,
+    membrane electron transport, and extracellular electron-transfer structures.
+  nodes:
+  - node_id: electron_transfer_trait
+    label: Electron transfer
+    node_type: TRAIT
+    grounding: METPO:1000805
+    description: Metabolic electron movement from donor to acceptor.
+  - node_id: electron_donor
+    label: electron donor
+    node_type: CHEMICAL
+    description: Reduced substrate or carrier supplying electrons.
+  - node_id: electron_acceptor
+    label: electron acceptor
+    node_type: CHEMICAL
+    description: Oxidized substrate or carrier receiving electrons.
+  - node_id: redox_protein
+    label: redox protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein carrier mediating electron transfer.
+  - node_id: cytochrome
+    label: c-type cytochrome
+    node_type: GENE_OR_PROTEIN
+    description: Heme-containing electron-transfer protein.
+  - node_id: membrane_electron_transport_chain
+    label: membrane electron transport chain
+    node_type: PATHWAY
+    description: Ordered redox chain in a biological membrane.
+  - node_id: extracellular_electron_transfer
+    label: extracellular electron transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Electron exchange between cells and extracellular minerals, electrodes, or cells.
+  - node_id: microbial_nanowire
+    label: microbial nanowire
+    node_type: CELLULAR_LOCALIZATION
+    description: Conductive extracellular structure implicated in long-range electron transfer.
+  - node_id: terminal_acceptor_reduction
+    label: terminal acceptor reduction
+    node_type: MOLECULAR_FUNCTION
+    description: Reduction of the final electron acceptor.
+  edges:
+  - subject: electron_transfer_trait
+    predicate: transfers electrons from
+    object: electron_donor
+    description: Electron transfer starts from an electron donor.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: free energy of a redox reaction
+      notes: Supports donor-side redox chemistry.
+  - subject: electron_donor
+    predicate: transfers electrons to
+    object: electron_acceptor
+    description: Electron transfer moves reducing equivalents from donor to acceptor.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: electron transfer process
+      notes: Supports donor-to-acceptor electron flow.
+  - subject: redox_protein
+    predicate: mediates transfer between
+    object: electron_donor
+    description: Redox proteins mediate biological electron-transfer steps.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.93
+      snippet: molecular mechanisms ... exchange electrons
+      notes: Supports protein-mediated microbial electron exchange.
+  - subject: cytochrome
+    predicate: example of
+    object: redox_protein
+    description: c-type cytochromes are electron-transfer proteins.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.93
+      snippet: c-type cytochromes
+      notes: Supports c-type cytochromes as electron-transfer components.
+  - subject: membrane_electron_transport_chain
+    predicate: performs
+    object: terminal_acceptor_reduction
+    description: Electron transport chains deliver electrons to terminal acceptors.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: membrane-bound electron transport chain
+      notes: Supports membrane redox chains as electron-transfer machinery.
+  - subject: extracellular_electron_transfer
+    predicate: uses structure
+    object: microbial_nanowire
+    description: Some microbes use conductive appendages or nanowires for extracellular electron transfer.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.93
+      snippet: microbial nanowires
+      notes: Supports nanowires as an extracellular electron-transfer mechanism.
+  - subject: extracellular_electron_transfer
+    predicate: uses protein
+    object: cytochrome
+    description: Extracellular electron transfer can use c-type cytochromes.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.93
+      snippet: c-Type cytochromes
+      notes: Supports c-type cytochromes in extracellular electron exchange.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913647+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for donor-to-acceptor electron transfer, redox proteins, cytochromes, membrane chains, and extracellular nanowire-associated transfer.
+  llm_assisted: true

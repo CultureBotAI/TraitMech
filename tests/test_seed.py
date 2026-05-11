@@ -16,6 +16,7 @@ from seed_from_metpo import (  # noqa: E402
     categorize,
     slugify,
 )
+from trait_causal_graph import causal_graphs_for_template  # noqa: E402
 
 
 def test_owl_parses_and_yields_terms():
@@ -27,8 +28,8 @@ def test_owl_parses_and_yields_terms():
     assert "METPO:1000060" in parsed   # metabolism
 
 
-def test_every_seeded_yaml_has_required_fields():
-    """Each TraitRecord YAML on disk must carry identifier, label, mapping_status."""
+def test_every_trait_yaml_has_required_fields():
+    """Each TraitRecord YAML on disk must carry core identifiers and lifecycle status."""
     yamls = sorted(TRAITS_DIR.rglob("*.yaml"))
     assert yamls, "no trait YAMLs found — run `just seed-apply`"
     for p in yamls:
@@ -37,7 +38,9 @@ def test_every_seeded_yaml_has_required_fields():
         for required in ("identifier", "label", "trait_category", "term_kind", "mapping_status"):
             assert required in doc, f"{p}: missing {required!r}"
         assert doc["identifier"].startswith("METPO:"), f"{p}: identifier not a METPO CURIE"
-        assert doc["mapping_status"] == "SEEDED", f"{p}: status={doc['mapping_status']!r}"
+        assert doc["mapping_status"] in {"SEEDED", "REVIEWED", "DEPRECATED"}, (
+            f"{p}: status={doc['mapping_status']!r}"
+        )
 
 
 def test_no_material_entity_subtree_seeded():
@@ -60,3 +63,14 @@ def test_slug_collision_uses_localid_suffix():
     assert slugify("", "fallback") == "fallback"
     # Special chars get folded to underscores.
     assert slugify("uses as carbon source!", "x") == "uses_as_carbon_source"
+
+
+def test_causal_graph_template_payload_preserves_edge_evidence():
+    doc = yaml.safe_load((TRAITS_DIR / "environment" / "aerobic.yaml").read_text())
+    graphs = causal_graphs_for_template(doc)
+    assert graphs, "aerobic trait should include a causal graph example"
+    graph = graphs[0]
+    assert graph["issues"] == []
+    assert len(graph["nodes"]) >= 4
+    assert len(graph["edges"]) >= 4
+    assert all(edge["evidence"] for edge in graph["edges"])

@@ -2,15 +2,112 @@ identifier: METPO:1002006
 label: Syntrophy
 definition: A metabolism in which the metabolism of one species is thermodynamically
   dependent on the removal of its products by another species.
+definition_source: DOI:10.1038/nrmicro2166
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1038/nrmicro2166
+  snippet: Interspecies electron transfer is a key process
+  notes: Review supports hydrogen/formate-mediated electron transfer in syntrophic communities.
+causal_graphs:
+- graph_id: syntrophy_interspecies_electron_transfer
+  title: Syntrophy interspecies electron transfer mechanism
+  description: DOI-backed graph for product removal and electron transfer between
+    fermenting syntrophs and methanogenic partners.
+  nodes:
+  - node_id: syntrophy_trait
+    label: Syntrophy
+    node_type: TRAIT
+    grounding: METPO:1002006
+    description: Thermodynamically coupled metabolism between partner organisms.
+  - node_id: syntrophic_product_formation
+    label: syntrophic product formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Product-forming metabolism that depends on product removal by a partner.
+  - node_id: methanogenic_product_consumption
+    label: methanogenic product consumption
+    node_type: BIOLOGICAL_PROCESS
+    description: Hydrogen- or formate-consuming methanogenic partner metabolism.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Diffusible interspecies electron carrier.
+  - node_id: formate
+    label: formate
+    node_type: CHEMICAL
+    grounding: CHEBI:15740
+    description: Diffusible interspecies electron carrier.
+  - node_id: low_hydrogen_condition
+    label: low hydrogen condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Product concentration state that permits otherwise unfavorable syntrophic metabolism.
+  - node_id: methanogenesis
+    label: methanogenesis
+    node_type: PATHWAY
+    grounding: METPO:1000844
+    description: Hydrogen- or formate-consuming methane-producing pathway.
+  edges:
+  - subject: syntrophy_trait
+    predicate: requires partner interaction
+    object: methanogenic_product_consumption
+    description: Syntrophic metabolism depends on a partner that consumes products.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: metabolic abilities of their syntrophic partner
+      notes: Supports partner dependence in syntrophic communities.
+  - subject: syntrophic_product_formation
+    predicate: transfers electrons via
+    object: molecular_hydrogen
+    description: Hydrogen can carry reducing equivalents between syntrophic partners.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: Hydrogen and formate are key components
+      notes: Supports hydrogen as a key interspecies electron-transfer carrier.
+  - subject: syntrophic_product_formation
+    predicate: transfers electrons via
+    object: formate
+    description: Formate can carry reducing equivalents between syntrophic partners.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: transfer of hydrogen and formate
+      notes: Supports formate-mediated interspecies electron transfer.
+  - subject: methanogenic_product_consumption
+    predicate: consumes
+    object: molecular_hydrogen
+    description: Methanogens keep hydrogen concentrations low enough for syntrophic metabolism.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: low hydrogen concentrations, which are created by the methanogen
+      notes: Supports product removal by methanogens as a thermodynamic driver.
+  - subject: methanogenic_product_consumption
+    predicate: creates
+    object: low_hydrogen_condition
+    description: Hydrogen consumption creates the product-removal condition needed by the syntroph.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: live at the limits of what is thermodynamically possible
+      notes: Supports the thermodynamic constraint that product removal relieves.
+  - subject: molecular_hydrogen
+    predicate: input to
+    object: methanogenesis
+    description: Hydrogen can feed methanogenesis in syntrophic communities.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2166
+      snippet: syntrophic methanogenic communities
+      notes: Supports hydrogen-linked electron flow into methanogenic partners.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936190+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for hydrogen/formate interspecies electron transfer and methanogenic product removal in syntrophy.
+  llm_assisted: true

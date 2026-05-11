@@ -2,9 +2,10 @@ identifier: METPO:1000644
 label: heterotrophic
 definition: A trophic type in which an organism obtains carbon from organic compounds
   rather than from carbon dioxide.
+definition_source: DOI:10.1016/B978-012373944-5.00083-3
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -20,9 +21,105 @@ synonyms:
 - synonym_text: heterotrophic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/B978-012373944-5.00083-3
+  snippet: organic compounds as the primary sources of carbon
+  notes: Encyclopedia chapter supports organic compounds as heterotrophic carbon sources.
+- reference: DOI:10.1021/acsomega.3c02205
+  snippet: organic molecules ... carbon source
+  notes: Review table supports organic molecules as carbon sources in heterotrophic growth modes.
+causal_graphs:
+- graph_id: heterotrophic_organic_carbon_assimilation
+  title: Heterotrophic organic carbon assimilation
+  description: DOI-backed graph linking external organic molecules, nutrient uptake,
+    catabolism, precursor metabolites, and biomass formation.
+  nodes:
+  - node_id: heterotrophic_trait
+    label: heterotrophic
+    node_type: TRAIT
+    grounding: METPO:1000644
+    description: Trophic type using organic compounds as carbon sources.
+  - node_id: organic_molecule
+    label: organic molecule
+    node_type: CHEMICAL
+    description: Organic carbon source such as sugars, organic acids, lipids, or amino acids.
+  - node_id: nutrient_uptake
+    label: nutrient uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular import of external organic substrates.
+  - node_id: catabolism
+    label: catabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Breakdown of nutrients to supply energy and biosynthetic precursors.
+  - node_id: precursor_metabolites
+    label: precursor metabolites
+    node_type: CHEMICAL
+    description: Central metabolic intermediates used in biosynthesis.
+  - node_id: anabolism
+    label: anabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthetic conversion of precursors into cellular material.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell material formed from assimilated organic carbon.
+  edges:
+  - subject: heterotrophic_trait
+    predicate: uses carbon source
+    object: organic_molecule
+    description: Heterotrophy uses organic compounds as carbon sources instead of CO2.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: organic compounds as the primary sources of carbon
+      notes: Supports organic compounds as heterotrophic carbon sources.
+  - subject: organic_molecule
+    predicate: imported by
+    object: nutrient_uptake
+    description: Organic nutrients must be taken up before intracellular metabolism.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: nutrient uptake
+      notes: Supports uptake as part of microbial nutrition.
+  - subject: nutrient_uptake
+    predicate: supplies
+    object: catabolism
+    description: Imported organic substrates feed catabolic metabolism.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: breakdown of nutrients
+      notes: Supports catabolic processing of organic nutrients.
+  - subject: catabolism
+    predicate: produces
+    object: precursor_metabolites
+    description: Catabolism generates central intermediates for biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: precursor compounds for anabolism
+      notes: Supports nutrient breakdown to biosynthetic precursors.
+  - subject: precursor_metabolites
+    predicate: used by
+    object: anabolism
+    description: Precursor metabolites are substrates for biosynthetic pathways.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: anabolism
+      notes: Supports biosynthetic use of catabolic precursors.
+  - subject: anabolism
+    predicate: produces
+    object: biomass
+    description: Anabolism incorporates organic carbon into biomass.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: incorporation of a compound into biomass
+      notes: Supports assimilation of compounds into cell material.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.873704+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for organic carbon uptake, catabolism, precursor metabolites, anabolism, and biomass formation.
+  llm_assisted: true

@@ -2,18 +2,39 @@ identifier: METPO:1000609
 label: aerotolerant
 definition: An oxygen preference that does not use O₂ for growth but tolerates its
   presence.
+definition_source: https://bio.libretexts.org/Courses/Ohio_State_University/Microbiology_Lab_SP25/05%3A_Lab_5/5.05%3A_Bacterial_Oxygen_Requirements
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000601
 synonyms:
 - synonym_text: aerotolerant
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: aerotolerant anaerobe
+  synonym_type: RELATED_SYNONYM
+  source: https://bio.libretexts.org/Courses/Ohio_State_University/Microbiology_Lab_SP25/05%3A_Lab_5/5.05%3A_Bacterial_Oxygen_Requirements
+evidence:
+- reference: https://bio.libretexts.org/Courses/Ohio_State_University/Microbiology_Lab_SP25/05%3A_Lab_5/5.05%3A_Bacterial_Oxygen_Requirements
+  snippet: they do not utilize it for ATP production
+  notes: Supports aerotolerance as oxygen tolerance without oxygen use.
+- reference: PMID:38864615
+  snippet: this bacterium is relatively aerotolerant and survives limited oxygen exposure
+  notes: 'Organism example: Clostridium perfringens is described as aerotolerant.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853836+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added definition source, supported synonym, and evidence for aerotolerance.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Clostridium perfringens organism example with PMID-backed evidence.
+  llm_assisted: true

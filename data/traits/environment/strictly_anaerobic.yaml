@@ -1,19 +1,40 @@
 identifier: METPO:1000611
 label: strictly anaerobic
-definition: An obligately anaerobic where a microorganism does not grow in the presence
-  of oxygen gas (O2).
+definition: An obligately anaerobic oxygen preference in which a microorganism does
+  not grow in the presence of oxygen gas (O₂).
+definition_source: https://www.ncbi.nlm.nih.gov/books/NBK482349/
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000607
 synonyms:
 - synonym_text: strictly anaerobic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: strict obligate anaerobe
+  synonym_type: RELATED_SYNONYM
+  source: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+evidence:
+- reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+  snippet: will not survive if there is more than half a percent oxygen
+  notes: Supports strict anaerobiosis as a highly oxygen-sensitive subtype.
+- reference: PMID:39189748
+  snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
+  notes: 'Organism example: Clostridioides difficile is described as strictly anaerobic.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855051+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-05T01:09:05-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Clarified wording, added definition source, synonym, and evidence.
+  llm_assisted: true
+- timestamp: '2026-05-05T18:39:46-07:00'
+  curator: codex
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Clostridioides difficile organism example with PMID-backed evidence.
+  llm_assisted: true

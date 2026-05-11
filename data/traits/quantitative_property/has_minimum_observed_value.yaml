@@ -3,7 +3,7 @@ label: has minimum observed value
 definition: The minimum temperature (°C) associated with this observation.
 trait_category: QUANTITATIVE_PROPERTY
 term_kind: DATATYPE_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 parent_traits:
 - METPO:2000063
 domain: https://w3id.org/metpo/1001000
@@ -14,3 +14,10 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (DATATYPE_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated datatype-property value carrier; later replacement should use
+    more specific trait records that combine the minimum-value relation with the
+    measured quantity, chemical, observation, or other entity.
+  llm_assisted: true

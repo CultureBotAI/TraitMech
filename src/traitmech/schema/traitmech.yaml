@@ -27,6 +27,11 @@ prefixes:
   UO: http://purl.obolibrary.org/obo/UO_
   OBI: http://purl.obolibrary.org/obo/OBI_
   IAO: http://purl.obolibrary.org/obo/IAO_
+  RO: http://purl.obolibrary.org/obo/RO_
+  KEGG: https://www.kegg.jp/entry/
+  MetaCyc: https://biocyc.org/META/NEW-IMAGE?object=
+  UniProtKB: https://www.uniprot.org/uniprotkb/
+  NCBIGene: https://www.ncbi.nlm.nih.gov/gene/
   # Taxonomy
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   # Provenance
@@ -178,6 +183,16 @@ classes:
         inlined_as_list: true
         range: CurationEvent
 
+      causal_graphs:
+        description: >-
+          Optional causal mechanism graphs for this trait. Nodes represent
+          traits, pathways, environmental or experimental factors,
+          genes/proteins, chemicals, cellular locations, molecular functions,
+          and biological processes. Edges must carry evidence.
+        multivalued: true
+        inlined_as_list: true
+        range: CausalGraph
+
   TraitSynonym:
     description: A synonym entry with its scope.
     attributes:
@@ -202,6 +217,93 @@ classes:
         range: string
       notes:
         range: string
+
+  CausalGraph:
+    description: A directed causal mechanism graph associated with a trait.
+    attributes:
+      graph_id:
+        description: Stable local graph identifier within the TraitRecord.
+        identifier: true
+        required: true
+        range: string
+      title:
+        description: Human-readable graph title.
+        range: string
+      description:
+        description: Short scope note for the graph.
+        range: string
+      nodes:
+        description: Nodes participating in the causal graph.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalNode
+      edges:
+        description: Evidence-backed directed causal or mechanistic edges.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalEdge
+
+  CausalNode:
+    description: A node in a trait causal graph.
+    attributes:
+      node_id:
+        description: Stable local node identifier used by graph edges.
+        identifier: true
+        required: true
+        range: string
+      label:
+        description: Human-readable node label.
+        required: true
+        range: string
+      node_type:
+        description: Broad semantic category used for rendering and curation.
+        required: true
+        range: CausalNodeTypeEnum
+      grounding:
+        description: >-
+          Preferred ontology or database CURIE for the node when available.
+          Label-only draft nodes are permitted in v1.
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      xrefs:
+        description: Additional ontology/database CURIEs for this node.
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      description:
+        description: Optional node-specific scope note.
+        range: string
+
+  CausalEdge:
+    description: An evidence-backed directed relationship in a trait causal graph.
+    attributes:
+      subject:
+        description: Local node_id of the upstream/source node.
+        required: true
+        range: string
+      predicate:
+        description: Human-readable predicate label or relation CURIE.
+        required: true
+        range: string
+      predicate_id:
+        description: Optional ontology CURIE grounding the predicate.
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      object:
+        description: Local node_id of the downstream/target node.
+        required: true
+        range: string
+      description:
+        description: Short explanation of the causal claim.
+        range: string
+      evidence:
+        description: Edge-level literature, database, or curated source support.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
 
   CurationEvent:
     description: A timestamped curator action on a TraitRecord.
@@ -281,3 +383,27 @@ enums:
         description: Curator has signed off on label / definition / parents.
       DEPRECATED:
         description: Superseded by another TraitRecord.
+
+  CausalNodeTypeEnum:
+    description: Broad categories for nodes in trait causal graphs.
+    permissible_values:
+      TRAIT:
+        description: A TraitMech or METPO trait.
+      PATHWAY:
+        description: A pathway or pathway-like mechanism.
+      ENVIRONMENTAL_FACTOR:
+        description: An environmental exposure or condition.
+      EXPERIMENTAL_FACTOR:
+        description: An assay, perturbation, or experimental condition.
+      GENE_OR_PROTEIN:
+        description: A gene, protein, gene product, or protein complex.
+      CHEMICAL:
+        description: A chemical entity.
+      ORGANELLE:
+        description: A cellular organelle or microbial subcellular structure.
+      CELLULAR_LOCALIZATION:
+        description: A cellular component or localization.
+      MOLECULAR_FUNCTION:
+        description: A molecular activity or function.
+      BIOLOGICAL_PROCESS:
+        description: A biological process.

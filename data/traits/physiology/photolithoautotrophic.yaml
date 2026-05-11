@@ -2,18 +2,147 @@ identifier: METPO:1000665
 label: photolithoautotrophic
 definition: A trophic type in which an organism obtains energy from light and carbon
   from carbon dioxide using inorganic electron donors.
+definition_source: DOI:10.3389/fmicb.2011.00165
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
 - synonym_text: photolithoautotroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.3389/fmicb.2011.00165
+  snippet: oxidize sulfide
+  notes: Review supports sulfide oxidation coupled to phototrophic central carbon and energy metabolism.
+- reference: DOI:10.3390/antiox10060829
+  snippet: reduced sulfur compounds as an electron donor
+  notes: Review supports reduced sulfur electron donors in photolithotrophic sulfur bacteria.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: autotrophic CO2 fixation
+  notes: Review supports CO2 fixation as the autotrophic carbon-assimilation process.
+causal_graphs:
+- graph_id: photolithoautotrophic_light_inorganic_donor_fixation
+  title: Photolithoautotrophic light and inorganic-donor mechanism
+  description: DOI-backed graph linking light, inorganic electron donors, photosynthetic
+    electron transport, and autotrophic CO2 fixation.
+  nodes:
+  - node_id: photolithoautotrophic_trait
+    label: photolithoautotrophic
+    node_type: TRAIT
+    grounding: METPO:1000665
+    description: Trophic type using light, inorganic electron donors, and carbon dioxide.
+  - node_id: light
+    label: light
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Energy source for photolithoautotrophic metabolism.
+  - node_id: photosynthetic_electron_transport
+    label: photosynthetic electron transport
+    node_type: PATHWAY
+    description: Light-driven electron transport pathway.
+  - node_id: inorganic_electron_donor
+    label: inorganic electron donor
+    node_type: CHEMICAL
+    description: Reduced inorganic substrate supplying electrons.
+  - node_id: sulfide
+    label: sulfide
+    node_type: CHEMICAL
+    description: Example inorganic electron donor for anoxygenic phototrophs.
+  - node_id: sulfur_oxidation
+    label: sulfur oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of reduced sulfur compounds during phototrophic metabolism.
+  - node_id: reducing_power
+    label: reducing power
+    node_type: CHEMICAL
+    description: Reduced electron carriers used for biosynthesis.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source.
+  - node_id: autotrophic_co2_fixation
+    label: autotrophic CO2 fixation
+    node_type: PATHWAY
+    description: Carbon-assimilation pathway converting CO2 to cellular carbon.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular material formed from fixed carbon.
+  edges:
+  - subject: photolithoautotrophic_trait
+    predicate: uses energy source
+    object: light
+    description: Photolithoautotrophy depends on light as the energy source.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2011.00165
+      snippet: use light as the energy source
+      notes: Supports light-powered metabolism in phototrophic bacteria.
+  - subject: light
+    predicate: drives
+    object: photosynthetic_electron_transport
+    description: Light drives photosynthetic electron transport.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2011.00165
+      snippet: light-induced electron transport
+      notes: Supports light-driven electron transport.
+  - subject: inorganic_electron_donor
+    predicate: provides electrons to
+    object: photosynthetic_electron_transport
+    description: Inorganic electron donors supply electrons for photolithotrophic metabolism.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: reduced sulfur compounds as an electron donor
+      notes: Supports reduced inorganic sulfur compounds as electron donors for anoxygenic photolithotrophy.
+  - subject: sulfide
+    predicate: participates in
+    object: sulfur_oxidation
+    description: Sulfide is an example reduced inorganic donor oxidized by phototrophic bacteria.
+    evidence:
+    - reference: DOI:10.3390/antiox10060829
+      snippet: oxidizes reduced sulfur compounds
+      notes: Supports sulfur oxidation from reduced sulfur electron donors.
+  - subject: photosynthetic_electron_transport
+    predicate: produces
+    object: reducing_power
+    description: Light-induced electron transport produces reductants.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2011.00165
+      snippet: NAD(P)H and reduced ferredoxin
+      notes: Supports generation of reducing equivalents.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: autotrophic_co2_fixation
+    description: CO2 is fixed during autotrophic carbon assimilation.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: autotrophic CO2 fixation
+      notes: Supports CO2 fixation as the autotrophic carbon-assimilation process.
+  - subject: reducing_power
+    predicate: supports
+    object: autotrophic_co2_fixation
+    description: Reductants generated by light-driven electron transport support CO2 fixation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2011.00165
+      snippet: reducing equivalent flow during photoautotrophic
+      notes: Supports reducing-equivalent flow in photoautotrophic growth.
+  - subject: autotrophic_co2_fixation
+    predicate: produces
+    object: biomass
+    description: Autotrophic CO2 fixation produces cellular carbon.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: cellular carbon
+      notes: Supports assimilation of CO2 into cellular carbon.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884349+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for light-driven electron transport, inorganic electron donors, sulfide oxidation, and autotrophic CO2 fixation.
+  llm_assisted: true

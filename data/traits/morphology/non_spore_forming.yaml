@@ -1,9 +1,10 @@
 identifier: METPO:1000872
 label: non-spore forming
 definition: A sporulation in which an organism lacks the ability to produce endospores.
+definition_source: DOI:10.1155/2013/898106
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000870
 synonyms:
@@ -13,9 +14,18 @@ synonyms:
 - synonym_text: no_spore
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1155/2013/898106
+  snippet: S. aureus does not form spores
+  notes: 'Organism example: Staphylococcus aureus is described as non-spore-forming.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917903+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:40:41-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Staphylococcus aureus organism example with DOI-backed evidence.
+  llm_assisted: true

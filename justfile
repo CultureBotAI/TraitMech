@@ -1,5 +1,7 @@
 # TraitMech - microbial trait knowledge base seeded from METPO
 
+set dotenv-load := true
+
 default:
     @just --list --unsorted
 
@@ -43,6 +45,32 @@ build-embeddings:
 # Render per-trait HTML pages + category indexes + landing into pages/.
 gen-pages *args:
     /opt/homebrew/bin/python3.13 scripts/render_trait_pages.py {{args}}
+
+# ============== Deep Research ==============
+
+research_dir := "research"
+templates_dir := "templates"
+
+# Deep research on a trait using a specified provider.
+# Examples:
+#   just research-trait falcon physiology autotrophic
+#   just research-trait falcon environment aerobic --dry-run
+research-trait provider category slug *args="":
+    uv run --extra dev python scripts/research_trait.py \
+      --provider {{provider}} \
+      --category {{category}} \
+      --slug {{slug}} \
+      --template {{templates_dir}}/trait_causal_graph_research.md \
+      --research-dir {{research_dir}} \
+      {{args}}
+
+# List available deep-research-client providers.
+research-providers:
+    uv run --extra dev deep-research-client providers
+
+# Show detailed availability and parameters for one provider.
+research-provider provider:
+    uv run --extra dev deep-research-client providers --provider {{provider}}
 
 # Composite: refresh METPO → seed → build embeddings → render pages.
 gen-site: seed-apply build-embeddings gen-pages

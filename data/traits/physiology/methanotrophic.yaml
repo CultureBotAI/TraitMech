@@ -2,9 +2,10 @@ identifier: METPO:1000650
 label: methanotrophic
 definition: A trophic type in which an organism uses methane as the primary carbon
   and energy source through oxidation of methane to carbon dioxide.
+definition_source: DOI:10.1039/D3CY00737E
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -12,9 +13,135 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1039/D3CY00737E
+  snippet: convert methane to methanol using methane monooxygenase
+  notes: Review supports methane monooxygenase as the first aerobic methanotrophy step.
+causal_graphs:
+- graph_id: methanotrophic_methane_oxidation
+  title: Aerobic methanotrophic methane oxidation mechanism
+  description: DOI-backed graph for aerobic methane oxidation from methane to methanol,
+    formaldehyde assimilation, and carbon dioxide production.
+  nodes:
+  - node_id: methanotrophic_trait
+    label: methanotrophic
+    node_type: TRAIT
+    grounding: METPO:1000650
+    description: Trophic type using methane as carbon and energy source.
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+    grounding: CHEBI:16183
+    description: Primary C1 substrate of methanotrophs.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Oxidant used by aerobic methane monooxygenases.
+  - node_id: methane_monooxygenase
+    label: methane monooxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme family catalyzing the first methane oxidation step.
+  - node_id: intracellular_membrane
+    label: intracellular membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Localization associated with particulate methane monooxygenase.
+  - node_id: methanol
+    label: methanol
+    node_type: CHEMICAL
+    grounding: CHEBI:17790
+    description: First oxidation product of methane.
+  - node_id: methanol_dehydrogenase
+    label: methanol dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidizing methanol to formaldehyde.
+  - node_id: formaldehyde
+    label: formaldehyde
+    node_type: CHEMICAL
+    grounding: CHEBI:16842
+    description: Central C1 intermediate for assimilation or oxidation.
+  - node_id: formaldehyde_assimilation
+    label: formaldehyde assimilation
+    node_type: PATHWAY
+    description: RuMP or serine pathway incorporation of formaldehyde into biomass.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Oxidized C1 product of methane metabolism.
+  edges:
+  - subject: methanotrophic_trait
+    predicate: uses substrate
+    object: methane
+    description: Methane is the defining carbon and energy source for methanotrophy.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: methane as carbon and energy sources
+      notes: Review places methane among C1 compounds used by methanotrophs.
+  - subject: methane_monooxygenase
+    predicate: oxidizes
+    object: methane
+    description: Methane monooxygenase catalyzes methane oxidation.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: methane oxidation ... catalyzed by two types of methane monooxygenases
+      notes: Supports MMO as the enzyme for the first oxidation step.
+  - subject: methane_monooxygenase
+    predicate: uses oxidant
+    object: molecular_oxygen
+    description: Aerobic methane monooxygenases activate oxygen during methane oxidation.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: activation of molecular oxygen
+      notes: Supports oxygen involvement in MMO catalysis.
+  - subject: methane
+    predicate: oxidized to
+    object: methanol
+    description: The first aerobic methane oxidation product is methanol.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: convert methane to methanol
+      notes: Supports methane-to-methanol conversion by MMO.
+  - subject: methane_monooxygenase
+    predicate: located in
+    object: intracellular_membrane
+    description: Particulate methane monooxygenase is membrane associated in methanotrophs.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: pMMO is located in the characteristic intracellular membrane
+      notes: Supports subcellular localization for pMMO.
+  - subject: methanol_dehydrogenase
+    predicate: oxidizes
+    object: methanol
+    description: Methanol dehydrogenase converts methanol onward to formaldehyde.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: Methanol is oxidized to formaldehyde
+      notes: Supports methanol dehydrogenase as the next step.
+  - subject: formaldehyde
+    predicate: input to
+    object: formaldehyde_assimilation
+    description: Formaldehyde can be assimilated through RuMP or serine pathways.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: RuMP pathway and the serine pathway
+      notes: Supports formaldehyde assimilation routes in methanotrophs.
+  - subject: methanotrophic_trait
+    predicate: produces
+    object: carbon_dioxide
+    description: Methane oxidation can continue to carbon dioxide for energy metabolism.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      snippet: methane cycle between ... methane and CO2
+      notes: Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.876493+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for aerobic methane oxidation by methane monooxygenase and downstream C1 metabolism.
+  llm_assisted: true

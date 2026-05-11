@@ -2,9 +2,10 @@ identifier: METPO:1000636
 label: chemoheterotrophic
 definition: A trophic type in which an organism obtains both energy and carbon from
   organic compounds.
+definition_source: DOI:10.1016/B978-012373944-5.00083-3
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
@@ -14,9 +15,136 @@ synonyms:
 - synonym_text: chemoheterotroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/B978-012373944-5.00083-3
+  snippet: Chemoheterotroph (chemoorganoheterotroph)
+  notes: Encyclopedia chapter maps chemoheterotrophy to chemical energy and reduced organic carbon.
+- reference: DOI:10.1021/acsomega.3c02205
+  snippet: chemoheterotrophic
+  notes: Review table supports chemoheterotrophic use of organic molecules as energy and carbon sources.
+causal_graphs:
+- graph_id: chemoheterotrophic_organic_energy_carbon
+  title: Chemoheterotrophic organic energy and carbon metabolism
+  description: DOI-backed graph linking organic molecules as chemical energy and
+    carbon sources to catabolism, respiration or fermentation, ATP, and biomass.
+  nodes:
+  - node_id: chemoheterotrophic_trait
+    label: chemoheterotrophic
+    node_type: TRAIT
+    grounding: METPO:1000636
+    description: Trophic type obtaining energy and carbon from organic compounds.
+  - node_id: organic_molecule
+    label: organic molecule
+    node_type: CHEMICAL
+    description: Reduced organic compound used for energy and carbon.
+  - node_id: catabolism
+    label: catabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Breakdown of nutrients to generate energy and biosynthetic precursors.
+  - node_id: respiration
+    label: respiration
+    node_type: PATHWAY
+    grounding: METPO:1000800
+    description: Electron-transport route for energy conservation.
+  - node_id: fermentation
+    label: fermentation
+    node_type: PATHWAY
+    grounding: METPO:1002005
+    description: Organic-substrate redox balancing route with substrate-level phosphorylation.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier produced during chemoheterotrophic metabolism.
+  - node_id: precursor_metabolites
+    label: precursor metabolites
+    node_type: CHEMICAL
+    description: Central intermediates used for biosynthesis.
+  - node_id: biomass
+    label: biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell material formed from organic carbon.
+  edges:
+  - subject: chemoheterotrophic_trait
+    predicate: uses energy source
+    object: organic_molecule
+    description: Chemoheterotrophs derive chemical energy from organic compounds.
+    evidence:
+    - reference: DOI:10.1021/acsomega.3c02205
+      snippet: organic molecules ... energy source
+      notes: Supports organic molecules as energy sources in chemoheterotrophic growth.
+  - subject: chemoheterotrophic_trait
+    predicate: uses carbon source
+    object: organic_molecule
+    description: Chemoheterotrophs use organic compounds as carbon sources.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: reduced organic compound
+      notes: Supports organic compounds as carbon sources in chemoheterotrophy.
+  - subject: organic_molecule
+    predicate: broken down by
+    object: catabolism
+    description: Organic molecules are catabolized to release energy and precursors.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: breakdown of nutrients
+      notes: Supports catabolism of organic nutrients.
+  - subject: catabolism
+    predicate: can proceed through
+    object: respiration
+    description: Organic catabolism can conserve energy through respiration.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: membrane-bound electron transport chain
+      notes: Supports respiratory electron transport as an energy-conserving route.
+  - subject: catabolism
+    predicate: can proceed through
+    object: fermentation
+    description: Organic catabolism can conserve energy through fermentation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      snippet: substrate ... electron donor as well as acceptor
+      notes: Supports fermentation of organic substrates without external electron acceptors.
+  - subject: respiration
+    predicate: produces
+    object: atp
+    description: Respiration supports ATP synthesis.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: drives ATP synthesis
+      notes: Supports ATP synthesis from respiratory energy conservation.
+  - subject: fermentation
+    predicate: produces
+    object: atp
+    description: Fermentation can produce ATP by substrate-level phosphorylation.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.13746
+      snippet: substrate-level phosphorylation
+      notes: Supports ATP formation during fermentative metabolism.
+  - subject: catabolism
+    predicate: produces
+    object: precursor_metabolites
+    description: Catabolism supplies precursors for biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: precursor compounds for anabolism
+      notes: Supports catabolism as a source of biosynthetic precursors.
+  - subject: precursor_metabolites
+    predicate: incorporated into
+    object: biomass
+    description: Organic-carbon precursors are incorporated into biomass.
+    evidence:
+    - reference: DOI:10.1016/B978-012373944-5.00083-3
+      snippet: incorporation of a compound into biomass
+      notes: Supports assimilation of compounds into cell material.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869925+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for organic molecules as energy and carbon sources feeding catabolism, respiration or fermentation, ATP, and biomass.
+  llm_assisted: true

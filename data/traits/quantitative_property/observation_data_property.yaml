@@ -2,10 +2,17 @@ identifier: METPO:2000063
 label: observation data property
 trait_category: QUANTITATIVE_PROPERTY
 term_kind: DATATYPE_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 curation_history:
 - timestamp: '2026-05-05T01:35:46.980776+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (DATATYPE_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated upper datatype-property carrier for observation data; later
+    replacement should use more specific trait records that combine the data
+    relation with chemicals, measurements, observations, or other entities.
+  llm_assisted: true

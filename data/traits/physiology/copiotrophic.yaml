@@ -3,9 +3,10 @@ label: copiotrophic
 definition: A nutrient adaptation in which an organism thrives in environments with
   high nutrient concentrations, typically exhibiting rapid growth rates and utilizing
   diverse carbon sources.
+definition_source: DOI:10.1073/pnas.0903507106
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000731
 synonyms:
@@ -13,9 +14,106 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1073/pnas.0903507106
+  snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
+  notes: Comparative genomics paper defines copiotrophic growth strategy by high-nutrient adaptation.
+- reference: DOI:10.1002/bies.1091
+  snippet: common in environments with greater nutritional opportunities
+  notes: Essay contrasts copiotrophs with oligotrophs in nutrient-rich environments.
+causal_graphs:
+- graph_id: copiotrophic_high_nutrient_fast_growth
+  title: Copiotrophic high-nutrient rapid-growth strategy
+  description: DOI-backed graph linking nutrient-rich environments, regulatory capacity,
+    transport systems, ribosomal capacity, and rapid growth.
+  nodes:
+  - node_id: copiotrophic_trait
+    label: copiotrophic
+    node_type: TRAIT
+    grounding: METPO:1000642
+    description: Nutrient adaptation to high-resource environments.
+  - node_id: high_nutrient_environment
+    label: high nutrient concentration
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Resource-rich condition favoring copiotrophic growth.
+  - node_id: diverse_carbon_sources
+    label: diverse carbon sources
+    node_type: CHEMICAL
+    description: Multiple available organic substrates.
+  - node_id: membrane_transporters
+    label: membrane transporters
+    node_type: GENE_OR_PROTEIN
+    description: Nutrient-acquisition proteins used during resource pulses.
+  - node_id: regulatory_systems
+    label: transcription and signal regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulatory capacity for responding to changing substrates.
+  - node_id: rrna_operons
+    label: rRNA operons
+    node_type: GENE_OR_PROTEIN
+    description: Ribosomal RNA gene copies associated with growth strategy.
+  - node_id: rapid_growth
+    label: rapid growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Fast biomass accumulation under nutrient-rich conditions.
+  edges:
+  - subject: high_nutrient_environment
+    predicate: selects for
+    object: copiotrophic_trait
+    description: Copiotrophs grow optimally in high-nutrient environments.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
+      notes: Supports high nutrient concentration as the environmental driver.
+  - subject: copiotrophic_trait
+    predicate: uses substrate pool
+    object: diverse_carbon_sources
+    description: Copiotrophs exploit diverse carbon sources under nutrient-rich conditions.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: grow optimally at either high
+      notes: Supports growth strategy tied to resource-rich habitats.
+  - subject: copiotrophic_trait
+    predicate: associated with
+    object: membrane_transporters
+    description: Copiotrophic genomes encode energetically costly nutrient acquisition systems.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: use energetically expensive transporters
+      notes: Supports transporter investment as a genomic feature of copiotrophy.
+  - subject: copiotrophic_trait
+    predicate: associated with
+    object: regulatory_systems
+    description: Copiotrophs have regulatory capacity to respond to resource pulses.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: regulate metabolism
+      notes: Supports regulatory systems as part of copiotrophic adaptation.
+  - subject: rrna_operons
+    predicate: supports
+    object: rapid_growth
+    description: Higher rRNA operon copy number supports rapid response and growth.
+    evidence:
+    - reference: DOI:10.1128/AEM.66.4.1328-1333.2000
+      snippet: rRNA Operon Copy Number Reflects Ecological Strategies
+      notes: Supports rRNA operon copy number as a genomic indicator of reproductive strategy.
+  - subject: rapid_growth
+    predicate: characteristic of
+    object: copiotrophic_trait
+    description: Rapid growth is a characteristic outcome of copiotrophic strategy.
+    evidence:
+    - reference: DOI:10.1002/bies.1091
+      snippet: Bacteria can grow rapidly
+      notes: Supports rapid growth as part of the copiotroph/oligotroph contrast.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.873168+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: Codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed copiotrophy graph for nutrient-rich environments,
+    transport/regulatory capacity, rRNA operons, and rapid growth.
+  llm_assisted: true

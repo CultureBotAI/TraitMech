@@ -2,18 +2,149 @@ identifier: METPO:1000635
 label: chemoautotrophic
 definition: A trophic type in which an organism obtains energy from oxidation of inorganic
   compounds and carbon from carbon dioxide.
+definition_source: DOI:10.1146/annurev.micro.52.1.191
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000631
 synonyms:
 - synonym_text: chemoautotroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.52.1.191
+  snippet: Carbon Dioxide Fixation in Chemoautotrophs
+  notes: Review supports CO2 fixation as central to chemoautotrophic bacteria.
+- reference: DOI:10.1128/AEM.02473-10
+  snippet: Calvin-Benson reductive pentose phosphate cycle
+  notes: Review supports Calvin-Benson and other microbial autotrophic CO2-fixation pathways.
+causal_graphs:
+- graph_id: chemoautotrophic_chemical_energy_co2_fixation
+  title: Chemoautotrophic chemical-energy CO2 fixation
+  description: DOI-backed graph linking chemical electron donors, energy conservation,
+    RuBisCO/Calvin-Benson carbon fixation, and biomass production.
+  nodes:
+  - node_id: chemoautotrophic_trait
+    label: chemoautotrophic
+    node_type: TRAIT
+    grounding: METPO:1000635
+    description: Trophic type using chemical energy and CO2 as carbon source.
+  - node_id: reduced_inorganic_compound
+    label: reduced inorganic compound
+    node_type: CHEMICAL
+    description: Chemical energy substrate oxidized by chemoautotrophs.
+  - node_id: respiratory_energy_conservation
+    label: respiratory energy conservation
+    node_type: BIOLOGICAL_PROCESS
+    description: Energy conservation from redox reactions.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy carrier used in carbon fixation.
+  - node_id: nadph
+    label: NADPH
+    node_type: CHEMICAL
+    description: Reducing equivalent used in reductive biosynthesis.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source.
+  - node_id: calvin_benson_cycle
+    label: Calvin-Benson cycle
+    node_type: PATHWAY
+    description: Common microbial CO2-fixation pathway.
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Carboxylating enzyme of the Calvin-Benson cycle.
+  - node_id: cellular_biomass
+    label: cellular biomass
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular material produced from fixed carbon.
+  edges:
+  - subject: chemoautotrophic_trait
+    predicate: uses energy substrate
+    object: reduced_inorganic_compound
+    description: Chemoautotrophs derive energy from oxidizing reduced inorganic compounds.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.52.1.191
+      snippet: physiology ... of chemoautotrophic bacteria
+      notes: Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.
+  - subject: reduced_inorganic_compound
+    predicate: supports
+    object: respiratory_energy_conservation
+    description: Oxidation of chemical substrates supports energy conservation.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: free energy of a redox reaction
+      notes: Supports energy conservation from redox reactions in respiratory systems.
+  - subject: respiratory_energy_conservation
+    predicate: produces
+    object: atp
+    description: Energy conservation produces ATP for biosynthesis.
+    evidence:
+    - reference: DOI:10.1016/j.bbabio.2008.09.008
+      snippet: drives ATP synthesis
+      notes: Supports ATP synthesis from respiratory energy conservation.
+  - subject: respiratory_energy_conservation
+    predicate: produces
+    object: nadph
+    description: Chemoautotrophic electron flow supplies reducing equivalents.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2021.125768
+      snippet: NADH, or ... NADPH
+      notes: Supports reduced redox cofactors in chemolithoautotrophic metabolism.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: calvin_benson_cycle
+    description: CO2 can be fixed through the Calvin-Benson cycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: Calvin-Benson reductive pentose phosphate cycle
+      notes: Supports Calvin-Benson as a microbial autotrophic CO2-fixation pathway.
+  - subject: rubisco
+    predicate: catalyzes
+    object: calvin_benson_cycle
+    description: RuBisCO catalyzes the carboxylation step of Calvin-Benson CO2 fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: form I RuBisCO
+      notes: Supports RuBisCO as a Calvin-Benson cycle enzyme.
+  - subject: atp
+    predicate: supports
+    object: calvin_benson_cycle
+    description: ATP is required for chemoautotrophic CO2 fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      snippet: energy required for autotrophic CO2 fixation
+      notes: Supports ATP/energy requirement for carbon fixation.
+  - subject: nadph
+    predicate: supports
+    object: calvin_benson_cycle
+    description: Reducing equivalents support reductive CO2 fixation.
+    evidence:
+    - reference: DOI:10.1016/j.biortech.2021.125768
+      snippet: reduction of CO2
+      notes: Supports NAD(P)H-like reductant use in carbon fixation.
+  - subject: calvin_benson_cycle
+    predicate: produces
+    object: cellular_biomass
+    description: Fixed carbon is incorporated into cellular biomass.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.52.1.191
+      snippet: physiology, ecology, and molecular biology
+      notes: Review scope supports chemoautotrophic bacterial growth from fixed carbon.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869416+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-08T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for chemical energy conservation, ATP/reductant generation, Calvin-Benson CO2 fixation, and biomass production.
+  llm_assisted: true

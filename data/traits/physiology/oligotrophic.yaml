@@ -3,9 +3,10 @@ label: oligotrophic
 definition: A nutrient adaptation characterized by the ability to thrive in environments
   with very low nutrient concentrations, typically possessing efficient nutrient uptake
   and utilization systems.
+definition_source: DOI:10.1073/pnas.0903507106
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000731
 synonyms:
@@ -16,9 +17,106 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1073/pnas.0903507106
+  snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
+  notes: Comparative genomics paper defines oligotrophy by low-nutrient adaptation.
+- reference: DOI:10.1038/ismej.2014.60
+  snippet: nutrients limit growth
+  notes: Streamlining review links nutrient limitation to small-cell/genome adaptation.
+causal_graphs:
+- graph_id: oligotrophic_low_nutrient_efficiency
+  title: Oligotrophic low-nutrient efficiency strategy
+  description: DOI-backed graph linking nutrient limitation, streamlined genomes,
+    efficient nutrient use, and persistence in low-resource environments.
+  nodes:
+  - node_id: oligotrophic_trait
+    label: oligotrophic
+    node_type: TRAIT
+    grounding: METPO:1000654
+    description: Nutrient adaptation to low-resource environments.
+  - node_id: low_nutrient_environment
+    label: low nutrient concentration
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Resource-poor condition favoring oligotrophic growth.
+  - node_id: nutrient_limitation
+    label: nutrient limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Limiting resource availability that constrains growth.
+  - node_id: streamlined_genome
+    label: streamlined genome
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced genome architecture associated with efficient resource use.
+  - node_id: small_cell_architecture
+    label: small cell architecture
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular architecture minimizing nutrient demand.
+  - node_id: efficient_nutrient_use
+    label: efficient nutrient use
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth strategy minimizing resource requirements.
+  - node_id: slow_growth
+    label: slow growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Low maximum growth response in chronic nutrient limitation.
+  edges:
+  - subject: low_nutrient_environment
+    predicate: selects for
+    object: oligotrophic_trait
+    description: Oligotrophs grow optimally at low nutrient concentrations.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: low (oligotrophic) nutrient concentrations
+      notes: Supports low nutrient concentration as the defining environmental context.
+  - subject: nutrient_limitation
+    predicate: favors
+    object: streamlined_genome
+    description: Nutrient limitation favors streamlined genomic and cellular architecture.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: selection for efficient use of nutrients
+      notes: Supports streamlining as an adaptation under nutrient limitation.
+  - subject: streamlined_genome
+    predicate: contributes to
+    object: efficient_nutrient_use
+    description: Streamlined genomes reduce resource requirements for cell replication.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: minimizes resources required for replication
+      notes: Supports genome streamlining as a resource-efficiency mechanism.
+  - subject: small_cell_architecture
+    predicate: contributes to
+    object: efficient_nutrient_use
+    description: Small cells reduce resource demand in oligotrophic habitats.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: small cells and genomes
+      notes: Supports small-cell architecture as part of streamlining theory.
+  - subject: oligotrophic_trait
+    predicate: associated with
+    object: slow_growth
+    description: Oligotrophs are often slow-growing under apparently favorable conditions.
+    evidence:
+    - reference: DOI:10.1002/bies.1091
+      snippet: grow slowly under apparent optimal conditions
+      notes: Supports slow growth as a characteristic of oligotrophic strategy.
+  - subject: efficient_nutrient_use
+    predicate: enables
+    object: oligotrophic_trait
+    description: Efficient nutrient use enables persistence and growth in nutrient-poor environments.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: molecular mechanisms of adaptation
+      notes: Supports genomic mechanisms underlying oligotrophic adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.878135+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-09T00:00:00-07:00'
+  curator: Codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed oligotrophy graph for low nutrients, genome/cell
+    streamlining, efficient nutrient use, and slow-growth strategy.
+  llm_assisted: true

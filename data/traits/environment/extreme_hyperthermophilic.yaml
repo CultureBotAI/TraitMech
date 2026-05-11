@@ -1,9 +1,10 @@
 identifier: METPO:1000721
 label: extreme hyperthermophilic
 definition: A temperature preference that grows optimally at temperatures above 90°C.
+definition_source: PMID:9680332
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
 synonyms:
@@ -13,9 +14,18 @@ synonyms:
 - synonym_text: extremely hyperthermophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:9680332
+  snippet: It grew at between 90 degrees C and 113 degrees C
+  notes: 'Organism example: Pyrolobus fumarii grows in the extreme hyperthermophilic range.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909279+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-06T14:58:45-07:00'
+  curator: codex
+  action: CURATED_WITH_ORGANISM_EXAMPLE
+  changes: Added Pyrolobus fumarii organism example with PMID-backed evidence.
+  llm_assisted: true

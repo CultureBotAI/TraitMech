@@ -2,9 +2,10 @@ identifier: METPO:1000802
 label: Anaerobic respiration
 definition: A respiration in which an organism uses electron acceptors other than
   oxygen for energy production.
+definition_source: DOI:10.1128/mmbr.61.4.533-616.1997
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000800
 synonyms:
@@ -14,9 +15,91 @@ synonyms:
 - synonym_text: Dissimilatory respiration (non-O₂)
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1128/mmbr.61.4.533-616.1997
+  snippet: N oxides as terminal electron acceptors
+  notes: Denitrification review supports anaerobic respiration using non-oxygen terminal electron acceptors.
+causal_graphs:
+- graph_id: anaerobic_respiration_denitrification
+  title: Anaerobic respiration with nitrogen oxide acceptors
+  description: Evidence-backed causal sketch using denitrification as a representative
+    anaerobic respiratory process.
+  nodes:
+  - node_id: anaerobic_respiration_trait
+    label: Anaerobic respiration
+    node_type: TRAIT
+    grounding: METPO:1000802
+    description: Respiration using terminal electron acceptors other than oxygen.
+  - node_id: low_oxygen_condition
+    label: anaerobic or microaerophilic condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-oxygen condition permissive for denitrifying respiration.
+  - node_id: denitrification
+    label: denitrification
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019330
+    description: Respiratory reduction of nitrogen oxides.
+  - node_id: nitrogen_oxides
+    label: nitrogen oxides
+    node_type: CHEMICAL
+    description: Non-oxygen terminal electron acceptors used in denitrification.
+  - node_id: terminal_electron_acceptor
+    label: terminal electron acceptor
+    node_type: MOLECULAR_FUNCTION
+    description: Electron-accepting role in respiratory bioenergetics.
+  - node_id: energy_conservation
+    label: cellular energy conservation
+    node_type: BIOLOGICAL_PROCESS
+    description: Bioenergetic output of respiratory electron transport.
+  edges:
+  - subject: denitrification
+    predicate: occurs under
+    object: low_oxygen_condition
+    description: Denitrification can occur under anaerobic and microaerophilic conditions.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: under anaerobic, microaerophilic, and occasionally aerobic conditions
+      notes: Supports low-oxygen context for denitrification.
+  - subject: nitrogen_oxides
+    predicate: acts as
+    object: terminal_electron_acceptor
+    description: Nitrogen oxides serve as terminal electron acceptors.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: N oxides as terminal electron acceptors
+      notes: Supports the terminal electron acceptor role.
+  - subject: denitrification
+    predicate: uses
+    object: nitrogen_oxides
+    description: Denitrification uses nitrogen oxides in respiratory bioenergetics.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: making use of N oxides
+      notes: Supports nitrogen oxides as denitrification substrates.
+  - subject: denitrification
+    predicate: conserves
+    object: energy_conservation
+    description: Denitrification is a respiratory route for energy conservation.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: distinct means of energy conservation
+      notes: Supports energy conservation via denitrification.
+  - subject: anaerobic_respiration_trait
+    predicate: exemplified by
+    object: denitrification
+    description: Denitrification is a representative anaerobic respiratory process.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: terminal electron acceptors for cellular bioenergetics
+      notes: Supports denitrification as non-oxygen respiratory bioenergetics.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912036+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-07T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for anaerobic respiration using denitrification and nitrogen oxide terminal electron acceptors.
+  llm_assisted: true

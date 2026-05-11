@@ -47,7 +47,14 @@ just validate-all             # validate every TraitRecord YAML
 - **TraitRecord** — root class, one per YAML file. Carries
   `identifier` (METPO CURIE), `label`, `definition`, `parent_traits`,
   `xrefs`, `synonyms`, `trait_category`, `term_kind`, optional
-  `evidence`, optional `curation_history`.
+  `evidence`, optional `curation_history`, and optional inline
+  `causal_graphs`.
+- **CausalGraph / CausalNode / CausalEdge** — evidence-backed causal
+  mechanism graphs for trait pages. Nodes can represent traits,
+  pathways, environmental factors, experimental factors, genes/proteins,
+  chemicals, organelles, cellular localizations, molecular functions, or
+  biological processes. Use ontology/database CURIEs in `grounding`
+  when available; label-only draft nodes are permitted in v1.
 - **TraitSynonym / EvidenceItem / CurationEvent** — ancillary classes.
 - **TraitCategoryEnum** — the 10 buckets above.
 - **TermKindEnum** — `CLASS` / `DATATYPE_PROPERTY` /
@@ -79,8 +86,29 @@ TraitMech/
 3. **Curate**: edit `data/traits/<category>/<slug>.yaml` directly;
    set `mapping_status: REVIEWED`, append a `CurationEvent`, attach
    `EvidenceItem` blocks with PMID + verbatim snippet.
-4. **Validate**: `just validate-all` runs `linkml-validate` over
+4. **Add causal graphs**: add `causal_graphs` only when the trait has
+   source-backed mechanism structure. Every `CausalEdge` must include
+   edge-level `evidence`; prefer grounded CURIEs for nodes and
+   predicates when a suitable ontology or database term is known.
+5. **Validate**: `just validate-all` runs `linkml-validate` over
    every record.
+
+## Deep Research
+
+TraitMech mirrors DisMech's `deep-research-client` workflow for agentic
+curation support. Use Falcon/FutureHouse research reports as source-finding
+inputs, then manually curate only DOI-backed claims into TraitRecord YAML.
+
+```bash
+export EDISON_API_KEY=...        # or FUTUREHOUSE_API_KEY; the wrapper maps it
+just research-provider falcon
+just research-trait falcon physiology autotrophic
+just research-trait falcon physiology autotrophic --dry-run
+```
+
+Reports are written under `research/traits/<category>/` with separate citation
+files. The API key is read from the environment and is never written by the
+TraitMech tooling.
 
 ## Cross-repo integration
 
