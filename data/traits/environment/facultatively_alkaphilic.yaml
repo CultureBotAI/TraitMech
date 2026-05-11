@@ -2,9 +2,10 @@ identifier: METPO:1003005
 label: facultatively alkaphilic
 definition: A pH growth preference in which an organism can grow at alkaline pH but
   does not require it.
+definition_source: DOI:10.3389/fbioe.2015.00075
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -17,9 +18,116 @@ synonyms:
 - synonym_text: facultatively alkaliphilic
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.3389/fbioe.2015.00075
+  snippet: capable of growing near neutral pH
+  notes: Supports facultative alkaliphiles as alkaline-growing organisms that also
+    grow near neutral pH.
+causal_graphs:
+- graph_id: facultatively_alkaphilic_sodium_cycle_homeostasis
+  title: Facultative alkaliphily sodium-cycle pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking facultative alkaliphily to
+    alkaline growth capacity, near-neutral growth, and sodium-dependent pH
+    homeostasis.
+  nodes:
+  - node_id: facultatively_alkaphilic_trait
+    label: facultatively alkaphilic
+    node_type: TRAIT
+    grounding: METPO:1003005
+    description: Growth can occur at alkaline pH but does not require alkaline pH.
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH above neutral, often near or above pH 9 for
+      alkaliphiles.
+  - node_id: near_neutral_external_ph
+    label: near-neutral external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH near neutrality compatible with facultative
+      alkaliphile growth.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29101
+    description: Sodium ion participating in alkaliphile sodium cycles.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion imported or retained to acidify the cytoplasm under
+      alkaline conditions.
+  - node_id: sodium_proton_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Antiporter exchanging sodium ions and protons during alkaline pH
+      homeostasis.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH across alkaline and near-neutral
+      environments.
+  edges:
+  - subject: alkaline_external_ph
+    predicate: supports
+    object: facultatively_alkaphilic_trait
+    description: Facultative alkaliphiles grow well under alkaline pH conditions.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2015.00075
+      snippet: grow well at pH values exceeding pH 9
+      notes: Supports alkaline growth capacity of alkaliphilic microorganisms.
+  - subject: near_neutral_external_ph
+    predicate: is compatible with
+    object: facultatively_alkaphilic_trait
+    description: Facultative alkaliphiles retain growth capacity near neutral pH.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2015.00075
+      snippet: capable of growing near neutral pH
+      notes: Review explicitly distinguishes facultative alkaliphiles from obligate
+        alkaliphiles.
+  - subject: alkaline_external_ph
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: Alkaline external pH requires cytoplasmic proton accumulation or
+      retention.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: active proton accumulation or generation in the cytoplasm
+      notes: Supports alkaline-pH homeostasis mechanisms.
+  - subject: sodium_proton_antiporter
+    predicate: exports
+    object: sodium_ion
+    description: Sodium efflux is one limb of the alkaliphile Na+ cycle.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: Na+ efflux
+      notes: Supports sodium efflux through Na+/H+ antiporters.
+  - subject: sodium_proton_antiporter
+    predicate: accumulates
+    object: proton
+    description: Na+/H+ antiport contributes to net proton accumulation during
+      alkaline pH homeostasis.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: net H+ accumulation
+      notes: Supports proton accumulation by antiporters in alkaliphiles.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: facultatively_alkaphilic_trait
+    description: Growth across alkaline and near-neutral pH requires pH
+      homeostasis.
+    evidence:
+    - reference: DOI:10.1016/S0005-2728(00)00285-1
+      snippet: pH homeostasis ... appears to set the upper pH limit for growth
+      notes: Supports pH homeostasis as a determinant of alkaliphilic growth range.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.939582+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed facultatively alkaphilic trait and added DOI-backed evidence
+    and causal graph for alkaline and near-neutral pH growth capacity.
+  llm_assisted: true

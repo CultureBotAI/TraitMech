@@ -2,14 +2,107 @@ identifier: METPO:1003000
 label: pH growth preference
 definition: A phenotype that describes how the rate and extent of population growth
   are affected by environmental pH.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: external pH values that are outside the cytoplasmic pH range
+  notes: Supports environmental pH as a growth-relevant condition requiring pH
+    homeostasis.
+causal_graphs:
+- graph_id: ph_growth_preference_homeostasis
+  title: Environmental pH control of growth preference
+  description: Evidence-backed causal sketch linking environmental pH, pH sensing,
+    and cytoplasmic pH homeostasis to growth preference phenotypes.
+  nodes:
+  - node_id: ph_growth_preference_trait
+    label: pH growth preference
+    node_type: TRAIT
+    grounding: METPO:1003000
+    description: Growth-rate and growth-extent phenotype shaped by environmental
+      pH.
+  - node_id: environmental_ph
+    label: environmental pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Acidity or alkalinity of the growth environment.
+  - node_id: acidic_external_ph
+    label: acidic external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH below the cytoplasmic pH range compatible with growth.
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH above the cytoplasmic pH range compatible with growth.
+  - node_id: ph_sensing
+    label: pH sensing
+    node_type: MOLECULAR_FUNCTION
+    description: Detection of external or envelope pH change by regulatory proteins
+      and transporters.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH within a range compatible with
+      growth.
+  edges:
+  - subject: environmental_ph
+    predicate: influences
+    object: ph_growth_preference_trait
+    description: Environmental pH determines which pH conditions support growth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: tolerate or grow at external pH values
+      notes: Review frames pH growth as a response to external pH outside the
+        cytoplasmic range.
+  - subject: acidic_external_ph
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: Acidic environments impose inward proton stress that must be
+      managed for growth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: acid challenge conditions include increased expression and activity
+      notes: Supports active mechanisms under acid challenge.
+  - subject: alkaline_external_ph
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: Alkaline environments require active proton accumulation or
+      generation to maintain cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: active proton accumulation or generation in the cytoplasm
+      notes: Supports alkaline-pH homeostasis as a growth-enabling process.
+  - subject: ph_sensing
+    predicate: regulates
+    object: cytoplasmic_ph_homeostasis
+    description: pH-sensing and signalling systems regulate homeostasis responses
+      to acid or alkali.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH-sensing and signalling capabilities
+      notes: Supports regulatory sensing as part of homeostasis.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: ph_growth_preference_trait
+    description: Growth at preferred pH depends on maintaining intracellular pH
+      compatible with cellular processes.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: robust mechanisms for cytoplasmic pH homeostasis
+      notes: Supports cytoplasmic pH homeostasis as central to growth under pH
+        stress.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936639+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed pH growth preference trait and added DOI-backed evidence and
+    causal graph for pH sensing and cytoplasmic pH homeostasis.
+  llm_assisted: true
