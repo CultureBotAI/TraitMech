@@ -2,7 +2,7 @@ identifier: METPO:2000101
 label: has quality
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 domain: https://w3id.org/metpo/1000525
 range_: https://w3id.org/metpo/1000188
 curation_history:
@@ -11,3 +11,11 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated generic metabolism relation carrier; later replacement should
+    use more specific trait records that combine the relation with the chemical,
+    phenotype, quality, compartment, enzyme or activity target, growth context,
+    measurement, or other entity.
+  llm_assisted: true
