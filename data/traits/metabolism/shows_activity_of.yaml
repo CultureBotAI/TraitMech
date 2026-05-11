@@ -2,7 +2,7 @@ identifier: METPO:2000302
 label: shows activity of
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 parent_traits:
 - METPO:2000301
 synonyms:
@@ -17,3 +17,11 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated generic biochemical conversion or activity relation carrier;
+    later replacement should use more specific trait records that combine the
+    relation with the substrate, product, enzyme or activity target, assay
+    context, growth condition, or other entity.
+  llm_assisted: true
