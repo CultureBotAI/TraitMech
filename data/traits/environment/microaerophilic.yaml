@@ -25,6 +25,71 @@ evidence:
 - reference: PMID:26284041
   snippet: C. jejuni is a microaerophilic, fastidious bacterium
   notes: 'Organism example: Campylobacter jejuni is described as microaerophilic.'
+causal_graphs:
+- graph_id: microaerophile_low_oxygen_respiration
+  title: Microaerophilic low-oxygen respiration mechanism
+  description: Evidence-backed causal sketch linking microaerophily to microoxic
+    environments and high-affinity terminal oxidases.
+  nodes:
+  - node_id: microaerophilic_trait
+    label: microaerophilic
+    node_type: TRAIT
+    grounding: METPO:1000604
+    description: Growth requires oxygen below atmospheric concentration.
+  - node_id: microoxic_environment
+    label: microoxic environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-oxygen zone that supports microaerobic respiration.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen present at low concentration.
+  - node_id: high_affinity_terminal_oxidase
+    label: high-affinity terminal oxidase
+    node_type: GENE_OR_PROTEIN
+    description: Respiratory oxidase enabling oxygen use at low concentration.
+  - node_id: cbb3_oxidase
+    label: cytochrome cbb3 oxidase
+    node_type: GENE_OR_PROTEIN
+    description: High-affinity cytochrome oxidase associated with microaerobic
+      metabolism.
+  edges:
+  - subject: microoxic_environment
+    predicate: supports
+    object: microaerophilic_trait
+    description: Microaerophiles grow optimally in microoxic conditions.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2970
+      snippet: microaerophiles grow optimally under microoxic conditions
+      notes: Nature Reviews Microbiology analysis defines the microoxic context.
+  - subject: high_affinity_terminal_oxidase
+    predicate: enables use of
+    object: molecular_oxygen
+    description: High-affinity terminal oxidases enable respiration at scarce oxygen
+      concentrations.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2970
+      snippet: harvest O2 present at low, even nanomolar, concentrations
+      notes: Supports the low-oxygen respiratory role of high-affinity oxidases.
+  - subject: high_affinity_terminal_oxidase
+    predicate: contributes to
+    object: microaerophilic_trait
+    description: High-affinity terminal oxidases are mechanistic contributors to
+      microaerophilic growth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2970
+      snippet: provide microaerobes with access to scarce supplies of O2
+      notes: Supports terminal oxidases as causal entities for low-oxygen growth.
+  - subject: cbb3_oxidase
+    predicate: has function
+    object: high_affinity_terminal_oxidase
+    description: The cbb3 oxidase is an example high-affinity oxidase for
+      microaerobic metabolism.
+    evidence:
+    - reference: DOI:10.1042/BST0300653
+      snippet: characterized by its high oxygen affinity
+      notes: Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.850463+00:00'
   curator: seed_from_metpo
@@ -40,4 +105,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Campylobacter jejuni organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for microoxic respiration via
+    high-affinity terminal oxidases.
   llm_assisted: true

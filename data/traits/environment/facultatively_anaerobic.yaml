@@ -22,6 +22,75 @@ evidence:
 - reference: DOI:10.1093/femsre/fuac008
   snippet: Escherichia coli is a facultative anaerobe
   notes: 'Organism example: Escherichia coli is described as facultatively anaerobic.'
+causal_graphs:
+- graph_id: facultative_anaerobe_oxygen_switch
+  title: Facultative anaerobe oxygen-responsive metabolism
+  description: Evidence-backed causal sketch linking facultative anaerobiosis to
+    oxygen-responsive switching between aerobic and anaerobic metabolism.
+  nodes:
+  - node_id: facultative_anaerobic_trait
+    label: facultatively anaerobic
+    node_type: TRAIT
+    grounding: METPO:1000605
+    description: Growth can occur with or without molecular oxygen.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen acts as a respiratory substrate and regulatory signal.
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009060
+    description: Oxygen-dependent respiratory energy metabolism.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Respiratory energy metabolism using non-oxygen electron acceptors.
+  - node_id: fnr_regulator
+    label: FNR oxygen-responsive regulator
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-dependent transcriptional regulator of anaerobic respiration
+      genes in E. coli.
+  edges:
+  - subject: molecular_oxygen
+    predicate: enables
+    object: aerobic_respiration
+    description: In facultative anaerobes, oxygen availability permits aerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.1111/cmi.13338
+      snippet: cope with changing oxygen levels
+      notes: Review frames facultative anaerobe fitness around changing oxygen
+        availability; exact pathways vary by organism.
+  - subject: molecular_oxygen
+    predicate: regulates
+    object: fnr_regulator
+    description: FNR senses oxygen status and changes respiratory gene expression.
+    evidence:
+    - reference: DOI:10.1007/BF00445650
+      snippet: molecular oxygen is an important regulatory signal
+      notes: Review describes oxygen-dependent regulation by FNR.
+  - subject: fnr_regulator
+    predicate: activates in absence of oxygen
+    object: anaerobic_respiration
+    description: FNR activates anaerobic respiratory gene expression under anoxic
+      conditions.
+    evidence:
+    - reference: DOI:10.1007/BF00445650
+      snippet: activates transcription in the absence of O2
+      notes: Supports FNR activation of anaerobic respiration genes without oxygen.
+  - subject: facultative_anaerobic_trait
+    predicate: has alternative process
+    object: anaerobic_respiration
+    description: Facultative anaerobiosis includes the capacity to grow using
+      anaerobic respiration when oxygen is absent.
+    evidence:
+    - reference: DOI:10.1007/BF00445650
+      snippet: expression of anaerobic respiration
+      notes: E. coli-focused evidence for anaerobic respiratory programs in a
+        facultative anaerobe.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851077+00:00'
   curator: seed_from_metpo
@@ -37,4 +106,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Escherichia coli organism example with DOI-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for oxygen-responsive facultative
+    anaerobic metabolism.
   llm_assisted: true

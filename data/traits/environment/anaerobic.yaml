@@ -25,6 +25,70 @@ evidence:
 - reference: PMID:22778399
   snippet: obligate anaerobe Bacteroides fragilis
   notes: 'Organism example: Bacteroides fragilis is described as an anaerobic organism.'
+causal_graphs:
+- graph_id: anaerobic_trait_oxygen_exclusion
+  title: Anaerobic growth oxygen-exclusion mechanism
+  description: Evidence-backed causal sketch linking anaerobic growth to absence
+    of molecular oxygen and oxygen-derived stress.
+  nodes:
+  - node_id: anaerobic_trait
+    label: anaerobic
+    node_type: TRAIT
+    grounding: METPO:1000603
+    description: Growth occurs without molecular oxygen.
+  - node_id: anoxic_condition
+    label: anoxic or hypoxic condition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-oxygen environment that permits anaerobic growth.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen whose presence can block anaerobic growth.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    grounding: CHEBI:26523
+    description: Oxygen-derived oxidants such as superoxide and hydrogen peroxide.
+  - node_id: oxygen_sensitive_catalytic_sites
+    label: oxygen-sensitive catalytic sites
+    node_type: MOLECULAR_FUNCTION
+    description: Radical chemistry and low-potential metal centers vulnerable to
+      oxygen or ROS.
+  edges:
+  - subject: anoxic_condition
+    predicate: enables
+    object: anaerobic_trait
+    description: Anaerobic growth is favored in low-oxygen environments.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: hypoxic environments in which these organisms dwell
+      notes: Review links anaerobe ecology to hypoxic environments.
+  - subject: molecular_oxygen
+    predicate: inhibits
+    object: anaerobic_trait
+    description: Oxygen exposure can block growth of anaerobic organisms.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: oxygen blocks their growth
+      notes: Supports oxygen as an inhibitory factor for anaerobic growth.
+  - subject: molecular_oxygen
+    predicate: generates stress via
+    object: reactive_oxygen_species
+    description: Oxygen exposure can lead to ROS-mediated stress in anaerobes.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: molecular oxygen and ROS
+      notes: Review describes oxygen and ROS as linked stressors for anaerobes.
+  - subject: reactive_oxygen_species
+    predicate: damages
+    object: oxygen_sensitive_catalytic_sites
+    description: ROS can disrupt oxygen-sensitive radical or metal-center catalysis
+      used in anaerobic metabolism.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: vulnerable to direct poisoning by molecular oxygen and ROS
+      notes: Supports ROS-sensitive catalytic sites as mechanistic vulnerability.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849856+00:00'
   curator: seed_from_metpo
@@ -40,4 +104,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Bacteroides fragilis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for oxygen exclusion and oxygen-derived
+    stress in anaerobic growth.
   llm_assisted: true
