@@ -2,9 +2,10 @@ identifier: METPO:1003002
 label: alkaphilic
 definition: A pH growth preference in which an organism grows optimally at pH values
   above 9.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -20,9 +21,98 @@ synonyms:
 - synonym_text: alkalophilic
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: external pH range of 9.5-11.0
+  notes: Supports alkaliphilic growth at strongly alkaline external pH.
+causal_graphs:
+- graph_id: alkaliphilic_na_cycle_homeostasis
+  title: Alkaliphilic sodium-cycle pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking alkaliphily to high external
+    pH, Na+/H+ antiport, and cytoplasmic acidification relative to the medium.
+  nodes:
+  - node_id: alkaphilic_trait
+    label: alkaphilic
+    node_type: TRAIT
+    grounding: METPO:1003002
+    description: Optimal growth occurs at alkaline pH.
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH above neutral, often pH 9 or higher.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29101
+    description: Sodium ion participating in alkaliphile Na+ cycles.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion imported or retained to acidify the cytoplasm.
+  - node_id: sodium_proton_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Secondary transporter exchanging sodium and protons.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of internal pH below highly alkaline external pH.
+  edges:
+  - subject: alkaline_external_ph
+    predicate: selects for
+    object: alkaphilic_trait
+    description: Alkaline environments select for organisms with alkaline growth
+      optima.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH range of 9.5-11.0
+      notes: Review supports growth of extreme alkaliphiles at high external pH.
+  - subject: alkaline_external_ph
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: High external pH challenges the cell's ability to keep cytoplasm
+      near functional pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cytoplasmic pH ... below an external pH
+      notes: Supports cytoplasmic pH control below alkaline external pH.
+  - subject: sodium_proton_antiporter
+    predicate: exchanges
+    object: sodium_ion
+    description: Na+/H+ antiport is central to the sodium cycle in alkaliphiles.
+    evidence:
+    - reference: DOI:10.1007/BF00762685
+      snippet: secondary Na+/H+ antiporter
+      notes: Supports Na+/H+ antiport as a key alkaliphile sodium-cycle component.
+  - subject: sodium_proton_antiporter
+    predicate: imports
+    object: proton
+    description: Electrogenic Na+/H+ antiport contributes to cytoplasmic
+      acidification under alkaline conditions.
+    evidence:
+    - reference: DOI:10.1016/j.bbamem.2005.09.010
+      snippet: promote proton capture and retention
+      notes: Review supports proton capture/retention mechanisms in alkaline pH
+        homeostasis.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: alkaphilic_trait
+    description: Alkaliphilic growth requires maintaining cytoplasmic pH during
+      high-pH exposure.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH sensing and homeostasis
+      notes: Supports homeostasis as the enabling process for alkaline growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937702+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed alkaphilic trait and added DOI-backed evidence and causal
+    graph for sodium-cycle alkaline pH homeostasis.
+  llm_assisted: true

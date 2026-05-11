@@ -3,9 +3,10 @@ label: acidotolerant
 definition: A pH growth preference characterized by the ability to tolerate acidic
   environments (typically pH below 5.5) while maintaining optimal growth near neutral
   pH.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -13,9 +14,83 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: tolerate and grow at external pH values
+  notes: Supports acidotolerance as growth or survival under otherwise stressful
+    external pH conditions.
+causal_graphs:
+- graph_id: acidotolerant_acid_stress_homeostasis
+  title: Acidotolerant acid-stress pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking acidotolerance to acidic
+    exposure and maintenance of cytoplasmic pH near compatibility with growth.
+  nodes:
+  - node_id: acidotolerant_trait
+    label: acidotolerant
+    node_type: TRAIT
+    grounding: METPO:1003008
+    description: Tolerates acidic conditions despite neutral-pH growth optimum.
+  - node_id: acidic_exposure
+    label: acidic exposure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External acidic pH stress.
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    grounding: CHEBI:15378
+    description: Hydrogen ion contributing to acid stress.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular control of internal pH during acid stress.
+  - node_id: proton_efflux_transport
+    label: proton efflux transport
+    node_type: MOLECULAR_FUNCTION
+    description: Export or exclusion of excess protons from the cytoplasm.
+  edges:
+  - subject: acidic_exposure
+    predicate: challenges
+    object: acidotolerant_trait
+    description: Acidotolerant organisms withstand acidic external pH that can be
+      toxic to non-adapted cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH values that would otherwise be toxic
+      notes: Review supports pH tolerance as adaptation to toxic external pH.
+  - subject: acidic_exposure
+    predicate: increases influx pressure of
+    object: proton
+    description: Acid exposure increases proton pressure on the cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: rate at which protons leak inward
+      notes: Acidophile review frames proton leak as a pH-homeostasis challenge.
+  - subject: proton_efflux_transport
+    predicate: removes
+    object: proton
+    description: Proton export helps prevent excessive cytoplasmic acidification.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: remove excess protons from the cytoplasm
+      notes: Supports active proton removal as an acid-stress mechanism.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: acidotolerant_trait
+    description: Acid tolerance depends on maintaining cytoplasmic pH during acid
+      challenge.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: bacterial pH homeostasis is a cell-wide physiological process
+      notes: Supports pH homeostasis as a broad mechanism for acid tolerance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941434+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed acidotolerant trait and added DOI-backed evidence and causal
+    graph for acid-stress pH homeostasis.
+  llm_assisted: true
