@@ -20,6 +20,81 @@ evidence:
 - reference: PMID:9758852
   snippet: moderately halophilic bacterium Halomonas elongata
   notes: 'Organism example: Halomonas elongata is described as moderately halophilic.'
+causal_graphs:
+- graph_id: moderate_halophile_compatible_solutes
+  title: Moderate halophile compatible-solute mechanism
+  description: Evidence-backed causal sketch linking moderate halophily to NaCl
+    stress and compatible-solute osmoadaptation.
+  nodes:
+  - node_id: moderately_halophilic_trait
+    label: moderately halophilic
+    node_type: TRAIT
+    grounding: METPO:1000623
+    description: Growth requires elevated but not saturated salt concentrations.
+  - node_id: elevated_nacl
+    label: elevated NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Moderate saline growth condition.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Water activity and turgor challenge under saline conditions.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    grounding: CHEBI:27500
+    description: Compatible solute used by many halophilic bacteria.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    grounding: CHEBI:17750
+    description: Compatible solute transported or accumulated for osmoprotection.
+  edges:
+  - subject: elevated_nacl
+    predicate: causes
+    object: osmotic_stress
+    description: Moderate NaCl elevation imposes osmotic stress that must be
+      balanced for growth.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0168818
+      snippet: cope with high salinities
+      notes: Halomonas elongata osmoregulation study supports high salinity as the
+        stressor.
+  - subject: ectoine
+    predicate: mitigates
+    object: osmotic_stress
+    description: Ectoine accumulation helps cells maintain osmotic balance at
+      moderate salinity.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0168818
+      snippet: synthesizes ectoine as its major compatible solute
+      notes: Supports ectoine as a compatible-solute mechanism in halophilic
+        bacteria.
+  - subject: glycine_betaine
+    predicate: mitigates
+    object: osmotic_stress
+    description: Glycine betaine uptake can contribute to bacterial osmoprotection.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: glycine betaine uptake
+      notes: Review supports glycine betaine transport as an osmoadaptation route.
+  - subject: ectoine
+    predicate: enables
+    object: moderately_halophilic_trait
+    description: Compatible-solute accumulation supports growth at elevated NaCl.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0168818
+      snippet: allows microorganisms to cope with high salinities
+      notes: Supports compatible solutes as contributors to moderate halophily.
+  - subject: elevated_nacl
+    predicate: selects for
+    object: moderately_halophilic_trait
+    description: Moderate halophiles grow best under elevated salinity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: Moderately halophilic bacteria
+      notes: Review identifies moderate halophiles as models for bacterial osmotic
+        adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.862444+00:00'
   curator: seed_from_metpo
@@ -30,4 +105,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Halomonas elongata organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for moderate halophile compatible-solute
+    osmoadaptation.
   llm_assisted: true

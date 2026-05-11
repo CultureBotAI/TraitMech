@@ -16,6 +16,85 @@ evidence:
 - reference: PMID:19329623
   snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
   notes: 'Organism example: Salinicoccus albus is described as halophilic.'
+causal_graphs:
+- graph_id: halophilic_osmoadaptation
+  title: Halophilic osmoadaptation mechanism
+  description: Evidence-backed causal sketch linking halophilic growth to high-salt
+    environments and osmotic adaptation strategies.
+  nodes:
+  - node_id: halophilic_trait
+    label: halophilic
+    node_type: TRAIT
+    grounding: METPO:1000620
+    description: Requires high salt concentrations for growth and survival.
+  - node_id: high_salt_environment
+    label: high-salt environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hypersaline or elevated NaCl condition.
+  - node_id: sodium_chloride
+    label: sodium chloride
+    node_type: CHEMICAL
+    grounding: CHEBI:26710
+    description: NaCl as the dominant salt exposure in many halophilic habitats.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular water and turgor stress caused by external salinity.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Organic osmolytes such as ectoine and glycine betaine.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular inorganic ion accumulation for osmotic balance.
+  edges:
+  - subject: high_salt_environment
+    predicate: selects for
+    object: halophilic_trait
+    description: Halophilic microorganisms are adapted to growth in high-salt
+      environments.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: Hypersaline environments ... inhabited by halophilic
+      notes: Review supports hypersaline habitats as the environmental context for
+        halophily.
+  - subject: sodium_chloride
+    predicate: causes
+    object: osmotic_stress
+    description: Elevated NaCl creates osmotic pressure that requires cellular
+      adaptation.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: ways they cope with the high salt concentrations
+      notes: Review frames halophily around coping with high environmental salt.
+  - subject: compatible_solutes
+    predicate: mitigates
+    object: osmotic_stress
+    description: Compatible solutes are one major osmoadaptation mechanism in
+      halophilic microorganisms.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: synthesize organic osmotic solutes
+      notes: Supports organic compatible-solute accumulation as an osmotic
+        adaptation mechanism.
+  - subject: salt_in_strategy
+    predicate: mitigates
+    object: osmotic_stress
+    description: Salt-in ion accumulation is an alternative osmoadaptation strategy.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: KCl accumulating Halobacterium salinarum
+      notes: Supports intracellular KCl accumulation as a high-salt adaptation.
+  - subject: compatible_solutes
+    predicate: contributes to
+    object: halophilic_trait
+    description: Compatible-solute accumulation supports growth under high salinity.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0168818
+      snippet: allows microorganisms to cope with high salinities
+      notes: Halomonas elongata study supports compatible solutes as a mechanism
+        enabling halophilic growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860938+00:00'
   curator: seed_from_metpo
@@ -26,4 +105,9 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Salinicoccus albus organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for halophilic osmoadaptation mechanisms.
   llm_assisted: true

@@ -16,6 +16,73 @@ evidence:
 - reference: PMID:12501437
   snippet: A slightly halophilic, extremely halotolerant, alkaliphilic
   notes: 'Organism example: Paraliobacillus ryukyuensis strain O15-7T is described as slightly halophilic.'
+causal_graphs:
+- graph_id: slight_halophile_low_salt_osmoadaptation
+  title: Slight halophile low-salt osmoadaptation mechanism
+  description: Evidence-backed causal sketch linking slight halophily to low or
+    moderate NaCl and compatible-solute osmoprotection.
+  nodes:
+  - node_id: slightly_halophilic_trait
+    label: slightly halophilic
+    node_type: TRAIT
+    grounding: METPO:1000625
+    description: Optimal growth requires low to moderate salt concentrations.
+  - node_id: low_moderate_nacl
+    label: low to moderate NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Salinity range below that of moderate and extreme halophiles.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmotic challenge caused by environmental salt.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Organic osmoprotectants accumulated or synthesized in response to
+      salt.
+  - node_id: osmoprotectant_transport
+    label: osmoprotectant transport
+    node_type: MOLECULAR_FUNCTION
+    description: Uptake of compatible solutes such as glycine betaine.
+  edges:
+  - subject: low_moderate_nacl
+    predicate: supports
+    object: slightly_halophilic_trait
+    description: Slight halophily is a salt-growth preference at lower salinity
+      than moderate or extreme halophily.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: minimum salt concentration required for growth
+      notes: Review supports halophily as a continuum of salt growth requirements.
+  - subject: low_moderate_nacl
+    predicate: causes
+    object: osmotic_stress
+    description: Even lower salinity preferences involve osmotic adjustment to
+      environmental salt.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: salt relationships
+      notes: Review describes growth in relation to minimum, optimum, and upper
+        salt limits.
+  - subject: compatible_solutes
+    predicate: mitigates
+    object: osmotic_stress
+    description: Compatible solutes provide osmotic balance without disrupting
+      metabolism.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0168818
+      snippet: do not disturb the cell's metabolism
+      notes: Supports compatible solutes as non-disruptive osmoprotectants.
+  - subject: osmoprotectant_transport
+    predicate: accumulates
+    object: compatible_solutes
+    description: Uptake systems can accumulate compatible solutes for salt
+      adaptation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: organic osmotic solutes
+      notes: Review supports accumulation of organic osmotic solutes in bacterial
+        osmoadaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863572+00:00'
   curator: seed_from_metpo
@@ -26,4 +93,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Paraliobacillus ryukyuensis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for slight halophile compatible-solute
+    osmoadaptation.
   llm_assisted: true
