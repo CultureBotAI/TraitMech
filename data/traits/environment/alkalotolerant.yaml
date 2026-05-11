@@ -2,18 +2,101 @@ identifier: METPO:1003009
 label: alkalotolerant
 definition: A pH growth preference in which an organism can tolerate alkaline pH but
   grows optimally at neutral pH.
+definition_source: DOI:10.1016/j.bbamem.2005.09.010
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
 - synonym_text: alkalitolerant
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/j.bbamem.2005.09.010
+  snippet: alkali-tolerant and extremely alkaliphilic bacteria
+  notes: Supports alkaline pH tolerance as a microbial pH-homeostasis phenotype.
+causal_graphs:
+- graph_id: alkalotolerant_alkaline_stress_homeostasis
+  title: Alkalotolerant alkaline-stress pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking alkalotolerance to alkaline
+    exposure, proton retention, and cation/proton antiport.
+  nodes:
+  - node_id: alkalotolerant_trait
+    label: alkalotolerant
+    node_type: TRAIT
+    grounding: METPO:1003009
+    description: Tolerates alkaline pH while growing optimally near neutral pH.
+  - node_id: alkaline_exposure
+    label: alkaline exposure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH above neutral.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of internal pH during alkaline challenge.
+  - node_id: proton_retention
+    label: proton retention
+    node_type: BIOLOGICAL_PROCESS
+    description: Retaining or capturing protons at the cell surface or cytoplasm.
+  - node_id: cation_proton_antiporter
+    label: cation/proton antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Antiporter exchanging cations for protons during pH stress.
+  edges:
+  - subject: alkaline_exposure
+    predicate: challenges
+    object: alkalotolerant_trait
+    description: Alkalotolerance reflects capacity to withstand alkaline pH
+      outside the growth optimum.
+    evidence:
+    - reference: DOI:10.1016/j.bbamem.2005.09.010
+      snippet: alkali-tolerant and extremely alkaliphilic bacteria
+      notes: Review explicitly covers alkali-tolerant bacteria.
+  - subject: alkaline_exposure
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: Alkaline pH requires maintenance of a less alkaline cytoplasm.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: grow in environments with external pH values
+      notes: Review supports pH homeostasis for growth outside cytoplasmic pH range.
+  - subject: proton_retention
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Proton capture and retention support pH homeostasis in alkaline
+      environments.
+    evidence:
+    - reference: DOI:10.1016/j.bbamem.2005.09.010
+      snippet: promote proton capture and retention
+      notes: Supports proton retention mechanisms during alkaline pH challenge.
+  - subject: cation_proton_antiporter
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Cation/proton antiporters help regulate intracellular pH under
+      alkaline stress.
+    evidence:
+    - reference: DOI:10.3390/ijms21124566
+      snippet: maintaining ion and pH homeostasis
+      notes: Supports cation/proton antiporters as pH-homeostasis transporters.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: alkalotolerant_trait
+    description: Alkaline tolerance depends on maintaining cytoplasmic pH during
+      alkaline exposure.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cell-wide physiological process
+      notes: Supports pH homeostasis as a broad enabling process.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941966+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed alkalotolerant trait and added DOI-backed evidence and causal
+    graph for alkaline-stress pH homeostasis.
+  llm_assisted: true

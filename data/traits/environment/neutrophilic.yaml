@@ -2,9 +2,10 @@ identifier: METPO:1003001
 label: neutrophilic
 definition: A pH growth preference characterized by optimal growth at near-neutral
   pH values, typically between pH 6.5 and 7.5.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003000
 synonyms:
@@ -18,9 +19,80 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: cytoplasmic pH ... must maintain for growth
+  notes: Supports pH growth preference as tied to cytoplasmic pH requirements.
+causal_graphs:
+- graph_id: neutrophilic_neutral_ph_homeostasis
+  title: Neutrophilic near-neutral pH homeostasis mechanism
+  description: Evidence-backed causal sketch linking neutrophilic growth to
+    near-neutral external pH and ordinary cytoplasmic pH homeostasis.
+  nodes:
+  - node_id: neutrophilic_trait
+    label: neutrophilic
+    node_type: TRAIT
+    grounding: METPO:1003001
+    description: Optimal growth occurs at near-neutral pH.
+  - node_id: near_neutral_external_ph
+    label: near-neutral external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH around neutrality.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH compatible with growth.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient coupled to energy metabolism.
+  - node_id: cation_proton_antiporter
+    label: cation/proton antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Transporters contributing to ion and pH homeostasis.
+  edges:
+  - subject: near_neutral_external_ph
+    predicate: supports
+    object: neutrophilic_trait
+    description: Neutrophiles grow optimally when external pH is near neutrality.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH values outside the cytoplasmic pH
+      notes: Review supports growth constraints around cytoplasmic pH compatibility.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: neutrophilic_trait
+    description: Growth near neutral pH still requires active maintenance of
+      internal pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: bacterial pH homeostasis is a cell-wide physiological process
+      notes: Supports pH homeostasis as central to bacterial growth.
+  - subject: proton_motive_force
+    predicate: interacts with
+    object: cytoplasmic_ph_homeostasis
+    description: pH regulation is linked to proton motive force and bioenergetics.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: intrinsically linked to cellular bioenergetics
+      notes: Supports coupling of pH gradients and bioenergetics.
+  - subject: cation_proton_antiporter
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Cation/proton antiporters help regulate ion and pH balance.
+    evidence:
+    - reference: DOI:10.3390/ijms21124566
+      snippet: maintaining ion and pH homeostasis
+      notes: Supports cation/proton antiport as a general pH-homeostasis mechanism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937067+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed neutrophilic trait and added DOI-backed evidence and causal
+    graph for near-neutral pH homeostasis.
+  llm_assisted: true
