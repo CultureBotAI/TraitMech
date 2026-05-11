@@ -22,6 +22,71 @@ evidence:
 - reference: PMID:38864615
   snippet: this bacterium is relatively aerotolerant and survives limited oxygen exposure
   notes: 'Organism example: Clostridium perfringens is described as aerotolerant.'
+causal_graphs:
+- graph_id: aerotolerant_anaerobe_ros_defense
+  title: Aerotolerant anaerobe ROS-defense mechanism
+  description: Evidence-backed causal sketch linking aerotolerance to anaerobic
+    growth plus enzymatic defenses against oxygen-derived stress.
+  nodes:
+  - node_id: aerotolerant_trait
+    label: aerotolerant
+    node_type: TRAIT
+    grounding: METPO:1000609
+    description: Does not use oxygen for growth but tolerates its presence.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen exposure tolerated by aerotolerant anaerobes.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    grounding: CHEBI:26523
+    description: Oxygen-derived oxidants that can damage cells.
+  - node_id: superoxide_dismutase
+    label: superoxide dismutase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme associated with detoxification of superoxide stress.
+  - node_id: anaerobic_growth
+    label: anaerobic growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth supported without using oxygen as an energy substrate.
+  edges:
+  - subject: aerotolerant_trait
+    predicate: includes
+    object: anaerobic_growth
+    description: Aerotolerant anaerobes grow anaerobically while tolerating oxygen.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2970
+      snippet: Aerotolerant anaerobes ... ROS defence ... Anaerobic growth
+      notes: Table classifies aerotolerant anaerobes as anaerobic-growth organisms
+        with ROS defence.
+  - subject: molecular_oxygen
+    predicate: can generate
+    object: reactive_oxygen_species
+    description: Oxygen exposure creates ROS stress that aerotolerant organisms
+      must defend against.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: molecular oxygen and ROS
+      notes: Review links oxygen exposure and reactive oxygen species in anaerobes.
+  - subject: superoxide_dismutase
+    predicate: contributes to
+    object: aerotolerant_trait
+    description: Superoxide dismutase abundance is associated with oxygen tolerance
+      among anaerobic bacteria.
+    evidence:
+    - reference: DOI:10.1128/iai.16.1.20-25.1977
+      snippet: aerotolerant and intermediate organisms had SOD
+      notes: Comparative anaerobe study supports SOD as an oxygen-tolerance factor.
+  - subject: superoxide_dismutase
+    predicate: mitigates
+    object: reactive_oxygen_species
+    description: SOD mitigates superoxide stress generated during oxygen exposure.
+    evidence:
+    - reference: DOI:10.1128/iai.16.1.20-25.1977
+      snippet: oxygen tolerance of anaerobes is usually related to their level of SOD
+      notes: Supports SOD as a ROS-defense mechanism for aerotolerant anaerobes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853836+00:00'
   curator: seed_from_metpo
@@ -37,4 +102,10 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Clostridium perfringens organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for aerotolerance and ROS-defense
+    mechanisms in anaerobes.
   llm_assisted: true

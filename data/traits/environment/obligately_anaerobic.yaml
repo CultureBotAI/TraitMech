@@ -22,6 +22,73 @@ evidence:
 - reference: PMID:22778399
   snippet: obligate anaerobe Bacteroides fragilis
   notes: 'Organism example: Bacteroides fragilis is described as an obligate anaerobe.'
+causal_graphs:
+- graph_id: obligate_anaerobe_oxygen_toxicity
+  title: Obligate anaerobe oxygen-toxicity mechanism
+  description: Evidence-backed causal sketch linking obligate anaerobiosis to
+    oxygen-blocked growth and oxygen-sensitive metabolic chemistry.
+  nodes:
+  - node_id: obligate_anaerobic_trait
+    label: obligately anaerobic
+    node_type: TRAIT
+    grounding: METPO:1000607
+    description: Molecular oxygen inhibits or prevents growth.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Dioxygen exposure that blocks obligate anaerobe growth.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    grounding: CHEBI:26523
+    description: Oxygen-derived oxidants such as superoxide and hydrogen peroxide.
+  - node_id: low_potential_metal_centres
+    label: low-potential metal centres
+    node_type: MOLECULAR_FUNCTION
+    description: Oxygen-sensitive catalytic centers used in anaerobic metabolism.
+  - node_id: anaerobic_metabolism
+    label: anaerobic metabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Energy metabolism optimized for anoxic conditions.
+  edges:
+  - subject: molecular_oxygen
+    predicate: inhibits
+    object: obligate_anaerobic_trait
+    description: Oxygen blocks growth of obligate anaerobes.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: oxygen blocks their growth
+      notes: Review identifies blocked growth as the defining trait of obligate
+        anaerobes.
+  - subject: anaerobic_metabolism
+    predicate: depends on
+    object: low_potential_metal_centres
+    description: Obligate anaerobic metabolism often relies on oxygen-sensitive
+      radical chemistry and low-potential metal centers.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: radical chemistry and low-potential metal centres
+      notes: Supports low-potential metal centers as anaerobic metabolic features.
+  - subject: molecular_oxygen
+    predicate: poisons
+    object: low_potential_metal_centres
+    description: Dioxygen can directly poison catalytic sites central to anaerobic
+      metabolism.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: direct poisoning by molecular oxygen and ROS
+      notes: Supports oxygen-sensitive catalytic sites as a mechanism of growth
+        inhibition.
+  - subject: reactive_oxygen_species
+    predicate: damages
+    object: low_potential_metal_centres
+    description: ROS provide an additional route for damage to oxygen-sensitive
+      anaerobic enzymes.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      snippet: direct poisoning by molecular oxygen and ROS
+      notes: Supports ROS-mediated impairment of anaerobic catalytic sites.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.852690+00:00'
   curator: seed_from_metpo
@@ -37,4 +104,9 @@ curation_history:
   curator: codex
   action: ADDED_ORGANISM_EXAMPLE
   changes: Added Bacteroides fragilis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: ADDED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph for oxygen toxicity in obligate anaerobes.
   llm_assisted: true
