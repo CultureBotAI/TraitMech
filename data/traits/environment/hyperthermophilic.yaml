@@ -2,7 +2,7 @@ identifier: METPO:1000617
 label: hyperthermophilic
 definition: A temperature preference in which growth is favored at very high temperatures,
   typically ≥80 °C.
-definition_source: PMID:9348040
+definition_source: DOI:10.1111/j.1574-6976.1996.tb00233.x
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -16,9 +16,94 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
+- reference: DOI:10.1111/j.1574-6976.1996.tb00233.x
+  snippet: optimal growth temperatures between 80°C and 110°C
+  notes: Supports hyperthermophile growth at very high temperatures.
 - reference: PMID:9348040
   snippet: hyperthermophilic archaeon, Pyrococcus furiosus
   notes: 'Organism example: Pyrococcus furiosus is described as hyperthermophilic.'
+causal_graphs:
+- graph_id: hyperthermophilic_thermostability
+  title: Hyperthermophilic thermostability mechanism
+  description: Evidence-backed causal sketch linking hyperthermophily to very high
+    temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and
+    membrane adaptation.
+  nodes:
+  - node_id: hyperthermophilic_trait
+    label: hyperthermophilic
+    node_type: TRAIT
+    grounding: METPO:1000617
+    description: Growth is favored at very high temperatures, typically at or above
+      80 degrees C.
+  - node_id: very_high_temperature
+    label: very high temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Growth condition around 80 degrees C or hotter.
+  - node_id: thermostable_enzymes
+    label: thermostable enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes resistant to irreversible inactivation at high
+      temperatures.
+  - node_id: reverse_gyrase
+    label: reverse gyrase
+    node_type: GENE_OR_PROTEIN
+    description: Topoisomerase associated with hyperthermophiles and positive DNA
+      supercoiling.
+  - node_id: molecular_chaperonins
+    label: archaeal molecular chaperonins
+    node_type: GENE_OR_PROTEIN
+    description: Protein-folding systems in hyperthermophilic archaea.
+  - node_id: membrane_lipid_composition
+    label: membrane lipid composition
+    node_type: CELLULAR_LOCALIZATION
+    description: Membrane lipid features supporting stability at very high
+      temperature.
+  edges:
+  - subject: very_high_temperature
+    predicate: selects for
+    object: hyperthermophilic_trait
+    description: Very high-temperature environments select for hyperthermophilic
+      growth capacity.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.1996.tb00233.x
+      snippet: optimal growth temperatures between 80°C and 110°C
+      notes: Review supports hyperthermophile growth temperature range.
+  - subject: thermostable_enzymes
+    predicate: enables
+    object: hyperthermophilic_trait
+    description: Thermostable enzymes support metabolism at very high temperature.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: thermostable ... optimally active at high temperatures
+      notes: Supports enzyme thermostability in hyperthermophiles.
+  - subject: reverse_gyrase
+    predicate: contributes to
+    object: hyperthermophilic_trait
+    description: Reverse gyrase is associated with DNA stabilization in
+      hyperthermophiles.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.661411
+      snippet: reverse gyrase is present in all the hyperthermophiles
+      notes: Review supports the strong association of reverse gyrase with
+        hyperthermophily.
+  - subject: molecular_chaperonins
+    predicate: maintains
+    object: thermostable_enzymes
+    description: Chaperonin systems support protein folding under heat stress.
+    evidence:
+    - reference: DOI:10.1038/nrmicro866
+      snippet: protein-folding system to cope with heat stress
+      notes: Review supports archaeal chaperonins in hyperthermophile heat-stress
+        protein folding.
+  - subject: membrane_lipid_composition
+    predicate: enables
+    object: hyperthermophilic_trait
+    description: Membrane lipid adaptation contributes to growth near the upper
+      temperature range for life.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: changes in the membrane lipid composition
+      notes: Supports membrane lipid changes as high-temperature adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858819+00:00'
   curator: seed_from_metpo
@@ -29,4 +114,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Pyrococcus furiosus organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed hyperthermophily causal graph for thermostable
+    enzymes, reverse gyrase, chaperonins, and membrane adaptation.
   llm_assisted: true

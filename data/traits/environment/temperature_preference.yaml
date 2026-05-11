@@ -2,9 +2,10 @@ identifier: METPO:1000613
 label: temperature preference
 definition: A phenotype that describes characteristic growth with respect to environmental
   temperature.
+definition_source: DOI:10.1038/sj.jim.2900572
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -14,9 +15,116 @@ synonyms:
 - synonym_text: range_tmp
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/sj.jim.2900572
+  snippet: growth rate vs temperature
+  notes: Supports temperature-dependent microbial growth-rate phenotypes.
+causal_graphs:
+- graph_id: temperature_preference_growth_physiology
+  title: Environmental temperature control of growth preference
+  description: Evidence-backed causal sketch linking environmental temperature to
+    membrane fluidity, protein stability, and growth-rate phenotypes.
+  nodes:
+  - node_id: temperature_preference_trait
+    label: temperature preference
+    node_type: TRAIT
+    grounding: METPO:1000613
+    description: Growth phenotype characterized by preferred environmental
+      temperature.
+  - node_id: environmental_temperature
+    label: environmental temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Growth temperature experienced by the organism.
+  - node_id: low_temperature
+    label: low temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cold growth condition that reduces molecular motion and membrane
+      fluidity.
+  - node_id: high_temperature
+    label: high temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hot growth condition that challenges protein and membrane
+      stability.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical state of the membrane affecting transport and cell
+      function.
+  - node_id: protein_stability
+    label: protein stability
+    node_type: MOLECULAR_FUNCTION
+    description: Capacity of proteins to retain folded, functional conformations.
+  - node_id: growth_rate
+    label: microbial growth rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Rate of population growth under a given temperature regime.
+  edges:
+  - subject: environmental_temperature
+    predicate: influences
+    object: growth_rate
+    description: Microbial growth rate varies with growth temperature.
+    evidence:
+    - reference: DOI:10.1038/sj.jim.2900572
+      snippet: growth rate vs temperature
+      notes: Study analyzes temperature dependence of microbial growth rates across
+        psychrotrophs, mesophiles, and thermophiles.
+  - subject: low_temperature
+    predicate: decreases
+    object: membrane_fluidity
+    description: Cold temperature reduces membrane fluidity and transport
+      efficiency.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: decreased membrane fluidity
+      notes: Review identifies membrane fluidity loss as a core cold challenge.
+  - subject: high_temperature
+    predicate: challenges
+    object: protein_stability
+    description: Elevated temperature challenges protein folding and functional
+      stability.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Review supports thermostable enzymes as a high-temperature adaptation.
+  - subject: high_temperature
+    predicate: increases
+    object: membrane_fluidity
+    description: High temperature increases membrane permeability and fluidity,
+      creating a limit on growth.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: proton permeability ... increase with the temperature
+      notes: Review links increased membrane permeability to upper temperature
+        growth limits.
+  - subject: membrane_fluidity
+    predicate: constrains
+    object: temperature_preference_trait
+    description: Temperature preference reflects the range in which membrane
+      function remains compatible with growth.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: optimizes the performance of cellular physiological processes
+      notes: Review supports membrane fluidity adaptation as a temperature-sensing
+        and response mechanism.
+  - subject: protein_stability
+    predicate: constrains
+    object: temperature_preference_trait
+    description: Growth at preferred temperatures requires proteins to remain
+      active and stable.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: molecular mechanisms involved in protein thermostabilization
+      notes: Supports protein stability as a determinant of high-temperature
+        growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.856449+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed temperature preference trait and added DOI-backed causal graph
+    for temperature effects on membrane fluidity, protein stability, and growth.
+  llm_assisted: true
