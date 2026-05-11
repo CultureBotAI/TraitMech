@@ -2,7 +2,7 @@ identifier: METPO:2000231
 label: does not sequester
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: SEEDED
+mapping_status: DEPRECATED
 parent_traits:
 - METPO:2000230
 domain: https://w3id.org/metpo/1000525
@@ -13,3 +13,11 @@ curation_history:
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (OBJECT_PROPERTY)
   llm_assisted: false
+- timestamp: '2026-05-10T00:00:00-07:00'
+  curator: codex
+  action: DEPRECATED_PROPERTY_RECORD
+  changes: Deprecated generic transport or storage relation carrier; later replacement
+    should use more specific trait records that combine the relation with the
+    transported, imported, exported, accumulated, or sequestered entity, cellular
+    location or compartment, and positive or negative context.
+  llm_assisted: true
