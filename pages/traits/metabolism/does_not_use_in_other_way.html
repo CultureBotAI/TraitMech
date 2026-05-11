@@ -29,136 +29,144 @@
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
     <h1>does not use in other way</h1>
-    <p class="curie"><code>METPO:2000041</code> · OBJECT_PROPERTY · SEEDED</p>
-    
+    <p class="curie"><code>METPO:2000041</code> · OBJECT_PROPERTY · DEPRECATED</p>
+
   </header>
+
+
 
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
-        
-        
-        
-        
+
+
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/metabolism/organism_interacts_with_chemical.html" >organism interacts with chemical <code>METPO:2000001</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>other <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:2000041</code> <span class="dim-preview">[+1.458, +1.133, -0.190, +0.009, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/does_not_build_base_from.html">does not build base from</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/does_not_assimilate.html">does not assimilate</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/does_not_build_acid_from.html">does not build acid from</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/does_not_disproportionate.html">does not disproportionate</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/degrades.html">degrades</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/builds_base_from.html">builds base from</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/ferments.html">ferments</a>
           <span class="sim">0.994</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionates.html">disproportionates</a>
           <span class="sim">0.993</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.970382+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (OBJECT_PROPERTY)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-10T00:00:00-07:00</time> ·
+          <strong>DEPRECATED_PROPERTY_RECORD</strong> · codex
+          <p class="changes">Deprecated generic negative biochemical conversion or activity relation carrier; later replacement should use more specific trait records that combine the relation with the substrate, product, enzyme or activity target, assay context, growth condition, and negative evidence.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -183,27 +191,29 @@
       <dt>Term kind</dt>
       <dd>OBJECT_PROPERTY</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>DEPRECATED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
+
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-11 05:19 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
