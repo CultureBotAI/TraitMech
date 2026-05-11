@@ -1,10 +1,11 @@
 identifier: METPO:1000720
 label: facultative psychrophilic
 definition: A temperature preference characterized by the ability to grow at low temperatures
-  (typically below 20Â°C) while maintaining optimal growth at moderate temperatures.
+  (typically below 20 degrees C) while maintaining optimal growth at moderate temperatures.
+definition_source: DOI:10.1111/j.1574-6941.2009.00727.x
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
 synonyms:
@@ -15,9 +16,99 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1111/j.1574-6941.2009.00727.x
+  snippet: optimum temperatures >20 °C and are capable of growth around 0 °C
+  notes: Supports facultative psychrophiles as cold-growing organisms with higher
+    temperature optima.
+causal_graphs:
+- graph_id: facultative_psychrophilic_cold_tolerance
+  title: Facultative psychrophily cold-tolerance mechanism
+  description: Evidence-backed causal sketch linking facultative psychrophily to
+    low-temperature growth, moderate-temperature optima, membrane remodeling, and
+    cold acclimation proteins.
+  nodes:
+  - node_id: facultative_psychrophilic_trait
+    label: facultative psychrophilic
+    node_type: TRAIT
+    grounding: METPO:1000720
+    description: Capacity to grow at low temperatures while retaining optimal
+      growth at moderate temperatures.
+  - node_id: low_temperature
+    label: low temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cold growth condition near 0 degrees C.
+  - node_id: moderate_temperature
+    label: moderate temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Temperature range where facultative psychrophiles can show optimal
+      growth.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical state of the membrane needed for transport and growth.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated and branched-chain fatty acids
+    node_type: CHEMICAL
+    description: Membrane lipid features that maintain fluidity under cold
+      conditions.
+  - node_id: cold_shock_proteins
+    label: cold-shock proteins
+    node_type: GENE_OR_PROTEIN
+    description: Proteins involved in cold shock and cold acclimation responses.
+  edges:
+  - subject: low_temperature
+    predicate: is tolerated by
+    object: facultative_psychrophilic_trait
+    description: Facultative psychrophiles can grow at low temperature.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6941.2009.00727.x
+      snippet: capable of growth around 0 °C
+      notes: Review introduction supports low-temperature growth capacity.
+  - subject: moderate_temperature
+    predicate: supports optimum of
+    object: facultative_psychrophilic_trait
+    description: Facultative psychrophiles retain optimal growth at moderate
+      temperatures.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6941.2009.00727.x
+      snippet: optimum temperatures >20 °C
+      notes: Supports distinction from obligate psychrophiles.
+  - subject: low_temperature
+    predicate: decreases
+    object: membrane_fluidity
+    description: Cold temperature decreases membrane fluidity.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: decreased membrane fluidity
+      notes: Supports membrane rigidification as a cold challenge.
+  - subject: unsaturated_fatty_acids
+    predicate: maintains
+    object: membrane_fluidity
+    description: Lipid remodeling maintains membrane function during cold growth.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: incorporation of proportionally more unsaturated fatty acids
+      notes: Supports homoviscous adaptation during lower-temperature growth.
+  - subject: cold_shock_proteins
+    predicate: contributes to
+    object: facultative_psychrophilic_trait
+    description: Cold-shock proteins contribute to growth after temperature
+      downshift.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: Cold-shock proteins have also been described
+      notes: Supports cold-shock proteins as cold-acclimation components.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.908340+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed facultative psychrophilic trait, corrected temperature text
+    encoding, and added DOI-backed causal graph for low-temperature growth with
+    moderate-temperature optimum.
+  llm_assisted: true
