@@ -3,9 +3,10 @@ label: spirochete shaped
 definition: A cell shape in which an organism has an elongated, tightly coiled helical
   morphology with periplasmic flagella (endoflagella) located between the cell wall
   and outer membrane.
+definition_source: DOI:10.1073/pnas.200221797
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -13,9 +14,86 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1073/pnas.200221797
+  snippet: periplasmic flagella ... confer in part its flat-wave morphology
+  notes: Supports spirochete morphology as a cell-cylinder and periplasmic-flagella
+    interaction.
+causal_graphs:
+- graph_id: spirochete_shaped_periplasmic_flagella
+  title: Spirochete-shape periplasmic flagella mechanism
+  description: Evidence-backed causal sketch linking spirochete morphology to the
+    cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or
+    helical cell-body deformation.
+  nodes:
+  - node_id: spirochete_shaped_trait
+    label: spirochete shaped
+    node_type: TRAIT
+    grounding: METPO:1000693
+    description: Elongated helical or flat-wave spirochete morphology.
+  - node_id: cell_cylinder
+    label: cell cylinder
+    node_type: CELLULAR_LOCALIZATION
+    description: Rod-like cell body within the outer membrane sheath.
+  - node_id: periplasmic_flagella
+    label: periplasmic flagella
+    node_type: ORGANELLE
+    description: Internal flagella located in the periplasmic space.
+  - node_id: flaB
+    label: FlaB
+    node_type: GENE_OR_PROTEIN
+    description: Major periplasmic flagellar filament protein in Borrelia.
+  - node_id: flat_wave_morphology
+    label: flat-wave morphology
+    node_type: BIOLOGICAL_PROCESS
+    description: Wave-like deformation of the spirochete cell body.
+  edges:
+  - subject: flaB
+    predicate: builds
+    object: periplasmic_flagella
+    description: FlaB is required for periplasmic flagellar filaments.
+    evidence:
+    - reference: DOI:10.1073/pnas.200221797
+      snippet: gene encoding the major periplasmic flagellar filament protein FlaB
+      notes: Targeted mutagenesis of flaB removed periplasmic flagella in
+        Borrelia burgdorferi.
+  - subject: periplasmic_flagella
+    predicate: interact with
+    object: cell_cylinder
+    description: Periplasmic flagella interact with the cell cylinder to deform
+      the spirochete body.
+    evidence:
+    - reference: DOI:10.1073/pnas.200221797
+      snippet: complex interaction between the cell cylinder and the internal periplasmic flagella
+      notes: Supports a physical interaction between flagella and cell cylinder.
+  - subject: periplasmic_flagella
+    predicate: confer
+    object: flat_wave_morphology
+    description: Periplasmic flagella provide a skeletal function that confers
+      flat-wave morphology.
+    evidence:
+    - reference: DOI:10.1073/pnas.200221797
+      snippet: have a skeletal function
+      notes: Supports periplasmic flagella as morphology-shaping structures.
+  - subject: flat_wave_morphology
+    predicate: produces
+    object: spirochete_shaped_trait
+    description: Flat-wave or helical deformation produces spirochete morphology.
+    evidence:
+    - reference: DOI:10.1073/pnas.200221797
+      snippet: cell morphology is either a helix, a flat wave, or an irregularly shaped helix
+      notes: Supports spirochete-shape classes and their dependence on internal
+        flagella-cell-body geometry.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899870+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Replaced broad definition source with DOI-backed spirochete morphology
+    evidence and added causal graph for FlaB, periplasmic flagella, cell cylinder,
+    and flat-wave morphology.
+  llm_assisted: true

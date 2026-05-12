@@ -1,8 +1,11 @@
 identifier: METPO:1000670
 label: curved shaped
+definition: A cell shape in which an organism has a bent or curved cell body rather
+  than a straight rod or sphere.
+definition_source: DOI:10.1371/journal.pbio.1002565
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -13,9 +16,86 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1371/journal.pbio.1002565
+  snippet: curved cells appear to be optimized for motility
+  notes: Supports curved cells as a recognized bacterial morphology with possible
+    functional associations.
+causal_graphs:
+- graph_id: curved_shaped_scaffolded_curvature
+  title: Curved-shape scaffolded morphogenesis mechanism
+  description: Evidence-backed causal sketch linking curved bacterial morphology
+    to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.
+  nodes:
+  - node_id: curved_shaped_trait
+    label: curved shaped
+    node_type: TRAIT
+    grounding: METPO:1000670
+    description: Bent or curved bacterial cell-body morphology.
+  - node_id: curvature_scaffold
+    label: curvature scaffold
+    node_type: GENE_OR_PROTEIN
+    description: Shape-determining scaffold such as crescentin or CrvA that marks
+      the inner curve.
+  - node_id: inner_cell_curvature
+    label: inner cell curvature
+    node_type: CELLULAR_LOCALIZATION
+    description: Concave region of a curved bacterial cell body.
+  - node_id: peptidoglycan_growth_pattern
+    label: peptidoglycan growth pattern
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial pattern of wall synthesis and remodeling that shapes the
+      cell body.
+  - node_id: cell_body_curvature
+    label: cell-body curvature
+    node_type: BIOLOGICAL_PROCESS
+    description: Curving of the bacterial cell body.
+  edges:
+  - subject: curvature_scaffold
+    predicate: localizes to
+    object: inner_cell_curvature
+    description: Curvature scaffolds mark or constrain the inner curve of the cell.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: scaffold-mediated delineation of an inner curvature
+      notes: Supports a common structural theme for curved and helical cells.
+  - subject: curvature_scaffold
+    predicate: guides
+    object: peptidoglycan_growth_pattern
+    description: Curvature scaffolds bias wall growth or structural constraints
+      along the inner curve.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: guide PG synthesis
+      notes: Supports scaffold-guided peptidoglycan synthesis as a curvature
+        mechanism in representative bacteria.
+  - subject: peptidoglycan_growth_pattern
+    predicate: generates
+    object: cell_body_curvature
+    description: Spatially patterned wall growth or constraint generates cell-body
+      curvature.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2016.12.019
+      snippet: asymmetrically patterns peptidoglycan insertion
+      notes: Vibrio evidence supports asymmetric PG insertion as one concrete
+        route to curved rods.
+  - subject: cell_body_curvature
+    predicate: produces
+    object: curved_shaped_trait
+    description: Cell-body curvature produces the curved-shape trait.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: vibrioid (curved) morphology
+      notes: Supports curved morphology as a recognized bacterial cell-shape class.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887107+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed curved shape and added DOI-backed causal graph for curvature
+    scaffolds, inner curvature, and spatial peptidoglycan growth.
+  llm_assisted: true
