@@ -50,7 +50,7 @@ causal_graphs:
     description: Pathology produced in an animal host.
   edges:
   - subject: metazoan_virulence_factors
-    predicate: enable
+    predicate: enables
     object: animal_tissue_colonization
     description: Metazoan-adapted virulence factors enable adhesion and invasion
       of animal tissues.

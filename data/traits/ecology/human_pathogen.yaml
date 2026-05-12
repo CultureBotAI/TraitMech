@@ -22,7 +22,7 @@ evidence:
     by which bacteria establish human infection.
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
-  title: Human-pathogen Homo-sapiens host adaptation
+  title: Human-pathogen Homo sapiens host adaptation
   description: DOI-backed graph linking human-adapted virulence factors,
     body-temperature and tissue tropism, and human-specific immune evasion to the
     human-pathogen phenotype.
@@ -51,7 +51,7 @@ causal_graphs:
     description: Pathology produced in a human host.
   edges:
   - subject: human_virulence_factors
-    predicate: enable
+    predicate: enables
     object: human_tropism
     description: Human-adapted virulence factors enable preferential adhesion and
       growth in human tissues.

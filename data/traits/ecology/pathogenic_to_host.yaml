@@ -1,6 +1,6 @@
 identifier: METPO:1004000
 label: pathogenic to host
-definition: A phenotype where a microbe is a pathogen of of some host organism.
+definition: A phenotype where a microbe is a pathogen of some host organism.
 definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -64,7 +64,7 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports virulence factors as enablers of host colonization.
   - subject: secretion_systems
-    predicate: deliver
+    predicate: delivers
     object: virulence_factors
     description: Bacterial protein secretion systems deliver effector virulence
       factors into host environments or host cells.
