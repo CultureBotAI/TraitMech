@@ -2,9 +2,10 @@ identifier: METPO:1000629
 label: halophily preference
 definition: A phenotype that is relating to an organism's salt concentration requirements
   or tolerance for growth.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -14,9 +15,118 @@ synonyms:
 - synonym_text: range_salinity
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: life at high salt concentrations
+  notes: Supports salinity and salt concentration as a growth-relevant microbial
+    trait axis.
+causal_graphs:
+- graph_id: halophily_preference_osmoadaptation
+  title: Salinity preference and osmoadaptation mechanism
+  description: Evidence-backed causal sketch linking environmental salinity,
+    osmotic stress, water flux, ion homeostasis, and compatible-solute
+    accumulation to halophily preference.
+  nodes:
+  - node_id: halophily_preference_trait
+    label: halophily preference
+    node_type: TRAIT
+    grounding: METPO:1000629
+    description: Growth requirement or tolerance with respect to environmental salt
+      concentration.
+  - node_id: environmental_salinity
+    label: environmental salinity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Salt concentration of the growth environment.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular stress caused by a mismatch between external and
+      cytoplasmic osmotic potential.
+  - node_id: water_flux
+    label: water flux across cytoplasmic membrane
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmotically driven water movement across the membrane.
+  - node_id: potassium_ion
+    label: potassium ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29103
+    description: Inorganic ion rapidly accumulated during some osmotic upshifts.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Organic osmolytes accumulated by synthesis or uptake under salt
+      stress.
+  - node_id: compatible_solute_transport
+    label: compatible-solute transport
+    node_type: MOLECULAR_FUNCTION
+    description: Uptake systems importing osmoprotectants from the environment.
+  edges:
+  - subject: environmental_salinity
+    predicate: influences
+    object: halophily_preference_trait
+    description: Salt concentration determines whether growth requires, tolerates,
+      or avoids salinity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: life at high salt concentrations
+      notes: Review frames halophily as microbial life under high salt
+        concentration.
+  - subject: environmental_salinity
+    predicate: causes
+    object: osmotic_stress
+    description: Salinity changes impose osmotic stress on cells.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2002.tb00598.x
+      snippet: overcome salt stress
+      notes: Review describes bacterial mechanisms for salt-stress responses.
+  - subject: osmotic_stress
+    predicate: drives
+    object: water_flux
+    description: Osmotic imbalance drives water movement across the cytoplasmic
+      membrane.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: balance the osmotic gradient across their cytoplasmic membrane
+      notes: Supports osmotic-gradient balancing as central to microbial osmotic
+        stress.
+  - subject: potassium_ion
+    predicate: contributes to
+    object: osmotic_stress
+    description: Potassium accumulation is an early response to osmotic upshift in
+      many bacteria.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: initially importing substantial amounts of potassium ions
+      notes: Supports K+ uptake as an emergency osmotic-stress response.
+  - subject: compatible_solute_transport
+    predicate: imports
+    object: compatible_solutes
+    description: Transport systems import compatible solutes that relieve osmotic
+      stress.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2021.01.030
+      snippet: biosynthesis and/or uptake of compatible solutes
+      notes: Review supports uptake and biosynthesis of compatible solutes in
+        bacterial high-salinity responses.
+  - subject: compatible_solutes
+    predicate: mitigates
+    object: osmotic_stress
+    description: Compatible solutes maintain turgor and protect macromolecular
+      function under salt stress.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-1-5
+      snippet: balance external osmotic pressure
+      notes: Review supports compatible solutes as osmolytes for osmotic balance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.865794+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed halophily preference trait and added DOI-backed causal graph
+    for salinity-driven osmotic stress, ion homeostasis, and compatible-solute
+    osmoadaptation.
+  llm_assisted: true
