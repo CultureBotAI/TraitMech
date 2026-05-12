@@ -1,17 +1,110 @@
 identifier: METPO:1003031
 label: carotenoid pigmentation
+definition: A pigmentation phenotype caused by microbial production and accumulation
+  of carotenoid pigments.
+definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_carotenoid
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1080/1040841X.2025.2526423
+  snippet: Carotenoids are isoprenoid pigments
+  notes: Supports carotenoid pigmentation as a bacterial isoprenoid-pigment
+    phenotype.
+causal_graphs:
+- graph_id: carotenoid_pigmentation_crt_pathway
+  title: Carotenoid pigmentation crt-pathway mechanism
+  description: Evidence-backed causal sketch linking bacterial carotenoid
+    pigmentation to isoprenoid precursors, crt enzymes, conjugated carotenoids, and
+    yellow-orange-red visible color.
+  nodes:
+  - node_id: carotenoid_pigmentation_trait
+    label: carotenoid pigmentation
+    node_type: TRAIT
+    grounding: METPO:1003031
+    description: Microbial pigmentation caused by carotenoid compounds.
+  - node_id: isoprenoid_precursors
+    label: isoprenoid precursors
+    node_type: CHEMICAL
+    description: Prenyl building blocks used in carotenoid biosynthesis.
+  - node_id: crt_enzymes
+    label: Crt enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial carotenoid biosynthetic enzymes encoded by crt genes.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic pathway producing carotenoid pigments.
+  - node_id: conjugated_carotenoids
+    label: conjugated carotenoids
+    node_type: CHEMICAL
+    description: Colored carotenoid molecules with conjugated double bonds.
+  - node_id: yellow_orange_red_color
+    label: yellow-orange-red color
+    node_type: MOLECULAR_FUNCTION
+    description: Visible colors associated with carotenoid absorption spectra.
+  edges:
+  - subject: isoprenoid_precursors
+    predicate: feed into
+    object: carotenoid_biosynthesis
+    description: Isoprenoid precursors provide substrate for carotenoid production.
+    evidence:
+    - reference: DOI:10.1016/j.gene.2004.11.038
+      snippet: isoprenoid precursor biosynthesis
+      notes: Supports isoprenoid precursor biosynthesis as a major step in
+        eubacterial carotenoid pathways.
+  - subject: crt_enzymes
+    predicate: catalyzes
+    object: carotenoid_biosynthesis
+    description: Crt gene products catalyze bacterial carotenoid biosynthetic
+      reactions.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: crt genes ... reactions they catalyze
+      notes: Supports Crt enzymes as pathway catalysts.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: conjugated_carotenoids
+    description: Carotenoid biosynthesis produces conjugated carotenoid pigments.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: biosynthesis pathways of bacterial carotenoids
+      notes: Supports bacterial carotenoid biosynthesis as the source of
+        carotenoid pigments.
+  - subject: conjugated_carotenoids
+    predicate: causes
+    object: yellow_orange_red_color
+    description: Conjugated carotenoids absorb visible light and produce
+      yellow-orange-red pigmentation.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: red, pink, orange, and yellow pigmentation in bacteria
+      notes: Supports carotenoids as color determinants for this pigment class.
+  - subject: yellow_orange_red_color
+    predicate: manifests as
+    object: carotenoid_pigmentation_trait
+    description: Yellow-orange-red visible color manifests carotenoid pigmentation.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: responsible for the red, pink, orange, and yellow pigmentation
+      notes: Supports the trait-level mapping from carotenoid chemistry to
+        pigmentation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947657+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:45:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for isoprenoid precursors,
+    Crt enzymes, carotenoid biosynthesis, conjugated carotenoids, and visible
+    pigmentation.
+  llm_assisted: true
