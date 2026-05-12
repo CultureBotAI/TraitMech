@@ -2,9 +2,10 @@ identifier: METPO:1000870
 label: sporulation
 definition: A phenotype that is relating to an organism's ability to form dormant,
   stress-resistant endospores.
+definition_source: DOI:10.1146/annurev.genet.30.1.297
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -17,9 +18,110 @@ synonyms:
 - synonym_text: sporulation
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.genet.30.1.297
+  snippet: conversion of a growing cell into a two-cell-chamber sporangium
+  notes: Supports sporulation as a developmental morphogenesis process producing a
+    spore within a sporangium.
+causal_graphs:
+- graph_id: sporulation_spo0a_sigma_morphogenesis
+  title: Sporulation Spo0A and sigma-factor morphogenesis
+  description: Evidence-backed causal sketch linking environmental stress and
+    Spo0A activation to asymmetric septation, compartment-specific sigma factors,
+    forespore maturation, and endospore formation.
+  nodes:
+  - node_id: sporulation_trait
+    label: sporulation
+    node_type: TRAIT
+    grounding: METPO:1000870
+    description: Ability to undergo endospore-forming developmental differentiation.
+  - node_id: nutrient_limitation
+    label: nutrient limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Starvation or stress cue that can trigger sporulation.
+  - node_id: spo0a_phosphorelay
+    label: Spo0A phosphorelay
+    node_type: GENE_OR_PROTEIN
+    description: Phosphorelay-controlled master regulator of sporulation initiation.
+  - node_id: asymmetric_septation
+    label: asymmetric septation
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar division generating mother-cell and forespore compartments.
+  - node_id: compartment_sigma_factors
+    label: compartment-specific sigma factors
+    node_type: GENE_OR_PROTEIN
+    description: Sporulation sigma factors such as sigma F, E, G, and K.
+  - node_id: forespore_maturation
+    label: forespore maturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Developmental process converting the forespore into a mature endospore.
+  - node_id: endospore
+    label: endospore
+    node_type: ORGANELLE
+    description: Dormant stress-resistant spore produced by sporulating bacteria.
+  edges:
+  - subject: nutrient_limitation
+    predicate: activates
+    object: spo0a_phosphorelay
+    description: Starvation and stress signals feed into Spo0A activation.
+    evidence:
+    - reference: DOI:10.1016/S1369-5274(00)00141-7
+      snippet: steps that lead to activation of Spo0A
+      notes: Supports Spo0A activation as the initiation control point for
+        sporulation.
+  - subject: spo0a_phosphorelay
+    predicate: initiates
+    object: asymmetric_septation
+    description: Spo0A-dependent transcription initiates the morphological program
+      that includes asymmetric septation.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: activation of these sigma factors to landmark events in morphogenesis
+      notes: Supports regulatory linkage between Spo0A/sigma activation and
+        sporulation morphogenesis.
+  - subject: asymmetric_septation
+    predicate: establishes
+    object: compartment_sigma_factors
+    description: Asymmetric septation establishes mother-cell and forespore
+      compartments with distinct sigma-factor programs.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.526-560.2003
+      snippet: Compartmentalization of Gene Expression
+      notes: Supports compartment-specific gene expression during spore formation.
+  - subject: compartment_sigma_factors
+    predicate: drives
+    object: forespore_maturation
+    description: Sequential sigma-factor activity drives forespore development.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.4.526-560.2003
+      snippet: forespore- and mother cell-specific transcription factors
+      notes: Supports sigma-factor cascades as drivers of compartmental development.
+  - subject: forespore_maturation
+    predicate: produces
+    object: endospore
+    description: Forespore maturation produces a dormant endospore.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: within which a spore is produced
+      notes: Supports the developmental endpoint of sporulation.
+  - subject: endospore
+    predicate: manifests as
+    object: sporulation_trait
+    description: Endospore production manifests the sporulation phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: production of a highly resistant dormant cell type known as the spore
+      notes: Supports endospore production as the trait outcome.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.916642+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T21:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for nutrient limitation,
+    Spo0A phosphorelay, asymmetric septation, compartment sigma factors, forespore
+    maturation, and endospore formation.
+  llm_assisted: true

@@ -1,17 +1,106 @@
 identifier: METPO:1000687
 label: branched shaped
+definition: A cell shape in which an organism forms lateral branches from
+  filamentous or hyphal cells.
+definition_source: DOI:10.1016/j.mib.2012.10.012
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: branced
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/j.mib.2012.10.012
+  snippet: Streptomyces grow by tip extension and through the initiation of new branches
+  notes: Supports branched morphology as a Streptomyces hyphal growth phenotype.
+causal_graphs:
+- graph_id: branched_shaped_streptomyces_branching
+  title: Branched-shape Streptomyces branch-site mechanism
+  description: Evidence-backed causal sketch linking branched morphology to
+    DivIVA foci, branch-site selection, polarisome behavior, local peptidoglycan
+    assembly, and lateral branch outgrowth.
+  nodes:
+  - node_id: branched_shaped_trait
+    label: branched shaped
+    node_type: TRAIT
+    grounding: METPO:1000687
+    description: Filamentous bacterial morphology with lateral branches.
+  - node_id: divIVA_foci
+    label: DivIVA foci
+    node_type: GENE_OR_PROTEIN
+    description: DivIVA assemblies marking future Streptomyces branch sites.
+  - node_id: branch_site_selection
+    label: branch-site selection
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection of a new site for lateral branch outgrowth.
+  - node_id: polarisome_behavior
+    label: polarisome behavior
+    node_type: BIOLOGICAL_PROCESS
+    description: Dynamics of the polar growth machinery that controls branch growth.
+  - node_id: local_cell_wall_assembly
+    label: local cell-wall assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Peptidoglycan assembly at a new growth zone.
+  - node_id: lateral_branch_outgrowth
+    label: lateral branch outgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Emergence and extension of a new hyphal branch.
+  edges:
+  - subject: divIVA_foci
+    predicate: marks
+    object: branch_site_selection
+    description: DivIVA foci mark sites where lateral branches will emerge.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1002423
+      snippet: mark sites of future branch outgrowth
+      notes: Supports DivIVA foci as branch-site markers.
+  - subject: branch_site_selection
+    predicate: controls
+    object: polarisome_behavior
+    description: Branch-site selection controls where new polar growth machinery
+      is established.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2012.10.012
+      snippet: principal mechanism of branch site selection
+      notes: Supports branch-site selection as a regulated mechanism.
+  - subject: polarisome_behavior
+    predicate: directs
+    object: local_cell_wall_assembly
+    description: Polarisome behavior directs local wall assembly at the branch site.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2012.10.012
+      snippet: modulate polar growth and hyphal branching
+      notes: Supports polarisome modulation of polar growth and branching.
+  - subject: local_cell_wall_assembly
+    predicate: drives
+    object: lateral_branch_outgrowth
+    description: Local wall assembly drives emergence of the lateral branch.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2012.10.012
+      snippet: apical growth requires the localization of the machinery
+      notes: Supports localized wall-building machinery as needed for apical
+        branch outgrowth.
+  - subject: lateral_branch_outgrowth
+    predicate: manifests as
+    object: branched_shaped_trait
+    description: Lateral branch outgrowth manifests the branched-shape phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2012.10.012
+      snippet: initiation of new branches
+      notes: Supports branched morphology as a Streptomyces growth phenotype.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896783+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T21:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for DivIVA foci,
+    branch-site selection, polarisome behavior, local cell-wall assembly, and
+    lateral branch outgrowth.
+  llm_assisted: true
