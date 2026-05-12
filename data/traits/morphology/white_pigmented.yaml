@@ -1,17 +1,115 @@
 identifier: METPO:1003029
 label: white pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  white or nonpigmented because visible chromophore accumulation is absent or low.
+definition_source: DOI:10.2147/IDR.S49039
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_white
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.2147/IDR.S49039
+  snippet: white phenotypic variant of Staphylococcus aureus
+  notes: Supports white colony appearance as a microbial pigmentation phenotype
+    tied to absent or inducible staphyloxanthin production in a representative
+    bacterium.
+causal_graphs:
+- graph_id: white_pigmented_low_chromophore
+  title: White pigmentation low-chromophore mechanism
+  description: Evidence-backed causal sketch linking white colony pigmentation to
+    reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery,
+    and absence or silencing of carotenoid production in representative bacteria.
+  nodes:
+  - node_id: white_pigmented_trait
+    label: white pigmented
+    node_type: TRAIT
+    grounding: METPO:1003029
+    description: White or nonpigmented microbial colony or cell appearance.
+  - node_id: crtOPQMN_operon
+    label: crtOPQMN operon
+    node_type: GENE_OR_PROTEIN
+    description: S. aureus carotenoid biosynthesis gene cluster for
+      staphyloxanthin production.
+  - node_id: staphyloxanthin_biosynthesis
+    label: staphyloxanthin biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis of the golden carotenoid pigment staphyloxanthin.
+  - node_id: staphyloxanthin
+    label: staphyloxanthin
+    node_type: CHEMICAL
+    description: Golden carotenoid pigment of Staphylococcus aureus.
+  - node_id: low_visible_chromophore
+    label: low visible chromophore accumulation
+    node_type: CHEMICAL
+    description: Absence or low accumulation of colored pigment molecules.
+  - node_id: visible_white_color
+    label: visible white color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed white or nonpigmented colony color.
+  edges:
+  - subject: crtOPQMN_operon
+    predicate: encodes
+    object: staphyloxanthin_biosynthesis
+    description: The crtOPQMN operon encodes machinery for staphyloxanthin
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.1038/s41426-018-0078-1
+      snippet: controlled by the crtOPQMN operon
+      notes: Supports the operon as staphyloxanthin biosynthetic machinery.
+  - subject: staphyloxanthin_biosynthesis
+    predicate: produces
+    object: staphyloxanthin
+    description: Staphyloxanthin biosynthesis produces the golden carotenoid
+      pigment.
+    evidence:
+    - reference: DOI:10.1084/jem.20050846
+      snippet: Golden color imparted by carotenoid pigments
+      notes: Supports the link from carotenoid biosynthesis to visible golden
+        pigment in S. aureus.
+  - subject: low_visible_chromophore
+    predicate: results from reduced
+    object: staphyloxanthin_biosynthesis
+    description: Reduced or absent staphyloxanthin biosynthesis lowers visible
+      pigment accumulation.
+    evidence:
+    - reference: DOI:10.2147/IDR.S49039
+      snippet: white-colony phenotype actually lacked the crtOPQMN operon
+      notes: Supports white colony phenotype when staphyloxanthin synthesis
+        machinery is absent in a representative case.
+  - subject: low_visible_chromophore
+    predicate: causes
+    object: visible_white_color
+    description: Lack of accumulated chromophore yields a white or nonpigmented
+      colony appearance.
+    evidence:
+    - reference: DOI:10.2147/IDR.S49039
+      snippet: white phenotypic variant
+      notes: Supports white appearance as a phenotype of low or absent visible
+        pigment.
+  - subject: visible_white_color
+    predicate: manifests as
+    object: white_pigmented_trait
+    description: Visible white colony color manifests the white-pigmented trait.
+    evidence:
+    - reference: DOI:10.2147/IDR.S49039
+      snippet: white phenotypic variant of Staphylococcus aureus
+      notes: Supports trait-level white pigmentation in a representative microbial
+        context.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946745+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T19:10:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for staphyloxanthin
+    biosynthesis machinery, low visible chromophore accumulation, and white colony
+    appearance.
+  llm_assisted: true

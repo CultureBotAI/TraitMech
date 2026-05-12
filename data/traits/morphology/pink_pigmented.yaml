@@ -1,17 +1,104 @@
 identifier: METPO:1003027
 label: pink pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  pink due to accumulation of pink or rose carotenoid pigments.
+definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_pink
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1080/1040841X.2025.2526423
+  snippet: red, pink, orange, and yellow pigmentation in bacteria
+  notes: Supports pink bacterial pigmentation as a carotenoid-associated color
+    phenotype.
+causal_graphs:
+- graph_id: pink_pigmented_carotenoid_color
+  title: Pink pigmentation carotenoid mechanism
+  description: Evidence-backed causal sketch linking pink microbial pigmentation to
+    carotenoid biosynthesis, conjugated carotenoid pigments, and visible pink color.
+  nodes:
+  - node_id: pink_pigmented_trait
+    label: pink pigmented
+    node_type: TRAIT
+    grounding: METPO:1003027
+    description: Microbial pigmentation appearing pink.
+  - node_id: isoprenoid_precursors
+    label: isoprenoid precursors
+    node_type: CHEMICAL
+    description: Prenyl building blocks used in carotenoid biosynthesis.
+  - node_id: crt_enzymes
+    label: Crt enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial carotenoid biosynthetic enzymes.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic pathway producing carotenoid pigments.
+  - node_id: pink_carotenoids
+    label: pink carotenoids
+    node_type: CHEMICAL
+    description: Carotenoid pigments that produce pink or rose coloration.
+  - node_id: visible_pink_color
+    label: visible pink color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed pink colony or cell color.
+  edges:
+  - subject: isoprenoid_precursors
+    predicate: feed into
+    object: carotenoid_biosynthesis
+    description: Isoprenoid precursors provide substrate for carotenoid production.
+    evidence:
+    - reference: DOI:10.1016/j.gene.2004.11.038
+      snippet: isoprenoid precursor biosynthesis
+      notes: Supports isoprenoid precursor biosynthesis as an upstream step in
+        eubacterial carotenoid pathways.
+  - subject: crt_enzymes
+    predicate: catalyzes
+    object: carotenoid_biosynthesis
+    description: Crt enzymes catalyze reactions in carotenoid biosynthesis.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: crt genes ... reactions they catalyze
+      notes: Supports Crt enzymes as pathway catalysts.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: pink_carotenoids
+    description: Carotenoid biosynthesis can produce pink bacterial pigments.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: pink ... pigmentation in bacteria
+      notes: Supports carotenoids as one source of pink bacterial pigmentation.
+  - subject: pink_carotenoids
+    predicate: causes
+    object: visible_pink_color
+    description: Pink carotenoids cause visible pink pigmentation.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: responsible for the red, pink, orange, and yellow pigmentation
+      notes: Supports the color-producing role of carotenoid pigments.
+  - subject: visible_pink_color
+    predicate: manifests as
+    object: pink_pigmented_trait
+    description: Visible pink color manifests the pink-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: pink ... pigmentation in bacteria
+      notes: Supports trait-level pink pigmentation from bacterial carotenoids.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945783+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T19:10:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for isoprenoid precursors,
+    Crt enzymes, carotenoid biosynthesis, pink carotenoids, and visible pink color.
+  llm_assisted: true

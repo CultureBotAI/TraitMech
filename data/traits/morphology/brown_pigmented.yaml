@@ -1,17 +1,108 @@
 identifier: METPO:1003023
 label: brown pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  brown due to accumulation of brown pigments such as pyomelanin or other melanins.
+definition_source: DOI:10.1128/AEM.67.8.3463-3468.2001
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_brown
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1128/AEM.67.8.3463-3468.2001
+  snippet: Brown pigments are produced when homogentisic acid accumulates
+  notes: Supports brown microbial pigmentation as a homogentisic-acid/pyomelanin
+    pathway phenotype.
+causal_graphs:
+- graph_id: brown_pigmented_pyomelanin_pathway
+  title: Brown pigmentation pyomelanin mechanism
+  description: Evidence-backed causal sketch linking brown microbial pigmentation
+    to tyrosine catabolism, homogentisic acid accumulation, oxidative
+    polymerization into pyomelanin, and visible brown color.
+  nodes:
+  - node_id: brown_pigmented_trait
+    label: brown pigmented
+    node_type: TRAIT
+    grounding: METPO:1003023
+    description: Microbial pigmentation appearing brown.
+  - node_id: tyrosine_catabolism
+    label: tyrosine catabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Catabolic pathway generating homogentisic acid intermediates.
+  - node_id: hppD
+    label: 4-hydroxyphenylpyruvate dioxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that can form homogentisic acid from
+      4-hydroxyphenylpyruvate.
+  - node_id: homogentisic_acid
+    label: homogentisic acid
+    node_type: CHEMICAL
+    description: HGA precursor that oxidizes and polymerizes to pyomelanin.
+  - node_id: pyomelanin
+    label: pyomelanin
+    node_type: CHEMICAL
+    description: Brown-to-black phenolic polymer pigment.
+  - node_id: visible_brown_color
+    label: visible brown color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed brown colony or medium color.
+  edges:
+  - subject: tyrosine_catabolism
+    predicate: produces
+    object: homogentisic_acid
+    description: Tyrosine catabolism can generate homogentisic acid.
+    evidence:
+    - reference: DOI:10.1128/AEM.67.8.3463-3468.2001
+      snippet: homogentisic acid accumulates in the medium
+      notes: Supports HGA accumulation as upstream of brown pigment formation.
+  - subject: hppD
+    predicate: catalyzes formation of
+    object: homogentisic_acid
+    description: HppD catalyzes formation of homogentisic acid in pyomelanin
+      pathways.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0120923
+      snippet: catalyzes the reaction from 4-hydroxyphenylpyruvate to HGA
+      notes: Supports HppD-mediated HGA formation in bacterial pyomelanin
+        production.
+  - subject: homogentisic_acid
+    predicate: polymerizes to
+    object: pyomelanin
+    description: HGA oxidizes and polymerizes into pyomelanin.
+    evidence:
+    - reference: DOI:10.1128/AEM.67.8.3463-3468.2001
+      snippet: spontaneously oxidize and polymerize
+      notes: Supports HGA polymerization as the source of pyomelanin.
+  - subject: pyomelanin
+    predicate: causes
+    object: visible_brown_color
+    description: Pyomelanin causes visible brown pigmentation.
+    evidence:
+    - reference: DOI:10.1128/AEM.67.8.3463-3468.2001
+      snippet: Brown pigments are produced
+      notes: Supports brown color as the output of pyomelanin formation.
+  - subject: visible_brown_color
+    predicate: manifests as
+    object: brown_pigmented_trait
+    description: Visible brown color manifests the brown-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.biotechadv.2021.107773
+      snippet: black/brown color to the cells
+      notes: Supports brown microbial cell color as a melanin-related pigmentation
+        phenotype.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.943677+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T19:10:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for tyrosine catabolism,
+    HppD, homogentisic acid, pyomelanin, and visible brown color.
+  llm_assisted: true

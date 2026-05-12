@@ -1,17 +1,108 @@
 identifier: METPO:1003026
 label: orange pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  orange due to production and accumulation of orange pigments such as carotenoids.
+definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_orange
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1080/1040841X.2025.2526423
+  snippet: orange ... pigmentation in bacteria
+  notes: Supports orange microbial pigmentation as a bacterial carotenoid-associated
+    color phenotype.
+causal_graphs:
+- graph_id: orange_pigmented_carotenoid_accumulation
+  title: Orange pigmentation carotenoid mechanism
+  description: Evidence-backed causal sketch linking orange microbial pigmentation
+    to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and
+    visible orange color.
+  nodes:
+  - node_id: orange_pigmented_trait
+    label: orange pigmented
+    node_type: TRAIT
+    grounding: METPO:1003026
+    description: Microbial pigmentation appearing orange.
+  - node_id: crt_enzymes
+    label: Crt enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial carotenoid biosynthetic enzymes.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic pathway producing carotenoid pigments.
+  - node_id: orange_carotenoids
+    label: orange carotenoids
+    node_type: CHEMICAL
+    description: Carotenoid pigments with orange visible coloration.
+  - node_id: staphyloxanthin
+    label: staphyloxanthin
+    node_type: CHEMICAL
+    description: Golden-orange C30 carotenoid pigment from Staphylococcus aureus.
+  - node_id: visible_orange_color
+    label: visible orange color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed orange colony or cell color.
+  edges:
+  - subject: crt_enzymes
+    predicate: catalyzes
+    object: carotenoid_biosynthesis
+    description: Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: crt genes ... reactions they catalyze
+      notes: Supports Crt enzymes as catalysts in bacterial carotenoid pathways.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: orange_carotenoids
+    description: Carotenoid biosynthesis produces orange pigments in representative
+      bacteria.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: orange ... pigmentation in bacteria
+      notes: Supports carotenoid biosynthesis as a route to orange bacterial
+        pigmentation.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: staphyloxanthin
+    description: The S. aureus carotenoid pathway produces staphyloxanthin.
+    evidence:
+    - reference: DOI:10.1128/JB.147.3.900-913.1981
+      snippet: triterpenoid carotenoids possessing a C30 chain
+      notes: Supports staphyloxanthin-related C30 carotenoid pigments in
+        S. aureus.
+  - subject: orange_carotenoids
+    predicate: causes
+    object: visible_orange_color
+    description: Orange carotenoids cause visible orange pigmentation.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: responsible for ... orange ... pigmentation
+      notes: Supports carotenoid pigments as determinants of orange color.
+  - subject: visible_orange_color
+    predicate: manifests as
+    object: orange_pigmented_trait
+    description: Visible orange color manifests the orange-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: orange ... pigmentation in bacteria
+      notes: Supports the trait-level color assignment.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945311+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T19:10:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for Crt enzymes,
+    carotenoid biosynthesis, orange carotenoids, staphyloxanthin, and visible
+    orange color.
+  llm_assisted: true
