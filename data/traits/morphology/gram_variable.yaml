@@ -58,16 +58,17 @@ causal_graphs:
     description: Aging cultures undergo cell-wall thinning via autolysis.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
-      snippet: cell wall structure
-      notes: Supports culture-age-dependent wall remodeling.
+      snippet: autolysis
+      notes: Supports autolysis-driven peptidoglycan thinning in aging cultures.
   - subject: peptidoglycan_thinning
     predicate: causes
     object: crystal_violet_retention_loss
     description: Thinned peptidoglycan no longer retains the gram-stain dye.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
-      snippet: cell wall structure
-      notes: Supports PG thickness as the determinant of crystal-violet retention.
+      snippet: crystal violet
+      notes: Supports peptidoglycan thickness as the determinant of crystal-violet
+        retention in the gram-stain protocol.
   - subject: crystal_violet_retention_loss
     predicate: produces
     object: mixed_staining
@@ -75,16 +76,18 @@ causal_graphs:
       alongside intact gram-positive cells.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
-      snippet: cell wall structure
-      notes: Supports mixed staining outcomes from heterogeneous wall states.
+      snippet: decolorization
+      notes: Supports differential decolorization producing mixed staining within
+        a single culture.
   - subject: mixed_staining
     predicate: manifests as
     object: gram_variable_trait
     description: Mixed staining manifests the gram-variable trait.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
-      snippet: cell wall structure
-      notes: Supports the trait endpoint.
+      snippet: Gram-variable
+      notes: Supports the Gram-variable phenotype as the trait endpoint of
+        heterogeneous staining.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo

@@ -30,10 +30,11 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1003024
     description: Cream/pale colony or cell coloration.
-  - node_id: carotenoid_biosynthesis
-    label: carotenoid biosynthesis
+  - node_id: low_carotenoid_biosynthesis
+    label: low-level carotenoid biosynthesis
     node_type: BIOLOGICAL_PROCESS
-    description: Bacterial isoprenoid pigment biosynthesis pathway.
+    description: Reduced flux through the bacterial isoprenoid pigment biosynthesis
+      pathway compared to brightly pigmented lineages.
     grounding: GO:0016117
   - node_id: low_pigment_accumulation
     label: low pigment accumulation
@@ -45,7 +46,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Optical phenotype of off-white pigmented colonies.
   edges:
-  - subject: carotenoid_biosynthesis
+  - subject: low_carotenoid_biosynthesis
     predicate: produces
     object: low_pigment_accumulation
     description: Limited carotenoid (or analogous) pigment biosynthesis produces

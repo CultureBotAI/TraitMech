@@ -62,10 +62,11 @@ causal_graphs:
     description: Without motility pili cells cannot generate twitching or related
       pilus-driven movement.
     evidence:
-    - reference: DOI:10.1146/annurev.micro.57.030502.090832
-      snippet: flagellum
-      notes: Supports motility appendages as the cellular basis for self-powered
-        movement (and their absence as the basis for non-motility).
+    - reference: DOI:10.1038/nrmicro2218
+      snippet: type IV pili
+      notes: Type-IV-pili review supports type IV pili as the cellular basis for
+        twitching motility (and their absence as the basis for non-twitching/non-motile
+        phenotype).
   - subject: no_propulsion
     predicate: manifests as
     object: non_motile_trait

@@ -29,15 +29,15 @@ causal_graphs:
     Spo0A-initiated sporulation regulatory cascade to inability to form endospores.
   nodes:
   - node_id: non_spore_forming_trait
-    label: non spore forming
+    label: non-spore forming
     node_type: TRAIT
     grounding: METPO:1000872
     description: Inability to produce endospores.
   - node_id: absent_spo0a_cascade
     label: absent Spo0A regulatory cascade
-    node_type: GENE_OR_PROTEIN
-    description: Absence or non-functionality of the Spo0A master regulator and
-      downstream sigma factors.
+    node_type: BIOLOGICAL_PROCESS
+    description: Absence or non-functionality of the Spo0A-initiated sporulation
+      regulatory program (Spo0A master regulator and downstream sigma factors).
   - node_id: no_asymmetric_septation
     label: no asymmetric septation
     node_type: BIOLOGICAL_PROCESS
