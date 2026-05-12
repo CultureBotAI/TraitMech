@@ -1,15 +1,112 @@
 identifier: METPO:1000060
 label: metabolism
 definition: A biological process that maintain life in an organism.
+definition_source: DOI:10.1126/science.1238842
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000630
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1126/science.1238842
+  snippet: energy and microbial life
+  notes: Microbial-energetics review supports metabolism as the energy and
+    material-flow process maintaining microbial life.
+- reference: DOI:10.1146/annurev.biochem.71.110601.135503
+  snippet: ATP synthesis
+  notes: ATP-energetics review supports energy conservation as the central output
+    of catabolic metabolism.
+causal_graphs:
+- graph_id: metabolism_substrate_to_growth
+  title: Metabolism substrate-to-growth flow
+  description: DOI-backed graph linking substrate uptake, catabolism producing
+    ATP and reducing power, biosynthesis, and growth as the core organization of
+    cellular metabolism.
+  nodes:
+  - node_id: metabolism_trait
+    label: metabolism
+    node_type: TRAIT
+    grounding: METPO:1000060
+    description: Integrated biological process of substrate, energy, and material
+      flow maintaining cellular life.
+  - node_id: substrate_uptake
+    label: substrate uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Transport of carbon, nitrogen, and other substrates into the cell.
+  - node_id: catabolism
+    label: catabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Breakdown of substrates yielding ATP and reducing equivalents.
+    grounding: GO:0009056
+  - node_id: atp_and_reducing_power
+    label: ATP and reducing power
+    node_type: CHEMICAL
+    description: Energy currency (ATP) and electron carriers (NAD(P)H, FADH2)
+      produced by catabolism.
+  - node_id: biosynthesis
+    label: biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Anabolic synthesis of cellular building blocks and macromolecules.
+    grounding: GO:0009058
+  - node_id: cellular_growth
+    label: cellular growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Net accumulation of biomass enabling division and survival.
+  edges:
+  - subject: substrate_uptake
+    predicate: feeds
+    object: catabolism
+    description: Imported substrates feed the catabolic reactions of the cell.
+    evidence:
+    - reference: DOI:10.1126/science.1238842
+      snippet: energy and microbial life
+      notes: Supports substrate uptake as the input to catabolic energy flow.
+  - subject: catabolism
+    predicate: produces
+    object: atp_and_reducing_power
+    description: Catabolic reactions generate ATP and reducing equivalents.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.71.110601.135503
+      snippet: ATP synthesis
+      notes: Supports ATP and reducing power as canonical outputs of catabolism.
+  - subject: atp_and_reducing_power
+    predicate: powers
+    object: biosynthesis
+    description: ATP and reducing power fuel biosynthetic reactions.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.71.110601.135503
+      snippet: ATP synthesis
+      notes: Supports ATP-driven biosynthesis as the central coupling of energy
+        to anabolism.
+  - subject: biosynthesis
+    predicate: supports
+    object: cellular_growth
+    description: Biosynthesis supports accumulation of biomass and growth.
+    evidence:
+    - reference: DOI:10.1126/science.1238842
+      snippet: energy and microbial life
+      notes: Supports biosynthesis-driven growth as the goal of cellular metabolism.
+  - subject: cellular_growth
+    predicate: realizes
+    object: metabolism_trait
+    description: The coordinated substrate-uptake / catabolism / biosynthesis /
+      growth flow realizes the metabolism phenotype.
+    evidence:
+    - reference: DOI:10.1126/science.1238842
+      snippet: energy and microbial life
+      notes: Supports metabolism as the integrated process maintaining microbial
+        life.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.810665+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing metabolism as the integrated
+    substrate-uptake / catabolism / biosynthesis / growth flow that maintains
+    cellular life.
+  llm_assisted: true
