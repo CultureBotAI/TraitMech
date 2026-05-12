@@ -1,17 +1,81 @@
 identifier: METPO:1000885
 label: cell length medium
+definition: A cell-length phenotype in which the longer cell dimension lies
+  approximately between 2 and 3 micrometers.
+definition_source: DOI:10.1126/science.aaa1313
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000881
 synonyms:
 - synonym_text: L_2_3
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1126/science.aaa1313
+  snippet: cell size scales with growth rate
+  notes: Growth-rate-dependent size law supports medium cell length as a typical
+    outcome at moderate growth rates.
+causal_graphs:
+- graph_id: cell_length_medium_growth_rate
+  title: Medium cell-length under moderate growth
+  description: DOI-backed graph linking moderate elongation rate and the growth-rate
+    size law to a medium cell-length range (2–3 μm).
+  nodes:
+  - node_id: cell_length_medium_trait
+    label: cell length medium
+    node_type: TRAIT
+    grounding: METPO:1000885
+    description: Cell length approximately 2–3 μm.
+  - node_id: cell_length_trait
+    label: cell length
+    node_type: TRAIT
+    grounding: METPO:1000881
+    description: Regulated longer cellular dimension.
+  - node_id: moderate_growth_rate
+    label: moderate growth rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Moderate exponential growth rate typical of common bacterial culture.
+  - node_id: growth_rate_size_law
+    label: growth-rate size law
+    node_type: BIOLOGICAL_PROCESS
+    description: Empirical scaling of average cell size with growth rate.
+  edges:
+  - subject: moderate_growth_rate
+    predicate: feeds into
+    object: growth_rate_size_law
+    description: Moderate exponential growth rates engage the growth-rate size law.
+    evidence:
+    - reference: DOI:10.1126/science.aaa1313
+      snippet: cell size scales with growth rate
+      notes: Supports growth rate as the input to the size-scaling relationship.
+  - subject: growth_rate_size_law
+    predicate: produces
+    object: cell_length_medium_trait
+    description: At moderate growth rates the size law produces medium cell length.
+    evidence:
+    - reference: DOI:10.1126/science.aaa1313
+      snippet: cell size scales with growth rate
+      notes: Supports medium length as the expected size at moderate growth rates.
+  - subject: cell_length_medium_trait
+    predicate: is a
+    object: cell_length_trait
+    description: Medium cell length is a quantitative bin of the cell-length phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.07.022
+      snippet: cell size is tightly controlled
+      notes: Supports medium length as a value within the regulated cell-length
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.920338+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking moderate growth rate and the
+    growth-rate size law to medium cell length (2–3 μm).
+  llm_assisted: true

@@ -1,17 +1,81 @@
 identifier: METPO:1000888
 label: cell width small
+definition: A cell-width phenotype in which the shorter cell dimension lies
+  approximately between 0.5 and 0.65 micrometers.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000882
 synonyms:
 - synonym_text: W_0.5_0.65
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: MreB-directed peptidoglycan synthesis
+  notes: Supports the MreB/Rod-complex set-point producing narrow rod widths in
+    the 0.5–0.65 μm range.
+causal_graphs:
+- graph_id: cell_width_small_mreb_setpoint
+  title: Small cell-width MreB-Rod set-point
+  description: DOI-backed graph linking MreB-organized lateral wall synthesis to
+    a narrow rod radius set-point (0.5–0.65 μm).
+  nodes:
+  - node_id: cell_width_small_trait
+    label: cell width small
+    node_type: TRAIT
+    grounding: METPO:1000888
+    description: Cell width approximately 0.5–0.65 μm.
+  - node_id: cell_width_trait
+    label: cell width
+    node_type: TRAIT
+    grounding: METPO:1000882
+    description: Regulated shorter cellular dimension.
+  - node_id: mreb_cytoskeleton
+    label: MreB cytoskeleton
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like MreB filaments organizing lateral cell-wall synthesis.
+  - node_id: rod_complex_pg
+    label: Rod-complex peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: MreB-organized lateral peptidoglycan assembly.
+  edges:
+  - subject: mreb_cytoskeleton
+    predicate: organizes
+    object: rod_complex_pg
+    description: MreB organizes lateral PG synthesis along the cylinder.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports MreB as the lateral PG organizer.
+  - subject: rod_complex_pg
+    predicate: produces
+    object: cell_width_small_trait
+    description: Rod-complex PG synthesis maintains a narrow cylinder radius.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: rod-shape is maintained
+      notes: Supports lateral PG assembly as the producer of the narrow rod radius.
+  - subject: cell_width_small_trait
+    predicate: is a
+    object: cell_width_trait
+    description: Small cell width is a quantitative bin of the cell-width phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports small width as a value within the regulated cell-width
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921682+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex
+    peptidoglycan synthesis to small cell width (0.5–0.65 μm).
+  llm_assisted: true

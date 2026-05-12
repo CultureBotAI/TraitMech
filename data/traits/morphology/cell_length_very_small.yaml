@@ -1,17 +1,83 @@
 identifier: METPO:1000883
 label: cell length very small
+definition: A cell-length phenotype in which the longer cell dimension is at most
+  approximately 1.3 micrometers.
+definition_source: DOI:10.1038/ismej.2014.60
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000881
 synonyms:
 - synonym_text: L_<=1.3
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/ismej.2014.60
+  snippet: small cells and genomes
+  notes: Streamlining review links very small cell sizes to oligotrophic lifestyle
+    and reduced cellular material requirements.
+causal_graphs:
+- graph_id: cell_length_very_small_streamlining
+  title: Very-small cell-length streamlining
+  description: DOI-backed graph linking strong nutrient limitation and
+    streamlining selection to very-small cell length (≤1.3 μm).
+  nodes:
+  - node_id: cell_length_very_small_trait
+    label: cell length very small
+    node_type: TRAIT
+    grounding: METPO:1000883
+    description: Cell length at most ~1.3 μm.
+  - node_id: cell_length_trait
+    label: cell length
+    node_type: TRAIT
+    grounding: METPO:1000881
+    description: Longer cellular dimension under shared size regulation.
+  - node_id: streamlining_selection
+    label: streamlining selection
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection for reduced cellular and genomic material under
+      chronic nutrient limitation.
+  - node_id: oligotrophic_environment
+    label: oligotrophic environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Persistent low-nutrient setting that favors miniaturized cells.
+  edges:
+  - subject: oligotrophic_environment
+    predicate: drives
+    object: streamlining_selection
+    description: Persistent oligotrophy selects for streamlined cells and genomes.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: small cells and genomes
+      notes: Supports oligotrophic regimes as drivers of cell miniaturization.
+  - subject: streamlining_selection
+    predicate: produces
+    object: cell_length_very_small_trait
+    description: Streamlining selection produces very small cell length values.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: small cells
+      notes: Supports very small length as an outcome of streamlining selection.
+  - subject: cell_length_very_small_trait
+    predicate: is a
+    object: cell_length_trait
+    description: Very small cell length is a quantitative bin of the cell-length
+      phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.07.022
+      snippet: cell size is tightly controlled
+      notes: Supports very small cell length as a value within the regulated
+        cell-length distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.919417+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking oligotrophic streamlining
+    selection to very small cell length.
+  llm_assisted: true

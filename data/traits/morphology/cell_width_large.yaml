@@ -1,17 +1,86 @@
 identifier: METPO:1000890
 label: cell width large
+definition: A cell-width phenotype in which the shorter cell dimension exceeds
+  approximately 0.9 micrometers.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000882
 synonyms:
 - synonym_text: W_>0.9
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: MreB-directed peptidoglycan synthesis
+  notes: Supports MreB/Rod-complex activity as the control point governing wide
+    rod radii.
+- reference: DOI:10.1126/science.aaa1313
+  snippet: cell size scales with growth rate
+  notes: Growth-rate-dependent size law supports widening of cells at fast growth
+    rates or under nutrient-rich conditions.
+causal_graphs:
+- graph_id: cell_width_large_setpoint_increase
+  title: Large cell-width by elevated wall-radius set-point
+  description: DOI-backed graph linking nutrient-rich growth conditions and an
+    elevated MreB-driven wall-radius set-point to wide rods (>0.9 μm).
+  nodes:
+  - node_id: cell_width_large_trait
+    label: cell width large
+    node_type: TRAIT
+    grounding: METPO:1000890
+    description: Cell width exceeding approximately 0.9 μm.
+  - node_id: cell_width_trait
+    label: cell width
+    node_type: TRAIT
+    grounding: METPO:1000882
+    description: Regulated shorter cellular dimension.
+  - node_id: rich_growth_conditions
+    label: rich growth conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient-rich conditions promoting fast growth and larger cells.
+  - node_id: rod_complex_pg
+    label: Rod-complex peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: MreB-organized lateral peptidoglycan assembly.
+  edges:
+  - subject: rich_growth_conditions
+    predicate: shifts
+    object: rod_complex_pg
+    description: Rich growth conditions shift Rod-complex activity toward a larger
+      radius set-point.
+    evidence:
+    - reference: DOI:10.1126/science.aaa1313
+      snippet: cell size scales with growth rate
+      notes: Supports growth-rate-dependent enlargement of cell radius.
+  - subject: rod_complex_pg
+    predicate: produces
+    object: cell_width_large_trait
+    description: Elevated Rod-complex activity yields a wide rod radius.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports lateral PG synthesis as the producer of the wide cell radius.
+  - subject: cell_width_large_trait
+    predicate: is a
+    object: cell_width_trait
+    description: Large cell width is a quantitative bin of the cell-width phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports large width as a value within the regulated cell-width
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922624+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking rich growth conditions and
+    elevated Rod-complex activity to large cell width (>0.9 μm).
+  llm_assisted: true

@@ -1,17 +1,83 @@
 identifier: METPO:1000887
 label: cell width very small
+definition: A cell-width phenotype in which the shorter cell dimension is at most
+  approximately 0.5 micrometers.
+definition_source: DOI:10.1038/ismej.2014.60
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000882
 synonyms:
 - synonym_text: W_<=0.5
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/ismej.2014.60
+  snippet: small cells and genomes
+  notes: Streamlining review links very narrow cell widths to oligotrophic and
+    streamlined lineages.
+causal_graphs:
+- graph_id: cell_width_very_small_streamlining
+  title: Very-narrow cell width by streamlining
+  description: DOI-backed graph linking nutrient streamlining to a very-narrow
+    rod radius (≤0.5 μm).
+  nodes:
+  - node_id: cell_width_very_small_trait
+    label: cell width very small
+    node_type: TRAIT
+    grounding: METPO:1000887
+    description: Cell width at most ~0.5 μm.
+  - node_id: cell_width_trait
+    label: cell width
+    node_type: TRAIT
+    grounding: METPO:1000882
+    description: Regulated shorter cellular dimension.
+  - node_id: streamlining_selection
+    label: streamlining selection
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection for reduced surface-to-volume ratio under chronic
+      nutrient limitation.
+  - node_id: oligotrophic_environment
+    label: oligotrophic environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Persistent low-nutrient setting that favors miniaturized cells.
+  edges:
+  - subject: oligotrophic_environment
+    predicate: drives
+    object: streamlining_selection
+    description: Persistent oligotrophy selects for streamlined narrow cells.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: small cells and genomes
+      notes: Supports oligotrophic regimes as drivers of cell-width reduction.
+  - subject: streamlining_selection
+    predicate: produces
+    object: cell_width_very_small_trait
+    description: Streamlining selection produces very narrow rods.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: small cells
+      notes: Supports very narrow width as an outcome of streamlining selection.
+  - subject: cell_width_very_small_trait
+    predicate: is a
+    object: cell_width_trait
+    description: Very small cell width is a quantitative bin of the cell-width
+      phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports very narrow width as a value within the regulated cell-width
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921226+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking oligotrophic streamlining
+    selection to very narrow cell width (≤0.5 μm).
+  llm_assisted: true
