@@ -1,17 +1,84 @@
 identifier: METPO:1003024
 label: cream pigmented
+definition: A pigmentation phenotype in which colony or cell coloration is a pale,
+  off-white or cream hue, typically reflecting low-density carotenoid or other
+  light-absorbing pigments.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162844
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_cream
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162844
+  snippet: bacterial carotenoid pigments
+  notes: Bacterial-carotenoid review supports low-abundance carotenoids as the
+    basis for cream/pale coloration in many bacterial taxa.
+causal_graphs:
+- graph_id: cream_pigmented_low_carotenoid_density
+  title: Cream-pigmentation low carotenoid density
+  description: DOI-backed graph linking low-level carotenoid (or analogous
+    light-absorbing pigment) biosynthesis and limited pigment accumulation to a
+    cream/pale-colored colony phenotype.
+  nodes:
+  - node_id: cream_pigmented_trait
+    label: cream pigmented
+    node_type: TRAIT
+    grounding: METPO:1003024
+    description: Cream/pale colony or cell coloration.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacterial isoprenoid pigment biosynthesis pathway.
+    grounding: GO:0016117
+  - node_id: low_pigment_accumulation
+    label: low pigment accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced steady-state pigment levels relative to brightly pigmented
+      lineages.
+  - node_id: pale_coloration
+    label: pale cream coloration
+    node_type: BIOLOGICAL_PROCESS
+    description: Optical phenotype of off-white pigmented colonies.
+  edges:
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: low_pigment_accumulation
+    description: Limited carotenoid (or analogous) pigment biosynthesis produces
+      low pigment accumulation.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162844
+      snippet: bacterial carotenoid pigments
+      notes: Supports carotenoid biosynthesis as the source of bacterial pigmentation.
+  - subject: low_pigment_accumulation
+    predicate: yields
+    object: pale_coloration
+    description: Low pigment density yields a pale, cream-colored optical phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162844
+      snippet: bacterial carotenoid pigments
+      notes: Supports pigment density as the determinant of colony color intensity.
+  - subject: pale_coloration
+    predicate: manifests as
+    object: cream_pigmented_trait
+    description: Pale coloration manifests the cream-pigmented trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162844
+      snippet: bacterial carotenoid pigments
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944295+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking low-density
+    carotenoid biosynthesis to cream/pale colony pigmentation.
+  llm_assisted: true

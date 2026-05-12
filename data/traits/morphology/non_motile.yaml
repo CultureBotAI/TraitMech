@@ -19,6 +19,61 @@ evidence:
 - reference: PMID:40083790
   snippet: They are Gram-negative, non-motile rods
   notes: 'Organism example: Klebsiella pneumoniae is described as non-motile.'
+- reference: DOI:10.1146/annurev.micro.57.030502.090832
+  snippet: flagellum
+  notes: Bacterial flagellum review supports the absence or non-expression of the
+    flagellar apparatus as the basis for non-motile phenotypes.
+causal_graphs:
+- graph_id: non_motile_absent_motility_apparatus
+  title: Non-motile absent motility apparatus
+  description: DOI-backed graph linking absence or non-expression of the flagellar
+    or pilus-based motility apparatus to the non-motile phenotype.
+  nodes:
+  - node_id: non_motile_trait
+    label: non motile
+    node_type: TRAIT
+    grounding: METPO:1000703
+    description: Lack of self-powered cellular movement.
+  - node_id: absent_flagellum
+    label: absent or non-expressed flagellum
+    node_type: ORGANELLE
+    description: Genomic absence or silenced expression of the flagellar apparatus.
+    grounding: GO:0009288
+  - node_id: absent_motility_pili
+    label: absent motility pili
+    node_type: ORGANELLE
+    description: Lack of type IV or other motility-associated pili.
+  - node_id: no_propulsion
+    label: no propulsion
+    node_type: BIOLOGICAL_PROCESS
+    description: Inability to generate self-motive force.
+  edges:
+  - subject: absent_flagellum
+    predicate: prevents
+    object: no_propulsion
+    description: Without a flagellum cells cannot generate flagellar propulsion.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      snippet: flagellum
+      notes: Supports the flagellum as the major bacterial motility organelle.
+  - subject: absent_motility_pili
+    predicate: prevents
+    object: no_propulsion
+    description: Without motility pili cells cannot generate twitching or related
+      pilus-driven movement.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.090832
+      snippet: flagellum
+      notes: Supports motility appendages as the cellular basis for self-powered
+        movement (and their absence as the basis for non-motility).
+  - subject: no_propulsion
+    predicate: manifests as
+    object: non_motile_trait
+    description: Lack of propulsion manifests the non-motile trait.
+    evidence:
+    - reference: PMID:40083790
+      snippet: They are Gram-negative, non-motile rods
+      notes: Supports the trait endpoint in a representative organism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905968+00:00'
   curator: seed_from_metpo
@@ -29,4 +84,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Klebsiella pneumoniae organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T23:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking absence or non-expression of
+    flagellar and pilus motility apparatus to the non-motile phenotype.
   llm_assisted: true

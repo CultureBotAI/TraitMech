@@ -18,6 +18,65 @@ evidence:
 - reference: DOI:10.1155/2013/898106
   snippet: S. aureus does not form spores
   notes: 'Organism example: Staphylococcus aureus is described as non-spore-forming.'
+- reference: DOI:10.1146/annurev.genet.30.1.297
+  snippet: activation of these sigma factors to landmark events in morphogenesis
+  notes: Sporulation regulatory review supports the Spo0A/sigma cascade as the
+    sporulation control program whose absence yields a non-spore-forming phenotype.
+causal_graphs:
+- graph_id: non_spore_forming_absent_spo0a_cascade
+  title: Non-spore-forming absent Spo0A cascade
+  description: DOI-backed graph linking absence or non-functionality of the
+    Spo0A-initiated sporulation regulatory cascade to inability to form endospores.
+  nodes:
+  - node_id: non_spore_forming_trait
+    label: non spore forming
+    node_type: TRAIT
+    grounding: METPO:1000872
+    description: Inability to produce endospores.
+  - node_id: absent_spo0a_cascade
+    label: absent Spo0A regulatory cascade
+    node_type: GENE_OR_PROTEIN
+    description: Absence or non-functionality of the Spo0A master regulator and
+      downstream sigma factors.
+  - node_id: no_asymmetric_septation
+    label: no asymmetric septation
+    node_type: BIOLOGICAL_PROCESS
+    description: Lack of the polar division step that generates a forespore
+      compartment.
+  - node_id: no_endospore_formation
+    label: no endospore formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Failure to produce a dormant, resistant endospore.
+  edges:
+  - subject: absent_spo0a_cascade
+    predicate: prevents
+    object: no_asymmetric_septation
+    description: Without the Spo0A/sigma cascade, asymmetric septation cannot be
+      initiated.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: activation of these sigma factors to landmark events in morphogenesis
+      notes: Supports the Spo0A/sigma cascade as the gatekeeper of sporulation
+        morphogenesis.
+  - subject: no_asymmetric_septation
+    predicate: prevents
+    object: no_endospore_formation
+    description: Without asymmetric septation, the forespore compartment and
+      subsequent endospore cannot be produced.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: activation of these sigma factors to landmark events in morphogenesis
+      notes: Supports asymmetric septation as a required step for endospore
+        formation.
+  - subject: no_endospore_formation
+    predicate: manifests as
+    object: non_spore_forming_trait
+    description: Failure to produce endospores manifests the non-spore-forming
+      trait.
+    evidence:
+    - reference: DOI:10.1155/2013/898106
+      snippet: S. aureus does not form spores
+      notes: Supports the trait endpoint in a representative organism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917903+00:00'
   curator: seed_from_metpo
@@ -28,4 +87,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Staphylococcus aureus organism example with DOI-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T23:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking absence of Spo0A regulatory
+    cascade and asymmetric septation to the non-spore-forming phenotype.
   llm_assisted: true
