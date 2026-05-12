@@ -12,6 +12,9 @@ synonyms:
 - synonym_text: branced
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+- synonym_text: branched
+  synonym_type: RELATED_SYNONYM
+  source: corrected-from-metpo.owl
 evidence:
 - reference: DOI:10.1016/j.mib.2012.10.012
   snippet: Streptomyces grow by tip extension and through the initiation of new branches
