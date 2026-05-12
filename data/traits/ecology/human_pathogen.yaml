@@ -1,18 +1,98 @@
 identifier: METPO:1004004
 label: human pathogen
 definition: A pathogen that infects organisms of the species Homo sapiens.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
 synonyms:
 - synonym_text: human pathogen
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports adaptation of bacterial virulence
+    programs to the human host environment.
+- reference: DOI:10.1038/nrmicro1592
+  snippet: secretion systems
+  notes: Secretion-systems review supports effector delivery as a major mechanism
+    by which bacteria establish human infection.
+causal_graphs:
+- graph_id: human_pathogen_anthropoid_adaptation
+  title: Human-pathogen Homo sapiens host adaptation
+  description: DOI-backed graph linking human-adapted virulence factors,
+    body-temperature and tissue tropism, and human-specific immune evasion to the
+    human-pathogen phenotype.
+  nodes:
+  - node_id: human_pathogen_trait
+    label: human pathogen
+    node_type: TRAIT
+    grounding: METPO:1004004
+    description: Pathogen of Homo sapiens.
+  - node_id: human_virulence_factors
+    label: human-adapted virulence factors
+    node_type: GENE_OR_PROTEIN
+    description: Virulence factors tuned to human-cell receptors and biology.
+  - node_id: human_tropism
+    label: human tissue tropism
+    node_type: BIOLOGICAL_PROCESS
+    description: Preferential adhesion and growth in human-specific tissues at
+      body-core temperatures.
+  - node_id: human_immune_evasion
+    label: human immune evasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Strategies evading human innate and adaptive immunity.
+  - node_id: human_disease
+    label: human disease
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathology produced in a human host.
+  edges:
+  - subject: human_virulence_factors
+    predicate: enables
+    object: human_tropism
+    description: Human-adapted virulence factors enable preferential adhesion and
+      growth in human tissues.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports virulence factors as enablers of human tissue tropism.
+  - subject: human_tropism
+    predicate: supports
+    object: human_disease
+    description: Tissue tropism supports establishment of human disease at
+      specific anatomical sites.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports tissue tropism as a determinant of human-disease pattern.
+  - subject: human_immune_evasion
+    predicate: supports
+    object: human_disease
+    description: Evasion of human immunity supports sustained infection and disease.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1592
+      snippet: secretion systems
+      notes: Supports secretion-system-delivered effectors in human immune evasion.
+  - subject: human_disease
+    predicate: manifests as
+    object: human_pathogen_trait
+    description: Human disease manifests the human-pathogen trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949749+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:15:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking human-adapted virulence factors,
+    tissue tropism, immune evasion, and disease to the human-pathogen trait.
+  llm_assisted: true
