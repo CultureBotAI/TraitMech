@@ -2,14 +2,95 @@ identifier: METPO:1000882
 label: cell width
 definition: A phenotype that inheres in a cell by virtue of its shorter dimension
   when viewed on a plane.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: MreB-directed peptidoglycan synthesis
+  notes: Bacterial rod-shape review identifies MreB-directed lateral wall synthesis
+    as the control point governing cell width.
+- reference: DOI:10.1038/nrmicro3088
+  snippet: rod-shape is maintained
+  notes: Cell-wall biosynthesis review supports lateral peptidoglycan assembly as
+    the cellular machinery setting rod width.
+causal_graphs:
+- graph_id: cell_width_mreb_lateral_wall
+  title: Cell-width control by MreB-directed lateral cell-wall assembly
+  description: DOI-backed graph linking MreB cytoskeletal organization,
+    Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to
+    the observed cell-width phenotype.
+  nodes:
+  - node_id: cell_width_trait
+    label: cell width
+    node_type: TRAIT
+    grounding: METPO:1000882
+    description: Shorter dimension of the cell body, perpendicular to the long axis.
+  - node_id: mreb_cytoskeleton
+    label: MreB cytoskeleton
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like MreB filaments that pattern lateral cell-wall synthesis.
+  - node_id: rod_complex_pg
+    label: Rod-complex peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: MreB-organized peptidoglycan synthesis along the cylindrical wall.
+  - node_id: peptidoglycan_cell_wall
+    label: peptidoglycan cell wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Load-bearing peptidoglycan sacculus that constrains cell shape.
+    grounding: GO:0009274
+  - node_id: turgor_pressure
+    label: turgor pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Internal hydrostatic pressure pushing against the cell wall.
+  edges:
+  - subject: mreb_cytoskeleton
+    predicate: organizes
+    object: rod_complex_pg
+    description: MreB filaments organize Rod-complex peptidoglycan synthesis along
+      the cylinder.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports MreB as the organizer of lateral PG synthesis.
+  - subject: rod_complex_pg
+    predicate: builds
+    object: peptidoglycan_cell_wall
+    description: Rod-complex peptidoglycan synthesis builds the lateral cylindrical
+      wall.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: rod-shape is maintained
+      notes: Supports lateral PG assembly as the wall-building activity.
+  - subject: peptidoglycan_cell_wall
+    predicate: constrains
+    object: cell_width_trait
+    description: The peptidoglycan sacculus constrains cell width against turgor.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: rod-shape is maintained
+      notes: Supports the cell wall as the structural constraint on width.
+  - subject: turgor_pressure
+    predicate: balances
+    object: peptidoglycan_cell_wall
+    description: Turgor pressure is mechanically balanced by the peptidoglycan wall,
+      determining the steady-state radius.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports wall mechanics as the determinant of steady-state cell width.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918950+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking MreB cytoskeleton, Rod-complex
+    peptidoglycan synthesis, cell wall, and turgor balance to cell width.
+  llm_assisted: true

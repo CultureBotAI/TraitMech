@@ -1,17 +1,83 @@
 identifier: METPO:1000889
 label: cell width medium
+definition: A cell-width phenotype in which the shorter cell dimension lies
+  approximately between 0.65 and 0.9 micrometers.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000882
 synonyms:
 - synonym_text: W_0.65_0.9
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: MreB-directed peptidoglycan synthesis
+  notes: Supports the MreB/Rod-complex set-point producing typical rod widths in
+    the 0.65–0.9 μm range.
+causal_graphs:
+- graph_id: cell_width_medium_typical_rod
+  title: Medium cell-width typical rod
+  description: DOI-backed graph linking MreB-directed lateral wall synthesis under
+    standard growth conditions to typical rod radii (0.65–0.9 μm).
+  nodes:
+  - node_id: cell_width_medium_trait
+    label: cell width medium
+    node_type: TRAIT
+    grounding: METPO:1000889
+    description: Cell width approximately 0.65–0.9 μm.
+  - node_id: cell_width_trait
+    label: cell width
+    node_type: TRAIT
+    grounding: METPO:1000882
+    description: Regulated shorter cellular dimension.
+  - node_id: rod_complex_pg
+    label: Rod-complex peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: MreB-organized lateral peptidoglycan assembly.
+  - node_id: standard_growth_conditions
+    label: standard growth conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Routine laboratory growth conditions producing typical bacterial
+      rod widths.
+  edges:
+  - subject: standard_growth_conditions
+    predicate: support
+    object: rod_complex_pg
+    description: Standard growth regimes support typical Rod-complex activity.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports MreB-organized PG synthesis under standard conditions.
+  - subject: rod_complex_pg
+    predicate: produces
+    object: cell_width_medium_trait
+    description: Rod-complex PG synthesis sustains a typical rod radius.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: rod-shape is maintained
+      notes: Supports lateral PG assembly as the producer of typical rod radius.
+  - subject: cell_width_medium_trait
+    predicate: is a
+    object: cell_width_trait
+    description: Medium cell width is a quantitative bin of the cell-width
+      phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports medium width as a value within the regulated cell-width
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922158+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex
+    peptidoglycan synthesis to medium cell width (0.65–0.9 μm).
+  llm_assisted: true

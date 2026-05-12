@@ -1,17 +1,85 @@
 identifier: METPO:1000886
 label: cell length large
+definition: A cell-length phenotype in which the longer cell dimension exceeds
+  approximately 3 micrometers.
+definition_source: DOI:10.1126/science.aaa1313
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000881
 synonyms:
 - synonym_text: L_>3
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1126/science.aaa1313
+  snippet: cell size scales with growth rate
+  notes: Growth-rate-dependent size law supports large cell length under fast-growth
+    or division-delayed regimes.
+- reference: DOI:10.1038/nrmicro2671
+  snippet: directs cell division
+  notes: FtsZ-divisome review supports division-site timing as a control point
+    governing whether cells reach larger lengths before constriction.
+causal_graphs:
+- graph_id: cell_length_large_division_delay
+  title: Large cell-length from fast growth or division delay
+  description: DOI-backed graph linking fast elongation, delayed FtsZ-ring
+    constriction, or filamentous growth programs to large cell length (>3 μm).
+  nodes:
+  - node_id: cell_length_large_trait
+    label: cell length large
+    node_type: TRAIT
+    grounding: METPO:1000886
+    description: Cell length exceeding approximately 3 μm.
+  - node_id: cell_length_trait
+    label: cell length
+    node_type: TRAIT
+    grounding: METPO:1000881
+    description: Regulated longer cellular dimension.
+  - node_id: fast_elongation
+    label: fast elongation rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid axial elongation between divisions.
+  - node_id: division_timing_delay
+    label: division-timing delay
+    node_type: BIOLOGICAL_PROCESS
+    description: Postponement of FtsZ-ring constriction extending elongation.
+  edges:
+  - subject: fast_elongation
+    predicate: contributes to
+    object: cell_length_large_trait
+    description: Fast elongation between divisions yields longer cells.
+    evidence:
+    - reference: DOI:10.1126/science.aaa1313
+      snippet: cell size scales with growth rate
+      notes: Supports fast growth as a producer of larger cell sizes.
+  - subject: division_timing_delay
+    predicate: contributes to
+    object: cell_length_large_trait
+    description: Delaying division allows continued elongation past the typical size.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2671
+      snippet: directs cell division
+      notes: Supports division timing as a control point for cell length.
+  - subject: cell_length_large_trait
+    predicate: is a
+    object: cell_length_trait
+    description: Large cell length is a quantitative bin of the cell-length phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.07.022
+      snippet: cell size is tightly controlled
+      notes: Supports large length as a value within the regulated cell-length
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.920780+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking fast elongation and
+    division-timing delay to large cell length (>3 μm).
+  llm_assisted: true

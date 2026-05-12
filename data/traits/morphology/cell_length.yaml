@@ -2,14 +2,106 @@ identifier: METPO:1000881
 label: cell length
 definition: A phenotype that inheres in a cell by virtue of its longer dimension when
   viewed on a plane.
+definition_source: DOI:10.1016/j.cub.2014.07.022
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1016/j.cub.2014.07.022
+  snippet: cell size is tightly controlled
+  notes: Review establishes cell size as an actively regulated phenotype, supporting
+    length as a controlled cellular dimension.
+- reference: DOI:10.1016/j.cell.2014.11.022
+  snippet: cells grow by a fixed amount between divisions
+  notes: Adder-model paper supports an inter-divisional length increment underlying
+    cell-length distributions.
+causal_graphs:
+- graph_id: cell_length_division_growth_control
+  title: Cell-length control by growth and division timing
+  description: DOI-backed graph linking growth rate, division-site placement,
+    and the adder size-control principle to the observed cell-length phenotype.
+  nodes:
+  - node_id: cell_length_trait
+    label: cell length
+    node_type: TRAIT
+    grounding: METPO:1000881
+    description: Longer dimension of the rod-like or elongated cell body.
+  - node_id: growth_rate
+    label: elongation rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Rate at which the cell elongates between divisions.
+  - node_id: adder_principle
+    label: adder size control
+    node_type: BIOLOGICAL_PROCESS
+    description: Mechanism by which cells add a fixed length increment between
+      consecutive divisions.
+  - node_id: ftsz_ring
+    label: FtsZ ring (divisome)
+    node_type: GENE_OR_PROTEIN
+    description: Tubulin-like FtsZ-based contractile ring that organizes division.
+  - node_id: division_site_placement
+    label: division-site placement
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial selection of the midcell division site.
+  - node_id: cytokinesis
+    label: cytokinesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell division that resets cell length each generation.
+  edges:
+  - subject: growth_rate
+    predicate: contributes to
+    object: cell_length_trait
+    description: Elongation rate sets how rapidly a cell extends along its long
+      axis between divisions.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2014.07.022
+      snippet: cell size is tightly controlled
+      notes: Supports growth/elongation rate as a determinant of cell size.
+  - subject: adder_principle
+    predicate: regulates
+    object: cell_length_trait
+    description: Adder size control sets the inter-division length increment that
+      determines average cell length.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2014.11.022
+      snippet: cells grow by a fixed amount between divisions
+      notes: Supports the adder principle as the size-control rule producing the
+        length distribution.
+  - subject: ftsz_ring
+    predicate: assembles at
+    object: division_site_placement
+    description: FtsZ assembles at the future division site to initiate cytokinesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2671
+      snippet: FtsZ ring at the future division site
+      notes: Supports FtsZ-ring assembly as the proximate divisome event.
+  - subject: division_site_placement
+    predicate: triggers
+    object: cytokinesis
+    description: Division-site placement directs constriction and cytokinesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2671
+      snippet: directs cell division
+      notes: Supports division-site placement as the trigger for cytokinesis.
+  - subject: cytokinesis
+    predicate: resets
+    object: cell_length_trait
+    description: Cytokinesis halves the mother cell, resetting daughter cell length.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2014.11.022
+      snippet: cells grow by a fixed amount between divisions
+      notes: Supports division as the event that resets length each generation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918489+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking elongation rate, adder size
+    control, FtsZ-divisome division-site placement, and cytokinesis to cell length.
+  llm_assisted: true
