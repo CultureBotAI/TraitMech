@@ -1,9 +1,10 @@
 identifier: METPO:1004000
 label: pathogenic to host
 definition: A phenotype where a microbe is a pathogen of of some host organism.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -13,9 +14,91 @@ synonyms:
 - synonym_text: Safety information.risk assessment
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports the encoding of dedicated virulence
+    factors as the molecular basis of host pathogenicity.
+- reference: DOI:10.1038/nrmicro1592
+  snippet: secretion systems
+  notes: Secretion-systems review supports protein secretion machineries as
+    central effectors of host pathogenicity across kingdoms.
+causal_graphs:
+- graph_id: pathogenic_to_host_virulence_factor_program
+  title: Pathogenic-to-host virulence-factor program
+  description: DOI-backed graph linking encoded virulence factors, secretion-based
+    effector delivery, host colonization, and host damage to the
+    pathogenic-to-host phenotype.
+  nodes:
+  - node_id: pathogenic_to_host_trait
+    label: pathogenic to host
+    node_type: TRAIT
+    grounding: METPO:1004000
+    description: Ability to cause disease in a host organism.
+  - node_id: virulence_factors
+    label: virulence factors
+    node_type: GENE_OR_PROTEIN
+    description: Encoded toxins, adhesins, and effector proteins enabling host
+      colonization and damage.
+  - node_id: secretion_systems
+    label: protein secretion systems
+    node_type: GENE_OR_PROTEIN
+    description: Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS)
+      delivering effectors to host cells.
+  - node_id: host_colonization
+    label: host colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of microbial growth within host tissues.
+  - node_id: host_damage
+    label: host damage
+    node_type: BIOLOGICAL_PROCESS
+    description: Tissue, cell, or systemic damage produced in the host.
+  edges:
+  - subject: virulence_factors
+    predicate: enables
+    object: host_colonization
+    description: Virulence factors enable adhesion, immune evasion, and tissue
+      invasion required for host colonization.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports virulence factors as enablers of host colonization.
+  - subject: secretion_systems
+    predicate: deliver
+    object: virulence_factors
+    description: Bacterial protein secretion systems deliver effector virulence
+      factors into host environments or host cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1592
+      snippet: secretion systems
+      notes: Supports secretion systems as delivery machinery for effectors.
+  - subject: host_colonization
+    predicate: enables
+    object: host_damage
+    description: Established host colonization enables sustained damage to host
+      tissues.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports the colonization-to-damage progression characteristic of
+        pathogens.
+  - subject: host_damage
+    predicate: manifests as
+    object: pathogenic_to_host_trait
+    description: Host damage manifests the pathogenic-to-host trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948130+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:15:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking virulence factors, secretion
+    systems, host colonization, and host damage to the pathogenic-to-host trait.
+  llm_assisted: true

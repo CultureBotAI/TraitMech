@@ -1,18 +1,98 @@
 identifier: METPO:1004002
 label: animal pathogen
 definition: A pathogen that infects organisms in the kingdom Metazoa.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
 synonyms:
 - synonym_text: animal pathogen
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports adaptation of bacterial virulence
+    programs to animal hosts.
+- reference: DOI:10.1038/nrmicro1592
+  snippet: secretion systems
+  notes: Secretion-systems review supports T3SS/T6SS effector delivery as a major
+    mechanism by which bacteria infect animal hosts.
+causal_graphs:
+- graph_id: animal_pathogen_metazoan_adaptation
+  title: Animal-pathogen metazoan host adaptation
+  description: DOI-backed graph linking metazoan-adapted virulence factors,
+    immune-evasion strategies, and animal-tissue colonization to the
+    animal-pathogen phenotype.
+  nodes:
+  - node_id: animal_pathogen_trait
+    label: animal pathogen
+    node_type: TRAIT
+    grounding: METPO:1004002
+    description: Pathogen of metazoan hosts.
+  - node_id: metazoan_virulence_factors
+    label: metazoan-adapted virulence factors
+    node_type: GENE_OR_PROTEIN
+    description: Virulence factors tuned to animal-cell receptors and tissues.
+  - node_id: immune_evasion
+    label: immune evasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Strategies evading innate and adaptive immunity of metazoans.
+  - node_id: animal_tissue_colonization
+    label: animal tissue colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of microbial growth in metazoan tissues.
+  - node_id: animal_disease
+    label: animal disease
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathology produced in an animal host.
+  edges:
+  - subject: metazoan_virulence_factors
+    predicate: enable
+    object: animal_tissue_colonization
+    description: Metazoan-adapted virulence factors enable adhesion and invasion
+      of animal tissues.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports virulence factors as enablers of animal tissue colonization.
+  - subject: immune_evasion
+    predicate: supports
+    object: animal_tissue_colonization
+    description: Immune evasion supports sustained colonization despite host
+      defenses.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1592
+      snippet: secretion systems
+      notes: Supports effector-delivery-based immune evasion in animal pathogens.
+  - subject: animal_tissue_colonization
+    predicate: causes
+    object: animal_disease
+    description: Established colonization in animal tissues causes disease.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports colonization-to-disease progression in animal hosts.
+  - subject: animal_disease
+    predicate: manifests as
+    object: animal_pathogen_trait
+    description: Animal disease manifests the animal-pathogen trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948723+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:15:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking metazoan-adapted virulence
+    factors, immune evasion, animal tissue colonization, and disease to the
+    animal-pathogen trait.
+  llm_assisted: true

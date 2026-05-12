@@ -1,18 +1,110 @@
 identifier: METPO:1004003
 label: plant pathogen
 definition: A pathogen that infects organisms in the kingdom Viridiplantae.
+definition_source: DOI:10.1146/annurev.phyto.43.040204.135923
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
 synonyms:
 - synonym_text: plant pathogen
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.phyto.43.040204.135923
+  snippet: type III secretion
+  notes: Plant-pathology review supports type III secretion of effectors as the
+    central mechanism by which bacterial plant pathogens manipulate plant cells.
+- reference: DOI:10.1146/annurev.micro.55.1.535
+  snippet: cell-wall-degrading enzymes
+  notes: Plant-pathogen review supports secreted plant-cell-wall-degrading enzymes
+    as essential virulence factors of bacterial phytopathogens.
+causal_graphs:
+- graph_id: plant_pathogen_t3ss_effector_program
+  title: Plant-pathogen T3SS-effector and wall-degradation program
+  description: DOI-backed graph linking plant-cell-wall degradation, type III
+    secretion of effectors, suppression of plant immunity, and plant tissue
+    colonization to the plant-pathogen phenotype.
+  nodes:
+  - node_id: plant_pathogen_trait
+    label: plant pathogen
+    node_type: TRAIT
+    grounding: METPO:1004003
+    description: Pathogen of plant hosts.
+  - node_id: cwd_enzymes
+    label: plant-cell-wall-degrading enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Secreted enzymes (e.g., pectinases, cellulases) degrading the
+      plant cell wall.
+  - node_id: t3ss
+    label: type III secretion system
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial T3SS delivering effector proteins into plant cells.
+  - node_id: plant_immune_suppression
+    label: plant immune suppression
+    node_type: BIOLOGICAL_PROCESS
+    description: Suppression of plant innate immunity by translocated effectors.
+  - node_id: plant_tissue_colonization
+    label: plant tissue colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of microbial growth in plant tissues.
+  - node_id: plant_disease
+    label: plant disease
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathology produced in a plant host.
+  edges:
+  - subject: cwd_enzymes
+    predicate: enable
+    object: plant_tissue_colonization
+    description: Plant-cell-wall-degrading enzymes enable bacterial spread within
+      plant tissues.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.535
+      snippet: cell-wall-degrading enzymes
+      notes: Supports CWD enzymes as virulence factors in plant infection.
+  - subject: t3ss
+    predicate: delivers
+    object: plant_immune_suppression
+    description: The T3SS delivers effectors that suppress plant innate immunity.
+    evidence:
+    - reference: DOI:10.1146/annurev.phyto.43.040204.135923
+      snippet: type III secretion
+      notes: Supports T3SS effectors in immune suppression of plant defenses.
+  - subject: plant_immune_suppression
+    predicate: supports
+    object: plant_tissue_colonization
+    description: Immune suppression supports sustained colonization of plant tissues.
+    evidence:
+    - reference: DOI:10.1146/annurev.phyto.43.040204.135923
+      snippet: type III secretion
+      notes: Supports immune-suppression-driven colonization in phytopathogens.
+  - subject: plant_tissue_colonization
+    predicate: causes
+    object: plant_disease
+    description: Established colonization of plant tissues causes plant disease.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.535
+      snippet: cell-wall-degrading enzymes
+      notes: Supports colonization-to-disease progression in plant pathogens.
+  - subject: plant_disease
+    predicate: manifests as
+    object: plant_pathogen_trait
+    description: Plant disease manifests the plant-pathogen trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.phyto.43.040204.135923
+      snippet: type III secretion
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949239+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:15:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking plant-cell-wall-degrading
+    enzymes, T3SS effector delivery, immune suppression, plant tissue colonization,
+    and disease to the plant-pathogen trait.
+  llm_assisted: true
