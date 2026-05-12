@@ -1,8 +1,11 @@
 identifier: METPO:1000684
 label: spiral shaped
+definition: A cell shape in which an organism has a spiral or helically curved
+  morphology rather than a straight rod or sphere.
+definition_source: DOI:10.1371/journal.pbio.1002565
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -16,9 +19,88 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1371/journal.pbio.1002565
+  snippet: spirillar types
+  notes: Supports spiral/spirillar morphology as a recognized bacterial cell-shape
+    class within broader bacterial morphology diversity.
+causal_graphs:
+- graph_id: spiral_shaped_curvature_mechanisms
+  title: Spiral-shape curvature and cell-wall mechanism
+  description: Evidence-backed causal sketch linking spiral morphology to
+    scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell
+    geometry.
+  nodes:
+  - node_id: spiral_shaped_trait
+    label: spiral shaped
+    node_type: TRAIT
+    grounding: METPO:1000684
+    description: Spiral or helically curved bacterial morphology.
+  - node_id: peptidoglycan_remodeling
+    label: peptidoglycan remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Local cell-wall synthesis, relaxation, or crosslink remodeling.
+  - node_id: curvature_scaffold
+    label: curvature scaffold
+    node_type: GENE_OR_PROTEIN
+    description: Protein scaffold or shape complex that biases cell curvature.
+  - node_id: helical_curvature
+    label: helical curvature
+    node_type: BIOLOGICAL_PROCESS
+    description: Curved and twisted cell-wall geometry.
+  - node_id: viscous_motility_environment
+    label: viscous motility environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Viscous surroundings where curved or helical morphology can affect
+      movement.
+  edges:
+  - subject: curvature_scaffold
+    predicate: influences
+    object: peptidoglycan_remodeling
+    description: Shape scaffolds or complexes bias wall remodeling to create curved
+      and spiral forms.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: cytoplasmic scaffolding proteins ... participate in helical morphogenesis
+      notes: Supports scaffold involvement in helical or spiral morphogenesis.
+  - subject: peptidoglycan_remodeling
+    predicate: enables
+    object: helical_curvature
+    description: Peptidoglycan remodeling enables helical curvature and twist.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist
+      notes: H. pylori provides a source-backed concrete mechanism for spiral-like
+        helical morphology.
+  - subject: helical_curvature
+    predicate: produces
+    object: spiral_shaped_trait
+    description: Helical curvature produces a spiral-shaped cell body.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: helical cells
+      notes: Supports helical/spiral cell shape as a recurring bacterial
+        morphology.
+  - subject: spiral_shaped_trait
+    predicate: associated with
+    object: viscous_motility_environment
+    description: Spiral and curved morphologies can be associated with motility in
+      viscous media.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      snippet: helical and curved cells appear to be optimized for motility
+      notes: Functional association is broad and marked as an association, not as
+        a universal cause of the trait.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894976+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added definition and DOI-backed causal graph for spiral morphology,
+    peptidoglycan remodeling, curvature scaffolds, helical curvature, and viscous
+    motility association.
+  llm_assisted: true

@@ -1,8 +1,11 @@
 identifier: METPO:1000676
 label: helical shaped
+definition: A cell shape in which an organism has a corkscrew-like helical cell
+  body with curvature and twist along its long axis.
+definition_source: DOI:10.1016/j.cell.2010.03.046
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -10,9 +13,84 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1016/j.cell.2010.03.046
+  snippet: coordinated action of multiple proteins relaxes peptidoglycan crosslinking
+  notes: Supports a mechanistic basis for helical bacterial cell curvature and
+    twist in Helicobacter pylori.
+causal_graphs:
+- graph_id: helical_shaped_pg_relaxation
+  title: Helical-shape peptidoglycan relaxation mechanism
+  description: Evidence-backed causal sketch linking helical cell shape to
+    H. pylori shape proteins, peptidoglycan crosslink relaxation, and curvature
+    plus twist.
+  nodes:
+  - node_id: helical_shaped_trait
+    label: helical shaped
+    node_type: TRAIT
+    grounding: METPO:1000676
+    description: Corkscrew-like bacterial morphology with curvature and twist.
+  - node_id: csd_shape_proteins
+    label: Csd shape proteins
+    node_type: GENE_OR_PROTEIN
+    description: H. pylori Csd1-Csd3 peptidoglycan endopeptidase homologs.
+  - node_id: ccmA
+    label: CcmA
+    node_type: GENE_OR_PROTEIN
+    description: Bactofilin-like protein implicated in H. pylori helical shape.
+  - node_id: peptidoglycan_crosslink_relaxation
+    label: peptidoglycan crosslink relaxation
+    node_type: BIOLOGICAL_PROCESS
+    description: Local reduction or remodeling of peptidoglycan crosslinks.
+  - node_id: helical_curvature_twist
+    label: helical curvature and twist
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall geometry that produces a helical cell body.
+  edges:
+  - subject: csd_shape_proteins
+    predicate: promotes
+    object: peptidoglycan_crosslink_relaxation
+    description: Csd peptidoglycan endopeptidase homologs contribute to reduced
+      crosslinking in helical-shape generation.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      snippet: three LytM peptidoglycan endopeptidase homologs
+      notes: Supports Csd proteins as required genes in the H. pylori helical
+        shape pathway.
+  - subject: ccmA
+    predicate: contributes to
+    object: peptidoglycan_crosslink_relaxation
+    description: CcmA contributes to the shape-generating pathway for helical
+      morphology.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      snippet: three LytM peptidoglycan endopeptidase homologs ... and a ccmA homolog
+      notes: Supports CcmA as one of the proteins required for helical shape.
+  - subject: peptidoglycan_crosslink_relaxation
+    predicate: enables
+    object: helical_curvature_twist
+    description: Relaxed peptidoglycan crosslinking enables curvature and twist.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist
+      notes: Direct evidence for PG crosslink relaxation causing helical geometry.
+  - subject: helical_curvature_twist
+    predicate: produces
+    object: helical_shaped_trait
+    description: Helical curvature and twist produce the helical-shaped trait.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      snippet: helical cell curvature and twist
+      notes: Supports the morphology endpoint of the graph.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890639+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed helical shape and added DOI-backed causal graph for Csd
+    proteins, CcmA, peptidoglycan crosslink relaxation, and helical curvature.
+  llm_assisted: true
