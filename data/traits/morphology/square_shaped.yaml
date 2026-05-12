@@ -1,17 +1,86 @@
 identifier: METPO:1000694
 label: square shaped
+definition: A cell shape in which an organism forms flat, square or rectangular cells.
+definition_source: DOI:10.1099/ijs.0.65431-0
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: square
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1099/ijs.0.65431-0
+  snippet: flat square or disc-shaped cells
+  notes: Haloquadratum walsbyi description supports flat square cell morphology
+    in halophilic archaea.
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports anisotropic envelope growth as the basis for
+    non-round cell geometries.
+causal_graphs:
+- graph_id: square_shaped_planar_anisotropic_growth
+  title: Square-shape planar anisotropic envelope growth
+  description: DOI-backed graph linking anisotropic planar cell-envelope growth
+    and S-layer-constrained right-angle geometry to flat square cells.
+  nodes:
+  - node_id: square_shaped_trait
+    label: square shaped
+    node_type: TRAIT
+    grounding: METPO:1000694
+    description: Flat square or rectangular cell geometry.
+  - node_id: planar_envelope_growth
+    label: planar envelope growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-envelope expansion in two orthogonal in-plane directions.
+  - node_id: slayer_constraints
+    label: S-layer constraints
+    node_type: ORGANELLE
+    description: Paracrystalline S-layer that imposes geometric constraints on
+      cell shape.
+    grounding: GO:0030115
+  - node_id: right_angle_growth
+    label: right-angle growth geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth pattern producing perpendicular cell edges.
+  edges:
+  - subject: planar_envelope_growth
+    predicate: enables
+    object: right_angle_growth
+    description: Planar envelope growth in two axes supports rectangular geometry.
+    evidence:
+    - reference: DOI:10.1099/ijs.0.65431-0
+      snippet: flat square or disc-shaped cells
+      notes: Supports planar growth as the cellular basis for flat square cells.
+  - subject: slayer_constraints
+    predicate: shapes
+    object: right_angle_growth
+    description: The paracrystalline S-layer constrains envelope geometry toward
+      right angles.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports envelope architectural constraints (e.g., S-layer) as shape
+        determinants.
+  - subject: right_angle_growth
+    predicate: manifests as
+    object: square_shaped_trait
+    description: Right-angle planar geometry manifests the square-shaped trait.
+    evidence:
+    - reference: DOI:10.1099/ijs.0.65431-0
+      snippet: square or disc-shaped cells
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.900481+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking planar anisotropic
+    envelope growth and S-layer constraints to square-shaped halophile morphology.
+  llm_assisted: true

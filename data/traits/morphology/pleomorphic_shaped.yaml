@@ -2,9 +2,10 @@ identifier: METPO:1000679
 label: pleomorphic shaped
 definition: A cell shape characterized by variable and irregular morphology, where
   individual cells within a population exhibit multiple distinct shapes.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -18,9 +19,72 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review establishes pleomorphism as a phenotype of relaxed or
+    absent cytoskeletal/wall shape control.
+- reference: DOI:10.1126/science.1170701
+  snippet: cell-wall-deficient L-forms
+  notes: L-form review supports pleomorphism in wall-deficient or wall-less cells.
+causal_graphs:
+- graph_id: pleomorphic_shaped_relaxed_shape_control
+  title: Pleomorphic-shape relaxed shape control
+  description: DOI-backed graph linking loss or weakening of cytoskeletal and
+    cell-wall shape control to multi-morphology populations.
+  nodes:
+  - node_id: pleomorphic_shaped_trait
+    label: pleomorphic shaped
+    node_type: TRAIT
+    grounding: METPO:1000679
+    description: Population exhibiting multiple cell shapes.
+  - node_id: weak_cytoskeleton
+    label: weak/absent shape-determining cytoskeleton
+    node_type: GENE_OR_PROTEIN
+    description: Reduced MreB or analogous shape-determining cytoskeletal activity.
+  - node_id: weak_cell_wall
+    label: weak or absent peptidoglycan wall
+    node_type: ORGANELLE
+    description: Cell wall reduced (L-form/Mycoplasma) or compromised.
+    grounding: GO:0009274
+  - node_id: variable_geometry
+    label: variable cell geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Population-level variability in cell shape.
+  edges:
+  - subject: weak_cytoskeleton
+    predicate: relaxes
+    object: variable_geometry
+    description: Weak shape-determining cytoskeleton permits multiple geometries.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports cytoskeletal loss as a driver of multi-shape populations.
+  - subject: weak_cell_wall
+    predicate: enables
+    object: variable_geometry
+    description: Reduced or absent cell wall enables membrane-driven shape variability.
+    evidence:
+    - reference: DOI:10.1126/science.1170701
+      snippet: cell-wall-deficient L-forms
+      notes: Supports wall deficiency as a basis for L-form pleomorphism.
+  - subject: variable_geometry
+    predicate: manifests as
+    object: pleomorphic_shaped_trait
+    description: Variable geometry across cells manifests pleomorphism.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.892214+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking weak shape-determining
+    cytoskeleton and reduced cell wall to pleomorphic populations.
+  llm_assisted: true

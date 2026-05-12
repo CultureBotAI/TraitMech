@@ -1,8 +1,12 @@
 identifier: METPO:1000672
 label: dumbbell shaped
+definition: A cell shape in which an organism consists of two rounded cell bodies
+  connected by a narrower central isthmus, often resulting from incomplete or snapping
+  cell division.
+definition_source: DOI:10.1111/j.1574-6976.2011.00298.x
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -12,9 +16,71 @@ synonyms:
 - synonym_text: dumbbell-shaped
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1111/j.1574-6976.2011.00298.x
+  snippet: snapping cell division
+  notes: Corynebacterineae review supports snapping/V-form division producing
+    transient dumbbell pairs.
+causal_graphs:
+- graph_id: dumbbell_shaped_snapping_division
+  title: Dumbbell-shape snapping division intermediate
+  description: DOI-backed graph linking pre-separation septum constriction and
+    snapping/incomplete cell division to dumbbell cell pairs.
+  nodes:
+  - node_id: dumbbell_shaped_trait
+    label: dumbbell shaped
+    node_type: TRAIT
+    grounding: METPO:1000672
+    description: Two-lobe cell body joined by a central isthmus.
+  - node_id: midcell_constriction
+    label: midcell constriction
+    node_type: BIOLOGICAL_PROCESS
+    description: Division-site constriction pinching the cell at midcell.
+  - node_id: snapping_division
+    label: snapping division
+    node_type: BIOLOGICAL_PROCESS
+    description: Incomplete outer-layer separation that keeps daughter cells linked.
+  - node_id: dumbbell_intermediate
+    label: dumbbell intermediate
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-lobe cell pair joined by an isthmus prior to full separation.
+  edges:
+  - subject: midcell_constriction
+    predicate: produces
+    object: dumbbell_intermediate
+    description: Strong midcell constriction creates a two-lobe pre-division
+      morphology.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2011.00298.x
+      snippet: snapping cell division
+      notes: Supports midcell constriction as the proximate event preceding
+        dumbbell intermediates.
+  - subject: snapping_division
+    predicate: stabilizes
+    object: dumbbell_intermediate
+    description: Snapping/V-form division preserves linkage between daughter cells.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2011.00298.x
+      snippet: snapping cell division
+      notes: Supports snapping division as the mechanism stabilizing post-division
+        dumbbells.
+  - subject: dumbbell_intermediate
+    predicate: manifests as
+    object: dumbbell_shaped_trait
+    description: The dumbbell intermediate manifests the dumbbell-shaped trait.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2011.00298.x
+      snippet: snapping cell division
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.888187+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking midcell
+    constriction and snapping division to dumbbell cell morphology.
+  llm_assisted: true

@@ -1,17 +1,83 @@
 identifier: METPO:1000695
 label: tailed shaped
+definition: A cell shape in which an organism has an elongated polar appendage or
+  stalk extending from the cell body.
+definition_source: DOI:10.1146/annurev.micro.061705.103240
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: tailed
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.061705.103240
+  snippet: prosthecate bacteria
+  notes: Prosthecate-bacteria review supports tailed/stalked cell morphology in
+    Caulobacter and related lineages.
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: polar growth
+  notes: Cell-shape review supports unipolar peptidoglycan growth as the basis
+    for stalk-like polar appendages.
+causal_graphs:
+- graph_id: tailed_shaped_polar_stalk_growth
+  title: Tailed-shape polar stalk extension
+  description: DOI-backed graph linking unipolar peptidoglycan growth and stalk
+    outgrowth to tailed cell morphology.
+  nodes:
+  - node_id: tailed_shaped_trait
+    label: tailed shaped
+    node_type: TRAIT
+    grounding: METPO:1000695
+    description: Cell body bearing an elongated polar appendage or stalk.
+  - node_id: unipolar_pg_growth
+    label: unipolar peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar wall synthesis localized at a single cell pole.
+  - node_id: stalk_outgrowth
+    label: stalk outgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Extension of a narrow cytoplasmic stalk from one pole.
+  - node_id: polar_appendage
+    label: polar appendage
+    node_type: BIOLOGICAL_PROCESS
+    description: Resulting elongated polar structure.
+  edges:
+  - subject: unipolar_pg_growth
+    predicate: drives
+    object: stalk_outgrowth
+    description: Unipolar PG growth at the same cell pole drives stalk extension.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports polar wall growth as the mechanism extending the stalk.
+  - subject: stalk_outgrowth
+    predicate: produces
+    object: polar_appendage
+    description: Stalk outgrowth produces an elongated polar appendage.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports stalk extension as a prosthecate-cell feature.
+  - subject: polar_appendage
+    predicate: manifests as
+    object: tailed_shaped_trait
+    description: A polar appendage manifests the tailed-shaped trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.900946+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking unipolar
+    peptidoglycan growth and stalk outgrowth to tailed cell morphology.
+  llm_assisted: true

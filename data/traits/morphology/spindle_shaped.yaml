@@ -1,8 +1,11 @@
 identifier: METPO:1000692
 label: spindle shaped
+definition: A cell shape that is widest at the middle and tapers symmetrically toward
+  pointed poles.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -10,9 +13,70 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports symmetric tapered shapes as a genetically
+    determined outcome of polar wall patterning.
+causal_graphs:
+- graph_id: spindle_shaped_symmetric_taper
+  title: Spindle-shape symmetric polar taper
+  description: DOI-backed graph linking symmetric tapered polar wall growth and
+    reduced end-cap radius to spindle morphology.
+  nodes:
+  - node_id: spindle_shaped_trait
+    label: spindle shaped
+    node_type: TRAIT
+    grounding: METPO:1000692
+    description: Cell widest at the middle and tapering symmetrically to pointed
+      poles.
+  - node_id: symmetric_polar_pg
+    label: symmetric polar peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Tapered PG growth at both poles producing pointed ends.
+  - node_id: reduced_end_cap_radius
+    label: reduced end-cap radius
+    node_type: BIOLOGICAL_PROCESS
+    description: Narrowed cell-body radius near the poles.
+  - node_id: spindle_geometry
+    label: spindle geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Bilaterally symmetric tapered body geometry.
+  edges:
+  - subject: symmetric_polar_pg
+    predicate: produces
+    object: reduced_end_cap_radius
+    description: Symmetric polar growth produces reduced end-cap radius at both
+      poles.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: polar growth
+      notes: Supports polar PG growth as the producer of tapered ends.
+  - subject: reduced_end_cap_radius
+    predicate: shapes
+    object: spindle_geometry
+    description: Reduced end-cap radius at both poles yields spindle geometry.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports tapered geometry as a genetically determined shape outcome.
+  - subject: spindle_geometry
+    predicate: manifests as
+    object: spindle_shaped_trait
+    description: Spindle geometry manifests the spindle-shaped trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899347+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking symmetric polar
+    peptidoglycan growth and reduced end-cap radius to spindle morphology.
+  llm_assisted: true

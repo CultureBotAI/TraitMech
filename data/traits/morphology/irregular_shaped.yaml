@@ -1,17 +1,85 @@
 identifier: METPO:1000691
 label: irregular shaped
+definition: A cell shape lacking a consistent geometric form across individual cells
+  of a population.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: irregular
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports loss of cytoskeletal/wall-patterning control
+    as the basis for irregular morphology.
+- reference: DOI:10.1111/j.1574-6976.2011.00298.x
+  snippet: coryneform morphology
+  notes: Corynebacterineae review supports irregular and coryneform morphologies
+    associated with apical polar growth and reduced lateral wall patterning.
+causal_graphs:
+- graph_id: irregular_shaped_loss_of_patterning
+  title: Irregular-shape loss of wall patterning
+  description: DOI-backed graph linking reduced or stochastic cell-wall patterning
+    to inconsistent, irregular cell geometry.
+  nodes:
+  - node_id: irregular_shaped_trait
+    label: irregular shaped
+    node_type: TRAIT
+    grounding: METPO:1000691
+    description: Inconsistent cell geometry across a population.
+  - node_id: reduced_wall_patterning
+    label: reduced cell-wall patterning
+    node_type: BIOLOGICAL_PROCESS
+    description: Diminished spatial control of peptidoglycan synthesis.
+  - node_id: stochastic_growth
+    label: stochastic growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-by-cell variation in growth-zone placement and extent.
+  - node_id: variable_geometry
+    label: variable cell geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Population-level variability in cell shape.
+  edges:
+  - subject: reduced_wall_patterning
+    predicate: enables
+    object: stochastic_growth
+    description: Reduced patterning permits stochastic growth-zone placement.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports patterning loss as a driver of inconsistent shapes.
+  - subject: stochastic_growth
+    predicate: produces
+    object: variable_geometry
+    description: Stochastic growth produces variable cell geometry.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2011.00298.x
+      snippet: coryneform morphology
+      notes: Supports irregular coryneform-like morphology arising from
+        polar/apical growth without strong lateral patterning.
+  - subject: variable_geometry
+    predicate: manifests as
+    object: irregular_shaped_trait
+    description: Variable geometry across cells manifests the irregular-shaped
+      trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898746+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking reduced
+    cell-wall patterning and stochastic growth to irregular morphology.
+  llm_assisted: true

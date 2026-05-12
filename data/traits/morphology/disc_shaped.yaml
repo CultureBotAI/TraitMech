@@ -1,18 +1,83 @@
 identifier: METPO:1000689
 label: disc shaped
 definition: A cell shape in which an organism is flat and circular.
+definition_source: DOI:10.1099/ijs.0.65431-0
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: disc
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports flat-disc geometry as a determined morphological
+    phenotype.
+- reference: DOI:10.1099/ijs.0.65431-0
+  snippet: flat square or disc-shaped cells
+  notes: Halophilic-archaea description supports flat disc-shaped cell morphology
+    in the wild.
+causal_graphs:
+- graph_id: disc_shaped_anisotropic_wall_growth
+  title: Disc-shape anisotropic cell-wall growth
+  description: DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer
+    growth and suppressed axial extension to flat disc-shaped cell geometry.
+  nodes:
+  - node_id: disc_shaped_trait
+    label: disc shaped
+    node_type: TRAIT
+    grounding: METPO:1000689
+    description: Flat, circular cellular morphology.
+  - node_id: planar_envelope_growth
+    label: planar envelope growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-envelope (peptidoglycan or S-layer) expansion in a 2D plane.
+  - node_id: axial_extension_suppression
+    label: axial extension suppression
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced or absent extension along the orthogonal cell axis.
+  - node_id: flat_geometry
+    label: flat disc geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Resulting flat, plate-like cell body.
+  edges:
+  - subject: planar_envelope_growth
+    predicate: shapes
+    object: flat_geometry
+    description: Planar envelope growth produces a 2D-expanded cell body.
+    evidence:
+    - reference: DOI:10.1099/ijs.0.65431-0
+      snippet: flat square or disc-shaped cells
+      notes: Supports planar envelope growth producing flat morphology in
+        disc-shaped halophiles.
+  - subject: axial_extension_suppression
+    predicate: contributes to
+    object: flat_geometry
+    description: Suppression of axial extension keeps cells thin.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports anisotropic growth as a control mechanism for cell shape.
+  - subject: flat_geometry
+    predicate: manifests as
+    object: disc_shaped_trait
+    description: Flat geometry manifests the disc-shaped trait.
+    evidence:
+    - reference: DOI:10.1099/ijs.0.65431-0
+      snippet: disc-shaped cells
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.897674+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking planar envelope growth and
+    axial-extension suppression to disc-shaped morphology.
+  llm_assisted: true

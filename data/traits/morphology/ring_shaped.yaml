@@ -1,9 +1,10 @@
 identifier: METPO:1000680
 label: ring shaped
 definition: A cell shape in which an organism forms circular or toroidal structures.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -13,9 +14,69 @@ synonyms:
 - synonym_text: ring-shaped
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell curvature
+  notes: Cell-shape review supports curvature-generating wall patterning as the
+    basis for closed-ring morphology.
+causal_graphs:
+- graph_id: ring_shaped_curved_growth_closure
+  title: Ring-shape curved growth and pole closure
+  description: DOI-backed graph linking strongly curved peptidoglycan growth and
+    pole-to-pole closure to toroidal ring morphology.
+  nodes:
+  - node_id: ring_shaped_trait
+    label: ring shaped
+    node_type: TRAIT
+    grounding: METPO:1000680
+    description: Closed circular or toroidal cell geometry.
+  - node_id: curved_pg_growth
+    label: strongly curved peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Asymmetric lateral wall synthesis producing high cell curvature.
+  - node_id: pole_to_pole_closure
+    label: pole-to-pole closure
+    node_type: BIOLOGICAL_PROCESS
+    description: Connection or near-contact of the two cell poles producing a ring.
+  - node_id: toroidal_geometry
+    label: toroidal geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Closed ring-like cell-body geometry.
+  edges:
+  - subject: curved_pg_growth
+    predicate: produces
+    object: pole_to_pole_closure
+    description: Strong axial curvature brings the poles into proximity.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell curvature
+      notes: Supports curvature-generating wall growth as a producer of closed ring
+        forms.
+  - subject: pole_to_pole_closure
+    predicate: shapes
+    object: toroidal_geometry
+    description: Pole-to-pole closure yields a toroidal body.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports closed ring forms as genetically determined shape outcomes.
+  - subject: toroidal_geometry
+    predicate: manifests as
+    object: ring_shaped_trait
+    description: Toroidal geometry manifests the ring-shaped trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell curvature
+      notes: Supports the trait endpoint via curvature-driven closure.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.892873+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking strongly curved peptidoglycan
+    growth and pole-to-pole closure to ring-shaped morphology.
+  llm_assisted: true

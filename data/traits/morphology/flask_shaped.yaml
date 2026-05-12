@@ -1,8 +1,11 @@
 identifier: METPO:1000675
 label: flask shaped
+definition: A cell shape in which an organism has a bulbous body with a narrower
+  neck-like extension at one pole.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -12,9 +15,68 @@ synonyms:
 - synonym_text: flask-shaped
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: polar growth
+  notes: Cell-shape review supports polarized peptidoglycan growth as a mechanism
+    producing asymmetric flask-like morphology.
+causal_graphs:
+- graph_id: flask_shaped_asymmetric_polar_growth
+  title: Flask-shape asymmetric polar growth
+  description: DOI-backed graph linking unipolar peptidoglycan growth and tapered
+    neck extension to flask-shaped cell morphology.
+  nodes:
+  - node_id: flask_shaped_trait
+    label: flask shaped
+    node_type: TRAIT
+    grounding: METPO:1000675
+    description: Bulbous cell body with a narrower polar neck.
+  - node_id: unipolar_pg_growth
+    label: unipolar peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Peptidoglycan synthesis localized to a single cell pole.
+  - node_id: polar_neck_extension
+    label: polar neck extension
+    node_type: BIOLOGICAL_PROCESS
+    description: Tapered extension of one pole producing the flask neck.
+  - node_id: bulbous_body
+    label: bulbous body
+    node_type: BIOLOGICAL_PROCESS
+    description: Wider rounded body region opposite the neck.
+  edges:
+  - subject: unipolar_pg_growth
+    predicate: drives
+    object: polar_neck_extension
+    description: Unipolar PG growth extends one pole into a narrower neck.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: polar growth
+      notes: Supports unipolar growth as the mechanism for asymmetric pole extension.
+  - subject: polar_neck_extension
+    predicate: combines_with
+    object: bulbous_body
+    description: A narrow polar neck adjoining a wider body yields flask geometry.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports asymmetric growth as a genetically determined shape program.
+  - subject: bulbous_body
+    predicate: manifests as
+    object: flask_shaped_trait
+    description: The combined neck+body geometry manifests flask morphology.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: polar growth
+      notes: Supports the trait endpoint via asymmetric polar growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890141+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking unipolar
+    peptidoglycan growth and neck extension to flask-shaped morphology.
+  llm_assisted: true
