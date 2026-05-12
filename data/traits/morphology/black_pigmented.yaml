@@ -1,17 +1,108 @@
 identifier: METPO:1003022
 label: black pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  black or very dark due to accumulation of dark pigments such as melanins.
+definition_source: DOI:10.1016/j.biotechadv.2021.107773
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_black
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1016/j.biotechadv.2021.107773
+  snippet: dark-colored pigment
+  notes: Supports black/dark microbial pigmentation as a melanin-associated color
+    phenotype.
+causal_graphs:
+- graph_id: black_pigmented_melanin_polymer
+  title: Black pigmentation melanin polymer mechanism
+  description: Evidence-backed causal sketch linking black microbial pigmentation
+    to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin
+    polymers, and visible black color.
+  nodes:
+  - node_id: black_pigmented_trait
+    label: black pigmented
+    node_type: TRAIT
+    grounding: METPO:1003022
+    description: Microbial pigmentation appearing black or very dark.
+  - node_id: phenolic_precursors
+    label: phenolic precursors
+    node_type: CHEMICAL
+    description: Tyrosine-derived, DOPA-like, DHN-like, or HGA-like precursors for
+      melanin formation.
+  - node_id: tyrosinase_laccase_oxidases
+    label: tyrosinase/laccase oxidases
+    node_type: GENE_OR_PROTEIN
+    description: Oxidative enzymes that can catalyze melanin precursor oxidation.
+  - node_id: melanin_biosynthesis
+    label: melanin biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidative polymerization process producing microbial melanins.
+  - node_id: black_brown_melanin
+    label: black-brown melanin
+    node_type: CHEMICAL
+    description: Dark melanin polymer causing black or brown pigmentation.
+  - node_id: visible_black_color
+    label: visible black color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed black or very dark colony or cell color.
+  edges:
+  - subject: phenolic_precursors
+    predicate: feed into
+    object: melanin_biosynthesis
+    description: Phenolic precursors feed oxidative melanin-forming pathways.
+    evidence:
+    - reference: DOI:10.1007/s11274-020-02941-z
+      snippet: oxidative polymerization of tyrosine derivatives
+      notes: Supports phenolic or tyrosine-derived precursors as melanin
+        biosynthetic substrates.
+  - subject: tyrosinase_laccase_oxidases
+    predicate: catalyzes
+    object: melanin_biosynthesis
+    description: Oxidases catalyze precursor oxidation in melanin formation.
+    evidence:
+    - reference: DOI:10.1016/j.biotechadv.2021.107773
+      snippet: biosynthesis ... oxidative polymerization
+      notes: Supports oxidative enzymatic routes for microbial melanin formation.
+  - subject: melanin_biosynthesis
+    predicate: produces
+    object: black_brown_melanin
+    description: Melanin biosynthesis produces dark melanin polymers.
+    evidence:
+    - reference: DOI:10.1016/j.biotechadv.2021.107773
+      snippet: Eumelanin and allomelanin impart black/brown color
+      notes: Supports black-brown melanins as microbial colorants.
+  - subject: black_brown_melanin
+    predicate: causes
+    object: visible_black_color
+    description: Dark melanin polymers cause visible black pigmentation when
+      sufficiently accumulated.
+    evidence:
+    - reference: DOI:10.1016/j.biotechadv.2021.107773
+      snippet: black/brown color
+      notes: Supports black color as an outcome of dark melanin accumulation.
+  - subject: visible_black_color
+    predicate: manifests as
+    object: black_pigmented_trait
+    description: Visible black color manifests the black-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.biotechadv.2021.107773
+      snippet: black/brown color to the cells
+      notes: Supports the trait-level assignment.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.942877+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T19:10:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for phenolic precursors,
+    oxidative melanin biosynthesis, black-brown melanin polymers, and visible black
+    color.
+  llm_assisted: true
