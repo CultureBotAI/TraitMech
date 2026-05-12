@@ -1,10 +1,12 @@
 identifier: METPO:1000673
 label: ellipsoidal
-definition: A cell shape in which an organism has an oval or ellipse morphology, elongated
-  along one axis with rounded ends, intermediate between spherical and rod-shaped.
+definition: A cell shape in which an organism has an oval or ellipse morphology,
+  elongated along one axis with rounded ends, intermediate between spherical and
+  rod-shaped.
+definition_source: DOI:10.1089/mdr.2014.0032
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -12,9 +14,96 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1089/mdr.2014.0032
+  snippet: ovococci that are ellipsoid
+  notes: Supports ellipsoidal bacterial morphology as a named ovococcal shape class.
+causal_graphs:
+- graph_id: ellipsoidal_ovococcal_elongation
+  title: Ellipsoidal ovococcal elongation mechanism
+  description: Evidence-backed causal sketch linking ellipsoidal morphology to
+    ovococcal peripheral peptidoglycan insertion, septal synthesis, PBP2b, and
+    DivIVA-regulated elongation.
+  nodes:
+  - node_id: ellipsoidal_trait
+    label: ellipsoidal
+    node_type: TRAIT
+    grounding: METPO:1000673
+    description: Ellipse-like bacterial cell morphology.
+  - node_id: peripheral_peptidoglycan
+    label: peripheral peptidoglycan
+    node_type: CELLULAR_LOCALIZATION
+    description: Lateral wall material generated during ovococcal elongation.
+  - node_id: pbp2b
+    label: PBP2b
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan synthase implicated in ovococcal elongation.
+  - node_id: divIVA
+    label: DivIVA
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein coordinating septum splitting and elongation.
+  - node_id: septal_and_peripheral_synthesis
+    label: septal and peripheral peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Coordinated wall synthesis pattern in ovococci.
+  - node_id: ellipsoid_geometry
+    label: ellipsoid geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Rounded cell geometry elongated along one axis.
+  edges:
+  - subject: pbp2b
+    predicate: promotes
+    object: peripheral_peptidoglycan
+    description: PBP2b promotes peripheral wall synthesis in ovococcal elongation.
+    evidence:
+    - reference: DOI:10.1089/mdr.2014.0032
+      snippet: PBP2b of ovococci
+      notes: Supports PBP2b as part of the ovococcal elongation system.
+  - subject: divIVA
+    predicate: regulates
+    object: septal_and_peripheral_synthesis
+    description: DivIVA regulates septal cleavage and peripheral peptidoglycan
+      synthesis during ovococcal morphogenesis.
+    evidence:
+    - reference: DOI:10.1128/mbio.01311-24
+      snippet: peripheral peptidoglycan synthesis
+      notes: Supports DivIVA control of ovococcal wall remodeling and elongation.
+  - subject: peripheral_peptidoglycan
+    predicate: contributes to
+    object: ellipsoid_geometry
+    description: Peripheral wall insertion contributes to elongation of the
+      ellipsoidal cell body.
+    evidence:
+    - reference: DOI:10.1128/mbio.01311-24
+      snippet: septum cleavage and peripheral peptidoglycan synthesis
+      notes: Supports peripheral PG as a remodeling event for ovococcal elongation.
+  - subject: septal_and_peripheral_synthesis
+    predicate: shapes
+    object: ellipsoid_geometry
+    description: Coordinated septal and peripheral synthesis shapes the ellipsoidal
+      cell body.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2021.04.041
+      snippet: dynamics of peptidoglycan assembly
+      notes: Supports PG assembly dynamics in ovoid bacteria.
+  - subject: ellipsoid_geometry
+    predicate: manifests as
+    object: ellipsoidal_trait
+    description: Ellipsoid cell-body geometry manifests the ellipsoidal trait.
+    evidence:
+    - reference: DOI:10.1089/mdr.2014.0032
+      snippet: ovococci that are ellipsoid
+      notes: Supports the morphology endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.888945+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for PBP2b, DivIVA,
+    peripheral peptidoglycan, coordinated septal/peripheral wall synthesis, and
+    ellipsoid geometry.
+  llm_assisted: true

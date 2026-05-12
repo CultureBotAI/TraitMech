@@ -1,8 +1,11 @@
 identifier: METPO:1000683
 label: sphere shaped
+definition: A cell shape in which an organism has a spherical or nearly spherical
+  morphology with roughly equal dimensions in all directions.
+definition_source: DOI:10.1038/nrmicro3088
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -13,9 +16,84 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1038/nrmicro3088
+  snippet: spherical cocci synthesize peptidoglycan only at the division septum
+  notes: Supports spherical bacterial morphology as associated with septal
+    peptidoglycan synthesis.
+causal_graphs:
+- graph_id: sphere_shaped_septal_peptidoglycan
+  title: Spherical shape septal peptidoglycan mechanism
+  description: Evidence-backed causal sketch linking spherical cell shape to
+    FtsZ-associated septal synthesis, peptidoglycan remodeling, and limited lateral
+    elongation.
+  nodes:
+  - node_id: sphere_shaped_trait
+    label: sphere shaped
+    node_type: TRAIT
+    grounding: METPO:1000683
+    description: Spherical bacterial cell morphology.
+  - node_id: ftsZ_division_ring
+    label: FtsZ division ring
+    node_type: GENE_OR_PROTEIN
+    description: Tubulin-like division scaffold.
+  - node_id: septal_peptidoglycan_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall synthesis localized to the division septum.
+  - node_id: peptidoglycan_cell_wall
+    label: peptidoglycan cell wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell-wall polymer network maintaining bacterial shape.
+  - node_id: lateral_elongation
+    label: lateral cell-wall elongation
+    node_type: BIOLOGICAL_PROCESS
+    description: Sidewall growth mode that lengthens rods.
+  edges:
+  - subject: ftsZ_division_ring
+    predicate: organizes
+    object: septal_peptidoglycan_synthesis
+    description: The FtsZ division ring organizes septal wall synthesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: FtsZ collaborates with penicillin binding proteins
+      notes: Supports FtsZ-PBP cooperation in division-associated shape generation.
+  - subject: septal_peptidoglycan_synthesis
+    predicate: builds
+    object: peptidoglycan_cell_wall
+    description: Septal synthesis builds and remodels the spherical cell wall.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: synthesize peptidoglycan only at the division septum
+      notes: Supports septal-only PG synthesis in spherical cocci.
+  - subject: lateral_elongation
+    predicate: reduced in
+    object: sphere_shaped_trait
+    description: Reduced lateral elongation helps preserve a sphere rather than a
+      rod.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      snippet: mechanisms controlling growth and division of coccoid bacteria
+      notes: Broad review supports different growth mechanisms for coccoid versus
+        rod-shaped bacteria.
+  - subject: peptidoglycan_cell_wall
+    predicate: maintains
+    object: sphere_shaped_trait
+    description: Peptidoglycan wall geometry maintains the spherical shape.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: primary role in maintaining cell shape
+      notes: Supports the cell wall as central to bacterial shape maintenance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894456+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for FtsZ-associated septal
+    peptidoglycan synthesis, peptidoglycan cell wall, reduced lateral elongation,
+    and spherical morphology.
+  llm_assisted: true

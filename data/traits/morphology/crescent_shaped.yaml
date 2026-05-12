@@ -1,8 +1,11 @@
 identifier: METPO:1000669
 label: crescent shaped
+definition: A cell shape in which an organism has a curved crescent-like morphology
+  with a concave inner side and a convex outer side.
+definition_source: DOI:10.1016/S0092-8674(03)00935-8
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -10,9 +13,82 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1016/S0092-8674(03)00935-8
+  snippet: required for the vibrioid and helical shapes of Caulobacter
+  notes: Supports crescentin as a bacterial cytoskeletal determinant of curved
+    Caulobacter cell shape.
+causal_graphs:
+- graph_id: crescent_shaped_crescentin_curvature
+  title: Crescent-shape crescentin curvature mechanism
+  description: Evidence-backed causal sketch linking crescent morphology to
+    crescentin localization, inner-curvature mechanical constraint, peptidoglycan
+    growth bias, and curved cell-body geometry.
+  nodes:
+  - node_id: crescent_shaped_trait
+    label: crescent shaped
+    node_type: TRAIT
+    grounding: METPO:1000669
+    description: Curved crescent-like bacterial cell morphology.
+  - node_id: crescentin
+    label: crescentin
+    node_type: GENE_OR_PROTEIN
+    description: Intermediate-filament-like cytoskeletal protein encoded by creS.
+  - node_id: inner_cell_curvature
+    label: inner cell curvature
+    node_type: CELLULAR_LOCALIZATION
+    description: Concave side of a crescent-shaped cell.
+  - node_id: peptidoglycan_growth_bias
+    label: peptidoglycan growth bias
+    node_type: BIOLOGICAL_PROCESS
+    description: Differential wall growth or strain that bends the cell body.
+  - node_id: crescent_cell_curvature
+    label: crescent cell curvature
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a curved crescent cell body.
+  edges:
+  - subject: crescentin
+    predicate: localizes to
+    object: inner_cell_curvature
+    description: Crescentin localizes along the inner curvature of the cell.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      snippet: localizes to the inner cell curvature
+      notes: Supports crescentin as an inner-curvature-localized shape protein.
+  - subject: crescentin
+    predicate: constrains
+    object: peptidoglycan_growth_bias
+    description: Crescentin mechanically constrains cell-wall growth to create
+      differential curvature.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      snippet: mechanical control of cell growth
+      notes: Supports a mechanical growth-control role for crescentin.
+  - subject: peptidoglycan_growth_bias
+    predicate: generates
+    object: crescent_cell_curvature
+    description: Biased peptidoglycan growth or strain generates curved geometry.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      snippet: bacterial cell curvature through mechanical control
+      notes: Supports differential growth mechanics as a curvature mechanism.
+  - subject: crescent_cell_curvature
+    predicate: produces
+    object: crescent_shaped_trait
+    description: Curved cell-body geometry produces the crescent-shaped trait.
+    evidence:
+    - reference: DOI:10.1016/S0092-8674(03)00935-8
+      snippet: required for the ... shapes of Caulobacter
+      notes: Supports crescentin-dependent curved morphology as the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.886631+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for crescentin, inner cell
+    curvature, peptidoglycan growth bias, and crescent morphology.
+  llm_assisted: true
