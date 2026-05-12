@@ -2,9 +2,10 @@ identifier: METPO:1000671
 label: diplococcus shaped
 definition: A cell shape in which spherical cells remain attached in pairs following
   cell division, forming characteristic doublets.
+definition_source: DOI:10.1038/ncomms4842
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -12,9 +13,87 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1038/ncomms4842
+  snippet: Separation of daughter cells during bacterial cell division
+  notes: Supports diplococcus-like paired morphology as linked to septal cross-wall
+    splitting and daughter-cell separation.
+causal_graphs:
+- graph_id: diplococcus_shaped_septal_separation
+  title: Diplococcus paired-cell separation mechanism
+  description: Evidence-backed causal sketch linking diplococcus morphology to
+    septal peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell
+    separation, and retention of daughter-cell pairs.
+  nodes:
+  - node_id: diplococcus_shaped_trait
+    label: diplococcus shaped
+    node_type: TRAIT
+    grounding: METPO:1000671
+    description: Pair-forming spherical bacterial morphology.
+  - node_id: septal_peptidoglycan_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Division-associated wall synthesis at the septum.
+  - node_id: septal_cross_wall
+    label: septal cross wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Peptidoglycan wall separating daughter cells.
+  - node_id: pcsB_hydrolase_system
+    label: PcsB hydrolase system
+    node_type: GENE_OR_PROTEIN
+    description: Pneumococcal cell-separation factor involved in cross-wall
+      splitting.
+  - node_id: daughter_cell_pair
+    label: daughter-cell pair
+    node_type: BIOLOGICAL_PROCESS
+    description: Two cells remaining attached after division.
+  edges:
+  - subject: septal_peptidoglycan_synthesis
+    predicate: forms
+    object: septal_cross_wall
+    description: Septal wall synthesis forms the cross-wall between daughter cells.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2021.04.041
+      snippet: peptidoglycan assembly during the cell cycle
+      notes: Supports septal PG assembly during ovococcal division.
+  - subject: pcsB_hydrolase_system
+    predicate: splits
+    object: septal_cross_wall
+    description: Cell separation requires splitting the septal cross-wall.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      snippet: splitting of the septal cross wall
+      notes: Supports PcsB-associated peptidoglycan hydrolase function in cell
+        separation.
+  - subject: septal_cross_wall
+    predicate: incomplete separation yields
+    object: daughter_cell_pair
+    description: Incomplete or regulated separation of septal cross-wall material
+      yields attached cell pairs.
+    evidence:
+    - reference: DOI:10.1128/JB.183.10.3108-3116.2001
+      snippet: short chains with few or no free diplococci
+      notes: Supports the relationship between pneumococcal separation state and
+        diplococcus occurrence.
+  - subject: daughter_cell_pair
+    predicate: manifests as
+    object: diplococcus_shaped_trait
+    description: Attached daughter-cell pairs manifest the diplococcus-shaped trait.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      snippet: daughter cells during bacterial cell division
+      notes: Supports paired morphology as an outcome of daughter-cell separation
+        dynamics.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887641+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for septal peptidoglycan,
+    PcsB-associated cross-wall splitting, daughter-cell pairing, and diplococcus
+    morphology.
+  llm_assisted: true

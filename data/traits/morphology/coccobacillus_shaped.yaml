@@ -1,17 +1,97 @@
 identifier: METPO:1000688
 label: coccobacillus shaped
+definition: A cell shape intermediate between spherical cocci and elongated bacilli,
+  typically appearing as short or plump rods.
+definition_source: DOI:10.1128/JB.187.1.54-64.2005
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: coccobacillus
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1128/JB.187.1.54-64.2005
+  snippet: changes shape, from a rod to coccobacillus
+  notes: Supports coccobacillus morphology as a short-rod state associated with
+    cell-shape control in representative bacteria.
+causal_graphs:
+- graph_id: coccobacillus_shaped_short_rod_morphogenesis
+  title: Coccobacillus short-rod morphogenesis mechanism
+  description: Evidence-backed causal sketch linking coccobacillus shape to
+    peptidoglycan synthesis, MreB-associated elongation, septal growth, and reduced
+    length-to-width ratio.
+  nodes:
+  - node_id: coccobacillus_shaped_trait
+    label: coccobacillus shaped
+    node_type: TRAIT
+    grounding: METPO:1000688
+    description: Short, plump rod morphology intermediate between coccus and
+      bacillus.
+  - node_id: mreB
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like bacterial cytoskeletal protein involved in cell-shape
+      control.
+  - node_id: peptidoglycan_synthesis
+    label: peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall synthesis and remodeling process.
+  - node_id: septal_growth
+    label: septal growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Division-associated cell-wall synthesis.
+  - node_id: short_rod_geometry
+    label: short-rod geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell geometry with reduced length-to-width ratio.
+  edges:
+  - subject: mreB
+    predicate: controls
+    object: peptidoglycan_synthesis
+    description: MreB contributes to control of peptidoglycan synthetic complexes.
+    evidence:
+    - reference: DOI:10.1128/JB.187.1.54-64.2005
+      snippet: control of the peptidoglycan synthetic complexes
+      notes: Supports MreB involvement in shape-related PG synthesis.
+  - subject: peptidoglycan_synthesis
+    predicate: shapes
+    object: short_rod_geometry
+    description: Wall synthesis patterns determine whether cells remain rod-like or
+      become short coccobacilli.
+    evidence:
+    - reference: DOI:10.1128/JB.187.1.54-64.2005
+      snippet: conditions causing changes in cell shape
+      notes: Supports PG-associated shape changes to a coccobacillus state.
+  - subject: septal_growth
+    predicate: contributes to
+    object: short_rod_geometry
+    description: Division-associated septal growth contributes to the short-rod
+      intermediate geometry.
+    evidence:
+    - reference: DOI:10.1128/JB.187.1.54-64.2005
+      snippet: role at mid-cell ... in early septation
+      notes: Supports a septation-linked role for MreB in representative
+        coccobacillus-forming cells.
+  - subject: short_rod_geometry
+    predicate: produces
+    object: coccobacillus_shaped_trait
+    description: Short-rod geometry produces the coccobacillus-shaped trait.
+    evidence:
+    - reference: DOI:10.1128/JB.187.1.54-64.2005
+      snippet: from a rod to coccobacillus
+      notes: Supports the trait endpoint as a short-rod morphology.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.897227+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for MreB, peptidoglycan
+    synthesis, septal growth, and short-rod coccobacillus geometry.
+  llm_assisted: true

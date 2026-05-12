@@ -2,9 +2,10 @@ identifier: METPO:1000677
 label: ovoid shaped
 definition: A cell shape in which an organism has an oval morphology, rounded at both
   ends with one end often slightly broader than the other.
+definition_source: DOI:10.1016/j.cub.2021.04.041
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -15,9 +16,95 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1016/j.cub.2021.04.041
+  snippet: ovoid bacterium Streptococcus pneumoniae
+  notes: Supports ovoid bacterial morphology as a recognized ovococcal shape.
+causal_graphs:
+- graph_id: ovoid_shaped_midcell_pg_assembly
+  title: Ovoid-shape midcell peptidoglycan mechanism
+  description: Evidence-backed causal sketch linking ovoid morphology to midcell
+    peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth,
+    and rounded ovoid geometry.
+  nodes:
+  - node_id: ovoid_shaped_trait
+    label: ovoid shaped
+    node_type: TRAIT
+    grounding: METPO:1000677
+    description: Rounded ovoid bacterial morphology.
+  - node_id: midcell_pg_assembly
+    label: midcell peptidoglycan assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Wall synthesis and assembly in an annular midcell region.
+  - node_id: mapZ
+    label: MapZ
+    node_type: GENE_OR_PROTEIN
+    description: Membrane protein involved in division-site placement in
+      S. pneumoniae.
+  - node_id: divIVA
+    label: DivIVA
+    node_type: GENE_OR_PROTEIN
+    description: Protein involved in septum splitting and elongation in ovococci.
+  - node_id: septum_splitting
+    label: septum splitting
+    node_type: BIOLOGICAL_PROCESS
+    description: Separation and remodeling of the division septum.
+  - node_id: ovoid_geometry
+    label: ovoid geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Rounded, egg-like cell-body geometry.
+  edges:
+  - subject: mapZ
+    predicate: positions
+    object: midcell_pg_assembly
+    description: MapZ participates in division-site placement for ovoid growth.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2016.07.014
+      snippet: relies on the membrane protein MapZ
+      notes: Supports MapZ as a division-positioning factor in S. pneumoniae.
+  - subject: midcell_pg_assembly
+    predicate: shapes
+    object: ovoid_geometry
+    description: Midcell peptidoglycan assembly shapes ovoid cell geometry.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2021.04.041
+      snippet: peptidoglycan synthesis ... in the ovoid bacterium
+      notes: Supports PG assembly dynamics in ovoid S. pneumoniae.
+  - subject: divIVA
+    predicate: controls
+    object: septum_splitting
+    description: DivIVA controls septum splitting and elongation dynamics.
+    evidence:
+    - reference: DOI:10.1128/mbio.01311-24
+      snippet: DivIVA controls the dynamics of septum splitting and cell elongation
+      notes: Supports DivIVA in ovococcal cell morphogenesis.
+  - subject: septum_splitting
+    predicate: contributes to
+    object: ovoid_geometry
+    description: Septum splitting and elongation dynamics contribute to ovoid
+      morphology.
+    evidence:
+    - reference: DOI:10.1128/mbio.01311-24
+      snippet: how ovoid bacteria proliferate
+      notes: Supports septum/elongation dynamics as relevant to ovoid bacterial
+        proliferation.
+  - subject: ovoid_geometry
+    predicate: manifests as
+    object: ovoid_shaped_trait
+    description: Ovoid cell-body geometry manifests the ovoid-shaped trait.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2021.04.041
+      snippet: ovoid-shaped bacteria
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.891106+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for MapZ, DivIVA, midcell
+    peptidoglycan assembly, septum splitting, and ovoid cell geometry.
+  llm_assisted: true

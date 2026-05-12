@@ -2,9 +2,10 @@ identifier: METPO:1000678
 label: oval shaped
 definition: A cell shape characterized by an ellipsoidal morphology with rounded ends,
   resembling an elongated sphere.
+definition_source: DOI:10.1089/mdr.2014.0032
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -12,9 +13,96 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1089/mdr.2014.0032
+  snippet: ovococci that are ellipsoid
+  notes: Supports oval/ellipsoidal morphology as an ovococcal bacterial shape class.
+causal_graphs:
+- graph_id: oval_shaped_ovococcal_pg_synthesis
+  title: Oval-shape ovococcal peptidoglycan mechanism
+  description: Evidence-backed causal sketch linking oval morphology to peripheral
+    and septal peptidoglycan synthesis, PBP2b-associated elongation, MapZ/FtsZ
+    division positioning, and rounded ellipsoidal geometry.
+  nodes:
+  - node_id: oval_shaped_trait
+    label: oval shaped
+    node_type: TRAIT
+    grounding: METPO:1000678
+    description: Rounded ellipsoidal bacterial cell morphology.
+  - node_id: peripheral_peptidoglycan_synthesis
+    label: peripheral peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Peripheral wall synthesis contributing to ovococcal elongation.
+  - node_id: septal_peptidoglycan_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Division-site wall synthesis.
+  - node_id: pbp2b
+    label: PBP2b
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan synthase associated with elongation in ovococci.
+  - node_id: mapZ_ftsZ_system
+    label: MapZ/FtsZ division-positioning system
+    node_type: GENE_OR_PROTEIN
+    description: Proteins involved in positioning and organizing ovococcal division.
+  - node_id: ellipsoidal_geometry
+    label: ellipsoidal geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Rounded elongated cell-body geometry.
+  edges:
+  - subject: pbp2b
+    predicate: supports
+    object: peripheral_peptidoglycan_synthesis
+    description: PBP2b supports peripheral peptidoglycan synthesis in ovococcal
+      elongation.
+    evidence:
+    - reference: DOI:10.1089/mdr.2014.0032
+      snippet: PBP2b of ovococci
+      notes: Supports PBP2b as a key ovococcal elongation factor.
+  - subject: mapZ_ftsZ_system
+    predicate: positions
+    object: septal_peptidoglycan_synthesis
+    description: MapZ/FtsZ positioning organizes the division-associated wall
+      synthesis zone.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2016.07.014
+      snippet: relies on the membrane protein MapZ
+      notes: Supports MapZ/FtsZ involvement in S. pneumoniae cell division.
+  - subject: peripheral_peptidoglycan_synthesis
+    predicate: combines with
+    object: septal_peptidoglycan_synthesis
+    description: Peripheral and septal synthesis together generate the ovococcal
+      growth pattern.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2021.04.041
+      snippet: dynamics of peptidoglycan assembly
+      notes: Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.
+  - subject: septal_peptidoglycan_synthesis
+    predicate: shapes
+    object: ellipsoidal_geometry
+    description: Coordinated septal and peripheral synthesis shapes an ellipsoidal
+      cell body.
+    evidence:
+    - reference: DOI:10.1089/mdr.2014.0032
+      snippet: ovococci that are ellipsoid
+      notes: Supports the ellipsoidal ovococcal morphology endpoint.
+  - subject: ellipsoidal_geometry
+    predicate: manifests as
+    object: oval_shaped_trait
+    description: Rounded ellipsoidal geometry manifests the oval-shaped trait.
+    evidence:
+    - reference: DOI:10.1089/mdr.2014.0032
+      snippet: ellipsoid
+      notes: Supports oval shape as an ellipsoidal bacterial morphology.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.891705+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T20:05:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for PBP2b, MapZ/FtsZ,
+    peripheral and septal peptidoglycan synthesis, and oval cell geometry.
+  llm_assisted: true

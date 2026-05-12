@@ -29,11 +29,125 @@
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
     <h1>ovoid shaped</h1>
-    <p class="curie"><code>METPO:1000677</code> · CLASS · SEEDED</p>
-    
+    <p class="curie"><code>METPO:1000677</code> · CLASS · REVIEWED</p>
+
     <p class="definition">A cell shape in which an organism has an oval morphology, rounded at both ends with one end often slightly broader than the other.</p>
-    
+
   </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Ovoid-shape midcell peptidoglycan mechanism</h2>
+      <p class="meta">Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth, and rounded ovoid geometry.</p>
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Ovoid-shape midcell peptidoglycan mechanism</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for ovoid shaped.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>MapZ</strong>
+            <span class="edge-predicate">positions</span>
+            <strong>midcell peptidoglycan assembly</strong>
+
+            <p>MapZ participates in division-site placement for ovoid growth.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.mib.2016.07.014</code>
+                <span class="evidence-snippet">relies on the membrane protein MapZ</span>
+                <span class="meta">Supports MapZ as a division-positioning factor in S. pneumoniae.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>midcell peptidoglycan assembly</strong>
+            <span class="edge-predicate">shapes</span>
+            <strong>ovoid geometry</strong>
+
+            <p>Midcell peptidoglycan assembly shapes ovoid cell geometry.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cub.2021.04.041</code>
+                <span class="evidence-snippet">peptidoglycan synthesis ... in the ovoid bacterium</span>
+                <span class="meta">Supports PG assembly dynamics in ovoid S. pneumoniae.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>DivIVA</strong>
+            <span class="edge-predicate">controls</span>
+            <strong>septum splitting</strong>
+
+            <p>DivIVA controls septum splitting and elongation dynamics.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/mbio.01311-24</code>
+                <span class="evidence-snippet">DivIVA controls the dynamics of septum splitting and cell elongation</span>
+                <span class="meta">Supports DivIVA in ovococcal cell morphogenesis.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>septum splitting</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>ovoid geometry</strong>
+
+            <p>Septum splitting and elongation dynamics contribute to ovoid morphology.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1128/mbio.01311-24</code>
+                <span class="evidence-snippet">how ovoid bacteria proliferate</span>
+                <span class="meta">Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>ovoid geometry</strong>
+            <span class="edge-predicate">manifests as</span>
+            <strong>ovoid shaped</strong>
+
+            <p>Ovoid cell-body geometry manifests the ovoid-shaped trait.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1016/j.cub.2021.04.041</code>
+                <span class="evidence-snippet">ovoid-shaped bacteria</span>
+                <span class="meta">Supports the trait endpoint.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="grid">
     <div class="card">
@@ -41,128 +155,134 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
-        
-        
-        
+        <dt>Definition source</dt><dd>DOI:10.1016/j.cub.2021.04.041</dd>
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/cell_shape.html" >cell shape <code>METPO:1000666</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>S_ovoid <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>ovoid-shaped <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000677</code> <span class="dim-preview">[-0.781, -1.187, -1.918, +1.637, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoorganoheterotrophic.html">chemoorganoheterotrophic</a>
           <span class="sim">0.522</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/flask_shaped.html">flask shaped</a>
           <span class="sim">0.494</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoorganotrophic.html">chemoorganotrophic</a>
           <span class="sim">0.464</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_low.html">temperature range low</a>
           <span class="sim">0.444</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid1.html">temperature range mid1</a>
           <span class="sim">0.440</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid4.html">temperature range mid4</a>
           <span class="sim">0.430</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
           <span class="sim">0.428</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/rod_shaped.html">rod shaped</a>
           <span class="sim">0.418</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.891106+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-11T20:05:00-07:00</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Added DOI-backed definition and causal graph for MapZ, DivIVA, midcell peptidoglycan assembly, septum splitting, and ovoid cell geometry.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -187,27 +307,352 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth, and rounded ovoid geometry.", "edges": [{"description": "MapZ participates in division-site placement for ovoid growth.", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "id": "edge-1", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mapZ", "target": "midcell_pg_assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "id": "edge-2", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "midcell_pg_assembly", "target": "ovoid_geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "id": "edge-3", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "divIVA", "target": "septum_splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "septum_splitting", "target": "ovoid_geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "ovoid_geometry", "target": "ovoid_shaped_trait"}], "evidence_rows": [{"description": "MapZ participates in division-site placement for ovoid growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "predicate": "positions", "predicate_id": null, "source": "MapZ", "target": "midcell peptidoglycan assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "predicate": "shapes", "predicate_id": null, "source": "midcell peptidoglycan assembly", "target": "ovoid geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "predicate": "controls", "predicate_id": null, "source": "DivIVA", "target": "septum splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "predicate": "contributes to", "predicate_id": null, "source": "septum splitting", "target": "ovoid geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "predicate": "manifests as", "predicate_id": null, "source": "ovoid geometry", "target": "ovoid shaped"}], "graph_id": "ovoid_shaped_midcell_pg_assembly", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein involved in septum splitting and elongation in ovococci.", "grounding": null, "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane protein involved in division-site placement in S. pneumoniae.", "grounding": null, "id": "mapZ", "is_orphan": false, "label": "MapZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Wall synthesis and assembly in an annular midcell region.", "grounding": null, "id": "midcell_pg_assembly", "is_orphan": false, "label": "midcell peptidoglycan assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Rounded, egg-like cell-body geometry.", "grounding": null, "id": "ovoid_geometry", "is_orphan": false, "label": "ovoid geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Rounded ovoid bacterial morphology.", "grounding": "METPO:1000677", "id": "ovoid_shaped_trait", "is_orphan": false, "label": "ovoid shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Separation and remodeling of the division septum.", "grounding": null, "id": "septum_splitting", "is_orphan": false, "label": "septum splitting", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Ovoid-shape midcell peptidoglycan mechanism"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-12 03:52 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
