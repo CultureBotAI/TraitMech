@@ -29,136 +29,241 @@
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
     <h1>red pigmented</h1>
-    <p class="curie"><code>METPO:1003028</code> · CLASS · SEEDED</p>
-    
+    <p class="curie"><code>METPO:1003028</code> · CLASS · REVIEWED</p>
+
+    <p class="definition">A pigmentation phenotype in which microbial colonies or cells appear red due to production of red pigments such as prodiginines or carotenoids.</p>
+
   </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Red pigmentation prodiginine mechanism</h2>
+      <p class="meta">Evidence-backed causal sketch linking red microbial pigmentation to prodiginine biosynthesis, PigC/RedH condensation, prodigiosin accumulation, and visible red color.</p>
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Red pigmentation prodiginine mechanism</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for red pigmented.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>prodiginine biosynthesis</strong>
+            <span class="edge-predicate">includes</span>
+            <strong>PigC/RedH condensation</strong>
+
+            <p>Prodiginine biosynthesis culminates in PigC/RedH-catalyzed condensation.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1531</code>
+                <span class="evidence-snippet">culminating in the PigC/RedH catalysed condensation</span>
+                <span class="meta">Supports PigC/RedH condensation as a key step in prodiginine biosynthesis.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>PigC/RedH condensation</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>prodigiosin</strong>
+
+            <p>PigC/RedH condensation produces prodigiosin or related prodiginines.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1531</code>
+                <span class="evidence-snippet">to form prodigiosin</span>
+                <span class="meta">Supports prodigiosin as a pathway product.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>prodigiosin</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>visible red color</strong>
+
+            <p>Prodigiosin causes red colony pigmentation in representative bacteria.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1021/acs.chemrev.6b00024</code>
+                <span class="evidence-snippet">bright red pigment prodigiosin</span>
+                <span class="meta">Supports prodigiosin as a red pigment.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>visible red color</strong>
+            <span class="edge-predicate">manifests as</span>
+            <strong>red pigmented</strong>
+
+            <p>Visible red color manifests the red-pigmented phenotype.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1531</code>
+                <span class="evidence-snippet">red-pigmented prodiginines</span>
+                <span class="meta">Supports trait-level red pigmentation from prodiginines.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
-        
-        
-        
-        
+
+        <dt>Definition source</dt><dd>DOI:10.1038/nrmicro1531</dd>
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/pigmentation.html" >pigmentation <code>METPO:1003021</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
-        
+
         <li>Pigment_red <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1003028</code> <span class="dim-preview">[+1.230, -1.493, -0.477, +1.200, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/pink_pigmented.html">pink pigmented</a>
           <span class="sim">0.642</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/black_pigmented.html">black pigmented</a>
           <span class="sim">0.546</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/brown_pigmented.html">brown pigmented</a>
           <span class="sim">0.515</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/cream_pigmented.html">cream pigmented</a>
           <span class="sim">0.513</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/white_pigmented.html">white pigmented</a>
           <span class="sim">0.498</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/orange_pigmented.html">orange pigmented</a>
           <span class="sim">0.481</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/carotenoid_pigmentation.html">carotenoid pigmentation</a>
           <span class="sim">0.456</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/pigmentation.html">pigmentation</a>
           <span class="sim">0.455</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.946258+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-11T18:45:00-07:00</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Added DOI-backed definition and causal graph for prodiginine biosynthesis, PigC/RedH condensation, prodigiosin, and visible red color.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -183,27 +288,352 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking red microbial pigmentation to prodiginine biosynthesis, PigC/RedH condensation, prodigiosin accumulation, and visible red color.", "edges": [{"description": "Prodiginine biosynthesis culminates in PigC/RedH-catalyzed condensation.", "evidence": [{"notes": "Supports PigC/RedH condensation as a key step in prodiginine biosynthesis.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "culminating in the PigC/RedH catalysed condensation"}], "id": "edge-1", "is_orphan": false, "predicate": "includes", "predicate_id": null, "source": "prodiginine_biosynthesis", "target": "pigC_redH_condensation"}, {"description": "PigC/RedH condensation produces prodigiosin or related prodiginines.", "evidence": [{"notes": "Supports prodigiosin as a pathway product.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "to form prodigiosin"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "pigC_redH_condensation", "target": "prodigiosin"}, {"description": "Prodigiosin causes red colony pigmentation in representative bacteria.", "evidence": [{"notes": "Supports prodigiosin as a red pigment.", "reference": "DOI:10.1021/acs.chemrev.6b00024", "snippet": "bright red pigment prodigiosin"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "prodigiosin", "target": "visible_red_color"}, {"description": "Visible red color manifests the red-pigmented phenotype.", "evidence": [{"notes": "Supports trait-level red pigmentation from prodiginines.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "red-pigmented prodiginines"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_red_color", "target": "red_pigmented_trait"}], "evidence_rows": [{"description": "Prodiginine biosynthesis culminates in PigC/RedH-catalyzed condensation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports PigC/RedH condensation as a key step in prodiginine biosynthesis.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "culminating in the PigC/RedH catalysed condensation"}], "predicate": "includes", "predicate_id": null, "source": "prodiginine biosynthesis", "target": "PigC/RedH condensation"}, {"description": "PigC/RedH condensation produces prodigiosin or related prodiginines.", "edge_id": "edge-2", "evidence": [{"notes": "Supports prodigiosin as a pathway product.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "to form prodigiosin"}], "predicate": "produces", "predicate_id": null, "source": "PigC/RedH condensation", "target": "prodigiosin"}, {"description": "Prodigiosin causes red colony pigmentation in representative bacteria.", "edge_id": "edge-3", "evidence": [{"notes": "Supports prodigiosin as a red pigment.", "reference": "DOI:10.1021/acs.chemrev.6b00024", "snippet": "bright red pigment prodigiosin"}], "predicate": "causes", "predicate_id": null, "source": "prodigiosin", "target": "visible red color"}, {"description": "Visible red color manifests the red-pigmented phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports trait-level red pigmentation from prodiginines.", "reference": "DOI:10.1038/nrmicro1531", "snippet": "red-pigmented prodiginines"}], "predicate": "manifests as", "predicate_id": null, "source": "visible red color", "target": "red pigmented"}], "graph_id": "red_pigmented_prodiginine_pathway", "issues": [], "nodes": [{"color": "#cffafe", "description": "Condensation reaction forming prodigiosin or related prodiginines.", "grounding": null, "id": "pigC_redH_condensation", "is_orphan": false, "label": "PigC/RedH condensation", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#ecfccb", "description": "Bifurcated biosynthetic pathway yielding prodiginine pigments.", "grounding": null, "id": "prodiginine_biosynthesis", "is_orphan": false, "label": "prodiginine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Red tripyrrole pigment produced by some bacteria.", "grounding": null, "id": "prodigiosin", "is_orphan": false, "label": "prodigiosin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing red.", "grounding": "METPO:1003028", "id": "red_pigmented_trait", "is_orphan": false, "label": "red pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Observed red color produced by pigment absorption spectra.", "grounding": null, "id": "visible_red_color", "is_orphan": false, "label": "visible red color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Red pigmentation prodiginine mechanism"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-12 02:27 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>

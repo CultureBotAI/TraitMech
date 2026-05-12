@@ -1,17 +1,93 @@
 identifier: METPO:1003030
 label: yellow pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  yellow due to production of yellow pigments such as carotenoids.
+definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_yellow
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1080/1040841X.2025.2526423
+  snippet: red, pink, orange, and yellow pigmentation in bacteria
+  notes: Supports yellow microbial pigmentation as a carotenoid-associated bacterial
+    color phenotype.
+causal_graphs:
+- graph_id: yellow_pigmented_carotenoid_color
+  title: Yellow pigmentation carotenoid mechanism
+  description: Evidence-backed causal sketch linking yellow microbial pigmentation
+    to crt-catalyzed carotenoid biosynthesis, yellow carotenoid accumulation, and
+    visible yellow colony color.
+  nodes:
+  - node_id: yellow_pigmented_trait
+    label: yellow pigmented
+    node_type: TRAIT
+    grounding: METPO:1003030
+    description: Microbial pigmentation appearing yellow.
+  - node_id: crt_enzymes
+    label: Crt enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial carotenoid biosynthetic enzymes.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic pathway producing carotenoid pigments.
+  - node_id: yellow_carotenoids
+    label: yellow carotenoids
+    node_type: CHEMICAL
+    description: Carotenoid pigments that contribute yellow coloration.
+  - node_id: visible_yellow_color
+    label: visible yellow color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed yellow color produced by pigment absorption spectra.
+  edges:
+  - subject: crt_enzymes
+    predicate: catalyzes
+    object: carotenoid_biosynthesis
+    description: Crt enzymes catalyze carotenoid biosynthetic reactions.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: crt genes ... reactions they catalyze
+      notes: Supports Crt enzymes as catalysts in bacterial carotenoid pathways.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: yellow_carotenoids
+    description: Carotenoid biosynthesis produces yellow-pigment carotenoids in
+      representative bacteria.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: yellow pigmentation in bacteria
+      notes: Supports carotenoids as one source of yellow pigmentation.
+  - subject: yellow_carotenoids
+    predicate: causes
+    object: visible_yellow_color
+    description: Yellow carotenoids cause visible yellow colony or cell color.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2010.07.007
+      snippet: Carotenoids are natural pigments
+      notes: Supports carotenoids as visible pigments in bacteria.
+  - subject: visible_yellow_color
+    predicate: manifests as
+    object: yellow_pigmented_trait
+    description: Visible yellow color manifests the yellow-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1080/1040841X.2025.2526423
+      snippet: yellow pigmentation in bacteria
+      notes: Supports trait-level yellow pigmentation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947204+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:45:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for Crt enzymes,
+    carotenoid biosynthesis, yellow carotenoids, and visible yellow color.
+  llm_assisted: true

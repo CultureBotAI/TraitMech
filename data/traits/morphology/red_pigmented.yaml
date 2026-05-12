@@ -1,17 +1,96 @@
 identifier: METPO:1003028
 label: red pigmented
+definition: A pigmentation phenotype in which microbial colonies or cells appear
+  red due to production of red pigments such as prodiginines or carotenoids.
+definition_source: DOI:10.1038/nrmicro1531
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_red
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro1531
+  snippet: red-pigmented prodiginines
+  notes: Supports red microbial pigmentation as a prodiginine-associated color
+    phenotype in representative bacteria.
+causal_graphs:
+- graph_id: red_pigmented_prodiginine_pathway
+  title: Red pigmentation prodiginine mechanism
+  description: Evidence-backed causal sketch linking red microbial pigmentation to
+    prodiginine biosynthesis, PigC/RedH condensation, prodigiosin accumulation, and
+    visible red color.
+  nodes:
+  - node_id: red_pigmented_trait
+    label: red pigmented
+    node_type: TRAIT
+    grounding: METPO:1003028
+    description: Microbial pigmentation appearing red.
+  - node_id: prodiginine_biosynthesis
+    label: prodiginine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Bifurcated biosynthetic pathway yielding prodiginine pigments.
+  - node_id: pigC_redH_condensation
+    label: PigC/RedH condensation
+    node_type: MOLECULAR_FUNCTION
+    description: Condensation reaction forming prodigiosin or related prodiginines.
+  - node_id: prodigiosin
+    label: prodigiosin
+    node_type: CHEMICAL
+    description: Red tripyrrole pigment produced by some bacteria.
+  - node_id: visible_red_color
+    label: visible red color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed red color produced by pigment absorption spectra.
+  edges:
+  - subject: prodiginine_biosynthesis
+    predicate: includes
+    object: pigC_redH_condensation
+    description: Prodiginine biosynthesis culminates in PigC/RedH-catalyzed
+      condensation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1531
+      snippet: culminating in the PigC/RedH catalysed condensation
+      notes: Supports PigC/RedH condensation as a key step in prodiginine
+        biosynthesis.
+  - subject: pigC_redH_condensation
+    predicate: produces
+    object: prodigiosin
+    description: PigC/RedH condensation produces prodigiosin or related
+      prodiginines.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1531
+      snippet: to form prodigiosin
+      notes: Supports prodigiosin as a pathway product.
+  - subject: prodigiosin
+    predicate: causes
+    object: visible_red_color
+    description: Prodigiosin causes red colony pigmentation in representative
+      bacteria.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.6b00024
+      snippet: bright red pigment prodigiosin
+      notes: Supports prodigiosin as a red pigment.
+  - subject: visible_red_color
+    predicate: manifests as
+    object: red_pigmented_trait
+    description: Visible red color manifests the red-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1531
+      snippet: red-pigmented prodiginines
+      notes: Supports trait-level red pigmentation from prodiginines.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946258+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:45:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for prodiginine
+    biosynthesis, PigC/RedH condensation, prodigiosin, and visible red color.
+  llm_assisted: true

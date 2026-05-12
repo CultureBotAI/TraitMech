@@ -1,17 +1,94 @@
 identifier: METPO:1003025
 label: green pigmented
+definition: A pigmentation phenotype in which microbial colonies or cultures appear
+  green or blue-green due to pigments such as pyocyanin and pyoverdine.
+definition_source: DOI:10.1186/s12934-023-02122-1
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1003021
 synonyms:
 - synonym_text: Pigment_green
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1186/s12934-023-02122-1
+  snippet: green colorization of the culture plate
+  notes: Supports green/blue-green pigmentation from pyocyanin and fluorescein or
+    pyoverdine-like pigments in representative bacteria.
+causal_graphs:
+- graph_id: green_pigmented_pyocyanin_phenazine
+  title: Green pigmentation pyocyanin phenazine mechanism
+  description: Evidence-backed causal sketch linking green or blue-green microbial
+    pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and
+    visible green culture color.
+  nodes:
+  - node_id: green_pigmented_trait
+    label: green pigmented
+    node_type: TRAIT
+    grounding: METPO:1003025
+    description: Microbial pigmentation appearing green or blue-green.
+  - node_id: phz_operons
+    label: phz operons
+    node_type: GENE_OR_PROTEIN
+    description: Phenazine biosynthesis gene clusters in representative bacteria.
+  - node_id: phenazine_biosynthesis
+    label: phenazine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthetic pathway producing phenazine pigments.
+  - node_id: pyocyanin
+    label: pyocyanin
+    node_type: CHEMICAL
+    description: Blue-green phenazine pigment produced by Pseudomonas aeruginosa.
+  - node_id: visible_green_color
+    label: visible green color
+    node_type: MOLECULAR_FUNCTION
+    description: Observed green or blue-green culture color.
+  edges:
+  - subject: phz_operons
+    predicate: encodes
+    object: phenazine_biosynthesis
+    description: phz operons encode enzymes required for phenazine biosynthesis.
+    evidence:
+    - reference: DOI:10.1186/s12934-023-02122-1
+      snippet: phenazine synthesis operons including phzA1, phzA2, phzS, and phzM
+      notes: Supports phz genes as pyocyanin/phenazine biosynthesis machinery.
+  - subject: phenazine_biosynthesis
+    predicate: produces
+    object: pyocyanin
+    description: Phenazine biosynthesis produces pyocyanin.
+    evidence:
+    - reference: DOI:10.1128/jb.138.3.846-852.1979
+      snippet: pyocyanine biosynthesis
+      notes: Supports pyocyanin production as a phenazine biosynthetic process.
+  - subject: pyocyanin
+    predicate: causes
+    object: visible_green_color
+    description: Pyocyanin contributes blue-green visible pigmentation.
+    evidence:
+    - reference: DOI:10.1186/s12934-023-02122-1
+      snippet: Pyocyanin is a blue phenazine pigment
+      notes: Supports pyocyanin as a visible blue/green pigment.
+  - subject: visible_green_color
+    predicate: manifests as
+    object: green_pigmented_trait
+    description: Visible green or blue-green culture color manifests the
+      green-pigmented phenotype.
+    evidence:
+    - reference: DOI:10.1186/s12934-023-02122-1
+      snippet: lead to the green colorization of the culture plate
+      notes: Supports trait-level green pigmentation from pyocyanin and related
+        pigments in representative cultures.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944814+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T18:45:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for phz operons,
+    phenazine biosynthesis, pyocyanin, and visible green/blue-green color.
+  llm_assisted: true
