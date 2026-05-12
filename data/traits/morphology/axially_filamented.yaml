@@ -2,9 +2,10 @@ identifier: METPO:1000705
 label: axially filamented
 definition: A motility where the flagellum filament of an organism is located in the
   periplasm and does not extend past the cell envelope.
+definition_source: DOI:10.3390/biom10040550
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000702
 synonyms:
@@ -12,9 +13,109 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.3390/biom10040550
+  snippet: flagella are hidden within the periplasmic space
+  notes: Supports axial/periplasmic flagella as the defining motility structure.
+causal_graphs:
+- graph_id: axially_filamented_periplasmic_flagella
+  title: Axial filament periplasmic flagella mechanism
+  description: Evidence-backed causal sketch linking axial filament motility to
+    periplasmic flagella, basal motors, cell-envelope localization, torque, and
+    corkscrew-like cell movement.
+  nodes:
+  - node_id: axially_filamented_trait
+    label: axially filamented
+    node_type: TRAIT
+    grounding: METPO:1000705
+    description: Motility with flagellar filaments located in the periplasm.
+  - node_id: periplasmic_flagella
+    label: periplasmic flagella
+    node_type: CELLULAR_LOCALIZATION
+    description: Flagella located between the cell wall and outer membrane.
+  - node_id: flagellar_basal_motor
+    label: flagellar basal motor
+    node_type: GENE_OR_PROTEIN
+    description: Motor embedded in the cytoplasmic membrane and peptidoglycan
+      layer.
+  - node_id: periplasmic_space
+    label: periplasmic space
+    node_type: CELLULAR_LOCALIZATION
+    description: Space between inner and outer membranes containing spirochete
+      flagella.
+  - node_id: torque_generation
+    label: torque generation
+    node_type: BIOLOGICAL_PROCESS
+    description: Motor-generated force that deforms or rotates the cell body.
+  - node_id: corkscrew_motility
+    label: corkscrew motility
+    node_type: BIOLOGICAL_PROCESS
+    description: Helical or undulating movement produced by periplasmic flagella.
+  edges:
+  - subject: periplasmic_flagella
+    predicate: defines
+    object: axially_filamented_trait
+    description: Axial filamented motility is defined by flagella located inside
+      the periplasmic space.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      snippet: flagella are hidden within the periplasmic space
+      notes: Supports periplasmic flagella as the defining structure.
+  - subject: periplasmic_flagella
+    predicate: localized in
+    object: periplasmic_space
+    description: Spirochete flagella reside inside the cell envelope rather than
+      extending externally.
+    evidence:
+    - reference: DOI:10.1016/j.semcdb.2015.10.015
+      snippet: enclose their flagella in the periplasm
+      notes: Supports periplasmic localization of spirochete flagella.
+  - subject: flagellar_basal_motor
+    predicate: rotates
+    object: periplasmic_flagella
+    description: Basal motors drive periplasmic flagellar rotation.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      snippet: connects with a basal motor
+      notes: Supports basal motor linkage to periplasmic flagella.
+  - subject: torque_generation
+    predicate: depends on
+    object: flagellar_basal_motor
+    description: Spirochete-specific motor structures generate torque needed for
+      motility.
+    evidence:
+    - reference: DOI:10.1128/mBio.02494-21
+      snippet: generation of the high torque necessary
+      notes: Supports torque generation by spirochete flagellar motor structures.
+  - subject: periplasmic_flagella
+    predicate: enables
+    object: corkscrew_motility
+    description: Periplasmic flagella drive cell-body undulation or corkscrew-like
+      movement.
+    evidence:
+    - reference: DOI:10.1016/j.semcdb.2015.10.015
+      snippet: long, helical appendages known as flagella to move
+      notes: Supports motility by periplasmic flagella in spirochetes.
+  - subject: corkscrew_motility
+    predicate: realizes
+    object: axially_filamented_trait
+    description: Corkscrew or undulating movement is the observed locomotion
+      phenotype of axial filament systems.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      snippet: mechanics of spirochete motility
+      notes: Supports cell-body mechanics as the phenotype-level expression of
+        periplasmic flagella.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907078+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed axially filamented trait and added DOI-backed causal graph for
+    periplasmic flagella, basal motors, torque generation, and spirochete
+    corkscrew motility.
+  llm_assisted: true

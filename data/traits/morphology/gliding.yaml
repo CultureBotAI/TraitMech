@@ -2,18 +2,104 @@ identifier: METPO:1000706
 label: gliding
 definition: A motile in which an organism moves smoothly along solid surfaces without
   flagella or pili.
+definition_source: DOI:10.1146/annurev.micro.55.1.49
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000702
 synonyms:
 - synonym_text: gliding
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.55.1.49
+  snippet: move actively over surfaces
+  notes: Supports gliding as active surface movement without flagella.
+causal_graphs:
+- graph_id: gliding_surface_motility
+  title: Gliding surface motility mechanism
+  description: Evidence-backed causal sketch linking gliding to solid surfaces,
+    cell-envelope motors, surface adhesins, and type IX secretion/gliding systems.
+  nodes:
+  - node_id: gliding_trait
+    label: gliding
+    node_type: TRAIT
+    grounding: METPO:1000706
+    description: Smooth movement along solid surfaces without flagella or pili.
+  - node_id: solid_surface
+    label: solid surface
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Surface substrate on which gliding movement occurs.
+  - node_id: gliding_motility_machinery
+    label: gliding motility machinery
+    node_type: GENE_OR_PROTEIN
+    description: Molecular machinery that produces surface translocation without
+      flagella.
+  - node_id: surface_adhesins
+    label: surface adhesins
+    node_type: GENE_OR_PROTEIN
+    description: Cell-surface proteins moved or engaged during gliding.
+  - node_id: type_ix_secretion_system
+    label: type IX secretion system
+    node_type: GENE_OR_PROTEIN
+    description: Secretion-associated machinery linked to Flavobacterium gliding.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical gradient powering some gliding motors.
+  edges:
+  - subject: solid_surface
+    predicate: enables context for
+    object: gliding_trait
+    description: Gliding is a mode of active bacterial movement over surfaces.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.49
+      snippet: move actively over surfaces
+      notes: Supports surface movement as defining context for gliding.
+  - subject: gliding_motility_machinery
+    predicate: enables
+    object: gliding_trait
+    description: Specialized machinery drives bacterial surface movement without
+      flagella.
+    evidence:
+    - reference: DOI:10.1016/j.cub.2016.12.035
+      snippet: without using flagella, pili, or other external appendages
+      notes: Supports gliding as a distinct motility mode.
+  - subject: surface_adhesins
+    predicate: transmit force for
+    object: gliding_trait
+    description: Surface adhesins couple internal motors to external substrates.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00626-4
+      snippet: moves adhesins along the cell surface
+      notes: Review summarizes gliding models using moving surface adhesins.
+  - subject: type_ix_secretion_system
+    predicate: contributes to
+    object: gliding_motility_machinery
+    description: Type IX secretion-associated components contribute to some gliding
+      systems.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00626-4
+      snippet: type 9 secretion and gliding motility
+      notes: Supports linkage between type IX secretion and gliding machinery.
+  - subject: proton_motive_force
+    predicate: powers
+    object: gliding_motility_machinery
+    description: Proton motive force can power gliding motility motors.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00626-4
+      snippet: proton-driven motor that powers type 9 secretion and gliding motility
+      notes: Supports proton-driven gliding machinery in reviewed systems.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907644+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed gliding trait and added DOI-backed causal graph for surface
+    gliding machinery, adhesins, type IX secretion, and proton motive force.
+  llm_assisted: true
