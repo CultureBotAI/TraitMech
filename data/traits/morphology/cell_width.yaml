@@ -37,9 +37,9 @@ causal_graphs:
     label: Rod-complex peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized peptidoglycan synthesis along the cylindrical wall.
-  - node_id: cell_wall
+  - node_id: peptidoglycan_cell_wall
     label: peptidoglycan cell wall
-    node_type: ORGANELLE
+    node_type: CELLULAR_LOCALIZATION
     description: Load-bearing peptidoglycan sacculus that constrains cell shape.
     grounding: GO:0009274
   - node_id: turgor_pressure
@@ -58,14 +58,14 @@ causal_graphs:
       notes: Supports MreB as the organizer of lateral PG synthesis.
   - subject: rod_complex_pg
     predicate: builds
-    object: cell_wall
+    object: peptidoglycan_cell_wall
     description: Rod-complex peptidoglycan synthesis builds the lateral cylindrical
       wall.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: rod-shape is maintained
       notes: Supports lateral PG assembly as the wall-building activity.
-  - subject: cell_wall
+  - subject: peptidoglycan_cell_wall
     predicate: constrains
     object: cell_width_trait
     description: The peptidoglycan sacculus constrains cell width against turgor.
@@ -75,7 +75,7 @@ causal_graphs:
       notes: Supports the cell wall as the structural constraint on width.
   - subject: turgor_pressure
     predicate: balances
-    object: cell_wall
+    object: peptidoglycan_cell_wall
     description: Turgor pressure is mechanically balanced by the peptidoglycan wall,
       determining the steady-state radius.
     evidence:
