@@ -47,12 +47,12 @@ causal_graphs:
     description: Allocation of cellular resources between rapid growth machinery
       and high-affinity uptake or stress tolerance.
   - node_id: copiotrophic_phenotype
-    label: copiotrophic phenotype
+    label: copiotrophic
     node_type: TRAIT
     grounding: METPO:1000642
     description: Adaptation favoring fast growth in nutrient-rich conditions.
   - node_id: oligotrophic_phenotype
-    label: oligotrophic phenotype
+    label: oligotrophic
     node_type: TRAIT
     grounding: METPO:1000654
     description: Adaptation favoring efficient growth in nutrient-poor conditions.

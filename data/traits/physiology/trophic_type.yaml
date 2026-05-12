@@ -1,7 +1,7 @@
 identifier: METPO:1000631
 label: trophic type
-definition: A phenotype that is describing how an organism obtains carbon and energy
-  for growth and metabolism.
+definition: A phenotype that is describing how an organism obtains carbon, energy,
+  and electron donors for growth and metabolism.
 definition_source: DOI:10.1146/annurev.micro.61.080706.093130
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -59,22 +59,22 @@ causal_graphs:
     description: The set of biosynthetic, energy-conserving, and electron-transfer
       pathways present in the genome.
   - node_id: autotrophic_phenotype
-    label: autotrophic phenotype
+    label: autotrophic
     node_type: TRAIT
     grounding: METPO:1000632
     description: CO2-fixing trophic phenotype.
   - node_id: heterotrophic_phenotype
-    label: heterotrophic phenotype
+    label: heterotrophic
     node_type: TRAIT
     grounding: METPO:1000644
     description: Organic-carbon-utilizing trophic phenotype.
   - node_id: phototrophic_phenotype
-    label: phototrophic phenotype
+    label: phototrophic
     node_type: TRAIT
     grounding: METPO:1000660
     description: Light-driven energy-acquisition trophic phenotype.
   - node_id: chemotrophic_phenotype
-    label: chemotrophic phenotype
+    label: chemotrophic
     node_type: TRAIT
     grounding: METPO:1000641
     description: Chemical-energy-driven trophic phenotype.
