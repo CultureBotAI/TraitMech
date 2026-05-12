@@ -2,7 +2,7 @@ identifier: METPO:1000624
 label: non halophilic
 definition: A halophily preference in which an organism does not require or prefer
   elevated salt concentrations for growth.
-definition_source: PMID:11583854
+definition_source: DOI:10.1128/AEM.01934-12
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,9 +13,114 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
+- reference: DOI:10.1128/AEM.01934-12
+  snippet: B. subtilis can attain cellular protection
+  notes: Supports salt-stress protection mechanisms in a non-halophilic bacterial
+    model.
 - reference: PMID:11583854
   snippet: Vibrio cholerae non-O1, a non-halophilic bacterium
   notes: 'Organism example: Vibrio cholerae non-O1 is described as non-halophilic.'
+causal_graphs:
+- graph_id: non_halophilic_salt_stress_response
+  title: Non-halophilic salt-stress response mechanism
+  description: Evidence-backed causal sketch linking non-halophily to lack of salt
+    requirement, high-osmolarity stress, potassium uptake, and compatible-solute
+    protection.
+  nodes:
+  - node_id: non_halophilic_trait
+    label: non halophilic
+    node_type: TRAIT
+    grounding: METPO:1000624
+    description: Growth does not require or prefer elevated salt concentration.
+  - node_id: low_to_moderate_salinity
+    label: low-to-moderate salinity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Non-elevated salinity condition compatible with non-halophilic
+      growth.
+  - node_id: high_osmolarity
+    label: high osmolarity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hyperosmotic condition that can inhibit growth of non-halophiles.
+  - node_id: water_flux
+    label: water flux across cytoplasmic membrane
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmotically driven water movement during osmotic upshift or
+      downshift.
+  - node_id: potassium_ion
+    label: potassium ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29103
+    description: Ion accumulated as an early osmotic-stress response.
+  - node_id: proline
+    label: proline
+    node_type: CHEMICAL
+    grounding: CHEBI:17203
+    description: Compatible solute synthesized by Bacillus subtilis during osmotic
+      adaptation.
+  - node_id: compatible_solute_uptake
+    label: compatible-solute uptake systems
+    node_type: GENE_OR_PROTEIN
+    description: Transporters importing glycine betaine, proline, ectoine, or other
+      osmoprotectants.
+  edges:
+  - subject: low_to_moderate_salinity
+    predicate: supports
+    object: non_halophilic_trait
+    description: Non-halophilic organisms do not require elevated salinity for
+      growth.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: soil-dwelling bacterium Bacillus subtilis
+      notes: Bacillus subtilis is used here as a non-halophilic model for salt
+        stress responses rather than salt-requiring growth.
+  - subject: high_osmolarity
+    predicate: drives
+    object: water_flux
+    description: Hyperosmotic stress alters cellular water balance and can impair
+      non-halophilic growth.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: outflow of water, drop in turgor, and the ensuing growth arrest
+      notes: Supports high-osmolarity growth inhibition through water loss and
+        turgor decrease.
+  - subject: potassium_ion
+    predicate: mitigates
+    object: water_flux
+    description: Rapid potassium accumulation helps adjust cytoplasmic osmotic
+      potential after osmotic upshift.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: initially importing substantial amounts of potassium ions
+      notes: Supports potassium uptake as an initial osmotic response.
+  - subject: proline
+    predicate: mitigates
+    object: water_flux
+    description: Proline accumulation supports osmoadaptation under sustained
+      high-osmolarity conditions.
+    evidence:
+    - reference: DOI:10.1128/JB.00778-11
+      snippet: proline production is required
+      notes: Supports de novo proline synthesis in Bacillus subtilis osmotic
+        defense.
+  - subject: compatible_solute_uptake
+    predicate: imports
+    object: proline
+    description: Uptake systems can import osmoprotectants that relieve high
+      osmolarity.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: osmotically controlled uptake systems
+      notes: Supports uptake systems for compatible solutes in Bacillus subtilis.
+  - subject: proline
+    predicate: enables tolerance of
+    object: high_osmolarity
+    description: Proline acts as an osmoprotectant enabling survival or growth
+      under salt stress without making salt a growth requirement.
+    evidence:
+    - reference: DOI:10.1128/AEM.01934-12
+      snippet: proline as an osmoprotectant
+      notes: Supports proline-mediated protection in a non-halophilic bacterial
+        model.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863044+00:00'
   curator: seed_from_metpo
@@ -26,4 +131,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Vibrio cholerae non-O1 organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed non-halophilic causal graph for salt-stress response
+    in a non-halophilic Bacillus model, including K+ uptake, proline, and
+    compatible-solute uptake systems.
   llm_assisted: true

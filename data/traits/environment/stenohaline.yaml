@@ -3,9 +3,10 @@ label: stenohaline
 definition: A halophily preference in which an organism can only tolerate a narrow
   range of salinity concentrations and cannot survive significant changes in environmental
   salt levels.
+definition_source: DOI:10.1186/s40168-024-01817-w
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
 synonyms:
@@ -13,9 +14,100 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1186/s40168-024-01817-w
+  snippet: narrow range of salinity
+  notes: Supports stenohaline microorganisms as organisms thriving within a narrow
+    salinity range.
+causal_graphs:
+- graph_id: stenohaline_narrow_salinity_tolerance
+  title: Stenohaline narrow-salinity tolerance mechanism
+  description: Evidence-backed causal sketch linking stenohalinity to narrow
+    salinity niches, osmotic imbalance during salinity shifts, and constrained
+    salinity-adaptation capacity.
+  nodes:
+  - node_id: stenohaline_trait
+    label: stenohaline
+    node_type: TRAIT
+    grounding: METPO:1000626
+    description: Tolerance is limited to a narrow range of salinity concentrations.
+  - node_id: narrow_salinity_range
+    label: narrow salinity range
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Restricted salinity interval that supports growth.
+  - node_id: salinity_shift
+    label: salinity shift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environmental increase or decrease in salt concentration.
+  - node_id: osmotic_imbalance
+    label: osmotic imbalance
+    node_type: BIOLOGICAL_PROCESS
+    description: Difference between external and internal osmotic potential.
+  - node_id: water_flux
+    label: water flux across cytoplasmic membrane
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmotically driven water movement across the cell membrane.
+  - node_id: salinity_adaptation_genes
+    label: salinity-adaptation genes
+    node_type: GENE_OR_PROTEIN
+    description: Gene repertoires associated with adaptation along salinity
+      gradients.
+  edges:
+  - subject: narrow_salinity_range
+    predicate: defines
+    object: stenohaline_trait
+    description: Stenohaline microorganisms thrive within a narrow salinity range.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: narrow range of salinity
+      notes: Microbiome study explicitly defines stenohaline microorganisms by a
+        narrow salinity range.
+  - subject: salinity_shift
+    predicate: causes
+    object: osmotic_imbalance
+    description: Salinity shifts create osmotic imbalance across the membrane.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: In response to osmotic imbalance
+      notes: Supports osmotic imbalance as a response to salinity change.
+  - subject: osmotic_imbalance
+    predicate: drives
+    object: water_flux
+    description: Osmotic imbalance drives water flux across the membrane.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: water immediately rushes into the cell
+      notes: Supports water flux during osmotic imbalance.
+  - subject: salinity_adaptation_genes
+    predicate: constrains
+    object: stenohaline_trait
+    description: Salinity adaptation gene repertoires help determine salinity niche
+      breadth; limited repertoires can correspond to narrow tolerance.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: genes associated with microbial salinity adaptation
+      notes: The constraint direction is inferred from the study's salinity
+        adaptation analysis; kept broad because organism-specific gene sets vary.
+  - subject: salinity_shift
+    predicate: exceeds tolerance of
+    object: stenohaline_trait
+    description: Large salinity changes can exceed the narrow tolerance range of
+      stenohaline organisms.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: Organisms thriving within a narrow range of salinity
+      notes: Supports the ecological interpretation that large salinity excursions
+        exceed stenohaline niche breadth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864123+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed stenohaline trait and added DOI-backed causal graph for narrow
+    salinity tolerance, salinity-shift osmotic imbalance, water flux, and
+    constrained salinity-adaptation capacity.
+  llm_assisted: true

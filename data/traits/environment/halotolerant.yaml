@@ -2,7 +2,7 @@ identifier: METPO:1000622
 label: halotolerant
 definition: A halophily preference in which an organism can tolerate high salt concentrations
   but does not require them for growth.
-definition_source: PMID:27621824
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,6 +13,10 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: highly halotolerant representatives
+  notes: Supports halotolerant microorganisms as high-salt tolerant without strict
+    salt requirement.
 - reference: PMID:27621824
   snippet: Halomonas massiliensis sp. nov., a new halotolerant bacterium
   notes: 'Organism example: Halomonas massiliensis is described as halotolerant.'
@@ -39,6 +43,10 @@ causal_graphs:
     label: compatible solutes
     node_type: CHEMICAL
     description: Organic osmolytes that support salt tolerance.
+  - node_id: compatible_solute_transport
+    label: compatible-solute transport
+    node_type: MOLECULAR_FUNCTION
+    description: Uptake systems importing osmoprotectants under high-salt stress.
   - node_id: stress_protection
     label: stress protection
     node_type: BIOLOGICAL_PROCESS
@@ -70,6 +78,15 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: organic osmotic solutes
       notes: Supports organic osmotic solutes as an osmoadaptation strategy.
+  - subject: compatible_solute_transport
+    predicate: imports
+    object: compatible_solutes
+    description: Uptake systems import osmoprotectants that support halotolerance.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2021.01.030
+      snippet: biosynthesis and/or uptake of compatible solutes
+      notes: Adds explicit source support for transport-mediated compatible-solute
+        accumulation in bacterial salt-stress responses.
   - subject: compatible_solutes
     predicate: contributes to
     object: stress_protection
@@ -102,4 +119,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for halotolerant salt-stress response.
+  llm_assisted: true
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Replaced PMID definition source with DOI-backed halotolerance source
+    and added a compatible-solute transport edge to the existing causal graph.
   llm_assisted: true
