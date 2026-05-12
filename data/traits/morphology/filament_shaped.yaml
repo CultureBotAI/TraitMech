@@ -1,8 +1,11 @@
 identifier: METPO:1000674
 label: filament shaped
+definition: A cell shape in which an organism grows as elongated filamentous cells
+  or hypha-like structures.
+definition_source: DOI:10.1016/j.mib.2010.10.002
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -16,9 +19,96 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1016/j.mib.2010.10.002
+  snippet: polar growth of Streptomyces
+  notes: Supports filamentous Streptomyces morphology as a polar-growth cell-shape
+    system.
+causal_graphs:
+- graph_id: filament_shaped_streptomyces_polar_growth
+  title: Filament-shape Streptomyces polar growth mechanism
+  description: Evidence-backed causal sketch linking filamentous morphology to
+    DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip
+    extension.
+  nodes:
+  - node_id: filament_shaped_trait
+    label: filament shaped
+    node_type: TRAIT
+    grounding: METPO:1000674
+    description: Elongated filamentous bacterial morphology.
+  - node_id: divIVA
+    label: DivIVA
+    node_type: GENE_OR_PROTEIN
+    description: Polarity determinant for Streptomyces apical growth.
+  - node_id: scy
+    label: Scy
+    node_type: GENE_OR_PROTEIN
+    description: Streptomyces cytoskeletal element associated with the polarisome.
+  - node_id: apical_polarisome
+    label: apical polarisome
+    node_type: CELLULAR_LOCALIZATION
+    description: Hyphal-tip organizing center for polar growth.
+  - node_id: apical_peptidoglycan_synthesis
+    label: apical peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall synthesis localized at the hyphal tip.
+  - node_id: hyphal_tip_extension
+    label: hyphal tip extension
+    node_type: BIOLOGICAL_PROCESS
+    description: Extension of filamentous hyphae by polar growth.
+  edges:
+  - subject: divIVA
+    predicate: localizes to
+    object: apical_polarisome
+    description: DivIVA localizes at hyphal tips as part of the polar growth
+      machinery.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2010.10.002
+      snippet: polarity determinant DivIVA
+      notes: Supports DivIVA as a polarity determinant in Streptomyces.
+  - subject: scy
+    predicate: organizes
+    object: apical_polarisome
+    description: Scy is a component of the tip-organizing center controlling polar
+      growth.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1002423
+      snippet: tip organizing center
+      notes: Supports Scy/DivIVA assemblies in Streptomyces polarized growth.
+  - subject: apical_polarisome
+    predicate: recruits
+    object: apical_peptidoglycan_synthesis
+    description: The apical polarisome recruits cell-wall synthesis machinery to
+      hyphal tips.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2012.10.012
+      snippet: polarisome-like complex involving the essential polarity protein DivIVA
+      notes: Supports polarisome-directed apical growth and cell-wall assembly.
+  - subject: apical_peptidoglycan_synthesis
+    predicate: drives
+    object: hyphal_tip_extension
+    description: Localized wall synthesis at the tip drives filament extension.
+    evidence:
+    - reference: DOI:10.1038/s41564-025-02080-x
+      snippet: DivIVA drives growth at the hyphal poles
+      notes: Supports DivIVA-recruited PG synthesis at hyphal poles.
+  - subject: hyphal_tip_extension
+    predicate: manifests as
+    object: filament_shaped_trait
+    description: Hyphal tip extension manifests filamentous morphology.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2010.10.002
+      snippet: Streptomyces hyphae
+      notes: Supports filamentous hyphal morphology as the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.889558+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T21:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for DivIVA, Scy,
+    apical polarisome, apical peptidoglycan synthesis, and hyphal tip extension.
+  llm_assisted: true

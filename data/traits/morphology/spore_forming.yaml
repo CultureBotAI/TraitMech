@@ -1,7 +1,7 @@
 identifier: METPO:1000871
 label: spore forming
 definition: A sporulation in which an organism has the ability to produce endospores.
-definition_source: PMID:32660383
+definition_source: DOI:10.1038/nrmicro2921
 trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -15,9 +15,86 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
+- reference: DOI:10.1038/nrmicro2921
+  snippet: production of a highly resistant dormant cell type known as the spore
+  notes: Supports spore forming as the ability to produce dormant resistant spores.
 - reference: PMID:32660383
   snippet: Endospore formation in Bacillus subtilis
   notes: 'Organism example: Bacillus subtilis is described as endospore-forming.'
+causal_graphs:
+- graph_id: spore_forming_endospore_assembly
+  title: Spore-forming endospore assembly mechanism
+  description: Evidence-backed causal sketch linking forespore development to
+    cortex synthesis, coat assembly, dipicolinic acid accumulation, and the
+    spore-forming phenotype.
+  nodes:
+  - node_id: spore_forming_trait
+    label: spore forming
+    node_type: TRAIT
+    grounding: METPO:1000871
+    description: Ability to produce bacterial endospores.
+  - node_id: forespore
+    label: forespore
+    node_type: CELLULAR_LOCALIZATION
+    description: Developing spore compartment within the sporangium.
+  - node_id: spore_cortex
+    label: spore cortex
+    node_type: CELLULAR_LOCALIZATION
+    description: Specialized peptidoglycan layer surrounding the spore core.
+  - node_id: spore_coat
+    label: spore coat
+    node_type: CELLULAR_LOCALIZATION
+    description: Multilayered proteinaceous protective surface of the endospore.
+  - node_id: dipicolinic_acid
+    label: dipicolinic acid
+    node_type: CHEMICAL
+    description: Pyridine dicarboxylic acid enriched in bacterial spores.
+  - node_id: resistant_endospore
+    label: resistant endospore
+    node_type: ORGANELLE
+    description: Dormant stress-resistant spore produced by endospore-forming bacteria.
+  edges:
+  - subject: forespore
+    predicate: develops into
+    object: resistant_endospore
+    description: The forespore compartment matures into a resistant endospore.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: within which a spore is produced
+      notes: Supports forespore development into the spore.
+  - subject: spore_cortex
+    predicate: contributes to
+    object: resistant_endospore
+    description: Cortex synthesis contributes to endospore structure and resistance.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: spore surface layers
+      notes: Supports specialized spore layers as functional components of the
+        endospore.
+  - subject: spore_coat
+    predicate: protects
+    object: resistant_endospore
+    description: The multilayered coat protects and structures the endospore surface.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: assembly and functions of the multilayered coat
+      notes: Supports the spore coat as a protective assembly.
+  - subject: dipicolinic_acid
+    predicate: contributes to
+    object: resistant_endospore
+    description: Dipicolinic acid contributes to spore resistance and stability.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2672.2005.02736.x
+      snippet: mechanisms are responsible for the resistance of spores
+      notes: Supports chemical and structural factors in Bacillus spore resistance.
+  - subject: resistant_endospore
+    predicate: manifests as
+    object: spore_forming_trait
+    description: Production of resistant endospores manifests the spore-forming trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: production of a highly resistant dormant cell type known as the spore
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917323+00:00'
   curator: seed_from_metpo
@@ -28,4 +105,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Bacillus subtilis organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T21:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Replaced definition source with DOI-backed endospore source and added
+    causal graph for forespore development, cortex, coat, dipicolinic acid, and
+    resistant endospore formation.
   llm_assisted: true

@@ -1,8 +1,12 @@
 identifier: METPO:1000682
 label: spore shaped
+definition: A cell shape in which an organism or differentiated cell has an
+  endospore-like morphology, reflecting a dormant spore body with specialized
+  protective layers.
+definition_source: DOI:10.1038/nrmicro2921
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -10,9 +14,95 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1038/nrmicro2921
+  snippet: structure of the endospore coat
+  notes: Supports endospore morphology as a differentiated structure with
+    specialized surface layers.
+causal_graphs:
+- graph_id: spore_shaped_endospore_layers
+  title: Spore-shape endospore layer mechanism
+  description: Evidence-backed causal sketch linking spore-shaped morphology to
+    forespore engulfment, cortex formation, coat assembly, and dehydrated spore-core
+    maturation.
+  nodes:
+  - node_id: spore_shaped_trait
+    label: spore shaped
+    node_type: TRAIT
+    grounding: METPO:1000682
+    description: Endospore-like morphology.
+  - node_id: forespore_engulfment
+    label: forespore engulfment
+    node_type: BIOLOGICAL_PROCESS
+    description: Mother-cell membrane migration around the forespore.
+  - node_id: cortex_formation
+    label: cortex formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of the specialized spore cortex layer.
+  - node_id: coat_assembly
+    label: coat assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the multilayered spore coat.
+  - node_id: dehydrated_spore_core
+    label: dehydrated spore core
+    node_type: CELLULAR_LOCALIZATION
+    description: Low-water spore core contributing to dormant spore properties.
+  - node_id: mature_spore_body
+    label: mature spore body
+    node_type: ORGANELLE
+    description: Differentiated spore structure with cortex, coat, and core.
+  edges:
+  - subject: forespore_engulfment
+    predicate: establishes
+    object: mature_spore_body
+    description: Engulfment establishes the forespore as a distinct spore body.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.30.1.297
+      snippet: two-cell-chamber sporangium
+      notes: Supports spore morphogenesis through compartmental development.
+  - subject: cortex_formation
+    predicate: builds layer of
+    object: mature_spore_body
+    description: Cortex formation builds a specialized spore structural layer.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: spore surface layers
+      notes: Supports specialized spore layers as components of mature morphology.
+  - subject: coat_assembly
+    predicate: builds layer of
+    object: mature_spore_body
+    description: Coat assembly builds the multilayered external spore structure.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: mechanisms of coat assembly
+      notes: Supports coat assembly as a morphogenetic process.
+  - subject: dehydrated_spore_core
+    predicate: contributes to
+    object: mature_spore_body
+    description: Core dehydration contributes to mature spore architecture and
+      resistance.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2672.2005.02736.x
+      snippet: resistance of spores of Bacillus species
+      notes: Supports spore core properties as part of resistant spore morphology.
+  - subject: mature_spore_body
+    predicate: manifests as
+    object: spore_shaped_trait
+    description: Mature spore-body architecture manifests the spore-shaped trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      snippet: highly resistant dormant cell type known as the spore
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893996+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T21:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Added DOI-backed definition and causal graph for forespore engulfment,
+    cortex formation, coat assembly, dehydrated spore core, and mature spore-body
+    morphology.
+  llm_assisted: true
