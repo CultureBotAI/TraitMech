@@ -2,7 +2,7 @@ identifier: METPO:1000681
 label: rod shaped
 definition: A cell shape in which an organism has an elongated, cylindrical morphology
   with relatively straight sides and rounded or flat ends.
-definition_source: PMID:7575501
+definition_source: DOI:10.1146/annurev-cellbio-010521-010834
 trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -17,9 +17,89 @@ synonyms:
   source: metpo.owl
 created_by: Luke Wang
 evidence:
+- reference: DOI:10.1146/annurev-cellbio-010521-010834
+  snippet: bacterial rod shape formation
+  notes: Supports rod shape as an actively regulated bacterial morphogenesis
+    phenotype.
 - reference: PMID:7575501
   snippet: why E. coli is rod-shaped
   notes: 'Organism example: Escherichia coli is described as rod-shaped.'
+causal_graphs:
+- graph_id: rod_shaped_mreB_peptidoglycan
+  title: Rod-shape MreB and peptidoglycan mechanism
+  description: Evidence-backed causal sketch linking rod shape to MreB-guided
+    peptidoglycan synthesis, Rod complex activity, cell-wall elongation, and FtsZ
+    division coupling.
+  nodes:
+  - node_id: rod_shaped_trait
+    label: rod shaped
+    node_type: TRAIT
+    grounding: METPO:1000681
+    description: Elongated cylindrical bacterial morphology.
+  - node_id: mreB
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like protein involved in rod-shape maintenance.
+  - node_id: rod_complex
+    label: Rod complex
+    node_type: GENE_OR_PROTEIN
+    description: Cell-wall elongation machinery associated with MreB in rod-shaped
+      bacteria.
+  - node_id: peptidoglycan_synthesis
+    label: peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall synthesis and remodeling process.
+  - node_id: lateral_cell_wall_elongation
+    label: lateral cell-wall elongation
+    node_type: BIOLOGICAL_PROCESS
+    description: Sidewall growth that lengthens rod-shaped cells.
+  - node_id: ftsZ
+    label: FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Division-ring protein coordinating septal growth.
+  edges:
+  - subject: mreB
+    predicate: organizes
+    object: rod_complex
+    description: MreB organizes rod-shape elongation machinery.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-010521-010834
+      snippet: MreB filaments interact with Rod complexes
+      notes: Supports MreB-Rod complex interaction in rod-shape regulation.
+  - subject: rod_complex
+    predicate: directs
+    object: peptidoglycan_synthesis
+    description: Rod complexes direct sidewall peptidoglycan synthesis.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-010521-010834
+      snippet: Rod complexes drive cell wall insertion
+      notes: Supports Rod complex contribution to wall insertion.
+  - subject: peptidoglycan_synthesis
+    predicate: produces
+    object: lateral_cell_wall_elongation
+    description: Directed peptidoglycan synthesis elongates rod-shaped cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: elongation mode of peptidoglycan synthesis
+      notes: Supports peptidoglycan synthesis in cell elongation.
+  - subject: lateral_cell_wall_elongation
+    predicate: maintains
+    object: rod_shaped_trait
+    description: Lateral wall elongation preserves the cylindrical rod morphology.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2011.11.004
+      snippet: restores its rod shape
+      notes: Supports MreB-associated cell-wall synthesis as important for rod
+        shape restoration and maintenance.
+  - subject: ftsZ
+    predicate: coordinates with
+    object: peptidoglycan_synthesis
+    description: FtsZ coordinates division-associated peptidoglycan synthesis with
+      rod cell morphology.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: FtsZ collaborates with penicillin binding proteins
+      notes: Supports FtsZ-PBP collaboration in bacterial cell-shape generation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893421+00:00'
   curator: seed_from_metpo
@@ -30,4 +110,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Escherichia coli organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Replaced PMID definition source with DOI-backed rod-shape source and
+    added causal graph for MreB, Rod complex, peptidoglycan synthesis, lateral
+    wall elongation, and FtsZ coupling.
   llm_assisted: true

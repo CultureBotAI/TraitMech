@@ -3,9 +3,10 @@ label: cell shape
 definition: A phenotype that describes the characteristic three-dimensional morphological
   form of a microbial cell, determined by cell wall structure, cytoskeletal elements,
   and environmental factors.
+definition_source: DOI:10.1038/nrmicro1205
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -16,9 +17,113 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1038/nrmicro1205
+  snippet: bacterial cell wall ... primary role in maintaining cell shape
+  notes: Supports bacterial cell shape as determined by cell wall and cytoskeletal
+    elements.
+causal_graphs:
+- graph_id: cell_shape_peptidoglycan_cytoskeleton
+  title: Bacterial cell-shape morphogenesis mechanism
+  description: Evidence-backed causal sketch linking cell shape to peptidoglycan
+    synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.
+  nodes:
+  - node_id: cell_shape_trait
+    label: cell shape
+    node_type: TRAIT
+    grounding: METPO:1000666
+    description: Characteristic three-dimensional microbial cell morphology.
+  - node_id: peptidoglycan_cell_wall
+    label: peptidoglycan cell wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell-wall polymer network maintaining bacterial shape.
+  - node_id: peptidoglycan_synthesis
+    label: peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis and remodeling of the bacterial cell wall.
+  - node_id: penicillin_binding_proteins
+    label: penicillin-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes that synthesize and remodel peptidoglycan.
+  - node_id: mreB
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like bacterial cytoskeletal protein involved in rod-shape
+      determination.
+  - node_id: ftsZ
+    label: FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Tubulin-like bacterial cell-division protein.
+  - node_id: crescentin
+    label: crescentin
+    node_type: GENE_OR_PROTEIN
+    description: Intermediate-filament-like protein required for curved rod shape
+      in Caulobacter.
+  edges:
+  - subject: peptidoglycan_cell_wall
+    predicate: maintains
+    object: cell_shape_trait
+    description: The peptidoglycan wall has a primary role in maintaining bacterial
+      cell shape.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: primary role in maintaining cell shape
+      notes: Review supports peptidoglycan wall as central to cell shape.
+  - subject: penicillin_binding_proteins
+    predicate: catalyzes
+    object: peptidoglycan_synthesis
+    description: PBPs synthesize and remodel peptidoglycan during growth and
+      division.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: carry out the reactions for synthesis and remodelling
+      notes: Supports PBPs in peptidoglycan synthesis/remodeling.
+  - subject: peptidoglycan_synthesis
+    predicate: determines
+    object: cell_shape_trait
+    description: Spatial regulation of wall synthesis determines growth morphology.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: peptidoglycan synthesis to bacterial growth and morphology
+      notes: Review supports regulated peptidoglycan synthesis as a determinant of
+        morphology.
+  - subject: mreB
+    predicate: positions
+    object: peptidoglycan_synthesis
+    description: MreB helps organize or position peptidoglycan synthesis machinery.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2677
+      snippet: positions peptidoglycan biosynthesis machineries
+      notes: Supports MreB in spatial organization of cell-wall synthesis.
+  - subject: ftsZ
+    predicate: regulates
+    object: cell_shape_trait
+    description: FtsZ controls division-associated shape generation and septal wall
+      synthesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: FtsZ is essential for cell division
+      notes: Supports FtsZ as a shape-related cytoskeletal protein through cell
+        division.
+  - subject: crescentin
+    predicate: contributes to
+    object: cell_shape_trait
+    description: Crescentin contributes to curved-rod cell shape in representative
+      bacteria.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1205
+      snippet: crescentin is required for the curved-rod shape
+      notes: Supports crescentin as a cell-shape determinant in Caulobacter.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884864+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed cell shape trait and added DOI-backed causal graph for
+    peptidoglycan cell wall, PBPs, MreB, FtsZ, crescentin, and localized wall
+    growth.
+  llm_assisted: true

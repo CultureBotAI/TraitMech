@@ -3,7 +3,7 @@ label: gram negative
 definition: A gram stain in which bacteria do not retain crystal violet dye and appear
   pink or red after staining, indicating a thin peptidoglycan layer and presence of
   an outer membrane.
-definition_source: PMID:27564552
+definition_source: DOI:10.1038/s41579-019-0201-x
 trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -18,9 +18,97 @@ synonyms:
   source: metpo.owl
 created_by: Luke Wang
 evidence:
+- reference: DOI:10.1038/s41579-019-0201-x
+  snippet: defining feature of the Gram-negative cell envelope
+  notes: Supports the outer membrane as a defining Gram-negative envelope feature.
 - reference: PMID:27564552
   snippet: Gram-Negative Bacterium Escherichia coli
   notes: 'Organism example: Escherichia coli is described as Gram-negative.'
+causal_graphs:
+- graph_id: gram_negative_outer_membrane_dye_loss
+  title: Gram-negative outer-membrane dye-loss mechanism
+  description: Evidence-backed causal sketch linking Gram-negative staining to
+    outer membrane architecture, lipopolysaccharide, thin peptidoglycan,
+    decolorization, and counterstain uptake.
+  nodes:
+  - node_id: gram_negative_trait
+    label: gram negative
+    node_type: TRAIT
+    grounding: METPO:1000699
+    description: Gram stain phenotype in which cells lose crystal violet and appear
+      pink or red after counterstaining.
+  - node_id: outer_membrane
+    label: outer membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Gram-negative outer membrane outside the peptidoglycan layer.
+  - node_id: lipopolysaccharide
+    label: lipopolysaccharide
+    node_type: CHEMICAL
+    description: Glycolipid found in the outer leaflet of Gram-negative outer
+      membranes.
+  - node_id: thin_peptidoglycan_layer
+    label: thin peptidoglycan layer
+    node_type: CELLULAR_LOCALIZATION
+    description: Thin peptidoglycan layer in the Gram-negative periplasm.
+  - node_id: periplasmic_space
+    label: periplasmic space
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell-envelope compartment between inner and outer membranes.
+  - node_id: crystal_violet_iodine_complex
+    label: crystal violet-iodine complex
+    node_type: CHEMICAL
+    description: Dye complex removed during decolorization in Gram-negative cells.
+  - node_id: counterstain
+    label: counterstain
+    node_type: CHEMICAL
+    description: Safranin or similar stain producing pink/red appearance.
+  edges:
+  - subject: outer_membrane
+    predicate: defines
+    object: gram_negative_trait
+    description: The outer membrane is a defining feature of the Gram-negative cell
+      envelope.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0201-x
+      snippet: defining feature of the Gram-negative cell envelope
+      notes: Supports outer membrane as the key Gram-negative envelope feature.
+  - subject: lipopolysaccharide
+    predicate: localized in
+    object: outer_membrane
+    description: LPS is found on the outer surface of the Gram-negative outer
+      membrane.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0201-x
+      snippet: lipopolysaccharide exclusively found on the surface
+      notes: Supports LPS as a surface-exposed outer-membrane component.
+  - subject: thin_peptidoglycan_layer
+    predicate: localized in
+    object: periplasmic_space
+    description: Gram-negative peptidoglycan is a thin layer in the periplasm.
+    evidence:
+    - reference: DOI:10.1016/j.bbalip.2016.10.010
+      snippet: periplasm ... containing a thin layer of peptidoglycan
+      notes: Supports thin periplasmic peptidoglycan in Gram-negative envelopes.
+  - subject: thin_peptidoglycan_layer
+    predicate: fails to retain
+    object: crystal_violet_iodine_complex
+    description: Thin peptidoglycan and outer-membrane disruption allow dye complex
+      loss during decolorization.
+    evidence:
+    - reference: DOI:10.3109/10520299609117151
+      snippet: cell wall ... responsible for retention
+      notes: Inference from Gram-positive retention mechanism; thinner
+        Gram-negative peptidoglycan contributes to non-retention.
+  - subject: counterstain
+    predicate: produces
+    object: gram_negative_trait
+    description: Counterstain gives decolorized Gram-negative cells their pink/red
+      appearance.
+    evidence:
+    - reference: DOI:10.3109/10520299609117151
+      snippet: mechanism of the Gram stain
+      notes: Supports Gram stain procedure context; counterstain appearance follows
+        dye-complex loss.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903067+00:00'
   curator: seed_from_metpo
@@ -31,4 +119,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Escherichia coli organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Replaced PMID definition source with DOI-backed Gram-negative envelope
+    source and added causal graph for outer membrane, lipopolysaccharide,
+    periplasmic thin peptidoglycan, dye loss, and counterstaining.
   llm_assisted: true

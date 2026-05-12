@@ -29,11 +29,142 @@
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
     <h1>cell shape</h1>
-    <p class="curie"><code>METPO:1000666</code> · CLASS · SEEDED</p>
-    
+    <p class="curie"><code>METPO:1000666</code> · CLASS · REVIEWED</p>
+
     <p class="definition">A phenotype that describes the characteristic three-dimensional morphological form of a microbial cell, determined by cell wall structure, cytoskeletal elements, and environmental factors.</p>
-    
+
   </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Bacterial cell-shape morphogenesis mechanism</h2>
+      <p class="meta">Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.</p>
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Bacterial cell-shape morphogenesis mechanism</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for cell shape.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>peptidoglycan cell wall</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>cell shape</strong>
+
+            <p>The peptidoglycan wall has a primary role in maintaining bacterial cell shape.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1205</code>
+                <span class="evidence-snippet">primary role in maintaining cell shape</span>
+                <span class="meta">Review supports peptidoglycan wall as central to cell shape.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>penicillin-binding proteins</strong>
+            <span class="edge-predicate">catalyzes</span>
+            <strong>peptidoglycan synthesis</strong>
+
+            <p>PBPs synthesize and remodel peptidoglycan during growth and division.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1205</code>
+                <span class="evidence-snippet">carry out the reactions for synthesis and remodelling</span>
+                <span class="meta">Supports PBPs in peptidoglycan synthesis/remodeling.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>peptidoglycan synthesis</strong>
+            <span class="edge-predicate">determines</span>
+            <strong>cell shape</strong>
+
+            <p>Spatial regulation of wall synthesis determines growth morphology.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro2677</code>
+                <span class="evidence-snippet">peptidoglycan synthesis to bacterial growth and morphology</span>
+                <span class="meta">Review supports regulated peptidoglycan synthesis as a determinant of morphology.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>MreB</strong>
+            <span class="edge-predicate">positions</span>
+            <strong>peptidoglycan synthesis</strong>
+
+            <p>MreB helps organize or position peptidoglycan synthesis machinery.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro2677</code>
+                <span class="evidence-snippet">positions peptidoglycan biosynthesis machineries</span>
+                <span class="meta">Supports MreB in spatial organization of cell-wall synthesis.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>FtsZ</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>cell shape</strong>
+
+            <p>FtsZ controls division-associated shape generation and septal wall synthesis.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1205</code>
+                <span class="evidence-snippet">FtsZ is essential for cell division</span>
+                <span class="meta">Supports FtsZ as a shape-related cytoskeletal protein through cell division.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-6">
+            <strong>crescentin</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>cell shape</strong>
+
+            <p>Crescentin contributes to curved-rod cell shape in representative bacteria.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/nrmicro1205</code>
+                <span class="evidence-snippet">crescentin is required for the curved-rod shape</span>
+                <span class="meta">Supports crescentin as a cell-shape determinant in Caulobacter.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="grid">
     <div class="card">
@@ -41,195 +172,201 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
-        
-        
-        
+        <dt>Definition source</dt><dd>DOI:10.1038/nrmicro1205</dd>
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/phenotype.html" >phenotype <code>METPO:1000059</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (30)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped <code>METPO:1000667</code></a></li>
-        
+
         <li><a href="../../traits/morphology/branched_shaped.html">branched shaped <code>METPO:1000687</code></a></li>
-        
+
         <li><a href="../../traits/morphology/coccobacillus_shaped.html">coccobacillus shaped <code>METPO:1000688</code></a></li>
-        
+
         <li><a href="../../traits/morphology/coccus_shaped.html">coccus shaped <code>METPO:1000668</code></a></li>
-        
+
         <li><a href="../../traits/morphology/crescent_shaped.html">crescent shaped <code>METPO:1000669</code></a></li>
-        
+
         <li><a href="../../traits/morphology/curved_shaped.html">curved shaped <code>METPO:1000670</code></a></li>
-        
+
         <li><a href="../../traits/morphology/diplococcus_shaped.html">diplococcus shaped <code>METPO:1000671</code></a></li>
-        
+
         <li><a href="../../traits/morphology/disc_shaped.html">disc shaped <code>METPO:1000689</code></a></li>
-        
+
         <li><a href="../../traits/morphology/dumbbell_shaped.html">dumbbell shaped <code>METPO:1000672</code></a></li>
-        
+
         <li><a href="../../traits/morphology/ellipsoidal.html">ellipsoidal <code>METPO:1000673</code></a></li>
-        
+
         <li><a href="../../traits/morphology/filament_shaped.html">filament shaped <code>METPO:1000674</code></a></li>
-        
+
         <li><a href="../../traits/morphology/flask_shaped.html">flask shaped <code>METPO:1000675</code></a></li>
-        
+
         <li><a href="../../traits/morphology/fusiform_shaped.html">fusiform shaped <code>METPO:1000690</code></a></li>
-        
+
         <li><a href="../../traits/morphology/helical_shaped.html">helical shaped <code>METPO:1000676</code></a></li>
-        
+
         <li><a href="../../traits/morphology/irregular_shaped.html">irregular shaped <code>METPO:1000691</code></a></li>
-        
+
         <li><a href="../../traits/morphology/oval_shaped.html">oval shaped <code>METPO:1000678</code></a></li>
-        
+
         <li><a href="../../traits/morphology/ovoid_shaped.html">ovoid shaped <code>METPO:1000677</code></a></li>
-        
+
         <li><a href="../../traits/morphology/pleomorphic_shaped.html">pleomorphic shaped <code>METPO:1000679</code></a></li>
-        
+
         <li><a href="../../traits/morphology/ring_shaped.html">ring shaped <code>METPO:1000680</code></a></li>
-        
+
         <li><a href="../../traits/morphology/rod_shaped.html">rod shaped <code>METPO:1000681</code></a></li>
-        
+
         <li><a href="../../traits/morphology/sphere_shaped.html">sphere shaped <code>METPO:1000683</code></a></li>
-        
+
         <li><a href="../../traits/morphology/spindle_shaped.html">spindle shaped <code>METPO:1000692</code></a></li>
-        
+
         <li><a href="../../traits/morphology/spiral_shaped.html">spiral shaped <code>METPO:1000684</code></a></li>
-        
+
         <li><a href="../../traits/morphology/spirochete_shaped.html">spirochete shaped <code>METPO:1000693</code></a></li>
-        
+
         <li><a href="../../traits/morphology/spore_shaped.html">spore shaped <code>METPO:1000682</code></a></li>
-        
+
         <li><a href="../../traits/morphology/square_shaped.html">square shaped <code>METPO:1000694</code></a></li>
-        
+
         <li><a href="../../traits/morphology/star_shaped.html">star shaped <code>METPO:1000685</code></a></li>
-        
+
         <li><a href="../../traits/morphology/tailed_shaped.html">tailed shaped <code>METPO:1000695</code></a></li>
-        
+
         <li><a href="../../traits/morphology/triangular_shaped.html">triangular shaped <code>METPO:1000696</code></a></li>
-        
+
         <li><a href="../../traits/morphology/vibrio_shaped.html">vibrio shaped <code>METPO:1000686</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>Morphology.cell morphology.cell shape <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>cell_shape <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000666</code> <span class="dim-preview">[-1.261, -1.903, -0.410, +0.621, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/motility.html">motility</a>
           <span class="sim">0.772</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/chemoheterotrophic.html">chemoheterotrophic</a>
           <span class="sim">0.751</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic</a>
           <span class="sim">0.751</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/acidophilic.html">acidophilic</a>
           <span class="sim">0.751</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sporulation.html">sporulation</a>
           <span class="sim">0.750</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">ecology</span>
           <a href="../../traits/ecology/biosafety_level.html">biosafety level</a>
           <span class="sim">0.742</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/phototrophic.html">phototrophic</a>
           <span class="sim">0.741</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
           <span class="sim">0.729</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.884864+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-11T00:00:00-07:00</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Reviewed cell shape trait and added DOI-backed causal graph for peptidoglycan cell wall, PBPs, MreB, FtsZ, crescentin, and localized wall growth.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -254,27 +391,352 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.", "edges": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "id": "edge-1", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan_cell_wall", "target": "cell_shape_trait"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "penicillin_binding_proteins", "target": "peptidoglycan_synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "id": "edge-3", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "peptidoglycan_synthesis", "target": "cell_shape_trait"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "id": "edge-4", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mreB", "target": "peptidoglycan_synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "ftsZ", "target": "cell_shape_trait"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "crescentin", "target": "cell_shape_trait"}], "evidence_rows": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan cell wall", "target": "cell shape"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "predicate": "catalyzes", "predicate_id": null, "source": "penicillin-binding proteins", "target": "peptidoglycan synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "predicate": "determines", "predicate_id": null, "source": "peptidoglycan synthesis", "target": "cell shape"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "predicate": "positions", "predicate_id": null, "source": "MreB", "target": "peptidoglycan synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "predicate": "regulates", "predicate_id": null, "source": "FtsZ", "target": "cell shape"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "edge_id": "edge-6", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "predicate": "contributes to", "predicate_id": null, "source": "crescentin", "target": "cell shape"}], "graph_id": "cell_shape_peptidoglycan_cytoskeleton", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Characteristic three-dimensional microbial cell morphology.", "grounding": "METPO:1000666", "id": "cell_shape_trait", "is_orphan": false, "label": "cell shape", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate-filament-like protein required for curved rod shape in Caulobacter.", "grounding": null, "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like bacterial cell-division protein.", "grounding": null, "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like bacterial cytoskeletal protein involved in rod-shape determination.", "grounding": null, "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that synthesize and remodel peptidoglycan.", "grounding": null, "id": "penicillin_binding_proteins", "is_orphan": false, "label": "penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer network maintaining bacterial shape.", "grounding": null, "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis and remodeling of the bacterial cell wall.", "grounding": null, "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Bacterial cell-shape morphogenesis mechanism"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-12 00:57 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
