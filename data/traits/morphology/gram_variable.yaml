@@ -3,9 +3,10 @@ label: gram variable
 definition: A gram stain in which bacteria from the same culture show both gram-positive
   and gram-negative staining characteristics, often due to age of culture or cell
   wall degradation.
+definition_source: DOI:10.1128/CMR.00043-07
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000697
 synonyms:
@@ -13,9 +14,90 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1128/CMR.00043-07
+  snippet: cell wall structure
+  notes: Bacterial cell-wall review supports peptidoglycan thinning and
+    autolysis-mediated loss of crystal-violet retention as the basis for
+    gram-variable staining.
+causal_graphs:
+- graph_id: gram_variable_wall_thinning
+  title: Gram-variable peptidoglycan thinning
+  description: DOI-backed graph linking culture-age-dependent peptidoglycan
+    thinning and autolysis to inconsistent gram-staining within a single
+    bacterial population.
+  nodes:
+  - node_id: gram_variable_trait
+    label: gram variable
+    node_type: TRAIT
+    grounding: METPO:1000700
+    description: Mixed gram-positive and gram-negative staining within a single
+      culture.
+  - node_id: culture_aging
+    label: culture aging
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Stationary-phase or post-exponential growth conditions promoting
+      cell-wall remodeling.
+  - node_id: peptidoglycan_thinning
+    label: peptidoglycan thinning
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-wall degradation or thinning due to autolysis or stress.
+  - node_id: crystal_violet_retention_loss
+    label: crystal-violet retention loss
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of the thick PG layer required to retain the gram-stain dye.
+  - node_id: mixed_staining
+    label: mixed-population gram staining
+    node_type: BIOLOGICAL_PROCESS
+    description: Co-existence of gram-positive and gram-negative-staining cells in
+      the same culture.
+  edges:
+  - subject: culture_aging
+    predicate: drives
+    object: peptidoglycan_thinning
+    description: Aging cultures undergo cell-wall thinning via autolysis.
+    evidence:
+    - reference: DOI:10.1128/CMR.00043-07
+      snippet: autolysis
+      notes: Supports autolysis-driven peptidoglycan thinning in aging cultures.
+  - subject: peptidoglycan_thinning
+    predicate: causes
+    object: crystal_violet_retention_loss
+    description: Thinned peptidoglycan no longer retains the gram-stain dye.
+    evidence:
+    - reference: DOI:10.1128/CMR.00043-07
+      snippet: crystal violet
+      notes: Supports peptidoglycan thickness as the determinant of crystal-violet
+        retention in the gram-stain protocol.
+  - subject: crystal_violet_retention_loss
+    predicate: produces
+    object: mixed_staining
+    description: Subpopulations with reduced dye retention appear gram-negative
+      alongside intact gram-positive cells.
+    evidence:
+    - reference: DOI:10.1128/CMR.00043-07
+      snippet: decolorization
+      notes: Supports differential decolorization producing mixed staining within
+        a single culture.
+  - subject: mixed_staining
+    predicate: manifests as
+    object: gram_variable_trait
+    description: Mixed staining manifests the gram-variable trait.
+    evidence:
+    - reference: DOI:10.1128/CMR.00043-07
+      snippet: Gram-variable
+      notes: Supports the Gram-variable phenotype as the trait endpoint of
+        heterogeneous staining.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T23:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking culture-age-dependent
+    peptidoglycan thinning and loss of crystal-violet retention to gram-variable
+    staining.
+  llm_assisted: true
