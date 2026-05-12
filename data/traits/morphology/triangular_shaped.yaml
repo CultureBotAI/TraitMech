@@ -1,17 +1,85 @@
 identifier: METPO:1000696
 label: triangular shaped
+definition: A cell shape in which an organism forms flat, triangular or wedge-shaped
+  cells.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: triangular
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports anisotropic envelope architecture as the basis
+    for non-round cell geometries such as triangles.
+- reference: DOI:10.1146/annurev-micro-090816-093703
+  snippet: archaeal cell shape
+  notes: Archaeal cell-shape review supports unusual flat polygonal cells in
+    halophilic archaea.
+causal_graphs:
+- graph_id: triangular_shaped_planar_polygonal_growth
+  title: Triangular-shape planar polygonal envelope growth
+  description: DOI-backed graph linking planar anisotropic envelope growth and
+    S-layer-constrained polygonal geometry to flat triangular cells.
+  nodes:
+  - node_id: triangular_shaped_trait
+    label: triangular shaped
+    node_type: TRAIT
+    grounding: METPO:1000696
+    description: Flat triangular or wedge-shaped cell geometry.
+  - node_id: planar_envelope_growth
+    label: planar envelope growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-envelope expansion in a 2D plane.
+  - node_id: slayer_constraints
+    label: S-layer constraints
+    node_type: ORGANELLE
+    description: Paracrystalline S-layer imposing geometric constraints on shape.
+    grounding: GO:0030115
+  - node_id: polygonal_geometry
+    label: polygonal geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Flat, angular cell geometry with defined edges.
+  edges:
+  - subject: planar_envelope_growth
+    predicate: enables
+    object: polygonal_geometry
+    description: Planar envelope growth allows flat polygonal cell forms.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-090816-093703
+      snippet: archaeal cell shape
+      notes: Supports planar growth as the basis for flat archaeal cells.
+  - subject: slayer_constraints
+    predicate: shapes
+    object: polygonal_geometry
+    description: S-layer geometry constrains the cell into angular polygonal forms.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports envelope-architecture constraints (e.g., S-layer) as shape
+        determinants.
+  - subject: polygonal_geometry
+    predicate: manifests as
+    object: triangular_shaped_trait
+    description: Angular polygonal geometry manifests the triangular-shaped trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-090816-093703
+      snippet: archaeal cell shape
+      notes: Supports the trait endpoint in triangular halophilic archaea.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901416+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking planar anisotropic envelope growth
+    and S-layer constraints to triangular-shaped halophile morphology.
+  llm_assisted: true

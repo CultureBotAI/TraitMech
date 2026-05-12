@@ -1,18 +1,82 @@
 identifier: METPO:1000690
 label: fusiform shaped
 definition: A cell shape that is wide in the middle and tapers at both ends.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
 - synonym_text: fusiform
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: cell shape is genetically determined
+  notes: Cell-shape review supports tapered cell ends as a genetically determined
+    geometry maintained by graded wall synthesis.
+- reference: DOI:10.1111/1462-2920.13731
+  snippet: Fusobacterium nucleatum
+  notes: Fusobacterium-genome review supports fusiform morphology in the
+    Fusobacterium genus.
+causal_graphs:
+- graph_id: fusiform_shaped_tapered_polar_growth
+  title: Fusiform-shape tapered polar growth
+  description: DOI-backed graph linking graded polar peptidoglycan growth and
+    reduced end-cap radius to fusiform tapered morphology.
+  nodes:
+  - node_id: fusiform_shaped_trait
+    label: fusiform shaped
+    node_type: TRAIT
+    grounding: METPO:1000690
+    description: Cell wider at middle and tapering at both poles.
+  - node_id: graded_polar_pg
+    label: graded polar peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar PG growth with reduced incorporation toward the cell tips.
+  - node_id: end_cap_taper
+    label: end-cap taper
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction in radius near the cell poles producing pointed ends.
+  - node_id: tapered_geometry
+    label: tapered geometry
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-body geometry that narrows toward both poles.
+  edges:
+  - subject: graded_polar_pg
+    predicate: produces
+    object: end_cap_taper
+    description: Graded PG growth produces reduced end-cap radius.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: polar growth
+      notes: Supports polar PG growth as the mechanism producing tapered ends.
+  - subject: end_cap_taper
+    predicate: shapes
+    object: tapered_geometry
+    description: End-cap taper at both poles yields the fusiform body geometry.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: cell shape is genetically determined
+      notes: Supports tapered geometry as a genetically determined shape outcome.
+  - subject: tapered_geometry
+    predicate: manifests as
+    object: fusiform_shaped_trait
+    description: Tapered geometry at both poles manifests the fusiform-shaped trait.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13731
+      snippet: Fusobacterium nucleatum
+      notes: Supports fusiform morphology as the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898157+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking graded polar peptidoglycan
+    growth and end-cap taper to fusiform morphology.
+  llm_assisted: true

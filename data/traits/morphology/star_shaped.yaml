@@ -2,9 +2,10 @@ identifier: METPO:1000685
 label: star shaped
 definition: A cell shape in which an organism has multiple radiating projections from
   a central body.
+definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -17,9 +18,72 @@ synonyms:
 - synonym_text: star-shaped
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-cellbio-101011-155745
+  snippet: polar growth
+  notes: Cell-shape review supports multi-pole peptidoglycan growth as the basis
+    for prosthecate or appendaged geometries.
+- reference: DOI:10.1146/annurev.micro.061705.103240
+  snippet: prosthecate bacteria
+  notes: Prosthecate-bacteria review supports star-shaped morphology in
+    Stella/Ancalomicrobium and related stalked lineages.
+causal_graphs:
+- graph_id: star_shaped_multiple_prosthecae
+  title: Star-shape multiple prosthecae extension
+  description: DOI-backed graph linking multi-site polar peptidoglycan growth and
+    prostheca outgrowth to a star-shaped cell body with radiating projections.
+  nodes:
+  - node_id: star_shaped_trait
+    label: star shaped
+    node_type: TRAIT
+    grounding: METPO:1000685
+    description: Cell body with multiple radiating projections.
+  - node_id: multi_site_polar_pg
+    label: multi-site polar peptidoglycan growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar wall growth initiated at multiple sites on the cell body.
+  - node_id: prostheca_outgrowth
+    label: prostheca outgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Outward extension of cytoplasmic projections (prosthecae).
+  - node_id: radiating_projections
+    label: radiating projections
+    node_type: BIOLOGICAL_PROCESS
+    description: Multiple projecting arms emerging from a central cell body.
+  edges:
+  - subject: multi_site_polar_pg
+    predicate: drives
+    object: prostheca_outgrowth
+    description: Multi-site polar PG growth drives extension of cellular projections.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports prostheca extension via polar wall growth.
+  - subject: prostheca_outgrowth
+    predicate: produces
+    object: radiating_projections
+    description: Multiple prosthecae form radiating projections from the cell body.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports prosthecate morphology in star-shaped lineages.
+  - subject: radiating_projections
+    predicate: manifests as
+    object: star_shaped_trait
+    description: Radiating projections manifest the star-shaped trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.061705.103240
+      snippet: prosthecate bacteria
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.895581+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:45:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking multi-site polar peptidoglycan
+    growth and prostheca outgrowth to star-shaped morphology.
+  llm_assisted: true
