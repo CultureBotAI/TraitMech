@@ -3,9 +3,10 @@ label: motility
 definition: A phenotype in which an organism has the capability to move independently
   through its environment, typically by means of flagella, pili, gliding mechanisms,
   or other locomotory structures.
+definition_source: DOI:10.1038/s41579-021-00626-4
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -16,9 +17,100 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1038/s41579-021-00626-4
+  snippet: mechanisms that allow bacteria to move around
+  notes: Supports bacterial motility as a phenotype mediated by multiple molecular
+    machines and physical mechanisms.
+causal_graphs:
+- graph_id: motility_locomotion_machinery
+  title: Bacterial motility machinery
+  description: Evidence-backed causal sketch linking motility to flagella, type IV
+    pili, gliding systems, chemotaxis, and energy transduction.
+  nodes:
+  - node_id: motility_trait
+    label: motility
+    node_type: TRAIT
+    grounding: METPO:1000701
+    description: Independent movement through the environment.
+  - node_id: flagellar_motor
+    label: flagellar motor
+    node_type: GENE_OR_PROTEIN
+    description: Rotary motor that powers flagellar swimming or swarming.
+  - node_id: type_iv_pilus
+    label: type IV pilus
+    node_type: GENE_OR_PROTEIN
+    description: Dynamic pilus that powers twitching and related surface motility.
+  - node_id: gliding_motility_machinery
+    label: gliding motility machinery
+    node_type: GENE_OR_PROTEIN
+    description: Cell-envelope motors and adhesins that move bacteria over
+      surfaces without flagella.
+  - node_id: ion_motive_force
+    label: ion motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical ion gradient used to power motility motors.
+  - node_id: chemotaxis_signaling
+    label: chemotaxis signaling
+    node_type: BIOLOGICAL_PROCESS
+    description: Signal transduction that changes motility direction in response to
+      environmental cues.
+  edges:
+  - subject: flagellar_motor
+    predicate: enables
+    object: motility_trait
+    description: Rotary flagellar motors enable bacterial swimming and related
+      motility modes.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00626-4
+      snippet: allow bacteria to move around
+      notes: Review summarizes flagellar machinery as a major bacterial motility
+        mechanism.
+  - subject: type_iv_pilus
+    predicate: enables
+    object: motility_trait
+    description: Type IV pili enable twitching motility through extension,
+      adhesion, and retraction.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0195-4
+      snippet: Cycles of pilus extension, binding and retraction
+      notes: Supports type IV pili as motility appendages.
+  - subject: gliding_motility_machinery
+    predicate: enables
+    object: motility_trait
+    description: Gliding machinery allows surface movement without external
+      flagella.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.49
+      snippet: move actively over surfaces
+      notes: Supports gliding as an active bacterial movement mechanism.
+  - subject: ion_motive_force
+    predicate: powers
+    object: flagellar_motor
+    description: Ion motive force powers rotation of many bacterial flagellar
+      motors.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.659464
+      snippet: relationship between the IMF and the functioning
+      notes: Supports ion motive force powering the bacterial flagellar motor.
+  - subject: chemotaxis_signaling
+    predicate: regulates
+    object: motility_trait
+    description: Chemotaxis signaling regulates the direction and pattern of
+      bacterial movement.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      snippet: chemotactic signaling pathways regulate the direction
+      notes: Supports chemotaxis control of flagella-driven motility.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.904440+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed motility trait and added DOI-backed causal graph for flagellar,
+    pili-mediated, gliding, chemotaxis, and ion-motive-force mechanisms.
+  llm_assisted: true

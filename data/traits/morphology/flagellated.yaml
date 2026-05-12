@@ -1,18 +1,107 @@
 identifier: METPO:1000704
 label: flagellated
 definition: A motile in which an organism possesses flagella for locomotion.
+definition_source: DOI:10.3390/biom9070279
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000702
 synonyms:
 - synonym_text: flagella
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.3390/biom9070279
+  snippet: bacterial flagellum is a helical filamentous organelle responsible for motility
+  notes: Supports flagella as locomotory structures.
+causal_graphs:
+- graph_id: flagellated_flagellar_motor
+  title: Flagellated locomotion mechanism
+  description: Evidence-backed causal sketch linking the flagellated phenotype to
+    flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.
+  nodes:
+  - node_id: flagellated_trait
+    label: flagellated
+    node_type: TRAIT
+    grounding: METPO:1000704
+    description: Possession of flagella for locomotion.
+  - node_id: flagellar_filament
+    label: flagellar filament
+    node_type: CELLULAR_LOCALIZATION
+    description: Helical filament that acts as a propeller or molecular screw.
+  - node_id: flagellar_hook
+    label: flagellar hook
+    node_type: CELLULAR_LOCALIZATION
+    description: Universal-joint-like connector between motor and filament.
+  - node_id: flagellar_basal_body
+    label: flagellar basal body
+    node_type: GENE_OR_PROTEIN
+    description: Rotary motor complex embedded in the cell envelope.
+  - node_id: stator_complex
+    label: flagellar stator complex
+    node_type: GENE_OR_PROTEIN
+    description: Force-generating motor units coupled to ion flow.
+  - node_id: ion_motive_force
+    label: ion motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Proton or sodium motive force powering motor rotation.
+  - node_id: chemotaxis_signaling
+    label: chemotaxis signaling
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation of flagellar rotation and movement direction.
+  edges:
+  - subject: flagellar_filament
+    predicate: enables
+    object: flagellated_trait
+    description: A flagellar filament is the locomotory appendage of flagellated
+      cells.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      snippet: helical filamentous organelle responsible for motility
+      notes: Supports the filament as the locomotory flagellar structure.
+  - subject: flagellar_hook
+    predicate: connects
+    object: flagellar_filament
+    description: The hook couples the motor to the filament.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      snippet: hook as a universal joint
+      notes: Supports the hook's coupling role.
+  - subject: flagellar_basal_body
+    predicate: rotates
+    object: flagellar_filament
+    description: The basal body motor rotates the filament for propulsion.
+    evidence:
+    - reference: DOI:10.1016/S1937-6448(08)01402-0
+      snippet: reversible rotary motor
+      notes: Supports basal body motor rotation of flagella.
+  - subject: ion_motive_force
+    predicate: powers
+    object: stator_complex
+    description: Ion flux through stator complexes powers torque generation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.659464
+      snippet: relationship between the IMF and the functioning
+      notes: Supports ion motive force coupling to flagellar motor function.
+  - subject: chemotaxis_signaling
+    predicate: regulates
+    object: flagellated_trait
+    description: Chemotaxis signaling changes flagellar motor behavior and movement
+      direction.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      snippet: regulate the direction of flagella-driven motility
+      notes: Supports chemotaxis regulation of flagellated motility.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.906575+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T00:00:00-07:00'
+  curator: codex
+  action: CURATED_WITH_LITERATURE
+  changes: Reviewed flagellated trait and added DOI-backed causal graph for
+    flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.
+  llm_assisted: true

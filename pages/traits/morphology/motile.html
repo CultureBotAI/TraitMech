@@ -29,153 +29,279 @@
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
     <h1>motile</h1>
-    <p class="curie"><code>METPO:1000702</code> · CLASS · SEEDED</p>
-    
+    <p class="curie"><code>METPO:1000702</code> · CLASS · REVIEWED</p>
+
     <p class="definition">A motility in which an organism has the ability to move independently using metabolic energy.</p>
-    
+
   </header>
+
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Energy-dependent bacterial locomotion</h2>
+      <p class="meta">Evidence-backed causal sketch linking motile phenotype to metabolic energy, ion motive force, flagella, pili, and directional regulation.</p>
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Energy-dependent bacterial locomotion</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for motile.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>metabolic energy</strong>
+            <span class="edge-predicate">generates</span>
+            <strong>ion motive force</strong>
+
+            <p>Metabolism supports ion gradients that can power motility.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3389/fmicb.2021.659464</code>
+                <span class="evidence-snippet">ion motive force powering the bacterial flagellar motor</span>
+                <span class="meta">Supports energy transduction from ion gradients into motor function.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>ion motive force</strong>
+            <span class="edge-predicate">powers</span>
+            <strong>flagellar motor</strong>
+
+            <p>Ion motive force powers rotation of the flagellar motor.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3389/fmicb.2021.659464</code>
+                <span class="evidence-snippet">The Dynamic Ion Motive Force Powering</span>
+                <span class="meta">Review directly addresses ion motive force powering flagellar motors.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>flagellar motor</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>motile</strong>
+
+            <p>Flagellar rotation enables independent bacterial movement.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3390/biom9070279</code>
+                <span class="evidence-snippet">responsible for motility</span>
+                <span class="meta">Supports flagella-driven motility.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>type IV pilus</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>motile</strong>
+
+            <p>Type IV pilus extension and retraction enable surface motility.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1038/s41579-019-0195-4</code>
+                <span class="evidence-snippet">enable T4P to perform</span>
+                <span class="meta">Supports pilus-mediated twitching and related motility functions.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-5">
+            <strong>chemotaxis signaling</strong>
+            <span class="edge-predicate">directs</span>
+            <strong>motile</strong>
+
+            <p>Chemotaxis signaling regulates motility direction in response to environmental changes.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.3390/biom9070279</code>
+                <span class="evidence-snippet">migrate towards more desirable environments</span>
+                <span class="meta">Supports chemotaxis regulation of motile behavior.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
-        
-        
-        
-        
+
+        <dt>Definition source</dt><dd>DOI:10.1038/s41579-021-00626-4</dd>
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/motility.html" >motility <code>METPO:1000701</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (3)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/axially_filamented.html">axially filamented <code>METPO:1000705</code></a></li>
-        
+
         <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a></li>
-        
+
         <li><a href="../../traits/morphology/gliding.html">gliding <code>METPO:1000706</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
-        
+
         <li>motile <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
         <li>yes <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000702</code> <span class="dim-preview">[-6.040, -32.814, +6.039, +64.391, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped</a>
           <span class="sim">0.706</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/non_spore_forming.html">non-spore forming</a>
           <span class="sim">0.599</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/facultatively_aerobic.html">facultatively aerobic</a>
           <span class="sim">0.549</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/spore_forming.html">spore forming</a>
           <span class="sim">0.510</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/vibrio_shaped.html">vibrio shaped</a>
           <span class="sim">0.481</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gram_negative.html">gram negative</a>
           <span class="sim">0.469</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/spiral_shaped.html">spiral shaped</a>
           <span class="sim">0.413</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/non_motile.html">non motile</a>
           <span class="sim">0.347</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.905197+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-06T14:40:41-07:00</time> ·
+          <strong>CURATED_WITH_ORGANISM_EXAMPLE</strong> · codex
+          <p class="changes">Added Pseudomonas aeruginosa organism example with PMID-backed evidence.</p>
+        </li>
+
+        <li>
+          <time>2026-05-11T00:00:00-07:00</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Replaced PMID definition source with DOI-backed motility review and added causal graph for energy-dependent locomotion by flagella, type IV pili, ion motive force, and chemotaxis.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -200,27 +326,352 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking motile phenotype to metabolic energy, ion motive force, flagella, pili, and directional regulation.", "edges": [{"description": "Metabolism supports ion gradients that can power motility.", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "id": "edge-1", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "metabolic_energy", "target": "ion_motive_force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "id": "edge-2", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "flagellar_motor", "target": "motile_trait"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "type_iv_pilus", "target": "motile_trait"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "id": "edge-5", "is_orphan": false, "predicate": "directs", "predicate_id": null, "source": "chemotaxis_signaling", "target": "motile_trait"}], "evidence_rows": [{"description": "Metabolism supports ion gradients that can power motility.", "edge_id": "edge-1", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "predicate": "generates", "predicate_id": null, "source": "metabolic energy", "target": "ion motive force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "edge_id": "edge-2", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "predicate": "powers", "predicate_id": null, "source": "ion motive force", "target": "flagellar motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "edge_id": "edge-3", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "predicate": "enables", "predicate_id": null, "source": "flagellar motor", "target": "motile"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "predicate": "enables", "predicate_id": null, "source": "type IV pilus", "target": "motile"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "predicate": "directs", "predicate_id": null, "source": "chemotaxis signaling", "target": "motile"}], "graph_id": "motile_energy_dependent_locomotion", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulatory system that biases movement toward favorable conditions.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that turns bacterial flagella.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient used by many motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Energy generated by cellular metabolism and converted into ion gradients or ATP-dependent movement.", "grounding": null, "id": "metabolic_energy", "is_orphan": false, "label": "metabolic energy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to move independently using metabolic energy.", "grounding": "METPO:1000702", "id": "motile_trait", "is_orphan": false, "label": "motile", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Pilus machinery that extends, adheres, and retracts.", "grounding": null, "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Energy-dependent bacterial locomotion"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-12 00:19 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
