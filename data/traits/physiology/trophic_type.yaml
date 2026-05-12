@@ -2,9 +2,10 @@ identifier: METPO:1000631
 label: trophic type
 definition: A phenotype that is describing how an organism obtains carbon and energy
   for growth and metabolism.
+definition_source: DOI:10.1146/annurev.micro.61.080706.093130
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -18,9 +19,145 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1146/annurev.micro.61.080706.093130
+  snippet: carbon source, energy source, and electron donor
+  notes: Microbial physiology review frames trophic type as the joint classification
+    by carbon, energy, and electron-donor source.
+- reference: DOI:10.1073/pnas.0903507106
+  snippet: molecular mechanisms of adaptation
+  notes: Comparative genomics supports the classification of bacteria by trophic
+    strategy from genome-encoded pathways.
+causal_graphs:
+- graph_id: trophic_type_classification_axes
+  title: Trophic type classification axes
+  description: DOI-backed graph linking the three classification axes (carbon
+    source, energy source, electron donor) to the metabolic pathways an organism
+    encodes, which jointly determine its trophic type.
+  nodes:
+  - node_id: trophic_type_trait
+    label: trophic type
+    node_type: TRAIT
+    grounding: METPO:1000631
+    description: Classification of how an organism obtains carbon and energy.
+  - node_id: carbon_source_use
+    label: carbon source utilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Use of inorganic (CO2) or organic carbon for biosynthesis.
+  - node_id: energy_source_use
+    label: energy source utilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Use of light (phototrophy) or chemical (chemotrophy) energy.
+  - node_id: electron_donor_use
+    label: electron donor utilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Use of inorganic (lithotrophy) or organic (organotrophy) electron
+      donors.
+  - node_id: encoded_metabolic_pathways
+    label: encoded metabolic pathways
+    node_type: BIOLOGICAL_PROCESS
+    description: The set of biosynthetic, energy-conserving, and electron-transfer
+      pathways present in the genome.
+  - node_id: autotrophic_phenotype
+    label: autotrophic phenotype
+    node_type: TRAIT
+    grounding: METPO:1000632
+    description: CO2-fixing trophic phenotype.
+  - node_id: heterotrophic_phenotype
+    label: heterotrophic phenotype
+    node_type: TRAIT
+    grounding: METPO:1000644
+    description: Organic-carbon-utilizing trophic phenotype.
+  - node_id: phototrophic_phenotype
+    label: phototrophic phenotype
+    node_type: TRAIT
+    grounding: METPO:1000660
+    description: Light-driven energy-acquisition trophic phenotype.
+  - node_id: chemotrophic_phenotype
+    label: chemotrophic phenotype
+    node_type: TRAIT
+    grounding: METPO:1000641
+    description: Chemical-energy-driven trophic phenotype.
+  edges:
+  - subject: carbon_source_use
+    predicate: determines
+    object: trophic_type_trait
+    description: Carbon-source utilization defines the auto/heterotrophy axis of
+      the trophic classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: carbon source
+      notes: Supports carbon-source utilization as a primary trophic-type axis.
+  - subject: energy_source_use
+    predicate: determines
+    object: trophic_type_trait
+    description: Energy-source utilization defines the photo/chemotrophy axis of
+      the trophic classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: energy source
+      notes: Supports energy-source utilization as a primary trophic-type axis.
+  - subject: electron_donor_use
+    predicate: determines
+    object: trophic_type_trait
+    description: Electron-donor utilization defines the litho/organotrophy axis of
+      the trophic classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: electron donor
+      notes: Supports electron-donor utilization as a primary trophic-type axis.
+  - subject: encoded_metabolic_pathways
+    predicate: realizes
+    object: trophic_type_trait
+    description: The genome-encoded set of carbon-fixation, energy-conserving, and
+      electron-transfer pathways realizes the organism's trophic type.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: molecular mechanisms of adaptation
+      notes: Supports genome-encoded pathway repertoires as the proximate
+        determinant of trophic phenotypes.
+  - subject: autotrophic_phenotype
+    predicate: is a
+    object: trophic_type_trait
+    description: Autotrophy is a child phenotype of trophic type.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: carbon source
+      notes: Supports autotrophy as one carbon-source-defined trophic phenotype.
+  - subject: heterotrophic_phenotype
+    predicate: is a
+    object: trophic_type_trait
+    description: Heterotrophy is a child phenotype of trophic type.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: carbon source
+      notes: Supports heterotrophy as one carbon-source-defined trophic phenotype.
+  - subject: phototrophic_phenotype
+    predicate: is a
+    object: trophic_type_trait
+    description: Phototrophy is a child phenotype of trophic type.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: energy source
+      notes: Supports phototrophy as one energy-source-defined trophic phenotype.
+  - subject: chemotrophic_phenotype
+    predicate: is a
+    object: trophic_type_trait
+    description: Chemotrophy is a child phenotype of trophic type.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: energy source
+      notes: Supports chemotrophy as one energy-source-defined trophic phenotype.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-11T22:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing trophic type by its three
+    classification axes (carbon source, energy source, electron donor) and child
+    phenotypes (autotroph, heterotroph, phototroph, chemotroph).
+  llm_assisted: true
