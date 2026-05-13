@@ -18,6 +18,83 @@ evidence:
 - reference: PMID:9680332
   snippet: It grew at between 90 degrees C and 113 degrees C
   notes: 'Organism example: Pyrolobus fumarii grows in the extreme hyperthermophilic range.'
+- reference: DOI:10.1128/MMBR.65.1.1-43.2001
+  snippet: resistant to irreversible inactivation at high temperatures
+  notes: Thermostable-protein review supports extreme protein and membrane
+    stability as the basis of hyperthermophile physiology.
+causal_graphs:
+- graph_id: extreme_hyperthermophilic_archaeal_adaptation
+  title: Extreme-hyperthermophilic archaeal heat-adaptation mechanism
+  description: DOI-backed graph linking extreme hyperthermophily to
+    archaeal tetraether membrane lipids, hyperthermostable proteins, and
+    bioenergetic adaptation at temperatures above 90 °C.
+  nodes:
+  - node_id: extreme_hyperthermophilic_trait
+    label: extreme hyperthermophilic
+    node_type: TRAIT
+    grounding: METPO:1000721
+    description: Optimal growth at temperatures above 90 °C.
+  - node_id: very_high_temperature
+    label: very high temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient temperature above 90 °C, typical of hydrothermal
+      vents and geothermal springs.
+  - node_id: tetraether_lipids
+    label: archaeal tetraether membrane lipids
+    node_type: CHEMICAL
+    description: Glycerol-dibiphytanyl-glycerol-tetraether (GDGT) lipids
+      forming heat-resistant monolayer membranes in hyperthermophilic
+      archaea.
+  - node_id: hyperthermostable_proteins
+    label: hyperthermostable proteins
+    node_type: GENE_OR_PROTEIN
+    description: Proteins with extreme resistance to denaturation, including
+      enzymes active at >90 °C.
+  - node_id: hyperthermophile_bioenergetics
+    label: hyperthermophile bioenergetics
+    node_type: BIOLOGICAL_PROCESS
+    description: Energy transduction tuned to function in very-high-temperature
+      environments.
+  edges:
+  - subject: very_high_temperature
+    predicate: selects for
+    object: extreme_hyperthermophilic_trait
+    description: Very-high-temperature habitats select for extreme
+      hyperthermophily.
+    evidence:
+    - reference: PMID:9680332
+      snippet: It grew at between 90 degrees C and 113 degrees C
+      notes: Supports growth above 90 °C in extreme hyperthermophiles.
+  - subject: tetraether_lipids
+    predicate: protects against
+    object: very_high_temperature
+    description: Archaeal tetraether lipids form heat-resistant membranes
+      that protect against very-high-temperature membrane stress.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Membrane-adaptation review supports specialized lipid composition
+        as the basis of extreme thermal adaptation.
+  - subject: hyperthermostable_proteins
+    predicate: enables
+    object: hyperthermophile_bioenergetics
+    description: Hyperthermostable proteins enable continued energy
+      conservation at very high temperature.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Supports protein hyperthermostability as a hyperthermophile
+        feature.
+  - subject: hyperthermophile_bioenergetics
+    predicate: supports
+    object: extreme_hyperthermophilic_trait
+    description: Heat-adapted bioenergetics supports growth at extreme
+      hyperthermophilic temperatures.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: energy transducing enzymes
+      notes: Supports temperature-adapted energy transduction as the basis of
+        thermophile and hyperthermophile growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909279+00:00'
   curator: seed_from_metpo
@@ -28,4 +105,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Pyrolobus fumarii organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-13T11:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking archaeal tetraether
+    membrane lipids, hyperthermostable proteins, and hyperthermophile
+    bioenergetics to extreme hyperthermophily.
   llm_assisted: true

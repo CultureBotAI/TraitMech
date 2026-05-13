@@ -16,6 +16,69 @@ evidence:
 - reference: PMID:12508889
   snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
   notes: 'Organism example: Pseudomonas thermotolerans is described as thermotolerant.'
+- reference: DOI:10.1128/MMBR.65.1.1-43.2001
+  snippet: resistant to irreversible inactivation at high temperatures
+  notes: Thermostable-protein review supports protein-stability features
+    underlying facultative growth at elevated temperatures.
+causal_graphs:
+- graph_id: thermotolerant_facultative_heat_adaptation
+  title: Thermotolerant facultative heat-adaptation mechanism
+  description: DOI-backed graph linking thermotolerance to limited heat-stress
+    tolerance machinery that permits growth at elevated temperatures without
+    requiring them.
+  nodes:
+  - node_id: thermotolerant_trait
+    label: thermotolerant
+    node_type: TRAIT
+    grounding: METPO:1000619
+    description: Growth at elevated temperatures without obligate
+      high-temperature preference.
+  - node_id: elevated_temperature
+    label: elevated temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient temperature above the mesophile optimum range.
+  - node_id: heat_shock_response
+    label: heat-shock response
+    node_type: BIOLOGICAL_PROCESS
+    description: Induction of heat-shock chaperones (GroEL, DnaK) protecting
+      protein folding under heat stress.
+  - node_id: chaperone_proteins
+    label: chaperone proteins
+    node_type: GENE_OR_PROTEIN
+    description: Molecular chaperones refolding heat-damaged proteins.
+  - node_id: limited_thermostability
+    label: limited thermostability
+    node_type: BIOLOGICAL_PROCESS
+    description: Modest protein and membrane stability at elevated temperatures
+      compared with obligate thermophiles.
+  edges:
+  - subject: elevated_temperature
+    predicate: triggers
+    object: heat_shock_response
+    description: Elevated temperature triggers heat-shock chaperone induction.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Supports protein-stability physiology as a high-temperature
+        response.
+  - subject: chaperone_proteins
+    predicate: supports
+    object: limited_thermostability
+    description: Chaperone proteins support limited thermostability sufficient
+      for facultative high-temperature growth.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Supports chaperone-mediated heat-stress tolerance.
+  - subject: limited_thermostability
+    predicate: enables
+    object: thermotolerant_trait
+    description: Limited thermostability enables facultative growth at elevated
+      temperatures.
+    evidence:
+    - reference: PMID:12508889
+      snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
+      notes: Supports the trait endpoint in a representative organism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860266+00:00'
   curator: seed_from_metpo
@@ -26,4 +89,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Pseudomonas thermotolerans organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-13T11:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking heat-shock response,
+    chaperone proteins, and limited thermostability to the thermotolerant
+    trait.
   llm_assisted: true
