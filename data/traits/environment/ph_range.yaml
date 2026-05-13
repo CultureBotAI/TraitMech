@@ -1,15 +1,102 @@
 identifier: METPO:1000332
 label: pH range
+definition: A pH phenotype with numerical limits that bounds the minimum and maximum
+  external pH supporting growth of an organism.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000531
 - METPO:1000535
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: pH homeostasis
+  notes: pH-homeostasis review supports the bounded external-pH span over
+    which cytoplasmic pH homeostasis sustains growth as the basis of the
+    pH-range phenotype.
+- reference: DOI:10.1016/j.tim.2007.02.005
+  snippet: highly impermeable cell membranes
+  notes: pH-homeostasis review supports envelope-based proton barriers as the
+    mechanism extending growth into acidic and alkaline extremes.
+causal_graphs:
+- graph_id: ph_range_bounded_homeostasis
+  title: pH-range bounded cytoplasmic homeostasis
+  description: DOI-backed graph linking acid- and alkaline-tolerance to the
+    bounded span of growth-supporting external pH.
+  nodes:
+  - node_id: ph_range_trait
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: external_ph
+    label: external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient proton activity (pH) imposed on the cell.
+  - node_id: acid_tolerance
+    label: acid tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain cytoplasmic pH against an inward H+
+      gradient at low external pH.
+  - node_id: alkaline_tolerance
+    label: alkaline tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain cytoplasmic pH against an outward H+
+      gradient at high external pH.
+  - node_id: bounded_growth_window
+    label: bounded pH growth window
+    node_type: BIOLOGICAL_PROCESS
+    description: Span of external pH between the minimum and maximum that
+      supports growth.
+  edges:
+  - subject: external_ph
+    predicate: defines
+    object: bounded_growth_window
+    description: External pH defines the axis over which the growth window is
+      bounded.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH
+      notes: Supports external pH as the axis bounding the growth window.
+  - subject: acid_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Acid tolerance sets the lower bound of the pH growth window.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: highly impermeable cell membranes
+      notes: Supports envelope proton barriers as the lower-bound mechanism
+        for low-pH growth.
+  - subject: alkaline_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Alkaline tolerance sets the upper bound of the pH growth
+      window.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: alkaliphiles
+      notes: Supports alkaline-tolerance physiology as the upper-bound
+        mechanism for high-pH growth.
+  - subject: bounded_growth_window
+    predicate: manifests as
+    object: ph_range_trait
+    description: The bounded pH growth window manifests the pH-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815188+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking acid- and alkaline-tolerance
+    to the bounded pH-range phenotype.
+  llm_assisted: true

@@ -1,8 +1,12 @@
 identifier: METPO:1000457
 label: pH optimum mid2
+definition: A pH optimum phenotype with the best-growth external pH between
+  approximately 7 and 8, corresponding to neutrophilic or moderately alkaliphilic
+  physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000331
 synonyms:
@@ -18,9 +22,77 @@ synonyms:
 - synonym_text: pHO_7_to_8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: pH homeostasis
+  notes: pH-homeostasis review supports the 7–8 external-pH range as the
+    common neutrophile / moderately alkaline-tolerant optimum.
+causal_graphs:
+- graph_id: ph_optimum_mid2_alkaline_tolerant_setpoint
+  title: pH-optimum-mid2 alkaline-tolerant setpoint
+  description: DOI-backed graph linking modest alkaline pH-homeostasis at
+    slightly basic external pH to a pH-optimum between 7 and 8.
+  nodes:
+  - node_id: ph_optimum_mid2_trait
+    label: pH optimum mid2
+    node_type: TRAIT
+    grounding: METPO:1000457
+    description: pH optimum approximately 7–8.
+  - node_id: ph_optimum
+    label: pH optimum
+    node_type: TRAIT
+    grounding: METPO:1000331
+    description: External pH supporting maximal growth.
+  - node_id: slightly_alkaline_external_ph
+    label: slightly alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH 7–8, typical of seawater and many host body fluids.
+  - node_id: modest_alkaline_homeostasis
+    label: modest alkaline pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Mild K+/H+ antiport and cytoplasmic acidification activity
+      maintaining cytoplasmic pH at slightly basic external pH.
+  edges:
+  - subject: slightly_alkaline_external_ph
+    predicate: engages
+    object: modest_alkaline_homeostasis
+    description: Slightly alkaline external pH engages modest alkaline
+      pH-homeostasis.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports balanced proton motive force at slightly alkaline pH
+        as the energetic setting of this regime.
+  - subject: modest_alkaline_homeostasis
+    predicate: produces
+    object: ph_optimum_mid2_trait
+    description: Modest alkaline pH-homeostasis yields a neutrophile /
+      alkaline-tolerant pH-optimum setpoint.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports the 7–8 optimum as the neutrophile / mild-alkaliphile
+        outcome.
+  - subject: ph_optimum_mid2_trait
+    predicate: is a
+    object: ph_optimum
+    description: pH optimum mid2 is a quantitative bin of the pH-optimum
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cytoplasmic pH
+      notes: Supports the 7–8 optimum as a value within the pH-optimum
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827757+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking modest
+    alkaline pH-homeostasis to the neutrophile / mild-alkaliphile
+    pH-optimum-mid2 bin.
+  llm_assisted: true

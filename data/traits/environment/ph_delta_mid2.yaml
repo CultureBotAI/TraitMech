@@ -1,17 +1,74 @@
 identifier: METPO:1000476
 label: pH delta mid2
+definition: A pH delta phenotype with a growth-supporting pH breadth of
+  approximately 3–4 pH units, characteristic of organisms with broad
+  pH-tolerance breadth.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000232
 synonyms:
 - synonym_text: pHd_3_4
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: pH homeostasis
+  notes: pH-homeostasis review supports broad pH-homeostasis flexibility as
+    the basis of generalist pH-tolerance physiology.
+causal_graphs:
+- graph_id: ph_delta_mid2_broad_breadth
+  title: pH-delta-mid2 broad-breadth pH homeostasis
+  description: DOI-backed graph linking broad pH-homeostasis flexibility to
+    a pH growth breadth of approximately 3–4 pH units.
+  nodes:
+  - node_id: ph_delta_mid2_trait
+    label: pH delta mid2
+    node_type: TRAIT
+    grounding: METPO:1000476
+    description: pH growth-supporting breadth approximately 3–4 pH units.
+  - node_id: ph_delta
+    label: pH delta
+    node_type: TRAIT
+    grounding: METPO:1000232
+    description: Breadth of the growth-supporting external pH range.
+  - node_id: broad_ph_homeostasis
+    label: broad pH-homeostasis flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Strong capacity to remodel proton extrusion, K+/H+ antiport,
+      and envelope buffering across a broad pH span.
+  edges:
+  - subject: broad_ph_homeostasis
+    predicate: produces
+    object: ph_delta_mid2_trait
+    description: Broad pH-homeostasis flexibility yields a 3–4 pH-unit
+      pH-delta breadth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports broad pH-homeostasis flexibility as the basis of a
+        broad breadth.
+  - subject: ph_delta_mid2_trait
+    predicate: is a
+    object: ph_delta
+    description: pH delta mid2 is a quantitative bin of the pH-delta
+      phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports the 3–4 unit breadth as a value within the pH-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839415+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking broad
+    pH-homeostasis flexibility to the broad-breadth pH-delta-mid2 bin.
+  llm_assisted: true

@@ -1,8 +1,11 @@
 identifier: METPO:1000458
 label: pH optimum high
+definition: A pH optimum phenotype with the best-growth external pH above
+  approximately 8, corresponding to alkaliphilic or extreme-alkaliphilic physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000331
 synonyms:
@@ -18,9 +21,99 @@ synonyms:
 - synonym_text: pHO_8_to_14
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: alkaliphiles
+  notes: pH-homeostasis review supports alkaliphile and extreme-alkaliphile
+    physiology growing at high external pH.
+- reference: DOI:10.1016/j.tim.2007.02.005
+  snippet: proton motive force
+  notes: pH-homeostasis review supports Na+/H+ antiporters re-importing
+    protons as the alkaliphile mechanism sustaining the proton motive force
+    at high external pH.
+causal_graphs:
+- graph_id: ph_optimum_high_alkaliphile_setpoint
+  title: pH-optimum-high alkaliphile setpoint
+  description: DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis
+    via Na+/H+ antiporters to a pH-optimum above 8 (alkaliphile / extreme
+    alkaliphile).
+  nodes:
+  - node_id: ph_optimum_high_trait
+    label: pH optimum high
+    node_type: TRAIT
+    grounding: METPO:1000458
+    description: pH optimum above ~8.
+  - node_id: ph_optimum
+    label: pH optimum
+    node_type: TRAIT
+    grounding: METPO:1000331
+    description: External pH supporting maximal growth.
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH > ~8, typical of soda lakes and other alkaline
+      habitats.
+  - node_id: na_h_antiporters
+    label: Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Membrane antiporters importing H+ in exchange for Na+ to
+      acidify the cytoplasm at high external pH.
+  - node_id: alkaliphile_homeostasis
+    label: alkaliphile cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a less alkaline cytoplasm than the external
+      environment by proton re-import.
+  edges:
+  - subject: alkaline_external_ph
+    predicate: selects for
+    object: alkaliphile_homeostasis
+    description: Alkaline environments select for alkaliphile cytoplasmic pH
+      homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: alkaliphiles
+      notes: Supports the alkaliphile regime as the environmental context for
+        high-pH optima.
+  - subject: na_h_antiporters
+    predicate: drives
+    object: alkaliphile_homeostasis
+    description: Na+/H+ antiporters drive proton re-import that acidifies the
+      cytoplasm relative to the alkaline external pH.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports antiporter-driven proton re-import as the alkaliphile
+        mechanism for maintaining the proton motive force.
+  - subject: alkaliphile_homeostasis
+    predicate: produces
+    object: ph_optimum_high_trait
+    description: Alkaliphile pH homeostasis yields an alkaline pH-optimum
+      setpoint.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: alkaliphiles
+      notes: Supports a high-pH optimum as the alkaliphile / extreme-alkaliphile
+        outcome.
+  - subject: ph_optimum_high_trait
+    predicate: is a
+    object: ph_optimum
+    description: pH optimum high is a quantitative bin of the pH-optimum
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cytoplasmic pH
+      notes: Supports an alkaline optimum as a value within the pH-optimum
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.828378+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking Na+/H+
+    antiporter-driven alkaliphile pH homeostasis to the alkaliphile /
+    extreme-alkaliphile pH-optimum-high bin.
+  llm_assisted: true
