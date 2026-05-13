@@ -2,14 +2,103 @@ identifier: METPO:1000536
 label: optimum phenotype with numerical limits
 definition: A phenotype characterized by the value at which an organism exhibits maximum
   growth rate or activity.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: optimal NaCl
+  notes: Osmoadaptation review supports the environmental value at which
+    growth is maximal as a standard quantitative descriptor.
+- reference: DOI:10.1038/nrmicro2549
+  snippet: cytoplasmic pH
+  notes: pH-homeostasis review supports the external pH at which cytoplasmic
+    homeostasis sustains peak growth as an analogous optimum on the pH axis.
+causal_graphs:
+- graph_id: optimum_phenotype_descriptor
+  title: Optimum phenotype descriptor across environmental axes
+  description: DOI-backed graph framing the optimum phenotype as a generic
+    peak-growth setpoint over any numerical environmental axis, with `is a`
+    edges to the axis-specific optimum phenotypes for NaCl, pH, and
+    temperature.
+  nodes:
+  - node_id: optimum_phenotype_trait
+    label: optimum phenotype with numerical limits
+    node_type: TRAIT
+    grounding: METPO:1000536
+    description: Phenotype defined by the value of an environmental variable
+      at which growth rate is maximal.
+  - node_id: numerical_environmental_axis
+    label: numerical environmental axis
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Any continuous environmental variable (NaCl, pH, temperature,
+      etc.) on which microbial growth can be measured quantitatively.
+  - node_id: nacl_optimum
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration supporting maximal growth.
+  - node_id: ph_optimum
+    label: pH optimum
+    node_type: TRAIT
+    grounding: METPO:1000331
+    description: External pH supporting maximal growth.
+  - node_id: temperature_optimum
+    label: temperature optimum
+    node_type: TRAIT
+    grounding: METPO:1000304
+    description: Ambient temperature supporting maximal growth.
+  edges:
+  - subject: numerical_environmental_axis
+    predicate: defines
+    object: optimum_phenotype_trait
+    description: A numerical environmental axis defines the values whose
+      peak-growth setting yields the optimum phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports a numerical environmental axis as the axis on which an
+        optimum is identified.
+  - subject: nacl_optimum
+    predicate: is a
+    object: optimum_phenotype_trait
+    description: NaCl optimum is an axis-specific optimum phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports NaCl optimum as an optimum phenotype defined over the
+        salinity axis.
+  - subject: ph_optimum
+    predicate: is a
+    object: optimum_phenotype_trait
+    description: pH optimum is an axis-specific optimum phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cytoplasmic pH
+      notes: Supports pH optimum as an optimum phenotype defined over the
+        external-pH axis.
+  - subject: temperature_optimum
+    predicate: is a
+    object: optimum_phenotype_trait
+    description: Temperature optimum is an axis-specific optimum phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Membrane-adaptation review supports temperature optima as a
+        homoviscous-adaptation-tuned setpoint on the temperature axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848187+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T12:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing the optimum phenotype as a
+    cross-axis peak-growth descriptor with axis-specific children for NaCl,
+    pH, and temperature.
+  llm_assisted: true

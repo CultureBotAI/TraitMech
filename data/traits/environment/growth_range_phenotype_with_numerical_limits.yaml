@@ -2,14 +2,104 @@ identifier: METPO:1000535
 label: growth range phenotype with numerical limits
 definition: A phenotype characterized by the span of values within which an organism
   can maintain growth.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports the bounded span of a growth-supporting
+    environmental variable as a standard quantitative descriptor.
+- reference: DOI:10.1038/nrmicro2549
+  snippet: external pH
+  notes: pH-homeostasis review supports the external-pH range over which
+    cytoplasmic pH homeostasis sustains growth as an analogous range
+    descriptor on the pH axis.
+causal_graphs:
+- graph_id: growth_range_phenotype_descriptor
+  title: Growth-range phenotype descriptor across environmental axes
+  description: DOI-backed graph framing the growth-range phenotype as a generic
+    bounded-span descriptor over any numerical environmental axis, with
+    `is a` edges to the axis-specific growth-range phenotypes for NaCl, pH,
+    and temperature.
+  nodes:
+  - node_id: growth_range_phenotype_trait
+    label: growth range phenotype with numerical limits
+    node_type: TRAIT
+    grounding: METPO:1000535
+    description: Phenotype defined by the span between minimum and maximum
+      growth-supporting values of an environmental variable.
+  - node_id: numerical_environmental_axis
+    label: numerical environmental axis
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Any continuous environmental variable (NaCl, pH, temperature,
+      etc.) on which microbial growth can be measured quantitatively.
+  - node_id: nacl_range
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: ph_range
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: temperature_range
+    label: temperature range
+    node_type: TRAIT
+    grounding: METPO:1000306
+    description: Span of ambient temperatures supporting growth.
+  edges:
+  - subject: numerical_environmental_axis
+    predicate: defines
+    object: growth_range_phenotype_trait
+    description: A numerical environmental axis defines the values whose
+      bounded growth-supporting span yields the growth-range phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports a numerical environmental axis as the axis on which a
+        bounded growth-supporting span is measured.
+  - subject: nacl_range
+    predicate: is a
+    object: growth_range_phenotype_trait
+    description: NaCl range is an axis-specific growth-range phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports NaCl range as a growth-range phenotype defined over
+        the salinity axis.
+  - subject: ph_range
+    predicate: is a
+    object: growth_range_phenotype_trait
+    description: pH range is an axis-specific growth-range phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH
+      notes: Supports pH range as a growth-range phenotype defined over the
+        external-pH axis.
+  - subject: temperature_range
+    predicate: is a
+    object: growth_range_phenotype_trait
+    description: Temperature range is an axis-specific growth-range phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports temperature range as a growth-range phenotype defined
+        over the ambient-temperature axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847733+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T12:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing the growth-range phenotype
+    as a cross-axis bounded-span descriptor with axis-specific children for
+    NaCl, pH, and temperature.
+  llm_assisted: true
