@@ -1,8 +1,11 @@
 identifier: METPO:1000441
 label: temperature optimum very low
+definition: A temperature optimum phenotype with the best-growth ambient temperature
+  at or below approximately 10 °C, characteristic of psychrophilic physiology.
+definition_source: DOI:10.1038/sj.embor.7400662
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000304
 synonyms:
@@ -12,9 +15,74 @@ synonyms:
 - synonym_text: TO_<=10
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/sj.embor.7400662
+  snippet: growing well at temperatures around the freezing point of water
+  notes: Psychrophile review supports growth at very low temperatures as the
+    psychrophilic optimum.
+causal_graphs:
+- graph_id: temperature_optimum_very_low_psychrophile_setpoint
+  title: Temperature-optimum-very-low psychrophile setpoint
+  description: DOI-backed graph linking cold-adapted membrane and enzyme
+    machinery to a temperature optimum at or below ~10 °C.
+  nodes:
+  - node_id: temperature_optimum_very_low_trait
+    label: temperature optimum very low
+    node_type: TRAIT
+    grounding: METPO:1000441
+    description: Temperature optimum at or below ~10 °C.
+  - node_id: temperature_optimum
+    label: temperature optimum
+    node_type: TRAIT
+    grounding: METPO:1000304
+    description: Ambient temperature supporting maximal growth.
+  - node_id: cold_environment
+    label: cold environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Habitat ambient temperature near the freezing point of water.
+  - node_id: psychrophile_machinery
+    label: psychrophile cold-adapted machinery
+    node_type: BIOLOGICAL_PROCESS
+    description: Cold-active enzymes and unsaturated-lipid membranes sustaining
+      function at very low temperature.
+  edges:
+  - subject: cold_environment
+    predicate: selects for
+    object: psychrophile_machinery
+    description: Cold environments select for cold-adapted enzymes and lipids.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: growing well at temperatures around the freezing point of water
+      notes: Supports cold habitats as the context for psychrophile machinery.
+  - subject: psychrophile_machinery
+    predicate: produces
+    object: temperature_optimum_very_low_trait
+    description: Psychrophile cold-adapted machinery yields a very-low
+      temperature optimum.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous adaptation as the mechanism setting the
+        psychrophile optimum.
+  - subject: temperature_optimum_very_low_trait
+    predicate: is a
+    object: temperature_optimum
+    description: Temperature optimum very low is a quantitative bin of the
+      temperature-optimum phenotype.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: growing well at temperatures around the freezing point of water
+      notes: Supports a ≤10 °C optimum as a value within the temperature-optimum
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818713+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking psychrophile
+    cold-adapted machinery to the temperature-optimum-very-low bin.
+  llm_assisted: true

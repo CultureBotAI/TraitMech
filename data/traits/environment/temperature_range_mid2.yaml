@@ -1,8 +1,12 @@
 identifier: METPO:1000451
 label: temperature range mid2
+definition: A temperature range phenotype in which the growth-supporting ambient
+  temperature range spans approximately 27–30 °C, characteristic of mesophilic
+  physiology.
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000306
 synonyms:
@@ -12,9 +16,61 @@ synonyms:
 - synonym_text: TR_27_to_30
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports the 27–30 °C range as a typical
+    mesophile growth range.
+causal_graphs:
+- graph_id: temperature_range_mid2_baseline_mesophile
+  title: Temperature-range-mid2 baseline-mesophile range
+  description: DOI-backed graph linking baseline mesophile adaptation to a
+    temperature growth range of approximately 27–30 °C.
+  nodes:
+  - node_id: temperature_range_mid2_trait
+    label: temperature range mid2
+    node_type: TRAIT
+    grounding: METPO:1000451
+    description: Temperature growth-supporting range approximately 27–30 °C.
+  - node_id: temperature_range
+    label: temperature range
+    node_type: TRAIT
+    grounding: METPO:1000306
+    description: Span of ambient temperatures supporting growth.
+  - node_id: baseline_mesophile_adaptation
+    label: baseline mesophile adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Standard mesophile membrane and enzyme repertoire supporting
+      growth at moderate ambient temperatures.
+  edges:
+  - subject: baseline_mesophile_adaptation
+    predicate: enables
+    object: temperature_range_mid2_trait
+    description: Baseline mesophile adaptation enables growth across 27–30 °C.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports baseline mesophile homeoviscous adaptation as the range
+        mechanism.
+  - subject: temperature_range_mid2_trait
+    predicate: is a
+    object: temperature_range
+    description: Temperature range mid2 is a quantitative bin of the
+      temperature-range phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the 27–30 °C range as a value within the temperature-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.824255+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking baseline
+    mesophile adaptation to the temperature-range-mid2 bin.
+  llm_assisted: true

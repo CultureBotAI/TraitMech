@@ -1,14 +1,76 @@
 identifier: METPO:1000303
 label: temperature delta
+definition: A temperature phenotype with numerical limits expressing the breadth
+  (maximum minus minimum, in °C) of ambient temperatures supporting growth of an
+  organism.
+definition_source: DOI:10.1016/s0300-9629(97)00003-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000533
 - METPO:1000534
+evidence:
+- reference: DOI:10.1016/s0300-9629(97)00003-0
+  snippet: adapted to environments of high temperature
+  notes: Thermophile-adaptation review supports the breadth of the
+    temperature-tolerance span as a derived descriptor reflecting overall
+    thermal-adaptation flexibility.
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports homoviscous remodeling capacity
+    as the basis of broad versus narrow temperature tolerance.
+causal_graphs:
+- graph_id: temperature_delta_thermal_flexibility
+  title: Temperature-delta thermal-adaptation flexibility
+  description: DOI-backed graph linking the flexibility of membrane and
+    enzyme adaptation to the breadth of the temperature growth range
+    (delta = max − min).
+  nodes:
+  - node_id: temperature_delta_trait
+    label: temperature delta
+    node_type: TRAIT
+    grounding: METPO:1000303
+    description: Breadth of the growth-supporting ambient-temperature range.
+  - node_id: thermal_adaptation_flexibility
+    label: thermal-adaptation flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to remodel membrane lipid composition and enzyme
+      repertoire across a wide span of ambient temperatures.
+  - node_id: tolerance_breadth
+    label: temperature tolerance breadth
+    node_type: BIOLOGICAL_PROCESS
+    description: Span between the minimum and maximum growth-supporting ambient
+      temperatures.
+  edges:
+  - subject: thermal_adaptation_flexibility
+    predicate: enables
+    object: tolerance_breadth
+    description: Thermal-adaptation flexibility enables broad temperature
+      tolerance.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports membrane-remodeling flexibility as the basis of broad
+        thermal tolerance.
+  - subject: tolerance_breadth
+    predicate: manifests as
+    object: temperature_delta_trait
+    description: The breadth between minimum and maximum growth-supporting
+      ambient temperatures manifests the temperature-delta phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the trait endpoint via thermal adaptation across a span.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812991+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking thermal-adaptation
+    flexibility to the temperature-delta breadth phenotype.
+  llm_assisted: true
