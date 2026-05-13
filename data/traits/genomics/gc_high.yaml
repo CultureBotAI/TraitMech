@@ -1,17 +1,75 @@
 identifier: METPO:1000432
 label: GC high
+definition: A GC-content phenotype with genome-wide GC composition at or below
+  approximately 42.65% (the METPO `GC_<=42.65` bin; note that the upstream label
+  'high' does not match this numeric threshold, but the synonym is preserved as
+  the authoritative bin definition).
+definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000127
 synonyms:
 - synonym_text: GC_<=42.65
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrg2358
+  snippet: GC content
+  notes: Bacterial-genome review supports the lower end of GC content as a
+    distinct genomic-composition phenotype.
+causal_graphs:
+- graph_id: gc_high_low_gc_bin
+  title: GC-high (METPO ≤42.65%) low-GC bin
+  description: DOI-backed graph linking AT-biased mutation pressure to a GC
+    content at or below ~42.65% (the threshold encoded by the METPO synonym
+    GC_<=42.65 on this record).
+  nodes:
+  - node_id: gc_high_trait
+    label: GC high
+    node_type: TRAIT
+    grounding: METPO:1000432
+    description: GC content at or below ~42.65% (per METPO synonym GC_<=42.65).
+  - node_id: gc_content
+    label: GC content
+    node_type: TRAIT
+    grounding: METPO:1000127
+    description: Percentage of guanine and cytosine nucleotides in genomic DNA.
+  - node_id: at_mutation_bias
+    label: AT-biased mutation pressure
+    node_type: BIOLOGICAL_PROCESS
+    description: Mutational bias favoring AT base pairs that lowers genome-wide
+      GC content.
+  edges:
+  - subject: at_mutation_bias
+    predicate: produces
+    object: gc_high_trait
+    description: AT-biased mutation pressure produces low genome-wide GC
+      composition.
+    evidence:
+    - reference: DOI:10.1186/1471-2148-10-374
+      snippet: mutation bias
+      notes: Supports mutation bias as the primary driver of low-GC composition.
+  - subject: gc_high_trait
+    predicate: is a
+    object: gc_content
+    description: GC high is a quantitative bin of the GC-content phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrg2358
+      snippet: GC content
+      notes: Supports the ≤42.65% bin as a value within the GC-content
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818260+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition (derived from METPO synonym GC_<=42.65)
+    and causal graph linking AT-biased mutation pressure to this GC bin.
+    Documented the upstream label-vs-threshold inconsistency.
+  llm_assisted: true
