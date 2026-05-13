@@ -2,14 +2,104 @@ identifier: METPO:1000534
 label: delta phenotype with numerical limits
 definition: A phenotype characterized by the difference between maximum and minimum
   values of a growth parameter.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports the breadth of a growth-supporting
+    environmental range as a derived quantitative descriptor of microbial
+    physiology.
+- reference: DOI:10.1016/s0300-9629(97)00003-0
+  snippet: adapted to environments of high temperature
+  notes: Thermophile-adaptation review supports thermal-tolerance breadth as
+    a comparable derived quantitative descriptor.
+causal_graphs:
+- graph_id: delta_phenotype_breadth_descriptor
+  title: Delta phenotype breadth descriptor across environmental axes
+  description: DOI-backed graph framing the delta phenotype as a generic
+    derived breadth descriptor over any numerical environmental axis, with
+    `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and
+    temperature.
+  nodes:
+  - node_id: delta_phenotype_trait
+    label: delta phenotype with numerical limits
+    node_type: TRAIT
+    grounding: METPO:1000534
+    description: Phenotype defined by the max − min span of a growth-supporting
+      environmental variable.
+  - node_id: numerical_environmental_axis
+    label: numerical environmental axis
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Any continuous environmental variable (NaCl, pH, temperature,
+      etc.) on which microbial growth can be measured quantitatively.
+  - node_id: nacl_delta
+    label: NaCl delta
+    node_type: TRAIT
+    grounding: METPO:1000335
+    description: Breadth of the growth-supporting NaCl range.
+  - node_id: ph_delta
+    label: pH delta
+    node_type: TRAIT
+    grounding: METPO:1000232
+    description: Breadth of the growth-supporting external pH range.
+  - node_id: temperature_delta
+    label: temperature delta
+    node_type: TRAIT
+    grounding: METPO:1000303
+    description: Breadth of the growth-supporting ambient-temperature range.
+  edges:
+  - subject: numerical_environmental_axis
+    predicate: defines
+    object: delta_phenotype_trait
+    description: A numerical environmental axis defines the values whose max
+      and min are subtracted to yield the delta phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports a numerical environmental axis as the axis on which a
+        growth-supporting range (and hence its breadth) is measured.
+  - subject: nacl_delta
+    predicate: is a
+    object: delta_phenotype_trait
+    description: NaCl delta is an axis-specific delta phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports NaCl delta as a delta phenotype defined over the
+        salinity axis.
+  - subject: ph_delta
+    predicate: is a
+    object: delta_phenotype_trait
+    description: pH delta is an axis-specific delta phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports pH delta as a delta phenotype defined over the
+        external-pH axis.
+  - subject: temperature_delta
+    predicate: is a
+    object: delta_phenotype_trait
+    description: Temperature delta is an axis-specific delta phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports temperature delta as a delta phenotype defined over the
+        ambient-temperature axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847283+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T12:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing the delta phenotype as a
+    cross-axis breadth descriptor with axis-specific children for NaCl, pH,
+    and temperature.
+  llm_assisted: true
