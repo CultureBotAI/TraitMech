@@ -44,7 +44,7 @@ causal_graphs:
       classification.
   - node_id: containment_requirements
     label: containment requirements
-    node_type: BIOLOGICAL_PROCESS
+    node_type: EXPERIMENTAL_FACTOR
     description: Laboratory practices, equipment, and facility features
       mandated for safe handling of the agent.
   - node_id: bsl1
