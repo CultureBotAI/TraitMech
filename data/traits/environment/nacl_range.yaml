@@ -65,8 +65,10 @@ causal_graphs:
     description: Tolerance to low salt sets the lower bound of the growth window.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
-      snippet: cope with
-      notes: Supports tolerance to low-salt stress as the lower-bound mechanism.
+      snippet: cope with the high salt concentrations
+      notes: Saline-Systems review frames halophily around salt-tolerance
+        mechanisms that span both the lower and upper limits of growth-supporting
+        salinity.
   - subject: high_salt_tolerance
     predicate: sets
     object: bounded_growth_window

@@ -9,11 +9,11 @@ mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 evidence:
-- reference: DOI:10.1093/database/baw155
-  snippet: BacDive
-  notes: BacDive culture-collection database supports quantitative salinity
-    phenotypes (optimum, range) as standard numerical descriptors for prokaryotic
-    strains.
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports quantitative salinity descriptors
+    (optimum, range, delta) as the standard numerical phenotype framing for
+    halophily classification.
 - reference: DOI:10.1093/femsre/fuy009
   snippet: Hypersaline environments
   notes: Osmoadaptation review supports salinity as the physical axis underlying
@@ -56,10 +56,10 @@ causal_graphs:
     description: Ambient NaCl concentration is the quantitative axis defining
       salinity phenotypes.
     evidence:
-    - reference: DOI:10.1093/database/baw155
-      snippet: BacDive
-      notes: Supports NaCl concentration as a standard descriptor axis in
-        strain databases.
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports NaCl concentration as the quantitative axis underlying
+        salinity-phenotype descriptors.
   - subject: nacl_optimum
     predicate: is a
     object: salinity_phenotype_trait
@@ -81,10 +81,10 @@ causal_graphs:
     object: salinity_phenotype_trait
     description: NaCl delta is a numerical-limit salinity phenotype.
     evidence:
-    - reference: DOI:10.1093/database/baw155
-      snippet: BacDive
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
       notes: Supports growth-range breadth as a derived numerical salinity
-        descriptor.
+        descriptor of the same axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
