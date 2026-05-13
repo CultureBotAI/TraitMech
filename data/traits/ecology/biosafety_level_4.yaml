@@ -1,19 +1,73 @@
 identifier: METPO:1001105
 label: biosafety level 4
-definition: A biosafety level that pose extreme risk of life-threatening disease through
+definition: A biosafety level that poses extreme risk of life-threatening disease through
   aerosol transmission with no available treatment.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1001101
 synonyms:
 - synonym_text: '4'
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports the extreme virulence and absence
+    of countermeasures characteristic of BSL-4 agents.
+causal_graphs:
+- graph_id: biosafety_level_4_extreme_hazard
+  title: BSL-4 extreme-hazard classification
+  description: DOI-backed graph linking extreme virulence, aerosol
+    transmissibility, and absence of available treatments to BSL-4
+    classification.
+  nodes:
+  - node_id: bsl4_trait
+    label: biosafety level 4
+    node_type: TRAIT
+    grounding: METPO:1001105
+    description: Extreme-risk agents causing life-threatening disease with no
+      available treatment; maximum containment required.
+  - node_id: biosafety_level
+    label: biosafety level
+    node_type: TRAIT
+    grounding: METPO:1001101
+    description: Hazard-classification axis for biological agents.
+  - node_id: extreme_pathogen_hazard
+    label: extreme pathogen hazard
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathogens with extreme virulence, aerosol transmission, and
+      absent or inadequate medical countermeasures.
+  edges:
+  - subject: extreme_pathogen_hazard
+    predicate: produces
+    object: bsl4_trait
+    description: Extreme pathogen hazard without available treatment yields
+      BSL-4 classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports extreme virulence with absent countermeasures as the
+        basis of BSL-4 classification.
+  - subject: bsl4_trait
+    predicate: is a
+    object: biosafety_level
+    description: BSL-4 is a member of the biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-4 as a member of the biosafety-level classification.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.934198+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking extreme pathogen hazard to
+    BSL-4 classification.
+  llm_assisted: true

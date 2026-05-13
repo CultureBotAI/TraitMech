@@ -3,9 +3,10 @@ label: biosafety level 3
 definition: A biosafety level that can cause serious or potentially lethal disease
   through inhalation or other routes, requiring specialized containment facilities
   with controlled access, directional airflow, and strict safety protocols.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1001101
 synonyms:
@@ -16,9 +17,61 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports highly virulent aerosol-transmissible
+    pathogens (serious or potentially lethal disease) as BSL-3 agents.
+causal_graphs:
+- graph_id: biosafety_level_3_serious_hazard
+  title: BSL-3 serious-hazard classification
+  description: DOI-backed graph linking serious/lethal disease potential and
+    aerosol transmission risk to BSL-3 classification.
+  nodes:
+  - node_id: bsl3_trait
+    label: biosafety level 3
+    node_type: TRAIT
+    grounding: METPO:1001104
+    description: Agents causing serious or potentially lethal disease, often
+      via inhalation; specialized containment required.
+  - node_id: biosafety_level
+    label: biosafety level
+    node_type: TRAIT
+    grounding: METPO:1001101
+    description: Hazard-classification axis for biological agents.
+  - node_id: serious_pathogen_hazard
+    label: serious pathogen hazard
+    node_type: BIOLOGICAL_PROCESS
+    description: Highly virulent pathogens with aerosol transmission potential
+      causing serious or lethal disease.
+  edges:
+  - subject: serious_pathogen_hazard
+    predicate: produces
+    object: bsl3_trait
+    description: Serious pathogen hazard with aerosol risk yields BSL-3
+      classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports high virulence with aerosol transmissibility as the basis
+        of BSL-3 classification.
+  - subject: bsl3_trait
+    predicate: is a
+    object: biosafety_level
+    description: BSL-3 is a member of the biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-3 as a member of the biosafety-level classification.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.933585+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking serious pathogen hazard with
+    aerosol transmission to BSL-3 classification.
+  llm_assisted: true
