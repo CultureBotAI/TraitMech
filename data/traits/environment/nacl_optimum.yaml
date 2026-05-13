@@ -2,16 +2,114 @@ identifier: METPO:1000333
 label: NaCl optimum
 definition: A salinity phenotype with numerical limits that supports the most efficient
   growth and reproduction of an organism.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000532
 - METPO:1000536
 created_by: Luke Wang
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: optimal NaCl
+  notes: Osmoadaptation review supports the NaCl concentration at which growth
+    rate is maximal as a standard halophily descriptor.
+- reference: DOI:10.1186/1746-1448-4-2
+  snippet: ways they cope with the high salt concentrations
+  notes: Saline-Systems review supports osmotic balance at the optimal NaCl as
+    the mechanistic basis of the NaCl-optimum phenotype.
+causal_graphs:
+- graph_id: nacl_optimum_balanced_osmoadaptation
+  title: NaCl-optimum balanced osmoadaptation
+  description: DOI-backed graph linking ambient NaCl, osmotic balance via
+    compatible solutes and ion homeostasis, and maximal growth rate to the
+    NaCl-optimum phenotype.
+  nodes:
+  - node_id: nacl_optimum_trait
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration at which growth rate is maximal.
+  - node_id: ambient_nacl
+    label: ambient NaCl concentration
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient NaCl level imposed on the cell.
+  - node_id: osmotic_balance
+    label: osmotic balance
+    node_type: BIOLOGICAL_PROCESS
+    description: Steady-state matching of intracellular osmotic activity to the
+      external salt concentration.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Organic osmolytes (ectoine, glycine betaine) maintaining
+      cytoplasmic osmotic activity.
+  - node_id: na_h_antiporters
+    label: Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Membrane antiporters extruding Na+ in exchange for H+ to maintain
+      ion homeostasis.
+  - node_id: maximal_growth_rate
+    label: maximal growth rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Peak specific growth rate achieved at the optimal NaCl.
+  edges:
+  - subject: ambient_nacl
+    predicate: triggers
+    object: osmotic_balance
+    description: External NaCl level engages the osmoadaptive balance machinery.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: cope with the high salt concentrations
+      notes: Supports osmotic balance as the response to ambient NaCl.
+  - subject: compatible_solutes
+    predicate: maintains
+    object: osmotic_balance
+    description: Compatible-solute accumulation maintains osmotic balance at the
+      optimal NaCl.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: synthesize organic osmotic solutes
+      notes: Supports compatible solutes as the osmoadaptive osmolyte.
+  - subject: na_h_antiporters
+    predicate: supports
+    object: osmotic_balance
+    description: Na+/H+ antiporters support ion homeostasis underlying osmotic
+      balance.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: Na+/H+ antiporters
+      notes: Supports antiporter-driven Na+ extrusion as an osmoadaptive mechanism.
+  - subject: osmotic_balance
+    predicate: enables
+    object: maximal_growth_rate
+    description: Maintained osmotic balance enables peak growth at the optimal
+      NaCl concentration.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: optimum
+      notes: Supports peak growth at the optimal NaCl as the operational definition
+        of NaCl optimum.
+  - subject: maximal_growth_rate
+    predicate: manifests as
+    object: nacl_optimum_trait
+    description: The NaCl concentration at which peak growth is achieved manifests
+      the NaCl-optimum phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815612+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking ambient NaCl, osmotic balance via
+    compatible solutes and Na+/H+ antiporters, and maximal growth rate to the
+    NaCl-optimum phenotype.
+  llm_assisted: true

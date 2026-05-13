@@ -1,8 +1,12 @@
 identifier: METPO:1000469
 label: NaCl range low
+definition: A NaCl range phenotype in which the upper bound of growth-supporting
+  NaCl concentration is at or below approximately 1% (w/v), characteristic of
+  non-halophilic or halotolerant organisms.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000334
 synonyms:
@@ -15,9 +19,59 @@ synonyms:
 - synonym_text: NaR_<=1
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports growth limited to ≤ ~1% NaCl as the
+    non-halophilic / halotolerant range.
+causal_graphs:
+- graph_id: nacl_range_low_non_halophile
+  title: NaCl-range-low non-halophile range
+  description: DOI-backed graph linking limited high-salt tolerance to a
+    growth-supporting NaCl range capped at ~1% (w/v).
+  nodes:
+  - node_id: nacl_range_low_trait
+    label: NaCl range low
+    node_type: TRAIT
+    grounding: METPO:1000469
+    description: NaCl growth-supporting range with upper bound ≤ ~1% w/v.
+  - node_id: nacl_range
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: limited_high_salt_tolerance
+    label: limited high-salt tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced capacity to maintain osmotic balance above ~1% NaCl.
+  edges:
+  - subject: limited_high_salt_tolerance
+    predicate: produces
+    object: nacl_range_low_trait
+    description: Limited tolerance to elevated NaCl caps growth at low salt.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports limited high-salt tolerance as the basis of a low NaCl
+        range.
+  - subject: nacl_range_low_trait
+    predicate: is a
+    object: nacl_range
+    description: NaCl range low is a quantitative bin of the NaCl-range phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports low NaCl range as a value within the NaCl-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835809+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking limited
+    high-salt tolerance to the non-halophile NaCl-range bin.
+  llm_assisted: true

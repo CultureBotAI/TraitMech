@@ -1,15 +1,99 @@
 identifier: METPO:1000334
 label: NaCl range
+definition: A salinity phenotype with numerical limits that bounds the minimum and
+  maximum NaCl concentrations supporting growth of an organism.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000532
 - METPO:1000535
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports the span of NaCl concentrations supporting
+    growth as a standard halophily descriptor.
+- reference: DOI:10.1186/1746-1448-4-2
+  snippet: ways they cope with the high salt concentrations
+  notes: Saline-Systems review supports osmotic-tolerance breadth as the basis
+    of the NaCl-range phenotype.
+causal_graphs:
+- graph_id: nacl_range_tolerance_breadth
+  title: NaCl-range osmotic-tolerance breadth
+  description: DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to
+    low and high salt, and the bounded span of growth-supporting NaCl
+    concentrations.
+  nodes:
+  - node_id: nacl_range_trait
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: ambient_nacl
+    label: ambient NaCl concentration
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient NaCl level imposed on the cell.
+  - node_id: low_salt_tolerance
+    label: low-salt tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain turgor and ion homeostasis at low ambient
+      NaCl.
+  - node_id: high_salt_tolerance
+    label: high-salt tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain osmotic balance under elevated NaCl.
+  - node_id: bounded_growth_window
+    label: bounded growth window
+    node_type: BIOLOGICAL_PROCESS
+    description: Span of NaCl concentrations between the minimum and maximum that
+      support growth.
+  edges:
+  - subject: ambient_nacl
+    predicate: defines
+    object: bounded_growth_window
+    description: Ambient NaCl defines the axis over which the growth window is
+      bounded.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports NaCl as the axis bounding the growth window.
+  - subject: low_salt_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Tolerance to low salt sets the lower bound of the growth window.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: cope with the high salt concentrations
+      notes: Saline-Systems review frames halophily around salt-tolerance
+        mechanisms that span both the lower and upper limits of growth-supporting
+        salinity.
+  - subject: high_salt_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Tolerance to high salt sets the upper bound of the growth window.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: high salt concentrations
+      notes: Supports tolerance to high salt as the upper-bound mechanism.
+  - subject: bounded_growth_window
+    predicate: manifests as
+    object: nacl_range_trait
+    description: The bounded growth window manifests the NaCl-range phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816101+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking ambient NaCl and low/high-salt
+    tolerance to the bounded NaCl-range phenotype.
+  llm_assisted: true

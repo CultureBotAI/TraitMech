@@ -1,8 +1,12 @@
 identifier: METPO:1000472
 label: NaCl range high
+definition: A NaCl range phenotype in which the growth-supporting NaCl range
+  extends above approximately 8% (w/v), characteristic of extreme-halophile
+  organisms.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000334
 synonyms:
@@ -12,9 +16,65 @@ synonyms:
 - synonym_text: NaR_>8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: extreme halophile
+  notes: Osmoadaptation review supports growth ranges extending above 8% NaCl
+    as the extreme-halophile category.
+- reference: DOI:10.1186/1746-1448-4-2
+  snippet: KCl accumulating Halobacterium salinarum
+  notes: Saline-Systems review supports salt-in physiology underlying extended
+    high-salt growth.
+causal_graphs:
+- graph_id: nacl_range_high_extreme_halophile
+  title: NaCl-range-high extreme-halophile range
+  description: DOI-backed graph linking salt-in physiology to NaCl growth ranges
+    extending above 8% (w/v).
+  nodes:
+  - node_id: nacl_range_high_trait
+    label: NaCl range high
+    node_type: TRAIT
+    grounding: METPO:1000472
+    description: NaCl growth-supporting range extending above ~8% w/v.
+  - node_id: nacl_range
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: salt_in_physiology
+    label: salt-in physiology
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular ion-accumulation strategy enabling growth at
+      hypersaline NaCl.
+  edges:
+  - subject: salt_in_physiology
+    predicate: produces
+    object: nacl_range_high_trait
+    description: Salt-in physiology yields a growth range extending above 8%
+      NaCl.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: KCl accumulating Halobacterium salinarum
+      notes: Supports salt-in physiology as the basis of extreme-halophile
+        growth ranges.
+  - subject: nacl_range_high_trait
+    predicate: is a
+    object: nacl_range
+    description: NaCl range high is a quantitative bin of the NaCl-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the >8% range as a value within the NaCl-range distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.837512+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking salt-in
+    physiology to the extreme-halophile NaCl-range bin.
+  llm_assisted: true

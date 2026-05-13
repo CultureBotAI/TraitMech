@@ -2,14 +2,98 @@ identifier: METPO:1000532
 label: salinity phenotype with numerical limits
 definition: A phenotype characterized by specific salt concentration values or ranges
   that define growth or activity limits.
+definition_source: DOI:10.1093/database/baw155
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports quantitative salinity descriptors
+    (optimum, range, delta) as the standard numerical phenotype framing for
+    halophily classification.
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: Hypersaline environments
+  notes: Osmoadaptation review supports salinity as the physical axis underlying
+    halophily classifications.
+causal_graphs:
+- graph_id: salinity_phenotype_numerical_axis
+  title: Salinity phenotype numerical-limits axis
+  description: DOI-backed graph linking the ambient NaCl concentration axis to the
+    three numerical-limit measurement types (optimum, range, delta) that together
+    classify halophily.
+  nodes:
+  - node_id: salinity_phenotype_trait
+    label: salinity phenotype with numerical limits
+    node_type: TRAIT
+    grounding: METPO:1000532
+    description: Phenotype defined by a numerical NaCl concentration descriptor.
+  - node_id: nacl_concentration_axis
+    label: NaCl concentration axis
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient NaCl concentration as a continuous environmental variable.
+  - node_id: nacl_optimum
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration supporting the most efficient growth.
+  - node_id: nacl_range
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: nacl_delta
+    label: NaCl delta
+    node_type: TRAIT
+    grounding: METPO:1000335
+    description: Breadth (max − min) of the growth-supporting NaCl range.
+  edges:
+  - subject: nacl_concentration_axis
+    predicate: defines
+    object: salinity_phenotype_trait
+    description: Ambient NaCl concentration is the quantitative axis defining
+      salinity phenotypes.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports NaCl concentration as the quantitative axis underlying
+        salinity-phenotype descriptors.
+  - subject: nacl_optimum
+    predicate: is a
+    object: salinity_phenotype_trait
+    description: NaCl optimum is a numerical-limit salinity phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports NaCl optimum as a recognized salinity descriptor.
+  - subject: nacl_range
+    predicate: is a
+    object: salinity_phenotype_trait
+    description: NaCl range is a numerical-limit salinity phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports NaCl range as a recognized salinity descriptor.
+  - subject: nacl_delta
+    predicate: is a
+    object: salinity_phenotype_trait
+    description: NaCl delta is a numerical-limit salinity phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports growth-range breadth as a derived numerical salinity
+        descriptor of the same axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking the NaCl concentration axis to
+    NaCl optimum, range, and delta measurement types.
+  llm_assisted: true

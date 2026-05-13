@@ -1,8 +1,11 @@
 identifier: METPO:1000471
 label: NaCl range mid2
+definition: A NaCl range phenotype in which the growth-supporting NaCl range
+  spans approximately 3–8% (w/v), characteristic of moderate-halophile organisms.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000334
 synonyms:
@@ -15,9 +18,60 @@ synonyms:
 - synonym_text: NaR_3_to_8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: moderate halophile
+  notes: Osmoadaptation review supports the 3–8% NaCl growth range as the
+    moderate-halophile category.
+causal_graphs:
+- graph_id: nacl_range_mid2_moderate_halophile
+  title: NaCl-range-mid2 moderate-halophile range
+  description: DOI-backed graph linking robust osmoadaptive tolerance to a 3–8%
+    (w/v) NaCl growth range.
+  nodes:
+  - node_id: nacl_range_mid2_trait
+    label: NaCl range mid2
+    node_type: TRAIT
+    grounding: METPO:1000471
+    description: NaCl growth-supporting range approximately 3–8% w/v.
+  - node_id: nacl_range
+    label: NaCl range
+    node_type: TRAIT
+    grounding: METPO:1000334
+    description: Span of NaCl concentrations supporting growth.
+  - node_id: robust_osmoadaptive_tolerance
+    label: robust osmoadaptive tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Strong compatible-solute and ion-balance capacity sustaining
+      growth at saline-lake / salt-marsh NaCl levels.
+  edges:
+  - subject: robust_osmoadaptive_tolerance
+    predicate: produces
+    object: nacl_range_mid2_trait
+    description: Robust osmoadaptive tolerance yields a 3–8% NaCl growth range.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: moderate halophile
+      notes: Supports the 3–8% range as the moderate-halophile outcome.
+  - subject: nacl_range_mid2_trait
+    predicate: is a
+    object: nacl_range
+    description: NaCl range mid2 is a quantitative bin of the NaCl-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the 3–8% range as a value within the NaCl-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.836940+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking robust
+    osmoadaptive tolerance to the moderate-halophile NaCl-range bin.
+  llm_assisted: true

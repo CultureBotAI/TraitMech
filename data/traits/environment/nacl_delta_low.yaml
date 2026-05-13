@@ -1,17 +1,73 @@
 identifier: METPO:1000479
 label: NaCl delta low
+definition: A NaCl delta phenotype with a narrow growth-supporting NaCl breadth
+  of at most approximately 1% (w/v), characteristic of stenohaline organisms.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000335
 synonyms:
 - synonym_text: Nad_<=1
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports narrow salinity-tolerance breadths as
+    the stenohaline phenotype, contrasted with euryhaline organisms.
+causal_graphs:
+- graph_id: nacl_delta_low_stenohaline
+  title: NaCl-delta-low stenohaline breadth
+  description: DOI-backed graph linking limited osmoadaptive flexibility to a
+    narrow NaCl growth breadth (≤ ~1% w/v).
+  nodes:
+  - node_id: nacl_delta_low_trait
+    label: NaCl delta low
+    node_type: TRAIT
+    grounding: METPO:1000479
+    description: NaCl growth-supporting breadth ≤ ~1% w/v.
+  - node_id: nacl_delta
+    label: NaCl delta
+    node_type: TRAIT
+    grounding: METPO:1000335
+    description: Breadth of the growth-supporting NaCl range.
+  - node_id: limited_osmoadaptive_flexibility
+    label: limited osmoadaptive flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Narrow capacity to remodel osmolyte pools and ion transport
+      across ambient salinities.
+  edges:
+  - subject: limited_osmoadaptive_flexibility
+    predicate: produces
+    object: nacl_delta_low_trait
+    description: Limited osmoadaptive flexibility yields a narrow NaCl-delta
+      breadth.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports limited osmoadaptive flexibility as the basis of
+        stenohaline breadth.
+  - subject: nacl_delta_low_trait
+    predicate: is a
+    object: nacl_delta
+    description: NaCl delta low is a quantitative bin of the NaCl-delta
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports a narrow breadth as a value within the NaCl-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840753+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking limited
+    osmoadaptive flexibility to the stenohaline NaCl-delta bin.
+  llm_assisted: true
