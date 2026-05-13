@@ -1,17 +1,74 @@
 identifier: METPO:1000473
 label: pH delta very low
+definition: A pH delta phenotype with a very narrow growth-supporting pH breadth
+  of at most approximately 1 pH unit, characteristic of stenotopic pH-sensitive
+  physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000232
 synonyms:
 - synonym_text: pHd_<=1
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: pH homeostasis
+  notes: pH-homeostasis review supports very narrow pH-tolerance breadths as
+    the stenotopic / pH-sensitive phenotype.
+causal_graphs:
+- graph_id: ph_delta_very_low_stenotopic
+  title: pH-delta-very-low stenotopic breadth
+  description: DOI-backed graph linking very limited pH-homeostasis
+    flexibility to a pH growth breadth of at most ~1 pH unit.
+  nodes:
+  - node_id: ph_delta_very_low_trait
+    label: pH delta very low
+    node_type: TRAIT
+    grounding: METPO:1000473
+    description: pH growth-supporting breadth ≤ ~1 pH unit.
+  - node_id: ph_delta
+    label: pH delta
+    node_type: TRAIT
+    grounding: METPO:1000232
+    description: Breadth of the growth-supporting external pH range.
+  - node_id: very_limited_ph_homeostasis
+    label: very limited pH-homeostasis flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Narrow capacity to remodel proton extrusion and envelope
+      buffering across changes in external pH.
+  edges:
+  - subject: very_limited_ph_homeostasis
+    predicate: produces
+    object: ph_delta_very_low_trait
+    description: Very limited pH-homeostasis flexibility yields a narrow
+      pH-delta breadth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports very limited pH-homeostasis flexibility as the basis
+        of stenotopic breadth.
+  - subject: ph_delta_very_low_trait
+    predicate: is a
+    object: ph_delta
+    description: pH delta very low is a quantitative bin of the pH-delta
+      phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports a very narrow breadth as a value within the pH-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838042+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking very limited
+    pH-homeostasis flexibility to the stenotopic pH-delta-very-low bin.
+  llm_assisted: true

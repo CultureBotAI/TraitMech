@@ -1,8 +1,11 @@
 identifier: METPO:1000463
 label: pH range mid3
+definition: A pH range phenotype in which the growth-supporting external pH range
+  spans approximately 8–10, characteristic of alkaliphile physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000332
 synonyms:
@@ -21,9 +24,61 @@ synonyms:
 - synonym_text: pHR_8_to_10
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: alkaliphiles
+  notes: pH-homeostasis review supports alkaliphile physiology growing
+    across pH 8–10.
+causal_graphs:
+- graph_id: ph_range_mid3_alkaliphile_range
+  title: pH-range-mid3 alkaliphile range
+  description: DOI-backed graph linking alkaliphile cytoplasmic pH
+    homeostasis to a pH growth range of approximately 8–10.
+  nodes:
+  - node_id: ph_range_mid3_trait
+    label: pH range mid3
+    node_type: TRAIT
+    grounding: METPO:1000463
+    description: pH growth-supporting range approximately 8–10.
+  - node_id: ph_range
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: alkaliphile_homeostasis
+    label: alkaliphile pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Proton re-import via Na+/H+ antiporters maintaining a less
+      alkaline cytoplasm at high external pH.
+  edges:
+  - subject: alkaliphile_homeostasis
+    predicate: enables
+    object: ph_range_mid3_trait
+    description: Alkaliphile pH-homeostasis enables growth across pH 8–10.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: alkaliphiles
+      notes: Supports alkaliphile cytoplasmic pH homeostasis as the alkaline
+        growth-range mechanism.
+  - subject: ph_range_mid3_trait
+    predicate: is a
+    object: ph_range
+    description: pH range mid3 is a quantitative bin of the pH-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports the pH 8–10 range as a value within the pH-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.832120+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking alkaliphile
+    pH-homeostasis to the pH-range-mid3 bin.
+  llm_assisted: true

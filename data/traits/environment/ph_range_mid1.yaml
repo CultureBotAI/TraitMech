@@ -1,8 +1,11 @@
 identifier: METPO:1000461
 label: pH range mid1
+definition: A pH range phenotype in which the growth-supporting external pH range
+  spans approximately 6–7, characteristic of neutrophilic physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000332
 synonyms:
@@ -18,9 +21,62 @@ synonyms:
 - synonym_text: pHR_6_to_7
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: cytoplasmic pH
+  notes: pH-homeostasis review supports near-neutral cytoplasmic pH at
+    near-neutral external pH as the neutrophilic regime.
+causal_graphs:
+- graph_id: ph_range_mid1_neutrophile_range
+  title: pH-range-mid1 neutrophile range
+  description: DOI-backed graph linking baseline pH-homeostasis at
+    near-neutral external pH to a pH growth range of approximately 6–7.
+  nodes:
+  - node_id: ph_range_mid1_trait
+    label: pH range mid1
+    node_type: TRAIT
+    grounding: METPO:1000461
+    description: pH growth-supporting range approximately 6–7.
+  - node_id: ph_range
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: baseline_ph_homeostasis
+    label: baseline pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Minimal proton-extrusion and buffering activity needed to
+      maintain near-neutral cytoplasmic pH at near-neutral external pH.
+  edges:
+  - subject: baseline_ph_homeostasis
+    predicate: enables
+    object: ph_range_mid1_trait
+    description: Baseline pH-homeostasis enables growth across pH 6–7.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports baseline pH-homeostasis as the neutrophilic range
+        mechanism.
+  - subject: ph_range_mid1_trait
+    predicate: is a
+    object: ph_range
+    description: pH range mid1 is a quantitative bin of the pH-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: external pH
+      notes: Supports the pH 6–7 range as a value within the pH-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.830444+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking baseline
+    pH-homeostasis at near-neutral external pH to the neutrophilic
+    pH-range-mid1 bin.
+  llm_assisted: true

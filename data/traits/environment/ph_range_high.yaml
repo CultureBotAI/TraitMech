@@ -1,8 +1,11 @@
 identifier: METPO:1000464
 label: pH range high
+definition: A pH range phenotype in which the growth-supporting external pH range
+  spans approximately 10–14, characteristic of extreme-alkaliphile physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000332
 synonyms:
@@ -18,9 +21,66 @@ synonyms:
 - synonym_text: 10_to_14
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: alkaliphiles
+  notes: pH-homeostasis review supports extreme-alkaliphile physiology
+    growing at external pH above 10.
+- reference: DOI:10.1016/j.tim.2007.02.005
+  snippet: proton motive force
+  notes: pH-homeostasis review supports robust Na+/H+ antiporter activity as
+    the extreme-alkaliphile mechanism sustaining the proton motive force
+    above pH 10.
+causal_graphs:
+- graph_id: ph_range_high_extreme_alkaliphile
+  title: pH-range-high extreme-alkaliphile range
+  description: DOI-backed graph linking extreme-alkaliphile Na+/H+
+    antiporter activity to a pH growth range extending above 10.
+  nodes:
+  - node_id: ph_range_high_trait
+    label: pH range high
+    node_type: TRAIT
+    grounding: METPO:1000464
+    description: pH growth-supporting range extending above ~10.
+  - node_id: ph_range
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: extreme_alkaliphile_antiport
+    label: extreme-alkaliphile Na+/H+ antiport
+    node_type: BIOLOGICAL_PROCESS
+    description: Robust Na+/H+ antiporter activity importing H+ at strongly
+      alkaline external pH.
+  edges:
+  - subject: extreme_alkaliphile_antiport
+    predicate: enables
+    object: ph_range_high_trait
+    description: Robust Na+/H+ antiport enables growth at pH > 10.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports antiporter-driven proton re-import as the
+        extreme-alkaliphile mechanism.
+  - subject: ph_range_high_trait
+    predicate: is a
+    object: ph_range
+    description: pH range high is a quantitative bin of the pH-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: alkaliphiles
+      notes: Supports the pH 10–14 range as a value within the pH-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.832881+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking
+    extreme-alkaliphile Na+/H+ antiport to the pH-range-high bin.
+  llm_assisted: true

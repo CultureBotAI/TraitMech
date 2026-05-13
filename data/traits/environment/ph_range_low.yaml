@@ -1,8 +1,11 @@
 identifier: METPO:1000460
 label: pH range low
+definition: A pH range phenotype in which the growth-supporting external pH range
+  spans approximately 4–6, characteristic of acidophilic physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000332
 synonyms:
@@ -21,9 +24,61 @@ synonyms:
 - synonym_text: pHR_4_to_6
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: cytoplasmic pH
+  notes: pH-homeostasis review supports moderately acidic pH-homeostasis as
+    the basis of growth in the pH 4–6 range.
+causal_graphs:
+- graph_id: ph_range_low_acidophile_range
+  title: pH-range-low acidophile range
+  description: DOI-backed graph linking moderately acidophile pH-homeostasis
+    to a pH growth range of approximately 4–6.
+  nodes:
+  - node_id: ph_range_low_trait
+    label: pH range low
+    node_type: TRAIT
+    grounding: METPO:1000460
+    description: pH growth-supporting range approximately 4–6.
+  - node_id: ph_range
+    label: pH range
+    node_type: TRAIT
+    grounding: METPO:1000332
+    description: Span of external pH values supporting growth.
+  - node_id: acidophile_homeostasis
+    label: acidophile pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Proton extrusion and envelope barriers maintaining
+      cytoplasmic pH against a moderately acidic external pH.
+  edges:
+  - subject: acidophile_homeostasis
+    predicate: enables
+    object: ph_range_low_trait
+    description: Acidophile pH-homeostasis enables growth across pH 4–6.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: cytoplasmic pH
+      notes: Supports acidophile cytoplasmic pH homeostasis as the
+        moderately-acidic growth-range mechanism.
+  - subject: ph_range_low_trait
+    predicate: is a
+    object: ph_range
+    description: pH range low is a quantitative bin of the pH-range
+      phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports the pH 4–6 range as a value within the pH-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.829744+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking acidophile
+    pH-homeostasis to the pH-range-low bin.
+  llm_assisted: true

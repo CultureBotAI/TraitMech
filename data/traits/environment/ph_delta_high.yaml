@@ -1,17 +1,77 @@
 identifier: METPO:1000478
 label: pH delta high
+definition: A pH delta phenotype with a growth-supporting pH breadth above
+  approximately 5 pH units, characteristic of euryphilic pH-tolerance physiology.
+definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000232
 synonyms:
 - synonym_text: pHd_5_9
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrmicro2549
+  snippet: pH homeostasis
+  notes: pH-homeostasis review supports very broad pH-homeostasis as a
+    hallmark of generalist pH-tolerance physiology.
+- reference: DOI:10.1016/j.tim.2007.02.005
+  snippet: proton motive force
+  notes: pH-homeostasis review supports robust proton extrusion and import
+    machinery as the basis of very broad pH-tolerance.
+causal_graphs:
+- graph_id: ph_delta_high_euryphilic_breadth
+  title: pH-delta-high euryphilic breadth
+  description: DOI-backed graph linking maximal pH-homeostasis flexibility
+    to a pH growth breadth exceeding ~5 pH units.
+  nodes:
+  - node_id: ph_delta_high_trait
+    label: pH delta high
+    node_type: TRAIT
+    grounding: METPO:1000478
+    description: pH growth-supporting breadth exceeding ~5 pH units.
+  - node_id: ph_delta
+    label: pH delta
+    node_type: TRAIT
+    grounding: METPO:1000232
+    description: Breadth of the growth-supporting external pH range.
+  - node_id: maximal_ph_homeostasis
+    label: maximal pH-homeostasis flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Combined proton-extrusion and Na+/H+ antiport flexibility
+      supporting growth across an extreme pH span.
+  edges:
+  - subject: maximal_ph_homeostasis
+    predicate: produces
+    object: ph_delta_high_trait
+    description: Maximal pH-homeostasis flexibility yields an extreme
+      pH-delta breadth.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2007.02.005
+      snippet: proton motive force
+      notes: Supports maximal pH-homeostasis flexibility as the basis of
+        euryphilic breadth.
+  - subject: ph_delta_high_trait
+    predicate: is a
+    object: ph_delta
+    description: pH delta high is a quantitative bin of the pH-delta
+      phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: pH homeostasis
+      notes: Supports the >5 unit breadth as a value within the pH-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840309+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking maximal
+    pH-homeostasis flexibility to the euryphilic pH-delta-high bin.
+  llm_assisted: true
