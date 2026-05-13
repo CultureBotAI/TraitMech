@@ -72,9 +72,11 @@ causal_graphs:
       that protect against very-high-temperature membrane stress.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      snippet: more unsaturated fatty acids
-      notes: Membrane-adaptation review supports specialized lipid composition
-        as the basis of extreme thermal adaptation.
+      snippet: membrane lipid composition
+      notes: Membrane-adaptation review supports membrane lipid composition
+        as the primary tunable mechanism for thermal adaptation; in
+        hyperthermophilic archaea this is realized via tetraether (GDGT)
+        monolayer membranes.
   - subject: hyperthermostable_proteins
     predicate: enables
     object: hyperthermophile_bioenergetics

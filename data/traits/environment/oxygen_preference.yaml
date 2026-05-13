@@ -42,12 +42,6 @@ causal_graphs:
     label: ambient molecular oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient O2 concentration imposed on the cell.
-  - node_id: molecular_oxygen
-    label: molecular oxygen
-    node_type: CHEMICAL
-    grounding: CHEBI:15379
-    description: O2 used by aerobes as terminal electron acceptor and
-      avoided/tolerated by anaerobes/microaerophiles.
   - node_id: aerobic_phenotype
     label: aerobic
     node_type: TRAIT
@@ -94,29 +88,30 @@ causal_graphs:
     object: oxygen_preference_trait
     description: Anaerobic is a child oxygen-preference phenotype.
     evidence:
-    - reference: DOI:10.1016/j.bbabio.2011.06.016
-      snippet: respiratory quinol:O2 oxidoreductase
-      notes: Supports the O2-use axis whose absence characterizes anaerobic
-        phenotypes.
+    - reference: PMID:21413255
+      snippet: Anaerobes, on the other hand, cannot grow in the presence of oxygen
+      notes: Supports anaerobes as the O2-avoidance setting on the
+        oxygen-preference axis.
   - subject: microaerophilic_phenotype
     predicate: is a
     object: oxygen_preference_trait
     description: Microaerophilic is a child oxygen-preference phenotype.
     evidence:
     - reference: PMID:21413255
-      snippet: aerobes require molecular oxygen
-      notes: Supports a low-O2 setting on the oxygen-preference axis as the
-        microaerophilic phenotype.
+      snippet: microaerophilic
+      notes: Supports microaerophiles as a low-O2 setting on the
+        oxygen-preference axis.
   - subject: facultative_phenotype
     predicate: is a
     object: oxygen_preference_trait
     description: Facultative oxygen preference is a child oxygen-preference
       phenotype.
     evidence:
-    - reference: DOI:10.1016/j.bbabio.2011.06.016
-      snippet: respiratory quinol:O2 oxidoreductase
-      notes: Supports facultative switching between aerobic and anaerobic
-        bioenergetics across the O2-availability axis.
+    - reference: PMID:21413255
+      snippet: facultative anaerobes
+      notes: Supports facultative organisms as a mixed-O2 setting on the
+        oxygen-preference axis, switching between aerobic and anaerobic
+        metabolism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848644+00:00'
   curator: seed_from_metpo
