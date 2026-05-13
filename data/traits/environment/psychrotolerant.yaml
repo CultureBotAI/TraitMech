@@ -16,6 +16,83 @@ evidence:
 - reference: PMID:17978227
   snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
   notes: 'Organism example: Pseudomonas guineae is described as psychrotolerant.'
+- reference: DOI:10.1038/sj.embor.7400662
+  snippet: decreased membrane fluidity
+  notes: Psychrophile review supports cold-end membrane stress as the
+    challenge that psychrotolerant facultative adaptation overcomes without
+    full psychrophile dedication.
+causal_graphs:
+- graph_id: psychrotolerant_facultative_cold_adaptation
+  title: Psychrotolerant facultative cold-adaptation mechanism
+  description: DOI-backed graph linking psychrotolerance to low-temperature
+    membrane and enzyme acclimation that does not preclude growth at
+    moderate ambient temperatures.
+  nodes:
+  - node_id: psychrotolerant_trait
+    label: psychrotolerant
+    node_type: TRAIT
+    grounding: METPO:1000618
+    description: Growth at low temperatures without an obligate low-temperature
+      preference.
+  - node_id: low_temperature
+    label: low temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient temperature below the mesophile optimum range.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical state of the cytoplasmic membrane supporting
+      transport and bioenergetics.
+  - node_id: facultative_lipid_remodeling
+    label: facultative lipid remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Cold-induced shifts in lipid composition without obligate
+      low-temperature specialization.
+  - node_id: cold_shock_response
+    label: cold-shock response
+    node_type: BIOLOGICAL_PROCESS
+    description: Cold-shock-protein induction supporting transient
+      low-temperature acclimation.
+  edges:
+  - subject: low_temperature
+    predicate: decreases
+    object: membrane_fluidity
+    description: Low temperature reduces membrane fluidity, requiring
+      compensation.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: decreased membrane fluidity
+      notes: Supports cold-end membrane stress as the physical challenge for
+        psychrotolerant growth.
+  - subject: facultative_lipid_remodeling
+    predicate: maintains
+    object: membrane_fluidity
+    description: Facultative lipid remodeling maintains workable membrane
+      fluidity at low temperature.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous adaptation as the mechanism employed under
+        cold exposure.
+  - subject: cold_shock_response
+    predicate: enables
+    object: psychrotolerant_trait
+    description: The cold-shock response enables acclimation to low temperature
+      without obligate cold dedication.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: Cold-shock proteins have also been described
+      notes: Supports cold-shock proteins as a hallmark facultative-cold
+        adaptation.
+  - subject: facultative_lipid_remodeling
+    predicate: manifests as
+    object: psychrotolerant_trait
+    description: Facultative lipid remodeling at low temperature manifests
+      the psychrotolerant trait in representative organisms.
+    evidence:
+    - reference: PMID:17978227
+      snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
+      notes: Supports the trait endpoint in a representative organism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.859611+00:00'
   curator: seed_from_metpo
@@ -26,4 +103,10 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Pseudomonas guineae organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-13T11:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking facultative cold adaptation
+    (lipid remodeling and cold-shock response) to the psychrotolerant trait.
   llm_assisted: true

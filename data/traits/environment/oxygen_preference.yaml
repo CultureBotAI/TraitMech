@@ -2,9 +2,10 @@ identifier: METPO:1000601
 label: oxygen preference
 definition: A phenotype that is relating to an organism's oxygen requirements or tolerance
   for growth.
+definition_source: PMID:21413255
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -14,9 +15,113 @@ synonyms:
 - synonym_text: metabolism
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: PMID:21413255
+  snippet: aerobes require molecular oxygen as a terminal electron acceptor
+  notes: Medical Microbiology chapter supports molecular oxygen as the
+    environmental axis defining oxygen-preference phenotypes.
+- reference: DOI:10.1016/j.bbabio.2011.06.016
+  snippet: respiratory quinol:O2 oxidoreductase
+  notes: Aerobic respiration review supports terminal oxidases as the
+    enzymatic interface between cells and ambient O2.
+causal_graphs:
+- graph_id: oxygen_preference_o2_availability_axis
+  title: Oxygen-preference O2-availability axis
+  description: DOI-backed graph linking ambient molecular-oxygen availability
+    to the four child oxygen-preference phenotypes (aerobic, anaerobic,
+    microaerophilic, facultative) that classify how organisms use or tolerate
+    O2.
+  nodes:
+  - node_id: oxygen_preference_trait
+    label: oxygen preference
+    node_type: TRAIT
+    grounding: METPO:1000601
+    description: Classification of an organism's oxygen requirements or
+      tolerance for growth.
+  - node_id: ambient_oxygen
+    label: ambient molecular oxygen
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient O2 concentration imposed on the cell.
+  - node_id: aerobic_phenotype
+    label: aerobic
+    node_type: TRAIT
+    grounding: METPO:1000602
+    description: Growth in the presence of molecular oxygen using O2 as
+      terminal electron acceptor.
+  - node_id: anaerobic_phenotype
+    label: anaerobic
+    node_type: TRAIT
+    grounding: METPO:1000603
+    description: Growth in the absence of molecular oxygen.
+  - node_id: microaerophilic_phenotype
+    label: microaerophilic
+    node_type: TRAIT
+    grounding: METPO:1000604
+    description: Growth at low molecular-oxygen concentrations.
+  - node_id: facultative_phenotype
+    label: facultative oxygen preference
+    node_type: TRAIT
+    grounding: METPO:1000612
+    description: Growth across a range of oxygen availabilities, switching
+      between aerobic and anaerobic metabolism.
+  edges:
+  - subject: ambient_oxygen
+    predicate: defines
+    object: oxygen_preference_trait
+    description: Ambient molecular-oxygen concentration is the quantitative
+      axis defining oxygen-preference phenotypes.
+    evidence:
+    - reference: PMID:21413255
+      snippet: aerobes require molecular oxygen
+      notes: Supports molecular oxygen as the descriptor axis for the
+        oxygen-preference classification.
+  - subject: aerobic_phenotype
+    predicate: is a
+    object: oxygen_preference_trait
+    description: Aerobic is a child oxygen-preference phenotype.
+    evidence:
+    - reference: PMID:21413255
+      snippet: aerobes require molecular oxygen as a terminal electron acceptor
+      notes: Supports aerobic as the O2-dependent oxygen-preference phenotype.
+  - subject: anaerobic_phenotype
+    predicate: is a
+    object: oxygen_preference_trait
+    description: Anaerobic is a child oxygen-preference phenotype.
+    evidence:
+    - reference: PMID:21413255
+      snippet: Anaerobes, on the other hand, cannot grow in the presence of oxygen
+      notes: Supports anaerobes as the O2-avoidance setting on the
+        oxygen-preference axis.
+  - subject: microaerophilic_phenotype
+    predicate: is a
+    object: oxygen_preference_trait
+    description: Microaerophilic is a child oxygen-preference phenotype.
+    evidence:
+    - reference: PMID:21413255
+      snippet: microaerophilic
+      notes: Supports microaerophiles as a low-O2 setting on the
+        oxygen-preference axis.
+  - subject: facultative_phenotype
+    predicate: is a
+    object: oxygen_preference_trait
+    description: Facultative oxygen preference is a child oxygen-preference
+      phenotype.
+    evidence:
+    - reference: PMID:21413255
+      snippet: facultative anaerobes
+      notes: Supports facultative organisms as a mixed-O2 setting on the
+        oxygen-preference axis, switching between aerobic and anaerobic
+        metabolism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848644+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing oxygen preference as the
+    O2-availability axis with child aerobic, anaerobic, microaerophilic,
+    and facultative phenotypes.
+  llm_assisted: true

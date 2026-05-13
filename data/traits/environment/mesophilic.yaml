@@ -16,6 +16,83 @@ evidence:
 - reference: PMID:23931326
   snippet: Escherichia coli, a mesophilic bacterium
   notes: 'Organism example: Escherichia coli is described as mesophilic.'
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports homoviscous membrane composition
+    matched to ambient temperature as the basis of mesophile physiology.
+causal_graphs:
+- graph_id: mesophilic_homoviscous_adaptation
+  title: Mesophilic homoviscous and enzymatic adaptation mechanism
+  description: DOI-backed graph linking mesophily to moderate ambient
+    temperature, homoviscous membrane lipid composition, mesophile enzyme
+    repertoire, and balanced growth at intermediate temperatures.
+  nodes:
+  - node_id: mesophilic_trait
+    label: mesophilic
+    node_type: TRAIT
+    grounding: METPO:1000615
+    description: Growth is favored at intermediate temperatures (~20–45 °C).
+  - node_id: moderate_temperature
+    label: moderate ambient temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient temperature in the ~20–45 °C mesophilic range.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical state of the cytoplasmic membrane supporting
+      transport and bioenergetics.
+  - node_id: homoviscous_lipid_composition
+    label: homoviscous lipid composition
+    node_type: CELLULAR_LOCALIZATION
+    description: Lipid composition tuned to maintain target membrane fluidity
+      at mesophilic temperatures.
+  - node_id: mesophile_enzyme_repertoire
+    label: mesophile enzyme repertoire
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes with peak activity in the mesophile temperature range.
+  - node_id: balanced_growth
+    label: balanced mesophilic growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Sustained growth rate at intermediate temperatures.
+  edges:
+  - subject: moderate_temperature
+    predicate: selects for
+    object: mesophilic_trait
+    description: Moderate ambient temperatures select for mesophilic physiology.
+    evidence:
+    - reference: PMID:23931326
+      snippet: Escherichia coli, a mesophilic bacterium
+      notes: Supports a representative mesophile thriving at moderate
+        temperatures.
+  - subject: homoviscous_lipid_composition
+    predicate: maintains
+    object: membrane_fluidity
+    description: Homoviscous lipid composition maintains target membrane
+      fluidity at mesophilic temperatures.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous adaptation as the mechanism setting membrane
+        fluidity.
+  - subject: mesophile_enzyme_repertoire
+    predicate: enables
+    object: balanced_growth
+    description: Mesophile enzyme repertoire enables balanced growth at
+      intermediate temperatures.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: energy transducing enzymes
+      notes: Supports temperature-tuned enzyme repertoires as the basis of
+        adapted growth.
+  - subject: balanced_growth
+    predicate: manifests as
+    object: mesophilic_trait
+    description: Balanced growth at moderate temperatures manifests the
+      mesophilic trait.
+    evidence:
+    - reference: PMID:23931326
+      snippet: Escherichia coli, a mesophilic bacterium
+      notes: Supports the trait endpoint in a representative organism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
@@ -26,4 +103,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
   changes: Added Escherichia coli organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-13T11:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking moderate ambient temperature,
+    homoviscous membrane composition, mesophile enzyme repertoire, and balanced
+    growth to the mesophilic trait.
   llm_assisted: true
