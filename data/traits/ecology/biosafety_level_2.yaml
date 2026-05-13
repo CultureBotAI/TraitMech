@@ -2,18 +2,72 @@ identifier: METPO:1001103
 label: biosafety level 2
 definition: A biosafety level that pose moderate risk and are associated with human
   diseases present in the community.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1001101
 synonyms:
 - synonym_text: '2'
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports moderate-virulence community-disease
+    pathogens (typically with available vaccines or therapies) as BSL-2
+    agents.
+causal_graphs:
+- graph_id: biosafety_level_2_moderate_hazard
+  title: BSL-2 moderate-hazard classification
+  description: DOI-backed graph linking moderate pathogen virulence and the
+    presence of effective countermeasures to BSL-2 classification.
+  nodes:
+  - node_id: bsl2_trait
+    label: biosafety level 2
+    node_type: TRAIT
+    grounding: METPO:1001103
+    description: Moderate-risk agents associated with community human diseases;
+      biosafety cabinets and PPE required.
+  - node_id: biosafety_level
+    label: biosafety level
+    node_type: TRAIT
+    grounding: METPO:1001101
+    description: Hazard-classification axis for biological agents.
+  - node_id: moderate_pathogen_hazard
+    label: moderate pathogen hazard
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathogens with established virulence in healthy adults but
+      generally treatable with available countermeasures.
+  edges:
+  - subject: moderate_pathogen_hazard
+    predicate: produces
+    object: bsl2_trait
+    description: Moderate pathogen hazard with available countermeasures yields
+      BSL-2 classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports moderate virulence with treatability as the basis of
+        BSL-2 classification.
+  - subject: bsl2_trait
+    predicate: is a
+    object: biosafety_level
+    description: BSL-2 is a member of the biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-2 as a member of the biosafety-level classification.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.933068+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking moderate pathogen hazard to
+    BSL-2 classification.
+  llm_assisted: true

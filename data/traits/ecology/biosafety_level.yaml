@@ -2,18 +2,151 @@ identifier: METPO:1001101
 label: biosafety level
 definition: A quality that categorizes biological agents according to their hazard
   level and required containment measures.
+definition_source: DOI:10.1146/annurev.micro.62.081307.162938
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000188
 synonyms:
 - synonym_text: Safety information.risk assessment.biosafety level
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev.micro.62.081307.162938
+  snippet: virulence factors
+  notes: Virulence-factor review supports pathogen virulence characteristics
+    (transmissibility, severity, treatability) as the biological inputs
+    underlying biosafety-level classification.
+- reference: DOI:10.1038/nrmicro1592
+  snippet: secretion systems
+  notes: Secretion-systems review supports effector-mediated host damage as
+    a virulence axis informing hazard assessment.
+causal_graphs:
+- graph_id: biosafety_level_hazard_classification
+  title: Biosafety-level hazard-classification axis
+  description: DOI-backed graph framing biosafety level as a hazard-based
+    classification driven by pathogen transmissibility, disease severity, and
+    availability of countermeasures, with `is a` edges to the BSL-1 through
+    BSL-5 child classifications.
+  nodes:
+  - node_id: biosafety_level_trait
+    label: biosafety level
+    node_type: TRAIT
+    grounding: METPO:1001101
+    description: Classification of a biological agent's hazard level and
+      required containment.
+  - node_id: pathogen_hazard_properties
+    label: pathogen hazard properties
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathogen transmissibility, disease severity, and availability
+      of vaccines or therapeutics that together determine biosafety
+      classification.
+  - node_id: containment_requirements
+    label: containment requirements
+    node_type: BIOLOGICAL_PROCESS
+    description: Laboratory practices, equipment, and facility features
+      mandated for safe handling of the agent.
+  - node_id: bsl1
+    label: biosafety level 1
+    node_type: TRAIT
+    grounding: METPO:1001102
+    description: Agents posing minimal hazard; standard laboratory practices.
+  - node_id: bsl2
+    label: biosafety level 2
+    node_type: TRAIT
+    grounding: METPO:1001103
+    description: Agents posing moderate risk; biosafety cabinets and PPE
+      required.
+  - node_id: bsl3
+    label: biosafety level 3
+    node_type: TRAIT
+    grounding: METPO:1001104
+    description: Agents that can cause serious or potentially lethal disease;
+      controlled-access containment.
+  - node_id: bsl4
+    label: biosafety level 4
+    node_type: TRAIT
+    grounding: METPO:1001105
+    description: Extreme-risk agents; maximum containment (positive-pressure
+      suits, dedicated facilities).
+  - node_id: bsl5
+    label: biosafety level 5
+    node_type: TRAIT
+    grounding: METPO:1001106
+    description: Proposed enhanced classification beyond BSL-4.
+  edges:
+  - subject: pathogen_hazard_properties
+    predicate: determines
+    object: biosafety_level_trait
+    description: Pathogen transmissibility, severity, and treatability jointly
+      determine biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports pathogen virulence properties as the biological inputs
+        for hazard-level classification.
+  - subject: biosafety_level_trait
+    predicate: mandates
+    object: containment_requirements
+    description: Each biosafety level mandates specific containment practices
+      and engineering controls.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports pathogen virulence as the basis for graduated containment
+        requirements.
+  - subject: bsl1
+    predicate: is a
+    object: biosafety_level_trait
+    description: BSL-1 is a biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-1 as a member of the hazard-classification axis.
+  - subject: bsl2
+    predicate: is a
+    object: biosafety_level_trait
+    description: BSL-2 is a biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-2 as a member of the hazard-classification axis.
+  - subject: bsl3
+    predicate: is a
+    object: biosafety_level_trait
+    description: BSL-3 is a biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-3 as a member of the hazard-classification axis.
+  - subject: bsl4
+    predicate: is a
+    object: biosafety_level_trait
+    description: BSL-4 is a biosafety-level classification.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-4 as a member of the hazard-classification axis.
+  - subject: bsl5
+    predicate: is a
+    object: biosafety_level_trait
+    description: BSL-5 is a proposed biosafety-level classification beyond BSL-4.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports BSL-5 as a proposed extension of the hazard-classification
+        axis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.931935+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:30:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph framing biosafety level as a
+    hazard-classification axis driven by pathogen virulence properties, with
+    is-a edges to the five BSL child classifications.
+  llm_assisted: true
