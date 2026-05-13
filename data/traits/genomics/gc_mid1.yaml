@@ -22,9 +22,9 @@ evidence:
 causal_graphs:
 - graph_id: gc_mid1_high_gc_bin
   title: GC-mid1 (METPO >66.3%) high-GC bin
-  description: DOI-backed graph linking strong GC-biased gene conversion and
-    GC-favoring selection to a GC content above ~66.3% (the threshold encoded
-    by the METPO synonym GC_>66.3 on this record).
+  description: DOI-backed graph linking strong GC-biased gene conversion to a
+    GC content above ~66.3% (the threshold encoded by the METPO synonym
+    GC_>66.3 on this record).
   nodes:
   - node_id: gc_mid1_trait
     label: GC mid1

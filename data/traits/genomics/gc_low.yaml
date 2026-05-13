@@ -22,9 +22,9 @@ evidence:
 causal_graphs:
 - graph_id: gc_low_mid_low_gc_bin
   title: GC-low (METPO 42.65–57.0%) mid-low GC bin
-  description: DOI-backed graph linking moderate AT-bias and weak GC-biased
-    gene conversion to a GC content of ~42.65–57.0% (the threshold encoded by
-    the METPO synonym GC_42.65_57.0 on this record).
+  description: DOI-backed graph linking moderate mutation bias to a GC
+    content of ~42.65–57.0% (the threshold encoded by the METPO synonym
+    GC_42.65_57.0 on this record).
   nodes:
   - node_id: gc_low_trait
     label: GC low
@@ -39,8 +39,8 @@ causal_graphs:
   - node_id: moderate_mutation_bias
     label: moderate mutation bias
     node_type: BIOLOGICAL_PROCESS
-    description: Modest AT-bias combined with weak GC-biased gene conversion
-      yielding mid-range GC composition.
+    description: Modest mutation-bias balance between AT- and GC-favoring
+      pressures yielding mid-range GC composition.
   edges:
   - subject: moderate_mutation_bias
     predicate: produces
