@@ -1,17 +1,74 @@
 identifier: METPO:1000429
 label: GC low
+definition: A GC-content phenotype with genome-wide GC composition between
+  approximately 42.65% and 57.0% (the METPO `GC_42.65_57.0` bin; note that the
+  upstream label 'low' does not match this mid-range numeric threshold, but the
+  synonym is preserved as the authoritative bin definition).
+definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000127
 synonyms:
 - synonym_text: GC_42.65_57.0
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1038/nrg2358
+  snippet: GC content
+  notes: Bacterial-genome review supports the mid-range GC content as a
+    distinct genomic-composition phenotype.
+causal_graphs:
+- graph_id: gc_low_mid_low_gc_bin
+  title: GC-low (METPO 42.65–57.0%) mid-low GC bin
+  description: DOI-backed graph linking moderate mutation bias to a GC
+    content of ~42.65–57.0% (the threshold encoded by the METPO synonym
+    GC_42.65_57.0 on this record).
+  nodes:
+  - node_id: gc_low_trait
+    label: GC low
+    node_type: TRAIT
+    grounding: METPO:1000429
+    description: GC content ~42.65–57.0% (per METPO synonym GC_42.65_57.0).
+  - node_id: gc_content
+    label: GC content
+    node_type: TRAIT
+    grounding: METPO:1000127
+    description: Percentage of guanine and cytosine nucleotides in genomic DNA.
+  - node_id: moderate_mutation_bias
+    label: moderate mutation bias
+    node_type: BIOLOGICAL_PROCESS
+    description: Modest mutation-bias balance between AT- and GC-favoring
+      pressures yielding mid-range GC composition.
+  edges:
+  - subject: moderate_mutation_bias
+    predicate: produces
+    object: gc_low_trait
+    description: Moderate mutation-bias balance yields mid-range GC composition.
+    evidence:
+    - reference: DOI:10.1186/1471-2148-10-374
+      snippet: mutation bias
+      notes: Supports mutation-bias balance as the basis of mid-range GC bins.
+  - subject: gc_low_trait
+    predicate: is a
+    object: gc_content
+    description: GC low is a quantitative bin of the GC-content phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrg2358
+      snippet: GC content
+      notes: Supports the 42.65–57.0% bin as a value within the GC-content
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition (derived from METPO synonym
+    GC_42.65_57.0) and causal graph linking moderate mutation bias to this
+    GC bin. Documented the upstream label-vs-threshold inconsistency.
+  llm_assisted: true

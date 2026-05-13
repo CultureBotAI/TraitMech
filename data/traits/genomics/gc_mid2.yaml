@@ -1,17 +1,74 @@
 identifier: METPO:1000431
 label: GC mid2
+definition: A GC-content phenotype with genome-wide GC composition between
+  approximately 57.0% and 66.3% (the METPO `GC_57.0_66.3` bin).
+definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000127
 synonyms:
 - synonym_text: GC_57.0_66.3
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1186/1471-2148-10-374
+  snippet: GC-biased gene conversion
+  notes: Bacterial-GC-content evolution review supports moderate GC-biased
+    gene conversion as the mechanism producing mid-high GC content.
+causal_graphs:
+- graph_id: gc_mid2_mid_high_gc_bin
+  title: GC-mid2 (METPO 57.0–66.3%) mid-high GC bin
+  description: DOI-backed graph linking moderate GC-biased gene conversion to
+    a GC content of ~57.0–66.3% (the threshold encoded by the METPO synonym
+    GC_57.0_66.3 on this record).
+  nodes:
+  - node_id: gc_mid2_trait
+    label: GC mid2
+    node_type: TRAIT
+    grounding: METPO:1000431
+    description: GC content ~57.0–66.3% (per METPO synonym GC_57.0_66.3).
+  - node_id: gc_content
+    label: GC content
+    node_type: TRAIT
+    grounding: METPO:1000127
+    description: Percentage of guanine and cytosine nucleotides in genomic DNA.
+  - node_id: moderate_gbgc
+    label: moderate GC-biased gene conversion
+    node_type: BIOLOGICAL_PROCESS
+    description: Recombination-associated GC-favoring activity sufficient to
+      elevate GC content into the mid-high range.
+  edges:
+  - subject: moderate_gbgc
+    predicate: produces
+    object: gc_mid2_trait
+    description: Moderate GC-biased gene conversion yields mid-high genome-wide
+      GC composition.
+    evidence:
+    - reference: DOI:10.1186/1471-2148-10-374
+      snippet: GC-biased gene conversion
+      notes: Supports GC-biased gene conversion as the driver of mid-high GC
+        bins.
+  - subject: gc_mid2_trait
+    predicate: is a
+    object: gc_content
+    description: GC mid2 is a quantitative bin of the GC-content phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrg2358
+      snippet: GC content
+      notes: Supports the 57.0–66.3% bin as a value within the GC-content
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817814+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T13:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition (derived from METPO synonym
+    GC_57.0_66.3) and causal graph linking moderate GC-biased gene conversion
+    to this GC bin.
+  llm_assisted: true
