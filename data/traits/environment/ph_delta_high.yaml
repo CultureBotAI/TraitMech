@@ -1,7 +1,7 @@
 identifier: METPO:1000478
 label: pH delta high
-definition: A pH delta phenotype with a growth-supporting pH breadth above
-  approximately 5 pH units, characteristic of euryphilic pH-tolerance physiology.
+definition: A pH delta phenotype with a growth-supporting pH breadth of
+  approximately 5–9 pH units, characteristic of euryphilic pH-tolerance physiology.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -25,13 +25,13 @@ causal_graphs:
 - graph_id: ph_delta_high_euryphilic_breadth
   title: pH-delta-high euryphilic breadth
   description: DOI-backed graph linking maximal pH-homeostasis flexibility
-    to a pH growth breadth exceeding ~5 pH units.
+    to a pH growth breadth of approximately 5–9 pH units.
   nodes:
   - node_id: ph_delta_high_trait
     label: pH delta high
     node_type: TRAIT
     grounding: METPO:1000478
-    description: pH growth-supporting breadth exceeding ~5 pH units.
+    description: pH growth-supporting breadth approximately 5–9 pH units.
   - node_id: ph_delta
     label: pH delta
     node_type: TRAIT
@@ -61,7 +61,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
-      notes: Supports the >5 unit breadth as a value within the pH-delta
+      notes: Supports the 5–9 unit breadth as a value within the pH-delta
         distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840309+00:00'
