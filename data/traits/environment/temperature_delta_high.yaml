@@ -1,17 +1,79 @@
 identifier: METPO:1000487
 label: temperature delta high
+definition: A temperature delta phenotype with a growth-supporting temperature
+  breadth above approximately 30 °C, characteristic of extreme-eurythermal
+  physiology.
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000303
 synonyms:
 - synonym_text: Td_>30
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports very broad homoviscous remodeling
+    capacity as the basis of extreme-eurythermal physiology.
+- reference: DOI:10.1128/MMBR.65.1.1-43.2001
+  snippet: resistant to irreversible inactivation at high temperatures
+  notes: Thermostable-protein review supports robust thermostability as the
+    basis of extending tolerance beyond standard mesophile ranges.
+causal_graphs:
+- graph_id: temperature_delta_high_eurythermal
+  title: Temperature-delta-high eurythermal breadth
+  description: DOI-backed graph linking maximal thermal-adaptation flexibility
+    to a temperature growth breadth above 30 °C.
+  nodes:
+  - node_id: temperature_delta_high_trait
+    label: temperature delta high
+    node_type: TRAIT
+    grounding: METPO:1000487
+    description: Temperature growth-supporting breadth above ~30 °C.
+  - node_id: temperature_delta
+    label: temperature delta
+    node_type: TRAIT
+    grounding: METPO:1000303
+    description: Breadth of the growth-supporting ambient-temperature range.
+  - node_id: maximal_thermal_adaptation
+    label: maximal thermal-adaptation flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Combined membrane remodeling and protein-thermostability
+      capacity supporting growth across an extreme temperature span.
+  edges:
+  - subject: maximal_thermal_adaptation
+    predicate: produces
+    object: temperature_delta_high_trait
+    description: Maximal thermal-adaptation flexibility yields an extreme
+      temperature-delta breadth.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Supports maximal thermal-adaptation as the basis of extreme
+        eurythermal breadth.
+  - subject: temperature_delta_high_trait
+    predicate: is a
+    object: temperature_delta
+    description: Temperature delta high is a quantitative bin of the
+      temperature-delta phenotype.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports the >30 °C breadth as a value within the
+        temperature-delta distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845441+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking maximal
+    thermal-adaptation flexibility to the eurythermal temperature-delta-high
+    bin.
+  llm_assisted: true

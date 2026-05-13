@@ -1,17 +1,120 @@
 identifier: METPO:1000304
 label: temperature optimum
-definition: A temperature phenotype with numerical limits that represents the conditions
-  at which an organism exhibits the most efficient growth and reproduction.
+definition: A temperature phenotype with numerical limits that represents the
+  ambient-temperature conditions at which an organism exhibits the most efficient
+  growth and reproduction.
+definition_source: DOI:10.1016/s0300-9629(97)00003-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000533
 - METPO:1000536
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.1016/s0300-9629(97)00003-0
+  snippet: adapted to environments of high temperature
+  notes: Thermophile-adaptation review supports the ambient temperature at
+    which membrane and enzyme function are best maintained as the operational
+    definition of temperature optimum.
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports homoviscous membrane composition
+    as a key mechanism setting the temperature optimum.
+causal_graphs:
+- graph_id: temperature_optimum_balanced_adaptation
+  title: Temperature-optimum balanced adaptation
+  description: DOI-backed graph linking the ambient temperature at which
+    membrane fluidity, protein folding, and enzyme kinetics jointly maintain
+    maximal growth to the temperature-optimum phenotype.
+  nodes:
+  - node_id: temperature_optimum_trait
+    label: temperature optimum
+    node_type: TRAIT
+    grounding: METPO:1000304
+    description: Ambient temperature at which growth rate is maximal.
+  - node_id: ambient_temperature
+    label: ambient temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient growth temperature imposed on the cell.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical state of the cytoplasmic membrane supporting transport
+      and bioenergetics.
+  - node_id: homoviscous_lipid_composition
+    label: homoviscous lipid composition
+    node_type: CELLULAR_LOCALIZATION
+    description: Lipid composition tuned to maintain a target fluidity at the
+      growth temperature.
+  - node_id: enzyme_kinetics
+    label: enzyme kinetics
+    node_type: BIOLOGICAL_PROCESS
+    description: Temperature dependence of enzyme turnover for biosynthesis and
+      energy conservation.
+  - node_id: maximal_growth_rate
+    label: maximal growth rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Peak specific growth rate achieved at the optimal temperature.
+  edges:
+  - subject: ambient_temperature
+    predicate: influences
+    object: membrane_fluidity
+    description: Ambient temperature sets a target membrane fluidity that the
+      cell must match.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports temperature as the input to membrane-fluidity adaptation.
+  - subject: homoviscous_lipid_composition
+    predicate: maintains
+    object: membrane_fluidity
+    description: Homoviscous lipid composition maintains target membrane
+      fluidity at the optimum temperature.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous adaptation as the mechanism setting membrane
+        fluidity.
+  - subject: ambient_temperature
+    predicate: influences
+    object: enzyme_kinetics
+    description: Ambient temperature scales enzyme turnover rates across the
+      cellular network.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: energy transducing enzymes
+      notes: Supports temperature as the determinant of enzyme function in
+        adapted organisms.
+  - subject: enzyme_kinetics
+    predicate: enables
+    object: maximal_growth_rate
+    description: Adequately fast enzyme kinetics enable peak growth at the
+      optimal temperature.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports balanced enzyme kinetics at adapted temperature as the
+        basis of peak growth.
+  - subject: maximal_growth_rate
+    predicate: manifests as
+    object: temperature_optimum_trait
+    description: The ambient temperature supporting peak growth manifests the
+      temperature-optimum phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.813650+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking ambient temperature,
+    homoviscous membrane adaptation, enzyme kinetics, and maximal growth to
+    the temperature-optimum phenotype.
+  llm_assisted: true

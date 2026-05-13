@@ -1,14 +1,102 @@
 identifier: METPO:1000306
 label: temperature range
+definition: A temperature phenotype with numerical limits that bounds the minimum
+  and maximum ambient temperatures supporting growth of an organism.
+definition_source: DOI:10.1016/s0300-9629(97)00003-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000533
 - METPO:1000535
+evidence:
+- reference: DOI:10.1016/s0300-9629(97)00003-0
+  snippet: adapted to environments of high temperature
+  notes: Thermophile-adaptation review supports the bounded ambient-temperature
+    span over which membrane, enzyme, and bioenergetic adaptations sustain
+    growth as the basis of the temperature-range phenotype.
+- reference: DOI:10.1038/sj.embor.7400662
+  snippet: decreased membrane fluidity
+  notes: Psychrophile review supports cold-end membrane stress as a lower-bound
+    growth constraint that low-temperature tolerance must overcome.
+causal_graphs:
+- graph_id: temperature_range_bounded_adaptation
+  title: Temperature-range bounded thermal adaptation
+  description: DOI-backed graph linking cold- and heat-tolerance to the bounded
+    span of growth-supporting ambient temperatures.
+  nodes:
+  - node_id: temperature_range_trait
+    label: temperature range
+    node_type: TRAIT
+    grounding: METPO:1000306
+    description: Span of ambient temperatures supporting growth.
+  - node_id: ambient_temperature
+    label: ambient temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient growth temperature imposed on the cell.
+  - node_id: cold_tolerance
+    label: cold tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain membrane fluidity and enzyme function at
+      low ambient temperature.
+  - node_id: heat_tolerance
+    label: heat tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to maintain protein folding and membrane integrity at
+      high ambient temperature.
+  - node_id: bounded_growth_window
+    label: bounded temperature growth window
+    node_type: BIOLOGICAL_PROCESS
+    description: Span of ambient temperatures between the minimum and maximum
+      that support growth.
+  edges:
+  - subject: ambient_temperature
+    predicate: defines
+    object: bounded_growth_window
+    description: Ambient temperature defines the axis over which the growth
+      window is bounded.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports ambient temperature as the axis bounding the growth window.
+  - subject: cold_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Cold tolerance sets the lower bound of the temperature growth
+      window.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      snippet: decreased membrane fluidity
+      notes: Supports cold-end membrane and enzyme adaptation as the lower-bound
+        mechanism.
+  - subject: heat_tolerance
+    predicate: sets
+    object: bounded_growth_window
+    description: Heat tolerance sets the upper bound of the temperature growth
+      window.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      snippet: resistant to irreversible inactivation at high temperatures
+      notes: Supports protein-thermostability physiology as the upper-bound
+        mechanism.
+  - subject: bounded_growth_window
+    predicate: manifests as
+    object: temperature_range_trait
+    description: The bounded temperature growth window manifests the
+      temperature-range phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814231+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking cold- and heat-tolerance to
+    the bounded temperature-range phenotype.
+  llm_assisted: true

@@ -1,8 +1,11 @@
 identifier: METPO:1000443
 label: temperature optimum mid1
+definition: A temperature optimum phenotype with the best-growth ambient temperature
+  between approximately 22 and 27 °C, characteristic of mesophilic physiology.
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000304
 synonyms:
@@ -12,9 +15,74 @@ synonyms:
 - synonym_text: TO_22_to_27
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports moderate-temperature optima
+    matched by homoviscous lipid composition as the mesophile setpoint.
+causal_graphs:
+- graph_id: temperature_optimum_mid1_lower_mesophile
+  title: Temperature-optimum-mid1 lower-mesophile setpoint
+  description: DOI-backed graph linking modest membrane and enzyme adaptation
+    at moderate ambient temperature to a temperature optimum between 22 and
+    27 °C.
+  nodes:
+  - node_id: temperature_optimum_mid1_trait
+    label: temperature optimum mid1
+    node_type: TRAIT
+    grounding: METPO:1000443
+    description: Temperature optimum approximately 22–27 °C.
+  - node_id: temperature_optimum
+    label: temperature optimum
+    node_type: TRAIT
+    grounding: METPO:1000304
+    description: Ambient temperature supporting maximal growth.
+  - node_id: lower_mesophilic_environment
+    label: lower-mesophilic environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Habitat ambient temperature in the 22–27 °C range.
+  - node_id: mesophile_adaptation
+    label: mesophile membrane and enzyme adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Membrane lipid composition and enzyme repertoire tuned for
+      moderate ambient temperatures.
+  edges:
+  - subject: lower_mesophilic_environment
+    predicate: engages
+    object: mesophile_adaptation
+    description: Lower-mesophilic environments engage moderate adaptation
+      programs.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports moderate-temperature membrane homeoviscous adaptation.
+  - subject: mesophile_adaptation
+    predicate: produces
+    object: temperature_optimum_mid1_trait
+    description: Mesophile adaptation yields a 22–27 °C optimum.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports the 22–27 °C optimum as the lower-mesophile outcome.
+  - subject: temperature_optimum_mid1_trait
+    predicate: is a
+    object: temperature_optimum
+    description: Temperature optimum mid1 is a quantitative bin of the
+      temperature-optimum phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the 22–27 °C optimum as a value within the
+        temperature-optimum distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.819857+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking mesophile
+    membrane and enzyme adaptation to the temperature-optimum-mid1 bin.
+  llm_assisted: true

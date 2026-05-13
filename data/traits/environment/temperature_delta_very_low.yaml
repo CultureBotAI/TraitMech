@@ -1,17 +1,75 @@
 identifier: METPO:1000483
 label: temperature delta very low
+definition: A temperature delta phenotype with a growth-supporting temperature
+  breadth of approximately 1–5 °C, characteristic of stenothermal physiology.
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000303
 synonyms:
 - synonym_text: Td_1_5
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports very narrow thermal-tolerance
+    breadths as the stenothermal phenotype with limited membrane-remodeling
+    flexibility.
+causal_graphs:
+- graph_id: temperature_delta_very_low_stenothermal
+  title: Temperature-delta-very-low stenothermal breadth
+  description: DOI-backed graph linking very limited thermal-adaptation
+    flexibility to a 1–5 °C temperature growth breadth.
+  nodes:
+  - node_id: temperature_delta_very_low_trait
+    label: temperature delta very low
+    node_type: TRAIT
+    grounding: METPO:1000483
+    description: Temperature growth-supporting breadth approximately 1–5 °C.
+  - node_id: temperature_delta
+    label: temperature delta
+    node_type: TRAIT
+    grounding: METPO:1000303
+    description: Breadth of the growth-supporting ambient-temperature range.
+  - node_id: very_limited_thermal_adaptation
+    label: very limited thermal-adaptation flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Narrow capacity to remodel membrane lipid composition and
+      enzyme repertoire across temperature shifts.
+  edges:
+  - subject: very_limited_thermal_adaptation
+    predicate: produces
+    object: temperature_delta_very_low_trait
+    description: Very limited thermal-adaptation flexibility yields a 1–5 °C
+      temperature-delta breadth.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports very limited remodeling flexibility as the basis of
+        stenothermal breadth.
+  - subject: temperature_delta_very_low_trait
+    predicate: is a
+    object: temperature_delta
+    description: Temperature delta very low is a quantitative bin of the
+      temperature-delta phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the 1–5 °C breadth as a value within the temperature-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.843238+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking very limited
+    thermal-adaptation flexibility to the stenothermal temperature-delta-very-low
+    bin.
+  llm_assisted: true

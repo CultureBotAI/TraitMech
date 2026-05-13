@@ -1,8 +1,12 @@
 identifier: METPO:1000450
 label: temperature range mid1
+definition: A temperature range phenotype in which the growth-supporting ambient
+  temperature range spans approximately 22–27 °C, characteristic of mesophilic
+  physiology.
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000306
 synonyms:
@@ -12,9 +16,61 @@ synonyms:
 - synonym_text: TR_22_to_27
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports the 22–27 °C range as a lower
+    mesophile growth range.
+causal_graphs:
+- graph_id: temperature_range_mid1_lower_mesophile
+  title: Temperature-range-mid1 lower-mesophile range
+  description: DOI-backed graph linking lower-mesophile adaptation to a
+    temperature growth range of approximately 22–27 °C.
+  nodes:
+  - node_id: temperature_range_mid1_trait
+    label: temperature range mid1
+    node_type: TRAIT
+    grounding: METPO:1000450
+    description: Temperature growth-supporting range approximately 22–27 °C.
+  - node_id: temperature_range
+    label: temperature range
+    node_type: TRAIT
+    grounding: METPO:1000306
+    description: Span of ambient temperatures supporting growth.
+  - node_id: lower_mesophile_adaptation
+    label: lower-mesophile adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Mesophile membrane and enzyme adaptation sustaining growth
+      at modest ambient temperatures.
+  edges:
+  - subject: lower_mesophile_adaptation
+    predicate: enables
+    object: temperature_range_mid1_trait
+    description: Lower-mesophile adaptation enables growth across 22–27 °C.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous mesophile adaptation as the lower-mesophile
+        range mechanism.
+  - subject: temperature_range_mid1_trait
+    predicate: is a
+    object: temperature_range
+    description: Temperature range mid1 is a quantitative bin of the
+      temperature-range phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the 22–27 °C range as a value within the temperature-range
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.823745+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking lower-mesophile
+    adaptation to the temperature-range-mid1 bin.
+  llm_assisted: true

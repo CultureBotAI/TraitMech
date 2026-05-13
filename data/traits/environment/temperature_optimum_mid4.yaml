@@ -1,8 +1,12 @@
 identifier: METPO:1000446
 label: temperature optimum mid4
+definition: A temperature optimum phenotype with the best-growth ambient temperature
+  between approximately 34 and 40 °C, characteristic of warm-mesophilic physiology
+  (including many mammalian host-associated bacteria).
+definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000304
 synonyms:
@@ -12,9 +16,74 @@ synonyms:
 - synonym_text: TO_34_to_40
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1146/annurev-micro-091313-103612
+  snippet: more unsaturated fatty acids
+  notes: Membrane-adaptation review supports a 34–40 °C optimum as the
+    warm-mesophile (mammalian-host) setpoint.
+causal_graphs:
+- graph_id: temperature_optimum_mid4_warm_mesophile
+  title: Temperature-optimum-mid4 warm-mesophile setpoint
+  description: DOI-backed graph linking warm-mesophile membrane and enzyme
+    adaptation to a temperature optimum between 34 and 40 °C.
+  nodes:
+  - node_id: temperature_optimum_mid4_trait
+    label: temperature optimum mid4
+    node_type: TRAIT
+    grounding: METPO:1000446
+    description: Temperature optimum approximately 34–40 °C.
+  - node_id: temperature_optimum
+    label: temperature optimum
+    node_type: TRAIT
+    grounding: METPO:1000304
+    description: Ambient temperature supporting maximal growth.
+  - node_id: warm_environment
+    label: warm host-associated environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Habitat ambient temperature in the 34–40 °C range, typical of
+      many mammalian hosts.
+  - node_id: warm_mesophile_adaptation
+    label: warm-mesophile adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Membrane and enzyme repertoires tuned for warm host-body
+      temperatures.
+  edges:
+  - subject: warm_environment
+    predicate: engages
+    object: warm_mesophile_adaptation
+    description: Warm host-associated environments engage warm-mesophile
+      adaptation.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports homoviscous adaptation at warm-mesophilic temperatures.
+  - subject: warm_mesophile_adaptation
+    predicate: produces
+    object: temperature_optimum_mid4_trait
+    description: Warm-mesophile adaptation yields a 34–40 °C optimum.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: more unsaturated fatty acids
+      notes: Supports the 34–40 °C optimum as the warm-mesophile outcome.
+  - subject: temperature_optimum_mid4_trait
+    predicate: is a
+    object: temperature_optimum
+    description: Temperature optimum mid4 is a quantitative bin of the
+      temperature-optimum phenotype.
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: adapted to environments of high temperature
+      notes: Supports the 34–40 °C optimum as a value within the
+        temperature-optimum distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.821571+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-13T11:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking warm-mesophile
+    adaptation to the temperature-optimum-mid4 bin.
+  llm_assisted: true
