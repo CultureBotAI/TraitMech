@@ -1,8 +1,12 @@
 identifier: METPO:1000465
 label: NaCl optimum low
+definition: A NaCl optimum phenotype with the best-growth NaCl concentration at or
+  below approximately 1% (w/v), corresponding to non-halophilic or halotolerant
+  physiology.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000333
 synonyms:
@@ -15,9 +19,74 @@ synonyms:
 - synonym_text: NaO_<=1
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: optimal NaCl
+  notes: Osmoadaptation review supports low-salt optima as the non-halophilic /
+    halotolerant end of the halophily axis.
+causal_graphs:
+- graph_id: nacl_optimum_low_non_halophile_setpoint
+  title: NaCl-optimum-low non-halophile setpoint
+  description: DOI-backed graph linking minimal osmoadaptive load at low ambient
+    NaCl to a low NaCl-optimum (≤1% w/v) consistent with non-halophilic or
+    halotolerant physiology.
+  nodes:
+  - node_id: nacl_optimum_low_trait
+    label: NaCl optimum low
+    node_type: TRAIT
+    grounding: METPO:1000465
+    description: NaCl optimum at or below ~1% w/v.
+  - node_id: nacl_optimum
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration supporting maximal growth.
+  - node_id: low_ambient_nacl
+    label: low ambient NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Freshwater-like or mildly saline external NaCl ≤ ~1% w/v.
+  - node_id: minimal_osmoadaptive_load
+    label: minimal osmoadaptive load
+    node_type: BIOLOGICAL_PROCESS
+    description: Low demand on osmolyte and ion-transport machinery at low salt.
+  edges:
+  - subject: low_ambient_nacl
+    predicate: imposes
+    object: minimal_osmoadaptive_load
+    description: Low ambient NaCl imposes minimal osmoadaptive demand on the cell.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports low-salt environments as the context for non-halophilic
+        optima.
+  - subject: minimal_osmoadaptive_load
+    predicate: produces
+    object: nacl_optimum_low_trait
+    description: Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports low-salt optima as the non-halophile / halotolerant outcome.
+  - subject: nacl_optimum_low_trait
+    predicate: is a
+    object: nacl_optimum
+    description: NaCl optimum low is a quantitative bin of the NaCl-optimum
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports low-salt optima as a value within the NaCl-optimum
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.833539+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking minimal
+    osmoadaptive load at low ambient NaCl to the non-halophile / halotolerant
+    NaCl-optimum bin.
+  llm_assisted: true

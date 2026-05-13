@@ -1,17 +1,73 @@
 identifier: METPO:1000481
 label: NaCl delta mid2
+definition: A NaCl delta phenotype with a growth-supporting NaCl breadth of
+  approximately 3–8% (w/v), characteristic of organisms with broad salinity
+  tolerance.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000335
 synonyms:
 - synonym_text: Nad_3_8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports broad osmoadaptive breadths as the
+    halotolerant / moderately euryhaline phenotype.
+causal_graphs:
+- graph_id: nacl_delta_mid2_broad_breadth
+  title: NaCl-delta-mid2 broad-breadth osmoadaptation
+  description: DOI-backed graph linking robust osmoadaptive flexibility to a
+    3–8% (w/v) NaCl growth breadth.
+  nodes:
+  - node_id: nacl_delta_mid2_trait
+    label: NaCl delta mid2
+    node_type: TRAIT
+    grounding: METPO:1000481
+    description: NaCl growth-supporting breadth approximately 3–8% w/v.
+  - node_id: nacl_delta
+    label: NaCl delta
+    node_type: TRAIT
+    grounding: METPO:1000335
+    description: Breadth of the growth-supporting NaCl range.
+  - node_id: robust_osmoadaptive_flexibility
+    label: robust osmoadaptive flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Strong osmolyte-remodeling capacity supporting growth across a
+      broad salinity span.
+  edges:
+  - subject: robust_osmoadaptive_flexibility
+    predicate: produces
+    object: nacl_delta_mid2_trait
+    description: Robust osmoadaptive flexibility yields a 3–8% NaCl-delta breadth.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports robust osmoadaptive flexibility as the basis of a broad
+        breadth.
+  - subject: nacl_delta_mid2_trait
+    predicate: is a
+    object: nacl_delta
+    description: NaCl delta mid2 is a quantitative bin of the NaCl-delta
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the 3–8% breadth as a value within the NaCl-delta
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842087+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking robust
+    osmoadaptive flexibility to the broad-breadth NaCl-delta bin.
+  llm_assisted: true

@@ -1,8 +1,11 @@
 identifier: METPO:1000468
 label: NaCl optimum high
+definition: A NaCl optimum phenotype with the best-growth NaCl concentration above
+  approximately 8% (w/v), corresponding to extreme-halophile physiology.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000333
 synonyms:
@@ -12,9 +15,77 @@ synonyms:
 - synonym_text: NaO_>8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: extreme halophile
+  notes: Osmoadaptation review supports >8% NaCl optimum as the extreme-halophile
+    category.
+- reference: DOI:10.1186/1746-1448-4-2
+  snippet: KCl accumulating Halobacterium salinarum
+  notes: Saline-Systems review supports the salt-in (intracellular KCl) strategy
+    as the mechanism for extreme-halophile growth.
+causal_graphs:
+- graph_id: nacl_optimum_high_extreme_halophile
+  title: NaCl-optimum-high extreme-halophile setpoint
+  description: DOI-backed graph linking salt-in ion-accumulation strategy under
+    hypersaline NaCl to a >8% (w/v) NaCl-optimum (extreme halophile).
+  nodes:
+  - node_id: nacl_optimum_high_trait
+    label: NaCl optimum high
+    node_type: TRAIT
+    grounding: METPO:1000468
+    description: NaCl optimum exceeding ~8% w/v.
+  - node_id: nacl_optimum
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration supporting maximal growth.
+  - node_id: hypersaline_nacl
+    label: hypersaline NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External NaCl above ~8% w/v, typical of brines and salt lakes.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular K+ accumulation balancing high external NaCl
+      osmotic activity.
+  edges:
+  - subject: hypersaline_nacl
+    predicate: selects for
+    object: salt_in_strategy
+    description: Hypersaline conditions select for intracellular ion-accumulation
+      osmoadaptation.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: KCl accumulating Halobacterium salinarum
+      notes: Supports the salt-in strategy in extreme-halophile lineages.
+  - subject: salt_in_strategy
+    predicate: produces
+    object: nacl_optimum_high_trait
+    description: Salt-in ion accumulation yields a >8% NaCl-optimum setpoint.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: extreme halophile
+      notes: Supports the >8% optimum as the extreme-halophile outcome.
+  - subject: nacl_optimum_high_trait
+    predicate: is a
+    object: nacl_optimum
+    description: NaCl optimum high is a quantitative bin of the NaCl-optimum
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports >8% optimum as a value within the NaCl-optimum distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835295+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking salt-in
+    ion-accumulation strategy under hypersaline NaCl to the extreme-halophile
+    NaCl-optimum bin.
+  llm_assisted: true

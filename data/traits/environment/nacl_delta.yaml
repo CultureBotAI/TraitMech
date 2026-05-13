@@ -1,14 +1,86 @@
 identifier: METPO:1000335
 label: NaCl delta
+definition: A salinity phenotype with numerical limits expressing the breadth
+  (maximum minus minimum) of NaCl concentrations supporting growth of an organism.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000532
 - METPO:1000534
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: salinity range
+  notes: Osmoadaptation review supports the span of NaCl-tolerance as a halophily
+    descriptor; its breadth (delta) reflects euryhaline versus stenohaline
+    physiology.
+- reference: DOI:10.1186/1746-1448-4-2
+  snippet: cope with the high salt concentrations
+  notes: Saline-Systems review supports broad osmoadaptive capacity as the basis
+    of a wide NaCl-delta phenotype.
+causal_graphs:
+- graph_id: nacl_delta_euryhaline_breadth
+  title: NaCl-delta euryhaline tolerance breadth
+  description: DOI-backed graph linking osmoadaptive flexibility to the breadth
+    of the NaCl growth range (delta = max − min).
+  nodes:
+  - node_id: nacl_delta_trait
+    label: NaCl delta
+    node_type: TRAIT
+    grounding: METPO:1000335
+    description: Breadth of the growth-supporting NaCl range.
+  - node_id: osmoadaptive_flexibility
+    label: osmoadaptive flexibility
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity to remodel osmolyte pools and ion transport across a
+      wide span of ambient salinities.
+  - node_id: euryhaline_physiology
+    label: euryhaline physiology
+    node_type: BIOLOGICAL_PROCESS
+    description: Physiology supporting growth over a broad salinity range.
+  - node_id: tolerance_breadth
+    label: tolerance breadth
+    node_type: BIOLOGICAL_PROCESS
+    description: Span between the minimum and maximum growth-supporting NaCl.
+  edges:
+  - subject: osmoadaptive_flexibility
+    predicate: enables
+    object: euryhaline_physiology
+    description: Osmoadaptive flexibility enables euryhaline growth.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: cope with the high salt concentrations
+      notes: Supports osmoadaptive flexibility as the basis of broad-salinity
+        growth.
+  - subject: euryhaline_physiology
+    predicate: produces
+    object: tolerance_breadth
+    description: Euryhaline physiology produces a wide growth-supporting NaCl
+      range.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the link between osmoadaptive physiology and tolerance
+        breadth.
+  - subject: tolerance_breadth
+    predicate: manifests as
+    object: nacl_delta_trait
+    description: The breadth between minimum and maximum growth-supporting NaCl
+      manifests the NaCl-delta phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: salinity range
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816534+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed causal graph linking osmoadaptive flexibility and
+    euryhaline physiology to the NaCl-delta breadth phenotype.
+  llm_assisted: true

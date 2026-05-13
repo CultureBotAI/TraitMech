@@ -1,8 +1,12 @@
 identifier: METPO:1000467
 label: NaCl optimum mid2
+definition: A NaCl optimum phenotype with the best-growth NaCl concentration
+  approximately between 3 and 8% (w/v), corresponding to moderate-halophile or
+  halotolerant physiology.
+definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000333
 synonyms:
@@ -15,9 +19,76 @@ synonyms:
 - synonym_text: NaO_3_to_8
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+evidence:
+- reference: DOI:10.1093/femsre/fuy009
+  snippet: moderate halophile
+  notes: Osmoadaptation review supports the 3–8% NaCl optimum range as the
+    moderate-halophile category.
+causal_graphs:
+- graph_id: nacl_optimum_mid2_moderate_halophile
+  title: NaCl-optimum-mid2 moderate-halophile setpoint
+  description: DOI-backed graph linking pronounced compatible-solute
+    accumulation at elevated NaCl to a 3–8% (w/v) NaCl-optimum (moderate
+    halophile).
+  nodes:
+  - node_id: nacl_optimum_mid2_trait
+    label: NaCl optimum mid2
+    node_type: TRAIT
+    grounding: METPO:1000467
+    description: NaCl optimum approximately 3–8% w/v.
+  - node_id: nacl_optimum
+    label: NaCl optimum
+    node_type: TRAIT
+    grounding: METPO:1000333
+    description: NaCl concentration supporting maximal growth.
+  - node_id: elevated_nacl
+    label: elevated NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External NaCl ~3–8% w/v, typical of saline lakes and salt marshes.
+  - node_id: pronounced_compatible_solutes
+    label: pronounced compatible-solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Substantial accumulation of organic osmolytes (ectoine, glycine
+      betaine) under moderately hypersaline conditions.
+  edges:
+  - subject: elevated_nacl
+    predicate: drives
+    object: pronounced_compatible_solutes
+    description: Elevated NaCl drives substantial compatible-solute accumulation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: synthesize organic osmotic solutes
+      notes: Supports compatible-solute accumulation as the osmoadaptive response
+        at elevated NaCl.
+  - subject: pronounced_compatible_solutes
+    predicate: produces
+    object: nacl_optimum_mid2_trait
+    description: Pronounced compatible-solute accumulation yields a 3–8%
+      NaCl-optimum setpoint.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: moderate halophile
+      notes: Supports the 3–8% optimum as the moderate-halophile outcome.
+  - subject: nacl_optimum_mid2_trait
+    predicate: is a
+    object: nacl_optimum
+    description: NaCl optimum mid2 is a quantitative bin of the NaCl-optimum
+      phenotype.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: optimal NaCl
+      notes: Supports the 3–8% optimum as a value within the NaCl-optimum
+        distribution.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.834715+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-12T10:00:00-07:00'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added DOI-backed definition and causal graph linking pronounced
+    compatible-solute accumulation at elevated NaCl to the moderate-halophile
+    NaCl-optimum bin.
+  llm_assisted: true
