@@ -56,9 +56,6 @@ causal_graphs:
     object: molecular_oxygen
     description: Aerobic growth depends on molecular oxygen availability.
     evidence:
-    - reference: PMID:21413255
-      snippet: aerobes require molecular oxygen
-      notes: Medical Microbiology chapter supports oxygen requirement for aerobes.
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: obligate aerobe ... exposed to hypoxia, stops growing
       notes: Mycobacterium tuberculosis example supports oxygen dependence for
@@ -68,9 +65,6 @@ causal_graphs:
     object: aerobic_respiration
     description: The aerobic trait is mechanistically tied to oxygen-dependent respiration.
     evidence:
-    - reference: GO:0009060
-      snippet: requires oxygen as the terminal electron acceptor
-      notes: Gene Ontology definition of aerobic respiration.
     - reference: DOI:10.1016/j.bbabio.2011.06.016
       snippet: respiratory quinol:O2 oxidoreductase
       notes: Review supports oxygen-reducing terminal oxidases as core aerobic
@@ -80,9 +74,6 @@ causal_graphs:
     object: molecular_oxygen
     description: Aerobic respiration requires oxygen.
     evidence:
-    - reference: GO:0009060
-      snippet: requires oxygen as the terminal electron acceptor
-      notes: Gene Ontology definition of aerobic respiration.
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: transfer electrons from the ETC to O2
       notes: Supports molecular oxygen as the terminal acceptor for bacterial
@@ -93,9 +84,6 @@ causal_graphs:
     description: In aerobic energy metabolism, molecular oxygen acts as the terminal
       electron acceptor.
     evidence:
-    - reference: PMID:21413255
-      snippet: molecular oxygen as a terminal electron acceptor
-      notes: Medical Microbiology chapter supports oxygen's role in aerobic metabolism.
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: terminal oxidases transfer electrons from the ETC to O2
       notes: Supports oxygen's electron-acceptor role in terminal oxidase activity.
@@ -124,4 +112,10 @@ curation_history:
   curator: codex
   action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
   changes: Added DOI-backed edge evidence to the aerobic respiration causal graph.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Removed PMID and GO fallback references from CausalEdge evidence where
+    DOI-backed evidence already supported the same oxygen-use mechanisms.
   llm_assisted: true

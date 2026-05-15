@@ -2,7 +2,7 @@ identifier: METPO:1000618
 label: psychrotolerant
 definition: A temperature preference in which growth can occur at low temperatures
   without an obligate low-temperature preference.
-definition_source: PMID:17978227
+definition_source: DOI:10.1099/ijs.0.65141-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,7 +13,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: PMID:17978227
+- reference: DOI:10.1099/ijs.0.65141-0
   snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
   notes: 'Organism example: Pseudomonas guineae is described as psychrotolerant.'
 - reference: DOI:10.1038/sj.embor.7400662
@@ -90,7 +90,7 @@ causal_graphs:
     description: Facultative lipid remodeling at low temperature manifests
       the psychrotolerant trait in representative organisms.
     evidence:
-    - reference: PMID:17978227
+    - reference: DOI:10.1099/ijs.0.65141-0
       snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
       notes: Supports the trait endpoint in a representative organism.
 curation_history:
@@ -109,4 +109,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph linking facultative cold adaptation
     (lipid remodeling and cold-shock response) to the psychrotolerant trait.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced Pseudomonas guineae PMID fallback with the article DOI in
+    definition, record evidence, and CausalEdge evidence.
   llm_assisted: true

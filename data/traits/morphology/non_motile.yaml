@@ -2,7 +2,7 @@ identifier: METPO:1000703
 label: non motile
 definition: A motility in which an organism lacks the ability to move independently
   under its own power.
-definition_source: PMID:40083790
+definition_source: DOI:10.3389/fmicb.2025.1514643
 trait_category: MORPHOLOGY
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -16,7 +16,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: PMID:40083790
+- reference: DOI:10.3389/fmicb.2025.1514643
   snippet: They are Gram-negative, non-motile rods
   notes: 'Organism example: Klebsiella pneumoniae is described as non-motile.'
 - reference: DOI:10.1146/annurev.micro.57.030502.090832
@@ -72,7 +72,7 @@ causal_graphs:
     object: non_motile_trait
     description: Lack of propulsion manifests the non-motile trait.
     evidence:
-    - reference: PMID:40083790
+    - reference: DOI:10.3389/fmicb.2025.1514643
       snippet: They are Gram-negative, non-motile rods
       notes: Supports the trait endpoint in a representative organism.
 curation_history:
@@ -91,4 +91,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph linking absence or non-expression of
     flagellar and pilus motility apparatus to the non-motile phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced Klebsiella non-motile PMID fallback with the article DOI in
+    definition, record evidence, and CausalEdge evidence.
   llm_assisted: true
