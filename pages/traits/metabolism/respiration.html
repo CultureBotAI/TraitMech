@@ -29,11 +29,159 @@
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
     <h1>respiration</h1>
-    <p class="curie"><code>METPO:1000800</code> · CLASS · SEEDED</p>
+    <p class="curie"><code>METPO:1000800</code> · CLASS · REVIEWED</p>
     
     <p class="definition">A metabolism that is characterized by the method of performing cellular respiration, distinguished primarily by the specific terminal electron acceptor utilized for producing cellular energy.</p>
     
   </header>
+
+  
+  <section class="causal-graphs">
+    
+    
+    <div class="card causal-graph-card">
+      <h2>Respiration electron acceptor energy conservation</h2>
+      <p class="meta">DOI-backed graph linking electron donors, terminal electron acceptors, membrane electron transport, proton motive force, and ATP synthesis.</p>
+      
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Respiration electron acceptor energy conservation</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for respiration.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+      
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+          
+          <li id="pathograph-1-edge-1">
+            <strong>respiration</strong>
+            <span class="edge-predicate">uses electron flow from</span>
+            <strong>electron donor</strong>
+            
+            <p>Respiration begins with reduced electron donors.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">free energy of a redox reaction</span>
+                <span class="meta">Supports respiratory energy conservation from redox reactions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-2">
+            <strong>electron donor</strong>
+            <span class="edge-predicate">transfers electrons to</span>
+            <strong>terminal electron acceptor</strong>
+            
+            <p>Electrons move from donors to terminal acceptors.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">electron transfer process</span>
+                <span class="meta">Supports donor-to-acceptor electron flow in respiratory chains.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-3">
+            <strong>molecular oxygen</strong>
+            <span class="edge-predicate">example of</span>
+            <strong>terminal electron acceptor</strong>
+            
+            <p>Oxygen is the terminal electron acceptor in aerobic respiration.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.61.4.533-616.1997</code>
+                <span class="evidence-snippet">oxygen as terminal electron acceptor</span>
+                <span class="meta">Supports oxygen as a respiratory terminal acceptor.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>nitrate</strong>
+            <span class="edge-predicate">example of</span>
+            <strong>terminal electron acceptor</strong>
+            
+            <p>Nitrate is a representative anaerobic terminal electron acceptor.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.61.4.533-616.1997</code>
+                <span class="evidence-snippet">utilization of nitrate</span>
+                <span class="meta">Supports nitrate use in anaerobic respiration.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>membrane electron transport chain</strong>
+            <span class="edge-predicate">couples electron flow to</span>
+            <strong>proton motive force</strong>
+            
+            <p>Respiratory chains conserve redox energy as an ion gradient.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">generation of an electrochemical ion gradient</span>
+                <span class="meta">Supports ion-gradient generation by membrane electron transport.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>ATP synthase</strong>
+            
+            <p>Proton motive force powers ATP synthase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">drives ATP synthesis</span>
+                <span class="meta">Supports ATP synthase as the downstream energy-conservation output.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ATP synthase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>ATP</strong>
+            
+            <p>ATP synthase produces ATP during respiration.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">ATP synthesis</span>
+                <span class="meta">Supports ATP production from respiratory energy conservation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+    
+  </section>
+  
 
   <section class="grid">
     <div class="card">
@@ -41,7 +189,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         <dt>Author</dt><dd>Anthea Guo</dd>
-        
+        <dt>Definition source</dt><dd>DOI:10.1016/j.bbabio.2008.09.008</dd>
         
         
       </dl>
@@ -161,6 +309,8 @@
     
 
     
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -169,6 +319,12 @@
           <time>2026-05-05T01:35:46.910466+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
+        </li>
+        
+        <li>
+          <time>2026-05-08T00:00:00-07:00</time> ·
+          <strong>ADDED_CAUSAL_GRAPH</strong> · codex
+          <p class="changes">Added DOI-backed causal graph for donor-to-acceptor respiratory electron flow, membrane ion-gradient generation, and ATP synthesis.</p>
         </li>
         
       </ol>
@@ -198,7 +354,7 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
@@ -211,14 +367,339 @@
 </aside>
 </div>
 
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "DOI-backed graph linking electron donors, terminal electron acceptors, membrane electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Respiration begins with reduced electron donors.", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration_trait", "target": "electron_donor"}, {"description": "Electrons move from donors to terminal acceptors.", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-2", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": null, "source": "electron_donor", "target": "terminal_electron_acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "oxygen", "target": "terminal_electron_acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "nitrate", "target": "terminal_electron_acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane_electron_transport_chain", "target": "proton_motive_force"}, {"description": "Proton motive force powers ATP synthase.", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase produces ATP during respiration.", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "atp_synthase", "target": "atp"}], "evidence_rows": [{"description": "Respiration begins with reduced electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration", "target": "electron donor"}, {"description": "Electrons move from donors to terminal acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "transfers electrons to", "predicate_id": null, "source": "electron donor", "target": "terminal electron acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "predicate": "example of", "predicate_id": null, "source": "molecular oxygen", "target": "terminal electron acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "predicate": "example of", "predicate_id": null, "source": "nitrate", "target": "terminal electron acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane electron transport chain", "target": "proton motive force"}, {"description": "Proton motive force powers ATP synthase.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "target": "ATP synthase"}, {"description": "ATP synthase produces ATP during respiration.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "predicate": "produces", "predicate_id": null, "source": "ATP synthase", "target": "ATP"}], "graph_id": "respiration_electron_acceptor_energy_conservation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced by respiration.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme complex using proton motive force for ATP synthesis.", "grounding": null, "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced substrate supplying electrons.", "grounding": null, "id": "electron_donor", "is_orphan": false, "label": "electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor-to-acceptor electron flow.", "grounding": null, "id": "membrane_electron_transport_chain", "is_orphan": false, "label": "membrane electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Alternative anaerobic terminal electron acceptor.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Aerobic terminal electron acceptor.", "grounding": "CHEBI:15379", "id": "oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient generated across a coupling membrane.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Energy metabolism using electron transport to a terminal electron acceptor.", "grounding": "METPO:1000800", "id": "respiration_trait", "is_orphan": false, "label": "respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized substrate receiving electrons at the end of a respiratory chain.", "grounding": null, "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "CHEMICAL", "xrefs": []}], "title": "Respiration electron acceptor energy conservation"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-15 07:12 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
