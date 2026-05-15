@@ -29,13 +29,108 @@
       <a href="../../category/upper.html">UPPER</a>
     </p>
     <h1>phenotype</h1>
-    <p class="curie"><code>METPO:1000059</code> · CLASS · SEEDED</p>
-    
+    <p class="curie"><code>METPO:1000059</code> · CLASS · REVIEWED</p>
+
     <p class="definition">A quality that differentiates specific instances of a species from other instances of the same species.</p>
-    
+
   </header>
 
-  
+
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Phenotype quality and child-trait context</h2>
+      <p class="meta">DOI-backed upper-ontology context graph linking phenotype to its quality parent and to non-environmental, non-genomic TraitMech child groupings.</p>
+
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Phenotype quality and child-trait context</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for phenotype.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>phenotype</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>quality</strong>
+
+            <p>Phenotypes are modeled as qualities or quality-bearing descriptions of entities.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1186/gb-2010-11-1-r2</code>
+                <span class="evidence-snippet">ontology of qualities termed Phenotype and Trait ontology</span>
+                <span class="meta">Supports phenotype representation through PATO quality classes.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>morphology child traits</strong>
+            <span class="edge-predicate">specialize</span>
+            <strong>phenotype</strong>
+
+            <p>Morphology classes are non-environmental child phenotypes in TraitMech.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1186/gb-2010-11-1-r2</code>
+                <span class="evidence-snippet">size, color, shape, structure</span>
+                <span class="meta">Supports morphology-like qualities as phenotype descriptors.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-3">
+            <strong>trophic type</strong>
+            <span class="edge-predicate">specializes</span>
+            <strong>phenotype</strong>
+
+            <p>Trophic type is retained as a non-environmental physiology child under phenotype.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1186/gb-2010-11-1-r2</code>
+                <span class="evidence-snippet">logical definitions and associated ontologies</span>
+                <span class="meta">Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-4">
+            <strong>pathogenic to host</strong>
+            <span class="edge-predicate">specializes</span>
+            <strong>phenotype</strong>
+
+            <p>Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.</p>
+            <ul>
+
+              <li>
+                <code>DOI:10.1186/gb-2010-11-1-r2</code>
+                <span class="evidence-snippet">phenotype ontologies across multiple species</span>
+                <span class="meta">Supports phenotype hierarchies spanning different biological domains.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="grid">
     <div class="card">
@@ -43,164 +138,170 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         <dt>Author</dt><dd>Luke Wang</dd>
-        
-        
-        
+        <dt>Definition source</dt><dd>DOI:10.1186/gb-2010-11-1-r2</dd>
+
+
       </dl>
     </div>
 
-    
+
     <div class="card">
       <h2>Parent traits (1)</h2>
       <ul>
-        
+
         <li><a href="../../traits/upper/quality.html" >quality <code>METPO:1000188</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
+
+
     <div class="card">
       <h2>Children (19)</h2>
       <ul>
-        
+
         <li><a href="../../traits/morphology/cell_length.html">cell length <code>METPO:1000881</code></a></li>
-        
+
         <li><a href="../../traits/morphology/cell_shape.html">cell shape <code>METPO:1000666</code></a></li>
-        
+
         <li><a href="../../traits/morphology/cell_width.html">cell width <code>METPO:1000882</code></a></li>
-        
+
         <li><a href="../../traits/environment/delta_phenotype_with_numerical_limits.html">delta phenotype with numerical limits <code>METPO:1000534</code></a></li>
-        
+
         <li><a href="../../traits/morphology/gram_stain.html">gram stain <code>METPO:1000697</code></a></li>
-        
+
         <li><a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits <code>METPO:1000535</code></a></li>
-        
+
         <li><a href="../../traits/environment/halophily_preference.html">halophily preference <code>METPO:1000629</code></a></li>
-        
+
         <li><a href="../../traits/morphology/motility.html">motility <code>METPO:1000701</code></a></li>
-        
+
         <li><a href="../../traits/environment/optimum_phenotype_with_numerical_limits.html">optimum phenotype with numerical limits <code>METPO:1000536</code></a></li>
-        
+
         <li><a href="../../traits/environment/oxygen_preference.html">oxygen preference <code>METPO:1000601</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_growth_preference.html">pH growth preference <code>METPO:1003000</code></a></li>
-        
+
         <li><a href="../../traits/environment/ph_phenotype_with_numerical_limits.html">pH phenotype with numerical limits <code>METPO:1000531</code></a></li>
-        
+
         <li><a href="../../traits/ecology/pathogenic_to_host.html">pathogenic to host <code>METPO:1004000</code></a></li>
-        
+
         <li><a href="../../traits/morphology/pigmentation.html">pigmentation <code>METPO:1003021</code></a></li>
-        
+
         <li><a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits <code>METPO:1000532</code></a></li>
-        
+
         <li><a href="../../traits/morphology/sporulation.html">sporulation <code>METPO:1000870</code></a></li>
-        
+
         <li><a href="../../traits/environment/temperature_phenotype_with_numerical_limits.html">temperature phenotype with numerical limits <code>METPO:1000533</code></a></li>
-        
+
         <li><a href="../../traits/environment/temperature_preference.html">temperature preference <code>METPO:1000613</code></a></li>
-        
+
         <li><a href="../../traits/physiology/trophic_type.html">trophic type <code>METPO:1000631</code></a></li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-      
+
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-        
+
         <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
-        
+
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-      
+
     </div>
 
-    
+
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
           <span class="sim">0.854</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/optimum_phenotype_with_numerical_limits.html">optimum phenotype with numerical limits</a>
           <span class="sim">0.852</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits</a>
           <span class="sim">0.847</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_phenotype_with_numerical_limits.html">pH phenotype with numerical limits</a>
           <span class="sim">0.846</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/quality.html">quality</a>
           <span class="sim">0.841</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_optimum.html">NaCl optimum</a>
           <span class="sim">0.838</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/delta_phenotype_with_numerical_limits.html">delta phenotype with numerical limits</a>
           <span class="sim">0.836</span>
         </li>
-        
+
         <li>
           <span class="nn-cat">ecology</span>
           <a href="../../traits/ecology/pathogenic_to_host.html">pathogenic to host</a>
           <span class="sim">0.835</span>
         </li>
-        
+
       </ul>
     </div>
-    
 
-    
 
-    
+
+
+
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-        
+
         <li>
           <time>2026-05-05T01:35:46.809675+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-        
+
+        <li>
+          <time>2026-05-15T00:35:00-07:00</time> ·
+          <strong>CURATED_UPPER_CONTEXT</strong> · codex
+          <p class="changes">Reviewed phenotype as an upper quality-derived classifier and added a DOI-backed context graph covering its quality parent plus non-environmental, non-genomic child groupings.</p>
+        </li>
+
       </ol>
     </div>
-    
+
   </section>
 </article>
 
@@ -225,25 +326,348 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
-  
+
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-  
+
 </aside>
 </div>
 
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "DOI-backed upper-ontology context graph linking phenotype to its quality parent and to non-environmental, non-genomic TraitMech child groupings.", "edges": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "phenotype_trait", "target": "quality_parent"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "id": "edge-2", "is_orphan": false, "predicate": "specialize", "predicate_id": null, "source": "morphology_children", "target": "phenotype_trait"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "id": "edge-3", "is_orphan": false, "predicate": "specializes", "predicate_id": null, "source": "physiology_child", "target": "phenotype_trait"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "id": "edge-4", "is_orphan": false, "predicate": "specializes", "predicate_id": null, "source": "ecology_child", "target": "phenotype_trait"}], "evidence_rows": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "predicate": "is a", "predicate_id": null, "source": "phenotype", "target": "quality"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "edge_id": "edge-2", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "predicate": "specialize", "predicate_id": null, "source": "morphology child traits", "target": "phenotype"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "predicate": "specializes", "predicate_id": null, "source": "trophic type", "target": "phenotype"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "predicate": "specializes", "predicate_id": null, "source": "pathogenic to host", "target": "phenotype"}], "graph_id": "phenotype_quality_child_context", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ecology child class under phenotype.", "grounding": "METPO:1004000", "id": "ecology_child", "is_orphan": false, "label": "pathogenic to host", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental morphology children such as cell shape, cell size, Gram stain, pigmentation, motility, and sporulation.", "grounding": null, "id": "morphology_children", "is_orphan": false, "label": "morphology child traits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Upper-level class for organismal qualities and observable trait classes.", "grounding": "METPO:1000059", "id": "phenotype_trait", "is_orphan": false, "label": "phenotype", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Physiology child class under phenotype.", "grounding": "METPO:1000631", "id": "physiology_child", "is_orphan": false, "label": "trophic type", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Parent upper class for qualities.", "grounding": "METPO:1000188", "id": "quality_parent", "is_orphan": false, "label": "quality", "node_type": "TRAIT", "xrefs": []}], "title": "Phenotype quality and child-trait context"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
 
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-05-15 07:38 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
