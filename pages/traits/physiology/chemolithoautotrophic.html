@@ -29,11 +29,193 @@
       <a href="../../category/physiology.html">PHYSIOLOGY</a>
     </p>
     <h1>chemolithoautotrophic</h1>
-    <p class="curie"><code>METPO:1000637</code> · CLASS · SEEDED</p>
+    <p class="curie"><code>METPO:1000637</code> · CLASS · REVIEWED</p>
     
     <p class="definition">A trophic type in which an organism obtains energy from oxidation of inorganic compounds (lithotrophy) and carbon from carbon dioxide.</p>
     
   </header>
+
+  
+  <section class="causal-graphs">
+    
+    
+    <div class="card causal-graph-card">
+      <h2>Chemolithoautotrophic energy and CO2 fixation</h2>
+      <p class="meta">DOI-backed graph linking inorganic donor oxidation, respiratory energy conservation, reductant generation, and autotrophic CO2 fixation.</p>
+      
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Chemolithoautotrophic energy and CO2 fixation</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for chemolithoautotrophic.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+      
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+          
+          <li id="pathograph-1-edge-1">
+            <strong>chemolithoautotrophic</strong>
+            <span class="edge-predicate">uses electron donor</span>
+            <strong>inorganic electron donor</strong>
+            
+            <p>Chemolithoautotrophs obtain energy from inorganic electron donors.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/B978-0-12-378630-2.00219-X</code>
+                <span class="evidence-snippet">growth-supporting reductant and energy source</span>
+                <span class="meta">Supports inorganic reductants as energy sources.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-2">
+            <strong>inorganic electron donor</strong>
+            <span class="edge-predicate">feeds electrons into</span>
+            <strong>electron transport chain</strong>
+            
+            <p>Donor oxidation supplies electrons to energy-conserving respiratory chains.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">membrane-bound electron transport chain</span>
+                <span class="meta">Supports membrane-bound respiratory chains as redox energy-conserving systems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-3">
+            <strong>electron transport chain</strong>
+            <span class="edge-predicate">generates</span>
+            <strong>proton motive force</strong>
+            
+            <p>Respiratory chains generate an electrochemical ion gradient.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">generation of an electrochemical ion gradient</span>
+                <span class="meta">Supports proton motive force generation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">drives synthesis of</span>
+            <strong>ATP</strong>
+            
+            <p>The ion gradient drives ATP synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.bbabio.2008.09.008</code>
+                <span class="evidence-snippet">drives ATP synthesis</span>
+                <span class="meta">Supports ATP synthesis from respiratory ion gradients.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>inorganic electron donor</strong>
+            <span class="edge-predicate">supports generation of</span>
+            <strong>reducing power</strong>
+            
+            <p>Electrons from inorganic donors provide reduced cofactors for biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.biortech.2021.125768</code>
+                <span class="evidence-snippet">serve as reductive power</span>
+                <span class="meta">Supports reduced cofactors generated from chemolithoautotrophic electron donors.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>carbon dioxide</strong>
+            <span class="edge-predicate">fixed by</span>
+            <strong>CO2 fixation pathway</strong>
+            
+            <p>Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev.micro.52.1.191</code>
+                <span class="evidence-snippet">Carbon Dioxide Fixation in Chemoautotrophs</span>
+                <span class="meta">Supports CO2 fixation in chemoautotrophic bacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ATP</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>CO2 fixation pathway</strong>
+            
+            <p>ATP generated from donor oxidation supports autotrophic CO2 fixation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.02473-10</code>
+                <span class="evidence-snippet">energy required for autotrophic CO2 fixation</span>
+                <span class="meta">Supports energy demand of autotrophic CO2 fixation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>reducing power</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>CO2 fixation pathway</strong>
+            
+            <p>Reducing power supports reductive CO2 assimilation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.biortech.2021.125768</code>
+                <span class="evidence-snippet">reduction of CO2</span>
+                <span class="meta">Supports reductant use in CO2 fixation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>CO2 fixation pathway</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>biomass</strong>
+            
+            <p>CO2 fixation generates cellular biomass.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev.micro.52.1.191</code>
+                <span class="evidence-snippet">physiology ... of chemoautotrophic bacteria</span>
+                <span class="meta">Review scope supports chemoautotrophic growth from fixed carbon.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+    
+  </section>
+  
 
   <section class="grid">
     <div class="card">
@@ -41,7 +223,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         
-        
+        <dt>Definition source</dt><dd>DOI:10.1146/annurev.micro.52.1.191</dd>
         
         
       </dl>
@@ -148,6 +330,8 @@
     
 
     
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -156,6 +340,12 @@
           <time>2026-05-05T01:35:46.870482+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
+        </li>
+        
+        <li>
+          <time>2026-05-08T00:00:00-07:00</time> ·
+          <strong>ADDED_CAUSAL_GRAPH</strong> · codex
+          <p class="changes">Added DOI-backed causal graph for inorganic donor oxidation, respiratory energy conservation, ATP/reductant generation, and CO2 fixation.</p>
         </li>
         
       </ol>
@@ -185,7 +375,7 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
@@ -198,14 +388,339 @@
 </aside>
 </div>
 
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "DOI-backed graph linking inorganic donor oxidation, respiratory energy conservation, reductant generation, and autotrophic CO2 fixation.", "edges": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithoautotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-2", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic_electron_donor", "target": "electron_transport_chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "electron_transport_chain", "target": "proton_motive_force"}, {"description": "The ion gradient drives ATP synthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "drives synthesis of", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "id": "edge-5", "is_orphan": false, "predicate": "supports generation of", "predicate_id": null, "source": "inorganic_electron_donor", "target": "reducing_power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": null, "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "atp", "target": "co2_fixation_pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "reducing_power", "target": "co2_fixation_pathway"}, {"description": "CO2 fixation generates cellular biomass.", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "co2_fixation_pathway", "target": "biomass"}], "evidence_rows": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithoautotrophic", "target": "inorganic electron donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic electron donor", "target": "electron transport chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": null, "source": "electron transport chain", "target": "proton motive force"}, {"description": "The ion gradient drives ATP synthesis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives synthesis of", "predicate_id": null, "source": "proton motive force", "target": "ATP"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "predicate": "supports generation of", "predicate_id": null, "source": "inorganic electron donor", "target": "reducing power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "predicate": "fixed by", "predicate_id": null, "source": "carbon dioxide", "target": "CO2 fixation pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "predicate": "supports", "predicate_id": null, "source": "ATP", "target": "CO2 fixation pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "predicate": "supports", "predicate_id": null, "source": "reducing power", "target": "CO2 fixation pathway"}, {"description": "CO2 fixation generates cellular biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "predicate": "produces", "predicate_id": null, "source": "CO2 fixation pathway", "target": "biomass"}], "graph_id": "chemolithoautotrophic_energy_and_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier supporting biosynthesis.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular material generated from fixed carbon.", "grounding": null, "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Primary carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic donor oxidation and CO2 fixation.", "grounding": "METPO:1000637", "id": "chemolithoautotrophic_trait", "is_orphan": false, "label": "chemolithoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic pathway reducing CO2 into cell carbon.", "grounding": null, "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2 fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor oxidation.", "grounding": null, "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound oxidized for energy.", "grounding": null, "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient generated by energy-conserving electron transfer.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "NAD(P)H or related reductants supporting CO2 reduction.", "grounding": null, "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CHEMICAL", "xrefs": []}], "title": "Chemolithoautotrophic energy and CO2 fixation"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-15 07:05 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>

@@ -29,9 +29,125 @@
       <a href="../../category/morphology.html">MORPHOLOGY</a>
     </p>
     <h1>branched shaped</h1>
-    <p class="curie"><code>METPO:1000687</code> · CLASS · SEEDED</p>
+    <p class="curie"><code>METPO:1000687</code> · CLASS · REVIEWED</p>
+    
+    <p class="definition">A cell shape in which an organism forms lateral branches from filamentous or hyphal cells.</p>
     
   </header>
+
+  
+  <section class="causal-graphs">
+    
+    
+    <div class="card causal-graph-card">
+      <h2>Branched-shape Streptomyces branch-site mechanism</h2>
+      <p class="meta">Evidence-backed causal sketch linking branched morphology to DivIVA foci, branch-site selection, polarisome behavior, local peptidoglycan assembly, and lateral branch outgrowth.</p>
+      
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Branched-shape Streptomyces branch-site mechanism</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for branched shaped.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+      
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+          
+          <li id="pathograph-1-edge-1">
+            <strong>DivIVA foci</strong>
+            <span class="edge-predicate">marks</span>
+            <strong>branch-site selection</strong>
+            
+            <p>DivIVA foci mark sites where lateral branches will emerge.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pgen.1002423</code>
+                <span class="evidence-snippet">mark sites of future branch outgrowth</span>
+                <span class="meta">Supports DivIVA foci as branch-site markers.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-2">
+            <strong>branch-site selection</strong>
+            <span class="edge-predicate">controls</span>
+            <strong>polarisome behavior</strong>
+            
+            <p>Branch-site selection controls where new polar growth machinery is established.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2012.10.012</code>
+                <span class="evidence-snippet">principal mechanism of branch site selection</span>
+                <span class="meta">Supports branch-site selection as a regulated mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-3">
+            <strong>polarisome behavior</strong>
+            <span class="edge-predicate">directs</span>
+            <strong>local cell-wall assembly</strong>
+            
+            <p>Polarisome behavior directs local wall assembly at the branch site.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2012.10.012</code>
+                <span class="evidence-snippet">modulate polar growth and hyphal branching</span>
+                <span class="meta">Supports polarisome modulation of polar growth and branching.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>local cell-wall assembly</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>lateral branch outgrowth</strong>
+            
+            <p>Local wall assembly drives emergence of the lateral branch.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2012.10.012</code>
+                <span class="evidence-snippet">apical growth requires the localization of the machinery</span>
+                <span class="meta">Supports localized wall-building machinery as needed for apical branch outgrowth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>lateral branch outgrowth</strong>
+            <span class="edge-predicate">manifests as</span>
+            <strong>branched shaped</strong>
+            
+            <p>Lateral branch outgrowth manifests the branched-shape phenotype.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2012.10.012</code>
+                <span class="evidence-snippet">initiation of new branches</span>
+                <span class="meta">Supports branched morphology as a Streptomyces growth phenotype.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+    
+  </section>
+  
 
   <section class="grid">
     <div class="card">
@@ -39,7 +155,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         
-        
+        <dt>Definition source</dt><dd>DOI:10.1016/j.mib.2012.10.012</dd>
         
         
       </dl>
@@ -60,10 +176,12 @@
 
     
     <div class="card">
-      <h2>Synonyms (1)</h2>
+      <h2>Synonyms (2)</h2>
       <ul class="synonyms">
         
         <li>branced <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        
+        <li>branched <span class="meta">RELATED_SYNONYM · corrected-from-metpo.owl</span></li>
         
       </ul>
     </div>
@@ -146,6 +264,8 @@
     
 
     
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -154,6 +274,12 @@
           <time>2026-05-05T01:35:46.896783+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
+        </li>
+        
+        <li>
+          <time>2026-05-11T21:00:00-07:00</time> ·
+          <strong>CURATED_WITH_LITERATURE</strong> · codex
+          <p class="changes">Added DOI-backed definition and causal graph for DivIVA foci, branch-site selection, polarisome behavior, local cell-wall assembly, and lateral branch outgrowth.</p>
         </li>
         
       </ol>
@@ -183,7 +309,7 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
@@ -196,14 +322,339 @@
 </aside>
 </div>
 
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking branched morphology to DivIVA foci, branch-site selection, polarisome behavior, local peptidoglycan assembly, and lateral branch outgrowth.", "edges": [{"description": "DivIVA foci mark sites where lateral branches will emerge.", "evidence": [{"notes": "Supports DivIVA foci as branch-site markers.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "mark sites of future branch outgrowth"}], "id": "edge-1", "is_orphan": false, "predicate": "marks", "predicate_id": null, "source": "divIVA_foci", "target": "branch_site_selection"}, {"description": "Branch-site selection controls where new polar growth machinery is established.", "evidence": [{"notes": "Supports branch-site selection as a regulated mechanism.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "principal mechanism of branch site selection"}], "id": "edge-2", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "branch_site_selection", "target": "polarisome_behavior"}, {"description": "Polarisome behavior directs local wall assembly at the branch site.", "evidence": [{"notes": "Supports polarisome modulation of polar growth and branching.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "modulate polar growth and hyphal branching"}], "id": "edge-3", "is_orphan": false, "predicate": "directs", "predicate_id": null, "source": "polarisome_behavior", "target": "local_cell_wall_assembly"}, {"description": "Local wall assembly drives emergence of the lateral branch.", "evidence": [{"notes": "Supports localized wall-building machinery as needed for apical branch outgrowth.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "apical growth requires the localization of the machinery"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "local_cell_wall_assembly", "target": "lateral_branch_outgrowth"}, {"description": "Lateral branch outgrowth manifests the branched-shape phenotype.", "evidence": [{"notes": "Supports branched morphology as a Streptomyces growth phenotype.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "initiation of new branches"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "lateral_branch_outgrowth", "target": "branched_shaped_trait"}], "evidence_rows": [{"description": "DivIVA foci mark sites where lateral branches will emerge.", "edge_id": "edge-1", "evidence": [{"notes": "Supports DivIVA foci as branch-site markers.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "mark sites of future branch outgrowth"}], "predicate": "marks", "predicate_id": null, "source": "DivIVA foci", "target": "branch-site selection"}, {"description": "Branch-site selection controls where new polar growth machinery is established.", "edge_id": "edge-2", "evidence": [{"notes": "Supports branch-site selection as a regulated mechanism.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "principal mechanism of branch site selection"}], "predicate": "controls", "predicate_id": null, "source": "branch-site selection", "target": "polarisome behavior"}, {"description": "Polarisome behavior directs local wall assembly at the branch site.", "edge_id": "edge-3", "evidence": [{"notes": "Supports polarisome modulation of polar growth and branching.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "modulate polar growth and hyphal branching"}], "predicate": "directs", "predicate_id": null, "source": "polarisome behavior", "target": "local cell-wall assembly"}, {"description": "Local wall assembly drives emergence of the lateral branch.", "edge_id": "edge-4", "evidence": [{"notes": "Supports localized wall-building machinery as needed for apical branch outgrowth.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "apical growth requires the localization of the machinery"}], "predicate": "drives", "predicate_id": null, "source": "local cell-wall assembly", "target": "lateral branch outgrowth"}, {"description": "Lateral branch outgrowth manifests the branched-shape phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports branched morphology as a Streptomyces growth phenotype.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "initiation of new branches"}], "predicate": "manifests as", "predicate_id": null, "source": "lateral branch outgrowth", "target": "branched shaped"}], "graph_id": "branched_shaped_streptomyces_branching", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Selection of a new site for lateral branch outgrowth.", "grounding": null, "id": "branch_site_selection", "is_orphan": false, "label": "branch-site selection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Filamentous bacterial morphology with lateral branches.", "grounding": "METPO:1000687", "id": "branched_shaped_trait", "is_orphan": false, "label": "branched shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "DivIVA assemblies marking future Streptomyces branch sites.", "grounding": null, "id": "divIVA_foci", "is_orphan": false, "label": "DivIVA foci", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Emergence and extension of a new hyphal branch.", "grounding": null, "id": "lateral_branch_outgrowth", "is_orphan": false, "label": "lateral branch outgrowth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Peptidoglycan assembly at a new growth zone.", "grounding": null, "id": "local_cell_wall_assembly", "is_orphan": false, "label": "local cell-wall assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Dynamics of the polar growth machinery that controls branch growth.", "grounding": null, "id": "polarisome_behavior", "is_orphan": false, "label": "polarisome behavior", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Branched-shape Streptomyces branch-site mechanism"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
+
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-15 07:05 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
