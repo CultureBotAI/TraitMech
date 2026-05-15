@@ -2,7 +2,7 @@ identifier: METPO:1000619
 label: thermotolerant
 definition: A temperature preference in which growth can occur at elevated temperatures
   without an obligate high-temperature preference.
-definition_source: PMID:12508889
+definition_source: DOI:10.1099/00207713-52-6-2203
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,7 +13,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: PMID:12508889
+- reference: DOI:10.1099/00207713-52-6-2203
   snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
   notes: 'Organism example: Pseudomonas thermotolerans is described as thermotolerant.'
 - reference: DOI:10.1128/MMBR.65.1.1-43.2001
@@ -76,7 +76,7 @@ causal_graphs:
     description: Limited thermostability enables facultative growth at elevated
       temperatures.
     evidence:
-    - reference: PMID:12508889
+    - reference: DOI:10.1099/00207713-52-6-2203
       snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
       notes: Supports the trait endpoint in a representative organism.
 curation_history:
@@ -96,4 +96,10 @@ curation_history:
   changes: Added DOI-backed causal graph linking heat-shock response,
     chaperone proteins, and limited thermostability to the thermotolerant
     trait.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced Pseudomonas thermotolerans PMID fallback with the article DOI
+    in definition, record evidence, and CausalEdge evidence.
   llm_assisted: true

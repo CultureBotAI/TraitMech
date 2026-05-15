@@ -2,7 +2,7 @@ identifier: METPO:1000615
 label: mesophilic
 definition: A temperature preference in which growth is favored at intermediate temperatures,
   typically ~20–45 °C.
-definition_source: PMID:23931326
+definition_source: DOI:10.1016/j.bpj.2013.06.029
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -13,7 +13,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: PMID:23931326
+- reference: DOI:10.1016/j.bpj.2013.06.029
   snippet: Escherichia coli, a mesophilic bacterium
   notes: 'Organism example: Escherichia coli is described as mesophilic.'
 - reference: DOI:10.1146/annurev-micro-091313-103612
@@ -60,7 +60,7 @@ causal_graphs:
     object: mesophilic_trait
     description: Moderate ambient temperatures select for mesophilic physiology.
     evidence:
-    - reference: PMID:23931326
+    - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
       notes: Supports a representative mesophile thriving at moderate
         temperatures.
@@ -90,7 +90,7 @@ causal_graphs:
     description: Balanced growth at moderate temperatures manifests the
       mesophilic trait.
     evidence:
-    - reference: PMID:23931326
+    - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
       notes: Supports the trait endpoint in a representative organism.
 curation_history:
@@ -110,4 +110,10 @@ curation_history:
   changes: Added DOI-backed causal graph linking moderate ambient temperature,
     homoviscous membrane composition, mesophile enzyme repertoire, and balanced
     growth to the mesophilic trait.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced Escherichia coli mesophile PMID fallback with the article DOI
+    in definition, record evidence, and CausalEdge evidence.
   llm_assisted: true

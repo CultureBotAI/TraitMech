@@ -71,35 +71,35 @@ causal_graphs:
     description: Ambient molecular-oxygen concentration is the quantitative
       axis defining oxygen-preference phenotypes.
     evidence:
-    - reference: PMID:21413255
-      snippet: aerobes require molecular oxygen
-      notes: Supports molecular oxygen as the descriptor axis for the
-        oxygen-preference classification.
+    - reference: DOI:10.3389/fmicb.2014.00674
+      snippet: various capacities in their utilization of molecular oxygen
+      notes: Supports molecular oxygen utilization as the classification axis for
+        oxygen-preference phenotypes.
   - subject: aerobic_phenotype
     predicate: is a
     object: oxygen_preference_trait
     description: Aerobic is a child oxygen-preference phenotype.
     evidence:
-    - reference: PMID:21413255
-      snippet: aerobes require molecular oxygen as a terminal electron acceptor
-      notes: Supports aerobic as the O2-dependent oxygen-preference phenotype.
+    - reference: DOI:10.3389/fmicb.2014.00674
+      snippet: aerobic ... respiration capacities
+      notes: Supports aerobic as an oxygen-use phenotype within oxygen-preference
+        classification.
   - subject: anaerobic_phenotype
     predicate: is a
     object: oxygen_preference_trait
     description: Anaerobic is a child oxygen-preference phenotype.
     evidence:
-    - reference: PMID:21413255
-      snippet: Anaerobes, on the other hand, cannot grow in the presence of oxygen
-      notes: Supports anaerobes as the O2-avoidance setting on the
-        oxygen-preference axis.
+    - reference: DOI:10.3389/fmicb.2014.00674
+      snippet: aerobic, microaerobic, and anaerobic reductases
+      notes: Supports anaerobic as a distinct oxygen-preference classification.
   - subject: microaerophilic_phenotype
     predicate: is a
     object: oxygen_preference_trait
     description: Microaerophilic is a child oxygen-preference phenotype.
     evidence:
-    - reference: PMID:21413255
-      snippet: microaerophilic
-      notes: Supports microaerophiles as a low-O2 setting on the
+    - reference: DOI:10.3389/fmicb.2014.00674
+      snippet: aerophilic, microaerophilic, or anaerobic
+      notes: Supports microaerophilic as a low-O2 setting on the
         oxygen-preference axis.
   - subject: facultative_phenotype
     predicate: is a
@@ -107,8 +107,8 @@ causal_graphs:
     description: Facultative oxygen preference is a child oxygen-preference
       phenotype.
     evidence:
-    - reference: PMID:21413255
-      snippet: facultative anaerobes
+    - reference: DOI:10.1111/cmi.13338
+      snippet: cope with changing oxygen levels
       notes: Supports facultative organisms as a mixed-O2 setting on the
         oxygen-preference axis, switching between aerobic and anaerobic
         metabolism.
@@ -124,4 +124,10 @@ curation_history:
   changes: Added DOI-backed causal graph framing oxygen preference as the
     O2-availability axis with child aerobic, anaerobic, microaerophilic,
     and facultative phenotypes.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced PMID fallback CausalEdge references with DOI-backed
+    oxygen-utilization and facultative oxygen-response citations.
   llm_assisted: true

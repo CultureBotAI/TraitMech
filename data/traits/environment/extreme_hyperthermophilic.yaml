@@ -1,7 +1,7 @@
 identifier: METPO:1000721
 label: extreme hyperthermophilic
 definition: A temperature preference that grows optimally at temperatures above 90°C.
-definition_source: PMID:9680332
+definition_source: DOI:10.1007/s007920050010
 trait_category: ENVIRONMENT
 term_kind: CLASS
 mapping_status: REVIEWED
@@ -15,7 +15,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 evidence:
-- reference: PMID:9680332
+- reference: DOI:10.1007/s007920050010
   snippet: It grew at between 90 degrees C and 113 degrees C
   notes: 'Organism example: Pyrolobus fumarii grows in the extreme hyperthermophilic range.'
 - reference: DOI:10.1128/MMBR.65.1.1-43.2001
@@ -62,7 +62,7 @@ causal_graphs:
     description: Very-high-temperature habitats select for extreme
       hyperthermophily.
     evidence:
-    - reference: PMID:9680332
+    - reference: DOI:10.1007/s007920050010
       snippet: It grew at between 90 degrees C and 113 degrees C
       notes: Supports growth above 90 °C in extreme hyperthermophiles.
   - subject: tetraether_lipids
@@ -114,4 +114,10 @@ curation_history:
   changes: Added DOI-backed causal graph linking archaeal tetraether
     membrane lipids, hyperthermostable proteins, and hyperthermophile
     bioenergetics to extreme hyperthermophily.
+  llm_assisted: true
+- timestamp: '2026-05-13T22:45:00-07:00'
+  curator: codex
+  action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
+  changes: Replaced Pyrolobus fumarii PMID fallback with the article DOI in
+    definition, record evidence, and CausalEdge evidence.
   llm_assisted: true
