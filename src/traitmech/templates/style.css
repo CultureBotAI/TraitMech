@@ -129,6 +129,23 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 .rail-meta dd { margin-left: 0; }
 .source-card { border-color: var(--accent); }
 
+/* Deep-research output card: scrolling preformatted markdown so the
+   research narrative doesn't dominate the page or overflow horizontally. */
+.research-card pre.research-md {
+  max-height: 480px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: var(--code-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0.5rem 0 0 0;
+}
+.research-card { border-left: 4px solid var(--accent); }
+
 /* DisMech-style causal pathographs on trait pages */
 .causal-graphs { margin: 1.25rem 0; }
 .causal-graph-card { margin-bottom: 1rem; }

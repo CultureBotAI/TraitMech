@@ -38,6 +38,7 @@ from trait_causal_graph import causal_graphs_for_template
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
+RESEARCH_DIR = REPO_ROOT / "research" / "traits"
 EMBED_DIR = REPO_ROOT / "data" / "embeddings"
 TEMPLATES_DIR = REPO_ROOT / "src" / "traitmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
@@ -208,6 +209,18 @@ def render_pages(args: argparse.Namespace) -> int:
         children = sorted(children_by_parent.get(curie, []), key=lambda x: x["label"])
 
         yaml_rel = f"data/traits/{category_dir}/{slug}.yaml"
+
+        # Deep-research output: surface research/traits/<cat>/<slug>.md when
+        # the deep-research-client pipeline has produced one. Source of truth
+        # lives at `research/traits/<category_dir>/<slug>.md`; the renderer
+        # treats it as an opaque markdown blob and hands it to the template as
+        # a string. No file → research section is hidden entirely.
+        research_path = RESEARCH_DIR / category_dir / f"{slug}.md"
+        research_md = research_path.read_text() if research_path.exists() else ""
+        research_rel = (
+            f"research/traits/{category_dir}/{slug}.md" if research_md else ""
+        )
+
         # Resolve nearest-neighbor records into renderable rows with page links.
         nn_rows = []
         for nn in nn_by_curie.get(curie, []):
@@ -234,6 +247,11 @@ def render_pages(args: argparse.Namespace) -> int:
             parent_labels=parent_labels,
             children=children,
             nearest_neighbors=nn_rows,
+            research_md=research_md,
+            research_path=research_rel,
+            research_blob_url=(
+                f"{GH_BLOB_BASE}/{research_rel}" if research_rel else ""
+            ),
             embedding_release=EMBEDDING_RELEASE,
             metpo_version=metpo_version,
             yaml_path=yaml_rel,
