@@ -2,13 +2,88 @@ identifier: METPO:1000186
 label: material entity
 definition: An object or portion of a substance or mixture of substances that consists
   of matter
+definition_source: DOI:10.3233/AO-220262
 trait_category: UPPER
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
 created_by: Anthea Guo
+evidence:
+- reference: DOI:10.3233/AO-220262
+  snippet: BFO is a genuine top-level ontology
+  notes: Supports material entity as a top-level ontology class rather than a
+    concrete microbial trait.
+- reference: DOI:10.7551/mitpress/9780262527811.001.0001
+  snippet: specific top-level ontology, the Basic Formal Ontology
+  notes: Supports BFO as the upper ontology context for material entity.
+causal_graphs:
+- graph_id: material_entity_bfo_upper_context
+  title: Material entity upper-class context
+  description: DOI-backed upper-ontology context graph linking material entities
+    to qualities, observations, and processes without asserting a taxon-specific
+    microbial mechanism.
+  nodes:
+  - node_id: material_entity_trait
+    label: material entity
+    node_type: TRAIT
+    grounding: METPO:1000186
+    xrefs:
+    - BFO:0000040
+    description: Upper-level class for objects or portions of matter.
+  - node_id: quality_trait
+    label: quality
+    node_type: TRAIT
+    grounding: METPO:1000188
+    description: Dependent characteristic borne by an entity.
+  - node_id: observation_trait
+    label: observation
+    node_type: EXPERIMENTAL_FACTOR
+    grounding: METPO:1001000
+    description: Measurement or data-collection context about an entity or its
+      qualities.
+  - node_id: biological_process_trait
+    label: biological process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: METPO:1000630
+    description: Process in which material entities can participate.
+  edges:
+  - subject: material_entity_trait
+    predicate: can bear
+    object: quality_trait
+    description: Material entities provide bearers for qualities used in trait
+      descriptions.
+    evidence:
+    - reference: DOI:10.1186/gb-2010-11-1-r2
+      snippet: entity that is observed to be affected
+      notes: Supports the entity-quality pattern in phenotype representation.
+  - subject: observation_trait
+    predicate: can be about
+    object: material_entity_trait
+    description: Observations and investigation outputs can be about material
+      entities and their qualities.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0154556
+      snippet: results of a study can be about any material entity
+      notes: Supports material entities as subjects of biomedical investigation
+        data.
+  - subject: material_entity_trait
+    predicate: can participate in
+    object: biological_process_trait
+    description: Material entities can participate in biological processes, but
+      this upper record has no direct TraitMech children.
+    evidence:
+    - reference: DOI:10.3233/AO-220262
+      snippet: support information integration, retrieval, and analysis
+      notes: Supports BFO as the upper ontology used to place material entities
+        in scientific-domain representations.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811703+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-15T00:35:00-07:00'
+  curator: codex
+  action: CURATED_UPPER_CONTEXT
+  changes: Reviewed material entity as an upper classifier and added a
+    DOI-backed context graph; no direct TraitMech children were present.
+  llm_assisted: true

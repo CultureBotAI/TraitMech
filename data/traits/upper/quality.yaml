@@ -2,12 +2,83 @@ identifier: METPO:1000188
 label: quality
 definition: A characteristic of an entity that depends on the entity's existence,
   size, color, and physiological traits.
+definition_source: DOI:10.1186/gb-2010-11-1-r2
 trait_category: UPPER
 term_kind: CLASS
-mapping_status: SEEDED
+mapping_status: REVIEWED
+evidence:
+- reference: DOI:10.1186/gb-2010-11-1-r2
+  snippet: ontology of qualities termed Phenotype and Trait ontology
+  notes: Supports quality as an upper class used to construct phenotype
+    descriptions.
+- reference: DOI:10.1186/gb-2010-11-1-r2
+  snippet: specific characteristic or quality of that entity
+  notes: Supports qualities as entity-dependent phenotype descriptors.
+causal_graphs:
+- graph_id: quality_upper_child_context
+  title: Quality upper-class child context
+  description: DOI-backed upper-ontology context graph linking quality to
+    phenotype and biosafety-level child classes while excluding the genomic GC
+    content child from this batch.
+  nodes:
+  - node_id: quality_trait
+    label: quality
+    node_type: TRAIT
+    grounding: METPO:1000188
+    description: Upper class for entity-dependent characteristics.
+  - node_id: material_entity
+    label: material entity
+    node_type: TRAIT
+    grounding: METPO:1000186
+    description: Entity that can bear a quality.
+  - node_id: phenotype_trait
+    label: phenotype
+    node_type: TRAIT
+    grounding: METPO:1000059
+    description: TraitMech child class for observable organismal qualities.
+  - node_id: biosafety_level_trait
+    label: biosafety level
+    node_type: TRAIT
+    grounding: METPO:1001101
+    description: Ecology child class that classifies biological-agent hazard and
+      containment level.
+  edges:
+  - subject: quality_trait
+    predicate: characterizes
+    object: material_entity
+    description: Qualities characterize or inhere in entities.
+    evidence:
+    - reference: DOI:10.1186/gb-2010-11-1-r2
+      snippet: specific characteristic or quality of that entity
+      notes: Supports entity-dependent qualities in phenotype descriptions.
+  - subject: phenotype_trait
+    predicate: is a
+    object: quality_trait
+    description: Phenotype is a quality-derived child class in TraitMech.
+    evidence:
+    - reference: DOI:10.1186/gb-2010-11-1-r2
+      snippet: Phenotype and Trait ontology
+      notes: Supports phenotype and trait descriptions using quality classes.
+  - subject: biosafety_level_trait
+    predicate: is a
+    object: quality_trait
+    description: Biosafety level is a reviewed non-genomic child quality in
+      TraitMech's ecology category.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.62.081307.162938
+      snippet: virulence factors
+      notes: Supports hazard-related biological-agent properties as inputs to
+        biosafety-level classification.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812123+00:00'
   curator: seed_from_metpo
   action: SEEDED_FROM_METPO
   changes: imported from data/raw/metpo.owl (CLASS)
   llm_assisted: false
+- timestamp: '2026-05-15T00:35:00-07:00'
+  curator: codex
+  action: CURATED_UPPER_CONTEXT
+  changes: Reviewed quality as an upper classifier and added a DOI-backed
+    context graph covering non-genomic child classes phenotype and biosafety
+    level.
+  llm_assisted: true
