@@ -29,9 +29,11 @@
       <a href="../../category/quantitative_property.html">QUANTITATIVE_PROPERTY</a>
     </p>
     <h1>observation data property</h1>
-    <p class="curie"><code>METPO:2000063</code> · DATATYPE_PROPERTY · SEEDED</p>
+    <p class="curie"><code>METPO:2000063</code> · DATATYPE_PROPERTY · DEPRECATED</p>
     
   </header>
+
+  
 
   <section class="grid">
     <div class="card">
@@ -83,6 +85,8 @@
     
 
     
+
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
@@ -91,6 +95,12 @@
           <time>2026-05-05T01:35:46.980776+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (DATATYPE_PROPERTY)</p>
+        </li>
+        
+        <li>
+          <time>2026-05-08T00:00:00-07:00</time> ·
+          <strong>DEPRECATED_PROPERTY_RECORD</strong> · codex
+          <p class="changes">Deprecated upper datatype-property carrier for observation data; later replacement should use more specific trait records that combine the data relation with chemicals, measurements, observations, or other entities.</p>
         </li>
         
       </ol>
@@ -120,7 +130,7 @@
       <dt>Term kind</dt>
       <dd>DATATYPE_PROPERTY</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>DEPRECATED</dd>
     </dl>
   </div>
 
@@ -128,14 +138,16 @@
 </aside>
 </div>
 
+
+
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-05 04:56 UTC from
+    Built 2026-05-15 07:12 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 354 TraitRecords
     · embedding coverage 97.7%
-    (kg-microbe deepwalk 200-D, 2024-09-25)
+    (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
 </body>
