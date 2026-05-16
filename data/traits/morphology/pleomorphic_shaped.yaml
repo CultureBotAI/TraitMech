@@ -44,7 +44,7 @@ causal_graphs:
     description: Reduced MreB or analogous shape-determining cytoskeletal activity.
   - node_id: weak_cell_wall
     label: weak or absent peptidoglycan wall
-    node_type: ORGANELLE
+    node_type: CELLULAR_LOCALIZATION
     description: Cell wall reduced (L-form/Mycoplasma) or compromised.
     grounding: GO:0009274
   - node_id: variable_geometry
