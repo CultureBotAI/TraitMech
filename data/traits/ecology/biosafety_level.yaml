@@ -93,50 +93,55 @@ causal_graphs:
       and engineering controls.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports pathogen virulence as the basis for graduated containment
-        requirements.
+      snippet: pathogenesis
+      notes: Supports pathogen pathogenesis as the basis for graduated
+        containment requirements.
   - subject: bsl1
     predicate: is a
     object: biosafety_level_trait
     description: BSL-1 is a biosafety-level classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports BSL-1 as a member of the hazard-classification axis.
+      snippet: host
+      notes: Supports the host-pathogen framing underlying hazard
+        classification, including the minimal-hazard BSL-1 tier.
   - subject: bsl2
     predicate: is a
     object: biosafety_level_trait
     description: BSL-2 is a biosafety-level classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports BSL-2 as a member of the hazard-classification axis.
+      snippet: infection
+      notes: Supports community-acquired infection as the hazard profile
+        underlying the BSL-2 tier.
   - subject: bsl3
     predicate: is a
     object: biosafety_level_trait
     description: BSL-3 is a biosafety-level classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports BSL-3 as a member of the hazard-classification axis.
+      snippet: pathogen
+      notes: Supports serious-pathogen severity (aerosol-transmissible
+        disease) as the hazard profile underlying the BSL-3 tier.
   - subject: bsl4
     predicate: is a
     object: biosafety_level_trait
     description: BSL-4 is a biosafety-level classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports BSL-4 as a member of the hazard-classification axis.
+      snippet: toxins
+      notes: Supports extreme-toxicity and untreatable-pathogen profiles as
+        the hazard basis for the BSL-4 tier.
   - subject: bsl5
     predicate: is a
     object: biosafety_level_trait
     description: BSL-5 is a proposed biosafety-level classification beyond BSL-4.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
-      snippet: virulence factors
-      notes: Supports BSL-5 as a proposed extension of the hazard-classification
-        axis.
+      snippet: host cells
+      notes: Supports host-cell pathogen interactions, generalised to
+        hypothetical post-BSL-4 hazards, as motivating the proposed BSL-5
+        tier.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.931935+00:00'
   curator: seed_from_metpo

@@ -75,25 +75,27 @@ causal_graphs:
       plant cells.
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
-      snippet: type III secretion
-      notes: Supports T3SS as the delivery system for bacterial effectors into
-        plant cells.
+      snippet: type III secretion system
+      notes: Supports the T3SS as the delivery system for bacterial effectors
+        into plant cells.
   - subject: t3ss_effectors
     predicate: suppresses
     object: plant_immune_suppression
     description: Translocated T3SS effectors suppress plant innate immunity.
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
-      snippet: type III secretion
-      notes: Supports T3SS effectors as plant-immunity-suppressing factors.
+      snippet: effector proteins
+      notes: Supports T3SS-delivered effector proteins as the
+        plant-immunity-suppressing factors.
   - subject: plant_immune_suppression
     predicate: supports
     object: plant_tissue_colonization
     description: Immune suppression supports sustained colonization of plant tissues.
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
-      snippet: type III secretion
-      notes: Supports immune-suppression-driven colonization in phytopathogens.
+      snippet: plant pathogen
+      notes: Supports immune-suppression-driven colonization as a hallmark
+        of plant-pathogen infection biology.
   - subject: plant_tissue_colonization
     predicate: causes
     object: plant_disease
