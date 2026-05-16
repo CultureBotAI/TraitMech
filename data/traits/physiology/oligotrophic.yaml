@@ -24,6 +24,12 @@ evidence:
 - reference: DOI:10.1038/ismej.2014.60
   snippet: nutrients limit growth
   notes: Streamlining review links nutrient limitation to small-cell/genome adaptation.
+- reference: PMID:16109880
+  snippet: Pelagibacter ubique
+  notes: 'Organism example: Pelagibacter ubique HTCC1062 (SAR11 clade) is the
+    archetypal oligotrophic marine bacterium with a streamlined genome
+    adapted to nutrient-poor open-ocean conditions (Giovannoni et al. 2005,
+    Science).'
 causal_graphs:
 - graph_id: oligotrophic_low_nutrient_efficiency
   title: Oligotrophic low-nutrient efficiency strategy
@@ -119,4 +125,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed oligotrophy graph for low nutrients, genome/cell
     streamlining, efficient nutrient use, and slow-growth strategy.
+  llm_assisted: true
+- timestamp: '2026-05-16T05:00:00-07:00'
+  curator: claude
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Pelagibacter ubique HTCC1062 (SAR11) organism example with
+    PMID-backed evidence.
   llm_assisted: true

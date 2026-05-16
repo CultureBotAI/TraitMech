@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.485
   snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
   notes: Review supports ammonia oxidation as an example chemolithoautotrophic process.
+- reference: PMID:12700255
+  snippet: Nitrosomonas europaea
+  notes: 'Organism example: Nitrosomonas europaea is the model chemolithotrophic
+    ammonia-oxidizing bacterium, conserving energy from NH3 → NO2- oxidation
+    (Chain et al. 2003, J Bacteriol, complete genome).'
 causal_graphs:
 - graph_id: chemolithotrophic_inorganic_oxidation
   title: Chemolithotrophic inorganic chemical oxidation
@@ -138,4 +143,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for inorganic chemical electron donors, ammonia oxidation, sulfur oxidation, respiratory energy conservation, and ATP synthesis.
+  llm_assisted: true
+- timestamp: '2026-05-16T05:00:00-07:00'
+  curator: claude
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Nitrosomonas europaea organism example with PMID-backed
+    evidence.
   llm_assisted: true

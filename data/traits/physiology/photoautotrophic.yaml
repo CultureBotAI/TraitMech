@@ -35,6 +35,12 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   snippet: Calvin-Benson reductive pentose phosphate cycle
   notes: Review supports the Calvin-Benson cycle as a microbial autotrophic CO2-fixation pathway.
+- reference: PMID:8590279
+  snippet: Synechocystis sp. strain PCC6803
+  notes: 'Organism example: Synechocystis sp. PCC 6803 is a model
+    photoautotrophic cyanobacterium that uses oxygenic photosynthesis to
+    drive Calvin-Benson CO2 fixation (Kaneko et al. 1996, DNA Res, full
+    genome).'
 causal_graphs:
 - graph_id: photoautotrophic_cyanobacterial_carbon_fixation
   title: Photoautotrophic light-powered CO2 fixation
@@ -164,4 +170,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for oxygenic light capture, ATP/NADPH generation, and Calvin-Benson CO2 fixation.
+  llm_assisted: true
+- timestamp: '2026-05-16T05:00:00-07:00'
+  curator: claude
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Synechocystis sp. PCC 6803 organism example with
+    PMID-backed evidence.
   llm_assisted: true

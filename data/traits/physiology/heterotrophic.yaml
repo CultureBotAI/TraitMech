@@ -28,6 +28,11 @@ evidence:
 - reference: DOI:10.1021/acsomega.3c02205
   snippet: organic molecules ... carbon source
   notes: Review table supports organic molecules as carbon sources in heterotrophic growth modes.
+- reference: PMID:9278503
+  snippet: Escherichia coli K-12
+  notes: 'Organism example: Escherichia coli K-12 (MG1655) is the canonical
+    chemoorganoheterotrophic model bacterium that grows on diverse organic
+    substrates (Blattner et al. 1997, Science, complete genome).'
 causal_graphs:
 - graph_id: heterotrophic_organic_carbon_assimilation
   title: Heterotrophic organic carbon assimilation
@@ -123,4 +128,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for organic carbon uptake, catabolism, precursor metabolites, anabolism, and biomass formation.
+  llm_assisted: true
+- timestamp: '2026-05-16T05:00:00-07:00'
+  curator: claude
+  action: ADDED_ORGANISM_EXAMPLE
+  changes: Added Escherichia coli K-12 organism example with PMID-backed
+    evidence.
   llm_assisted: true
