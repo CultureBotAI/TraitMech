@@ -60,7 +60,7 @@ causal_graphs:
       snippet: ontology of qualities termed Phenotype and Trait ontology
       notes: Supports phenotype representation through PATO quality classes.
   - subject: morphology_children
-    predicate: specialize
+    predicate: specializes
     object: phenotype_trait
     description: Morphology classes are non-environmental child phenotypes in
       TraitMech.
