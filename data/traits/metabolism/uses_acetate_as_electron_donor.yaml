@@ -1,0 +1,118 @@
+identifier: traitmech:UED_ACETATE
+label: uses acetate as electron donor
+definition: A metabolic trait in which an organism oxidises acetate as an electron
+  donor for energy conservation, typically coupled to anaerobic respiration with
+  external electron acceptors (sulfate, nitrate, iron, etc.) or to syntrophic
+  acetate oxidation.
+definition_source: DOI:10.1146/annurev.micro.61.080706.093130
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000060
+xrefs:
+- CHEBI:30089
+replaces:
+- METPO:2000009
+- CHEBI:30089
+synonyms:
+- synonym_text: acetate-oxidising
+  synonym_type: RELATED_SYNONYM
+  source: traitmech
+evidence:
+- reference: DOI:10.1146/annurev.micro.61.080706.093130
+  snippet: acetate
+  notes: Microbial-physiology review supports acetate oxidation as an
+    electron-donor route for anaerobic respiration and syntrophic metabolism.
+- reference: PMID:16357845
+  snippet: Desulfobacter
+  notes: 'Organism example: Desulfobacter postgatei is a model anaerobic
+    bacterium oxidising acetate while reducing sulfate.'
+causal_graphs:
+- graph_id: uses_acetate_as_electron_donor_oxidation
+  title: Use of acetate as electron donor
+  description: DOI-backed graph linking acetate, activation, complete oxidation
+    to CO2, electron transfer to a terminal acceptor, and ATP synthesis.
+  nodes:
+  - node_id: trait
+    label: uses acetate as electron donor
+    node_type: TRAIT
+    grounding: traitmech:UED_ACETATE
+    description: Use of acetate as electron donor for energy conservation.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    grounding: CHEBI:30089
+    description: Short-chain organic acid serving as electron donor.
+  - node_id: acetate_oxidation
+    label: complete acetate oxidation to CO2
+    node_type: BIOLOGICAL_PROCESS
+    description: Sequential oxidation of acetate via acetyl-CoA and the
+      TCA/Wood-Ljungdahl pathway, releasing electrons and CO2.
+  - node_id: electron_transport
+    label: electron transport
+    node_type: PATHWAY
+    description: Membrane electron-transfer pathway coupling acetate-derived
+      electrons to a terminal electron acceptor.
+  - node_id: terminal_electron_acceptor
+    label: terminal electron acceptor
+    node_type: MOLECULAR_FUNCTION
+    description: External oxidised species (sulfate, nitrate, Fe(III), etc.)
+      accepting electrons from acetate-driven respiration.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy currency conserved by electron transfer.
+  edges:
+  - subject: acetate
+    predicate: oxidized by
+    object: acetate_oxidation
+    description: Acetate is fully oxidised to CO2, providing reducing equivalents.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: acetate
+      notes: Supports acetate as a substrate for complete-oxidation respiration.
+  - subject: acetate_oxidation
+    predicate: feeds electrons into
+    object: electron_transport
+    description: Electrons from acetate oxidation feed the respiratory chain.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: electron donor
+      notes: Supports acetate-derived electrons as the input to respiratory
+        electron transport.
+  - subject: electron_transport
+    predicate: transfers electrons to
+    object: terminal_electron_acceptor
+    description: The respiratory chain transfers electrons from acetate to a
+      terminal acceptor.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: terminal electron acceptor
+      notes: Supports terminal-acceptor reduction as the energy-conserving sink.
+  - subject: electron_transport
+    predicate: conserves
+    object: atp
+    description: Proton-motive-force coupling to ATP synthase generates ATP
+      during acetate-driven respiration.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: ATP
+      notes: Supports ATP synthesis coupled to acetate oxidation.
+  - subject: atp
+    predicate: manifests as
+    object: trait
+    description: ATP yield from acetate-driven electron transfer manifests the
+      use-acetate-as-electron-donor trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: acetate
+      notes: Supports the trait endpoint.
+curation_history:
+- timestamp: '2026-05-16T07:40:00-07:00'
+  curator: claude
+  action: REPLACES_DEPRECATED_RELATION
+  changes: New TraitMech-curated record. Replaces METPO:2000009
+    (uses_as_electron_donor) specifically for acetate (CHEBI:30089).
+  llm_assisted: true

@@ -1,0 +1,125 @@
+identifier: traitmech:UEA_NITRATE
+label: uses nitrate as electron acceptor
+definition: A metabolic trait in which an organism uses nitrate as a terminal
+  electron acceptor in anaerobic respiration, reducing nitrate via the
+  denitrification pathway (NO3- → NO2- → NO → N2O → N2) or dissimilatory nitrate
+  reduction to ammonium (DNRA).
+definition_source: DOI:10.1146/annurev.micro.61.080706.093130
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000060
+xrefs:
+- CHEBI:17632
+replaces:
+- METPO:2000008
+- CHEBI:17632
+synonyms:
+- synonym_text: nitrate-respiring
+  synonym_type: RELATED_SYNONYM
+  source: traitmech
+- synonym_text: denitrifier
+  synonym_type: RELATED_SYNONYM
+  source: traitmech
+evidence:
+- reference: DOI:10.1146/annurev.micro.61.080706.093130
+  snippet: nitrate
+  notes: Microbial-physiology review supports nitrate respiration as a major
+    anaerobic-respiratory pathway across diverse bacterial lineages.
+- reference: PMID:14573725
+  snippet: Paracoccus denitrificans
+  notes: 'Organism example: Paracoccus denitrificans is the model denitrifier,
+    reducing nitrate to dinitrogen via the complete denitrification chain.'
+causal_graphs:
+- graph_id: uses_nitrate_as_electron_acceptor_respiration
+  title: Use of nitrate as terminal electron acceptor
+  description: DOI-backed graph linking electron donors, the respiratory chain,
+    nitrate reductase, nitrate, and ATP yield from anaerobic nitrate
+    respiration.
+  nodes:
+  - node_id: trait
+    label: uses nitrate as electron acceptor
+    node_type: TRAIT
+    grounding: traitmech:UEA_NITRATE
+    description: Use of nitrate as the terminal electron acceptor in anaerobic
+      respiration.
+  - node_id: electron_donor
+    label: respiratory electron donor
+    node_type: CHEMICAL
+    description: Reduced organic or inorganic substrate (e.g. organic carbon,
+      H2, sulfide) supplying electrons for nitrate respiration.
+  - node_id: electron_transport
+    label: respiratory electron transport
+    node_type: PATHWAY
+    description: Membrane electron-transfer pathway delivering electrons from
+      donor oxidation to nitrate reductase.
+  - node_id: nitrate_reductase
+    label: nitrate reductase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound or periplasmic enzyme reducing nitrate to
+      nitrite (first step of denitrification or DNRA).
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    grounding: CHEBI:17632
+    description: Oxidised inorganic nitrogen species accepting electrons.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy currency conserved by nitrate respiration.
+  edges:
+  - subject: electron_donor
+    predicate: feeds electrons into
+    object: electron_transport
+    description: Electrons from oxidised substrates enter the respiratory chain.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: electron donor
+      notes: Supports respiratory electron transport as the route from donor
+        oxidation to a terminal acceptor.
+  - subject: electron_transport
+    predicate: transfers electrons to
+    object: nitrate_reductase
+    description: The respiratory chain delivers electrons to nitrate reductase.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: nitrate reductase
+      notes: Supports nitrate reductase as the terminal-acceptor enzyme of
+        nitrate respiration.
+  - subject: nitrate_reductase
+    predicate: reduces
+    object: nitrate
+    description: Nitrate reductase reduces nitrate to nitrite, initiating
+      denitrification or DNRA.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: nitrate
+      notes: Supports nitrate as the electron acceptor in anaerobic nitrate
+        respiration.
+  - subject: electron_transport
+    predicate: conserves
+    object: atp
+    description: Proton-motive-force coupling to ATP synthase generates ATP
+      during nitrate-driven respiration.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: ATP
+      notes: Supports ATP synthesis coupled to nitrate respiration.
+  - subject: atp
+    predicate: manifests as
+    object: trait
+    description: ATP yield from nitrate-coupled electron transfer manifests
+      the use-nitrate-as-electron-acceptor trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.61.080706.093130
+      snippet: nitrate
+      notes: Supports the trait endpoint.
+curation_history:
+- timestamp: '2026-05-16T07:40:00-07:00'
+  curator: claude
+  action: REPLACES_DEPRECATED_RELATION
+  changes: New TraitMech-curated record. Replaces METPO:2000008
+    (uses_as_electron_acceptor) specifically for nitrate (CHEBI:17632).
+  llm_assisted: true
