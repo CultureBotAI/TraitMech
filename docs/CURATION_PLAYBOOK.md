@@ -27,13 +27,20 @@ mechanism structure**. Three healthy use cases:
    the numeric range (from the METPO synonym) to a representative
    mechanism, with a single `is a` edge back to the umbrella.
 
-**Skip causal graphs when:**
+**Thin "classification axis" graphs** are appropriate for
+administrative or regulatory classifications that don't have a
+biological mechanism of their own — e.g., `biosafety_level_1`. These
+get a 3–4 node graph framing the classification as a value on an
+axis (hazard properties → classification → containment requirements),
+not a phenotype mechanism. See use case 2 above and the
+`biosafety_level` family for the established pattern.
+
+**Skip causal graphs entirely when:**
 
 - The record is `term_kind: OBJECT_PROPERTY` or
   `DATATYPE_PROPERTY` (relation carrier) → typically `DEPRECATED`.
-- The record is an administrative/regulatory classification with no
-  biological mechanism (e.g., `biosafety_level_1` deserves a thin
-  hazard-classification graph but is not a phenotype mechanism).
+- The record's biology is fully covered by a more specific child
+  trait and no umbrella-level mechanism is meaningful.
 
 ## File-level structure
 
@@ -67,7 +74,8 @@ curation_history:
   action: SEEDED_FROM_METPO
   ...
 - timestamp: <today>
-  curator: claude            # or codex or human name
+  curator: claude            # lowercase handle (claude, codex,
+                             # or your-handle); not a full name
   action: CURATED_CAUSAL_GRAPH
   changes: <one-sentence summary of what was added>
   llm_assisted: true
@@ -125,7 +133,8 @@ Required: `node_id` (unique within the graph), `label`,
 | The trait itself | `TRAIT` with `grounding: METPO:...` |
 | Another grounded trait (`is a` child, sibling) | `TRAIT` with `grounding: METPO:...` |
 | Ambient temperature/pH/NaCl/light/nutrient level | `ENVIRONMENTAL_FACTOR` |
-| A biological process (e.g., osmotic balance, cytokinesis) | `BIOLOGICAL_PROCESS` |
+| A named biochemical pathway (TCA cycle, glycolysis, respiration) | `PATHWAY` |
+| A biological process (osmotic balance, cytokinesis, etc.) | `BIOLOGICAL_PROCESS` |
 | A named enzyme / protein / pathway component | `GENE_OR_PROTEIN` |
 | A small-molecule (with optional `CHEBI:` grounding) | `CHEMICAL` |
 | A cell-envelope structure, membrane, sacculus | `CELLULAR_LOCALIZATION` |
@@ -133,10 +142,19 @@ Required: `node_id` (unique within the graph), `label`,
 | Laboratory practice / containment / experimental design | `EXPERIMENTAL_FACTOR` |
 | A molecular role (e.g., "terminal electron acceptor") | `MOLECULAR_FUNCTION` |
 
+`PATHWAY` vs `BIOLOGICAL_PROCESS`: use `PATHWAY` for named ordered
+sequences of reactions/steps (TCA cycle, fermentation, respiration —
+see `data/traits/metabolism/acetogenesis.yaml` for an example).
+Use `BIOLOGICAL_PROCESS` for everything else process-like (a
+response, a regulatory event, a state-change).
+
 **Established convention: the bacterial cell wall is
 `CELLULAR_LOCALIZATION`** with `node_id: peptidoglycan_cell_wall`
-(and ideally `grounding: GO:0009274`). Do **not** use `ORGANELLE`
-for the cell wall — see PR #26 / #44 precedent.
+and `grounding: GO:0009274`. Do **not** use `ORGANELLE` for the
+cell wall — see PR #26 / #44 precedent. (A small number of older
+records may still type the cell wall as `ORGANELLE`; these are
+legacy and should be migrated to `CELLULAR_LOCALIZATION` when
+touched.)
 
 **TRAIT labels** should match the canonical METPO label of the
 trait being grounded — no stray `" phenotype"` suffix beyond what
@@ -190,16 +208,25 @@ use spaces (`combines with`, not `combines_with`).
 
 ## Curation history
 
-Append a `CurationEvent` for each significant change. Use these
-canonical action names:
+Append a `CurationEvent` for each significant change. Action vocabulary
+in use across the repo (any of these is acceptable; prefer the
+shorter form for new work):
 
-- `SEEDED_FROM_METPO` (the auto-import event; never write this
-  yourself)
-- `CURATED_WITH_LITERATURE` (added definition/evidence from sources)
-- `CURATED_WITH_ORGANISM_EXAMPLE` (added a PMID organism example)
-- `CURATED_CAUSAL_GRAPH` (added or revised the causal graph)
-- `DEPRECATED_PROPERTY_RECORD` (marked a relation carrier as
-  superseded)
+- `SEEDED_FROM_METPO` — auto-import event (don't write this yourself).
+- `CURATED_WITH_LITERATURE` — added definition/evidence from sources.
+- `CURATED_WITH_ORGANISM_EXAMPLE` / `ADDED_ORGANISM_EXAMPLE` —
+  added a PMID-backed organism example.
+- `CURATED_CAUSAL_GRAPH` / `ADDED_CAUSAL_GRAPH` — added or revised
+  the causal graph (use `CURATED_*` for first add; `ADDED_*` is
+  legacy from earlier curation passes).
+- `IMPROVED_CAUSAL_GRAPH_EVIDENCE` — added or strengthened
+  edge-level evidence on an existing graph.
+- `DEPRECATED_PROPERTY_RECORD` — marked a relation carrier as
+  superseded.
+
+`curator:` is a lowercase handle (`claude`, `codex`, or your own
+short identifier) — not a full name — so history stays
+machine-greppable.
 
 Set `llm_assisted: true` when an LLM helped generate the content.
 
