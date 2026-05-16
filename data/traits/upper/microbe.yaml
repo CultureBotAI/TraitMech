@@ -10,8 +10,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1000186
-xrefs:
-- OBI:0100026
 evidence:
 - reference: PMID:21413255
   snippet: microorganisms
@@ -28,7 +26,16 @@ curation_history:
   changes: 'Created upper-ontology CLASS record for METPO:1000525 (microbe)
     so that the domain of un-deprecated metabolism OBJECT_PROPERTYs (which
     all declare domain https://w3id.org/metpo/1000525) resolves to a curated
-    TraitMech record. Added xref to OBI:0100026 (organism) as the closest
-    upper-ontology equivalent; no clean NCBITaxon equivalent exists because
-    microbe cuts across bacteria, archaea, and microbial eukaryotes.'
+    TraitMech record.'
+  llm_assisted: true
+- timestamp: '2026-05-16T09:45:00-07:00'
+  curator: claude
+  action: REMOVED_NON_EQUIVALENT_XREF
+  changes: 'Removed xref to OBI:0100026 (organism) per Copilot review of PR
+    #55. The schema documents xrefs as ontology *equivalents*; OBI:0100026
+    "organism" is broader than "microbe" (it covers macro-organisms too),
+    so treating it as an equivalence mapping would mis-align downstream
+    consumers. No clean NCBITaxon, OBI, or ENVO equivalent for "microbe"
+    exists because the concept cuts across bacteria, archaea, and microbial
+    eukaryotes; left without xrefs.'
   llm_assisted: true
