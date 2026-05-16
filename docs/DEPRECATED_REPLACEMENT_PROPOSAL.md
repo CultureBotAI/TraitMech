@@ -29,7 +29,7 @@ Take `uses_as_carbon_source` (METPO:2000006) as the worked example.
 A single specific replacement record might look like:
 
 ```yaml
-identifier: TRAITMECH:UCS_GLUCOSE
+identifier: traitmech:UCS_GLUCOSE
 label: uses glucose as carbon source
 definition: A metabolic trait in which an organism uses glucose as
   its sole or primary carbon source for growth.
@@ -38,9 +38,15 @@ trait_category: METABOLISM
 term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
-- METPO:2000001          # the generic 'metabolic relation' anchor
+- METPO:1000060          # 'metabolism' umbrella CLASS — the right
+                         # rdfs:subClassOf parent. METPO:2000006
+                         # (the OBJECT_PROPERTY this record replaces)
+                         # belongs in xrefs / curation_history, NOT
+                         # in parent_traits (property vs class
+                         # hierarchy).
 xrefs:
 - CHEBI:17234            # glucose
+- METPO:2000006          # replaces this deprecated relation carrier
 synonyms:
 - synonym_text: glucose as sole carbon source
   synonym_type: RELATED_SYNONYM
@@ -60,7 +66,7 @@ causal_graphs:
   - node_id: trait
     label: uses glucose as carbon source
     node_type: TRAIT
-    grounding: TRAITMECH:UCS_GLUCOSE
+    grounding: traitmech:UCS_GLUCOSE
     description: Use of glucose as the sole/primary carbon source.
   - node_id: glucose
     label: glucose
@@ -97,15 +103,59 @@ causal_graphs:
       snippet: glucose as the sole carbon source
       notes: Supports glucose import as the first step of glucose
         catabolism.
-  # ... remaining edges glycolysis → precursors → growth ...
+  - subject: glucose_uptake
+    predicate: feeds
+    object: glycolysis
+    description: Imported glucose enters the glycolytic pathway.
+    evidence:
+    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
+      snippet: glucose
+      notes: Supports glucose as the substrate entering glycolysis.
+  - subject: glycolysis
+    predicate: produces
+    object: precursor_metabolites
+    description: Glycolysis yields pyruvate and central intermediates
+      for biosynthesis.
+    evidence:
+    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
+      snippet: glycolysis
+      notes: Supports glycolysis as a producer of central catabolic
+        precursors.
+  - subject: precursor_metabolites
+    predicate: enables
+    object: cellular_growth
+    description: Central metabolites supply biosynthesis required
+      for net biomass accumulation.
+    evidence:
+    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
+      snippet: growth
+      notes: Supports central catabolic precursors as required for
+        growth on glucose.
+  - subject: cellular_growth
+    predicate: manifests as
+    object: trait
+    description: Net growth on glucose manifests the
+      use-glucose-as-carbon-source trait.
+    evidence:
+    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
+      snippet: glucose as the sole carbon source
+      notes: Supports the trait endpoint.
 curation_history:
 - timestamp: '...'
   curator: claude
   action: REPLACES_DEPRECATED_RELATION
-  changes: Replaces the generic METPO:2000006 (uses_as_carbon_source)
-    carrier for glucose specifically.
+  changes: 'Replaces the generic METPO:2000006 (uses_as_carbon_source)
+    carrier for glucose specifically. Replacement lineage:
+    replaces METPO:2000006 + CHEBI:17234.'
   llm_assisted: true
 ```
+
+(The example above is intentionally a complete-edge graph so it can
+be lifted directly as a starting record once the identifier policy
+is settled. Note that lineage is recorded in `changes` and in
+`xrefs`, not in a dedicated `replaced_by:` field, since
+`CurationEvent` does not currently support one — see Decision 4
+below.)
 
 ## Key design decisions for the user
 
@@ -115,43 +165,71 @@ curation_history:
    - **(a)** Coordinate with METPO upstream: file an issue listing
      the specific records we want and get METPO IDs assigned. Slow
      but keeps the namespace clean.
-   - **(b)** Use a local `TRAITMECH:` prefix for now (the schema
-     pattern `^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$` already
-     accepts it). Later, when METPO accepts the records, do a one-off
-     ID rewrite (a regex over `data/traits/` is straightforward).
+   - **(b)** Use the local `traitmech:` prefix for now (the schema
+     already declares it; CURIE pattern accepts it). Later, when
+     METPO accepts the records, do a one-off ID rewrite (a regex
+     over `data/traits/` is straightforward).
    - **(c)** Don't replace; keep the deprecated records and use
      `xrefs` or `synonyms` on existing trait records to express the
      substrate-specific information.
    - The recommended option is **(b)** for tractable progress with
      **(a)** filed as a parallel upstream issue. The worked example
-     above uses option (b) (`TRAITMECH:UCS_GLUCOSE`).
+     above uses option (b) (`traitmech:UCS_GLUCOSE`). Note that the
+     schema's declared prefix is **lowercase** `traitmech:` (matching
+     the lowercase `traitmech: https://w3id.org/traitmech/` mapping
+     in `src/traitmech/schema/traitmech.yaml`); the ID's local part
+     can be mixed-case for readability.
 
 2. **Naming scheme**. A coherent ID/slug pattern keeps the corpus
    navigable. Suggestion:
-   - ID: `TRAITMECH:<RELATION>_<CHEMICAL>` where `<RELATION>` is a
+   - ID: `traitmech:<RELATION>_<CHEMICAL>` where `<RELATION>` is a
      short code (`UCS` = uses as carbon source, `UES` = uses as
      energy source, `UEA` = uses as electron acceptor, `UED` = uses
      as electron donor, `FERM` = ferments, etc.) and `<CHEMICAL>` is
      the substrate's slug.
    - File slug: `uses_glucose_as_carbon_source.yaml` (i.e., the
      human-readable form), placed under `data/traits/metabolism/`.
-   - Label: same as file slug but with spaces.
+     File slug uses snake_case to match the rest of the corpus.
+   - Label: human-readable (`uses glucose as carbon source`),
+     spaces not underscores.
 
 3. **Scope of the first batch**. 94 metabolism relation carriers × N
-   substrates is intractable as one PR. A sensible first batch is:
-   - Pick **5–10 high-value substrate × relation pairs** that
-     downstream consumers actually need (e.g., glucose, acetate,
-     lactate, citrate, fumarate, hydrogen, nitrate, sulfate, oxygen,
-     ammonia × the canonical relations).
-   - That generates **~30–60 new records**, manageable as one or two
-     PRs.
+   substrates is intractable as one PR. A sensible first batch
+   is **~5 substrates × ~3 relations = ~15 records**, picking
+   high-value pairs:
+   - Substrates: glucose, acetate, lactate, hydrogen, nitrate (a
+     mix of carbon, electron-donor, and electron-acceptor uses).
+   - Relations: `uses_as_carbon_source`, `uses_as_electron_donor`,
+     `uses_as_electron_acceptor` (the three most-queried use
+     relations).
+   - Not every cross-pair is biologically meaningful — e.g.,
+     `uses_glucose_as_electron_acceptor` isn't a real phenotype.
+     Curate only meaningful pairs, expected to be 10–15 records
+     out of the 5×3 = 15 candidate matrix.
+   - Avoid an "every substrate × every relation" first batch.
 
-4. **What happens to the existing DEPRECATED records?**
-   - Leave them in place with their `DEPRECATED` status (they still
-     serve as anchors for the new records' `parent_traits` and
-     `replaces` xref).
-   - Add a `replaced_by:` field in `curation_history` of the new
-     record (or as an `xref`) so the lineage is traceable.
+4. **Replacement lineage** (existing DEPRECATED records → new
+   records). Two important constraints:
+   - The DEPRECATED record is an `OBJECT_PROPERTY` (relation), not a
+     `CLASS`. It is **not** the rdfs:subClassOf parent of the new
+     record. `parent_traits` should point to a real class anchor
+     (e.g., the `metabolism` umbrella `METPO:1000060`), not to the
+     deprecated property.
+   - The schema's `CurationEvent` currently does **not** have a
+     dedicated `replaced_by:` field — it carries `timestamp`,
+     `curator`, `action`, `changes`, `llm_assisted` only. Record
+     replacement lineage in two existing slots:
+     - **`xrefs:`** on the new record points to the deprecated
+       METPO ID (e.g., `xrefs: [METPO:2000006, CHEBI:17234]`).
+     - **`curation_history.changes:`** explicitly states "replaces
+       METPO:2000006 + CHEBI:17234".
+   - If a structured lineage field is desired, propose a small
+     schema extension in a separate PR (e.g., a `replaces:` field
+     on `TraitRecord` that takes a list of CURIEs). Don't invent
+     unsupported fields in YAML — they would break validation.
+   - Leave the DEPRECATED records themselves in place; they remain
+     as the upstream-METPO IDs that downstream consumers may still
+     reference.
 
 5. **Negative usage** (`does_not_use_as_carbon_source` style). 47 of
    the 94 metabolism deprecated records are explicit negations. The
