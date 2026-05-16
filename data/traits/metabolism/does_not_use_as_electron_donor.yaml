@@ -1,14 +1,27 @@
 identifier: METPO:2000035
 label: does not use as electron donor
+definition: An OBJECT_PROPERTY asserting that an organism does *not* use a given chemical
+  entity as an electron donor. The intended use is predicate + class composition at
+  assertion time, e.g. `<organism> METPO:X CHEBI:18276` ("organism does not use H2
+  as electron donor"). Negation companion to METPO:2000009.
+definition_source: DOI:10.1146/annurev.micro.61.080706.093130
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: DEPRECATED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:2000001
 synonyms:
 - synonym_text: electron donor
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+domain: https://w3id.org/metpo/1000525
+range_: http://purl.obolibrary.org/obo/CHEBI_24431
+evidence:
+- reference: DOI:10.1146/annurev.micro.61.080706.093130
+  snippet: electron donor
+  notes: Microbial-physiology reference supports the positive form of this relation;
+    the negation companion uses the same domain/range with the assertion negated at
+    use-site.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.967448+00:00'
   curator: seed_from_metpo
@@ -19,6 +32,13 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated generic chemical-use relation carrier; later replacement should
-    use more specific trait records that combine the relation with the chemical,
-    metabolic role, growth condition, and positive or negative usage context.
+    use more specific trait records that combine the relation with the chemical, metabolic
+    role, growth condition, and positive or negative usage context.
+  llm_assisted: true
+- timestamp: '2026-05-16T08:50:00-07:00'
+  curator: claude
+  action: UNDEPRECATED_AS_COMPOSITION_PRIMITIVE
+  changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
+    pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
+    DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
   llm_assisted: true

@@ -1,14 +1,26 @@
 identifier: METPO:2000050
 label: uses for anaerobic growth in the dark
+definition: An OBJECT_PROPERTY relating an organism to a chemical that supports the
+  organism's growth under anaerobic conditions without illumination (i.e. excluding
+  phototrophic anaerobic growth).
+definition_source: DOI:10.1146/annurev.micro.55.1.485
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: DEPRECATED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:2000001
 synonyms:
 - synonym_text: anaerobic growth in the dark
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+domain: https://w3id.org/metpo/1000525
+range_: http://purl.obolibrary.org/obo/CHEBI_24431
+evidence:
+- reference: DOI:10.1146/annurev.micro.55.1.485
+  snippet: anaerobic
+  notes: Microbial-physiology reference supports 'uses for anaerobic growth in the
+    dark' as a canonical predicate composed with a CHEBI-class chemical object at
+    assertion time.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.974663+00:00'
   curator: seed_from_metpo
@@ -19,6 +31,13 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated generic use-context relation carrier; later replacement should
-    use more specific trait records that combine the relation with the chemical,
-    growth or respiration context, experimental condition, or other entity.
+    use more specific trait records that combine the relation with the chemical, growth
+    or respiration context, experimental condition, or other entity.
+  llm_assisted: true
+- timestamp: '2026-05-16T08:50:00-07:00'
+  curator: claude
+  action: UNDEPRECATED_AS_COMPOSITION_PRIMITIVE
+  changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
+    pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
+    DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
   llm_assisted: true

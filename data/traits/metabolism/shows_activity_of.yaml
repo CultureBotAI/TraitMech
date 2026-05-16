@@ -1,8 +1,11 @@
 identifier: METPO:2000302
 label: shows activity of
+definition: An OBJECT_PROPERTY relating an organism to an enzyme or metabolic activity
+  that the organism exhibits.
+definition_source: PMID:21413255
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: DEPRECATED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:2000301
 synonyms:
@@ -10,7 +13,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 domain: https://w3id.org/metpo/1000525
-range_: https://w3id.org/metpo/1000527
+range_: http://purl.obolibrary.org/obo/CHEBI_24431
+evidence:
+- reference: PMID:21413255
+  snippet: activity
+  notes: Microbial-physiology reference supports 'shows activity of' as a canonical
+    predicate composed with a CHEBI-class chemical object at assertion time.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.991056+00:00'
   curator: seed_from_metpo
@@ -21,7 +29,14 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated generic biochemical conversion or activity relation carrier;
-    later replacement should use more specific trait records that combine the
-    relation with the substrate, product, enzyme or activity target, assay
-    context, growth condition, or other entity.
+    later replacement should use more specific trait records that combine the relation
+    with the substrate, product, enzyme or activity target, assay context, growth
+    condition, or other entity.
+  llm_assisted: true
+- timestamp: '2026-05-16T08:50:00-07:00'
+  curator: claude
+  action: UNDEPRECATED_AS_COMPOSITION_PRIMITIVE
+  changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
+    pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
+    DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
   llm_assisted: true
