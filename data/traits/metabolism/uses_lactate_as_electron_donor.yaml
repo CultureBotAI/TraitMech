@@ -1,0 +1,119 @@
+identifier: traitmech:UED_LACTATE
+label: uses lactate as electron donor
+definition: A metabolic trait in which an organism oxidises lactate as an electron
+  donor for energy conservation, typically coupled to anaerobic respiration with
+  sulfate or other external acceptors (e.g. in sulfate-reducing bacteria).
+definition_source: DOI:10.1146/annurev.micro.55.1.485
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000060
+xrefs:
+- CHEBI:24996
+replaces:
+- METPO:2000009
+- CHEBI:24996
+synonyms:
+- synonym_text: lactate-oxidising
+  synonym_type: RELATED_SYNONYM
+  source: traitmech
+evidence:
+- reference: DOI:10.1146/annurev.micro.55.1.485
+  snippet: lactate
+  notes: Anaerobic-respiration review supports lactate oxidation as an
+    electron-donor route in sulfate-reducing and other anaerobic bacteria.
+- reference: PMID:14563071
+  snippet: Desulfovibrio
+  notes: 'Organism example: Desulfovibrio vulgaris Hildenborough oxidises
+    lactate as electron donor coupled to sulfate reduction (Heidelberg et al.
+    2004, Nat Biotechnol, genome).'
+causal_graphs:
+- graph_id: uses_lactate_as_electron_donor_oxidation
+  title: Use of lactate as electron donor
+  description: DOI-backed graph linking lactate, lactate dehydrogenase, electron
+    transport, terminal electron acceptor reduction, and ATP synthesis.
+  nodes:
+  - node_id: trait
+    label: uses lactate as electron donor
+    node_type: TRAIT
+    grounding: traitmech:UED_LACTATE
+    description: Use of lactate as electron donor for energy conservation.
+  - node_id: lactate
+    label: lactate
+    node_type: CHEMICAL
+    grounding: CHEBI:24996
+    description: Three-carbon organic acid serving as electron donor.
+  - node_id: lactate_dehydrogenase
+    label: lactate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidising lactate to pyruvate; in anaerobes, often
+      membrane-bound and coupled to electron-transfer chains.
+  - node_id: electron_transport
+    label: electron transport
+    node_type: PATHWAY
+    description: Membrane electron-transfer pathway coupling lactate-derived
+      electrons to a terminal electron acceptor.
+  - node_id: terminal_electron_acceptor
+    label: terminal electron acceptor
+    node_type: MOLECULAR_FUNCTION
+    description: External oxidised species (sulfate, fumarate, Fe(III), etc.)
+      accepting electrons from lactate-driven respiration.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Energy currency conserved by electron transfer.
+  edges:
+  - subject: lactate
+    predicate: oxidized by
+    object: lactate_dehydrogenase
+    description: Lactate is oxidised, releasing electrons for the respiratory
+      chain.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: lactate
+      notes: Supports lactate as a substrate for anaerobic respiratory
+        electron-donor metabolism.
+  - subject: lactate_dehydrogenase
+    predicate: feeds electrons into
+    object: electron_transport
+    description: Lactate-derived electrons feed the respiratory chain.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: electron donor
+      notes: Supports lactate-derived electrons as the input to respiratory
+        electron transport.
+  - subject: electron_transport
+    predicate: transfers electrons to
+    object: terminal_electron_acceptor
+    description: The respiratory chain transfers electrons from lactate to a
+      terminal acceptor.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: terminal electron acceptor
+      notes: Supports terminal-acceptor reduction as the energy-conserving sink.
+  - subject: electron_transport
+    predicate: conserves
+    object: atp
+    description: Proton-motive-force coupling to ATP synthase generates ATP.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: ATP
+      notes: Supports ATP synthesis coupled to lactate-driven respiration.
+  - subject: atp
+    predicate: manifests as
+    object: trait
+    description: ATP yield from lactate-driven electron transfer manifests the
+      use-lactate-as-electron-donor trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.485
+      snippet: lactate
+      notes: Supports the trait endpoint.
+curation_history:
+- timestamp: '2026-05-16T07:40:00-07:00'
+  curator: claude
+  action: REPLACES_DEPRECATED_RELATION
+  changes: New TraitMech-curated record. Replaces METPO:2000009
+    (uses_as_electron_donor) specifically for lactate (CHEBI:24996).
+  llm_assisted: true

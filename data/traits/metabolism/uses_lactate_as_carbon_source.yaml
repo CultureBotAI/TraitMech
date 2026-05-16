@@ -1,0 +1,116 @@
+identifier: traitmech:UCS_LACTATE
+label: uses lactate as carbon source
+definition: A metabolic trait in which an organism uses lactate as a sole or primary
+  carbon source for growth, oxidising lactate to pyruvate via lactate dehydrogenase
+  and feeding central catabolism for biosynthesis.
+definition_source: DOI:10.1099/00207713-49-2-541
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000060
+xrefs:
+- CHEBI:24996
+replaces:
+- METPO:2000006
+- CHEBI:24996
+synonyms:
+- synonym_text: lactate as sole carbon source
+  synonym_type: RELATED_SYNONYM
+  source: traitmech
+evidence:
+- reference: DOI:10.1099/00207713-49-2-541
+  snippet: lactate
+  notes: Taxonomic descriptions of marine bacteria support lactate as a defining
+    carbon source for lactate-utilising lineages.
+- reference: PMID:14563071
+  snippet: Desulfovibrio
+  notes: 'Organism example: Desulfovibrio spp. grow on lactate as carbon source,
+    oxidising it to acetate (Heidelberg et al. 2004, Nat Biotechnol, genome of
+    D. vulgaris Hildenborough).'
+causal_graphs:
+- graph_id: uses_lactate_as_carbon_source_assimilation
+  title: Use of lactate as carbon source
+  description: DOI-backed graph linking lactate, lactate dehydrogenase, pyruvate,
+    central catabolism, and cellular growth.
+  nodes:
+  - node_id: trait
+    label: uses lactate as carbon source
+    node_type: TRAIT
+    grounding: traitmech:UCS_LACTATE
+    description: Use of lactate as the sole or primary carbon source.
+  - node_id: lactate
+    label: lactate
+    node_type: CHEMICAL
+    grounding: CHEBI:24996
+    description: Three-carbon organic acid serving as carbon source.
+  - node_id: lactate_dehydrogenase
+    label: lactate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidising lactate to pyruvate, releasing NADH.
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    grounding: CHEBI:15361
+    description: Central catabolic intermediate produced from lactate.
+  - node_id: central_catabolism
+    label: central catabolism
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009056
+    description: Downstream catabolic and anabolic processing of pyruvate-derived
+      carbon.
+  - node_id: cellular_growth
+    label: cellular growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Net biomass accumulation.
+  edges:
+  - subject: lactate
+    predicate: oxidized by
+    object: lactate_dehydrogenase
+    description: Lactate is converted to pyruvate by lactate dehydrogenase.
+    evidence:
+    - reference: DOI:10.1099/00207713-49-2-541
+      snippet: lactate
+      notes: Supports lactate oxidation as the entry step into central
+        metabolism.
+  - subject: lactate_dehydrogenase
+    predicate: produces
+    object: pyruvate
+    description: Lactate dehydrogenase yields pyruvate (+ NADH) from lactate.
+    evidence:
+    - reference: DOI:10.1099/00207713-49-2-541
+      snippet: pyruvate
+      notes: Supports pyruvate as the immediate product of lactate oxidation.
+  - subject: pyruvate
+    predicate: feeds
+    object: central_catabolism
+    description: Pyruvate enters central catabolism for energy and biosynthesis.
+    evidence:
+    - reference: DOI:10.1099/00207713-49-2-541
+      snippet: central metabolism
+      notes: Supports pyruvate as a hub feeding central catabolism on lactate.
+  - subject: central_catabolism
+    predicate: enables
+    object: cellular_growth
+    description: Central catabolism supplies the precursor metabolites and ATP
+      needed for biomass accumulation.
+    evidence:
+    - reference: DOI:10.1099/00207713-49-2-541
+      snippet: growth
+      notes: Supports central catabolism as the basis of growth on lactate.
+  - subject: cellular_growth
+    predicate: manifests as
+    object: trait
+    description: Net growth on lactate manifests the use-lactate-as-carbon-source
+      trait.
+    evidence:
+    - reference: DOI:10.1099/00207713-49-2-541
+      snippet: lactate
+      notes: Supports the trait endpoint.
+curation_history:
+- timestamp: '2026-05-16T07:40:00-07:00'
+  curator: claude
+  action: REPLACES_DEPRECATED_RELATION
+  changes: New TraitMech-curated record. Replaces METPO:2000006
+    (uses_as_carbon_source) specifically for lactate (CHEBI:24996).
+  llm_assisted: true
