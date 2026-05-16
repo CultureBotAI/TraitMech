@@ -1,282 +1,168 @@
-# Proposal: replacing the 121 DEPRECATED relation carriers
+# Proposal: predicate + class composition for chemical-use relations
 
-## Background
+> **History note.** An earlier revision of this document proposed
+> *precomposing* substrate-specific TraitRecords like
+> `traitmech:UCS_GLUCOSE` ("uses glucose as carbon source") to replace
+> the DEPRECATED METPO relation carriers (`METPO:2000006` etc.).
+> That direction was wrong: it is not the METPO modelling pattern.
+> The correct pattern is **predicate + class composition** —
+> reusing the METPO OBJECT_PROPERTY as the predicate and pointing it
+> at a CHEBI (or other) class at the assertion site. This document
+> now describes that approach.
+>
+> See `git log -- docs/DEPRECATED_REPLACEMENT_PROPOSAL.md` for the
+> precomposition draft (now superseded). PR #52 (which added 7
+> precomposed records) was reverted.
 
-The current TraitMech corpus has **121 records with
-`mapping_status: DEPRECATED`**, split as:
+## The pattern
 
-| Category | Count | What they are |
-|---|---:|---|
-| metabolism | 94 | `OBJECT_PROPERTY` relation predicates seeded from METPO (`uses_as_carbon_source`, `does_not_use_as_carbon_source`, `ferments`, `has_phenotype`, `has_growth_temperature_observation`, …) |
-| observation | 20 | `CLASS` records representing generic observation/value carriers seeded from METPO (`growth NaCl observation`, `optimum pH observation`, …) |
-| quantitative_property | 7 | `DATATYPE_PROPERTY` records (`has maximum observed value`, `has value`, …) |
+METPO carries a set of OBJECT_PROPERTY records for chemical-use
+relations:
 
-Each carries a deprecation note that says, roughly:
+| METPO ID | Relation | Companion class |
+|---|---|---|
+| METPO:2000006 | uses as carbon source | a `CHEBI:` class (organic / carbon-bearing chemical) |
+| METPO:2000008 | uses as electron acceptor | a `CHEBI:` class (oxidised species) |
+| METPO:2000009 | uses as electron donor | a `CHEBI:` class (reduced species) |
+| METPO:2000007 | uses as energy source | a `CHEBI:` class or environmental factor |
+| METPO:2000010 | uses as nitrogen source | a `CHEBI:` class (N-bearing chemical) |
+| METPO:2000020 | uses as sulfur source | a `CHEBI:` class (S-bearing chemical) |
+| METPO:2000003 | builds acid from | a `CHEBI:` class (substrate) |
+| (and many more — see `data/traits/metabolism/`) |
 
-> Deprecated generic ... relation carrier; later replacement should
-> use more specific trait records that combine the relation with the
-> chemical, metabolic role, growth condition, and positive or
-> negative usage context.
+The intended assertion at use-site (in downstream KG, in causal
+graph edges, etc.) is:
 
-This file proposes how those replacements should be structured so a
-future curation push can produce them coherently. **No new TraitRecord
-YAMLs are committed in this PR** — the proposal is meant to be
-discussed and approved before scaling.
-
-## What "specific trait records" should look like
-
-Take `uses_as_carbon_source` (METPO:2000006) as the worked example.
-A single specific replacement record might look like:
-
-```yaml
-identifier: traitmech:UCS_GLUCOSE
-label: uses glucose as carbon source
-definition: A metabolic trait in which an organism uses glucose as
-  its sole or primary carbon source for growth.
-definition_source: DOI:10.1016/B978-012373944-5.00083-3
-trait_category: METABOLISM
-term_kind: CLASS
-mapping_status: REVIEWED
-parent_traits:
-- METPO:1000060          # 'metabolism' umbrella CLASS — the right
-                         # rdfs:subClassOf parent. METPO:2000006
-                         # (the OBJECT_PROPERTY this record replaces)
-                         # belongs in xrefs / curation_history, NOT
-                         # in parent_traits (property vs class
-                         # hierarchy).
-xrefs:
-- CHEBI:17234            # glucose
-- METPO:2000006          # replaces this deprecated relation carrier
-synonyms:
-- synonym_text: glucose as sole carbon source
-  synonym_type: RELATED_SYNONYM
-  source: traitmech
-evidence:
-- reference: DOI:10.1128/JB.183.16.4641-4654.2001
-  snippet: glucose as the sole carbon source
-  notes: Salmonella Typhimurium grown on glucose as sole carbon
-    source — example of a specific use-as-carbon-source observation.
-causal_graphs:
-- graph_id: uses_glucose_as_carbon_source_assimilation
-  title: Use of glucose as carbon source
-  description: Glucose enters the cell, is funnelled through
-    glycolysis into central catabolism, and supplies precursor
-    metabolites and energy for growth.
-  nodes:
-  - node_id: trait
-    label: uses glucose as carbon source
-    node_type: TRAIT
-    grounding: traitmech:UCS_GLUCOSE
-    description: Use of glucose as the sole/primary carbon source.
-  - node_id: glucose
-    label: glucose
-    node_type: CHEMICAL
-    grounding: CHEBI:17234
-    description: Hexose sugar serving as the carbon source.
-  - node_id: glucose_uptake
-    label: glucose transport
-    node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0015758
-    description: Cellular import of glucose (PTS, MFS, ABC, etc.).
-  - node_id: glycolysis
-    label: glycolysis
-    node_type: PATHWAY
-    grounding: GO:0006096
-    description: Embden–Meyerhof–Parnas pathway producing pyruvate
-      and ATP/NADH.
-  - node_id: precursor_metabolites
-    label: precursor metabolites
-    node_type: CHEMICAL
-    description: Central intermediates feeding biosynthesis.
-  - node_id: cellular_growth
-    label: cellular growth
-    node_type: BIOLOGICAL_PROCESS
-    description: Net biomass accumulation.
-  edges:
-  - subject: glucose
-    predicate: imported by
-    object: glucose_uptake
-    description: Extracellular glucose is taken up via dedicated
-      transporters before catabolism.
-    evidence:
-    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
-      snippet: glucose as the sole carbon source
-      notes: Supports glucose import as the first step of glucose
-        catabolism.
-  - subject: glucose_uptake
-    predicate: feeds
-    object: glycolysis
-    description: Imported glucose enters the glycolytic pathway.
-    evidence:
-    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
-      snippet: glucose
-      notes: Supports glucose as the substrate entering glycolysis.
-  - subject: glycolysis
-    predicate: produces
-    object: precursor_metabolites
-    description: Glycolysis yields pyruvate and central intermediates
-      for biosynthesis.
-    evidence:
-    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
-      snippet: glycolysis
-      notes: Supports glycolysis as a producer of central catabolic
-        precursors.
-  - subject: precursor_metabolites
-    predicate: enables
-    object: cellular_growth
-    description: Central metabolites supply biosynthesis required
-      for net biomass accumulation.
-    evidence:
-    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
-      snippet: growth
-      notes: Supports central catabolic precursors as required for
-        growth on glucose.
-  - subject: cellular_growth
-    predicate: manifests as
-    object: trait
-    description: Net growth on glucose manifests the
-      use-glucose-as-carbon-source trait.
-    evidence:
-    - reference: DOI:10.1128/JB.183.16.4641-4654.2001
-      snippet: glucose as the sole carbon source
-      notes: Supports the trait endpoint.
-curation_history:
-- timestamp: '...'
-  curator: claude
-  action: REPLACES_DEPRECATED_RELATION
-  changes: 'Replaces the generic METPO:2000006 (uses_as_carbon_source)
-    carrier for glucose specifically. Replacement lineage:
-    replaces METPO:2000006 + CHEBI:17234.'
-  llm_assisted: true
+```
+<organism>  METPO:2000006  CHEBI:17234     # X uses glucose as carbon source
+<organism>  METPO:2000009  CHEBI:18276     # X uses H2 as electron donor
+<organism>  METPO:2000008  CHEBI:17632     # X uses nitrate as electron acceptor
 ```
 
-(The example above is intentionally a complete-edge graph so it can
-be lifted directly as a starting record once the identifier policy
-is settled. Note that lineage is recorded in `changes` and in
-`xrefs`, not in a dedicated `replaced_by:` field, since
-`CurationEvent` does not currently support one — see Decision 4
-below.)
+TraitMech provides the predicate vocabulary (the METPO relations as
+`OBJECT_PROPERTY` records with definitions, evidence, and proper
+domain/range) and curated trait/phenotype classes. Downstream
+consumers — KG-Microbe, observation databases, organism profiles —
+compose the predicate with the CHEBI substrate at the level where
+each organism's observation is recorded. **No precomposed
+substrate-specific TraitRecords are needed in this corpus.**
 
-## Key design decisions for the user
+## Implications for the DEPRECATED records
 
-1. **Identifier prefix**. METPO IDs are assigned upstream by the
-   METPO maintainers, so TraitMech cannot mint new METPO IDs.
-   Options:
-   - **(a)** Coordinate with METPO upstream: file an issue listing
-     the specific records we want and get METPO IDs assigned. Slow
-     but keeps the namespace clean.
-   - **(b)** Use the local `traitmech:` prefix for now (the schema
-     already declares it; CURIE pattern accepts it). Later, when
-     METPO accepts the records, do a one-off ID rewrite (a regex
-     over `data/traits/` is straightforward).
-   - **(c)** Don't replace; keep the deprecated records and use
-     `xrefs` or `synonyms` on existing trait records to express the
-     substrate-specific information.
-   - The recommended option is **(b)** for tractable progress with
-     **(a)** filed as a parallel upstream issue. The worked example
-     above uses option (b) (`traitmech:UCS_GLUCOSE`). Note that the
-     schema's declared prefix is **lowercase** `traitmech:` (matching
-     the lowercase `traitmech: https://w3id.org/traitmech/` mapping
-     in `src/traitmech/schema/traitmech.yaml`); the ID's local part
-     can be mixed-case for readability.
+The 94 metabolism `OBJECT_PROPERTY` records previously marked
+`DEPRECATED` were the **wrong** thing to deprecate. They are
+precisely the composition primitives that the predicate+class model
+needs. They should be:
 
-2. **Naming scheme**. A coherent ID/slug pattern keeps the corpus
-   navigable. Suggestion:
-   - ID: `traitmech:<RELATION>_<CHEMICAL>` where `<RELATION>` is a
-     short code (`UCS` = uses as carbon source, `UES` = uses as
-     energy source, `UEA` = uses as electron acceptor, `UED` = uses
-     as electron donor, `FERM` = ferments, etc.) and `<CHEMICAL>` is
-     the substrate's slug.
-   - File slug: `uses_glucose_as_carbon_source.yaml` (i.e., the
-     human-readable form), placed under `data/traits/metabolism/`.
-     File slug uses snake_case to match the rest of the corpus.
-   - Label: human-readable (`uses glucose as carbon source`),
-     spaces not underscores.
+- Restored to `mapping_status: REVIEWED`.
+- Given a clean definition, definition_source, and at least one
+  literature-evidence entry that supports the relation as a
+  microbial-physiology descriptor.
+- Have their `domain:` and `range_:` slots set explicitly so RDF
+  consumers know the predicate connects an organism class to a
+  chemical class.
 
-3. **Scope of the first batch**. 94 metabolism relation carriers × N
-   substrates is intractable as one PR. A sensible first batch
-   is **~5 substrates × ~3 relations = ~15 records**, picking
-   high-value pairs:
-   - Substrates: glucose, acetate, lactate, hydrogen, nitrate (a
-     mix of carbon, electron-donor, and electron-acceptor uses).
-   - Relations: `uses_as_carbon_source`, `uses_as_electron_donor`,
-     `uses_as_electron_acceptor` (the three most-queried use
-     relations).
-   - Not every cross-pair is biologically meaningful — e.g.,
-     `uses_glucose_as_electron_acceptor` isn't a real phenotype.
-     Curate only meaningful pairs, expected to be 10–15 records
-     out of the 5×3 = 15 candidate matrix.
-   - Avoid an "every substrate × every relation" first batch.
+A `UNDEPRECATED_AS_COMPOSITION_PRIMITIVE` curation_history event
+records the restoration on each record.
 
-4. **Replacement lineage** (existing DEPRECATED records → new
-   records). Two important constraints:
-   - The DEPRECATED record is an `OBJECT_PROPERTY` (relation), not a
-     `CLASS`. It is **not** the rdfs:subClassOf parent of the new
-     record. `parent_traits` should point to a real class anchor
-     (e.g., the `metabolism` umbrella `METPO:1000060`), not to the
-     deprecated property.
-   - The schema's `CurationEvent` currently does **not** have a
-     dedicated `replaced_by:` field — it carries `timestamp`,
-     `curator`, `action`, `changes`, `llm_assisted` only. Record
-     replacement lineage in two existing slots:
-     - **`xrefs:`** on the new record points to the deprecated
-       METPO ID (e.g., `xrefs: [METPO:2000006, CHEBI:17234]`).
-     - **`curation_history.changes:`** explicitly states "replaces
-       METPO:2000006 + CHEBI:17234".
-   - If a structured lineage field is desired, propose a small
-     schema extension in a separate PR (e.g., a `replaces:` field
-     on `TraitRecord` that takes a list of CURIEs). Don't invent
-     unsupported fields in YAML — they would break validation.
-   - Leave the DEPRECATED records themselves in place; they remain
-     as the upstream-METPO IDs that downstream consumers may still
-     reference.
+3 of these (METPO:2000006 / 2000008 / 2000009 — the three directly
+touched in the original precomposition push) are un-deprecated in
+the same PR as this doc revision. The remaining 91 are deferred to
+a follow-up survey PR.
 
-5. **Negative usage** (`does_not_use_as_carbon_source` style). 47 of
-   the 94 metabolism deprecated records are explicit negations. The
-   replacement pattern would mirror the positive form but with
-   `does_not_use_glucose_as_carbon_source` records. Recommend
-   deferring negation expansion to a later batch (they're 2× the
-   work and less central to most downstream queries).
+## Implications for downstream graphs
 
-6. **Observation and quantitative_property categories**. These 27
-   records are structurally different — they represent observation
-   data carriers, not phenotype claims. They probably belong in a
-   separate replacement initiative tied to the `BacDive`-style
-   strain-observation modelling (see also PR #40 / #41). Defer until
-   the metabolism-relation replacement pattern is settled.
+Causal graphs inside TraitRecords already use the predicate+class
+pattern when needed: edges carry a `predicate:` string and point at
+nodes that are typically grounded chemicals or processes. For
+example, the existing `aerobic.yaml` causal graph has:
 
-## Suggested next step
+```yaml
+edges:
+- subject: aerobic_trait
+  predicate: requires
+  object: molecular_oxygen          # CHEMICAL node grounded to CHEBI:15379
+```
 
-If options (b) and the worked example look reasonable:
+Asserting "uses glucose as carbon source" at the edge level in
+*another* trait's graph would look like:
 
-1. Write a small CLI helper (`scripts/replace_deprecated.py`) that
-   takes a YAML manifest of `(relation, chemical, label,
-   parent_metpo_id)` rows and emits one TraitRecord YAML per row
-   with skeletal causal graph nodes (substrate → uptake → pathway →
-   biomass) that a human curator fills in.
-2. Curate the first batch (glucose, acetate, lactate, citrate, ...
-   × `uses_as_carbon_source` and `uses_as_electron_donor`) by hand,
-   following the playbook conventions in `docs/CURATION_PLAYBOOK.md`.
-3. PR per batch (~10–15 records each), Copilot-reviewed, merged
-   into main.
-4. After ~50 records, evaluate whether the pattern holds and decide
-   whether to keep going manually or invest in heavier automation.
+```yaml
+- subject: <some trait>
+  predicate: uses as carbon source  # METPO:2000006
+  object: glucose                   # CHEMICAL node grounded to CHEBI:17234
+```
 
-## Why this proposal instead of committing records
+This is already supported by the current schema — no schema change
+is needed beyond what's already there.
 
-The user's earlier note characterised this task as "substantial
-scope" needing a pilot. Three things made it preferable to write a
-proposal first rather than commit even a single record:
+## Implications for the `replaces:` schema field
 
-1. **Identifier minting** is a policy decision (option a/b/c above)
-   that should be made by maintainers, not unilaterally by the
-   curator.
-2. **Naming scheme** affects every future replacement; getting it
-   wrong creates rework.
-3. **Scope** (5–10 substrates × N relations × 94 metabolism records)
-   is large enough that a coherent plan beats opportunistic
-   per-record curation.
+The `replaces:` slot added in PR #51 (slot_uri `dcterms:replaces`)
+remains in the schema. Its primary motivating use case
+(precomposition records replacing DEPRECATED predicates) no longer
+applies, but the slot is still useful for genuine record
+replacements (e.g. when a TraitMech curator splits one record into
+two, or when METPO renumbers a class). The slot stays — it just
+won't be widely used until those occasions arise.
 
-With the decisions made, the replacement push becomes a clear
-multi-PR initiative that can run alongside the rest of TraitMech
-maintenance.
+## Implications for the upstream METPO issue
+
+`CultureBotAI/assay-metadata#2` was opened to request METPO IDs for
+the 7 precomposed records. That request is now moot. The issue is
+updated to explain the pivot to predicate+class composition.
+
+## What this PR does
+
+1. **Reverts PR #52** — deletes the 7 precomposed substrate-specific
+   records (`uses_glucose_as_carbon_source.yaml`, etc.) that were
+   the wrong direction.
+2. **Un-deprecates 3 METPO relation predicates** (METPO:2000006,
+   METPO:2000008, METPO:2000009) — switches `mapping_status` from
+   `DEPRECATED` back to `REVIEWED`, adds DOI-backed definition and
+   evidence, sets `domain:` and `range_:` to make the predicate's
+   intended composition explicit.
+3. **Rewrites this proposal doc** to describe the predicate+class
+   composition pattern.
+4. **Updates the curation playbook** with a section on the pattern.
+5. **Updates the upstream METPO issue** to explain the pivot.
+
+## Out of scope for this PR
+
+- **The 91 remaining DEPRECATED metabolism predicates** (`assimilates`,
+  `degrades`, `disproportionates`, `exports`, `ferments`, `hydrolyzes`,
+  `imports`, `oxidizes`, `produces`, `reduces`, `sequesters`,
+  `shows_activity_of`, `transports`, etc., plus their `does_not_*`
+  negation variants, plus the various `has_*_observation` records).
+  These are tracked in task #33 — a survey PR will pick the canonical
+  predicates and un-deprecate them in batch, leaving any genuinely
+  non-canonical ones (e.g. metpo-internal observation carriers) as
+  DEPRECATED.
+
+- **The 20 observation and 7 quantitative_property DEPRECATED
+  records**. These are structurally different (observation/value
+  carriers, not predicates), and the predicate+class pivot does
+  not directly affect them. They remain DEPRECATED pending a
+  separate observation-modelling decision.
+
+## Why the pivot now
+
+The precomposition approach treats each (substrate, relation) pair
+as a new ontology class. This:
+
+1. Multiplies record count combinatorially (5 substrates × 3
+   relations = 15 classes; the full matrix is ~thousands).
+2. Doesn't reflect how METPO is actually modelled upstream — METPO
+   keeps the predicate and class spaces separate.
+3. Creates a permanent fork between TraitMech and METPO whenever
+   substrates outside the precomposed batch are needed.
+
+The predicate+class approach:
+
+1. Records O(predicates) + O(chemicals), not O(predicates × chemicals).
+2. Matches METPO modelling.
+3. Lets organism observations refer directly to the same MM/CHEBI
+   classes used elsewhere in the OBO world.
+4. Surfaces the per-organism evidence at the *observation* level
+   (where it belongs) rather than the *class* level (where it
+   doesn't).

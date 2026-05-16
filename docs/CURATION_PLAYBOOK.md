@@ -38,9 +38,63 @@ not a phenotype mechanism. See use case 2 above and the
 **Skip causal graphs entirely when:**
 
 - The record is `term_kind: OBJECT_PROPERTY` or
-  `DATATYPE_PROPERTY` (relation carrier) → typically `DEPRECATED`.
+  `DATATYPE_PROPERTY` (relation carrier). These are predicates,
+  not phenotypes — they get a definition + evidence but no graph.
+  See "Chemical-use relations" below.
 - The record's biology is fully covered by a more specific child
   trait and no umbrella-level mechanism is meaningful.
+
+## Chemical-use relations: predicate + class composition
+
+METPO carries OBJECT_PROPERTY records for chemical-use relations
+(e.g. `METPO:2000006` "uses as carbon source", `METPO:2000009`
+"uses as electron donor", `METPO:2000008` "uses as electron
+acceptor"). The intended modelling pattern is **predicate + class
+composition** at the assertion site, NOT a precomposed
+substrate-specific TraitRecord per (relation × substrate) pair.
+
+An assertion like "organism X uses glucose as a carbon source" is
+modelled as the triple:
+
+```
+<organism>  METPO:2000006  CHEBI:17234
+```
+
+Curators **should not** create new records like
+`uses_glucose_as_carbon_source` to express such pairings. Those
+records were attempted briefly (PR #52, reverted) before being
+recognised as off-pattern; see `docs/DEPRECATED_REPLACEMENT_PROPOSAL.md`
+for the history.
+
+What curators **should** do for the OBJECT_PROPERTY relation
+records:
+
+- Keep `mapping_status: REVIEWED` (not DEPRECATED).
+- Set `domain:` to the organism class (typically the METPO
+  organism URI).
+- Set `range_:` to a CHEBI root broad enough to cover the
+  predicate's intended substrates. Use `CHEBI:24431` ("chemical
+  entity", the top CHEBI root) by default — most chemical-use
+  predicates accept both organic and inorganic substrates (CO2 as
+  carbon source, H2 / NH3 / Fe2+ as electron donors, nitrate /
+  sulfate / O2 as electron acceptors, etc.). A narrower root like
+  `CHEBI:50860` ("organic molecular entity") would incorrectly
+  exclude these inorganic objects.
+- Provide a DOI/PMID-backed `definition_source` and at least one
+  literature `evidence` entry framing the relation as a recognised
+  microbial-physiology descriptor.
+- Do not add a `causal_graphs:` block — these are predicates, not
+  phenotypes with mechanism.
+
+Edges inside *other* TraitRecords' causal graphs can use these
+relations as predicates pointing at CHEMICAL nodes:
+
+```yaml
+edges:
+- subject: <some_trait>
+  predicate: uses as carbon source     # METPO:2000006
+  object: glucose                      # CHEMICAL node grounded to CHEBI:17234
+```
 
 ## File-level structure
 
