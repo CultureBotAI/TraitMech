@@ -109,6 +109,21 @@ classes:
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
 
+      replaces:
+        description: >-
+          IAO:0100001 — CURIEs of records that this trait replaces.
+          Used to track lineage when a substrate-specific TraitRecord
+          (e.g. traitmech:UCS_GLUCOSE for "uses glucose as carbon
+          source") replaces a generic METPO relation carrier
+          (e.g. METPO:2000006 for "uses as carbon source"). The
+          replaced record itself is left in place with
+          mapping_status: DEPRECATED so downstream references remain
+          resolvable; this field carries the structured forward link.
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+        slot_uri: IAO:0100001
+
       trait_category:
         description: >-
           Coarse-grained bucket for filesystem organisation and reporting.
