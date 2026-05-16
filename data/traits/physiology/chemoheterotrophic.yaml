@@ -40,6 +40,7 @@ causal_graphs:
   - node_id: catabolism
     label: catabolism
     node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009056
     description: Breakdown of nutrients to generate energy and biosynthetic precursors.
   - node_id: respiration
     label: respiration

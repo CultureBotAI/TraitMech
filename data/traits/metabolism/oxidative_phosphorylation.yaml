@@ -49,7 +49,7 @@ causal_graphs:
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
-    grounding: CHEBI:15422
+    grounding: CHEBI:30616
     description: Energy-rich nucleotide product.
   edges:
   - subject: oxidative_phosphorylation_trait

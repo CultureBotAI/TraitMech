@@ -50,6 +50,7 @@ causal_graphs:
   - node_id: peptidoglycan_cell_wall
     label: peptidoglycan cell wall
     node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009274
     description: Cell-wall polymer layer influencing stain retention.
   - node_id: outer_membrane
     label: outer membrane

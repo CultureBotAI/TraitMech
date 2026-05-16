@@ -45,6 +45,7 @@ causal_graphs:
   - node_id: catabolism
     label: catabolism
     node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009056
     description: Oxidative breakdown of organic compounds.
   - node_id: respiratory_chain
     label: respiratory chain
