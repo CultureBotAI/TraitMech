@@ -44,7 +44,7 @@ causal_graphs:
       cell sizes.
   edges:
   - subject: standard_growth_conditions
-    predicate: support
+    predicate: supports
     object: adder_principle
     description: Standard nutrient/temperature regimes maintain adder size control.
     evidence:

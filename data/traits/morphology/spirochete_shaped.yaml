@@ -67,7 +67,7 @@ causal_graphs:
       snippet: complex interaction between the cell cylinder and the internal periplasmic flagella
       notes: Supports a physical interaction between flagella and cell cylinder.
   - subject: periplasmic_flagella
-    predicate: confer
+    predicate: confers
     object: flat_wave_morphology
     description: Periplasmic flagella provide a skeletal function that confers
       flat-wave morphology.

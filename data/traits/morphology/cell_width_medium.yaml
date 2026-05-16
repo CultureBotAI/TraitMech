@@ -44,7 +44,7 @@ causal_graphs:
       rod widths.
   edges:
   - subject: standard_growth_conditions
-    predicate: support
+    predicate: supports
     object: rod_complex_pg
     description: Standard growth regimes support typical Rod-complex activity.
     evidence:
