@@ -37,6 +37,7 @@ prefixes:
   # Provenance
   PMID: http://www.ncbi.nlm.nih.gov/pubmed/
   DOI: https://doi.org/
+  dcterms: http://purl.org/dc/terms/
   # Schema-org
   skos: http://www.w3.org/2004/02/skos/core#
 
@@ -111,18 +112,22 @@ classes:
 
       replaces:
         description: >-
-          IAO:0100001 — CURIEs of records that this trait replaces.
-          Used to track lineage when a substrate-specific TraitRecord
-          (e.g. traitmech:UCS_GLUCOSE for "uses glucose as carbon
-          source") replaces a generic METPO relation carrier
+          dcterms:replaces — CURIEs of records that this trait
+          supersedes. Used to track lineage when a substrate-specific
+          TraitRecord (e.g. traitmech:UCS_GLUCOSE for "uses glucose as
+          carbon source") replaces a generic METPO relation carrier
           (e.g. METPO:2000006 for "uses as carbon source"). The
           replaced record itself is left in place with
           mapping_status: DEPRECATED so downstream references remain
-          resolvable; this field carries the structured forward link.
+          resolvable; this field carries the structured forward link
+          from the new record back to the old. The reverse direction
+          (deprecated → replacement) is the OBO/IAO `IAO:0100001`
+          (term replaced by); we use dcterms:replaces here because
+          the field lives on the *new* record and points to the *old*.
         multivalued: true
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
-        slot_uri: IAO:0100001
+        slot_uri: dcterms:replaces
 
       trait_category:
         description: >-
