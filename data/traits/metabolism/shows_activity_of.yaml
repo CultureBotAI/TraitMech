@@ -1,9 +1,11 @@
 identifier: METPO:2000302
 label: shows activity of
-definition: An OBJECT_PROPERTY relating an organism to an enzyme or metabolic
-  activity class that the organism exhibits. Intended use is predicate + class
-  composition at assertion time with a METPO enzyme (or GO catalytic-activity)
-  class as the object.
+definition: An OBJECT_PROPERTY relating an organism to an enzyme (material
+  entity) for which the organism shows the corresponding catalytic activity.
+  Intended use is predicate + class composition at assertion time with a METPO
+  enzyme class (METPO:1000527 or its subclass) as the object — the assertion
+  reads "<organism> expresses an enzyme of class <X>, evidenced by activity
+  measurement".
 definition_source: PMID:21413255
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY

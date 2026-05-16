@@ -1,9 +1,10 @@
 identifier: METPO:2000303
 label: does not show activity of
-definition: An OBJECT_PROPERTY asserting that an organism does NOT exhibit a given
-  enzyme or metabolic activity class. Negation companion of 'shows activity of'.
-  Intended use is predicate + class composition at assertion time with a METPO
-  enzyme (or GO catalytic-activity) class as the object.
+definition: An OBJECT_PROPERTY asserting that an organism does NOT show the
+  catalytic activity of a given enzyme (material entity) class. Negation
+  companion of 'shows activity of'. Intended use is predicate + class
+  composition at assertion time with a METPO enzyme class (METPO:1000527 or
+  its subclass) as the object.
 definition_source: PMID:21413255
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
