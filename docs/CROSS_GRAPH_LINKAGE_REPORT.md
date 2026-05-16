@@ -16,10 +16,10 @@ This report has three purposes:
 3. **Propose candidate shared groundings** for recurring mechanism
    nodes that are currently ungrounded.
 
-## Already grounded consistently (no action needed)
+## Already grounded consistently (no action needed in this PR)
 
-These 11 labels are used in ≥3 graphs and carry the **same**
-grounding everywhere they appear:
+These 10 labels are used in ≥3 graphs and already carried the
+**same** grounding in every graph before this PR:
 
 | Label | Node type | Grounding | # graphs |
 |---|---|---|---:|
@@ -33,7 +33,9 @@ grounding everywhere they appear:
 | potassium ion | `CHEMICAL` | `CHEBI:29103` | 3 |
 | carbon monoxide | `CHEMICAL` | `CHEBI:17245` | 3 |
 | acetate | `CHEMICAL` | `CHEBI:30089` | 3 |
-| ATP (post-normalisation) | `CHEMICAL` | `CHEBI:30616` | 22 |
+
+(ATP is also used consistently across 22 graphs after this PR, but
+required a small normalisation first — see the next section.)
 
 ## Normalised in this PR
 
@@ -154,8 +156,10 @@ artefact.
 - Total node instances surveyed: **1,252**
 - Total causal graphs: **233**
 - Recurring labels (≥3 graphs): **54**
-- Recurring labels with consistent grounding: **11**
-- Recurring labels needing normalisation (this PR): **4**
+- Recurring labels with consistent grounding before this PR: **10**
+- Recurring labels normalised in this PR (ATP, peptidoglycan cell
+  wall × 2, catabolism): **4**
+- Recurring labels with consistent grounding after this PR: **14**
 - Recurring labels with grounding candidates noted but not changed: **22**
 
 ## Why this matters
