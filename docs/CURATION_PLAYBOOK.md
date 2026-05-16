@@ -72,9 +72,14 @@ records:
 - Keep `mapping_status: REVIEWED` (not DEPRECATED).
 - Set `domain:` to the organism class (typically the METPO
   organism URI).
-- Set `range_:` to the appropriate CHEBI class (e.g.
-  `CHEBI:50860` "organic molecular entity" for carbon-source
-  relations).
+- Set `range_:` to a CHEBI root broad enough to cover the
+  predicate's intended substrates. Use `CHEBI:24431` ("chemical
+  entity", the top CHEBI root) by default — most chemical-use
+  predicates accept both organic and inorganic substrates (CO2 as
+  carbon source, H2 / NH3 / Fe2+ as electron donors, nitrate /
+  sulfate / O2 as electron acceptors, etc.). A narrower root like
+  `CHEBI:50860` ("organic molecular entity") would incorrectly
+  exclude these inorganic objects.
 - Provide a DOI/PMID-backed `definition_source` and at least one
   literature `evidence` entry framing the relation as a recognised
   microbial-physiology descriptor.
