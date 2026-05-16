@@ -12,20 +12,28 @@ Each trait — Gram type, motility, pH optimum, "uses as carbon source",
 "halophilic", etc. — lives in its own YAML file with provenance back to its
 METPO source class and (optionally) to literature evidence.
 
-**Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25):**
+**Initial seed (from `data/raw/metpo.owl`, METPO 2025-11-25) and current curation status:**
 
-| Category | Count |
-|---|---:|
-| MORPHOLOGY | 65 |
-| PHYSIOLOGY | 31 |
-| ENVIRONMENT | 103 |
-| METABOLISM | 108 |
-| GENOMICS | 5 |
-| ECOLOGY | 10 |
-| OBSERVATION | 20 |
-| QUANTITATIVE_PROPERTY | 7 |
-| UPPER | 5 |
-| **TOTAL** | **354** |
+| Category | REVIEWED | DEPRECATED | causal_graphs | Total |
+|---|---:|---:|---:|---:|
+| MORPHOLOGY | 65 | 0 | 65 | 65 |
+| PHYSIOLOGY | 31 | 0 | 31 | 31 |
+| ENVIRONMENT | 103 | 0 | 103 | 103 |
+| ECOLOGY | 10 | 0 | 10 | 10 |
+| GENOMICS | 5 | 0 | 5 | 5 |
+| UPPER | 5 | 0 | 5 | 5 |
+| METABOLISM | 14 | 94 | 14 | 108 |
+| OBSERVATION | 0 | 20 | 0 | 20 |
+| QUANTITATIVE_PROPERTY | 0 | 7 | 0 | 7 |
+| **TOTAL** | **233** | **121** | **233** | **354** |
+
+Every `CLASS` record is curated to `REVIEWED` with a DOI-backed
+causal graph. The 121 `DEPRECATED` records (94 metabolism, 20
+observation, 7 quantitative_property) are generic `OBJECT_PROPERTY` /
+`DATATYPE_PROPERTY` relation carriers from the upstream METPO seed
+that are not intended to carry mechanism graphs in TraitMech — they
+should be replaced by specific trait records combining the relation
+with the chemical / quality / measurement / growth context.
 
 (`material entity` subtree — chemicals / microbes / enzymes — is not
 seeded; those belong in MIM / CultureMech.)
