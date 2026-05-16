@@ -1,9 +1,9 @@
 identifier: METPO:2000301
 label: enzyme activity analyzed
-definition: An OBJECT_PROPERTY relating an organism to an enzyme/activity class
-  that has been experimentally assayed for that organism. Intended use is
-  predicate + class composition at assertion time with a METPO enzyme (or GO
-  catalytic-activity) class as the object.
+definition: An OBJECT_PROPERTY relating an organism to an enzyme (material
+  entity) whose catalytic activity has been experimentally assayed for that
+  organism. Intended use is predicate + class composition at assertion time
+  with a METPO enzyme class (METPO:1000527 or its subclass) as the object.
 definition_source: PMID:21413255
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY

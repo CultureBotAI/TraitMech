@@ -1,0 +1,36 @@
+identifier: METPO:1000526
+label: chemical entity
+definition: A material entity that is a physical entity of interest in chemistry,
+  including molecular entities, parts thereof, and chemical substances. Used as
+  the range class for the majority of METPO chemical-use OBJECT_PROPERTYs
+  (uses_as_carbon_source, uses_as_electron_donor, ferments, oxidizes, etc.)
+  so that organism-to-chemical assertions resolve to a curated chemical class.
+definition_source: DOI:10.1093/nar/gkv1031
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000186
+xrefs:
+- CHEBI:24431
+evidence:
+- reference: DOI:10.1093/nar/gkv1031
+  snippet: ChEBI is a freely available dictionary of molecular entities
+  notes: ChEBI's 'chemical entity' (CHEBI:24431) is the canonical upper-root
+    for the chemical objects participating in METPO chemical-use predicates
+    and is the recommended grounding for METPO:1000526.
+- reference: DOI:10.3233/AO-220262
+  snippet: BFO is a genuine top-level ontology
+  notes: Supports METPO:1000186 (material entity) as the BFO-aligned parent of
+    chemical entity.
+curation_history:
+- timestamp: '2026-05-16T09:30:00-07:00'
+  curator: claude
+  action: CREATED_UPPER_CLASS_RECORD
+  changes: Created upper-ontology CLASS record for METPO:1000526 (chemical
+    entity) so that the range of un-deprecated metabolism OBJECT_PROPERTYs
+    resolves to a curated TraitMech record. Added xref to CHEBI:24431, which
+    is the exact ChEBI equivalent (same definition, same root position).
+    TraitMech records can use either METPO:1000526 or CHEBI:24431 as range_;
+    this xref makes them interconvertible.
+  llm_assisted: true
