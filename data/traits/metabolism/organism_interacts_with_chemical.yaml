@@ -1,10 +1,20 @@
 identifier: METPO:2000001
 label: organism interacts with chemical
+definition: The root OBJECT_PROPERTY for all organism-to-chemical interactions in
+  the metabolism vocabulary; concrete uses (uses-as-X, ferments, produces, etc.) specialise
+  this relation.
+definition_source: DOI:10.1146/annurev.micro.55.1.485
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
-mapping_status: DEPRECATED
+mapping_status: REVIEWED
 domain: https://w3id.org/metpo/1000525
-range_: https://w3id.org/metpo/1000526
+range_: http://purl.obolibrary.org/obo/CHEBI_24431
+evidence:
+- reference: DOI:10.1146/annurev.micro.55.1.485
+  snippet: interaction
+  notes: Microbial-physiology reference supports 'organism interacts with chemical'
+    as a canonical predicate composed with a CHEBI-class chemical object at assertion
+    time.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.950239+00:00'
   curator: seed_from_metpo
@@ -15,7 +25,14 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated generic metabolism relation carrier; later replacement should
-    use more specific trait records that combine the relation with the chemical,
-    phenotype, quality, compartment, enzyme or activity target, growth context,
-    measurement, or other entity.
+    use more specific trait records that combine the relation with the chemical, phenotype,
+    quality, compartment, enzyme or activity target, growth context, measurement,
+    or other entity.
+  llm_assisted: true
+- timestamp: '2026-05-16T08:50:00-07:00'
+  curator: claude
+  action: UNDEPRECATED_AS_COMPOSITION_PRIMITIVE
+  changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
+    pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
+    DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
   llm_assisted: true
