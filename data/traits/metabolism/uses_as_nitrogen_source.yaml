@@ -13,7 +13,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
 domain: https://w3id.org/metpo/1000525
-range_: http://purl.obolibrary.org/obo/CHEBI_24431
+range_: http://purl.obolibrary.org/obo/CHEBI_51143
 evidence:
 - reference: PMID:21413255
   snippet: nitrogen source
@@ -38,4 +38,12 @@ curation_history:
   changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
     pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
     DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
+  llm_assisted: true
+- timestamp: '2026-05-16T09:35:00-07:00'
+  curator: claude
+  action: TIGHTENED_RANGE_TO_CHEBI_SUBCLASS
+  changes: 'Narrowed range_ from http://purl.obolibrary.org/obo/CHEBI_24431 to http://purl.obolibrary.org/obo/CHEBI_51143
+    (''nitrogen molecular entity''). The earlier CHEBI:24431 root was used as a safe
+    default during bulk un-deprecation (PR #54); the more specific CHEBI subclass
+    better reflects the predicate''s intended substrates.'
   llm_assisted: true

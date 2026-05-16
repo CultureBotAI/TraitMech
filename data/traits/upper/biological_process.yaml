@@ -9,6 +9,8 @@ definition_source: DOI:10.1093/database/bat054
 trait_category: UPPER
 term_kind: CLASS
 mapping_status: REVIEWED
+xrefs:
+- GO:0008150
 evidence:
 - reference: DOI:10.1093/database/bat054
   snippet: gene product can be associated to a GO term

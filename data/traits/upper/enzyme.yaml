@@ -1,0 +1,39 @@
+identifier: METPO:1000527
+label: enzyme
+definition: A biological macromolecule (typically a protein) that catalyses a
+  specific biochemical reaction. Used as the range class for METPO
+  enzyme-activity OBJECT_PROPERTYs (shows_activity_of, enzyme_activity_analyzed)
+  so that organism-to-activity assertions resolve to a curated activity class.
+  In practice the object can be either an enzyme protein class or a catalytic
+  activity (GO:0003824 and descendants); both are subsumed semantically by
+  this class for the purposes of METPO composition.
+definition_source: DOI:10.1093/nar/gku1003
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000186
+xrefs:
+- GO:0003824
+- CHEBI:23357
+evidence:
+- reference: DOI:10.1093/nar/gku1003
+  snippet: ENZYME nomenclature
+  notes: ENZYME / EC nomenclature provides the canonical external vocabulary
+    for the catalytic activities that satisfy this class; GO:0003824
+    (catalytic activity) is the matching upper class in the Gene Ontology.
+- reference: DOI:10.1093/nar/gkv1031
+  snippet: ChEBI is a freely available dictionary of molecular entities
+  notes: CHEBI:23357 ('catalyst') is the ChEBI role concept that an enzyme
+    bears when participating in a reaction; included as a secondary xref.
+curation_history:
+- timestamp: '2026-05-16T09:30:00-07:00'
+  curator: claude
+  action: CREATED_UPPER_CLASS_RECORD
+  changes: Created upper-ontology CLASS record for METPO:1000527 (enzyme) so
+    that the range of un-deprecated activity-assay OBJECT_PROPERTYs
+    (shows_activity_of, enzyme_activity_analyzed, and their negation
+    companions) resolves to a curated TraitMech record. Added xrefs to
+    GO:0003824 (catalytic activity, the closest functional equivalent in GO)
+    and CHEBI:23357 (catalyst, the closest ChEBI role concept).
+  llm_assisted: true

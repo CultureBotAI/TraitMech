@@ -1,0 +1,34 @@
+identifier: METPO:1000525
+label: microbe
+definition: A material entity that is too small to be viewed by the unaided eye,
+  typically requiring microscopy for observation. Used as the domain class for
+  METPO organism-to-X object properties so that organism-level assertions can
+  be expressed as `<microbe-instance> <METPO predicate> <object-class>`.
+definition_source: PMID:21413255
+trait_category: UPPER
+term_kind: CLASS
+mapping_status: REVIEWED
+parent_traits:
+- METPO:1000186
+xrefs:
+- OBI:0100026
+evidence:
+- reference: PMID:21413255
+  snippet: microorganisms
+  notes: Medical Microbiology chapter supports 'microbe' (microorganism) as
+    the standard high-level class for the bacteria, archaea, and microbial
+    eukaryotes covered by this knowledge base.
+- reference: DOI:10.3233/AO-220262
+  snippet: BFO is a genuine top-level ontology
+  notes: Supports METPO:1000186 (material entity) as the BFO-aligned parent.
+curation_history:
+- timestamp: '2026-05-16T09:30:00-07:00'
+  curator: claude
+  action: CREATED_UPPER_CLASS_RECORD
+  changes: 'Created upper-ontology CLASS record for METPO:1000525 (microbe)
+    so that the domain of un-deprecated metabolism OBJECT_PROPERTYs (which
+    all declare domain https://w3id.org/metpo/1000525) resolves to a curated
+    TraitMech record. Added xref to OBI:0100026 (organism) as the closest
+    upper-ontology equivalent; no clean NCBITaxon equivalent exists because
+    microbe cuts across bacteria, archaea, and microbial eukaryotes.'
+  llm_assisted: true
