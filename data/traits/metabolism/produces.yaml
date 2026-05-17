@@ -14,6 +14,8 @@ synonyms:
   source: metpo.owl
 domain: https://w3id.org/metpo/1000525
 range_: http://purl.obolibrary.org/obo/CHEBI_24431
+xrefs:
+- RO:0003000
 evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.485
   snippet: production
@@ -39,4 +41,11 @@ curation_history:
   changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
     pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
     DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
+  llm_assisted: true
+- timestamp: '2026-05-17T10:00:00-07:00'
+  curator: claude
+  action: ADDED_EXTERNAL_PREDICATE_XREF
+  changes: 'Added xrefs [''RO:0003000''] to record an external equivalence predicate
+    (RO:0003000 ''produces''). RO:0003000 ''produces'' is the equivalent material-entity-to-material-entity
+    production predicate. Source: OLS4 property search.'
   llm_assisted: true

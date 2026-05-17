@@ -1,29 +1,30 @@
 identifier: METPO:2000008
 label: uses as electron acceptor
-definition: An OBJECT_PROPERTY relating an organism to a chemical entity (e.g. a
-  CHEBI class) that the organism uses as the terminal electron acceptor in
-  respiration. The intended use is predicate + class composition at assertion
-  time, e.g. `<organism> METPO:2000008 CHEBI:17632` ("organism uses nitrate as
-  electron acceptor").
+definition: An OBJECT_PROPERTY relating an organism to a chemical entity (e.g. a CHEBI
+  class) that the organism uses as the terminal electron acceptor in respiration.
+  The intended use is predicate + class composition at assertion time, e.g. `<organism>
+  METPO:2000008 CHEBI:17632` ("organism uses nitrate as electron acceptor").
 definition_source: DOI:10.1146/annurev.micro.61.080706.093130
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
 mapping_status: REVIEWED
 parent_traits:
 - METPO:2000001
-domain: https://w3id.org/metpo/1000525
-range_: http://purl.obolibrary.org/obo/CHEBI_24431
 synonyms:
 - synonym_text: electron acceptor
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
+domain: https://w3id.org/metpo/1000525
+range_: http://purl.obolibrary.org/obo/CHEBI_24431
+xrefs:
+- MICRO:0001463
 evidence:
 - reference: DOI:10.1146/annurev.micro.61.080706.093130
   snippet: terminal electron acceptor
-  notes: Microbial-physiology review supports the "electron acceptor" relation
-    as the standard descriptor for the terminal-acceptor pole of respiration;
-    composed at assertion time with the specific acceptor chemical (O2,
-    nitrate, sulfate, Fe(III), CO2, etc.).
+  notes: Microbial-physiology review supports the "electron acceptor" relation as
+    the standard descriptor for the terminal-acceptor pole of respiration; composed
+    at assertion time with the specific acceptor chemical (O2, nitrate, sulfate, Fe(III),
+    CO2, etc.).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.953476+00:00'
   curator: seed_from_metpo
@@ -34,15 +35,21 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated generic chemical-use relation carrier; later replacement should
-    use more specific trait records that combine the relation with the chemical,
-    metabolic role, growth condition, and positive or negative usage context.
+    use more specific trait records that combine the relation with the chemical, metabolic
+    role, growth condition, and positive or negative usage context.
   llm_assisted: true
 - timestamp: '2026-05-16T08:00:00-07:00'
   curator: claude
   action: UNDEPRECATED_AS_COMPOSITION_PRIMITIVE
-  changes: Restored from DEPRECATED to REVIEWED. METPO modeling uses the
-    predicate + class composition pattern (this OBJECT_PROPERTY composed with
-    a CHEBI electron-acceptor chemical at assertion time) rather than
-    precomposed substrate-specific TraitRecords. Added DOI-backed definition
-    and evidence.
+  changes: Restored from DEPRECATED to REVIEWED. METPO modeling uses the predicate
+    + class composition pattern (this OBJECT_PROPERTY composed with a CHEBI electron-acceptor
+    chemical at assertion time) rather than precomposed substrate-specific TraitRecords.
+    Added DOI-backed definition and evidence.
+  llm_assisted: true
+- timestamp: '2026-05-17T10:00:00-07:00'
+  curator: claude
+  action: ADDED_EXTERNAL_PREDICATE_XREF
+  changes: 'Added xrefs [''MICRO:0001463''] to record an external equivalence predicate
+    (MICRO:0001463 ''uses electron acceptor''). MICRO:0001463 ''uses electron acceptor''
+    is the direct equivalent. Source: OLS4 property search.'
   llm_assisted: true

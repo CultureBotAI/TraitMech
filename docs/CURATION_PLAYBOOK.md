@@ -85,6 +85,27 @@ records:
   microbial-physiology descriptor.
 - Do not add a `causal_graphs:` block — these are predicates, not
   phenotypes with mechanism.
+- Add `xrefs:` to external ontology predicates where a *true*
+  equivalence exists. Survey result (2026-05-17, OLS4 property
+  search): six of the 71 un-deprecated metabolism predicates have a
+  clean equivalent — `METPO:2000006`/`2000010`/`2000008`/`2000009`
+  ↔ the matching MICRO `uses {carbon|energy|electron acceptor|
+  electron donor} source` predicates; `METPO:2000103` (`capable_of`)
+  ↔ `RO:0002215`; `METPO:2000202` (`produces`) ↔ `RO:0003000`.
+  `METPO:2000001` (`organism_interacts_with_chemical`) was
+  initially mapped to `MICRO:0000975` "uses chemical entity" but
+  reverted on Copilot review: the METPO root covers `produces` and
+  other non-use relations as subProperties, while MICRO's predicate
+  is restricted to use relations, so the mapping is narrower-than
+  rather than equivalent. The remaining predicates (ferments,
+  oxidizes, reduces, hydrolyzes, transports, imports, exports,
+  requires_for_growth, etc., plus all `does_not_*` negation
+  companions) have no organism-level equivalent in RO, MICRO, OBI,
+  IAO, or CHIRO. RO models transport/import/export at the *process*
+  level, not the organism level, so those METPO predicates
+  intentionally lack an RO xref. Treat the absence of an xref as
+  documented rather than a gap — leave `xrefs:` unset on records
+  without a confident match.
 
 Edges inside *other* TraitRecords' causal graphs can use these
 relations as predicates pointing at CHEMICAL nodes:

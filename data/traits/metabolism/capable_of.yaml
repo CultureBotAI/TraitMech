@@ -2,20 +2,22 @@ identifier: METPO:2000103
 label: capable of
 definition: A general OBJECT_PROPERTY relating an organism to a biological process
   or metabolic capability the organism is capable of. Intended use is predicate +
-  class composition at assertion time, with a METPO biological-process (or GO
-  biological-process) class as the object.
+  class composition at assertion time, with a METPO biological-process (or GO biological-process)
+  class as the object.
 definition_source: DOI:10.1146/annurev.micro.55.1.485
 trait_category: METABOLISM
 term_kind: OBJECT_PROPERTY
 mapping_status: REVIEWED
 domain: https://w3id.org/metpo/1000525
 range_: https://w3id.org/metpo/1000630
+xrefs:
+- RO:0002215
 evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.485
   snippet: capability
-  notes: Microbial-physiology reference supports 'capable of' as a canonical
-    predicate relating an organism to a biological-process class (the
-    capability), composed at assertion time.
+  notes: Microbial-physiology reference supports 'capable of' as a canonical predicate
+    relating an organism to a biological-process class (the capability), composed
+    at assertion time.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.982473+00:00'
   curator: seed_from_metpo
@@ -36,4 +38,12 @@ curation_history:
   changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
     pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
     DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
+  llm_assisted: true
+- timestamp: '2026-05-17T10:00:00-07:00'
+  curator: claude
+  action: ADDED_EXTERNAL_PREDICATE_XREF
+  changes: 'Added xrefs [''RO:0002215''] to record an external equivalence predicate
+    (RO:0002215 ''capable of''). RO:0002215 ''capable of'' is the exact equivalent
+    (organism/material capable of a biological process; matches METPO''s biological-process
+    range). Source: OLS4 property search.'
   llm_assisted: true
