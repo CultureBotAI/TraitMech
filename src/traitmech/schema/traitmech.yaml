@@ -106,7 +106,9 @@ classes:
       xrefs:
         description: >-
           oboInOwl:hasDbXref — equivalents in other ontologies (PATO, GO,
-          NCIT, ENVO, CHEBI, UO).
+          NCIT, ENVO, CHEBI, UO, RO, MICRO, OBI). Use only for *true*
+          equivalences; record broader/narrower relations as
+          `parent_traits:` or notes instead.
         multivalued: true
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
