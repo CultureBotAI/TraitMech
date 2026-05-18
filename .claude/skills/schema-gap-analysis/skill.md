@@ -67,19 +67,28 @@ grep -oE "is not a '[^']+'" /tmp/tm_validate.out \
 
 ### 4. Cross-check generator drift (Axis 3)
 
-TraitMech's only YAML writer is `scripts/seed_from_metpo.py` (initial seed from METPO OWL). `scripts/trait_causal_graph.py` is a **renderer helper** that reads `record["causal_graphs"]` and shapes it for the page template — it does not write to the YAMLs, so drift there can't introduce schema gaps. All other edits to `data/traits/*.yaml` are made directly by hand or by ad-hoc scripts; those are what the greps below sweep for.
+TraitMech's only YAML writer is `scripts/seed_from_metpo.py` — specifically its `write_yaml(path, doc)` helper, which writes one `TraitRecord` per file via `path.write_text(yaml.safe_dump(doc, ...))`. There is no top-level `traits:` collection key, so collection-shape greps that work for MIM/CommunityMech don't apply here.
+
+`scripts/trait_causal_graph.py` is a **renderer helper** that reads `record["causal_graphs"]` and shapes it for the page template — it does not write to the YAMLs, so drift there can't introduce schema gaps.
+
+The drift surface to watch is therefore: any other writer to `data/traits/*.yaml` that bypasses `write_yaml`. The greps below catch each mechanism the seeder could be sidestepped through.
 
 ```bash
 # Naive datetimes
 grep -rnE 'datetime\.now\(\)\.isoformat\b' \
   src/ scripts/ --include='*.py' | grep -v "timezone"
 
-# yaml.dump that drops collection metadata (TraitMech key: traits)
-grep -rnE 'yaml\.dump\(\s*\{\s*["\047]traits["\047]\s*:' \
-  src/ scripts/ --include='*.py'
+# Ad-hoc Path.write_text writes that touch data/traits/ (other than the seeder's write_yaml helper)
+grep -rnE '\.write_text\(' scripts/ src/ --include='*.py' \
+  | grep -E 'data/traits|traits/.*\.yaml' \
+  | grep -v 'def write_yaml'
 
-# Direct writes that skip the seeder
-grep -rnE 'open\([^)]*data/traits/[^)]*["\047][wa][bt]?["\047]' \
+# open()-style writes targeting data/traits/
+grep -rnE 'open\([^)]*data/traits/[^)]*["\047][wabt]+["\047]' \
+  scripts/ src/ --include='*.py'
+
+# Direct yaml.dump / yaml.safe_dump to a data/traits/ path (sometimes done in one expression)
+grep -rnE 'yaml\.(safe_)?dump\([^)]*data/traits/' \
   scripts/ src/ --include='*.py'
 ```
 
