@@ -143,7 +143,75 @@ updated to explain the pivot to predicate+class composition.
   records**. These are structurally different (observation/value
   carriers, not predicates), and the predicate+class pivot does
   not directly affect them. They remain DEPRECATED pending a
-  separate observation-modelling decision.
+  separate observation-modelling decision. **Update 2026-05-17:
+  the observation-modelling decision is now resolved — see
+  "Observation-value records stay deprecated" below.**
+
+## Observation-value records stay deprecated
+
+After the predicate+class composition pivot landed (#54, #55, #56),
+50 records remain `DEPRECATED`:
+
+| Group | Count | Where |
+|---|---|---|
+| `has_*_observation` / `has_phenotype` / `has_quality` predicates | 23 | `data/traits/metabolism/` |
+| Observation classes (pH observation, temperature observation, etc.) | 20 | `data/traits/observation/` |
+| Value-carrying datatype properties (`has_value`, etc.) | 7 | `data/traits/quantitative_property/` |
+
+These three groups together would compose into the
+BacDive-style assertion shape:
+
+```
+<organism>  has_temperature_observation  <obs-instance>
+<obs-instance>  has_value  37.0
+<obs-instance>  has_unit   UO:0000027   # degree Celsius
+```
+
+**They stay deprecated and out of scope for TraitMech.** The reasoning:
+
+1. **Observations belong in the downstream consumer, not the
+   trait knowledge base.** TraitMech's job is to curate the trait
+   vocabulary (METPO classes + predicates) and the *mechanism*
+   behind each trait (causal graphs, evidence). Per-organism
+   numeric observations — what temperature *this strain*
+   actually grew at — are KG-Microbe's job, and earlier
+   BacDive-derived observations there already use a different
+   shape (a per-strain table, not OWL instance assertions).
+   Recreating BacDive's observation schema inside TraitMech would
+   duplicate that effort with a less-mature implementation.
+
+2. **The METPO observation classes are wrappers around
+   numeric values; they have no curatable mechanism.** Unlike
+   `aerobic` or `halophilic` (which have rich mechanism graphs),
+   `optimum_pH_observation` carries no mechanism — it's a measurement
+   slot. Promoting these to REVIEWED would force us to add
+   placeholder causal_graphs that wouldn't carry real information.
+
+3. **`has_value` and the other datatype properties in
+   `quantitative_property/` are part of the observation shape,
+   not standalone phenotypes.** If we ever do model
+   per-organism observations directly, we'd want to align with
+   STATO / OBI / QUDT rather than maintaining a parallel METPO
+   numeric vocabulary.
+
+4. **The predicate+class pivot covers the trait-level need.**
+   Every chemical-use or activity assertion that previously
+   would have used `has_X_observation` can now be expressed as
+   `<organism> <METPO predicate> <CHEBI/METPO class>` —
+   evidence sits in the predicate record (or downstream
+   per-strain table), not as a separate observation instance.
+
+A `DEPRECATION_CONFIRMED_AS_OUT_OF_SCOPE` curation_history entry
+has been added to all 50 records pointing at this section, so the
+decision is findable from each record individually rather than
+only from this doc.
+
+**If a future use case requires per-strain observation modelling
+inside TraitMech**, reopen this section: the cleanest path
+would be to introduce a `traitmech:Observation` class in the
+schema (separate from `TraitRecord`) rather than re-promoting the
+METPO 1001xxx and 2000xxx observation/has-observation records,
+which were modelled before STATO/OBI alignment was a goal.
 
 ## Why the pivot now
 
