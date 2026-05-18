@@ -67,7 +67,7 @@ grep -oE "is not a '[^']+'" /tmp/tm_validate.out \
 
 ### 4. Cross-check generator drift (Axis 3)
 
-TraitMech's writers are `scripts/seed_from_metpo.py` (initial seed from METPO OWL) and `scripts/trait_causal_graph.py` (causal-graph augmentation). Most drift will originate there.
+TraitMech's only YAML writer is `scripts/seed_from_metpo.py` (initial seed from METPO OWL). `scripts/trait_causal_graph.py` is a **renderer helper** that reads `record["causal_graphs"]` and shapes it for the page template — it does not write to the YAMLs, so drift there can't introduce schema gaps. All other edits to `data/traits/*.yaml` are made directly by hand or by ad-hoc scripts; those are what the greps below sweep for.
 
 ```bash
 # Naive datetimes
@@ -102,13 +102,13 @@ find data/traits -name "*.yaml" -print0 \
 
 TraitMech's corpus passes cleanly. Re-run this skill after:
 - Re-seeding from a new METPO release (`just seed-from-metpo`).
-- Adding causal-graph blocks via `scripts/trait_causal_graph.py`.
+- Hand-editing `causal_graphs:` blocks into `data/traits/*.yaml` (the renderer reads them but does not write or validate them).
 - Schema changes (any edit to `src/traitmech/schema/traitmech.yaml`).
 
 ## Pointers
 
 - Schema: `src/traitmech/schema/traitmech.yaml`
-- Seeder (initial trait creation from METPO): `scripts/seed_from_metpo.py`
-- Causal-graph augmenter: `scripts/trait_causal_graph.py`
+- Seeder (the only writer; initial trait creation from METPO): `scripts/seed_from_metpo.py`
+- Causal-graph template helper (reads `causal_graphs:`; doesn't write YAML): `scripts/trait_causal_graph.py`
 - Page renderer (consumes validated YAML, doesn't write it): `scripts/render_trait_pages.py`
 - Cross-Mech framework + new-Mech bootstrap template: [claw/.claude/skills/schema-gap-analysis](https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/skill.md)
