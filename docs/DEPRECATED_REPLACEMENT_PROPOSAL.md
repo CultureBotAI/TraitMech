@@ -187,11 +187,11 @@ BacDive-style assertion shape:
    slot. Promoting these to REVIEWED would force us to add
    placeholder causal_graphs that wouldn't carry real information.
 
-3. **`has_value` and the other DATATYPE_PROPERTYs in
+3. **`has_value` and the other datatype properties in
    `quantitative_property/` are part of the observation shape,
    not standalone phenotypes.** If we ever do model
    per-organism observations directly, we'd want to align with
-   STATO / OBI / qudt rather than maintaining a parallel METPO
+   STATO / OBI / QUDT rather than maintaining a parallel METPO
    numeric vocabulary.
 
 4. **The predicate+class pivot covers the trait-level need.**

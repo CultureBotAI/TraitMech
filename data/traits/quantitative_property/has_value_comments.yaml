@@ -18,16 +18,18 @@ curation_history:
   curator: codex
   action: DEPRECATED_PROPERTY_RECORD
   changes: Deprecated datatype-property comment carrier; later replacement should
-    use more specific trait records that combine the comment relation with the measured
-    quantity, chemical, observation, or other entity.
+    use more specific trait records that combine the comment relation with the
+    measured quantity, chemical, observation, or other entity.
   llm_assisted: true
 - timestamp: '2026-05-17T15:30:00-07:00'
   curator: claude
   action: DEPRECATION_CONFIRMED_AS_OUT_OF_SCOPE
-  changes: DEPRECATED status confirmed as final after the predicate+class composition
-    pivot (#54/#55/#56). This record's observation-shape modelling is out of scope
-    for TraitMech; the trait vocabulary + mechanism need is met by the un-deprecated
-    METPO predicates, and per-organism numeric observations belong downstream (KG-Microbe
-    / BacDive). See docs/DEPRECATED_REPLACEMENT_PROPOSAL.md, section 'Observation-value
-    records stay deprecated', for the rationale.
+  changes: |
+    DEPRECATED status confirmed as final after the predicate+class composition
+    pivot (#54/#55/#56). This record's observation-shape modelling is out of
+    scope for TraitMech; the trait vocabulary + mechanism need is met by the un-
+    deprecated METPO predicates, and per-organism numeric observations belong
+    downstream (KG-Microbe / BacDive). See
+    docs/DEPRECATED_REPLACEMENT_PROPOSAL.md, section 'Observation-value records
+    stay deprecated', for the rationale.
   llm_assisted: true
