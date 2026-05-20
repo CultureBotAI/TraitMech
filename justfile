@@ -22,6 +22,22 @@ validate file:
 validate-all:
     @find data/traits -name '*.yaml' | xargs -I{} just validate {}
 
+# Strict in-process validation in *closed* mode (rejects unknown fields).
+# Emits reports/instance_validation_failures.tsv and exits 1 on any ERROR.
+# This is what `validate-all` should become once trusted in CI.
+validate-strict *args:
+    uv run python scripts/validate_strict.py {{args}}
+
+# Programmatic schema-quality probes (orphan enums, missing identifiers,
+# untyped string slots, etc.). Output to stdout — pipe to a report.
+audit-schema:
+    uv run python scripts/audit_schema.py
+
+# Audit every YAML-writing Python module for safeguards
+# (curation_history append, --dry-run, validates-before-write, wired-into-just).
+audit-writers *args:
+    uv run python scripts/audit_writers.py {{args}}
+
 # Seed data/traits/ from data/raw/metpo.owl. Default dry-run.
 seed-from-metpo *args:
     uv run python3 scripts/seed_from_metpo.py {{args}}
