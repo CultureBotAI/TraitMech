@@ -112,11 +112,14 @@ trait_category: PHYSIOLOGY            # Must match a TraitCategoryEnum value
 synonyms: []
 evidence: []                          # PMID:/DOI: refs supporting the trait
 curation_history:
-  - timestamp: '2026-05-19T...Z'
-    curator: <your name or handle>
+  - timestamp: '2026-05-19T00:00:00+00:00'
+    curator: <your name or handle>    # match an existing convention: seed_from_metpo, codex, or your name
     action: MINTED_TRAITMECH_ID
-    notes: 'METPO has no matching term yet; tracked in METPO issue #N'
+    changes: 'METPO has no matching term yet; tracked in METPO issue #N'
+    llm_assisted: false
 ```
+
+The `CurationEvent` schema only permits `timestamp`, `curator`, `action`, `changes`, and `llm_assisted` — no free-text `notes:` slot. If you want to add free-form prose, use `changes:`.
 
 ### 3. Validate
 
