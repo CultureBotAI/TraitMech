@@ -34,7 +34,15 @@ _CURATION_APPEND = re.compile(
     r"|append_curation_event"
     r"|record_curation"
 )
-_DRY_RUN = re.compile(r"--dry[-_]run|dry_run\s*[:=]")
+# Match either the explicit `--dry-run` opt-out convention OR the
+# `--apply`/`--write` opt-in convention. Either pattern indicates a
+# safety-conscious writer (the latter is strictly stronger because the
+# default action is *not* to write).
+_DRY_RUN = re.compile(
+    r"--dry[-_]run|dry_run\s*[:=]"
+    r"|--apply\b|args\.apply\b"
+    r"|--write\b|args\.write\b"
+)
 _VALIDATE_BEFORE_WRITE = re.compile(
     r"linkml[._-]?validate"
     r"|TraitValidator"
