@@ -36,14 +36,6 @@ SUSPECT_FRAGMENTS = [
 TERM_NAME_FRAGMENTS = ["term", "ontology", "curie", "_id"]
 
 
-def line_of(text_lines: list[str], needle: str, after_line: int = 0) -> int:
-    """Find the first line (1-indexed) containing `needle` at/after `after_line`."""
-    for i in range(after_line, len(text_lines)):
-        if needle in text_lines[i]:
-            return i + 1
-    return -1
-
-
 def class_line_index(text_lines: list[str]) -> dict[str, int]:
     """Map class name -> 1-indexed line of its declaration."""
     out: dict[str, int] = {}

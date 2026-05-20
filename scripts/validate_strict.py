@@ -134,10 +134,16 @@ def validate_one(path: Path) -> list[dict]:
     return rows
 
 
+_YAML_SUFFIXES = {".yaml", ".yml"}
+
+
 def iter_yaml_files(paths: Iterable[Path]) -> list[Path]:
     out: list[Path] = []
     for p in paths:
         if p.is_file():
+            if p.suffix.lower() not in _YAML_SUFFIXES:
+                print(f"Skipping non-YAML file: {p}", file=sys.stderr)
+                continue
             out.append(p)
         elif p.is_dir():
             out.extend(sorted(p.rglob("*.yaml")))

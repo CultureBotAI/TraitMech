@@ -21,7 +21,6 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(".").resolve()
 SEARCH_DIRS = [
     Path("scripts"),
     Path("src/traitmech"),
