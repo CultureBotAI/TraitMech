@@ -19,7 +19,7 @@ The skill is built around three orthogonal lenses:
 
 1. **Instance-record validation** — every YAML under `data/traits/**` is validated with `linkml-validate` in *closed* mode (unknown fields rejected). Errors are categorized into a TSV.
 2. **Schema audit** — programmatic probes over `src/traitmech/schema/traitmech.yaml` for identifier policy, untyped `string` slots, divergent term-field naming, inconsistent `required:`, orphan enums, and range references to undefined types.
-3. **Pipeline / writer audit** — every Python module that writes a YAML is checked for: appends to `curation_history`?, has `--dry-run`?, validates before writing?, wired into a `just` target?
+3. **Pipeline / writer audit** — every Python module that writes a YAML is checked for: appends to `curation_history`?, has a write-safeguard (`--dry-run` opt-out or `--apply`/`--write` opt-in)?, validates before writing?, wired into a `just` target?
 
 Output is reports under `reports/` plus a re-runnable validation harness at `scripts/validate_strict.py`, all version-controlled.
 
@@ -113,7 +113,7 @@ Run: `uv run python scripts/audit_writers.py --out reports/pipeline_writers_audi
 Walks `scripts/` and `src/traitmech/`. For each module that writes YAML (heuristic: `yaml.safe_dump` / `yaml.dump` / `.write_text(` with a `.yaml` path hint), records:
 
 - `appends_curation_history` — regex match on `curation_history.*append` or `record_curation_event` or `'curator':`
-- `has_dry_run` — regex match on `--dry-run` or `dry_run\s*[:=]`
+- `has_write_safeguard` — regex match on `--dry-run` / `dry_run\s*[:=]` OR the safer opt-in conventions `--apply` / `args.apply` / `--write` / `args.write`
 - `validates_before_write` — regex match on `linkml-validate` or `TraitValidator` or `validator.validate(`
 - `wired_into_just` — filename appears in `justfile`
 
@@ -129,10 +129,10 @@ Compose `reports/gap_fix_backlog.tsv` (machine-readable) + `reports/gap_fix_back
 |---|---|
 | id | G01 |
 | category | pipeline / schema / instance |
-| title | Add `--dry-run` to seed_from_metpo.py |
+| title | Add write-safeguard to a writer flagged `has_write_safeguard=no` |
 | impact | Prevents accidental over-write of curator edits |
 | effort | S / M / L |
-| suggested_fix_path | `scripts/seed_from_metpo.py` |
+| suggested_fix_path | `scripts/<writer>.py` |
 | blocking | comma-separated upstream G-ids |
 
 Rank by impact × (1/effort). Group narrative by tier so an implementer can pick the easiest big-wins first. Always lead with **G01: enable the CI gate** — without it, every other fix can regress on the next merge.

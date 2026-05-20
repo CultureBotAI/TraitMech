@@ -6,7 +6,8 @@ YAML (looks for `yaml.dump`, `yaml.safe_dump`, or `.write_text(` on a `.yaml`
 path), record:
 
   - appends to `curation_history`?
-  - has a `--dry-run` flag?
+  - has a write-safeguard? (either `--dry-run` opt-out OR `--apply`/`--write`
+    opt-in — opt-in is strictly safer because the default is to *not* write)
   - calls `linkml-validate` (in any form) before writing?
   - is mentioned in `justfile` (i.e. wired into a target)?
 
@@ -34,7 +35,15 @@ _CURATION_APPEND = re.compile(
     r"|append_curation_event"
     r"|record_curation"
 )
-_DRY_RUN = re.compile(r"--dry[-_]run|dry_run\s*[:=]")
+# Match either the explicit `--dry-run` opt-out convention OR the
+# `--apply`/`--write` opt-in convention. Either pattern indicates a
+# safety-conscious writer (the latter is strictly stronger because the
+# default action is *not* to write).
+_WRITE_SAFEGUARD = re.compile(
+    r"--dry[-_]run|dry_run\s*[:=]"
+    r"|--apply\b|args\.apply\b"
+    r"|--write\b|args\.write\b"
+)
 _VALIDATE_BEFORE_WRITE = re.compile(
     r"linkml[._-]?validate"
     r"|TraitValidator"
@@ -72,7 +81,7 @@ def audit(path: Path, justfile_text: str) -> dict | None:
         "path": str(path),
         "writes_yaml": "yes",
         "appends_curation_history": "yes" if _CURATION_APPEND.search(text) else "no",
-        "has_dry_run": "yes" if _DRY_RUN.search(text) else "no",
+        "has_write_safeguard": "yes" if _WRITE_SAFEGUARD.search(text) else "no",
         "validates_before_write": "yes" if _VALIDATE_BEFORE_WRITE.search(text) else "no",
         "wired_into_just": "yes" if path.stem in justfile_text or path.name in justfile_text else "no",
     }
@@ -101,7 +110,7 @@ def main() -> int:
             rows.append(row)
 
     fields = ["path", "writes_yaml", "appends_curation_history",
-              "has_dry_run", "validates_before_write", "wired_into_just"]
+              "has_write_safeguard", "validates_before_write", "wired_into_just"]
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -125,7 +134,7 @@ def main() -> int:
     print(f"=== writers audit summary ({len(rows)} writers) ===", file=sys.stderr)
     print(f"  appends curation_history:   {count('appends_curation_history', 'yes')} / {len(rows)}",
           file=sys.stderr)
-    print(f"  has --dry-run:              {count('has_dry_run', 'yes')} / {len(rows)}",
+    print(f"  has write safeguard:        {count('has_write_safeguard', 'yes')} / {len(rows)}",
           file=sys.stderr)
     print(f"  validates before write:     {count('validates_before_write', 'yes')} / {len(rows)}",
           file=sys.stderr)
