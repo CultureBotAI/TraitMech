@@ -14,8 +14,8 @@ xrefs:
 evidence:
 - reference: DOI:10.1093/database/bat054
   snippet: gene product can be associated to a GO term
-  notes: Supports biological process as a Gene Ontology aspect used for
-    annotating gene-product roles.
+  notes: Supports biological process as a Gene Ontology aspect used for annotating
+    gene-product roles.
 - reference: DOI:10.1093/database/bat054
   snippet: biological process, molecular function, or cellular component
   notes: Supports biological process as one of the core GO annotation aspects.
@@ -23,8 +23,8 @@ causal_graphs:
 - graph_id: biological_process_go_upper_context
   title: Biological process upper-class context
   description: DOI-backed upper-ontology context graph linking biological process
-    to molecular functions, gene products, and the non-environmental child
-    metabolism class.
+    to molecular functions, gene products, and the non-environmental child metabolism
+    class.
   nodes:
   - node_id: biological_process_trait
     label: biological process
@@ -32,8 +32,7 @@ causal_graphs:
     grounding: METPO:1000630
     xrefs:
     - GO:0008150
-    description: Upper-level process class for genetically encoded biological
-      programs.
+    description: Upper-level process class for genetically encoded biological programs.
   - node_id: molecular_function
     label: molecular function
     node_type: MOLECULAR_FUNCTION
@@ -47,8 +46,7 @@ causal_graphs:
     label: metabolism
     node_type: TRAIT
     grounding: METPO:1000060
-    description: Non-environmental TraitMech child class under biological
-      process.
+    description: Non-environmental TraitMech child class under biological process.
   edges:
   - subject: gene_product
     predicate: carries out
@@ -62,23 +60,22 @@ causal_graphs:
   - subject: molecular_function
     predicate: contributes to
     object: biological_process_trait
-    description: Molecular functions collectively accomplish broader biological
-      processes.
+    description: Molecular functions collectively accomplish broader biological processes.
     evidence:
     - reference: DOI:10.1093/database/bat054
       snippet: Molecular Function, Biological Process and Cellular Component
-      notes: Supports GO annotation across molecular functions and biological
-        processes.
+      notes: Supports GO annotation across molecular functions and biological processes.
+    predicate_id: RO:0002326
   - subject: metabolism_trait
     predicate: specializes
     object: biological_process_trait
-    description: In TraitMech, metabolism is the non-environmental child class
-      under biological process.
+    description: In TraitMech, metabolism is the non-environmental child class under
+      biological process.
     evidence:
     - reference: DOI:10.1093/database/bat054
       snippet: child term is a subtype of the parent term
-      notes: Supports parent-child is-a interpretation for GO-style process
-        hierarchies.
+      notes: Supports parent-child is-a interpretation for GO-style process hierarchies.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866352+00:00'
   curator: seed_from_metpo
@@ -88,7 +85,19 @@ curation_history:
 - timestamp: '2026-05-15T00:35:00-07:00'
   curator: codex
   action: CURATED_UPPER_CONTEXT
-  changes: Reviewed biological process as an upper classifier and added a
-    DOI-backed context graph linking molecular functions, gene products, and the
-    metabolism child class.
+  changes: Reviewed biological process as an upper classifier and added a DOI-backed
+    context graph linking molecular functions, gene products, and the metabolism child
+    class.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1).
   llm_assisted: true

@@ -19,8 +19,8 @@ evidence:
 causal_graphs:
 - graph_id: alkalotolerant_alkaline_stress_homeostasis
   title: Alkalotolerant alkaline-stress pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking alkalotolerance to alkaline
-    exposure, proton retention, and cation/proton antiport.
+  description: Evidence-backed causal sketch linking alkalotolerance to alkaline exposure,
+    proton retention, and cation/proton antiport.
   nodes:
   - node_id: alkalotolerant_trait
     label: alkalotolerant
@@ -47,8 +47,8 @@ causal_graphs:
   - subject: alkaline_exposure
     predicate: challenges
     object: alkalotolerant_trait
-    description: Alkalotolerance reflects capacity to withstand alkaline pH
-      outside the growth optimum.
+    description: Alkalotolerance reflects capacity to withstand alkaline pH outside
+      the growth optimum.
     evidence:
     - reference: DOI:10.1016/j.bbamem.2005.09.010
       snippet: alkali-tolerant and extremely alkaliphilic bacteria
@@ -64,30 +64,32 @@ causal_graphs:
   - subject: proton_retention
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
-    description: Proton capture and retention support pH homeostasis in alkaline
-      environments.
+    description: Proton capture and retention support pH homeostasis in alkaline environments.
     evidence:
     - reference: DOI:10.1016/j.bbamem.2005.09.010
       snippet: promote proton capture and retention
       notes: Supports proton retention mechanisms during alkaline pH challenge.
+    predicate_id: RO:0002326
   - subject: cation_proton_antiporter
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
-    description: Cation/proton antiporters help regulate intracellular pH under
-      alkaline stress.
+    description: Cation/proton antiporters help regulate intracellular pH under alkaline
+      stress.
     evidence:
     - reference: DOI:10.3390/ijms21124566
       snippet: maintaining ion and pH homeostasis
       notes: Supports cation/proton antiporters as pH-homeostasis transporters.
+    predicate_id: RO:0002326
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: alkalotolerant_trait
-    description: Alkaline tolerance depends on maintaining cytoplasmic pH during
-      alkaline exposure.
+    description: Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline
+      exposure.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cell-wide physiological process
       notes: Supports pH homeostasis as a broad enabling process.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941966+00:00'
   curator: seed_from_metpo
@@ -99,4 +101,10 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Reviewed alkalotolerant trait and added DOI-backed evidence and causal
     graph for alkaline-stress pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, RO:0002327×1).
   llm_assisted: true

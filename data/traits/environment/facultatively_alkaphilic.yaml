@@ -26,9 +26,8 @@ evidence:
 causal_graphs:
 - graph_id: facultatively_alkaphilic_sodium_cycle_homeostasis
   title: Facultative alkaliphily sodium-cycle pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking facultative alkaliphily to
-    alkaline growth capacity, near-neutral growth, and sodium-dependent pH
-    homeostasis.
+  description: Evidence-backed causal sketch linking facultative alkaliphily to alkaline
+    growth capacity, near-neutral growth, and sodium-dependent pH homeostasis.
   nodes:
   - node_id: facultatively_alkaphilic_trait
     label: facultatively alkaphilic
@@ -38,13 +37,12 @@ causal_graphs:
   - node_id: alkaline_external_ph
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
-    description: External pH above neutral, often near or above pH 9 for
-      alkaliphiles.
+    description: External pH above neutral, often near or above pH 9 for alkaliphiles.
   - node_id: near_neutral_external_ph
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
-    description: External pH near neutrality compatible with facultative
-      alkaliphile growth.
+    description: External pH near neutrality compatible with facultative alkaliphile
+      growth.
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
@@ -104,8 +102,8 @@ causal_graphs:
   - subject: sodium_proton_antiporter
     predicate: accumulates
     object: proton
-    description: Na+/H+ antiport contributes to net proton accumulation during
-      alkaline pH homeostasis.
+    description: Na+/H+ antiport contributes to net proton accumulation during alkaline
+      pH homeostasis.
     evidence:
     - reference: DOI:10.1016/S0005-2728(00)00285-1
       snippet: net H+ accumulation
@@ -113,12 +111,12 @@ causal_graphs:
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: facultatively_alkaphilic_trait
-    description: Growth across alkaline and near-neutral pH requires pH
-      homeostasis.
+    description: Growth across alkaline and near-neutral pH requires pH homeostasis.
     evidence:
     - reference: DOI:10.1016/S0005-2728(00)00285-1
       snippet: pH homeostasis ... appears to set the upper pH limit for growth
       notes: Supports pH homeostasis as a determinant of alkaliphilic growth range.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.939582+00:00'
   curator: seed_from_metpo
@@ -128,6 +126,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed facultatively alkaphilic trait and added DOI-backed evidence
-    and causal graph for alkaline and near-neutral pH growth capacity.
+  changes: Reviewed facultatively alkaphilic trait and added DOI-backed evidence and
+    causal graph for alkaline and near-neutral pH growth capacity.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

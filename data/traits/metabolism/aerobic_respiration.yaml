@@ -20,10 +20,12 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1146/annurev.biophys.27.1.329
   snippet: terminal enzyme of respiratory chains
-  notes: Review supports cytochrome c oxidase reducing molecular oxygen to water in aerobic respiratory chains.
+  notes: Review supports cytochrome c oxidase reducing molecular oxygen to water in
+    aerobic respiratory chains.
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: membrane-bound electron transport chain
-  notes: Review supports proton-gradient energy conservation by prokaryotic respiratory chains.
+  notes: Review supports proton-gradient energy conservation by prokaryotic respiratory
+    chains.
 causal_graphs:
 - graph_id: aerobic_respiration_terminal_oxidase
   title: Aerobic respiration terminal oxidase mechanism
@@ -71,11 +73,13 @@ causal_graphs:
   - subject: aerobic_respiration_trait
     predicate: has mechanistic pathway
     object: electron_transport_chain
-    description: Aerobic respiration uses a membrane-bound respiratory electron transport chain.
+    description: Aerobic respiration uses a membrane-bound respiratory electron transport
+      chain.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: membrane-bound electron transport chain
-      notes: Review describes respiration as redox reactions catalyzed by membrane-bound electron transport chains.
+      notes: Review describes respiration as redox reactions catalyzed by membrane-bound
+        electron transport chains.
   - subject: cytochrome_c_oxidase
     predicate: reduces
     object: molecular_oxygen
@@ -100,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: generation of an electrochemical ion gradient
       notes: Supports proton motive force generation by respiratory chains.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives
     object: atp_synthase
@@ -116,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: gradient across a coupling membrane that drives ATP synthesis
       notes: Supports ATP synthesis driven by the respiratory ion gradient.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.911295+00:00'
   curator: seed_from_metpo
@@ -125,5 +131,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for oxygen reduction, proton motive force, and ATP synthesis in aerobic respiration.
+  changes: Added DOI-backed causal graph for oxygen reduction, proton motive force,
+    and ATP synthesis in aerobic respiration.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

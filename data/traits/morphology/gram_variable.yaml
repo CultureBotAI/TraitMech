@@ -17,22 +17,19 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1128/CMR.00043-07
   snippet: cell wall structure
-  notes: Bacterial cell-wall review supports peptidoglycan thinning and
-    autolysis-mediated loss of crystal-violet retention as the basis for
-    gram-variable staining.
+  notes: Bacterial cell-wall review supports peptidoglycan thinning and autolysis-mediated
+    loss of crystal-violet retention as the basis for gram-variable staining.
 causal_graphs:
 - graph_id: gram_variable_wall_thinning
   title: Gram-variable peptidoglycan thinning
-  description: DOI-backed graph linking culture-age-dependent peptidoglycan
-    thinning and autolysis to inconsistent gram-staining within a single
-    bacterial population.
+  description: DOI-backed graph linking culture-age-dependent peptidoglycan thinning
+    and autolysis to inconsistent gram-staining within a single bacterial population.
   nodes:
   - node_id: gram_variable_trait
     label: gram variable
     node_type: TRAIT
     grounding: METPO:1000700
-    description: Mixed gram-positive and gram-negative staining within a single
-      culture.
+    description: Mixed gram-positive and gram-negative staining within a single culture.
   - node_id: culture_aging
     label: culture aging
     node_type: ENVIRONMENTAL_FACTOR
@@ -69,16 +66,18 @@ causal_graphs:
       snippet: crystal violet
       notes: Supports peptidoglycan thickness as the determinant of crystal-violet
         retention in the gram-stain protocol.
+    predicate_id: biolink:causes
   - subject: crystal_violet_retention_loss
     predicate: produces
     object: mixed_staining
-    description: Subpopulations with reduced dye retention appear gram-negative
-      alongside intact gram-positive cells.
+    description: Subpopulations with reduced dye retention appear gram-negative alongside
+      intact gram-positive cells.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
       snippet: decolorization
       notes: Supports differential decolorization producing mixed staining within
         a single culture.
+    predicate_id: METPO:2000202
   - subject: mixed_staining
     predicate: manifests as
     object: gram_variable_trait
@@ -86,8 +85,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
       snippet: Gram-variable
-      notes: Supports the Gram-variable phenotype as the trait endpoint of
-        heterogeneous staining.
+      notes: Supports the Gram-variable phenotype as the trait endpoint of heterogeneous
+        staining.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo
@@ -97,7 +96,18 @@ curation_history:
 - timestamp: '2026-05-11T23:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking culture-age-dependent
-    peptidoglycan thinning and loss of crystal-violet retention to gram-variable
-    staining.
+  changes: Added DOI-backed causal graph linking culture-age-dependent peptidoglycan
+    thinning and loss of crystal-violet retention to gram-variable staining.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

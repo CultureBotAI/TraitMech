@@ -12,7 +12,8 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1038/nrmicro2166
   snippet: Interspecies electron transfer is a key process
-  notes: Review supports hydrogen/formate-mediated electron transfer in syntrophic communities.
+  notes: Review supports hydrogen/formate-mediated electron transfer in syntrophic
+    communities.
 causal_graphs:
 - graph_id: syntrophy_interspecies_electron_transfer
   title: Syntrophy interspecies electron transfer mechanism
@@ -45,7 +46,8 @@ causal_graphs:
   - node_id: low_hydrogen_condition
     label: low hydrogen condition
     node_type: ENVIRONMENTAL_FACTOR
-    description: Product concentration state that permits otherwise unfavorable syntrophic metabolism.
+    description: Product concentration state that permits otherwise unfavorable syntrophic
+      metabolism.
   - node_id: methanogenesis
     label: methanogenesis
     node_type: PATHWAY
@@ -79,15 +81,18 @@ causal_graphs:
   - subject: methanogenic_product_consumption
     predicate: consumes
     object: molecular_hydrogen
-    description: Methanogens keep hydrogen concentrations low enough for syntrophic metabolism.
+    description: Methanogens keep hydrogen concentrations low enough for syntrophic
+      metabolism.
     evidence:
     - reference: DOI:10.1038/nrmicro2166
       snippet: low hydrogen concentrations, which are created by the methanogen
       notes: Supports product removal by methanogens as a thermodynamic driver.
+    predicate_id: biolink:consumes
   - subject: methanogenic_product_consumption
     predicate: creates
     object: low_hydrogen_condition
-    description: Hydrogen consumption creates the product-removal condition needed by the syntroph.
+    description: Hydrogen consumption creates the product-removal condition needed
+      by the syntroph.
     evidence:
     - reference: DOI:10.1038/nrmicro2166
       snippet: live at the limits of what is thermodynamically possible
@@ -109,5 +114,12 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for hydrogen/formate interspecies electron transfer and methanogenic product removal in syntrophy.
+  changes: Added DOI-backed causal graph for hydrogen/formate interspecies electron
+    transfer and methanogenic product removal in syntrophy.
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:consumes×1).
   llm_assisted: true

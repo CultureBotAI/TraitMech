@@ -13,7 +13,8 @@ synonyms:
   source: metpo.owl
 evidence:
 - reference: DOI:10.3390/biom9070279
-  snippet: bacterial flagellum is a helical filamentous organelle responsible for motility
+  snippet: bacterial flagellum is a helical filamentous organelle responsible for
+    motility
   notes: Supports flagella as locomotory structures.
 causal_graphs:
 - graph_id: flagellated_flagellar_motor
@@ -54,12 +55,12 @@ causal_graphs:
   - subject: flagellar_filament
     predicate: enables
     object: flagellated_trait
-    description: A flagellar filament is the locomotory appendage of flagellated
-      cells.
+    description: A flagellar filament is the locomotory appendage of flagellated cells.
     evidence:
     - reference: DOI:10.3390/biom9070279
       snippet: helical filamentous organelle responsible for motility
       notes: Supports the filament as the locomotory flagellar structure.
+    predicate_id: RO:0002327
   - subject: flagellar_hook
     predicate: connects
     object: flagellar_filament
@@ -93,6 +94,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom9070279
       snippet: regulate the direction of flagella-driven motility
       notes: Supports chemotaxis regulation of flagellated motility.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.906575+00:00'
   curator: seed_from_metpo
@@ -102,6 +104,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed flagellated trait and added DOI-backed causal graph for
-    flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.
+  changes: Reviewed flagellated trait and added DOI-backed causal graph for flagellar
+    filament, hook, basal body, stator, ion motive force, and chemotaxis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1).
   llm_assisted: true

@@ -20,12 +20,13 @@ evidence:
   notes: Supports the requirement for oxygen in obligately aerobic organisms.
 - reference: PMID:27203084
   snippet: M. tuberculosis is an obligate aerobe
-  notes: 'Organism example: Mycobacterium tuberculosis is described as obligately aerobic.'
+  notes: 'Organism example: Mycobacterium tuberculosis is described as obligately
+    aerobic.'
 causal_graphs:
 - graph_id: obligate_aerobe_oxygen_respiration
   title: Obligate aerobe oxygen-dependent respiration mechanism
-  description: Evidence-backed causal sketch linking obligate aerobic growth to
-    oxygen-dependent terminal oxidase respiration.
+  description: Evidence-backed causal sketch linking obligate aerobic growth to oxygen-dependent
+    terminal oxidase respiration.
   nodes:
   - node_id: obligate_aerobic_trait
     label: obligately aerobic
@@ -84,6 +85,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2011.06.016
       snippet: production of a proton motive force
       notes: Supports bioenergetic coupling by cytochrome bd oxygen reductases.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851998+00:00'
   curator: seed_from_metpo
@@ -103,6 +105,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for obligate aerobic respiration and
-    oxygen-reducing terminal oxidases.
+  changes: Added DOI-backed causal graph for obligate aerobic respiration and oxygen-reducing
+    terminal oxidases.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

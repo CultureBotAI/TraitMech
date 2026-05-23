@@ -22,8 +22,8 @@ evidence:
 causal_graphs:
 - graph_id: acidophilic_ph_homeostasis
   title: Acidophilic pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking acidophily to acidic
-    environments, proton exclusion, and cytoplasmic pH homeostasis.
+  description: Evidence-backed causal sketch linking acidophily to acidic environments,
+    proton exclusion, and cytoplasmic pH homeostasis.
   nodes:
   - node_id: acidophilic_trait
     label: acidophilic
@@ -72,8 +72,7 @@ causal_graphs:
   - subject: low_proton_permeability_membrane
     predicate: limits influx of
     object: proton
-    description: Low proton permeability helps acidophiles avoid cytoplasmic
-      acidification.
+    description: Low proton permeability helps acidophiles avoid cytoplasmic acidification.
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: highly impermeable cell membranes
@@ -95,6 +94,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports cytoplasmic pH homeostasis during growth at low external pH.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.938355+00:00'
   curator: seed_from_metpo
@@ -104,6 +104,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed acidophilic trait and added DOI-backed evidence and causal
-    graph for acidic pH homeostasis.
+  changes: Reviewed acidophilic trait and added DOI-backed evidence and causal graph
+    for acidic pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

@@ -26,8 +26,8 @@ evidence:
 causal_graphs:
 - graph_id: neutrophilic_neutral_ph_homeostasis
   title: Neutrophilic near-neutral pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking neutrophilic growth to
-    near-neutral external pH and ordinary cytoplasmic pH homeostasis.
+  description: Evidence-backed causal sketch linking neutrophilic growth to near-neutral
+    external pH and ordinary cytoplasmic pH homeostasis.
   nodes:
   - node_id: neutrophilic_trait
     label: neutrophilic
@@ -62,12 +62,13 @@ causal_graphs:
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: neutrophilic_trait
-    description: Growth near neutral pH still requires active maintenance of
-      internal pH.
+    description: Growth near neutral pH still requires active maintenance of internal
+      pH.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: bacterial pH homeostasis is a cell-wide physiological process
       notes: Supports pH homeostasis as central to bacterial growth.
+    predicate_id: RO:0002327
   - subject: proton_motive_force
     predicate: interacts with
     object: cytoplasmic_ph_homeostasis
@@ -76,6 +77,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: intrinsically linked to cellular bioenergetics
       notes: Supports coupling of pH gradients and bioenergetics.
+    predicate_id: biolink:interacts_with
   - subject: cation_proton_antiporter
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -84,6 +86,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms21124566
       snippet: maintaining ion and pH homeostasis
       notes: Supports cation/proton antiport as a general pH-homeostasis mechanism.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937067+00:00'
   curator: seed_from_metpo
@@ -93,6 +96,18 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed neutrophilic trait and added DOI-backed evidence and causal
-    graph for near-neutral pH homeostasis.
+  changes: Reviewed neutrophilic trait and added DOI-backed evidence and causal graph
+    for near-neutral pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:interacts_with×1).
   llm_assisted: true

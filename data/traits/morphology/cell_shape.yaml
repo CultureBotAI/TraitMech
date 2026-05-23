@@ -25,8 +25,8 @@ evidence:
 causal_graphs:
 - graph_id: cell_shape_peptidoglycan_cytoskeleton
   title: Bacterial cell-shape morphogenesis mechanism
-  description: Evidence-backed causal sketch linking cell shape to peptidoglycan
-    synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.
+  description: Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis,
+    PBPs, MreB, FtsZ, crescentin, and localized wall growth.
   nodes:
   - node_id: cell_shape_trait
     label: cell shape
@@ -49,8 +49,7 @@ causal_graphs:
   - node_id: mreB
     label: MreB
     node_type: GENE_OR_PROTEIN
-    description: Actin-like bacterial cytoskeletal protein involved in rod-shape
-      determination.
+    description: Actin-like bacterial cytoskeletal protein involved in rod-shape determination.
   - node_id: ftsZ
     label: FtsZ
     node_type: GENE_OR_PROTEIN
@@ -73,12 +72,12 @@ causal_graphs:
   - subject: penicillin_binding_proteins
     predicate: catalyzes
     object: peptidoglycan_synthesis
-    description: PBPs synthesize and remodel peptidoglycan during growth and
-      division.
+    description: PBPs synthesize and remodel peptidoglycan during growth and division.
     evidence:
     - reference: DOI:10.1038/nrmicro1205
       snippet: carry out the reactions for synthesis and remodelling
       notes: Supports PBPs in peptidoglycan synthesis/remodeling.
+    predicate_id: biolink:catalyzes
   - subject: peptidoglycan_synthesis
     predicate: determines
     object: cell_shape_trait
@@ -104,8 +103,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro1205
       snippet: FtsZ is essential for cell division
-      notes: Supports FtsZ as a shape-related cytoskeletal protein through cell
-        division.
+      notes: Supports FtsZ as a shape-related cytoskeletal protein through cell division.
+    predicate_id: RO:0002211
   - subject: crescentin
     predicate: contributes to
     object: cell_shape_trait
@@ -115,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1205
       snippet: crescentin is required for the curved-rod shape
       notes: Supports crescentin as a cell-shape determinant in Caulobacter.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884864+00:00'
   curator: seed_from_metpo
@@ -124,7 +124,18 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed cell shape trait and added DOI-backed causal graph for
-    peptidoglycan cell wall, PBPs, MreB, FtsZ, crescentin, and localized wall
-    growth.
+  changes: Reviewed cell shape trait and added DOI-backed causal graph for peptidoglycan
+    cell wall, PBPs, MreB, FtsZ, crescentin, and localized wall growth.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true

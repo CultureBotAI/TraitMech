@@ -18,15 +18,17 @@ synonyms:
 evidence:
 - reference: DOI:10.1016/B978-012373944-5.00083-3
   snippet: Chemoheterotroph (chemoorganoheterotroph)
-  notes: Encyclopedia chapter maps chemoheterotrophy to chemical energy and reduced organic carbon.
+  notes: Encyclopedia chapter maps chemoheterotrophy to chemical energy and reduced
+    organic carbon.
 - reference: DOI:10.1021/acsomega.3c02205
   snippet: chemoheterotrophic
-  notes: Review table supports chemoheterotrophic use of organic molecules as energy and carbon sources.
+  notes: Review table supports chemoheterotrophic use of organic molecules as energy
+    and carbon sources.
 causal_graphs:
 - graph_id: chemoheterotrophic_organic_energy_carbon
   title: Chemoheterotrophic organic energy and carbon metabolism
-  description: DOI-backed graph linking organic molecules as chemical energy and
-    carbon sources to catabolism, respiration or fermentation, ATP, and biomass.
+  description: DOI-backed graph linking organic molecules as chemical energy and carbon
+    sources to catabolism, respiration or fermentation, ATP, and biomass.
   nodes:
   - node_id: chemoheterotrophic_trait
     label: chemoheterotrophic
@@ -74,6 +76,7 @@ causal_graphs:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... energy source
       notes: Supports organic molecules as energy sources in chemoheterotrophic growth.
+    predicate_id: METPO:2000010
   - subject: chemoheterotrophic_trait
     predicate: uses carbon source
     object: organic_molecule
@@ -82,6 +85,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: reduced organic compound
       notes: Supports organic compounds as carbon sources in chemoheterotrophy.
+    predicate_id: METPO:2000006
   - subject: organic_molecule
     predicate: broken down by
     object: catabolism
@@ -105,7 +109,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
       snippet: substrate ... electron donor as well as acceptor
-      notes: Supports fermentation of organic substrates without external electron acceptors.
+      notes: Supports fermentation of organic substrates without external electron
+        acceptors.
   - subject: respiration
     predicate: produces
     object: atp
@@ -114,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
+    predicate_id: METPO:2000202
   - subject: fermentation
     predicate: produces
     object: atp
@@ -122,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: substrate-level phosphorylation
       notes: Supports ATP formation during fermentative metabolism.
+    predicate_id: METPO:2000202
   - subject: catabolism
     predicate: produces
     object: precursor_metabolites
@@ -130,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: precursor compounds for anabolism
       notes: Supports catabolism as a source of biosynthetic precursors.
+    predicate_id: METPO:2000202
   - subject: precursor_metabolites
     predicate: incorporated into
     object: biomass
@@ -147,5 +155,12 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for organic molecules as energy and carbon sources feeding catabolism, respiration or fermentation, ATP, and biomass.
+  changes: Added DOI-backed causal graph for organic molecules as energy and carbon
+    sources feeding catabolism, respiration or fermentation, ATP, and biomass.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×3, METPO:2000010×1, METPO:2000006×1).
   llm_assisted: true

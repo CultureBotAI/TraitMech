@@ -1,7 +1,7 @@
 identifier: METPO:1003030
 label: yellow pigmented
-definition: A pigmentation phenotype in which microbial colonies or cells appear
-  yellow due to production of yellow pigments such as carotenoids.
+definition: A pigmentation phenotype in which microbial colonies or cells appear yellow
+  due to production of yellow pigments such as carotenoids.
 definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -54,15 +54,17 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: crt genes ... reactions they catalyze
       notes: Supports Crt enzymes as catalysts in bacterial carotenoid pathways.
+    predicate_id: biolink:catalyzes
   - subject: carotenoid_biosynthesis
     predicate: produces
     object: yellow_carotenoids
-    description: Carotenoid biosynthesis produces yellow-pigment carotenoids in
-      representative bacteria.
+    description: Carotenoid biosynthesis produces yellow-pigment carotenoids in representative
+      bacteria.
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: yellow pigmentation in bacteria
       notes: Supports carotenoids as one source of yellow pigmentation.
+    predicate_id: METPO:2000202
   - subject: yellow_carotenoids
     predicate: causes
     object: visible_yellow_color
@@ -71,6 +73,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.tim.2010.07.007
       snippet: Carotenoids are natural pigments
       notes: Supports carotenoids as visible pigments in bacteria.
+    predicate_id: biolink:causes
   - subject: visible_yellow_color
     predicate: manifests as
     object: yellow_pigmented_trait
@@ -88,6 +91,18 @@ curation_history:
 - timestamp: '2026-05-11T18:45:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for Crt enzymes,
-    carotenoid biosynthesis, yellow carotenoids, and visible yellow color.
+  changes: Added DOI-backed definition and causal graph for Crt enzymes, carotenoid
+    biosynthesis, yellow carotenoids, and visible yellow color.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, biolink:causes×1).
   llm_assisted: true

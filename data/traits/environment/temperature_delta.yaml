@@ -1,8 +1,7 @@
 identifier: METPO:1000303
 label: temperature delta
-definition: A temperature phenotype with numerical limits expressing the breadth
-  (maximum minus minimum, in °C) of ambient temperatures supporting growth of an
-  organism.
+definition: A temperature phenotype with numerical limits expressing the breadth (maximum
+  minus minimum, in °C) of ambient temperatures supporting growth of an organism.
 definition_source: DOI:10.1016/s0300-9629(97)00003-0
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -13,19 +12,17 @@ parent_traits:
 evidence:
 - reference: DOI:10.1016/s0300-9629(97)00003-0
   snippet: adapted to environments of high temperature
-  notes: Thermophile-adaptation review supports the breadth of the
-    temperature-tolerance span as a derived descriptor reflecting overall
-    thermal-adaptation flexibility.
+  notes: Thermophile-adaptation review supports the breadth of the temperature-tolerance
+    span as a derived descriptor reflecting overall thermal-adaptation flexibility.
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
-  notes: Membrane-adaptation review supports homoviscous remodeling capacity
-    as the basis of broad versus narrow temperature tolerance.
+  notes: Membrane-adaptation review supports homoviscous remodeling capacity as the
+    basis of broad versus narrow temperature tolerance.
 causal_graphs:
 - graph_id: temperature_delta_thermal_flexibility
   title: Temperature-delta thermal-adaptation flexibility
-  description: DOI-backed graph linking the flexibility of membrane and
-    enzyme adaptation to the breadth of the temperature growth range
-    (delta = max − min).
+  description: DOI-backed graph linking the flexibility of membrane and enzyme adaptation
+    to the breadth of the temperature growth range (delta = max − min).
   nodes:
   - node_id: temperature_delta_trait
     label: temperature delta
@@ -35,29 +32,28 @@ causal_graphs:
   - node_id: thermal_adaptation_flexibility
     label: thermal-adaptation flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Capacity to remodel membrane lipid composition and enzyme
-      repertoire across a wide span of ambient temperatures.
+    description: Capacity to remodel membrane lipid composition and enzyme repertoire
+      across a wide span of ambient temperatures.
   - node_id: tolerance_breadth
     label: temperature tolerance breadth
     node_type: BIOLOGICAL_PROCESS
-    description: Span between the minimum and maximum growth-supporting ambient
-      temperatures.
+    description: Span between the minimum and maximum growth-supporting ambient temperatures.
   edges:
   - subject: thermal_adaptation_flexibility
     predicate: enables
     object: tolerance_breadth
-    description: Thermal-adaptation flexibility enables broad temperature
-      tolerance.
+    description: Thermal-adaptation flexibility enables broad temperature tolerance.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports membrane-remodeling flexibility as the basis of broad
-        thermal tolerance.
+      notes: Supports membrane-remodeling flexibility as the basis of broad thermal
+        tolerance.
+    predicate_id: RO:0002327
   - subject: tolerance_breadth
     predicate: manifests as
     object: temperature_delta_trait
-    description: The breadth between minimum and maximum growth-supporting
-      ambient temperatures manifests the temperature-delta phenotype.
+    description: The breadth between minimum and maximum growth-supporting ambient
+      temperatures manifests the temperature-delta phenotype.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
@@ -71,6 +67,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking thermal-adaptation
-    flexibility to the temperature-delta breadth phenotype.
+  changes: Added DOI-backed causal graph linking thermal-adaptation flexibility to
+    the temperature-delta breadth phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

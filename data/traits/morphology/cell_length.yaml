@@ -20,8 +20,8 @@ evidence:
 causal_graphs:
 - graph_id: cell_length_division_growth_control
   title: Cell-length control by growth and division timing
-  description: DOI-backed graph linking growth rate, division-site placement,
-    and the adder size-control principle to the observed cell-length phenotype.
+  description: DOI-backed graph linking growth rate, division-site placement, and
+    the adder size-control principle to the observed cell-length phenotype.
   nodes:
   - node_id: cell_length_trait
     label: cell length
@@ -35,8 +35,8 @@ causal_graphs:
   - node_id: adder_principle
     label: adder size control
     node_type: BIOLOGICAL_PROCESS
-    description: Mechanism by which cells add a fixed length increment between
-      consecutive divisions.
+    description: Mechanism by which cells add a fixed length increment between consecutive
+      divisions.
   - node_id: ftsz_ring
     label: FtsZ ring (divisome)
     node_type: GENE_OR_PROTEIN
@@ -53,12 +53,13 @@ causal_graphs:
   - subject: growth_rate
     predicate: contributes to
     object: cell_length_trait
-    description: Elongation rate sets how rapidly a cell extends along its long
-      axis between divisions.
+    description: Elongation rate sets how rapidly a cell extends along its long axis
+      between divisions.
     evidence:
     - reference: DOI:10.1016/j.cub.2014.07.022
       snippet: cell size is tightly controlled
       notes: Supports growth/elongation rate as a determinant of cell size.
+    predicate_id: RO:0002326
   - subject: adder_principle
     predicate: regulates
     object: cell_length_trait
@@ -67,8 +68,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.cell.2014.11.022
       snippet: cells grow by a fixed amount between divisions
-      notes: Supports the adder principle as the size-control rule producing the
-        length distribution.
+      notes: Supports the adder principle as the size-control rule producing the length
+        distribution.
+    predicate_id: RO:0002211
   - subject: ftsz_ring
     predicate: assembles at
     object: division_site_placement
@@ -102,6 +104,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking elongation rate, adder size
-    control, FtsZ-divisome division-site placement, and cytokinesis to cell length.
+  changes: Added DOI-backed causal graph linking elongation rate, adder size control,
+    FtsZ-divisome division-site placement, and cytokinesis to cell length.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002211×1).
   llm_assisted: true

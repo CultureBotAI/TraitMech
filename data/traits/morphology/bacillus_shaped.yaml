@@ -20,9 +20,8 @@ evidence:
 causal_graphs:
 - graph_id: bacillus_shaped_rod_elongation
   title: Bacillus-shape rod elongation mechanism
-  description: Evidence-backed causal sketch linking bacillus morphology to
-    MreB-organized Rod complexes, lateral peptidoglycan insertion, and FtsZ-coupled
-    division.
+  description: Evidence-backed causal sketch linking bacillus morphology to MreB-organized
+    Rod complexes, lateral peptidoglycan insertion, and FtsZ-coupled division.
   nodes:
   - node_id: bacillus_shaped_trait
     label: bacillus shaped
@@ -73,8 +72,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2677
       snippet: peptidoglycan synthesis to bacterial growth and morphology
-      notes: Supports regulated peptidoglycan synthesis as a determinant of
-        bacterial morphology.
+      notes: Supports regulated peptidoglycan synthesis as a determinant of bacterial
+        morphology.
+    predicate_id: METPO:2000202
   - subject: lateral_cell_wall_elongation
     predicate: maintains
     object: bacillus_shaped_trait
@@ -82,8 +82,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2011.11.004
       snippet: restores its rod shape
-      notes: Supports MreB-associated cell-wall synthesis as important for rod
-        shape restoration and maintenance.
+      notes: Supports MreB-associated cell-wall synthesis as important for rod shape
+        restoration and maintenance.
   - subject: ftsZ
     predicate: coordinates with
     object: peptidoglycan_synthesis
@@ -102,7 +102,13 @@ curation_history:
 - timestamp: '2026-05-11T18:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed bacillus shape as rod-like morphology and added DOI-backed
-    causal graph for MreB, Rod complex, peptidoglycan synthesis, lateral wall
-    elongation, and FtsZ coupling.
+  changes: Reviewed bacillus shape as rod-like morphology and added DOI-backed causal
+    graph for MreB, Rod complex, peptidoglycan synthesis, lateral wall elongation,
+    and FtsZ coupling.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

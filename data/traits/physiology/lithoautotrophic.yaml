@@ -64,6 +64,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: inorganic atoms or molecules as a growth-supporting reductant
       notes: Supports inorganic electron donors for lithotrophic growth.
+    predicate_id: METPO:2000009
   - subject: inorganic_electron_donor
     predicate: supports
     object: respiratory_energy_conservation
@@ -75,11 +76,14 @@ causal_graphs:
   - subject: respiratory_energy_conservation
     predicate: generates
     object: reducing_power
-    description: Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.
+    description: Lithoautotrophic energy metabolism supplies reducing equivalents
+      for biosynthesis.
     evidence:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: NADH, or ... NADPH
-      notes: Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.
+      notes: Review discusses reduced redox cofactors generated from chemolithoautotrophic
+        electron donors.
+    predicate_id: biolink:produces
   - subject: carbon_dioxide
     predicate: fixed by
     object: autotrophic_co2_fixation
@@ -104,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: CO2 ... into cellular carbon
       notes: Supports assimilation of CO2 into cellular carbon.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.874845+00:00'
   curator: seed_from_metpo
@@ -113,5 +118,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for inorganic electron donors, reducing power, and autotrophic CO2 fixation.
+  changes: Added DOI-backed causal graph for inorganic electron donors, reducing power,
+    and autotrophic CO2 fixation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000009×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

@@ -27,9 +27,8 @@ evidence:
 causal_graphs:
 - graph_id: filament_shaped_streptomyces_polar_growth
   title: Filament-shape Streptomyces polar growth mechanism
-  description: Evidence-backed causal sketch linking filamentous morphology to
-    DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip
-    extension.
+  description: Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy
+    polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.
   nodes:
   - node_id: filament_shaped_trait
     label: filament shaped
@@ -60,12 +59,12 @@ causal_graphs:
   - subject: divIVA
     predicate: localizes to
     object: apical_polarisome
-    description: DivIVA localizes at hyphal tips as part of the polar growth
-      machinery.
+    description: DivIVA localizes at hyphal tips as part of the polar growth machinery.
     evidence:
     - reference: DOI:10.1016/j.mib.2010.10.002
       snippet: polarity determinant DivIVA
       notes: Supports DivIVA as a polarity determinant in Streptomyces.
+    predicate_id: biolink:located_in
   - subject: scy
     predicate: organizes
     object: apical_polarisome
@@ -78,8 +77,8 @@ causal_graphs:
   - subject: apical_polarisome
     predicate: recruits
     object: apical_peptidoglycan_synthesis
-    description: The apical polarisome recruits cell-wall synthesis machinery to
-      hyphal tips.
+    description: The apical polarisome recruits cell-wall synthesis machinery to hyphal
+      tips.
     evidence:
     - reference: DOI:10.1016/j.mib.2012.10.012
       snippet: polarisome-like complex involving the essential polarity protein DivIVA
@@ -109,6 +108,12 @@ curation_history:
 - timestamp: '2026-05-11T21:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for DivIVA, Scy,
-    apical polarisome, apical peptidoglycan synthesis, and hyphal tip extension.
+  changes: Added DOI-backed definition and causal graph for DivIVA, Scy, apical polarisome,
+    apical peptidoglycan synthesis, and hyphal tip extension.
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1).
   llm_assisted: true

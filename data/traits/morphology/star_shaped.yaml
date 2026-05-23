@@ -21,12 +21,12 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: polar growth
-  notes: Cell-shape review supports multi-pole peptidoglycan growth as the basis
-    for prosthecate or appendaged geometries.
+  notes: Cell-shape review supports multi-pole peptidoglycan growth as the basis for
+    prosthecate or appendaged geometries.
 - reference: DOI:10.1146/annurev.micro.061705.103240
   snippet: prosthecate bacteria
-  notes: Prosthecate-bacteria review supports star-shaped morphology in
-    Stella/Ancalomicrobium and related stalked lineages.
+  notes: Prosthecate-bacteria review supports star-shaped morphology in Stella/Ancalomicrobium
+    and related stalked lineages.
 causal_graphs:
 - graph_id: star_shaped_multiple_prosthecae
   title: Star-shape multiple prosthecae extension
@@ -67,6 +67,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.061705.103240
       snippet: prosthecate bacteria
       notes: Supports prosthecate morphology in star-shaped lineages.
+    predicate_id: METPO:2000202
   - subject: radiating_projections
     predicate: manifests as
     object: star_shaped_trait
@@ -84,6 +85,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking multi-site polar peptidoglycan
-    growth and prostheca outgrowth to star-shaped morphology.
+  changes: Added DOI-backed causal graph linking multi-site polar peptidoglycan growth
+    and prostheca outgrowth to star-shaped morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

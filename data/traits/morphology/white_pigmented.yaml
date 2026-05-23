@@ -1,7 +1,7 @@
 identifier: METPO:1003029
 label: white pigmented
-definition: A pigmentation phenotype in which microbial colonies or cells appear
-  white or nonpigmented because visible chromophore accumulation is absent or low.
+definition: A pigmentation phenotype in which microbial colonies or cells appear white
+  or nonpigmented because visible chromophore accumulation is absent or low.
 definition_source: DOI:10.2147/IDR.S49039
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,9 +15,8 @@ synonyms:
 evidence:
 - reference: DOI:10.2147/IDR.S49039
   snippet: white phenotypic variant of Staphylococcus aureus
-  notes: Supports white colony appearance as a microbial pigmentation phenotype
-    tied to absent or inducible staphyloxanthin production in a representative
-    bacterium.
+  notes: Supports white colony appearance as a microbial pigmentation phenotype tied
+    to absent or inducible staphyloxanthin production in a representative bacterium.
 causal_graphs:
 - graph_id: white_pigmented_low_chromophore
   title: White pigmentation low-chromophore mechanism
@@ -33,8 +32,8 @@ causal_graphs:
   - node_id: crtOPQMN_operon
     label: crtOPQMN operon
     node_type: GENE_OR_PROTEIN
-    description: S. aureus carotenoid biosynthesis gene cluster for
-      staphyloxanthin production.
+    description: S. aureus carotenoid biosynthesis gene cluster for staphyloxanthin
+      production.
   - node_id: staphyloxanthin_biosynthesis
     label: staphyloxanthin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -55,42 +54,42 @@ causal_graphs:
   - subject: crtOPQMN_operon
     predicate: encodes
     object: staphyloxanthin_biosynthesis
-    description: The crtOPQMN operon encodes machinery for staphyloxanthin
-      biosynthesis.
+    description: The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.
     evidence:
     - reference: DOI:10.1038/s41426-018-0078-1
       snippet: controlled by the crtOPQMN operon
       notes: Supports the operon as staphyloxanthin biosynthetic machinery.
+    predicate_id: biolink:encodes
   - subject: staphyloxanthin_biosynthesis
     predicate: produces
     object: staphyloxanthin
-    description: Staphyloxanthin biosynthesis produces the golden carotenoid
-      pigment.
+    description: Staphyloxanthin biosynthesis produces the golden carotenoid pigment.
     evidence:
     - reference: DOI:10.1084/jem.20050846
       snippet: Golden color imparted by carotenoid pigments
-      notes: Supports the link from carotenoid biosynthesis to visible golden
-        pigment in S. aureus.
+      notes: Supports the link from carotenoid biosynthesis to visible golden pigment
+        in S. aureus.
+    predicate_id: METPO:2000202
   - subject: low_visible_chromophore
     predicate: results from reduced
     object: staphyloxanthin_biosynthesis
-    description: Reduced or absent staphyloxanthin biosynthesis lowers visible
-      pigment accumulation.
+    description: Reduced or absent staphyloxanthin biosynthesis lowers visible pigment
+      accumulation.
     evidence:
     - reference: DOI:10.2147/IDR.S49039
       snippet: white-colony phenotype actually lacked the crtOPQMN operon
-      notes: Supports white colony phenotype when staphyloxanthin synthesis
-        machinery is absent in a representative case.
+      notes: Supports white colony phenotype when staphyloxanthin synthesis machinery
+        is absent in a representative case.
   - subject: low_visible_chromophore
     predicate: causes
     object: visible_white_color
-    description: Lack of accumulated chromophore yields a white or nonpigmented
-      colony appearance.
+    description: Lack of accumulated chromophore yields a white or nonpigmented colony
+      appearance.
     evidence:
     - reference: DOI:10.2147/IDR.S49039
       snippet: white phenotypic variant
-      notes: Supports white appearance as a phenotype of low or absent visible
-        pigment.
+      notes: Supports white appearance as a phenotype of low or absent visible pigment.
+    predicate_id: biolink:causes
   - subject: visible_white_color
     predicate: manifests as
     object: white_pigmented_trait
@@ -109,7 +108,24 @@ curation_history:
 - timestamp: '2026-05-11T19:10:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for staphyloxanthin
-    biosynthesis machinery, low visible chromophore accumulation, and white colony
-    appearance.
+  changes: Added DOI-backed definition and causal graph for staphyloxanthin biosynthesis
+    machinery, low visible chromophore accumulation, and white colony appearance.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:encodes×1).
   llm_assisted: true

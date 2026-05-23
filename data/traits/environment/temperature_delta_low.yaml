@@ -1,8 +1,8 @@
 identifier: METPO:1000484
 label: temperature delta low
-definition: A temperature delta phenotype with a growth-supporting temperature
-  breadth of approximately 5–10 °C, characteristic of organisms with limited
-  thermal-tolerance breadth.
+definition: A temperature delta phenotype with a growth-supporting temperature breadth
+  of approximately 5–10 °C, characteristic of organisms with limited thermal-tolerance
+  breadth.
 definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -16,13 +16,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
-  notes: Membrane-adaptation review supports limited thermal-adaptation
-    flexibility as the basis of narrow thermal-tolerance breadths.
+  notes: Membrane-adaptation review supports limited thermal-adaptation flexibility
+    as the basis of narrow thermal-tolerance breadths.
 causal_graphs:
 - graph_id: temperature_delta_low_limited_breadth
   title: Temperature-delta-low limited-breadth thermal adaptation
-  description: DOI-backed graph linking limited thermal-adaptation flexibility
-    to a 5–10 °C temperature growth breadth.
+  description: DOI-backed graph linking limited thermal-adaptation flexibility to
+    a 5–10 °C temperature growth breadth.
   nodes:
   - node_id: temperature_delta_low_trait
     label: temperature delta low
@@ -37,29 +37,31 @@ causal_graphs:
   - node_id: limited_thermal_adaptation
     label: limited thermal-adaptation flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Modest capacity to remodel membrane lipids and enzymes across
-      small temperature shifts.
+    description: Modest capacity to remodel membrane lipids and enzymes across small
+      temperature shifts.
   edges:
   - subject: limited_thermal_adaptation
     predicate: produces
     object: temperature_delta_low_trait
-    description: Limited thermal-adaptation flexibility yields a 5–10 °C
-      temperature-delta breadth.
+    description: Limited thermal-adaptation flexibility yields a 5–10 °C temperature-delta
+      breadth.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports limited thermal-adaptation flexibility as the basis of
-        narrow breadth.
+      notes: Supports limited thermal-adaptation flexibility as the basis of narrow
+        breadth.
+    predicate_id: METPO:2000202
   - subject: temperature_delta_low_trait
     predicate: is a
     object: temperature_delta
-    description: Temperature delta low is a quantitative bin of the
-      temperature-delta phenotype.
+    description: Temperature delta low is a quantitative bin of the temperature-delta
+      phenotype.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports the 5–10 °C breadth as a value within the
-        temperature-delta distribution.
+      notes: Supports the 5–10 °C breadth as a value within the temperature-delta
+        distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.843770+00:00'
   curator: seed_from_metpo
@@ -69,7 +71,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking limited
-    thermal-adaptation flexibility to the narrow-breadth temperature-delta-low
-    bin.
+  changes: Added DOI-backed definition and causal graph linking limited thermal-adaptation
+    flexibility to the narrow-breadth temperature-delta-low bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

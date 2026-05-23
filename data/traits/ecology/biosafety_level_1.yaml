@@ -16,21 +16,20 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
-  notes: Virulence-factor review supports the absence or low expression of
-    virulence factors in BSL-1 agents (non-pathogenic to healthy adults).
+  notes: Virulence-factor review supports the absence or low expression of virulence
+    factors in BSL-1 agents (non-pathogenic to healthy adults).
 causal_graphs:
 - graph_id: biosafety_level_1_minimal_hazard
   title: BSL-1 minimal-hazard classification
-  description: DOI-backed graph linking the absence of significant pathogen
-    hazard properties to BSL-1 classification and minimal containment
-    requirements.
+  description: DOI-backed graph linking the absence of significant pathogen hazard
+    properties to BSL-1 classification and minimal containment requirements.
   nodes:
   - node_id: bsl1_trait
     label: biosafety level 1
     node_type: TRAIT
     grounding: METPO:1001102
-    description: Minimal hazard to healthy adults; standard microbiological
-      practices only.
+    description: Minimal hazard to healthy adults; standard microbiological practices
+      only.
   - node_id: biosafety_level
     label: biosafety level
     node_type: TRAIT
@@ -39,8 +38,8 @@ causal_graphs:
   - node_id: low_pathogen_hazard
     label: low pathogen hazard
     node_type: BIOLOGICAL_PROCESS
-    description: Absence or low expression of virulence factors producing
-      disease in healthy adults.
+    description: Absence or low expression of virulence factors producing disease
+      in healthy adults.
   edges:
   - subject: low_pathogen_hazard
     predicate: produces
@@ -49,17 +48,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
-      notes: Supports the absence of virulence factors as the basis of BSL-1
-        classification.
+      notes: Supports the absence of virulence factors as the basis of BSL-1 classification.
+    predicate_id: METPO:2000202
   - subject: bsl1_trait
     predicate: is a
     object: biosafety_level
-    description: BSL-1 is a quantitative class within the biosafety-level
-      classification axis.
+    description: BSL-1 is a quantitative class within the biosafety-level classification
+      axis.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports BSL-1 as a member of the biosafety-level classification.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.932513+00:00'
   curator: seed_from_metpo
@@ -69,6 +69,11 @@ curation_history:
 - timestamp: '2026-05-13T13:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking low pathogen hazard to BSL-1
-    classification.
+  changes: Added DOI-backed causal graph linking low pathogen hazard to BSL-1 classification.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

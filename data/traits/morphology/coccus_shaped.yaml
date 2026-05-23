@@ -19,17 +19,17 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1038/nrmicro3088
   snippet: spherical cocci synthesize peptidoglycan only at the division septum
-  notes: Supports coccus shape as a spherical morphology with septal wall growth
-    rather than lateral elongation.
+  notes: Supports coccus shape as a spherical morphology with septal wall growth rather
+    than lateral elongation.
 - reference: PMID:19747126
   snippet: Staphylococcus aureus is a facultative, Gram-positive coccus
   notes: 'Organism example: Staphylococcus aureus is described as coccus-shaped.'
 causal_graphs:
 - graph_id: coccus_shaped_septal_growth
   title: Coccus-shape septal growth mechanism
-  description: Evidence-backed causal sketch linking spherical coccus morphology
-    to septal peptidoglycan synthesis, FtsZ-directed division, and reduced reliance
-    on lateral elongation systems.
+  description: Evidence-backed causal sketch linking spherical coccus morphology to
+    septal peptidoglycan synthesis, FtsZ-directed division, and reduced reliance on
+    lateral elongation systems.
   nodes:
   - node_id: coccus_shaped_trait
     label: coccus shaped
@@ -43,8 +43,7 @@ causal_graphs:
   - node_id: ftsZ_division_ring
     label: FtsZ division ring
     node_type: GENE_OR_PROTEIN
-    description: Tubulin-like division scaffold that recruits septal synthesis
-      machinery.
+    description: Tubulin-like division scaffold that recruits septal synthesis machinery.
   - node_id: penicillin_binding_proteins
     label: penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
@@ -62,8 +61,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: one type of cell wall synthesis machinery
-      notes: Review describes coccal growth as relying on division-septum wall
-        synthesis machinery.
+      notes: Review describes coccal growth as relying on division-septum wall synthesis
+        machinery.
   - subject: penicillin_binding_proteins
     predicate: catalyzes
     object: septal_peptidoglycan_synthesis
@@ -73,6 +72,7 @@ causal_graphs:
       snippet: catalysed by one type of cell wall synthesis machinery
       notes: Supports wall-synthesis enzymes as the proximal machinery for septal
         peptidoglycan synthesis in spherical cocci.
+    predicate_id: biolink:catalyzes
   - subject: septal_peptidoglycan_synthesis
     predicate: maintains
     object: coccus_shaped_trait
@@ -81,13 +81,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: synthesize peptidoglycan only at the division septum
-      notes: Supports septal-only wall synthesis as a mechanism for spherical
-        coccal growth.
+      notes: Supports septal-only wall synthesis as a mechanism for spherical coccal
+        growth.
   - subject: lateral_elongation
     predicate: reduced in
     object: coccus_shaped_trait
-    description: Cocci lack the sustained lateral elongation mode that produces
-      rod morphology.
+    description: Cocci lack the sustained lateral elongation mode that produces rod
+      morphology.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: round, rod-shaped, curved and spiral cells
@@ -108,7 +108,13 @@ curation_history:
 - timestamp: '2026-05-11T18:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Replaced PMID definition source with DOI-backed coccoid growth review
-    and added causal graph for FtsZ-associated septal peptidoglycan synthesis and
-    spherical morphology.
+  changes: Replaced PMID definition source with DOI-backed coccoid growth review and
+    added causal graph for FtsZ-associated septal peptidoglycan synthesis and spherical
+    morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true

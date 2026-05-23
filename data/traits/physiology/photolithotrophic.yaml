@@ -17,15 +17,16 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.3390/antiox10060829
   snippet: anoxygenic photosynthesis
-  notes: Review supports light-driven oxidation of reduced sulfur compounds by photolithotrophic sulfur bacteria.
+  notes: Review supports light-driven oxidation of reduced sulfur compounds by photolithotrophic
+    sulfur bacteria.
 - reference: DOI:10.3389/fmicb.2017.00323
   snippet: light as an energy source and reduced iron
   notes: Review supports Fe(II) as an inorganic electron donor for photoferrotrophy.
 causal_graphs:
 - graph_id: photolithotrophic_inorganic_electron_donors
   title: Photolithotrophic inorganic electron donor photosynthesis
-  description: DOI-backed graph linking light capture, inorganic electron donors
-    such as sulfide and Fe(II), anoxygenic photosynthetic electron transport, and CO2 assimilation.
+  description: DOI-backed graph linking light capture, inorganic electron donors such
+    as sulfide and Fe(II), anoxygenic photosynthetic electron transport, and CO2 assimilation.
   nodes:
   - node_id: photolithotrophic_trait
     label: photolithotrophic
@@ -71,6 +72,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: light as an energy source
       notes: Supports light as the energy source for photoferrotrophic photolithotrophy.
+    predicate_id: METPO:2000010
   - subject: photolithotrophic_trait
     predicate: uses electron donor
     object: inorganic_electron_donor
@@ -79,6 +81,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox10060829
       snippet: oxidizes reduced sulfur compounds
       notes: Supports inorganic reduced sulfur compounds as electron donors.
+    predicate_id: METPO:2000009
   - subject: hydrogen_sulfide
     predicate: example of
     object: inorganic_electron_donor
@@ -87,6 +90,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox10060829
       snippet: hydrogen sulfide
       notes: Supports H2S as a photolithotrophic sulfur-bacteria substrate.
+    predicate_id: rdfs:subClassOf
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_electron_donor
@@ -95,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: reduced iron [Fe(II)] as an electron donor
       notes: Supports Fe(II) as an inorganic electron donor for anoxygenic photosynthesis.
+    predicate_id: rdfs:subClassOf
   - subject: inorganic_electron_donor
     predicate: feeds electrons into
     object: anoxygenic_photosynthesis
@@ -127,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2017.00323
       snippet: inorganic carbon is fixed into organic matter
       notes: Supports organic matter formation from inorganic carbon in photoferrotrophy.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881359+00:00'
   curator: seed_from_metpo
@@ -136,5 +142,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for light-driven anoxygenic photosynthesis with sulfide and Fe(II) as inorganic electron donors.
+  changes: Added DOI-backed causal graph for light-driven anoxygenic photosynthesis
+    with sulfide and Fe(II) as inorganic electron donors.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000010×1, METPO:2000009×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

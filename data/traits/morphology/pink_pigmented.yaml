@@ -1,7 +1,7 @@
 identifier: METPO:1003027
 label: pink pigmented
-definition: A pigmentation phenotype in which microbial colonies or cells appear
-  pink due to accumulation of pink or rose carotenoid pigments.
+definition: A pigmentation phenotype in which microbial colonies or cells appear pink
+  due to accumulation of pink or rose carotenoid pigments.
 definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,8 +15,7 @@ synonyms:
 evidence:
 - reference: DOI:10.1080/1040841X.2025.2526423
   snippet: red, pink, orange, and yellow pigmentation in bacteria
-  notes: Supports pink bacterial pigmentation as a carotenoid-associated color
-    phenotype.
+  notes: Supports pink bacterial pigmentation as a carotenoid-associated color phenotype.
 causal_graphs:
 - graph_id: pink_pigmented_carotenoid_color
   title: Pink pigmentation carotenoid mechanism
@@ -56,8 +55,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.gene.2004.11.038
       snippet: isoprenoid precursor biosynthesis
-      notes: Supports isoprenoid precursor biosynthesis as an upstream step in
-        eubacterial carotenoid pathways.
+      notes: Supports isoprenoid precursor biosynthesis as an upstream step in eubacterial
+        carotenoid pathways.
   - subject: crt_enzymes
     predicate: catalyzes
     object: carotenoid_biosynthesis
@@ -66,6 +65,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: crt genes ... reactions they catalyze
       notes: Supports Crt enzymes as pathway catalysts.
+    predicate_id: biolink:catalyzes
   - subject: carotenoid_biosynthesis
     predicate: produces
     object: pink_carotenoids
@@ -74,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: pink ... pigmentation in bacteria
       notes: Supports carotenoids as one source of pink bacterial pigmentation.
+    predicate_id: METPO:2000202
   - subject: pink_carotenoids
     predicate: causes
     object: visible_pink_color
@@ -82,6 +83,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: responsible for the red, pink, orange, and yellow pigmentation
       notes: Supports the color-producing role of carotenoid pigments.
+    predicate_id: biolink:causes
   - subject: visible_pink_color
     predicate: manifests as
     object: pink_pigmented_trait
@@ -101,4 +103,16 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed definition and causal graph for isoprenoid precursors,
     Crt enzymes, carotenoid biosynthesis, pink carotenoids, and visible pink color.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, biolink:causes×1).
   llm_assisted: true

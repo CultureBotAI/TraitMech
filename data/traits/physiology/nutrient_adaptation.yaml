@@ -22,20 +22,20 @@ causal_graphs:
 - graph_id: nutrient_adaptation_life_history_axis
   title: Nutrient adaptation life-history axis
   description: DOI-backed graph linking ambient nutrient availability to sensing,
-    resource-allocation strategy, and the copiotroph/oligotroph life-history
-    phenotypes that fall under nutrient adaptation.
+    resource-allocation strategy, and the copiotroph/oligotroph life-history phenotypes
+    that fall under nutrient adaptation.
   nodes:
   - node_id: nutrient_adaptation_trait
     label: nutrient adaptation
     node_type: TRAIT
     grounding: METPO:1000731
-    description: Physiological and metabolic adaptation to specific nutrient
-      availability regimes.
+    description: Physiological and metabolic adaptation to specific nutrient availability
+      regimes.
   - node_id: ambient_nutrient_concentration
     label: ambient nutrient concentration
     node_type: ENVIRONMENTAL_FACTOR
-    description: Concentration of carbon, nitrogen, and phosphorus available in
-      the habitat.
+    description: Concentration of carbon, nitrogen, and phosphorus available in the
+      habitat.
   - node_id: nutrient_sensing
     label: nutrient sensing
     node_type: BIOLOGICAL_PROCESS
@@ -44,8 +44,8 @@ causal_graphs:
   - node_id: resource_allocation
     label: resource allocation strategy
     node_type: BIOLOGICAL_PROCESS
-    description: Allocation of cellular resources between rapid growth machinery
-      and high-affinity uptake or stress tolerance.
+    description: Allocation of cellular resources between rapid growth machinery and
+      high-affinity uptake or stress tolerance.
   - node_id: copiotrophic_phenotype
     label: copiotrophic
     node_type: TRAIT
@@ -64,13 +64,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
-      notes: Supports nutrient concentration as the environmental driver of the
-        adaptation axis.
+      notes: Supports nutrient concentration as the environmental driver of the adaptation
+        axis.
   - subject: nutrient_sensing
     predicate: controls
     object: resource_allocation
-    description: Sensing of nutrient status shifts allocation between growth and
-      maintenance functions.
+    description: Sensing of nutrient status shifts allocation between growth and maintenance
+      functions.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: selection for efficient use of nutrients
@@ -102,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: copiotrophic
       notes: Supports copiotrophy as a recognized nutrient-adaptation phenotype.
+    predicate_id: rdfs:subClassOf
   - subject: oligotrophic_phenotype
     predicate: is a
     object: nutrient_adaptation_trait
@@ -110,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: oligotrophic
       notes: Supports oligotrophy as a recognized nutrient-adaptation phenotype.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909957+00:00'
   curator: seed_from_metpo
@@ -119,7 +121,12 @@ curation_history:
 - timestamp: '2026-05-11T22:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph framing nutrient adaptation as a
-    sensing/resource-allocation axis manifesting as copiotrophic and oligotrophic
-    phenotypes.
+  changes: Added DOI-backed causal graph framing nutrient adaptation as a sensing/resource-allocation
+    axis manifesting as copiotrophic and oligotrophic phenotypes.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

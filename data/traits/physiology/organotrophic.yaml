@@ -18,15 +18,16 @@ synonyms:
 evidence:
 - reference: DOI:10.1016/B978-012373944-5.00083-3
   snippet: incorporation of a compound into biomass
-  notes: Microbial metabolism reference supports assimilation and use of organic compounds in growth.
+  notes: Microbial metabolism reference supports assimilation and use of organic compounds
+    in growth.
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: membrane-bound electron transport chain
   notes: Review supports respiratory electron transport as an energy-conserving route.
 causal_graphs:
 - graph_id: organotrophic_organic_compound_oxidation
   title: Organotrophic organic compound oxidation
-  description: DOI-backed graph linking organic electron donors, catabolism,
-    respiratory energy conservation, ATP production, and biomass precursors.
+  description: DOI-backed graph linking organic electron donors, catabolism, respiratory
+    energy conservation, ATP production, and biomass precursors.
   nodes:
   - node_id: organotrophic_trait
     label: organotrophic
@@ -73,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports use and assimilation of organic compounds in microbial growth.
+    predicate_id: METPO:2000009
   - subject: glucose
     predicate: example of
     object: organic_compound
@@ -81,6 +83,7 @@ causal_graphs:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: glucose metabolism
       notes: Supports glucose as a microbial organic substrate.
+    predicate_id: rdfs:subClassOf
   - subject: organic_compound
     predicate: oxidized by
     object: catabolism
@@ -105,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: generation of an electrochemical ion gradient
       notes: Supports proton motive force generation by membrane electron transport.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives production of
     object: atp
@@ -121,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports use of compound-derived intermediates for biomass formation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.879073+00:00'
   curator: seed_from_metpo
@@ -130,6 +135,18 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: Codex
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed organotrophy graph for organic substrate oxidation,
-    respiratory energy conservation, ATP, and biosynthetic precursors.
+  changes: Added DOI-backed organotrophy graph for organic substrate oxidation, respiratory
+    energy conservation, ATP, and biosynthetic precursors.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000009×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1, biolink:produces×1).
   llm_assisted: true

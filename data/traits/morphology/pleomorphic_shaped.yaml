@@ -22,16 +22,16 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: cell shape is genetically determined
-  notes: Cell-shape review establishes pleomorphism as a phenotype of relaxed or
-    absent cytoskeletal/wall shape control.
+  notes: Cell-shape review establishes pleomorphism as a phenotype of relaxed or absent
+    cytoskeletal/wall shape control.
 - reference: DOI:10.1126/science.1170701
   snippet: cell-wall-deficient L-forms
   notes: L-form review supports pleomorphism in wall-deficient or wall-less cells.
 causal_graphs:
 - graph_id: pleomorphic_shaped_relaxed_shape_control
   title: Pleomorphic-shape relaxed shape control
-  description: DOI-backed graph linking loss or weakening of cytoskeletal and
-    cell-wall shape control to multi-morphology populations.
+  description: DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall
+    shape control to multi-morphology populations.
   nodes:
   - node_id: pleomorphic_shaped_trait
     label: pleomorphic shaped
@@ -68,6 +68,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.1170701
       snippet: cell-wall-deficient L-forms
       notes: Supports wall deficiency as a basis for L-form pleomorphism.
+    predicate_id: RO:0002327
   - subject: variable_geometry
     predicate: manifests as
     object: pleomorphic_shaped_trait
@@ -85,6 +86,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking weak shape-determining
-    cytoskeleton and reduced cell wall to pleomorphic populations.
+  changes: Added DOI-backed causal graph linking weak shape-determining cytoskeleton
+    and reduced cell wall to pleomorphic populations.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

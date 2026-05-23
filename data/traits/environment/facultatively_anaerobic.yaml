@@ -25,8 +25,8 @@ evidence:
 causal_graphs:
 - graph_id: facultative_anaerobe_oxygen_switch
   title: Facultative anaerobe oxygen-responsive metabolism
-  description: Evidence-backed causal sketch linking facultative anaerobiosis to
-    oxygen-responsive switching between aerobic and anaerobic metabolism.
+  description: Evidence-backed causal sketch linking facultative anaerobiosis to oxygen-responsive
+    switching between aerobic and anaerobic metabolism.
   nodes:
   - node_id: facultative_anaerobic_trait
     label: facultatively anaerobic
@@ -57,13 +57,13 @@ causal_graphs:
   - subject: molecular_oxygen
     predicate: enables
     object: aerobic_respiration
-    description: In facultative anaerobes, oxygen availability permits aerobic
-      respiration.
+    description: In facultative anaerobes, oxygen availability permits aerobic respiration.
     evidence:
     - reference: DOI:10.1111/cmi.13338
       snippet: cope with changing oxygen levels
-      notes: Review frames facultative anaerobe fitness around changing oxygen
-        availability; exact pathways vary by organism.
+      notes: Review frames facultative anaerobe fitness around changing oxygen availability;
+        exact pathways vary by organism.
+    predicate_id: RO:0002327
   - subject: molecular_oxygen
     predicate: regulates
     object: fnr_regulator
@@ -72,6 +72,7 @@ causal_graphs:
     - reference: DOI:10.1007/BF00445650
       snippet: molecular oxygen is an important regulatory signal
       notes: Review describes oxygen-dependent regulation by FNR.
+    predicate_id: RO:0002211
   - subject: fnr_regulator
     predicate: activates in absence of oxygen
     object: anaerobic_respiration
@@ -84,13 +85,13 @@ causal_graphs:
   - subject: facultative_anaerobic_trait
     predicate: has alternative process
     object: anaerobic_respiration
-    description: Facultative anaerobiosis includes the capacity to grow using
-      anaerobic respiration when oxygen is absent.
+    description: Facultative anaerobiosis includes the capacity to grow using anaerobic
+      respiration when oxygen is absent.
     evidence:
     - reference: DOI:10.1007/BF00445650
       snippet: expression of anaerobic respiration
-      notes: E. coli-focused evidence for anaerobic respiratory programs in a
-        facultative anaerobe.
+      notes: E. coli-focused evidence for anaerobic respiratory programs in a facultative
+        anaerobe.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851077+00:00'
   curator: seed_from_metpo
@@ -110,6 +111,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for oxygen-responsive facultative
-    anaerobic metabolism.
+  changes: Added DOI-backed causal graph for oxygen-responsive facultative anaerobic
+    metabolism.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1).
   llm_assisted: true

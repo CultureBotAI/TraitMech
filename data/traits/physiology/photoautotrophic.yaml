@@ -31,16 +31,17 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.3390/life10050071
   snippet: capture solar energy
-  notes: Review supports cyanobacterial photoautotrophic use of solar energy and CO2 fixation.
+  notes: Review supports cyanobacterial photoautotrophic use of solar energy and CO2
+    fixation.
 - reference: DOI:10.1128/AEM.02473-10
   snippet: Calvin-Benson reductive pentose phosphate cycle
-  notes: Review supports the Calvin-Benson cycle as a microbial autotrophic CO2-fixation pathway.
+  notes: Review supports the Calvin-Benson cycle as a microbial autotrophic CO2-fixation
+    pathway.
 - reference: PMID:8590279
   snippet: Synechocystis sp. strain PCC6803
-  notes: 'Organism example: Synechocystis sp. PCC 6803 is a model
-    photoautotrophic cyanobacterium that uses oxygenic photosynthesis to
-    drive Calvin-Benson CO2 fixation (Kaneko et al. 1996, DNA Res, full
-    genome).'
+  notes: 'Organism example: Synechocystis sp. PCC 6803 is a model photoautotrophic
+    cyanobacterium that uses oxygenic photosynthesis to drive Calvin-Benson CO2 fixation
+    (Kaneko et al. 1996, DNA Res, full genome).'
 causal_graphs:
 - graph_id: photoautotrophic_cyanobacterial_carbon_fixation
   title: Photoautotrophic light-powered CO2 fixation
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: capture solar energy
       notes: Supports light capture by cyanobacteria under photoautotrophic metabolism.
+    predicate_id: METPO:2000010
   - subject: photosystem_ii
     predicate: oxidizes
     object: water
@@ -112,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: uses it to split H2O
       notes: Supports water splitting by PSII in cyanobacteria.
+    predicate_id: METPO:2000016
   - subject: water
     predicate: oxidized to
     object: molecular_oxygen
@@ -127,7 +130,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/life10050071
       snippet: passes its reducing equivalents to an electron transfer chain
-      notes: Supports electron flow from PSII/plastoquinol into photosynthetic electron transport.
+      notes: Supports electron flow from PSII/plastoquinol into photosynthetic electron
+        transport.
   - subject: photosynthetic_electron_transport
     predicate: produces
     object: atp_nadph
@@ -136,6 +140,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: generate chemical energy (ATP) and reducing power (NADPH)
       notes: Supports ATP and NADPH generation by photosynthetic electron transport.
+    predicate_id: METPO:2000202
   - subject: carbon_dioxide
     predicate: fixed by
     object: calvin_benson_cycle
@@ -152,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: Calvin cycle enzymes, RuBisCO
       notes: Supports RuBisCO as a Calvin-cycle enzyme tied to CO2 fixation rate.
+    predicate_id: biolink:catalyzes
   - subject: calvin_benson_cycle
     predicate: produces
     object: biomass
@@ -160,6 +166,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: fix ... CO2 into ... biomass
       notes: Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.879777+00:00'
   curator: seed_from_metpo
@@ -169,11 +176,23 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for oxygenic light capture, ATP/NADPH generation, and Calvin-Benson CO2 fixation.
+  changes: Added DOI-backed causal graph for oxygenic light capture, ATP/NADPH generation,
+    and Calvin-Benson CO2 fixation.
   llm_assisted: true
 - timestamp: '2026-05-16T05:00:00-07:00'
   curator: claude
   action: ADDED_ORGANISM_EXAMPLE
-  changes: Added Synechocystis sp. PCC 6803 organism example with
-    PMID-backed evidence.
+  changes: Added Synechocystis sp. PCC 6803 organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000010×1, METPO:2000016×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true

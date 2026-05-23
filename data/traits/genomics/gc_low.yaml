@@ -1,9 +1,9 @@
 identifier: METPO:1000429
 label: GC low
-definition: A GC-content phenotype with genome-wide GC composition between
-  approximately 42.65% and 57.0% (the METPO `GC_42.65_57.0` bin; note that the
-  upstream label 'low' does not match this mid-range numeric threshold, but the
-  synonym is preserved as the authoritative bin definition).
+definition: A GC-content phenotype with genome-wide GC composition between approximately
+  42.65% and 57.0% (the METPO `GC_42.65_57.0` bin; note that the upstream label 'low'
+  does not match this mid-range numeric threshold, but the synonym is preserved as
+  the authoritative bin definition).
 definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
@@ -17,14 +17,14 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrg2358
   snippet: GC content
-  notes: Bacterial-genome review supports the mid-range GC content as a
-    distinct genomic-composition phenotype.
+  notes: Bacterial-genome review supports the mid-range GC content as a distinct genomic-composition
+    phenotype.
 causal_graphs:
 - graph_id: gc_low_mid_low_gc_bin
   title: GC-low (METPO 42.65–57.0%) mid-low GC bin
-  description: DOI-backed graph linking moderate mutation bias to a GC
-    content of ~42.65–57.0% (the threshold encoded by the METPO synonym
-    GC_42.65_57.0 on this record).
+  description: DOI-backed graph linking moderate mutation bias to a GC content of
+    ~42.65–57.0% (the threshold encoded by the METPO synonym GC_42.65_57.0 on this
+    record).
   nodes:
   - node_id: gc_low_trait
     label: GC low
@@ -39,8 +39,8 @@ causal_graphs:
   - node_id: moderate_mutation_bias
     label: moderate mutation bias
     node_type: BIOLOGICAL_PROCESS
-    description: Modest mutation-bias balance between AT- and GC-favoring
-      pressures yielding mid-range GC composition.
+    description: Modest mutation-bias balance between AT- and GC-favoring pressures
+      yielding mid-range GC composition.
   edges:
   - subject: moderate_mutation_bias
     predicate: produces
@@ -50,6 +50,7 @@ causal_graphs:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: mutation bias
       notes: Supports mutation-bias balance as the basis of mid-range GC bins.
+    predicate_id: METPO:2000202
   - subject: gc_low_trait
     predicate: is a
     object: gc_content
@@ -57,8 +58,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the 42.65–57.0% bin as a value within the GC-content
-        distribution.
+      notes: Supports the 42.65–57.0% bin as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
@@ -68,7 +69,13 @@ curation_history:
 - timestamp: '2026-05-13T13:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition (derived from METPO synonym
-    GC_42.65_57.0) and causal graph linking moderate mutation bias to this
-    GC bin. Documented the upstream label-vs-threshold inconsistency.
+  changes: Added DOI-backed definition (derived from METPO synonym GC_42.65_57.0)
+    and causal graph linking moderate mutation bias to this GC bin. Documented the
+    upstream label-vs-threshold inconsistency.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

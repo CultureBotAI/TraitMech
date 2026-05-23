@@ -48,8 +48,7 @@ causal_graphs:
   - node_id: acidic_halophilic_proteins
     label: acidic halophilic proteins
     node_type: GENE_OR_PROTEIN
-    description: Proteins enriched in acidic residues and adapted to high ionic
-      strength.
+    description: Proteins enriched in acidic residues and adapted to high ionic strength.
   edges:
   - subject: hypersaline_brine
     predicate: selects for
@@ -58,8 +57,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salt concentrations up to NaCl saturation
-      notes: Review supports saturated salt environments as extreme-halophile
-        habitats.
+      notes: Review supports saturated salt environments as extreme-halophile habitats.
   - subject: salt_in_strategy
     predicate: uses
     object: potassium_ion
@@ -72,13 +70,14 @@ causal_graphs:
   - subject: salt_in_strategy
     predicate: enables
     object: extremely_halophilic_trait
-    description: Maintaining high intracellular salt supports growth at extreme
-      external salinity.
+    description: Maintaining high intracellular salt supports growth at extreme external
+      salinity.
     evidence:
     - reference: DOI:10.1038/srep25642
       snippet: Salt-in strategy
-      notes: Haloarchaeal salinity-stress study describes salt-in adaptation in
-        extreme halophiles.
+      notes: Haloarchaeal salinity-stress study describes salt-in adaptation in extreme
+        halophiles.
+    predicate_id: RO:0002327
   - subject: acidic_halophilic_proteins
     predicate: enables
     object: extremely_halophilic_trait
@@ -86,8 +85,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.copbio.2015.05.004
       snippet: negatively charged due to an excess of acidic over basic residues
-      notes: Review supports acidic proteomes as a molecular adaptation to
-        hypersaline cytoplasm.
+      notes: Review supports acidic proteomes as a molecular adaptation to hypersaline
+        cytoplasm.
+    predicate_id: RO:0002327
   - subject: salt_in_strategy
     predicate: requires adaptation of
     object: acidic_halophilic_proteins
@@ -96,8 +96,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.copbio.2015.05.004
       snippet: promote function in low water activity conditions
-      notes: Supports functional coupling between high-salt cytoplasm and
-        salt-adapted proteins.
+      notes: Supports functional coupling between high-salt cytoplasm and salt-adapted
+        proteins.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.865176+00:00'
   curator: seed_from_metpo
@@ -112,6 +112,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for extreme halophile salt-in and
-    acidic-proteome adaptation.
+  changes: Added DOI-backed causal graph for extreme halophile salt-in and acidic-proteome
+    adaptation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2).
   llm_assisted: true

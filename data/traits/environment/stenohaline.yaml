@@ -22,9 +22,9 @@ evidence:
 causal_graphs:
 - graph_id: stenohaline_narrow_salinity_tolerance
   title: Stenohaline narrow-salinity tolerance mechanism
-  description: Evidence-backed causal sketch linking stenohalinity to narrow
-    salinity niches, osmotic imbalance during salinity shifts, and constrained
-    salinity-adaptation capacity.
+  description: Evidence-backed causal sketch linking stenohalinity to narrow salinity
+    niches, osmotic imbalance during salinity shifts, and constrained salinity-adaptation
+    capacity.
   nodes:
   - node_id: stenohaline_trait
     label: stenohaline
@@ -50,8 +50,7 @@ causal_graphs:
   - node_id: salinity_adaptation_genes
     label: salinity-adaptation genes
     node_type: GENE_OR_PROTEIN
-    description: Gene repertoires associated with adaptation along salinity
-      gradients.
+    description: Gene repertoires associated with adaptation along salinity gradients.
   edges:
   - subject: narrow_salinity_range
     predicate: defines
@@ -60,8 +59,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: narrow range of salinity
-      notes: Microbiome study explicitly defines stenohaline microorganisms by a
-        narrow salinity range.
+      notes: Microbiome study explicitly defines stenohaline microorganisms by a narrow
+        salinity range.
   - subject: salinity_shift
     predicate: causes
     object: osmotic_imbalance
@@ -70,6 +69,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: In response to osmotic imbalance
       notes: Supports osmotic imbalance as a response to salinity change.
+    predicate_id: biolink:causes
   - subject: osmotic_imbalance
     predicate: drives
     object: water_flux
@@ -86,13 +86,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: genes associated with microbial salinity adaptation
-      notes: The constraint direction is inferred from the study's salinity
-        adaptation analysis; kept broad because organism-specific gene sets vary.
+      notes: The constraint direction is inferred from the study's salinity adaptation
+        analysis; kept broad because organism-specific gene sets vary.
   - subject: salinity_shift
     predicate: exceeds tolerance of
     object: stenohaline_trait
-    description: Large salinity changes can exceed the narrow tolerance range of
-      stenohaline organisms.
+    description: Large salinity changes can exceed the narrow tolerance range of stenohaline
+      organisms.
     evidence:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: Organisms thriving within a narrow range of salinity
@@ -108,6 +108,12 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Reviewed stenohaline trait and added DOI-backed causal graph for narrow
-    salinity tolerance, salinity-shift osmotic imbalance, water flux, and
-    constrained salinity-adaptation capacity.
+    salinity tolerance, salinity-shift osmotic imbalance, water flux, and constrained
+    salinity-adaptation capacity.
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

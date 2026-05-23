@@ -23,8 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: moderate_halophile_compatible_solutes
   title: Moderate halophile compatible-solute mechanism
-  description: Evidence-backed causal sketch linking moderate halophily to NaCl
-    stress and compatible-solute osmoadaptation.
+  description: Evidence-backed causal sketch linking moderate halophily to NaCl stress
+    and compatible-solute osmoadaptation.
   nodes:
   - node_id: moderately_halophilic_trait
     label: moderately halophilic
@@ -53,23 +53,23 @@ causal_graphs:
   - subject: elevated_nacl
     predicate: causes
     object: osmotic_stress
-    description: Moderate NaCl elevation imposes osmotic stress that must be
-      balanced for growth.
+    description: Moderate NaCl elevation imposes osmotic stress that must be balanced
+      for growth.
     evidence:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: cope with high salinities
       notes: Halomonas elongata osmoregulation study supports high salinity as the
         stressor.
+    predicate_id: biolink:causes
   - subject: ectoine
     predicate: mitigates
     object: osmotic_stress
-    description: Ectoine accumulation helps cells maintain osmotic balance at
-      moderate salinity.
+    description: Ectoine accumulation helps cells maintain osmotic balance at moderate
+      salinity.
     evidence:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: synthesizes ectoine as its major compatible solute
-      notes: Supports ectoine as a compatible-solute mechanism in halophilic
-        bacteria.
+      notes: Supports ectoine as a compatible-solute mechanism in halophilic bacteria.
   - subject: glycine_betaine
     predicate: mitigates
     object: osmotic_stress
@@ -86,6 +86,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: allows microorganisms to cope with high salinities
       notes: Supports compatible solutes as contributors to moderate halophily.
+    predicate_id: RO:0002327
   - subject: elevated_nacl
     predicate: selects for
     object: moderately_halophilic_trait
@@ -111,4 +112,16 @@ curation_history:
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for moderate halophile compatible-solute
     osmoadaptation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

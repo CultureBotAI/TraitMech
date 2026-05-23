@@ -11,8 +11,7 @@ parent_traits:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: external pH values that are outside the cytoplasmic pH range
-  notes: Supports environmental pH as a growth-relevant condition requiring pH
-    homeostasis.
+  notes: Supports environmental pH as a growth-relevant condition requiring pH homeostasis.
 causal_graphs:
 - graph_id: ph_growth_preference_homeostasis
   title: Environmental pH control of growth preference
@@ -23,8 +22,7 @@ causal_graphs:
     label: pH growth preference
     node_type: TRAIT
     grounding: METPO:1003000
-    description: Growth-rate and growth-extent phenotype shaped by environmental
-      pH.
+    description: Growth-rate and growth-extent phenotype shaped by environmental pH.
   - node_id: environmental_ph
     label: environmental pH
     node_type: ENVIRONMENTAL_FACTOR
@@ -45,8 +43,7 @@ causal_graphs:
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
-    description: Maintenance of intracellular pH within a range compatible with
-      growth.
+    description: Maintenance of intracellular pH within a range compatible with growth.
   edges:
   - subject: environmental_ph
     predicate: influences
@@ -55,13 +52,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: tolerate or grow at external pH values
-      notes: Review frames pH growth as a response to external pH outside the
-        cytoplasmic range.
+      notes: Review frames pH growth as a response to external pH outside the cytoplasmic
+        range.
   - subject: acidic_external_ph
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
-    description: Acidic environments impose inward proton stress that must be
-      managed for growth.
+    description: Acidic environments impose inward proton stress that must be managed
+      for growth.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: acid challenge conditions include increased expression and activity
@@ -69,8 +66,8 @@ causal_graphs:
   - subject: alkaline_external_ph
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
-    description: Alkaline environments require active proton accumulation or
-      generation to maintain cytoplasmic pH.
+    description: Alkaline environments require active proton accumulation or generation
+      to maintain cytoplasmic pH.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: active proton accumulation or generation in the cytoplasm
@@ -84,16 +81,17 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH-sensing and signalling capabilities
       notes: Supports regulatory sensing as part of homeostasis.
+    predicate_id: RO:0002211
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: ph_growth_preference_trait
-    description: Growth at preferred pH depends on maintaining intracellular pH
-      compatible with cellular processes.
+    description: Growth at preferred pH depends on maintaining intracellular pH compatible
+      with cellular processes.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: robust mechanisms for cytoplasmic pH homeostasis
-      notes: Supports cytoplasmic pH homeostasis as central to growth under pH
-        stress.
+      notes: Supports cytoplasmic pH homeostasis as central to growth under pH stress.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936639+00:00'
   curator: seed_from_metpo
@@ -103,6 +101,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed pH growth preference trait and added DOI-backed evidence and
-    causal graph for pH sensing and cytoplasmic pH homeostasis.
+  changes: Reviewed pH growth preference trait and added DOI-backed evidence and causal
+    graph for pH sensing and cytoplasmic pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002327×1).
   llm_assisted: true

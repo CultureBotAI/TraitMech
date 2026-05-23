@@ -18,14 +18,14 @@ evidence:
   notes: 'Organism example: Escherichia coli is described as mesophilic.'
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
-  notes: Membrane-adaptation review supports homoviscous membrane composition
-    matched to ambient temperature as the basis of mesophile physiology.
+  notes: Membrane-adaptation review supports homoviscous membrane composition matched
+    to ambient temperature as the basis of mesophile physiology.
 causal_graphs:
 - graph_id: mesophilic_homoviscous_adaptation
   title: Mesophilic homoviscous and enzymatic adaptation mechanism
-  description: DOI-backed graph linking mesophily to moderate ambient
-    temperature, homoviscous membrane lipid composition, mesophile enzyme
-    repertoire, and balanced growth at intermediate temperatures.
+  description: DOI-backed graph linking mesophily to moderate ambient temperature,
+    homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced
+    growth at intermediate temperatures.
   nodes:
   - node_id: mesophilic_trait
     label: mesophilic
@@ -39,13 +39,13 @@ causal_graphs:
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: BIOLOGICAL_PROCESS
-    description: Physical state of the cytoplasmic membrane supporting
-      transport and bioenergetics.
+    description: Physical state of the cytoplasmic membrane supporting transport and
+      bioenergetics.
   - node_id: homoviscous_lipid_composition
     label: homoviscous lipid composition
     node_type: CELLULAR_LOCALIZATION
-    description: Lipid composition tuned to maintain target membrane fluidity
-      at mesophilic temperatures.
+    description: Lipid composition tuned to maintain target membrane fluidity at mesophilic
+      temperatures.
   - node_id: mesophile_enzyme_repertoire
     label: mesophile enzyme repertoire
     node_type: GENE_OR_PROTEIN
@@ -62,33 +62,32 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
-      notes: Supports a representative mesophile thriving at moderate
-        temperatures.
+      notes: Supports a representative mesophile thriving at moderate temperatures.
   - subject: homoviscous_lipid_composition
     predicate: maintains
     object: membrane_fluidity
-    description: Homoviscous lipid composition maintains target membrane
-      fluidity at mesophilic temperatures.
+    description: Homoviscous lipid composition maintains target membrane fluidity
+      at mesophilic temperatures.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports homoviscous adaptation as the mechanism setting membrane
-        fluidity.
+      notes: Supports homoviscous adaptation as the mechanism setting membrane fluidity.
   - subject: mesophile_enzyme_repertoire
     predicate: enables
     object: balanced_growth
-    description: Mesophile enzyme repertoire enables balanced growth at
-      intermediate temperatures.
+    description: Mesophile enzyme repertoire enables balanced growth at intermediate
+      temperatures.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: energy transducing enzymes
-      notes: Supports temperature-tuned enzyme repertoires as the basis of
-        adapted growth.
+      notes: Supports temperature-tuned enzyme repertoires as the basis of adapted
+        growth.
+    predicate_id: RO:0002327
   - subject: balanced_growth
     predicate: manifests as
     object: mesophilic_trait
-    description: Balanced growth at moderate temperatures manifests the
-      mesophilic trait.
+    description: Balanced growth at moderate temperatures manifests the mesophilic
+      trait.
     evidence:
     - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
@@ -107,13 +106,19 @@ curation_history:
 - timestamp: '2026-05-13T11:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking moderate ambient temperature,
-    homoviscous membrane composition, mesophile enzyme repertoire, and balanced
-    growth to the mesophilic trait.
+  changes: Added DOI-backed causal graph linking moderate ambient temperature, homoviscous
+    membrane composition, mesophile enzyme repertoire, and balanced growth to the
+    mesophilic trait.
   llm_assisted: true
 - timestamp: '2026-05-13T22:45:00-07:00'
   curator: codex
   action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
   changes: Replaced Escherichia coli mesophile PMID fallback with the article DOI
     in definition, record evidence, and CausalEdge evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

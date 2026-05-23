@@ -23,8 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: halotolerant_salt_stress_response
   title: Halotolerant salt-stress response mechanism
-  description: Evidence-backed causal sketch linking halotolerance to survival
-    under high salinity without strict salt requirement.
+  description: Evidence-backed causal sketch linking halotolerance to survival under
+    high salinity without strict salt requirement.
   nodes:
   - node_id: halotolerant_trait
     label: halotolerant
@@ -55,13 +55,12 @@ causal_graphs:
   - subject: high_salt_exposure
     predicate: tolerated by
     object: halotolerant_trait
-    description: Halotolerant organisms can survive elevated salinity without
-      requiring it.
+    description: Halotolerant organisms can survive elevated salinity without requiring
+      it.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: highly halotolerant representatives
-      notes: Review distinguishes halotolerant microorganisms in high-salt
-        environments.
+      notes: Review distinguishes halotolerant microorganisms in high-salt environments.
   - subject: high_salt_exposure
     predicate: causes
     object: osmotic_stress
@@ -70,6 +69,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: high salt concentrations in the environment
       notes: Review supports high environmental salt as the stress context.
+    predicate_id: biolink:causes
   - subject: compatible_solutes
     predicate: mitigates
     object: osmotic_stress
@@ -94,8 +94,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1139/cjm-2014-0233
       snippet: stabilizers of intracellular proteins
-      notes: Haloalkaliphile review supports compatible solutes as stabilizing
-        osmoprotectants; mechanism is shared with halotolerance.
+      notes: Haloalkaliphile review supports compatible solutes as stabilizing osmoprotectants;
+        mechanism is shared with halotolerance.
+    predicate_id: RO:0002326
   - subject: stress_protection
     predicate: enables
     object: halotolerant_trait
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: allows microorganisms to cope with high salinities
       notes: Supports osmoadaptation as a mechanism for growth under salt stress.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861954+00:00'
   curator: seed_from_metpo
@@ -123,6 +125,18 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Replaced PMID definition source with DOI-backed halotolerance source
-    and added a compatible-solute transport edge to the existing causal graph.
+  changes: Replaced PMID definition source with DOI-backed halotolerance source and
+    added a compatible-solute transport edge to the existing causal graph.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

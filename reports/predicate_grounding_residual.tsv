@@ -1,0 +1,192 @@
+predicate_label	edge_count	example_files
+manifests as	52	data/traits/ecology/animal_pathogen.yaml|data/traits/ecology/human_pathogen.yaml|data/traits/ecology/pathogenic_to_host.yaml
+supports	26	data/traits/ecology/animal_pathogen.yaml|data/traits/ecology/human_pathogen.yaml|data/traits/ecology/plant_pathogen.yaml
+selects for	20	data/traits/environment/acidophilic.yaml|data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml
+drives	19	data/traits/environment/halophily_preference.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/non_halophilic.yaml
+defines	14	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
+maintains	13	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/hyperthermophilic.yaml|data/traits/environment/mesophilic.yaml
+mitigates	12	data/traits/environment/aerotolerant.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophilic.yaml
+shapes	12	data/traits/genomics/gc_content.yaml|data/traits/morphology/coccobacillus_shaped.yaml|data/traits/morphology/disc_shaped.yaml
+feeds electrons into	12	data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml
+challenges	9	data/traits/environment/acidotolerant.yaml|data/traits/environment/alkalotolerant.yaml|data/traits/environment/alkaphilic.yaml
+fixed by	9	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml
+oxidized to	8	data/traits/metabolism/disproportionation.yaml|data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemolithotrophic.yaml
+influences	7	data/traits/environment/halophily_preference.yaml|data/traits/environment/ph_growth_preference.yaml|data/traits/environment/temperature_optimum.yaml
+engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
+determines	6	data/traits/ecology/biosafety_level.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/gram_stain.yaml
+sets	6	data/traits/environment/nacl_range.yaml|data/traits/environment/ph_range.yaml|data/traits/environment/temperature_range.yaml
+constrains	6	data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/stenohaline.yaml|data/traits/environment/temperature_preference.yaml
+input to	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/syntrophy.yaml
+transfers electrons to	6	data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml
+powers	6	data/traits/metabolism/metabolism.yaml|data/traits/morphology/flagellated.yaml|data/traits/morphology/gliding.yaml
+organizes	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_small.yaml
+imports	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml
+occurs under	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/metabolism/disproportionation.yaml
+incorporated into	5	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
+drives production of	5	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
+requires	4	data/traits/environment/aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/physiology/carboxydotrophic.yaml
+decreases	4	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml|data/traits/environment/psychrotolerant.yaml
+triggers	4	data/traits/environment/nacl_optimum.yaml|data/traits/environment/thermotolerant.yaml|data/traits/morphology/cell_length.yaml
+directs	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/branched_shaped.yaml|data/traits/morphology/motile.yaml
+controls	4	data/traits/morphology/branched_shaped.yaml|data/traits/morphology/coccobacillus_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
+prevents	4	data/traits/morphology/non_motile.yaml|data/traits/morphology/non_spore_forming.yaml
+initiates	4	data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml
+can proceed through	4	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
+assimilated into	4	data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
+increases gradient of	3	data/traits/environment/acidophilic.yaml|data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+includes	3	data/traits/environment/aerotolerant.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/morphology/red_pigmented.yaml
+inhibits	3	data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
+damages	3	data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
+uses	3	data/traits/environment/extremely_halophilic.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/metabolism/fermentation.yaml
+has alternative process	3	data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
+accumulates	3	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/slightly_halophilic.yaml
+has mechanistic pathway	3	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/homoacetogenesis.yaml
+realizes	3	data/traits/metabolism/metabolism.yaml|data/traits/morphology/axially_filamented.yaml|data/traits/physiology/trophic_type.yaml
+feed into	3	data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
+positions	3	data/traits/morphology/cell_shape.yaml|data/traits/morphology/oval_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
+builds	3	data/traits/morphology/cell_width.yaml|data/traits/morphology/sphere_shaped.yaml|data/traits/morphology/spirochete_shaped.yaml
+captured by	3	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
+delivers	2	data/traits/ecology/pathogenic_to_host.yaml|data/traits/ecology/plant_pathogen.yaml
+limits influx of	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+removes	2	data/traits/environment/acidotolerant.yaml|data/traits/morphology/gram_stain.yaml
+acts as	2	data/traits/environment/aerobic.yaml|data/traits/metabolism/anaerobic_respiration.yaml
+can generate	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
+protects against	2	data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/psychrophilic.yaml
+is compatible with	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml
+exports	2	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
+provides	2	data/traits/environment/haloalkaliphilic.yaml
+tolerated by	2	data/traits/environment/halotolerant.yaml|data/traits/environment/microaerotolerant.yaml
+imposes	2	data/traits/environment/nacl_optimum_low.yaml|data/traits/environment/ph_optimum_mid1.yaml
+reduces	2	data/traits/environment/obligately_aerobic.yaml|data/traits/metabolism/aerobic_respiration.yaml
+increases	2	data/traits/environment/temperature_preference.yaml|data/traits/environment/thermophilic.yaml
+reduced to	2	data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/disproportionation.yaml
+oxidized during	2	data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/physiology/chemoorganotrophic.yaml
+converted to	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/lithoheterotrophic.yaml
+supports formation of	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemolithoheterotrophic.yaml
+catalyzes formation of	2	data/traits/metabolism/methanogenesis.yaml|data/traits/morphology/brown_pigmented.yaml
+transfers electrons via	2	data/traits/metabolism/syntrophy.yaml
+rotates	2	data/traits/morphology/axially_filamented.yaml|data/traits/morphology/flagellated.yaml
+coordinates with	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
+recruits	2	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/filament_shaped.yaml
+reduced in	2	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/sphere_shaped.yaml
+promotes	2	data/traits/morphology/ellipsoidal.yaml|data/traits/morphology/helical_shaped.yaml
+combines with	2	data/traits/morphology/flask_shaped.yaml|data/traits/morphology/oval_shaped.yaml
+establishes	2	data/traits/morphology/spore_shaped.yaml|data/traits/morphology/sporulation.yaml
+builds layer of	2	data/traits/morphology/spore_shaped.yaml
+uses energy substrate	2	data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml
+broken down by	2	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
+drives synthesis of	2	data/traits/physiology/chemolithoautotrophic.yaml|data/traits/physiology/lithotrophic.yaml
+imported by	2	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/heterotrophic.yaml
+uses chemical energy source	2	data/traits/physiology/chemoorganoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml
+oxidized by	2	data/traits/physiology/chemotrophic.yaml|data/traits/physiology/organotrophic.yaml
+supplies	2	data/traits/physiology/heterotrophic.yaml|data/traits/physiology/mixotrophic.yaml
+uses substrate	2	data/traits/physiology/methanotrophic.yaml|data/traits/physiology/methylotrophic.yaml
+assimilated by	2	data/traits/physiology/methylotrophic.yaml
+mandates	1	data/traits/ecology/biosafety_level.yaml
+motivates	1	data/traits/ecology/biosafety_level_5.yaml
+suppresses	1	data/traits/ecology/plant_pathogen.yaml
+mitigates influx of	1	data/traits/environment/acidophilic.yaml
+increases influx pressure of	1	data/traits/environment/acidotolerant.yaml
+has mechanistic process	1	data/traits/environment/aerobic.yaml
+exchanges	1	data/traits/environment/alkaphilic.yaml
+generates stress via	1	data/traits/environment/anaerobic.yaml
+requires adaptation of	1	data/traits/environment/extremely_halophilic.yaml
+responds to	1	data/traits/environment/facultative_oxygen_preference.yaml
+controls adaptation to	1	data/traits/environment/facultative_oxygen_preference.yaml
+is tolerated by	1	data/traits/environment/facultative_psychrophilic.yaml
+supports optimum of	1	data/traits/environment/facultative_psychrophilic.yaml
+regulates switch between	1	data/traits/environment/facultatively_aerobic.yaml
+activates in absence of oxygen	1	data/traits/environment/facultatively_anaerobic.yaml
+enables use of	1	data/traits/environment/microaerophilic.yaml
+has function	1	data/traits/environment/microaerophilic.yaml
+does not require	1	data/traits/environment/microaerotolerant.yaml
+compatible with	1	data/traits/environment/microaerotolerant.yaml
+enables tolerance of	1	data/traits/environment/non_halophilic.yaml
+suppresses influx of	1	data/traits/environment/obligately_acidophilic.yaml
+is required for	1	data/traits/environment/obligately_alkaphilic.yaml
+poisons	1	data/traits/environment/obligately_anaerobic.yaml
+imposes gradient of	1	data/traits/environment/ph_optimum.yaml
+exceeds tolerance of	1	data/traits/environment/stenohaline.yaml
+causes formation of	1	data/traits/environment/strictly_anaerobic.yaml
+limits	1	data/traits/environment/thermophilic.yaml
+carries	1	data/traits/genomics/gc_content.yaml
+precursor of	1	data/traits/metabolism/acetogenesis.yaml
+conserves	1	data/traits/metabolism/anaerobic_respiration.yaml
+exemplified by	1	data/traits/metabolism/anaerobic_respiration.yaml
+provides electron donor	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+provides electron acceptor	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+mediates	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+reduced during	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+serves as electron donor and acceptor	1	data/traits/metabolism/disproportionation.yaml
+transfers electrons from	1	data/traits/metabolism/electron_transfer.yaml
+mediates transfer between	1	data/traits/metabolism/electron_transfer.yaml
+performs	1	data/traits/metabolism/electron_transfer.yaml
+uses structure	1	data/traits/metabolism/electron_transfer.yaml
+uses protein	1	data/traits/metabolism/electron_transfer.yaml
+oxidation reduces	1	data/traits/metabolism/fermentation.yaml
+reoxidized by	1	data/traits/metabolism/fermentation.yaml
+conserves energy by	1	data/traits/metabolism/fermentation.yaml
+provides electrons for	1	data/traits/metabolism/homoacetogenesis.yaml
+feeds	1	data/traits/metabolism/metabolism.yaml
+reduced with electron donor	1	data/traits/metabolism/methanogenesis.yaml
+has prosthetic group	1	data/traits/metabolism/methanogenesis.yaml
+uses pathway	1	data/traits/metabolism/oxidative_phosphorylation.yaml
+uses electron flow from	1	data/traits/metabolism/respiration.yaml
+couples electron flow to	1	data/traits/metabolism/respiration.yaml
+donates phosphoryl group to	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+substrate for	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+requires partner interaction	1	data/traits/metabolism/syntrophy.yaml
+creates	1	data/traits/metabolism/syntrophy.yaml
+marks	1	data/traits/morphology/branched_shaped.yaml
+polymerizes to	1	data/traits/morphology/brown_pigmented.yaml
+assembles at	1	data/traits/morphology/cell_length.yaml
+resets	1	data/traits/morphology/cell_length.yaml
+feeds into	1	data/traits/morphology/cell_length_medium.yaml
+balances	1	data/traits/morphology/cell_width.yaml
+shifts	1	data/traits/morphology/cell_width_large.yaml
+yields	1	data/traits/morphology/cream_pigmented.yaml
+guides	1	data/traits/morphology/curved_shaped.yaml
+forms	1	data/traits/morphology/diplococcus_shaped.yaml
+splits	1	data/traits/morphology/diplococcus_shaped.yaml
+incomplete separation yields	1	data/traits/morphology/diplococcus_shaped.yaml
+stabilizes	1	data/traits/morphology/dumbbell_shaped.yaml
+connects	1	data/traits/morphology/flagellated.yaml
+enables context for	1	data/traits/morphology/gliding.yaml
+transmit force for	1	data/traits/morphology/gliding.yaml
+fails to retain	1	data/traits/morphology/gram_negative.yaml
+retains	1	data/traits/morphology/gram_positive.yaml
+embedded in	1	data/traits/morphology/gram_positive.yaml
+fails to remove	1	data/traits/morphology/gram_positive.yaml
+reacts with	1	data/traits/morphology/gram_stain.yaml
+is retained by	1	data/traits/morphology/gram_stain.yaml
+modulates	1	data/traits/morphology/pigmentation.yaml
+relaxes	1	data/traits/morphology/pleomorphic_shaped.yaml
+interact with	1	data/traits/morphology/spirochete_shaped.yaml
+confers	1	data/traits/morphology/spirochete_shaped.yaml
+protects	1	data/traits/morphology/spore_forming.yaml
+activates	1	data/traits/morphology/sporulation.yaml
+self-assembles into	1	data/traits/morphology/vibrio_shaped.yaml
+patterns	1	data/traits/morphology/vibrio_shaped.yaml
+results from reduced	1	data/traits/morphology/white_pigmented.yaml
+alternative inorganic carbon source for	1	data/traits/physiology/autotrophic.yaml
+enzyme class for	1	data/traits/physiology/carboxydotrophic.yaml
+drives formation of	1	data/traits/physiology/carboxydotrophic.yaml
+supports generation of	1	data/traits/physiology/chemolithoautotrophic.yaml
+uses substrate pool	1	data/traits/physiology/copiotrophic.yaml
+characteristic of	1	data/traits/physiology/copiotrophic.yaml
+used by	1	data/traits/physiology/heterotrophic.yaml
+donates electrons to	1	data/traits/physiology/lithotrophic.yaml
+uses oxidant	1	data/traits/physiology/methanotrophic.yaml
+can use energy capture route	1	data/traits/physiology/mixotrophic.yaml
+favors	1	data/traits/physiology/oligotrophic.yaml
+metabolized by	1	data/traits/physiology/organoheterotrophic.yaml
+oxidizes carbon to	1	data/traits/physiology/organoheterotrophic.yaml
+provides electrons to	1	data/traits/physiology/photolithoautotrophic.yaml
+fixed during	1	data/traits/physiology/photolithotrophic.yaml
+carries out	1	data/traits/upper/biological_process.yaml
+can bear	1	data/traits/upper/material_entity.yaml
+can be about	1	data/traits/upper/material_entity.yaml
+can participate in	1	data/traits/upper/material_entity.yaml
+records	1	data/traits/upper/observation.yaml
+is about	1	data/traits/upper/observation.yaml
+characterizes	1	data/traits/upper/quality.yaml

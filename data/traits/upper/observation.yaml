@@ -1,7 +1,7 @@
 identifier: METPO:1001000
 label: observation
-definition: A data-collection or measurement context in which trait-relevant
-  qualities of organisms, samples, or conditions are recorded.
+definition: A data-collection or measurement context in which trait-relevant qualities
+  of organisms, samples, or conditions are recorded.
 definition_source: DOI:10.1371/journal.pone.0154556
 trait_category: UPPER
 term_kind: CLASS
@@ -16,10 +16,10 @@ evidence:
 causal_graphs:
 - graph_id: observation_measurement_upper_context
   title: Observation measurement upper-class context
-  description: DOI-backed upper-ontology context graph for observations as
-    assay or measurement outputs about material entities and qualities. Child
-    observation records are deprecated relation/value carriers and are not
-    expanded as mechanistic trait nodes here.
+  description: DOI-backed upper-ontology context graph for observations as assay or
+    measurement outputs about material entities and qualities. Child observation records
+    are deprecated relation/value carriers and are not expanded as mechanistic trait
+    nodes here.
   nodes:
   - node_id: observation_trait
     label: observation
@@ -38,8 +38,8 @@ causal_graphs:
     label: measured quality
     node_type: TRAIT
     grounding: METPO:1000188
-    description: Quality such as temperature, pH, salinity, oxygen, or phenotype
-      status captured by observation records.
+    description: Quality such as temperature, pH, salinity, oxygen, or phenotype status
+      captured by observation records.
   - node_id: material_entity
     label: material entity
     node_type: TRAIT
@@ -54,6 +54,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0154556
       snippet: the output of an assay is typically a data item
       notes: Supports assay outputs as data items.
+    predicate_id: METPO:2000202
   - subject: data_item
     predicate: records
     object: measured_quality
@@ -65,8 +66,8 @@ causal_graphs:
   - subject: observation_trait
     predicate: is about
     object: material_entity
-    description: Observation records are about material entities or samples and
-      their qualities.
+    description: Observation records are about material entities or samples and their
+      qualities.
     evidence:
     - reference: DOI:10.1371/journal.pone.0154556
       snippet: can be about any material entity
@@ -81,6 +82,12 @@ curation_history:
   curator: codex
   action: CURATED_UPPER_CONTEXT
   changes: Added definition, DOI-backed evidence, and a measurement-context graph
-    for observation; deprecated observation child records were reviewed as
-    relation/value carriers rather than standalone mechanistic traits.
+    for observation; deprecated observation child records were reviewed as relation/value
+    carriers rather than standalone mechanistic traits.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

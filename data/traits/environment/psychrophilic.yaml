@@ -22,8 +22,8 @@ evidence:
 causal_graphs:
 - graph_id: psychrophilic_cold_adaptation
   title: Psychrophilic cold-adaptation mechanism
-  description: Evidence-backed causal sketch linking psychrophily to low
-    temperature, membrane remodeling, cold-active enzymes, and cryoprotection.
+  description: Evidence-backed causal sketch linking psychrophily to low temperature,
+    membrane remodeling, cold-active enzymes, and cryoprotection.
   nodes:
   - node_id: psychrophilic_trait
     label: psychrophilic
@@ -41,13 +41,13 @@ causal_graphs:
   - node_id: unsaturated_fatty_acids
     label: unsaturated and branched-chain fatty acids
     node_type: CHEMICAL
-    description: Membrane lipid features that reduce packing order and maintain
-      fluidity at low temperature.
+    description: Membrane lipid features that reduce packing order and maintain fluidity
+      at low temperature.
   - node_id: cold_adapted_enzymes
     label: cold-adapted enzymes
     node_type: GENE_OR_PROTEIN
-    description: Enzymes with activity at low temperature, often associated with
-      increased structural flexibility.
+    description: Enzymes with activity at low temperature, often associated with increased
+      structural flexibility.
   - node_id: cold_shock_proteins
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
@@ -60,8 +60,8 @@ causal_graphs:
   - subject: low_temperature
     predicate: selects for
     object: psychrophilic_trait
-    description: Permanently cold environments select for microorganisms able to
-      grow near freezing.
+    description: Permanently cold environments select for microorganisms able to grow
+      near freezing.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: growing well at temperatures around the freezing point
@@ -69,8 +69,7 @@ causal_graphs:
   - subject: low_temperature
     predicate: decreases
     object: membrane_fluidity
-    description: Cold reduces membrane fluidity, altering transport and waste
-      exchange.
+    description: Cold reduces membrane fluidity, altering transport and waste exchange.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
@@ -78,13 +77,12 @@ causal_graphs:
   - subject: unsaturated_fatty_acids
     predicate: maintains
     object: membrane_fluidity
-    description: Unsaturated and branched-chain fatty acids maintain membrane
-      fluidity during cold growth.
+    description: Unsaturated and branched-chain fatty acids maintain membrane fluidity
+      during cold growth.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Review supports homoviscous membrane adaptation as temperature
-        decreases.
+      notes: Review supports homoviscous membrane adaptation as temperature decreases.
   - subject: cold_adapted_enzymes
     predicate: enables
     object: psychrophilic_trait
@@ -92,17 +90,17 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2010.05.002
       snippet: genes involved in cold adaptation
-      notes: Review connects psychrophile omics signatures with cold-adaptation
-        mechanisms.
+      notes: Review connects psychrophile omics signatures with cold-adaptation mechanisms.
+    predicate_id: RO:0002327
   - subject: cold_shock_proteins
     predicate: contributes to
     object: psychrophilic_trait
-    description: Cold-shock proteins support cellular acclimation to low
-      temperature.
+    description: Cold-shock proteins support cellular acclimation to low temperature.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: Cold-shock proteins have also been described
       notes: Supports cold-shock proteins as psychrophile-associated adaptations.
+    predicate_id: RO:0002326
   - subject: antifreeze_proteins
     predicate: protects against
     object: low_temperature
@@ -111,8 +109,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: intracellular ice formation
-      notes: Review identifies ice formation as a cold challenge and cites
-        bacterial antifreeze protein activity.
+      notes: Review identifies ice formation as a cold challenge and cites bacterial
+        antifreeze protein activity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857091+00:00'
   curator: seed_from_metpo
@@ -127,7 +125,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed psychrophily causal graph for cold adaptation,
-    membrane fluidity, cold-active enzymes, cold-shock proteins, and
-    cryoprotection.
+  changes: Added DOI-backed psychrophily causal graph for cold adaptation, membrane
+    fluidity, cold-active enzymes, cold-shock proteins, and cryoprotection.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002326×1).
   llm_assisted: true
