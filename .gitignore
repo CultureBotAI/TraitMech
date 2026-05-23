@@ -28,3 +28,8 @@ workspace/
 
 # Generated dataclasses (regenerable from schema)
 src/traitmech/schema/traitmech_dataclasses.py
+
+# ROBOT/ELK validation outputs for METPO proposals (regenerable with
+# `just robot-validate-proposal <cohort>`; merged.owl/reasoned.owl are
+# ~500 KB each, dominated by re-serialized metpo.owl).
+reports/robot/
