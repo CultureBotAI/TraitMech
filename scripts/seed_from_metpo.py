@@ -19,10 +19,38 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from linkml.validator import Validator
+from linkml.validator.plugins import JsonschemaValidationPlugin
+from linkml.validator.report import Severity
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OWL_PATH = REPO_ROOT / "data" / "raw" / "metpo.owl"
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
+SCHEMA_PATH = REPO_ROOT / "src" / "traitmech" / "schema" / "traitmech.yaml"
+TARGET_CLASS = "TraitRecord"
+
+# Process-local validator, built on first use so the schema parses once.
+_VALIDATOR: Validator | None = None
+
+
+def _get_validator() -> Validator:
+    global _VALIDATOR
+    if _VALIDATOR is None:
+        _VALIDATOR = Validator(
+            schema=str(SCHEMA_PATH),
+            validation_plugins=[JsonschemaValidationPlugin(closed=True)],
+        )
+    return _VALIDATOR
+
+
+def validate_record(doc: dict[str, Any]) -> str | None:
+    """Validate a built record. Returns first ERROR message, or None if clean."""
+    validator = _get_validator()
+    report = validator.validate(doc, target_class=TARGET_CLASS)
+    for r in report.results:
+        if r.severity == Severity.ERROR:
+            return r.message
+    return None
 
 NS = {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -360,6 +388,7 @@ def main() -> int:
     skipped: Counter = Counter()
     written = 0
     skipped_existing = 0
+    skipped_invalid: list[tuple[str, str]] = []
 
     # Build slug uniqueness map: prefer label-only slug; fall back to
     # label+localid when collisions occur.
@@ -391,6 +420,15 @@ def main() -> int:
         cat_dir = args.out / CATEGORY_DIR[category]
         path = cat_dir / f"{slug}.yaml"
         doc = to_record(curie, rec, category)
+        # G03: validate before write — never commit an invalid record.
+        # Don't abort the whole run on a single failure; the seed touches
+        # hundreds of records.
+        err = validate_record(doc)
+        if err is not None:
+            skipped_invalid.append((str(path.relative_to(REPO_ROOT)), err[:200]))
+            print(f"  SKIP (invalid): {path.relative_to(REPO_ROOT)}: {err[:200]}",
+                  file=sys.stderr)
+            continue
         if args.apply:
             if path.exists() and not args.force:
                 skipped_existing += 1
@@ -411,13 +449,19 @@ def main() -> int:
     total = sum(by_cat.values())
     print(f"  {'TOTAL':<25} {total:>4}")
     print()
+    if skipped_invalid:
+        print(f"Skipped (invalid):          {len(skipped_invalid)}")
+        for rel, msg in skipped_invalid[:10]:
+            print(f"  {rel}: {msg}")
+        if len(skipped_invalid) > 10:
+            print(f"  ... and {len(skipped_invalid) - 10} more")
     if args.apply:
         print(f"Wrote:                      {written} files under {args.out}")
         if skipped_existing:
             print(f"Skipped (exists, no --force): {skipped_existing}")
     else:
         print("Mode:                       DRY-RUN (re-run with --apply to write)")
-    return 0
+    return 1 if skipped_invalid else 0
 
 
 if __name__ == "__main__":
