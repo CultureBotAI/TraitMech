@@ -70,6 +70,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: synthesizes ectoine as its major compatible solute
       notes: Supports ectoine as a compatible-solute mechanism in halophilic bacteria.
+    predicate_id: METPO:2007407
   - subject: glycine_betaine
     predicate: mitigates
     object: osmotic_stress
@@ -78,6 +79,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: glycine betaine uptake
       notes: Review supports glycine betaine transport as an osmoadaptation route.
+    predicate_id: METPO:2007407
   - subject: ectoine
     predicate: enables
     object: moderately_halophilic_trait
@@ -96,6 +98,7 @@ causal_graphs:
       snippet: Moderately halophilic bacteria
       notes: Review identifies moderate halophiles as models for bacterial osmotic
         adaptation.
+    predicate_id: METPO:2007401
 curation_history:
 - timestamp: '2026-05-05T01:35:46.862444+00:00'
   curator: seed_from_metpo
@@ -124,4 +127,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×2, METPO:2007401×1).
   llm_assisted: true

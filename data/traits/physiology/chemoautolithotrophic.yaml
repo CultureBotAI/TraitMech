@@ -108,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: membrane-bound electron transport chain
       notes: Supports respiratory electron transfer as energy-conserving pathway.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: produces
     object: atp
@@ -134,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: autotrophic carbon dioxide assimilation pathway
       notes: Supports conversion of CO2 by microbial autotrophic pathways.
+    predicate_id: METPO:2007404
   - subject: co2_fixation_pathway
     predicate: produces
     object: biomass
@@ -166,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1, METPO:2007404×1).
   llm_assisted: true

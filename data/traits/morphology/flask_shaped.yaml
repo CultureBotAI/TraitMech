@@ -1,7 +1,7 @@
 identifier: METPO:1000675
 label: flask shaped
-definition: A cell shape in which an organism has a bulbous body with a narrower
-  neck-like extension at one pole.
+definition: A cell shape in which an organism has a bulbous body with a narrower neck-like
+  extension at one pole.
 definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -68,6 +68,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: polar growth
       notes: Supports the trait endpoint via asymmetric polar growth.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890141+00:00'
   curator: seed_from_metpo
@@ -77,6 +78,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking unipolar
-    peptidoglycan growth and neck extension to flask-shaped morphology.
+  changes: Added DOI-backed definition and causal graph linking unipolar peptidoglycan
+    growth and neck extension to flask-shaped morphology.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

@@ -95,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: orange ... pigmentation in bacteria
       notes: Supports the trait-level color assignment.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945311+00:00'
   curator: seed_from_metpo
@@ -118,4 +119,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

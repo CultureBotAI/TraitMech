@@ -76,6 +76,7 @@ causal_graphs:
       snippet: salinity gradient of a typical short residence-time estuary
       notes: Estuary metagenome study uses salinity gradients to analyze microbial
         salinity adaptation.
+    predicate_id: METPO:2007401
   - subject: salinity_gradient
     predicate: causes
     object: osmotic_imbalance
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-1-5
       snippet: balance external osmotic pressure
       notes: Supports compatible solutes as osmolytes under salinity stress.
+    predicate_id: METPO:2007407
   - subject: salinity_adaptation_genes
     predicate: contributes to
     object: euryhaline_trait
@@ -143,4 +145,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, METPO:2007407×1).
   llm_assisted: true

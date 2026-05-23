@@ -74,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: do not disturb the cell's metabolism
       notes: Supports compatible solutes as non-disruptive osmoprotectants.
+    predicate_id: METPO:2007407
   - subject: osmoprotectant_transport
     predicate: accumulates
     object: compatible_solutes
@@ -104,4 +105,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×1).
   llm_assisted: true

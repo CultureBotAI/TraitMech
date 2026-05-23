@@ -29,8 +29,7 @@ causal_graphs:
     label: temperature preference
     node_type: TRAIT
     grounding: METPO:1000613
-    description: Growth phenotype characterized by preferred environmental
-      temperature.
+    description: Growth phenotype characterized by preferred environmental temperature.
   - node_id: environmental_temperature
     label: environmental temperature
     node_type: ENVIRONMENTAL_FACTOR
@@ -43,13 +42,11 @@ causal_graphs:
   - node_id: high_temperature
     label: high temperature
     node_type: ENVIRONMENTAL_FACTOR
-    description: Hot growth condition that challenges protein and membrane
-      stability.
+    description: Hot growth condition that challenges protein and membrane stability.
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: BIOLOGICAL_PROCESS
-    description: Physical state of the membrane affecting transport and cell
-      function.
+    description: Physical state of the membrane affecting transport and cell function.
   - node_id: protein_stability
     label: protein stability
     node_type: MOLECULAR_FUNCTION
@@ -71,8 +68,7 @@ causal_graphs:
   - subject: low_temperature
     predicate: decreases
     object: membrane_fluidity
-    description: Cold temperature reduces membrane fluidity and transport
-      efficiency.
+    description: Cold temperature reduces membrane fluidity and transport efficiency.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
@@ -80,27 +76,27 @@ causal_graphs:
   - subject: high_temperature
     predicate: challenges
     object: protein_stability
-    description: Elevated temperature challenges protein folding and functional
-      stability.
+    description: Elevated temperature challenges protein folding and functional stability.
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: resistant to irreversible inactivation at high temperatures
       notes: Review supports thermostable enzymes as a high-temperature adaptation.
+    predicate_id: METPO:2007406
   - subject: high_temperature
     predicate: increases
     object: membrane_fluidity
-    description: High temperature increases membrane permeability and fluidity,
-      creating a limit on growth.
+    description: High temperature increases membrane permeability and fluidity, creating
+      a limit on growth.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: proton permeability ... increase with the temperature
-      notes: Review links increased membrane permeability to upper temperature
-        growth limits.
+      notes: Review links increased membrane permeability to upper temperature growth
+        limits.
   - subject: membrane_fluidity
     predicate: constrains
     object: temperature_preference_trait
-    description: Temperature preference reflects the range in which membrane
-      function remains compatible with growth.
+    description: Temperature preference reflects the range in which membrane function
+      remains compatible with growth.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: optimizes the performance of cellular physiological processes
@@ -109,13 +105,12 @@ causal_graphs:
   - subject: protein_stability
     predicate: constrains
     object: temperature_preference_trait
-    description: Growth at preferred temperatures requires proteins to remain
-      active and stable.
+    description: Growth at preferred temperatures requires proteins to remain active
+      and stable.
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: molecular mechanisms involved in protein thermostabilization
-      notes: Supports protein stability as a determinant of high-temperature
-        growth.
+      notes: Supports protein stability as a determinant of high-temperature growth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.856449+00:00'
   curator: seed_from_metpo
@@ -127,4 +122,10 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Reviewed temperature preference trait and added DOI-backed causal graph
     for temperature effects on membrane fluidity, protein stability, and growth.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007406×1).
   llm_assisted: true

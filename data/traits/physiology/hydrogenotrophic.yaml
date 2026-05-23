@@ -88,6 +88,7 @@ causal_graphs:
     - reference: DOI:10.21775/cimb.006.159
       snippet: H2 <--> 2 H+ + 2 e-
       notes: Supports the H2 redox half reaction.
+    predicate_id: METPO:2007405
   - subject: hydrogenase
     predicate: interacts with
     object: electron_transport_system
@@ -116,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: assimilation of CO2
       notes: Supports CO2 assimilation into cellular carbon.
+    predicate_id: METPO:2007404
   - subject: autotrophic_co2_fixation
     predicate: produces
     object: cellular_carbon
@@ -154,4 +156,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×1, METPO:2007404×1).
   llm_assisted: true

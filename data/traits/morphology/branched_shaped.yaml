@@ -1,7 +1,7 @@
 identifier: METPO:1000687
 label: branched shaped
-definition: A cell shape in which an organism forms lateral branches from
-  filamentous or hyphal cells.
+definition: A cell shape in which an organism forms lateral branches from filamentous
+  or hyphal cells.
 definition_source: DOI:10.1016/j.mib.2012.10.012
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -22,9 +22,9 @@ evidence:
 causal_graphs:
 - graph_id: branched_shaped_streptomyces_branching
   title: Branched-shape Streptomyces branch-site mechanism
-  description: Evidence-backed causal sketch linking branched morphology to
-    DivIVA foci, branch-site selection, polarisome behavior, local peptidoglycan
-    assembly, and lateral branch outgrowth.
+  description: Evidence-backed causal sketch linking branched morphology to DivIVA
+    foci, branch-site selection, polarisome behavior, local peptidoglycan assembly,
+    and lateral branch outgrowth.
   nodes:
   - node_id: branched_shaped_trait
     label: branched shaped
@@ -63,12 +63,13 @@ causal_graphs:
   - subject: branch_site_selection
     predicate: controls
     object: polarisome_behavior
-    description: Branch-site selection controls where new polar growth machinery
-      is established.
+    description: Branch-site selection controls where new polar growth machinery is
+      established.
     evidence:
     - reference: DOI:10.1016/j.mib.2012.10.012
       snippet: principal mechanism of branch site selection
       notes: Supports branch-site selection as a regulated mechanism.
+    predicate_id: RO:0002211
   - subject: polarisome_behavior
     predicate: directs
     object: local_cell_wall_assembly
@@ -77,6 +78,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.mib.2012.10.012
       snippet: modulate polar growth and hyphal branching
       notes: Supports polarisome modulation of polar growth and branching.
+    predicate_id: RO:0002211
   - subject: local_cell_wall_assembly
     predicate: drives
     object: lateral_branch_outgrowth
@@ -84,8 +86,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.mib.2012.10.012
       snippet: apical growth requires the localization of the machinery
-      notes: Supports localized wall-building machinery as needed for apical
-        branch outgrowth.
+      notes: Supports localized wall-building machinery as needed for apical branch
+        outgrowth.
   - subject: lateral_branch_outgrowth
     predicate: manifests as
     object: branched_shaped_trait
@@ -94,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.mib.2012.10.012
       snippet: initiation of new branches
       notes: Supports branched morphology as a Streptomyces growth phenotype.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896783+00:00'
   curator: seed_from_metpo
@@ -103,7 +106,12 @@ curation_history:
 - timestamp: '2026-05-11T21:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for DivIVA foci,
-    branch-site selection, polarisome behavior, local cell-wall assembly, and
-    lateral branch outgrowth.
+  changes: Added DOI-backed definition and causal graph for DivIVA foci, branch-site
+    selection, polarisome behavior, local cell-wall assembly, and lateral branch outgrowth.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2, METPO:2007400×1).
   llm_assisted: true

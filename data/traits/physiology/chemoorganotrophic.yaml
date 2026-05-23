@@ -89,6 +89,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: electron transfer process
       notes: Supports electron flow through respiratory chains.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: transfers electrons to
     object: terminal_electron_acceptor
@@ -97,6 +98,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       snippet: terminal electron acceptor
       notes: Supports terminal electron acceptors in respiratory metabolism.
+    predicate_id: METPO:2007403
   - subject: respiratory_chain
     predicate: generates
     object: proton_motive_force
@@ -139,4 +141,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1, METPO:2007403×1).
   llm_assisted: true

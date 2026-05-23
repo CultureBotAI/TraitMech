@@ -21,9 +21,9 @@ evidence:
 causal_graphs:
 - graph_id: diplococcus_shaped_septal_separation
   title: Diplococcus paired-cell separation mechanism
-  description: Evidence-backed causal sketch linking diplococcus morphology to
-    septal peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell
-    separation, and retention of daughter-cell pairs.
+  description: Evidence-backed causal sketch linking diplococcus morphology to septal
+    peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell separation, and
+    retention of daughter-cell pairs.
   nodes:
   - node_id: diplococcus_shaped_trait
     label: diplococcus shaped
@@ -41,8 +41,7 @@ causal_graphs:
   - node_id: pcsB_hydrolase_system
     label: PcsB hydrolase system
     node_type: GENE_OR_PROTEIN
-    description: Pneumococcal cell-separation factor involved in cross-wall
-      splitting.
+    description: Pneumococcal cell-separation factor involved in cross-wall splitting.
   - node_id: daughter_cell_pair
     label: daughter-cell pair
     node_type: BIOLOGICAL_PROCESS
@@ -63,8 +62,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/ncomms4842
       snippet: splitting of the septal cross wall
-      notes: Supports PcsB-associated peptidoglycan hydrolase function in cell
-        separation.
+      notes: Supports PcsB-associated peptidoglycan hydrolase function in cell separation.
   - subject: septal_cross_wall
     predicate: incomplete separation yields
     object: daughter_cell_pair
@@ -73,8 +71,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/JB.183.10.3108-3116.2001
       snippet: short chains with few or no free diplococci
-      notes: Supports the relationship between pneumococcal separation state and
-        diplococcus occurrence.
+      notes: Supports the relationship between pneumococcal separation state and diplococcus
+        occurrence.
   - subject: daughter_cell_pair
     predicate: manifests as
     object: diplococcus_shaped_trait
@@ -84,6 +82,7 @@ causal_graphs:
       snippet: daughter cells during bacterial cell division
       notes: Supports paired morphology as an outcome of daughter-cell separation
         dynamics.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887641+00:00'
   curator: seed_from_metpo
@@ -94,6 +93,11 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed definition and causal graph for septal peptidoglycan,
-    PcsB-associated cross-wall splitting, daughter-cell pairing, and diplococcus
-    morphology.
+    PcsB-associated cross-wall splitting, daughter-cell pairing, and diplococcus morphology.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

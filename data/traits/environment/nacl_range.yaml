@@ -17,14 +17,13 @@ evidence:
     growth as a standard halophily descriptor.
 - reference: DOI:10.1186/1746-1448-4-2
   snippet: ways they cope with the high salt concentrations
-  notes: Saline-Systems review supports osmotic-tolerance breadth as the basis
-    of the NaCl-range phenotype.
+  notes: Saline-Systems review supports osmotic-tolerance breadth as the basis of
+    the NaCl-range phenotype.
 causal_graphs:
 - graph_id: nacl_range_tolerance_breadth
   title: NaCl-range osmotic-tolerance breadth
-  description: DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to
-    low and high salt, and the bounded span of growth-supporting NaCl
-    concentrations.
+  description: DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low
+    and high salt, and the bounded span of growth-supporting NaCl concentrations.
   nodes:
   - node_id: nacl_range_trait
     label: NaCl range
@@ -38,8 +37,7 @@ causal_graphs:
   - node_id: low_salt_tolerance
     label: low-salt tolerance
     node_type: BIOLOGICAL_PROCESS
-    description: Capacity to maintain turgor and ion homeostasis at low ambient
-      NaCl.
+    description: Capacity to maintain turgor and ion homeostasis at low ambient NaCl.
   - node_id: high_salt_tolerance
     label: high-salt tolerance
     node_type: BIOLOGICAL_PROCESS
@@ -53,8 +51,7 @@ causal_graphs:
   - subject: ambient_nacl
     predicate: defines
     object: bounded_growth_window
-    description: Ambient NaCl defines the axis over which the growth window is
-      bounded.
+    description: Ambient NaCl defines the axis over which the growth window is bounded.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
@@ -66,9 +63,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: cope with the high salt concentrations
-      notes: Saline-Systems review frames halophily around salt-tolerance
-        mechanisms that span both the lower and upper limits of growth-supporting
-        salinity.
+      notes: Saline-Systems review frames halophily around salt-tolerance mechanisms
+        that span both the lower and upper limits of growth-supporting salinity.
   - subject: high_salt_tolerance
     predicate: sets
     object: bounded_growth_window
@@ -85,6 +81,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
       notes: Supports the trait endpoint.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816101+00:00'
   curator: seed_from_metpo
@@ -94,6 +91,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking ambient NaCl and low/high-salt
-    tolerance to the bounded NaCl-range phenotype.
+  changes: Added DOI-backed causal graph linking ambient NaCl and low/high-salt tolerance
+    to the bounded NaCl-range phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

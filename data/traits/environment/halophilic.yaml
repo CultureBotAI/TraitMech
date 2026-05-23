@@ -58,6 +58,7 @@ causal_graphs:
       snippet: Hypersaline environments ... inhabited by halophilic
       notes: Review supports hypersaline habitats as the environmental context for
         halophily.
+    predicate_id: METPO:2007401
   - subject: sodium_chloride
     predicate: causes
     object: osmotic_stress
@@ -77,6 +78,7 @@ causal_graphs:
       snippet: synthesize organic osmotic solutes
       notes: Supports organic compatible-solute accumulation as an osmotic adaptation
         mechanism.
+    predicate_id: METPO:2007407
   - subject: salt_in_strategy
     predicate: mitigates
     object: osmotic_stress
@@ -85,6 +87,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: KCl accumulating Halobacterium salinarum
       notes: Supports intracellular KCl accumulation as a high-salt adaptation.
+    predicate_id: METPO:2007407
   - subject: compatible_solutes
     predicate: contributes to
     object: halophilic_trait
@@ -122,4 +125,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×2, METPO:2007401×1).
   llm_assisted: true

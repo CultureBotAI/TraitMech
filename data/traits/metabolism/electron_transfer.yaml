@@ -78,6 +78,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: electron transfer process
       notes: Supports donor-to-acceptor electron flow.
+    predicate_id: METPO:2007403
   - subject: redox_protein
     predicate: mediates transfer between
     object: electron_donor
@@ -138,4 +139,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×1).
   llm_assisted: true

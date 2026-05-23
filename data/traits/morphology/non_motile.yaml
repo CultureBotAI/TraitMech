@@ -64,9 +64,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2218
       snippet: type IV pili
-      notes: Type-IV-pili review supports type IV pili as the cellular basis for
-        twitching motility (and their absence as the basis for non-twitching/non-motile
-        phenotype).
+      notes: Type-IV-pili review supports type IV pili as the cellular basis for twitching
+        motility (and their absence as the basis for non-twitching/non-motile phenotype).
   - subject: no_propulsion
     predicate: manifests as
     object: non_motile_trait
@@ -75,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2025.1514643
       snippet: They are Gram-negative, non-motile rods
       notes: Supports the trait endpoint in a representative organism.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905968+00:00'
   curator: seed_from_metpo
@@ -89,12 +89,18 @@ curation_history:
 - timestamp: '2026-05-11T23:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking absence or non-expression of
-    flagellar and pilus motility apparatus to the non-motile phenotype.
+  changes: Added DOI-backed causal graph linking absence or non-expression of flagellar
+    and pilus motility apparatus to the non-motile phenotype.
   llm_assisted: true
 - timestamp: '2026-05-13T22:45:00-07:00'
   curator: codex
   action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
-  changes: Replaced Klebsiella non-motile PMID fallback with the article DOI in
-    definition, record evidence, and CausalEdge evidence.
+  changes: Replaced Klebsiella non-motile PMID fallback with the article DOI in definition,
+    record evidence, and CausalEdge evidence.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

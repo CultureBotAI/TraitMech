@@ -75,6 +75,7 @@ causal_graphs:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: selection for efficient use of nutrients
       notes: Supports nutrient regime as a driver of resource-allocation strategy.
+    predicate_id: RO:0002211
   - subject: resource_allocation
     predicate: manifests as
     object: copiotrophic_phenotype
@@ -84,6 +85,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: high (copiotrophic) nutrient concentrations
       notes: Supports copiotrophy as one expression of nutrient adaptation.
+    predicate_id: METPO:2007400
   - subject: resource_allocation
     predicate: manifests as
     object: oligotrophic_phenotype
@@ -94,6 +96,7 @@ causal_graphs:
       snippet: small cells and genomes
       notes: Supports oligotrophy as a streamlining-driven expression of nutrient
         adaptation.
+    predicate_id: METPO:2007400
   - subject: copiotrophic_phenotype
     predicate: is a
     object: nutrient_adaptation_trait
@@ -129,4 +132,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×2, RO:0002211×1).
   llm_assisted: true

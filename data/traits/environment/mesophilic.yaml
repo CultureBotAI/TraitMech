@@ -63,6 +63,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
       notes: Supports a representative mesophile thriving at moderate temperatures.
+    predicate_id: METPO:2007401
   - subject: homoviscous_lipid_composition
     predicate: maintains
     object: membrane_fluidity
@@ -92,6 +93,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bpj.2013.06.029
       snippet: Escherichia coli, a mesophilic bacterium
       notes: Supports the trait endpoint in a representative organism.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
@@ -121,4 +123,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, METPO:2007400×1).
   llm_assisted: true

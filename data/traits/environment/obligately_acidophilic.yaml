@@ -68,6 +68,7 @@ causal_graphs:
       snippet: acidic optimal growth pH
       notes: Review supports acidophile classification by acidic optimum pH; the obligate
         neutral-pH exclusion remains from the METPO definition.
+    predicate_id: METPO:2007401
   - subject: acidic_external_ph
     predicate: increases gradient of
     object: proton
@@ -131,4 +132,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

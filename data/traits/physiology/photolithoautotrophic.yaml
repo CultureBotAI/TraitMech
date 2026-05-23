@@ -127,6 +127,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: autotrophic CO2 fixation
       notes: Supports CO2 fixation as the autotrophic carbon-assimilation process.
+    predicate_id: METPO:2007404
   - subject: reducing_power
     predicate: supports
     object: autotrophic_co2_fixation
@@ -168,4 +169,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:participates_in×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007404×1).
   llm_assisted: true

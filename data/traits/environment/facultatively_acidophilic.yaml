@@ -69,6 +69,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: acidic optimal growth pH
       notes: Supports acidophilic classification by acidic growth optimum.
+    predicate_id: METPO:2007401
   - subject: near_neutral_external_ph
     predicate: is compatible with
     object: facultatively_acidophilic_trait
@@ -133,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×2, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

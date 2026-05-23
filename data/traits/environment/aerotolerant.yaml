@@ -89,6 +89,7 @@ causal_graphs:
       snippet: oxygen tolerance of anaerobes is usually related to their level of
         SOD
       notes: Supports SOD as a ROS-defense mechanism for aerotolerant anaerobes.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853836+00:00'
   curator: seed_from_metpo
@@ -116,4 +117,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×1).
   llm_assisted: true
