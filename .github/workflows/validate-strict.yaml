@@ -1,0 +1,48 @@
+name: validate-strict
+
+on:
+  pull_request:
+    paths:
+      - "src/traitmech/schema/**"
+      - "data/traits/**"
+      - "scripts/seed_from_metpo.py"
+      - "scripts/validate_strict.py"
+      - ".github/workflows/validate-strict.yaml"
+      - "pyproject.toml"
+  push:
+    branches: [main]
+    paths:
+      - "src/traitmech/schema/**"
+      - "data/traits/**"
+      - "scripts/seed_from_metpo.py"
+      - "scripts/validate_strict.py"
+      - ".github/workflows/validate-strict.yaml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+jobs:
+  validate-strict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run strict validation
+        run: uv run python scripts/validate_strict.py
+
+      - name: Upload failure TSV
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: instance-validation-failures
+          path: reports/instance_validation_failures.tsv
+          if-no-files-found: ignore
