@@ -26,8 +26,8 @@ causal_graphs:
 - graph_id: hyperthermophilic_thermostability
   title: Hyperthermophilic thermostability mechanism
   description: Evidence-backed causal sketch linking hyperthermophily to very high
-    temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and
-    membrane adaptation.
+    temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and membrane
+    adaptation.
   nodes:
   - node_id: hyperthermophilic_trait
     label: hyperthermophilic
@@ -42,8 +42,7 @@ causal_graphs:
   - node_id: thermostable_enzymes
     label: thermostable enzymes
     node_type: GENE_OR_PROTEIN
-    description: Enzymes resistant to irreversible inactivation at high
-      temperatures.
+    description: Enzymes resistant to irreversible inactivation at high temperatures.
   - node_id: reverse_gyrase
     label: reverse gyrase
     node_type: GENE_OR_PROTEIN
@@ -56,14 +55,13 @@ causal_graphs:
   - node_id: membrane_lipid_composition
     label: membrane lipid composition
     node_type: CELLULAR_LOCALIZATION
-    description: Membrane lipid features supporting stability at very high
-      temperature.
+    description: Membrane lipid features supporting stability at very high temperature.
   edges:
   - subject: very_high_temperature
     predicate: selects for
     object: hyperthermophilic_trait
-    description: Very high-temperature environments select for hyperthermophilic
-      growth capacity.
+    description: Very high-temperature environments select for hyperthermophilic growth
+      capacity.
     evidence:
     - reference: DOI:10.1111/j.1574-6976.1996.tb00233.x
       snippet: optimal growth temperatures between 80°C and 110°C
@@ -76,16 +74,16 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: thermostable ... optimally active at high temperatures
       notes: Supports enzyme thermostability in hyperthermophiles.
+    predicate_id: RO:0002327
   - subject: reverse_gyrase
     predicate: contributes to
     object: hyperthermophilic_trait
-    description: Reverse gyrase is associated with DNA stabilization in
-      hyperthermophiles.
+    description: Reverse gyrase is associated with DNA stabilization in hyperthermophiles.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.661411
       snippet: reverse gyrase is present in all the hyperthermophiles
-      notes: Review supports the strong association of reverse gyrase with
-        hyperthermophily.
+      notes: Review supports the strong association of reverse gyrase with hyperthermophily.
+    predicate_id: RO:0002326
   - subject: molecular_chaperonins
     predicate: maintains
     object: thermostable_enzymes
@@ -98,12 +96,13 @@ causal_graphs:
   - subject: membrane_lipid_composition
     predicate: enables
     object: hyperthermophilic_trait
-    description: Membrane lipid adaptation contributes to growth near the upper
-      temperature range for life.
+    description: Membrane lipid adaptation contributes to growth near the upper temperature
+      range for life.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: changes in the membrane lipid composition
       notes: Supports membrane lipid changes as high-temperature adaptation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858819+00:00'
   curator: seed_from_metpo
@@ -118,6 +117,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed hyperthermophily causal graph for thermostable
-    enzymes, reverse gyrase, chaperonins, and membrane adaptation.
+  changes: Added DOI-backed hyperthermophily causal graph for thermostable enzymes,
+    reverse gyrase, chaperonins, and membrane adaptation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002326×1).
   llm_assisted: true

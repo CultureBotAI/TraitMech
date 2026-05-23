@@ -16,15 +16,17 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1016/B978-012373944-5.00083-3
   snippet: organic compounds as the primary sources of carbon and energy
-  notes: Encyclopedia chapter supports organic compounds as carbon and energy sources in heterotrophy.
+  notes: Encyclopedia chapter supports organic compounds as carbon and energy sources
+    in heterotrophy.
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: free energy of a redox reaction
-  notes: Review supports energy conservation from electron donor oxidation through respiratory chains.
+  notes: Review supports energy conservation from electron donor oxidation through
+    respiratory chains.
 causal_graphs:
 - graph_id: organoheterotrophic_organic_donor_carbon
   title: Organoheterotrophic organic donor and carbon use
-  description: DOI-backed graph linking organic compounds as electron donors and
-    carbon sources to central metabolism, respiratory energy conservation, ATP, and biomass.
+  description: DOI-backed graph linking organic compounds as electron donors and carbon
+    sources to central metabolism, respiratory energy conservation, ATP, and biomass.
   nodes:
   - node_id: organoheterotrophic_trait
     label: organoheterotrophic
@@ -65,7 +67,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
-      notes: Supports organic molecules as electron sources in organoheterotrophic categories.
+      notes: Supports organic molecules as electron sources in organoheterotrophic
+        categories.
+    predicate_id: METPO:2000009
   - subject: organoheterotrophic_trait
     predicate: uses carbon source
     object: organic_compound
@@ -74,6 +78,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: organic compounds as the primary sources of carbon
       notes: Supports organic compounds as the carbon source for heterotrophic growth.
+    predicate_id: METPO:2000006
   - subject: organic_compound
     predicate: metabolized by
     object: central_carbon_metabolism
@@ -85,7 +90,8 @@ causal_graphs:
   - subject: central_carbon_metabolism
     predicate: feeds electrons into
     object: respiratory_chain
-    description: Oxidation of organic substrates supplies reducing equivalents to respiratory chains.
+    description: Oxidation of organic substrates supplies reducing equivalents to
+      respiratory chains.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: electron transfer process
@@ -97,7 +103,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: dissimilation
-      notes: Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.
+      notes: Supports oxidation of nutrients to provide energy for biosynthesis and
+        maintenance.
   - subject: respiratory_chain
     predicate: produces
     object: atp
@@ -106,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
+    predicate_id: METPO:2000202
   - subject: organic_compound
     predicate: assimilated into
     object: biomass
@@ -123,5 +131,12 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for organic compounds as electron donors and carbon sources supporting respiration, ATP, and biomass.
+  changes: Added DOI-backed causal graph for organic compounds as electron donors
+    and carbon sources supporting respiration, ATP, and biomass.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000009×1, METPO:2000006×1, METPO:2000202×1).
   llm_assisted: true

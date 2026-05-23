@@ -1,8 +1,7 @@
 identifier: METPO:1000462
 label: pH range mid2
 definition: A pH range phenotype in which the growth-supporting external pH range
-  spans approximately 7–8, characteristic of neutrophile or mild-alkaliphile
-  physiology.
+  spans approximately 7–8, characteristic of neutrophile or mild-alkaliphile physiology.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -28,13 +27,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: pH homeostasis
-  notes: pH-homeostasis review supports modest alkaline-tolerance physiology
-    as the basis of growth across pH 7–8.
+  notes: pH-homeostasis review supports modest alkaline-tolerance physiology as the
+    basis of growth across pH 7–8.
 causal_graphs:
 - graph_id: ph_range_mid2_mild_alkaline_tolerance
   title: pH-range-mid2 mild-alkaline-tolerance range
-  description: DOI-backed graph linking modest alkaline pH-homeostasis to a
-    pH growth range of approximately 7–8.
+  description: DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth
+    range of approximately 7–8.
   nodes:
   - node_id: ph_range_mid2_trait
     label: pH range mid2
@@ -49,29 +48,28 @@ causal_graphs:
   - node_id: modest_alkaline_tolerance
     label: modest alkaline-tolerance physiology
     node_type: BIOLOGICAL_PROCESS
-    description: Mild K+/H+ antiport and cytoplasmic acidification activity
-      enabling growth at slightly basic external pH.
+    description: Mild K+/H+ antiport and cytoplasmic acidification activity enabling
+      growth at slightly basic external pH.
   edges:
   - subject: modest_alkaline_tolerance
     predicate: enables
     object: ph_range_mid2_trait
-    description: Modest alkaline-tolerance physiology enables growth across
-      pH 7–8.
+    description: Modest alkaline-tolerance physiology enables growth across pH 7–8.
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: proton motive force
-      notes: Supports balanced proton motive force at slightly alkaline pH
-        as the range mechanism.
+      notes: Supports balanced proton motive force at slightly alkaline pH as the
+        range mechanism.
+    predicate_id: RO:0002327
   - subject: ph_range_mid2_trait
     predicate: is a
     object: ph_range
-    description: pH range mid2 is a quantitative bin of the pH-range
-      phenotype.
+    description: pH range mid2 is a quantitative bin of the pH-range phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cytoplasmic pH
-      notes: Supports the pH 7–8 range as a value within the pH-range
-        distribution.
+      notes: Supports the pH 7–8 range as a value within the pH-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.831107+00:00'
   curator: seed_from_metpo
@@ -81,6 +79,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking modest
-    alkaline-tolerance physiology to the pH-range-mid2 bin.
+  changes: Added DOI-backed definition and causal graph linking modest alkaline-tolerance
+    physiology to the pH-range-mid2 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

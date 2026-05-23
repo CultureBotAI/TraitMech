@@ -26,14 +26,14 @@ evidence:
     by carbon, energy, and electron-donor source.
 - reference: DOI:10.1073/pnas.0903507106
   snippet: molecular mechanisms of adaptation
-  notes: Comparative genomics supports the classification of bacteria by trophic
-    strategy from genome-encoded pathways.
+  notes: Comparative genomics supports the classification of bacteria by trophic strategy
+    from genome-encoded pathways.
 causal_graphs:
 - graph_id: trophic_type_classification_axes
   title: Trophic type classification axes
-  description: DOI-backed graph linking the three classification axes (carbon
-    source, energy source, electron donor) to the metabolic pathways an organism
-    encodes, which jointly determine its trophic type.
+  description: DOI-backed graph linking the three classification axes (carbon source,
+    energy source, electron donor) to the metabolic pathways an organism encodes,
+    which jointly determine its trophic type.
   nodes:
   - node_id: trophic_type_trait
     label: trophic type
@@ -82,8 +82,8 @@ causal_graphs:
   - subject: carbon_source_use
     predicate: determines
     object: trophic_type_trait
-    description: Carbon-source utilization defines the auto/heterotrophy axis of
-      the trophic classification.
+    description: Carbon-source utilization defines the auto/heterotrophy axis of the
+      trophic classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: carbon source
@@ -91,8 +91,8 @@ causal_graphs:
   - subject: energy_source_use
     predicate: determines
     object: trophic_type_trait
-    description: Energy-source utilization defines the photo/chemotrophy axis of
-      the trophic classification.
+    description: Energy-source utilization defines the photo/chemotrophy axis of the
+      trophic classification.
     evidence:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: energy source
@@ -114,8 +114,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: molecular mechanisms of adaptation
-      notes: Supports genome-encoded pathway repertoires as the proximate
-        determinant of trophic phenotypes.
+      notes: Supports genome-encoded pathway repertoires as the proximate determinant
+        of trophic phenotypes.
   - subject: autotrophic_phenotype
     predicate: is a
     object: trophic_type_trait
@@ -124,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: carbon source
       notes: Supports autotrophy as one carbon-source-defined trophic phenotype.
+    predicate_id: rdfs:subClassOf
   - subject: heterotrophic_phenotype
     predicate: is a
     object: trophic_type_trait
@@ -132,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: carbon source
       notes: Supports heterotrophy as one carbon-source-defined trophic phenotype.
+    predicate_id: rdfs:subClassOf
   - subject: phototrophic_phenotype
     predicate: is a
     object: trophic_type_trait
@@ -140,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: energy source
       notes: Supports phototrophy as one energy-source-defined trophic phenotype.
+    predicate_id: rdfs:subClassOf
   - subject: chemotrophic_phenotype
     predicate: is a
     object: trophic_type_trait
@@ -148,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: energy source
       notes: Supports chemotrophy as one energy-source-defined trophic phenotype.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
@@ -157,7 +161,13 @@ curation_history:
 - timestamp: '2026-05-11T22:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph framing trophic type by its three
-    classification axes (carbon source, energy source, electron donor) and child
-    phenotypes (autotroph, heterotroph, phototroph, chemotroph).
+  changes: Added DOI-backed causal graph framing trophic type by its three classification
+    axes (carbon source, energy source, electron donor) and child phenotypes (autotroph,
+    heterotroph, phototroph, chemotroph).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×4).
   llm_assisted: true

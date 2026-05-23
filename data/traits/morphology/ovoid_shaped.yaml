@@ -23,9 +23,9 @@ evidence:
 causal_graphs:
 - graph_id: ovoid_shaped_midcell_pg_assembly
   title: Ovoid-shape midcell peptidoglycan mechanism
-  description: Evidence-backed causal sketch linking ovoid morphology to midcell
-    peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth,
-    and rounded ovoid geometry.
+  description: Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan
+    assembly, MapZ division-site placement, DivIVA-associated growth, and rounded
+    ovoid geometry.
   nodes:
   - node_id: ovoid_shaped_trait
     label: ovoid shaped
@@ -39,8 +39,7 @@ causal_graphs:
   - node_id: mapZ
     label: MapZ
     node_type: GENE_OR_PROTEIN
-    description: Membrane protein involved in division-site placement in
-      S. pneumoniae.
+    description: Membrane protein involved in division-site placement in S. pneumoniae.
   - node_id: divIVA
     label: DivIVA
     node_type: GENE_OR_PROTEIN
@@ -81,13 +80,12 @@ causal_graphs:
   - subject: septum_splitting
     predicate: contributes to
     object: ovoid_geometry
-    description: Septum splitting and elongation dynamics contribute to ovoid
-      morphology.
+    description: Septum splitting and elongation dynamics contribute to ovoid morphology.
     evidence:
     - reference: DOI:10.1128/mbio.01311-24
       snippet: how ovoid bacteria proliferate
-      notes: Supports septum/elongation dynamics as relevant to ovoid bacterial
-        proliferation.
+      notes: Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.
+    predicate_id: RO:0002326
   - subject: ovoid_geometry
     predicate: manifests as
     object: ovoid_shaped_trait
@@ -107,4 +105,10 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed definition and causal graph for MapZ, DivIVA, midcell
     peptidoglycan assembly, septum splitting, and ovoid cell geometry.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

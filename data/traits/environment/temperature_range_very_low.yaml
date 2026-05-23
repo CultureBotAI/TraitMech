@@ -1,8 +1,7 @@
 identifier: METPO:1000448
 label: temperature range very low
-definition: A temperature range phenotype in which growth extends to ambient
-  temperatures at or below approximately 10 °C, characteristic of psychrophilic
-  growth ranges.
+definition: A temperature range phenotype in which growth extends to ambient temperatures
+  at or below approximately 10 °C, characteristic of psychrophilic growth ranges.
 definition_source: DOI:10.1038/sj.embor.7400662
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -19,13 +18,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: growing well at temperatures around the freezing point of water
-  notes: Psychrophile review supports growth at very low temperatures as the
-    psychrophilic range.
+  notes: Psychrophile review supports growth at very low temperatures as the psychrophilic
+    range.
 causal_graphs:
 - graph_id: temperature_range_very_low_psychrophile
   title: Temperature-range-very-low psychrophile range
-  description: DOI-backed graph linking psychrophile cold-adapted machinery
-    to a temperature growth range reaching ≤ ~10 °C.
+  description: DOI-backed graph linking psychrophile cold-adapted machinery to a temperature
+    growth range reaching ≤ ~10 °C.
   nodes:
   - node_id: temperature_range_very_low_trait
     label: temperature range very low
@@ -40,8 +39,8 @@ causal_graphs:
   - node_id: psychrophile_machinery
     label: psychrophile cold-adapted machinery
     node_type: BIOLOGICAL_PROCESS
-    description: Cold-active enzymes and unsaturated-lipid membranes that
-      sustain function near freezing.
+    description: Cold-active enzymes and unsaturated-lipid membranes that sustain
+      function near freezing.
   edges:
   - subject: psychrophile_machinery
     predicate: enables
@@ -50,18 +49,19 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
-      notes: Supports cold-adapted membranes and enzymes as enablers of growth
-        at very low temperatures.
+      notes: Supports cold-adapted membranes and enzymes as enablers of growth at
+        very low temperatures.
+    predicate_id: RO:0002327
   - subject: temperature_range_very_low_trait
     predicate: is a
     object: temperature_range
-    description: Temperature range very low is a quantitative bin of the
-      temperature-range phenotype.
+    description: Temperature range very low is a quantitative bin of the temperature-range
+      phenotype.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: growing well at temperatures around the freezing point of water
-      notes: Supports a ≤10 °C range as a value within the temperature-range
-        distribution.
+      notes: Supports a ≤10 °C range as a value within the temperature-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822647+00:00'
   curator: seed_from_metpo
@@ -71,6 +71,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking psychrophile
-    cold-adapted machinery to the temperature-range-very-low bin.
+  changes: Added DOI-backed definition and causal graph linking psychrophile cold-adapted
+    machinery to the temperature-range-very-low bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

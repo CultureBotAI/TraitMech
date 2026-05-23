@@ -16,7 +16,8 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1039/D3CY00737E
   snippet: convert methane to methanol using methane monooxygenase
-  notes: Review supports methane monooxygenase as the first aerobic methanotrophy step.
+  notes: Review supports methane monooxygenase as the first aerobic methanotrophy
+    step.
 causal_graphs:
 - graph_id: methanotrophic_methane_oxidation
   title: Aerobic methanotrophic methane oxidation mechanism
@@ -86,6 +87,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       snippet: methane oxidation ... catalyzed by two types of methane monooxygenases
       notes: Supports MMO as the enzyme for the first oxidation step.
+    predicate_id: METPO:2000016
   - subject: methane_monooxygenase
     predicate: uses oxidant
     object: molecular_oxygen
@@ -110,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       snippet: pMMO is located in the characteristic intracellular membrane
       notes: Supports subcellular localization for pMMO.
+    predicate_id: biolink:located_in
   - subject: methanol_dehydrogenase
     predicate: oxidizes
     object: methanol
@@ -118,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       snippet: Methanol is oxidized to formaldehyde
       notes: Supports methanol dehydrogenase as the next step.
+    predicate_id: METPO:2000016
   - subject: formaldehyde
     predicate: input to
     object: formaldehyde_assimilation
@@ -133,7 +137,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/D3CY00737E
       snippet: methane cycle between ... methane and CO2
-      notes: Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.
+      notes: Supports methane oxidation in the methane-carbon dioxide cycle; graph
+        focuses on aerobic methanotrophy.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.876493+00:00'
   curator: seed_from_metpo
@@ -143,5 +149,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for aerobic methane oxidation by methane monooxygenase and downstream C1 metabolism.
+  changes: Added DOI-backed causal graph for aerobic methane oxidation by methane
+    monooxygenase and downstream C1 metabolism.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000016×2, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1).
   llm_assisted: true

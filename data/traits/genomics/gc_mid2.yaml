@@ -1,7 +1,7 @@
 identifier: METPO:1000431
 label: GC mid2
-definition: A GC-content phenotype with genome-wide GC composition between
-  approximately 57.0% and 66.3% (the METPO `GC_57.0_66.3` bin).
+definition: A GC-content phenotype with genome-wide GC composition between approximately
+  57.0% and 66.3% (the METPO `GC_57.0_66.3` bin).
 definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
@@ -15,14 +15,14 @@ synonyms:
 evidence:
 - reference: DOI:10.1186/1471-2148-10-374
   snippet: GC-biased gene conversion
-  notes: Bacterial-GC-content evolution review supports moderate GC-biased
-    gene conversion as the mechanism producing mid-high GC content.
+  notes: Bacterial-GC-content evolution review supports moderate GC-biased gene conversion
+    as the mechanism producing mid-high GC content.
 causal_graphs:
 - graph_id: gc_mid2_mid_high_gc_bin
   title: GC-mid2 (METPO 57.0–66.3%) mid-high GC bin
-  description: DOI-backed graph linking moderate GC-biased gene conversion to
-    a GC content of ~57.0–66.3% (the threshold encoded by the METPO synonym
-    GC_57.0_66.3 on this record).
+  description: DOI-backed graph linking moderate GC-biased gene conversion to a GC
+    content of ~57.0–66.3% (the threshold encoded by the METPO synonym GC_57.0_66.3
+    on this record).
   nodes:
   - node_id: gc_mid2_trait
     label: GC mid2
@@ -37,19 +37,19 @@ causal_graphs:
   - node_id: moderate_gbgc
     label: moderate GC-biased gene conversion
     node_type: BIOLOGICAL_PROCESS
-    description: Recombination-associated GC-favoring activity sufficient to
-      elevate GC content into the mid-high range.
+    description: Recombination-associated GC-favoring activity sufficient to elevate
+      GC content into the mid-high range.
   edges:
   - subject: moderate_gbgc
     predicate: produces
     object: gc_mid2_trait
-    description: Moderate GC-biased gene conversion yields mid-high genome-wide
-      GC composition.
+    description: Moderate GC-biased gene conversion yields mid-high genome-wide GC
+      composition.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: GC-biased gene conversion
-      notes: Supports GC-biased gene conversion as the driver of mid-high GC
-        bins.
+      notes: Supports GC-biased gene conversion as the driver of mid-high GC bins.
+    predicate_id: METPO:2000202
   - subject: gc_mid2_trait
     predicate: is a
     object: gc_content
@@ -57,8 +57,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the 57.0–66.3% bin as a value within the GC-content
-        distribution.
+      notes: Supports the 57.0–66.3% bin as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817814+00:00'
   curator: seed_from_metpo
@@ -68,7 +68,12 @@ curation_history:
 - timestamp: '2026-05-13T13:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition (derived from METPO synonym
-    GC_57.0_66.3) and causal graph linking moderate GC-biased gene conversion
-    to this GC bin.
+  changes: Added DOI-backed definition (derived from METPO synonym GC_57.0_66.3) and
+    causal graph linking moderate GC-biased gene conversion to this GC bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

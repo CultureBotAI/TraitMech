@@ -16,14 +16,14 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1016/S0092-8674(03)00935-8
   snippet: required for the vibrioid and helical shapes of Caulobacter
-  notes: Supports crescentin as a bacterial cytoskeletal determinant of curved
-    Caulobacter cell shape.
+  notes: Supports crescentin as a bacterial cytoskeletal determinant of curved Caulobacter
+    cell shape.
 causal_graphs:
 - graph_id: crescent_shaped_crescentin_curvature
   title: Crescent-shape crescentin curvature mechanism
-  description: Evidence-backed causal sketch linking crescent morphology to
-    crescentin localization, inner-curvature mechanical constraint, peptidoglycan
-    growth bias, and curved cell-body geometry.
+  description: Evidence-backed causal sketch linking crescent morphology to crescentin
+    localization, inner-curvature mechanical constraint, peptidoglycan growth bias,
+    and curved cell-body geometry.
   nodes:
   - node_id: crescent_shaped_trait
     label: crescent shaped
@@ -55,11 +55,12 @@ causal_graphs:
     - reference: DOI:10.1038/emboj.2009.61
       snippet: localizes to the inner cell curvature
       notes: Supports crescentin as an inner-curvature-localized shape protein.
+    predicate_id: biolink:located_in
   - subject: crescentin
     predicate: constrains
     object: peptidoglycan_growth_bias
-    description: Crescentin mechanically constrains cell-wall growth to create
-      differential curvature.
+    description: Crescentin mechanically constrains cell-wall growth to create differential
+      curvature.
     evidence:
     - reference: DOI:10.1038/emboj.2009.61
       snippet: mechanical control of cell growth
@@ -72,6 +73,7 @@ causal_graphs:
     - reference: DOI:10.1038/emboj.2009.61
       snippet: bacterial cell curvature through mechanical control
       notes: Supports differential growth mechanics as a curvature mechanism.
+    predicate_id: biolink:produces
   - subject: crescent_cell_curvature
     predicate: produces
     object: crescent_shaped_trait
@@ -80,6 +82,7 @@ causal_graphs:
     - reference: DOI:10.1016/S0092-8674(03)00935-8
       snippet: required for the ... shapes of Caulobacter
       notes: Supports crescentin-dependent curved morphology as the trait endpoint.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.886631+00:00'
   curator: seed_from_metpo
@@ -91,4 +94,16 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed definition and causal graph for crescentin, inner cell
     curvature, peptidoglycan growth bias, and crescent morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1, biolink:produces×1).
   llm_assisted: true

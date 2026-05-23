@@ -30,13 +30,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: growing at pH 1.0-3.0
-  notes: pH-homeostasis review supports growth in the pH 1–4 range as the
-    extreme-acidophile growth range.
+  notes: pH-homeostasis review supports growth in the pH 1–4 range as the extreme-acidophile
+    growth range.
 causal_graphs:
 - graph_id: ph_range_very_low_extreme_acidophile
   title: pH-range-very-low extreme-acidophile range
-  description: DOI-backed graph linking extreme-acidophile proton-exclusion
-    physiology to a pH growth range reaching ≤ ~4.
+  description: DOI-backed graph linking extreme-acidophile proton-exclusion physiology
+    to a pH growth range reaching ≤ ~4.
   nodes:
   - node_id: ph_range_very_low_trait
     label: pH range very low
@@ -51,9 +51,8 @@ causal_graphs:
   - node_id: extreme_acidophile_envelope
     label: extreme-acidophile envelope barrier
     node_type: BIOLOGICAL_PROCESS
-    description: Combined low-permeability membrane and reversed membrane
-      potential preventing cytoplasmic acidification at strongly acidic
-      external pH.
+    description: Combined low-permeability membrane and reversed membrane potential
+      preventing cytoplasmic acidification at strongly acidic external pH.
   edges:
   - subject: extreme_acidophile_envelope
     predicate: enables
@@ -62,18 +61,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: reversed membrane potential
-      notes: Supports envelope and membrane-potential mechanisms as enablers
-        of growth at strongly acidic pH.
+      notes: Supports envelope and membrane-potential mechanisms as enablers of growth
+        at strongly acidic pH.
+    predicate_id: RO:0002327
   - subject: ph_range_very_low_trait
     predicate: is a
     object: ph_range
-    description: pH range very low is a quantitative bin of the pH-range
-      phenotype.
+    description: pH range very low is a quantitative bin of the pH-range phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: growing at pH 1.0-3.0
-      notes: Supports a very-low pH range as a value within the pH-range
-        distribution.
+      notes: Supports a very-low pH range as a value within the pH-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.829000+00:00'
   curator: seed_from_metpo
@@ -85,4 +84,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed definition and causal graph linking extreme-acidophile
     envelope barriers to the pH-range-very-low bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

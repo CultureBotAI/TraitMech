@@ -14,8 +14,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
-  notes: Virulence-factor review supports adaptation of bacterial virulence
-    programs to animal hosts.
+  notes: Virulence-factor review supports adaptation of bacterial virulence programs
+    to animal hosts.
 - reference: DOI:10.1038/nrmicro1592
   snippet: secretion systems
   notes: Secretion-systems review supports T3SS/T6SS effector delivery as a major
@@ -23,9 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: animal_pathogen_metazoan_adaptation
   title: Animal-pathogen metazoan host adaptation
-  description: DOI-backed graph linking metazoan-adapted virulence factors,
-    immune-evasion strategies, and animal-tissue colonization to the
-    animal-pathogen phenotype.
+  description: DOI-backed graph linking metazoan-adapted virulence factors, immune-evasion
+    strategies, and animal-tissue colonization to the animal-pathogen phenotype.
   nodes:
   - node_id: animal_pathogen_trait
     label: animal pathogen
@@ -52,17 +51,17 @@ causal_graphs:
   - subject: metazoan_virulence_factors
     predicate: enables
     object: animal_tissue_colonization
-    description: Metazoan-adapted virulence factors enable adhesion and invasion
-      of animal tissues.
+    description: Metazoan-adapted virulence factors enable adhesion and invasion of
+      animal tissues.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports virulence factors as enablers of animal tissue colonization.
+    predicate_id: RO:0002327
   - subject: immune_evasion
     predicate: supports
     object: animal_tissue_colonization
-    description: Immune evasion supports sustained colonization despite host
-      defenses.
+    description: Immune evasion supports sustained colonization despite host defenses.
     evidence:
     - reference: DOI:10.1038/nrmicro1592
       snippet: secretion systems
@@ -75,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports colonization-to-disease progression in animal hosts.
+    predicate_id: biolink:causes
   - subject: animal_disease
     predicate: manifests as
     object: animal_pathogen_trait
@@ -92,7 +92,19 @@ curation_history:
 - timestamp: '2026-05-11T23:15:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking metazoan-adapted virulence
-    factors, immune evasion, animal tissue colonization, and disease to the
-    animal-pathogen trait.
+  changes: Added DOI-backed causal graph linking metazoan-adapted virulence factors,
+    immune evasion, animal tissue colonization, and disease to the animal-pathogen
+    trait.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

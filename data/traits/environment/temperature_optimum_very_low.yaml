@@ -18,13 +18,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: growing well at temperatures around the freezing point of water
-  notes: Psychrophile review supports growth at very low temperatures as the
-    psychrophilic optimum.
+  notes: Psychrophile review supports growth at very low temperatures as the psychrophilic
+    optimum.
 causal_graphs:
 - graph_id: temperature_optimum_very_low_psychrophile_setpoint
   title: Temperature-optimum-very-low psychrophile setpoint
-  description: DOI-backed graph linking cold-adapted membrane and enzyme
-    machinery to a temperature optimum at or below ~10 °C.
+  description: DOI-backed graph linking cold-adapted membrane and enzyme machinery
+    to a temperature optimum at or below ~10 °C.
   nodes:
   - node_id: temperature_optimum_very_low_trait
     label: temperature optimum very low
@@ -43,8 +43,8 @@ causal_graphs:
   - node_id: psychrophile_machinery
     label: psychrophile cold-adapted machinery
     node_type: BIOLOGICAL_PROCESS
-    description: Cold-active enzymes and unsaturated-lipid membranes sustaining
-      function at very low temperature.
+    description: Cold-active enzymes and unsaturated-lipid membranes sustaining function
+      at very low temperature.
   edges:
   - subject: cold_environment
     predicate: selects for
@@ -57,23 +57,24 @@ causal_graphs:
   - subject: psychrophile_machinery
     predicate: produces
     object: temperature_optimum_very_low_trait
-    description: Psychrophile cold-adapted machinery yields a very-low
-      temperature optimum.
+    description: Psychrophile cold-adapted machinery yields a very-low temperature
+      optimum.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports homoviscous adaptation as the mechanism setting the
-        psychrophile optimum.
+      notes: Supports homoviscous adaptation as the mechanism setting the psychrophile
+        optimum.
+    predicate_id: METPO:2000202
   - subject: temperature_optimum_very_low_trait
     predicate: is a
     object: temperature_optimum
-    description: Temperature optimum very low is a quantitative bin of the
-      temperature-optimum phenotype.
+    description: Temperature optimum very low is a quantitative bin of the temperature-optimum
+      phenotype.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: growing well at temperatures around the freezing point of water
-      notes: Supports a ≤10 °C optimum as a value within the temperature-optimum
-        distribution.
+      notes: Supports a ≤10 °C optimum as a value within the temperature-optimum distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818713+00:00'
   curator: seed_from_metpo
@@ -83,6 +84,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking psychrophile
-    cold-adapted machinery to the temperature-optimum-very-low bin.
+  changes: Added DOI-backed definition and causal graph linking psychrophile cold-adapted
+    machinery to the temperature-optimum-very-low bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

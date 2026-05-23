@@ -19,8 +19,8 @@ evidence:
 causal_graphs:
 - graph_id: haloalkaliphilic_salt_alkaline_adaptation
   title: Haloalkaliphilic salt and alkaline-pH adaptation mechanism
-  description: Evidence-backed causal sketch linking haloalkaliphily to combined
-    hypersaline and alkaline conditions.
+  description: Evidence-backed causal sketch linking haloalkaliphily to combined hypersaline
+    and alkaline conditions.
   nodes:
   - node_id: haloalkaliphilic_trait
     label: haloalkaliphilic
@@ -71,8 +71,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/pr060352q
       snippet: survive in salt-saturated lakes of pH 11
-      notes: Natronomonas pharaonis proteomics paper supports combined salt and
-        alkaline survival.
+      notes: Natronomonas pharaonis proteomics paper supports combined salt and alkaline
+        survival.
+    predicate_id: RO:0002326
   - subject: alkaline_ph
     predicate: contributes to
     object: haloalkaliphilic_trait
@@ -81,6 +82,7 @@ causal_graphs:
     - reference: DOI:10.1021/pr060352q
       snippet: salt-saturated lakes of pH 11
       notes: Supports high-pH component of the haloalkaliphilic trait.
+    predicate_id: RO:0002326
   - subject: compatible_solutes
     predicate: contributes to
     object: haloalkaliphilic_trait
@@ -88,8 +90,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1139/cjm-2014-0233
       snippet: ectoine and glycine betaine
-      notes: Review supports compatible solutes as osmoadaptation mechanisms in
-        haloalkaliphiles.
+      notes: Review supports compatible solutes as osmoadaptation mechanisms in haloalkaliphiles.
+    predicate_id: RO:0002326
   - subject: alkaline_ph_homeostasis
     predicate: enables
     object: haloalkaliphilic_trait
@@ -99,6 +101,7 @@ causal_graphs:
       snippet: bacterial pH homeostasis is a cell-wide physiological process
       notes: Review supports pH homeostasis as a physiological mechanism integrated
         with salinity and other factors.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861455+00:00'
   curator: seed_from_metpo
@@ -113,6 +116,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for combined high-salt and alkaline-pH
-    adaptation in haloalkaliphily.
+  changes: Added DOI-backed causal graph for combined high-salt and alkaline-pH adaptation
+    in haloalkaliphily.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×3, RO:0002327×1).
   llm_assisted: true

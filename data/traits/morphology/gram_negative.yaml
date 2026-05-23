@@ -27,9 +27,9 @@ evidence:
 causal_graphs:
 - graph_id: gram_negative_outer_membrane_dye_loss
   title: Gram-negative outer-membrane dye-loss mechanism
-  description: Evidence-backed causal sketch linking Gram-negative staining to
-    outer membrane architecture, lipopolysaccharide, thin peptidoglycan,
-    decolorization, and counterstain uptake.
+  description: Evidence-backed causal sketch linking Gram-negative staining to outer
+    membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization,
+    and counterstain uptake.
   nodes:
   - node_id: gram_negative_trait
     label: gram negative
@@ -44,8 +44,7 @@ causal_graphs:
   - node_id: lipopolysaccharide
     label: lipopolysaccharide
     node_type: CHEMICAL
-    description: Glycolipid found in the outer leaflet of Gram-negative outer
-      membranes.
+    description: Glycolipid found in the outer leaflet of Gram-negative outer membranes.
   - node_id: thin_peptidoglycan_layer
     label: thin peptidoglycan layer
     node_type: CELLULAR_LOCALIZATION
@@ -75,12 +74,12 @@ causal_graphs:
   - subject: lipopolysaccharide
     predicate: localized in
     object: outer_membrane
-    description: LPS is found on the outer surface of the Gram-negative outer
-      membrane.
+    description: LPS is found on the outer surface of the Gram-negative outer membrane.
     evidence:
     - reference: DOI:10.1038/s41579-019-0201-x
       snippet: lipopolysaccharide exclusively found on the surface
       notes: Supports LPS as a surface-exposed outer-membrane component.
+    predicate_id: biolink:located_in
   - subject: thin_peptidoglycan_layer
     predicate: localized in
     object: periplasmic_space
@@ -89,6 +88,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbalip.2016.10.010
       snippet: periplasm ... containing a thin layer of peptidoglycan
       notes: Supports thin periplasmic peptidoglycan in Gram-negative envelopes.
+    predicate_id: biolink:located_in
   - subject: thin_peptidoglycan_layer
     predicate: fails to retain
     object: crystal_violet_iodine_complex
@@ -97,8 +97,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3109/10520299609117151
       snippet: cell wall ... responsible for retention
-      notes: Inference from Gram-positive retention mechanism; thinner
-        Gram-negative peptidoglycan contributes to non-retention.
+      notes: Inference from Gram-positive retention mechanism; thinner Gram-negative
+        peptidoglycan contributes to non-retention.
   - subject: counterstain
     predicate: produces
     object: gram_negative_trait
@@ -109,6 +109,7 @@ causal_graphs:
       snippet: mechanism of the Gram stain
       notes: Supports Gram stain procedure context; counterstain appearance follows
         dye-complex loss.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903067+00:00'
   curator: seed_from_metpo
@@ -124,6 +125,18 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Replaced PMID definition source with DOI-backed Gram-negative envelope
-    source and added causal graph for outer membrane, lipopolysaccharide,
-    periplasmic thin peptidoglycan, dye loss, and counterstaining.
+    source and added causal graph for outer membrane, lipopolysaccharide, periplasmic
+    thin peptidoglycan, dye loss, and counterstaining.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×2).
   llm_assisted: true

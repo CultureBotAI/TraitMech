@@ -18,7 +18,8 @@ evidence:
   notes: Phototrophy chapter supports light-driven reaction-center electron transfer.
 - reference: DOI:10.1021/acsomega.3c02205
   snippet: photoorganoheterotrophic
-  notes: Review table classifies photoorganoheterotrophy by light with organic electron and carbon sources.
+  notes: Review table classifies photoorganoheterotrophy by light with organic electron
+    and carbon sources.
 causal_graphs:
 - graph_id: photoorganoheterotrophic_light_organic_electrons
   title: Photoorganoheterotrophic light and organic substrate use
@@ -29,7 +30,8 @@ causal_graphs:
     label: photoorganoheterotrophic
     node_type: TRAIT
     grounding: METPO:1000659
-    description: Trophic type using light energy and organic substrates for electrons and carbon.
+    description: Trophic type using light energy and organic substrates for electrons
+      and carbon.
   - node_id: light
     label: light
     node_type: ENVIRONMENTAL_FACTOR
@@ -68,6 +70,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: use of light
       notes: Supports light as the energy source in photoheterotrophy categories.
+    predicate_id: METPO:2000010
   - subject: photoorganoheterotrophic_trait
     predicate: uses electron donor
     object: organic_compound
@@ -75,7 +78,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
-      notes: Supports organic molecules as the electron source in photoorganoheterotrophic growth.
+      notes: Supports organic molecules as the electron source in photoorganoheterotrophic
+        growth.
+    predicate_id: METPO:2000009
   - subject: photoorganoheterotrophic_trait
     predicate: uses carbon source
     object: organic_compound
@@ -83,7 +88,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... carbon source
-      notes: Supports organic molecules as the carbon source in photoorganoheterotrophic growth.
+      notes: Supports organic molecules as the carbon source in photoorganoheterotrophic
+        growth.
+    predicate_id: METPO:2000006
   - subject: light
     predicate: captured by
     object: photosynthetic_reaction_center
@@ -108,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-0-12-809633-8.20672-9
       snippet: produce stable reductants ... proton motive force
       notes: Supports proton motive force formation by phototrophic electron transfer.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives production of
     object: atp
@@ -133,5 +141,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for light-driven energy conservation using organic compounds as electron and carbon sources.
+  changes: Added DOI-backed causal graph for light-driven energy conservation using
+    organic compounds as electron and carbon sources.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000010×1, METPO:2000009×1, METPO:2000006×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

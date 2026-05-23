@@ -17,13 +17,13 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: tolerate and grow at external pH values
-  notes: Supports acidotolerance as growth or survival under otherwise stressful
-    external pH conditions.
+  notes: Supports acidotolerance as growth or survival under otherwise stressful external
+    pH conditions.
 causal_graphs:
 - graph_id: acidotolerant_acid_stress_homeostasis
   title: Acidotolerant acid-stress pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking acidotolerance to acidic
-    exposure and maintenance of cytoplasmic pH near compatibility with growth.
+  description: Evidence-backed causal sketch linking acidotolerance to acidic exposure
+    and maintenance of cytoplasmic pH near compatibility with growth.
   nodes:
   - node_id: acidotolerant_trait
     label: acidotolerant
@@ -82,6 +82,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: bacterial pH homeostasis is a cell-wide physiological process
       notes: Supports pH homeostasis as a broad mechanism for acid tolerance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941434+00:00'
   curator: seed_from_metpo
@@ -91,6 +92,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed acidotolerant trait and added DOI-backed evidence and causal
-    graph for acid-stress pH homeostasis.
+  changes: Reviewed acidotolerant trait and added DOI-backed evidence and causal graph
+    for acid-stress pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

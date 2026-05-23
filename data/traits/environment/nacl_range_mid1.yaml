@@ -1,8 +1,7 @@
 identifier: METPO:1000470
 label: NaCl range mid1
-definition: A NaCl range phenotype in which the growth-supporting NaCl range
-  spans approximately 1–3% (w/v), characteristic of slight-halophilic or
-  halotolerant organisms.
+definition: A NaCl range phenotype in which the growth-supporting NaCl range spans
+  approximately 1–3% (w/v), characteristic of slight-halophilic or halotolerant organisms.
 definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -22,13 +21,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: slight halophile
-  notes: Osmoadaptation review supports the 1–3% NaCl growth range as the
-    slight-halophile/halotolerant category.
+  notes: Osmoadaptation review supports the 1–3% NaCl growth range as the slight-halophile/halotolerant
+    category.
 causal_graphs:
 - graph_id: nacl_range_mid1_slight_halophile
   title: NaCl-range-mid1 slight-halophile range
-  description: DOI-backed graph linking modest osmoadaptive tolerance to a
-    1–3% (w/v) NaCl growth range.
+  description: DOI-backed graph linking modest osmoadaptive tolerance to a 1–3% (w/v)
+    NaCl growth range.
   nodes:
   - node_id: nacl_range_mid1_trait
     label: NaCl range mid1
@@ -43,8 +42,7 @@ causal_graphs:
   - node_id: modest_osmoadaptive_tolerance
     label: modest osmoadaptive tolerance
     node_type: BIOLOGICAL_PROCESS
-    description: Osmoadaptive capacity supporting growth across seawater-range
-      NaCl.
+    description: Osmoadaptive capacity supporting growth across seawater-range NaCl.
   edges:
   - subject: modest_osmoadaptive_tolerance
     predicate: produces
@@ -54,16 +52,16 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: slight halophile
       notes: Supports the 1–3% range as the slight-halophile outcome.
+    predicate_id: METPO:2000202
   - subject: nacl_range_mid1_trait
     predicate: is a
     object: nacl_range
-    description: NaCl range mid1 is a quantitative bin of the NaCl-range
-      phenotype.
+    description: NaCl range mid1 is a quantitative bin of the NaCl-range phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
-      notes: Supports the 1–3% range as a value within the NaCl-range
-        distribution.
+      notes: Supports the 1–3% range as a value within the NaCl-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.836372+00:00'
   curator: seed_from_metpo
@@ -73,6 +71,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking modest
-    osmoadaptive tolerance to the slight-halophile NaCl-range bin.
+  changes: Added DOI-backed definition and causal graph linking modest osmoadaptive
+    tolerance to the slight-halophile NaCl-range bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

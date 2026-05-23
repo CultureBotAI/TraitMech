@@ -19,13 +19,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1111/j.1574-6976.2011.00298.x
   snippet: snapping cell division
-  notes: Corynebacterineae review supports snapping/V-form division producing
-    transient dumbbell pairs.
+  notes: Corynebacterineae review supports snapping/V-form division producing transient
+    dumbbell pairs.
 causal_graphs:
 - graph_id: dumbbell_shaped_snapping_division
   title: Dumbbell-shape snapping division intermediate
-  description: DOI-backed graph linking pre-separation septum constriction and
-    snapping/incomplete cell division to dumbbell cell pairs.
+  description: DOI-backed graph linking pre-separation septum constriction and snapping/incomplete
+    cell division to dumbbell cell pairs.
   nodes:
   - node_id: dumbbell_shaped_trait
     label: dumbbell shaped
@@ -48,13 +48,13 @@ causal_graphs:
   - subject: midcell_constriction
     predicate: produces
     object: dumbbell_intermediate
-    description: Strong midcell constriction creates a two-lobe pre-division
-      morphology.
+    description: Strong midcell constriction creates a two-lobe pre-division morphology.
     evidence:
     - reference: DOI:10.1111/j.1574-6976.2011.00298.x
       snippet: snapping cell division
-      notes: Supports midcell constriction as the proximate event preceding
-        dumbbell intermediates.
+      notes: Supports midcell constriction as the proximate event preceding dumbbell
+        intermediates.
+    predicate_id: METPO:2000202
   - subject: snapping_division
     predicate: stabilizes
     object: dumbbell_intermediate
@@ -81,6 +81,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking midcell
-    constriction and snapping division to dumbbell cell morphology.
+  changes: Added DOI-backed definition and causal graph linking midcell constriction
+    and snapping division to dumbbell cell morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

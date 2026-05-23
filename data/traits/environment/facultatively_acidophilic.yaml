@@ -24,8 +24,8 @@ evidence:
 causal_graphs:
 - graph_id: facultatively_acidophilic_ph_homeostasis
   title: Facultative acidophily pH homeostasis mechanism
-  description: Evidence-backed causal sketch linking facultative acidophily to
-    acidic growth, near-neutral growth capacity, and inducible pH homeostasis.
+  description: Evidence-backed causal sketch linking facultative acidophily to acidic
+    growth, near-neutral growth capacity, and inducible pH homeostasis.
   nodes:
   - node_id: facultatively_acidophilic_trait
     label: facultatively acidophilic
@@ -40,8 +40,8 @@ causal_graphs:
   - node_id: near_neutral_external_ph
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
-    description: External pH near neutrality that facultative acidophiles can
-      tolerate or grow in.
+    description: External pH near neutrality that facultative acidophiles can tolerate
+      or grow in.
   - node_id: proton
     label: proton
     node_type: CHEMICAL
@@ -50,18 +50,16 @@ causal_graphs:
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
-    description: Maintenance of intracellular pH across acidic and near-neutral
-      environments.
+    description: Maintenance of intracellular pH across acidic and near-neutral environments.
   - node_id: proton_export_pumps
     label: proton export pumps and antiporters
     node_type: GENE_OR_PROTEIN
-    description: Transport systems proposed to remove protons or exchange ions
-      during acid stress.
+    description: Transport systems proposed to remove protons or exchange ions during
+      acid stress.
   - node_id: cytoplasmic_buffering
     label: cytoplasmic buffering
     node_type: BIOLOGICAL_PROCESS
-    description: Cellular buffering and proton-consuming reactions that mitigate
-      acidification.
+    description: Cellular buffering and proton-consuming reactions that mitigate acidification.
   edges:
   - subject: acidic_external_ph
     predicate: selects for
@@ -91,31 +89,32 @@ causal_graphs:
   - subject: proton_export_pumps
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
-    description: Proton export and antiport systems contribute to acid-stress
-      homeostasis.
+    description: Proton export and antiport systems contribute to acid-stress homeostasis.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: proton export pumps and antiporters
       notes: Supports transporter-mediated pH homeostasis mechanisms.
+    predicate_id: RO:0002326
   - subject: cytoplasmic_buffering
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
-    description: Buffering and proton-consuming reactions reduce cytoplasmic
-      acidification.
+    description: Buffering and proton-consuming reactions reduce cytoplasmic acidification.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: cytoplasmic buffering
       notes: Supports buffering as a proposed acid resistance mechanism.
+    predicate_id: RO:0002326
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: facultatively_acidophilic_trait
-    description: Growth across acidic and near-neutral pH requires intracellular
-      pH control.
+    description: Growth across acidic and near-neutral pH requires intracellular pH
+      control.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: robust mechanisms for cytoplasmic pH homeostasis
       notes: Supports cytoplasmic pH homeostasis for growth outside the preferred
         cytoplasmic pH range.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940835+00:00'
   curator: seed_from_metpo
@@ -128,4 +127,10 @@ curation_history:
   changes: Reviewed facultatively acidophilic trait and added DOI-backed evidence
     and causal graph for acidic and near-neutral pH growth capacity. Near-neutral
     growth evidence is species-level and should be treated as qualified.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, RO:0002327×1).
   llm_assisted: true

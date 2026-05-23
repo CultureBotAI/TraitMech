@@ -1,8 +1,7 @@
 identifier: METPO:1000475
 label: pH delta mid1
-definition: A pH delta phenotype with a growth-supporting pH breadth of
-  approximately 2–3 pH units, characteristic of organisms with moderate
-  pH-tolerance breadth.
+definition: A pH delta phenotype with a growth-supporting pH breadth of approximately
+  2–3 pH units, characteristic of organisms with moderate pH-tolerance breadth.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -16,13 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: pH homeostasis
-  notes: pH-homeostasis review supports moderate pH-homeostasis flexibility
-    as common among non-extreme microorganisms.
+  notes: pH-homeostasis review supports moderate pH-homeostasis flexibility as common
+    among non-extreme microorganisms.
 causal_graphs:
 - graph_id: ph_delta_mid1_moderate_breadth
   title: pH-delta-mid1 moderate-breadth pH homeostasis
-  description: DOI-backed graph linking moderate pH-homeostasis flexibility
-    to a pH growth breadth of approximately 2–3 pH units.
+  description: DOI-backed graph linking moderate pH-homeostasis flexibility to a pH
+    growth breadth of approximately 2–3 pH units.
   nodes:
   - node_id: ph_delta_mid1_trait
     label: pH delta mid1
@@ -37,29 +36,28 @@ causal_graphs:
   - node_id: moderate_ph_homeostasis
     label: moderate pH-homeostasis flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Mid-range capacity to remodel proton extrusion and envelope
-      buffering across a few pH units.
+    description: Mid-range capacity to remodel proton extrusion and envelope buffering
+      across a few pH units.
   edges:
   - subject: moderate_ph_homeostasis
     predicate: produces
     object: ph_delta_mid1_trait
-    description: Moderate pH-homeostasis flexibility yields a 2–3 pH-unit
-      pH-delta breadth.
+    description: Moderate pH-homeostasis flexibility yields a 2–3 pH-unit pH-delta
+      breadth.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
-      notes: Supports moderate flexibility as the basis of an intermediate
-        breadth.
+      notes: Supports moderate flexibility as the basis of an intermediate breadth.
+    predicate_id: METPO:2000202
   - subject: ph_delta_mid1_trait
     predicate: is a
     object: ph_delta
-    description: pH delta mid1 is a quantitative bin of the pH-delta
-      phenotype.
+    description: pH delta mid1 is a quantitative bin of the pH-delta phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH
-      notes: Supports the 2–3 unit breadth as a value within the pH-delta
-        distribution.
+      notes: Supports the 2–3 unit breadth as a value within the pH-delta distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838958+00:00'
   curator: seed_from_metpo
@@ -69,6 +67,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking moderate
-    pH-homeostasis flexibility to the moderate-breadth pH-delta-mid1 bin.
+  changes: Added DOI-backed definition and causal graph linking moderate pH-homeostasis
+    flexibility to the moderate-breadth pH-delta-mid1 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

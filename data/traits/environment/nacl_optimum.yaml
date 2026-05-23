@@ -13,18 +13,17 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: optimal NaCl
-  notes: Osmoadaptation review supports the NaCl concentration at which growth
-    rate is maximal as a standard halophily descriptor.
+  notes: Osmoadaptation review supports the NaCl concentration at which growth rate
+    is maximal as a standard halophily descriptor.
 - reference: DOI:10.1186/1746-1448-4-2
   snippet: ways they cope with the high salt concentrations
-  notes: Saline-Systems review supports osmotic balance at the optimal NaCl as
-    the mechanistic basis of the NaCl-optimum phenotype.
+  notes: Saline-Systems review supports osmotic balance at the optimal NaCl as the
+    mechanistic basis of the NaCl-optimum phenotype.
 causal_graphs:
 - graph_id: nacl_optimum_balanced_osmoadaptation
   title: NaCl-optimum balanced osmoadaptation
-  description: DOI-backed graph linking ambient NaCl, osmotic balance via
-    compatible solutes and ion homeostasis, and maximal growth rate to the
-    NaCl-optimum phenotype.
+  description: DOI-backed graph linking ambient NaCl, osmotic balance via compatible
+    solutes and ion homeostasis, and maximal growth rate to the NaCl-optimum phenotype.
   nodes:
   - node_id: nacl_optimum_trait
     label: NaCl optimum
@@ -38,13 +37,13 @@ causal_graphs:
   - node_id: osmotic_balance
     label: osmotic balance
     node_type: BIOLOGICAL_PROCESS
-    description: Steady-state matching of intracellular osmotic activity to the
-      external salt concentration.
+    description: Steady-state matching of intracellular osmotic activity to the external
+      salt concentration.
   - node_id: compatible_solutes
     label: compatible solutes
     node_type: CHEMICAL
-    description: Organic osmolytes (ectoine, glycine betaine) maintaining
-      cytoplasmic osmotic activity.
+    description: Organic osmolytes (ectoine, glycine betaine) maintaining cytoplasmic
+      osmotic activity.
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
@@ -66,8 +65,8 @@ causal_graphs:
   - subject: compatible_solutes
     predicate: maintains
     object: osmotic_balance
-    description: Compatible-solute accumulation maintains osmotic balance at the
-      optimal NaCl.
+    description: Compatible-solute accumulation maintains osmotic balance at the optimal
+      NaCl.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: synthesize organic osmotic solutes
@@ -75,8 +74,7 @@ causal_graphs:
   - subject: na_h_antiporters
     predicate: supports
     object: osmotic_balance
-    description: Na+/H+ antiporters support ion homeostasis underlying osmotic
-      balance.
+    description: Na+/H+ antiporters support ion homeostasis underlying osmotic balance.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: Na+/H+ antiporters
@@ -84,13 +82,14 @@ causal_graphs:
   - subject: osmotic_balance
     predicate: enables
     object: maximal_growth_rate
-    description: Maintained osmotic balance enables peak growth at the optimal
-      NaCl concentration.
+    description: Maintained osmotic balance enables peak growth at the optimal NaCl
+      concentration.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: optimum
       notes: Supports peak growth at the optimal NaCl as the operational definition
         of NaCl optimum.
+    predicate_id: RO:0002327
   - subject: maximal_growth_rate
     predicate: manifests as
     object: nacl_optimum_trait
@@ -110,6 +109,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph linking ambient NaCl, osmotic balance via
-    compatible solutes and Na+/H+ antiporters, and maximal growth rate to the
-    NaCl-optimum phenotype.
+    compatible solutes and Na+/H+ antiporters, and maximal growth rate to the NaCl-optimum
+    phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

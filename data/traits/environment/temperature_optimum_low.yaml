@@ -1,8 +1,8 @@
 identifier: METPO:1000442
 label: temperature optimum low
 definition: A temperature optimum phenotype with the best-growth ambient temperature
-  between approximately 10 and 22 °C, characteristic of psychrophilic or
-  psychrotolerant physiology.
+  between approximately 10 and 22 °C, characteristic of psychrophilic or psychrotolerant
+  physiology.
 definition_source: DOI:10.1038/sj.embor.7400662
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -22,13 +22,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: growing well at temperatures around the freezing point of water
-  notes: Psychrophile review supports low-but-not-freezing optima as the
-    psychrophile / psychrotolerant category.
+  notes: Psychrophile review supports low-but-not-freezing optima as the psychrophile
+    / psychrotolerant category.
 causal_graphs:
 - graph_id: temperature_optimum_low_psychrotolerant_setpoint
   title: Temperature-optimum-low psychrotolerant setpoint
-  description: DOI-backed graph linking cold-tolerant membrane and enzyme
-    adaptation to a temperature optimum between 10 and 22 °C.
+  description: DOI-backed graph linking cold-tolerant membrane and enzyme adaptation
+    to a temperature optimum between 10 and 22 °C.
   nodes:
   - node_id: temperature_optimum_low_trait
     label: temperature optimum low
@@ -47,8 +47,8 @@ causal_graphs:
   - node_id: psychrotolerant_adaptation
     label: psychrotolerant adaptation
     node_type: BIOLOGICAL_PROCESS
-    description: Mild cold-adaptation of membrane lipid composition and enzyme
-      flexibility sustaining function at cool temperatures.
+    description: Mild cold-adaptation of membrane lipid composition and enzyme flexibility
+      sustaining function at cool temperatures.
   edges:
   - subject: cool_environment
     predicate: engages
@@ -57,28 +57,28 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
-      notes: Supports cool-temperature membrane-stress responses as the basis
-        of cool-range optima.
+      notes: Supports cool-temperature membrane-stress responses as the basis of cool-range
+        optima.
   - subject: psychrotolerant_adaptation
     predicate: produces
     object: temperature_optimum_low_trait
-    description: Psychrotolerant adaptation yields a 10–22 °C temperature
-      optimum.
+    description: Psychrotolerant adaptation yields a 10–22 °C temperature optimum.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports homoviscous adaptation as the mechanism setting cool-range
-        optima.
+      notes: Supports homoviscous adaptation as the mechanism setting cool-range optima.
+    predicate_id: METPO:2000202
   - subject: temperature_optimum_low_trait
     predicate: is a
     object: temperature_optimum
-    description: Temperature optimum low is a quantitative bin of the
-      temperature-optimum phenotype.
+    description: Temperature optimum low is a quantitative bin of the temperature-optimum
+      phenotype.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: growing well at temperatures around the freezing point of water
       notes: Supports a 10–22 °C optimum as a value within the temperature-optimum
         distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.819249+00:00'
   curator: seed_from_metpo
@@ -88,6 +88,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking psychrotolerant
-    adaptation to the temperature-optimum-low bin.
+  changes: Added DOI-backed definition and causal graph linking psychrotolerant adaptation
+    to the temperature-optimum-low bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

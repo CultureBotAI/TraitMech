@@ -15,21 +15,20 @@ synonyms:
 evidence:
 - reference: DOI:10.1128/JB.187.1.54-64.2005
   snippet: changes shape, from a rod to coccobacillus
-  notes: Supports coccobacillus morphology as a short-rod state associated with
-    cell-shape control in representative bacteria.
+  notes: Supports coccobacillus morphology as a short-rod state associated with cell-shape
+    control in representative bacteria.
 causal_graphs:
 - graph_id: coccobacillus_shaped_short_rod_morphogenesis
   title: Coccobacillus short-rod morphogenesis mechanism
-  description: Evidence-backed causal sketch linking coccobacillus shape to
-    peptidoglycan synthesis, MreB-associated elongation, septal growth, and reduced
-    length-to-width ratio.
+  description: Evidence-backed causal sketch linking coccobacillus shape to peptidoglycan
+    synthesis, MreB-associated elongation, septal growth, and reduced length-to-width
+    ratio.
   nodes:
   - node_id: coccobacillus_shaped_trait
     label: coccobacillus shaped
     node_type: TRAIT
     grounding: METPO:1000688
-    description: Short, plump rod morphology intermediate between coccus and
-      bacillus.
+    description: Short, plump rod morphology intermediate between coccus and bacillus.
   - node_id: mreB
     label: MreB
     node_type: GENE_OR_PROTEIN
@@ -68,13 +67,14 @@ causal_graphs:
   - subject: septal_growth
     predicate: contributes to
     object: short_rod_geometry
-    description: Division-associated septal growth contributes to the short-rod
-      intermediate geometry.
+    description: Division-associated septal growth contributes to the short-rod intermediate
+      geometry.
     evidence:
     - reference: DOI:10.1128/JB.187.1.54-64.2005
       snippet: role at mid-cell ... in early septation
-      notes: Supports a septation-linked role for MreB in representative
-        coccobacillus-forming cells.
+      notes: Supports a septation-linked role for MreB in representative coccobacillus-forming
+        cells.
+    predicate_id: RO:0002326
   - subject: short_rod_geometry
     predicate: produces
     object: coccobacillus_shaped_trait
@@ -83,6 +83,7 @@ causal_graphs:
     - reference: DOI:10.1128/JB.187.1.54-64.2005
       snippet: from a rod to coccobacillus
       notes: Supports the trait endpoint as a short-rod morphology.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.897227+00:00'
   curator: seed_from_metpo
@@ -92,6 +93,12 @@ curation_history:
 - timestamp: '2026-05-11T20:05:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for MreB, peptidoglycan
-    synthesis, septal growth, and short-rod coccobacillus geometry.
+  changes: Added DOI-backed definition and causal graph for MreB, peptidoglycan synthesis,
+    septal growth, and short-rod coccobacillus geometry.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, METPO:2000202×1).
   llm_assisted: true

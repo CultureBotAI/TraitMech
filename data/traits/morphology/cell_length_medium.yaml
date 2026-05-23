@@ -1,7 +1,7 @@
 identifier: METPO:1000885
 label: cell length medium
-definition: A cell-length phenotype in which the longer cell dimension lies
-  approximately between 2 and 3 micrometers.
+definition: A cell-length phenotype in which the longer cell dimension lies approximately
+  between 2 and 3 micrometers.
 definition_source: DOI:10.1126/science.aaa1313
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1126/science.aaa1313
   snippet: cell size scales with growth rate
-  notes: Growth-rate-dependent size law supports medium cell length as a typical
-    outcome at moderate growth rates.
+  notes: Growth-rate-dependent size law supports medium cell length as a typical outcome
+    at moderate growth rates.
 causal_graphs:
 - graph_id: cell_length_medium_growth_rate
   title: Medium cell-length under moderate growth
@@ -58,6 +58,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.aaa1313
       snippet: cell size scales with growth rate
       notes: Supports medium length as the expected size at moderate growth rates.
+    predicate_id: METPO:2000202
   - subject: cell_length_medium_trait
     predicate: is a
     object: cell_length_trait
@@ -65,8 +66,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.cub.2014.07.022
       snippet: cell size is tightly controlled
-      notes: Supports medium length as a value within the regulated cell-length
-        distribution.
+      notes: Supports medium length as a value within the regulated cell-length distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.920338+00:00'
   curator: seed_from_metpo
@@ -76,6 +77,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking moderate growth rate and the
-    growth-rate size law to medium cell length (2–3 μm).
+  changes: Added DOI-backed causal graph linking moderate growth rate and the growth-rate
+    size law to medium cell length (2–3 μm).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

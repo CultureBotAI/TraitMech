@@ -1,8 +1,8 @@
 identifier: METPO:1000485
 label: temperature delta mid1
-definition: A temperature delta phenotype with a growth-supporting temperature
-  breadth of approximately 10–20 °C, characteristic of organisms with moderate
-  thermal-tolerance breadth.
+definition: A temperature delta phenotype with a growth-supporting temperature breadth
+  of approximately 10–20 °C, characteristic of organisms with moderate thermal-tolerance
+  breadth.
 definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -16,13 +16,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
-  notes: Membrane-adaptation review supports moderate homoviscous remodeling
-    capacity as common among generalist mesophiles.
+  notes: Membrane-adaptation review supports moderate homoviscous remodeling capacity
+    as common among generalist mesophiles.
 causal_graphs:
 - graph_id: temperature_delta_mid1_moderate_breadth
   title: Temperature-delta-mid1 moderate-breadth thermal adaptation
-  description: DOI-backed graph linking moderate thermal-adaptation flexibility
-    to a 10–20 °C temperature growth breadth.
+  description: DOI-backed graph linking moderate thermal-adaptation flexibility to
+    a 10–20 °C temperature growth breadth.
   nodes:
   - node_id: temperature_delta_mid1_trait
     label: temperature delta mid1
@@ -37,29 +37,31 @@ causal_graphs:
   - node_id: moderate_thermal_adaptation
     label: moderate thermal-adaptation flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Mid-range capacity to remodel membrane lipids and enzymes
-      across temperature shifts of ~10–20 °C.
+    description: Mid-range capacity to remodel membrane lipids and enzymes across
+      temperature shifts of ~10–20 °C.
   edges:
   - subject: moderate_thermal_adaptation
     predicate: produces
     object: temperature_delta_mid1_trait
-    description: Moderate thermal-adaptation flexibility yields a 10–20 °C
-      temperature-delta breadth.
+    description: Moderate thermal-adaptation flexibility yields a 10–20 °C temperature-delta
+      breadth.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports moderate remodeling flexibility as the basis of an
-        intermediate breadth.
+      notes: Supports moderate remodeling flexibility as the basis of an intermediate
+        breadth.
+    predicate_id: METPO:2000202
   - subject: temperature_delta_mid1_trait
     predicate: is a
     object: temperature_delta
-    description: Temperature delta mid1 is a quantitative bin of the
-      temperature-delta phenotype.
+    description: Temperature delta mid1 is a quantitative bin of the temperature-delta
+      phenotype.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports the 10–20 °C breadth as a value within the
-        temperature-delta distribution.
+      notes: Supports the 10–20 °C breadth as a value within the temperature-delta
+        distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844372+00:00'
   curator: seed_from_metpo
@@ -69,6 +71,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking moderate
-    thermal-adaptation flexibility to the temperature-delta-mid1 bin.
+  changes: Added DOI-backed definition and causal graph linking moderate thermal-adaptation
+    flexibility to the temperature-delta-mid1 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

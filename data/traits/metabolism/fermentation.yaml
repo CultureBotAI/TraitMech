@@ -20,7 +20,8 @@ evidence:
   notes: Supports donor/acceptor definition of anaerobic bacterial fermentation.
 - reference: DOI:10.1111/1751-7915.13746
   snippet: Substrate-level phosphorylation is one of the main sources of energy
-  notes: Supports substrate-level phosphorylation as a major fermentative energy-conservation mechanism.
+  notes: Supports substrate-level phosphorylation as a major fermentative energy-conservation
+    mechanism.
 causal_graphs:
 - graph_id: fermentation_redox_energy
   title: Fermentation redox and substrate-level phosphorylation
@@ -58,10 +59,12 @@ causal_graphs:
   - subject: fermentation_trait
     predicate: uses
     object: organic_substrate
-    description: Fermentation uses an organic substrate as both electron donor and acceptor source.
+    description: Fermentation uses an organic substrate as both electron donor and
+      acceptor source.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
-      snippet: substrate of a fermentation has to serve as electron donor as well as acceptor
+      snippet: substrate of a fermentation has to serve as electron donor as well
+        as acceptor
       notes: Supports organic substrate donor/acceptor role.
   - subject: organic_substrate
     predicate: oxidation reduces
@@ -82,7 +85,8 @@ causal_graphs:
   - subject: fermentation_trait
     predicate: conserves energy by
     object: substrate_level_phosphorylation
-    description: Substrate-level phosphorylation is a major fermentative energy-conservation route.
+    description: Substrate-level phosphorylation is a major fermentative energy-conservation
+      route.
     evidence:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: main sources of energy under fermentative conditions
@@ -95,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: energy-rich bonds (for example via substrate-level phosphorylation)
       notes: Supports SLP as ATP-linked energy conservation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.935638+00:00'
   curator: seed_from_metpo
@@ -104,5 +109,12 @@ curation_history:
 - timestamp: '2026-05-07T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for fermentation redox balancing and substrate-level phosphorylation.
+  changes: Added DOI-backed causal graph for fermentation redox balancing and substrate-level
+    phosphorylation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

@@ -1,8 +1,7 @@
 identifier: METPO:1000682
 label: spore shaped
-definition: A cell shape in which an organism or differentiated cell has an
-  endospore-like morphology, reflecting a dormant spore body with specialized
-  protective layers.
+definition: A cell shape in which an organism or differentiated cell has an endospore-like
+  morphology, reflecting a dormant spore body with specialized protective layers.
 definition_source: DOI:10.1038/nrmicro2921
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -17,14 +16,13 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1038/nrmicro2921
   snippet: structure of the endospore coat
-  notes: Supports endospore morphology as a differentiated structure with
-    specialized surface layers.
+  notes: Supports endospore morphology as a differentiated structure with specialized
+    surface layers.
 causal_graphs:
 - graph_id: spore_shaped_endospore_layers
   title: Spore-shape endospore layer mechanism
-  description: Evidence-backed causal sketch linking spore-shaped morphology to
-    forespore engulfment, cortex formation, coat assembly, and dehydrated spore-core
-    maturation.
+  description: Evidence-backed causal sketch linking spore-shaped morphology to forespore
+    engulfment, cortex formation, coat assembly, and dehydrated spore-core maturation.
   nodes:
   - node_id: spore_shaped_trait
     label: spore shaped
@@ -79,12 +77,12 @@ causal_graphs:
   - subject: dehydrated_spore_core
     predicate: contributes to
     object: mature_spore_body
-    description: Core dehydration contributes to mature spore architecture and
-      resistance.
+    description: Core dehydration contributes to mature spore architecture and resistance.
     evidence:
     - reference: DOI:10.1111/j.1365-2672.2005.02736.x
       snippet: resistance of spores of Bacillus species
       notes: Supports spore core properties as part of resistant spore morphology.
+    predicate_id: RO:0002326
   - subject: mature_spore_body
     predicate: manifests as
     object: spore_shaped_trait
@@ -105,4 +103,10 @@ curation_history:
   changes: Added DOI-backed definition and causal graph for forespore engulfment,
     cortex formation, coat assembly, dehydrated spore core, and mature spore-body
     morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

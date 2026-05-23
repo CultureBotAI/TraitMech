@@ -25,8 +25,8 @@ evidence:
 causal_graphs:
 - graph_id: obligate_anaerobe_oxygen_toxicity
   title: Obligate anaerobe oxygen-toxicity mechanism
-  description: Evidence-backed causal sketch linking obligate anaerobiosis to
-    oxygen-blocked growth and oxygen-sensitive metabolic chemistry.
+  description: Evidence-backed causal sketch linking obligate anaerobiosis to oxygen-blocked
+    growth and oxygen-sensitive metabolic chemistry.
   nodes:
   - node_id: obligate_anaerobic_trait
     label: obligately anaerobic
@@ -59,17 +59,17 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: oxygen blocks their growth
-      notes: Review identifies blocked growth as the defining trait of obligate
-        anaerobes.
+      notes: Review identifies blocked growth as the defining trait of obligate anaerobes.
   - subject: anaerobic_metabolism
     predicate: depends on
     object: low_potential_metal_centres
-    description: Obligate anaerobic metabolism often relies on oxygen-sensitive
-      radical chemistry and low-potential metal centers.
+    description: Obligate anaerobic metabolism often relies on oxygen-sensitive radical
+      chemistry and low-potential metal centers.
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: radical chemistry and low-potential metal centres
       notes: Supports low-potential metal centers as anaerobic metabolic features.
+    predicate_id: RO:0002502
   - subject: molecular_oxygen
     predicate: poisons
     object: low_potential_metal_centres
@@ -78,13 +78,12 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: direct poisoning by molecular oxygen and ROS
-      notes: Supports oxygen-sensitive catalytic sites as a mechanism of growth
-        inhibition.
+      notes: Supports oxygen-sensitive catalytic sites as a mechanism of growth inhibition.
   - subject: reactive_oxygen_species
     predicate: damages
     object: low_potential_metal_centres
-    description: ROS provide an additional route for damage to oxygen-sensitive
-      anaerobic enzymes.
+    description: ROS provide an additional route for damage to oxygen-sensitive anaerobic
+      enzymes.
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: direct poisoning by molecular oxygen and ROS
@@ -109,4 +108,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for oxygen toxicity in obligate anaerobes.
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002502×1).
   llm_assisted: true

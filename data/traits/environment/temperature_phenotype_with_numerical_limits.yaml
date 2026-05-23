@@ -11,18 +11,18 @@ parent_traits:
 evidence:
 - reference: DOI:10.1016/s0300-9629(97)00003-0
   snippet: adapted to environments of high temperature
-  notes: Thermophile-adaptation review supports temperature as the quantitative
-    axis defining psychrophile, mesophile, and thermophile classification.
+  notes: Thermophile-adaptation review supports temperature as the quantitative axis
+    defining psychrophile, mesophile, and thermophile classification.
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: growing well at temperatures around the freezing point of water
-  notes: Psychrophile review supports the low end of the temperature axis as
-    a distinct quantitative phenotype.
+  notes: Psychrophile review supports the low end of the temperature axis as a distinct
+    quantitative phenotype.
 causal_graphs:
 - graph_id: temperature_phenotype_numerical_axis
   title: Temperature phenotype numerical-limits axis
-  description: DOI-backed graph linking ambient temperature to the three
-    numerical-limit measurement types (optimum, range, delta) that together
-    classify psychrophile, mesophile, and thermophile physiology.
+  description: DOI-backed graph linking ambient temperature to the three numerical-limit
+    measurement types (optimum, range, delta) that together classify psychrophile,
+    mesophile, and thermophile physiology.
   nodes:
   - node_id: temperature_phenotype_trait
     label: temperature phenotype with numerical limits
@@ -52,13 +52,13 @@ causal_graphs:
   - subject: ambient_temperature_axis
     predicate: defines
     object: temperature_phenotype_trait
-    description: Ambient temperature is the quantitative axis defining
-      temperature phenotypes.
+    description: Ambient temperature is the quantitative axis defining temperature
+      phenotypes.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports ambient temperature as the descriptor axis for microbial
-        temperature phenotypes.
+      notes: Supports ambient temperature as the descriptor axis for microbial temperature
+        phenotypes.
   - subject: temperature_optimum
     predicate: is a
     object: temperature_phenotype_trait
@@ -66,8 +66,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports temperature optima as the set-point at which membrane
-        and protein adaptations maintain growth.
+      notes: Supports temperature optima as the set-point at which membrane and protein
+        adaptations maintain growth.
+    predicate_id: rdfs:subClassOf
   - subject: temperature_range
     predicate: is a
     object: temperature_phenotype_trait
@@ -75,8 +76,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: growing well at temperatures around the freezing point of water
-      notes: Supports temperature ranges as the span of temperatures sustaining
-        growth.
+      notes: Supports temperature ranges as the span of temperatures sustaining growth.
+    predicate_id: rdfs:subClassOf
   - subject: temperature_delta
     predicate: is a
     object: temperature_phenotype_trait
@@ -84,8 +85,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports temperature delta as a derived breadth descriptor over
-        the temperature axis.
+      notes: Supports temperature delta as a derived breadth descriptor over the temperature
+        axis.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846837+00:00'
   curator: seed_from_metpo
@@ -95,6 +97,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking the ambient temperature axis
-    to temperature optimum, range, and delta measurement types.
+  changes: Added DOI-backed causal graph linking the ambient temperature axis to temperature
+    optimum, range, and delta measurement types.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×3).
   llm_assisted: true

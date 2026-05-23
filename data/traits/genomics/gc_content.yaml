@@ -12,19 +12,18 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1038/nrg2358
   snippet: GC content
-  notes: Bacterial-genome review supports GC content as a fundamental
-    genome-composition descriptor varying widely across prokaryotic lineages.
+  notes: Bacterial-genome review supports GC content as a fundamental genome-composition
+    descriptor varying widely across prokaryotic lineages.
 - reference: DOI:10.1186/1471-2148-10-374
   snippet: GC-biased gene conversion
-  notes: Bacterial-GC-content evolution review supports GC-biased gene
-    conversion and mutation bias as the mechanistic drivers of genomic GC
-    composition.
+  notes: Bacterial-GC-content evolution review supports GC-biased gene conversion
+    and mutation bias as the mechanistic drivers of genomic GC composition.
 causal_graphs:
 - graph_id: gc_content_composition_drivers
   title: GC content composition drivers
-  description: DOI-backed graph linking mutation bias, GC-biased gene
-    conversion, and selection on codon usage to the genome-wide GC content
-    phenotype, with `is a` edges to the four METPO GC-content bins.
+  description: DOI-backed graph linking mutation bias, GC-biased gene conversion,
+    and selection on codon usage to the genome-wide GC content phenotype, with `is
+    a` edges to the four METPO GC-content bins.
   nodes:
   - node_id: gc_content_trait
     label: GC content
@@ -34,23 +33,23 @@ causal_graphs:
   - node_id: genomic_dna
     label: genomic DNA
     node_type: CELLULAR_LOCALIZATION
-    description: Bacterial or archaeal chromosomal DNA on which GC composition
-      is measured.
+    description: Bacterial or archaeal chromosomal DNA on which GC composition is
+      measured.
   - node_id: mutation_bias
     label: GC/AT mutation bias
     node_type: BIOLOGICAL_PROCESS
-    description: Asymmetric substitution rates between GC and AT base pairs
-      across the genome.
+    description: Asymmetric substitution rates between GC and AT base pairs across
+      the genome.
   - node_id: gc_biased_gene_conversion
     label: GC-biased gene conversion
     node_type: BIOLOGICAL_PROCESS
-    description: Recombination-associated process favoring fixation of GC
-      alleles at heterozygous sites.
+    description: Recombination-associated process favoring fixation of GC alleles
+      at heterozygous sites.
   - node_id: codon_usage_selection
     label: selection on codon usage
     node_type: BIOLOGICAL_PROCESS
-    description: Translational and gene-expression selection shaping
-      synonymous-codon GC content.
+    description: Translational and gene-expression selection shaping synonymous-codon
+      GC content.
   - node_id: gc_high_bin
     label: GC high
     node_type: TRAIT
@@ -75,8 +74,8 @@ causal_graphs:
   - subject: genomic_dna
     predicate: carries
     object: gc_content_trait
-    description: Genomic DNA is the substrate on which the GC content
-      phenotype is measured.
+    description: Genomic DNA is the substrate on which the GC content phenotype is
+      measured.
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
@@ -84,8 +83,8 @@ causal_graphs:
   - subject: mutation_bias
     predicate: shapes
     object: gc_content_trait
-    description: Asymmetric GC/AT mutation bias shapes the equilibrium
-      genome-wide GC content.
+    description: Asymmetric GC/AT mutation bias shapes the equilibrium genome-wide
+      GC content.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: mutation bias
@@ -93,23 +92,24 @@ causal_graphs:
   - subject: gc_biased_gene_conversion
     predicate: shapes
     object: gc_content_trait
-    description: GC-biased gene conversion elevates GC content at
-      recombination hotspots and across the genome.
+    description: GC-biased gene conversion elevates GC content at recombination hotspots
+      and across the genome.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: GC-biased gene conversion
-      notes: Supports GC-biased gene conversion as a recombination-driven
-        contributor to GC content.
+      notes: Supports GC-biased gene conversion as a recombination-driven contributor
+        to GC content.
   - subject: codon_usage_selection
     predicate: contributes to
     object: gc_content_trait
-    description: Selection on synonymous codon usage contributes to
-      genome-wide GC content patterns.
+    description: Selection on synonymous codon usage contributes to genome-wide GC
+      content patterns.
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: codon usage
-      notes: Supports translational selection on codon usage as a contributor
-        to GC composition.
+      notes: Supports translational selection on codon usage as a contributor to GC
+        composition.
+    predicate_id: RO:0002326
   - subject: gc_high_bin
     predicate: is a
     object: gc_content_trait
@@ -117,8 +117,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the binned phenotype as a value within the GC-content
-        distribution.
+      notes: Supports the binned phenotype as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
   - subject: gc_low_bin
     predicate: is a
     object: gc_content_trait
@@ -126,8 +126,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the binned phenotype as a value within the GC-content
-        distribution.
+      notes: Supports the binned phenotype as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
   - subject: gc_mid1_bin
     predicate: is a
     object: gc_content_trait
@@ -135,8 +135,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the binned phenotype as a value within the GC-content
-        distribution.
+      notes: Supports the binned phenotype as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
   - subject: gc_mid2_bin
     predicate: is a
     object: gc_content_trait
@@ -144,8 +144,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the binned phenotype as a value within the GC-content
-        distribution.
+      notes: Supports the binned phenotype as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811180+00:00'
   curator: seed_from_metpo
@@ -155,7 +155,13 @@ curation_history:
 - timestamp: '2026-05-13T13:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking mutation bias, GC-biased
-    gene conversion, and codon-usage selection to the GC-content phenotype,
-    with is-a edges to the four METPO GC-content bins.
+  changes: Added DOI-backed causal graph linking mutation bias, GC-biased gene conversion,
+    and codon-usage selection to the GC-content phenotype, with is-a edges to the
+    four METPO GC-content bins.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×4, RO:0002326×1).
   llm_assisted: true

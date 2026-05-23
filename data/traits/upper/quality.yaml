@@ -9,17 +9,16 @@ mapping_status: REVIEWED
 evidence:
 - reference: DOI:10.1186/gb-2010-11-1-r2
   snippet: ontology of qualities termed Phenotype and Trait ontology
-  notes: Supports quality as an upper class used to construct phenotype
-    descriptions.
+  notes: Supports quality as an upper class used to construct phenotype descriptions.
 - reference: DOI:10.1186/gb-2010-11-1-r2
   snippet: specific characteristic or quality of that entity
   notes: Supports qualities as entity-dependent phenotype descriptors.
 causal_graphs:
 - graph_id: quality_upper_child_context
   title: Quality upper-class child context
-  description: DOI-backed upper-ontology context graph linking quality to
-    phenotype and biosafety-level child classes while excluding the genomic GC
-    content child from this batch.
+  description: DOI-backed upper-ontology context graph linking quality to phenotype
+    and biosafety-level child classes while excluding the genomic GC content child
+    from this batch.
   nodes:
   - node_id: quality_trait
     label: quality
@@ -40,8 +39,8 @@ causal_graphs:
     label: biosafety level
     node_type: TRAIT
     grounding: METPO:1001101
-    description: Ecology child class that classifies biological-agent hazard and
-      containment level.
+    description: Ecology child class that classifies biological-agent hazard and containment
+      level.
   edges:
   - subject: quality_trait
     predicate: characterizes
@@ -59,16 +58,18 @@ causal_graphs:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: Phenotype and Trait ontology
       notes: Supports phenotype and trait descriptions using quality classes.
+    predicate_id: rdfs:subClassOf
   - subject: biosafety_level_trait
     predicate: is a
     object: quality_trait
-    description: Biosafety level is a reviewed non-genomic child quality in
-      TraitMech's ecology category.
+    description: Biosafety level is a reviewed non-genomic child quality in TraitMech's
+      ecology category.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
-      notes: Supports hazard-related biological-agent properties as inputs to
-        biosafety-level classification.
+      notes: Supports hazard-related biological-agent properties as inputs to biosafety-level
+        classification.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812123+00:00'
   curator: seed_from_metpo
@@ -78,7 +79,12 @@ curation_history:
 - timestamp: '2026-05-15T00:35:00-07:00'
   curator: codex
   action: CURATED_UPPER_CONTEXT
-  changes: Reviewed quality as an upper classifier and added a DOI-backed
-    context graph covering non-genomic child classes phenotype and biosafety
-    level.
+  changes: Reviewed quality as an upper classifier and added a DOI-backed context
+    graph covering non-genomic child classes phenotype and biosafety level.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

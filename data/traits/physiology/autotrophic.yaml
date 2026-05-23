@@ -29,9 +29,9 @@ evidence:
   notes: Minireview supports Calvin-Benson and other microbial CO2-fixation pathways.
 - reference: PMID:8590279
   snippet: Synechocystis sp. strain PCC6803
-  notes: 'Organism example: Synechocystis sp. PCC 6803 is a model autotrophic
-    cyanobacterium that fixes CO2 via the Calvin-Benson cycle (Kaneko et al.
-    1996, DNA Res, full genome).'
+  notes: 'Organism example: Synechocystis sp. PCC 6803 is a model autotrophic cyanobacterium
+    that fixes CO2 via the Calvin-Benson cycle (Kaneko et al. 1996, DNA Res, full
+    genome).'
 causal_graphs:
 - graph_id: autotrophic_inorganic_carbon_fixation
   title: Autotrophic inorganic carbon fixation
@@ -86,10 +86,12 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2016.130
       snippet: require only CO2 as a carbon source
       notes: Supports CO2 as the defining autotrophic carbon source.
+    predicate_id: METPO:2000006
   - subject: bicarbonate
     predicate: alternative inorganic carbon source for
     object: autotrophic_trait
-    description: Bicarbonate is another inorganic carbon species available for autotrophic fixation.
+    description: Bicarbonate is another inorganic carbon species available for autotrophic
+      fixation.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: autotrophic carbon dioxide assimilation pathway
@@ -118,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: Calvin-Benson reductive pentose phosphate cycle
       notes: Supports the Calvin-Benson cycle as a microbial autotrophic pathway.
+    predicate_id: rdfs:subClassOf
   - subject: rubisco
     predicate: catalyzes
     object: calvin_benson_cycle
@@ -126,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: ribulose-1,5-bisphosphate carboxylase
       notes: Supports RuBisCO as the marker enzyme for Calvin-Benson autotrophy.
+    predicate_id: biolink:catalyzes
   - subject: co2_fixation_pathway
     predicate: produces
     object: precursor_metabolites
@@ -134,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: converted to other central intermediates
       notes: Supports conversion of fixed carbon into central metabolites.
+    predicate_id: METPO:2000202
   - subject: precursor_metabolites
     predicate: incorporated into
     object: biomass
@@ -151,11 +156,29 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for inorganic carbon fixation, Calvin-Benson cycle, RuBisCO, precursor metabolites, and biomass formation.
+  changes: Added DOI-backed causal graph for inorganic carbon fixation, Calvin-Benson
+    cycle, RuBisCO, precursor metabolites, and biomass formation.
   llm_assisted: true
 - timestamp: '2026-05-16T05:00:00-07:00'
   curator: claude
   action: ADDED_ORGANISM_EXAMPLE
-  changes: Added Synechocystis sp. PCC 6803 organism example with
-    PMID-backed evidence.
+  changes: Added Synechocystis sp. PCC 6803 organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000006×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1).
   llm_assisted: true

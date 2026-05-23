@@ -11,13 +11,12 @@ parent_traits:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: salinity range
-  notes: Osmoadaptation review supports quantitative salinity descriptors
-    (optimum, range, delta) as the standard numerical phenotype framing for
-    halophily classification.
+  notes: Osmoadaptation review supports quantitative salinity descriptors (optimum,
+    range, delta) as the standard numerical phenotype framing for halophily classification.
 - reference: DOI:10.1093/femsre/fuy009
   snippet: Hypersaline environments
-  notes: Osmoadaptation review supports salinity as the physical axis underlying
-    halophily classifications.
+  notes: Osmoadaptation review supports salinity as the physical axis underlying halophily
+    classifications.
 causal_graphs:
 - graph_id: salinity_phenotype_numerical_axis
   title: Salinity phenotype numerical-limits axis
@@ -53,13 +52,13 @@ causal_graphs:
   - subject: nacl_concentration_axis
     predicate: defines
     object: salinity_phenotype_trait
-    description: Ambient NaCl concentration is the quantitative axis defining
-      salinity phenotypes.
+    description: Ambient NaCl concentration is the quantitative axis defining salinity
+      phenotypes.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
-      notes: Supports NaCl concentration as the quantitative axis underlying
-        salinity-phenotype descriptors.
+      notes: Supports NaCl concentration as the quantitative axis underlying salinity-phenotype
+        descriptors.
   - subject: nacl_optimum
     predicate: is a
     object: salinity_phenotype_trait
@@ -68,6 +67,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
       notes: Supports NaCl optimum as a recognized salinity descriptor.
+    predicate_id: rdfs:subClassOf
   - subject: nacl_range
     predicate: is a
     object: salinity_phenotype_trait
@@ -76,6 +76,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
       notes: Supports NaCl range as a recognized salinity descriptor.
+    predicate_id: rdfs:subClassOf
   - subject: nacl_delta
     predicate: is a
     object: salinity_phenotype_trait
@@ -83,8 +84,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
-      notes: Supports growth-range breadth as a derived numerical salinity
-        descriptor of the same axis.
+      notes: Supports growth-range breadth as a derived numerical salinity descriptor
+        of the same axis.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
@@ -94,6 +96,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking the NaCl concentration axis to
-    NaCl optimum, range, and delta measurement types.
+  changes: Added DOI-backed causal graph linking the NaCl concentration axis to NaCl
+    optimum, range, and delta measurement types.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×3).
   llm_assisted: true

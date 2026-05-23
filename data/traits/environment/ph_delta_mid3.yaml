@@ -1,8 +1,7 @@
 identifier: METPO:1000477
 label: pH delta mid3
-definition: A pH delta phenotype with a growth-supporting pH breadth of
-  approximately 4–5 pH units, characteristic of organisms with wide
-  pH-tolerance breadth.
+definition: A pH delta phenotype with a growth-supporting pH breadth of approximately
+  4–5 pH units, characteristic of organisms with wide pH-tolerance breadth.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -16,13 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: pH homeostasis
-  notes: pH-homeostasis review supports wide pH-homeostasis flexibility as
-    the basis of euryphilic pH-tolerance.
+  notes: pH-homeostasis review supports wide pH-homeostasis flexibility as the basis
+    of euryphilic pH-tolerance.
 causal_graphs:
 - graph_id: ph_delta_mid3_wide_breadth
   title: pH-delta-mid3 wide-breadth pH homeostasis
-  description: DOI-backed graph linking wide pH-homeostasis flexibility to a
-    pH growth breadth of approximately 4–5 pH units.
+  description: DOI-backed graph linking wide pH-homeostasis flexibility to a pH growth
+    breadth of approximately 4–5 pH units.
   nodes:
   - node_id: ph_delta_mid3_trait
     label: pH delta mid3
@@ -37,29 +36,27 @@ causal_graphs:
   - node_id: wide_ph_homeostasis
     label: wide pH-homeostasis flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Strong cross-axis pH-homeostasis capacity allowing growth
-      across a wide range of external pH.
+    description: Strong cross-axis pH-homeostasis capacity allowing growth across
+      a wide range of external pH.
   edges:
   - subject: wide_ph_homeostasis
     predicate: produces
     object: ph_delta_mid3_trait
-    description: Wide pH-homeostasis flexibility yields a 4–5 pH-unit
-      pH-delta breadth.
+    description: Wide pH-homeostasis flexibility yields a 4–5 pH-unit pH-delta breadth.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
-      notes: Supports wide pH-homeostasis flexibility as the basis of a wide
-        breadth.
+      notes: Supports wide pH-homeostasis flexibility as the basis of a wide breadth.
+    predicate_id: METPO:2000202
   - subject: ph_delta_mid3_trait
     predicate: is a
     object: ph_delta
-    description: pH delta mid3 is a quantitative bin of the pH-delta
-      phenotype.
+    description: pH delta mid3 is a quantitative bin of the pH-delta phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH
-      notes: Supports the 4–5 unit breadth as a value within the pH-delta
-        distribution.
+      notes: Supports the 4–5 unit breadth as a value within the pH-delta distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839862+00:00'
   curator: seed_from_metpo
@@ -69,6 +66,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking wide
-    pH-homeostasis flexibility to the wide-breadth pH-delta-mid3 bin.
+  changes: Added DOI-backed definition and causal graph linking wide pH-homeostasis
+    flexibility to the wide-breadth pH-delta-mid3 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

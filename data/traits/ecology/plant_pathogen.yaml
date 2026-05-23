@@ -14,8 +14,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev.phyto.43.040204.135923
   snippet: type III secretion
-  notes: Plant-pathology review supports type III secretion of effectors as the
-    central mechanism by which bacterial plant pathogens manipulate plant cells.
+  notes: Plant-pathology review supports type III secretion of effectors as the central
+    mechanism by which bacterial plant pathogens manipulate plant cells.
 - reference: DOI:10.1146/annurev.micro.55.1.535
   snippet: cell-wall-degrading enzymes
   notes: Plant-pathogen review supports secreted plant-cell-wall-degrading enzymes
@@ -23,9 +23,9 @@ evidence:
 causal_graphs:
 - graph_id: plant_pathogen_t3ss_effector_program
   title: Plant-pathogen T3SS-effector and wall-degradation program
-  description: DOI-backed graph linking plant-cell-wall degradation, type III
-    secretion of effectors, suppression of plant immunity, and plant tissue
-    colonization to the plant-pathogen phenotype.
+  description: DOI-backed graph linking plant-cell-wall degradation, type III secretion
+    of effectors, suppression of plant immunity, and plant tissue colonization to
+    the plant-pathogen phenotype.
   nodes:
   - node_id: plant_pathogen_trait
     label: plant pathogen
@@ -35,8 +35,8 @@ causal_graphs:
   - node_id: cwd_enzymes
     label: plant-cell-wall-degrading enzymes
     node_type: GENE_OR_PROTEIN
-    description: Secreted enzymes (e.g., pectinases, cellulases) degrading the
-      plant cell wall.
+    description: Secreted enzymes (e.g., pectinases, cellulases) degrading the plant
+      cell wall.
   - node_id: t3ss
     label: type III secretion system
     node_type: GENE_OR_PROTEIN
@@ -68,16 +68,17 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.55.1.535
       snippet: cell-wall-degrading enzymes
       notes: Supports CWD enzymes as virulence factors in plant infection.
+    predicate_id: RO:0002327
   - subject: t3ss
     predicate: delivers
     object: t3ss_effectors
-    description: The T3SS translocates effector proteins from the bacterium into
-      plant cells.
+    description: The T3SS translocates effector proteins from the bacterium into plant
+      cells.
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
       snippet: type III secretion system
-      notes: Supports the T3SS as the delivery system for bacterial effectors
-        into plant cells.
+      notes: Supports the T3SS as the delivery system for bacterial effectors into
+        plant cells.
   - subject: t3ss_effectors
     predicate: suppresses
     object: plant_immune_suppression
@@ -85,8 +86,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
       snippet: effector proteins
-      notes: Supports T3SS-delivered effector proteins as the
-        plant-immunity-suppressing factors.
+      notes: Supports T3SS-delivered effector proteins as the plant-immunity-suppressing
+        factors.
   - subject: plant_immune_suppression
     predicate: supports
     object: plant_tissue_colonization
@@ -94,8 +95,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.phyto.43.040204.135923
       snippet: plant pathogen
-      notes: Supports immune-suppression-driven colonization as a hallmark
-        of plant-pathogen infection biology.
+      notes: Supports immune-suppression-driven colonization as a hallmark of plant-pathogen
+        infection biology.
   - subject: plant_tissue_colonization
     predicate: causes
     object: plant_disease
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.55.1.535
       snippet: cell-wall-degrading enzymes
       notes: Supports colonization-to-disease progression in plant pathogens.
+    predicate_id: biolink:causes
   - subject: plant_disease
     predicate: manifests as
     object: plant_pathogen_trait
@@ -121,7 +123,19 @@ curation_history:
 - timestamp: '2026-05-11T23:15:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking plant-cell-wall-degrading
-    enzymes, T3SS effector delivery, immune suppression, plant tissue colonization,
-    and disease to the plant-pathogen trait.
+  changes: Added DOI-backed causal graph linking plant-cell-wall-degrading enzymes,
+    T3SS effector delivery, immune suppression, plant tissue colonization, and disease
+    to the plant-pathogen trait.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

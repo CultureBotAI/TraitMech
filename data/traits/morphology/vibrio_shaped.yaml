@@ -19,14 +19,13 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1016/j.cell.2016.12.019
   snippet: V. cholerae has a characteristic curved rod morphology
-  notes: Supports vibrio/comma morphology and a source-backed curvature
-    mechanism in Vibrio cholerae.
+  notes: Supports vibrio/comma morphology and a source-backed curvature mechanism
+    in Vibrio cholerae.
 causal_graphs:
 - graph_id: vibrio_shaped_crvA_curvature
   title: Vibrio-shape CrvA curvature mechanism
-  description: Evidence-backed causal sketch linking vibrioid curved-rod
-    morphology to periplasmic CrvA polymers and asymmetric peptidoglycan
-    insertion.
+  description: Evidence-backed causal sketch linking vibrioid curved-rod morphology
+    to periplasmic CrvA polymers and asymmetric peptidoglycan insertion.
   nodes:
   - node_id: vibrio_shaped_trait
     label: vibrio shaped
@@ -53,8 +52,7 @@ causal_graphs:
   - subject: crvA
     predicate: self-assembles into
     object: periplasmic_filament
-    description: CrvA forms periplasmic filaments at the inner face of cell
-      curvature.
+    description: CrvA forms periplasmic filaments at the inner face of cell curvature.
     evidence:
     - reference: DOI:10.1016/j.cell.2016.12.019
       snippet: CrvA self-assembles into filaments at the inner face
@@ -76,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2016.12.019
       snippet: causing more material insertions into the outer face
       notes: Supports asymmetric wall insertion as the proximal cause of curvature.
+    predicate_id: biolink:causes
   - subject: cell_body_curvature
     predicate: produces
     object: vibrio_shaped_trait
@@ -84,6 +83,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2016.12.019
       snippet: characteristic curved rod morphology
       notes: Supports the observed Vibrio morphology as a curved-rod shape.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896189+00:00'
   curator: seed_from_metpo
@@ -93,7 +93,18 @@ curation_history:
 - timestamp: '2026-05-11T18:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed vibrio shape and added DOI-backed causal graph for CrvA
-    periplasmic filaments, asymmetric peptidoglycan insertion, and curved-rod
-    morphology.
+  changes: Reviewed vibrio shape and added DOI-backed causal graph for CrvA periplasmic
+    filaments, asymmetric peptidoglycan insertion, and curved-rod morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

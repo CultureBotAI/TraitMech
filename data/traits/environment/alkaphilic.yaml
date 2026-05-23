@@ -62,8 +62,7 @@ causal_graphs:
   - subject: alkaline_external_ph
     predicate: selects for
     object: alkaphilic_trait
-    description: Alkaline environments select for organisms with alkaline growth
-      optima.
+    description: Alkaline environments select for organisms with alkaline growth optima.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH range of 9.5-11.0
@@ -88,22 +87,22 @@ causal_graphs:
   - subject: sodium_proton_antiporter
     predicate: imports
     object: proton
-    description: Electrogenic Na+/H+ antiport contributes to cytoplasmic
-      acidification under alkaline conditions.
+    description: Electrogenic Na+/H+ antiport contributes to cytoplasmic acidification
+      under alkaline conditions.
     evidence:
     - reference: DOI:10.1016/j.bbamem.2005.09.010
       snippet: promote proton capture and retention
-      notes: Review supports proton capture/retention mechanisms in alkaline pH
-        homeostasis.
+      notes: Review supports proton capture/retention mechanisms in alkaline pH homeostasis.
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: alkaphilic_trait
-    description: Alkaliphilic growth requires maintaining cytoplasmic pH during
-      high-pH exposure.
+    description: Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH
+      exposure.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH sensing and homeostasis
       notes: Supports homeostasis as the enabling process for alkaline growth.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937702+00:00'
   curator: seed_from_metpo
@@ -113,6 +112,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed alkaphilic trait and added DOI-backed evidence and causal
-    graph for sodium-cycle alkaline pH homeostasis.
+  changes: Reviewed alkaphilic trait and added DOI-backed evidence and causal graph
+    for sodium-cycle alkaline pH homeostasis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

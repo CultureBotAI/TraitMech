@@ -14,7 +14,8 @@ evidence:
   notes: Review supports SLP as microbial energy conservation in fermentative metabolism.
 - reference: DOI:10.1128/MMBR.69.1.12-50.2005
   snippet: phosphotransacetylase [PTA], acetate kinase [ACK]
-  notes: Review supports acetate kinase and phosphotransacetylase as central acetate-switch enzymes.
+  notes: Review supports acetate kinase and phosphotransacetylase as central acetate-switch
+    enzymes.
 causal_graphs:
 - graph_id: substrate_level_phosphorylation_direct_atp
   title: Substrate-level phosphorylation direct ATP formation
@@ -69,6 +70,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: main sources of energy under fermentative conditions
       notes: Supports fermentative context for SLP.
+    predicate_id: biolink:occurs_in
   - subject: high_energy_phosphorylated_intermediate
     predicate: donates phosphoryl group to
     object: adp
@@ -80,11 +82,13 @@ causal_graphs:
   - subject: kinase_reaction
     predicate: produces
     object: atp
-    description: Kinase reactions convert phosphorylated intermediates and ADP to ATP.
+    description: Kinase reactions convert phosphorylated intermediates and ADP to
+      ATP.
     evidence:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: kinase-catalysed reactions can be applied for SLP
       notes: Supports kinase-mediated ATP formation.
+    predicate_id: METPO:2000202
   - subject: acetyl_phosphate
     predicate: substrate for
     object: acetate_kinase
@@ -101,14 +105,18 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.69.1.12-50.2005
       snippet: phosphotransacetylase [PTA], acetate kinase [ACK]
       notes: Supports acetate kinase as a central acetate-switch component.
+    predicate_id: METPO:2000202
   - subject: acetate_kinase
     predicate: produces
     object: atp
-    description: Acetate kinase contributes ATP formation through substrate-level phosphorylation.
+    description: Acetate kinase contributes ATP formation through substrate-level
+      phosphorylation.
     evidence:
     - reference: DOI:10.1111/1751-7915.13746
       snippet: acetyl-phosphate to acetate
-      notes: Review lists acetyl-phosphate to acetate among SLP energy-conserving reactions.
+      notes: Review lists acetyl-phosphate to acetate among SLP energy-conserving
+        reactions.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913184+00:00'
   curator: seed_from_metpo
@@ -118,5 +126,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for direct phosphoryl transfer to ADP and acetate kinase-linked ATP formation.
+  changes: Added DOI-backed causal graph for direct phosphoryl transfer to ADP and
+    acetate kinase-linked ATP formation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×3).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:occurs_in×1).
   llm_assisted: true

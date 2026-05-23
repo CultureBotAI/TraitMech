@@ -17,7 +17,8 @@ created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1038/s41598-021-81412-3
   snippet: engineered lithoheterotrophic strain
-  notes: Experimental study supports Fe(II)-dependent lithoheterotrophic growth with glucose as carbon source.
+  notes: Experimental study supports Fe(II)-dependent lithoheterotrophic growth with
+    glucose as carbon source.
 - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
   snippet: oxidize inorganic atoms or molecules
   notes: Review supports inorganic compound oxidation as lithotrophic energy metabolism.
@@ -25,13 +26,15 @@ causal_graphs:
 - graph_id: lithoheterotrophic_inorganic_energy_organic_carbon
   title: Lithoheterotrophic inorganic energy and organic carbon use
   description: DOI-backed graph linking inorganic electron donors, Fe(II) oxidation,
-    respiratory energy conservation, organic carbon uptake, precursor metabolites, and biomass.
+    respiratory energy conservation, organic carbon uptake, precursor metabolites,
+    and biomass.
   nodes:
   - node_id: lithoheterotrophic_trait
     label: lithoheterotrophic
     node_type: TRAIT
     grounding: METPO:1000648
-    description: Trophic type using inorganic donors for energy and organic compounds for carbon.
+    description: Trophic type using inorganic donors for energy and organic compounds
+      for carbon.
   - node_id: inorganic_electron_donor
     label: inorganic electron donor
     node_type: CHEMICAL
@@ -75,11 +78,13 @@ causal_graphs:
   - subject: lithoheterotrophic_trait
     predicate: uses electron donor
     object: inorganic_electron_donor
-    description: Lithoheterotrophy uses inorganic compounds as energy-generating electron donors.
+    description: Lithoheterotrophy uses inorganic compounds as energy-generating electron
+      donors.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical oxidation as lithotrophic energy metabolism.
+    predicate_id: METPO:2000009
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_electron_donor
@@ -88,6 +93,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: Fe(II) as the energy source
       notes: Supports Fe(II) oxidation as the energy source in engineered lithoheterotrophy.
+    predicate_id: rdfs:subClassOf
   - subject: inorganic_electron_donor
     predicate: feeds electrons into
     object: respiratory_chain
@@ -112,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
+    predicate_id: METPO:2000202
   - subject: lithoheterotrophic_trait
     predicate: uses carbon source
     object: organic_carbon
@@ -119,7 +126,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: glucose as the sole carbon source
-      notes: Supports organic carbon use under Fe(II)-oxidizing lithoheterotrophic conditions.
+      notes: Supports organic carbon use under Fe(II)-oxidizing lithoheterotrophic
+        conditions.
+    predicate_id: METPO:2000006
   - subject: glucose
     predicate: example of
     object: organic_carbon
@@ -128,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: glucose as the sole carbon source
       notes: Supports glucose as the organic carbon source in the engineered strain.
+    predicate_id: rdfs:subClassOf
   - subject: organic_carbon
     predicate: converted to
     object: precursor_metabolites
@@ -153,5 +163,18 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for inorganic electron donor oxidation, Fe(II), respiratory energy conservation, organic carbon use, and biomass formation.
+  changes: Added DOI-backed causal graph for inorganic electron donor oxidation, Fe(II),
+    respiratory energy conservation, organic carbon use, and biomass formation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000009×1, METPO:2000202×1, METPO:2000006×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

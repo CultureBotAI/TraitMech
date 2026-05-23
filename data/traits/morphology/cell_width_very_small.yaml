@@ -15,13 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/ismej.2014.60
   snippet: small cells and genomes
-  notes: Streamlining review links very narrow cell widths to oligotrophic and
-    streamlined lineages.
+  notes: Streamlining review links very narrow cell widths to oligotrophic and streamlined
+    lineages.
 causal_graphs:
 - graph_id: cell_width_very_small_streamlining
   title: Very-narrow cell width by streamlining
-  description: DOI-backed graph linking nutrient streamlining to a very-narrow
-    rod radius (≤0.5 μm).
+  description: DOI-backed graph linking nutrient streamlining to a very-narrow rod
+    radius (≤0.5 μm).
   nodes:
   - node_id: cell_width_very_small_trait
     label: cell width very small
@@ -36,8 +36,8 @@ causal_graphs:
   - node_id: streamlining_selection
     label: streamlining selection
     node_type: BIOLOGICAL_PROCESS
-    description: Selection for reduced surface-to-volume ratio under chronic
-      nutrient limitation.
+    description: Selection for reduced surface-to-volume ratio under chronic nutrient
+      limitation.
   - node_id: oligotrophic_environment
     label: oligotrophic environment
     node_type: ENVIRONMENTAL_FACTOR
@@ -59,16 +59,17 @@ causal_graphs:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: small cells
       notes: Supports very narrow width as an outcome of streamlining selection.
+    predicate_id: METPO:2000202
   - subject: cell_width_very_small_trait
     predicate: is a
     object: cell_width_trait
-    description: Very small cell width is a quantitative bin of the cell-width
-      phenotype.
+    description: Very small cell width is a quantitative bin of the cell-width phenotype.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports very narrow width as a value within the regulated cell-width
         distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921226+00:00'
   curator: seed_from_metpo
@@ -78,6 +79,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking oligotrophic streamlining
-    selection to very narrow cell width (≤0.5 μm).
+  changes: Added DOI-backed causal graph linking oligotrophic streamlining selection
+    to very narrow cell width (≤0.5 μm).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

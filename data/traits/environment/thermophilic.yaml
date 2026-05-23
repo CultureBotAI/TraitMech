@@ -22,9 +22,8 @@ evidence:
 causal_graphs:
 - graph_id: thermophilic_heat_adaptation
   title: Thermophilic heat-adaptation mechanism
-  description: Evidence-backed causal sketch linking thermophily to elevated
-    temperature, membrane lipid adaptation, thermostable proteins, and energy
-    transduction constraints.
+  description: Evidence-backed causal sketch linking thermophily to elevated temperature,
+    membrane lipid adaptation, thermostable proteins, and energy transduction constraints.
   nodes:
   - node_id: thermophilic_trait
     label: thermophilic
@@ -38,13 +37,11 @@ causal_graphs:
   - node_id: membrane_lipid_composition
     label: membrane lipid composition
     node_type: CELLULAR_LOCALIZATION
-    description: Membrane lipid features altered during high-temperature
-      adaptation.
+    description: Membrane lipid features altered during high-temperature adaptation.
   - node_id: membrane_proton_permeability
     label: membrane proton permeability
     node_type: BIOLOGICAL_PROCESS
-    description: Proton leakiness of the cytoplasmic membrane at elevated
-      temperature.
+    description: Proton leakiness of the cytoplasmic membrane at elevated temperature.
   - node_id: thermostable_proteins
     label: thermostable proteins
     node_type: GENE_OR_PROTEIN
@@ -52,34 +49,29 @@ causal_graphs:
   - node_id: energy_transducing_enzymes
     label: energy-transducing enzymes
     node_type: GENE_OR_PROTEIN
-    description: Enzymes involved in membrane bioenergetics at elevated
-      temperature.
+    description: Enzymes involved in membrane bioenergetics at elevated temperature.
   edges:
   - subject: high_temperature
     predicate: selects for
     object: thermophilic_trait
-    description: High-temperature environments select for thermophilic growth
-      capacity.
+    description: High-temperature environments select for thermophilic growth capacity.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Review supports thermophile adaptation to high-temperature
-        environments.
+      notes: Review supports thermophile adaptation to high-temperature environments.
   - subject: high_temperature
     predicate: increases
     object: membrane_proton_permeability
-    description: Elevated temperature increases proton permeability of the
-      cytoplasmic membrane.
+    description: Elevated temperature increases proton permeability of the cytoplasmic
+      membrane.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: proton permeability ... increase with the temperature
-      notes: Supports membrane proton permeability as a high-temperature growth
-        constraint.
+      notes: Supports membrane proton permeability as a high-temperature growth constraint.
   - subject: membrane_lipid_composition
     predicate: limits
     object: membrane_proton_permeability
-    description: Lipid composition changes can reduce high-temperature membrane
-      leakiness.
+    description: Lipid composition changes can reduce high-temperature membrane leakiness.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: changing the lipid composition
@@ -93,16 +85,16 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: resistant to irreversible inactivation at high temperatures
       notes: Supports thermostability as a high-temperature enzyme feature.
+    predicate_id: RO:0002327
   - subject: energy_transducing_enzymes
     predicate: supports
     object: thermophilic_trait
-    description: Adapted energy-transducing enzymes support growth at elevated
-      temperature.
+    description: Adapted energy-transducing enzymes support growth at elevated temperature.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: energy transducing enzymes
-      notes: Review cites higher turnover rates and coupling-ion changes in
-        high-temperature adaptation.
+      notes: Review cites higher turnover rates and coupling-ion changes in high-temperature
+        adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858214+00:00'
   curator: seed_from_metpo
@@ -112,11 +104,18 @@ curation_history:
 - timestamp: '2026-05-06T14:58:45-07:00'
   curator: codex
   action: CURATED_WITH_ORGANISM_EXAMPLE
-  changes: Added Geobacillus stearothermophilus organism example with PMID-backed evidence.
+  changes: Added Geobacillus stearothermophilus organism example with PMID-backed
+    evidence.
   llm_assisted: true
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed thermophily causal graph for membrane permeability,
-    lipid adaptation, thermostable proteins, and energy transduction.
+  changes: Added DOI-backed thermophily causal graph for membrane permeability, lipid
+    adaptation, thermostable proteins, and energy transduction.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

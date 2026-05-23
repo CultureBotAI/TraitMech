@@ -51,8 +51,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1099/ijs.0.65431-0
       snippet: flat square or disc-shaped cells
-      notes: Supports planar envelope growth producing flat morphology in
-        disc-shaped halophiles.
+      notes: Supports planar envelope growth producing flat morphology in disc-shaped
+        halophiles.
   - subject: axial_extension_suppression
     predicate: contributes to
     object: flat_geometry
@@ -61,6 +61,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
       notes: Supports anisotropic growth as a control mechanism for cell shape.
+    predicate_id: RO:0002326
   - subject: flat_geometry
     predicate: manifests as
     object: disc_shaped_trait
@@ -78,6 +79,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking planar envelope growth and
-    axial-extension suppression to disc-shaped morphology.
+  changes: Added DOI-backed causal graph linking planar envelope growth and axial-extension
+    suppression to disc-shaped morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

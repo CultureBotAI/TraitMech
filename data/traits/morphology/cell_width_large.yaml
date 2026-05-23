@@ -1,7 +1,7 @@
 identifier: METPO:1000890
 label: cell width large
-definition: A cell-width phenotype in which the shorter cell dimension exceeds
-  approximately 0.9 micrometers.
+definition: A cell-width phenotype in which the shorter cell dimension exceeds approximately
+  0.9 micrometers.
 definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: MreB-directed peptidoglycan synthesis
-  notes: Supports MreB/Rod-complex activity as the control point governing wide
-    rod radii.
+  notes: Supports MreB/Rod-complex activity as the control point governing wide rod
+    radii.
 - reference: DOI:10.1126/science.aaa1313
   snippet: cell size scales with growth rate
   notes: Growth-rate-dependent size law supports widening of cells at fast growth
@@ -24,8 +24,8 @@ evidence:
 causal_graphs:
 - graph_id: cell_width_large_setpoint_increase
   title: Large cell-width by elevated wall-radius set-point
-  description: DOI-backed graph linking nutrient-rich growth conditions and an
-    elevated MreB-driven wall-radius set-point to wide rods (>0.9 μm).
+  description: DOI-backed graph linking nutrient-rich growth conditions and an elevated
+    MreB-driven wall-radius set-point to wide rods (>0.9 μm).
   nodes:
   - node_id: cell_width_large_trait
     label: cell width large
@@ -63,6 +63,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports lateral PG synthesis as the producer of the wide cell radius.
+    predicate_id: METPO:2000202
   - subject: cell_width_large_trait
     predicate: is a
     object: cell_width_trait
@@ -70,8 +71,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
-      notes: Supports large width as a value within the regulated cell-width
-        distribution.
+      notes: Supports large width as a value within the regulated cell-width distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922624+00:00'
   curator: seed_from_metpo
@@ -81,6 +82,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking rich growth conditions and
-    elevated Rod-complex activity to large cell width (>0.9 μm).
+  changes: Added DOI-backed causal graph linking rich growth conditions and elevated
+    Rod-complex activity to large cell width (>0.9 μm).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

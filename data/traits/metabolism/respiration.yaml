@@ -31,7 +31,8 @@ causal_graphs:
     label: respiration
     node_type: TRAIT
     grounding: METPO:1000800
-    description: Energy metabolism using electron transport to a terminal electron acceptor.
+    description: Energy metabolism using electron transport to a terminal electron
+      acceptor.
   - node_id: electron_donor
     label: electron donor
     node_type: CHEMICAL
@@ -39,7 +40,8 @@ causal_graphs:
   - node_id: terminal_electron_acceptor
     label: terminal electron acceptor
     node_type: CHEMICAL
-    description: Oxidized substrate receiving electrons at the end of a respiratory chain.
+    description: Oxidized substrate receiving electrons at the end of a respiratory
+      chain.
   - node_id: oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -53,7 +55,8 @@ causal_graphs:
   - node_id: membrane_electron_transport_chain
     label: membrane electron transport chain
     node_type: PATHWAY
-    description: Membrane redox chain conserving energy from donor-to-acceptor electron flow.
+    description: Membrane redox chain conserving energy from donor-to-acceptor electron
+      flow.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -92,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       snippet: oxygen as terminal electron acceptor
       notes: Supports oxygen as a respiratory terminal acceptor.
+    predicate_id: rdfs:subClassOf
   - subject: nitrate
     predicate: example of
     object: terminal_electron_acceptor
@@ -100,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       snippet: utilization of nitrate
       notes: Supports nitrate use in anaerobic respiration.
+    predicate_id: rdfs:subClassOf
   - subject: membrane_electron_transport_chain
     predicate: couples electron flow to
     object: proton_motive_force
@@ -124,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: ATP synthesis
       notes: Supports ATP production from respiratory energy conservation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.910466+00:00'
   curator: seed_from_metpo
@@ -133,5 +139,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for donor-to-acceptor respiratory electron flow, membrane ion-gradient generation, and ATP synthesis.
+  changes: Added DOI-backed causal graph for donor-to-acceptor respiratory electron
+    flow, membrane ion-gradient generation, and ATP synthesis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

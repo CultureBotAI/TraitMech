@@ -1,7 +1,7 @@
 identifier: METPO:1000482
 label: NaCl delta high
-definition: A NaCl delta phenotype with a growth-supporting NaCl breadth above
-  approximately 8% (w/v), characteristic of extreme-euryhaline organisms.
+definition: A NaCl delta phenotype with a growth-supporting NaCl breadth above approximately
+  8% (w/v), characteristic of extreme-euryhaline organisms.
 definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -15,17 +15,17 @@ synonyms:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: salinity range
-  notes: Osmoadaptation review supports very wide salinity-tolerance breadths as
-    the extreme-euryhaline phenotype.
+  notes: Osmoadaptation review supports very wide salinity-tolerance breadths as the
+    extreme-euryhaline phenotype.
 - reference: DOI:10.1186/1746-1448-4-2
   snippet: cope with the high salt concentrations
-  notes: Saline-Systems review supports combined osmolyte / salt-in flexibility
-    as the basis of very wide salinity tolerance.
+  notes: Saline-Systems review supports combined osmolyte / salt-in flexibility as
+    the basis of very wide salinity tolerance.
 causal_graphs:
 - graph_id: nacl_delta_high_extreme_euryhaline
   title: NaCl-delta-high extreme-euryhaline breadth
-  description: DOI-backed graph linking maximal osmoadaptive flexibility to NaCl
-    growth breadths exceeding 8% (w/v).
+  description: DOI-backed graph linking maximal osmoadaptive flexibility to NaCl growth
+    breadths exceeding 8% (w/v).
   nodes:
   - node_id: nacl_delta_high_trait
     label: NaCl delta high
@@ -40,28 +40,27 @@ causal_graphs:
   - node_id: maximal_osmoadaptive_flexibility
     label: maximal osmoadaptive flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Combined osmolyte-remodeling and salt-in capacity supporting
-      growth across an extreme salinity span.
+    description: Combined osmolyte-remodeling and salt-in capacity supporting growth
+      across an extreme salinity span.
   edges:
   - subject: maximal_osmoadaptive_flexibility
     predicate: produces
     object: nacl_delta_high_trait
-    description: Maximal osmoadaptive flexibility yields an extreme NaCl-delta
-      breadth.
+    description: Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: cope with the high salt concentrations
-      notes: Supports maximal osmoadaptive flexibility as the basis of extreme
-        euryhalinity.
+      notes: Supports maximal osmoadaptive flexibility as the basis of extreme euryhalinity.
+    predicate_id: METPO:2000202
   - subject: nacl_delta_high_trait
     predicate: is a
     object: nacl_delta
-    description: NaCl delta high is a quantitative bin of the NaCl-delta
-      phenotype.
+    description: NaCl delta high is a quantitative bin of the NaCl-delta phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
       notes: Supports >8% breadth as a value within the NaCl-delta distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842691+00:00'
   curator: seed_from_metpo
@@ -71,6 +70,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking maximal
-    osmoadaptive flexibility to the extreme-euryhaline NaCl-delta bin.
+  changes: Added DOI-backed definition and causal graph linking maximal osmoadaptive
+    flexibility to the extreme-euryhaline NaCl-delta bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

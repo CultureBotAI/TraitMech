@@ -17,13 +17,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: cell curvature
-  notes: Cell-shape review supports curvature-generating wall patterning as the
-    basis for closed-ring morphology.
+  notes: Cell-shape review supports curvature-generating wall patterning as the basis
+    for closed-ring morphology.
 causal_graphs:
 - graph_id: ring_shaped_curved_growth_closure
   title: Ring-shape curved growth and pole closure
-  description: DOI-backed graph linking strongly curved peptidoglycan growth and
-    pole-to-pole closure to toroidal ring morphology.
+  description: DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole
+    closure to toroidal ring morphology.
   nodes:
   - node_id: ring_shaped_trait
     label: ring shaped
@@ -52,6 +52,7 @@ causal_graphs:
       snippet: cell curvature
       notes: Supports curvature-generating wall growth as a producer of closed ring
         forms.
+    predicate_id: METPO:2000202
   - subject: pole_to_pole_closure
     predicate: shapes
     object: toroidal_geometry
@@ -77,6 +78,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking strongly curved peptidoglycan
-    growth and pole-to-pole closure to ring-shaped morphology.
+  changes: Added DOI-backed causal graph linking strongly curved peptidoglycan growth
+    and pole-to-pole closure to ring-shaped morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

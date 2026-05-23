@@ -27,12 +27,13 @@ evidence:
   notes: Encyclopedia chapter supports organic compounds as heterotrophic carbon sources.
 - reference: DOI:10.1021/acsomega.3c02205
   snippet: organic molecules ... carbon source
-  notes: Review table supports organic molecules as carbon sources in heterotrophic growth modes.
+  notes: Review table supports organic molecules as carbon sources in heterotrophic
+    growth modes.
 - reference: PMID:9278503
   snippet: Escherichia coli K-12
-  notes: 'Organism example: Escherichia coli K-12 (MG1655) is the canonical
-    chemoorganoheterotrophic model bacterium that grows on diverse organic
-    substrates (Blattner et al. 1997, Science, complete genome).'
+  notes: 'Organism example: Escherichia coli K-12 (MG1655) is the canonical chemoorganoheterotrophic
+    model bacterium that grows on diverse organic substrates (Blattner et al. 1997,
+    Science, complete genome).'
 causal_graphs:
 - graph_id: heterotrophic_organic_carbon_assimilation
   title: Heterotrophic organic carbon assimilation
@@ -47,7 +48,8 @@ causal_graphs:
   - node_id: organic_molecule
     label: organic molecule
     node_type: CHEMICAL
-    description: Organic carbon source such as sugars, organic acids, lipids, or amino acids.
+    description: Organic carbon source such as sugars, organic acids, lipids, or amino
+      acids.
   - node_id: nutrient_uptake
     label: nutrient uptake
     node_type: BIOLOGICAL_PROCESS
@@ -73,11 +75,13 @@ causal_graphs:
   - subject: heterotrophic_trait
     predicate: uses carbon source
     object: organic_molecule
-    description: Heterotrophy uses organic compounds as carbon sources instead of CO2.
+    description: Heterotrophy uses organic compounds as carbon sources instead of
+      CO2.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: organic compounds as the primary sources of carbon
       notes: Supports organic compounds as heterotrophic carbon sources.
+    predicate_id: METPO:2000006
   - subject: organic_molecule
     predicate: imported by
     object: nutrient_uptake
@@ -102,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: precursor compounds for anabolism
       notes: Supports nutrient breakdown to biosynthetic precursors.
+    predicate_id: METPO:2000202
   - subject: precursor_metabolites
     predicate: used by
     object: anabolism
@@ -118,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of compounds into cell material.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.873704+00:00'
   curator: seed_from_metpo
@@ -127,11 +133,17 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for organic carbon uptake, catabolism, precursor metabolites, anabolism, and biomass formation.
+  changes: Added DOI-backed causal graph for organic carbon uptake, catabolism, precursor
+    metabolites, anabolism, and biomass formation.
   llm_assisted: true
 - timestamp: '2026-05-16T05:00:00-07:00'
   curator: claude
   action: ADDED_ORGANISM_EXAMPLE
-  changes: Added Escherichia coli K-12 organism example with PMID-backed
-    evidence.
+  changes: Added Escherichia coli K-12 organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000006×1).
   llm_assisted: true

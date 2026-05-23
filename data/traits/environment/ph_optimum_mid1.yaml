@@ -1,7 +1,7 @@
 identifier: METPO:1000456
 label: pH optimum mid1
-definition: A pH optimum phenotype with the best-growth external pH between
-  approximately 6 and 7, corresponding to neutrophilic physiology.
+definition: A pH optimum phenotype with the best-growth external pH between approximately
+  6 and 7, corresponding to neutrophilic physiology.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -21,14 +21,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: cytoplasmic pH
-  notes: pH-homeostasis review supports a near-neutral external pH as the
-    neutrophilic optimum, where cytoplasmic pH homeostasis operates with
-    minimal load.
+  notes: pH-homeostasis review supports a near-neutral external pH as the neutrophilic
+    optimum, where cytoplasmic pH homeostasis operates with minimal load.
 causal_graphs:
 - graph_id: ph_optimum_mid1_neutrophile_setpoint
   title: pH-optimum-mid1 neutrophile setpoint
-  description: DOI-backed graph linking minimal pH-homeostasis load at
-    near-neutral external pH to a pH-optimum between 6 and 7 (neutrophile).
+  description: DOI-backed graph linking minimal pH-homeostasis load at near-neutral
+    external pH to a pH-optimum between 6 and 7 (neutrophile).
   nodes:
   - node_id: ph_optimum_mid1_trait
     label: pH optimum mid1
@@ -43,43 +42,41 @@ causal_graphs:
   - node_id: near_neutral_external_ph
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
-    description: External pH 6–7, typical of fresh-water and many host
-      environments.
+    description: External pH 6–7, typical of fresh-water and many host environments.
   - node_id: minimal_ph_homeostasis_load
     label: minimal pH-homeostasis load
     node_type: BIOLOGICAL_PROCESS
-    description: Modest demand on proton extrusion and cytoplasmic buffering
-      near a near-neutral cytoplasmic pH.
+    description: Modest demand on proton extrusion and cytoplasmic buffering near
+      a near-neutral cytoplasmic pH.
   edges:
   - subject: near_neutral_external_ph
     predicate: imposes
     object: minimal_ph_homeostasis_load
-    description: Near-neutral external pH imposes minimal pH-homeostasis
-      demand on the cell.
+    description: Near-neutral external pH imposes minimal pH-homeostasis demand on
+      the cell.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cytoplasmic pH
-      notes: Supports near-neutral external pH as the regime with the smallest
-        cytoplasmic-pH gradient to maintain.
+      notes: Supports near-neutral external pH as the regime with the smallest cytoplasmic-pH
+        gradient to maintain.
   - subject: minimal_ph_homeostasis_load
     predicate: produces
     object: ph_optimum_mid1_trait
-    description: Minimal pH-homeostasis load yields a neutrophilic pH-optimum
-      setpoint.
+    description: Minimal pH-homeostasis load yields a neutrophilic pH-optimum setpoint.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
       notes: Supports a near-neutral optimum as the neutrophile outcome.
+    predicate_id: METPO:2000202
   - subject: ph_optimum_mid1_trait
     predicate: is a
     object: ph_optimum
-    description: pH optimum mid1 is a quantitative bin of the pH-optimum
-      phenotype.
+    description: pH optimum mid1 is a quantitative bin of the pH-optimum phenotype.
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: proton motive force
-      notes: Supports a near-neutral optimum as a value within the pH-optimum
-        distribution.
+      notes: Supports a near-neutral optimum as a value within the pH-optimum distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827192+00:00'
   curator: seed_from_metpo
@@ -89,7 +86,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking minimal
-    pH-homeostasis load at near-neutral external pH to the neutrophilic
-    pH-optimum-mid1 bin.
+  changes: Added DOI-backed definition and causal graph linking minimal pH-homeostasis
+    load at near-neutral external pH to the neutrophilic pH-optimum-mid1 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

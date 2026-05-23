@@ -18,17 +18,17 @@ synonyms:
 evidence:
 - reference: DOI:10.1016/s0300-9629(97)00003-0
   snippet: adapted to environments of high temperature
-  notes: Thermophile-adaptation review supports the >40 °C optimum as the
-    thermophile category.
+  notes: Thermophile-adaptation review supports the >40 °C optimum as the thermophile
+    category.
 - reference: DOI:10.1128/MMBR.65.1.1-43.2001
   snippet: resistant to irreversible inactivation at high temperatures
-  notes: Thermostable-protein review supports thermostable proteins as the
-    mechanism enabling thermophile optima.
+  notes: Thermostable-protein review supports thermostable proteins as the mechanism
+    enabling thermophile optima.
 causal_graphs:
 - graph_id: temperature_optimum_high_thermophile_setpoint
   title: Temperature-optimum-high thermophile setpoint
-  description: DOI-backed graph linking thermophile membrane and protein
-    thermostability adaptation to a temperature optimum above 40 °C.
+  description: DOI-backed graph linking thermophile membrane and protein thermostability
+    adaptation to a temperature optimum above 40 °C.
   nodes:
   - node_id: temperature_optimum_high_trait
     label: temperature optimum high
@@ -43,19 +43,18 @@ causal_graphs:
   - node_id: hot_environment
     label: hot environment
     node_type: ENVIRONMENTAL_FACTOR
-    description: Habitat ambient temperature above ~40 °C, typical of hot
-      springs and compost.
+    description: Habitat ambient temperature above ~40 °C, typical of hot springs
+      and compost.
   - node_id: thermophile_thermostability
     label: thermophile protein thermostability
     node_type: BIOLOGICAL_PROCESS
-    description: Heat-stable membrane lipids and proteins that retain function
-      at elevated temperatures.
+    description: Heat-stable membrane lipids and proteins that retain function at
+      elevated temperatures.
   edges:
   - subject: hot_environment
     predicate: selects for
     object: thermophile_thermostability
-    description: Hot environments select for thermophile thermostable
-      machinery.
+    description: Hot environments select for thermophile thermostable machinery.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
@@ -67,18 +66,19 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: resistant to irreversible inactivation at high temperatures
-      notes: Supports thermostability as the mechanism producing thermophile
-        optima.
+      notes: Supports thermostability as the mechanism producing thermophile optima.
+    predicate_id: METPO:2000202
   - subject: temperature_optimum_high_trait
     predicate: is a
     object: temperature_optimum
-    description: Temperature optimum high is a quantitative bin of the
-      temperature-optimum phenotype.
+    description: Temperature optimum high is a quantitative bin of the temperature-optimum
+      phenotype.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports the >40 °C optimum as a value within the
-        temperature-optimum distribution.
+      notes: Supports the >40 °C optimum as a value within the temperature-optimum
+        distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822120+00:00'
   curator: seed_from_metpo
@@ -88,6 +88,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking thermophile
-    thermostability to the temperature-optimum-high bin.
+  changes: Added DOI-backed definition and causal graph linking thermophile thermostability
+    to the temperature-optimum-high bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

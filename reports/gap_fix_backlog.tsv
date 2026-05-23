@@ -1,0 +1,6 @@
+id	category	title	impact	effort	suggested_fix_path	blocking
+G01	pipeline	Add CI gate running just validate-strict on PRs touching schema or data/traits/	Prevents silent regression of every fix below; without it the corpus can revert to drift on the next merge	S	.github/workflows/validate-strict.yaml
+G02	pipeline	Promote validate-strict over validate-all as the default and document	Stops users (and Claude) from trusting open-mode "all good" output that hides unknown-field drift	S	justfile, README.md	G01
+G03	pipeline	Validate trait records in scripts/seed_from_metpo.py before write	Catches schema drift at seed time, not after commit; the seeder is the only writer of new trait YAMLs	M	scripts/seed_from_metpo.py	G01
+G04	schema	Document the required: asymmetry on evidence (required on CausalEdge, optional on TraitRecord)	Prevents a future cleanup PR from "harmonizing" away a deliberate editorial policy	S	src/traitmech/schema/traitmech.yaml
+G05	pipeline	Skip-self short-circuit in scripts/audit_writers.py to suppress the auditor false positive	Cosmetic — keeps the writer audit report clean of self-referential noise	S	scripts/audit_writers.py

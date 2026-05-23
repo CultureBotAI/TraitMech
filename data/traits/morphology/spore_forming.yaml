@@ -24,9 +24,9 @@ evidence:
 causal_graphs:
 - graph_id: spore_forming_endospore_assembly
   title: Spore-forming endospore assembly mechanism
-  description: Evidence-backed causal sketch linking forespore development to
-    cortex synthesis, coat assembly, dipicolinic acid accumulation, and the
-    spore-forming phenotype.
+  description: Evidence-backed causal sketch linking forespore development to cortex
+    synthesis, coat assembly, dipicolinic acid accumulation, and the spore-forming
+    phenotype.
   nodes:
   - node_id: spore_forming_trait
     label: spore forming
@@ -62,6 +62,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: within which a spore is produced
       notes: Supports forespore development into the spore.
+    predicate_id: biolink:develops_into
   - subject: spore_cortex
     predicate: contributes to
     object: resistant_endospore
@@ -69,8 +70,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2921
       snippet: spore surface layers
-      notes: Supports specialized spore layers as functional components of the
-        endospore.
+      notes: Supports specialized spore layers as functional components of the endospore.
+    predicate_id: RO:0002326
   - subject: spore_coat
     predicate: protects
     object: resistant_endospore
@@ -87,6 +88,7 @@ causal_graphs:
     - reference: DOI:10.1111/j.1365-2672.2005.02736.x
       snippet: mechanisms are responsible for the resistance of spores
       notes: Supports chemical and structural factors in Bacillus spore resistance.
+    predicate_id: RO:0002326
   - subject: resistant_endospore
     predicate: manifests as
     object: spore_forming_trait
@@ -109,7 +111,19 @@ curation_history:
 - timestamp: '2026-05-11T21:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Replaced definition source with DOI-backed endospore source and added
-    causal graph for forespore development, cortex, coat, dipicolinic acid, and
-    resistant endospore formation.
+  changes: Replaced definition source with DOI-backed endospore source and added causal
+    graph for forespore development, cortex, coat, dipicolinic acid, and resistant
+    endospore formation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:develops_into×1).
   llm_assisted: true

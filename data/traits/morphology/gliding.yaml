@@ -19,8 +19,8 @@ evidence:
 causal_graphs:
 - graph_id: gliding_surface_motility
   title: Gliding surface motility mechanism
-  description: Evidence-backed causal sketch linking gliding to solid surfaces,
-    cell-envelope motors, surface adhesins, and type IX secretion/gliding systems.
+  description: Evidence-backed causal sketch linking gliding to solid surfaces, cell-envelope
+    motors, surface adhesins, and type IX secretion/gliding systems.
   nodes:
   - node_id: gliding_trait
     label: gliding
@@ -34,8 +34,7 @@ causal_graphs:
   - node_id: gliding_motility_machinery
     label: gliding motility machinery
     node_type: GENE_OR_PROTEIN
-    description: Molecular machinery that produces surface translocation without
-      flagella.
+    description: Molecular machinery that produces surface translocation without flagella.
   - node_id: surface_adhesins
     label: surface adhesins
     node_type: GENE_OR_PROTEIN
@@ -60,12 +59,12 @@ causal_graphs:
   - subject: gliding_motility_machinery
     predicate: enables
     object: gliding_trait
-    description: Specialized machinery drives bacterial surface movement without
-      flagella.
+    description: Specialized machinery drives bacterial surface movement without flagella.
     evidence:
     - reference: DOI:10.1016/j.cub.2016.12.035
       snippet: without using flagella, pili, or other external appendages
       notes: Supports gliding as a distinct motility mode.
+    predicate_id: RO:0002327
   - subject: surface_adhesins
     predicate: transmit force for
     object: gliding_trait
@@ -83,6 +82,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00626-4
       snippet: type 9 secretion and gliding motility
       notes: Supports linkage between type IX secretion and gliding machinery.
+    predicate_id: RO:0002326
   - subject: proton_motive_force
     predicate: powers
     object: gliding_motility_machinery
@@ -100,6 +100,12 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed gliding trait and added DOI-backed causal graph for surface
-    gliding machinery, adhesins, type IX secretion, and proton motive force.
+  changes: Reviewed gliding trait and added DOI-backed causal graph for surface gliding
+    machinery, adhesins, type IX secretion, and proton motive force.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002326×1).
   llm_assisted: true

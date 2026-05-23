@@ -28,8 +28,8 @@ evidence:
 causal_graphs:
 - graph_id: microaerophile_low_oxygen_respiration
   title: Microaerophilic low-oxygen respiration mechanism
-  description: Evidence-backed causal sketch linking microaerophily to microoxic
-    environments and high-affinity terminal oxidases.
+  description: Evidence-backed causal sketch linking microaerophily to microoxic environments
+    and high-affinity terminal oxidases.
   nodes:
   - node_id: microaerophilic_trait
     label: microaerophilic
@@ -52,8 +52,7 @@ causal_graphs:
   - node_id: cbb3_oxidase
     label: cytochrome cbb3 oxidase
     node_type: GENE_OR_PROTEIN
-    description: High-affinity cytochrome oxidase associated with microaerobic
-      metabolism.
+    description: High-affinity cytochrome oxidase associated with microaerobic metabolism.
   edges:
   - subject: microoxic_environment
     predicate: supports
@@ -75,17 +74,18 @@ causal_graphs:
   - subject: high_affinity_terminal_oxidase
     predicate: contributes to
     object: microaerophilic_trait
-    description: High-affinity terminal oxidases are mechanistic contributors to
-      microaerophilic growth.
+    description: High-affinity terminal oxidases are mechanistic contributors to microaerophilic
+      growth.
     evidence:
     - reference: DOI:10.1038/nrmicro2970
       snippet: provide microaerobes with access to scarce supplies of O2
       notes: Supports terminal oxidases as causal entities for low-oxygen growth.
+    predicate_id: RO:0002326
   - subject: cbb3_oxidase
     predicate: has function
     object: high_affinity_terminal_oxidase
-    description: The cbb3 oxidase is an example high-affinity oxidase for
-      microaerobic metabolism.
+    description: The cbb3 oxidase is an example high-affinity oxidase for microaerobic
+      metabolism.
     evidence:
     - reference: DOI:10.1042/BST0300653
       snippet: characterized by its high oxygen affinity
@@ -109,6 +109,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for microoxic respiration via
-    high-affinity terminal oxidases.
+  changes: Added DOI-backed causal graph for microoxic respiration via high-affinity
+    terminal oxidases.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

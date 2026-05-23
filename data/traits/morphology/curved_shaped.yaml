@@ -24,8 +24,8 @@ evidence:
 causal_graphs:
 - graph_id: curved_shaped_scaffolded_curvature
   title: Curved-shape scaffolded morphogenesis mechanism
-  description: Evidence-backed causal sketch linking curved bacterial morphology
-    to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.
+  description: Evidence-backed causal sketch linking curved bacterial morphology to
+    scaffold-mediated inner curvature and spatially biased peptidoglycan growth.
   nodes:
   - node_id: curved_shaped_trait
     label: curved shaped
@@ -59,16 +59,17 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.1002565
       snippet: scaffold-mediated delineation of an inner curvature
       notes: Supports a common structural theme for curved and helical cells.
+    predicate_id: biolink:located_in
   - subject: curvature_scaffold
     predicate: guides
     object: peptidoglycan_growth_pattern
-    description: Curvature scaffolds bias wall growth or structural constraints
-      along the inner curve.
+    description: Curvature scaffolds bias wall growth or structural constraints along
+      the inner curve.
     evidence:
     - reference: DOI:10.1371/journal.pbio.1002565
       snippet: guide PG synthesis
-      notes: Supports scaffold-guided peptidoglycan synthesis as a curvature
-        mechanism in representative bacteria.
+      notes: Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism
+        in representative bacteria.
   - subject: peptidoglycan_growth_pattern
     predicate: generates
     object: cell_body_curvature
@@ -77,8 +78,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.cell.2016.12.019
       snippet: asymmetrically patterns peptidoglycan insertion
-      notes: Vibrio evidence supports asymmetric PG insertion as one concrete
-        route to curved rods.
+      notes: Vibrio evidence supports asymmetric PG insertion as one concrete route
+        to curved rods.
+    predicate_id: biolink:produces
   - subject: cell_body_curvature
     predicate: produces
     object: curved_shaped_trait
@@ -87,6 +89,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.1002565
       snippet: vibrioid (curved) morphology
       notes: Supports curved morphology as a recognized bacterial cell-shape class.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887107+00:00'
   curator: seed_from_metpo
@@ -96,6 +99,18 @@ curation_history:
 - timestamp: '2026-05-11T18:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed curved shape and added DOI-backed causal graph for curvature
-    scaffolds, inner curvature, and spatial peptidoglycan growth.
+  changes: Reviewed curved shape and added DOI-backed causal graph for curvature scaffolds,
+    inner curvature, and spatial peptidoglycan growth.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1, biolink:produces×1).
   llm_assisted: true

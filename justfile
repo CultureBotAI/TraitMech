@@ -52,6 +52,17 @@ verify-proposal cohort *args:
 robot-validate-proposal cohort *args:
     uv run python scripts/robot_validate_proposal.py proposals/{{cohort}} {{args}}
 
+# Apply mappings/predicate_grounding.tsv to populate empty
+# causal_graphs[].edges[].predicate_id across data/traits/.
+# Dry-run by default; re-run with --apply to write.
+ground-predicates *args:
+    uv run python scripts/ground_causal_predicates.py {{args}}
+
+# Cross-check applied mappings + residual labels against the Biolink model.
+# Emits reports/biolink_coverage.tsv. Uses data/raw/biolink-model.yaml.
+check-biolink-coverage *args:
+    uv run python scripts/check_biolink_coverage.py {{args}}
+
 # Seed data/traits/ from data/raw/metpo.owl. Default dry-run.
 seed-from-metpo *args:
     uv run python3 scripts/seed_from_metpo.py {{args}}

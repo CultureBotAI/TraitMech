@@ -1,7 +1,7 @@
 identifier: METPO:1000889
 label: cell width medium
-definition: A cell-width phenotype in which the shorter cell dimension lies
-  approximately between 0.65 and 0.9 micrometers.
+definition: A cell-width phenotype in which the shorter cell dimension lies approximately
+  between 0.65 and 0.9 micrometers.
 definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: MreB-directed peptidoglycan synthesis
-  notes: Supports the MreB/Rod-complex set-point producing typical rod widths in
-    the 0.65–0.9 μm range.
+  notes: Supports the MreB/Rod-complex set-point producing typical rod widths in the
+    0.65–0.9 μm range.
 causal_graphs:
 - graph_id: cell_width_medium_typical_rod
   title: Medium cell-width typical rod
@@ -59,16 +59,16 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       snippet: rod-shape is maintained
       notes: Supports lateral PG assembly as the producer of typical rod radius.
+    predicate_id: METPO:2000202
   - subject: cell_width_medium_trait
     predicate: is a
     object: cell_width_trait
-    description: Medium cell width is a quantitative bin of the cell-width
-      phenotype.
+    description: Medium cell width is a quantitative bin of the cell-width phenotype.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
-      notes: Supports medium width as a value within the regulated cell-width
-        distribution.
+      notes: Supports medium width as a value within the regulated cell-width distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922158+00:00'
   curator: seed_from_metpo
@@ -78,6 +78,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex
-    peptidoglycan synthesis to medium cell width (0.65–0.9 μm).
+  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex peptidoglycan
+    synthesis to medium cell width (0.65–0.9 μm).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

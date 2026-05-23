@@ -1,7 +1,7 @@
 identifier: METPO:1003026
 label: orange pigmented
-definition: A pigmentation phenotype in which microbial colonies or cells appear
-  orange due to production and accumulation of orange pigments such as carotenoids.
+definition: A pigmentation phenotype in which microbial colonies or cells appear orange
+  due to production and accumulation of orange pigments such as carotenoids.
 definition_source: DOI:10.1080/1040841X.2025.2526423
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -21,8 +21,8 @@ causal_graphs:
 - graph_id: orange_pigmented_carotenoid_accumulation
   title: Orange pigmentation carotenoid mechanism
   description: Evidence-backed causal sketch linking orange microbial pigmentation
-    to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and
-    visible orange color.
+    to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible
+    orange color.
   nodes:
   - node_id: orange_pigmented_trait
     label: orange pigmented
@@ -58,6 +58,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: crt genes ... reactions they catalyze
       notes: Supports Crt enzymes as catalysts in bacterial carotenoid pathways.
+    predicate_id: biolink:catalyzes
   - subject: carotenoid_biosynthesis
     predicate: produces
     object: orange_carotenoids
@@ -66,8 +67,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: orange ... pigmentation in bacteria
-      notes: Supports carotenoid biosynthesis as a route to orange bacterial
-        pigmentation.
+      notes: Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.
+    predicate_id: METPO:2000202
   - subject: carotenoid_biosynthesis
     predicate: produces
     object: staphyloxanthin
@@ -75,8 +76,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/JB.147.3.900-913.1981
       snippet: triterpenoid carotenoids possessing a C30 chain
-      notes: Supports staphyloxanthin-related C30 carotenoid pigments in
-        S. aureus.
+      notes: Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.
+    predicate_id: METPO:2000202
   - subject: orange_carotenoids
     predicate: causes
     object: visible_orange_color
@@ -85,6 +86,7 @@ causal_graphs:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: responsible for ... orange ... pigmentation
       notes: Supports carotenoid pigments as determinants of orange color.
+    predicate_id: biolink:causes
   - subject: visible_orange_color
     predicate: manifests as
     object: orange_pigmented_trait
@@ -102,7 +104,18 @@ curation_history:
 - timestamp: '2026-05-11T19:10:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for Crt enzymes,
-    carotenoid biosynthesis, orange carotenoids, staphyloxanthin, and visible
-    orange color.
+  changes: Added DOI-backed definition and causal graph for Crt enzymes, carotenoid
+    biosynthesis, orange carotenoids, staphyloxanthin, and visible orange color.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, biolink:causes×1).
   llm_assisted: true
