@@ -38,6 +38,20 @@ audit-schema:
 audit-writers *args:
     uv run python scripts/audit_writers.py {{args}}
 
+# Verify a METPO ROBOT-template proposal cohort under proposals/.
+# Runs column-count, header, parent integrity, subset tag, and scope-A/C
+# coverage checks. See .claude/skills/metpo-proposal/SKILL.md.
+# Example: just verify-proposal metpo_traitmech_v1
+verify-proposal cohort *args:
+    uv run python scripts/verify_metpo_proposal.py proposals/{{cohort}} {{args}}
+
+# Validate a METPO proposal cohort by compiling its ROBOT-template TSVs,
+# merging with data/raw/metpo.owl, and reasoning with ELK. Requires the
+# robot binary — picks up $ROBOT, $ROBOT_BIN, or ../kg-microbe/data/raw/robot.
+# Example: just robot-validate-proposal metpo_traitmech_v1
+robot-validate-proposal cohort *args:
+    uv run python scripts/robot_validate_proposal.py proposals/{{cohort}} {{args}}
+
 # Apply mappings/predicate_grounding.tsv to populate empty
 # causal_graphs[].edges[].predicate_id across data/traits/.
 # Dry-run by default; re-run with --apply to write.
