@@ -15,17 +15,17 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev.micro.061705.103240
   snippet: prosthecate bacteria
-  notes: Prosthecate-bacteria review supports tailed/stalked cell morphology in
-    Caulobacter and related lineages.
+  notes: Prosthecate-bacteria review supports tailed/stalked cell morphology in Caulobacter
+    and related lineages.
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: polar growth
-  notes: Cell-shape review supports unipolar peptidoglycan growth as the basis
-    for stalk-like polar appendages.
+  notes: Cell-shape review supports unipolar peptidoglycan growth as the basis for
+    stalk-like polar appendages.
 causal_graphs:
 - graph_id: tailed_shaped_polar_stalk_growth
   title: Tailed-shape polar stalk extension
-  description: DOI-backed graph linking unipolar peptidoglycan growth and stalk
-    outgrowth to tailed cell morphology.
+  description: DOI-backed graph linking unipolar peptidoglycan growth and stalk outgrowth
+    to tailed cell morphology.
   nodes:
   - node_id: tailed_shaped_trait
     label: tailed shaped
@@ -61,6 +61,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.061705.103240
       snippet: prosthecate bacteria
       notes: Supports stalk extension as a prosthecate-cell feature.
+    predicate_id: METPO:2000202
   - subject: polar_appendage
     predicate: manifests as
     object: tailed_shaped_trait
@@ -78,6 +79,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking unipolar
-    peptidoglycan growth and stalk outgrowth to tailed cell morphology.
+  changes: Added DOI-backed definition and causal graph linking unipolar peptidoglycan
+    growth and stalk outgrowth to tailed cell morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

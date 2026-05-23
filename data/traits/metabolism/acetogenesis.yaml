@@ -75,7 +75,8 @@ causal_graphs:
   - subject: acetogenesis_trait
     predicate: has mechanistic pathway
     object: wood_ljungdahl_pathway
-    description: The Wood-Ljungdahl pathway is the central acetogenic carbon-fixation route.
+    description: The Wood-Ljungdahl pathway is the central acetogenic carbon-fixation
+      route.
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: Wood-Ljungdahl Pathway of CO2 Fixation
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1196/annals.1419.015
       snippet: convert carbon dioxide and CO into acetyl-CoA
       notes: Supports acetyl-CoA as pathway product.
+    predicate_id: METPO:2000202
   - subject: acetyl_coa
     predicate: precursor of
     object: acetate
@@ -111,7 +113,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: Energy metabolism associated with acetogenesis
-      notes: Review discusses acetogenic energy metabolism downstream of acetyl-CoA synthesis.
+      notes: Review discusses acetogenic energy metabolism downstream of acetyl-CoA
+        synthesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.915402+00:00'
   curator: seed_from_metpo
@@ -121,5 +124,12 @@ curation_history:
 - timestamp: '2026-05-07T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for anaerobic Wood-Ljungdahl carbon fixation and acetate production.
+  changes: Added DOI-backed causal graph for anaerobic Wood-Ljungdahl carbon fixation
+    and acetate production.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

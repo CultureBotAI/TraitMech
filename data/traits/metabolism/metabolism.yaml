@@ -11,8 +11,8 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1126/science.1238842
   snippet: energy and microbial life
-  notes: Microbial-energetics review supports metabolism as the energy and
-    material-flow process maintaining microbial life.
+  notes: Microbial-energetics review supports metabolism as the energy and material-flow
+    process maintaining microbial life.
 - reference: DOI:10.1146/annurev.biochem.71.110601.135503
   snippet: ATP synthesis
   notes: ATP-energetics review supports energy conservation as the central output
@@ -20,9 +20,9 @@ evidence:
 causal_graphs:
 - graph_id: metabolism_substrate_to_growth
   title: Metabolism substrate-to-growth flow
-  description: DOI-backed graph linking substrate uptake, catabolism producing
-    ATP and reducing power, biosynthesis, and growth as the core organization of
-    cellular metabolism.
+  description: DOI-backed graph linking substrate uptake, catabolism producing ATP
+    and reducing power, biosynthesis, and growth as the core organization of cellular
+    metabolism.
   nodes:
   - node_id: metabolism_trait
     label: metabolism
@@ -42,8 +42,8 @@ causal_graphs:
   - node_id: atp_and_reducing_power
     label: ATP and reducing power
     node_type: CHEMICAL
-    description: Energy currency (ATP) and electron carriers (NAD(P)H, FADH2)
-      produced by catabolism.
+    description: Energy currency (ATP) and electron carriers (NAD(P)H, FADH2) produced
+      by catabolism.
   - node_id: biosynthesis
     label: biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -70,6 +70,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.biochem.71.110601.135503
       snippet: ATP synthesis
       notes: Supports ATP and reducing power as canonical outputs of catabolism.
+    predicate_id: METPO:2000202
   - subject: atp_and_reducing_power
     predicate: powers
     object: biosynthesis
@@ -77,8 +78,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.biochem.71.110601.135503
       snippet: ATP synthesis
-      notes: Supports ATP-driven biosynthesis as the central coupling of energy
-        to anabolism.
+      notes: Supports ATP-driven biosynthesis as the central coupling of energy to
+        anabolism.
   - subject: biosynthesis
     predicate: supports
     object: cellular_growth
@@ -90,13 +91,12 @@ causal_graphs:
   - subject: cellular_growth
     predicate: realizes
     object: metabolism_trait
-    description: The coordinated substrate-uptake / catabolism / biosynthesis /
-      growth flow realizes the metabolism phenotype.
+    description: The coordinated substrate-uptake / catabolism / biosynthesis / growth
+      flow realizes the metabolism phenotype.
     evidence:
     - reference: DOI:10.1126/science.1238842
       snippet: energy and microbial life
-      notes: Supports metabolism as the integrated process maintaining microbial
-        life.
+      notes: Supports metabolism as the integrated process maintaining microbial life.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.810665+00:00'
   curator: seed_from_metpo
@@ -106,7 +106,12 @@ curation_history:
 - timestamp: '2026-05-11T23:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph framing metabolism as the integrated
-    substrate-uptake / catabolism / biosynthesis / growth flow that maintains
-    cellular life.
+  changes: Added DOI-backed causal graph framing metabolism as the integrated substrate-uptake
+    / catabolism / biosynthesis / growth flow that maintains cellular life.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

@@ -1,7 +1,7 @@
 identifier: METPO:1000684
 label: spiral shaped
-definition: A cell shape in which an organism has a spiral or helically curved
-  morphology rather than a straight rod or sphere.
+definition: A cell shape in which an organism has a spiral or helically curved morphology
+  rather than a straight rod or sphere.
 definition_source: DOI:10.1371/journal.pbio.1002565
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -27,9 +27,8 @@ evidence:
 causal_graphs:
 - graph_id: spiral_shaped_curvature_mechanisms
   title: Spiral-shape curvature and cell-wall mechanism
-  description: Evidence-backed causal sketch linking spiral morphology to
-    scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell
-    geometry.
+  description: Evidence-backed causal sketch linking spiral morphology to scaffold-mediated
+    curvature, peptidoglycan remodeling, and helical/spiral cell geometry.
   nodes:
   - node_id: spiral_shaped_trait
     label: spiral shaped
@@ -69,9 +68,11 @@ causal_graphs:
     description: Peptidoglycan remodeling enables helical curvature and twist.
     evidence:
     - reference: DOI:10.1016/j.cell.2010.03.046
-      snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist
+      snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature
+        and twist
       notes: H. pylori provides a source-backed concrete mechanism for spiral-like
         helical morphology.
+    predicate_id: RO:0002327
   - subject: helical_curvature
     predicate: produces
     object: spiral_shaped_trait
@@ -79,8 +80,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1371/journal.pbio.1002565
       snippet: helical cells
-      notes: Supports helical/spiral cell shape as a recurring bacterial
-        morphology.
+      notes: Supports helical/spiral cell shape as a recurring bacterial morphology.
+    predicate_id: METPO:2000202
   - subject: spiral_shaped_trait
     predicate: associated with
     object: viscous_motility_environment
@@ -91,6 +92,7 @@ causal_graphs:
       snippet: helical and curved cells appear to be optimized for motility
       notes: Functional association is broad and marked as an association, not as
         a universal cause of the trait.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894976+00:00'
   curator: seed_from_metpo
@@ -100,7 +102,18 @@ curation_history:
 - timestamp: '2026-05-11T18:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added definition and DOI-backed causal graph for spiral morphology,
-    peptidoglycan remodeling, curvature scaffolds, helical curvature, and viscous
-    motility association.
+  changes: Added definition and DOI-backed causal graph for spiral morphology, peptidoglycan
+    remodeling, curvature scaffolds, helical curvature, and viscous motility association.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:associated_with×1).
   llm_assisted: true

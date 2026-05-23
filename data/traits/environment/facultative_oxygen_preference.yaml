@@ -65,21 +65,20 @@ causal_graphs:
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: transfer electrons from the ETC to O2
       notes: Supports oxygen use by terminal oxidases during respiration.
+    predicate_id: RO:0002327
   - subject: facultative_oxygen_trait
     predicate: has alternative process
     object: anaerobic_respiration_or_fermentation
-    description: Growth without oxygen can use alternative electron acceptors or
-      fermentation.
+    description: Growth without oxygen can use alternative electron acceptors or fermentation.
     evidence:
     - reference: DOI:10.1089/ars.2011.4051
       snippet: utilizing other substrates as final electron acceptors
-      notes: Supports oxygen-independent respiratory alternatives under oxygen
-        shortage.
+      notes: Supports oxygen-independent respiratory alternatives under oxygen shortage.
   - subject: oxygen_sensing_regulation
     predicate: controls adaptation to
     object: molecular_oxygen
-    description: Oxygen-sensing regulators mediate metabolic adaptation across
-      oxygen regimes.
+    description: Oxygen-sensing regulators mediate metabolic adaptation across oxygen
+      regimes.
     evidence:
     - reference: DOI:10.1089/ars.2011.4051
       snippet: Fnr-type transcriptional regulators that directly sense O2
@@ -95,4 +94,10 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Reviewed facultative oxygen preference and added DOI-backed definition
     source, evidence, and causal graph for oxygen-responsive metabolic switching.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

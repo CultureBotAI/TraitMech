@@ -19,16 +19,14 @@ evidence:
 causal_graphs:
 - graph_id: phenotype_quality_child_context
   title: Phenotype quality and child-trait context
-  description: DOI-backed upper-ontology context graph linking phenotype to its
-    quality parent and to non-environmental, non-genomic TraitMech child
-    groupings.
+  description: DOI-backed upper-ontology context graph linking phenotype to its quality
+    parent and to non-environmental, non-genomic TraitMech child groupings.
   nodes:
   - node_id: phenotype_trait
     label: phenotype
     node_type: TRAIT
     grounding: METPO:1000059
-    description: Upper-level class for organismal qualities and observable trait
-      classes.
+    description: Upper-level class for organismal qualities and observable trait classes.
   - node_id: quality_parent
     label: quality
     node_type: TRAIT
@@ -37,8 +35,8 @@ causal_graphs:
   - node_id: morphology_children
     label: morphology child traits
     node_type: TRAIT
-    description: Non-environmental morphology children such as cell shape,
-      cell size, Gram stain, pigmentation, motility, and sporulation.
+    description: Non-environmental morphology children such as cell shape, cell size,
+      Gram stain, pigmentation, motility, and sporulation.
   - node_id: physiology_child
     label: trophic type
     node_type: TRAIT
@@ -53,21 +51,22 @@ causal_graphs:
   - subject: phenotype_trait
     predicate: is a
     object: quality_parent
-    description: Phenotypes are modeled as qualities or quality-bearing
-      descriptions of entities.
+    description: Phenotypes are modeled as qualities or quality-bearing descriptions
+      of entities.
     evidence:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: ontology of qualities termed Phenotype and Trait ontology
       notes: Supports phenotype representation through PATO quality classes.
+    predicate_id: rdfs:subClassOf
   - subject: morphology_children
     predicate: specializes
     object: phenotype_trait
-    description: Morphology classes are non-environmental child phenotypes in
-      TraitMech.
+    description: Morphology classes are non-environmental child phenotypes in TraitMech.
     evidence:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: size, color, shape, structure
       notes: Supports morphology-like qualities as phenotype descriptors.
+    predicate_id: rdfs:subClassOf
   - subject: physiology_child
     predicate: specializes
     object: phenotype_trait
@@ -76,18 +75,19 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: logical definitions and associated ontologies
-      notes: Supports phenotype classes as organized through ontology-backed
-        definitions and parent-child placement.
+      notes: Supports phenotype classes as organized through ontology-backed definitions
+        and parent-child placement.
+    predicate_id: rdfs:subClassOf
   - subject: ecology_child
     predicate: specializes
     object: phenotype_trait
-    description: Pathogenic-to-host is retained as a non-environmental ecology
-      child under phenotype.
+    description: Pathogenic-to-host is retained as a non-environmental ecology child
+      under phenotype.
     evidence:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: phenotype ontologies across multiple species
-      notes: Supports phenotype hierarchies spanning different biological
-        domains.
+      notes: Supports phenotype hierarchies spanning different biological domains.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.809675+00:00'
   curator: seed_from_metpo
@@ -97,7 +97,19 @@ curation_history:
 - timestamp: '2026-05-15T00:35:00-07:00'
   curator: codex
   action: CURATED_UPPER_CONTEXT
-  changes: Reviewed phenotype as an upper quality-derived classifier and added a
-    DOI-backed context graph covering its quality parent plus non-environmental,
-    non-genomic child groupings.
+  changes: Reviewed phenotype as an upper quality-derived classifier and added a DOI-backed
+    context graph covering its quality parent plus non-environmental, non-genomic
+    child groupings.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×3).
   llm_assisted: true

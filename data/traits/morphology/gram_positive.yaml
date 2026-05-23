@@ -18,34 +18,31 @@ synonyms:
 evidence:
 - reference: DOI:10.3109/10520299609117151
   snippet: retention of a crystal violet:iodine complex
-  notes: Supports Gram-positive phenotype as retention of crystal violet-iodine
-    complex.
+  notes: Supports Gram-positive phenotype as retention of crystal violet-iodine complex.
 - reference: PMID:16950365
   snippet: Staphylococcus aureus is a gram-positive bacterium
   notes: 'Organism example: Staphylococcus aureus is described as Gram-positive.'
 causal_graphs:
 - graph_id: gram_positive_cell_wall_retention
   title: Gram-positive cell-wall dye retention mechanism
-  description: Evidence-backed causal sketch linking Gram-positive staining to
-    thick peptidoglycan, wall teichoic acids, low decolorizer permeability, and
-    crystal violet-iodine retention.
+  description: Evidence-backed causal sketch linking Gram-positive staining to thick
+    peptidoglycan, wall teichoic acids, low decolorizer permeability, and crystal
+    violet-iodine retention.
   nodes:
   - node_id: gram_positive_trait
     label: gram positive
     node_type: TRAIT
     grounding: METPO:1000698
-    description: Gram stain phenotype in which cells retain crystal violet and
-      appear purple.
+    description: Gram stain phenotype in which cells retain crystal violet and appear
+      purple.
   - node_id: thick_peptidoglycan_cell_wall
     label: thick peptidoglycan cell wall
     node_type: CELLULAR_LOCALIZATION
-    description: Multilayered peptidoglycan wall characteristic of Gram-positive
-      bacteria.
+    description: Multilayered peptidoglycan wall characteristic of Gram-positive bacteria.
   - node_id: wall_teichoic_acids
     label: wall teichoic acids
     node_type: CHEMICAL
-    description: Anionic cell-wall glycopolymers attached to Gram-positive
-      peptidoglycan.
+    description: Anionic cell-wall glycopolymers attached to Gram-positive peptidoglycan.
   - node_id: lipoteichoic_acids
     label: lipoteichoic acids
     node_type: CHEMICAL
@@ -62,13 +59,13 @@ causal_graphs:
   - subject: thick_peptidoglycan_cell_wall
     predicate: retains
     object: crystal_violet_iodine_complex
-    description: Thick Gram-positive cell walls retain the dye-iodine complex
-      during decolorization.
+    description: Thick Gram-positive cell walls retain the dye-iodine complex during
+      decolorization.
     evidence:
     - reference: DOI:10.3109/10520299609117151
       snippet: cell wall ... responsible for retention
-      notes: Supports retention of crystal violet-iodine complex by the
-        Gram-positive cell wall.
+      notes: Supports retention of crystal violet-iodine complex by the Gram-positive
+        cell wall.
   - subject: wall_teichoic_acids
     predicate: embedded in
     object: thick_peptidoglycan_cell_wall
@@ -77,23 +74,23 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro1861
       snippet: peptidoglycan-attached
-      notes: Supports teichoic acids as peptidoglycan-attached Gram-positive
-        wall polymers.
+      notes: Supports teichoic acids as peptidoglycan-attached Gram-positive wall
+        polymers.
   - subject: lipoteichoic_acids
     predicate: contributes to
     object: thick_peptidoglycan_cell_wall
-    description: Lipoteichoic acids are membrane-attached glycopolymers in
-      Gram-positive cell envelopes.
+    description: Lipoteichoic acids are membrane-attached glycopolymers in Gram-positive
+      cell envelopes.
     evidence:
     - reference: DOI:10.1038/nrmicro1861
       snippet: membrane-attached
-      notes: Supports lipoteichoic acids as membrane-attached Gram-positive
-        glycopolymers.
+      notes: Supports lipoteichoic acids as membrane-attached Gram-positive glycopolymers.
+    predicate_id: RO:0002326
   - subject: alcohol_decolorization
     predicate: fails to remove
     object: crystal_violet_iodine_complex
-    description: Gram-positive cells retain dye complex after decolorization and
-      remain purple.
+    description: Gram-positive cells retain dye complex after decolorization and remain
+      purple.
     evidence:
     - reference: DOI:10.3109/10520299609117151
       snippet: retention of a crystal violet:iodine complex
@@ -107,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.156.2.837-845.1983
       snippet: crystal violet-iodine complex
       notes: Supports the dye complex as the chemical basis of staining.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.902486+00:00'
   curator: seed_from_metpo
@@ -121,7 +119,13 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Replaced PMID definition source with DOI-backed Gram stain source and
-    added causal graph for Gram-positive cell-wall dye retention, peptidoglycan,
-    wall teichoic acids, and lipoteichoic acids.
+  changes: Replaced PMID definition source with DOI-backed Gram stain source and added
+    causal graph for Gram-positive cell-wall dye retention, peptidoglycan, wall teichoic
+    acids, and lipoteichoic acids.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, METPO:2000202×1).
   llm_assisted: true

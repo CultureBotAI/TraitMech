@@ -17,18 +17,18 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
-  notes: Virulence-factor review supports the encoding of dedicated virulence
-    factors as the molecular basis of host pathogenicity.
+  notes: Virulence-factor review supports the encoding of dedicated virulence factors
+    as the molecular basis of host pathogenicity.
 - reference: DOI:10.1038/nrmicro1592
   snippet: secretion systems
-  notes: Secretion-systems review supports protein secretion machineries as
-    central effectors of host pathogenicity across kingdoms.
+  notes: Secretion-systems review supports protein secretion machineries as central
+    effectors of host pathogenicity across kingdoms.
 causal_graphs:
 - graph_id: pathogenic_to_host_virulence_factor_program
   title: Pathogenic-to-host virulence-factor program
   description: DOI-backed graph linking encoded virulence factors, secretion-based
-    effector delivery, host colonization, and host damage to the
-    pathogenic-to-host phenotype.
+    effector delivery, host colonization, and host damage to the pathogenic-to-host
+    phenotype.
   nodes:
   - node_id: pathogenic_to_host_trait
     label: pathogenic to host
@@ -38,13 +38,13 @@ causal_graphs:
   - node_id: virulence_factors
     label: virulence factors
     node_type: GENE_OR_PROTEIN
-    description: Encoded toxins, adhesins, and effector proteins enabling host
-      colonization and damage.
+    description: Encoded toxins, adhesins, and effector proteins enabling host colonization
+      and damage.
   - node_id: secretion_systems
     label: protein secretion systems
     node_type: GENE_OR_PROTEIN
-    description: Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS)
-      delivering effectors to host cells.
+    description: Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS) delivering
+      effectors to host cells.
   - node_id: host_colonization
     label: host colonization
     node_type: BIOLOGICAL_PROCESS
@@ -57,17 +57,18 @@ causal_graphs:
   - subject: virulence_factors
     predicate: enables
     object: host_colonization
-    description: Virulence factors enable adhesion, immune evasion, and tissue
-      invasion required for host colonization.
+    description: Virulence factors enable adhesion, immune evasion, and tissue invasion
+      required for host colonization.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports virulence factors as enablers of host colonization.
+    predicate_id: RO:0002327
   - subject: secretion_systems
     predicate: delivers
     object: virulence_factors
-    description: Bacterial protein secretion systems deliver effector virulence
-      factors into host environments or host cells.
+    description: Bacterial protein secretion systems deliver effector virulence factors
+      into host environments or host cells.
     evidence:
     - reference: DOI:10.1038/nrmicro1592
       snippet: secretion systems
@@ -75,13 +76,12 @@ causal_graphs:
   - subject: host_colonization
     predicate: enables
     object: host_damage
-    description: Established host colonization enables sustained damage to host
-      tissues.
+    description: Established host colonization enables sustained damage to host tissues.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
-      notes: Supports the colonization-to-damage progression characteristic of
-        pathogens.
+      notes: Supports the colonization-to-damage progression characteristic of pathogens.
+    predicate_id: RO:0002327
   - subject: host_damage
     predicate: manifests as
     object: pathogenic_to_host_trait
@@ -99,6 +99,12 @@ curation_history:
 - timestamp: '2026-05-11T23:15:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking virulence factors, secretion
-    systems, host colonization, and host damage to the pathogenic-to-host trait.
+  changes: Added DOI-backed causal graph linking virulence factors, secretion systems,
+    host colonization, and host damage to the pathogenic-to-host trait.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2).
   llm_assisted: true

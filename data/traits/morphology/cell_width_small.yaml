@@ -1,7 +1,7 @@
 identifier: METPO:1000888
 label: cell width small
-definition: A cell-width phenotype in which the shorter cell dimension lies
-  approximately between 0.5 and 0.65 micrometers.
+definition: A cell-width phenotype in which the shorter cell dimension lies approximately
+  between 0.5 and 0.65 micrometers.
 definition_source: DOI:10.1146/annurev-cellbio-101011-155745
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,13 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: MreB-directed peptidoglycan synthesis
-  notes: Supports the MreB/Rod-complex set-point producing narrow rod widths in
-    the 0.5–0.65 μm range.
+  notes: Supports the MreB/Rod-complex set-point producing narrow rod widths in the
+    0.5–0.65 μm range.
 causal_graphs:
 - graph_id: cell_width_small_mreb_setpoint
   title: Small cell-width MreB-Rod set-point
-  description: DOI-backed graph linking MreB-organized lateral wall synthesis to
-    a narrow rod radius set-point (0.5–0.65 μm).
+  description: DOI-backed graph linking MreB-organized lateral wall synthesis to a
+    narrow rod radius set-point (0.5–0.65 μm).
   nodes:
   - node_id: cell_width_small_trait
     label: cell width small
@@ -58,6 +58,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       snippet: rod-shape is maintained
       notes: Supports lateral PG assembly as the producer of the narrow rod radius.
+    predicate_id: METPO:2000202
   - subject: cell_width_small_trait
     predicate: is a
     object: cell_width_trait
@@ -65,8 +66,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
-      notes: Supports small width as a value within the regulated cell-width
-        distribution.
+      notes: Supports small width as a value within the regulated cell-width distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921682+00:00'
   curator: seed_from_metpo
@@ -76,6 +77,12 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex
-    peptidoglycan synthesis to small cell width (0.5–0.65 μm).
+  changes: Added DOI-backed causal graph linking MreB-directed Rod-complex peptidoglycan
+    synthesis to small cell width (0.5–0.65 μm).
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

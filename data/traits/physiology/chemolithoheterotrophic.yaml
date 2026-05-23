@@ -17,21 +17,25 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1038/s41598-021-81412-3
   snippet: chemolithoheterotrophy
-  notes: Experimental study supports chemolithoheterotrophy as Fe(II) oxidation for energy with glucose as carbon source.
+  notes: Experimental study supports chemolithoheterotrophy as Fe(II) oxidation for
+    energy with glucose as carbon source.
 - reference: DOI:10.1128/mBio.01112-19
   snippet: oxidize sulfur to fuel the uptake of organic compounds
-  notes: Study supports sulfur oxidation coupled to organic compound uptake in a chemolithoheterotrophic symbiont context.
+  notes: Study supports sulfur oxidation coupled to organic compound uptake in a chemolithoheterotrophic
+    symbiont context.
 causal_graphs:
 - graph_id: chemolithoheterotrophic_inorganic_energy_organic_carbon
   title: Chemolithoheterotrophic inorganic chemical energy and organic carbon use
   description: DOI-backed graph linking inorganic chemical electron donors, Fe(II)
-    and reduced sulfur examples, respiratory energy conservation, organic carbon uptake, and biomass.
+    and reduced sulfur examples, respiratory energy conservation, organic carbon uptake,
+    and biomass.
   nodes:
   - node_id: chemolithoheterotrophic_trait
     label: chemolithoheterotrophic
     node_type: TRAIT
     grounding: METPO:1000638
-    description: Trophic type using inorganic chemical electron donors and organic carbon.
+    description: Trophic type using inorganic chemical electron donors and organic
+      carbon.
   - node_id: inorganic_chemical_donor
     label: inorganic chemical donor
     node_type: CHEMICAL
@@ -73,11 +77,13 @@ causal_graphs:
   - subject: chemolithoheterotrophic_trait
     predicate: uses electron donor
     object: inorganic_chemical_donor
-    description: Chemolithoheterotrophy uses inorganic chemical compounds as electron donors.
+    description: Chemolithoheterotrophy uses inorganic chemical compounds as electron
+      donors.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical donors in chemolithotrophic metabolism.
+    predicate_id: METPO:2000009
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_chemical_donor
@@ -86,6 +92,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: Fe(II) oxidation provides energy
       notes: Supports Fe(II) as energy source in engineered chemolithoheterotrophy.
+    predicate_id: rdfs:subClassOf
   - subject: reduced_sulfur_compound
     predicate: example of
     object: inorganic_chemical_donor
@@ -93,11 +100,14 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/mBio.01112-19
       snippet: oxidize sulfur to fuel
-      notes: Supports sulfur oxidation as an energy source coupled to organic compound uptake.
+      notes: Supports sulfur oxidation as an energy source coupled to organic compound
+        uptake.
+    predicate_id: rdfs:subClassOf
   - subject: inorganic_chemical_donor
     predicate: feeds electrons into
     object: respiratory_chain
-    description: Oxidized inorganic donors feed electrons into respiratory energy conservation.
+    description: Oxidized inorganic donors feed electrons into respiratory energy
+      conservation.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: electron transfer process
@@ -110,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: generation of an electrochemical ion gradient
       notes: Supports proton motive force generation by membrane electron transport.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives production of
     object: atp
@@ -126,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: glucose as the sole carbon source
       notes: Supports organic carbon use under inorganic donor oxidizing conditions.
+    predicate_id: METPO:2000006
   - subject: organic_compound
     predicate: imported by
     object: nutrient_uptake
@@ -151,5 +163,18 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for inorganic chemical donors, Fe(II), reduced sulfur, respiratory energy conservation, organic nutrient uptake, and biomass.
+  changes: Added DOI-backed causal graph for inorganic chemical donors, Fe(II), reduced
+    sulfur, respiratory energy conservation, organic nutrient uptake, and biomass.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000009×1, METPO:2000006×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2, biolink:produces×1).
   llm_assisted: true

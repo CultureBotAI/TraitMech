@@ -18,7 +18,8 @@ evidence:
   notes: Review supports CO2 fixation as central to chemoautotrophic bacteria.
 - reference: DOI:10.1128/AEM.02473-10
   snippet: Calvin-Benson reductive pentose phosphate cycle
-  notes: Review supports Calvin-Benson and other microbial autotrophic CO2-fixation pathways.
+  notes: Review supports Calvin-Benson and other microbial autotrophic CO2-fixation
+    pathways.
 causal_graphs:
 - graph_id: chemoautotrophic_chemical_energy_co2_fixation
   title: Chemoautotrophic chemical-energy CO2 fixation
@@ -72,7 +73,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.micro.52.1.191
       snippet: physiology ... of chemoautotrophic bacteria
-      notes: Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.
+      notes: Review supports chemoautotrophic metabolism based on chemical energy
+        and CO2 fixation.
   - subject: reduced_inorganic_compound
     predicate: supports
     object: respiratory_energy_conservation
@@ -89,6 +91,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from respiratory energy conservation.
+    predicate_id: METPO:2000202
   - subject: respiratory_energy_conservation
     predicate: produces
     object: nadph
@@ -97,6 +100,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: NADH, or ... NADPH
       notes: Supports reduced redox cofactors in chemolithoautotrophic metabolism.
+    predicate_id: METPO:2000202
   - subject: carbon_dioxide
     predicate: fixed by
     object: calvin_benson_cycle
@@ -113,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: form I RuBisCO
       notes: Supports RuBisCO as a Calvin-Benson cycle enzyme.
+    predicate_id: biolink:catalyzes
   - subject: atp
     predicate: supports
     object: calvin_benson_cycle
@@ -137,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.52.1.191
       snippet: physiology, ecology, and molecular biology
       notes: Review scope supports chemoautotrophic bacterial growth from fixed carbon.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869416+00:00'
   curator: seed_from_metpo
@@ -146,5 +152,18 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for chemical energy conservation, ATP/reductant generation, Calvin-Benson CO2 fixation, and biomass production.
+  changes: Added DOI-backed causal graph for chemical energy conservation, ATP/reductant
+    generation, Calvin-Benson CO2 fixation, and biomass production.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×3).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true

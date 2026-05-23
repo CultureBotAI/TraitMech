@@ -15,14 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1080/1040841X.2025.2526423
   snippet: Carotenoids are isoprenoid pigments
-  notes: Supports carotenoid pigmentation as a bacterial isoprenoid-pigment
-    phenotype.
+  notes: Supports carotenoid pigmentation as a bacterial isoprenoid-pigment phenotype.
 causal_graphs:
 - graph_id: carotenoid_pigmentation_crt_pathway
   title: Carotenoid pigmentation crt-pathway mechanism
-  description: Evidence-backed causal sketch linking bacterial carotenoid
-    pigmentation to isoprenoid precursors, crt enzymes, conjugated carotenoids, and
-    yellow-orange-red visible color.
+  description: Evidence-backed causal sketch linking bacterial carotenoid pigmentation
+    to isoprenoid precursors, crt enzymes, conjugated carotenoids, and yellow-orange-red
+    visible color.
   nodes:
   - node_id: carotenoid_pigmentation_trait
     label: carotenoid pigmentation
@@ -57,17 +56,17 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.gene.2004.11.038
       snippet: isoprenoid precursor biosynthesis
-      notes: Supports isoprenoid precursor biosynthesis as a major step in
-        eubacterial carotenoid pathways.
+      notes: Supports isoprenoid precursor biosynthesis as a major step in eubacterial
+        carotenoid pathways.
   - subject: crt_enzymes
     predicate: catalyzes
     object: carotenoid_biosynthesis
-    description: Crt gene products catalyze bacterial carotenoid biosynthetic
-      reactions.
+    description: Crt gene products catalyze bacterial carotenoid biosynthetic reactions.
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: crt genes ... reactions they catalyze
       notes: Supports Crt enzymes as pathway catalysts.
+    predicate_id: biolink:catalyzes
   - subject: carotenoid_biosynthesis
     predicate: produces
     object: conjugated_carotenoids
@@ -75,17 +74,19 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: biosynthesis pathways of bacterial carotenoids
-      notes: Supports bacterial carotenoid biosynthesis as the source of
-        carotenoid pigments.
+      notes: Supports bacterial carotenoid biosynthesis as the source of carotenoid
+        pigments.
+    predicate_id: METPO:2000202
   - subject: conjugated_carotenoids
     predicate: causes
     object: yellow_orange_red_color
-    description: Conjugated carotenoids absorb visible light and produce
-      yellow-orange-red pigmentation.
+    description: Conjugated carotenoids absorb visible light and produce yellow-orange-red
+      pigmentation.
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: red, pink, orange, and yellow pigmentation in bacteria
       notes: Supports carotenoids as color determinants for this pigment class.
+    predicate_id: biolink:causes
   - subject: yellow_orange_red_color
     predicate: manifests as
     object: carotenoid_pigmentation_trait
@@ -93,8 +94,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1080/1040841X.2025.2526423
       snippet: responsible for the red, pink, orange, and yellow pigmentation
-      notes: Supports the trait-level mapping from carotenoid chemistry to
-        pigmentation.
+      notes: Supports the trait-level mapping from carotenoid chemistry to pigmentation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947657+00:00'
   curator: seed_from_metpo
@@ -105,6 +105,17 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed definition and causal graph for isoprenoid precursors,
-    Crt enzymes, carotenoid biosynthesis, conjugated carotenoids, and visible
-    pigmentation.
+    Crt enzymes, carotenoid biosynthesis, conjugated carotenoids, and visible pigmentation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, biolink:causes×1).
   llm_assisted: true

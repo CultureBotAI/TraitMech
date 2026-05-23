@@ -30,8 +30,8 @@ causal_graphs:
     label: obligately acidophilic
     node_type: TRAIT
     grounding: METPO:1003006
-    description: Growth requires acidic pH and does not extend to neutral or
-      alkaline pH values.
+    description: Growth requires acidic pH and does not extend to neutral or alkaline
+      pH values.
   - node_id: acidic_external_ph
     label: acidic external pH
     node_type: ENVIRONMENTAL_FACTOR
@@ -56,19 +56,18 @@ causal_graphs:
   - node_id: proton_export_pumps
     label: proton export pumps and antiporters
     node_type: GENE_OR_PROTEIN
-    description: Transport systems proposed to remove protons or exchange ions
-      during acid stress.
+    description: Transport systems proposed to remove protons or exchange ions during
+      acid stress.
   edges:
   - subject: acidic_external_ph
     predicate: selects for
     object: obligately_acidophilic_trait
-    description: Acidic environments select for organisms with acidic pH growth
-      optima.
+    description: Acidic environments select for organisms with acidic pH growth optima.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: acidic optimal growth pH
-      notes: Review supports acidophile classification by acidic optimum pH; the
-        obligate neutral-pH exclusion remains from the METPO definition.
+      notes: Review supports acidophile classification by acidic optimum pH; the obligate
+        neutral-pH exclusion remains from the METPO definition.
   - subject: acidic_external_ph
     predicate: increases gradient of
     object: proton
@@ -103,15 +102,17 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: proton export pumps and antiporters
       notes: Supports transporter-mediated acid resistance mechanisms.
+    predicate_id: RO:0002326
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: obligately_acidophilic_trait
-    description: Obligate acidophilic growth requires maintaining cytoplasmic pH
-      despite acidic external pH.
+    description: Obligate acidophilic growth requires maintaining cytoplasmic pH despite
+      acidic external pH.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports intracellular pH control during extreme acidophilic growth.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940216+00:00'
   curator: seed_from_metpo
@@ -122,7 +123,12 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Reviewed obligately acidophilic trait and added DOI-backed evidence and
-    causal graph for acidic pH homeostasis. The graph does not assert a specific
-    molecular cause of the obligate neutral-pH growth exclusion because that varies
-    by lineage.
+    causal graph for acidic pH homeostasis. The graph does not assert a specific molecular
+    cause of the obligate neutral-pH growth exclusion because that varies by lineage.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002327×1).
   llm_assisted: true

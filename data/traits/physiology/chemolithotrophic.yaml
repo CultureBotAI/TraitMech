@@ -23,9 +23,9 @@ evidence:
   notes: Review supports ammonia oxidation as an example chemolithoautotrophic process.
 - reference: PMID:12700255
   snippet: Nitrosomonas europaea
-  notes: 'Organism example: Nitrosomonas europaea is the model chemolithotrophic
-    ammonia-oxidizing bacterium, conserving energy from NH3 → NO2- oxidation
-    (Chain et al. 2003, J Bacteriol, complete genome).'
+  notes: 'Organism example: Nitrosomonas europaea is the model chemolithotrophic ammonia-oxidizing
+    bacterium, conserving energy from NH3 → NO2- oxidation (Chain et al. 2003, J Bacteriol,
+    complete genome).'
 causal_graphs:
 - graph_id: chemolithotrophic_inorganic_oxidation
   title: Chemolithotrophic inorganic chemical oxidation
@@ -85,6 +85,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical oxidation as chemolithotrophy.
+    predicate_id: METPO:2000009
   - subject: ammonia_monooxygenase
     predicate: oxidizes
     object: ammonia
@@ -93,6 +94,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.55.1.485
       snippet: ammonia-oxidizing bacteria
       notes: Supports ammonia oxidation as a chemolithoautotrophic process.
+    predicate_id: METPO:2000016
   - subject: ammonia
     predicate: oxidized to
     object: hydroxylamine
@@ -112,11 +114,13 @@ causal_graphs:
   - subject: sox_enzyme_system
     predicate: oxidizes
     object: thiosulfate
-    description: Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.
+    description: Sox proteins mediate oxidation of reduced sulfur compounds such as
+      thiosulfate.
     evidence:
     - reference: DOI:10.1111/j.1574-6976.2009.00187.x
       snippet: oxidation of thiosulfate
       notes: Supports the Sox multienzyme system in lithotrophic sulfur oxidation.
+    predicate_id: METPO:2000016
   - subject: inorganic_chemical_donor
     predicate: feeds electrons into
     object: respiratory_chain
@@ -133,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from the respiratory ion gradient.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.871549+00:00'
   curator: seed_from_metpo
@@ -142,11 +147,17 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for inorganic chemical electron donors, ammonia oxidation, sulfur oxidation, respiratory energy conservation, and ATP synthesis.
+  changes: Added DOI-backed causal graph for inorganic chemical electron donors, ammonia
+    oxidation, sulfur oxidation, respiratory energy conservation, and ATP synthesis.
   llm_assisted: true
 - timestamp: '2026-05-16T05:00:00-07:00'
   curator: claude
   action: ADDED_ORGANISM_EXAMPLE
-  changes: Added Nitrosomonas europaea organism example with PMID-backed
-    evidence.
+  changes: Added Nitrosomonas europaea organism example with PMID-backed evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000016×2, METPO:2000009×1, METPO:2000202×1).
   llm_assisted: true

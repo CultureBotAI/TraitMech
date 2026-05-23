@@ -1,8 +1,7 @@
 identifier: METPO:1000467
 label: NaCl optimum mid2
-definition: A NaCl optimum phenotype with the best-growth NaCl concentration
-  approximately between 3 and 8% (w/v), corresponding to moderate-halophile or
-  halotolerant physiology.
+definition: A NaCl optimum phenotype with the best-growth NaCl concentration approximately
+  between 3 and 8% (w/v), corresponding to moderate-halophile or halotolerant physiology.
 definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -22,14 +21,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: moderate halophile
-  notes: Osmoadaptation review supports the 3–8% NaCl optimum range as the
-    moderate-halophile category.
+  notes: Osmoadaptation review supports the 3–8% NaCl optimum range as the moderate-halophile
+    category.
 causal_graphs:
 - graph_id: nacl_optimum_mid2_moderate_halophile
   title: NaCl-optimum-mid2 moderate-halophile setpoint
-  description: DOI-backed graph linking pronounced compatible-solute
-    accumulation at elevated NaCl to a 3–8% (w/v) NaCl-optimum (moderate
-    halophile).
+  description: DOI-backed graph linking pronounced compatible-solute accumulation
+    at elevated NaCl to a 3–8% (w/v) NaCl-optimum (moderate halophile).
   nodes:
   - node_id: nacl_optimum_mid2_trait
     label: NaCl optimum mid2
@@ -48,8 +46,8 @@ causal_graphs:
   - node_id: pronounced_compatible_solutes
     label: pronounced compatible-solute accumulation
     node_type: BIOLOGICAL_PROCESS
-    description: Substantial accumulation of organic osmolytes (ectoine, glycine
-      betaine) under moderately hypersaline conditions.
+    description: Substantial accumulation of organic osmolytes (ectoine, glycine betaine)
+      under moderately hypersaline conditions.
   edges:
   - subject: elevated_nacl
     predicate: drives
@@ -63,22 +61,22 @@ causal_graphs:
   - subject: pronounced_compatible_solutes
     predicate: produces
     object: nacl_optimum_mid2_trait
-    description: Pronounced compatible-solute accumulation yields a 3–8%
-      NaCl-optimum setpoint.
+    description: Pronounced compatible-solute accumulation yields a 3–8% NaCl-optimum
+      setpoint.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: moderate halophile
       notes: Supports the 3–8% optimum as the moderate-halophile outcome.
+    predicate_id: METPO:2000202
   - subject: nacl_optimum_mid2_trait
     predicate: is a
     object: nacl_optimum
-    description: NaCl optimum mid2 is a quantitative bin of the NaCl-optimum
-      phenotype.
+    description: NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
-      notes: Supports the 3–8% optimum as a value within the NaCl-optimum
-        distribution.
+      notes: Supports the 3–8% optimum as a value within the NaCl-optimum distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.834715+00:00'
   curator: seed_from_metpo
@@ -88,7 +86,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking pronounced
-    compatible-solute accumulation at elevated NaCl to the moderate-halophile
-    NaCl-optimum bin.
+  changes: Added DOI-backed definition and causal graph linking pronounced compatible-solute
+    accumulation at elevated NaCl to the moderate-halophile NaCl-optimum bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

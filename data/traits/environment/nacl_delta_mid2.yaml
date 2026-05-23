@@ -1,8 +1,7 @@
 identifier: METPO:1000481
 label: NaCl delta mid2
-definition: A NaCl delta phenotype with a growth-supporting NaCl breadth of
-  approximately 3–8% (w/v), characteristic of organisms with broad salinity
-  tolerance.
+definition: A NaCl delta phenotype with a growth-supporting NaCl breadth of approximately
+  3–8% (w/v), characteristic of organisms with broad salinity tolerance.
 definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -16,13 +15,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: salinity range
-  notes: Osmoadaptation review supports broad osmoadaptive breadths as the
-    halotolerant / moderately euryhaline phenotype.
+  notes: Osmoadaptation review supports broad osmoadaptive breadths as the halotolerant
+    / moderately euryhaline phenotype.
 causal_graphs:
 - graph_id: nacl_delta_mid2_broad_breadth
   title: NaCl-delta-mid2 broad-breadth osmoadaptation
-  description: DOI-backed graph linking robust osmoadaptive flexibility to a
-    3–8% (w/v) NaCl growth breadth.
+  description: DOI-backed graph linking robust osmoadaptive flexibility to a 3–8%
+    (w/v) NaCl growth breadth.
   nodes:
   - node_id: nacl_delta_mid2_trait
     label: NaCl delta mid2
@@ -37,8 +36,8 @@ causal_graphs:
   - node_id: robust_osmoadaptive_flexibility
     label: robust osmoadaptive flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Strong osmolyte-remodeling capacity supporting growth across a
-      broad salinity span.
+    description: Strong osmolyte-remodeling capacity supporting growth across a broad
+      salinity span.
   edges:
   - subject: robust_osmoadaptive_flexibility
     predicate: produces
@@ -47,18 +46,17 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
-      notes: Supports robust osmoadaptive flexibility as the basis of a broad
-        breadth.
+      notes: Supports robust osmoadaptive flexibility as the basis of a broad breadth.
+    predicate_id: METPO:2000202
   - subject: nacl_delta_mid2_trait
     predicate: is a
     object: nacl_delta
-    description: NaCl delta mid2 is a quantitative bin of the NaCl-delta
-      phenotype.
+    description: NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
-      notes: Supports the 3–8% breadth as a value within the NaCl-delta
-        distribution.
+      notes: Supports the 3–8% breadth as a value within the NaCl-delta distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842087+00:00'
   curator: seed_from_metpo
@@ -68,6 +66,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking robust
-    osmoadaptive flexibility to the broad-breadth NaCl-delta bin.
+  changes: Added DOI-backed definition and causal graph linking robust osmoadaptive
+    flexibility to the broad-breadth NaCl-delta bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

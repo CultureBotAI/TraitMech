@@ -34,7 +34,8 @@ causal_graphs:
     label: chemoautolithotrophic
     node_type: TRAIT
     grounding: METPO:1000634
-    description: Trophic type using inorganic chemical donors for energy and CO2 for carbon.
+    description: Trophic type using inorganic chemical donors for energy and CO2 for
+      carbon.
   - node_id: inorganic_electron_donor
     label: inorganic electron donor
     node_type: CHEMICAL
@@ -74,11 +75,13 @@ causal_graphs:
   - subject: chemoautolithotrophic_trait
     predicate: uses electron donor
     object: inorganic_electron_donor
-    description: Chemoautolithotrophy uses inorganic chemical electron donors for energy.
+    description: Chemoautolithotrophy uses inorganic chemical electron donors for
+      energy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports lithotrophic oxidation of inorganic substrates.
+    predicate_id: METPO:2000009
   - subject: ammonia
     predicate: example of
     object: inorganic_electron_donor
@@ -87,6 +90,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.55.1.485
       snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
       notes: Supports ammonia oxidation as a chemolithoautotrophic example.
+    predicate_id: rdfs:subClassOf
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_electron_donor
@@ -95,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: Fe(II) as the energy source
       notes: Supports Fe(II) oxidation as an inorganic energy source.
+    predicate_id: rdfs:subClassOf
   - subject: inorganic_electron_donor
     predicate: feeds electrons into
     object: respiratory_chain
@@ -111,6 +116,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP production from electron transport.
+    predicate_id: METPO:2000202
   - subject: chemoautolithotrophic_trait
     predicate: uses carbon source
     object: carbon_dioxide
@@ -119,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: autotrophic CO2 fixation
       notes: Supports inorganic carbon fixation by autotrophic pathways.
+    predicate_id: METPO:2000006
   - subject: carbon_dioxide
     predicate: fixed by
     object: co2_fixation_pathway
@@ -135,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2016.130
       snippet: microbial autotrophic production
       notes: Supports biomass production from autotrophic CO2 fixation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.868850+00:00'
   curator: seed_from_metpo
@@ -144,6 +152,18 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: Codex
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed chemoautolithotrophy graph for inorganic electron
-    donors, respiratory ATP generation, CO2 fixation, and biomass.
+  changes: Added DOI-backed chemoautolithotrophy graph for inorganic electron donors,
+    respiratory ATP generation, CO2 fixation, and biomass.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000009×1, METPO:2000006×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2).
   llm_assisted: true

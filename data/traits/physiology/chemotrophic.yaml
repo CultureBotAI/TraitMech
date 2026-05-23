@@ -21,12 +21,14 @@ evidence:
   notes: Encyclopedia chapter classifies chemotrophy by chemical energy sources.
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: free energy of a redox reaction
-  notes: Review supports chemical redox reactions as energy sources for respiratory energy conservation.
+  notes: Review supports chemical redox reactions as energy sources for respiratory
+    energy conservation.
 causal_graphs:
 - graph_id: chemotrophic_chemical_redox_energy
   title: Chemotrophic chemical redox energy conservation
   description: DOI-backed graph linking reduced chemical substrates, inorganic and
-    organic donor examples, redox reactions, respiratory electron transfer, proton motive force, and ATP.
+    organic donor examples, redox reactions, respiratory electron transfer, proton
+    motive force, and ATP.
   nodes:
   - node_id: chemotrophic_trait
     label: chemotrophic
@@ -75,6 +77,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: chemical energy
       notes: Supports chemical energy as the defining chemotrophic energy source.
+    predicate_id: METPO:2000010
   - subject: inorganic_compound
     predicate: example of
     object: reduced_chemical_substrate
@@ -83,6 +86,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical substrates in chemolithotrophic metabolism.
+    predicate_id: rdfs:subClassOf
   - subject: organic_compound
     predicate: example of
     object: reduced_chemical_substrate
@@ -91,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: reduced organic compound
       notes: Supports reduced organic compounds as chemical energy substrates.
+    predicate_id: rdfs:subClassOf
   - subject: reduced_chemical_substrate
     predicate: oxidized by
     object: redox_reaction
@@ -123,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: generation of an electrochemical ion gradient
       notes: Supports ion-gradient formation by electron transport.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives production of
     object: atp
@@ -140,5 +146,18 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for chemical substrate oxidation, respiratory electron transfer, proton motive force, and ATP synthesis.
+  changes: Added DOI-backed causal graph for chemical substrate oxidation, respiratory
+    electron transfer, proton motive force, and ATP synthesis.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000010×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2, biolink:produces×1).
   llm_assisted: true

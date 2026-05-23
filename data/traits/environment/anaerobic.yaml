@@ -28,8 +28,8 @@ evidence:
 causal_graphs:
 - graph_id: anaerobic_trait_oxygen_exclusion
   title: Anaerobic growth oxygen-exclusion mechanism
-  description: Evidence-backed causal sketch linking anaerobic growth to absence
-    of molecular oxygen and oxygen-derived stress.
+  description: Evidence-backed causal sketch linking anaerobic growth to absence of
+    molecular oxygen and oxygen-derived stress.
   nodes:
   - node_id: anaerobic_trait
     label: anaerobic
@@ -53,8 +53,8 @@ causal_graphs:
   - node_id: oxygen_sensitive_catalytic_sites
     label: oxygen-sensitive catalytic sites
     node_type: MOLECULAR_FUNCTION
-    description: Radical chemistry and low-potential metal centers vulnerable to
-      oxygen or ROS.
+    description: Radical chemistry and low-potential metal centers vulnerable to oxygen
+      or ROS.
   edges:
   - subject: anoxic_condition
     predicate: enables
@@ -64,6 +64,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: hypoxic environments in which these organisms dwell
       notes: Review links anaerobe ecology to hypoxic environments.
+    predicate_id: RO:0002327
   - subject: molecular_oxygen
     predicate: inhibits
     object: anaerobic_trait
@@ -108,6 +109,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for oxygen exclusion and oxygen-derived
-    stress in anaerobic growth.
+  changes: Added DOI-backed causal graph for oxygen exclusion and oxygen-derived stress
+    in anaerobic growth.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

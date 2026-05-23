@@ -11,31 +11,30 @@ parent_traits:
 evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: optimal NaCl
-  notes: Osmoadaptation review supports the environmental value at which
-    growth is maximal as a standard quantitative descriptor.
+  notes: Osmoadaptation review supports the environmental value at which growth is
+    maximal as a standard quantitative descriptor.
 - reference: DOI:10.1038/nrmicro2549
   snippet: cytoplasmic pH
-  notes: pH-homeostasis review supports the external pH at which cytoplasmic
-    homeostasis sustains peak growth as an analogous optimum on the pH axis.
+  notes: pH-homeostasis review supports the external pH at which cytoplasmic homeostasis
+    sustains peak growth as an analogous optimum on the pH axis.
 causal_graphs:
 - graph_id: optimum_phenotype_descriptor
   title: Optimum phenotype descriptor across environmental axes
-  description: DOI-backed graph framing the optimum phenotype as a generic
-    peak-growth setpoint over any numerical environmental axis, with `is a`
-    edges to the axis-specific optimum phenotypes for NaCl, pH, and
-    temperature.
+  description: DOI-backed graph framing the optimum phenotype as a generic peak-growth
+    setpoint over any numerical environmental axis, with `is a` edges to the axis-specific
+    optimum phenotypes for NaCl, pH, and temperature.
   nodes:
   - node_id: optimum_phenotype_trait
     label: optimum phenotype with numerical limits
     node_type: TRAIT
     grounding: METPO:1000536
-    description: Phenotype defined by the value of an environmental variable
-      at which growth rate is maximal.
+    description: Phenotype defined by the value of an environmental variable at which
+      growth rate is maximal.
   - node_id: numerical_environmental_axis
     label: numerical environmental axis
     node_type: ENVIRONMENTAL_FACTOR
-    description: Any continuous environmental variable (NaCl, pH, temperature,
-      etc.) on which microbial growth can be measured quantitatively.
+    description: Any continuous environmental variable (NaCl, pH, temperature, etc.)
+      on which microbial growth can be measured quantitatively.
   - node_id: nacl_optimum
     label: NaCl optimum
     node_type: TRAIT
@@ -55,13 +54,13 @@ causal_graphs:
   - subject: numerical_environmental_axis
     predicate: defines
     object: optimum_phenotype_trait
-    description: A numerical environmental axis defines the values whose
-      peak-growth setting yields the optimum phenotype.
+    description: A numerical environmental axis defines the values whose peak-growth
+      setting yields the optimum phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
-      notes: Supports a numerical environmental axis as the axis on which an
-        optimum is identified.
+      notes: Supports a numerical environmental axis as the axis on which an optimum
+        is identified.
   - subject: nacl_optimum
     predicate: is a
     object: optimum_phenotype_trait
@@ -69,8 +68,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
-      notes: Supports NaCl optimum as an optimum phenotype defined over the
-        salinity axis.
+      notes: Supports NaCl optimum as an optimum phenotype defined over the salinity
+        axis.
+    predicate_id: rdfs:subClassOf
   - subject: ph_optimum
     predicate: is a
     object: optimum_phenotype_trait
@@ -78,8 +78,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cytoplasmic pH
-      notes: Supports pH optimum as an optimum phenotype defined over the
-        external-pH axis.
+      notes: Supports pH optimum as an optimum phenotype defined over the external-pH
+        axis.
+    predicate_id: rdfs:subClassOf
   - subject: temperature_optimum
     predicate: is a
     object: optimum_phenotype_trait
@@ -87,8 +88,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Membrane-adaptation review supports temperature optima as a
-        homoviscous-adaptation-tuned setpoint on the temperature axis.
+      notes: Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned
+        setpoint on the temperature axis.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848187+00:00'
   curator: seed_from_metpo
@@ -98,7 +100,12 @@ curation_history:
 - timestamp: '2026-05-13T12:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph framing the optimum phenotype as a
-    cross-axis peak-growth descriptor with axis-specific children for NaCl,
-    pH, and temperature.
+  changes: Added DOI-backed causal graph framing the optimum phenotype as a cross-axis
+    peak-growth descriptor with axis-specific children for NaCl, pH, and temperature.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×3).
   llm_assisted: true

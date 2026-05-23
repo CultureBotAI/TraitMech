@@ -18,13 +18,13 @@ evidence:
     geometry maintained by graded wall synthesis.
 - reference: DOI:10.1111/1462-2920.13731
   snippet: Fusobacterium nucleatum
-  notes: Fusobacterium-genome review supports fusiform morphology in the
-    Fusobacterium genus.
+  notes: Fusobacterium-genome review supports fusiform morphology in the Fusobacterium
+    genus.
 causal_graphs:
 - graph_id: fusiform_shaped_tapered_polar_growth
   title: Fusiform-shape tapered polar growth
-  description: DOI-backed graph linking graded polar peptidoglycan growth and
-    reduced end-cap radius to fusiform tapered morphology.
+  description: DOI-backed graph linking graded polar peptidoglycan growth and reduced
+    end-cap radius to fusiform tapered morphology.
   nodes:
   - node_id: fusiform_shaped_trait
     label: fusiform shaped
@@ -52,6 +52,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: polar growth
       notes: Supports polar PG growth as the mechanism producing tapered ends.
+    predicate_id: METPO:2000202
   - subject: end_cap_taper
     predicate: shapes
     object: tapered_geometry
@@ -77,6 +78,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking graded polar peptidoglycan
-    growth and end-cap taper to fusiform morphology.
+  changes: Added DOI-backed causal graph linking graded polar peptidoglycan growth
+    and end-cap taper to fusiform morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

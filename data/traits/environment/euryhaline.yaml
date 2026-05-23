@@ -19,7 +19,8 @@ evidence:
     range.
 - reference: PMID:22675587
   snippet: due to its strong euryhaline phenotype
-  notes: 'Organism example: Chromohalobacter salexigens is described as having a strong euryhaline phenotype.'
+  notes: 'Organism example: Chromohalobacter salexigens is described as having a strong
+    euryhaline phenotype.'
 causal_graphs:
 - graph_id: euryhaline_wide_salinity_tolerance
   title: Euryhaline wide-salinity tolerance mechanism
@@ -34,8 +35,7 @@ causal_graphs:
   - node_id: wide_salinity_range
     label: wide salinity range
     node_type: ENVIRONMENTAL_FACTOR
-    description: Environmental salinity range broad enough to require flexible
-      osmoadaptation.
+    description: Environmental salinity range broad enough to require flexible osmoadaptation.
   - node_id: salinity_gradient
     label: salinity gradient
     node_type: ENVIRONMENTAL_FACTOR
@@ -85,6 +85,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: water immediately rushes into the cell
       notes: Supports osmotic imbalance and water flux during salinity change.
+    predicate_id: biolink:causes
   - subject: compatible_solute_transport
     predicate: imports
     object: compatible_solutes
@@ -111,8 +112,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40168-024-01817-w
       snippet: genes associated with microbial salinity adaptation
-      notes: Supports salinity-adaptation genes as contributors to microbial
-        salinity niche breadth.
+      notes: Supports salinity-adaptation genes as contributors to microbial salinity
+        niche breadth.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864669+00:00'
   curator: seed_from_metpo
@@ -129,4 +131,16 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Added DOI-backed euryhaline causal graph for broad salinity tolerance,
     salinity gradients, compatible solutes, and salinity-adaptation genes.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

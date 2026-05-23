@@ -1,7 +1,7 @@
 identifier: METPO:1000232
 label: pH delta
-definition: A pH phenotype with numerical limits expressing the breadth (maximum
-  minus minimum) of external pH supporting growth of an organism.
+definition: A pH phenotype with numerical limits expressing the breadth (maximum minus
+  minimum) of external pH supporting growth of an organism.
 definition_source: DOI:10.1038/nrmicro2549
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -12,17 +12,17 @@ parent_traits:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: pH homeostasis
-  notes: pH-homeostasis review supports the breadth of the pH-tolerance span
-    as a derived descriptor reflecting overall pH-homeostasis flexibility.
+  notes: pH-homeostasis review supports the breadth of the pH-tolerance span as a
+    derived descriptor reflecting overall pH-homeostasis flexibility.
 - reference: DOI:10.1016/j.tim.2007.02.005
   snippet: proton motive force
-  notes: pH-homeostasis review supports the proton motive force as the
-    energetic constraint underlying broad versus narrow pH tolerance.
+  notes: pH-homeostasis review supports the proton motive force as the energetic constraint
+    underlying broad versus narrow pH tolerance.
 causal_graphs:
 - graph_id: ph_delta_homeostasis_flexibility
   title: pH-delta homeostasis flexibility
-  description: DOI-backed graph linking the flexibility of pH-homeostasis
-    machinery to the breadth of the pH growth range (delta = max − min).
+  description: DOI-backed graph linking the flexibility of pH-homeostasis machinery
+    to the breadth of the pH growth range (delta = max − min).
   nodes:
   - node_id: ph_delta_trait
     label: pH delta
@@ -32,13 +32,12 @@ causal_graphs:
   - node_id: ph_homeostasis_flexibility
     label: pH-homeostasis flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Capacity to remodel proton extrusion, K+/H+ antiport, and
-      envelope buffering across a wide span of external pH.
+    description: Capacity to remodel proton extrusion, K+/H+ antiport, and envelope
+      buffering across a wide span of external pH.
   - node_id: tolerance_breadth
     label: pH tolerance breadth
     node_type: BIOLOGICAL_PROCESS
-    description: Span between the minimum and maximum growth-supporting
-      external pH.
+    description: Span between the minimum and maximum growth-supporting external pH.
   edges:
   - subject: ph_homeostasis_flexibility
     predicate: enables
@@ -47,18 +46,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: pH homeostasis
-      notes: Supports the breadth of pH homeostasis as the basis of broad pH
-        tolerance.
+      notes: Supports the breadth of pH homeostasis as the basis of broad pH tolerance.
+    predicate_id: RO:0002327
   - subject: tolerance_breadth
     predicate: manifests as
     object: ph_delta_trait
-    description: The breadth between minimum and maximum growth-supporting
-      external pH manifests the pH-delta phenotype.
+    description: The breadth between minimum and maximum growth-supporting external
+      pH manifests the pH-delta phenotype.
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: proton motive force
-      notes: Supports the bounded proton motive force as the determinant of
-        the pH tolerance breadth.
+      notes: Supports the bounded proton motive force as the determinant of the pH
+        tolerance breadth.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812528+00:00'
   curator: seed_from_metpo
@@ -68,6 +67,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking pH-homeostasis flexibility
-    and the proton motive force to the pH-delta breadth phenotype.
+  changes: Added DOI-backed causal graph linking pH-homeostasis flexibility and the
+    proton motive force to the pH-delta breadth phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

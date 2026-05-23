@@ -16,20 +16,19 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: cell shape is genetically determined
-  notes: Cell-shape review supports symmetric tapered shapes as a genetically
-    determined outcome of polar wall patterning.
+  notes: Cell-shape review supports symmetric tapered shapes as a genetically determined
+    outcome of polar wall patterning.
 causal_graphs:
 - graph_id: spindle_shaped_symmetric_taper
   title: Spindle-shape symmetric polar taper
-  description: DOI-backed graph linking symmetric tapered polar wall growth and
-    reduced end-cap radius to spindle morphology.
+  description: DOI-backed graph linking symmetric tapered polar wall growth and reduced
+    end-cap radius to spindle morphology.
   nodes:
   - node_id: spindle_shaped_trait
     label: spindle shaped
     node_type: TRAIT
     grounding: METPO:1000692
-    description: Cell widest at the middle and tapering symmetrically to pointed
-      poles.
+    description: Cell widest at the middle and tapering symmetrically to pointed poles.
   - node_id: symmetric_polar_pg
     label: symmetric polar peptidoglycan growth
     node_type: BIOLOGICAL_PROCESS
@@ -46,12 +45,12 @@ causal_graphs:
   - subject: symmetric_polar_pg
     predicate: produces
     object: reduced_end_cap_radius
-    description: Symmetric polar growth produces reduced end-cap radius at both
-      poles.
+    description: Symmetric polar growth produces reduced end-cap radius at both poles.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: polar growth
       notes: Supports polar PG growth as the producer of tapered ends.
+    predicate_id: METPO:2000202
   - subject: reduced_end_cap_radius
     predicate: shapes
     object: spindle_geometry
@@ -77,6 +76,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking symmetric polar
-    peptidoglycan growth and reduced end-cap radius to spindle morphology.
+  changes: Added DOI-backed definition and causal graph linking symmetric polar peptidoglycan
+    growth and reduced end-cap radius to spindle morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

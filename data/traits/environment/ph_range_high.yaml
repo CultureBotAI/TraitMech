@@ -24,18 +24,17 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: alkaliphiles
-  notes: pH-homeostasis review supports extreme-alkaliphile physiology
-    growing at external pH above 10.
+  notes: pH-homeostasis review supports extreme-alkaliphile physiology growing at
+    external pH above 10.
 - reference: DOI:10.1016/j.tim.2007.02.005
   snippet: proton motive force
-  notes: pH-homeostasis review supports robust Na+/H+ antiporter activity as
-    the extreme-alkaliphile mechanism sustaining the proton motive force
-    above pH 10.
+  notes: pH-homeostasis review supports robust Na+/H+ antiporter activity as the extreme-alkaliphile
+    mechanism sustaining the proton motive force above pH 10.
 causal_graphs:
 - graph_id: ph_range_high_extreme_alkaliphile
   title: pH-range-high extreme-alkaliphile range
-  description: DOI-backed graph linking extreme-alkaliphile Na+/H+
-    antiporter activity to a pH growth range extending above 10.
+  description: DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity
+    to a pH growth range extending above 10.
   nodes:
   - node_id: ph_range_high_trait
     label: pH range high
@@ -50,8 +49,8 @@ causal_graphs:
   - node_id: extreme_alkaliphile_antiport
     label: extreme-alkaliphile Na+/H+ antiport
     node_type: BIOLOGICAL_PROCESS
-    description: Robust Na+/H+ antiporter activity importing H+ at strongly
-      alkaline external pH.
+    description: Robust Na+/H+ antiporter activity importing H+ at strongly alkaline
+      external pH.
   edges:
   - subject: extreme_alkaliphile_antiport
     predicate: enables
@@ -60,18 +59,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: proton motive force
-      notes: Supports antiporter-driven proton re-import as the
-        extreme-alkaliphile mechanism.
+      notes: Supports antiporter-driven proton re-import as the extreme-alkaliphile
+        mechanism.
+    predicate_id: RO:0002327
   - subject: ph_range_high_trait
     predicate: is a
     object: ph_range
-    description: pH range high is a quantitative bin of the pH-range
-      phenotype.
+    description: pH range high is a quantitative bin of the pH-range phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: alkaliphiles
-      notes: Supports the pH 10–14 range as a value within the pH-range
-        distribution.
+      notes: Supports the pH 10–14 range as a value within the pH-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.832881+00:00'
   curator: seed_from_metpo
@@ -81,6 +80,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking
-    extreme-alkaliphile Na+/H+ antiport to the pH-range-high bin.
+  changes: Added DOI-backed definition and causal graph linking extreme-alkaliphile
+    Na+/H+ antiport to the pH-range-high bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

@@ -26,10 +26,9 @@ evidence:
   notes: Streamlining review links nutrient limitation to small-cell/genome adaptation.
 - reference: PMID:16109880
   snippet: Pelagibacter ubique
-  notes: 'Organism example: Pelagibacter ubique HTCC1062 (SAR11 clade) is the
-    archetypal oligotrophic marine bacterium with a streamlined genome
-    adapted to nutrient-poor open-ocean conditions (Giovannoni et al. 2005,
-    Science).'
+  notes: 'Organism example: Pelagibacter ubique HTCC1062 (SAR11 clade) is the archetypal
+    oligotrophic marine bacterium with a streamlined genome adapted to nutrient-poor
+    open-ocean conditions (Giovannoni et al. 2005, Science).'
 causal_graphs:
 - graph_id: oligotrophic_low_nutrient_efficiency
   title: Oligotrophic low-nutrient efficiency strategy
@@ -90,6 +89,7 @@ causal_graphs:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: minimizes resources required for replication
       notes: Supports genome streamlining as a resource-efficiency mechanism.
+    predicate_id: RO:0002326
   - subject: small_cell_architecture
     predicate: contributes to
     object: efficient_nutrient_use
@@ -98,6 +98,7 @@ causal_graphs:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: small cells and genomes
       notes: Supports small-cell architecture as part of streamlining theory.
+    predicate_id: RO:0002326
   - subject: oligotrophic_trait
     predicate: associated with
     object: slow_growth
@@ -106,14 +107,17 @@ causal_graphs:
     - reference: DOI:10.1002/bies.1091
       snippet: grow slowly under apparent optimal conditions
       notes: Supports slow growth as a characteristic of oligotrophic strategy.
+    predicate_id: biolink:associated_with
   - subject: efficient_nutrient_use
     predicate: enables
     object: oligotrophic_trait
-    description: Efficient nutrient use enables persistence and growth in nutrient-poor environments.
+    description: Efficient nutrient use enables persistence and growth in nutrient-poor
+      environments.
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: molecular mechanisms of adaptation
       notes: Supports genomic mechanisms underlying oligotrophic adaptation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.878135+00:00'
   curator: seed_from_metpo
@@ -123,12 +127,24 @@ curation_history:
 - timestamp: '2026-05-09T00:00:00-07:00'
   curator: Codex
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed oligotrophy graph for low nutrients, genome/cell
-    streamlining, efficient nutrient use, and slow-growth strategy.
+  changes: Added DOI-backed oligotrophy graph for low nutrients, genome/cell streamlining,
+    efficient nutrient use, and slow-growth strategy.
   llm_assisted: true
 - timestamp: '2026-05-16T05:00:00-07:00'
   curator: claude
   action: ADDED_ORGANISM_EXAMPLE
-  changes: Added Pelagibacter ubique HTCC1062 (SAR11) organism example with
-    PMID-backed evidence.
+  changes: Added Pelagibacter ubique HTCC1062 (SAR11) organism example with PMID-backed
+    evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:associated_with×1).
   llm_assisted: true

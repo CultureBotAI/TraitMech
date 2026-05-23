@@ -25,8 +25,8 @@ evidence:
 causal_graphs:
 - graph_id: strict_anaerobe_oxygen_sensitivity
   title: Strict anaerobe oxygen-sensitivity mechanism
-  description: Evidence-backed causal sketch linking strict anaerobic growth to
-    anoxic environments and oxygen-sensitive cellular chemistry.
+  description: Evidence-backed causal sketch linking strict anaerobic growth to anoxic
+    environments and oxygen-sensitive cellular chemistry.
   nodes:
   - node_id: strictly_anaerobic_trait
     label: strictly anaerobic
@@ -59,8 +59,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: hypoxic or anoxic conditions
-      notes: Review supports anoxic environments as the ecological context for
-        anaerobe growth.
+      notes: Review supports anoxic environments as the ecological context for anaerobe
+        growth.
+    predicate_id: RO:0002327
   - subject: molecular_oxygen
     predicate: inhibits
     object: strictly_anaerobic_trait
@@ -105,4 +106,10 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for strict anaerobe oxygen sensitivity.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

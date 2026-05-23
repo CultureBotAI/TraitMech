@@ -23,8 +23,8 @@ causal_graphs:
 - graph_id: spirochete_shaped_periplasmic_flagella
   title: Spirochete-shape periplasmic flagella mechanism
   description: Evidence-backed causal sketch linking spirochete morphology to the
-    cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or
-    helical cell-body deformation.
+    cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or helical
+    cell-body deformation.
   nodes:
   - node_id: spirochete_shaped_trait
     label: spirochete shaped
@@ -55,22 +55,23 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.200221797
       snippet: gene encoding the major periplasmic flagellar filament protein FlaB
-      notes: Targeted mutagenesis of flaB removed periplasmic flagella in
-        Borrelia burgdorferi.
+      notes: Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia
+        burgdorferi.
   - subject: periplasmic_flagella
     predicate: interact with
     object: cell_cylinder
-    description: Periplasmic flagella interact with the cell cylinder to deform
-      the spirochete body.
+    description: Periplasmic flagella interact with the cell cylinder to deform the
+      spirochete body.
     evidence:
     - reference: DOI:10.1073/pnas.200221797
-      snippet: complex interaction between the cell cylinder and the internal periplasmic flagella
+      snippet: complex interaction between the cell cylinder and the internal periplasmic
+        flagella
       notes: Supports a physical interaction between flagella and cell cylinder.
   - subject: periplasmic_flagella
     predicate: confers
     object: flat_wave_morphology
-    description: Periplasmic flagella provide a skeletal function that confers
-      flat-wave morphology.
+    description: Periplasmic flagella provide a skeletal function that confers flat-wave
+      morphology.
     evidence:
     - reference: DOI:10.1073/pnas.200221797
       snippet: have a skeletal function
@@ -81,9 +82,11 @@ causal_graphs:
     description: Flat-wave or helical deformation produces spirochete morphology.
     evidence:
     - reference: DOI:10.1073/pnas.200221797
-      snippet: cell morphology is either a helix, a flat wave, or an irregularly shaped helix
-      notes: Supports spirochete-shape classes and their dependence on internal
-        flagella-cell-body geometry.
+      snippet: cell morphology is either a helix, a flat wave, or an irregularly shaped
+        helix
+      notes: Supports spirochete-shape classes and their dependence on internal flagella-cell-body
+        geometry.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899870+00:00'
   curator: seed_from_metpo
@@ -96,4 +99,10 @@ curation_history:
   changes: Replaced broad definition source with DOI-backed spirochete morphology
     evidence and added causal graph for FlaB, periplasmic flagella, cell cylinder,
     and flat-wave morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

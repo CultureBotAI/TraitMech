@@ -26,9 +26,9 @@ evidence:
 causal_graphs:
 - graph_id: sporulation_spo0a_sigma_morphogenesis
   title: Sporulation Spo0A and sigma-factor morphogenesis
-  description: Evidence-backed causal sketch linking environmental stress and
-    Spo0A activation to asymmetric septation, compartment-specific sigma factors,
-    forespore maturation, and endospore formation.
+  description: Evidence-backed causal sketch linking environmental stress and Spo0A
+    activation to asymmetric septation, compartment-specific sigma factors, forespore
+    maturation, and endospore formation.
   nodes:
   - node_id: sporulation_trait
     label: sporulation
@@ -67,8 +67,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/S1369-5274(00)00141-7
       snippet: steps that lead to activation of Spo0A
-      notes: Supports Spo0A activation as the initiation control point for
-        sporulation.
+      notes: Supports Spo0A activation as the initiation control point for sporulation.
   - subject: spo0a_phosphorelay
     predicate: initiates
     object: asymmetric_septation
@@ -77,13 +76,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: activation of these sigma factors to landmark events in morphogenesis
-      notes: Supports regulatory linkage between Spo0A/sigma activation and
-        sporulation morphogenesis.
+      notes: Supports regulatory linkage between Spo0A/sigma activation and sporulation
+        morphogenesis.
   - subject: asymmetric_septation
     predicate: establishes
     object: compartment_sigma_factors
-    description: Asymmetric septation establishes mother-cell and forespore
-      compartments with distinct sigma-factor programs.
+    description: Asymmetric septation establishes mother-cell and forespore compartments
+      with distinct sigma-factor programs.
     evidence:
     - reference: DOI:10.1128/MMBR.67.4.526-560.2003
       snippet: Compartmentalization of Gene Expression
@@ -104,6 +103,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: within which a spore is produced
       notes: Supports the developmental endpoint of sporulation.
+    predicate_id: METPO:2000202
   - subject: endospore
     predicate: manifests as
     object: sporulation_trait
@@ -121,7 +121,13 @@ curation_history:
 - timestamp: '2026-05-11T21:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for nutrient limitation,
-    Spo0A phosphorelay, asymmetric septation, compartment sigma factors, forespore
-    maturation, and endospore formation.
+  changes: Added DOI-backed definition and causal graph for nutrient limitation, Spo0A
+    phosphorelay, asymmetric septation, compartment sigma factors, forespore maturation,
+    and endospore formation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

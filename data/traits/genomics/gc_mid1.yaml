@@ -1,9 +1,9 @@
 identifier: METPO:1000430
 label: GC mid1
-definition: A GC-content phenotype with genome-wide GC composition above
-  approximately 66.3% (the METPO `GC_>66.3` bin; note that the upstream label
-  'mid1' does not match this high-end numeric threshold, but the synonym is
-  preserved as the authoritative bin definition).
+definition: A GC-content phenotype with genome-wide GC composition above approximately
+  66.3% (the METPO `GC_>66.3` bin; note that the upstream label 'mid1' does not match
+  this high-end numeric threshold, but the synonym is preserved as the authoritative
+  bin definition).
 definition_source: DOI:10.1038/nrg2358
 trait_category: GENOMICS
 term_kind: CLASS
@@ -17,14 +17,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1186/1471-2148-10-374
   snippet: GC-biased gene conversion
-  notes: Bacterial-GC-content evolution review supports GC-biased gene
-    conversion as the mechanism elevating GC content into the high range.
+  notes: Bacterial-GC-content evolution review supports GC-biased gene conversion
+    as the mechanism elevating GC content into the high range.
 causal_graphs:
 - graph_id: gc_mid1_high_gc_bin
   title: GC-mid1 (METPO >66.3%) high-GC bin
-  description: DOI-backed graph linking strong GC-biased gene conversion to a
-    GC content above ~66.3% (the threshold encoded by the METPO synonym
-    GC_>66.3 on this record).
+  description: DOI-backed graph linking strong GC-biased gene conversion to a GC content
+    above ~66.3% (the threshold encoded by the METPO synonym GC_>66.3 on this record).
   nodes:
   - node_id: gc_mid1_trait
     label: GC mid1
@@ -39,19 +38,18 @@ causal_graphs:
   - node_id: strong_gbgc
     label: strong GC-biased gene conversion
     node_type: BIOLOGICAL_PROCESS
-    description: Recombination-associated process strongly favoring GC alleles
-      that elevates genome-wide GC content into the high range.
+    description: Recombination-associated process strongly favoring GC alleles that
+      elevates genome-wide GC content into the high range.
   edges:
   - subject: strong_gbgc
     predicate: produces
     object: gc_mid1_trait
-    description: Strong GC-biased gene conversion yields high genome-wide GC
-      composition.
+    description: Strong GC-biased gene conversion yields high genome-wide GC composition.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: GC-biased gene conversion
-      notes: Supports GC-biased gene conversion as the driver of high-GC
-        composition.
+      notes: Supports GC-biased gene conversion as the driver of high-GC composition.
+    predicate_id: METPO:2000202
   - subject: gc_mid1_trait
     predicate: is a
     object: gc_content
@@ -59,8 +57,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrg2358
       snippet: GC content
-      notes: Supports the >66.3% bin as a value within the GC-content
-        distribution.
+      notes: Supports the >66.3% bin as a value within the GC-content distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817373+00:00'
   curator: seed_from_metpo
@@ -70,7 +68,13 @@ curation_history:
 - timestamp: '2026-05-13T13:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition (derived from METPO synonym GC_>66.3)
-    and causal graph linking strong GC-biased gene conversion to this GC
-    bin. Documented the upstream label-vs-threshold inconsistency.
+  changes: Added DOI-backed definition (derived from METPO synonym GC_>66.3) and causal
+    graph linking strong GC-biased gene conversion to this GC bin. Documented the
+    upstream label-vs-threshold inconsistency.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

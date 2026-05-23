@@ -1,8 +1,7 @@
 identifier: METPO:1000673
 label: ellipsoidal
-definition: A cell shape in which an organism has an oval or ellipse morphology,
-  elongated along one axis with rounded ends, intermediate between spherical and
-  rod-shaped.
+definition: A cell shape in which an organism has an oval or ellipse morphology, elongated
+  along one axis with rounded ends, intermediate between spherical and rod-shaped.
 definition_source: DOI:10.1089/mdr.2014.0032
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -21,9 +20,9 @@ evidence:
 causal_graphs:
 - graph_id: ellipsoidal_ovococcal_elongation
   title: Ellipsoidal ovococcal elongation mechanism
-  description: Evidence-backed causal sketch linking ellipsoidal morphology to
-    ovococcal peripheral peptidoglycan insertion, septal synthesis, PBP2b, and
-    DivIVA-regulated elongation.
+  description: Evidence-backed causal sketch linking ellipsoidal morphology to ovococcal
+    peripheral peptidoglycan insertion, septal synthesis, PBP2b, and DivIVA-regulated
+    elongation.
   nodes:
   - node_id: ellipsoidal_trait
     label: ellipsoidal
@@ -62,21 +61,23 @@ causal_graphs:
   - subject: divIVA
     predicate: regulates
     object: septal_and_peripheral_synthesis
-    description: DivIVA regulates septal cleavage and peripheral peptidoglycan
-      synthesis during ovococcal morphogenesis.
+    description: DivIVA regulates septal cleavage and peripheral peptidoglycan synthesis
+      during ovococcal morphogenesis.
     evidence:
     - reference: DOI:10.1128/mbio.01311-24
       snippet: peripheral peptidoglycan synthesis
       notes: Supports DivIVA control of ovococcal wall remodeling and elongation.
+    predicate_id: RO:0002211
   - subject: peripheral_peptidoglycan
     predicate: contributes to
     object: ellipsoid_geometry
-    description: Peripheral wall insertion contributes to elongation of the
-      ellipsoidal cell body.
+    description: Peripheral wall insertion contributes to elongation of the ellipsoidal
+      cell body.
     evidence:
     - reference: DOI:10.1128/mbio.01311-24
       snippet: septum cleavage and peripheral peptidoglycan synthesis
       notes: Supports peripheral PG as a remodeling event for ovococcal elongation.
+    predicate_id: RO:0002326
   - subject: septal_and_peripheral_synthesis
     predicate: shapes
     object: ellipsoid_geometry
@@ -103,7 +104,12 @@ curation_history:
 - timestamp: '2026-05-11T20:05:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for PBP2b, DivIVA,
-    peripheral peptidoglycan, coordinated septal/peripheral wall synthesis, and
-    ellipsoid geometry.
+  changes: Added DOI-backed definition and causal graph for PBP2b, DivIVA, peripheral
+    peptidoglycan, coordinated septal/peripheral wall synthesis, and ellipsoid geometry.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002326×1).
   llm_assisted: true

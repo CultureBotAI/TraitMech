@@ -22,13 +22,13 @@ evidence:
     category.
 - reference: DOI:10.1186/1746-1448-4-2
   snippet: KCl accumulating Halobacterium salinarum
-  notes: Saline-Systems review supports the salt-in (intracellular KCl) strategy
-    as the mechanism for extreme-halophile growth.
+  notes: Saline-Systems review supports the salt-in (intracellular KCl) strategy as
+    the mechanism for extreme-halophile growth.
 causal_graphs:
 - graph_id: nacl_optimum_high_extreme_halophile
   title: NaCl-optimum-high extreme-halophile setpoint
-  description: DOI-backed graph linking salt-in ion-accumulation strategy under
-    hypersaline NaCl to a >8% (w/v) NaCl-optimum (extreme halophile).
+  description: DOI-backed graph linking salt-in ion-accumulation strategy under hypersaline
+    NaCl to a >8% (w/v) NaCl-optimum (extreme halophile).
   nodes:
   - node_id: nacl_optimum_high_trait
     label: NaCl optimum high
@@ -47,8 +47,8 @@ causal_graphs:
   - node_id: salt_in_strategy
     label: salt-in strategy
     node_type: BIOLOGICAL_PROCESS
-    description: Intracellular K+ accumulation balancing high external NaCl
-      osmotic activity.
+    description: Intracellular K+ accumulation balancing high external NaCl osmotic
+      activity.
   edges:
   - subject: hypersaline_nacl
     predicate: selects for
@@ -67,15 +67,16 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: extreme halophile
       notes: Supports the >8% optimum as the extreme-halophile outcome.
+    predicate_id: METPO:2000202
   - subject: nacl_optimum_high_trait
     predicate: is a
     object: nacl_optimum
-    description: NaCl optimum high is a quantitative bin of the NaCl-optimum
-      phenotype.
+    description: NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: optimal NaCl
       notes: Supports >8% optimum as a value within the NaCl-optimum distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835295+00:00'
   curator: seed_from_metpo
@@ -85,7 +86,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking salt-in
-    ion-accumulation strategy under hypersaline NaCl to the extreme-halophile
-    NaCl-optimum bin.
+  changes: Added DOI-backed definition and causal graph linking salt-in ion-accumulation
+    strategy under hypersaline NaCl to the extreme-halophile NaCl-optimum bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

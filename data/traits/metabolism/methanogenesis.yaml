@@ -26,7 +26,8 @@ created_by: Luke Wang
 evidence:
 - reference: DOI:10.1146/annurev-micro-011720-122807
   snippet: from CO2 and H2 to methane
-  notes: Supports hydrogenotrophic methanogenesis as a methane-producing archaeal pathway.
+  notes: Supports hydrogenotrophic methanogenesis as a methane-producing archaeal
+    pathway.
 - reference: DOI:10.1021/acs.biochem.9b00164
   snippet: catalyzes the reversible reduction of methyl-coenzyme M
   notes: Supports methyl-coenzyme M reductase as the terminal methane-forming enzyme.
@@ -76,7 +77,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-micro-011720-122807
       snippet: terminal step of microbial biomass degradation in anoxic habitats
-      notes: Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.
+      notes: Review places hydrogenotrophic methanogenesis in anoxic microbial biomass
+        degradation.
   - subject: carbon_dioxide
     predicate: reduced with electron donor
     object: molecular_hydrogen
@@ -96,7 +98,8 @@ causal_graphs:
   - subject: methyl_coenzyme_m_reductase
     predicate: catalyzes formation of
     object: methane
-    description: Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.
+    description: Methyl-coenzyme M reductase catalyzes the terminal methane-forming
+      reaction.
     evidence:
     - reference: DOI:10.1021/acs.biochem.9b00164
       snippet: catalyzes the reversible reduction of methyl-coenzyme M
@@ -109,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-011720-122807
       snippet: from CO2 and H2 to methane
       notes: Supports methane as the reduced product of hydrogenotrophic methanogenesis.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.914643+00:00'
   curator: seed_from_metpo
@@ -118,5 +122,12 @@ curation_history:
 - timestamp: '2026-05-07T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for anoxic C1 reduction to methane and the methyl-coenzyme M reductase terminal step.
+  changes: Added DOI-backed causal graph for anoxic C1 reduction to methane and the
+    methyl-coenzyme M reductase terminal step.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

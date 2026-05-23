@@ -14,8 +14,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
-  notes: Virulence-factor review supports adaptation of bacterial virulence
-    programs to the human host environment.
+  notes: Virulence-factor review supports adaptation of bacterial virulence programs
+    to the human host environment.
 - reference: DOI:10.1038/nrmicro1592
   snippet: secretion systems
   notes: Secretion-systems review supports effector delivery as a major mechanism
@@ -23,9 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
   title: Human-pathogen Homo sapiens host adaptation
-  description: DOI-backed graph linking human-adapted virulence factors,
-    body-temperature and tissue tropism, and human-specific immune evasion to the
-    human-pathogen phenotype.
+  description: DOI-backed graph linking human-adapted virulence factors, body-temperature
+    and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.
   nodes:
   - node_id: human_pathogen_trait
     label: human pathogen
@@ -39,8 +38,8 @@ causal_graphs:
   - node_id: human_tropism
     label: human tissue tropism
     node_type: BIOLOGICAL_PROCESS
-    description: Preferential adhesion and growth in human-specific tissues at
-      body-core temperatures.
+    description: Preferential adhesion and growth in human-specific tissues at body-core
+      temperatures.
   - node_id: human_immune_evasion
     label: human immune evasion
     node_type: BIOLOGICAL_PROCESS
@@ -59,11 +58,12 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports virulence factors as enablers of human tissue tropism.
+    predicate_id: RO:0002327
   - subject: human_tropism
     predicate: supports
     object: human_disease
-    description: Tissue tropism supports establishment of human disease at
-      specific anatomical sites.
+    description: Tissue tropism supports establishment of human disease at specific
+      anatomical sites.
     evidence:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
@@ -95,4 +95,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph linking human-adapted virulence factors,
     tissue tropism, immune evasion, and disease to the human-pathogen trait.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

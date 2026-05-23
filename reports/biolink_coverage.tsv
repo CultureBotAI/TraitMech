@@ -1,0 +1,220 @@
+source	label	current_curie	biolink_via_label	biolink_via_exact_mapping	edge_count
+applied	produces	METPO:2000202	biolink:produces		
+applied	oxidizes	METPO:2000016			
+applied	uses carbon source	METPO:2000006			
+applied	uses electron donor	METPO:2000009			
+applied	uses electron acceptor	METPO:2000008			
+applied	uses energy source	METPO:2000010			
+applied	is a	rdfs:subClassOf		biolink:subclass_of	
+applied	enables	RO:0002327	biolink:enables	biolink:catalyzes|biolink:enables	
+applied	contributes to	RO:0002326	biolink:contributes_to	biolink:contributes_to	
+applied	regulates	RO:0002211	biolink:regulates		
+applied	causes	biolink:causes	biolink:causes		
+applied	catalyzes	biolink:catalyzes	biolink:catalyzes		
+applied	associated with	biolink:associated_with	biolink:associated_with		
+applied	located in	biolink:located_in	biolink:located_in		
+applied	participates in	biolink:participates_in	biolink:participates_in		
+applied	part of	biolink:part_of	biolink:part_of		
+applied	occurs in	biolink:occurs_in	biolink:occurs_in		
+applied	interacts with	biolink:interacts_with	biolink:interacts_with		
+applied	develops into	biolink:develops_into	biolink:develops_into		
+applied	consumes	biolink:consumes	biolink:consumes		
+applied	specializes	rdfs:subClassOf		biolink:subclass_of	
+applied	example of	rdfs:subClassOf		biolink:subclass_of	
+applied	generates	biolink:produces			
+applied	localized in	biolink:located_in			
+applied	localized to	biolink:located_in			
+applied	localizes to	biolink:located_in			
+applied	encodes	biolink:encodes			
+applied	depends on	RO:0002502			
+residual	manifests as				52
+residual	supports				26
+residual	selects for				20
+residual	drives				19
+residual	defines				14
+residual	maintains				13
+residual	mitigates				12
+residual	shapes				12
+residual	feeds electrons into				12
+residual	challenges				9
+residual	fixed by				9
+residual	oxidized to				8
+residual	influences				7
+residual	engages				7
+residual	determines				6
+residual	sets				6
+residual	constrains				6
+residual	input to				6
+residual	transfers electrons to				6
+residual	powers				6
+residual	organizes				6
+residual	imports				5
+residual	occurs under				5
+residual	incorporated into				5
+residual	drives production of				5
+residual	requires				4
+residual	decreases				4
+residual	triggers				4
+residual	directs				4
+residual	controls				4
+residual	prevents		biolink:preventative_for_condition		4
+residual	initiates				4
+residual	can proceed through				4
+residual	assimilated into				4
+residual	increases gradient of				3
+residual	includes				3
+residual	inhibits				3
+residual	damages				3
+residual	uses				3
+residual	has alternative process				3
+residual	accumulates				3
+residual	has mechanistic pathway				3
+residual	realizes				3
+residual	feed into				3
+residual	positions				3
+residual	builds				3
+residual	captured by				3
+residual	delivers				2
+residual	limits influx of				2
+residual	removes				2
+residual	acts as				2
+residual	can generate				2
+residual	protects against				2
+residual	is compatible with				2
+residual	exports				2
+residual	provides				2
+residual	tolerated by				2
+residual	imposes				2
+residual	reduces				2
+residual	increases				2
+residual	reduced to				2
+residual	oxidized during				2
+residual	converted to				2
+residual	supports formation of				2
+residual	catalyzes formation of				2
+residual	transfers electrons via				2
+residual	rotates				2
+residual	coordinates with				2
+residual	recruits				2
+residual	reduced in				2
+residual	promotes				2
+residual	combines with				2
+residual	establishes				2
+residual	builds layer of				2
+residual	uses energy substrate				2
+residual	broken down by				2
+residual	drives synthesis of				2
+residual	imported by				2
+residual	uses chemical energy source				2
+residual	oxidized by				2
+residual	supplies				2
+residual	uses substrate				2
+residual	assimilated by				2
+residual	mandates				1
+residual	motivates				1
+residual	suppresses				1
+residual	mitigates influx of				1
+residual	increases influx pressure of				1
+residual	has mechanistic process				1
+residual	exchanges				1
+residual	generates stress via				1
+residual	requires adaptation of				1
+residual	responds to				1
+residual	controls adaptation to				1
+residual	is tolerated by				1
+residual	supports optimum of				1
+residual	regulates switch between				1
+residual	activates in absence of oxygen				1
+residual	enables use of				1
+residual	has function				1
+residual	does not require				1
+residual	compatible with				1
+residual	enables tolerance of				1
+residual	suppresses influx of				1
+residual	is required for				1
+residual	poisons				1
+residual	imposes gradient of				1
+residual	exceeds tolerance of				1
+residual	causes formation of				1
+residual	limits				1
+residual	carries				1
+residual	precursor of				1
+residual	conserves				1
+residual	exemplified by				1
+residual	provides electron donor				1
+residual	provides electron acceptor				1
+residual	mediates				1
+residual	reduced during				1
+residual	serves as electron donor and acceptor				1
+residual	transfers electrons from				1
+residual	mediates transfer between				1
+residual	performs				1
+residual	uses structure				1
+residual	uses protein				1
+residual	oxidation reduces				1
+residual	reoxidized by				1
+residual	conserves energy by				1
+residual	provides electrons for				1
+residual	feeds				1
+residual	reduced with electron donor				1
+residual	has prosthetic group				1
+residual	uses pathway				1
+residual	uses electron flow from				1
+residual	couples electron flow to				1
+residual	donates phosphoryl group to				1
+residual	substrate for				1
+residual	requires partner interaction				1
+residual	creates				1
+residual	marks				1
+residual	polymerizes to				1
+residual	assembles at				1
+residual	resets				1
+residual	feeds into				1
+residual	balances				1
+residual	shifts				1
+residual	yields				1
+residual	guides				1
+residual	forms				1
+residual	splits				1
+residual	incomplete separation yields				1
+residual	stabilizes				1
+residual	connects				1
+residual	enables context for				1
+residual	transmit force for				1
+residual	fails to retain				1
+residual	retains				1
+residual	embedded in				1
+residual	fails to remove				1
+residual	reacts with				1
+residual	is retained by				1
+residual	modulates				1
+residual	relaxes				1
+residual	interact with				1
+residual	confers				1
+residual	protects				1
+residual	activates				1
+residual	self-assembles into				1
+residual	patterns				1
+residual	results from reduced				1
+residual	alternative inorganic carbon source for				1
+residual	enzyme class for				1
+residual	drives formation of				1
+residual	supports generation of				1
+residual	uses substrate pool				1
+residual	characteristic of				1
+residual	used by				1
+residual	donates electrons to				1
+residual	uses oxidant				1
+residual	can use energy capture route				1
+residual	favors				1
+residual	metabolized by				1
+residual	oxidizes carbon to				1
+residual	provides electrons to				1
+residual	fixed during				1
+residual	carries out				1
+residual	can bear				1
+residual	can be about				1
+residual	can participate in				1
+residual	records				1
+residual	is about				1
+residual	characterizes				1

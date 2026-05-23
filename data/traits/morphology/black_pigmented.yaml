@@ -1,7 +1,7 @@
 identifier: METPO:1003022
 label: black pigmented
-definition: A pigmentation phenotype in which microbial colonies or cells appear
-  black or very dark due to accumulation of dark pigments such as melanins.
+definition: A pigmentation phenotype in which microbial colonies or cells appear black
+  or very dark due to accumulation of dark pigments such as melanins.
 definition_source: DOI:10.1016/j.biotechadv.2021.107773
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -21,8 +21,8 @@ causal_graphs:
 - graph_id: black_pigmented_melanin_polymer
   title: Black pigmentation melanin polymer mechanism
   description: Evidence-backed causal sketch linking black microbial pigmentation
-    to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin
-    polymers, and visible black color.
+    to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin polymers,
+    and visible black color.
   nodes:
   - node_id: black_pigmented_trait
     label: black pigmented
@@ -58,8 +58,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s11274-020-02941-z
       snippet: oxidative polymerization of tyrosine derivatives
-      notes: Supports phenolic or tyrosine-derived precursors as melanin
-        biosynthetic substrates.
+      notes: Supports phenolic or tyrosine-derived precursors as melanin biosynthetic
+        substrates.
   - subject: tyrosinase_laccase_oxidases
     predicate: catalyzes
     object: melanin_biosynthesis
@@ -68,6 +68,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.biotechadv.2021.107773
       snippet: biosynthesis ... oxidative polymerization
       notes: Supports oxidative enzymatic routes for microbial melanin formation.
+    predicate_id: biolink:catalyzes
   - subject: melanin_biosynthesis
     predicate: produces
     object: black_brown_melanin
@@ -76,15 +77,17 @@ causal_graphs:
     - reference: DOI:10.1016/j.biotechadv.2021.107773
       snippet: Eumelanin and allomelanin impart black/brown color
       notes: Supports black-brown melanins as microbial colorants.
+    predicate_id: METPO:2000202
   - subject: black_brown_melanin
     predicate: causes
     object: visible_black_color
-    description: Dark melanin polymers cause visible black pigmentation when
-      sufficiently accumulated.
+    description: Dark melanin polymers cause visible black pigmentation when sufficiently
+      accumulated.
     evidence:
     - reference: DOI:10.1016/j.biotechadv.2021.107773
       snippet: black/brown color
       notes: Supports black color as an outcome of dark melanin accumulation.
+    predicate_id: biolink:causes
   - subject: visible_black_color
     predicate: manifests as
     object: black_pigmented_trait
@@ -102,7 +105,18 @@ curation_history:
 - timestamp: '2026-05-11T19:10:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for phenolic precursors,
-    oxidative melanin biosynthesis, black-brown melanin polymers, and visible black
-    color.
+  changes: Added DOI-backed definition and causal graph for phenolic precursors, oxidative
+    melanin biosynthesis, black-brown melanin polymers, and visible black color.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, biolink:causes×1).
   llm_assisted: true

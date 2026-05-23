@@ -15,12 +15,12 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-cellbio-101011-155745
   snippet: cell shape is genetically determined
-  notes: Cell-shape review supports loss of cytoskeletal/wall-patterning control
-    as the basis for irregular morphology.
+  notes: Cell-shape review supports loss of cytoskeletal/wall-patterning control as
+    the basis for irregular morphology.
 - reference: DOI:10.1111/j.1574-6976.2011.00298.x
   snippet: coryneform morphology
-  notes: Corynebacterineae review supports irregular and coryneform morphologies
-    associated with apical polar growth and reduced lateral wall patterning.
+  notes: Corynebacterineae review supports irregular and coryneform morphologies associated
+    with apical polar growth and reduced lateral wall patterning.
 causal_graphs:
 - graph_id: irregular_shaped_loss_of_patterning
   title: Irregular-shape loss of wall patterning
@@ -53,6 +53,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
       notes: Supports patterning loss as a driver of inconsistent shapes.
+    predicate_id: RO:0002327
   - subject: stochastic_growth
     predicate: produces
     object: variable_geometry
@@ -60,13 +61,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1111/j.1574-6976.2011.00298.x
       snippet: coryneform morphology
-      notes: Supports irregular coryneform-like morphology arising from
-        polar/apical growth without strong lateral patterning.
+      notes: Supports irregular coryneform-like morphology arising from polar/apical
+        growth without strong lateral patterning.
+    predicate_id: METPO:2000202
   - subject: variable_geometry
     predicate: manifests as
     object: irregular_shaped_trait
-    description: Variable geometry across cells manifests the irregular-shaped
-      trait.
+    description: Variable geometry across cells manifests the irregular-shaped trait.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
@@ -80,6 +81,12 @@ curation_history:
 - timestamp: '2026-05-11T22:45:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking reduced
-    cell-wall patterning and stochastic growth to irregular morphology.
+  changes: Added DOI-backed definition and causal graph linking reduced cell-wall
+    patterning and stochastic growth to irregular morphology.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2000202×1).
   llm_assisted: true

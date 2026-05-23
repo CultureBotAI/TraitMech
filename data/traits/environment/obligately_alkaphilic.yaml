@@ -33,8 +33,8 @@ causal_graphs:
     label: obligately alkaphilic
     node_type: TRAIT
     grounding: METPO:1003004
-    description: Growth requires alkaline pH and does not extend to neutral or
-      acidic pH.
+    description: Growth requires alkaline pH and does not extend to neutral or acidic
+      pH.
   - node_id: alkaline_external_ph
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
@@ -62,8 +62,7 @@ causal_graphs:
   - node_id: proton_coupled_atp_synthase
     label: proton-coupled ATP synthase
     node_type: GENE_OR_PROTEIN
-    description: ATP synthase that remains proton-coupled in respiratory
-      alkaliphiles.
+    description: ATP synthase that remains proton-coupled in respiratory alkaliphiles.
   edges:
   - subject: alkaline_external_ph
     predicate: is required for
@@ -72,8 +71,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fbioe.2015.00075
       snippet: grow only at pH values of ~pH 9 and above
-      notes: Review explicitly defines obligate alkaliphiles by alkaline pH
-        restriction.
+      notes: Review explicitly defines obligate alkaliphiles by alkaline pH restriction.
   - subject: alkaline_external_ph
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
@@ -103,8 +101,8 @@ causal_graphs:
   - subject: proton_coupled_atp_synthase
     predicate: constrains
     object: obligately_alkaphilic_trait
-    description: Proton-coupled ATP synthesis at very high pH creates a
-      bioenergetic constraint requiring alkaliphile-specific adaptations.
+    description: Proton-coupled ATP synthesis at very high pH creates a bioenergetic
+      constraint requiring alkaliphile-specific adaptations.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2010.02.028
       snippet: robust H+-coupled ATP synthesis at external pH values > 10
@@ -112,12 +110,13 @@ causal_graphs:
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: obligately_alkaphilic_trait
-    description: Growth at obligately alkaline pH depends on maintaining
-      intracellular pH compatible with cell function.
+    description: Growth at obligately alkaline pH depends on maintaining intracellular
+      pH compatible with cell function.
     evidence:
     - reference: DOI:10.1016/S0005-2728(00)00285-1
       snippet: pH homeostasis ... appears to set the upper pH limit for growth
       notes: Supports pH homeostasis as growth-limiting for alkaliphilic Bacillus.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.938910+00:00'
   curator: seed_from_metpo
@@ -128,6 +127,12 @@ curation_history:
   curator: codex
   action: CURATED_WITH_LITERATURE
   changes: Reviewed obligately alkaphilic trait and added DOI-backed evidence and
-    causal graph for sodium-cycle alkaline pH homeostasis and ATP synthase
-    bioenergetic constraints.
+    causal graph for sodium-cycle alkaline pH homeostasis and ATP synthase bioenergetic
+    constraints.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

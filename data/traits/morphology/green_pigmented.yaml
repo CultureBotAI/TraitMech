@@ -21,8 +21,8 @@ causal_graphs:
 - graph_id: green_pigmented_pyocyanin_phenazine
   title: Green pigmentation pyocyanin phenazine mechanism
   description: Evidence-backed causal sketch linking green or blue-green microbial
-    pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and
-    visible green culture color.
+    pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and visible
+    green culture color.
   nodes:
   - node_id: green_pigmented_trait
     label: green pigmented
@@ -54,6 +54,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-023-02122-1
       snippet: phenazine synthesis operons including phzA1, phzA2, phzS, and phzM
       notes: Supports phz genes as pyocyanin/phenazine biosynthesis machinery.
+    predicate_id: biolink:encodes
   - subject: phenazine_biosynthesis
     predicate: produces
     object: pyocyanin
@@ -62,6 +63,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.138.3.846-852.1979
       snippet: pyocyanine biosynthesis
       notes: Supports pyocyanin production as a phenazine biosynthetic process.
+    predicate_id: METPO:2000202
   - subject: pyocyanin
     predicate: causes
     object: visible_green_color
@@ -70,16 +72,17 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-023-02122-1
       snippet: Pyocyanin is a blue phenazine pigment
       notes: Supports pyocyanin as a visible blue/green pigment.
+    predicate_id: biolink:causes
   - subject: visible_green_color
     predicate: manifests as
     object: green_pigmented_trait
-    description: Visible green or blue-green culture color manifests the
-      green-pigmented phenotype.
+    description: Visible green or blue-green culture color manifests the green-pigmented
+      phenotype.
     evidence:
     - reference: DOI:10.1186/s12934-023-02122-1
       snippet: lead to the green colorization of the culture plate
-      notes: Supports trait-level green pigmentation from pyocyanin and related
-        pigments in representative cultures.
+      notes: Supports trait-level green pigmentation from pyocyanin and related pigments
+        in representative cultures.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944814+00:00'
   curator: seed_from_metpo
@@ -89,6 +92,24 @@ curation_history:
 - timestamp: '2026-05-11T18:45:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Added DOI-backed definition and causal graph for phz operons,
-    phenazine biosynthesis, pyocyanin, and visible green/blue-green color.
+  changes: Added DOI-backed definition and causal graph for phz operons, phenazine
+    biosynthesis, pyocyanin, and visible green/blue-green color.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T08:21:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:encodes×1).
   llm_assisted: true

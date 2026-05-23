@@ -1,7 +1,7 @@
 identifier: METPO:1000335
 label: NaCl delta
-definition: A salinity phenotype with numerical limits expressing the breadth
-  (maximum minus minimum) of NaCl concentrations supporting growth of an organism.
+definition: A salinity phenotype with numerical limits expressing the breadth (maximum
+  minus minimum) of NaCl concentrations supporting growth of an organism.
 definition_source: DOI:10.1093/femsre/fuy009
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -13,17 +13,16 @@ evidence:
 - reference: DOI:10.1093/femsre/fuy009
   snippet: salinity range
   notes: Osmoadaptation review supports the span of NaCl-tolerance as a halophily
-    descriptor; its breadth (delta) reflects euryhaline versus stenohaline
-    physiology.
+    descriptor; its breadth (delta) reflects euryhaline versus stenohaline physiology.
 - reference: DOI:10.1186/1746-1448-4-2
   snippet: cope with the high salt concentrations
-  notes: Saline-Systems review supports broad osmoadaptive capacity as the basis
-    of a wide NaCl-delta phenotype.
+  notes: Saline-Systems review supports broad osmoadaptive capacity as the basis of
+    a wide NaCl-delta phenotype.
 causal_graphs:
 - graph_id: nacl_delta_euryhaline_breadth
   title: NaCl-delta euryhaline tolerance breadth
-  description: DOI-backed graph linking osmoadaptive flexibility to the breadth
-    of the NaCl growth range (delta = max − min).
+  description: DOI-backed graph linking osmoadaptive flexibility to the breadth of
+    the NaCl growth range (delta = max − min).
   nodes:
   - node_id: nacl_delta_trait
     label: NaCl delta
@@ -33,8 +32,8 @@ causal_graphs:
   - node_id: osmoadaptive_flexibility
     label: osmoadaptive flexibility
     node_type: BIOLOGICAL_PROCESS
-    description: Capacity to remodel osmolyte pools and ion transport across a
-      wide span of ambient salinities.
+    description: Capacity to remodel osmolyte pools and ion transport across a wide
+      span of ambient salinities.
   - node_id: euryhaline_physiology
     label: euryhaline physiology
     node_type: BIOLOGICAL_PROCESS
@@ -51,23 +50,22 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: cope with the high salt concentrations
-      notes: Supports osmoadaptive flexibility as the basis of broad-salinity
-        growth.
+      notes: Supports osmoadaptive flexibility as the basis of broad-salinity growth.
+    predicate_id: RO:0002327
   - subject: euryhaline_physiology
     predicate: produces
     object: tolerance_breadth
-    description: Euryhaline physiology produces a wide growth-supporting NaCl
-      range.
+    description: Euryhaline physiology produces a wide growth-supporting NaCl range.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
-      notes: Supports the link between osmoadaptive physiology and tolerance
-        breadth.
+      notes: Supports the link between osmoadaptive physiology and tolerance breadth.
+    predicate_id: METPO:2000202
   - subject: tolerance_breadth
     predicate: manifests as
     object: nacl_delta_trait
-    description: The breadth between minimum and maximum growth-supporting NaCl
-      manifests the NaCl-delta phenotype.
+    description: The breadth between minimum and maximum growth-supporting NaCl manifests
+      the NaCl-delta phenotype.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salinity range
@@ -81,6 +79,12 @@ curation_history:
 - timestamp: '2026-05-12T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking osmoadaptive flexibility and
-    euryhaline physiology to the NaCl-delta breadth phenotype.
+  changes: Added DOI-backed causal graph linking osmoadaptive flexibility and euryhaline
+    physiology to the NaCl-delta breadth phenotype.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2000202×1).
   llm_assisted: true

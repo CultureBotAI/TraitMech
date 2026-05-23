@@ -1,8 +1,8 @@
 identifier: METPO:1000453
 label: temperature range mid4
-definition: A temperature range phenotype in which the growth-supporting ambient
-  temperature range spans approximately 34–40 °C, characteristic of warm-mesophilic
-  physiology (including many mammalian host-associated bacteria).
+definition: A temperature range phenotype in which the growth-supporting ambient temperature
+  range spans approximately 34–40 °C, characteristic of warm-mesophilic physiology
+  (including many mammalian host-associated bacteria).
 definition_source: DOI:10.1146/annurev-micro-091313-103612
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -19,13 +19,13 @@ synonyms:
 evidence:
 - reference: DOI:10.1146/annurev-micro-091313-103612
   snippet: more unsaturated fatty acids
-  notes: Membrane-adaptation review supports the 34–40 °C range as the
-    warm-mesophile (mammalian-host) growth range.
+  notes: Membrane-adaptation review supports the 34–40 °C range as the warm-mesophile
+    (mammalian-host) growth range.
 causal_graphs:
 - graph_id: temperature_range_mid4_warm_mesophile
   title: Temperature-range-mid4 warm-mesophile range
-  description: DOI-backed graph linking warm-mesophile adaptation to a
-    temperature growth range of approximately 34–40 °C.
+  description: DOI-backed graph linking warm-mesophile adaptation to a temperature
+    growth range of approximately 34–40 °C.
   nodes:
   - node_id: temperature_range_mid4_trait
     label: temperature range mid4
@@ -40,8 +40,7 @@ causal_graphs:
   - node_id: warm_mesophile_adaptation
     label: warm-mesophile adaptation
     node_type: BIOLOGICAL_PROCESS
-    description: Membrane and enzyme repertoires tuned for warm host-body
-      temperatures.
+    description: Membrane and enzyme repertoires tuned for warm host-body temperatures.
   edges:
   - subject: warm_mesophile_adaptation
     predicate: enables
@@ -50,18 +49,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports warm-mesophile homeoviscous adaptation as the range
-        mechanism.
+      notes: Supports warm-mesophile homeoviscous adaptation as the range mechanism.
+    predicate_id: RO:0002327
   - subject: temperature_range_mid4_trait
     predicate: is a
     object: temperature_range
-    description: Temperature range mid4 is a quantitative bin of the
-      temperature-range phenotype.
+    description: Temperature range mid4 is a quantitative bin of the temperature-range
+      phenotype.
     evidence:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
-      notes: Supports the 34–40 °C range as a value within the temperature-range
-        distribution.
+      notes: Supports the 34–40 °C range as a value within the temperature-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825319+00:00'
   curator: seed_from_metpo
@@ -71,6 +70,12 @@ curation_history:
 - timestamp: '2026-05-13T11:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking warm-mesophile
-    adaptation to the temperature-range-mid4 bin.
+  changes: Added DOI-backed definition and causal graph linking warm-mesophile adaptation
+    to the temperature-range-mid4 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

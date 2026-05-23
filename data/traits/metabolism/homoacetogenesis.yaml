@@ -120,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.tibtech.2019.05.008
       snippet: reduced to one mol of acetyl-CoA
       notes: Supports acetyl-CoA synthesis from CO2.
+    predicate_id: METPO:2000202
   - subject: acetyl_coa
     predicate: converted to
     object: acetate
@@ -136,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1023/A:1020514617738
       snippet: reduce CO2 to acetate
       notes: Supports acetate as the defining acetogenic product.
+    predicate_id: METPO:2000202
   - subject: acetyl_coa
     predicate: supports formation of
     object: atp
@@ -153,5 +155,12 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for anaerobic Wood-Ljungdahl CO2 reduction, H2/CO inputs, acetyl-CoA formation, acetate product formation, and ATP conservation.
+  changes: Added DOI-backed causal graph for anaerobic Wood-Ljungdahl CO2 reduction,
+    H2/CO inputs, acetyl-CoA formation, acetate product formation, and ATP conservation.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2).
   llm_assisted: true

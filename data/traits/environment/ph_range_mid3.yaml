@@ -27,13 +27,12 @@ synonyms:
 evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: alkaliphiles
-  notes: pH-homeostasis review supports alkaliphile physiology growing
-    across pH 8–10.
+  notes: pH-homeostasis review supports alkaliphile physiology growing across pH 8–10.
 causal_graphs:
 - graph_id: ph_range_mid3_alkaliphile_range
   title: pH-range-mid3 alkaliphile range
-  description: DOI-backed graph linking alkaliphile cytoplasmic pH
-    homeostasis to a pH growth range of approximately 8–10.
+  description: DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis to
+    a pH growth range of approximately 8–10.
   nodes:
   - node_id: ph_range_mid3_trait
     label: pH range mid3
@@ -48,8 +47,8 @@ causal_graphs:
   - node_id: alkaliphile_homeostasis
     label: alkaliphile pH homeostasis
     node_type: BIOLOGICAL_PROCESS
-    description: Proton re-import via Na+/H+ antiporters maintaining a less
-      alkaline cytoplasm at high external pH.
+    description: Proton re-import via Na+/H+ antiporters maintaining a less alkaline
+      cytoplasm at high external pH.
   edges:
   - subject: alkaliphile_homeostasis
     predicate: enables
@@ -58,18 +57,18 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: alkaliphiles
-      notes: Supports alkaliphile cytoplasmic pH homeostasis as the alkaline
-        growth-range mechanism.
+      notes: Supports alkaliphile cytoplasmic pH homeostasis as the alkaline growth-range
+        mechanism.
+    predicate_id: RO:0002327
   - subject: ph_range_mid3_trait
     predicate: is a
     object: ph_range
-    description: pH range mid3 is a quantitative bin of the pH-range
-      phenotype.
+    description: pH range mid3 is a quantitative bin of the pH-range phenotype.
     evidence:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: proton motive force
-      notes: Supports the pH 8–10 range as a value within the pH-range
-        distribution.
+      notes: Supports the pH 8–10 range as a value within the pH-range distribution.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.832120+00:00'
   curator: seed_from_metpo
@@ -79,6 +78,12 @@ curation_history:
 - timestamp: '2026-05-13T10:00:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed definition and causal graph linking alkaliphile
-    pH-homeostasis to the pH-range-mid3 bin.
+  changes: Added DOI-backed definition and causal graph linking alkaliphile pH-homeostasis
+    to the pH-range-mid3 bin.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

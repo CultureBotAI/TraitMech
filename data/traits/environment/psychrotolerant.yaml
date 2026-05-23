@@ -18,22 +18,19 @@ evidence:
   notes: 'Organism example: Pseudomonas guineae is described as psychrotolerant.'
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: decreased membrane fluidity
-  notes: Psychrophile review supports cold-end membrane stress as the
-    challenge that psychrotolerant facultative adaptation overcomes without
-    full psychrophile dedication.
+  notes: Psychrophile review supports cold-end membrane stress as the challenge that
+    psychrotolerant facultative adaptation overcomes without full psychrophile dedication.
 causal_graphs:
 - graph_id: psychrotolerant_facultative_cold_adaptation
   title: Psychrotolerant facultative cold-adaptation mechanism
-  description: DOI-backed graph linking psychrotolerance to low-temperature
-    membrane and enzyme acclimation that does not preclude growth at
-    moderate ambient temperatures.
+  description: DOI-backed graph linking psychrotolerance to low-temperature membrane
+    and enzyme acclimation that does not preclude growth at moderate ambient temperatures.
   nodes:
   - node_id: psychrotolerant_trait
     label: psychrotolerant
     node_type: TRAIT
     grounding: METPO:1000618
-    description: Growth at low temperatures without an obligate low-temperature
-      preference.
+    description: Growth at low temperatures without an obligate low-temperature preference.
   - node_id: low_temperature
     label: low temperature
     node_type: ENVIRONMENTAL_FACTOR
@@ -41,54 +38,53 @@ causal_graphs:
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: BIOLOGICAL_PROCESS
-    description: Physical state of the cytoplasmic membrane supporting
-      transport and bioenergetics.
+    description: Physical state of the cytoplasmic membrane supporting transport and
+      bioenergetics.
   - node_id: facultative_lipid_remodeling
     label: facultative lipid remodeling
     node_type: BIOLOGICAL_PROCESS
-    description: Cold-induced shifts in lipid composition without obligate
-      low-temperature specialization.
+    description: Cold-induced shifts in lipid composition without obligate low-temperature
+      specialization.
   - node_id: cold_shock_response
     label: cold-shock response
     node_type: BIOLOGICAL_PROCESS
-    description: Cold-shock-protein induction supporting transient
-      low-temperature acclimation.
+    description: Cold-shock-protein induction supporting transient low-temperature
+      acclimation.
   edges:
   - subject: low_temperature
     predicate: decreases
     object: membrane_fluidity
-    description: Low temperature reduces membrane fluidity, requiring
-      compensation.
+    description: Low temperature reduces membrane fluidity, requiring compensation.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
-      notes: Supports cold-end membrane stress as the physical challenge for
-        psychrotolerant growth.
+      notes: Supports cold-end membrane stress as the physical challenge for psychrotolerant
+        growth.
   - subject: facultative_lipid_remodeling
     predicate: maintains
     object: membrane_fluidity
-    description: Facultative lipid remodeling maintains workable membrane
-      fluidity at low temperature.
+    description: Facultative lipid remodeling maintains workable membrane fluidity
+      at low temperature.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
-      notes: Supports homoviscous adaptation as the mechanism employed under
-        cold exposure.
+      notes: Supports homoviscous adaptation as the mechanism employed under cold
+        exposure.
   - subject: cold_shock_response
     predicate: enables
     object: psychrotolerant_trait
-    description: The cold-shock response enables acclimation to low temperature
-      without obligate cold dedication.
+    description: The cold-shock response enables acclimation to low temperature without
+      obligate cold dedication.
     evidence:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: Cold-shock proteins have also been described
-      notes: Supports cold-shock proteins as a hallmark facultative-cold
-        adaptation.
+      notes: Supports cold-shock proteins as a hallmark facultative-cold adaptation.
+    predicate_id: RO:0002327
   - subject: facultative_lipid_remodeling
     predicate: manifests as
     object: psychrotolerant_trait
-    description: Facultative lipid remodeling at low temperature manifests
-      the psychrotolerant trait in representative organisms.
+    description: Facultative lipid remodeling at low temperature manifests the psychrotolerant
+      trait in representative organisms.
     evidence:
     - reference: DOI:10.1099/ijs.0.65141-0
       snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
@@ -107,12 +103,18 @@ curation_history:
 - timestamp: '2026-05-13T11:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking facultative cold adaptation
-    (lipid remodeling and cold-shock response) to the psychrotolerant trait.
+  changes: Added DOI-backed causal graph linking facultative cold adaptation (lipid
+    remodeling and cold-shock response) to the psychrotolerant trait.
   llm_assisted: true
 - timestamp: '2026-05-13T22:45:00-07:00'
   curator: codex
   action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
-  changes: Replaced Pseudomonas guineae PMID fallback with the article DOI in
-    definition, record evidence, and CausalEdge evidence.
+  changes: Replaced Pseudomonas guineae PMID fallback with the article DOI in definition,
+    record evidence, and CausalEdge evidence.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

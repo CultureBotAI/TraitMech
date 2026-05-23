@@ -52,8 +52,7 @@ causal_graphs:
   - subject: high_salt_environment
     predicate: selects for
     object: halophilic_trait
-    description: Halophilic microorganisms are adapted to growth in high-salt
-      environments.
+    description: Halophilic microorganisms are adapted to growth in high-salt environments.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: Hypersaline environments ... inhabited by halophilic
@@ -62,22 +61,22 @@ causal_graphs:
   - subject: sodium_chloride
     predicate: causes
     object: osmotic_stress
-    description: Elevated NaCl creates osmotic pressure that requires cellular
-      adaptation.
+    description: Elevated NaCl creates osmotic pressure that requires cellular adaptation.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: ways they cope with the high salt concentrations
       notes: Review frames halophily around coping with high environmental salt.
+    predicate_id: biolink:causes
   - subject: compatible_solutes
     predicate: mitigates
     object: osmotic_stress
-    description: Compatible solutes are one major osmoadaptation mechanism in
-      halophilic microorganisms.
+    description: Compatible solutes are one major osmoadaptation mechanism in halophilic
+      microorganisms.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: synthesize organic osmotic solutes
-      notes: Supports organic compatible-solute accumulation as an osmotic
-        adaptation mechanism.
+      notes: Supports organic compatible-solute accumulation as an osmotic adaptation
+        mechanism.
   - subject: salt_in_strategy
     predicate: mitigates
     object: osmotic_stress
@@ -93,8 +92,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1371/journal.pone.0168818
       snippet: allows microorganisms to cope with high salinities
-      notes: Halomonas elongata study supports compatible solutes as a mechanism
-        enabling halophilic growth.
+      notes: Halomonas elongata study supports compatible solutes as a mechanism enabling
+        halophilic growth.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860938+00:00'
   curator: seed_from_metpo
@@ -110,4 +110,16 @@ curation_history:
   curator: codex
   action: ADDED_CAUSAL_GRAPH
   changes: Added DOI-backed causal graph for halophilic osmoadaptation mechanisms.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

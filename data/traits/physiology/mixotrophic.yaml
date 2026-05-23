@@ -15,10 +15,12 @@ synonyms:
 evidence:
 - reference: DOI:10.1128/AEM.01559-06
   snippet: Evidence for the ubiquity of mixotrophic bacteria
-  notes: Review supports bacterial mixotrophy as combined metabolic modes in marine systems.
+  notes: Review supports bacterial mixotrophy as combined metabolic modes in marine
+    systems.
 - reference: DOI:10.1073/pnas.1305998110
   snippet: combination of modes by which an organism can obtain its energy and carbon
-  notes: Perspective supports mixotrophy as combined energy and carbon acquisition modes.
+  notes: Perspective supports mixotrophy as combined energy and carbon acquisition
+    modes.
 causal_graphs:
 - graph_id: mixotrophic_dual_carbon_energy_use
   title: Mixotrophic dual carbon and energy use
@@ -46,7 +48,8 @@ causal_graphs:
   - node_id: phototrophic_energy_capture
     label: phototrophic energy capture
     node_type: PATHWAY
-    description: Light-driven energy capture, including rhodopsin or photosynthetic systems.
+    description: Light-driven energy capture, including rhodopsin or photosynthetic
+      systems.
   - node_id: co2_fixation_pathway
     label: CO2-fixation pathway
     node_type: PATHWAY
@@ -64,6 +67,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1305998110
       snippet: organic carbon (C) for their C needs
       notes: Supports organic carbon use as part of mixotrophic metabolism.
+    predicate_id: METPO:2000006
   - subject: mixotrophic_trait
     predicate: uses carbon source
     object: carbon_dioxide
@@ -72,6 +76,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1305998110
       snippet: obtain its energy and carbon
       notes: Supports combining autotrophic and heterotrophic carbon-acquisition modes.
+    predicate_id: METPO:2000006
   - subject: dissolved_organic_matter
     predicate: supplies
     object: organic_carbon
@@ -79,11 +84,13 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/AEM.01559-06
       snippet: DOM, dissolved organic matter
-      notes: Figure legend identifies dissolved organic matter as a substrate pool in bacterial metabolic modes.
+      notes: Figure legend identifies dissolved organic matter as a substrate pool
+        in bacterial metabolic modes.
   - subject: mixotrophic_trait
     predicate: can use energy capture route
     object: phototrophic_energy_capture
-    description: Some microbial mixotrophs supplement organic carbon use with light-harvesting energy systems.
+    description: Some microbial mixotrophs supplement organic carbon use with light-harvesting
+      energy systems.
     evidence:
     - reference: DOI:10.1128/AEM.01559-06
       snippet: rhodopsin and other pigment
@@ -115,4 +122,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added DOI-backed mixotrophy graph for dual organic/inorganic carbon use
     and light-associated energy capture.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000006×2).
   llm_assisted: true

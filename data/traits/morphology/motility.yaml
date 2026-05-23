@@ -44,8 +44,8 @@ causal_graphs:
   - node_id: gliding_motility_machinery
     label: gliding motility machinery
     node_type: GENE_OR_PROTEIN
-    description: Cell-envelope motors and adhesins that move bacteria over
-      surfaces without flagella.
+    description: Cell-envelope motors and adhesins that move bacteria over surfaces
+      without flagella.
   - node_id: ion_motive_force
     label: ion motive force
     node_type: BIOLOGICAL_PROCESS
@@ -59,36 +59,36 @@ causal_graphs:
   - subject: flagellar_motor
     predicate: enables
     object: motility_trait
-    description: Rotary flagellar motors enable bacterial swimming and related
-      motility modes.
+    description: Rotary flagellar motors enable bacterial swimming and related motility
+      modes.
     evidence:
     - reference: DOI:10.1038/s41579-021-00626-4
       snippet: allow bacteria to move around
-      notes: Review summarizes flagellar machinery as a major bacterial motility
-        mechanism.
+      notes: Review summarizes flagellar machinery as a major bacterial motility mechanism.
+    predicate_id: RO:0002327
   - subject: type_iv_pilus
     predicate: enables
     object: motility_trait
-    description: Type IV pili enable twitching motility through extension,
-      adhesion, and retraction.
+    description: Type IV pili enable twitching motility through extension, adhesion,
+      and retraction.
     evidence:
     - reference: DOI:10.1038/s41579-019-0195-4
       snippet: Cycles of pilus extension, binding and retraction
       notes: Supports type IV pili as motility appendages.
+    predicate_id: RO:0002327
   - subject: gliding_motility_machinery
     predicate: enables
     object: motility_trait
-    description: Gliding machinery allows surface movement without external
-      flagella.
+    description: Gliding machinery allows surface movement without external flagella.
     evidence:
     - reference: DOI:10.1146/annurev.micro.55.1.49
       snippet: move actively over surfaces
       notes: Supports gliding as an active bacterial movement mechanism.
+    predicate_id: RO:0002327
   - subject: ion_motive_force
     predicate: powers
     object: flagellar_motor
-    description: Ion motive force powers rotation of many bacterial flagellar
-      motors.
+    description: Ion motive force powers rotation of many bacterial flagellar motors.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
@@ -96,12 +96,13 @@ causal_graphs:
   - subject: chemotaxis_signaling
     predicate: regulates
     object: motility_trait
-    description: Chemotaxis signaling regulates the direction and pattern of
-      bacterial movement.
+    description: Chemotaxis signaling regulates the direction and pattern of bacterial
+      movement.
     evidence:
     - reference: DOI:10.3390/biom9070279
       snippet: chemotactic signaling pathways regulate the direction
       notes: Supports chemotaxis control of flagella-driven motility.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.904440+00:00'
   curator: seed_from_metpo
@@ -113,4 +114,10 @@ curation_history:
   action: CURATED_WITH_LITERATURE
   changes: Reviewed motility trait and added DOI-backed causal graph for flagellar,
     pili-mediated, gliding, chemotaxis, and ion-motive-force mechanisms.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, RO:0002211×1).
   llm_assisted: true

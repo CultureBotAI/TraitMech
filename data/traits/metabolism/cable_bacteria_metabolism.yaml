@@ -14,7 +14,8 @@ evidence:
   notes: Study directly demonstrates long-distance electron transport in cable bacteria.
 - reference: DOI:10.3389/fmars.2017.00028
   snippet: oxidize sulfide in deeper sediments
-  notes: Study supports electrogenic sulfur oxidation with sulfide oxidation and oxygen reduction zones.
+  notes: Study supports electrogenic sulfur oxidation with sulfide oxidation and oxygen
+    reduction zones.
 causal_graphs:
 - graph_id: cable_bacteria_long_distance_electron_transport
   title: Cable bacteria long-distance electron transport
@@ -25,7 +26,8 @@ causal_graphs:
     label: Cable bacteria metabolism
     node_type: TRAIT
     grounding: METPO:1002003
-    description: Multicellular filament metabolism involving long-distance electron transport.
+    description: Multicellular filament metabolism involving long-distance electron
+      transport.
   - node_id: sulfidic_sediment_zone
     label: sulfidic sediment zone
     node_type: ENVIRONMENTAL_FACTOR
@@ -50,7 +52,8 @@ causal_graphs:
   - node_id: conductive_fiber_network
     label: conductive fiber network
     node_type: CELLULAR_LOCALIZATION
-    description: Conductive cell-envelope structure supporting long-distance electron transport.
+    description: Conductive cell-envelope structure supporting long-distance electron
+      transport.
   - node_id: long_distance_electron_transport
     label: long-distance electron transport
     node_type: BIOLOGICAL_PROCESS
@@ -58,7 +61,8 @@ causal_graphs:
   - node_id: electrogenic_sulfur_oxidation
     label: electrogenic sulfur oxidation
     node_type: BIOLOGICAL_PROCESS
-    description: Spatially separated sulfide oxidation and oxygen reduction connected by electrical current.
+    description: Spatially separated sulfide oxidation and oxygen reduction connected
+      by electrical current.
   - node_id: sulfate
     label: sulfate
     node_type: CHEMICAL
@@ -73,6 +77,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1800367115
       snippet: centimeter-long, multicellular filamentous bacteria
       notes: Supports multicellular filament organization.
+    predicate_id: biolink:occurs_in
   - subject: sulfidic_sediment_zone
     predicate: provides electron donor
     object: sulfide
@@ -97,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.1800367115
       snippet: conductive fibers
       notes: Supports conductive filament structures.
+    predicate_id: biolink:located_in
   - subject: sulfide
     predicate: oxidized during
     object: electrogenic_sulfur_oxidation
@@ -112,7 +118,9 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmars.2017.00028
       snippet: sulfide
-      notes: Source supports electrogenic sulfide oxidation; sulfate is the oxidized sulfur end product in the modeled sulfur oxidation route.
+      notes: Source supports electrogenic sulfide oxidation; sulfate is the oxidized
+        sulfur end product in the modeled sulfur oxidation route.
+    predicate_id: METPO:2000202
   - subject: conductive_fiber_network
     predicate: mediates
     object: long_distance_electron_transport
@@ -124,15 +132,18 @@ causal_graphs:
   - subject: long_distance_electron_transport
     predicate: transfers electrons to
     object: oxygen
-    description: Long-distance electron transport connects sulfide oxidation to oxygen reduction.
+    description: Long-distance electron transport connects sulfide oxidation to oxygen
+      reduction.
     evidence:
     - reference: DOI:10.1073/pnas.1800367115
-      snippet: sulfide as an electron source at one end and oxygen as an electron acceptor at the other
+      snippet: sulfide as an electron source at one end and oxygen as an electron
+        acceptor at the other
       notes: Supports redox-separated sulfide-to-oxygen electron flow.
   - subject: oxygen
     predicate: reduced during
     object: electrogenic_sulfur_oxidation
-    description: Oxygen reduction is the cathodic half reaction in many cable bacteria systems.
+    description: Oxygen reduction is the cathodic half reaction in many cable bacteria
+      systems.
     evidence:
     - reference: DOI:10.3389/fmars.2017.00028
       snippet: reduction of oxygen
@@ -146,5 +157,19 @@ curation_history:
 - timestamp: '2026-05-08T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for multicellular cable filaments, conductive fibers, redox-separated sulfide oxidation and oxygen reduction, and long-distance electron transport.
+  changes: Added DOI-backed causal graph for multicellular cable filaments, conductive
+    fibers, redox-separated sulfide oxidation and oxygen reduction, and long-distance
+    electron transport.
+  llm_assisted: true
+- timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-20T05:49:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:occurs_in×1, biolink:located_in×1).
   llm_assisted: true
