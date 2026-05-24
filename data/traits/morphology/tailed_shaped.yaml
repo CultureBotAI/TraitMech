@@ -46,13 +46,14 @@ causal_graphs:
     description: Resulting elongated polar structure.
   edges:
   - subject: unipolar_pg_growth
-    predicate: drives
+    predicate: regulates
     object: stalk_outgrowth
     description: Unipolar PG growth at the same cell pole drives stalk extension.
     evidence:
     - reference: DOI:10.1146/annurev.micro.061705.103240
       snippet: prosthecate bacteria
       notes: Supports polar wall growth as the mechanism extending the stalk.
+    predicate_id: RO:0002211
   - subject: stalk_outgrowth
     predicate: produces
     object: polar_appendage
@@ -94,4 +95,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

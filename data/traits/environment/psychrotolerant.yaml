@@ -61,7 +61,7 @@ causal_graphs:
       notes: Supports cold-end membrane stress as the physical challenge for psychrotolerant
         growth.
   - subject: facultative_lipid_remodeling
-    predicate: maintains
+    predicate: regulates
     object: membrane_fluidity
     description: Facultative lipid remodeling maintains workable membrane fluidity
       at low temperature.
@@ -70,6 +70,7 @@ causal_graphs:
       snippet: more unsaturated fatty acids
       notes: Supports homoviscous adaptation as the mechanism employed under cold
         exposure.
+    predicate_id: RO:0002211
   - subject: cold_shock_response
     predicate: enables
     object: psychrotolerant_trait
@@ -124,4 +125,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

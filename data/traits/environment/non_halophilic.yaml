@@ -61,7 +61,7 @@ causal_graphs:
       osmoprotectants.
   edges:
   - subject: low_to_moderate_salinity
-    predicate: supports
+    predicate: enables
     object: non_halophilic_trait
     description: Non-halophilic organisms do not require elevated salinity for growth.
     evidence:
@@ -69,8 +69,9 @@ causal_graphs:
       snippet: soil-dwelling bacterium Bacillus subtilis
       notes: Bacillus subtilis is used here as a non-halophilic model for salt stress
         responses rather than salt-requiring growth.
+    predicate_id: RO:0002327
   - subject: high_osmolarity
-    predicate: drives
+    predicate: regulates
     object: water_flux
     description: Hyperosmotic stress alters cellular water balance and can impair
       non-halophilic growth.
@@ -79,6 +80,7 @@ causal_graphs:
       snippet: outflow of water, drop in turgor, and the ensuing growth arrest
       notes: Supports high-osmolarity growth inhibition through water loss and turgor
         decrease.
+    predicate_id: RO:0002211
   - subject: potassium_ion
     predicate: mitigates
     object: water_flux
@@ -139,4 +141,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×2).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1; drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1).
   llm_assisted: true

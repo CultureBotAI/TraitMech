@@ -45,13 +45,14 @@ causal_graphs:
     description: Wider rounded body region opposite the neck.
   edges:
   - subject: unipolar_pg_growth
-    predicate: drives
+    predicate: regulates
     object: polar_neck_extension
     description: Unipolar PG growth extends one pole into a narrower neck.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: polar growth
       notes: Supports unipolar growth as the mechanism for asymmetric pole extension.
+    predicate_id: RO:0002211
   - subject: polar_neck_extension
     predicate: combines with
     object: bulbous_body
@@ -86,4 +87,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

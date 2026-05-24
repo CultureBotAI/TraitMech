@@ -1,9 +1,5 @@
 predicate_label	edge_count	example_files
-supports	26	data/traits/ecology/animal_pathogen.yaml|data/traits/ecology/human_pathogen.yaml|data/traits/ecology/plant_pathogen.yaml
-drives	19	data/traits/environment/halophily_preference.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/non_halophilic.yaml
 defines	14	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
-maintains	13	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/hyperthermophilic.yaml|data/traits/environment/mesophilic.yaml
-shapes	12	data/traits/genomics/gc_content.yaml|data/traits/morphology/coccobacillus_shaped.yaml|data/traits/morphology/disc_shaped.yaml
 influences	7	data/traits/environment/halophily_preference.yaml|data/traits/environment/ph_growth_preference.yaml|data/traits/environment/temperature_optimum.yaml
 engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 determines	6	data/traits/ecology/biosafety_level.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/gram_stain.yaml

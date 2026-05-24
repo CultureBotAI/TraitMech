@@ -55,13 +55,14 @@ causal_graphs:
     description: High-affinity cytochrome oxidase associated with microaerobic metabolism.
   edges:
   - subject: microoxic_environment
-    predicate: supports
+    predicate: enables
     object: microaerophilic_trait
     description: Microaerophiles grow optimally in microoxic conditions.
     evidence:
     - reference: DOI:10.1038/nrmicro2970
       snippet: microaerophiles grow optimally under microoxic conditions
       notes: Nature Reviews Microbiology analysis defines the microoxic context.
+    predicate_id: RO:0002327
   - subject: high_affinity_terminal_oxidase
     predicate: enables use of
     object: molecular_oxygen
@@ -117,4 +118,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

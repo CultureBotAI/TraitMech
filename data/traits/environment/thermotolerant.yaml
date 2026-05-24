@@ -60,7 +60,7 @@ causal_graphs:
       snippet: resistant to irreversible inactivation at high temperatures
       notes: Supports protein-stability physiology as a high-temperature response.
   - subject: chaperone_proteins
-    predicate: supports
+    predicate: enables
     object: limited_thermostability
     description: Chaperone proteins support limited thermostability sufficient for
       facultative high-temperature growth.
@@ -68,6 +68,7 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: resistant to irreversible inactivation at high temperatures
       notes: Supports chaperone-mediated heat-stress tolerance.
+    predicate_id: RO:0002327
   - subject: limited_thermostability
     predicate: enables
     object: thermotolerant_trait
@@ -101,6 +102,18 @@ curation_history:
     in definition, record evidence, and CausalEdge evidence.
   llm_assisted: true
 - timestamp: '2026-05-20T03:35:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
   curator: claude
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv

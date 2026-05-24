@@ -66,7 +66,7 @@ causal_graphs:
       snippet: more unsaturated fatty acids
       notes: Supports temperature as the input to membrane-fluidity adaptation.
   - subject: homoviscous_lipid_composition
-    predicate: maintains
+    predicate: regulates
     object: membrane_fluidity
     description: Homoviscous lipid composition maintains target membrane fluidity
       at the optimum temperature.
@@ -74,6 +74,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
       notes: Supports homoviscous adaptation as the mechanism setting membrane fluidity.
+    predicate_id: RO:0002211
   - subject: ambient_temperature
     predicate: influences
     object: enzyme_kinetics
@@ -129,4 +130,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -59,13 +59,14 @@ causal_graphs:
       notes: Supports virulence factors as enablers of animal tissue colonization.
     predicate_id: RO:0002327
   - subject: immune_evasion
-    predicate: supports
+    predicate: enables
     object: animal_tissue_colonization
     description: Immune evasion supports sustained colonization despite host defenses.
     evidence:
     - reference: DOI:10.1038/nrmicro1592
       snippet: secretion systems
       notes: Supports effector-delivery-based immune evasion in animal pathogens.
+    predicate_id: RO:0002327
   - subject: animal_tissue_colonization
     predicate: causes
     object: animal_disease
@@ -114,4 +115,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

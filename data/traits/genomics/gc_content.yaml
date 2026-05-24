@@ -81,7 +81,7 @@ causal_graphs:
       snippet: GC content
       notes: Supports GC content as a property of the genomic DNA sequence.
   - subject: mutation_bias
-    predicate: shapes
+    predicate: causes
     object: gc_content_trait
     description: Asymmetric GC/AT mutation bias shapes the equilibrium genome-wide
       GC content.
@@ -89,8 +89,9 @@ causal_graphs:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: mutation bias
       notes: Supports mutation bias as a primary driver of bacterial GC content.
+    predicate_id: biolink:causes
   - subject: gc_biased_gene_conversion
-    predicate: shapes
+    predicate: causes
     object: gc_content_trait
     description: GC-biased gene conversion elevates GC content at recombination hotspots
       and across the genome.
@@ -99,6 +100,7 @@ causal_graphs:
       snippet: GC-biased gene conversion
       notes: Supports GC-biased gene conversion as a recombination-driven contributor
         to GC content.
+    predicate_id: biolink:causes
   - subject: codon_usage_selection
     predicate: contributes to
     object: gc_content_trait
@@ -164,4 +166,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×4, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2).
   llm_assisted: true

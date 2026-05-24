@@ -51,13 +51,14 @@ causal_graphs:
     description: Rounded elongated cell-body geometry.
   edges:
   - subject: pbp2b
-    predicate: supports
+    predicate: enables
     object: peripheral_peptidoglycan_synthesis
     description: PBP2b supports peripheral peptidoglycan synthesis in ovococcal elongation.
     evidence:
     - reference: DOI:10.1089/mdr.2014.0032
       snippet: PBP2b of ovococci
       notes: Supports PBP2b as a key ovococcal elongation factor.
+    predicate_id: RO:0002327
   - subject: mapZ_ftsZ_system
     predicate: positions
     object: septal_peptidoglycan_synthesis
@@ -77,7 +78,7 @@ causal_graphs:
       snippet: dynamics of peptidoglycan assembly
       notes: Supports nanometer-scale PG synthesis dynamics in ovoid bacteria.
   - subject: septal_peptidoglycan_synthesis
-    predicate: shapes
+    predicate: causes
     object: ellipsoidal_geometry
     description: Coordinated septal and peripheral synthesis shapes an ellipsoidal
       cell body.
@@ -85,6 +86,7 @@ causal_graphs:
     - reference: DOI:10.1089/mdr.2014.0032
       snippet: ovococci that are ellipsoid
       notes: Supports the ellipsoidal ovococcal morphology endpoint.
+    predicate_id: biolink:causes
   - subject: ellipsoidal_geometry
     predicate: manifests as
     object: oval_shaped_trait
@@ -111,4 +113,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1; shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:causes×1).
   llm_assisted: true

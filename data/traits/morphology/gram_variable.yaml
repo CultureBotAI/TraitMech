@@ -50,13 +50,14 @@ causal_graphs:
       the same culture.
   edges:
   - subject: culture_aging
-    predicate: drives
+    predicate: regulates
     object: peptidoglycan_thinning
     description: Aging cultures undergo cell-wall thinning via autolysis.
     evidence:
     - reference: DOI:10.1128/CMR.00043-07
       snippet: autolysis
       notes: Supports autolysis-driven peptidoglycan thinning in aging cultures.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_thinning
     predicate: causes
     object: crystal_violet_retention_loss
@@ -117,4 +118,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

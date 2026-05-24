@@ -81,13 +81,14 @@ causal_graphs:
       notes: Supports ATP-driven biosynthesis as the central coupling of energy to
         anabolism.
   - subject: biosynthesis
-    predicate: supports
+    predicate: enables
     object: cellular_growth
     description: Biosynthesis supports accumulation of biomass and growth.
     evidence:
     - reference: DOI:10.1126/science.1238842
       snippet: energy and microbial life
       notes: Supports biosynthesis-driven growth as the goal of cellular metabolism.
+    predicate_id: RO:0002327
   - subject: cellular_growth
     predicate: realizes
     object: metabolism_trait
@@ -114,4 +115,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

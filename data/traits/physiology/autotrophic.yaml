@@ -97,13 +97,14 @@ causal_graphs:
       snippet: autotrophic carbon dioxide assimilation pathway
       notes: Supports inorganic carbon assimilation by autotrophic pathways.
   - subject: energy_and_reductant
-    predicate: drives
+    predicate: regulates
     object: co2_fixation_pathway
     description: Autotrophic carbon fixation requires energy and reducing power.
     evidence:
     - reference: DOI:10.1038/nrmicro2365
       snippet: energy demand of the autotrophic pathways
       notes: Supports energy requirements of autotrophic carbon fixation pathways.
+    predicate_id: RO:0002211
   - subject: carbon_dioxide
     predicate: fixed by
     object: co2_fixation_pathway
@@ -188,4 +189,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

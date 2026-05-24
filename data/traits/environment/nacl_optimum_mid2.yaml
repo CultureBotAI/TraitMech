@@ -50,7 +50,7 @@ causal_graphs:
       under moderately hypersaline conditions.
   edges:
   - subject: elevated_nacl
-    predicate: drives
+    predicate: regulates
     object: pronounced_compatible_solutes
     description: Elevated NaCl drives substantial compatible-solute accumulation.
     evidence:
@@ -58,6 +58,7 @@ causal_graphs:
       snippet: synthesize organic osmotic solutes
       notes: Supports compatible-solute accumulation as the osmoadaptive response
         at elevated NaCl.
+    predicate_id: RO:0002211
   - subject: pronounced_compatible_solutes
     predicate: produces
     object: nacl_optimum_mid2_trait
@@ -94,4 +95,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

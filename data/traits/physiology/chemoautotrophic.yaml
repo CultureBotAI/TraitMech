@@ -76,13 +76,14 @@ causal_graphs:
       notes: Review supports chemoautotrophic metabolism based on chemical energy
         and CO2 fixation.
   - subject: reduced_inorganic_compound
-    predicate: supports
+    predicate: enables
     object: respiratory_energy_conservation
     description: Oxidation of chemical substrates supports energy conservation.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: free energy of a redox reaction
       notes: Supports energy conservation from redox reactions in respiratory systems.
+    predicate_id: RO:0002327
   - subject: respiratory_energy_conservation
     predicate: produces
     object: atp
@@ -120,21 +121,23 @@ causal_graphs:
       notes: Supports RuBisCO as a Calvin-Benson cycle enzyme.
     predicate_id: biolink:catalyzes
   - subject: atp
-    predicate: supports
+    predicate: enables
     object: calvin_benson_cycle
     description: ATP is required for chemoautotrophic CO2 fixation.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: energy required for autotrophic CO2 fixation
       notes: Supports ATP/energy requirement for carbon fixation.
+    predicate_id: RO:0002327
   - subject: nadph
-    predicate: supports
+    predicate: enables
     object: calvin_benson_cycle
     description: Reducing equivalents support reductive CO2 fixation.
     evidence:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: reduction of CO2
       notes: Supports NAD(P)H-like reductant use in carbon fixation.
+    predicate_id: RO:0002327
   - subject: calvin_benson_cycle
     predicate: produces
     object: cellular_biomass
@@ -173,4 +176,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 3 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×3.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3).
   llm_assisted: true

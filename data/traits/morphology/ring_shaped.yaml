@@ -54,13 +54,14 @@ causal_graphs:
         forms.
     predicate_id: METPO:2000202
   - subject: pole_to_pole_closure
-    predicate: shapes
+    predicate: causes
     object: toroidal_geometry
     description: Pole-to-pole closure yields a toroidal body.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
       notes: Supports closed ring forms as genetically determined shape outcomes.
+    predicate_id: biolink:causes
   - subject: toroidal_geometry
     predicate: manifests as
     object: ring_shaped_trait
@@ -93,4 +94,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

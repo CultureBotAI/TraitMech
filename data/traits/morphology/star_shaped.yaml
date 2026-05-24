@@ -52,13 +52,14 @@ causal_graphs:
     description: Multiple projecting arms emerging from a central cell body.
   edges:
   - subject: multi_site_polar_pg
-    predicate: drives
+    predicate: regulates
     object: prostheca_outgrowth
     description: Multi-site polar PG growth drives extension of cellular projections.
     evidence:
     - reference: DOI:10.1146/annurev.micro.061705.103240
       snippet: prosthecate bacteria
       notes: Supports prostheca extension via polar wall growth.
+    predicate_id: RO:0002211
   - subject: prostheca_outgrowth
     predicate: produces
     object: radiating_projections
@@ -100,4 +101,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

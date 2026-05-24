@@ -56,13 +56,14 @@ causal_graphs:
       notes: Supports planar growth as the basis for flat archaeal cells.
     predicate_id: RO:0002327
   - subject: slayer_constraints
-    predicate: shapes
+    predicate: causes
     object: polygonal_geometry
     description: S-layer geometry constrains the cell into angular polygonal forms.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
       notes: Supports envelope-architecture constraints (e.g., S-layer) as shape determinants.
+    predicate_id: biolink:causes
   - subject: polygonal_geometry
     predicate: manifests as
     object: triangular_shaped_trait
@@ -95,4 +96,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

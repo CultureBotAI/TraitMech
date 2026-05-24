@@ -88,7 +88,7 @@ causal_graphs:
       notes: Supports thermostability as a high-temperature enzyme feature.
     predicate_id: RO:0002327
   - subject: energy_transducing_enzymes
-    predicate: supports
+    predicate: enables
     object: thermophilic_trait
     description: Adapted energy-transducing enzymes support growth at elevated temperature.
     evidence:
@@ -96,6 +96,7 @@ causal_graphs:
       snippet: energy transducing enzymes
       notes: Review cites higher turnover rates and coupling-ion changes in high-temperature
         adaptation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858214+00:00'
   curator: seed_from_metpo
@@ -125,4 +126,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

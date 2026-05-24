@@ -44,13 +44,14 @@ causal_graphs:
     description: Persistent low-nutrient setting that favors miniaturized cells.
   edges:
   - subject: oligotrophic_environment
-    predicate: drives
+    predicate: regulates
     object: streamlining_selection
     description: Persistent oligotrophy selects for streamlined cells and genomes.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: small cells and genomes
       notes: Supports oligotrophic regimes as drivers of cell miniaturization.
+    predicate_id: RO:0002211
   - subject: streamlining_selection
     predicate: produces
     object: cell_length_very_small_trait
@@ -87,4 +88,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

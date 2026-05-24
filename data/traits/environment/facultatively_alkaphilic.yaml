@@ -66,13 +66,14 @@ causal_graphs:
       environments.
   edges:
   - subject: alkaline_external_ph
-    predicate: supports
+    predicate: enables
     object: facultatively_alkaphilic_trait
     description: Facultative alkaliphiles grow well under alkaline pH conditions.
     evidence:
     - reference: DOI:10.3389/fbioe.2015.00075
       snippet: grow well at pH values exceeding pH 9
       notes: Supports alkaline growth capacity of alkaliphilic microorganisms.
+    predicate_id: RO:0002327
   - subject: near_neutral_external_ph
     predicate: is compatible with
     object: facultatively_alkaphilic_trait
@@ -141,4 +142,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007406×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

@@ -62,13 +62,14 @@ causal_graphs:
       snippet: relies on the membrane protein MapZ
       notes: Supports MapZ as a division-positioning factor in S. pneumoniae.
   - subject: midcell_pg_assembly
-    predicate: shapes
+    predicate: causes
     object: ovoid_geometry
     description: Midcell peptidoglycan assembly shapes ovoid cell geometry.
     evidence:
     - reference: DOI:10.1016/j.cub.2021.04.041
       snippet: peptidoglycan synthesis ... in the ovoid bacterium
       notes: Supports PG assembly dynamics in ovoid S. pneumoniae.
+    predicate_id: biolink:causes
   - subject: divIVA
     predicate: controls
     object: septum_splitting
@@ -119,4 +120,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true
