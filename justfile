@@ -18,9 +18,13 @@ validate file:
     uv run linkml-validate -s src/traitmech/schema/traitmech.yaml \
       --target-class TraitRecord {{file}}
 
-# Validate every YAML under data/traits/
-validate-all:
-    @find data/traits -name '*.yaml' | xargs -I{} just validate {}
+# Validate every YAML under data/traits/. Delegates to validate-strict
+# (closed-mode, rejects unknown fields, exits non-zero on any ERROR).
+# Previous open-mode implementation ran linkml-validate per file via
+# xargs and silently passed unknown fields — see G02 in
+# reports/gap_fix_backlog.md.
+validate-all *args:
+    @just validate-strict {{args}}
 
 # Strict in-process validation in *closed* mode (rejects unknown fields).
 # Emits reports/instance_validation_failures.tsv and exits 1 on any ERROR.

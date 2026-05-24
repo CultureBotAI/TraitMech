@@ -189,6 +189,11 @@ classes:
         description: >-
           Optional citation list — populated when a curator backs the
           trait with literature support beyond METPO's own provenance.
+          Intentionally *not* `required: true` (compare CausalEdge.evidence):
+          a TraitRecord inherits provenance from the underlying METPO term,
+          so requiring trait-level citations would force every SEEDED row
+          to carry duplicate boilerplate. Causal claims are different —
+          they are curator-asserted and must carry their own support.
         multivalued: true
         inlined_as_list: true
         range: EvidenceItem
@@ -322,7 +327,12 @@ classes:
         description: Short explanation of the causal claim.
         range: string
       evidence:
-        description: Edge-level literature, database, or curated source support.
+        description: >-
+          Edge-level literature, database, or curated source support.
+          `required: true` (in contrast to TraitRecord.evidence, which is
+          optional): every causal claim must carry at least one citation
+          because, unlike trait classification, mechanism assertions are
+          not backed by METPO's own provenance.
         required: true
         multivalued: true
         inlined_as_list: true

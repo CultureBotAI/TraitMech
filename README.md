@@ -98,8 +98,10 @@ TraitMech/
    source-backed mechanism structure. Every `CausalEdge` must include
    edge-level `evidence`; prefer grounded CURIEs for nodes and
    predicates when a suitable ontology or database term is known.
-5. **Validate**: `just validate-all` runs `linkml-validate` over
-   every record.
+5. **Validate**: `just validate-all` (alias for `just validate-strict`)
+   runs closed-mode LinkML validation over every record; unknown fields
+   and missing required attributes fail with exit 1 and a row in
+   `reports/instance_validation_failures.tsv`.
 
 ## Deep Research
 

@@ -71,6 +71,11 @@ def looks_like_yaml_writer(text: str) -> bool:
 
 
 def audit(path: Path, justfile_text: str) -> dict | None:
+    # Suppress self-match: this module's regex source contains
+    # `yaml.safe_dump` etc., so it would otherwise appear in its own
+    # output. See G05 in reports/gap_fix_backlog.md.
+    if path.resolve() == Path(__file__).resolve():
+        return None
     try:
         text = path.read_text()
     except (UnicodeDecodeError, OSError):
