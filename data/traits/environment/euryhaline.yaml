@@ -68,6 +68,7 @@ causal_graphs:
       snippet: growing over a salinity range of 15%
       notes: Communication proposes a quantitative characterization for euryhaline
         halophiles.
+    predicate_id: METPO:2007500
   - subject: salinity_gradient
     predicate: selects for
     object: euryhaline_trait
@@ -158,4 +159,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:65015×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true

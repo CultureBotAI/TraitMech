@@ -1,5 +1,4 @@
 predicate_label	edge_count	example_files
-defines	14	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
 influences	7	data/traits/environment/halophily_preference.yaml|data/traits/environment/ph_growth_preference.yaml|data/traits/environment/temperature_optimum.yaml
 engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 determines	6	data/traits/ecology/biosafety_level.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/gram_stain.yaml

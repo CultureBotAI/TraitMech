@@ -61,6 +61,7 @@ causal_graphs:
       snippet: salinity range
       notes: Supports a numerical environmental axis as the axis on which a growth-supporting
         range (and hence its breadth) is measured.
+    predicate_id: METPO:2007500
   - subject: nacl_delta
     predicate: is a
     object: delta_phenotype_trait
@@ -106,4 +107,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×3).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true
