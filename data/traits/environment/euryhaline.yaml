@@ -48,6 +48,7 @@ causal_graphs:
     label: compatible solutes
     node_type: CHEMICAL
     description: Organic osmolytes accumulated to adjust cell osmotic potential.
+    grounding: CHEBI:65015
   - node_id: compatible_solute_transport
     label: compatible-solute transport
     node_type: MOLECULAR_FUNCTION
@@ -151,4 +152,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1, METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:37:59Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:65015×1).
   llm_assisted: true

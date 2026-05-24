@@ -62,6 +62,15 @@ robot-validate-proposal cohort *args:
 ground-predicates *args:
     uv run python scripts/ground_causal_predicates.py {{args}}
 
+# Apply mappings/node_grounding.tsv to populate empty
+# causal_graphs[].nodes[].grounding across data/traits/.
+# Keyed on (label, node_type) since the same label can resolve to
+# different CURIEs depending on node type (e.g. "terminal electron
+# acceptor" as CHEMICAL vs MOLECULAR_FUNCTION).
+# Dry-run by default; re-run with --apply to write.
+ground-nodes *args:
+    uv run python scripts/ground_causal_nodes.py {{args}}
+
 # Cross-check applied mappings + residual labels against the Biolink model.
 # Emits reports/biolink_coverage.tsv. Uses data/raw/biolink-model.yaml.
 check-biolink-coverage *args:

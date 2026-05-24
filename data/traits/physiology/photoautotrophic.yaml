@@ -57,6 +57,7 @@ causal_graphs:
     label: light
     node_type: ENVIRONMENTAL_FACTOR
     description: Energy source for photoautotrophic metabolism.
+    grounding: PATO:0001717
   - node_id: photosystem_ii
     label: photosystem II
     node_type: GENE_OR_PROTEIN
@@ -75,6 +76,7 @@ causal_graphs:
     label: photosynthetic electron transport
     node_type: PATHWAY
     description: Electron-transfer pathway generating ATP and NADPH.
+    grounding: GO:0009767
   - node_id: atp_nadph
     label: ATP and NADPH
     node_type: CHEMICAL
@@ -88,6 +90,7 @@ causal_graphs:
     label: Calvin-Benson cycle
     node_type: PATHWAY
     description: Reductive pentose phosphate CO2-fixation cycle.
+    grounding: GO:0019253
   - node_id: rubisco
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
@@ -204,4 +207,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007405×1, METPO:2007402×1, METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001717×1, GO:0009767×1, GO:0019253×1).
   llm_assisted: true

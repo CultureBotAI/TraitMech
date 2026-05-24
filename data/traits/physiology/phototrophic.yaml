@@ -43,6 +43,7 @@ causal_graphs:
     label: light
     node_type: ENVIRONMENTAL_FACTOR
     description: Electromagnetic energy harvested by phototrophic cells.
+    grounding: PATO:0001717
   - node_id: photosynthetic_reaction_center
     label: photosynthetic reaction center
     node_type: GENE_OR_PROTEIN
@@ -55,6 +56,7 @@ causal_graphs:
     label: photosynthetic electron transport
     node_type: PATHWAY
     description: Light-induced electron-transfer route producing ATP and reductants.
+    grounding: GO:0009767
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -142,4 +144,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001717×1, GO:0009767×1).
   llm_assisted: true

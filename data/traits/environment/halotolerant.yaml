@@ -39,10 +39,12 @@ causal_graphs:
     label: osmotic stress
     node_type: BIOLOGICAL_PROCESS
     description: Cellular stress caused by external salinity.
+    grounding: GO:0006970
   - node_id: compatible_solutes
     label: compatible solutes
     node_type: CHEMICAL
     description: Organic osmolytes that support salt tolerance.
+    grounding: CHEBI:65015
   - node_id: compatible_solute_transport
     label: compatible-solute transport
     node_type: MOLECULAR_FUNCTION
@@ -146,4 +148,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006970×1, CHEBI:65015×1).
   llm_assisted: true

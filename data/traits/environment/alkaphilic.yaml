@@ -58,6 +58,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of internal pH below highly alkaline external pH.
+    grounding: GO:0030641
   edges:
   - subject: alkaline_external_ph
     predicate: selects for
@@ -128,4 +129,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1, METPO:2007406×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:37:59Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0030641×1).
   llm_assisted: true

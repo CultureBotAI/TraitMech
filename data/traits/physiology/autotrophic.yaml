@@ -65,6 +65,7 @@ causal_graphs:
     label: Calvin-Benson cycle
     node_type: PATHWAY
     description: Common autotrophic CO2-fixation pathway using RuBisCO.
+    grounding: GO:0019253
   - node_id: rubisco
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
@@ -201,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019253×1).
   llm_assisted: true

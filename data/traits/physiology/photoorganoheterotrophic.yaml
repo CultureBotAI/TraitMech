@@ -36,6 +36,7 @@ causal_graphs:
     label: light
     node_type: ENVIRONMENTAL_FACTOR
     description: Energy source for photoorganoheterotrophic metabolism.
+    grounding: PATO:0001717
   - node_id: organic_compound
     label: organic compound
     node_type: CHEMICAL
@@ -48,6 +49,7 @@ causal_graphs:
     label: photosynthetic electron transport
     node_type: PATHWAY
     description: Light-induced pathway forming reductants and ion gradients.
+    grounding: GO:0009767
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -155,4 +157,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001717×1, GO:0009767×1).
   llm_assisted: true
