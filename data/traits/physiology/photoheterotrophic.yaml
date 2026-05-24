@@ -67,7 +67,7 @@ causal_graphs:
     grounding: CHEBI:50860
   - node_id: biomass
     label: biomass
-    node_type: BIOLOGICAL_PROCESS
+    node_type: CHEMICAL
     description: Cell material produced from assimilated organic carbon.
     grounding: METPO:1007501
   edges:
@@ -168,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007501×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:34:59Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.'
   llm_assisted: true
