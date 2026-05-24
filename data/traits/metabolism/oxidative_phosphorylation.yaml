@@ -81,13 +81,14 @@ causal_graphs:
       notes: Supports respiratory chain generation of pmf.
     predicate_id: biolink:produces
   - subject: proton_motive_force
-    predicate: drives
+    predicate: regulates
     object: atp_synthase
     description: Proton motive force energizes F1Fo ATP synthase.
     evidence:
     - reference: DOI:10.1038/s41598-019-38564-0
       snippet: energized by the proton motive force
       notes: Supports pmf-driven ATP synthase.
+    predicate_id: RO:0002211
   - subject: atp_synthase
     predicate: produces
     object: atp
@@ -120,4 +121,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:located_in×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

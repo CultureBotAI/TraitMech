@@ -52,13 +52,14 @@ causal_graphs:
       notes: Supports polar PG growth as the producer of tapered ends.
     predicate_id: METPO:2000202
   - subject: reduced_end_cap_radius
-    predicate: shapes
+    predicate: causes
     object: spindle_geometry
     description: Reduced end-cap radius at both poles yields spindle geometry.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: cell shape is genetically determined
       notes: Supports tapered geometry as a genetically determined shape outcome.
+    predicate_id: biolink:causes
   - subject: spindle_geometry
     predicate: manifests as
     object: spindle_shaped_trait
@@ -91,4 +92,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

@@ -115,13 +115,14 @@ causal_graphs:
       snippet: generation of an electrochemical ion gradient
       notes: Supports ion-gradient generation by membrane electron transport.
   - subject: proton_motive_force
-    predicate: drives
+    predicate: regulates
     object: atp_synthase
     description: Proton motive force powers ATP synthase.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP synthase as the downstream energy-conservation output.
+    predicate_id: RO:0002211
   - subject: atp_synthase
     predicate: produces
     object: atp
@@ -160,4 +161,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

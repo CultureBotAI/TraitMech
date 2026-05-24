@@ -73,7 +73,7 @@ causal_graphs:
         optima.
     predicate_id: METPO:2007401
   - subject: na_h_antiporters
-    predicate: drives
+    predicate: regulates
     object: alkaliphile_homeostasis
     description: Na+/H+ antiporters drive proton re-import that acidifies the cytoplasm
       relative to the alkaline external pH.
@@ -82,6 +82,7 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports antiporter-driven proton re-import as the alkaliphile mechanism
         for maintaining the proton motive force.
+    predicate_id: RO:0002211
   - subject: alkaliphile_homeostasis
     predicate: produces
     object: ph_optimum_high_trait
@@ -124,4 +125,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

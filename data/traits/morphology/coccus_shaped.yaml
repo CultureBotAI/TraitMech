@@ -74,7 +74,7 @@ causal_graphs:
         peptidoglycan synthesis in spherical cocci.
     predicate_id: biolink:catalyzes
   - subject: septal_peptidoglycan_synthesis
-    predicate: maintains
+    predicate: regulates
     object: coccus_shaped_trait
     description: Septum-centered peptidoglycan synthesis supports spherical coccus
       morphology.
@@ -83,6 +83,7 @@ causal_graphs:
       snippet: synthesize peptidoglycan only at the division septum
       notes: Supports septal-only wall synthesis as a mechanism for spherical coccal
         growth.
+    predicate_id: RO:0002211
   - subject: lateral_elongation
     predicate: reduced in
     object: coccus_shaped_trait
@@ -117,4 +118,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

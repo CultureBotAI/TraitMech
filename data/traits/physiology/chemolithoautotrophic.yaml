@@ -123,21 +123,23 @@ causal_graphs:
       notes: Supports CO2 fixation in chemoautotrophic bacteria.
     predicate_id: METPO:2007404
   - subject: atp
-    predicate: supports
+    predicate: enables
     object: co2_fixation_pathway
     description: ATP generated from donor oxidation supports autotrophic CO2 fixation.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: energy required for autotrophic CO2 fixation
       notes: Supports energy demand of autotrophic CO2 fixation.
+    predicate_id: RO:0002327
   - subject: reducing_power
-    predicate: supports
+    predicate: enables
     object: co2_fixation_pathway
     description: Reducing power supports reductive CO2 assimilation.
     evidence:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: reduction of CO2
       notes: Supports reductant use in CO2 fixation.
+    predicate_id: RO:0002327
   - subject: co2_fixation_pathway
     predicate: produces
     object: biomass
@@ -176,4 +178,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007402×1, METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2).
   llm_assisted: true

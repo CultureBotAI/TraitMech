@@ -88,13 +88,14 @@ causal_graphs:
       snippet: Compartmentalization of Gene Expression
       notes: Supports compartment-specific gene expression during spore formation.
   - subject: compartment_sigma_factors
-    predicate: drives
+    predicate: regulates
     object: forespore_maturation
     description: Sequential sigma-factor activity drives forespore development.
     evidence:
     - reference: DOI:10.1128/MMBR.67.4.526-560.2003
       snippet: forespore- and mother cell-specific transcription factors
       notes: Supports sigma-factor cascades as drivers of compartmental development.
+    predicate_id: RO:0002211
   - subject: forespore_maturation
     predicate: produces
     object: endospore
@@ -137,4 +138,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

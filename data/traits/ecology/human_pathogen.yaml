@@ -60,7 +60,7 @@ causal_graphs:
       notes: Supports virulence factors as enablers of human tissue tropism.
     predicate_id: RO:0002327
   - subject: human_tropism
-    predicate: supports
+    predicate: enables
     object: human_disease
     description: Tissue tropism supports establishment of human disease at specific
       anatomical sites.
@@ -68,14 +68,16 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.62.081307.162938
       snippet: virulence factors
       notes: Supports tissue tropism as a determinant of human-disease pattern.
+    predicate_id: RO:0002327
   - subject: human_immune_evasion
-    predicate: supports
+    predicate: enables
     object: human_disease
     description: Evasion of human immunity supports sustained infection and disease.
     evidence:
     - reference: DOI:10.1038/nrmicro1592
       snippet: secretion systems
       notes: Supports secretion-system-delivered effectors in human immune evasion.
+    predicate_id: RO:0002327
   - subject: human_disease
     predicate: manifests as
     object: human_pathogen_trait
@@ -108,4 +110,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2).
   llm_assisted: true

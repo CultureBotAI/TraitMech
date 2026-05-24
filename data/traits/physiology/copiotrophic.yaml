@@ -95,7 +95,7 @@ causal_graphs:
       notes: Supports regulatory systems as part of copiotrophic adaptation.
     predicate_id: biolink:associated_with
   - subject: rrna_operons
-    predicate: supports
+    predicate: enables
     object: rapid_growth
     description: Higher rRNA operon copy number supports rapid response and growth.
     evidence:
@@ -103,6 +103,7 @@ causal_graphs:
       snippet: rRNA Operon Copy Number Reflects Ecological Strategies
       notes: Supports rRNA operon copy number as a genomic indicator of reproductive
         strategy.
+    predicate_id: RO:0002327
   - subject: rapid_growth
     predicate: characteristic of
     object: copiotrophic_trait
@@ -134,4 +135,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

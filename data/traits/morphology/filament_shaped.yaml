@@ -84,13 +84,14 @@ causal_graphs:
       snippet: polarisome-like complex involving the essential polarity protein DivIVA
       notes: Supports polarisome-directed apical growth and cell-wall assembly.
   - subject: apical_peptidoglycan_synthesis
-    predicate: drives
+    predicate: regulates
     object: hyphal_tip_extension
     description: Localized wall synthesis at the tip drives filament extension.
     evidence:
     - reference: DOI:10.1038/s41564-025-02080-x
       snippet: DivIVA drives growth at the hyphal poles
       notes: Supports DivIVA-recruited PG synthesis at hyphal poles.
+    predicate_id: RO:0002211
   - subject: hyphal_tip_extension
     predicate: manifests as
     object: filament_shaped_trait
@@ -123,4 +124,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

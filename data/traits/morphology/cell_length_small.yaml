@@ -44,13 +44,14 @@ causal_graphs:
       cell sizes.
   edges:
   - subject: standard_growth_conditions
-    predicate: supports
+    predicate: enables
     object: adder_principle
     description: Standard nutrient/temperature regimes maintain adder size control.
     evidence:
     - reference: DOI:10.1016/j.cell.2014.11.022
       snippet: cells grow by a fixed amount between divisions
       notes: Supports adder control under typical growth regimes.
+    predicate_id: RO:0002327
   - subject: adder_principle
     predicate: produces
     object: cell_length_small_trait
@@ -87,4 +88,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

@@ -80,7 +80,7 @@ causal_graphs:
       notes: Supports polarisome modulation of polar growth and branching.
     predicate_id: RO:0002211
   - subject: local_cell_wall_assembly
-    predicate: drives
+    predicate: regulates
     object: lateral_branch_outgrowth
     description: Local wall assembly drives emergence of the lateral branch.
     evidence:
@@ -88,6 +88,7 @@ causal_graphs:
       snippet: apical growth requires the localization of the machinery
       notes: Supports localized wall-building machinery as needed for apical branch
         outgrowth.
+    predicate_id: RO:0002211
   - subject: lateral_branch_outgrowth
     predicate: manifests as
     object: branched_shaped_trait
@@ -114,4 +115,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×2, METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    drives → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

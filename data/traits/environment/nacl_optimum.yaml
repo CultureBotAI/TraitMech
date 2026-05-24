@@ -63,7 +63,7 @@ causal_graphs:
       snippet: cope with the high salt concentrations
       notes: Supports osmotic balance as the response to ambient NaCl.
   - subject: compatible_solutes
-    predicate: maintains
+    predicate: regulates
     object: osmotic_balance
     description: Compatible-solute accumulation maintains osmotic balance at the optimal
       NaCl.
@@ -71,14 +71,16 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: synthesize organic osmotic solutes
       notes: Supports compatible solutes as the osmoadaptive osmolyte.
+    predicate_id: RO:0002211
   - subject: na_h_antiporters
-    predicate: supports
+    predicate: enables
     object: osmotic_balance
     description: Na+/H+ antiporters support ion homeostasis underlying osmotic balance.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: Na+/H+ antiporters
       notes: Supports antiporter-driven Na+ extrusion as an osmoadaptive mechanism.
+    predicate_id: RO:0002327
   - subject: osmotic_balance
     predicate: enables
     object: maximal_growth_rate
@@ -124,4 +126,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1; supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002327×1).
   llm_assisted: true

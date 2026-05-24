@@ -19,14 +19,13 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1038/nrmicro3088
   snippet: spherical cocci synthesize peptidoglycan only at the division septum
-  notes: Supports spherical bacterial morphology as associated with septal
-    peptidoglycan synthesis.
+  notes: Supports spherical bacterial morphology as associated with septal peptidoglycan
+    synthesis.
 causal_graphs:
 - graph_id: sphere_shaped_septal_peptidoglycan
   title: Spherical shape septal peptidoglycan mechanism
-  description: Evidence-backed causal sketch linking spherical cell shape to
-    FtsZ-associated septal synthesis, peptidoglycan remodeling, and limited lateral
-    elongation.
+  description: Evidence-backed causal sketch linking spherical cell shape to FtsZ-associated
+    septal synthesis, peptidoglycan remodeling, and limited lateral elongation.
   nodes:
   - node_id: sphere_shaped_trait
     label: sphere shaped
@@ -78,13 +77,14 @@ causal_graphs:
       notes: Broad review supports different growth mechanisms for coccoid versus
         rod-shaped bacteria.
   - subject: peptidoglycan_cell_wall
-    predicate: maintains
+    predicate: regulates
     object: sphere_shaped_trait
     description: Peptidoglycan wall geometry maintains the spherical shape.
     evidence:
     - reference: DOI:10.1038/nrmicro1205
       snippet: primary role in maintaining cell shape
       notes: Supports the cell wall as central to bacterial shape maintenance.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894456+00:00'
   curator: seed_from_metpo
@@ -97,4 +97,16 @@ curation_history:
   changes: Added DOI-backed definition and causal graph for FtsZ-associated septal
     peptidoglycan synthesis, peptidoglycan cell wall, reduced lateral elongation,
     and spherical morphology.
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -45,7 +45,7 @@ causal_graphs:
     description: Resulting flat, plate-like cell body.
   edges:
   - subject: planar_envelope_growth
-    predicate: shapes
+    predicate: causes
     object: flat_geometry
     description: Planar envelope growth produces a 2D-expanded cell body.
     evidence:
@@ -53,6 +53,7 @@ causal_graphs:
       snippet: flat square or disc-shaped cells
       notes: Supports planar envelope growth producing flat morphology in disc-shaped
         halophiles.
+    predicate_id: biolink:causes
   - subject: axial_extension_suppression
     predicate: contributes to
     object: flat_geometry
@@ -94,4 +95,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

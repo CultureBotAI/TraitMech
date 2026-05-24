@@ -79,7 +79,7 @@ causal_graphs:
       notes: Supports peripheral PG as a remodeling event for ovococcal elongation.
     predicate_id: RO:0002326
   - subject: septal_and_peripheral_synthesis
-    predicate: shapes
+    predicate: causes
     object: ellipsoid_geometry
     description: Coordinated septal and peripheral synthesis shapes the ellipsoidal
       cell body.
@@ -87,6 +87,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cub.2021.04.041
       snippet: dynamics of peptidoglycan assembly
       notes: Supports PG assembly dynamics in ovoid bacteria.
+    predicate_id: biolink:causes
   - subject: ellipsoid_geometry
     predicate: manifests as
     object: ellipsoidal_trait
@@ -119,4 +120,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

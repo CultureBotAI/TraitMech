@@ -83,7 +83,7 @@ causal_graphs:
       notes: Supports peptidoglycan synthesis in cell elongation.
     predicate_id: METPO:2000202
   - subject: lateral_cell_wall_elongation
-    predicate: maintains
+    predicate: regulates
     object: rod_shaped_trait
     description: Lateral wall elongation preserves the cylindrical rod morphology.
     evidence:
@@ -91,6 +91,7 @@ causal_graphs:
       snippet: restores its rod shape
       notes: Supports MreB-associated cell-wall synthesis as important for rod shape
         restoration and maintenance.
+    predicate_id: RO:0002211
   - subject: ftsZ
     predicate: coordinates with
     object: peptidoglycan_synthesis
@@ -125,6 +126,18 @@ curation_history:
     (METPO:2000202×1).
   llm_assisted: true
 - timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
   curator: claude
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv

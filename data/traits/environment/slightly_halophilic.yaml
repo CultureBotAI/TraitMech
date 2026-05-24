@@ -47,7 +47,7 @@ causal_graphs:
     description: Uptake of compatible solutes such as glycine betaine.
   edges:
   - subject: low_moderate_nacl
-    predicate: supports
+    predicate: enables
     object: slightly_halophilic_trait
     description: Slight halophily is a salt-growth preference at lower salinity than
       moderate or extreme halophily.
@@ -55,6 +55,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: minimum salt concentration required for growth
       notes: Review supports halophily as a continuum of salt growth requirements.
+    predicate_id: RO:0002327
   - subject: low_moderate_nacl
     predicate: causes
     object: osmotic_stress
@@ -111,4 +112,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

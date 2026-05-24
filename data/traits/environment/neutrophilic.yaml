@@ -52,13 +52,14 @@ causal_graphs:
     description: Transporters contributing to ion and pH homeostasis.
   edges:
   - subject: near_neutral_external_ph
-    predicate: supports
+    predicate: enables
     object: neutrophilic_trait
     description: Neutrophiles grow optimally when external pH is near neutrality.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH values outside the cytoplasmic pH
       notes: Review supports growth constraints around cytoplasmic pH compatibility.
+    predicate_id: RO:0002327
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: neutrophilic_trait
@@ -110,4 +111,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:interacts_with×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

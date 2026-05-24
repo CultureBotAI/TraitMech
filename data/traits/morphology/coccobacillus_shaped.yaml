@@ -57,7 +57,7 @@ causal_graphs:
       notes: Supports MreB involvement in shape-related PG synthesis.
     predicate_id: RO:0002211
   - subject: peptidoglycan_synthesis
-    predicate: shapes
+    predicate: causes
     object: short_rod_geometry
     description: Wall synthesis patterns determine whether cells remain rod-like or
       become short coccobacilli.
@@ -65,6 +65,7 @@ causal_graphs:
     - reference: DOI:10.1128/JB.187.1.54-64.2005
       snippet: conditions causing changes in cell shape
       notes: Supports PG-associated shape changes to a coccobacillus state.
+    predicate_id: biolink:causes
   - subject: septal_growth
     predicate: contributes to
     object: short_rod_geometry
@@ -108,4 +109,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    shapes → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

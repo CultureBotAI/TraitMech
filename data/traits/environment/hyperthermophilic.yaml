@@ -86,7 +86,7 @@ causal_graphs:
       notes: Review supports the strong association of reverse gyrase with hyperthermophily.
     predicate_id: RO:0002326
   - subject: molecular_chaperonins
-    predicate: maintains
+    predicate: regulates
     object: thermostable_enzymes
     description: Chaperonin systems support protein folding under heat stress.
     evidence:
@@ -94,6 +94,7 @@ causal_graphs:
       snippet: protein-folding system to cope with heat stress
       notes: Review supports archaeal chaperonins in hyperthermophile heat-stress
         protein folding.
+    predicate_id: RO:0002211
   - subject: membrane_lipid_composition
     predicate: enables
     object: hyperthermophilic_trait
@@ -132,4 +133,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:18Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    maintains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

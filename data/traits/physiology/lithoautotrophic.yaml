@@ -66,13 +66,14 @@ causal_graphs:
       notes: Supports inorganic electron donors for lithotrophic growth.
     predicate_id: METPO:2000009
   - subject: inorganic_electron_donor
-    predicate: supports
+    predicate: enables
     object: respiratory_energy_conservation
     description: Oxidation of inorganic donors supplies redox energy.
     evidence:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: free energy of a redox reaction
       notes: Supports energy conservation from respiratory redox reactions.
+    predicate_id: RO:0002327
   - subject: respiratory_energy_conservation
     predicate: generates
     object: reducing_power
@@ -94,13 +95,14 @@ causal_graphs:
       notes: Supports CO2 fixation as the autotrophic carbon-assimilation process.
     predicate_id: METPO:2007404
   - subject: reducing_power
-    predicate: supports
+    predicate: enables
     object: autotrophic_co2_fixation
     description: Reducing equivalents support conversion of CO2 into cell carbon.
     evidence:
     - reference: DOI:10.1016/j.biortech.2021.125768
       snippet: reduction of CO2 in the carbon fixation mechanisms
       notes: Supports reductant use for CO2 reduction.
+    predicate_id: RO:0002327
   - subject: autotrophic_co2_fixation
     predicate: produces
     object: cellular_carbon
@@ -139,4 +141,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:19Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    supports → enables ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-24T04:13:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2).
   llm_assisted: true
