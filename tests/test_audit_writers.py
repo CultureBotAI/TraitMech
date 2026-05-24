@@ -31,11 +31,28 @@ def test_looks_like_yaml_writer_dump():
     assert looks_like_yaml_writer("yaml.dump(doc, f)")
 
 
-def test_looks_like_yaml_writer_write_text_with_yaml_hint():
-    assert looks_like_yaml_writer("path.write_text(content)  # .yaml")
+def test_looks_like_yaml_writer_write_text_of_yaml_dump():
+    """The post-#75 heuristic requires `write_text(yaml.dump(...))` —
+    the yaml-serializer call must feed directly into write_text on the
+    same line for the script to count as a YAML writer."""
+    assert looks_like_yaml_writer("path.write_text(yaml.safe_dump(doc))")
+    assert looks_like_yaml_writer("path.write_text( yaml.dump(doc) )")
 
 
-def test_looks_like_yaml_writer_write_text_without_yaml_hint_is_false():
+def test_looks_like_yaml_writer_write_text_of_json_is_false():
+    """A .write_text call writing JSON is NOT a YAML writer even if the
+    file also reads from *.yaml elsewhere (the false-positive case
+    that #75 fixed for scripts/build_embedding_index.py and
+    scripts/render_trait_pages.py)."""
+    src = (
+        "for p in Path('data/traits').rglob('*.yaml'):\n"
+        "    doc = yaml.safe_load(p.read_text())\n"
+        "path.write_text(json.dumps(payload))\n"
+    )
+    assert not looks_like_yaml_writer(src)
+
+
+def test_looks_like_yaml_writer_write_text_plain_is_false():
     assert not looks_like_yaml_writer("path.write_text('hello')")
 
 
