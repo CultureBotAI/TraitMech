@@ -53,6 +53,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbamem.2005.09.010
       snippet: alkali-tolerant and extremely alkaliphilic bacteria
       notes: Review explicitly covers alkali-tolerant bacteria.
+    predicate_id: METPO:2007406
   - subject: alkaline_exposure
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
@@ -61,6 +62,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: grow in environments with external pH values
       notes: Review supports pH homeostasis for growth outside cytoplasmic pH range.
+    predicate_id: METPO:2007406
   - subject: proton_retention
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -107,4 +109,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×2, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007406×2).
   llm_assisted: true

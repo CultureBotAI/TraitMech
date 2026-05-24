@@ -59,6 +59,7 @@ causal_graphs:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: adapted to environments of high temperature
       notes: Supports hot environments as the context for thermophile optima.
+    predicate_id: METPO:2007401
   - subject: thermophile_thermostability
     predicate: produces
     object: temperature_optimum_high_trait
@@ -96,4 +97,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

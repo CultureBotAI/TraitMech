@@ -108,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox10060829
       snippet: electron donor
       notes: Supports donor oxidation during anoxygenic photosynthesis.
+    predicate_id: METPO:2007402
   - subject: light
     predicate: powers
     object: anoxygenic_photosynthesis
@@ -156,4 +157,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1).
   llm_assisted: true

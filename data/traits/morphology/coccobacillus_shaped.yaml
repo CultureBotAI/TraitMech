@@ -55,6 +55,7 @@ causal_graphs:
     - reference: DOI:10.1128/JB.187.1.54-64.2005
       snippet: control of the peptidoglycan synthetic complexes
       notes: Supports MreB involvement in shape-related PG synthesis.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_synthesis
     predicate: shapes
     object: short_rod_geometry
@@ -101,4 +102,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

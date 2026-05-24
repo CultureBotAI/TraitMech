@@ -81,6 +81,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: below an external pH range of 9.5-11.0
       notes: Supports cytoplasmic pH control under extreme alkaline external pH.
+    predicate_id: METPO:2007406
   - subject: sodium_proton_antiporter
     predicate: exports
     object: sodium_ion
@@ -135,4 +136,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007406×1).
   llm_assisted: true

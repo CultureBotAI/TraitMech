@@ -112,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: electron transfer process
       notes: Supports electron transfer in energy-conserving respiratory chains.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: generates
     object: proton_motive_force
@@ -177,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1).
   llm_assisted: true

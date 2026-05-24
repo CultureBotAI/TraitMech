@@ -77,6 +77,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01311-24
       snippet: DivIVA controls the dynamics of septum splitting and cell elongation
       notes: Supports DivIVA in ovococcal cell morphogenesis.
+    predicate_id: RO:0002211
   - subject: septum_splitting
     predicate: contributes to
     object: ovoid_geometry
@@ -94,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cub.2021.04.041
       snippet: ovoid-shaped bacteria
       notes: Supports the trait endpoint.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.891106+00:00'
   curator: seed_from_metpo
@@ -111,4 +113,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, METPO:2007400×1).
   llm_assisted: true

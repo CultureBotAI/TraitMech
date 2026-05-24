@@ -63,6 +63,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: acid challenge conditions include increased expression and activity
       notes: Supports active mechanisms under acid challenge.
+    predicate_id: METPO:2007406
   - subject: alkaline_external_ph
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
@@ -72,6 +73,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: active proton accumulation or generation in the cytoplasm
       notes: Supports alkaline-pH homeostasis as a growth-enabling process.
+    predicate_id: METPO:2007406
   - subject: ph_sensing
     predicate: regulates
     object: cytoplasmic_ph_homeostasis
@@ -109,4 +111,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007406×2).
   llm_assisted: true

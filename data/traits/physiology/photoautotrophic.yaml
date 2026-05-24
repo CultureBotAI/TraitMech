@@ -123,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.3390/life10050071
       snippet: split H2O molecules into O2
       notes: Supports oxygen as the product of water splitting.
+    predicate_id: METPO:2007405
   - subject: photosystem_ii
     predicate: feeds electrons into
     object: photosynthetic_electron_transport
@@ -132,6 +133,7 @@ causal_graphs:
       snippet: passes its reducing equivalents to an electron transfer chain
       notes: Supports electron flow from PSII/plastoquinol into photosynthetic electron
         transport.
+    predicate_id: METPO:2007402
   - subject: photosynthetic_electron_transport
     predicate: produces
     object: atp_nadph
@@ -149,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       snippet: Calvin-Benson reductive pentose phosphate cycle
       notes: Supports Calvin-Benson cycle as an autotrophic CO2-fixation route.
+    predicate_id: METPO:2007404
   - subject: rubisco
     predicate: catalyzes
     object: calvin_benson_cycle
@@ -195,4 +198,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×1, METPO:2007402×1, METPO:2007404×1).
   llm_assisted: true

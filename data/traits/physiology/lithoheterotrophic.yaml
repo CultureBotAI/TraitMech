@@ -102,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: membrane-bound electron transport chain
       notes: Supports respiratory chains as energy-conserving redox systems.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: transfers electrons to
     object: oxygen
@@ -110,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       snippet: oxidation of Fe(II) coupled to the reduction of oxygen
       notes: Supports oxygen reduction coupled to Fe(II) oxidation.
+    predicate_id: METPO:2007403
   - subject: respiratory_chain
     predicate: produces
     object: atp
@@ -177,4 +179,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1, METPO:2007403×1).
   llm_assisted: true

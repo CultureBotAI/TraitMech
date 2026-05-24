@@ -103,6 +103,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00775-020-01820-0
       snippet: convert ammonia to hydroxylamine
       notes: Supports AMO-catalyzed ammonia-to-hydroxylamine conversion.
+    predicate_id: METPO:2007405
   - subject: hydroxylamine
     predicate: oxidized to
     object: nitrite
@@ -111,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2012.00210
       snippet: oxidation of hydroxylamine to nitrite
       notes: Supports hydroxylamine oxidation as the next nitrification step.
+    predicate_id: METPO:2007405
   - subject: sox_enzyme_system
     predicate: oxidizes
     object: thiosulfate
@@ -129,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: membrane-bound electron transport chain
       notes: Supports respiratory chains as energy-conserving redox systems.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: produces
     object: atp
@@ -160,4 +163,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000016×2, METPO:2000009×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×2, METPO:2007402×1).
   llm_assisted: true

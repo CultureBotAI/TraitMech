@@ -100,6 +100,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom9070279
       snippet: migrate towards more desirable environments
       notes: Supports chemotaxis regulation of motile behavior.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905197+00:00'
   curator: seed_from_metpo
@@ -129,4 +130,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -58,6 +58,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: salt concentrations up to NaCl saturation
       notes: Review supports saturated salt environments as extreme-halophile habitats.
+    predicate_id: METPO:2007401
   - subject: salt_in_strategy
     predicate: uses
     object: potassium_ion
@@ -120,4 +121,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

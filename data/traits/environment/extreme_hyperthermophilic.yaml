@@ -63,6 +63,7 @@ causal_graphs:
     - reference: DOI:10.1007/s007920050010
       snippet: It grew at between 90 degrees C and 113 degrees C
       notes: Supports growth above 90 °C in extreme hyperthermophiles.
+    predicate_id: METPO:2007401
   - subject: tetraether_lipids
     predicate: protects against
     object: very_high_temperature
@@ -122,4 +123,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

@@ -65,6 +65,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-010521-010834
       snippet: Rod complexes drive cell wall insertion
       notes: Supports Rod complex contribution to wall insertion.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_synthesis
     predicate: produces
     object: lateral_cell_wall_elongation
@@ -111,4 +112,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -86,6 +86,7 @@ causal_graphs:
       snippet: membrane-bound electron transport chain
       notes: Supports membrane-bound respiratory chains as redox energy-conserving
         systems.
+    predicate_id: METPO:2007402
   - subject: electron_transport_chain
     predicate: generates
     object: proton_motive_force
@@ -120,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.52.1.191
       snippet: Carbon Dioxide Fixation in Chemoautotrophs
       notes: Supports CO2 fixation in chemoautotrophic bacteria.
+    predicate_id: METPO:2007404
   - subject: atp
     predicate: supports
     object: co2_fixation_pathway
@@ -168,4 +170,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1, METPO:2007404×1).
   llm_assisted: true

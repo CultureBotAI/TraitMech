@@ -99,6 +99,7 @@ causal_graphs:
       snippet: white phenotypic variant of Staphylococcus aureus
       notes: Supports trait-level white pigmentation in a representative microbial
         context.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946745+00:00'
   curator: seed_from_metpo
@@ -128,4 +129,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:encodes×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1).
   llm_assisted: true

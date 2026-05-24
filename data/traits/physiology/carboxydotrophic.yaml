@@ -95,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00775-018-1541-0
       snippet: oxidation of CO to CO2
       notes: Supports CO-to-CO2 conversion by CODH.
+    predicate_id: METPO:2007405
   - subject: carbon_monoxide_dehydrogenase
     predicate: feeds electrons into
     object: respiratory_chain
@@ -103,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1111/j.1574-6968.1986.tb01858.x
       snippet: branched respiratory chain
       notes: Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.
+    predicate_id: METPO:2007402
   - subject: respiratory_chain
     predicate: requires
     object: co_insensitive_terminal_oxidase
@@ -151,4 +153,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×1, METPO:2007402×1).
   llm_assisted: true

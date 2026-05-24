@@ -59,6 +59,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: KCl accumulating Halobacterium salinarum
       notes: Supports the salt-in strategy in extreme-halophile lineages.
+    predicate_id: METPO:2007401
   - subject: salt_in_strategy
     predicate: produces
     object: nacl_optimum_high_trait
@@ -94,4 +95,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

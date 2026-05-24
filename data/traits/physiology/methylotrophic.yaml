@@ -97,6 +97,7 @@ causal_graphs:
     - reference: DOI:10.3389/fbioe.2021.787791
       snippet: converts methanol to formaldehyde
       notes: Supports methanol-to-formaldehyde conversion.
+    predicate_id: METPO:2007405
   - subject: pqq_dependent_mdh
     predicate: located in
     object: periplasmic_space
@@ -165,4 +166,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:located_in×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×1).
   llm_assisted: true

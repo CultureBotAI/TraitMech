@@ -113,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1080/17415990802105770
       snippet: generate hydrogen sulfide and sulfate
       notes: Supports sulfate as oxidized product.
+    predicate_id: METPO:2007405
   - subject: reverse_sulfate_reduction_pathway
     predicate: participates in
     object: disproportionation_trait
@@ -146,4 +147,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007405×1).
   llm_assisted: true

@@ -67,6 +67,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH range of 9.5-11.0
       notes: Review supports growth of extreme alkaliphiles at high external pH.
+    predicate_id: METPO:2007401
   - subject: alkaline_external_ph
     predicate: challenges
     object: cytoplasmic_ph_homeostasis
@@ -76,6 +77,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: cytoplasmic pH ... below an external pH
       notes: Supports cytoplasmic pH control below alkaline external pH.
+    predicate_id: METPO:2007406
   - subject: sodium_proton_antiporter
     predicate: exchanges
     object: sodium_ion
@@ -120,4 +122,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, METPO:2007406×1).
   llm_assisted: true

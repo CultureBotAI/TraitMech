@@ -66,6 +66,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: highly impermeable cell membranes
       notes: Supports envelope-based proton barriers as the selected acidophile mechanism.
+    predicate_id: METPO:2007401
   - subject: acidophile_proton_exclusion
     predicate: produces
     object: ph_optimum_low_trait
@@ -102,4 +103,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

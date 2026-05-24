@@ -17,8 +17,10 @@ evidence:
   snippet: microaerotolerant or aerotolerant anaerobes can survive
   notes: Supports microaerotolerance as survival under limited oxygen exposure.
 - reference: PMID:30113300
-  snippet: The novel strain stains Gram-negative and Congo-red-negative and is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
-  notes: 'Organism example: Simulacricoccus ruber strain MCy10636 is described as microaerotolerant.'
+  snippet: The novel strain stains Gram-negative and Congo-red-negative and is characterized
+    mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
+  notes: 'Organism example: Simulacricoccus ruber strain MCy10636 is described as
+    microaerotolerant.'
 causal_graphs:
 - graph_id: microaerotolerant_low_oxygen_defense
   title: Microaerotolerant low-oxygen survival mechanism
@@ -80,8 +82,10 @@ causal_graphs:
     description: ROS detoxification enzymes contribute to oxygen tolerance.
     evidence:
     - reference: DOI:10.1128/iai.16.1.20-25.1977
-      snippet: oxygen tolerance of anaerobes is usually related to their level of SOD
+      snippet: oxygen tolerance of anaerobes is usually related to their level of
+        SOD
       notes: Supports antioxidant defense as a mechanism for oxygen tolerance.
+    predicate_id: METPO:2007407
   - subject: microaerotolerant_trait
     predicate: compatible with
     object: anaerobic_growth
@@ -110,6 +114,12 @@ curation_history:
 - timestamp: '2026-05-10T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for low-oxygen survival and oxidative
-    stress defense in microaerotolerant organisms.
+  changes: Added DOI-backed causal graph for low-oxygen survival and oxidative stress
+    defense in microaerotolerant organisms.
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:06Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×1).
   llm_assisted: true

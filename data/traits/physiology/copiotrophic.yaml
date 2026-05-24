@@ -66,6 +66,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
       notes: Supports high nutrient concentration as the environmental driver.
+    predicate_id: METPO:2007401
   - subject: copiotrophic_trait
     predicate: uses substrate pool
     object: diverse_carbon_sources
@@ -127,4 +128,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:associated_with×2).
+  llm_assisted: true
+- timestamp: '2026-05-23T21:30:07Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

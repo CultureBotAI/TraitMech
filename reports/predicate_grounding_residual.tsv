@@ -1,23 +1,15 @@
 predicate_label	edge_count	example_files
-manifests as	52	data/traits/ecology/animal_pathogen.yaml|data/traits/ecology/human_pathogen.yaml|data/traits/ecology/pathogenic_to_host.yaml
 supports	26	data/traits/ecology/animal_pathogen.yaml|data/traits/ecology/human_pathogen.yaml|data/traits/ecology/plant_pathogen.yaml
-selects for	20	data/traits/environment/acidophilic.yaml|data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml
 drives	19	data/traits/environment/halophily_preference.yaml|data/traits/environment/nacl_optimum_mid2.yaml|data/traits/environment/non_halophilic.yaml
 defines	14	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml
 maintains	13	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/hyperthermophilic.yaml|data/traits/environment/mesophilic.yaml
-mitigates	12	data/traits/environment/aerotolerant.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophilic.yaml
 shapes	12	data/traits/genomics/gc_content.yaml|data/traits/morphology/coccobacillus_shaped.yaml|data/traits/morphology/disc_shaped.yaml
-feeds electrons into	12	data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml
-challenges	9	data/traits/environment/acidotolerant.yaml|data/traits/environment/alkalotolerant.yaml|data/traits/environment/alkaphilic.yaml
-fixed by	9	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml
-oxidized to	8	data/traits/metabolism/disproportionation.yaml|data/traits/physiology/carboxydotrophic.yaml|data/traits/physiology/chemolithotrophic.yaml
 influences	7	data/traits/environment/halophily_preference.yaml|data/traits/environment/ph_growth_preference.yaml|data/traits/environment/temperature_optimum.yaml
 engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
 determines	6	data/traits/ecology/biosafety_level.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/gram_stain.yaml
 sets	6	data/traits/environment/nacl_range.yaml|data/traits/environment/ph_range.yaml|data/traits/environment/temperature_range.yaml
 constrains	6	data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/stenohaline.yaml|data/traits/environment/temperature_preference.yaml
 input to	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/syntrophy.yaml
-transfers electrons to	6	data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml
 powers	6	data/traits/metabolism/metabolism.yaml|data/traits/morphology/flagellated.yaml|data/traits/morphology/gliding.yaml
 organizes	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_small.yaml
 imports	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml
@@ -27,8 +19,6 @@ drives production of	5	data/traits/physiology/chemolithoheterotrophic.yaml|data/
 requires	4	data/traits/environment/aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/physiology/carboxydotrophic.yaml
 decreases	4	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml|data/traits/environment/psychrotolerant.yaml
 triggers	4	data/traits/environment/nacl_optimum.yaml|data/traits/environment/thermotolerant.yaml|data/traits/morphology/cell_length.yaml
-directs	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/branched_shaped.yaml|data/traits/morphology/motile.yaml
-controls	4	data/traits/morphology/branched_shaped.yaml|data/traits/morphology/coccobacillus_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
 prevents	4	data/traits/morphology/non_motile.yaml|data/traits/morphology/non_spore_forming.yaml
 initiates	4	data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml
 can proceed through	4	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
