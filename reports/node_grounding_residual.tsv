@@ -1,8 +1,4 @@
 node_label	node_type	node_count	example_files
-proton motive force	BIOLOGICAL_PROCESS	16	data/traits/environment/neutrophilic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/environment/ph_optimum.yaml
-biomass	BIOLOGICAL_PROCESS	16	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml
-inorganic electron donor	CHEMICAL	7	data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
-membrane fluidity	BIOLOGICAL_PROCESS	6	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/mesophilic.yaml|data/traits/environment/psychrophilic.yaml
 precursor metabolites	CHEMICAL	6	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 organic compound	CHEMICAL	6	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
 acidic external ph	ENVIRONMENTAL_FACTOR	5	data/traits/environment/acidophilic.yaml|data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
@@ -11,10 +7,8 @@ near-neutral external ph	ENVIRONMENTAL_FACTOR	4	data/traits/environment/facultat
 mreb	GENE_OR_PROTEIN	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccobacillus_shaped.yaml
 lateral cell-wall elongation	BIOLOGICAL_PROCESS	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
 crt enzymes	GENE_OR_PROTEIN	4	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/pink_pigmented.yaml
-carotenoid biosynthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/pink_pigmented.yaml
 rod-complex peptidoglycan synthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_large.yaml|data/traits/morphology/cell_width_medium.yaml
 septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml|data/traits/morphology/oval_shaped.yaml
-reducing power	CHEMICAL	4	data/traits/physiology/chemolithoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml|data/traits/physiology/photolithoautotrophic.yaml
 na+/h+ antiporter	GENE_OR_PROTEIN	3	data/traits/environment/alkaphilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
 numerical environmental axis	ENVIRONMENTAL_FACTOR	3	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
 compatible-solute transport	MOLECULAR_FUNCTION	3	data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml|data/traits/environment/halotolerant.yaml
@@ -22,7 +16,6 @@ salt-in strategy	BIOLOGICAL_PROCESS	3	data/traits/environment/extremely_halophil
 water flux across cytoplasmic membrane	BIOLOGICAL_PROCESS	3	data/traits/environment/halophily_preference.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
 maximal growth rate	BIOLOGICAL_PROCESS	3	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/temperature_optimum.yaml
 membrane electron transport chain	PATHWAY	3	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml|data/traits/physiology/lithotrophic.yaml
-terminal electron acceptor	CHEMICAL	3	data/traits/metabolism/respiration.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
 ftsz	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/rod_shaped.yaml
 planar envelope growth	BIOLOGICAL_PROCESS	3	data/traits/morphology/disc_shaped.yaml|data/traits/morphology/square_shaped.yaml|data/traits/morphology/triangular_shaped.yaml
 diviva	GENE_OR_PROTEIN	3	data/traits/morphology/ellipsoidal.yaml|data/traits/morphology/filament_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
@@ -36,7 +29,6 @@ autotrophic co2 fixation	PATHWAY	3	data/traits/physiology/hydrogenotrophic.yaml|
 photosynthetic reaction center	GENE_OR_PROTEIN	3	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
 low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 reversed membrane potential	BIOLOGICAL_PROCESS	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
-terminal electron acceptor	MOLECULAR_FUNCTION	2	data/traits/environment/aerobic.yaml|data/traits/metabolism/anaerobic_respiration.yaml
 anaerobic growth	BIOLOGICAL_PROCESS	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 cation/proton antiporter	GENE_OR_PROTEIN	2	data/traits/environment/alkalotolerant.yaml|data/traits/environment/neutrophilic.yaml
 osmotic imbalance	BIOLOGICAL_PROCESS	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml

@@ -34,6 +34,7 @@ causal_graphs:
     label: inorganic electron donor
     node_type: CHEMICAL
     description: Reduced inorganic compound used for energy and reducing equivalents.
+    grounding: METPO:1007502
   - node_id: respiratory_energy_conservation
     label: respiratory energy conservation
     node_type: BIOLOGICAL_PROCESS
@@ -42,6 +43,7 @@ causal_graphs:
     label: reducing power
     node_type: CHEMICAL
     description: Reduced electron carriers used in biosynthesis.
+    grounding: METPO:1007503
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -139,4 +141,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:17:42Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007502×1, METPO:1007503×1).
   llm_assisted: true

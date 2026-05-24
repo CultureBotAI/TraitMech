@@ -48,6 +48,7 @@ causal_graphs:
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
     description: Ion gradient used for energy conservation.
+    grounding: METPO:1007500
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -162,4 +163,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007405×1, METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:17:42Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

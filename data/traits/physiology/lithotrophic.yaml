@@ -40,6 +40,7 @@ causal_graphs:
     label: inorganic electron donor
     node_type: CHEMICAL
     description: Reduced inorganic compound used as a source of electrons.
+    grounding: METPO:1007502
   - node_id: hydrogen
     label: molecular hydrogen
     node_type: CHEMICAL
@@ -57,6 +58,7 @@ causal_graphs:
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
     description: Electrochemical ion gradient used for energy conservation.
+    grounding: METPO:1007500
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -142,4 +144,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×2, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:17:42Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007502×1, METPO:1007500×1).
   llm_assisted: true
