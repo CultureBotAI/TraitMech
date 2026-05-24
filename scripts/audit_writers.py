@@ -28,7 +28,14 @@ SEARCH_DIRS = [
 ]
 
 # Patterns
-_WRITE_YAML_HINT = re.compile(r"\.ya?ml['\"]|\.yaml\b")
+# Match `path.write_text(yaml.safe_dump(...))` and similar — must show
+# yaml-serializer output flowing into write_text on the same line.
+# Previously a weaker heuristic (.write_text + any .yaml token in the
+# file) flagged scripts that READ trait YAMLs but write JSON/HTML/TSV
+# as false positives.
+_WRITE_TEXT_OF_YAML = re.compile(
+    r"\.write_text\s*\(\s*yaml\.(?:safe_)?dump"
+)
 _CURATION_APPEND = re.compile(
     r"curation_history.*?(append|\+=|\.insert)"
     r"|['\"]curator['\"]\s*:"
@@ -64,8 +71,11 @@ def script_paths() -> list[Path]:
 def looks_like_yaml_writer(text: str) -> bool:
     if "yaml.safe_dump(" in text or "yaml.dump(" in text:
         return True
-    # `.write_text(` only counts if combined with a yaml hint nearby.
-    if ".write_text(" in text and _WRITE_YAML_HINT.search(text):
+    # `.write_text(...)` only counts when the argument is a yaml.dump
+    # / yaml.safe_dump result. The looser previous heuristic
+    # (.write_text + any .yaml token in the file) flagged scripts that
+    # only READ yamls but write something else (JSON, HTML, TSV).
+    if _WRITE_TEXT_OF_YAML.search(text):
         return True
     return False
 
