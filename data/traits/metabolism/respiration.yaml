@@ -37,6 +37,7 @@ causal_graphs:
     label: electron donor
     node_type: CHEMICAL
     description: Reduced substrate supplying electrons.
+    grounding: CHEBI:17499
   - node_id: terminal_electron_acceptor
     label: terminal electron acceptor
     node_type: CHEMICAL
@@ -58,6 +59,7 @@ causal_graphs:
     node_type: PATHWAY
     description: Membrane redox chain conserving energy from donor-to-acceptor electron
       flow.
+    grounding: GO:0022900
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -188,4 +190,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A415TT77×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17499×1, GO:0022900×1).
   llm_assisted: true

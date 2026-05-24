@@ -73,3 +73,17 @@ ammonia monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A059V4Z9	Ammonia monooxygenase
 hydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A059XQG3	Hydrogenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 methane monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A0A3YNQ7	Methane monooxygenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A4U8YZA6	PQQ-dependent methanol dehydrogenase (Alpha subunit)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+acidic external ph	ENVIRONMENTAL_FACTOR	PATO:0001428	acidic pH	PATO	high	exact PATO quality term for acidic-pH condition
+alkaline external ph	ENVIRONMENTAL_FACTOR	PATO:0001429	alkaline pH	PATO	high	exact PATO quality term for alkaline-pH condition
+near-neutral external ph	ENVIRONMENTAL_FACTOR	PATO:0001432	neutral pH	PATO	high	closest PATO quality term ("near-neutral" → PATO neutral)
+very high temperature	ENVIRONMENTAL_FACTOR	PATO:0001637	extremely high temperature	PATO	high	PATO quality term for thermophilic / hyperthermophilic conditions
+high-salt environment	ENVIRONMENTAL_FACTOR	ENVO:01000687	saline environment	ENVO	high	exact ENVO term for high-salinity environmental context
+thiosulfate	CHEMICAL	CHEBI:33542	thiosulfate(2-)	CHEBI	high	exact CHEBI; sulfur-redox metabolism substrate
+electron donor	CHEMICAL	CHEBI:17499	electron donor	CHEBI	high	exact CHEBI term for the electron-donor chemical-role class
+organic compound	CHEMICAL	CHEBI:50860	organic molecular entity	CHEBI	high	same CHEBI as "organic carbon" — both are the broad class of carbon-containing molecules
+membrane electron transport chain	PATHWAY	GO:0022900	electron transport chain	GO	high	GO term for membrane-bound ETC; the corpus uses several near-synonym labels (see also "electron transport chain", "electron transport system")
+electron transport chain	PATHWAY	GO:0022900	electron transport chain	GO	high	exact GO match
+electron transport system	PATHWAY	GO:0022900	electron transport chain	GO	high	corpus paraphrase of electron transport chain
+co2-fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	GO carbon-fixation process subsumes the various CO2-fixation pathway labels
+autotrophic co2 fixation	PATHWAY	GO:0015977	carbon fixation	GO	high	autotrophic-context paraphrase of carbon fixation
+co2 fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	corpus typo variant of co2-fixation pathway (hyphen dropped)

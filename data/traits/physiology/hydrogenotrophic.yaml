@@ -45,6 +45,7 @@ causal_graphs:
     label: electron transport system
     node_type: PATHWAY
     description: Membrane-linked electron-transfer route supporting energy conservation.
+    grounding: GO:0022900
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -59,6 +60,7 @@ causal_graphs:
     label: autotrophic CO2 fixation
     node_type: PATHWAY
     description: Carbon fixation pathway converting inorganic carbon into cell carbon.
+    grounding: GO:0015977
   - node_id: cellular_carbon
     label: cellular carbon
     node_type: BIOLOGICAL_PROCESS
@@ -176,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A059XQG3×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0022900×1, GO:0015977×1).
   llm_assisted: true

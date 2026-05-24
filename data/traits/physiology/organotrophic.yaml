@@ -38,6 +38,7 @@ causal_graphs:
     label: organic compound
     node_type: CHEMICAL
     description: Reduced organic substrate serving as electron donor.
+    grounding: CHEBI:50860
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -170,4 +171,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:50860×1).
   llm_assisted: true

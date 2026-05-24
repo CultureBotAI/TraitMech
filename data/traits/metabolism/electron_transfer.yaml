@@ -31,6 +31,7 @@ causal_graphs:
     label: electron donor
     node_type: CHEMICAL
     description: Reduced substrate or carrier supplying electrons.
+    grounding: CHEBI:17499
   - node_id: electron_acceptor
     label: electron acceptor
     node_type: CHEMICAL
@@ -49,6 +50,7 @@ causal_graphs:
     label: membrane electron transport chain
     node_type: PATHWAY
     description: Ordered redox chain in a biological membrane.
+    grounding: GO:0022900
   - node_id: extracellular_electron_transfer
     label: extracellular electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -153,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A076EJF0×1, UniProtKB:A0A072TMC1×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17499×1, GO:0022900×1).
   llm_assisted: true

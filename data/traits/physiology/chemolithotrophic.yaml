@@ -68,6 +68,7 @@ causal_graphs:
     label: thiosulfate
     node_type: CHEMICAL
     description: Representative reduced sulfur donor.
+    grounding: CHEBI:33542
   - node_id: respiratory_chain
     label: respiratory chain
     node_type: PATHWAY
@@ -183,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A059V4Z9×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:33542×1).
   llm_assisted: true

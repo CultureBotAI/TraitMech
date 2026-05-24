@@ -39,6 +39,7 @@ causal_graphs:
     label: very high temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Growth condition around 80 degrees C or hotter.
+    grounding: PATO:0001637
   - node_id: thermostable_enzymes
     label: thermostable enzymes
     node_type: GENE_OR_PROTEIN
@@ -152,4 +153,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A088E825×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001637×1).
   llm_assisted: true

@@ -38,11 +38,13 @@ causal_graphs:
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH above neutral, often near or above pH 9 for alkaliphiles.
+    grounding: PATO:0001429
   - node_id: near_neutral_external_ph
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH near neutrality compatible with facultative alkaliphile
       growth.
+    grounding: PATO:0001432
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
@@ -168,4 +170,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A068T423×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001429×1, PATO:0001432×1).
   llm_assisted: true
