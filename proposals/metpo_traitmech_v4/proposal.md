@@ -8,11 +8,20 @@ coherent clusters of the predicate residual; this v4 cohort picks
 up the next-most-prevalent single residual label
 (`defines`, 14 edges).
 
-`defines` is an operationally-definitional predicate used uniformly
-across the delta / range / optimum phenotype graphs: an
-environmental measurement axis (or condition) **defines** the
-phenotype variable it parameterizes (e.g. *"external pH axis
-defines pH phenotype with numerical limits"*).
+`defines` is an operationally-definitional predicate used across
+two clusters in the corpus:
+
+1. **Environmental measurement contexts (12 of 14 edges)** — an
+   environmental measurement axis or condition defines the
+   phenotype variable it parameterizes (e.g. *"external pH axis
+   defines pH phenotype with numerical limits"*); dominant in the
+   delta / range / optimum phenotype graphs.
+
+2. **Morphological / structural contexts (2 of 14 edges)** — a
+   structural or anatomical feature defines a morphological trait
+   class (e.g. *"outer membrane defines gram negative"*, *"periplasmic
+   flagella defines axially filamented"*). Same operational-definition
+   semantics, with a structural rather than environmental subject.
 
 ## Scope
 
@@ -41,9 +50,15 @@ Total property rows in v4: **1**.
 | `METPO:2007401` (selects for) | Evolutionary selection, not operational definition. |
 | `rdfs:subClassOf` / `is a` | The axis is not a subclass of the phenotype; it's the input dimension. |
 
-The 14 uses cluster tightly: every one is an `<axis> defines
-<phenotype with numerical limits>` pattern from the delta / range
-/ optimum trait graphs.
+The 14 uses split between two semantic clusters that share the
+same operational-definition pattern:
+
+- 12 edges where an environmental measurement axis or condition
+  defines a numerical-limits phenotype (delta / range / optimum
+  graphs across pH, salinity, NaCl, oxygen, temperature).
+- 2 edges where a structural / anatomical feature defines a
+  morphological trait class (`outer membrane defines gram negative`,
+  `periplasmic flagella defines axially filamented`).
 
 ## ID space and subset
 
