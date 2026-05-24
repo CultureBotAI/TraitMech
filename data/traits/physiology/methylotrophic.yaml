@@ -43,12 +43,12 @@ causal_graphs:
     label: methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Primary enzyme oxidizing methanol in methylotrophy.
-    grounding: UniprotKB:A0A010SCY7
+    grounding: UniProtKB:A0A010SCY7
   - node_id: pqq_dependent_mdh
     label: PQQ-dependent methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Periplasmic methanol dehydrogenase class in Gram-negative methylotrophs.
-    grounding: UniprotKB:A0A4U8YZA6
+    grounding: UniProtKB:A0A4U8YZA6
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -186,5 +186,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A010SCY7×1, UniprotKB:A0A4U8YZA6×1).
+    (UniProtKB:A0A010SCY7×1, UniProtKB:A0A4U8YZA6×1).
   llm_assisted: true

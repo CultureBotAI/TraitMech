@@ -41,7 +41,7 @@ causal_graphs:
     label: type IV pilus
     node_type: GENE_OR_PROTEIN
     description: Dynamic pilus that powers twitching and related surface motility.
-    grounding: UniprotKB:R6TBR9
+    grounding: UniProtKB:R6TBR9
   - node_id: gliding_motility_machinery
     label: gliding motility machinery
     node_type: GENE_OR_PROTEIN
@@ -126,5 +126,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:R6TBR9×1).
+    (UniProtKB:R6TBR9×1).
   llm_assisted: true

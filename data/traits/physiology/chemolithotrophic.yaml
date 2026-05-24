@@ -50,7 +50,7 @@ causal_graphs:
     label: ammonia monooxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme initiating aerobic ammonia oxidation.
-    grounding: UniprotKB:A0A059V4Z9
+    grounding: UniProtKB:A0A059V4Z9
   - node_id: hydroxylamine
     label: hydroxylamine
     node_type: CHEMICAL
@@ -182,5 +182,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A059V4Z9×1).
+    (UniProtKB:A0A059V4Z9×1).
   llm_assisted: true

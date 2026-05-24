@@ -43,7 +43,7 @@ causal_graphs:
     label: FlaB
     node_type: GENE_OR_PROTEIN
     description: Major periplasmic flagellar filament protein in Borrelia.
-    grounding: UniprotKB:A8WEP6
+    grounding: UniProtKB:A8WEP6
   - node_id: flat_wave_morphology
     label: flat-wave morphology
     node_type: BIOLOGICAL_PROCESS
@@ -111,5 +111,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A8WEP6×1).
+    (UniProtKB:A8WEP6×1).
   llm_assisted: true

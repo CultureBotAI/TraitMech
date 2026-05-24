@@ -3,7 +3,7 @@
 kg-microbe UniProt transform.
 
 Streams the kg-microbe `merged-kg_uniprot_nodes.tsv` (≈2.2 GB), for
-each UniprotKB row checks whether any TraitMech residual
+each UniProtKB row checks whether any TraitMech residual
 GENE_OR_PROTEIN label appears as a token in the protein name, and
 emits a candidate-match TSV that lists representative UniProt CURIEs
 per label.
@@ -14,17 +14,28 @@ Two outputs:
   - `mappings/node_grounding.tsv` (appended in place) — one row per
     label, picking a single representative.
 
-Representative selection per label:
-  1. Prefer matches where the name ENDS with the label (e.g.
-     "Cell shape-determining protein MreB" ends in "MreB"), since
-     that's the protein-family-naming convention in UniProt.
-  2. Among those, prefer the alphabetically-first UniprotKB CURIE
-     (deterministic; reproducible).
-  3. If no clean suffix match, fall back to any name-containing
-     match with the same tiebreaker.
-  4. If a label matches >100 entries (likely too generic to ground
-     cleanly — e.g. "virulence factors"), skip and report as
-     ambiguous.
+Representative selection per label (see `pick_representative`):
+  Tier 1 (best). The UniProt name (cleaned of trailing parens)
+    equals the TraitMech label exactly. Pick the alphabetically-
+    first UniProtKB CURIE for determinism.
+  Tier 2. The cleaned name ends with " <label>" as the final
+    whitespace-separated token (e.g. "Polarized growth protein Scy"
+    for label "scy"). Pick the SHORTEST such name (fewer modifier
+    words like *chaperone*, *maturation protein*, *assembly factor*),
+    alphabetic CURIE as tiebreaker.
+  Otherwise. Return None — too ambiguous to ground cleanly.
+
+A separate hand-curated `SKIP_LABELS` blocklist suppresses abstract-
+category labels (e.g. "gene product", "virulence factors") that
+shouldn't be grounded to any single UniProt entry even when matches
+are found.
+
+CURIE prefix normalization:
+  The kg-microbe source data uses `UniprotKB:` (lowercase p);
+  the TraitMech LinkML schema declares `UniProtKB` (uppercase P).
+  This script reads using the source-data spelling and emits the
+  schema-canonical spelling in all downstream artifacts (mappings
+  TSV, candidates TSV, YAMLs after running ground-nodes).
 
 Default is **dry-run** (writes candidates TSV only). Pass `--apply`
 to also append mappings rows.
@@ -117,14 +128,20 @@ def stream_uniprot_matches(
             seen_rows += 1
             if seen_rows % 2_000_000 == 0:
                 print(f"  {seen_rows:>10,} rows scanned, "
-                      f"{seen_uniprot:>9,} UniprotKB, "
+                      f"{seen_uniprot:>9,} UniProtKB, "
                       f"{sum(len(v) for v in matches.values()):>7,} matches",
                       file=sys.stderr)
             cols = line.rstrip("\n").split("\t")
+            # kg-microbe source uses the `UniprotKB:` prefix (lowercase p);
+            # the TraitMech schema prefix-map declares `UniProtKB` (uppercase P).
+            # Filter against the source-data spelling here, and normalize the
+            # emitted CURIE just below so downstream artifacts (mappings,
+            # YAMLs, reports) match the schema.
             if len(cols) < 3 or not cols[0].startswith("UniprotKB:"):
                 continue
             seen_uniprot += 1
-            curie, _cat, name = cols[0], cols[1], cols[2]
+            curie = "UniProtKB:" + cols[0].split(":", 1)[1]
+            name = cols[2]
             for m in regex.finditer(name):
                 key = m.group(0).lower()
                 if key not in label_set:

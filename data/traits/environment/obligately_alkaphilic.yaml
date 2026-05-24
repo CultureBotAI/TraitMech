@@ -54,7 +54,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging sodium ions and protons during alkaline pH
       homeostasis.
-    grounding: UniprotKB:A0A068T423
+    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -155,5 +155,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A068T423×1).
+    (UniProtKB:A0A068T423×1).
   llm_assisted: true

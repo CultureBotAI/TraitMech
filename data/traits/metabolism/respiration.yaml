@@ -67,7 +67,7 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex using proton motive force for ATP synthesis.
-    grounding: UniprotKB:A0A415TT77
+    grounding: UniProtKB:A0A415TT77
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -187,5 +187,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A415TT77×1).
+    (UniProtKB:A0A415TT77×1).
   llm_assisted: true

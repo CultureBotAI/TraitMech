@@ -34,7 +34,7 @@ causal_graphs:
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like cytoskeletal protein encoded by creS.
-    grounding: UniprotKB:A0A2N9AY16
+    grounding: UniProtKB:A0A2N9AY16
   - node_id: inner_cell_curvature
     label: inner cell curvature
     node_type: CELLULAR_LOCALIZATION
@@ -112,5 +112,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A2N9AY16×1).
+    (UniProtKB:A0A2N9AY16×1).
   llm_assisted: true

@@ -36,7 +36,7 @@ causal_graphs:
     label: hydrogenase
     node_type: GENE_OR_PROTEIN
     description: Metalloenzyme catalyzing H2 oxidation or production.
-    grounding: UniprotKB:A0A059XQG3
+    grounding: UniProtKB:A0A059XQG3
   - node_id: protons_electrons
     label: protons and electrons
     node_type: CHEMICAL
@@ -175,5 +175,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A059XQG3×1).
+    (UniProtKB:A0A059XQG3×1).
   llm_assisted: true

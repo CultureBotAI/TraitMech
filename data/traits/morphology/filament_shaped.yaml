@@ -39,12 +39,12 @@ causal_graphs:
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Polarity determinant for Streptomyces apical growth.
-    grounding: UniprotKB:Q1IYG2
+    grounding: UniProtKB:Q1IYG2
   - node_id: scy
     label: Scy
     node_type: GENE_OR_PROTEIN
     description: Streptomyces cytoskeletal element associated with the polarisome.
-    grounding: UniprotKB:A0A191V3Q4
+    grounding: UniProtKB:A0A191V3Q4
   - node_id: apical_polarisome
     label: apical polarisome
     node_type: CELLULAR_LOCALIZATION
@@ -143,5 +143,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:Q1IYG2×1, UniprotKB:A0A191V3Q4×1).
+    (UniProtKB:Q1IYG2×1, UniProtKB:A0A191V3Q4×1).
   llm_assisted: true

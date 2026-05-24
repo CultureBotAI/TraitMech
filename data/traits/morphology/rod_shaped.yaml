@@ -38,7 +38,7 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
-    grounding: UniprotKB:A0A1B1UYY2
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: rod_complex
     label: Rod complex
     node_type: GENE_OR_PROTEIN
@@ -57,7 +57,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
-    grounding: UniprotKB:C0LUM8
+    grounding: UniProtKB:C0LUM8
   edges:
   - subject: mreB
     predicate: organizes
@@ -156,5 +156,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A1B1UYY2×1, UniprotKB:C0LUM8×1).
+    (UniProtKB:A0A1B1UYY2×1, UniProtKB:C0LUM8×1).
   llm_assisted: true

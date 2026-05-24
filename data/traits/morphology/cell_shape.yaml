@@ -51,18 +51,18 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in rod-shape determination.
-    grounding: UniprotKB:A0A1B1UYY2
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: ftsZ
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like bacterial cell-division protein.
-    grounding: UniprotKB:C0LUM8
+    grounding: UniProtKB:C0LUM8
   - node_id: crescentin
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like protein required for curved rod shape
       in Caulobacter.
-    grounding: UniprotKB:A0A2N9AY16
+    grounding: UniProtKB:A0A2N9AY16
   edges:
   - subject: peptidoglycan_cell_wall
     predicate: regulates
@@ -166,5 +166,5 @@ curation_history:
   curator: claude
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
-    (UniprotKB:A0A1B1UYY2×1, UniprotKB:C0LUM8×1, UniprotKB:A0A2N9AY16×1).
+    (UniProtKB:A0A1B1UYY2×1, UniProtKB:C0LUM8×1, UniProtKB:A0A2N9AY16×1).
   llm_assisted: true
