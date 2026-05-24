@@ -40,10 +40,12 @@ causal_graphs:
     label: osmotic stress
     node_type: BIOLOGICAL_PROCESS
     description: Cellular water and turgor stress caused by external salinity.
+    grounding: GO:0006970
   - node_id: compatible_solutes
     label: compatible solutes
     node_type: CHEMICAL
     description: Organic osmolytes such as ectoine and glycine betaine.
+    grounding: CHEBI:65015
   - node_id: salt_in_strategy
     label: salt-in strategy
     node_type: BIOLOGICAL_PROCESS
@@ -131,4 +133,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×2, METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:28Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006970×1, CHEBI:65015×1).
   llm_assisted: true

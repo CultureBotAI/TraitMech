@@ -43,6 +43,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of a near-neutral cytoplasmic pH against the external
       H+ gradient.
+    grounding: GO:0030641
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -113,4 +114,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:28Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0030641×1).
   llm_assisted: true

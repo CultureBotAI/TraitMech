@@ -35,6 +35,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Oxygen-free condition for many microbial sulfur disproportionation
       processes.
+    grounding: ENVO:01001057
   - node_id: inorganic_sulfur_intermediate
     label: inorganic sulfur intermediate
     node_type: CHEMICAL
@@ -51,6 +52,7 @@ causal_graphs:
     label: sulfide
     node_type: CHEMICAL
     description: Reduced sulfur product.
+    grounding: CHEBI:15138
   - node_id: sulfate
     label: sulfate
     node_type: CHEMICAL
@@ -153,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007405×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:01001057×1, CHEBI:15138×1).
   llm_assisted: true

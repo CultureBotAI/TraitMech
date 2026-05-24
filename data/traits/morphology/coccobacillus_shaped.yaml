@@ -38,6 +38,7 @@ causal_graphs:
     label: peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
     description: Cell-wall synthesis and remodeling process.
+    grounding: GO:0009252
   - node_id: septal_growth
     label: septal growth
     node_type: BIOLOGICAL_PROCESS
@@ -108,4 +109,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009252×1).
   llm_assisted: true

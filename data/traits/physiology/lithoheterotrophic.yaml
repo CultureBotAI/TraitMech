@@ -43,10 +43,12 @@ causal_graphs:
     label: ferrous iron
     node_type: CHEMICAL
     description: Fe(II), an inorganic electron donor in lithoheterotrophic iron oxidation.
+    grounding: CHEBI:29033
   - node_id: organic_carbon
     label: organic carbon
     node_type: CHEMICAL
     description: Organic compound used as the cellular carbon source.
+    grounding: CHEBI:50860
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -56,6 +58,7 @@ causal_graphs:
     label: respiratory chain
     node_type: PATHWAY
     description: Electron-transport route conserving energy from inorganic donor oxidation.
+    grounding: GO:0022904
   - node_id: oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -185,4 +188,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007402×1, METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:29033×1, CHEBI:50860×1, GO:0022904×1).
   llm_assisted: true

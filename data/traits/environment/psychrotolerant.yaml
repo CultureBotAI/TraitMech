@@ -35,6 +35,7 @@ causal_graphs:
     label: low temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient temperature below the mesophile optimum range.
+    grounding: PATO:0000383
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: BIOLOGICAL_PROCESS
@@ -124,4 +125,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:28Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0000383×1).
   llm_assisted: true

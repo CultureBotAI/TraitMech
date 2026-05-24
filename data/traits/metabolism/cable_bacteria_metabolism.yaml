@@ -40,6 +40,7 @@ causal_graphs:
     label: sulfide
     node_type: CHEMICAL
     description: Electron donor oxidized by anodic cable bacteria cells.
+    grounding: CHEBI:15138
   - node_id: oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -179,4 +180,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:10:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15138×1).
   llm_assisted: true
