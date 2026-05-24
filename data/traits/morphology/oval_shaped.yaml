@@ -41,6 +41,7 @@ causal_graphs:
     label: PBP2b
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan synthase associated with elongation in ovococci.
+    grounding: UniprotKB:A0A892RPK7
   - node_id: mapZ_ftsZ_system
     label: MapZ/FtsZ division-positioning system
     node_type: GENE_OR_PROTEIN
@@ -125,4 +126,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A892RPK7×1).
   llm_assisted: true

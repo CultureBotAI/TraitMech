@@ -54,6 +54,7 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Secondary transporter exchanging sodium and protons.
+    grounding: UniprotKB:A0A068T423
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -135,4 +136,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0030641×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A068T423×1).
   llm_assisted: true

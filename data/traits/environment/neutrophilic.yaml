@@ -52,6 +52,7 @@ causal_graphs:
     label: cation/proton antiporter
     node_type: GENE_OR_PROTEIN
     description: Transporters contributing to ion and pH homeostasis.
+    grounding: UniprotKB:A0A0H3JRG4
   edges:
   - subject: near_neutral_external_ph
     predicate: enables
@@ -137,4 +138,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A0H3JRG4×1).
   llm_assisted: true

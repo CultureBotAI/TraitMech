@@ -48,6 +48,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Topoisomerase associated with hyperthermophiles and positive DNA
       supercoiling.
+    grounding: UniprotKB:A0A088E825
   - node_id: molecular_chaperonins
     label: archaeal molecular chaperonins
     node_type: GENE_OR_PROTEIN
@@ -145,4 +146,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A088E825×1).
   llm_assisted: true

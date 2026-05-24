@@ -36,10 +36,12 @@ causal_graphs:
     label: carbon monoxide dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: CODH enzyme oxidizing carbon monoxide.
+    grounding: UniprotKB:A0A061JSS8
   - node_id: molybdenum_hydroxylase
     label: molybdenum hydroxylase
     node_type: GENE_OR_PROTEIN
     description: Aerobic CODH enzyme class described for CO oxidizers.
+    grounding: UniprotKB:A0A099I9V3
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -173,4 +175,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A061JSS8×1, UniprotKB:A0A099I9V3×1).
   llm_assisted: true

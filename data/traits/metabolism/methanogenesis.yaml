@@ -60,6 +60,7 @@ causal_graphs:
     label: methyl-coenzyme M reductase
     node_type: GENE_OR_PROTEIN
     description: Nickel F430 enzyme catalyzing the terminal methane-forming step.
+    grounding: UniprotKB:A0A099T5Q9
   - node_id: coenzyme_f430
     label: coenzyme F430
     node_type: CHEMICAL
@@ -130,4 +131,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A099T5Q9×1).
   llm_assisted: true

@@ -37,6 +37,7 @@ causal_graphs:
     label: 4-hydroxyphenylpyruvate dioxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that can form homogentisic acid from 4-hydroxyphenylpyruvate.
+    grounding: UniprotKB:A0A009PXB6
   - node_id: homogentisic_acid
     label: homogentisic acid
     node_type: CHEMICAL
@@ -123,4 +124,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A009PXB6×1).
   llm_assisted: true

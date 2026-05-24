@@ -37,6 +37,7 @@ causal_graphs:
     label: CcmA
     node_type: GENE_OR_PROTEIN
     description: Bactofilin-like protein implicated in H. pylori helical shape.
+    grounding: UniprotKB:E0X6H3
   - node_id: peptidoglycan_crosslink_relaxation
     label: peptidoglycan crosslink relaxation
     node_type: BIOLOGICAL_PROCESS
@@ -101,4 +102,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, RO:0002327×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:E0X6H3×1).
   llm_assisted: true

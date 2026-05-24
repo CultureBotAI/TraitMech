@@ -37,10 +37,12 @@ causal_graphs:
     label: PBP2b
     node_type: GENE_OR_PROTEIN
     description: Peptidoglycan synthase implicated in ovococcal elongation.
+    grounding: UniprotKB:A0A892RPK7
   - node_id: divIVA
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein coordinating septum splitting and elongation.
+    grounding: UniprotKB:Q1IYG2
   - node_id: septal_and_peripheral_synthesis
     label: septal and peripheral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -132,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniprotKB:A0A892RPK7×1, UniprotKB:Q1IYG2×1).
   llm_assisted: true
