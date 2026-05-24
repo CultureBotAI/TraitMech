@@ -102,7 +102,7 @@ def test_validate_one_yaml_parse_error_surfaces_as_row(tmp_path):
 
 def test_iter_yaml_files_walks_directory_and_filters(tmp_path):
     (tmp_path / "a.yaml").write_text("x: 1\n")
-    (tmp_path / "b.yml").write_text("x: 2\n")        # .yml — should be SKIPPED
+    (tmp_path / "b.yml").write_text("x: 2\n")        # .yml — skipped by rglob('*.yaml')
     (tmp_path / "c.txt").write_text("nope")          # non-YAML — skipped
     sub = tmp_path / "sub"
     sub.mkdir()
@@ -113,4 +113,20 @@ def test_iter_yaml_files_walks_directory_and_filters(tmp_path):
     # rglob('*.yaml') only picks .yaml (not .yml) when walking a directory
     assert "a.yaml" in names
     assert "d.yaml" in names
+    assert "b.yml" not in names
     assert "c.txt" not in names
+
+
+def test_iter_yaml_files_accepts_yml_file_passed_directly(tmp_path):
+    """When a .yml file is passed *as a file argument* (not via dir walk),
+    iter_yaml_files accepts it — only the directory rglob is .yaml-only.
+    Locks in the asymmetry that the prior test only documented in a comment."""
+    yml = tmp_path / "explicit.yml"
+    yml.write_text("x: 1\n")
+    txt = tmp_path / "explicit.txt"
+    txt.write_text("nope")
+
+    out = iter_yaml_files([yml, txt])
+    names = {p.name for p in out}
+    assert "explicit.yml" in names
+    assert "explicit.txt" not in names
