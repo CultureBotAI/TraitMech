@@ -39,10 +39,12 @@ causal_graphs:
     label: redox protein
     node_type: GENE_OR_PROTEIN
     description: Protein carrier mediating electron transfer.
+    grounding: UniProtKB:A0A076EJF0
   - node_id: cytochrome
     label: c-type cytochrome
     node_type: GENE_OR_PROTEIN
     description: Heme-containing electron-transfer protein.
+    grounding: UniProtKB:A0A072TMC1
   - node_id: membrane_electron_transport_chain
     label: membrane electron transport chain
     node_type: PATHWAY
@@ -145,4 +147,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A076EJF0×1, UniProtKB:A0A072TMC1×1).
   llm_assisted: true

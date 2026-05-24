@@ -34,6 +34,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in cell-shape
       control.
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: peptidoglycan_synthesis
     label: peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -128,4 +129,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009252×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1B1UYY2×1).
   llm_assisted: true

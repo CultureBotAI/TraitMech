@@ -57,6 +57,7 @@ causal_graphs:
     label: acetate kinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that converts acetyl phosphate and ADP to acetate and ATP.
+    grounding: UniProtKB:A0A081KVG3
   - node_id: acetate
     label: acetate
     node_type: CHEMICAL
@@ -147,4 +148,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0016301×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A081KVG3×1).
   llm_assisted: true

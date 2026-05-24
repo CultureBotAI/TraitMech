@@ -47,6 +47,7 @@ causal_graphs:
     label: superoxide dismutase
     node_type: GENE_OR_PROTEIN
     description: Enzyme associated with detoxification of superoxide stress.
+    grounding: UniProtKB:A0A009QPW9
   - node_id: anaerobic_growth
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
@@ -123,4 +124,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T05:05:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A009QPW9×1).
   llm_assisted: true
