@@ -60,6 +60,7 @@ causal_graphs:
     label: biomass
     node_type: BIOLOGICAL_PROCESS
     description: Cell material built from organic carbon.
+    grounding: METPO:1007501
   edges:
   - subject: organoheterotrophic_trait
     predicate: uses electron donor
@@ -153,4 +154,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0022904×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:04Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007501×1).
   llm_assisted: true

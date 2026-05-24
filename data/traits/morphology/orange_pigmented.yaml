@@ -37,6 +37,7 @@ causal_graphs:
     label: carotenoid biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: Enzymatic pathway producing carotenoid pigments.
+    grounding: GO:0016117
   - node_id: orange_carotenoids
     label: orange carotenoids
     node_type: CHEMICAL
@@ -125,4 +126,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:04Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0016117×1).
   llm_assisted: true

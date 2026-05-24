@@ -50,6 +50,7 @@ causal_graphs:
     label: terminal electron acceptor
     node_type: MOLECULAR_FUNCTION
     description: Functional role played by oxygen in aerobic respiration.
+    grounding: METPO:1007504
   edges:
   - subject: aerobic_trait
     predicate: requires
@@ -58,8 +59,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: obligate aerobe ... exposed to hypoxia, stops growing
-      notes: Mycobacterium tuberculosis example supports oxygen dependence for
-        aerobic growth.
+      notes: Mycobacterium tuberculosis example supports oxygen dependence for aerobic
+        growth.
   - subject: aerobic_trait
     predicate: has mechanistic process
     object: aerobic_respiration
@@ -67,8 +68,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.bbabio.2011.06.016
       snippet: respiratory quinol:O2 oxidoreductase
-      notes: Review supports oxygen-reducing terminal oxidases as core aerobic
-        respiratory enzymes.
+      notes: Review supports oxygen-reducing terminal oxidases as core aerobic respiratory
+        enzymes.
   - subject: aerobic_respiration
     predicate: requires
     object: molecular_oxygen
@@ -76,8 +77,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: transfer electrons from the ETC to O2
-      notes: Supports molecular oxygen as the terminal acceptor for bacterial
-        respiratory electron transport.
+      notes: Supports molecular oxygen as the terminal acceptor for bacterial respiratory
+        electron transport.
   - subject: molecular_oxygen
     predicate: acts as
     object: terminal_electron_acceptor
@@ -118,4 +119,10 @@ curation_history:
   action: IMPROVED_CAUSAL_GRAPH_EVIDENCE
   changes: Removed PMID and GO fallback references from CausalEdge evidence where
     DOI-backed evidence already supported the same oxygen-use mechanisms.
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:03Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007504×1).
   llm_assisted: true

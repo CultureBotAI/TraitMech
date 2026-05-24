@@ -41,6 +41,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Physical state of the cytoplasmic membrane supporting transport and
       bioenergetics.
+    grounding: METPO:1007505
   - node_id: facultative_lipid_remodeling
     label: facultative lipid remodeling
     node_type: BIOLOGICAL_PROCESS
@@ -144,4 +145,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0000383×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:03Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true
