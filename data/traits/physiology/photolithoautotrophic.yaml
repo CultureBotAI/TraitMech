@@ -49,6 +49,7 @@ causal_graphs:
     label: inorganic electron donor
     node_type: CHEMICAL
     description: Reduced inorganic substrate supplying electrons.
+    grounding: METPO:1007502
   - node_id: sulfide
     label: sulfide
     node_type: CHEMICAL
@@ -62,6 +63,7 @@ causal_graphs:
     label: reducing power
     node_type: CHEMICAL
     description: Reduced electron carriers used for biosynthesis.
+    grounding: METPO:1007503
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -75,6 +77,7 @@ causal_graphs:
     label: biomass
     node_type: BIOLOGICAL_PROCESS
     description: Cellular material formed from fixed carbon.
+    grounding: METPO:1007501
   edges:
   - subject: photolithoautotrophic_trait
     predicate: uses energy source
@@ -198,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001717×1, GO:0009767×1, CHEBI:15138×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:04Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007502×1, METPO:1007503×1, METPO:1007501×1).
   llm_assisted: true

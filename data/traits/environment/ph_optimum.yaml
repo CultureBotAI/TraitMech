@@ -48,6 +48,7 @@ causal_graphs:
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
     description: Electrochemical proton gradient powering ATP synthesis and transport.
+    grounding: METPO:1007500
   - node_id: maximal_growth_rate
     label: maximal growth rate
     node_type: BIOLOGICAL_PROCESS
@@ -133,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0030641×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:03Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007500×1).
   llm_assisted: true

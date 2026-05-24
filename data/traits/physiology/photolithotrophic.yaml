@@ -42,6 +42,7 @@ causal_graphs:
     label: inorganic electron donor
     node_type: CHEMICAL
     description: Reduced inorganic substrate supplying electrons.
+    grounding: METPO:1007502
   - node_id: hydrogen_sulfide
     label: hydrogen sulfide
     node_type: CHEMICAL
@@ -65,6 +66,7 @@ causal_graphs:
     label: biomass
     node_type: BIOLOGICAL_PROCESS
     description: Cell material formed from fixed carbon.
+    grounding: METPO:1007501
   edges:
   - subject: photolithotrophic_trait
     predicate: uses energy source
@@ -171,4 +173,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001717×1, CHEBI:29033×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:04Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007502×1, METPO:1007501×1).
   llm_assisted: true

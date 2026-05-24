@@ -18,7 +18,8 @@ synonyms:
 evidence:
 - reference: DOI:10.1128/mmbr.61.4.533-616.1997
   snippet: N oxides as terminal electron acceptors
-  notes: Denitrification review supports anaerobic respiration using non-oxygen terminal electron acceptors.
+  notes: Denitrification review supports anaerobic respiration using non-oxygen terminal
+    electron acceptors.
 causal_graphs:
 - graph_id: anaerobic_respiration_denitrification
   title: Anaerobic respiration with nitrogen oxide acceptors
@@ -47,6 +48,7 @@ causal_graphs:
     label: terminal electron acceptor
     node_type: MOLECULAR_FUNCTION
     description: Electron-accepting role in respiratory bioenergetics.
+    grounding: METPO:1007504
   - node_id: energy_conservation
     label: cellular energy conservation
     node_type: BIOLOGICAL_PROCESS
@@ -101,5 +103,12 @@ curation_history:
 - timestamp: '2026-05-07T00:00:00-07:00'
   curator: codex
   action: ADDED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph for anaerobic respiration using denitrification and nitrogen oxide terminal electron acceptors.
+  changes: Added DOI-backed causal graph for anaerobic respiration using denitrification
+    and nitrogen oxide terminal electron acceptors.
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:03Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007504×1).
   llm_assisted: true

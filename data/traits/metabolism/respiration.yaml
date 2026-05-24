@@ -42,6 +42,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Oxidized substrate receiving electrons at the end of a respiratory
       chain.
+    grounding: METPO:1007504
   - node_id: oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -61,6 +62,7 @@ causal_graphs:
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
     description: Electrochemical ion gradient generated across a coupling membrane.
+    grounding: METPO:1007500
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
@@ -173,4 +175,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:41:04Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007504×1, METPO:1007500×1).
   llm_assisted: true
