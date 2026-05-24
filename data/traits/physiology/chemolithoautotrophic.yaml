@@ -40,6 +40,7 @@ causal_graphs:
     label: electron transport chain
     node_type: PATHWAY
     description: Membrane redox chain conserving energy from donor oxidation.
+    grounding: GO:0022900
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -65,6 +66,7 @@ causal_graphs:
     label: CO2 fixation pathway
     node_type: PATHWAY
     description: Autotrophic pathway reducing CO2 into cell carbon.
+    grounding: GO:0015977
   - node_id: biomass
     label: biomass
     node_type: CHEMICAL
@@ -206,4 +208,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0022900×1, GO:0015977×1).
   llm_assisted: true

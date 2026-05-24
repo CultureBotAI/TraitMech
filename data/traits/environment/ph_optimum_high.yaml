@@ -51,6 +51,7 @@ causal_graphs:
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH > ~8, typical of soda lakes and other alkaline habitats.
+    grounding: PATO:0001429
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
@@ -137,4 +138,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001429×1).
   llm_assisted: true

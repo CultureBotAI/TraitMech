@@ -1,9 +1,5 @@
 node_label	node_type	node_count	example_files
 precursor metabolites	CHEMICAL	6	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
-organic compound	CHEMICAL	6	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
-acidic external ph	ENVIRONMENTAL_FACTOR	5	data/traits/environment/acidophilic.yaml|data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
-alkaline external ph	ENVIRONMENTAL_FACTOR	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
-near-neutral external ph	ENVIRONMENTAL_FACTOR	4	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/neutrophilic.yaml
 lateral cell-wall elongation	BIOLOGICAL_PROCESS	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
 crt enzymes	GENE_OR_PROTEIN	4	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/pink_pigmented.yaml
 rod-complex peptidoglycan synthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_large.yaml|data/traits/morphology/cell_width_medium.yaml
@@ -13,27 +9,22 @@ compatible-solute transport	MOLECULAR_FUNCTION	3	data/traits/environment/euryhal
 salt-in strategy	BIOLOGICAL_PROCESS	3	data/traits/environment/extremely_halophilic.yaml|data/traits/environment/halophilic.yaml|data/traits/environment/nacl_optimum_high.yaml
 water flux across cytoplasmic membrane	BIOLOGICAL_PROCESS	3	data/traits/environment/halophily_preference.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
 maximal growth rate	BIOLOGICAL_PROCESS	3	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/temperature_optimum.yaml
-membrane electron transport chain	PATHWAY	3	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml|data/traits/physiology/lithotrophic.yaml
 planar envelope growth	BIOLOGICAL_PROCESS	3	data/traits/morphology/disc_shaped.yaml|data/traits/morphology/square_shaped.yaml|data/traits/morphology/triangular_shaped.yaml
 ion motive force	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 chemotaxis signaling	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 crystal violet-iodine complex	CHEMICAL	3	data/traits/morphology/gram_negative.yaml|data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
-co2-fixation pathway	PATHWAY	3	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/mixotrophic.yaml
 rubisco	GENE_OR_PROTEIN	3	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/photoautotrophic.yaml
 organic molecule	CHEMICAL	3	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml|data/traits/physiology/heterotrophic.yaml
-autotrophic co2 fixation	PATHWAY	3	data/traits/physiology/hydrogenotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml|data/traits/physiology/photolithoautotrophic.yaml
 photosynthetic reaction center	GENE_OR_PROTEIN	3	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
 low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 reversed membrane potential	BIOLOGICAL_PROCESS	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 anaerobic growth	BIOLOGICAL_PROCESS	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 osmotic imbalance	BIOLOGICAL_PROCESS	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
 salinity-adaptation genes	GENE_OR_PROTEIN	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
-very high temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/hyperthermophilic.yaml
 unsaturated and branched-chain fatty acids	CHEMICAL	2	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml
 cold-shock proteins	GENE_OR_PROTEIN	2	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml
 proton export pumps and antiporters	GENE_OR_PROTEIN	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 anaerobic metabolism	BIOLOGICAL_PROCESS	2	data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
-high-salt environment	ENVIRONMENTAL_FACTOR	2	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/halophilic.yaml
 membrane lipid composition	CELLULAR_LOCALIZATION	2	data/traits/environment/hyperthermophilic.yaml|data/traits/environment/thermophilic.yaml
 homoviscous lipid composition	CELLULAR_LOCALIZATION	2	data/traits/environment/mesophilic.yaml|data/traits/environment/temperature_optimum.yaml
 elevated nacl	ENVIRONMENTAL_FACTOR	2	data/traits/environment/moderately_halophilic.yaml|data/traits/environment/nacl_optimum_mid2.yaml
@@ -47,8 +38,6 @@ upper-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperat
 warm-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_range_mid4.yaml
 psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_very_low.yaml
 high temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_preference.yaml|data/traits/environment/thermophilic.yaml
-thiosulfate	CHEMICAL	2	data/traits/metabolism/disproportionation.yaml|data/traits/physiology/chemolithotrophic.yaml
-electron donor	CHEMICAL	2	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml
 rod complex	GENE_OR_PROTEIN	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
 isoprenoid precursors	CHEMICAL	2	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
 adder size control	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length.yaml|data/traits/morphology/cell_length_small.yaml
@@ -427,8 +416,6 @@ reduced pyridine nucleotides	CHEMICAL	1	data/traits/physiology/carboxydotrophic.
 reduced inorganic compound	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
 nadph	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
 cellular biomass	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoautotrophic.yaml
-electron transport chain	PATHWAY	1	data/traits/physiology/chemolithoautotrophic.yaml
-co2 fixation pathway	PATHWAY	1	data/traits/physiology/chemolithoautotrophic.yaml
 inorganic chemical donor	CHEMICAL	1	data/traits/physiology/chemolithoheterotrophic.yaml
 organic nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemolithoheterotrophic.yaml
 inorganic chemical electron donor	CHEMICAL	1	data/traits/physiology/chemolithotrophic.yaml
@@ -446,7 +433,6 @@ rapid growth	BIOLOGICAL_PROCESS	1	data/traits/physiology/copiotrophic.yaml
 nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 anabolism	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml
-electron transport system	PATHWAY	1	data/traits/physiology/hydrogenotrophic.yaml
 intracellular membrane	CELLULAR_LOCALIZATION	1	data/traits/physiology/methanotrophic.yaml
 formaldehyde assimilation	PATHWAY	1	data/traits/physiology/methanotrophic.yaml
 ribulose monophosphate cycle	PATHWAY	1	data/traits/physiology/methylotrophic.yaml

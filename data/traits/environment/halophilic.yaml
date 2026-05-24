@@ -31,6 +31,7 @@ causal_graphs:
     label: high-salt environment
     node_type: ENVIRONMENTAL_FACTOR
     description: Hypersaline or elevated NaCl condition.
+    grounding: ENVO:01000687
   - node_id: sodium_chloride
     label: sodium chloride
     node_type: CHEMICAL
@@ -139,4 +140,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006970×1, CHEBI:65015×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:01000687×1).
   llm_assisted: true

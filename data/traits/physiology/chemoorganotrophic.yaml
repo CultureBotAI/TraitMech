@@ -38,6 +38,7 @@ causal_graphs:
     label: organic compound
     node_type: CHEMICAL
     description: Reduced organic substrate serving as chemical energy source.
+    grounding: CHEBI:50860
   - node_id: substrate_oxidation
     label: organic substrate oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -169,4 +170,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-24T08:14:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:50860×1).
   llm_assisted: true
