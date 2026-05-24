@@ -74,6 +74,7 @@ causal_graphs:
       snippet: various capacities in their utilization of molecular oxygen
       notes: Supports molecular oxygen utilization as the classification axis for
         oxygen-preference phenotypes.
+    predicate_id: METPO:2007500
   - subject: aerobic_phenotype
     predicate: is a
     object: oxygen_preference_trait
@@ -136,4 +137,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×4).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true

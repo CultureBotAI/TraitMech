@@ -61,6 +61,7 @@ causal_graphs:
       snippet: narrow range of salinity
       notes: Microbiome study explicitly defines stenohaline microorganisms by a narrow
         salinity range.
+    predicate_id: METPO:2007500
   - subject: salinity_shift
     predicate: causes
     object: osmotic_imbalance
@@ -129,4 +130,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true

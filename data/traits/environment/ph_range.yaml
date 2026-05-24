@@ -58,6 +58,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       snippet: external pH
       notes: Supports external pH as the axis bounding the growth window.
+    predicate_id: METPO:2007500
   - subject: acid_tolerance
     predicate: sets
     object: bounded_growth_window
@@ -102,4 +103,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true

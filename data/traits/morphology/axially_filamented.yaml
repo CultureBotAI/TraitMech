@@ -60,6 +60,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom10040550
       snippet: flagella are hidden within the periplasmic space
       notes: Supports periplasmic flagella as the defining structure.
+    predicate_id: METPO:2007500
   - subject: periplasmic_flagella
     predicate: localized in
     object: periplasmic_space
@@ -137,4 +138,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042597×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T07:37:40Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true
