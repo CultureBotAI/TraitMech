@@ -20,7 +20,7 @@ That migration has now run. The
 [predicate-grounding pipeline](../../scripts/ground_causal_predicates.py)
 applies a curated label → CURIE mapping
 (`mappings/predicate_grounding.tsv`) across `data/traits/`. As of this
-proposal, **648 of 1185 causal-edge `predicate_id` slots are
+proposal, **618 of 1019 causal-edge `predicate_id` slots are
 grounded** (28 RO / biolink / METPO / rdfs mappings landed in
 [PR #61](https://github.com/CultureBotAI/TraitMech/pull/61), plus 10
 additions in this cohort).
@@ -77,8 +77,8 @@ explicitly considered and rejected:
 ### Paired-predicate convention (one pair in this cohort)
 
 `challenges` (`METPO:2007406`) and `mitigates` (`METPO:2007407`) form
-the only paired pair in v2: a stressor *challenges* a trait, and a
-defense *mitigates* the corresponding stress. The pair is
+the only paired predicate set in v2: a stressor *challenges* a trait,
+and a defense *mitigates* the corresponding stress. The pair is
 unidirectional (stressor → trait; defense → stressor) and is **not**
 a positive/negative pair on the same axis (compare the
 chemical-interaction paired-positive/negative convention in
