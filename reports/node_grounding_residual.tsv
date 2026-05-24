@@ -1,0 +1,512 @@
+node_label	node_type	node_count	example_files
+proton motive force	BIOLOGICAL_PROCESS	16	data/traits/environment/neutrophilic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/environment/ph_optimum.yaml
+biomass	BIOLOGICAL_PROCESS	16	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml
+inorganic electron donor	CHEMICAL	7	data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/chemolithoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
+membrane fluidity	BIOLOGICAL_PROCESS	6	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/mesophilic.yaml|data/traits/environment/psychrophilic.yaml
+precursor metabolites	CHEMICAL	6	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
+organic compound	CHEMICAL	6	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
+acidic external ph	ENVIRONMENTAL_FACTOR	5	data/traits/environment/acidophilic.yaml|data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+alkaline external ph	ENVIRONMENTAL_FACTOR	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
+near-neutral external ph	ENVIRONMENTAL_FACTOR	4	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/neutrophilic.yaml
+mreb	GENE_OR_PROTEIN	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccobacillus_shaped.yaml
+lateral cell-wall elongation	BIOLOGICAL_PROCESS	4	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
+crt enzymes	GENE_OR_PROTEIN	4	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/pink_pigmented.yaml
+carotenoid biosynthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/pink_pigmented.yaml
+rod-complex peptidoglycan synthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_large.yaml|data/traits/morphology/cell_width_medium.yaml
+septal peptidoglycan synthesis	BIOLOGICAL_PROCESS	4	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/diplococcus_shaped.yaml|data/traits/morphology/oval_shaped.yaml
+reducing power	CHEMICAL	4	data/traits/physiology/chemolithoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml|data/traits/physiology/photolithoautotrophic.yaml
+na+/h+ antiporter	GENE_OR_PROTEIN	3	data/traits/environment/alkaphilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
+numerical environmental axis	ENVIRONMENTAL_FACTOR	3	data/traits/environment/delta_phenotype_with_numerical_limits.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
+compatible-solute transport	MOLECULAR_FUNCTION	3	data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml|data/traits/environment/halotolerant.yaml
+salt-in strategy	BIOLOGICAL_PROCESS	3	data/traits/environment/extremely_halophilic.yaml|data/traits/environment/halophilic.yaml|data/traits/environment/nacl_optimum_high.yaml
+water flux across cytoplasmic membrane	BIOLOGICAL_PROCESS	3	data/traits/environment/halophily_preference.yaml|data/traits/environment/non_halophilic.yaml|data/traits/environment/stenohaline.yaml
+maximal growth rate	BIOLOGICAL_PROCESS	3	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum.yaml|data/traits/environment/temperature_optimum.yaml
+membrane electron transport chain	PATHWAY	3	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml|data/traits/physiology/lithotrophic.yaml
+terminal electron acceptor	CHEMICAL	3	data/traits/metabolism/respiration.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
+ftsz	GENE_OR_PROTEIN	3	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/rod_shaped.yaml
+planar envelope growth	BIOLOGICAL_PROCESS	3	data/traits/morphology/disc_shaped.yaml|data/traits/morphology/square_shaped.yaml|data/traits/morphology/triangular_shaped.yaml
+diviva	GENE_OR_PROTEIN	3	data/traits/morphology/ellipsoidal.yaml|data/traits/morphology/filament_shaped.yaml|data/traits/morphology/ovoid_shaped.yaml
+ion motive force	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
+chemotaxis signaling	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
+crystal violet-iodine complex	CHEMICAL	3	data/traits/morphology/gram_negative.yaml|data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
+co2-fixation pathway	PATHWAY	3	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautolithotrophic.yaml|data/traits/physiology/mixotrophic.yaml
+rubisco	GENE_OR_PROTEIN	3	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/photoautotrophic.yaml
+organic molecule	CHEMICAL	3	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml|data/traits/physiology/heterotrophic.yaml
+autotrophic co2 fixation	PATHWAY	3	data/traits/physiology/hydrogenotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml|data/traits/physiology/photolithoautotrophic.yaml
+photosynthetic reaction center	GENE_OR_PROTEIN	3	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
+low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+reversed membrane potential	BIOLOGICAL_PROCESS	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+terminal electron acceptor	MOLECULAR_FUNCTION	2	data/traits/environment/aerobic.yaml|data/traits/metabolism/anaerobic_respiration.yaml
+anaerobic growth	BIOLOGICAL_PROCESS	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
+cation/proton antiporter	GENE_OR_PROTEIN	2	data/traits/environment/alkalotolerant.yaml|data/traits/environment/neutrophilic.yaml
+osmotic imbalance	BIOLOGICAL_PROCESS	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
+salinity-adaptation genes	GENE_OR_PROTEIN	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
+very high temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/hyperthermophilic.yaml
+unsaturated and branched-chain fatty acids	CHEMICAL	2	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml
+cold-shock proteins	GENE_OR_PROTEIN	2	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml
+proton export pumps and antiporters	GENE_OR_PROTEIN	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
+anaerobic metabolism	BIOLOGICAL_PROCESS	2	data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/obligately_anaerobic.yaml
+high-salt environment	ENVIRONMENTAL_FACTOR	2	data/traits/environment/haloalkaliphilic.yaml|data/traits/environment/halophilic.yaml
+membrane lipid composition	CELLULAR_LOCALIZATION	2	data/traits/environment/hyperthermophilic.yaml|data/traits/environment/thermophilic.yaml
+homoviscous lipid composition	CELLULAR_LOCALIZATION	2	data/traits/environment/mesophilic.yaml|data/traits/environment/temperature_optimum.yaml
+elevated nacl	ENVIRONMENTAL_FACTOR	2	data/traits/environment/moderately_halophilic.yaml|data/traits/environment/nacl_optimum_mid2.yaml
+ambient nacl concentration	ENVIRONMENTAL_FACTOR	2	data/traits/environment/nacl_optimum.yaml|data/traits/environment/nacl_range.yaml
+na+/h+ antiporters	GENE_OR_PROTEIN	2	data/traits/environment/nacl_optimum.yaml|data/traits/environment/ph_optimum_high.yaml
+external ph	ENVIRONMENTAL_FACTOR	2	data/traits/environment/ph_optimum.yaml|data/traits/environment/ph_range.yaml
+ambient temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_optimum.yaml|data/traits/environment/temperature_range.yaml
+psychrotolerant adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_low.yaml|data/traits/environment/temperature_range_low.yaml
+baseline mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid2.yaml|data/traits/environment/temperature_range_mid2.yaml
+upper-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid3.yaml|data/traits/environment/temperature_range_mid3.yaml
+warm-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_range_mid4.yaml
+psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_very_low.yaml
+high temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_preference.yaml|data/traits/environment/thermophilic.yaml
+atp synthase	GENE_OR_PROTEIN	2	data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/respiration.yaml
+thiosulfate	CHEMICAL	2	data/traits/metabolism/disproportionation.yaml|data/traits/physiology/chemolithotrophic.yaml
+electron donor	CHEMICAL	2	data/traits/metabolism/electron_transfer.yaml|data/traits/metabolism/respiration.yaml
+rod complex	GENE_OR_PROTEIN	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
+isoprenoid precursors	CHEMICAL	2	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
+adder size control	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length.yaml|data/traits/morphology/cell_length_small.yaml
+standard growth conditions	ENVIRONMENTAL_FACTOR	2	data/traits/morphology/cell_length_small.yaml|data/traits/morphology/cell_width_medium.yaml
+streamlining selection	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
+oligotrophic environment	ENVIRONMENTAL_FACTOR	2	data/traits/morphology/cell_length_very_small.yaml|data/traits/morphology/cell_width_very_small.yaml
+penicillin-binding proteins	GENE_OR_PROTEIN	2	data/traits/morphology/cell_shape.yaml|data/traits/morphology/coccus_shaped.yaml
+crescentin	GENE_OR_PROTEIN	2	data/traits/morphology/cell_shape.yaml|data/traits/morphology/crescent_shaped.yaml
+mreb cytoskeleton	GENE_OR_PROTEIN	2	data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_small.yaml
+ftsz division ring	GENE_OR_PROTEIN	2	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/sphere_shaped.yaml
+inner cell curvature	CELLULAR_LOCALIZATION	2	data/traits/morphology/crescent_shaped.yaml|data/traits/morphology/curved_shaped.yaml
+curvature scaffold	GENE_OR_PROTEIN	2	data/traits/morphology/curved_shaped.yaml|data/traits/morphology/spiral_shaped.yaml
+cell-body curvature	BIOLOGICAL_PROCESS	2	data/traits/morphology/curved_shaped.yaml|data/traits/morphology/vibrio_shaped.yaml
+pbp2b	GENE_OR_PROTEIN	2	data/traits/morphology/ellipsoidal.yaml|data/traits/morphology/oval_shaped.yaml
+unipolar peptidoglycan growth	BIOLOGICAL_PROCESS	2	data/traits/morphology/flask_shaped.yaml|data/traits/morphology/tailed_shaped.yaml
+gliding motility machinery	GENE_OR_PROTEIN	2	data/traits/morphology/gliding.yaml|data/traits/morphology/motility.yaml
+alcohol decolorization	EXPERIMENTAL_FACTOR	2	data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
+variable cell geometry	BIOLOGICAL_PROCESS	2	data/traits/morphology/irregular_shaped.yaml|data/traits/morphology/pleomorphic_shaped.yaml
+flagellar motor	GENE_OR_PROTEIN	2	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
+type iv pilus	GENE_OR_PROTEIN	2	data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
+staphyloxanthin	CHEMICAL	2	data/traits/morphology/orange_pigmented.yaml|data/traits/morphology/white_pigmented.yaml
+nutrient limitation	ENVIRONMENTAL_FACTOR	2	data/traits/morphology/sporulation.yaml|data/traits/physiology/oligotrophic.yaml
+respiratory energy conservation	BIOLOGICAL_PROCESS	2	data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
+reduced sulfur compound	CHEMICAL	2	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/lithotrophic.yaml
+cellular carbon	BIOLOGICAL_PROCESS	2	data/traits/physiology/hydrogenotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
+methanol dehydrogenase	GENE_OR_PROTEIN	2	data/traits/physiology/methanotrophic.yaml|data/traits/physiology/methylotrophic.yaml
+bacteriochlorophyll	CHEMICAL	2	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
+metazoan-adapted virulence factors	GENE_OR_PROTEIN	1	data/traits/ecology/animal_pathogen.yaml
+immune evasion	BIOLOGICAL_PROCESS	1	data/traits/ecology/animal_pathogen.yaml
+animal tissue colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/animal_pathogen.yaml
+animal disease	BIOLOGICAL_PROCESS	1	data/traits/ecology/animal_pathogen.yaml
+pathogen hazard properties	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level.yaml
+containment requirements	EXPERIMENTAL_FACTOR	1	data/traits/ecology/biosafety_level.yaml
+low pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_1.yaml
+moderate pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_2.yaml
+serious pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_3.yaml
+extreme pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_4.yaml
+enhanced pathogen hazard	BIOLOGICAL_PROCESS	1	data/traits/ecology/biosafety_level_5.yaml
+human-adapted virulence factors	GENE_OR_PROTEIN	1	data/traits/ecology/human_pathogen.yaml
+human tissue tropism	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
+human immune evasion	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
+human disease	BIOLOGICAL_PROCESS	1	data/traits/ecology/human_pathogen.yaml
+virulence factors	GENE_OR_PROTEIN	1	data/traits/ecology/pathogenic_to_host.yaml
+protein secretion systems	GENE_OR_PROTEIN	1	data/traits/ecology/pathogenic_to_host.yaml
+host colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/pathogenic_to_host.yaml
+host damage	BIOLOGICAL_PROCESS	1	data/traits/ecology/pathogenic_to_host.yaml
+plant-cell-wall-degrading enzymes	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
+type iii secretion system	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
+t3ss effector proteins	GENE_OR_PROTEIN	1	data/traits/ecology/plant_pathogen.yaml
+plant immune suppression	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
+plant tissue colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
+plant disease	BIOLOGICAL_PROCESS	1	data/traits/ecology/plant_pathogen.yaml
+acidic exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/acidotolerant.yaml
+proton efflux transport	MOLECULAR_FUNCTION	1	data/traits/environment/acidotolerant.yaml
+superoxide dismutase	GENE_OR_PROTEIN	1	data/traits/environment/aerotolerant.yaml
+alkaline exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/alkalotolerant.yaml
+proton retention	BIOLOGICAL_PROCESS	1	data/traits/environment/alkalotolerant.yaml
+anoxic or hypoxic condition	ENVIRONMENTAL_FACTOR	1	data/traits/environment/anaerobic.yaml
+oxygen-sensitive catalytic sites	MOLECULAR_FUNCTION	1	data/traits/environment/anaerobic.yaml
+wide salinity range	ENVIRONMENTAL_FACTOR	1	data/traits/environment/euryhaline.yaml
+salinity gradient	ENVIRONMENTAL_FACTOR	1	data/traits/environment/euryhaline.yaml
+archaeal tetraether membrane lipids	CHEMICAL	1	data/traits/environment/extreme_hyperthermophilic.yaml
+hyperthermostable proteins	GENE_OR_PROTEIN	1	data/traits/environment/extreme_hyperthermophilic.yaml
+hyperthermophile bioenergetics	BIOLOGICAL_PROCESS	1	data/traits/environment/extreme_hyperthermophilic.yaml
+hypersaline brine	ENVIRONMENTAL_FACTOR	1	data/traits/environment/extremely_halophilic.yaml
+acidic halophilic proteins	GENE_OR_PROTEIN	1	data/traits/environment/extremely_halophilic.yaml
+anaerobic respiration or fermentation	BIOLOGICAL_PROCESS	1	data/traits/environment/facultative_oxygen_preference.yaml
+oxygen-sensing regulation	GENE_OR_PROTEIN	1	data/traits/environment/facultative_oxygen_preference.yaml
+moderate temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/facultative_psychrophilic.yaml
+cytoplasmic buffering	BIOLOGICAL_PROCESS	1	data/traits/environment/facultatively_acidophilic.yaml
+fnr-type oxygen-responsive regulation	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_aerobic.yaml
+fnr oxygen-responsive regulator	GENE_OR_PROTEIN	1	data/traits/environment/facultatively_anaerobic.yaml
+saline soda lake environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/haloalkaliphilic.yaml
+alkaline ph	ENVIRONMENTAL_FACTOR	1	data/traits/environment/haloalkaliphilic.yaml
+alkaline ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/haloalkaliphilic.yaml
+environmental salinity	ENVIRONMENTAL_FACTOR	1	data/traits/environment/halophily_preference.yaml
+high-salt exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/halotolerant.yaml
+stress protection	BIOLOGICAL_PROCESS	1	data/traits/environment/halotolerant.yaml
+thermostable enzymes	GENE_OR_PROTEIN	1	data/traits/environment/hyperthermophilic.yaml
+reverse gyrase	GENE_OR_PROTEIN	1	data/traits/environment/hyperthermophilic.yaml
+archaeal molecular chaperonins	GENE_OR_PROTEIN	1	data/traits/environment/hyperthermophilic.yaml
+moderate ambient temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/mesophilic.yaml
+mesophile enzyme repertoire	GENE_OR_PROTEIN	1	data/traits/environment/mesophilic.yaml
+balanced mesophilic growth	BIOLOGICAL_PROCESS	1	data/traits/environment/mesophilic.yaml
+microoxic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/microaerophilic.yaml
+high-affinity terminal oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
+cytochrome cbb3 oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
+limited oxygen exposure	ENVIRONMENTAL_FACTOR	1	data/traits/environment/microaerotolerant.yaml
+oxidative stress defense enzymes	GENE_OR_PROTEIN	1	data/traits/environment/microaerotolerant.yaml
+osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta.yaml
+euryhaline physiology	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta.yaml
+tolerance breadth	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta.yaml
+maximal osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_high.yaml
+limited osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_low.yaml
+modest osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid1.yaml
+robust osmoadaptive flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_delta_mid2.yaml
+osmotic balance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum.yaml
+hypersaline nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_optimum_high.yaml
+low ambient nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_optimum_low.yaml
+minimal osmoadaptive load	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum_low.yaml
+seawater-like nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/nacl_optimum_mid1.yaml
+modest osmoadaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum_mid1.yaml
+pronounced compatible-solute accumulation	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_optimum_mid2.yaml
+low-salt tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range.yaml
+high-salt tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range.yaml
+bounded growth window	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range.yaml
+salt-in physiology	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_high.yaml
+limited high-salt tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_low.yaml
+modest osmoadaptive tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_mid1.yaml
+robust osmoadaptive tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/nacl_range_mid2.yaml
+low-to-moderate salinity	ENVIRONMENTAL_FACTOR	1	data/traits/environment/non_halophilic.yaml
+high osmolarity	ENVIRONMENTAL_FACTOR	1	data/traits/environment/non_halophilic.yaml
+compatible-solute uptake systems	GENE_OR_PROTEIN	1	data/traits/environment/non_halophilic.yaml
+terminal respiratory oxidases	GENE_OR_PROTEIN	1	data/traits/environment/obligately_aerobic.yaml
+proton-coupled atp synthase	GENE_OR_PROTEIN	1	data/traits/environment/obligately_alkaphilic.yaml
+low-potential metal centres	MOLECULAR_FUNCTION	1	data/traits/environment/obligately_anaerobic.yaml
+ambient molecular oxygen	ENVIRONMENTAL_FACTOR	1	data/traits/environment/oxygen_preference.yaml
+ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
+ph tolerance breadth	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta.yaml
+maximal ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_high.yaml
+limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_low.yaml
+moderate ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid1.yaml
+broad ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid2.yaml
+wide ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_mid3.yaml
+very limited ph-homeostasis flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_delta_very_low.yaml
+environmental ph	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_growth_preference.yaml
+ph sensing	MOLECULAR_FUNCTION	1	data/traits/environment/ph_growth_preference.yaml
+alkaliphile cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_high.yaml
+acidophile proton-exclusion physiology	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_low.yaml
+minimal ph-homeostasis load	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid1.yaml
+slightly alkaline external ph	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_optimum_mid2.yaml
+modest alkaline ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_optimum_mid2.yaml
+external ph axis	ENVIRONMENTAL_FACTOR	1	data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+acid tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range.yaml
+alkaline tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range.yaml
+bounded ph growth window	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range.yaml
+extreme-alkaliphile na+/h+ antiport	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_high.yaml
+acidophile ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_low.yaml
+baseline ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid1.yaml
+modest alkaline-tolerance physiology	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid2.yaml
+alkaliphile ph homeostasis	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_mid3.yaml
+extreme-acidophile envelope barrier	BIOLOGICAL_PROCESS	1	data/traits/environment/ph_range_very_low.yaml
+cold-adapted enzymes	GENE_OR_PROTEIN	1	data/traits/environment/psychrophilic.yaml
+antifreeze and ice-binding proteins	GENE_OR_PROTEIN	1	data/traits/environment/psychrophilic.yaml
+facultative lipid remodeling	BIOLOGICAL_PROCESS	1	data/traits/environment/psychrotolerant.yaml
+cold-shock response	BIOLOGICAL_PROCESS	1	data/traits/environment/psychrotolerant.yaml
+nacl concentration axis	ENVIRONMENTAL_FACTOR	1	data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+low to moderate nacl	ENVIRONMENTAL_FACTOR	1	data/traits/environment/slightly_halophilic.yaml
+osmoprotectant transport	MOLECULAR_FUNCTION	1	data/traits/environment/slightly_halophilic.yaml
+narrow salinity range	ENVIRONMENTAL_FACTOR	1	data/traits/environment/stenohaline.yaml
+salinity shift	ENVIRONMENTAL_FACTOR	1	data/traits/environment/stenohaline.yaml
+oxygen-sensitive enzymes	GENE_OR_PROTEIN	1	data/traits/environment/strictly_anaerobic.yaml
+thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta.yaml
+temperature tolerance breadth	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta.yaml
+maximal thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_high.yaml
+limited thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_low.yaml
+moderate thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid1.yaml
+broad thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_mid2.yaml
+very limited thermal-adaptation flexibility	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_delta_very_low.yaml
+enzyme kinetics	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum.yaml
+hot environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_high.yaml
+thermophile protein thermostability	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_high.yaml
+cool environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_low.yaml
+lower-mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid1.yaml
+mesophile membrane and enzyme adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_optimum_mid1.yaml
+mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid2.yaml
+upper-mesophilic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid3.yaml
+warm host-associated environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_mid4.yaml
+cold environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_optimum_very_low.yaml
+ambient temperature axis	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_phenotype_with_numerical_limits.yaml
+environmental temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/temperature_preference.yaml
+protein stability	MOLECULAR_FUNCTION	1	data/traits/environment/temperature_preference.yaml
+microbial growth rate	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_preference.yaml
+cold tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range.yaml
+heat tolerance	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range.yaml
+bounded temperature growth window	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range.yaml
+thermophile thermostability	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_high.yaml
+lower-mesophile adaptation	BIOLOGICAL_PROCESS	1	data/traits/environment/temperature_range_mid1.yaml
+membrane proton permeability	BIOLOGICAL_PROCESS	1	data/traits/environment/thermophilic.yaml
+thermostable proteins	GENE_OR_PROTEIN	1	data/traits/environment/thermophilic.yaml
+energy-transducing enzymes	GENE_OR_PROTEIN	1	data/traits/environment/thermophilic.yaml
+elevated temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/thermotolerant.yaml
+heat-shock response	BIOLOGICAL_PROCESS	1	data/traits/environment/thermotolerant.yaml
+chaperone proteins	GENE_OR_PROTEIN	1	data/traits/environment/thermotolerant.yaml
+limited thermostability	BIOLOGICAL_PROCESS	1	data/traits/environment/thermotolerant.yaml
+genomic dna	CELLULAR_LOCALIZATION	1	data/traits/genomics/gc_content.yaml
+gc/at mutation bias	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
+gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
+selection on codon usage	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_content.yaml
+at-biased mutation pressure	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_high.yaml
+moderate mutation bias	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_low.yaml
+strong gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_mid1.yaml
+moderate gc-biased gene conversion	BIOLOGICAL_PROCESS	1	data/traits/genomics/gc_mid2.yaml
+cytochrome c oxidase	GENE_OR_PROTEIN	1	data/traits/metabolism/aerobic_respiration.yaml
+anaerobic or microaerophilic condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/anaerobic_respiration.yaml
+nitrogen oxides	CHEMICAL	1	data/traits/metabolism/anaerobic_respiration.yaml
+cellular energy conservation	BIOLOGICAL_PROCESS	1	data/traits/metabolism/anaerobic_respiration.yaml
+sulfidic sediment zone	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+oxic sediment zone	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+multicellular filament	CELLULAR_LOCALIZATION	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+conductive fiber network	CELLULAR_LOCALIZATION	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+long-distance electron transport	BIOLOGICAL_PROCESS	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+electrogenic sulfur oxidation	BIOLOGICAL_PROCESS	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
+inorganic sulfur intermediate	CHEMICAL	1	data/traits/metabolism/disproportionation.yaml
+elemental sulfur	CHEMICAL	1	data/traits/metabolism/disproportionation.yaml
+reverse sulfate reduction pathway	PATHWAY	1	data/traits/metabolism/disproportionation.yaml
+electron acceptor	CHEMICAL	1	data/traits/metabolism/electron_transfer.yaml
+redox protein	GENE_OR_PROTEIN	1	data/traits/metabolism/electron_transfer.yaml
+c-type cytochrome	GENE_OR_PROTEIN	1	data/traits/metabolism/electron_transfer.yaml
+extracellular electron transfer	BIOLOGICAL_PROCESS	1	data/traits/metabolism/electron_transfer.yaml
+microbial nanowire	CELLULAR_LOCALIZATION	1	data/traits/metabolism/electron_transfer.yaml
+terminal acceptor reduction	MOLECULAR_FUNCTION	1	data/traits/metabolism/electron_transfer.yaml
+organic substrate	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
+reduced redox cofactors	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
+fermentation products	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
+substrate uptake	BIOLOGICAL_PROCESS	1	data/traits/metabolism/metabolism.yaml
+atp and reducing power	CHEMICAL	1	data/traits/metabolism/metabolism.yaml
+cellular growth	BIOLOGICAL_PROCESS	1	data/traits/metabolism/metabolism.yaml
+anoxic habitat	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/methanogenesis.yaml
+methyl-coenzyme m reductase	GENE_OR_PROTEIN	1	data/traits/metabolism/methanogenesis.yaml
+coenzyme f430	CHEMICAL	1	data/traits/metabolism/methanogenesis.yaml
+f1fo atp synthase	GENE_OR_PROTEIN	1	data/traits/metabolism/oxidative_phosphorylation.yaml
+fermentative condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+high-energy phosphorylated intermediate	CHEMICAL	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+adp	CHEMICAL	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+acetyl phosphate	CHEMICAL	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+acetate kinase	GENE_OR_PROTEIN	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
+syntrophic product formation	BIOLOGICAL_PROCESS	1	data/traits/metabolism/syntrophy.yaml
+methanogenic product consumption	BIOLOGICAL_PROCESS	1	data/traits/metabolism/syntrophy.yaml
+low hydrogen condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/syntrophy.yaml
+periplasmic flagella	CELLULAR_LOCALIZATION	1	data/traits/morphology/axially_filamented.yaml
+flagellar basal motor	GENE_OR_PROTEIN	1	data/traits/morphology/axially_filamented.yaml
+torque generation	BIOLOGICAL_PROCESS	1	data/traits/morphology/axially_filamented.yaml
+corkscrew motility	BIOLOGICAL_PROCESS	1	data/traits/morphology/axially_filamented.yaml
+phenolic precursors	CHEMICAL	1	data/traits/morphology/black_pigmented.yaml
+tyrosinase/laccase oxidases	GENE_OR_PROTEIN	1	data/traits/morphology/black_pigmented.yaml
+melanin biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/black_pigmented.yaml
+black-brown melanin	CHEMICAL	1	data/traits/morphology/black_pigmented.yaml
+visible black color	MOLECULAR_FUNCTION	1	data/traits/morphology/black_pigmented.yaml
+diviva foci	GENE_OR_PROTEIN	1	data/traits/morphology/branched_shaped.yaml
+branch-site selection	BIOLOGICAL_PROCESS	1	data/traits/morphology/branched_shaped.yaml
+polarisome behavior	BIOLOGICAL_PROCESS	1	data/traits/morphology/branched_shaped.yaml
+local cell-wall assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/branched_shaped.yaml
+lateral branch outgrowth	BIOLOGICAL_PROCESS	1	data/traits/morphology/branched_shaped.yaml
+tyrosine catabolism	BIOLOGICAL_PROCESS	1	data/traits/morphology/brown_pigmented.yaml
+4-hydroxyphenylpyruvate dioxygenase	GENE_OR_PROTEIN	1	data/traits/morphology/brown_pigmented.yaml
+homogentisic acid	CHEMICAL	1	data/traits/morphology/brown_pigmented.yaml
+pyomelanin	CHEMICAL	1	data/traits/morphology/brown_pigmented.yaml
+visible brown color	MOLECULAR_FUNCTION	1	data/traits/morphology/brown_pigmented.yaml
+conjugated carotenoids	CHEMICAL	1	data/traits/morphology/carotenoid_pigmentation.yaml
+yellow-orange-red color	MOLECULAR_FUNCTION	1	data/traits/morphology/carotenoid_pigmentation.yaml
+elongation rate	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length.yaml
+ftsz ring (divisome)	GENE_OR_PROTEIN	1	data/traits/morphology/cell_length.yaml
+division-site placement	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length.yaml
+cytokinesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length.yaml
+fast elongation rate	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_large.yaml
+division-timing delay	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_large.yaml
+moderate growth rate	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_medium.yaml
+growth-rate size law	BIOLOGICAL_PROCESS	1	data/traits/morphology/cell_length_medium.yaml
+turgor pressure	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/cell_width.yaml
+rich growth conditions	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/cell_width_large.yaml
+septal growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/coccobacillus_shaped.yaml
+short-rod geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/coccobacillus_shaped.yaml
+low pigment accumulation	BIOLOGICAL_PROCESS	1	data/traits/morphology/cream_pigmented.yaml
+pale cream coloration	BIOLOGICAL_PROCESS	1	data/traits/morphology/cream_pigmented.yaml
+peptidoglycan growth bias	BIOLOGICAL_PROCESS	1	data/traits/morphology/crescent_shaped.yaml
+crescent cell curvature	BIOLOGICAL_PROCESS	1	data/traits/morphology/crescent_shaped.yaml
+peptidoglycan growth pattern	BIOLOGICAL_PROCESS	1	data/traits/morphology/curved_shaped.yaml
+septal cross wall	CELLULAR_LOCALIZATION	1	data/traits/morphology/diplococcus_shaped.yaml
+pcsb hydrolase system	GENE_OR_PROTEIN	1	data/traits/morphology/diplococcus_shaped.yaml
+daughter-cell pair	BIOLOGICAL_PROCESS	1	data/traits/morphology/diplococcus_shaped.yaml
+axial extension suppression	BIOLOGICAL_PROCESS	1	data/traits/morphology/disc_shaped.yaml
+flat disc geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/disc_shaped.yaml
+midcell constriction	BIOLOGICAL_PROCESS	1	data/traits/morphology/dumbbell_shaped.yaml
+snapping division	BIOLOGICAL_PROCESS	1	data/traits/morphology/dumbbell_shaped.yaml
+dumbbell intermediate	BIOLOGICAL_PROCESS	1	data/traits/morphology/dumbbell_shaped.yaml
+peripheral peptidoglycan	CELLULAR_LOCALIZATION	1	data/traits/morphology/ellipsoidal.yaml
+septal and peripheral peptidoglycan synthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/ellipsoidal.yaml
+ellipsoid geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/ellipsoidal.yaml
+scy	GENE_OR_PROTEIN	1	data/traits/morphology/filament_shaped.yaml
+apical polarisome	CELLULAR_LOCALIZATION	1	data/traits/morphology/filament_shaped.yaml
+apical peptidoglycan synthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
+hyphal tip extension	BIOLOGICAL_PROCESS	1	data/traits/morphology/filament_shaped.yaml
+flagellar filament	CELLULAR_LOCALIZATION	1	data/traits/morphology/flagellated.yaml
+flagellar hook	CELLULAR_LOCALIZATION	1	data/traits/morphology/flagellated.yaml
+flagellar basal body	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
+flagellar stator complex	GENE_OR_PROTEIN	1	data/traits/morphology/flagellated.yaml
+polar neck extension	BIOLOGICAL_PROCESS	1	data/traits/morphology/flask_shaped.yaml
+bulbous body	BIOLOGICAL_PROCESS	1	data/traits/morphology/flask_shaped.yaml
+graded polar peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/fusiform_shaped.yaml
+end-cap taper	BIOLOGICAL_PROCESS	1	data/traits/morphology/fusiform_shaped.yaml
+tapered geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/fusiform_shaped.yaml
+solid surface	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/gliding.yaml
+surface adhesins	GENE_OR_PROTEIN	1	data/traits/morphology/gliding.yaml
+type ix secretion system	GENE_OR_PROTEIN	1	data/traits/morphology/gliding.yaml
+lipopolysaccharide	CHEMICAL	1	data/traits/morphology/gram_negative.yaml
+thin peptidoglycan layer	CELLULAR_LOCALIZATION	1	data/traits/morphology/gram_negative.yaml
+counterstain	CHEMICAL	1	data/traits/morphology/gram_negative.yaml
+thick peptidoglycan cell wall	CELLULAR_LOCALIZATION	1	data/traits/morphology/gram_positive.yaml
+wall teichoic acids	CHEMICAL	1	data/traits/morphology/gram_positive.yaml
+lipoteichoic acids	CHEMICAL	1	data/traits/morphology/gram_positive.yaml
+crystal violet	CHEMICAL	1	data/traits/morphology/gram_stain.yaml
+iodine mordant	CHEMICAL	1	data/traits/morphology/gram_stain.yaml
+culture aging	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/gram_variable.yaml
+peptidoglycan thinning	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_variable.yaml
+crystal-violet retention loss	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_variable.yaml
+mixed-population gram staining	BIOLOGICAL_PROCESS	1	data/traits/morphology/gram_variable.yaml
+phz operons	GENE_OR_PROTEIN	1	data/traits/morphology/green_pigmented.yaml
+phenazine biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/green_pigmented.yaml
+pyocyanin	CHEMICAL	1	data/traits/morphology/green_pigmented.yaml
+visible green color	MOLECULAR_FUNCTION	1	data/traits/morphology/green_pigmented.yaml
+csd shape proteins	GENE_OR_PROTEIN	1	data/traits/morphology/helical_shaped.yaml
+ccma	GENE_OR_PROTEIN	1	data/traits/morphology/helical_shaped.yaml
+peptidoglycan crosslink relaxation	BIOLOGICAL_PROCESS	1	data/traits/morphology/helical_shaped.yaml
+helical curvature and twist	BIOLOGICAL_PROCESS	1	data/traits/morphology/helical_shaped.yaml
+reduced cell-wall patterning	BIOLOGICAL_PROCESS	1	data/traits/morphology/irregular_shaped.yaml
+stochastic growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/irregular_shaped.yaml
+metabolic energy	BIOLOGICAL_PROCESS	1	data/traits/morphology/motile.yaml
+absent motility pili	ORGANELLE	1	data/traits/morphology/non_motile.yaml
+no propulsion	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_motile.yaml
+absent spo0a regulatory cascade	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
+no asymmetric septation	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
+no endospore formation	BIOLOGICAL_PROCESS	1	data/traits/morphology/non_spore_forming.yaml
+orange carotenoids	CHEMICAL	1	data/traits/morphology/orange_pigmented.yaml
+visible orange color	MOLECULAR_FUNCTION	1	data/traits/morphology/orange_pigmented.yaml
+peripheral peptidoglycan synthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/oval_shaped.yaml
+mapz/ftsz division-positioning system	GENE_OR_PROTEIN	1	data/traits/morphology/oval_shaped.yaml
+ellipsoidal geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/oval_shaped.yaml
+midcell peptidoglycan assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/ovoid_shaped.yaml
+mapz	GENE_OR_PROTEIN	1	data/traits/morphology/ovoid_shaped.yaml
+septum splitting	BIOLOGICAL_PROCESS	1	data/traits/morphology/ovoid_shaped.yaml
+ovoid geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/ovoid_shaped.yaml
+pigment biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/pigmentation.yaml
+chromophore-containing metabolites	CHEMICAL	1	data/traits/morphology/pigmentation.yaml
+environmental regulation	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/pigmentation.yaml
+visible colony color	MOLECULAR_FUNCTION	1	data/traits/morphology/pigmentation.yaml
+pink carotenoids	CHEMICAL	1	data/traits/morphology/pink_pigmented.yaml
+visible pink color	MOLECULAR_FUNCTION	1	data/traits/morphology/pink_pigmented.yaml
+weak/absent shape-determining cytoskeleton	GENE_OR_PROTEIN	1	data/traits/morphology/pleomorphic_shaped.yaml
+prodiginine biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/red_pigmented.yaml
+pigc/redh condensation	MOLECULAR_FUNCTION	1	data/traits/morphology/red_pigmented.yaml
+prodigiosin	CHEMICAL	1	data/traits/morphology/red_pigmented.yaml
+visible red color	MOLECULAR_FUNCTION	1	data/traits/morphology/red_pigmented.yaml
+strongly curved peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
+pole-to-pole closure	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
+toroidal geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/ring_shaped.yaml
+symmetric polar peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/spindle_shaped.yaml
+reduced end-cap radius	BIOLOGICAL_PROCESS	1	data/traits/morphology/spindle_shaped.yaml
+spindle geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/spindle_shaped.yaml
+peptidoglycan remodeling	BIOLOGICAL_PROCESS	1	data/traits/morphology/spiral_shaped.yaml
+helical curvature	BIOLOGICAL_PROCESS	1	data/traits/morphology/spiral_shaped.yaml
+viscous motility environment	ENVIRONMENTAL_FACTOR	1	data/traits/morphology/spiral_shaped.yaml
+cell cylinder	CELLULAR_LOCALIZATION	1	data/traits/morphology/spirochete_shaped.yaml
+periplasmic flagella	ORGANELLE	1	data/traits/morphology/spirochete_shaped.yaml
+flab	GENE_OR_PROTEIN	1	data/traits/morphology/spirochete_shaped.yaml
+flat-wave morphology	BIOLOGICAL_PROCESS	1	data/traits/morphology/spirochete_shaped.yaml
+forespore	CELLULAR_LOCALIZATION	1	data/traits/morphology/spore_forming.yaml
+spore cortex	CELLULAR_LOCALIZATION	1	data/traits/morphology/spore_forming.yaml
+spore coat	CELLULAR_LOCALIZATION	1	data/traits/morphology/spore_forming.yaml
+dipicolinic acid	CHEMICAL	1	data/traits/morphology/spore_forming.yaml
+resistant endospore	ORGANELLE	1	data/traits/morphology/spore_forming.yaml
+forespore engulfment	BIOLOGICAL_PROCESS	1	data/traits/morphology/spore_shaped.yaml
+cortex formation	BIOLOGICAL_PROCESS	1	data/traits/morphology/spore_shaped.yaml
+coat assembly	BIOLOGICAL_PROCESS	1	data/traits/morphology/spore_shaped.yaml
+dehydrated spore core	CELLULAR_LOCALIZATION	1	data/traits/morphology/spore_shaped.yaml
+mature spore body	ORGANELLE	1	data/traits/morphology/spore_shaped.yaml
+spo0a phosphorelay	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
+asymmetric septation	BIOLOGICAL_PROCESS	1	data/traits/morphology/sporulation.yaml
+compartment-specific sigma factors	GENE_OR_PROTEIN	1	data/traits/morphology/sporulation.yaml
+forespore maturation	BIOLOGICAL_PROCESS	1	data/traits/morphology/sporulation.yaml
+endospore	ORGANELLE	1	data/traits/morphology/sporulation.yaml
+right-angle growth geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/square_shaped.yaml
+multi-site polar peptidoglycan growth	BIOLOGICAL_PROCESS	1	data/traits/morphology/star_shaped.yaml
+prostheca outgrowth	BIOLOGICAL_PROCESS	1	data/traits/morphology/star_shaped.yaml
+radiating projections	BIOLOGICAL_PROCESS	1	data/traits/morphology/star_shaped.yaml
+stalk outgrowth	BIOLOGICAL_PROCESS	1	data/traits/morphology/tailed_shaped.yaml
+polar appendage	BIOLOGICAL_PROCESS	1	data/traits/morphology/tailed_shaped.yaml
+polygonal geometry	BIOLOGICAL_PROCESS	1	data/traits/morphology/triangular_shaped.yaml
+crva	GENE_OR_PROTEIN	1	data/traits/morphology/vibrio_shaped.yaml
+periplasmic filament	CELLULAR_LOCALIZATION	1	data/traits/morphology/vibrio_shaped.yaml
+asymmetric peptidoglycan insertion	BIOLOGICAL_PROCESS	1	data/traits/morphology/vibrio_shaped.yaml
+crtopqmn operon	GENE_OR_PROTEIN	1	data/traits/morphology/white_pigmented.yaml
+staphyloxanthin biosynthesis	BIOLOGICAL_PROCESS	1	data/traits/morphology/white_pigmented.yaml
+low visible chromophore accumulation	CHEMICAL	1	data/traits/morphology/white_pigmented.yaml
+visible white color	MOLECULAR_FUNCTION	1	data/traits/morphology/white_pigmented.yaml
+yellow carotenoids	CHEMICAL	1	data/traits/morphology/yellow_pigmented.yaml
+visible yellow color	MOLECULAR_FUNCTION	1	data/traits/morphology/yellow_pigmented.yaml
+energy and reductant	CHEMICAL	1	data/traits/physiology/autotrophic.yaml
+carbon monoxide dehydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
+molybdenum hydroxylase	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
+co-insensitive terminal oxidase	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
+reduced pyridine nucleotides	CHEMICAL	1	data/traits/physiology/carboxydotrophic.yaml
+reduced inorganic compound	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
+nadph	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
+cellular biomass	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoautotrophic.yaml
+electron transport chain	PATHWAY	1	data/traits/physiology/chemolithoautotrophic.yaml
+co2 fixation pathway	PATHWAY	1	data/traits/physiology/chemolithoautotrophic.yaml
+inorganic chemical donor	CHEMICAL	1	data/traits/physiology/chemolithoheterotrophic.yaml
+organic nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemolithoheterotrophic.yaml
+inorganic chemical electron donor	CHEMICAL	1	data/traits/physiology/chemolithotrophic.yaml
+ammonia monooxygenase	GENE_OR_PROTEIN	1	data/traits/physiology/chemolithotrophic.yaml
+hydroxylamine	CHEMICAL	1	data/traits/physiology/chemolithotrophic.yaml
+sox enzyme system	GENE_OR_PROTEIN	1	data/traits/physiology/chemolithotrophic.yaml
+organic substrate oxidation	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoorganotrophic.yaml
+reduced chemical substrate	CHEMICAL	1	data/traits/physiology/chemotrophic.yaml
+inorganic compound	CHEMICAL	1	data/traits/physiology/chemotrophic.yaml
+high nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/copiotrophic.yaml
+diverse carbon sources	CHEMICAL	1	data/traits/physiology/copiotrophic.yaml
+membrane transporters	GENE_OR_PROTEIN	1	data/traits/physiology/copiotrophic.yaml
+transcription and signal regulation	BIOLOGICAL_PROCESS	1	data/traits/physiology/copiotrophic.yaml
+rrna operons	GENE_OR_PROTEIN	1	data/traits/physiology/copiotrophic.yaml
+rapid growth	BIOLOGICAL_PROCESS	1	data/traits/physiology/copiotrophic.yaml
+nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
+anabolism	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
+hydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/hydrogenotrophic.yaml
+protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml
+electron transport system	PATHWAY	1	data/traits/physiology/hydrogenotrophic.yaml
+methane monooxygenase	GENE_OR_PROTEIN	1	data/traits/physiology/methanotrophic.yaml
+intracellular membrane	CELLULAR_LOCALIZATION	1	data/traits/physiology/methanotrophic.yaml
+formaldehyde assimilation	PATHWAY	1	data/traits/physiology/methanotrophic.yaml
+pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	1	data/traits/physiology/methylotrophic.yaml
+ribulose monophosphate cycle	PATHWAY	1	data/traits/physiology/methylotrophic.yaml
+serine pathway	PATHWAY	1	data/traits/physiology/methylotrophic.yaml
+biomass precursor	BIOLOGICAL_PROCESS	1	data/traits/physiology/methylotrophic.yaml
+dissolved organic matter	CHEMICAL	1	data/traits/physiology/mixotrophic.yaml
+phototrophic energy capture	PATHWAY	1	data/traits/physiology/mixotrophic.yaml
+ambient nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/nutrient_adaptation.yaml
+nutrient sensing	BIOLOGICAL_PROCESS	1	data/traits/physiology/nutrient_adaptation.yaml
+resource allocation strategy	BIOLOGICAL_PROCESS	1	data/traits/physiology/nutrient_adaptation.yaml
+low nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/oligotrophic.yaml
+streamlined genome	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
+small cell architecture	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
+efficient nutrient use	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
+slow growth	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
+central carbon metabolism	PATHWAY	1	data/traits/physiology/organoheterotrophic.yaml
+photosystem ii	GENE_OR_PROTEIN	1	data/traits/physiology/photoautotrophic.yaml
+atp and nadph	CHEMICAL	1	data/traits/physiology/photoautotrophic.yaml
+sulfur oxidation	BIOLOGICAL_PROCESS	1	data/traits/physiology/photolithoautotrophic.yaml
+anoxygenic photosynthesis	PATHWAY	1	data/traits/physiology/photolithotrophic.yaml
+carbon source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
+energy source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
+electron donor utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
+encoded metabolic pathways	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
+gene product	GENE_OR_PROTEIN	1	data/traits/upper/biological_process.yaml
+assay or measurement process	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
+data item	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
+morphology child traits	TRAIT	1	data/traits/upper/phenotype.yaml

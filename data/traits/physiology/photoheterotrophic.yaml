@@ -41,6 +41,7 @@ causal_graphs:
     label: light
     node_type: ENVIRONMENTAL_FACTOR
     description: Energy input harvested by photoheterotrophs.
+    grounding: PATO:0001717
   - node_id: bacteriochlorophyll
     label: bacteriochlorophyll
     node_type: CHEMICAL
@@ -53,6 +54,7 @@ causal_graphs:
     label: photosynthetic electron transport
     node_type: PATHWAY
     description: Light-induced electron-transfer pathway supporting energy conservation.
+    grounding: GO:0009767
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -62,6 +64,7 @@ causal_graphs:
     label: organic carbon
     node_type: CHEMICAL
     description: Reduced organic compound used as the primary carbon source.
+    grounding: CHEBI:50860
   - node_id: biomass
     label: biomass
     node_type: BIOLOGICAL_PROCESS
@@ -152,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001717×1, GO:0009767×1, CHEBI:50860×1).
   llm_assisted: true

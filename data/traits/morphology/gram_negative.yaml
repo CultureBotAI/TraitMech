@@ -41,6 +41,7 @@ causal_graphs:
     label: outer membrane
     node_type: CELLULAR_LOCALIZATION
     description: Gram-negative outer membrane outside the peptidoglycan layer.
+    grounding: GO:0019867
   - node_id: lipopolysaccharide
     label: lipopolysaccharide
     node_type: CHEMICAL
@@ -53,6 +54,7 @@ causal_graphs:
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
     description: Cell-envelope compartment between inner and outer membranes.
+    grounding: GO:0042597
   - node_id: crystal_violet_iodine_complex
     label: crystal violet-iodine complex
     node_type: CHEMICAL
@@ -139,4 +141,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:located_in×2).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019867×1, GO:0042597×1).
   llm_assisted: true

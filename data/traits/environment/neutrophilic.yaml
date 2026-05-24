@@ -42,6 +42,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of intracellular pH compatible with growth.
+    grounding: GO:0030641
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -123,4 +124,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0030641×1).
   llm_assisted: true

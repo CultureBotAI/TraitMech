@@ -24,16 +24,16 @@ evidence:
 causal_graphs:
 - graph_id: gram_stain_cell_envelope_retention
   title: Gram stain cell-envelope retention mechanism
-  description: Evidence-backed causal sketch linking Gram stain phenotype to
-    crystal violet-iodine complex formation, peptidoglycan architecture, outer
-    membrane loss during decolorization, and counterstaining.
+  description: Evidence-backed causal sketch linking Gram stain phenotype to crystal
+    violet-iodine complex formation, peptidoglycan architecture, outer membrane loss
+    during decolorization, and counterstaining.
   nodes:
   - node_id: gram_stain_trait
     label: gram stain
     node_type: TRAIT
     grounding: METPO:1000697
-    description: Differential staining phenotype based on retention of crystal
-      violet dye.
+    description: Differential staining phenotype based on retention of crystal violet
+      dye.
   - node_id: crystal_violet
     label: crystal violet
     node_type: CHEMICAL
@@ -41,8 +41,7 @@ causal_graphs:
   - node_id: iodine_mordant
     label: iodine mordant
     node_type: CHEMICAL
-    description: Iodine solution that forms a dye-iodine complex with crystal
-      violet.
+    description: Iodine solution that forms a dye-iodine complex with crystal violet.
   - node_id: crystal_violet_iodine_complex
     label: crystal violet-iodine complex
     node_type: CHEMICAL
@@ -55,13 +54,13 @@ causal_graphs:
   - node_id: outer_membrane
     label: outer membrane
     node_type: CELLULAR_LOCALIZATION
-    description: Gram-negative cell-envelope membrane disrupted during
-      decolorization.
+    description: Gram-negative cell-envelope membrane disrupted during decolorization.
+    grounding: GO:0019867
   - node_id: alcohol_decolorization
     label: alcohol decolorization
     node_type: EXPERIMENTAL_FACTOR
-    description: Decolorization step that differentiates Gram-positive and
-      Gram-negative staining.
+    description: Decolorization step that differentiates Gram-positive and Gram-negative
+      staining.
   edges:
   - subject: crystal_violet
     predicate: reacts with
@@ -79,8 +78,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3109/10520299609117151
       snippet: cell wall ... responsible for retention
-      notes: Review supports the Gram-positive cell wall as responsible for
-        retaining the dye-iodine complex.
+      notes: Review supports the Gram-positive cell wall as responsible for retaining
+        the dye-iodine complex.
   - subject: alcohol_decolorization
     predicate: removes
     object: outer_membrane
@@ -89,18 +88,16 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.156.2.837-845.1983
       snippet: alcohol-acetone decolorization
-      notes: Supports decolorization as a chemical step differentiating Gram
-        reactions.
+      notes: Supports decolorization as a chemical step differentiating Gram reactions.
   - subject: outer_membrane
     predicate: influences
     object: gram_stain_trait
-    description: The Gram-negative outer membrane contributes to dye loss and
-      counterstain appearance.
+    description: The Gram-negative outer membrane contributes to dye loss and counterstain
+      appearance.
     evidence:
     - reference: DOI:10.1038/s41579-019-0201-x
       snippet: defining feature of the Gram-negative cell envelope
-      notes: Supports the outer membrane as a defining Gram-negative envelope
-        feature.
+      notes: Supports the outer membrane as a defining Gram-negative envelope feature.
   - subject: peptidoglycan_cell_wall
     predicate: determines
     object: gram_stain_trait
@@ -119,7 +116,13 @@ curation_history:
 - timestamp: '2026-05-11T00:00:00-07:00'
   curator: codex
   action: CURATED_WITH_LITERATURE
-  changes: Reviewed Gram stain trait and added DOI-backed causal graph for
-    crystal violet-iodine complex retention, peptidoglycan cell wall architecture,
-    outer membrane influence, and alcohol decolorization.
+  changes: Reviewed Gram stain trait and added DOI-backed causal graph for crystal
+    violet-iodine complex retention, peptidoglycan cell wall architecture, outer membrane
+    influence, and alcohol decolorization.
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019867×1).
   llm_assisted: true

@@ -1,5 +1,6 @@
 path	writes_yaml	appends_curation_history	has_write_safeguard	validates_before_write	wired_into_just
-scripts/audit_writers.py	yes	yes	yes	yes	yes
 scripts/build_embedding_index.py	yes	no	no	no	yes
+scripts/ground_causal_nodes.py	yes	yes	yes	yes	yes
+scripts/ground_causal_predicates.py	yes	yes	yes	yes	yes
 scripts/render_trait_pages.py	yes	no	yes	no	yes
-scripts/seed_from_metpo.py	yes	yes	yes	no	yes
+scripts/seed_from_metpo.py	yes	yes	yes	yes	yes

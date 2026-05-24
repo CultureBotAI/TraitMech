@@ -39,10 +39,12 @@ causal_graphs:
     label: light
     node_type: ENVIRONMENTAL_FACTOR
     description: Energy source for photolithoautotrophic metabolism.
+    grounding: PATO:0001717
   - node_id: photosynthetic_electron_transport
     label: photosynthetic electron transport
     node_type: PATHWAY
     description: Light-driven electron transport pathway.
+    grounding: GO:0009767
   - node_id: inorganic_electron_donor
     label: inorganic electron donor
     node_type: CHEMICAL
@@ -51,6 +53,7 @@ causal_graphs:
     label: sulfide
     node_type: CHEMICAL
     description: Example inorganic electron donor for anoxygenic phototrophs.
+    grounding: CHEBI:15138
   - node_id: sulfur_oxidation
     label: sulfur oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -189,4 +192,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:01Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001717×1, GO:0009767×1, CHEBI:15138×1).
   llm_assisted: true

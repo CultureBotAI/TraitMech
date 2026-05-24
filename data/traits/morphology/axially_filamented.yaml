@@ -41,6 +41,7 @@ causal_graphs:
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
     description: Space between inner and outer membranes containing spirochete flagella.
+    grounding: GO:0042597
   - node_id: torque_generation
     label: torque generation
     node_type: BIOLOGICAL_PROCESS
@@ -130,4 +131,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:located_in×1, RO:0002502×1).
+  llm_assisted: true
+- timestamp: '2026-05-24T04:38:00Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042597×1).
   llm_assisted: true

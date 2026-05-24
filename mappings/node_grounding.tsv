@@ -1,0 +1,40 @@
+label	node_type	target_curie	target_label	source	confidence	notes
+molecular oxygen	CHEMICAL	CHEBI:15379	dioxygen	CHEBI	high	canonical CHEBI for O2; used in aerobic respiration / oxidative stress contexts
+carbon dioxide	CHEMICAL	CHEBI:16526	carbon dioxide	CHEBI	high	canonical CHEBI for CO2; substrate for fixation pathways, product of respiration
+carbon monoxide	CHEMICAL	CHEBI:17245	carbon monoxide	CHEBI	high	used in carboxydotrophic + Wood-Ljungdahl contexts
+molecular hydrogen	CHEMICAL	CHEBI:18276	dihydrogen	CHEBI	high	H2; electron donor in hydrogenotrophic methanogenesis + lithotrophy
+methane	CHEMICAL	CHEBI:16183	methane	CHEBI	high	product of methanogenesis, substrate for methanotrophs
+methanol	CHEMICAL	CHEBI:17790	methanol	CHEBI	high	C1 substrate for methylotrophs
+ammonia	CHEMICAL	CHEBI:16134	ammonia	CHEBI	high	NH3; nitrification substrate
+nitrate	CHEMICAL	CHEBI:17632	nitrate	CHEBI	high	terminal electron acceptor in denitrification
+sulfate	CHEMICAL	CHEBI:16189	sulfate	CHEBI	high	terminal electron acceptor in sulfate reduction; product of sulfide oxidation
+sulfide	CHEMICAL	CHEBI:15138	sulfide(2-)	CHEBI	high	electron donor in sulfur-oxidizing chemolithotrophy
+proton	CHEMICAL	CHEBI:24636	proton	CHEBI	high	H+; pH-related transport, pmf gradient ion
+ferrous iron	CHEMICAL	CHEBI:29033	iron(2+)	CHEBI	high	Fe2+; electron donor in iron-oxidizing lithotrophy
+organic carbon	CHEMICAL	CHEBI:50860	organic molecular entity	CHEBI	high	broad class — heterotroph carbon source, assimilated into biomass
+compatible solutes	CHEMICAL	CHEBI:65015	osmolyte	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts
+peptidoglycan synthesis	BIOLOGICAL_PROCESS	GO:0009252	peptidoglycan biosynthetic process	GO	high	exact GO term; used in MreB/FtsZ cell-shape graphs
+methanogenesis	BIOLOGICAL_PROCESS	GO:0015948	methanogenesis	GO	high	exact label match
+aerobic respiration	BIOLOGICAL_PROCESS	GO:0009060	aerobic respiration	GO	high	exact label match
+anaerobic respiration	BIOLOGICAL_PROCESS	GO:0009061	anaerobic respiration	GO	high	exact label match
+photosynthesis	BIOLOGICAL_PROCESS	GO:0015979	photosynthesis	GO	high	exact label match
+nitrogen fixation	BIOLOGICAL_PROCESS	GO:0009399	nitrogen fixation	GO	high	exact label match
+fermentation	BIOLOGICAL_PROCESS	GO:0006113	fermentation	GO	high	exact label match
+carbon fixation	BIOLOGICAL_PROCESS	GO:0015977	carbon fixation	GO	high	exact label match
+oxidative phosphorylation	BIOLOGICAL_PROCESS	GO:0006119	oxidative phosphorylation	GO	high	exact label match
+cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	GO:0030641	regulation of cellular pH	GO	high	GO doesn't distinguish cytoplasmic from cellular pH; closest exact term
+osmotic stress	BIOLOGICAL_PROCESS	GO:0006970	response to osmotic stress	GO	high	process-level GO term covering the response axis used in halotolerance graphs
+periplasmic space	CELLULAR_LOCALIZATION	GO:0042597	periplasmic space	GO	high	exact GO-CC term
+outer membrane	CELLULAR_LOCALIZATION	GO:0019867	outer membrane	GO	high	exact GO-CC term; applies to Gram-negatives + mitochondria
+plasma membrane	CELLULAR_LOCALIZATION	GO:0005886	plasma membrane	GO	high	exact GO-CC term
+cytoplasm	CELLULAR_LOCALIZATION	GO:0005737	cytoplasm	GO	high	exact GO-CC term
+kinase reaction	MOLECULAR_FUNCTION	GO:0016301	kinase activity	GO	high	maps the reaction node onto the GO-MF kinase activity class
+redox reaction	MOLECULAR_FUNCTION	GO:0016491	oxidoreductase activity	GO	high	canonical GO-MF for redox catalysis
+respiratory chain	PATHWAY	GO:0022904	respiratory electron transport chain	GO	high	GO term for the ETC; the corpus uses "respiratory chain" as shorthand
+photosynthetic electron transport	PATHWAY	GO:0009767	photosynthetic electron transport chain	GO	high	exact GO term
+calvin-benson cycle	PATHWAY	GO:0019253	reductive pentose-phosphate cycle	GO	high	GO's name for the Calvin-Benson cycle
+wood-ljungdahl pathway	PATHWAY	GO:0046358	acetyl-CoA biosynthetic process from carbon dioxide	GO	high	GO term for the Wood-Ljungdahl pathway
+light	ENVIRONMENTAL_FACTOR	PATO:0001717	light intensity	PATO	high	corpus uses "light" as photosynthesis-context environmental input; PATO captures the radiant-energy axis
+low temperature	ENVIRONMENTAL_FACTOR	PATO:0000383	decreased temperature	PATO	high	PATO quality term used in psychrophilic / psychrotolerant contexts
+anaerobic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	ENVO	high	exact ENVO term
+anoxic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	ENVO	high	ENVO collapses anoxic and anaerobic into one environment class
