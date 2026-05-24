@@ -425,8 +425,12 @@ def main() -> int:
         # hundreds of records.
         err = validate_record(doc)
         if err is not None:
-            skipped_invalid.append((str(path.relative_to(REPO_ROOT)), err[:200]))
-            print(f"  SKIP (invalid): {path.relative_to(REPO_ROOT)}: {err[:200]}",
+            try:
+                display_path = str(path.relative_to(REPO_ROOT))
+            except ValueError:
+                display_path = str(path)
+            skipped_invalid.append((display_path, err[:200]))
+            print(f"  SKIP (invalid): {display_path}: {err[:200]}",
                   file=sys.stderr)
             continue
         if args.apply:
