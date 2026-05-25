@@ -159,23 +159,27 @@ def main() -> int:
             llm_assisted=True,
         )
 
-        errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
-        if errors:
-            msg = errors[0].message[:200]
-            files_skipped_invalid.append((path, msg))
-            print(f"  SKIP (would-be invalid): {path}: {msg}", file=sys.stderr)
+        # Single validation per mode: dry-run uses the standalone validator
+        # (no write); --apply lets write_validated_trait do the only check.
+        invalid_msg: str | None = None
+        if args.apply:
+            try:
+                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            except ValidationFailedError as exc:
+                invalid_msg = exc.errors[0].message[:200] if exc.errors else str(exc)[:200]
+        else:
+            errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            if errors:
+                invalid_msg = errors[0].message[:200]
+
+        if invalid_msg is not None:
+            files_skipped_invalid.append((path, invalid_msg))
+            print(f"  SKIP (would-be invalid): {path}: {invalid_msg}", file=sys.stderr)
             continue
 
         files_modified += 1
         edges_grounded_total += grounded
         per_curie_total += per_curie
-
-        if args.apply:
-            try:
-                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
-            except ValidationFailedError as exc:
-                print(f"  ✗ validation failed for {path.name}: {exc.summary()}", file=sys.stderr)
-                continue
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", newline="") as fh:

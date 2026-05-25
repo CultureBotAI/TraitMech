@@ -74,7 +74,7 @@ def record_curation_event(
             ``"seed_from_metpo"``, ``"jane.smith"``). Required because
             the schema's ``CurationEvent.curator`` is required.
         action: SCREAMING_SNAKE_CASE action label
-            (e.g. ``"GROUND_CAUSAL_NODES"``, ``"SEED_FROM_METPO"``).
+            (e.g. ``"GROUND_CAUSAL_NODES"``, ``"SEEDED_FROM_METPO"``).
             Required.
         changes: Optional human-readable description of what changed.
             Maps to ``CurationEvent.changes`` — also the right field

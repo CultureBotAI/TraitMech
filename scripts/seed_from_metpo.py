@@ -401,19 +401,19 @@ def main() -> int:
         cat_dir = args.out / CATEGORY_DIR[category]
         path = cat_dir / f"{slug}.yaml"
         doc = to_record(curie, rec, category)
+        try:
+            display_path = str(path.relative_to(REPO_ROOT))
+        except ValueError:
+            display_path = str(path)
+
         # G03: validate before write — never commit an invalid record.
         # Don't abort the whole run on a single failure; the seed touches
         # hundreds of records.
-        err = validate_record(doc)
-        if err is not None:
-            try:
-                display_path = str(path.relative_to(REPO_ROOT))
-            except ValueError:
-                display_path = str(path)
-            skipped_invalid.append((display_path, err[:200]))
-            print(f"  SKIP (invalid): {display_path}: {err[:200]}",
-                  file=sys.stderr)
-            continue
+        #
+        # Single validation per mode: dry-run uses validate_record (no write);
+        # --apply lets write_validated_trait do the only check. The path-exists
+        # skip is checked first in apply mode so we don't waste a validation
+        # pass on records we wouldn't write anyway.
         if args.apply:
             if path.exists() and not args.force:
                 skipped_existing += 1
@@ -421,14 +421,18 @@ def main() -> int:
             try:
                 write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
             except ValidationFailedError as exc:
-                try:
-                    display_path = str(path.relative_to(REPO_ROOT))
-                except ValueError:
-                    display_path = str(path)
-                skipped_invalid.append((display_path, exc.summary()[:200]))
-                print(f"  ✗ validation failed for {display_path}: {exc.summary()}", file=sys.stderr)
+                msg = exc.errors[0].message[:200] if exc.errors else str(exc)[:200]
+                skipped_invalid.append((display_path, msg))
+                print(f"  SKIP (invalid): {display_path}: {msg}", file=sys.stderr)
                 continue
             written += 1
+        else:
+            err = validate_record(doc)
+            if err is not None:
+                skipped_invalid.append((display_path, err[:200]))
+                print(f"  SKIP (invalid): {display_path}: {err[:200]}",
+                      file=sys.stderr)
+                continue
         by_cat[category] += 1
 
     print(f"OWL parsed:                 {args.owl}")

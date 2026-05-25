@@ -1,10 +1,13 @@
 """Write-time validation: dump a TraitRecord to YAML *only if* it passes
 closed-schema LinkML validation.
 
-This is the write-time gate the audit found missing across every mutating
-writer in this repo: writes go through ``path.write_text(yaml.safe_dump(...))``
-with validation performed on the in-memory doc *before* the write but
-nothing checking that the bytes actually written round-trip cleanly.
+This is the write-time gate that pairs the in-memory mutation step with
+a schema check at the same call site, so a script can't accidentally
+write a doc that drifted into an invalid shape between the mutation and
+the disk write. The check is on the in-memory object (not a re-load of
+the emitted YAML), which is the right granularity for catching missing
+required fields, unknown fields, enum / pattern violations, etc. —
+the failure modes the audit cares about.
 
 Use::
 
