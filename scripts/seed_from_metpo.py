@@ -14,14 +14,15 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-import yaml
-from linkml.validator import Validator
-from linkml.validator.plugins import JsonschemaValidationPlugin
-from linkml.validator.report import Severity
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import (
+    ValidationFailedError,
+    validate_trait,
+    write_validated_trait,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OWL_PATH = REPO_ROOT / "data" / "raw" / "metpo.owl"
@@ -29,27 +30,12 @@ TRAITS_DIR = REPO_ROOT / "data" / "traits"
 SCHEMA_PATH = REPO_ROOT / "src" / "traitmech" / "schema" / "traitmech.yaml"
 TARGET_CLASS = "TraitRecord"
 
-# Process-local validator, built on first use so the schema parses once.
-_VALIDATOR: Validator | None = None
-
-
-def _get_validator() -> Validator:
-    global _VALIDATOR
-    if _VALIDATOR is None:
-        _VALIDATOR = Validator(
-            schema=str(SCHEMA_PATH),
-            validation_plugins=[JsonschemaValidationPlugin(closed=True)],
-        )
-    return _VALIDATOR
-
 
 def validate_record(doc: dict[str, Any]) -> str | None:
     """Validate a built record. Returns first ERROR message, or None if clean."""
-    validator = _get_validator()
-    report = validator.validate(doc, target_class=TARGET_CLASS)
-    for r in report.results:
-        if r.severity == Severity.ERROR:
-            return r.message
+    errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+    if errors:
+        return errors[0].message
     return None
 
 NS = {
@@ -347,20 +333,15 @@ def to_record(curie: str, rec: dict[str, Any], category: str) -> dict[str, Any]:
         out["range_"] = rec["range_"]
     if rec["created_by"]:
         out["created_by"] = rec["created_by"]
-    out["curation_history"] = [{
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "curator": "seed_from_metpo",
-        "action": "SEEDED_FROM_METPO",
-        "changes": f"imported from data/raw/metpo.owl ({rec['term_kind']})",
-        "llm_assisted": False,
-    }]
     # Drop None values for cleanliness
-    return {k: v for k, v in out.items() if v not in (None, [], {})}
-
-
-def write_yaml(path: Path, doc: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
+    cleaned = {k: v for k, v in out.items() if v not in (None, [], {})}
+    record_curation_event(
+        cleaned,
+        curator="seed_from_metpo",
+        action="SEEDED_FROM_METPO",
+        changes=f"imported from data/raw/metpo.owl ({rec['term_kind']})",
+    )
+    return cleaned
 
 
 # -----------------------------------------------------------------
@@ -420,25 +401,38 @@ def main() -> int:
         cat_dir = args.out / CATEGORY_DIR[category]
         path = cat_dir / f"{slug}.yaml"
         doc = to_record(curie, rec, category)
+        try:
+            display_path = str(path.relative_to(REPO_ROOT))
+        except ValueError:
+            display_path = str(path)
+
         # G03: validate before write — never commit an invalid record.
         # Don't abort the whole run on a single failure; the seed touches
         # hundreds of records.
-        err = validate_record(doc)
-        if err is not None:
-            try:
-                display_path = str(path.relative_to(REPO_ROOT))
-            except ValueError:
-                display_path = str(path)
-            skipped_invalid.append((display_path, err[:200]))
-            print(f"  SKIP (invalid): {display_path}: {err[:200]}",
-                  file=sys.stderr)
-            continue
+        #
+        # Single validation per mode: dry-run uses validate_record (no write);
+        # --apply lets write_validated_trait do the only check. The path-exists
+        # skip is checked first in apply mode so we don't waste a validation
+        # pass on records we wouldn't write anyway.
         if args.apply:
             if path.exists() and not args.force:
                 skipped_existing += 1
                 continue
-            write_yaml(path, doc)
+            try:
+                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            except ValidationFailedError as exc:
+                msg = exc.errors[0].message[:200] if exc.errors else str(exc)[:200]
+                skipped_invalid.append((display_path, msg))
+                print(f"  SKIP (invalid): {display_path}: {msg}", file=sys.stderr)
+                continue
             written += 1
+        else:
+            err = validate_record(doc)
+            if err is not None:
+                skipped_invalid.append((display_path, err[:200]))
+                print(f"  SKIP (invalid): {display_path}: {err[:200]}",
+                      file=sys.stderr)
+                continue
         by_cat[category] += 1
 
     print(f"OWL parsed:                 {args.owl}")

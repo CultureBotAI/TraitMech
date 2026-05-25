@@ -35,8 +35,9 @@ from linkml.validator import Validator
 from linkml.validator.plugins import JsonschemaValidationPlugin
 from linkml.validator.report import Severity
 
-SCHEMA_PATH = Path("src/traitmech/schema/traitmech.yaml")
-DEFAULT_ROOTS = [Path("data/traits")]
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+SCHEMA_PATH = _REPO_ROOT / "src" / "traitmech" / "schema" / "traitmech.yaml"
+DEFAULT_ROOTS = [_REPO_ROOT / "data" / "traits"]
 TARGET_CLASS = "TraitRecord"
 
 # Per-worker singleton — built lazily after fork so the schema parses once per
@@ -211,13 +212,13 @@ def main() -> int:
         files_with_errors.add(row["file"])
 
     print("", file=sys.stderr)
-    print(f"=== validate-strict summary ===", file=sys.stderr)
+    print("=== validate-strict summary ===", file=sys.stderr)
     print(f"  files scanned:      {len(files)}", file=sys.stderr)
     print(f"  files with ERROR:   {len(files_with_errors)}", file=sys.stderr)
     print(f"  total ERROR rows:   {len(all_rows)}", file=sys.stderr)
     print(f"  TSV:                {args.out}", file=sys.stderr)
     if by_cat:
-        print(f"  by category:", file=sys.stderr)
+        print("  by category:", file=sys.stderr)
         for cat, count in sorted(by_cat.items(), key=lambda kv: -kv[1]):
             print(f"    {cat:24s} {count:>8d}", file=sys.stderr)
 

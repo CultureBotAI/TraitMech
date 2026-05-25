@@ -24,14 +24,17 @@ from __future__ import annotations
 import argparse
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import yaml
-from linkml.validator import Validator
-from linkml.validator.plugins import JsonschemaValidationPlugin
-from linkml.validator.report import Severity
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import (
+    ValidationFailedError,
+    validate_trait,
+    write_validated_trait,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
@@ -65,13 +68,6 @@ DEFERRED = [
 ]
 
 
-def build_validator() -> Validator:
-    return Validator(
-        schema=str(SCHEMA_PATH),
-        validation_plugins=[JsonschemaValidationPlugin(closed=True)],
-    )
-
-
 def retype_nodes_in_doc(doc: dict[str, Any]) -> tuple[int, Counter]:
     """Mutate ``doc`` in place. Returns (retyped_count, per-rule counter)."""
     retyped = 0
@@ -89,22 +85,6 @@ def retype_nodes_in_doc(doc: dict[str, Any]) -> tuple[int, Counter]:
     return retyped, counts
 
 
-def append_curation_event(doc: dict[str, Any], retyped: int, counts: Counter) -> None:
-    history = doc.setdefault("curation_history", [])
-    summary = "; ".join(f"{k} ×{n}" for k, n in counts.most_common())
-    event = {
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "curator": "claude",
-        "action": CURATION_ACTION,
-        "changes": (
-            f"Re-typed {retyped} causal-node node_type field(s) to align with "
-            f"CausalNodeTypeEnum semantics: {summary}."
-        ),
-        "llm_assisted": True,
-    }
-    history.append(event)
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--apply", action="store_true",
@@ -120,8 +100,6 @@ def main() -> int:
         print("\nDeferred (no clean enum fit):", file=sys.stderr)
         for lbl, cur, reason in DEFERRED:
             print(f"  ({lbl!r}, {cur!r}) — {reason}", file=sys.stderr)
-
-    validator = build_validator()
 
     files = sorted(args.traits_dir.rglob("*.yaml"))
     print(f"\nScanning {len(files)} YAMLs under {args.traits_dir}", file=sys.stderr)
@@ -144,22 +122,39 @@ def main() -> int:
         if retyped == 0:
             continue
 
-        append_curation_event(doc, retyped, counts)
+        summary = "; ".join(f"{k} ×{n}" for k, n in counts.most_common())
+        record_curation_event(
+            doc,
+            curator="claude",
+            action=CURATION_ACTION,
+            changes=(
+                f"Re-typed {retyped} causal-node node_type field(s) to align with "
+                f"CausalNodeTypeEnum semantics: {summary}."
+            ),
+            llm_assisted=True,
+        )
 
-        report = validator.validate(doc, target_class=TARGET_CLASS)
-        errors = [r for r in report.results if r.severity == Severity.ERROR]
-        if errors:
-            msg = errors[0].message[:200]
-            files_skipped_invalid.append((path, msg))
-            print(f"  SKIP (would-be invalid): {path}: {msg}", file=sys.stderr)
+        # Single validation per mode: dry-run uses the standalone validator
+        # (no write); --apply lets write_validated_trait do the only check.
+        invalid_msg: str | None = None
+        if args.apply:
+            try:
+                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            except ValidationFailedError as exc:
+                invalid_msg = exc.errors[0].message[:200] if exc.errors else str(exc)[:200]
+        else:
+            errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            if errors:
+                invalid_msg = errors[0].message[:200]
+
+        if invalid_msg is not None:
+            files_skipped_invalid.append((path, invalid_msg))
+            print(f"  SKIP (would-be invalid): {path}: {invalid_msg}", file=sys.stderr)
             continue
 
         files_modified += 1
         retypes_total += retyped
         counts_total += counts
-
-        if args.apply:
-            path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
 
     print("", file=sys.stderr)
     print("=== retype-causal-nodes summary ===", file=sys.stderr)

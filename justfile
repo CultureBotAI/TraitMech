@@ -144,3 +144,7 @@ lint:
     uv run ruff check src/ scripts/ tests/
 
 check: lint test
+
+# Composite QC: strict closed-schema validation + schema-quality probes +
+# writers audit. Mirrors the qc target in MediaIngredientMech / CultureMech.
+qc: validate-strict audit-schema audit-writers

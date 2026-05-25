@@ -179,6 +179,16 @@ The audit *finds* drift; cleanup fixes it. Typical post-audit work, in dependenc
 - **Don't broaden a regex pattern in the schema to "make tests pass" without understanding what the new values mean.** Bake the explanation into the schema description.
 - **Don't forget to commit the regenerated `traitmech_dataclasses.py`** alongside any schema change.
 
+## Write-time helpers (use in new and existing writer scripts)
+
+Two shared modules close the audit loop by gating writes through the
+same closed-schema check the harness uses:
+
+- `src/traitmech/validation/write_validated.py` — `write_validated_trait(doc, path)` refuses to dump if the doc fails closed-schema validation. Pair it with the harness: harness catches existing drift on disk; helper prevents new drift from being written.
+- `src/traitmech/curate/curation_event.py` — `record_curation_event(doc, curator=..., action=..., changes=..., llm_assisted=...)` is the standard way to append a `CurationEvent` to `doc['curation_history']`. The five writer scripts under `scripts/` (`ground_causal_nodes`, `ground_causal_predicates`, `retype_causal_nodes`, `rename_predicate_labels`, `seed_from_metpo`) already route through both helpers — copy their pattern when adding a new writer.
+
+If a writer audit row shows `validates_before_write=no` or `appends_curation_history=no`, the fix is to import and use these two helpers, not to add ad-hoc validation inline.
+
 ## Cross-references
 
 - `reports/instance_validation_summary.md` — the most recent run's full numbers and what's left.

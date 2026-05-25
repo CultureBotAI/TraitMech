@@ -56,6 +56,10 @@ _VALIDATE_BEFORE_WRITE = re.compile(
     r"|TraitValidator"
     r"|validate_trait\("
     r"|validator\.validate\("
+    # write_validated_trait is the closed-schema gate from
+    # src/traitmech/validation/write_validated.py — its callers
+    # validate by virtue of calling it.
+    r"|write_validated_trait\("
 )
 
 
@@ -76,6 +80,10 @@ def looks_like_yaml_writer(text: str) -> bool:
     # (.write_text + any .yaml token in the file) flagged scripts that
     # only READ yamls but write something else (JSON, HTML, TSV).
     if _WRITE_TEXT_OF_YAML.search(text):
+        return True
+    # write_validated_trait is the closed-schema-gated wrapper that
+    # callers route through instead of yaml.dump directly.
+    if "write_validated_trait(" in text:
         return True
     return False
 

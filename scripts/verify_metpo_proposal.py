@@ -143,7 +143,7 @@ def check_scope_c(class_tsv_text: str, failures: list[str]) -> None:
     if not values:
         return
     if "CausalNodeTypeEnum" not in class_tsv_text:
-        print(f"  scope-C: CausalNodeTypeEnum not lifted in this cohort (skip)", file=sys.stderr)
+        print("  scope-C: CausalNodeTypeEnum not lifted in this cohort (skip)", file=sys.stderr)
         return
     missing = [v for v in values if f"CausalNodeTypeEnum.{v}" not in class_tsv_text]
     if missing:
@@ -216,7 +216,7 @@ def main() -> int:
         check_scope_c(class_tsv_text, failures)
 
     print("", file=sys.stderr)
-    print(f"=== verify-proposal summary ===", file=sys.stderr)
+    print("=== verify-proposal summary ===", file=sys.stderr)
     print(f"  cohort:   {cohort_dir}", file=sys.stderr)
     print(f"  failures: {len(failures)}", file=sys.stderr)
     if failures:
