@@ -35,14 +35,17 @@ import argparse
 import csv
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import yaml
-from linkml.validator import Validator
-from linkml.validator.plugins import JsonschemaValidationPlugin
-from linkml.validator.report import Severity
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import (
+    ValidationFailedError,
+    validate_trait,
+    write_validated_trait,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
@@ -95,13 +98,6 @@ def load_mapping(path: Path) -> dict[MappingKey, tuple[str, str]]:
     return out
 
 
-def build_validator() -> Validator:
-    return Validator(
-        schema=str(SCHEMA_PATH),
-        validation_plugins=[JsonschemaValidationPlugin(closed=True)],
-    )
-
-
 def ground_nodes_in_doc(
     doc: dict[str, Any],
     mapping: dict[MappingKey, tuple[str, str]],
@@ -146,22 +142,6 @@ def ground_nodes_in_doc(
     return grounded, per_curie, residual, grounded_keys
 
 
-def append_curation_event(doc: dict[str, Any], grounded: int, per_curie: Counter) -> None:
-    history = doc.setdefault("curation_history", [])
-    mapped_str = ", ".join(f"{c}×{n}" for c, n in per_curie.most_common())
-    event = {
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "curator": "claude",
-        "action": CURATION_ACTION,
-        "changes": (
-            f"Grounded {grounded} causal-node grounding field(s) "
-            f"via mappings/node_grounding.tsv ({mapped_str})."
-        ),
-        "llm_assisted": True,
-    }
-    history.append(event)
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--apply", action="store_true",
@@ -176,8 +156,6 @@ def main() -> int:
 
     mapping = load_mapping(args.mapping)
     print(f"Loaded {len(mapping)} mapped (label, node_type) keys from {args.mapping}", file=sys.stderr)
-
-    validator = build_validator()
 
     files = sorted(args.traits_dir.rglob("*.yaml"))
     print(f"Scanning {len(files)} YAMLs under {args.traits_dir}", file=sys.stderr)
@@ -210,10 +188,19 @@ def main() -> int:
             _record_residual(residual)
             continue
 
-        append_curation_event(doc, grounded, per_curie)
+        mapped_str = ", ".join(f"{c}×{n}" for c, n in per_curie.most_common())
+        record_curation_event(
+            doc,
+            curator="claude",
+            action=CURATION_ACTION,
+            changes=(
+                f"Grounded {grounded} causal-node grounding field(s) "
+                f"via mappings/node_grounding.tsv ({mapped_str})."
+            ),
+            llm_assisted=True,
+        )
 
-        report = validator.validate(doc, target_class=TARGET_CLASS)
-        errors = [r for r in report.results if r.severity == Severity.ERROR]
+        errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
         if errors:
             msg = errors[0].message[:200]
             files_skipped_invalid.append((path, msg))
@@ -231,7 +218,11 @@ def main() -> int:
         per_curie_total += per_curie
 
         if args.apply:
-            path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
+            try:
+                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            except ValidationFailedError as exc:
+                print(f"  ✗ validation failed for {path.name}: {exc.summary()}", file=sys.stderr)
+                continue
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", newline="") as fh:

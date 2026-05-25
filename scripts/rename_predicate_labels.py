@@ -25,14 +25,17 @@ from __future__ import annotations
 import argparse
 import sys
 from collections import Counter
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import yaml
-from linkml.validator import Validator
-from linkml.validator.plugins import JsonschemaValidationPlugin
-from linkml.validator.report import Severity
+
+from traitmech.curate.curation_event import record_curation_event
+from traitmech.validation.write_validated import (
+    ValidationFailedError,
+    validate_trait,
+    write_validated_trait,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "src/traitmech/schema/traitmech.yaml"
@@ -49,13 +52,6 @@ RENAMES: dict[str, tuple[str, str]] = {
     "maintains": ("regulates", "RO:0002211"),
     "shapes": ("causes", "biolink:causes"),
 }
-
-
-def build_validator() -> Validator:
-    return Validator(
-        schema=str(SCHEMA_PATH),
-        validation_plugins=[JsonschemaValidationPlugin(closed=True)],
-    )
 
 
 def rename_edges_in_doc(doc: dict[str, Any]) -> tuple[int, Counter]:
@@ -76,22 +72,6 @@ def rename_edges_in_doc(doc: dict[str, Any]) -> tuple[int, Counter]:
     return renamed, counts
 
 
-def append_curation_event(doc: dict[str, Any], renamed: int, counts: Counter) -> None:
-    history = doc.setdefault("curation_history", [])
-    summary = "; ".join(f"{k} ×{n}" for k, n in counts.most_common())
-    event = {
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "curator": "claude",
-        "action": CURATION_ACTION,
-        "changes": (
-            f"Renamed {renamed} causal-edge predicate label(s) to align with "
-            f"existing groundings: {summary}."
-        ),
-        "llm_assisted": True,
-    }
-    history.append(event)
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--apply", action="store_true",
@@ -103,8 +83,6 @@ def main() -> int:
     print(f"Rename map: {len(RENAMES)} entries:", file=sys.stderr)
     for old, (new, curie) in RENAMES.items():
         print(f"  {old!r:>16}  →  {new!r:<14} ({curie})", file=sys.stderr)
-
-    validator = build_validator()
 
     files = sorted(args.traits_dir.rglob("*.yaml"))
     print(f"\nScanning {len(files)} YAMLs under {args.traits_dir}", file=sys.stderr)
@@ -127,10 +105,19 @@ def main() -> int:
         if renamed == 0:
             continue
 
-        append_curation_event(doc, renamed, counts)
+        summary = "; ".join(f"{k} ×{n}" for k, n in counts.most_common())
+        record_curation_event(
+            doc,
+            curator="claude",
+            action=CURATION_ACTION,
+            changes=(
+                f"Renamed {renamed} causal-edge predicate label(s) to align with "
+                f"existing groundings: {summary}."
+            ),
+            llm_assisted=True,
+        )
 
-        report = validator.validate(doc, target_class=TARGET_CLASS)
-        errors = [r for r in report.results if r.severity == Severity.ERROR]
+        errors = validate_trait(doc, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
         if errors:
             msg = errors[0].message[:200]
             files_skipped_invalid.append((path, msg))
@@ -142,7 +129,11 @@ def main() -> int:
         counts_total += counts
 
         if args.apply:
-            path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
+            try:
+                write_validated_trait(doc, path, target_class=TARGET_CLASS, schema_path=SCHEMA_PATH)
+            except ValidationFailedError as exc:
+                print(f"  ✗ validation failed for {path.name}: {exc.summary()}", file=sys.stderr)
+                continue
 
     print("", file=sys.stderr)
     print("=== rename-predicate-labels summary ===", file=sys.stderr)
