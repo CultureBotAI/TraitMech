@@ -1,7 +1,7 @@
 path	writes_yaml	appends_curation_history	has_write_safeguard	validates_before_write	wired_into_just
 scripts/ground_causal_nodes.py	yes	yes	yes	yes	yes
 scripts/ground_causal_predicates.py	yes	yes	yes	yes	yes
-scripts/rename_predicate_labels.py	yes	yes	yes	yes	no
-scripts/retype_causal_nodes.py	yes	yes	yes	yes	no
+scripts/rename_predicate_labels.py	yes	yes	yes	yes	yes
+scripts/retype_causal_nodes.py	yes	yes	yes	yes	yes
 scripts/seed_from_metpo.py	yes	yes	yes	yes	yes
 src/traitmech/validation/write_validated.py	yes	no	no	yes	no

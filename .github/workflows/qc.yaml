@@ -1,0 +1,36 @@
+name: qc
+
+on:
+  pull_request:
+    paths:
+      - "data/traits/**"
+      - "src/traitmech/schema/**"
+      - "src/traitmech/**.py"
+      - "scripts/**.py"
+      - "justfile"
+      - "pyproject.toml"
+      - ".github/workflows/qc.yaml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  qc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: extractions/setup-just@v3
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Run qc (validate-strict + audit-schema + audit-writers)
+        run: just qc

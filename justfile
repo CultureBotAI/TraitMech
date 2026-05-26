@@ -84,6 +84,22 @@ seed-from-metpo *args:
 seed-apply:
     uv run python3 scripts/seed_from_metpo.py --apply
 
+# Rename predicate labels across data/traits/ from a TSV mapping. Default dry-run.
+rename-predicates *args:
+    uv run python scripts/rename_predicate_labels.py {{args}}
+
+# Apply the rename (writes YAMLs)
+rename-predicates-apply *args:
+    uv run python scripts/rename_predicate_labels.py --apply {{args}}
+
+# Retype causal-graph nodes from a TSV mapping. Default dry-run.
+retype-causal-nodes *args:
+    uv run python scripts/retype_causal_nodes.py {{args}}
+
+# Apply the retype (writes YAMLs)
+retype-causal-nodes-apply *args:
+    uv run python scripts/retype_causal_nodes.py --apply {{args}}
+
 # Refresh raw METPO copy from the local KG-Hub assays clone
 refresh-metpo:
     cp ../assays/assay-metadata/metpo.owl data/raw/metpo.owl
