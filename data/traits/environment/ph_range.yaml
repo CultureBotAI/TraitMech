@@ -60,7 +60,7 @@ causal_graphs:
       notes: Supports external pH as the axis bounding the growth window.
     predicate_id: METPO:2007500
   - subject: acid_tolerance
-    predicate: sets
+    predicate: defines
     object: bounded_growth_window
     description: Acid tolerance sets the lower bound of the pH growth window.
     evidence:
@@ -68,8 +68,9 @@ causal_graphs:
       snippet: highly impermeable cell membranes
       notes: Supports envelope proton barriers as the lower-bound mechanism for low-pH
         growth.
+    predicate_id: METPO:2007500
   - subject: alkaline_tolerance
-    predicate: sets
+    predicate: defines
     object: bounded_growth_window
     description: Alkaline tolerance sets the upper bound of the pH growth window.
     evidence:
@@ -77,6 +78,7 @@ causal_graphs:
       snippet: alkaliphiles
       notes: Supports alkaline-tolerance physiology as the upper-bound mechanism for
         high-pH growth.
+    predicate_id: METPO:2007500
   - subject: bounded_growth_window
     predicate: manifests as
     object: ph_range_trait
@@ -109,4 +111,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    sets → defines ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×2).
   llm_assisted: true

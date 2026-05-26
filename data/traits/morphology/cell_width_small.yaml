@@ -43,13 +43,14 @@ causal_graphs:
     description: MreB-organized lateral peptidoglycan assembly.
   edges:
   - subject: mreb_cytoskeleton
-    predicate: organizes
+    predicate: enables
     object: rod_complex_pg
     description: MreB organizes lateral PG synthesis along the cylinder.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports MreB as the lateral PG organizer.
+    predicate_id: RO:0002327
   - subject: rod_complex_pg
     predicate: produces
     object: cell_width_small_trait
@@ -85,4 +86,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    organizes → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

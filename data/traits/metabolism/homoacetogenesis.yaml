@@ -75,13 +75,14 @@ causal_graphs:
     description: Energy carrier conserved during acetate formation.
   edges:
   - subject: homoacetogenesis_trait
-    predicate: occurs under
+    predicate: occurs in
     object: anaerobic_condition
     description: Homoacetogenesis is an anaerobic acetogenic metabolism.
     evidence:
     - reference: DOI:10.1023/A:1020514617738
       snippet: obligately anaerobic bacteria
       notes: Supports anaerobic context for acetogens.
+    predicate_id: biolink:occurs_in
   - subject: homoacetogenesis_trait
     predicate: has mechanistic pathway
     object: wood_ljungdahl_pathway
@@ -91,13 +92,14 @@ causal_graphs:
       snippet: Wood-Ljungdahl pathway
       notes: Supports pathway assignment for acetogens.
   - subject: carbon_dioxide
-    predicate: input to
+    predicate: participates in
     object: wood_ljungdahl_pathway
     description: CO2 is reduced through the Wood-Ljungdahl pathway.
     evidence:
     - reference: DOI:10.1016/j.tibtech.2019.05.008
       snippet: carbon dioxide are reduced
       notes: Supports CO2 as substrate.
+    predicate_id: biolink:participates_in
   - subject: molecular_hydrogen
     predicate: provides electrons for
     object: wood_ljungdahl_pathway
@@ -107,13 +109,14 @@ causal_graphs:
       snippet: acetyl-CoA from CO or CO2 + H2
       notes: Supports H2 as an electron donor with CO2.
   - subject: carbon_monoxide
-    predicate: input to
+    predicate: participates in
     object: wood_ljungdahl_pathway
     description: CO can serve as a C1 input or intermediate for acetyl-CoA synthesis.
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: acetyl-CoA from CO or CO2 + H2
       notes: Supports CO as substrate or intermediate.
+    predicate_id: biolink:participates_in
   - subject: wood_ljungdahl_pathway
     predicate: produces
     object: acetyl_coa
@@ -171,4 +174,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:01001057×1, GO:0046358×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 3 causal-edge predicate label(s) to align with existing groundings:
+    input to → participates in ×2; occurs under → occurs in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:participates_in×2, biolink:occurs_in×1).
   llm_assisted: true

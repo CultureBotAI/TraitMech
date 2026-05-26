@@ -65,7 +65,7 @@ causal_graphs:
     description: Enzymatic route proposed for some sulfur disproportionators.
   edges:
   - subject: disproportionation_trait
-    predicate: occurs under
+    predicate: occurs in
     object: anoxic_condition
     description: Sulfur disproportionation is commonly observed as anaerobic microbial
       metabolism.
@@ -74,6 +74,7 @@ causal_graphs:
       snippet: microbiologically catalyzed chemolithotrophic process
       notes: Supports microbial sulfur disproportionation under non-oxygenated sulfur
         cycling contexts.
+    predicate_id: biolink:occurs_in
   - subject: inorganic_sulfur_intermediate
     predicate: serves as electron donor and acceptor
     object: disproportionation_trait
@@ -168,4 +169,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:33542×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    occurs under → occurs in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:occurs_in×1).
   llm_assisted: true

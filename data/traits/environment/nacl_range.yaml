@@ -58,7 +58,7 @@ causal_graphs:
       notes: Supports NaCl as the axis bounding the growth window.
     predicate_id: METPO:2007500
   - subject: low_salt_tolerance
-    predicate: sets
+    predicate: defines
     object: bounded_growth_window
     description: Tolerance to low salt sets the lower bound of the growth window.
     evidence:
@@ -66,14 +66,16 @@ causal_graphs:
       snippet: cope with the high salt concentrations
       notes: Saline-Systems review frames halophily around salt-tolerance mechanisms
         that span both the lower and upper limits of growth-supporting salinity.
+    predicate_id: METPO:2007500
   - subject: high_salt_tolerance
-    predicate: sets
+    predicate: defines
     object: bounded_growth_window
     description: Tolerance to high salt sets the upper bound of the growth window.
     evidence:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: high salt concentrations
       notes: Supports tolerance to high salt as the upper-bound mechanism.
+    predicate_id: METPO:2007500
   - subject: bounded_growth_window
     predicate: manifests as
     object: nacl_range_trait
@@ -106,4 +108,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    sets → defines ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×2).
   llm_assisted: true

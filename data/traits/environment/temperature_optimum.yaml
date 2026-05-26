@@ -58,7 +58,7 @@ causal_graphs:
     description: Peak specific growth rate achieved at the optimal temperature.
   edges:
   - subject: ambient_temperature
-    predicate: influences
+    predicate: regulates
     object: membrane_fluidity
     description: Ambient temperature sets a target membrane fluidity that the cell
       must match.
@@ -66,6 +66,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: more unsaturated fatty acids
       notes: Supports temperature as the input to membrane-fluidity adaptation.
+    predicate_id: RO:0002211
   - subject: homoviscous_lipid_composition
     predicate: regulates
     object: membrane_fluidity
@@ -77,7 +78,7 @@ causal_graphs:
       notes: Supports homoviscous adaptation as the mechanism setting membrane fluidity.
     predicate_id: RO:0002211
   - subject: ambient_temperature
-    predicate: influences
+    predicate: regulates
     object: enzyme_kinetics
     description: Ambient temperature scales enzyme turnover rates across the cellular
       network.
@@ -86,6 +87,7 @@ causal_graphs:
       snippet: energy transducing enzymes
       notes: Supports temperature as the determinant of enzyme function in adapted
         organisms.
+    predicate_id: RO:0002211
   - subject: enzyme_kinetics
     predicate: enables
     object: maximal_growth_rate
@@ -155,4 +157,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    influences → regulates ×2.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2).
   llm_assisted: true

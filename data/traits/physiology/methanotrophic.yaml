@@ -126,13 +126,14 @@ causal_graphs:
       notes: Supports methanol dehydrogenase as the next step.
     predicate_id: METPO:2000016
   - subject: formaldehyde
-    predicate: input to
+    predicate: participates in
     object: formaldehyde_assimilation
     description: Formaldehyde can be assimilated through RuMP or serine pathways.
     evidence:
     - reference: DOI:10.1039/D3CY00737E
       snippet: RuMP pathway and the serine pathway
       notes: Supports formaldehyde assimilation routes in methanotrophs.
+    predicate_id: biolink:participates_in
   - subject: methanotrophic_trait
     predicate: produces
     object: carbon_dioxide
@@ -178,4 +179,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0A3YNQ7×1, UniProtKB:A0A010SCY7×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    input to → participates in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:participates_in×1).
   llm_assisted: true

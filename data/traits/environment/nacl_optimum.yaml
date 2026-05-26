@@ -56,13 +56,14 @@ causal_graphs:
     description: Peak specific growth rate achieved at the optimal NaCl.
   edges:
   - subject: ambient_nacl
-    predicate: triggers
+    predicate: causes
     object: osmotic_balance
     description: External NaCl level engages the osmoadaptive balance machinery.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: cope with the high salt concentrations
       notes: Supports osmotic balance as the response to ambient NaCl.
+    predicate_id: biolink:causes
   - subject: compatible_solutes
     predicate: regulates
     object: osmotic_balance
@@ -145,4 +146,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:65015×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    triggers → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

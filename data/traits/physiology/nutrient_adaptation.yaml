@@ -58,7 +58,7 @@ causal_graphs:
     description: Adaptation favoring efficient growth in nutrient-poor conditions.
   edges:
   - subject: ambient_nutrient_concentration
-    predicate: triggers
+    predicate: causes
     object: nutrient_sensing
     description: Ambient nutrient levels are detected by cellular sensing systems.
     evidence:
@@ -66,6 +66,7 @@ causal_graphs:
       snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
       notes: Supports nutrient concentration as the environmental driver of the adaptation
         axis.
+    predicate_id: biolink:causes
   - subject: nutrient_sensing
     predicate: controls
     object: resource_allocation
@@ -138,4 +139,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×2, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    triggers → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

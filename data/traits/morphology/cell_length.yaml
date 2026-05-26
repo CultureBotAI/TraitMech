@@ -80,13 +80,14 @@ causal_graphs:
       snippet: FtsZ ring at the future division site
       notes: Supports FtsZ-ring assembly as the proximate divisome event.
   - subject: division_site_placement
-    predicate: triggers
+    predicate: causes
     object: cytokinesis
     description: Division-site placement directs constriction and cytokinesis.
     evidence:
     - reference: DOI:10.1038/nrmicro2671
       snippet: directs cell division
       notes: Supports division-site placement as the trigger for cytokinesis.
+    predicate_id: biolink:causes
   - subject: cytokinesis
     predicate: resets
     object: cell_length_trait
@@ -112,4 +113,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    triggers → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

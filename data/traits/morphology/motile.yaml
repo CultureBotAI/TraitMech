@@ -67,13 +67,14 @@ causal_graphs:
       notes: Supports energy transduction from ion gradients into motor function.
     predicate_id: biolink:produces
   - subject: ion_motive_force
-    predicate: powers
+    predicate: enables
     object: flagellar_motor
     description: Ion motive force powers rotation of the flagellar motor.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: The Dynamic Ion Motive Force Powering
       notes: Review directly addresses ion motive force powering flagellar motors.
+    predicate_id: RO:0002327
   - subject: flagellar_motor
     predicate: enables
     object: motile_trait
@@ -143,4 +144,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:R6TBR9×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    powers → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

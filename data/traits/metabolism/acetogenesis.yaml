@@ -67,13 +67,14 @@ causal_graphs:
     description: Primary end product of acetogenesis.
   edges:
   - subject: acetogenesis_trait
-    predicate: occurs under
+    predicate: occurs in
     object: anaerobic_condition
     description: Acetogenesis is typically an anaerobic metabolism.
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: grow organisms and work with enzymes under strictly oxygen-free conditions
       notes: Review emphasizes oxygen-free handling for acetogenic enzymes and organisms.
+    predicate_id: biolink:occurs_in
   - subject: acetogenesis_trait
     predicate: has mechanistic pathway
     object: wood_ljungdahl_pathway
@@ -84,21 +85,23 @@ causal_graphs:
       snippet: Wood-Ljungdahl Pathway of CO2 Fixation
       notes: Review title and scope support pathway assignment.
   - subject: carbon_dioxide
-    predicate: input to
+    predicate: participates in
     object: wood_ljungdahl_pathway
     description: Carbon dioxide is fixed through the Wood-Ljungdahl pathway.
     evidence:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: CO2 Fixation
       notes: Supports CO2 as a pathway substrate.
+    predicate_id: biolink:participates_in
   - subject: carbon_monoxide
-    predicate: input to
+    predicate: participates in
     object: wood_ljungdahl_pathway
     description: Carbon monoxide can be converted through the acetogenic pathway.
     evidence:
     - reference: DOI:10.1196/annals.1419.015
       snippet: convert carbon dioxide and CO into acetyl-CoA
       notes: Supports CO as a substrate for acetogenic acetyl-CoA synthesis.
+    predicate_id: biolink:participates_in
   - subject: wood_ljungdahl_pathway
     predicate: produces
     object: acetyl_coa
@@ -140,4 +143,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:01001057×1, GO:0046358×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 3 causal-edge predicate label(s) to align with existing groundings:
+    input to → participates in ×2; occurs under → occurs in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:participates_in×2, biolink:occurs_in×1).
   llm_assisted: true

@@ -73,7 +73,7 @@ causal_graphs:
     description: Proposed enhanced classification beyond BSL-4.
   edges:
   - subject: pathogen_hazard_properties
-    predicate: determines
+    predicate: causes
     object: biosafety_level_trait
     description: Pathogen transmissibility, severity, and treatability jointly determine
       biosafety-level classification.
@@ -82,6 +82,7 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports pathogen virulence properties as the biological inputs for hazard-level
         classification.
+    predicate_id: biolink:causes
   - subject: biosafety_level_trait
     predicate: mandates
     object: containment_requirements
@@ -160,4 +161,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×5).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    determines → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

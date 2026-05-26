@@ -114,13 +114,14 @@ causal_graphs:
       notes: Supports donor oxidation during anoxygenic photosynthesis.
     predicate_id: METPO:2007402
   - subject: light
-    predicate: powers
+    predicate: enables
     object: anoxygenic_photosynthesis
     description: Light powers anoxygenic photosynthetic electron transport.
     evidence:
     - reference: DOI:10.3390/antiox10060829
       snippet: deriving energy from photosynthesis
       notes: Supports photosynthetic energy capture in photolithotrophic sulfur bacteria.
+    predicate_id: RO:0002327
   - subject: carbon_dioxide
     predicate: fixed during
     object: anoxygenic_photosynthesis
@@ -185,4 +186,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    powers → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

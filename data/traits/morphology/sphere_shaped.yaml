@@ -51,13 +51,14 @@ causal_graphs:
     description: Sidewall growth mode that lengthens rods.
   edges:
   - subject: ftsZ_division_ring
-    predicate: organizes
+    predicate: enables
     object: septal_peptidoglycan_synthesis
     description: The FtsZ division ring organizes septal wall synthesis.
     evidence:
     - reference: DOI:10.1038/nrmicro1205
       snippet: FtsZ collaborates with penicillin binding proteins
       notes: Supports FtsZ-PBP cooperation in division-associated shape generation.
+    predicate_id: RO:0002327
   - subject: septal_peptidoglycan_synthesis
     predicate: builds
     object: peptidoglycan_cell_wall
@@ -109,4 +110,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    organizes → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true
