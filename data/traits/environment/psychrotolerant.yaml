@@ -38,7 +38,7 @@ causal_graphs:
     grounding: PATO:0000383
   - node_id: membrane_fluidity
     label: membrane fluidity
-    node_type: BIOLOGICAL_PROCESS
+    node_type: QUALITY
     description: Physical state of the cytoplasmic membrane supporting transport and
       bioenergetics.
     grounding: METPO:1007505
@@ -151,4 +151,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:30:13Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.'
   llm_assisted: true

@@ -62,7 +62,7 @@ causal_graphs:
     grounding: GO:0022900
   - node_id: proton_motive_force
     label: proton motive force
-    node_type: BIOLOGICAL_PROCESS
+    node_type: STATE
     description: Electrochemical ion gradient generated across a coupling membrane.
     grounding: METPO:1007500
   - node_id: atp_synthase
@@ -196,4 +196,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17499×1, GO:0022900×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:30:13Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
   llm_assisted: true

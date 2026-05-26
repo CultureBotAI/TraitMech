@@ -61,7 +61,7 @@ causal_graphs:
     description: Oxidation of reduced sulfur compounds during phototrophic metabolism.
   - node_id: reducing_power
     label: reducing power
-    node_type: CHEMICAL
+    node_type: CAPACITY
     description: Reduced electron carriers used for biosynthesis.
     grounding: METPO:1007503
   - node_id: carbon_dioxide
@@ -220,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0015977×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:30:14Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: reducing power: CHEMICAL → CAPACITY ×1.'
   llm_assisted: true

@@ -440,3 +440,21 @@ enums:
         description: A molecular activity or function.
       BIOLOGICAL_PROCESS:
         description: A biological process.
+      STATE:
+        description: >-
+          A bioenergetic or molecular state of the cell (e.g. proton
+          motive force, redox state of the quinone pool) that
+          mediates a trait mechanism. Distinct from a process: the
+          state is the gradient / steady-value, not its establishment.
+      QUALITY:
+        description: >-
+          A quality or measurable attribute of a cellular component
+          (e.g. membrane fluidity, GC content, motility speed) —
+          a PATO-style axis attached to a microbial entity that
+          modulates the trait mechanism.
+      CAPACITY:
+        description: >-
+          A metabolic or functional capacity — an electron-donating
+          pool, ATP charge, or other reservoir-of-X notion that is
+          neither a single chemical species nor a process. Examples
+          include reducing power (NADH/NADPH pool) and energy charge.

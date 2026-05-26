@@ -73,20 +73,30 @@ them under a richer parent (e.g. *bioenergetic state*,
 | `terminal electron acceptor` | individual CHEBIs (O₂, NO₃⁻, SO₄²⁻) | role-of class is missing upstream; corpus mixes CHEMICAL + MOLECULAR_FUNCTION node-typings of the same concept |
 | `membrane fluidity` | PATO:0001985 (viscosity) | viscosity is closely related but is a generic physical quality; membrane-specific lipid-mobility sense has no exact upstream term |
 
-### Node-typing notes
+### Node-typing notes (resolved post-merge)
 
-Four of these are *mis-typed* in the corpus (a separate cleanup):
-- `proton motive force` and `membrane fluidity` appear under
-  `node_type: BIOLOGICAL_PROCESS` but are semantically a
-  bioenergetic state and a membrane quality respectively.
-- `microbial biomass` and `reducing power` are typed as
-  `BIOLOGICAL_PROCESS` / `CHEMICAL` but are aggregate matter and
-  capacity respectively.
+When v3 first landed, four of these classes were *mis-typed* in
+the corpus because the `CausalNodeTypeEnum` lacked appropriate
+values:
+- `proton motive force` and `membrane fluidity` appeared under
+  `node_type: BIOLOGICAL_PROCESS` (semantically a bioenergetic
+  state and a membrane quality).
+- `microbial biomass` and `reducing power` were typed as
+  `BIOLOGICAL_PROCESS` / `CHEMICAL` (aggregate matter and capacity).
 
-Lifting them to METPO with proper classification gives downstream
-re-typing migrations a target. The mapping TSV in this PR grounds
-them via the corpus's current (mis-)typing so the corpus-side fix
-can land separately.
+All four are now correctly typed:
+- `biomass` → `CHEMICAL` (PR #72, the closest existing fit at
+  the time).
+- `proton motive force` → `STATE` (PR_D, after the enum was
+  extended with `STATE`/`QUALITY`/`CAPACITY`).
+- `membrane fluidity` → `QUALITY` (PR_D).
+- `reducing power` → `CAPACITY` (PR_D).
+
+The v1 cohort's `CausalNodeTypeEnum` lift was extended in-place
+(Path B per the metpo-proposal skill) to mint three new leaf
+classes — `METPO:1007421` (state node), `METPO:1007422` (quality
+node), `METPO:1007423` (capacity node) — keeping the subset tag
+`metpo_traitmech_2026_05`.
 
 ## Hierarchy decisions
 
