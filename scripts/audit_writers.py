@@ -88,7 +88,31 @@ def looks_like_yaml_writer(text: str) -> bool:
     return False
 
 
-_LIBRARY_HELPER_MARKER = "audit-writers: library-helper"
+# Library helpers opt out of the CLI-writer audit by declaring
+# `audit-writers: library-helper` as its own line (modulo leading
+# whitespace from docstring indentation). The marker must:
+#   1. Live under src/traitmech/ — CLI writers under scripts/ can't
+#      silently suppress themselves, even if they include the
+#      phrase in a docstring.
+#   2. Appear as a standalone line (not embedded in narrative text)
+#      so an incidental mention in prose can't trip it.
+_LIBRARY_HELPER_MARKER_RE = re.compile(
+    r"^\s*audit-writers:\s*library-helper\s*$",
+    re.MULTILINE,
+)
+_LIBRARY_HELPER_PATH_SUBSTR = "src/traitmech/"
+
+
+def _is_exempt_library_helper(path: Path, text: str) -> bool:
+    """A YAML-writing module can opt out of the CLI-writer audit iff
+    (a) its posix-style path contains ``src/traitmech/`` — CLI writers
+    under ``scripts/`` can't silently suppress themselves — and
+    (b) its source contains the literal-line marker
+    ``audit-writers: library-helper`` (allowing leading whitespace
+    for docstring indentation, but not arbitrary surrounding text)."""
+    if _LIBRARY_HELPER_PATH_SUBSTR not in path.as_posix():
+        return False
+    return bool(_LIBRARY_HELPER_MARKER_RE.search(text))
 
 
 def audit(path: Path, justfile_text: str) -> dict | None:
@@ -103,11 +127,7 @@ def audit(path: Path, justfile_text: str) -> dict | None:
         return None
     if not looks_like_yaml_writer(text):
         return None
-    # Library helpers (e.g. src/traitmech/validation/write_validated.py)
-    # ARE yaml writers but their curation-history / safeguard
-    # responsibilities live in callers. They opt out of the
-    # CLI-writer audit via an explicit marker comment.
-    if _LIBRARY_HELPER_MARKER in text:
+    if _is_exempt_library_helper(path, text):
         return None
     return {
         "path": str(path),

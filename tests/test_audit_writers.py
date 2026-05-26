@@ -141,29 +141,37 @@ def test_audit_suppresses_self_match():
 # ---------------------------------------------------------------- library-helper exemption
 
 
+_LIB_HELPER_BODY = (
+    '"""I am a library helper.\n\n'
+    "audit-writers: library-helper\n"
+    '"""\n'
+    "import yaml\n"
+    "def write(doc, path):\n"
+    "    path.write_text(yaml.safe_dump(doc))\n"
+)
+
+
 def test_audit_skips_library_helper_marker(tmp_path):
-    """A YAML-writing module that opts out via the `audit-writers:
-    library-helper` marker is excluded — its curation_history and
-    safeguard responsibilities belong to callers, not the helper."""
-    p = tmp_path / "lib_helper.py"
-    p.write_text(
-        '"""I am a library helper.\n\n'
-        "audit-writers: library-helper\n"
-        '"""\n'
-        "import yaml\n"
-        "def write(doc, path):\n"
-        "    path.write_text(yaml.safe_dump(doc))\n"
-    )
+    """A YAML-writing module under src/traitmech/ that opts out via
+    the standalone-line `audit-writers: library-helper` marker is
+    excluded — its curation_history and safeguard responsibilities
+    belong to callers, not the helper."""
+    sub = tmp_path / "src" / "traitmech" / "validation"
+    sub.mkdir(parents=True)
+    p = sub / "lib_helper.py"
+    p.write_text(_LIB_HELPER_BODY)
     assert audit(p, _JUSTFILE) is None, (
-        "modules with the library-helper marker must be excluded from "
-        "the CLI-writer audit"
+        "src/traitmech/ modules with the library-helper marker must be "
+        "excluded from the CLI-writer audit"
     )
 
 
 def test_audit_does_not_skip_without_marker(tmp_path):
     """Sanity-check the exemption is opt-in: a writer without the marker
     is still audited normally."""
-    p = tmp_path / "no_marker.py"
+    sub = tmp_path / "src" / "traitmech" / "validation"
+    sub.mkdir(parents=True)
+    p = sub / "no_marker.py"
     p.write_text(
         "import yaml\n"
         "def write(doc, path):\n"
@@ -172,6 +180,44 @@ def test_audit_does_not_skip_without_marker(tmp_path):
     row = audit(p, _JUSTFILE)
     assert row is not None, "writer without marker must still be audited"
     assert row["writes_yaml"] == "yes"
+
+
+def test_audit_does_not_skip_cli_writer_with_marker(tmp_path):
+    """A CLI writer under scripts/ that mentions the marker phrase
+    (e.g. in a docstring) must NOT be exempted — only files under
+    src/traitmech/ can opt out, so scripts can't silently suppress
+    themselves."""
+    sub = tmp_path / "scripts"
+    sub.mkdir()
+    p = sub / "rogue_cli_writer.py"
+    p.write_text(_LIB_HELPER_BODY)  # same body, just under scripts/
+    row = audit(p, _JUSTFILE)
+    assert row is not None, (
+        "scripts/ files must NOT be able to opt out of the audit via "
+        "the library-helper marker"
+    )
+    assert row["writes_yaml"] == "yes"
+
+
+def test_audit_does_not_skip_marker_in_narrative_text(tmp_path):
+    """A library file that mentions the marker phrase inside a
+    sentence/paragraph (not on its own line) is NOT exempted — only
+    the standalone-line directive opts out."""
+    sub = tmp_path / "src" / "traitmech"
+    sub.mkdir(parents=True)
+    p = sub / "narrative.py"
+    p.write_text(
+        '"""A module whose docstring discusses the audit-writers: '
+        'library-helper convention as PROSE without using it as a '
+        'directive."""\n'
+        "import yaml\n"
+        "def write(doc, path):\n"
+        "    path.write_text(yaml.safe_dump(doc))\n"
+    )
+    row = audit(p, _JUSTFILE)
+    assert row is not None, (
+        "marker inside running prose must not exempt the file"
+    )
 
 
 def test_audit_excludes_write_validated_helper():
