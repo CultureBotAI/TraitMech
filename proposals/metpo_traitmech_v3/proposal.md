@@ -87,10 +87,10 @@ values:
 All four are now correctly typed:
 - `biomass` → `CHEMICAL` (PR #72, the closest existing fit at
   the time).
-- `proton motive force` → `STATE` (PR_D, after the enum was
+- `proton motive force` → `STATE` (after the enum was
   extended with `STATE`/`QUALITY`/`CAPACITY`).
-- `membrane fluidity` → `QUALITY` (PR_D).
-- `reducing power` → `CAPACITY` (PR_D).
+- `membrane fluidity` → `QUALITY` (same enum-extension batch).
+- `reducing power` → `CAPACITY` (same enum-extension batch).
 
 The v1 cohort's `CausalNodeTypeEnum` lift was extended in-place
 (Path B per the metpo-proposal skill) to mint three new leaf

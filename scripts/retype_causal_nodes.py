@@ -46,7 +46,7 @@ CURATION_ACTION = "RETYPE_CAUSAL_NODES"
 #
 # Scope rule: only re-type when an existing CausalNodeTypeEnum value
 # is a clean semantic fit. The first entry (biomass) landed in
-# PR #72; the next three landed in PR_D after the enum was extended
+# PR #72; the next three landed after the enum was extended
 # with STATE / QUALITY / CAPACITY values.
 RETYPES: dict[tuple[str, str], str] = {
     # Microbial biomass is aggregate biochemistry — best existing fit
@@ -54,22 +54,22 @@ RETYPES: dict[tuple[str, str], str] = {
     ("biomass", "BIOLOGICAL_PROCESS"): "CHEMICAL",
 
     # Proton motive force is a bioenergetic state (electrochemical
-    # gradient), not a process. STATE was added to the enum in PR_D.
+    # gradient), not a process. STATE was added to the enum in the same batch.
     ("proton motive force", "BIOLOGICAL_PROCESS"): "STATE",
 
     # Membrane fluidity is a PATO-style quality of the membrane, not
-    # a process. QUALITY was added to the enum in PR_D.
+    # a process. QUALITY was added to the enum in the same batch.
     ("membrane fluidity", "BIOLOGICAL_PROCESS"): "QUALITY",
 
     # Reducing power is a metabolic capacity (electron-donating
     # pool), not a single chemical species. CAPACITY was added to
-    # the enum in PR_D.
+    # the enum in the same batch.
     ("reducing power", "CHEMICAL"): "CAPACITY",
 }
 
 # All mis-typed labels surfaced in the v3 proposal are now resolved
-# (PR #72 for biomass; PR_D for the other three). New mis-typings
-# discovered post-PR_D should be appended above with a comment
+# (PR #72 for biomass; the STATE/QUALITY/CAPACITY batch for the other three). New mis-typings
+# discovered after this batch should be appended above with a comment
 # pointing at where the new enum value (if needed) was added.
 DEFERRED: list[tuple[str, str, str]] = []
 
