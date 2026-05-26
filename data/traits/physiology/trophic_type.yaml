@@ -80,7 +80,7 @@ causal_graphs:
     description: Chemical-energy-driven trophic phenotype.
   edges:
   - subject: carbon_source_use
-    predicate: determines
+    predicate: causes
     object: trophic_type_trait
     description: Carbon-source utilization defines the auto/heterotrophy axis of the
       trophic classification.
@@ -88,8 +88,9 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: carbon source
       notes: Supports carbon-source utilization as a primary trophic-type axis.
+    predicate_id: biolink:causes
   - subject: energy_source_use
-    predicate: determines
+    predicate: causes
     object: trophic_type_trait
     description: Energy-source utilization defines the photo/chemotrophy axis of the
       trophic classification.
@@ -97,8 +98,9 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: energy source
       notes: Supports energy-source utilization as a primary trophic-type axis.
+    predicate_id: biolink:causes
   - subject: electron_donor_use
-    predicate: determines
+    predicate: causes
     object: trophic_type_trait
     description: Electron-donor utilization defines the litho/organotrophy axis of
       the trophic classification.
@@ -106,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.61.080706.093130
       snippet: electron donor
       notes: Supports electron-donor utilization as a primary trophic-type axis.
+    predicate_id: biolink:causes
   - subject: encoded_metabolic_pathways
     predicate: realizes
     object: trophic_type_trait
@@ -170,4 +173,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×4).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 3 causal-edge predicate label(s) to align with existing groundings:
+    determines → causes ×3.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×3).
   llm_assisted: true

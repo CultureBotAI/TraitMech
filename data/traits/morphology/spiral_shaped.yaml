@@ -54,7 +54,7 @@ causal_graphs:
       movement.
   edges:
   - subject: curvature_scaffold
-    predicate: influences
+    predicate: regulates
     object: peptidoglycan_remodeling
     description: Shape scaffolds or complexes bias wall remodeling to create curved
       and spiral forms.
@@ -62,6 +62,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.1002565
       snippet: cytoplasmic scaffolding proteins ... participate in helical morphogenesis
       notes: Supports scaffold involvement in helical or spiral morphogenesis.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_remodeling
     predicate: enables
     object: helical_curvature
@@ -116,4 +117,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:associated_with×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    influences → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

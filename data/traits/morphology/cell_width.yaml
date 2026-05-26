@@ -20,9 +20,9 @@ evidence:
 causal_graphs:
 - graph_id: cell_width_mreb_lateral_wall
   title: Cell-width control by MreB-directed lateral cell-wall assembly
-  description: DOI-backed graph linking MreB cytoskeletal organization,
-    Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to
-    the observed cell-width phenotype.
+  description: DOI-backed graph linking MreB cytoskeletal organization, Rod-complex
+    peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width
+    phenotype.
   nodes:
   - node_id: cell_width_trait
     label: cell width
@@ -48,7 +48,7 @@ causal_graphs:
     description: Internal hydrostatic pressure pushing against the cell wall.
   edges:
   - subject: mreb_cytoskeleton
-    predicate: organizes
+    predicate: enables
     object: rod_complex_pg
     description: MreB filaments organize Rod-complex peptidoglycan synthesis along
       the cylinder.
@@ -56,6 +56,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports MreB as the organizer of lateral PG synthesis.
+    predicate_id: RO:0002327
   - subject: rod_complex_pg
     predicate: builds
     object: peptidoglycan_cell_wall
@@ -66,13 +67,14 @@ causal_graphs:
       snippet: rod-shape is maintained
       notes: Supports lateral PG assembly as the wall-building activity.
   - subject: peptidoglycan_cell_wall
-    predicate: constrains
+    predicate: regulates
     object: cell_width_trait
     description: The peptidoglycan sacculus constrains cell width against turgor.
     evidence:
     - reference: DOI:10.1038/nrmicro3088
       snippet: rod-shape is maintained
       notes: Supports the cell wall as the structural constraint on width.
+    predicate_id: RO:0002211
   - subject: turgor_pressure
     predicate: balances
     object: peptidoglycan_cell_wall
@@ -91,6 +93,18 @@ curation_history:
 - timestamp: '2026-05-11T22:30:00-07:00'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added DOI-backed causal graph linking MreB cytoskeleton, Rod-complex
-    peptidoglycan synthesis, cell wall, and turgor balance to cell width.
+  changes: Added DOI-backed causal graph linking MreB cytoskeleton, Rod-complex peptidoglycan
+    synthesis, cell wall, and turgor balance to cell width.
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    organizes → enables ×1; constrains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1).
   llm_assisted: true

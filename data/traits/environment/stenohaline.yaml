@@ -81,7 +81,7 @@ causal_graphs:
       notes: Supports water flux during osmotic imbalance.
     predicate_id: RO:0002211
   - subject: salinity_adaptation_genes
-    predicate: constrains
+    predicate: regulates
     object: stenohaline_trait
     description: Salinity adaptation gene repertoires help determine salinity niche
       breadth; limited repertoires can correspond to narrow tolerance.
@@ -90,6 +90,7 @@ causal_graphs:
       snippet: genes associated with microbial salinity adaptation
       notes: The constraint direction is inferred from the study's salinity adaptation
         analysis; kept broad because organism-specific gene sets vary.
+    predicate_id: RO:0002211
   - subject: salinity_shift
     predicate: exceeds tolerance of
     object: stenohaline_trait
@@ -136,4 +137,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    constrains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

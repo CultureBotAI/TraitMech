@@ -59,7 +59,7 @@ causal_graphs:
     description: Rate of population growth under a given temperature regime.
   edges:
   - subject: environmental_temperature
-    predicate: influences
+    predicate: regulates
     object: growth_rate
     description: Microbial growth rate varies with growth temperature.
     evidence:
@@ -67,6 +67,7 @@ causal_graphs:
       snippet: growth rate vs temperature
       notes: Study analyzes temperature dependence of microbial growth rates across
         psychrotrophs, mesophiles, and thermophiles.
+    predicate_id: RO:0002211
   - subject: low_temperature
     predicate: decreases
     object: membrane_fluidity
@@ -95,7 +96,7 @@ causal_graphs:
       notes: Review links increased membrane permeability to upper temperature growth
         limits.
   - subject: membrane_fluidity
-    predicate: constrains
+    predicate: regulates
     object: temperature_preference_trait
     description: Temperature preference reflects the range in which membrane function
       remains compatible with growth.
@@ -104,8 +105,9 @@ causal_graphs:
       snippet: optimizes the performance of cellular physiological processes
       notes: Review supports membrane fluidity adaptation as a temperature-sensing
         and response mechanism.
+    predicate_id: RO:0002211
   - subject: protein_stability
-    predicate: constrains
+    predicate: regulates
     object: temperature_preference_trait
     description: Growth at preferred temperatures requires proteins to remain active
       and stable.
@@ -113,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.65.1.1-43.2001
       snippet: molecular mechanisms involved in protein thermostabilization
       notes: Supports protein stability as a determinant of high-temperature growth.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.856449+00:00'
   curator: seed_from_metpo
@@ -148,4 +151,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 3 causal-edge predicate label(s) to align with existing groundings:
+    constrains → regulates ×2; influences → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×3).
   llm_assisted: true

@@ -98,13 +98,14 @@ causal_graphs:
       snippet: live at the limits of what is thermodynamically possible
       notes: Supports the thermodynamic constraint that product removal relieves.
   - subject: molecular_hydrogen
-    predicate: input to
+    predicate: participates in
     object: methanogenesis
     description: Hydrogen can feed methanogenesis in syntrophic communities.
     evidence:
     - reference: DOI:10.1038/nrmicro2166
       snippet: syntrophic methanogenic communities
       notes: Supports hydrogen-linked electron flow into methanogenic partners.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936190+00:00'
   curator: seed_from_metpo
@@ -122,4 +123,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:consumes×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    input to → participates in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:participates_in×1).
   llm_assisted: true

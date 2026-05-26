@@ -63,7 +63,7 @@ causal_graphs:
     description: Uptake systems importing osmoprotectants from the environment.
   edges:
   - subject: environmental_salinity
-    predicate: influences
+    predicate: regulates
     object: halophily_preference_trait
     description: Salt concentration determines whether growth requires, tolerates,
       or avoids salinity.
@@ -71,6 +71,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy009
       snippet: life at high salt concentrations
       notes: Review frames halophily as microbial life under high salt concentration.
+    predicate_id: RO:0002211
   - subject: environmental_salinity
     predicate: causes
     object: osmotic_stress
@@ -166,4 +167,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006970×1, CHEBI:65015×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    influences → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:49Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

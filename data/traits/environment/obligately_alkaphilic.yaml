@@ -103,7 +103,7 @@ causal_graphs:
       snippet: achieve net H+ accumulation
       notes: Supports proton accumulation by antiporters in alkaliphiles.
   - subject: proton_coupled_atp_synthase
-    predicate: constrains
+    predicate: regulates
     object: obligately_alkaphilic_trait
     description: Proton-coupled ATP synthesis at very high pH creates a bioenergetic
       constraint requiring alkaliphile-specific adaptations.
@@ -111,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2010.02.028
       snippet: robust H+-coupled ATP synthesis at external pH values > 10
       notes: Supports the proton-coupled ATP synthesis challenge in alkaliphiles.
+    predicate_id: RO:0002211
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: obligately_alkaphilic_trait
@@ -163,4 +164,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001429×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    constrains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

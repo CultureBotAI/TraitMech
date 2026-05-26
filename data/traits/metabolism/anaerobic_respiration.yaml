@@ -55,13 +55,14 @@ causal_graphs:
     description: Bioenergetic output of respiratory electron transport.
   edges:
   - subject: denitrification
-    predicate: occurs under
+    predicate: occurs in
     object: low_oxygen_condition
     description: Denitrification can occur under anaerobic and microaerophilic conditions.
     evidence:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       snippet: under anaerobic, microaerophilic, and occasionally aerobic conditions
       notes: Supports low-oxygen context for denitrification.
+    predicate_id: biolink:occurs_in
   - subject: nitrogen_oxides
     predicate: acts as
     object: terminal_electron_acceptor
@@ -111,4 +112,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007504×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    occurs under → occurs in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:occurs_in×1).
   llm_assisted: true

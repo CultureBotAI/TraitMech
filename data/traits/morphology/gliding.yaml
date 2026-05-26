@@ -85,13 +85,14 @@ causal_graphs:
       notes: Supports linkage between type IX secretion and gliding machinery.
     predicate_id: RO:0002326
   - subject: proton_motive_force
-    predicate: powers
+    predicate: enables
     object: gliding_motility_machinery
     description: Proton motive force can power gliding motility motors.
     evidence:
     - reference: DOI:10.1038/s41579-021-00626-4
       snippet: proton-driven motor that powers type 9 secretion and gliding motility
       notes: Supports proton-driven gliding machinery in reviewed systems.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907644+00:00'
   curator: seed_from_metpo
@@ -121,4 +122,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    powers → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

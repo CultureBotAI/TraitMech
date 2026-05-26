@@ -58,7 +58,7 @@ causal_graphs:
       notes: Supports crescentin as an inner-curvature-localized shape protein.
     predicate_id: biolink:located_in
   - subject: crescentin
-    predicate: constrains
+    predicate: regulates
     object: peptidoglycan_growth_bias
     description: Crescentin mechanically constrains cell-wall growth to create differential
       curvature.
@@ -66,6 +66,7 @@ causal_graphs:
     - reference: DOI:10.1038/emboj.2009.61
       snippet: mechanical control of cell growth
       notes: Supports a mechanical growth-control role for crescentin.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_growth_bias
     predicate: generates
     object: crescent_cell_curvature
@@ -113,4 +114,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A2N9AY16×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    constrains → regulates ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

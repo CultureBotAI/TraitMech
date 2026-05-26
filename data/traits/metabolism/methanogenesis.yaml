@@ -72,7 +72,7 @@ causal_graphs:
     description: Primary reduced carbon end product.
   edges:
   - subject: methanogenesis_trait
-    predicate: occurs under
+    predicate: occurs in
     object: anoxic_habitat
     description: Hydrogenotrophic methanogenesis is associated with anoxic habitats.
     evidence:
@@ -80,6 +80,7 @@ causal_graphs:
       snippet: terminal step of microbial biomass degradation in anoxic habitats
       notes: Review places hydrogenotrophic methanogenesis in anoxic microbial biomass
         degradation.
+    predicate_id: biolink:occurs_in
   - subject: carbon_dioxide
     predicate: reduced with electron donor
     object: molecular_hydrogen
@@ -137,4 +138,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A099T5Q9×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    occurs under → occurs in ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:occurs_in×1).
   llm_assisted: true

@@ -46,11 +46,27 @@ CURATION_ACTION = "RENAME_PREDICATE_LABELS"
 # Rename map: old label → (new label, target CURIE the new label grounds to).
 # The CURIE column is informational — the actual grounding happens via the
 # separate ground_causal_predicates.py pass after this script runs.
+#
+# First 4 rows landed in PR #67 (predicate residual v3). The next 10
+# rows landed in the predicate residual v5 batch — each chosen so its
+# corpus usage maps cleanly to an existing grounded predicate.
 RENAMES: dict[str, tuple[str, str]] = {
+    # predicate residual v3 (PR #67) cohort
     "supports": ("enables", "RO:0002327"),
     "drives": ("regulates", "RO:0002211"),
     "maintains": ("regulates", "RO:0002211"),
     "shapes": ("causes", "biolink:causes"),
+    # predicate residual v5 cohort
+    "influences": ("regulates", "RO:0002211"),       # env-axis → trait-pref edges
+    "powers": ("enables", "RO:0002327"),             # ATP/PMF → process edges
+    "input to": ("participates in", "biolink:participates_in"),  # substrate → pathway
+    "determines": ("causes", "biolink:causes"),      # X-utilization → trophic-type
+    "sets": ("defines", "METPO:2007500"),            # tolerance → bounded-window
+    "constrains": ("regulates", "RO:0002211"),       # X → Y where X bounds Y
+    "organizes": ("enables", "RO:0002327"),          # cytoskeleton → process edges
+    "occurs under": ("occurs in", "biolink:occurs_in"),          # process → condition
+    "triggers": ("causes", "biolink:causes"),        # signal → response
+    "requires": ("depends on", "RO:0002502"),        # process → cofactor/substrate
 }
 
 

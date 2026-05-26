@@ -68,7 +68,7 @@ causal_graphs:
       notes: Supports DivIVA as a polarity determinant in Streptomyces.
     predicate_id: biolink:located_in
   - subject: scy
-    predicate: organizes
+    predicate: enables
     object: apical_polarisome
     description: Scy is a component of the tip-organizing center controlling polar
       growth.
@@ -76,6 +76,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1002423
       snippet: tip organizing center
       notes: Supports Scy/DivIVA assemblies in Streptomyces polarized growth.
+    predicate_id: RO:0002327
   - subject: apical_polarisome
     predicate: recruits
     object: apical_peptidoglycan_synthesis
@@ -144,4 +145,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:Q1IYG2×1, UniProtKB:A0A191V3Q4×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    organizes → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

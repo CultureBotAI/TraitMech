@@ -72,7 +72,7 @@ causal_graphs:
       notes: Supports ATP and reducing power as canonical outputs of catabolism.
     predicate_id: METPO:2000202
   - subject: atp_and_reducing_power
-    predicate: powers
+    predicate: enables
     object: biosynthesis
     description: ATP and reducing power fuel biosynthetic reactions.
     evidence:
@@ -80,6 +80,7 @@ causal_graphs:
       snippet: ATP synthesis
       notes: Supports ATP-driven biosynthesis as the central coupling of energy to
         anabolism.
+    predicate_id: RO:0002327
   - subject: biosynthesis
     predicate: enables
     object: cellular_growth
@@ -123,6 +124,18 @@ curation_history:
     supports → enables ×1.'
   llm_assisted: true
 - timestamp: '2026-05-24T04:13:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:47Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    powers → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
   curator: claude
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv

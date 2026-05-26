@@ -90,7 +90,7 @@ causal_graphs:
       snippet: alcohol-acetone decolorization
       notes: Supports decolorization as a chemical step differentiating Gram reactions.
   - subject: outer_membrane
-    predicate: influences
+    predicate: regulates
     object: gram_stain_trait
     description: The Gram-negative outer membrane contributes to dye loss and counterstain
       appearance.
@@ -98,8 +98,9 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-019-0201-x
       snippet: defining feature of the Gram-negative cell envelope
       notes: Supports the outer membrane as a defining Gram-negative envelope feature.
+    predicate_id: RO:0002211
   - subject: peptidoglycan_cell_wall
-    predicate: determines
+    predicate: causes
     object: gram_stain_trait
     description: Peptidoglycan thickness and envelope architecture determine Gram
       stain outcome.
@@ -107,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.3109/10520299609117151
       snippet: mechanism of the Gram stain
       notes: Supports cell-wall mediated Gram reaction.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901879+00:00'
   curator: seed_from_metpo
@@ -125,4 +127,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0019867×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 2 causal-edge predicate label(s) to align with existing groundings:
+    influences → regulates ×1; determines → causes ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, biolink:causes×1).
   llm_assisted: true

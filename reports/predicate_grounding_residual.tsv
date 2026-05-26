@@ -1,19 +1,9 @@
 predicate_label	edge_count	example_files
-influences	7	data/traits/environment/halophily_preference.yaml|data/traits/environment/ph_growth_preference.yaml|data/traits/environment/temperature_optimum.yaml
 engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
-determines	6	data/traits/ecology/biosafety_level.yaml|data/traits/morphology/cell_shape.yaml|data/traits/morphology/gram_stain.yaml
-sets	6	data/traits/environment/nacl_range.yaml|data/traits/environment/ph_range.yaml|data/traits/environment/temperature_range.yaml
-constrains	6	data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/stenohaline.yaml|data/traits/environment/temperature_preference.yaml
-input to	6	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/homoacetogenesis.yaml|data/traits/metabolism/syntrophy.yaml
-powers	6	data/traits/metabolism/metabolism.yaml|data/traits/morphology/flagellated.yaml|data/traits/morphology/gliding.yaml
-organizes	6	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/cell_width.yaml|data/traits/morphology/cell_width_small.yaml
 imports	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml
-occurs under	5	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/metabolism/disproportionation.yaml
 incorporated into	5	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 drives production of	5	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/chemotrophic.yaml
-requires	4	data/traits/environment/aerobic.yaml|data/traits/environment/obligately_aerobic.yaml|data/traits/physiology/carboxydotrophic.yaml
 decreases	4	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml|data/traits/environment/psychrotolerant.yaml
-triggers	4	data/traits/environment/nacl_optimum.yaml|data/traits/environment/thermotolerant.yaml|data/traits/morphology/cell_length.yaml
 prevents	4	data/traits/morphology/non_motile.yaml|data/traits/morphology/non_spore_forming.yaml
 initiates	4	data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml
 can proceed through	4	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml

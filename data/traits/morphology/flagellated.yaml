@@ -78,13 +78,14 @@ causal_graphs:
       snippet: reversible rotary motor
       notes: Supports basal body motor rotation of flagella.
   - subject: ion_motive_force
-    predicate: powers
+    predicate: enables
     object: stator_complex
     description: Ion flux through stator complexes powers torque generation.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.659464
       snippet: relationship between the IMF and the functioning
       notes: Supports ion motive force coupling to flagellar motor function.
+    predicate_id: RO:0002327
   - subject: chemotaxis_signaling
     predicate: regulates
     object: flagellated_trait
@@ -112,4 +113,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    powers → enables ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:50Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

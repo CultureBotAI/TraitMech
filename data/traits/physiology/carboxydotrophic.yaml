@@ -110,13 +110,14 @@ causal_graphs:
       notes: Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.
     predicate_id: METPO:2007402
   - subject: respiratory_chain
-    predicate: requires
+    predicate: depends on
     object: co_insensitive_terminal_oxidase
     description: CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.
     evidence:
     - reference: DOI:10.1111/j.1574-6968.1986.tb01858.x
       snippet: CO-insensitive terminal oxidase
       notes: Supports terminal oxidase adaptation for CO metabolism.
+    predicate_id: RO:0002502
   - subject: respiratory_chain
     predicate: generates
     object: proton_motive_force
@@ -187,4 +188,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:48Z'
+  curator: claude
+  action: RENAME_PREDICATE_LABELS
+  changes: 'Renamed 1 causal-edge predicate label(s) to align with existing groundings:
+    requires → depends on ×1.'
+  llm_assisted: true
+- timestamp: '2026-05-26T05:00:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002502×1).
   llm_assisted: true
