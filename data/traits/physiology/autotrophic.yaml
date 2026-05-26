@@ -71,6 +71,7 @@ causal_graphs:
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
+    grounding: UniProtKB:A0A075WF79
   - node_id: precursor_metabolites
     label: precursor metabolites
     node_type: CHEMICAL
@@ -228,4 +229,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0015977×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:27:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A075WF79×1).
   llm_assisted: true

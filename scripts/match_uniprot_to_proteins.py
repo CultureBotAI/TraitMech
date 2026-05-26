@@ -152,6 +152,9 @@ def stream_uniprot_matches(
     return matches
 
 
+_PAREN_RE = re.compile(r"\(([^()]*)\)")
+
+
 def pick_representative(label: str, candidates: list[tuple[str, str]]) -> tuple[str, str] | None:
     """Pick a single representative UniProt entry for a label.
 
@@ -160,6 +163,16 @@ def pick_representative(label: str, candidates: list[tuple[str, str]]) -> tuple[
         whitespace-separated token — prefer the SHORTEST such name
         (fewer modifier words like "chaperone", "maturation protein",
         "assembly factor"), with alphabetic CURIE as tiebreaker.
+    Tier 3 (paren-content): any parenthesized alt-name on the
+        UniProt entry equals the label exactly, OR ends with
+        " <label>" as a suffix token. This catches the common
+        UniProt convention of putting the family/short name in
+        parens (e.g. "Ribulose bisphosphate carboxylase large
+        chain (RuBisCO large subunit)" for label "rubisco";
+        "Crescentin (CreS)" already worked via tier 1 because
+        the cleaner strips the trailing paren). Prefer the
+        SHORTEST CANDIDATE NAME among tier-3 hits (proxy for
+        canonical form) with alphabetic CURIE as tiebreaker.
     Otherwise: skip (return None) — too ambiguous to ground cleanly.
     """
     if not candidates:
@@ -169,12 +182,15 @@ def pick_representative(label: str, candidates: list[tuple[str, str]]) -> tuple[
     def clean(name: str) -> str:
         return re.sub(r"\s*\([^)]*\)\s*$", "", name).strip()
 
-    # Tier 1 — exact match.
+    def paren_chunks(name: str) -> list[str]:
+        return [m.group(1).strip().lower() for m in _PAREN_RE.finditer(name)]
+
+    # Tier 1 — exact match (cleaned name == label).
     exact = [c for c in candidates if clean(c[1]).lower() == label_l]
     if exact:
         return sorted(exact, key=lambda x: x[0])[0]
 
-    # Tier 2 — name ends with " <label>" (last whitespace-token).
+    # Tier 2 — cleaned name ends with " <label>" (last whitespace-token).
     suffix_hits = [
         c for c in candidates
         if clean(c[1]).lower().endswith(" " + label_l)
@@ -182,6 +198,19 @@ def pick_representative(label: str, candidates: list[tuple[str, str]]) -> tuple[
     if suffix_hits:
         suffix_hits.sort(key=lambda x: (len(clean(x[1])), x[0]))
         return suffix_hits[0]
+
+    # Tier 3 — any parenthesized alt-name equals the label, or ends
+    # with " <label>" as the final token. Handles the UniProt
+    # convention of putting family / short names in parens.
+    paren_hits: list[tuple[str, str]] = []
+    for c in candidates:
+        for chunk in paren_chunks(c[1]):
+            if chunk == label_l or chunk.endswith(" " + label_l):
+                paren_hits.append(c)
+                break
+    if paren_hits:
+        paren_hits.sort(key=lambda x: (len(x[1]), x[0]))
+        return paren_hits[0]
 
     # Otherwise — too ambiguous.
     return None

@@ -87,3 +87,4 @@ electron transport system	PATHWAY	GO:0022900	electron transport chain	GO	high	co
 co2-fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	GO carbon-fixation process subsumes the various CO2-fixation pathway labels
 autotrophic co2 fixation	PATHWAY	GO:0015977	carbon fixation	GO	high	autotrophic-context paraphrase of carbon fixation
 co2 fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	corpus typo variant of co2-fixation pathway (hyphen dropped)
+rubisco	GENE_OR_PROTEIN	UniProtKB:A0A075WF79	Ribulose bisphosphate carboxylase (RuBisCO)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
