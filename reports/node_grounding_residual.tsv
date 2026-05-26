@@ -13,7 +13,6 @@ planar envelope growth	BIOLOGICAL_PROCESS	3	data/traits/morphology/disc_shaped.y
 ion motive force	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 chemotaxis signaling	BIOLOGICAL_PROCESS	3	data/traits/morphology/flagellated.yaml|data/traits/morphology/motile.yaml|data/traits/morphology/motility.yaml
 crystal violet-iodine complex	CHEMICAL	3	data/traits/morphology/gram_negative.yaml|data/traits/morphology/gram_positive.yaml|data/traits/morphology/gram_stain.yaml
-rubisco	GENE_OR_PROTEIN	3	data/traits/physiology/autotrophic.yaml|data/traits/physiology/chemoautotrophic.yaml|data/traits/physiology/photoautotrophic.yaml
 organic molecule	CHEMICAL	3	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml|data/traits/physiology/heterotrophic.yaml
 photosynthetic reaction center	GENE_OR_PROTEIN	3	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
 low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml

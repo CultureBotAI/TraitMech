@@ -1,28 +1,17 @@
 label	match_count	representative_curie	representative_name	example_other_curies
-mreb	500	UniProtKB:A0A1B1UYY2	MreB	UniProtKB:A0A061C7A1|UniProtKB:A0A0A2HCJ7|UniProtKB:A0A0D0GZ15|UniProtKB:A0A150MAM4|UniProtKB:A0A150WR44
 crt enzymes	0			
-na+/h+ antiporter	500	UniProtKB:A0A068T423	Na+/H+ antiporter	UniProtKB:A0A0B5D8P4|UniProtKB:A0A0C4YBE9|UniProtKB:A0A0D8IB81|UniProtKB:A0A165Z1Z5|UniProtKB:A0A174RVN8
-ftsz	500	UniProtKB:C0LUM8	FtsZ	UniProtKB:A0A069JFF4|UniProtKB:A0A072SUF3|UniProtKB:A0A098B578|UniProtKB:A0A179BY91|UniProtKB:A0A291JM22
-diviva	500	UniProtKB:Q1IYG2	DivIVA	UniProtKB:A0A0X2NN65|UniProtKB:A0A1C4V7R2|UniProtKB:A0A1C7FU26|UniProtKB:A0A2N9B6M9|UniProtKB:A0A9Q4TLM1
-rubisco	500			
 photosynthetic reaction center	356			
-cation/proton antiporter	332	UniProtKB:A0A0H3JRG4	Cation/proton antiporter	UniProtKB:D3RS68|UniProtKB:D5AV79|UniProtKB:A0A0F7G2G3|UniProtKB:T1X8Z9|UniProtKB:B9K9K2
 salinity-adaptation genes	0		(SKIPPED — abstract category)	
 cold-shock proteins	0		(SKIPPED — abstract category)	
 proton export pumps and antiporters	0		(SKIPPED — abstract category)	
 na+/h+ antiporters	0			
-atp synthase	500	UniProtKB:A0A415TT77	ATP synthase	UniProtKB:A0A060JKX6|UniProtKB:A0A061LPU4|UniProtKB:A0A072ZGX0|UniProtKB:A0A072ZGX0|UniProtKB:A0A076MUD0
 rod complex	0		(SKIPPED — abstract category)	
 penicillin-binding proteins	3			
-crescentin	19	UniProtKB:A0A2N9AY16	Crescentin (CreS)	UniProtKB:C7CBH2|UniProtKB:C5AU93|UniProtKB:A0A2K8KCA6|UniProtKB:A0A1A5JMU9
 mreb cytoskeleton	0			
 ftsz division ring	0			
 curvature scaffold	0			
-pbp2b	1	UniProtKB:A0A892RPK7	Penicillin-binding protein PBP2B	
 gliding motility machinery	0		(SKIPPED — abstract category)	
 flagellar motor	500			
-type iv pilus	500	UniProtKB:R6TBR9	Component of type IV pilus	UniProtKB:A0A031GS06|UniProtKB:A0A0N8SVU3|UniProtKB:A0A0P9GUP9|UniProtKB:A0A0Y5K4T0|UniProtKB:A0A220WHN9
-methanol dehydrogenase	500	UniProtKB:A0A010SCY7	Methanol dehydrogenase	UniProtKB:A0A1R3Y6H5|UniProtKB:A0A2N3QMY0|UniProtKB:Q67LA8|UniProtKB:A0A258DA92|UniProtKB:A0A2B5WLX2
 metazoan-adapted virulence factors	0			
 human-adapted virulence factors	0			
 virulence factors	170		(SKIPPED — abstract category)	
@@ -30,14 +19,12 @@ protein secretion systems	0
 plant-cell-wall-degrading enzymes	0			
 type iii secretion system	500			
 t3ss effector proteins	0			
-superoxide dismutase	500	UniProtKB:A0A009QPW9	Superoxide dismutase (Cu-Zn) 	UniProtKB:A0A078LI03|UniProtKB:A0A098Q6K5|UniProtKB:A0A0F6TY81|UniProtKB:A0A0P0F4S7|UniProtKB:A0A1E7NK19
 hyperthermostable proteins	0			
 acidic halophilic proteins	0			
 oxygen-sensing regulation	0			
 fnr-type oxygen-responsive regulation	0			
 fnr oxygen-responsive regulator	0			
 thermostable enzymes	0			
-reverse gyrase	191	UniProtKB:A0A088E825	Reverse gyrase 	UniProtKB:E1QQM5|UniProtKB:I3XSB9|UniProtKB:I3ZS97|UniProtKB:H9ZUA9|UniProtKB:W8NZH4
 archaeal molecular chaperonins	0			
 mesophile enzyme repertoire	0			
 high-affinity terminal oxidase	0			
@@ -52,43 +39,28 @@ oxygen-sensitive enzymes	0
 thermostable proteins	0		(SKIPPED — abstract category)	
 energy-transducing enzymes	0			
 chaperone proteins	1		(SKIPPED — abstract category)	
-cytochrome c oxidase	500	UniProtKB:A0A075NZN5	Cytochrome C oxidase	UniProtKB:A0A076P1R1|UniProtKB:A0A086GYN7|UniProtKB:A0A0D6IEK5|UniProtKB:A0A0K0Y203|UniProtKB:A0A0L1ME67
-redox protein	500	UniProtKB:A0A076EJF0	Redox protein	UniProtKB:K0DPA6|UniProtKB:A0A809N150|UniProtKB:A0A0A8XE30|UniProtKB:A0A1H1X1X7|UniProtKB:L0GPY9
-c-type cytochrome	500	UniProtKB:A0A072TMC1	C-type cytochrome (Cytochrome C)	UniProtKB:A0A087I8G3|UniProtKB:A0A177M085|UniProtKB:A0A1S1PAC0|UniProtKB:A0A369V0Q2|UniProtKB:A0A3G2W6V2
-methyl-coenzyme m reductase	500	UniProtKB:A0A099T5Q9	Methyl-coenzyme M reductase	UniProtKB:A0A0F8JJU9|UniProtKB:A0A1I6X4R0|UniProtKB:A0A2H4VRH3|UniProtKB:D3E050|UniProtKB:A0A089ZHQ4
 f1fo atp synthase	0			
-acetate kinase	500	UniProtKB:A0A081KVG3	Acetate kinase 	UniProtKB:A0A0D8I9V8|UniProtKB:A0A0H3ALX7|UniProtKB:A0A1B1MHF5|UniProtKB:A0A1B8R165|UniProtKB:A0A1Q9Q016
 flagellar basal motor	0			
 tyrosinase/laccase oxidases	0			
 diviva foci	0			
-4-hydroxyphenylpyruvate dioxygenase	500	UniProtKB:A0A009PXB6	4-hydroxyphenylpyruvate dioxygenase 	UniProtKB:A0A2H1IT22|UniProtKB:A0A2N9P8D1|UniProtKB:A0A2S7B435|UniProtKB:A0A3N9FER5|UniProtKB:A0A5B8UDR5
 ftsz ring (divisome)	0			
 pcsb hydrolase system	0			
-scy	24	UniProtKB:A0A191V3Q4	Polarized growth protein Scy	UniProtKB:A0A345XSW9|UniProtKB:A0A5J6G9V8|UniProtKB:A0A5J6H3P5|UniProtKB:A0A6B3QI23
 flagellar basal body	500			
 flagellar stator complex	0			
 surface adhesins	0			
 type ix secretion system	500			
 phz operons	0			
 csd shape proteins	0			
-ccma	500	UniProtKB:E0X6H3	CcmA	UniProtKB:A0A0M7A3Z5|UniProtKB:A0A0R0B6A3|UniProtKB:A0A347UP23|UniProtKB:A0A3G8M5L1|UniProtKB:A0A444P682
 mapz/ftsz division-positioning system	0			
 mapz	24			
 weak/absent shape-determining cytoskeleton	0			
-flab	8	UniProtKB:A8WEP6	FlaB	UniProtKB:I7LN98|UniProtKB:A0A257T2K8|UniProtKB:A8WEP7|UniProtKB:I7L0E4
 spo0a phosphorelay	0			
 compartment-specific sigma factors	0			
 crva	0			
 crtopqmn operon	0			
-carbon monoxide dehydrogenase	500	UniProtKB:A0A061JSS8	Carbon monoxide dehydrogenase	UniProtKB:A0A076MYH6|UniProtKB:A0A0E3ZLJ8|UniProtKB:A0A0P0RPE7|UniProtKB:A0A0P0RRQ4|UniProtKB:A0A125V4N7
-molybdenum hydroxylase	500	UniProtKB:A0A099I9V3	Molybdenum hydroxylase	UniProtKB:A0A7U9LIB8|UniProtKB:A0A837JRA4|UniProtKB:A0A367FVX1|UniProtKB:A0A413SLP5|UniProtKB:V0AG09
 co-insensitive terminal oxidase	0			
-ammonia monooxygenase	500	UniProtKB:A0A059V4Z9	Ammonia monooxygenase	UniProtKB:A0A0D5C0I4|UniProtKB:A0A140NLS6|UniProtKB:A0A1B1K0Y2|UniProtKB:G8RKH8|UniProtKB:A0A0B3S2V8
 sox enzyme system	0			
 membrane transporters	19		(SKIPPED — abstract category)	
 rrna operons	0			
-hydrogenase	500	UniProtKB:A0A059XQG3	Hydrogenase	UniProtKB:A0A037YJ76|UniProtKB:A0A037YJ76|UniProtKB:A0A060A036|UniProtKB:A0A0B2EK66|UniProtKB:A0A0B5BFH5
-methane monooxygenase	201	UniProtKB:A0A0A3YNQ7	Methane monooxygenase	UniProtKB:G8RKH8|UniProtKB:A0A177M3V6|UniProtKB:A0A6B8KI71|UniProtKB:A0A8B6MAX8|UniProtKB:A0A177MXU4
-pqq-dependent methanol dehydrogenase	1	UniProtKB:A0A4U8YZA6	PQQ-dependent methanol dehydrogenase (Alpha subunit) 	
 photosystem ii	212			
 gene product	83		(SKIPPED — abstract category)	
