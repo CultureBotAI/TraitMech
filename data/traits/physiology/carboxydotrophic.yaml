@@ -58,7 +58,7 @@ causal_graphs:
     description: Terminal oxidase enabling respiration during CO oxidation.
   - node_id: proton_motive_force
     label: proton motive force
-    node_type: BIOLOGICAL_PROCESS
+    node_type: STATE
     description: Ion gradient used for energy conservation.
     grounding: METPO:1007500
   - node_id: reduced_pyridine_nucleotides
@@ -181,4 +181,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A061JSS8×1, UniProtKB:A0A099I9V3×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:30:13Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
   llm_assisted: true

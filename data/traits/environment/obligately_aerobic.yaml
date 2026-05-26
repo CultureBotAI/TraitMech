@@ -49,7 +49,7 @@ causal_graphs:
     description: Oxygen-reducing terminal oxidase complexes.
   - node_id: proton_motive_force
     label: proton motive force
-    node_type: BIOLOGICAL_PROCESS
+    node_type: STATE
     description: Electrochemical gradient powering ATP synthesis.
     grounding: METPO:1007500
   edges:
@@ -120,4 +120,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007500×1).
+  llm_assisted: true
+- timestamp: '2026-05-26T02:30:12Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
+    semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
   llm_assisted: true
