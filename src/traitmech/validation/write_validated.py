@@ -1,6 +1,15 @@
 """Write-time validation: dump a TraitRecord to YAML *only if* it passes
 closed-schema LinkML validation.
 
+audit-writers: library-helper
+
+    This module is the canonical write-time YAML gate that CLI scripts
+    route through. Curation-history append and write-safeguard
+    (--dry-run/--apply) responsibilities live in the callers, not
+    here. ``scripts/audit_writers.py`` recognizes the
+    ``audit-writers: library-helper`` marker on this line and excludes
+    this file from its CLI-writer audit.
+
 This is the write-time gate that pairs the in-memory mutation step with
 a schema check at the same call site, so a script can't accidentally
 write a doc that drifted into an invalid shape between the mutation and

@@ -136,3 +136,51 @@ def test_audit_suppresses_self_match():
     self_path = REPO_ROOT / "scripts" / "audit_writers.py"
     row = audit(self_path, _JUSTFILE)
     assert row is None, "audit_writers.py must not flag itself"
+
+
+# ---------------------------------------------------------------- library-helper exemption
+
+
+def test_audit_skips_library_helper_marker(tmp_path):
+    """A YAML-writing module that opts out via the `audit-writers:
+    library-helper` marker is excluded — its curation_history and
+    safeguard responsibilities belong to callers, not the helper."""
+    p = tmp_path / "lib_helper.py"
+    p.write_text(
+        '"""I am a library helper.\n\n'
+        "audit-writers: library-helper\n"
+        '"""\n'
+        "import yaml\n"
+        "def write(doc, path):\n"
+        "    path.write_text(yaml.safe_dump(doc))\n"
+    )
+    assert audit(p, _JUSTFILE) is None, (
+        "modules with the library-helper marker must be excluded from "
+        "the CLI-writer audit"
+    )
+
+
+def test_audit_does_not_skip_without_marker(tmp_path):
+    """Sanity-check the exemption is opt-in: a writer without the marker
+    is still audited normally."""
+    p = tmp_path / "no_marker.py"
+    p.write_text(
+        "import yaml\n"
+        "def write(doc, path):\n"
+        "    path.write_text(yaml.safe_dump(doc))\n"
+    )
+    row = audit(p, _JUSTFILE)
+    assert row is not None, "writer without marker must still be audited"
+    assert row["writes_yaml"] == "yes"
+
+
+def test_audit_excludes_write_validated_helper():
+    """End-to-end: the canonical write_validated.py library helper has
+    the marker and is excluded from the audit."""
+    helper_path = REPO_ROOT / "src" / "traitmech" / "validation" / "write_validated.py"
+    assert helper_path.exists(), "write_validated.py must be on disk for this test"
+    row = audit(helper_path, _JUSTFILE)
+    assert row is None, (
+        "write_validated.py opts out via the library-helper marker; "
+        "audit_writers must exclude it"
+    )

@@ -88,6 +88,9 @@ def looks_like_yaml_writer(text: str) -> bool:
     return False
 
 
+_LIBRARY_HELPER_MARKER = "audit-writers: library-helper"
+
+
 def audit(path: Path, justfile_text: str) -> dict | None:
     # Suppress self-match: this module's regex source contains
     # `yaml.safe_dump` etc., so it would otherwise appear in its own
@@ -99,6 +102,12 @@ def audit(path: Path, justfile_text: str) -> dict | None:
     except (UnicodeDecodeError, OSError):
         return None
     if not looks_like_yaml_writer(text):
+        return None
+    # Library helpers (e.g. src/traitmech/validation/write_validated.py)
+    # ARE yaml writers but their curation-history / safeguard
+    # responsibilities live in callers. They opt out of the
+    # CLI-writer audit via an explicit marker comment.
+    if _LIBRARY_HELPER_MARKER in text:
         return None
     return {
         "path": str(path),
