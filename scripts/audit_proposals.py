@@ -128,7 +128,13 @@ def main(argv: list[str] | None = None) -> int:
             continue
         if not isinstance(record, dict):
             continue
-        row = audit_record(record, str(path))
+        # Emit repository-relative paths so the TSV is reproducible across
+        # contributors and CI (paths under DEFAULT_ROOTS are absolute).
+        try:
+            display_path = path.resolve().relative_to(_REPO_ROOT)
+        except ValueError:
+            display_path = path
+        row = audit_record(record, str(display_path))
         if row is not None:
             rows.append(row)
 
