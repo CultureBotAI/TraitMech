@@ -1,0 +1,28 @@
+identifier: traitmech:000034
+label: oxygenic photosynthesis
+definition: A phototrophic metabolism that uses light energy to fix CO2, oxidizing
+  water as the electron donor and releasing molecular oxygen. It uses two linked
+  photosystems and chlorophyll, and is characteristic of cyanobacteria (and plant
+  chloroplasts).
+definition_source: DOI:10.1016/j.tim.2006.09.001
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000038
+evidence:
+- reference: DOI:10.1016/j.tim.2006.09.001
+  notes: Bryant & Frigaard, "Prokaryotic photosynthesis and phototrophy illuminated",
+    contrasts oxygenic photosynthesis (water-splitting, O2-evolving) in cyanobacteria
+    with anoxygenic phototrophy.
+- reference: DOI:10.1146/annurev-earth-060313-054810
+  notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports
+    water-oxidizing, oxygen-evolving photosynthesis as a distinct, cyanobacterial
+    innovation.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (oxygenic photosynthesis) from
+    literature research to fill the phototrophy gap.
+  llm_assisted: true

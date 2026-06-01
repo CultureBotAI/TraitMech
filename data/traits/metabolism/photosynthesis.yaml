@@ -1,0 +1,27 @@
+identifier: traitmech:000038
+label: photosynthesis
+definition: A phototrophic metabolism that uses light energy and chlorophyll- or
+  bacteriochlorophyll-based photochemical reaction centers to drive electron flow,
+  fixing CO2 and/or generating reducing power. Subdivided into oxygenic and
+  anoxygenic photosynthesis.
+definition_source: DOI:10.1016/j.tim.2006.09.001
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000037
+evidence:
+- reference: DOI:10.1016/j.tim.2006.09.001
+  notes: Bryant & Frigaard treat prokaryotic photosynthesis (reaction-center based)
+    as encompassing both oxygenic and anoxygenic forms across five phyla.
+- reference: DOI:10.1146/annurev-earth-060313-054810
+  notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports
+    reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of
+    phototrophy distinct from rhodopsin-based light capture.
+curation_history:
+- timestamp: '2026-05-31T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Minted intermediate axis class (photosynthesis) under phototrophy to
+    parent the oxygenic- and anoxygenic-photosynthesis traits.
+  llm_assisted: true

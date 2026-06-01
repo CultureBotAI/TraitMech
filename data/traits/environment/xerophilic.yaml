@@ -1,0 +1,34 @@
+identifier: traitmech:000011
+label: xerophilic
+definition: An environmental growth preference in which an organism grows at low
+  water activity (low aw), such as in desiccated, high-sugar, or high-solute
+  substrates.
+definition_source: DOI:10.1098/rstb.2004.1502
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: xerotolerant
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1098/rstb.2004.1502
+evidence:
+- reference: DOI:10.1098/rstb.2004.1502
+  snippet: some of which are capable of growth at a water activity (aw) of 0.61, the
+    lowest aw value for growth recorded to date
+  notes: Low-water-activity review supports growth at very low aw as the defining
+    feature of xerophiles.
+- reference: DOI:10.3390/microorganisms10020432
+  snippet: Anhydrobiosis (gr. life without water) is predominantly described as the
+    ability of some organisms to lose all or almost all water and enter a state of
+    suspension where the metabolism comes to a reversible standstill
+  notes: Anhydrobiosis review supports low-water-activity adaptation as the
+    physiological context distinguishing xerophilic growth from desiccation survival.
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (low-water-activity growth preference)
+    from literature research to fill the water-availability coverage gap.
+  llm_assisted: true

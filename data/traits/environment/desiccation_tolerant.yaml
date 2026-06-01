@@ -1,0 +1,36 @@
+identifier: traitmech:000010
+label: desiccation tolerant
+definition: An environmental tolerance in which an organism survives extreme water
+  loss and resumes growth after rehydration (anhydrobiosis), protecting cellular
+  macromolecules during drying.
+definition_source: DOI:10.3390/microorganisms10020432
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: anhydrobiotic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3390/microorganisms10020432
+evidence:
+- reference: DOI:10.3390/microorganisms10020432
+  snippet: Anhydrobiosis (gr. life without water) is predominantly described as the
+    ability of some organisms to lose all or almost all water and enter a state of
+    suspension where the metabolism comes to a reversible standstill
+  notes: Bacterial anhydrobiosis review supports desiccation tolerance as reversible
+    survival of near-complete water loss.
+- reference: DOI:10.3390/genes14091803
+  snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is a
+    remarkable example of such an organism, showcasing an impressive resistance to a
+    wide array of stressors, including ionizing radiation, desiccation, UV radiation,
+    and oxidizing agents
+  notes: 'Organism example: Deinococcus radiodurans is desiccation-tolerant, sharing
+    DNA-repair machinery with its radiation tolerance.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (desiccation tolerance / anhydrobiosis)
+    from literature research to fill the water-availability coverage gap.
+  llm_assisted: true

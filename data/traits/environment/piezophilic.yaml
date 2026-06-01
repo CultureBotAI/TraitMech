@@ -1,0 +1,37 @@
+identifier: traitmech:000001
+label: piezophilic
+definition: An environmental growth preference in which an organism grows optimally
+  at hydrostatic pressures substantially above atmospheric pressure (0.1 MPa),
+  characteristic of deep-sea and deep-subsurface microorganisms.
+definition_source: DOI:10.3389/fmolb.2022.1058381
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: barophilic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmolb.2022.1058381
+- synonym_text: piezophile
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.3389/fmolb.2022.1058381
+evidence:
+- reference: DOI:10.3389/fmolb.2022.1058381
+  snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
+    to their preference for high pressure
+  notes: Membrane-lipid adaptation review supports the definition of piezophiles as
+    high-hydrostatic-pressure-adapted organisms, with adaptation involving unsaturated
+    and branched-chain fatty acids.
+- reference: DOI:10.1099/ijsem.0.001671
+  snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
+  notes: 'Organism example: Colwellia marinimaniae strain MTCD1, the most piezophilic
+    organism described, grows optimally at 120 MPa.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (high-hydrostatic-pressure growth
+    preference) from literature research to fill the pressure-tolerance coverage gap.
+    Backed by a piezophile adaptation review and a deep-sea organism example.
+  llm_assisted: true

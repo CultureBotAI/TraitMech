@@ -1,0 +1,32 @@
+identifier: traitmech:000036
+label: proteorhodopsin phototrophy
+definition: A light-harvesting metabolism in which a retinal-containing membrane
+  protein (proteorhodopsin) acts as a light-driven proton pump, generating proton
+  motive force without chlorophyll-based reaction centers. Widespread among marine
+  bacterioplankton.
+definition_source: DOI:10.1126/science.289.5486.1902
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000037
+synonyms:
+- synonym_text: rhodopsin-based phototrophy
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/35081051
+evidence:
+- reference: DOI:10.1126/science.289.5486.1902
+  notes: Béjà et al. identified proteorhodopsin, a retinal-binding light-driven
+    proton pump in an uncultivated marine bacterium, as evidence for a new type of
+    phototrophy in the sea.
+- reference: DOI:10.1038/35081051
+  notes: Béjà et al., "Proteorhodopsin phototrophy in the ocean", supports
+    proteorhodopsin as a widespread, spectrally tuned light-energy capture system in
+    marine bacteria.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (proteorhodopsin phototrophy) from
+    literature research to fill the light-driven-energy gap.
+  llm_assisted: true

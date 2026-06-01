@@ -1,0 +1,29 @@
+identifier: traitmech:000032
+label: manganese oxidation
+definition: A metabolism in which bacteria oxidize soluble Mn(II) to insoluble
+  Mn(III/IV) oxides, typically catalyzed by multicopper oxidases. Characteristic of
+  organisms such as Bacillus sp. SG-1, Leptothrix, and Pseudomonas putida.
+definition_source: DOI:10.1016/j.tim.2005.07.009
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: Mn(II) oxidation
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.tim.2005.07.009
+evidence:
+- reference: DOI:10.1016/j.tim.2005.07.009
+  notes: Tebo et al., "Geomicrobiology of manganese(II) oxidation", supports
+    bacterial Mn(II) oxidation to Mn oxides via a multicopper-oxidase mechanism.
+- reference: DOI:10.1146/annurev.earth.32.101802.120213
+  notes: Tebo et al., "Biogenic manganese oxides", supports the formation and
+    properties of bacterially produced Mn(III/IV) oxides.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (manganese oxidation) from literature
+    research to fill the metal-redox metabolism gap.
+  llm_assisted: true

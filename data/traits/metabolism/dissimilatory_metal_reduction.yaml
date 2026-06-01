@@ -1,0 +1,33 @@
+identifier: traitmech:000039
+label: dissimilatory metal reduction
+definition: An anaerobic respiratory metabolism in which an organism conserves
+  energy for growth by coupling the oxidation of organic matter or hydrogen to the
+  reduction of a metal (e.g. Fe(III), Mn(IV)) as a terminal electron acceptor.
+definition_source: DOI:10.1128/mr.55.2.259-287.1991
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: dissimilatory metal-ion reduction
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.55.2.259-287.1991
+evidence:
+- reference: DOI:10.1128/mr.55.2.259-287.1991
+  snippet: The oxidation of organic matter coupled to the reduction of Fe(III) or
+    Mn(IV) is one of the most important biogeochemical reactions in aquatic
+    sediments, soils, and groundwater
+  notes: Lovley review establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction as
+    energy-conserving anaerobic respiration; parent of the metal-specific reduction
+    sub-variants.
+- reference: PMID:7826009
+  notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
+    metals as terminal electron acceptors in anaerobic respiration.
+curation_history:
+- timestamp: '2026-05-31T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Minted intermediate axis class (dissimilatory metal reduction) under
+    anaerobic respiration (METPO:1000802) to parent dissimilatory iron reduction.
+  llm_assisted: true

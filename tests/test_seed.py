@@ -37,8 +37,13 @@ def test_every_trait_yaml_has_required_fields():
         assert isinstance(doc, dict), f"{p}: not a dict"
         for required in ("identifier", "label", "trait_category", "term_kind", "mapping_status"):
             assert required in doc, f"{p}: missing {required!r}"
-        assert doc["identifier"].startswith("METPO:"), f"{p}: identifier not a METPO CURIE"
-        assert doc["mapping_status"] in {"SEEDED", "REVIEWED", "DEPRECATED"}, (
+        # Seeded records use the METPO CURIE directly; curator-minted records
+        # (e.g. PROPOSED candidate traits) may use the reserved `traitmech:`
+        # prefix — see .claude/skills/manage-identifiers/SKILL.md.
+        assert doc["identifier"].startswith(("METPO:", "traitmech:")), (
+            f"{p}: identifier {doc['identifier']!r} is neither a METPO nor a traitmech CURIE"
+        )
+        assert doc["mapping_status"] in {"SEEDED", "PROPOSED", "REVIEWED", "DEPRECATED"}, (
             f"{p}: status={doc['mapping_status']!r}"
         )
 

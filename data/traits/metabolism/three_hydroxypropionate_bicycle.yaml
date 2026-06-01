@@ -1,0 +1,30 @@
+identifier: traitmech:000023
+label: 3-hydroxypropionate bicycle
+definition: An autotrophic carbon-fixation pathway in which two molecules of
+  bicarbonate are fixed via 3-hydroxypropionate and converted to glyoxylate and
+  pyruvate. It is characteristic of the filamentous anoxygenic phototroph
+  Chloroflexus aurantiacus.
+definition_source: DOI:10.1128/AEM.02473-10
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000019
+synonyms:
+- synonym_text: 3-hydroxypropionate cycle
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.02473-10
+evidence:
+- reference: DOI:10.1128/AEM.02473-10
+  notes: Berg review describes the 3-hydroxypropionate bicycle and its association
+    with Chloroflexus.
+- reference: DOI:10.1146/annurev-marine-120709-142712
+  notes: Hügler & Sievert include the 3-hydroxypropionate pathway among autotrophic
+    carbon-fixation strategies.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (3-hydroxypropionate bicycle);
+    sub-variant of carbon fixation.
+  llm_assisted: true

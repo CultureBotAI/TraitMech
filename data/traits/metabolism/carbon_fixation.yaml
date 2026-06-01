@@ -1,0 +1,35 @@
+identifier: traitmech:000019
+label: carbon fixation
+definition: A metabolic process in which an organism assimilates inorganic carbon
+  (CO2 or bicarbonate) into organic compounds (autotrophy). Six distinct natural
+  autotrophic carbon-fixation pathways are currently recognized.
+definition_source: DOI:10.1128/AEM.02473-10
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: CO2 fixation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.02473-10
+- synonym_text: autotrophic carbon assimilation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-marine-120709-142712
+evidence:
+- reference: DOI:10.1128/AEM.02473-10
+  notes: Berg review of the distribution of autotrophic CO2-fixation pathways
+    establishes that, besides the Calvin-Benson-Bassham cycle, five further
+    autotrophic carbon-fixation pathways are known, parent of the six pathway
+    sub-variants proposed here.
+- reference: DOI:10.1146/annurev-marine-120709-142712
+  notes: Hügler & Sievert, "Beyond the Calvin cycle", supports multiple autotrophic
+    carbon-fixation pathways operating among ocean microorganisms.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (autotrophic carbon fixation) from
+    literature research to fill the carbon-fixation-pathway coverage gap. Parent of
+    the six pathway-specific sub-variants.
+  llm_assisted: true

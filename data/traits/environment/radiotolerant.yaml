@@ -1,0 +1,37 @@
+identifier: traitmech:000007
+label: radiotolerant
+definition: An environmental tolerance in which an organism survives doses of
+  ionizing and/or ultraviolet radiation that are lethal to most microorganisms,
+  typically via efficient DNA repair and oxidative-damage protection.
+definition_source: DOI:10.1101/cshperspect.a012765
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: radioresistant
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1101/cshperspect.a012765
+evidence:
+- reference: DOI:10.1101/cshperspect.a012765
+  snippet: A strong correlation has been shown between intracellular Mn/Fe concentration
+    ratios and bacterial resistance to radiation
+  notes: Review of extreme radiation resistance supports manganese-antioxidant
+    protection of the proteome as a core radiotolerance mechanism in Deinococcus
+    radiodurans, "a champion of extreme radiation resistance".
+- reference: DOI:10.3390/genes14091803
+  snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is a
+    remarkable example of such an organism, showcasing an impressive resistance to a
+    wide array of stressors, including ionizing radiation, desiccation, UV radiation,
+    and oxidizing agents
+  notes: 'Organism example: Deinococcus radiodurans tolerates ionizing radiation,
+    UV radiation, and desiccation.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (general radiation tolerance) from
+    literature research to fill the radiation-tolerance coverage gap. Parent of the
+    ionizing- and UV-specific sub-variants.
+  llm_assisted: true

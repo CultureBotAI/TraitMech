@@ -1,0 +1,25 @@
+identifier: traitmech:000027
+label: mixed-acid fermentation
+definition: A fermentation in which sugars are converted via the glycolytic pathway
+  to a mixture of acids (lactic, acetic, formic, succinic) plus ethanol, CO2 and
+  H2. Characteristic of enteric bacteria such as Escherichia coli.
+definition_source: DOI:10.3389/fmicb.2021.703525
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1002005
+evidence:
+- reference: DOI:10.3389/fmicb.2021.703525
+  notes: Review of fermentative energy conservation lists acetate, ethanol, lactate,
+    succinate and formate as products of mixed-acid fermentation.
+- reference: DOI:10.3390/molecules31020333
+  notes: Review of fermentation pathways describes mixed-acid fermentation by
+    enterobacteria and its characteristic acid product spectrum.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (mixed-acid fermentation);
+    product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true

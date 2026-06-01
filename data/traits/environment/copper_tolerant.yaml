@@ -1,0 +1,34 @@
+identifier: traitmech:000018
+label: copper tolerant
+definition: A metal tolerance in which an organism grows in the presence of elevated
+  copper (Cu2+/Cu+) concentrations, typically via the cue, cus, pco, and cop systems
+  and ATPase-driven cytoplasmic copper efflux.
+definition_source: DOI:10.1007/s10565-013-9262-1
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000012
+synonyms:
+- synonym_text: copper resistant
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1007/s10565-013-9262-1
+evidence:
+- reference: DOI:10.1007/s10565-013-9262-1
+  snippet: ATPase-driven copper efflux seems to be the main mechanism responsible
+    for cytoplasmic copper detoxification in until now studied bacteria
+  notes: Review supports active efflux via the cue, cus, pco, and cop systems as the
+    basis of bacterial copper tolerance.
+- reference: DOI:10.3389/fmicb.2020.00047
+  snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
+    uM) and Pb2+ (1.7 mM)
+  notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates copper (Cu2+) to
+    a MIC of 5 mM.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (copper tolerance) from literature
+    research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true

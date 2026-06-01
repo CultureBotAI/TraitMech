@@ -1,0 +1,30 @@
+identifier: traitmech:000035
+label: anoxygenic photosynthesis
+definition: A phototrophic metabolism that uses light energy with a single
+  photosystem and bacteriochlorophyll, using electron donors other than water
+  (e.g. H2S, H2, Fe(II), organics) and therefore not evolving oxygen. Characteristic
+  of purple and green sulfur bacteria, Chloroflexi, and heliobacteria.
+definition_source: DOI:10.1016/j.tim.2006.09.001
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000038
+synonyms:
+- synonym_text: bacterial photosynthesis
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.tim.2006.09.001
+evidence:
+- reference: DOI:10.1016/j.tim.2006.09.001
+  notes: Bryant & Frigaard describe anoxygenic photosynthesis across five prokaryotic
+    phyla using bacteriochlorophyll and a single photosystem without O2 evolution.
+- reference: DOI:10.3389/fmicb.2024.1417714
+  notes: Review of anoxygenic photosynthesis in green sulfur bacteria supports
+    sulfide as electron donor and the absence of oxygen production.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (anoxygenic photosynthesis) from
+    literature research to fill the phototrophy gap.
+  llm_assisted: true

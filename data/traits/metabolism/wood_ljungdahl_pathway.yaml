@@ -1,0 +1,31 @@
+identifier: traitmech:000022
+label: Wood-Ljungdahl pathway
+definition: An autotrophic carbon-fixation pathway (the reductive acetyl-CoA
+  pathway) in which two molecules of CO2 are reduced and combined into acetyl-CoA.
+  It is energetically efficient and used by acetogenic bacteria, methanogenic
+  archaea, and some sulfate-reducing bacteria.
+definition_source: DOI:10.1016/j.bbapap.2008.08.012
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000019
+synonyms:
+- synonym_text: reductive acetyl-CoA pathway
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1016/j.bbapap.2008.08.012
+evidence:
+- reference: DOI:10.1016/j.bbapap.2008.08.012
+  notes: Ragsdale & Pierce, "Acetogenesis and the Wood-Ljungdahl pathway of CO2
+    fixation", is the reference treatment of this reductive acetyl-CoA pathway.
+- reference: DOI:10.1128/AEM.02473-10
+  notes: Berg review places the reductive acetyl-CoA (Wood-Ljungdahl) pathway among
+    the recognized autotrophic carbon-fixation pathways.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (Wood-Ljungdahl / reductive acetyl-CoA
+    carbon-fixation pathway); sub-variant of carbon fixation. Distinct from the
+    existing acetogenesis metabolism class (which produces acetate via this pathway).
+  llm_assisted: true

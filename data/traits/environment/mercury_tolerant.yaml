@@ -1,0 +1,35 @@
+identifier: traitmech:000016
+label: mercury tolerant
+definition: A metal tolerance in which an organism grows in the presence of toxic
+  inorganic or organic mercury compounds, typically via the mer operon, whose
+  mercuric reductase (MerA) reduces reactive Hg(II) to volatile Hg(0).
+definition_source: DOI:10.1016/S0168-6445(03)00046-9
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000012
+synonyms:
+- synonym_text: mercury resistant
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/S0168-6445(03)00046-9
+evidence:
+- reference: DOI:10.1016/S0168-6445(03)00046-9
+  snippet: Bacterial resistance to inorganic and organic mercury compounds (HgR) is
+    one of the most widely observed phenotypes in eubacteria
+  notes: Review supports mercury resistance as a widespread bacterial phenotype
+    mediated by MerA, "that reduces reactive ionic Hg(II) to volatile, relatively
+    inert, monoatomic Hg(0) vapor".
+- reference: PMID:12829273
+  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell
+    division superfamily, P-type ATPases, cation diffusion facilitator and chromate
+    proteins
+  notes: Heavy-metal resistance review situates mercury detoxification within the
+    broader prokaryotic metal-resistance machinery.
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (mercury tolerance) from literature
+    research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true

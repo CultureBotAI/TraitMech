@@ -1,0 +1,30 @@
+identifier: traitmech:000024
+label: 3-hydroxypropionate/4-hydroxybutyrate cycle
+definition: An autotrophic carbon-fixation pathway that fixes two molecules of
+  bicarbonate per turn via 3-hydroxypropionate and 4-hydroxybutyrate intermediates.
+  It operates in aerobic and microaerophilic Crenarchaeota such as Sulfolobus and
+  Metallosphaera.
+definition_source: DOI:10.1126/science.1149976
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000019
+synonyms:
+- synonym_text: 3HP/4HB cycle
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.1149976
+evidence:
+- reference: DOI:10.1126/science.1149976
+  notes: Berg et al. described the 3-hydroxypropionate/4-hydroxybutyrate autotrophic
+    CO2-assimilation pathway in Archaea (Sulfolobales).
+- reference: DOI:10.1128/AEM.02473-10
+  notes: Berg review situates the 3HP/4HB cycle among the six recognized autotrophic
+    carbon-fixation pathways.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (3-hydroxypropionate/4-hydroxybutyrate
+    cycle); archaeal sub-variant of carbon fixation.
+  llm_assisted: true

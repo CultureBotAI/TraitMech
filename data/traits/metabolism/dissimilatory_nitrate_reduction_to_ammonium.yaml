@@ -1,0 +1,33 @@
+identifier: traitmech:000030
+label: dissimilatory nitrate reduction to ammonium
+definition: An anaerobic respiratory metabolism in which nitrate is reduced via
+  nitrite to ammonium (rather than to N2), conserving fixed nitrogen within the
+  ecosystem. It is favored over denitrification under nitrate-limited,
+  high-electron-donor conditions.
+definition_source: DOI:10.1126/science.1254070
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: DNRA
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1126/science.1254070
+- synonym_text: nitrate ammonification
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1007/s11157-025-09719-5
+evidence:
+- reference: DOI:10.1126/science.1254070
+  notes: Kraft et al. show the donor-to-acceptor ratio governs whether nitrate
+    respiration ends in ammonium (DNRA) or N2 (denitrification).
+- reference: DOI:10.1007/s11157-025-09719-5
+  notes: Review of DNRA vs denitrification supports DNRA's competitive advantage and
+    nitrogen-retaining role under nitrate-limited conditions.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (dissimilatory nitrate reduction to
+    ammonium) from literature research to fill the nitrogen-cycling gap.
+  llm_assisted: true
