@@ -1,0 +1,28 @@
+identifier: traitmech:000006
+label: pressure delta
+definition: A pressure phenotype with numerical limits expressing the breadth
+  (maximum minus minimum) of hydrostatic pressure supporting growth of an organism.
+definition_source: DOI:10.3389/fmolb.2022.1058381
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.3389/fmolb.2022.1058381
+  snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
+    to their preference for high pressure
+  notes: Pressure-adaptation review supports the breadth of the pressure-tolerance
+    span as a derived descriptor of pressure-adaptation flexibility.
+- reference: DOI:10.1099/ijsem.0.001671
+  snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
+  notes: The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa)
+    illustrates the breadth this phenotype records.
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed quantitative companion trait (pressure-tolerance breadth)
+    mirroring the existing temperature_delta / nacl_delta pattern, to fill the
+    pressure coverage gap.
+  llm_assisted: true

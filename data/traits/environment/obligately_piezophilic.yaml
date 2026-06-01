@@ -1,0 +1,33 @@
+identifier: traitmech:000002
+label: obligately piezophilic
+definition: A pressure growth preference in which an organism requires elevated
+  hydrostatic pressure for growth and is unable to grow at atmospheric pressure
+  (0.1 MPa).
+definition_source: DOI:10.1038/srep27289
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000001
+synonyms:
+- synonym_text: obligate piezophile
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1038/srep27289
+evidence:
+- reference: DOI:10.1038/srep27289
+  snippet: High hydrostatic pressure adaptive strategies in an obligate piezophile
+    Pyrococcus yayanosii
+  notes: 'Organism example: Pyrococcus yayanosii is an obligate piezophile that
+    requires high hydrostatic pressure for growth.'
+- reference: DOI:10.1099/ijsem.0.001671
+  snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
+  notes: 'Organism example: Colwellia marinimaniae MTCD1 grows only at high pressure
+    (80-140 MPa) and does not grow near atmospheric pressure.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (obligate high-pressure requirement)
+    from literature research; sub-variant of piezophilic. Backed by two obligate-
+    piezophile organism examples.
+  llm_assisted: true

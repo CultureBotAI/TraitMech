@@ -1,0 +1,36 @@
+identifier: traitmech:000021
+label: reductive tricarboxylic acid cycle
+definition: An autotrophic carbon-fixation pathway (reductive citric acid /
+  Arnon-Buchanan cycle) that runs the tricarboxylic acid cycle in reverse to fix
+  CO2. It operates in anaerobic and microaerophilic bacteria such as green sulfur
+  bacteria (Chlorobium) and Aquificales.
+definition_source: DOI:10.1128/AEM.02473-10
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000019
+synonyms:
+- synonym_text: reductive citric acid cycle
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/AEM.02473-10
+- synonym_text: rTCA cycle
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.02473-10
+- synonym_text: Arnon-Buchanan cycle
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-marine-120709-142712
+evidence:
+- reference: DOI:10.1128/AEM.02473-10
+  notes: Berg review describes the reductive citric acid cycle as functional in
+    anaerobic/microaerophilic autotrophs.
+- reference: DOI:10.1146/annurev-marine-120709-142712
+  notes: Hügler & Sievert document the rTCA cycle in chemolithoautotrophs and green
+    sulfur bacteria in marine systems.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (reductive TCA carbon-fixation cycle);
+    sub-variant of carbon fixation.
+  llm_assisted: true

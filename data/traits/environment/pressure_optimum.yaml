@@ -1,0 +1,28 @@
+identifier: traitmech:000004
+label: pressure optimum
+definition: A pressure phenotype with numerical limits giving the hydrostatic
+  pressure at which an organism grows fastest.
+definition_source: DOI:10.1099/ijsem.0.001671
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+evidence:
+- reference: DOI:10.1099/ijsem.0.001671
+  snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
+  notes: Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum
+    (120 MPa), the quantitative value this phenotype records.
+- reference: DOI:10.3389/fmolb.2022.1058381
+  snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
+    to their preference for high pressure
+  notes: Pressure-adaptation review supports an organism-specific optimal growth
+    pressure as the defining quantity for piezophile classification.
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed quantitative companion trait (optimal growth pressure) mirroring
+    the existing temperature_optimum / nacl_optimum pattern, to fill the pressure
+    coverage gap.
+  llm_assisted: true

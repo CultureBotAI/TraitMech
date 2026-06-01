@@ -1,0 +1,32 @@
+identifier: traitmech:000037
+label: phototrophy
+definition: A metabolism in which an organism captures light as its energy source.
+  It encompasses chlorophyll-based photosynthesis (with photochemical reaction
+  centers) and retinal-based (rhodopsin) light-driven ion pumping.
+definition_source: DOI:10.1016/j.tim.2006.09.001
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: phototrophic metabolism
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.tim.2006.09.001
+evidence:
+- reference: DOI:10.1016/j.tim.2006.09.001
+  notes: Bryant & Frigaard, "Prokaryotic photosynthesis and phototrophy illuminated",
+    frames phototrophy as the broad use of light for energy, spanning chlorophyll-
+    and rhodopsin-based mechanisms; parent of the photosynthesis and proteorhodopsin
+    phototrophy sub-variants.
+- reference: DOI:10.1126/science.289.5486.1902
+  notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as a
+    light-energy capture mechanism distinct from chlorophyll-based photosynthesis.
+curation_history:
+- timestamp: '2026-05-31T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Minted intermediate axis class (phototrophy) to parent the photosynthesis
+    and proteorhodopsin-phototrophy traits, replacing their direct attachment to
+    METPO:1000060 (metabolism).
+  llm_assisted: true

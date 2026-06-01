@@ -1,0 +1,29 @@
+identifier: traitmech:000014
+label: zinc tolerant
+definition: A metal tolerance in which an organism grows in the presence of elevated
+  zinc (Zn2+) concentrations, typically via cation-efflux resistance systems such as
+  the czc determinant.
+definition_source: PMID:12829273
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000012
+evidence:
+- reference: DOI:10.1111/j.1365-2958.2009.06792.x
+  snippet: CzcP exports transition metals Zn(2+), Cd(2+) and Co(2+)
+  notes: The cobalt-zinc-cadmium (czc) efflux system of Cupriavidus metallidurans
+    confers zinc resistance.
+- reference: DOI:10.3389/fmicb.2020.00047
+  snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
+    uM) and Pb2+ (1.7 mM)
+  notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates zinc to a MIC of
+    20 mM.'
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (zinc tolerance) from literature
+    research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true

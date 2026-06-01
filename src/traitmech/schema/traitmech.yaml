@@ -412,6 +412,12 @@ enums:
     permissible_values:
       SEEDED:
         description: Imported verbatim from metpo.owl; not yet curator-reviewed.
+      PROPOSED:
+        description: >-
+          Candidate trait proposed from literature research to fill a coverage
+          gap; not yet curator-reviewed. Must carry at least two distinct
+          literature citations (across definition_source and evidence) — this
+          is enforced by scripts/audit_proposals.py in the `qc` target.
       REVIEWED:
         description: Curator has signed off on label / definition / parents.
       DEPRECATED:

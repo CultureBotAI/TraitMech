@@ -1,0 +1,34 @@
+identifier: traitmech:000008
+label: ionizing radiation tolerant
+definition: An environmental tolerance in which an organism survives high doses of
+  ionizing radiation (e.g. gamma rays), typically via efficient repair of DNA
+  double-strand breaks and protection of the proteome from oxidative damage.
+definition_source: DOI:10.3390/genes14091803
+trait_category: ENVIRONMENT
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000007
+synonyms:
+- synonym_text: gamma radiation resistant
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.3390/genes14091803
+evidence:
+- reference: DOI:10.3390/genes14091803
+  snippet: Deinococcus radiodurans R1 demonstrates a significantly higher radiation
+    resistance with D10 values exceeding 12 kGy for gamma radiation and 700 J/m2 for
+    UV-C radiation
+  notes: 'Organism example: Deinococcus radiodurans tolerates gamma (ionizing)
+    radiation D10 doses exceeding 12 kGy.'
+- reference: DOI:10.1101/cshperspect.a012765
+  snippet: A strong correlation has been shown between intracellular Mn/Fe concentration
+    ratios and bacterial resistance to radiation
+  notes: Mechanism support — manganese-mediated oxidative-damage protection underlies
+    survival of lethal ionizing-radiation doses.
+curation_history:
+- timestamp: '2026-05-28T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ENVIRONMENT trait (ionizing/gamma radiation tolerance)
+    from literature research; sub-variant of radiotolerant.
+  llm_assisted: true

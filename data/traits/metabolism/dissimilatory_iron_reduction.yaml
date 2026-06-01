@@ -1,0 +1,37 @@
+identifier: traitmech:000031
+label: dissimilatory iron reduction
+definition: An anaerobic respiratory metabolism in which an organism conserves
+  energy for growth by coupling the oxidation of organic matter or hydrogen to the
+  reduction of Fe(III) as a terminal electron acceptor. Characteristic of Geobacter
+  and Shewanella, often via extracellular electron transfer.
+definition_source: DOI:10.1128/mr.55.2.259-287.1991
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000039
+synonyms:
+- synonym_text: ferric iron respiration
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.55.2.259-287.1991
+- synonym_text: dissimilatory Fe(III) reduction
+  synonym_type: EXACT_SYNONYM
+  source: DOI:10.1128/mr.55.2.259-287.1991
+evidence:
+- reference: DOI:10.1128/mr.55.2.259-287.1991
+  snippet: The oxidation of organic matter coupled to the reduction of Fe(III) or
+    Mn(IV) is one of the most important biogeochemical reactions in aquatic
+    sediments, soils, and groundwater
+  notes: Lovley review establishes dissimilatory Fe(III)/Mn(IV) reduction as
+    energy-conserving anaerobic respiration coupling organic-matter oxidation to
+    metal reduction.
+- reference: PMID:7826009
+  notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
+    Fe(III) and Mn(IV) as terminal electron acceptors competitive with nitrate.
+curation_history:
+- timestamp: '2026-05-30T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (dissimilatory iron reduction) from
+    literature research to fill the metal-redox metabolism gap.
+  llm_assisted: true

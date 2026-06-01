@@ -42,6 +42,12 @@ audit-schema:
 audit-writers *args:
     uv run python scripts/audit_writers.py {{args}}
 
+# Enforce the citation bar on PROPOSED candidate traits: each must carry
+# >= 2 distinct literature citations (across definition_source + evidence).
+# Emits reports/proposal_citation_audit.tsv; exits 1 on any short record.
+audit-proposals *args:
+    uv run python scripts/audit_proposals.py {{args}}
+
 # Verify a METPO ROBOT-template proposal cohort under proposals/.
 # Runs column-count, header, parent integrity, subset tag, and scope-A/C
 # coverage checks. See .claude/skills/metpo-proposal/SKILL.md.
@@ -162,5 +168,6 @@ lint:
 check: lint test
 
 # Composite QC: strict closed-schema validation + schema-quality probes +
-# writers audit. Mirrors the qc target in MediaIngredientMech / CultureMech.
-qc: validate-strict audit-schema audit-writers
+# writers audit + proposal citation bar. Mirrors the qc target in
+# MediaIngredientMech / CultureMech.
+qc: validate-strict audit-schema audit-writers audit-proposals
