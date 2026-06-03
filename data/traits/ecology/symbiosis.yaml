@@ -1,0 +1,31 @@
+identifier: traitmech:000040
+label: symbiosis
+definition: An ecological lifestyle in which a microorganism lives in persistent
+  physical association with a host or partner organism. It encompasses mutualism,
+  commensalism, and parasitism, which form an evolutionary continuum.
+definition_source: DOI:10.1073/pnas.1218525110
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: symbiotic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1073/pnas.1218525110
+evidence:
+- reference: DOI:10.1073/pnas.1218525110
+  notes: McFall-Ngai et al., "Animals in a bacterial world", supports persistent
+    host-microbe association (symbiosis) as a pervasive microbial lifestyle; parent
+    of the mutualism/commensalism/parasitism sub-variants.
+- reference: DOI:10.1038/s41579-021-00550-7
+  notes: Drew et al. frame symbioses as a parasite-mutualist continuum, supporting
+    symbiosis as the umbrella lifestyle for these interaction modes.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY axis class (symbiosis) from literature research
+    to fill the host-interaction lifestyle gap; parent of mutualism, commensalism,
+    parasitism, and endosymbiosis.
+  llm_assisted: true

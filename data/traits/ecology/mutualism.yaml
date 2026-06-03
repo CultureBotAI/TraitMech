@@ -1,0 +1,28 @@
+identifier: traitmech:000041
+label: mutualism
+definition: A symbiosis in which both the microorganism and its host or partner
+  benefit from the association, often through exchange of nutrients or services.
+definition_source: DOI:10.1073/pnas.1218525110
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000040
+synonyms:
+- synonym_text: mutualist
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1073/pnas.1218525110
+evidence:
+- reference: DOI:10.1073/pnas.1218525110
+  notes: McFall-Ngai et al. document widespread mutually beneficial host-microbe
+    associations across animals.
+- reference: DOI:10.1126/science.1104816
+  notes: Bäckhed et al., "Host-bacterial mutualism in the human intestine", supports
+    reciprocal benefit (nutrient harvest for the host, habitat for the microbes) as
+    the defining feature of mutualism.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (mutualism); sub-variant of symbiosis.
+  llm_assisted: true

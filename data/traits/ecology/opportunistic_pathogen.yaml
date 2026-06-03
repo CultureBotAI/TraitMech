@@ -1,0 +1,30 @@
+identifier: traitmech:000046
+label: opportunistic pathogen
+definition: A host-association lifestyle in which a normally commensal or
+  environmental microorganism causes disease only when host defenses are compromised
+  or it reaches a normally sterile site.
+definition_source: DOI:10.1016/j.tim.2012.04.005
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1004000
+synonyms:
+- synonym_text: opportunistic infection
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.tim.2012.04.005
+evidence:
+- reference: DOI:10.1016/j.tim.2012.04.005
+  notes: Brown, Cornforth & Mideo, "Evolution of virulence in opportunistic
+    pathogens", support context-dependent virulence maintained by advantages outside
+    the host.
+- reference: DOI:10.1038/s41579-021-00550-7
+  notes: Drew et al. support facultative shifts toward parasitism/pathogenicity along
+    the parasite-mutualist continuum, the basis of opportunistic disease.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (opportunistic pathogen); sub-variant of
+    the existing pathogenic_to_host class (METPO:1004000).
+  llm_assisted: true

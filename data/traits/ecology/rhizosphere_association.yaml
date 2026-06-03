@@ -1,0 +1,29 @@
+identifier: traitmech:000051
+label: rhizosphere association
+definition: A habitat association in which an organism lives in the rhizosphere — the
+  soil zone influenced by plant roots and root exudates — a hotspot of microbial
+  activity and plant-microbe interaction.
+definition_source: DOI:10.1038/nrmicro3109
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000047
+synonyms:
+- synonym_text: rhizosphere-associated
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3109
+evidence:
+- reference: DOI:10.1038/nrmicro3109
+  notes: Philippot et al., "Going back to the roots", define the rhizosphere as a
+    distinct, root-influenced microbial habitat.
+- reference: DOI:10.1038/nrmicro.2017.87
+  notes: Fierer supports the rhizosphere as a high-activity subset of the broader
+    soil microbiome.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (rhizosphere association); sub-variant of
+    habitat association.
+  llm_assisted: true

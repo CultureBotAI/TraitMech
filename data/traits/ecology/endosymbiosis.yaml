@@ -1,0 +1,29 @@
+identifier: traitmech:000045
+label: endosymbiosis
+definition: A symbiosis in which the microorganism lives inside the cells or tissues
+  of its host. Obligate intracellular endosymbionts (e.g. of insects) frequently
+  undergo extreme genome reduction.
+definition_source: DOI:10.1038/nrmicro2670
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000040
+synonyms:
+- synonym_text: endosymbiont
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro2670
+evidence:
+- reference: DOI:10.1038/nrmicro2670
+  notes: McCutcheon & Moran, "Extreme genome reduction in symbiotic bacteria",
+    characterize intracellular endosymbionts and their diminished genomes.
+- reference: DOI:10.1038/nrmicro.2017.171
+  notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root
+    nodules, an example of the endosymbiotic lifestyle.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (endosymbiosis); spatial sub-variant of
+    symbiosis.
+  llm_assisted: true

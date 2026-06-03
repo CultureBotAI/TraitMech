@@ -1,0 +1,24 @@
+identifier: traitmech:000048
+label: free-living
+definition: A habitat association in which an organism lives independently in the
+  environment, not obligately associated with a host.
+definition_source: DOI:10.1038/nrmicro1341
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000047
+evidence:
+- reference: DOI:10.1038/nrmicro1341
+  notes: Martiny et al. support biogeographic patterning of free-living microbial
+    taxa across environments.
+- reference: DOI:10.1038/nrmicro.2017.171
+  notes: Poole et al. describe rhizobia in their free-living soil phase, contrasting
+    it with the host-associated endosymbiotic phase.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (free-living); sub-variant of habitat
+    association.
+  llm_assisted: true

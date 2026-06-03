@@ -1,0 +1,29 @@
+identifier: traitmech:000052
+label: gut-associated
+definition: A host association in which an organism is a persistent member of the
+  gastrointestinal microbiota of an animal host, often contributing to host
+  nutrition and physiology.
+definition_source: DOI:10.1126/science.1104816
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000049
+synonyms:
+- synonym_text: intestinal
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1126/science.1104816
+evidence:
+- reference: DOI:10.1126/science.1104816
+  notes: Bäckhed et al. characterize the distal intestine as a dense microbial
+    habitat whose residents provide metabolic capabilities to the host.
+- reference: DOI:10.1073/pnas.1218525110
+  notes: McFall-Ngai et al. support the gut as a major site of host-associated
+    microbial communities across animals.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (gut-associated); sub-variant of
+    host-associated.
+  llm_assisted: true
