@@ -1,0 +1,32 @@
+identifier: traitmech:000074
+label: mycelial growth
+definition: A morphology trait in which a bacterium grows as branching, filamentous
+  hyphae that form a mycelium, often with subsequent differentiation into aerial
+  hyphae and spores, as in Streptomyces.
+definition_source: DOI:10.1038/nrmicro1968
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: mycelium-forming
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro1968
+- synonym_text: hyphal growth
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3178
+evidence:
+- reference: DOI:10.1038/nrmicro1968
+  notes: Flärdh & Buttner describe Streptomyces growth as a branching hyphal mycelium
+    with subsequent morphological differentiation.
+- reference: DOI:10.1038/nrmicro3178
+  notes: Claessen et al. treat filamentous/mycelial growth as a bacterial solution to
+    multicellularity.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (mycelial growth) from literature
+    research to fill the multicellular/developmental gap.
+  llm_assisted: true

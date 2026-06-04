@@ -1,0 +1,29 @@
+identifier: traitmech:000071
+label: magnetosome
+definition: A membrane-bounded intracellular organelle containing a magnetic
+  iron-mineral crystal (magnetite or greigite); chains of magnetosomes allow
+  magnetotactic bacteria to align with and navigate along geomagnetic field lines.
+definition_source: DOI:10.1038/nrmicro.2016.99
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: magnetotactic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro842
+evidence:
+- reference: DOI:10.1038/nrmicro.2016.99
+  notes: Uebe & Schüler review magnetosome biogenesis as the formation of
+    membrane-bounded magnetic-mineral organelles in magnetotactic bacteria.
+- reference: DOI:10.1038/nrmicro842
+  notes: Bazylinski & Frankel, "Magnetosome formation in prokaryotes", describe
+    magnetosomes and the magnetotactic lifestyle they enable.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (magnetosome); organelle sub-variant
+    of intracellular inclusion.
+  llm_assisted: true

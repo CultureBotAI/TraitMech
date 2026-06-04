@@ -1,0 +1,30 @@
+identifier: traitmech:000072
+label: carboxysome
+definition: A bacterial microcompartment — a polyhedral protein-shelled organelle
+  that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 for carbon
+  fixation in cyanobacteria and many chemoautotrophs.
+definition_source: DOI:10.1038/nrmicro.2018.10
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: bacterial microcompartment
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro.2018.10
+evidence:
+- reference: DOI:10.1038/nrmicro.2018.10
+  notes: Kerfeld et al. review bacterial microcompartments; the carboxysome is the
+    archetypal protein-shelled CO2-fixing microcompartment.
+- reference: DOI:10.1038/nrmicro1913
+  notes: Yeates et al. describe protein-based organelles in bacteria (carboxysomes
+    and related microcompartments), including the carboxysome shell and its
+    encapsulated enzymes.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (carboxysome); protein-microcompartment
+    sub-variant of intracellular inclusion.
+  llm_assisted: true

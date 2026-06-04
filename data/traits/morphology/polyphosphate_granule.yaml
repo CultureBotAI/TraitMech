@@ -1,0 +1,32 @@
+identifier: traitmech:000068
+label: polyphosphate granule
+definition: An intracellular storage inclusion of inorganic polyphosphate (a polymer
+  of many phosphate residues), historically called a volutin or metachromatic granule,
+  serving as a phosphate and energy reserve.
+definition_source: DOI:10.1146/annurev.biochem.77.083007.093039
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: volutin granule
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.biochem.77.083007.093039
+- synonym_text: metachromatic granule
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.biochem.77.083007.093039
+evidence:
+- reference: DOI:10.1146/annurev.biochem.77.083007.093039
+  notes: Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated as
+    granules, as a phosphate/energy reserve essential for growth and survival.
+- reference: DOI:10.1038/s41579-020-0413-0
+  notes: Greening & Lithgow include polyphosphate bodies among bacterial intracellular
+    inclusions.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (polyphosphate/volutin granule);
+    storage sub-variant of intracellular inclusion.
+  llm_assisted: true

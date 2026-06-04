@@ -1,0 +1,32 @@
+identifier: traitmech:000065
+label: prosthecate
+definition: A morphology trait in which the cell bears one or more prosthecae —
+  tubular extensions of the cell envelope (stalks) — that increase nutrient-uptake
+  surface area or mediate attachment, as in Caulobacter.
+definition_source: DOI:10.1111/j.1365-2958.2007.05633.x
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: stalked
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1365-2958.2007.05633.x
+- synonym_text: prostheca
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00040-09
+evidence:
+- reference: DOI:10.1111/j.1365-2958.2007.05633.x
+  notes: Wagner & Brun describe the Caulobacter stalk (prostheca) as a cell-envelope
+    extension and a specialized form of cell elongation aiding nutrient uptake.
+- reference: DOI:10.1128/MMBR.00040-09
+  notes: Curtis & Brun's review of Caulobacter development supports the stalk as a
+    regulated developmental appendage.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (prosthecate / stalked) from literature
+    research to fill the cellular-appendage gap.
+  llm_assisted: true
