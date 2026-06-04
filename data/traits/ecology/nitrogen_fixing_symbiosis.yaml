@@ -1,0 +1,32 @@
+identifier: traitmech:000044
+label: nitrogen-fixing symbiosis
+definition: A mutualistic symbiosis in which a diazotrophic bacterium fixes
+  atmospheric N2 for a host plant — classically rhizobia in legume root nodules —
+  in exchange for photosynthate.
+definition_source: DOI:10.1038/nrmicro.2017.171
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000041
+synonyms:
+- synonym_text: nitrogen-fixing symbiont
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro.2017.171
+- synonym_text: root-nodule symbiosis
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro2990
+evidence:
+- reference: DOI:10.1038/nrmicro.2017.171
+  notes: Poole et al. describe the free-living-to-endosymbiont transition of rhizobia
+    that forms N2-fixing legume root nodules.
+- reference: DOI:10.1038/nrmicro2990
+  notes: Oldroyd, "Speak, friend, and enter", supports the symbiotic signalling that
+    establishes beneficial nitrogen-fixing plant-microbe associations.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (nitrogen-fixing symbiosis); sub-variant
+    of mutualism.
+  llm_assisted: true

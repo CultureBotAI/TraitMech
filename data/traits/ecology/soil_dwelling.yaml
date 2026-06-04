@@ -1,0 +1,29 @@
+identifier: traitmech:000050
+label: soil-dwelling
+definition: A habitat association in which an organism's primary environment is soil,
+  a complex and highly diverse microbial habitat central to terrestrial
+  biogeochemical cycling.
+definition_source: DOI:10.1038/nrmicro.2017.87
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000047
+synonyms:
+- synonym_text: soil-associated
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro.2017.87
+evidence:
+- reference: DOI:10.1038/nrmicro.2017.87
+  notes: Fierer, "Embracing the unknown", characterizes the soil microbiome as a
+    distinct, complex microbial habitat.
+- reference: DOI:10.1038/nrmicro1341
+  notes: Martiny et al. support soil communities as biogeographically structured
+    microbial habitats.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (soil-dwelling); sub-variant of habitat
+    association.
+  llm_assisted: true

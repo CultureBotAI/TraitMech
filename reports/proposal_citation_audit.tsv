@@ -1,4 +1,20 @@
 path	identifier	n_citations	citations	malformed	passes
+data/traits/ecology/biofilm_formation.yaml	traitmech:000053	2	DOI:10.1038/nrmicro.2016.94; DOI:10.1038/s41579-019-0162-0		yes
+data/traits/ecology/commensalism.yaml	traitmech:000042	2	DOI:10.1038/s41579-021-00550-7; DOI:10.1073/pnas.1218525110		yes
+data/traits/ecology/endosymbiosis.yaml	traitmech:000045	2	DOI:10.1038/nrmicro2670; DOI:10.1038/nrmicro.2017.171		yes
+data/traits/ecology/free_living.yaml	traitmech:000048	2	DOI:10.1038/nrmicro1341; DOI:10.1038/nrmicro.2017.171		yes
+data/traits/ecology/gut_associated.yaml	traitmech:000052	2	DOI:10.1126/science.1104816; DOI:10.1073/pnas.1218525110		yes
+data/traits/ecology/habitat_association.yaml	traitmech:000047	2	DOI:10.1038/nrmicro1341; DOI:10.1038/nrmicro.2017.87		yes
+data/traits/ecology/host_associated.yaml	traitmech:000049	2	DOI:10.1073/pnas.1218525110; DOI:10.1126/science.1104816		yes
+data/traits/ecology/mutualism.yaml	traitmech:000041	2	DOI:10.1073/pnas.1218525110; DOI:10.1126/science.1104816		yes
+data/traits/ecology/nitrogen_fixing_symbiosis.yaml	traitmech:000044	2	DOI:10.1038/nrmicro.2017.171; DOI:10.1038/nrmicro2990		yes
+data/traits/ecology/opportunistic_pathogen.yaml	traitmech:000046	2	DOI:10.1016/j.tim.2012.04.005; DOI:10.1038/s41579-021-00550-7		yes
+data/traits/ecology/parasitism.yaml	traitmech:000043	2	DOI:10.1038/s41579-021-00550-7; DOI:10.1073/pnas.1218525110		yes
+data/traits/ecology/predatory_bacterium.yaml	traitmech:000054	2	DOI:10.1146/annurev.micro.091208.073346; DOI:10.1111/1462-2920.13171		yes
+data/traits/ecology/rhizosphere_association.yaml	traitmech:000051	2	DOI:10.1038/nrmicro3109; DOI:10.1038/nrmicro.2017.87		yes
+data/traits/ecology/saprotrophy.yaml	traitmech:000055	2	DOI:10.3389/fmicb.2012.00348; DOI:10.1038/nrmicro.2017.87		yes
+data/traits/ecology/soil_dwelling.yaml	traitmech:000050	2	DOI:10.1038/nrmicro.2017.87; DOI:10.1038/nrmicro1341		yes
+data/traits/ecology/symbiosis.yaml	traitmech:000040	2	DOI:10.1073/pnas.1218525110; DOI:10.1038/s41579-021-00550-7		yes
 data/traits/environment/arsenic_tolerant.yaml	traitmech:000017	2	DOI:10.3389/fmicb.2018.02473; DOI:10.3389/fmicb.2020.00047		yes
 data/traits/environment/cadmium_tolerant.yaml	traitmech:000013	3	PMID:12829273; DOI:10.1111/j.1365-2958.2009.06792.x; DOI:10.3389/fmicb.2020.00047		yes
 data/traits/environment/cobalt_tolerant.yaml	traitmech:000015	3	PMID:12829273; DOI:10.1111/j.1365-2958.2009.06792.x; DOI:10.3389/fmicb.2020.00047		yes

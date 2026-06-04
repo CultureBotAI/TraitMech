@@ -1,0 +1,32 @@
+identifier: traitmech:000055
+label: saprotrophy
+definition: A trophic-ecology lifestyle in which an organism feeds on dead or
+  decaying organic matter, mineralizing it and driving carbon and nutrient cycling
+  (decomposition).
+definition_source: DOI:10.3389/fmicb.2012.00348
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: decomposer
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2012.00348
+- synonym_text: saprophytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2012.00348
+evidence:
+- reference: DOI:10.3389/fmicb.2012.00348
+  notes: Schimel & Schaeffer, "Microbial control over carbon cycling in soil",
+    support microbial decomposition of organic matter as a central ecosystem process.
+- reference: DOI:10.1038/nrmicro.2017.87
+  notes: Fierer supports decomposer/saprotrophic activity as a key function of soil
+    microbial communities.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (saprotrophy/decomposer) from literature
+    research to fill the trophic-ecology gap.
+  llm_assisted: true

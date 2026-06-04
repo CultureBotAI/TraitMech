@@ -1,0 +1,29 @@
+identifier: traitmech:000053
+label: biofilm formation
+definition: An ecological lifestyle in which cells form surface-attached,
+  matrix-enclosed multicellular communities (biofilms) held together by extracellular
+  polymeric substances — a widespread mode of microbial life.
+definition_source: DOI:10.1038/nrmicro.2016.94
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: biofilm-forming
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro.2016.94
+evidence:
+- reference: DOI:10.1038/nrmicro.2016.94
+  notes: Flemming et al. describe matrix-enclosed, surface-associated communities
+    (biofilms) as an emergent, distinct mode of bacterial life.
+- reference: DOI:10.1038/s41579-019-0162-0
+  notes: Flemming & Wuertz support the global ubiquity of the biofilm lifestyle
+    across microbial habitats.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (biofilm formation) from literature
+    research to fill the microbial-lifestyle gap.
+  llm_assisted: true

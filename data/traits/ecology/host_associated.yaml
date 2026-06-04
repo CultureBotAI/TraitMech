@@ -1,0 +1,25 @@
+identifier: traitmech:000049
+label: host-associated
+definition: A habitat association in which an organism lives persistently on or in a
+  plant or animal host (e.g. as a member of a host microbiome), spanning commensal,
+  mutualistic, and pathogenic relationships.
+definition_source: DOI:10.1073/pnas.1218525110
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000047
+evidence:
+- reference: DOI:10.1073/pnas.1218525110
+  notes: McFall-Ngai et al. document the ubiquity of host-associated microbial
+    communities across the animal kingdom.
+- reference: DOI:10.1126/science.1104816
+  notes: Bäckhed et al. characterize the host-associated gut microbiota as a dense,
+    coevolved community.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (host-associated); sub-variant of habitat
+    association, parent of gut-associated.
+  llm_assisted: true

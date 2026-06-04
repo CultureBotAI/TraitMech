@@ -1,0 +1,29 @@
+identifier: traitmech:000054
+label: predatory bacterium
+definition: A trophic-ecology lifestyle in which a bacterium actively kills and
+  consumes other bacteria for nutrients, e.g. the periplasmic predator Bdellovibrio
+  bacteriovorus.
+definition_source: DOI:10.1146/annurev.micro.091208.073346
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: bacterial predator
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.091208.073346
+evidence:
+- reference: DOI:10.1146/annurev.micro.091208.073346
+  notes: Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus", describes
+    invasion, killing, and digestion of prey bacteria as a predatory lifestyle.
+- reference: DOI:10.1111/1462-2920.13171
+  notes: Pérez et al. survey predatory bacteria, their hunting strategies, prey
+    ranges, and genome characteristics.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (predatory bacterium) from literature
+    research to fill the trophic-ecology gap.
+  llm_assisted: true

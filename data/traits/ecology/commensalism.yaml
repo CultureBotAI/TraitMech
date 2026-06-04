@@ -1,0 +1,28 @@
+identifier: traitmech:000042
+label: commensalism
+definition: A symbiosis in which the microorganism benefits from the association
+  (e.g. resources, shelter, transport) while the host's fitness remains essentially
+  unaffected.
+definition_source: DOI:10.1038/s41579-021-00550-7
+trait_category: ECOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000040
+synonyms:
+- synonym_text: commensal
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41579-021-00550-7
+evidence:
+- reference: DOI:10.1038/s41579-021-00550-7
+  notes: Drew et al. place commensalism on the parasite-mutualist continuum as a
+    near-neutral host interaction.
+- reference: DOI:10.1073/pnas.1218525110
+  notes: McFall-Ngai et al. support commensal colonization as a major class of
+    host-associated microbial lifestyles.
+curation_history:
+- timestamp: '2026-06-02T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate ECOLOGY trait (commensalism); sub-variant of symbiosis.
+  llm_assisted: true
