@@ -62,7 +62,7 @@ phenotype) with new intermediate axis classes.
 | Reference | Work |
 |-----------|------|
 | DOI:10.1093/femsre/fuv034 (PMID:26195616) | Schuhmacher, Thormann & Bange, "How bacteria maintain location and number of flagella?" (2015) |
-| DOI:10.3390/biom9070279 | (repo) bacterial flagellum review |
+| DOI:10.3390/biom9070279 (PMID:31337100) | Nakamura & Minamino, "Flagella-Driven Motility of Bacteria" (Biomolecules 2019) |
 | DOI:10.1146/annurev.micro.56.012302.160938 (PMID:12142488) | Mattick, "Type IV pili and twitching motility" (2002) |
 | DOI:10.1146/annurev.micro.57.030502.091014 (PMID:14527279) | Harshey, "Bacterial motility on a surface" (2003) |
 | DOI:10.1038/nrmicro2405 (PMID:20694026) | Kearns, "A field guide to bacterial swarming motility" (2010) |
