@@ -1,0 +1,31 @@
+identifier: traitmech:000056
+label: flagellar arrangement
+definition: A morphology trait describing the number and spatial distribution of
+  flagella on a cell (the flagellation pattern), e.g. monotrichous, lophotrichous,
+  amphitrichous, or peritrichous.
+definition_source: DOI:10.1093/femsre/fuv034
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000704
+synonyms:
+- synonym_text: flagellation pattern
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1093/femsre/fuv034
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  notes: Schuhmacher, Thormann & Bange describe how bacteria maintain a regular
+    number and cellular location of flagella (the flagellation pattern); parent of
+    the specific arrangement sub-variants.
+- reference: DOI:10.3390/biom9070279
+  notes: Bacterial flagellum review supports the flagellum as the locomotory organelle
+    whose number and placement define flagellar arrangement.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY axis class (flagellar arrangement) under the
+    existing flagellated class (METPO:1000704); parent of monotrichous/lophotrichous/
+    amphitrichous/peritrichous.
+  llm_assisted: true

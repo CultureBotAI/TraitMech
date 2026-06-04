@@ -1,0 +1,29 @@
+identifier: traitmech:000064
+label: S-layer
+definition: A morphology trait in which the cell surface is coated by a crystalline,
+  two-dimensional array of self-assembling proteinaceous (glyco)protein subunits (a
+  surface layer), found in many bacteria and most archaea.
+definition_source: DOI:10.1038/nrmicro3213
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: surface layer
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3213
+evidence:
+- reference: DOI:10.1038/nrmicro3213
+  notes: Fagan & Fairweather describe the S-layer as a self-assembled, regularly
+    spaced two-dimensional protein array coating the cell surface.
+- reference: DOI:10.1038/s41579-025-01258-8
+  notes: Review of assembly, architecture and functional roles of microbial surface
+    layers supports the S-layer as a defined cell-surface structure.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (S-layer) from literature research to
+    fill the cell-surface-structure gap.
+  llm_assisted: true

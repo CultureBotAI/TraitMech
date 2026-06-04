@@ -1,0 +1,33 @@
+identifier: traitmech:000063
+label: capsule
+definition: A morphology trait in which the cell is surrounded by a well-organized
+  layer of polysaccharide (or rarely polypeptide) external to the cell envelope,
+  mediating adhesion, desiccation resistance, and immune evasion.
+definition_source: DOI:10.1146/annurev.micro.50.1.285
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: capsulated
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.50.1.285
+- synonym_text: capsular polysaccharide
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.biochem.75.103004.142545
+evidence:
+- reference: DOI:10.1146/annurev.micro.50.1.285
+  notes: Roberts, "The biochemistry and genetics of capsular polysaccharide
+    production in bacteria", treats the capsule as an organized external polysaccharide
+    layer.
+- reference: DOI:10.1146/annurev.biochem.75.103004.142545
+  notes: Whitfield reviews biosynthesis and assembly of capsular polysaccharides in
+    Escherichia coli.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (capsule) from literature research to
+    fill the cell-surface-structure gap.
+  llm_assisted: true

@@ -1,0 +1,32 @@
+identifier: traitmech:000067
+label: polyhydroxyalkanoate granule
+definition: An intracellular storage inclusion composed of polyhydroxyalkanoate
+  (e.g. polyhydroxybutyrate, PHB), a carbon and energy reserve accumulated as
+  cytoplasmic granules.
+definition_source: DOI:10.1128/mr.54.4.450-472.1990
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: PHB granule
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.54.4.450-472.1990
+- synonym_text: polyhydroxybutyrate inclusion
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.54.4.450-472.1990
+evidence:
+- reference: DOI:10.1128/mr.54.4.450-472.1990
+  notes: Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy
+    reserves stored as cytoplasmic granules.
+- reference: DOI:10.1038/s41579-020-0413-0
+  notes: Greening & Lithgow include storage granules such as PHA bodies among bacterial
+    intracellular organelles.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (polyhydroxyalkanoate/PHB granule);
+    storage sub-variant of intracellular inclusion.
+  llm_assisted: true

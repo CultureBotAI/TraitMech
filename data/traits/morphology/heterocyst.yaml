@@ -1,0 +1,29 @@
+identifier: traitmech:000073
+label: heterocyst
+definition: A morphology trait in which a filamentous cyanobacterium differentiates
+  specialized, thick-walled cells (heterocysts) that create a microoxic interior for
+  oxygen-sensitive nitrogen fixation.
+definition_source: DOI:10.1101/cshperspect.a000315
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: heterocyst-forming
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1101/cshperspect.a000315
+evidence:
+- reference: DOI:10.1101/cshperspect.a000315
+  notes: Kumar, Mella-Herrera & Golden describe heterocysts as differentiated cells
+    whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.
+- reference: DOI:10.1093/femsre/fuw029
+  notes: Herrero, Stavans & Flores describe heterocysts within the multicellular
+    filament of heterocyst-forming cyanobacteria.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (heterocyst) from literature research
+    to fill the cellular-differentiation gap.
+  llm_assisted: true

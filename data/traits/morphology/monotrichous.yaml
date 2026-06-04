@@ -1,0 +1,24 @@
+identifier: traitmech:000057
+label: monotrichous
+definition: A flagellar arrangement with a single flagellum, typically located at
+  one pole of the cell.
+definition_source: DOI:10.1093/femsre/fuv034
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000056
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  notes: Schuhmacher et al. describe single-flagellum (monotrichous, polar)
+    flagellation as one regular flagellation pattern.
+- reference: DOI:10.3390/biom9070279
+  notes: Flagellum review supports a single helical flagellar filament as a
+    locomotory organelle.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (monotrichous flagellation);
+    sub-variant of flagellar arrangement.
+  llm_assisted: true

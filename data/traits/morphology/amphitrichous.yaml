@@ -1,0 +1,23 @@
+identifier: traitmech:000059
+label: amphitrichous
+definition: A flagellar arrangement with flagella (single filaments or tufts) at both
+  poles of the cell.
+definition_source: DOI:10.1093/femsre/fuv034
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000056
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  notes: Schuhmacher et al. describe bipolar (amphitrichous) flagellation among the
+    flagellation patterns governed by FlhF/FlhG.
+- reference: DOI:10.3390/biom9070279
+  notes: Flagellum review supports polar flagellar filaments as locomotory organelles.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (amphitrichous flagellation);
+    sub-variant of flagellar arrangement.
+  llm_assisted: true

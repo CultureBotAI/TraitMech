@@ -1,0 +1,28 @@
+identifier: traitmech:000070
+label: gas vesicle
+definition: An intracellular gas-filled proteinaceous inclusion that provides buoyancy,
+  allowing planktonic bacteria and archaea to position themselves in the water column.
+definition_source: DOI:10.1038/nrmicro2834
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: gas vacuole
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro2834
+evidence:
+- reference: DOI:10.1038/nrmicro2834
+  notes: Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous
+    flotation structures in bacteria and archaea.
+- reference: DOI:10.1038/s41579-020-0413-0
+  notes: Greening & Lithgow include gas vesicles among bacterial intracellular
+    organelles.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (gas vesicle / gas vacuole); buoyancy
+    sub-variant of intracellular inclusion.
+  llm_assisted: true

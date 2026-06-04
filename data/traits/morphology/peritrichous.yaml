@@ -1,0 +1,24 @@
+identifier: traitmech:000060
+label: peritrichous
+definition: A flagellar arrangement with flagella distributed over the entire cell
+  surface rather than localized to the poles.
+definition_source: DOI:10.1093/femsre/fuv034
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000056
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  notes: Schuhmacher et al. describe peritrichous (surface-distributed) flagellation
+    as one of the conserved flagellation patterns.
+- reference: DOI:10.3390/biom9070279
+  notes: Flagellum review supports multiple surface flagellar filaments as locomotory
+    organelles, as in peritrichously flagellated enterobacteria.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (peritrichous flagellation);
+    sub-variant of flagellar arrangement.
+  llm_assisted: true

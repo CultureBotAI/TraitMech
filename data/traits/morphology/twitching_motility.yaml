@@ -1,0 +1,29 @@
+identifier: traitmech:000061
+label: twitching motility
+definition: A flagella-independent surface motility driven by the extension,
+  attachment, and retraction of type IV pili, producing intermittent, jerky
+  translocation of cells across moist surfaces.
+definition_source: DOI:10.1146/annurev.micro.56.012302.160938
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000702
+synonyms:
+- synonym_text: twitching
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.56.012302.160938
+evidence:
+- reference: DOI:10.1146/annurev.micro.56.012302.160938
+  notes: Mattick, "Type IV pili and twitching motility", describes twitching as
+    type-IV-pilus-driven surface translocation operating like a grappling hook.
+- reference: DOI:10.1146/annurev.micro.57.030502.091014
+  notes: Harshey, "Bacterial motility on a surface", places twitching among the
+    distinct surface-translocation strategies of bacteria.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY/motility trait (twitching motility) under
+    the existing motile class (METPO:1000702).
+  llm_assisted: true

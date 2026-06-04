@@ -1,0 +1,24 @@
+identifier: traitmech:000058
+label: lophotrichous
+definition: A flagellar arrangement with a tuft of multiple flagella at one pole of
+  the cell.
+definition_source: DOI:10.1093/femsre/fuv034
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000056
+evidence:
+- reference: DOI:10.1093/femsre/fuv034
+  notes: Schuhmacher et al. describe polar tufts of flagella (lophotrichous) among
+    the regular flagellation patterns bacteria maintain.
+- reference: DOI:10.3390/biom9070279
+  notes: Flagellum review supports multiple flagellar filaments acting as locomotory
+    organelles.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (lophotrichous flagellation);
+    sub-variant of flagellar arrangement.
+  llm_assisted: true

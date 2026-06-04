@@ -1,0 +1,29 @@
+identifier: traitmech:000069
+label: sulfur globule
+definition: An intracellular (or periplasmic) inclusion of elemental sulfur formed as
+  an intermediate during the oxidation of reduced sulfur compounds, characteristic of
+  many sulfur-oxidizing and phototrophic sulfur bacteria.
+definition_source: DOI:10.1016/S0065-2911(08)00002-7
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000066
+synonyms:
+- synonym_text: sulfur inclusion
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/S0065-2911(08)00002-7
+evidence:
+- reference: DOI:10.1016/S0065-2911(08)00002-7
+  notes: Frigaard & Dahl describe sulfur globules as sulfur-storage inclusions formed
+    during oxidative sulfur metabolism in phototrophic sulfur bacteria.
+- reference: DOI:10.1038/s41579-020-0413-0
+  notes: Greening & Lithgow include sulfur globules among bacterial intracellular
+    storage inclusions/organelles.
+curation_history:
+- timestamp: '2026-06-03T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (sulfur globule); storage sub-variant
+    of intracellular inclusion.
+  llm_assisted: true
