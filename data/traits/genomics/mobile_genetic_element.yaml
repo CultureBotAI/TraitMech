@@ -1,0 +1,30 @@
+identifier: traitmech:000089
+label: mobile genetic element
+definition: A genomics trait describing possession of DNA segments that can move
+  within or between genomes and mediate horizontal gene transfer, including plasmids,
+  prophages, transposable elements, and genomic islands.
+definition_source: DOI:10.1038/nrmicro1235
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: MGE
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro1235
+evidence:
+- reference: DOI:10.1038/nrmicro1235
+  notes: Frost et al. review mobile genetic elements as the agents of horizontal gene
+    transfer and genome plasticity; parent of the plasmid, prophage, transposable-
+    element, and genomic-island sub-variants.
+- reference: DOI:10.1111/1574-6976.12067
+  notes: Siguier, Gourbeyre & Chandler review insertion sequences as a major class of
+    mobile genetic elements shaping bacterial genomes.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS axis class (mobile genetic element) to parent
+    plasmid carriage, prophage, transposable element, and genomic island.
+  llm_assisted: true

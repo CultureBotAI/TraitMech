@@ -1,0 +1,28 @@
+identifier: traitmech:000098
+label: genome size
+definition: A quantitative genomics property describing the total length of an
+  organism's genome (typically expressed in megabase pairs), which varies widely
+  across prokaryotes and reflects lifestyle and evolutionary forces.
+definition_source: DOI:10.1038/nrmicro3331
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: genome length
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3331
+evidence:
+- reference: DOI:10.1038/nrmicro3331
+  notes: Batut et al. review reductive genome evolution, linking genome size to
+    population size and lifestyle across prokaryotes.
+- reference: DOI:10.1038/ismej.2014.60
+  notes: Giovannoni et al. discuss streamlining theory and the small genomes of
+    abundant free-living microbes.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (genome size) from literature research.
+  llm_assisted: true

@@ -1,0 +1,29 @@
+identifier: traitmech:000091
+label: prophage
+definition: A genomics trait describing possession of an integrated (or
+  extrachromosomal) temperate bacteriophage genome (a prophage) maintained in the
+  host during lysogeny, often contributing genes that alter host phenotype.
+definition_source: DOI:10.1128/MMBR.67.2.238-276.2003
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000089
+synonyms:
+- synonym_text: lysogen
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/ismej.2017.16
+evidence:
+- reference: DOI:10.1128/MMBR.67.2.238-276.2003
+  notes: Canchaya et al. review prophage genomics, showing most sequenced bacterial
+    genomes carry prophage sequences.
+- reference: DOI:10.1038/ismej.2017.16
+  notes: Howard-Varona et al. review lysogeny in nature, the maintenance of temperate
+    phage genomes within hosts.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (prophage / lysogeny); sub-variant of
+    mobile genetic element.
+  llm_assisted: true
