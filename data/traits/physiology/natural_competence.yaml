@@ -1,0 +1,28 @@
+identifier: traitmech:000087
+label: natural competence
+definition: A physiological state in which a cell takes up free extracellular DNA from
+  the environment and integrates it into its genome (natural genetic transformation).
+definition_source: DOI:10.1038/nrmicro3199
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: natural transformation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3199
+evidence:
+- reference: DOI:10.1038/nrmicro3199
+  notes: Johnston et al. review the distribution, shared mechanisms, and control of
+    natural bacterial transformation (competence for DNA uptake).
+- reference: DOI:10.1038/s41579-021-00650-4
+  notes: Review of horizontal gene transfer supports natural transformation as a
+    major route of bacterial DNA acquisition.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (natural competence) from literature
+    research to fill the genetic-plasticity gap.
+  llm_assisted: true

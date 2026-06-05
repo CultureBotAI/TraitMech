@@ -1,0 +1,29 @@
+identifier: traitmech:000081
+label: viable but nonculturable state
+definition: A dormancy state in which cells remain viable and minimally metabolically
+  active but lose the ability to grow on routine culture media, regaining culturability
+  upon resuscitation.
+definition_source: DOI:10.1111/j.1574-6976.2009.00200.x
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000080
+synonyms:
+- synonym_text: VBNC state
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1574-6976.2009.00200.x
+evidence:
+- reference: DOI:10.1111/j.1574-6976.2009.00200.x
+  notes: Oliver reviews the viable-but-nonculturable state, in which stressed cells
+    stay viable yet unculturable until resuscitated.
+- reference: DOI:10.1038/nrmicro2504
+  notes: Lennon & Jones frame the VBNC state within the broader microbial dormancy
+    seed-bank concept.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (viable but nonculturable state);
+    sub-variant of dormancy.
+  llm_assisted: true
