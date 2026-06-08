@@ -1,0 +1,32 @@
+identifier: traitmech:000113
+label: xylan degradation
+definition: A biopolymer-degradation metabolism in which an organism hydrolyzes xylan,
+  the most abundant hemicellulose, into xylose and xylo-oligosaccharides using
+  xylanases and accessory enzymes.
+definition_source: DOI:10.1111/j.1757-1707.2009.01004.x
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000110
+synonyms:
+- synonym_text: xylanolytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1111/j.1757-1707.2009.01004.x
+- synonym_text: hemicellulose degradation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.cbpa.2015.10.018
+evidence:
+- reference: DOI:10.1111/j.1757-1707.2009.01004.x
+  notes: Dodd & Cann review the enzymatic deconstruction of xylan, the major
+    hemicellulosic polysaccharide.
+- reference: DOI:10.1016/j.cbpa.2015.10.018
+  notes: Cragg et al. include hemicellulose (xylan) degradation within lignocellulose
+    breakdown across organisms.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (xylan / hemicellulose degradation);
+    sub-variant of biopolymer degradation.
+  llm_assisted: true

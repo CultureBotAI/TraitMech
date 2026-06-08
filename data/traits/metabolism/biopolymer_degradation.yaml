@@ -1,0 +1,30 @@
+identifier: traitmech:000110
+label: biopolymer degradation
+definition: A metabolism in which an organism secretes enzymes to depolymerize
+  recalcitrant biopolymers (such as cellulose, hemicellulose, chitin, and lignin)
+  into assimilable units for growth.
+definition_source: DOI:10.1016/j.cbpa.2015.10.018
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: biomass degradation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.cbpa.2015.10.018
+evidence:
+- reference: DOI:10.1016/j.cbpa.2015.10.018
+  notes: Cragg et al. review lignocellulose degradation mechanisms across the tree of
+    life, using complementary enzymes to deconstruct plant biopolymers; parent of the
+    polymer-specific sub-variants.
+- reference: DOI:10.1128/MMBR.66.3.506-577.2002
+  notes: Lynd et al. review microbial utilization of cellulose, the archetypal
+    biopolymer-degradation process.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM axis class (biopolymer degradation) to parent
+    cellulolysis, chitinolysis, xylan degradation, and lignin degradation.
+  llm_assisted: true

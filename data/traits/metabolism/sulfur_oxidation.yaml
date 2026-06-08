@@ -1,0 +1,29 @@
+identifier: traitmech:000106
+label: sulfur oxidation
+definition: A metabolism in which an organism oxidizes reduced inorganic sulfur
+  compounds (sulfide, elemental sulfur, thiosulfate) to sulfate, conserving energy
+  and often supporting chemolithotrophic growth.
+definition_source: DOI:10.1111/j.1574-6976.2009.00187.x
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: sulfide oxidation
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1111/j.1574-6976.2009.00187.x
+evidence:
+- reference: DOI:10.1111/j.1574-6976.2009.00187.x
+  notes: Ghosh & Dam review the biochemistry and molecular biology of lithotrophic
+    sulfur oxidation across bacteria and archaea.
+- reference: DOI:10.1128/AEM.67.7.2873-2882.2001
+  notes: Friedrich et al. describe a common mechanism for bacterial oxidation of
+    reduced inorganic sulfur compounds (the Sox system).
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (sulfur oxidation); round 2,
+    sulfur-cycle gap.
+  llm_assisted: true

@@ -1,0 +1,32 @@
+identifier: traitmech:000111
+label: cellulolysis
+definition: A biopolymer-degradation metabolism in which an organism hydrolyzes
+  cellulose to cellodextrins and glucose using cellulase systems, sometimes organized
+  into cellulosomes.
+definition_source: DOI:10.1128/MMBR.66.3.506-577.2002
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000110
+synonyms:
+- synonym_text: cellulolytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.66.3.506-577.2002
+- synonym_text: cellulose degradation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.66.3.506-577.2002
+evidence:
+- reference: DOI:10.1128/MMBR.66.3.506-577.2002
+  notes: Lynd et al. review microbial cellulose utilization, its enzymology, and
+    cellulosome systems.
+- reference: DOI:10.1016/j.cbpa.2015.10.018
+  notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation
+    across diverse organisms.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (cellulolysis); sub-variant of
+    biopolymer degradation.
+  llm_assisted: true

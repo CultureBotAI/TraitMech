@@ -1,0 +1,31 @@
+identifier: traitmech:000112
+label: chitinolysis
+definition: A biopolymer-degradation metabolism in which an organism hydrolyzes chitin
+  to N-acetylglucosamine oligomers and monomers using secreted chitinases.
+definition_source: DOI:10.3389/fmicb.2013.00149
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000110
+synonyms:
+- synonym_text: chitinolytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2013.00149
+- synonym_text: chitin degradation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3389/fmicb.2013.00149
+evidence:
+- reference: DOI:10.3389/fmicb.2013.00149
+  notes: Beier & Bertilsson review bacterial chitin degradation mechanisms and
+    ecophysiological strategies.
+- reference: DOI:10.1080/07388550601168223
+  notes: Bhattacharya et al. review the properties and potential of bacterial
+    chitinases.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (chitinolysis); sub-variant of
+    biopolymer degradation.
+  llm_assisted: true

@@ -1,0 +1,30 @@
+identifier: traitmech:000108
+label: dissimilatory manganese reduction
+definition: An anaerobic respiratory metabolism in which an organism conserves energy
+  by reducing Mn(IV) oxides to soluble Mn(II) as a terminal electron acceptor while
+  oxidizing organic matter or hydrogen.
+definition_source: DOI:10.1128/mr.55.2.259-287.1991
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000039
+synonyms:
+- synonym_text: Mn(IV) reduction
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.55.2.259-287.1991
+evidence:
+- reference: DOI:10.1128/mr.55.2.259-287.1991
+  notes: Lovley establishes dissimilatory Fe(III)/Mn(IV) reduction as energy-conserving
+    anaerobic respiration on metal-oxide acceptors.
+- reference: PMID:7826009
+  notes: Nealson & Saffarini review iron and manganese in anaerobic respiration as
+    terminal electron acceptors.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (dissimilatory manganese reduction);
+    round 2, parented to the existing dissimilatory metal reduction axis
+    (traitmech:000039) alongside round-1 iron reduction.
+  llm_assisted: true
