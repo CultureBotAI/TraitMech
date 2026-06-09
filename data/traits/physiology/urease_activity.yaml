@@ -1,0 +1,29 @@
+identifier: traitmech:000077
+label: urease activity
+definition: A physiological enzyme-activity phenotype in which a cell produces urease,
+  which hydrolyzes urea to ammonia and carbon dioxide, typically raising local pH;
+  it is the basis of the diagnostic urease test.
+definition_source: DOI:10.1128/mr.59.3.451-480.1995
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: urease-positive
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mr.59.3.451-480.1995
+evidence:
+- reference: DOI:10.1128/mr.59.3.451-480.1995
+  notes: Mobley, Island & Hausinger review the molecular biology of microbial ureases
+    that hydrolyze urea to ammonia and carbon dioxide.
+- reference: DOI:10.1128/mr.53.1.85-108.1989
+  notes: Mobley & Hausinger review the significance and regulation of microbial
+    ureases.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (urease activity) from literature
+    research to fill the enzyme-activity-phenotype gap.
+  llm_assisted: true

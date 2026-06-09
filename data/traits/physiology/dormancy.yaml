@@ -1,0 +1,28 @@
+identifier: traitmech:000080
+label: dormancy
+definition: A reversible physiological state of greatly reduced metabolic activity
+  that allows a cell to survive unfavorable conditions and later resuscitate,
+  generating a microbial seed bank.
+definition_source: DOI:10.1038/nrmicro2504
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: dormant state
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro2504
+evidence:
+- reference: DOI:10.1038/nrmicro2504
+  notes: Lennon & Jones review microbial seed banks and the mechanisms by which
+    microorganisms enter and exit dormancy; parent of VBNC and persister sub-variants.
+- reference: DOI:10.1038/nrmicro1557
+  notes: Lewis links dormancy to persister-cell survival and infectious disease.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY axis class (dormancy) to parent the VBNC and
+    persister-cell sub-variants.
+  llm_assisted: true

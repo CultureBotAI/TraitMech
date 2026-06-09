@@ -1,0 +1,29 @@
+identifier: traitmech:000078
+label: stress response
+definition: A physiological program by which a cell senses and mounts a protective
+  response to environmental or cellular stress, such as the RpoS-mediated general
+  stress response of enteric bacteria.
+definition_source: DOI:10.1146/annurev-micro-090110-102946
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: general stress response
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev-micro-090110-102946
+evidence:
+- reference: DOI:10.1146/annurev-micro-090110-102946
+  notes: Battesti, Majdalani & Gottesman review the RpoS-mediated general stress
+    response, a broad protective program induced by stress and stationary phase.
+- reference: DOI:10.1038/nrmicro3032
+  notes: Imlay reviews molecular stress-defense mechanisms, exemplifying inducible
+    protective responses; parent of the oxidative-stress-response sub-variant.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY axis class (stress response) to parent
+    specific stress-response sub-variants.
+  llm_assisted: true

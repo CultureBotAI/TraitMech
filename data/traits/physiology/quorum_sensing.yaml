@@ -1,0 +1,29 @@
+identifier: traitmech:000084
+label: quorum sensing
+definition: A cell-density-dependent regulatory physiology in which cells produce,
+  release, and detect diffusible autoinducer signals to coordinate gene expression
+  across a population.
+definition_source: DOI:10.1146/annurev.cellbio.21.012704.131001
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: autoinduction
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.cellbio.21.012704.131001
+evidence:
+- reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+  notes: Waters & Bassler review quorum sensing as autoinducer-mediated cell-to-cell
+    communication coordinating population-wide behavior.
+- reference: DOI:10.1146/annurev.micro.55.1.165
+  notes: Miller & Bassler review quorum sensing across bacteria and its regulatory
+    logic.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (quorum sensing) from literature
+    research to fill the cell-cell-signaling gap.
+  llm_assisted: true

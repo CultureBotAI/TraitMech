@@ -1,0 +1,30 @@
+identifier: traitmech:000083
+label: spore germination
+definition: The physiological process by which a dormant spore exits dormancy and
+  resumes vegetative growth in response to germinant signals, including release of
+  dipicolinic acid and rehydration of the spore core.
+definition_source: DOI:10.1016/j.mib.2003.10.001
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: germination
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/j.mib.2003.10.001
+evidence:
+- reference: DOI:10.1016/j.mib.2003.10.001
+  notes: Setlow reviews spore germination, in which nutrient germinants trigger
+    dipicolinic-acid release and core rehydration to resume growth.
+- reference: DOI:10.1038/nrmicro2504
+  notes: Lennon & Jones frame germination as resuscitation from the dormant
+    seed-bank state.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (spore germination), the physiological
+    exit from spore dormancy; complements the morphological sporulation/spore-forming
+    traits.
+  llm_assisted: true

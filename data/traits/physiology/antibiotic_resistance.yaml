@@ -1,0 +1,28 @@
+identifier: traitmech:000088
+label: antibiotic resistance
+definition: A physiological capacity to grow in the presence of antibiotic
+  concentrations that inhibit susceptible cells, mediated by efflux, target
+  modification, drug inactivation, or reduced permeability.
+definition_source: DOI:10.1038/nrmicro3380
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: antimicrobial resistance
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro3380
+evidence:
+- reference: DOI:10.1038/nrmicro3380
+  notes: Blair et al. review the molecular mechanisms of antibiotic resistance
+    (efflux, target alteration, drug inactivation, reduced uptake).
+- reference: DOI:10.1038/s41579-022-00820-y
+  notes: Updated review revisits molecular mechanisms of antibiotic resistance.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (antibiotic resistance) from literature
+    research. Distinct from persister-cell tolerance (non-genetic).
+  llm_assisted: true

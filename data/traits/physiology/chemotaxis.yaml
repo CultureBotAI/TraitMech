@@ -1,0 +1,29 @@
+identifier: traitmech:000086
+label: chemotaxis
+definition: A behavioral physiology in which cells bias their movement toward
+  attractants or away from repellents by modulating flagellar motor switching in
+  response to chemical gradients.
+definition_source: DOI:10.1038/nrm1524
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: chemotactic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrm1524
+evidence:
+- reference: DOI:10.1038/nrm1524
+  notes: Wadhams & Armitage review bacterial chemotaxis as gradient-guided movement
+    controlled by a histidine-aspartate phosphorelay.
+- reference: DOI:10.1038/nrmicro2505
+  notes: Porter, Wadhams & Armitage review signal processing in complex chemotaxis
+    pathways.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (chemotaxis), a behavioral response;
+    distinct from the morphological motility apparatus.
+  llm_assisted: true

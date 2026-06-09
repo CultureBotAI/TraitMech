@@ -1,0 +1,29 @@
+identifier: traitmech:000076
+label: oxidase activity
+definition: A physiological enzyme-activity phenotype in which a cell produces a
+  terminal respiratory oxidase (notably cytochrome c oxidase); it is the basis of the
+  diagnostic oxidase test.
+definition_source: DOI:10.3390/microorganisms10050926
+trait_category: PHYSIOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000059
+synonyms:
+- synonym_text: oxidase-positive
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.3390/microorganisms10050926
+evidence:
+- reference: DOI:10.3390/microorganisms10050926
+  notes: Hederstedt reviews bacterial cytochrome c oxidase, the terminal respiratory
+    oxidase detected by the oxidase test.
+- reference: DOI:10.1089/ars.2020.8039
+  notes: Borisov et al. review cytochrome bd-family terminal oxidases of prokaryotic
+    respiratory chains.
+curation_history:
+- timestamp: '2026-06-04T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate PHYSIOLOGY trait (oxidase activity) from literature
+    research to fill the enzyme-activity-phenotype gap.
+  llm_assisted: true
