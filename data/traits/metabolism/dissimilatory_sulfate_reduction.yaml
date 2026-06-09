@@ -1,0 +1,28 @@
+identifier: traitmech:000105
+label: dissimilatory sulfate reduction
+definition: An anaerobic respiratory metabolism in which an organism uses sulfate as
+  the terminal electron acceptor, reducing it to hydrogen sulfide while oxidizing
+  organic matter or hydrogen for energy.
+definition_source: DOI:10.1038/nrmicro1892
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: sulfate respiration
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro1892
+evidence:
+- reference: DOI:10.1038/nrmicro1892
+  notes: Muyzer & Stams review sulfate-reducing bacteria, which respire sulfate to
+    sulfide in anoxic habitats.
+- reference: DOI:10.3389/fmicb.2011.00081
+  notes: Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (dissimilatory sulfate reduction);
+    round 2, parented to anaerobic respiration (METPO:1000802).
+  llm_assisted: true

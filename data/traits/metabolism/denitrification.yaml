@@ -1,0 +1,29 @@
+identifier: traitmech:000104
+label: denitrification
+definition: An anaerobic respiratory metabolism in which nitrate is reduced stepwise
+  to gaseous dinitrogen via nitrite, nitric oxide, and nitrous oxide, removing fixed
+  nitrogen from the system as gas.
+definition_source: DOI:10.1128/mmbr.61.4.533-616.1997
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000802
+synonyms:
+- synonym_text: denitrifying
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mmbr.61.4.533-616.1997
+evidence:
+- reference: DOI:10.1128/mmbr.61.4.533-616.1997
+  notes: Zumft reviews the cell biology and molecular basis of denitrification, the
+    stepwise respiratory reduction of nitrate to dinitrogen.
+- reference: DOI:10.1038/nrmicro.2018.9
+  notes: Kuypers et al. place denitrification as a nitrogen-loss branch of the
+    microbial nitrogen-cycling network.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (denitrification); round 2, parented
+    to anaerobic respiration (METPO:1000802). Complements round-1 DNRA.
+  llm_assisted: true

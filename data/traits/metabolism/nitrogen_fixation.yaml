@@ -1,0 +1,29 @@
+identifier: traitmech:000103
+label: nitrogen fixation
+definition: A metabolism in which an organism reduces atmospheric dinitrogen (N2) to
+  ammonia using the nitrogenase enzyme complex, making fixed nitrogen biologically
+  available (diazotrophy).
+definition_source: DOI:10.1038/nrmicro.2018.9
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: diazotrophy
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrmicro954
+evidence:
+- reference: DOI:10.1038/nrmicro.2018.9
+  notes: Kuypers, Marchant & Kartal place nitrogen fixation as the reductive entry
+    point of the microbial nitrogen-cycling network.
+- reference: DOI:10.1038/nrmicro954
+  notes: Dixon & Kahn review the genetic regulation of biological nitrogen fixation
+    and nitrogenase.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (nitrogen fixation / diazotrophy);
+    round 2, nitrogen-cycle gap.
+  llm_assisted: true

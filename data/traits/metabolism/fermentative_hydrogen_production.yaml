@@ -1,0 +1,29 @@
+identifier: traitmech:000109
+label: fermentative hydrogen production
+definition: A fermentation in which an organism disposes of excess reducing
+  equivalents by producing molecular hydrogen (H2), typically via hydrogenases acting
+  on reduced ferredoxin or formate.
+definition_source: DOI:10.3389/fmicb.2021.703525
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1002005
+synonyms:
+- synonym_text: biohydrogen production
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1016/S0360-3199(02)00131-3
+evidence:
+- reference: DOI:10.3389/fmicb.2021.703525
+  notes: Review of fermentative energy conservation supports H2 production as a
+    redox-balancing fermentation output via hydrogenases.
+- reference: DOI:10.1016/S0360-3199(02)00131-3
+  notes: Hallenbeck & Benemann review biological hydrogen production, including dark
+    fermentative H2 generation.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (fermentative hydrogen production);
+    round 2, sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true

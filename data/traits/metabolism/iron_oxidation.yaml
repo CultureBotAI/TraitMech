@@ -1,0 +1,29 @@
+identifier: traitmech:000107
+label: iron oxidation
+definition: A metabolism in which an organism oxidizes ferrous iron (Fe2+) to ferric
+  iron (Fe3+) to conserve energy, at acidic or circumneutral pH and under aerobic or
+  anaerobic conditions.
+definition_source: DOI:10.1146/annurev.micro.112408.134208
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000060
+synonyms:
+- synonym_text: ferrous iron oxidation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1146/annurev.micro.112408.134208
+evidence:
+- reference: DOI:10.1146/annurev.micro.112408.134208
+  notes: Emerson, Fleming & McBeth review iron-oxidizing bacteria from an
+    environmental and genomic perspective.
+- reference: DOI:10.1099/mic.0.045344-0
+  notes: Hedrich, Schlomann & Johnson review the iron-oxidizing proteobacteria and
+    their energy metabolism.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (iron oxidation); round 2,
+    metal-cycle gap. Complements round-1 dissimilatory iron reduction.
+  llm_assisted: true

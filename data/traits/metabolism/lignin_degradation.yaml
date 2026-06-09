@@ -1,0 +1,28 @@
+identifier: traitmech:000114
+label: lignin degradation
+definition: A biopolymer-degradation metabolism in which an organism breaks down
+  lignin, the recalcitrant aromatic heteropolymer of plant cell walls, using oxidative
+  enzymes such as peroxidases and laccases.
+definition_source: DOI:10.1039/c1np00042j
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000110
+synonyms:
+- synonym_text: ligninolytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1039/c1np00042j
+evidence:
+- reference: DOI:10.1039/c1np00042j
+  notes: Bugg et al. review pathways for degradation of lignin in bacteria and fungi.
+- reference: DOI:10.1016/j.cbpa.2015.10.018
+  notes: Cragg et al. cover lignin breakdown as part of lignocellulose degradation
+    across the tree of life.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (lignin degradation); sub-variant of
+    biopolymer degradation.
+  llm_assisted: true
