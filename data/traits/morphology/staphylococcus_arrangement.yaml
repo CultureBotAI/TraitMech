@@ -1,0 +1,29 @@
+identifier: traitmech:000118
+label: staphylococcus arrangement
+definition: A cell arrangement in which dividing cocci form irregular three-dimensional
+  grape-like clusters because division planes occur in multiple, non-orthogonal
+  orientations and daughter cells remain attached.
+definition_source: DOI:10.1128/MMBR.00001-06
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000666
+synonyms:
+- synonym_text: cluster-forming cocci
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00001-06
+evidence:
+- reference: DOI:10.1128/MMBR.00001-06
+  notes: Young's review treats clustered coccal arrangement as a division-plane-
+    determined heritable morphology.
+- reference: DOI:10.1038/ncomms4842
+  notes: Division-plane orientation and daughter-cell separation govern formation of
+    three-dimensional coccal clusters.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (staphylococcus / cluster arrangement);
+    leftover round, cell-arrangement sibling of diplococcus shaped.
+  llm_assisted: true

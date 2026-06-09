@@ -1,0 +1,32 @@
+identifier: traitmech:000116
+label: proteolysis
+definition: A biopolymer-degradation metabolism in which an organism secretes proteases
+  to hydrolyze extracellular proteins and peptides into amino acids and short peptides
+  for nutrition.
+definition_source: DOI:10.1128/mmbr.62.3.597-635.1998
+trait_category: METABOLISM
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000110
+synonyms:
+- synonym_text: proteolytic
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mmbr.62.3.597-635.1998
+- synonym_text: protein degradation
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/mmbr.62.3.597-635.1998
+evidence:
+- reference: DOI:10.1128/mmbr.62.3.597-635.1998
+  notes: Rao et al. review microbial proteases, noting that secreted (extracellular)
+    proteases play a major nutritional role through their depolymerizing activity.
+- reference: DOI:10.1093/femsre/fuab046
+  notes: Review of Bacillus proteases covers extracellular protease activities and
+    their functions.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate METABOLISM trait (proteolysis / extracellular protein
+    degradation); leftover round, sub-variant of biopolymer degradation.
+  llm_assisted: true
