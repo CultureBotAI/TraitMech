@@ -7,7 +7,7 @@ definition: A genomics trait describing possession of a genomic island — a
 definition_source: DOI:10.1038/nrmicro884
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000089
 synonyms:
@@ -21,10 +21,57 @@ evidence:
 - reference: DOI:10.1111/j.1574-6976.2008.00136.x
   notes: Juhas et al. review genomic islands as tools of bacterial horizontal gene
     transfer and evolution.
+causal_graphs:
+- graph_id: gi_hgt_accessory_function
+  title: Genomic islands acquired by HGT carry accessory functions
+  description: Evidence-backed causal sketch linking horizontal gene transfer to
+    acquisition of genomic islands that confer accessory phenotypes (pathogenicity,
+    symbiosis, metabolism).
+  nodes:
+  - node_id: gi_trait
+    label: genomic island
+    node_type: TRAIT
+    grounding: traitmech:000093
+    description: Possession of a horizontally acquired chromosomal island.
+  - node_id: horizontal_gene_transfer
+    label: horizontal gene transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Transfer of genetic material between organisms outside vertical
+      descent.
+  - node_id: accessory_function
+    label: accessory function
+    node_type: QUALITY
+    description: Pathogenicity, symbiosis, or metabolic capability encoded by the
+      island.
+  edges:
+  - subject: horizontal_gene_transfer
+    predicate: causes
+    object: gi_trait
+    description: Genomic islands are integrated into host chromosomes via HGT.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2008.00136.x
+      notes: Juhas et al. review genomic islands as tools of bacterial HGT.
+    predicate_id: biolink:causes
+  - subject: gi_trait
+    predicate: contributes to
+    object: accessory_function
+    description: Genomic islands deliver pathogenicity, symbiosis, or metabolic
+      modules to the host.
+    evidence:
+    - reference: DOI:10.1038/nrmicro884
+      notes: Dobrindt et al. review genomic islands carrying virulence and
+        metabolic functions in pathogens and environmental microbes.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (genomic island); sub-variant of mobile
     genetic element.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (HGT-acquired genomic island accessory
+    function) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

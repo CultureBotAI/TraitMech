@@ -6,7 +6,7 @@ definition: A quantitative genomics property describing the total length of an
 definition_source: DOI:10.1038/nrmicro3331
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000188
 synonyms:
@@ -20,9 +20,54 @@ evidence:
 - reference: DOI:10.1038/ismej.2014.60
   notes: Giovannoni et al. discuss streamlining theory and the small genomes of
     abundant free-living microbes.
+causal_graphs:
+- graph_id: genome_size_population_lifestyle
+  title: Genome size reflects effective population size and lifestyle
+  description: Evidence-backed causal sketch linking effective population size and
+    lifestyle to reductive evolution shaping prokaryotic genome length.
+  nodes:
+  - node_id: genome_size_trait
+    label: genome size
+    node_type: TRAIT
+    grounding: traitmech:000098
+    description: Total genomic length of an organism.
+  - node_id: effective_population_size
+    label: effective population size
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Long-term breeding population size shaping selection efficiency.
+  - node_id: reductive_genome_evolution
+    label: reductive genome evolution
+    node_type: BIOLOGICAL_PROCESS
+    description: Selective and drift-driven loss of genomic content.
+  edges:
+  - subject: effective_population_size
+    predicate: regulates
+    object: reductive_genome_evolution
+    description: Large Ne strengthens selection against superfluous DNA; small Ne
+      permits drift-driven loss in symbionts.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3331
+      notes: Batut et al. compare reductive genome evolution at both ends of the
+        population-size spectrum.
+    predicate_id: RO:0002211
+  - subject: reductive_genome_evolution
+    predicate: causes
+    object: genome_size_trait
+    description: Reductive evolution sets the observed genome length.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      notes: Giovannoni et al. link streamlining theory to small genomes in
+        abundant free-living microbes.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (genome size) from literature research.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (genome size / population-size and
+    lifestyle) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

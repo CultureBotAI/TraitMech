@@ -6,7 +6,7 @@ definition: A genomics trait describing the number of complete genome copies per
 definition_source: DOI:10.1159/000368855
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000188
 synonyms:
@@ -20,10 +20,59 @@ evidence:
 - reference: DOI:10.1073/pnas.0707522105
   notes: Mendell et al. document extreme polyploidy (tens of thousands of genome
     copies) in the large bacterium Epulopiscium.
+causal_graphs:
+- graph_id: ploidy_repair_survival
+  title: Polyploidy supports DNA repair and long-term survival
+  description: Evidence-backed causal sketch linking multiple genome copies to
+    homologous-recombination repair templates and survival under desiccation and
+    starvation.
+  nodes:
+  - node_id: ploidy_trait
+    label: ploidy
+    node_type: TRAIT
+    grounding: traitmech:000100
+    description: Number of complete genome copies per cell.
+  - node_id: dna_recombinational_repair
+    label: recombinational repair of damaged DNA
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000725
+    description: Homologous recombination using sister chromosome as repair
+      template.
+  - node_id: long_term_survival
+    label: long-term survival
+    node_type: QUALITY
+    description: Persistence under desiccation, starvation, and damage.
+  edges:
+  - subject: ploidy_trait
+    predicate: enables
+    object: dna_recombinational_repair
+    description: Extra genome copies provide templates for recombinational repair
+      of DNA damage.
+    evidence:
+    - reference: DOI:10.1159/000368855
+      notes: Soppa reviews polyploidy supporting damage tolerance via redundant
+        chromosomes.
+    predicate_id: RO:0002327
+  - subject: ploidy_trait
+    predicate: contributes to
+    object: long_term_survival
+    description: Polyploidy underpins desiccation resistance and large cell sizes
+      observed in extreme polyploid lineages.
+    evidence:
+    - reference: DOI:10.1073/pnas.0707522105
+      notes: Mendell et al. document extreme polyploidy in Epulopiscium supporting
+        giant cell size.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (ploidy / polyploidy) from literature
     research.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (ploidy / repair / survival) with GO
+    node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

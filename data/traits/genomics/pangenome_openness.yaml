@@ -6,7 +6,7 @@ definition: A genomics trait describing the structure of a species' pangenome â€
 definition_source: DOI:10.1073/pnas.0506758102
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000188
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/nmicrobiol.2017.40
   notes: McInerney, McNally & O'Connell review why prokaryotes have pangenomes and
     what drives their openness.
+causal_graphs:
+- graph_id: pangenome_openness_hgt
+  title: Horizontal gene transfer drives open pangenomes
+  description: Evidence-backed causal sketch linking HGT and ecological breadth to
+    open versus closed pangenome structure.
+  nodes:
+  - node_id: pangenome_openness_trait
+    label: pangenome openness
+    node_type: TRAIT
+    grounding: traitmech:000102
+    description: Open versus closed structure of a species' pangenome.
+  - node_id: horizontal_gene_transfer
+    label: horizontal gene transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Acquisition of genes between lineages outside vertical descent.
+  - node_id: accessory_gene_pool
+    label: accessory gene pool
+    node_type: QUALITY
+    description: Strain-variable genes outside the species core.
+  edges:
+  - subject: horizontal_gene_transfer
+    predicate: causes
+    object: pangenome_openness_trait
+    description: HGT continually adds new accessory genes, keeping the pangenome
+      open.
+    evidence:
+    - reference: DOI:10.1073/pnas.0506758102
+      notes: Tettelin et al. introduce the pan-genome concept distinguishing
+        open vs closed pangenomes.
+    predicate_id: biolink:causes
+  - subject: pangenome_openness_trait
+    predicate: associated with
+    object: accessory_gene_pool
+    description: Open pangenomes accumulate large accessory gene pools across
+      strains.
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2017.40
+      notes: McInerney et al. review the ecological and population drivers of
+        pangenome openness.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (pangenome openness) from literature
     research.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (HGT-driven open pangenome) with
+    biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

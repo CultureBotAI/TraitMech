@@ -6,7 +6,7 @@ definition: A genome-sequence property describing non-uniform usage of synonymou
 definition_source: DOI:10.1038/nrg2899
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000188
 synonyms:
@@ -18,10 +18,55 @@ evidence:
   notes: Plotkin & Kudla review the causes and consequences of synonymous codon bias.
 - reference: DOI:10.1146/annurev.genet.42.110807.091442
   notes: Hershberg & Petrov review selection on codon bias across genomes.
+causal_graphs:
+- graph_id: codon_bias_translation_efficiency
+  title: Codon usage bias shapes translation efficiency and gene expression
+  description: Evidence-backed causal sketch linking biased synonymous-codon usage
+    to translation rates and gene expression level.
+  nodes:
+  - node_id: codon_bias_trait
+    label: codon usage bias
+    node_type: TRAIT
+    grounding: traitmech:000096
+    description: Non-uniform use of synonymous codons across a genome.
+  - node_id: translation
+    label: translation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006412
+    description: Ribosome-mediated decoding of mRNA into protein.
+  - node_id: gene_expression_level
+    label: gene expression level
+    node_type: QUALITY
+    description: Steady-state protein output per gene.
+  edges:
+  - subject: codon_bias_trait
+    predicate: regulates
+    object: translation
+    description: Biased codon usage tunes elongation rate via tRNA availability.
+    evidence:
+    - reference: DOI:10.1038/nrg2899
+      notes: Plotkin & Kudla review how synonymous codon bias modulates translation.
+    predicate_id: RO:0002211
+  - subject: codon_bias_trait
+    predicate: associated with
+    object: gene_expression_level
+    description: Codon bias is strongest in highly expressed genes.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.42.110807.091442
+      notes: Hershberg & Petrov review translational selection on codon bias
+        correlating with expression level.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (codon usage bias) from literature
     research to fill the genome-sequence-composition gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (codon bias / translation efficiency)
+    with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true
