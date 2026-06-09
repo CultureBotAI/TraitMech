@@ -6,7 +6,7 @@ definition: A metabolism in which an organism oxidizes ferrous iron (Fe2+) to fe
 definition_source: DOI:10.1146/annurev.micro.112408.134208
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1099/mic.0.045344-0
   notes: Hedrich, Schlomann & Johnson review the iron-oxidizing proteobacteria and
     their energy metabolism.
+causal_graphs:
+- graph_id: iron_oxidation_ferrous_to_ferric
+  title: Ferrous iron oxidation for energy
+  description: Evidence-backed causal sketch linking the iron-oxidation trait to
+    oxidation of ferrous iron to ferric iron for energy conservation.
+  nodes:
+  - node_id: iron_oxidation_trait
+    label: iron oxidation
+    node_type: TRAIT
+    grounding: traitmech:000107
+    description: Capacity to oxidize Fe(II) to Fe(III) for energy.
+  - node_id: ferrous_iron
+    label: ferrous iron
+    node_type: CHEMICAL
+    grounding: CHEBI:29033
+    description: Fe(2+) electron-donor substrate.
+  - node_id: ferric_iron
+    label: ferric iron
+    node_type: CHEMICAL
+    grounding: CHEBI:29034
+    description: Fe(3+) oxidized product.
+  edges:
+  - subject: iron_oxidation_trait
+    predicate: oxidizes
+    object: ferrous_iron
+    description: Iron oxidizers oxidize ferrous iron as an electron donor.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.112408.134208
+      notes: Emerson et al. review iron-oxidizing bacteria that use Fe(II) for energy.
+    predicate_id: METPO:2000016
+  - subject: iron_oxidation_trait
+    predicate: produces
+    object: ferric_iron
+    description: Ferrous-iron oxidation yields ferric iron.
+    evidence:
+    - reference: DOI:10.1099/mic.0.045344-0
+      notes: Hedrich et al. describe Fe(II) to Fe(III) oxidation by iron-oxidizing
+        proteobacteria.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (iron oxidation); round 2,
     metal-cycle gap. Complements round-1 dissimilatory iron reduction.
+  llm_assisted: true
+- timestamp: '2026-06-08T12:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (Fe(II) to Fe(III) oxidation) with
+    CHEBI node groundings and METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A metabolism in which an organism oxidizes reduced inorganic sulfur
 definition_source: DOI:10.1111/j.1574-6976.2009.00187.x
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -20,10 +20,68 @@ evidence:
 - reference: DOI:10.1128/AEM.67.7.2873-2882.2001
   notes: Friedrich et al. describe a common mechanism for bacterial oxidation of
     reduced inorganic sulfur compounds (the Sox system).
+causal_graphs:
+- graph_id: sulfur_oxidation_sox
+  title: Lithotrophic sulfur oxidation to sulfate
+  description: Evidence-backed causal sketch linking sulfur-oxidizing enzyme systems
+    to oxidation of reduced sulfur compounds to sulfate.
+  nodes:
+  - node_id: sulfur_oxidation_trait
+    label: sulfur oxidation
+    node_type: TRAIT
+    grounding: traitmech:000106
+    description: Capacity to oxidize reduced inorganic sulfur to sulfate.
+  - node_id: sox_system
+    label: Sox enzyme system
+    node_type: GENE_OR_PROTEIN
+    description: Sulfur-oxidizing multienzyme system.
+  - node_id: hydrogen_sulfide
+    label: hydrogen sulfide
+    node_type: CHEMICAL
+    grounding: CHEBI:16136
+    description: Reduced inorganic sulfur substrate.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    grounding: CHEBI:16189
+    description: Oxidized sulfur end product.
+  edges:
+  - subject: sox_system
+    predicate: enables
+    object: sulfur_oxidation_trait
+    description: The Sox system enables lithotrophic sulfur oxidation.
+    evidence:
+    - reference: DOI:10.1128/AEM.67.7.2873-2882.2001
+      notes: Friedrich et al. describe the Sox system as a common sulfur-oxidation
+        mechanism.
+    predicate_id: RO:0002327
+  - subject: sulfur_oxidation_trait
+    predicate: oxidizes
+    object: hydrogen_sulfide
+    description: Sulfur oxidizers oxidize reduced sulfur compounds such as sulfide.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+      notes: Ghosh & Dam review lithotrophic oxidation of reduced inorganic sulfur.
+    predicate_id: METPO:2000016
+  - subject: sulfur_oxidation_trait
+    predicate: produces
+    object: sulfate
+    description: Complete sulfur oxidation produces sulfate.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+      notes: Supports sulfate as the oxidized end product.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (sulfur oxidation); round 2,
     sulfur-cycle gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T12:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (Sox-mediated sulfur oxidation to
+    sulfate) with CHEBI node groundings and RO/METPO predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true
