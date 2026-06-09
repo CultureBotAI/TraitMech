@@ -6,7 +6,7 @@ definition: A physiological enzyme-activity phenotype in which a cell produces
 definition_source: DOI:10.1007/s00018-003-3206-5
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,95 @@ evidence:
 - reference: DOI:10.1038/nrmicro3032
   notes: Imlay's oxidative-stress review supports catalase as a key hydrogen-peroxide
     scavenging defense.
+causal_graphs:
+- graph_id: catalase_activity_h2o2_detoxification
+  title: Catalase hydrogen-peroxide detoxification
+  description: Evidence-backed causal sketch linking catalase to dismutation of
+    hydrogen peroxide into water and molecular oxygen.
+  nodes:
+  - node_id: catalase_activity_trait
+    label: catalase activity
+    node_type: TRAIT
+    grounding: traitmech:000075
+    description: Capacity to decompose hydrogen peroxide via catalase.
+  - node_id: catalase
+    label: catalase
+    node_type: GENE_OR_PROTEIN
+    description: Heme enzyme that dismutates hydrogen peroxide.
+  - node_id: catalase_function
+    label: catalase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004096
+    description: Catalysis of 2 H2O2 = O2 + 2 H2O.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16240
+    description: Reactive oxygen species detoxified by catalase.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Product of hydrogen peroxide dismutation.
+  - node_id: water
+    label: water
+    node_type: CHEMICAL
+    grounding: CHEBI:15377
+    description: Product of hydrogen peroxide dismutation.
+  edges:
+  - subject: catalase
+    predicate: enables
+    object: catalase_function
+    description: Catalase carries out the catalase molecular function.
+    evidence:
+    - reference: DOI:10.1007/s00018-003-3206-5
+      notes: Chelikani et al. characterize catalases as the enzymes performing this
+        dismutation.
+    predicate_id: RO:0002327
+  - subject: catalase_function
+    predicate: consumes
+    object: hydrogen_peroxide
+    description: The catalase reaction consumes hydrogen peroxide.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3032
+      notes: Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.
+    predicate_id: biolink:consumes
+  - subject: catalase_function
+    predicate: produces
+    object: molecular_oxygen
+    description: The catalase reaction produces molecular oxygen.
+    evidence:
+    - reference: DOI:10.1007/s00018-003-3206-5
+      notes: Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).
+    predicate_id: METPO:2000202
+  - subject: catalase_function
+    predicate: produces
+    object: water
+    description: The catalase reaction produces water.
+    evidence:
+    - reference: DOI:10.1007/s00018-003-3206-5
+      notes: Catalase dismutation yields water.
+    predicate_id: METPO:2000202
+  - subject: catalase
+    predicate: enables
+    object: catalase_activity_trait
+    description: Production of catalase confers the catalase-activity phenotype.
+    evidence:
+    - reference: DOI:10.1007/s00018-003-3206-5
+      notes: Supports catalase possession as the basis of the catalase-activity
+        phenotype.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (catalase activity) from literature
     research to fill the enzyme-activity-phenotype gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (catalase hydrogen-peroxide
+    dismutation) with CHEBI/GO node groundings and RO/METPO/biolink predicate
+    groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

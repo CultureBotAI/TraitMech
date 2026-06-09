@@ -6,7 +6,7 @@ definition: A metabolism in which an organism reduces atmospheric dinitrogen (N2
 definition_source: DOI:10.1038/nrmicro.2018.9
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -20,10 +20,82 @@ evidence:
 - reference: DOI:10.1038/nrmicro954
   notes: Dixon & Kahn review the genetic regulation of biological nitrogen fixation
     and nitrogenase.
+causal_graphs:
+- graph_id: nitrogen_fixation_nitrogenase
+  title: Nitrogenase-catalyzed dinitrogen reduction
+  description: Evidence-backed causal sketch linking the nitrogenase complex to
+    reduction of atmospheric dinitrogen to ammonia.
+  nodes:
+  - node_id: nitrogen_fixation_trait
+    label: nitrogen fixation
+    node_type: TRAIT
+    grounding: traitmech:000103
+    description: Capacity to reduce N2 to ammonia.
+  - node_id: nitrogenase
+    label: nitrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-sensitive enzyme complex that reduces dinitrogen.
+  - node_id: nitrogen_fixation_process
+    label: nitrogen fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009399
+    description: Reduction of dinitrogen to ammonia.
+  - node_id: dinitrogen
+    label: dinitrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:17997
+    description: Atmospheric N2 substrate.
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+    grounding: CHEBI:16134
+    description: Fixed-nitrogen product.
+  edges:
+  - subject: nitrogenase
+    predicate: enables
+    object: nitrogen_fixation_process
+    description: The nitrogenase complex carries out biological nitrogen fixation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro954
+      notes: Dixon & Kahn review nitrogenase as the catalyst of biological nitrogen
+        fixation.
+    predicate_id: RO:0002327
+  - subject: nitrogen_fixation_process
+    predicate: consumes
+    object: dinitrogen
+    description: Nitrogen fixation consumes atmospheric dinitrogen.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.9
+      notes: Kuypers et al. place N2 reduction as the reductive entry to the nitrogen
+        cycle.
+    predicate_id: biolink:consumes
+  - subject: nitrogen_fixation_process
+    predicate: produces
+    object: ammonia
+    description: Nitrogen fixation produces ammonia.
+    evidence:
+    - reference: DOI:10.1038/nrmicro954
+      notes: Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.
+    predicate_id: METPO:2000202
+  - subject: nitrogen_fixation_trait
+    predicate: depends on
+    object: nitrogenase
+    description: The nitrogen-fixation trait depends on the nitrogenase complex.
+    evidence:
+    - reference: DOI:10.1038/nrmicro954
+      notes: Supports nitrogenase as required for the trait.
+    predicate_id: RO:0002502
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (nitrogen fixation / diazotrophy);
     round 2, nitrogen-cycle gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T12:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (nitrogenase-catalyzed N2 reduction)
+    with CHEBI/GO node groundings and RO/METPO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true
