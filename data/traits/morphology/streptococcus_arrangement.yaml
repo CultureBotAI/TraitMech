@@ -1,0 +1,29 @@
+identifier: traitmech:000117
+label: streptococcus arrangement
+definition: A cell arrangement in which dividing cocci remain attached in chains
+  because successive division planes are parallel and daughter cells do not fully
+  separate.
+definition_source: DOI:10.1128/MMBR.00001-06
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000666
+synonyms:
+- synonym_text: chain-forming cocci
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00001-06
+evidence:
+- reference: DOI:10.1128/MMBR.00001-06
+  notes: Young's review of the selective value of bacterial shape treats cell
+    arrangement (including chains) as a heritable, division-determined morphology.
+- reference: DOI:10.1038/ncomms4842
+  notes: Daughter-cell separation during division determines whether cocci stay
+    attached in chains versus separating.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (streptococcus / chain arrangement);
+    leftover round, cell-arrangement sibling of the existing diplococcus shaped.
+  llm_assisted: true
