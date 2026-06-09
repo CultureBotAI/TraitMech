@@ -6,7 +6,7 @@ definition: A dormancy state in which cells remain viable and minimally metaboli
 definition_source: DOI:10.1111/j.1574-6976.2009.00200.x
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000080
 synonyms:
@@ -20,10 +20,53 @@ evidence:
 - reference: DOI:10.1038/nrmicro2504
   notes: Lennon & Jones frame the VBNC state within the broader microbial dormancy
     seed-bank concept.
+causal_graphs:
+- graph_id: vbnc_stress_induced_dormancy
+  title: Stress-induced viable-but-nonculturable state
+  description: Evidence-backed causal sketch linking stress to a dormant
+    viable-but-nonculturable state that resuscitates later.
+  nodes:
+  - node_id: vbnc_trait
+    label: viable but nonculturable state
+    node_type: TRAIT
+    grounding: traitmech:000081
+    description: Viable, minimally active, non-culturable dormant state.
+  - node_id: stress
+    label: environmental stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Stress driving cells into the VBNC state.
+  - node_id: dormancy_process
+    label: dormancy process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0022611
+    description: Entry into a reversible quiescent state.
+  edges:
+  - subject: stress
+    predicate: causes
+    object: vbnc_trait
+    description: Stress drives cells into the viable-but-nonculturable state.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2009.00200.x
+      notes: Oliver reviews stress-induced entry into the VBNC state.
+    predicate_id: biolink:causes
+  - subject: dormancy_process
+    predicate: enables
+    object: vbnc_trait
+    description: The VBNC state is a form of microbial dormancy.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2504
+      notes: Lennon & Jones frame VBNC within microbial dormancy.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (viable but nonculturable state);
     sub-variant of dormancy.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (stress-induced VBNC) with GO node
+    grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

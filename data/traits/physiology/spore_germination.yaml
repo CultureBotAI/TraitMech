@@ -6,7 +6,7 @@ definition: The physiological process by which a dormant spore exits dormancy an
 definition_source: DOI:10.1016/j.mib.2003.10.001
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,6 +20,43 @@ evidence:
 - reference: DOI:10.1038/nrmicro2504
   notes: Lennon & Jones frame germination as resuscitation from the dormant
     seed-bank state.
+causal_graphs:
+- graph_id: spore_germination_germinant_trigger
+  title: Germinant-triggered spore germination
+  description: Evidence-backed causal sketch linking germinant signals to exit from
+    spore dormancy and resumption of growth.
+  nodes:
+  - node_id: spore_germination_trait
+    label: spore germination
+    node_type: TRAIT
+    grounding: traitmech:000083
+    description: Capacity of a dormant spore to resume growth.
+  - node_id: germinant
+    label: germinant
+    node_type: CHEMICAL
+    description: Nutrient signal that triggers germination.
+  - node_id: spore_germination_process
+    label: spore germination
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009847
+    description: Dipicolinic-acid release and core rehydration.
+  edges:
+  - subject: germinant
+    predicate: causes
+    object: spore_germination_process
+    description: Germinant binding triggers the germination process.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2003.10.001
+      notes: Setlow reviews germinant-triggered spore germination.
+    predicate_id: biolink:causes
+  - subject: spore_germination_process
+    predicate: enables
+    object: spore_germination_trait
+    description: The germination process realizes the spore-germination trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2504
+      notes: Lennon & Jones frame germination as resuscitation from dormancy.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -27,4 +64,11 @@ curation_history:
   changes: Proposed candidate PHYSIOLOGY trait (spore germination), the physiological
     exit from spore dormancy; complements the morphological sporulation/spore-forming
     traits.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (germinant-triggered germination) with
+    GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A physiological capacity to grow in the presence of antibiotic
 definition_source: DOI:10.1038/nrmicro3380
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -19,10 +19,53 @@ evidence:
     (efflux, target alteration, drug inactivation, reduced uptake).
 - reference: DOI:10.1038/s41579-022-00820-y
   notes: Updated review revisits molecular mechanisms of antibiotic resistance.
+causal_graphs:
+- graph_id: antibiotic_resistance_mechanisms
+  title: Mechanisms of antibiotic resistance
+  description: Evidence-backed causal sketch linking resistance determinants (efflux,
+    target modification, drug inactivation) to growth under antibiotic exposure.
+  nodes:
+  - node_id: antibiotic_resistance_trait
+    label: antibiotic resistance
+    node_type: TRAIT
+    grounding: traitmech:000088
+    description: Capacity to grow despite inhibitory antibiotic concentrations.
+  - node_id: efflux_pump
+    label: drug efflux pump
+    node_type: GENE_OR_PROTEIN
+    description: Transporter that expels antibiotics from the cell.
+  - node_id: antibiotic_response_process
+    label: response to antibiotic
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0046677
+    description: Cellular response conferring survival under antibiotic exposure.
+  edges:
+  - subject: efflux_pump
+    predicate: enables
+    object: antibiotic_resistance_trait
+    description: Drug efflux is one determinant enabling resistance.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3380
+      notes: Blair et al. review efflux among resistance mechanisms.
+    predicate_id: RO:0002327
+  - subject: antibiotic_resistance_trait
+    predicate: participates in
+    object: antibiotic_response_process
+    description: Resistance is part of the cellular response to antibiotics.
+    evidence:
+    - reference: DOI:10.1038/s41579-022-00820-y
+      notes: Updated review of antibiotic-resistance mechanisms.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (antibiotic resistance) from literature
     research. Distinct from persister-cell tolerance (non-genetic).
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (resistance mechanisms) with GO node
+    grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

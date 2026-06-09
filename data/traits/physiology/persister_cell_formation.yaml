@@ -6,7 +6,7 @@ definition: Formation of dormant phenotypic variants (persister cells) that are
 definition_source: DOI:10.1146/annurev.micro.112408.134306
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000080
 synonyms:
@@ -20,10 +20,53 @@ evidence:
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links persister-cell dormancy to the recalcitrance of chronic
     infections.
+causal_graphs:
+- graph_id: persister_dormancy_tolerance
+  title: Persister dormancy and antibiotic tolerance
+  description: Evidence-backed causal sketch linking dormancy to stochastic persister
+    formation and transient antibiotic tolerance.
+  nodes:
+  - node_id: persister_trait
+    label: persister cell formation
+    node_type: TRAIT
+    grounding: traitmech:000082
+    description: Stochastic formation of dormant, drug-tolerant variants.
+  - node_id: dormancy_process
+    label: dormancy process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0022611
+    description: Reversible quiescence underlying persistence.
+  - node_id: antibiotic_tolerance
+    label: antibiotic tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Transient survival of lethal antibiotic exposure.
+  edges:
+  - subject: dormancy_process
+    predicate: enables
+    object: persister_trait
+    description: Dormancy underlies stochastic persister formation.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.112408.134306
+      notes: Lewis reviews persisters as dormant tolerant variants.
+    predicate_id: RO:0002327
+  - subject: persister_trait
+    predicate: enables
+    object: antibiotic_tolerance
+    description: Persister cells transiently tolerate antibiotics.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1557
+      notes: Lewis links persisters to recalcitrant infection.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (persister cell formation); sub-variant
     of dormancy. Distinct from genetic antibiotic resistance.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (persister dormancy/tolerance) with GO
+    node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

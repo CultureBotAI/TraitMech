@@ -6,7 +6,7 @@ definition: A physiological enzyme-activity phenotype in which a cell produces u
 definition_source: DOI:10.1128/mr.59.3.451-480.1995
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,72 @@ evidence:
 - reference: DOI:10.1128/mr.53.1.85-108.1989
   notes: Mobley & Hausinger review the significance and regulation of microbial
     ureases.
+causal_graphs:
+- graph_id: urease_activity_urea_hydrolysis
+  title: Urease-catalyzed urea hydrolysis
+  description: Evidence-backed causal sketch linking urease to hydrolysis of urea
+    into ammonia, the basis of the urease test.
+  nodes:
+  - node_id: urease_activity_trait
+    label: urease activity
+    node_type: TRAIT
+    grounding: traitmech:000077
+    description: Possession of urease.
+  - node_id: urease
+    label: urease
+    node_type: GENE_OR_PROTEIN
+    description: Nickel metalloenzyme hydrolyzing urea.
+  - node_id: urease_function
+    label: urease activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0009039
+    description: Hydrolysis of urea to ammonia and carbon dioxide.
+  - node_id: urea
+    label: urea
+    node_type: CHEMICAL
+    grounding: CHEBI:16199
+    description: Substrate hydrolyzed by urease.
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+    grounding: CHEBI:16134
+    description: Product that raises local pH.
+  edges:
+  - subject: urease
+    predicate: enables
+    object: urease_function
+    description: Urease carries out urea hydrolysis.
+    evidence:
+    - reference: DOI:10.1128/mr.59.3.451-480.1995
+      notes: Mobley, Island & Hausinger review microbial ureases.
+    predicate_id: RO:0002327
+  - subject: urease_function
+    predicate: consumes
+    object: urea
+    description: The urease reaction consumes urea.
+    evidence:
+    - reference: DOI:10.1128/mr.59.3.451-480.1995
+      notes: Supports urea as the hydrolysis substrate.
+    predicate_id: biolink:consumes
+  - subject: urease_function
+    predicate: produces
+    object: ammonia
+    description: Urea hydrolysis produces ammonia.
+    evidence:
+    - reference: DOI:10.1128/mr.53.1.85-108.1989
+      notes: Mobley & Hausinger support ammonia release from urea hydrolysis.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (urease activity) from literature
     research to fill the enzyme-activity-phenotype gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (urease urea hydrolysis) with GO/CHEBI
+    node groundings and RO/METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true
