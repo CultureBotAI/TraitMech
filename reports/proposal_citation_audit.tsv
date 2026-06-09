@@ -73,8 +73,10 @@ data/traits/metabolism/oxygenic_photosynthesis.yaml	traitmech:000034	2	DOI:10.10
 data/traits/metabolism/photosynthesis.yaml	traitmech:000038	2	DOI:10.1016/j.tim.2006.09.001; DOI:10.1146/annurev-earth-060313-054810		yes
 data/traits/metabolism/phototrophy.yaml	traitmech:000037	2	DOI:10.1016/j.tim.2006.09.001; DOI:10.1126/science.289.5486.1902		yes
 data/traits/metabolism/propionic_acid_fermentation.yaml	traitmech:000029	2	DOI:10.3390/molecules31020333; DOI:10.3389/fmicb.2021.703525		yes
+data/traits/metabolism/proteolysis.yaml	traitmech:000116	2	DOI:10.1128/mmbr.62.3.597-635.1998; DOI:10.1093/femsre/fuab046		yes
 data/traits/metabolism/proteorhodopsin_phototrophy.yaml	traitmech:000036	2	DOI:10.1126/science.289.5486.1902; DOI:10.1038/35081051		yes
 data/traits/metabolism/reductive_tca_cycle.yaml	traitmech:000021	2	DOI:10.1128/AEM.02473-10; DOI:10.1146/annurev-marine-120709-142712		yes
+data/traits/metabolism/starch_degradation.yaml	traitmech:000115	2	DOI:10.1016/S0168-1656(01)00407-2; DOI:10.1093/nar/gkt1178		yes
 data/traits/metabolism/sulfur_oxidation.yaml	traitmech:000106	2	DOI:10.1111/j.1574-6976.2009.00187.x; DOI:10.1128/AEM.67.7.2873-2882.2001		yes
 data/traits/metabolism/three_hydroxypropionate_bicycle.yaml	traitmech:000023	2	DOI:10.1128/AEM.02473-10; DOI:10.1146/annurev-marine-120709-142712		yes
 data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml	traitmech:000024	2	DOI:10.1126/science.1149976; DOI:10.1128/AEM.02473-10		yes
@@ -96,8 +98,12 @@ data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	2	DOI:
 data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	2	DOI:10.1146/annurev.biochem.77.083007.093039; DOI:10.1038/s41579-020-0413-0		yes
 data/traits/morphology/prosthecate.yaml	traitmech:000065	2	DOI:10.1111/j.1365-2958.2007.05633.x; DOI:10.1128/MMBR.00040-09		yes
 data/traits/morphology/s_layer.yaml	traitmech:000064	2	DOI:10.1038/nrmicro3213; DOI:10.1038/s41579-025-01258-8		yes
+data/traits/morphology/sarcina_arrangement.yaml	traitmech:000120	2	DOI:10.1128/MMBR.00001-06; DOI:10.1038/ncomms4842		yes
+data/traits/morphology/staphylococcus_arrangement.yaml	traitmech:000118	2	DOI:10.1128/MMBR.00001-06; DOI:10.1038/ncomms4842		yes
+data/traits/morphology/streptococcus_arrangement.yaml	traitmech:000117	2	DOI:10.1128/MMBR.00001-06; DOI:10.1038/ncomms4842		yes
 data/traits/morphology/sulfur_globule.yaml	traitmech:000069	2	DOI:10.1016/S0065-2911(08)00002-7; DOI:10.1038/s41579-020-0413-0		yes
 data/traits/morphology/swarming_motility.yaml	traitmech:000062	2	DOI:10.1038/nrmicro2405; DOI:10.1146/annurev.micro.57.030502.091014		yes
+data/traits/morphology/tetrad_arrangement.yaml	traitmech:000119	2	DOI:10.1128/MMBR.00001-06; DOI:10.1038/ncomms4842		yes
 data/traits/morphology/twitching_motility.yaml	traitmech:000061	2	DOI:10.1146/annurev.micro.56.012302.160938; DOI:10.1146/annurev.micro.57.030502.091014		yes
 data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	2	DOI:10.1038/nrmicro3380; DOI:10.1038/s41579-022-00820-y		yes
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	2	DOI:10.1016/j.csbj.2018.11.003; DOI:10.1146/annurev.cellbio.21.012704.131001		yes

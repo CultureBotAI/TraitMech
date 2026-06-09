@@ -1,0 +1,28 @@
+identifier: traitmech:000119
+label: tetrad arrangement
+definition: A cell arrangement in which cocci divide in two perpendicular planes and
+  remain attached as groups of four (tetrads).
+definition_source: DOI:10.1128/MMBR.00001-06
+trait_category: MORPHOLOGY
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000666
+synonyms:
+- synonym_text: tetrad-forming cocci
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00001-06
+evidence:
+- reference: DOI:10.1128/MMBR.00001-06
+  notes: Young's review treats the tetrad as a division-plane-determined coccal
+    arrangement.
+- reference: DOI:10.1038/ncomms4842
+  notes: Two-plane division with incomplete daughter-cell separation yields
+    four-cell tetrads.
+curation_history:
+- timestamp: '2026-06-08T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate MORPHOLOGY trait (tetrad arrangement); leftover round,
+    cell-arrangement sibling of diplococcus shaped.
+  llm_assisted: true
