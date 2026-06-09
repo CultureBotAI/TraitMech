@@ -1,0 +1,27 @@
+identifier: traitmech:000096
+label: codon usage bias
+definition: A genome-sequence property describing non-uniform usage of synonymous
+  codons across a genome, shaped by mutational bias and translational selection and
+  correlated with gene expression level.
+definition_source: DOI:10.1038/nrg2899
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: codon bias
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/nrg2899
+evidence:
+- reference: DOI:10.1038/nrg2899
+  notes: Plotkin & Kudla review the causes and consequences of synonymous codon bias.
+- reference: DOI:10.1146/annurev.genet.42.110807.091442
+  notes: Hershberg & Petrov review selection on codon bias across genomes.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (codon usage bias) from literature
+    research to fill the genome-sequence-composition gap.
+  llm_assisted: true

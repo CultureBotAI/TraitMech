@@ -1,0 +1,29 @@
+identifier: traitmech:000099
+label: genome streamlining
+definition: A genomics trait describing selective reduction of genome size and gene
+  content in free-living microbes with very large effective population sizes,
+  minimizing the cellular cost of replication and biosynthesis.
+definition_source: DOI:10.1038/ismej.2014.60
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: streamlined genome
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/ismej.2014.60
+evidence:
+- reference: DOI:10.1038/ismej.2014.60
+  notes: Giovannoni et al. set out streamlining theory, explaining small streamlined
+    genomes of abundant oligotrophic microbes.
+- reference: DOI:10.1038/nrmicro3331
+  notes: Batut et al. compare reductive genome evolution at both ends of the bacterial
+    population-size spectrum.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (genome streamlining) from literature
+    research.
+  llm_assisted: true

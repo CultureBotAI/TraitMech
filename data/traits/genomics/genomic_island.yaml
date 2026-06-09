@@ -1,0 +1,30 @@
+identifier: traitmech:000093
+label: genomic island
+definition: A genomics trait describing possession of a genomic island — a
+  horizontally acquired chromosomal region (e.g. a pathogenicity, symbiosis, or
+  metabolic island) that often retains mobility signatures such as flanking repeats
+  and atypical nucleotide composition.
+definition_source: DOI:10.1038/nrmicro884
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000089
+synonyms:
+- synonym_text: pathogenicity island
+  synonym_type: NARROW_SYNONYM
+  source: DOI:10.1038/nrmicro884
+evidence:
+- reference: DOI:10.1038/nrmicro884
+  notes: Dobrindt et al. review genomic islands in pathogenic and environmental
+    microorganisms.
+- reference: DOI:10.1111/j.1574-6976.2008.00136.x
+  notes: Juhas et al. review genomic islands as tools of bacterial horizontal gene
+    transfer and evolution.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (genomic island); sub-variant of mobile
+    genetic element.
+  llm_assisted: true

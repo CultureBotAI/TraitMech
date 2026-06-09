@@ -1,0 +1,29 @@
+identifier: traitmech:000101
+label: rRNA operon copy number
+definition: A quantitative genomics property describing the number of ribosomal RNA
+  (rrn) operons encoded in a genome, which correlates with maximal growth rate and
+  ecological strategy.
+definition_source: DOI:10.1128/AEM.66.4.1328-1333.2000
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: rrn copy number
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/AEM.66.4.1328-1333.2000
+evidence:
+- reference: DOI:10.1128/AEM.66.4.1328-1333.2000
+  notes: Klappenbach, Dunbar & Schmidt show rRNA operon copy number reflects
+    ecological strategies, with fast responders carrying more copies.
+- reference: DOI:10.1038/nmicrobiol.2016.160
+  notes: Roller, Stoddard & Schmidt link rrn copy number to bacterial growth rate and
+    growth efficiency.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (rRNA operon copy number) from literature
+    research.
+  llm_assisted: true

@@ -1,0 +1,28 @@
+identifier: traitmech:000095
+label: restriction-modification system
+definition: A genomics trait describing possession of a restriction-modification
+  system that distinguishes self from non-self DNA through sequence-specific
+  methylation and cleavage of unmethylated DNA by a restriction endonuclease.
+definition_source: DOI:10.1128/MMBR.00044-12
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: R-M system
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00044-12
+evidence:
+- reference: DOI:10.1128/MMBR.00044-12
+  notes: Vasu & Nagaraja review restriction-modification systems and their defense
+    and additional cellular functions.
+- reference: DOI:10.3389/fmicb.2015.00528
+  notes: Review of restriction-modification systems as engines of genomic diversity.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (restriction-modification system) from
+    literature research to fill the genome-defense-system gap.
+  llm_assisted: true

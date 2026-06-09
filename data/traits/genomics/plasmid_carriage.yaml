@@ -1,0 +1,28 @@
+identifier: traitmech:000090
+label: plasmid carriage
+definition: A genomics trait describing possession of one or more plasmids —
+  extrachromosomal, typically circular DNA replicons that carry accessory genes such
+  as resistance, virulence, or metabolic functions and can transfer by conjugation.
+definition_source: DOI:10.1128/MMBR.00020-10
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- traitmech:000089
+synonyms:
+- synonym_text: plasmid-bearing
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1128/MMBR.00020-10
+evidence:
+- reference: DOI:10.1128/MMBR.00020-10
+  notes: Smillie et al. review plasmid mobility, classifying conjugative and
+    mobilizable plasmids as key vectors of horizontal gene transfer.
+- reference: DOI:10.1038/nrmicro1235
+  notes: Frost et al. include plasmids among the principal mobile genetic elements.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (plasmid carriage); sub-variant of mobile
+    genetic element.
+  llm_assisted: true

@@ -1,0 +1,29 @@
+identifier: traitmech:000094
+label: CRISPR-Cas system
+definition: A genomics trait describing possession of a CRISPR-Cas adaptive immune
+  system that records fragments of invading nucleic acids in CRISPR arrays and uses
+  Cas proteins to recognize and cleave matching sequences.
+definition_source: DOI:10.1038/s41579-019-0299-x
+trait_category: GENOMICS
+term_kind: CLASS
+mapping_status: PROPOSED
+parent_traits:
+- METPO:1000188
+synonyms:
+- synonym_text: CRISPR array
+  synonym_type: RELATED_SYNONYM
+  source: DOI:10.1038/s41579-019-0299-x
+evidence:
+- reference: DOI:10.1038/s41579-019-0299-x
+  notes: Makarova et al. present an evolutionary classification of CRISPR-Cas systems
+    into two classes, six types, and many subtypes.
+- reference: DOI:10.1016/j.molcel.2014.03.011
+  notes: Barrangou & Marraffini review CRISPR-Cas as prokaryotic adaptive immunity
+    against invading genetic elements.
+curation_history:
+- timestamp: '2026-06-05T00:00:00Z'
+  curator: claude
+  action: PROPOSED_FROM_RESEARCH
+  changes: Proposed candidate GENOMICS trait (CRISPR-Cas system) from literature
+    research to fill the genome-defense-system gap.
+  llm_assisted: true
