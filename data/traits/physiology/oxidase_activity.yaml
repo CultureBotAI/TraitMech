@@ -6,7 +6,7 @@ definition: A physiological enzyme-activity phenotype in which a cell produces a
 definition_source: DOI:10.3390/microorganisms10050926
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,67 @@ evidence:
 - reference: DOI:10.1089/ars.2020.8039
   notes: Borisov et al. review cytochrome bd-family terminal oxidases of prokaryotic
     respiratory chains.
+causal_graphs:
+- graph_id: oxidase_activity_terminal_oxidase
+  title: Terminal respiratory oxidase reducing oxygen
+  description: Evidence-backed causal sketch linking a terminal respiratory oxidase
+    to reduction of molecular oxygen, the basis of the oxidase test.
+  nodes:
+  - node_id: oxidase_activity_trait
+    label: oxidase activity
+    node_type: TRAIT
+    grounding: traitmech:000076
+    description: Possession of a terminal respiratory oxidase.
+  - node_id: cytochrome_c_oxidase
+    label: cytochrome c oxidase
+    node_type: GENE_OR_PROTEIN
+    description: Terminal oxidase of the respiratory chain.
+  - node_id: cytochrome_c_oxidase_function
+    label: cytochrome-c oxidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004129
+    description: Reduction of molecular oxygen using ferrocytochrome c.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Terminal electron acceptor reduced to water.
+  edges:
+  - subject: cytochrome_c_oxidase
+    predicate: enables
+    object: cytochrome_c_oxidase_function
+    description: Cytochrome c oxidase carries out terminal oxidase activity.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: Hederstedt reviews bacterial cytochrome c oxidase.
+    predicate_id: RO:0002327
+  - subject: cytochrome_c_oxidase_function
+    predicate: consumes
+    object: molecular_oxygen
+    description: The terminal oxidase reduces molecular oxygen to water.
+    evidence:
+    - reference: DOI:10.1089/ars.2020.8039
+      notes: Borisov et al. review terminal oxidases that reduce O2.
+    predicate_id: biolink:consumes
+  - subject: cytochrome_c_oxidase
+    predicate: enables
+    object: oxidase_activity_trait
+    description: Possession of a terminal oxidase confers the oxidase-activity phenotype.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: Supports the oxidase-test basis.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (oxidase activity) from literature
     research to fill the enzyme-activity-phenotype gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (terminal oxidase reducing O2) with
+    GO/CHEBI node groundings and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

@@ -5,7 +5,7 @@ definition: A physiological state in which a cell takes up free extracellular DN
 definition_source: DOI:10.1038/nrmicro3199
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -19,10 +19,53 @@ evidence:
 - reference: DOI:10.1038/s41579-021-00650-4
   notes: Review of horizontal gene transfer supports natural transformation as a
     major route of bacterial DNA acquisition.
+causal_graphs:
+- graph_id: natural_competence_dna_uptake
+  title: Competence-driven DNA uptake and transformation
+  description: Evidence-backed causal sketch linking the competence program to uptake
+    of extracellular DNA and genomic integration.
+  nodes:
+  - node_id: natural_competence_trait
+    label: natural competence
+    node_type: TRAIT
+    grounding: traitmech:000087
+    description: Capacity to take up and integrate environmental DNA.
+  - node_id: competence_process
+    label: establishment of competence for transformation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030420
+    description: Development of the DNA-uptake state.
+  - node_id: extracellular_dna
+    label: extracellular DNA
+    node_type: CHEMICAL
+    description: Free environmental DNA taken up by competent cells.
+  edges:
+  - subject: competence_process
+    predicate: consumes
+    object: extracellular_dna
+    description: Competence drives uptake of extracellular DNA.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3199
+      notes: Johnston et al. review DNA-uptake mechanisms of competence.
+    predicate_id: biolink:consumes
+  - subject: competence_process
+    predicate: enables
+    object: natural_competence_trait
+    description: The competence program realizes the natural-competence trait.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00650-4
+      notes: Transformation is a major route of bacterial DNA acquisition.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (natural competence) from literature
     research to fill the genetic-plasticity gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (competence DNA uptake) with GO node
+    grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

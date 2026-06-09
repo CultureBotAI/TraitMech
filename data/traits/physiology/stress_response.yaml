@@ -6,7 +6,7 @@ definition: A physiological program by which a cell senses and mounts a protecti
 definition_source: DOI:10.1146/annurev-micro-090110-102946
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,54 @@ evidence:
 - reference: DOI:10.1038/nrmicro3032
   notes: Imlay reviews molecular stress-defense mechanisms, exemplifying inducible
     protective responses; parent of the oxidative-stress-response sub-variant.
+causal_graphs:
+- graph_id: stress_response_induction
+  title: Stress-induced protective response
+  description: Evidence-backed causal sketch linking environmental stress to an
+    induced, protective general stress response.
+  nodes:
+  - node_id: stress_response_trait
+    label: stress response
+    node_type: TRAIT
+    grounding: traitmech:000078
+    description: Capacity to mount a protective response to stress.
+  - node_id: environmental_stress
+    label: environmental stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Disturbance of cellular homeostasis.
+  - node_id: stress_response_process
+    label: response to stress
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006950
+    description: Change in cell state triggered by a stressor.
+  edges:
+  - subject: environmental_stress
+    predicate: causes
+    object: stress_response_process
+    description: A stressor triggers the stress-response program.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-090110-102946
+      notes: Battesti et al. review stress/stationary-phase induction of RpoS.
+    predicate_id: biolink:causes
+  - subject: stress_response_process
+    predicate: enables
+    object: stress_response_trait
+    description: The induced program realizes the stress-response trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3032
+      notes: Imlay reviews inducible molecular stress defenses.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY axis class (stress response) to parent
     specific stress-response sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (stress-induced protective response)
+    with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

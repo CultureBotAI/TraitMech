@@ -6,7 +6,7 @@ definition: A cell-density-dependent regulatory physiology in which cells produc
 definition_source: DOI:10.1146/annurev.cellbio.21.012704.131001
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,53 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.165
   notes: Miller & Bassler review quorum sensing across bacteria and its regulatory
     logic.
+causal_graphs:
+- graph_id: quorum_sensing_autoinducer
+  title: Autoinducer-mediated quorum sensing
+  description: Evidence-backed causal sketch linking accumulating autoinducer signals
+    to coordinated population-wide gene expression.
+  nodes:
+  - node_id: quorum_sensing_trait
+    label: quorum sensing
+    node_type: TRAIT
+    grounding: traitmech:000084
+    description: Cell-density-dependent coordinated regulation.
+  - node_id: autoinducer
+    label: autoinducer
+    node_type: CHEMICAL
+    description: Diffusible signal whose concentration tracks cell density.
+  - node_id: quorum_sensing_process
+    label: quorum sensing
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009372
+    description: Detection of autoinducer and population-wide response.
+  edges:
+  - subject: autoinducer
+    predicate: participates in
+    object: quorum_sensing_process
+    description: Autoinducer accumulation drives quorum sensing.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+      notes: Waters & Bassler review autoinducer-mediated communication.
+    predicate_id: biolink:participates_in
+  - subject: quorum_sensing_process
+    predicate: enables
+    object: quorum_sensing_trait
+    description: The sensing process realizes the quorum-sensing trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.55.1.165
+      notes: Miller & Bassler review quorum-sensing regulatory logic.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (quorum sensing) from literature
     research to fill the cell-cell-signaling gap.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (autoinducer quorum sensing) with GO
+    node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

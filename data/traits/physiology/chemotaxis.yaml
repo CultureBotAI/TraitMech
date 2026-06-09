@@ -6,7 +6,7 @@ definition: A behavioral physiology in which cells bias their movement toward
 definition_source: DOI:10.1038/nrm1524
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,53 @@ evidence:
 - reference: DOI:10.1038/nrmicro2505
   notes: Porter, Wadhams & Armitage review signal processing in complex chemotaxis
     pathways.
+causal_graphs:
+- graph_id: chemotaxis_gradient_response
+  title: Gradient-guided chemotactic movement
+  description: Evidence-backed causal sketch linking chemical gradients to biased
+    motility via flagellar motor control.
+  nodes:
+  - node_id: chemotaxis_trait
+    label: chemotaxis
+    node_type: TRAIT
+    grounding: traitmech:000086
+    description: Biased movement along chemical gradients.
+  - node_id: chemical_gradient
+    label: chemical gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Spatial gradient of attractant or repellent.
+  - node_id: chemotaxis_process
+    label: chemotaxis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006935
+    description: Signal transduction biasing motor switching.
+  edges:
+  - subject: chemical_gradient
+    predicate: causes
+    object: chemotaxis_process
+    description: A chemical gradient drives the chemotaxis signaling response.
+    evidence:
+    - reference: DOI:10.1038/nrm1524
+      notes: Wadhams & Armitage review gradient-guided chemotaxis signaling.
+    predicate_id: biolink:causes
+  - subject: chemotaxis_process
+    predicate: enables
+    object: chemotaxis_trait
+    description: The chemotaxis signaling process realizes the trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2505
+      notes: Porter et al. review chemotaxis signal processing.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (chemotaxis), a behavioral response;
     distinct from the morphological motility apparatus.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (gradient-guided chemotaxis) with GO
+    node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A physiological capability to emit visible light through a
 definition_source: DOI:10.1016/j.csbj.2018.11.003
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,67 @@ evidence:
 - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
   notes: Waters & Bassler support quorum-sensing regulation of light production in
     luminous bacteria.
+causal_graphs:
+- graph_id: bioluminescence_luciferase
+  title: Luciferase-catalyzed light emission
+  description: Evidence-backed causal sketch linking luciferase to oxygen-dependent
+    light emission, often under quorum-sensing control.
+  nodes:
+  - node_id: bioluminescence_trait
+    label: bioluminescence
+    node_type: TRAIT
+    grounding: traitmech:000085
+    description: Capacity to emit visible light enzymatically.
+  - node_id: luciferase
+    label: luciferase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme catalyzing the light-emitting reaction.
+  - node_id: bioluminescence_process
+    label: bioluminescence
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0008218
+    description: Enzymatic emission of visible light.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: Co-substrate of the luciferase reaction.
+  edges:
+  - subject: luciferase
+    predicate: enables
+    object: bioluminescence_process
+    description: Luciferase carries out the light-emitting reaction.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: Brodl et al. review the bacterial luciferase mechanism.
+    predicate_id: RO:0002327
+  - subject: bioluminescence_process
+    predicate: consumes
+    object: molecular_oxygen
+    description: Light emission consumes molecular oxygen.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: Supports O2 as a luciferase co-substrate.
+    predicate_id: biolink:consumes
+  - subject: bioluminescence_process
+    predicate: enables
+    object: bioluminescence_trait
+    description: The luciferase reaction realizes the bioluminescence trait.
+    evidence:
+    - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+      notes: Waters & Bassler support quorum-sensing control of luminescence.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (bioluminescence) from literature
     research.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (luciferase light emission) with
+    GO/CHEBI node groundings and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

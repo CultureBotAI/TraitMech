@@ -6,7 +6,7 @@ definition: A reversible physiological state of greatly reduced metabolic activi
 definition_source: DOI:10.1038/nrmicro2504
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -19,10 +19,53 @@ evidence:
     microorganisms enter and exit dormancy; parent of VBNC and persister sub-variants.
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links dormancy to persister-cell survival and infectious disease.
+causal_graphs:
+- graph_id: dormancy_seed_bank
+  title: Reversible dormancy and resuscitation
+  description: Evidence-backed causal sketch linking unfavorable conditions to a
+    reversible dormant state forming a microbial seed bank.
+  nodes:
+  - node_id: dormancy_trait
+    label: dormancy
+    node_type: TRAIT
+    grounding: traitmech:000080
+    description: Capacity to enter a reversible low-activity state.
+  - node_id: unfavorable_conditions
+    label: unfavorable conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Stress or resource limitation triggering dormancy.
+  - node_id: dormancy_process
+    label: dormancy process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0022611
+    description: Entry into a reversible quiescent state.
+  edges:
+  - subject: unfavorable_conditions
+    predicate: causes
+    object: dormancy_process
+    description: Adverse conditions induce entry into dormancy.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2504
+      notes: Lennon & Jones review entry/exit from dormancy (seed banks).
+    predicate_id: biolink:causes
+  - subject: dormancy_process
+    predicate: enables
+    object: dormancy_trait
+    description: The dormancy process realizes the dormancy trait.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1557
+      notes: Lewis links dormancy to long-term survival.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY axis class (dormancy) to parent the VBNC and
     persister-cell sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (reversible dormancy) with GO node
+    grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A stress response that defends the cell against reactive oxygen spec
 definition_source: DOI:10.1038/nrmicro3032
 trait_category: PHYSIOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000078
 evidence:
@@ -16,10 +16,54 @@ evidence:
 - reference: DOI:10.1007/s00018-003-3206-5
   notes: Chelikani, Fita & Loewen support catalases as core enzymes of the
     oxidative-stress defense.
+causal_graphs:
+- graph_id: oxidative_stress_response_ros_defense
+  title: Defense against reactive oxygen species
+  description: Evidence-backed causal sketch linking reactive oxygen species to an
+    induced oxidative-stress defense.
+  nodes:
+  - node_id: oxidative_stress_response_trait
+    label: oxidative stress response
+    node_type: TRAIT
+    grounding: traitmech:000079
+    description: Capacity to defend against reactive oxygen species.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16240
+    description: Representative reactive oxygen species.
+  - node_id: oxidative_stress_process
+    label: response to oxidative stress
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006979
+    description: Defense response to reactive oxygen species.
+  edges:
+  - subject: hydrogen_peroxide
+    predicate: causes
+    object: oxidative_stress_process
+    description: Reactive oxygen species trigger the oxidative-stress response.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3032
+      notes: Imlay reviews ROS damage and induced defenses.
+    predicate_id: biolink:causes
+  - subject: oxidative_stress_process
+    predicate: enables
+    object: oxidative_stress_response_trait
+    description: The induced defense realizes the oxidative-stress-response trait.
+    evidence:
+    - reference: DOI:10.1007/s00018-003-3206-5
+      notes: Chelikani et al. support catalases as core oxidative-stress enzymes.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate PHYSIOLOGY trait (oxidative stress response);
     sub-variant of stress response.
+  llm_assisted: true
+- timestamp: '2026-06-08T13:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (ROS defense) with GO/CHEBI node
+    groundings and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
