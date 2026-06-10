@@ -6,7 +6,7 @@ definition: A morphology trait in which a filamentous cyanobacterium differentia
 definition_source: DOI:10.1101/cshperspect.a000315
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,75 @@ evidence:
 - reference: DOI:10.1093/femsre/fuw029
   notes: Herrero, Stavans & Flores describe heterocysts within the multicellular
     filament of heterocyst-forming cyanobacteria.
+causal_graphs:
+- graph_id: heterocyst_microoxic_nitrogen_fixation
+  title: Heterocyst differentiation creates a microoxic interior for N2 fixation
+  description: Evidence-backed causal sketch linking cyanobacterial cell
+    differentiation into thick-walled heterocysts to a microoxic interior that
+    accommodates oxygen-sensitive nitrogen fixation.
+  nodes:
+  - node_id: heterocyst_trait
+    label: heterocyst
+    node_type: TRAIT
+    grounding: traitmech:000073
+    description: Differentiated thick-walled cyanobacterial cell with microoxic
+      interior.
+  - node_id: cell_differentiation
+    label: cell differentiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030154
+    description: Acquisition of specialized cellular form/function.
+  - node_id: microoxic_interior
+    label: microoxic intracellular environment
+    node_type: STATE
+    description: Low-O2 internal environment protecting oxygen-sensitive enzymes.
+  - node_id: nitrogen_fixation
+    label: nitrogen fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009399
+    description: Reduction of atmospheric N2 to ammonia by nitrogenase.
+  edges:
+  - subject: cell_differentiation
+    predicate: enables
+    object: heterocyst_trait
+    description: Cyanobacterial cell differentiation realizes the thick-walled
+      heterocyst.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuw029
+      notes: Herrero et al. describe heterocysts within the multicellular
+        filament of heterocyst-forming cyanobacteria.
+    predicate_id: RO:0002327
+  - subject: heterocyst_trait
+    predicate: causes
+    object: microoxic_interior
+    description: The thick heterocyst wall and altered metabolism produce a
+      microoxic interior.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000315
+      notes: Kumar et al. describe heterocysts as differentiated cells whose
+        structure accommodates oxygen-sensitive N2 fixation.
+    predicate_id: biolink:causes
+  - subject: microoxic_interior
+    predicate: enables
+    object: nitrogen_fixation
+    description: The microoxic interior protects nitrogenase, enabling N2
+      fixation.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a000315
+      notes: Kumar et al. link heterocyst microoxia to oxygen-sensitive N2
+        fixation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (heterocyst) from literature research
     to fill the cellular-differentiation gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (heterocyst differentiation /
+    microoxic N2 fixation) with GO node groundings and RO/biolink predicate
+    groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

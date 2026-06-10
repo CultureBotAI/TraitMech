@@ -6,7 +6,7 @@ definition: A morphology trait in which the cell bears one or more prosthecae â€
 definition_source: DOI:10.1111/j.1365-2958.2007.05633.x
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -23,10 +23,57 @@ evidence:
 - reference: DOI:10.1128/MMBR.00040-09
   notes: Curtis & Brun's review of Caulobacter development supports the stalk as a
     regulated developmental appendage.
+causal_graphs:
+- graph_id: prosthecate_stalk_nutrient_uptake
+  title: Prostheca / stalk extends nutrient-uptake surface
+  description: Evidence-backed causal sketch linking developmental stalk extension
+    to increased uptake surface area and substrate attachment.
+  nodes:
+  - node_id: prosthecate_trait
+    label: prosthecate
+    node_type: TRAIT
+    grounding: traitmech:000065
+    description: Possession of one or more cell-envelope-extension stalks
+      (prosthecae).
+  - node_id: stalk_extension
+    label: stalk extension
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar extension of cell envelope producing the prostheca.
+  - node_id: uptake_surface_area
+    label: nutrient-uptake surface area
+    node_type: QUALITY
+    description: Effective transport surface available for nutrient uptake.
+  edges:
+  - subject: stalk_extension
+    predicate: enables
+    object: prosthecate_trait
+    description: Regulated stalk-extension elongation realizes the prosthecate
+      phenotype.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00040-09
+      notes: Curtis & Brun review the Caulobacter stalk as a regulated developmental
+        appendage.
+    predicate_id: RO:0002327
+  - subject: prosthecate_trait
+    predicate: contributes to
+    object: uptake_surface_area
+    description: Stalks expand nutrient-uptake surface area, aiding oligotrophic
+      growth.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2007.05633.x
+      notes: Wagner & Brun describe the Caulobacter stalk as a cell-envelope
+        extension increasing nutrient-uptake surface area.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (prosthecate / stalked) from literature
     research to fill the cellular-appendage gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (stalk extension / nutrient-uptake
+    surface) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

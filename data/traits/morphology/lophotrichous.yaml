@@ -5,7 +5,7 @@ definition: A flagellar arrangement with a tuft of multiple flagella at one pole
 definition_source: DOI:10.1093/femsre/fuv034
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000056
 evidence:
@@ -15,10 +15,55 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Flagellum review supports multiple flagellar filaments acting as locomotory
     organelles.
+causal_graphs:
+- graph_id: lophotrichous_polar_tuft
+  title: Lophotrichous flagellation — polar tuft of flagella
+  description: Evidence-backed causal sketch linking a polar tuft of bacterial
+    flagella to the lophotrichous arrangement.
+  nodes:
+  - node_id: lophotrichous_trait
+    label: lophotrichous
+    node_type: TRAIT
+    grounding: traitmech:000058
+    description: Tuft of multiple flagella at one pole.
+  - node_id: bacterial_flagellum
+    label: bacterial-type flagellum
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009288
+    description: Helical proteinaceous locomotory organelle.
+  - node_id: polar_tuft_placement
+    label: polar tuft placement
+    node_type: QUALITY
+    description: Multiple flagella clustered at one cell pole.
+  edges:
+  - subject: bacterial_flagellum
+    predicate: defines
+    object: lophotrichous_trait
+    description: A tuft of flagella at one pole defines the lophotrichous
+      arrangement.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: Schuhmacher et al. describe polar tufts of flagella (lophotrichous).
+    predicate_id: METPO:2007500
+  - subject: lophotrichous_trait
+    predicate: associated with
+    object: polar_tuft_placement
+    description: The lophotrichous pattern places multiple flagella at one pole.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      notes: Flagellum review supports multiple flagellar filaments acting as
+        locomotory organelles.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (lophotrichous flagellation);
     sub-variant of flagellar arrangement.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (polar tuft) with GO node grounding
+    and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

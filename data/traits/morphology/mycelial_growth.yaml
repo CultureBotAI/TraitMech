@@ -6,7 +6,7 @@ definition: A morphology trait in which a bacterium grows as branching, filament
 definition_source: DOI:10.1038/nrmicro1968
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -23,10 +23,58 @@ evidence:
 - reference: DOI:10.1038/nrmicro3178
   notes: Claessen et al. treat filamentous/mycelial growth as a bacterial solution to
     multicellularity.
+causal_graphs:
+- graph_id: mycelial_branching_hyphal_growth
+  title: Branching hyphal growth produces a bacterial mycelium
+  description: Evidence-backed causal sketch linking apical hyphal extension and
+    branching to a multicellular mycelium with subsequent aerial-hypha
+    differentiation.
+  nodes:
+  - node_id: mycelial_growth_trait
+    label: mycelial growth
+    node_type: TRAIT
+    grounding: traitmech:000074
+    description: Branching filamentous hyphal growth forming a mycelium.
+  - node_id: hyphal_extension
+    label: apical hyphal extension and branching
+    node_type: BIOLOGICAL_PROCESS
+    description: Polar tip growth and branch initiation generating a hyphal
+      network.
+  - node_id: aerial_hyphae_differentiation
+    label: aerial hyphae and spore differentiation
+    node_type: BIOLOGICAL_PROCESS
+    description: Developmental transition to aerial hyphae bearing spores
+      (as in Streptomyces).
+  edges:
+  - subject: hyphal_extension
+    predicate: enables
+    object: mycelial_growth_trait
+    description: Sustained apical extension and branching realize mycelial growth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1968
+      notes: Flärdh & Buttner describe Streptomyces growth as a branching hyphal
+        mycelium.
+    predicate_id: RO:0002327
+  - subject: mycelial_growth_trait
+    predicate: develops into
+    object: aerial_hyphae_differentiation
+    description: Mycelial colonies differentiate aerial hyphae and spores.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3178
+      notes: Claessen et al. treat filamentous/mycelial growth as a bacterial
+        solution to multicellularity with developmental differentiation.
+    predicate_id: biolink:develops_into
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (mycelial growth) from literature
     research to fill the multicellular/developmental gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (branching hyphal growth /
+    differentiation) with RO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

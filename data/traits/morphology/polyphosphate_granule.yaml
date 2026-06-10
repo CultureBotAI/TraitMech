@@ -6,7 +6,7 @@ definition: An intracellular storage inclusion of inorganic polyphosphate (a pol
 definition_source: DOI:10.1146/annurev.biochem.77.083007.093039
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -23,10 +23,55 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include polyphosphate bodies among bacterial intracellular
     inclusions.
+causal_graphs:
+- graph_id: polyphosphate_granule_storage
+  title: Polyphosphate granules store phosphate and energy as inorganic polyP
+  description: Evidence-backed causal sketch linking inorganic polyphosphate
+    accumulation to volutin/metachromatic granules supporting growth and survival.
+  nodes:
+  - node_id: polyp_granule_trait
+    label: polyphosphate granule
+    node_type: TRAIT
+    grounding: traitmech:000068
+    description: Cytoplasmic inclusion of inorganic polyphosphate.
+  - node_id: inorganic_polyphosphate
+    label: inorganic polyphosphate
+    node_type: CHEMICAL
+    description: Polymer of many phosphate residues stored as a granule.
+  - node_id: phosphate_energy_reserve
+    label: phosphate / energy reserve
+    node_type: QUALITY
+    description: Reservoir of phosphate and high-energy phosphoanhydride bonds.
+  edges:
+  - subject: inorganic_polyphosphate
+    predicate: located in
+    object: polyp_granule_trait
+    description: Inorganic polyphosphate accumulates as granules in the cytoplasm.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.77.083007.093039
+      notes: Rao, Gómez-García & Kornberg review polyphosphate accumulation as
+        granules.
+    predicate_id: biolink:located_in
+  - subject: polyp_granule_trait
+    predicate: contributes to
+    object: phosphate_energy_reserve
+    description: PolyP granules supply phosphate and energy for growth and
+      survival.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0413-0
+      notes: Greening & Lithgow include polyphosphate bodies among bacterial
+        intracellular inclusions.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (polyphosphate/volutin granule);
     storage sub-variant of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (polyP granule phosphate/energy
+    reserve) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -5,7 +5,7 @@ definition: A flagellar arrangement with a single flagellum, typically located a
 definition_source: DOI:10.1093/femsre/fuv034
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000056
 evidence:
@@ -15,10 +15,56 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Flagellum review supports a single helical flagellar filament as a
     locomotory organelle.
+causal_graphs:
+- graph_id: monotrichous_single_polar_flagellum
+  title: Monotrichous flagellation — single polar flagellum
+  description: Evidence-backed causal sketch linking a single polar bacterial
+    flagellum to monotrichous flagellation.
+  nodes:
+  - node_id: monotrichous_trait
+    label: monotrichous
+    node_type: TRAIT
+    grounding: traitmech:000057
+    description: Single flagellum, typically polar.
+  - node_id: bacterial_flagellum
+    label: bacterial-type flagellum
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009288
+    description: Helical proteinaceous locomotory organelle.
+  - node_id: polar_placement
+    label: polar single-flagellum placement
+    node_type: QUALITY
+    description: Single flagellum positioned at one cell pole.
+  edges:
+  - subject: bacterial_flagellum
+    predicate: defines
+    object: monotrichous_trait
+    description: A single polar flagellum defines the monotrichous arrangement.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: Schuhmacher et al. describe single-flagellum (monotrichous) polar
+        flagellation.
+    predicate_id: METPO:2007500
+  - subject: monotrichous_trait
+    predicate: associated with
+    object: polar_placement
+    description: The monotrichous pattern places one flagellum at one pole.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      notes: Flagellum review supports a single helical flagellar filament as a
+        locomotory organelle.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (monotrichous flagellation);
     sub-variant of flagellar arrangement.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (single polar flagellum) with GO node
+    grounding and METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

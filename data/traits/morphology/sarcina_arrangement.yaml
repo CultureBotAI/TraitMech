@@ -5,7 +5,7 @@ definition: A cell arrangement in which cocci divide in three perpendicular plan
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -19,10 +19,57 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Three-plane division with incomplete daughter-cell separation yields cubic
     eight-cell packets.
+causal_graphs:
+- graph_id: sarcina_three_plane_division_packet
+  title: Sarcina arrangement via three-plane perpendicular division
+  description: Evidence-backed causal sketch linking division in three perpendicular
+    planes with incomplete separation to cubic eight-cell packets.
+  nodes:
+  - node_id: sarcina_trait
+    label: sarcina arrangement
+    node_type: TRAIT
+    grounding: traitmech:000120
+    description: Cocci attached as cubic packets of eight (sarcinae).
+  - node_id: cell_division
+    label: cell division
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051301
+    description: Bacterial binary fission.
+  - node_id: three_plane_perpendicular_division
+    label: three perpendicular division planes
+    node_type: QUALITY
+    description: Successive division planes oriented along three orthogonal axes.
+  edges:
+  - subject: three_plane_perpendicular_division
+    predicate: causes
+    object: sarcina_trait
+    description: Three perpendicular division planes with incomplete separation
+      yield cubic eight-cell packets.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      notes: Three-plane division with incomplete daughter-cell separation yields
+        cubic eight-cell packets.
+    predicate_id: biolink:causes
+  - subject: cell_division
+    predicate: enables
+    object: sarcina_trait
+    description: Bacterial cell division underlies sarcina packet formation.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00001-06
+      notes: Young treats the sarcina cubic packet as a division-plane-determined
+        coccal arrangement.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (sarcina / cubic-packet arrangement);
     leftover round, cell-arrangement sibling of diplococcus shaped.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (three-plane perpendicular division →
+    cubic packet) with GO node grounding and RO/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true

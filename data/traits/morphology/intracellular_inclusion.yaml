@@ -6,7 +6,7 @@ definition: A morphology trait describing a discrete intracellular body — a st
 definition_source: DOI:10.1038/s41579-020-0413-0
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -22,10 +22,58 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
   notes: Kerfeld et al. review bacterial microcompartments as a major class of
     protein-bounded intracellular organelles.
+causal_graphs:
+- graph_id: inclusion_compartmentalization
+  title: Intracellular inclusions compartmentalize prokaryotic cytoplasm
+  description: Evidence-backed causal sketch linking discrete intracellular
+    inclusions (storage granules, gas vesicles, microcompartments) to
+    cytoplasmic compartmentalization.
+  nodes:
+  - node_id: inclusion_trait
+    label: intracellular inclusion
+    node_type: TRAIT
+    grounding: traitmech:000066
+    description: Discrete intracellular body compartmentalizing material or
+      function.
+  - node_id: cytoplasmic_compartmentalization
+    label: cytoplasmic compartmentalization
+    node_type: QUALITY
+    description: Spatial segregation of material or activity within the cytoplasm.
+  - node_id: bacterial_microcompartment
+    label: bacterial microcompartment
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031469
+    description: Protein-shelled prokaryotic organelle (e.g. carboxysome).
+  edges:
+  - subject: inclusion_trait
+    predicate: enables
+    object: cytoplasmic_compartmentalization
+    description: Inclusions partition activities within the prokaryotic cytoplasm.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0413-0
+      notes: Greening & Lithgow review formation and function of bacterial
+        organelles/inclusions.
+    predicate_id: RO:0002327
+  - subject: bacterial_microcompartment
+    predicate: example of
+    object: inclusion_trait
+    description: Bacterial microcompartments are protein-bounded inclusion
+      organelles.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. review bacterial microcompartments as protein-bounded
+        intracellular organelles.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY axis class (intracellular inclusion) to
     parent the storage-granule, gas-vesicle, magnetosome, and carboxysome traits.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (compartmentalization axis) with GO
+    node grounding and RO/RDFS predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

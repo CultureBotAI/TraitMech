@@ -6,7 +6,7 @@ definition: A cell arrangement in which dividing cocci form irregular three-dime
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -20,10 +20,59 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Division-plane orientation and daughter-cell separation govern formation of
     three-dimensional coccal clusters.
+causal_graphs:
+- graph_id: staphylococcus_irregular_division_cluster
+  title: Staphylococcus arrangement via multi-plane non-orthogonal division
+  description: Evidence-backed causal sketch linking non-orthogonal multi-plane
+    division and incomplete daughter-cell separation to irregular grape-like
+    coccal clusters.
+  nodes:
+  - node_id: staphylococcus_trait
+    label: staphylococcus arrangement
+    node_type: TRAIT
+    grounding: traitmech:000118
+    description: Cocci forming irregular three-dimensional grape-like clusters.
+  - node_id: cell_division
+    label: cell division
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051301
+    description: Bacterial binary fission.
+  - node_id: multiplane_nonorthogonal_division
+    label: multi-plane non-orthogonal division
+    node_type: QUALITY
+    description: Successive division planes oriented in multiple non-orthogonal
+      directions.
+  edges:
+  - subject: multiplane_nonorthogonal_division
+    predicate: causes
+    object: staphylococcus_trait
+    description: Multi-plane non-orthogonal division with incomplete separation
+      generates 3D coccal clusters.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      notes: Division-plane orientation and daughter-cell separation govern
+        formation of three-dimensional coccal clusters.
+    predicate_id: biolink:causes
+  - subject: cell_division
+    predicate: enables
+    object: staphylococcus_trait
+    description: Bacterial cell division underlies coccal cluster formation.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00001-06
+      notes: Young treats clustered coccal arrangement as a division-plane-
+        determined heritable morphology.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (staphylococcus / cluster arrangement);
     leftover round, cell-arrangement sibling of diplococcus shaped.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (multi-plane non-orthogonal division
+    → cluster) with GO node grounding and RO/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true
