@@ -5,7 +5,7 @@ definition: A habitat association in which an organism lives independently in th
 definition_source: DOI:10.1038/nrmicro1341
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000047
 evidence:
@@ -15,10 +15,55 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.171
   notes: Poole et al. describe rhizobia in their free-living soil phase, contrasting
     it with the host-associated endosymbiotic phase.
+causal_graphs:
+- graph_id: free_living_environmental_habitat
+  title: Free-living lifestyle is independent of host association
+  description: Evidence-backed causal sketch linking environmental habitat
+    occupancy to a host-independent free-living lifestyle.
+  nodes:
+  - node_id: free_living_trait
+    label: free-living
+    node_type: TRAIT
+    grounding: traitmech:000048
+    description: Persistent life in the environment, not obligately host-bound.
+  - node_id: environmental_habitat
+    label: environmental habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Soil, water, air, or other non-host habitat.
+  - node_id: biogeographic_structure
+    label: biogeographic community structure
+    node_type: QUALITY
+    description: Patterned distribution of free-living taxa across environments.
+  edges:
+  - subject: environmental_habitat
+    predicate: enables
+    object: free_living_trait
+    description: Persistent occupancy of environmental habitats realizes the
+      free-living lifestyle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1341
+      notes: Martiny et al. document biogeographic patterning of free-living
+        microbial taxa.
+    predicate_id: RO:0002327
+  - subject: free_living_trait
+    predicate: associated with
+    object: biogeographic_structure
+    description: Free-living taxa show environment-structured global distributions.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.171
+      notes: Poole et al. describe the free-living soil phase of rhizobia distinct
+        from their host-associated phase.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (free-living); sub-variant of habitat
     association.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (free-living / environmental habitat)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

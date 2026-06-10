@@ -5,7 +5,7 @@ definition: A symbiosis in which both the microorganism and its host or partner
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000040
 synonyms:
@@ -20,9 +20,55 @@ evidence:
   notes: Bäckhed et al., "Host-bacterial mutualism in the human intestine", supports
     reciprocal benefit (nutrient harvest for the host, habitat for the microbes) as
     the defining feature of mutualism.
+causal_graphs:
+- graph_id: mutualism_reciprocal_benefit
+  title: Mutualism delivers reciprocal benefit to host and microbe
+  description: Evidence-backed causal sketch linking nutrient/service exchange to
+    reciprocal-benefit symbiosis.
+  nodes:
+  - node_id: mutualism_trait
+    label: mutualism
+    node_type: TRAIT
+    grounding: traitmech:000041
+    description: Symbiosis with positive fitness effects for both partners.
+  - node_id: nutrient_exchange
+    label: nutrient and service exchange
+    node_type: BIOLOGICAL_PROCESS
+    description: Bidirectional transfer of metabolites or functions between host
+      and microbe.
+  - node_id: reciprocal_benefit
+    label: reciprocal fitness benefit
+    node_type: QUALITY
+    description: Positive net fitness change for both host and microbe.
+  edges:
+  - subject: nutrient_exchange
+    predicate: causes
+    object: reciprocal_benefit
+    description: Exchange of nutrients or services yields positive fitness for
+      both partners.
+    evidence:
+    - reference: DOI:10.1126/science.1104816
+      notes: Bäckhed et al. document reciprocal nutrient-harvest benefits in the
+        gut-microbiota mutualism.
+    predicate_id: biolink:causes
+  - subject: reciprocal_benefit
+    predicate: enables
+    object: mutualism_trait
+    description: Sustained mutual benefit realizes the mutualistic lifestyle.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. document mutually beneficial host-microbe
+        associations across animals.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (mutualism); sub-variant of symbiosis.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (mutualism / reciprocal benefit) with
+    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

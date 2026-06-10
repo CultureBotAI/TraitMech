@@ -6,7 +6,7 @@ definition: A host association in which an organism is a persistent member of th
 definition_source: DOI:10.1126/science.1104816
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000049
 synonyms:
@@ -20,10 +20,54 @@ evidence:
 - reference: DOI:10.1073/pnas.1218525110
   notes: McFall-Ngai et al. support the gut as a major site of host-associated
     microbial communities across animals.
+causal_graphs:
+- graph_id: gut_associated_microbiota_metabolism
+  title: Gut-associated lifestyle in the gastrointestinal microbiota
+  description: Evidence-backed causal sketch linking gastrointestinal habitat to
+    persistent gut-microbiota membership and host nutritional contributions.
+  nodes:
+  - node_id: gut_associated_trait
+    label: gut-associated
+    node_type: TRAIT
+    grounding: traitmech:000052
+    description: Persistent member of an animal gastrointestinal microbiota.
+  - node_id: gastrointestinal_habitat
+    label: gastrointestinal tract habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Animal distal intestine and other GI compartments.
+  - node_id: host_metabolic_contribution
+    label: host metabolic contribution
+    node_type: BIOLOGICAL_PROCESS
+    description: Microbially mediated nutrient harvest and metabolism for the host.
+  edges:
+  - subject: gastrointestinal_habitat
+    predicate: enables
+    object: gut_associated_trait
+    description: The intestinal environment supports persistent residency.
+    evidence:
+    - reference: DOI:10.1126/science.1104816
+      notes: Bäckhed et al. characterize the distal intestine as a dense microbial
+        habitat.
+    predicate_id: RO:0002327
+  - subject: gut_associated_trait
+    predicate: contributes to
+    object: host_metabolic_contribution
+    description: Gut microbiota provide metabolic capabilities to the host.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. support the gut microbiota as a metabolically
+        consequential host-associated community.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (gut-associated); sub-variant of
     host-associated.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (gut microbiota / host metabolic
+    contribution) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

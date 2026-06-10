@@ -6,7 +6,7 @@ definition: A host-association lifestyle in which a normally commensal or
 definition_source: DOI:10.1016/j.tim.2012.04.005
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
 synonyms:
@@ -21,10 +21,58 @@ evidence:
 - reference: DOI:10.1038/s41579-021-00550-7
   notes: Drew et al. support facultative shifts toward parasitism/pathogenicity along
     the parasite-mutualist continuum, the basis of opportunistic disease.
+causal_graphs:
+- graph_id: opportunistic_pathogen_context_dependent_virulence
+  title: Opportunistic pathogenesis under compromised host defense
+  description: Evidence-backed causal sketch linking compromised host defenses to
+    context-dependent virulence in normally commensal/environmental microbes.
+  nodes:
+  - node_id: opportunistic_pathogen_trait
+    label: opportunistic pathogen
+    node_type: TRAIT
+    grounding: traitmech:000046
+    description: Disease causation only under compromised host defenses or
+      sterile-site translocation.
+  - node_id: compromised_host_defense
+    label: compromised host defense
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Immunosuppression, barrier breach, or sterile-site translocation.
+  - node_id: opportunistic_infection
+    label: opportunistic infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Disease arising from a normally commensal or environmental
+      microbe in a permissive host context.
+  edges:
+  - subject: compromised_host_defense
+    predicate: causes
+    object: opportunistic_infection
+    description: Breached or weakened host defenses enable a normally innocuous
+      microbe to cause disease.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2012.04.005
+      notes: Brown et al. support context-dependent virulence in opportunistic
+        pathogens.
+    predicate_id: biolink:causes
+  - subject: opportunistic_infection
+    predicate: enables
+    object: opportunistic_pathogen_trait
+    description: Context-dependent infection realizes the opportunistic-pathogen
+      lifestyle.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00550-7
+      notes: Drew et al. support facultative shifts toward pathogenicity along the
+        parasite-mutualist continuum.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (opportunistic pathogen); sub-variant of
     the existing pathogenic_to_host class (METPO:1004000).
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (opportunistic / context-dependent
+    virulence) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: An ecological classification of the primary environment or niche an
 definition_source: DOI:10.1038/nrmicro1341
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer, "Embracing the unknown", supports environment-specific microbial
     community membership (e.g. the soil microbiome) underpinning habitat association.
+causal_graphs:
+- graph_id: habitat_association_biogeographic_structure
+  title: Habitat association structures microbial biogeography
+  description: Evidence-backed causal sketch linking environmental habitat to the
+    biogeographic patterning of microbial taxa.
+  nodes:
+  - node_id: habitat_association_trait
+    label: habitat association
+    node_type: TRAIT
+    grounding: traitmech:000047
+    description: Ecological classification of the organism's primary environment.
+  - node_id: habitat
+    label: habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Free-living, host-associated, soil, rhizosphere, or gut habitat.
+  - node_id: biogeographic_structure
+    label: biogeographic community structure
+    node_type: QUALITY
+    description: Habitat-specific microbial community membership.
+  edges:
+  - subject: habitat
+    predicate: causes
+    object: habitat_association_trait
+    description: The organism's primary habitat sets its habitat-association
+      classification.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1341
+      notes: Martiny et al. show habitat as a structuring axis of microbial
+        biogeography.
+    predicate_id: biolink:causes
+  - subject: habitat_association_trait
+    predicate: associated with
+    object: biogeographic_structure
+    description: Habitat-associated taxa display environment-specific community
+      membership.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      notes: Fierer documents environment-specific community membership (e.g. the
+        soil microbiome).
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY axis class (habitat association) to parent the
     free-living/host-associated/soil/rhizosphere/gut habitat sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (habitat / biogeographic structure)
+    with biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

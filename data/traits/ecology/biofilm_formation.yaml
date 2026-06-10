@@ -6,7 +6,7 @@ definition: An ecological lifestyle in which cells form surface-attached,
 definition_source: DOI:10.1038/nrmicro.2016.94
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,57 @@ evidence:
 - reference: DOI:10.1038/s41579-019-0162-0
   notes: Flemming & Wuertz support the global ubiquity of the biofilm lifestyle
     across microbial habitats.
+causal_graphs:
+- graph_id: biofilm_eps_matrix_community
+  title: Biofilm formation builds a matrix-enclosed surface community
+  description: Evidence-backed causal sketch linking secretion of extracellular
+    polymeric substances to assembly of a surface-attached multicellular biofilm
+    community.
+  nodes:
+  - node_id: biofilm_formation_trait
+    label: biofilm formation
+    node_type: TRAIT
+    grounding: traitmech:000053
+    description: Capacity to form surface-attached, matrix-enclosed multicellular
+      communities.
+  - node_id: biofilm_formation_process
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042710
+    description: Aggregation of cells into a structured community on a surface.
+  - node_id: eps_matrix
+    label: extracellular polymeric substance matrix
+    node_type: CHEMICAL
+    description: Polysaccharide/protein/DNA matrix holding the biofilm together.
+  edges:
+  - subject: eps_matrix
+    predicate: enables
+    object: biofilm_formation_process
+    description: EPS matrix encloses cells and holds the biofilm together.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.94
+      notes: Flemming et al. describe the EPS matrix as the structural basis of
+        biofilms.
+    predicate_id: RO:0002327
+  - subject: biofilm_formation_process
+    predicate: enables
+    object: biofilm_formation_trait
+    description: Biofilm-formation activity realizes the biofilm-forming trait.
+    evidence:
+    - reference: DOI:10.1038/s41579-019-0162-0
+      notes: Flemming & Wuertz frame biofilm formation as the dominant microbial
+        lifestyle.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (biofilm formation) from literature
     research to fill the microbial-lifestyle gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (biofilm EPS matrix / community) with
+    GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

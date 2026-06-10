@@ -6,7 +6,7 @@ definition: A habitat association in which an organism lives persistently on or 
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000047
 evidence:
@@ -16,10 +16,55 @@ evidence:
 - reference: DOI:10.1126/science.1104816
   notes: Bäckhed et al. characterize the host-associated gut microbiota as a dense,
     coevolved community.
+causal_graphs:
+- graph_id: host_associated_microbiome
+  title: Host association establishes persistent host microbiome membership
+  description: Evidence-backed causal sketch linking host habitat to persistent
+    membership in a host-associated microbial community.
+  nodes:
+  - node_id: host_associated_trait
+    label: host-associated
+    node_type: TRAIT
+    grounding: traitmech:000049
+    description: Persistent life on or in a plant or animal host.
+  - node_id: host_habitat
+    label: host habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Plant or animal tissue surface or lumen.
+  - node_id: host_colonization
+    label: host colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Persistent establishment of microbes on or in a host.
+  edges:
+  - subject: host_habitat
+    predicate: enables
+    object: host_colonization
+    description: Host tissues provide the habitat in which the microbe colonizes.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. document ubiquitous host-associated microbial
+        communities across animals.
+    predicate_id: RO:0002327
+  - subject: host_colonization
+    predicate: enables
+    object: host_associated_trait
+    description: Persistent host colonization realizes the host-associated
+      lifestyle.
+    evidence:
+    - reference: DOI:10.1126/science.1104816
+      notes: Bäckhed et al. characterize host-associated microbiota as dense,
+        coevolved communities.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (host-associated); sub-variant of habitat
     association, parent of gut-associated.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (host-associated microbiome
+    membership) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
