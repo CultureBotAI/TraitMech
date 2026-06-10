@@ -6,7 +6,7 @@ definition: A fermentation that produces propionate (with acetate and CO2) from
 definition_source: DOI:10.3390/molecules31020333
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1002005
 synonyms:
@@ -21,10 +21,57 @@ evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
   notes: Review of fermentative energy conservation supports propionate formation as
     a redox-balancing, energy-conserving fermentation route.
+causal_graphs:
+- graph_id: propionic_acid_fermentation_propionate
+  title: Propionic acid fermentation produces propionate via the Wood-Werkman
+    pathway
+  description: Evidence-backed causal sketch linking methylmalonyl-CoA-pathway
+    catabolism of sugars or lactate to propionate, acetate, and CO2.
+  nodes:
+  - node_id: propionic_acid_fermentation_trait
+    label: propionic acid fermentation
+    node_type: TRAIT
+    grounding: traitmech:000029
+    description: Fermentation producing propionate via the Wood-Werkman pathway.
+  - node_id: fermentation_process
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006113
+    description: ATP-yielding catabolism with organic terminal acceptors.
+  - node_id: propionate
+    label: propionate
+    node_type: CHEMICAL
+    description: Reduced end product characteristic of propionibacteria.
+  edges:
+  - subject: propionic_acid_fermentation_trait
+    predicate: participates in
+    object: fermentation_process
+    description: Propionic acid fermentation is a class of fermentation metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Energy-conservation review supports propionate formation as a
+        redox-balancing fermentation route.
+    predicate_id: biolink:participates_in
+  - subject: propionic_acid_fermentation_trait
+    predicate: produces
+    object: propionate
+    description: Propionate is the characteristic end product of the pathway.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Classical-fermentation review describes propionic acid fermentation
+        via the Wood-Werkman pathway in propionibacteria.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (propionic acid fermentation);
     product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (propionic acid fermentation) with
+    GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

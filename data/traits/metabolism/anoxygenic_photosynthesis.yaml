@@ -7,7 +7,7 @@ definition: A phototrophic metabolism that uses light energy with a single
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000038
 synonyms:
@@ -21,10 +21,62 @@ evidence:
 - reference: DOI:10.3389/fmicb.2024.1417714
   notes: Review of anoxygenic photosynthesis in green sulfur bacteria supports
     sulfide as electron donor and the absence of oxygen production.
+causal_graphs:
+- graph_id: anoxygenic_photosynthesis_sulfide_donor
+  title: Anoxygenic photosynthesis uses non-water electron donors
+  description: Evidence-backed causal sketch linking a single bacteriochlorophyll
+    photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to
+    photosynthetic electron flow without O2 evolution.
+  nodes:
+  - node_id: anoxygenic_photosynthesis_trait
+    label: anoxygenic photosynthesis
+    node_type: TRAIT
+    grounding: traitmech:000035
+    description: Bacteriochlorophyll-based photosynthesis using non-water electron
+      donors.
+  - node_id: sulfide
+    label: sulfide
+    node_type: CHEMICAL
+    grounding: CHEBI:15138
+    description: Reduced sulfur electron donor (representative anoxygenic donor).
+  - node_id: photosynthetic_etc
+    label: photosynthetic electron transport
+    node_type: PATHWAY
+    grounding: GO:0009767
+    description: Single-photosystem electron transport powering anoxygenic
+      photosynthesis.
+  edges:
+  - subject: sulfide
+    predicate: feeds electrons into
+    object: photosynthetic_etc
+    description: Sulfide and other non-water donors feed electrons into the single
+      photosystem.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1417714
+      notes: Review of green sulfur bacteria supports sulfide as electron donor and
+        the absence of oxygen production.
+    predicate_id: METPO:2007402
+  - subject: photosynthetic_etc
+    predicate: enables
+    object: anoxygenic_photosynthesis_trait
+    description: Bacteriochlorophyll-based electron flow realizes anoxygenic
+      photosynthesis.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2006.09.001
+      notes: Bryant & Frigaard describe anoxygenic photosynthesis across five
+        prokaryotic phyla using bacteriochlorophyll and a single photosystem.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (anoxygenic photosynthesis) from
     literature research to fill the phototrophy gap.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (sulfide-driven anoxygenic
+    photosynthesis) with CHEBI/GO node groundings and RO/METPO predicate
+    groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A fermentation in which pyruvate is decarboxylated to acetaldehyde
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1002005
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
   notes: Review of fermentative energy conservation supports ethanol as an
     NADH-reoxidizing fermentation end product.
+causal_graphs:
+- graph_id: ethanol_fermentation_pyruvate_to_ethanol
+  title: Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2
+  description: Evidence-backed causal sketch linking pyruvate decarboxylation and
+    NADH-driven ethanol production to NAD+ regeneration.
+  nodes:
+  - node_id: ethanol_fermentation_trait
+    label: ethanol fermentation
+    node_type: TRAIT
+    grounding: traitmech:000028
+    description: Alcoholic fermentation producing ethanol and CO2.
+  - node_id: fermentation_process
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006113
+    description: ATP-yielding catabolism with organic terminal acceptors.
+  - node_id: ethanol
+    label: ethanol
+    node_type: CHEMICAL
+    description: Reduced end product regenerating NAD+ from NADH.
+  edges:
+  - subject: ethanol_fermentation_trait
+    predicate: participates in
+    object: fermentation_process
+    description: Alcoholic fermentation is a class of fermentation metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Energy-conservation review supports ethanol as an NADH-reoxidizing
+        fermentation end product.
+    predicate_id: biolink:participates_in
+  - subject: ethanol_fermentation_trait
+    predicate: produces
+    object: ethanol
+    description: Ethanol is the characteristic end product of the pathway.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Classical-fermentation review describes pyruvate decarboxylation and
+        reduction to ethanol.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (ethanol/alcoholic fermentation);
     product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (alcoholic fermentation / ethanol
+    production) with GO node grounding and METPO/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true

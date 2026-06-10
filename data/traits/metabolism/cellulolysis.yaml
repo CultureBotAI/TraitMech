@@ -6,7 +6,7 @@ definition: A biopolymer-degradation metabolism in which an organism hydrolyzes
 definition_source: DOI:10.1128/MMBR.66.3.506-577.2002
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000110
 synonyms:
@@ -23,10 +23,56 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation
     across diverse organisms.
+causal_graphs:
+- graph_id: cellulolysis_cellulase_systems
+  title: Cellulolysis hydrolyzes cellulose to glucose
+  description: Evidence-backed causal sketch linking cellulase systems
+    (cellulosomes / free enzymes) to cellulose hydrolysis into cellodextrins and
+    glucose.
+  nodes:
+  - node_id: cellulolysis_trait
+    label: cellulolysis
+    node_type: TRAIT
+    grounding: traitmech:000111
+    description: Hydrolysis of cellulose to assimilable sugars.
+  - node_id: cellulase
+    label: cellulase systems
+    node_type: GENE_OR_PROTEIN
+    description: Endoglucanases, exoglucanases, and beta-glucosidases (sometimes
+      cellulosomal).
+  - node_id: glucose
+    label: glucose
+    node_type: CHEMICAL
+    description: Monomeric assimilable sugar released from cellulose.
+  edges:
+  - subject: cellulase
+    predicate: enables
+    object: cellulolysis_trait
+    description: Cellulase systems hydrolyze cellulose extracellularly.
+    evidence:
+    - reference: DOI:10.1128/MMBR.66.3.506-577.2002
+      notes: Lynd et al. review microbial cellulose utilization and the cellulase
+        systems involved.
+    predicate_id: RO:0002327
+  - subject: cellulolysis_trait
+    predicate: produces
+    object: glucose
+    description: Cellulose hydrolysis yields cellodextrins and glucose.
+    evidence:
+    - reference: DOI:10.1016/j.cbpa.2015.10.018
+      notes: Cragg et al. place cellulose deconstruction within lignocellulose
+        degradation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (cellulolysis); sub-variant of
     biopolymer degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (cellulase hydrolysis of cellulose)
+    with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

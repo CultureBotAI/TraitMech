@@ -7,7 +7,7 @@ definition: An autotrophic carbon-fixation pathway in which two molecules of
 definition_source: DOI:10.1128/AEM.02473-10
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000019
 synonyms:
@@ -21,10 +21,57 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert include the 3-hydroxypropionate pathway among autotrophic
     carbon-fixation strategies.
+causal_graphs:
+- graph_id: three_hp_bicycle_chloroflexus
+  title: 3-hydroxypropionate bicycle fixes bicarbonate in Chloroflexus
+  description: Evidence-backed causal sketch linking bicarbonate fixation via
+    3-hydroxypropionate to glyoxylate and pyruvate in Chloroflexus aurantiacus.
+  nodes:
+  - node_id: three_hp_bicycle_trait
+    label: 3-hydroxypropionate bicycle
+    node_type: TRAIT
+    grounding: traitmech:000023
+    description: Autotrophic carbon-fixation bicycle via 3-hydroxypropionate.
+  - node_id: bicarbonate
+    label: hydrogencarbonate
+    node_type: CHEMICAL
+    grounding: CHEBI:17544
+    description: Inorganic carbon substrate fixed by the bicycle.
+  - node_id: carbon_fixation_process
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Conversion of inorganic carbon into organic compounds.
+  edges:
+  - subject: bicarbonate
+    predicate: fixed by
+    object: three_hp_bicycle_trait
+    description: Two molecules of bicarbonate are fixed per cycle turn.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg describes the 3-hydroxypropionate bicycle in Chloroflexus.
+    predicate_id: METPO:2007404
+  - subject: three_hp_bicycle_trait
+    predicate: contributes to
+    object: carbon_fixation_process
+    description: The bicycle is one of the recognized autotrophic CO2-fixation
+      pathways.
+    evidence:
+    - reference: DOI:10.1146/annurev-marine-120709-142712
+      notes: Hügler & Sievert include the 3-hydroxypropionate pathway among
+        autotrophic carbon-fixation strategies.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (3-hydroxypropionate bicycle);
     sub-variant of carbon fixation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (3HP bicycle bicarbonate fixation)
+    with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

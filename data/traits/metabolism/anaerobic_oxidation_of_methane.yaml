@@ -7,7 +7,7 @@ definition: A metabolism in which methane is oxidized under anoxic conditions,
 definition_source: DOI:10.1038/35036572
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000802
 synonyms:
@@ -24,6 +24,49 @@ evidence:
 - reference: DOI:10.3389/fmars.2025.1609892
   notes: Review of AOM in marine sediments supports sulfate- and metal-coupled
     anaerobic methane oxidation as a major methane sink.
+causal_graphs:
+- graph_id: aom_anme_sulfate_consortium
+  title: AOM couples methane oxidation to sulfate reduction in ANME-SRB consortia
+  description: Evidence-backed causal sketch linking anaerobic methanotrophic
+    archaea (ANME) and sulfate-reducing bacteria to coupled methane oxidation
+    and sulfate reduction.
+  nodes:
+  - node_id: aom_trait
+    label: anaerobic oxidation of methane
+    node_type: TRAIT
+    grounding: traitmech:000033
+    description: Anaerobic methane oxidation, classically coupled to sulfate
+      reduction.
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+    grounding: CHEBI:16183
+    description: Substrate oxidized under anoxic conditions.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    grounding: CHEBI:16189
+    description: Terminal electron acceptor for AOM.
+  edges:
+  - subject: methane
+    predicate: oxidized to
+    object: sulfate
+    description: Methane oxidation is coupled to sulfate reduction in the ANME-SRB
+      consortium.
+    evidence:
+    - reference: DOI:10.1038/35036572
+      notes: Boetius et al. described the marine ANME-SRB consortium mediating
+        AOM.
+    predicate_id: METPO:2007405
+  - subject: aom_trait
+    predicate: associated with
+    object: methane
+    description: AOM is a major biological sink for methane in anoxic sediments.
+    evidence:
+    - reference: DOI:10.3389/fmars.2025.1609892
+      notes: AOM review supports sulfate- and metal-coupled methane oxidation as
+        a major methane sink.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -31,4 +74,11 @@ curation_history:
   changes: Proposed candidate METABOLISM trait (anaerobic oxidation of methane) from
     literature research; complements the existing methanogenesis class (the reverse
     process).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (ANME-SRB AOM consortium) with CHEBI
+    node groundings and METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

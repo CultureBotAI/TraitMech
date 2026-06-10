@@ -7,7 +7,7 @@ definition: An anaerobic respiratory metabolism in which nitrate is reduced via
 definition_source: DOI:10.1126/science.1254070
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000802
 synonyms:
@@ -24,10 +24,63 @@ evidence:
 - reference: DOI:10.1007/s11157-025-09719-5
   notes: Review of DNRA vs denitrification supports DNRA's competitive advantage and
     nitrogen-retaining role under nitrate-limited conditions.
+causal_graphs:
+- graph_id: dnra_nitrate_to_ammonium
+  title: DNRA reduces nitrate to ammonium, conserving fixed nitrogen
+  description: Evidence-backed causal sketch linking nitrate respiration ending in
+    ammonium to nitrogen retention under high donor-to-acceptor ratios.
+  nodes:
+  - node_id: dnra_trait
+    label: dissimilatory nitrate reduction to ammonium
+    node_type: TRAIT
+    grounding: traitmech:000030
+    description: Anaerobic respiratory reduction of nitrate to ammonium.
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    grounding: CHEBI:17632
+    description: Terminal electron acceptor reduced in DNRA.
+  - node_id: ammonium
+    label: ammonium
+    node_type: CHEMICAL
+    grounding: CHEBI:28938
+    description: Final reduction product retained in the ecosystem.
+  - node_id: donor_acceptor_ratio
+    label: high donor-to-acceptor ratio
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nitrate-limited, high-electron-donor environment selecting for
+      DNRA over denitrification.
+  edges:
+  - subject: nitrate
+    predicate: oxidized to
+    object: ammonium
+    description: Nitrate is reduced via nitrite to ammonium, retaining N in the
+      cell/system.
+    evidence:
+    - reference: DOI:10.1126/science.1254070
+      notes: Kraft et al. show DNRA produces ammonium from nitrate under
+        nitrate-limited conditions.
+    predicate_id: METPO:2007405
+  - subject: donor_acceptor_ratio
+    predicate: selects for
+    object: dnra_trait
+    description: High donor-to-acceptor ratio favors DNRA over denitrification.
+    evidence:
+    - reference: DOI:10.1007/s11157-025-09719-5
+      notes: DNRA review supports its competitive advantage and N-retaining role
+        under nitrate-limited conditions.
+    predicate_id: METPO:2007401
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (dissimilatory nitrate reduction to
     ammonium) from literature research to fill the nitrogen-cycling gap.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (DNRA nitrate → ammonium retention)
+    with CHEBI node groundings and METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

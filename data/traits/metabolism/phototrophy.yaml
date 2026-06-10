@@ -6,7 +6,7 @@ definition: A metabolism in which an organism captures light as its energy sourc
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -22,6 +22,47 @@ evidence:
 - reference: DOI:10.1126/science.289.5486.1902
   notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as a
     light-energy capture mechanism distinct from chlorophyll-based photosynthesis.
+causal_graphs:
+- graph_id: phototrophy_light_energy_capture
+  title: Phototrophy captures light as cellular energy
+  description: Evidence-backed causal sketch linking light input to ATP/PMF
+    generation across chlorophyll- and retinal-based phototrophic mechanisms.
+  nodes:
+  - node_id: phototrophy_trait
+    label: phototrophy
+    node_type: TRAIT
+    grounding: traitmech:000037
+    description: Use of light as cellular energy source.
+  - node_id: light
+    label: light
+    node_type: ENVIRONMENTAL_FACTOR
+    grounding: PATO:0001717
+    description: Radiant energy captured for cellular use.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: STATE
+    grounding: METPO:1007500
+    description: Bioenergetic gradient driving ATP synthesis.
+  edges:
+  - subject: light
+    predicate: causes
+    object: phototrophy_trait
+    description: Light availability is the input the phototrophic trait realizes.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2006.09.001
+      notes: Bryant & Frigaard frame phototrophy as the broad use of light for
+        energy.
+    predicate_id: biolink:causes
+  - subject: phototrophy_trait
+    predicate: enables
+    object: proton_motive_force
+    description: Chlorophyll- and retinal-based phototrophy generate proton motive
+      force from absorbed light.
+    evidence:
+    - reference: DOI:10.1126/science.289.5486.1902
+      notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as
+        a light-driven proton pump, complementing chlorophyll-based photosynthesis.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
@@ -29,4 +70,11 @@ curation_history:
   changes: Minted intermediate axis class (phototrophy) to parent the photosynthesis
     and proteorhodopsin-phototrophy traits, replacing their direct attachment to
     METPO:1000060 (metabolism).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (phototrophy / light → PMF) with
+    PATO/METPO node groundings and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

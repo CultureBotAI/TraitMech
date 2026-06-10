@@ -6,7 +6,7 @@ definition: A fermentation in which an organism disposes of excess reducing
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1002005
 synonyms:
@@ -20,10 +20,58 @@ evidence:
 - reference: DOI:10.1016/S0360-3199(02)00131-3
   notes: Hallenbeck & Benemann review biological hydrogen production, including dark
     fermentative H2 generation.
+causal_graphs:
+- graph_id: fermentative_h2_production
+  title: Fermentative H2 production disposes of excess reducing equivalents
+  description: Evidence-backed causal sketch linking hydrogenase activity on
+    reduced ferredoxin or formate to molecular hydrogen production as a
+    redox-balancing fermentation output.
+  nodes:
+  - node_id: fermentative_h2_trait
+    label: fermentative hydrogen production
+    node_type: TRAIT
+    grounding: traitmech:000109
+    description: Fermentation that yields H2 to dispose of excess electrons.
+  - node_id: fermentation_process
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006113
+    description: ATP-yielding catabolism with organic terminal acceptors.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: H2 produced by hydrogenases.
+  edges:
+  - subject: fermentative_h2_trait
+    predicate: participates in
+    object: fermentation_process
+    description: Fermentative H2 production is a class of fermentation metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Energy-conservation review supports H2 production as a
+        redox-balancing fermentation output via hydrogenases.
+    predicate_id: biolink:participates_in
+  - subject: fermentative_h2_trait
+    predicate: produces
+    object: molecular_hydrogen
+    description: Hydrogenases produce H2 to regenerate oxidized cofactors.
+    evidence:
+    - reference: DOI:10.1016/S0360-3199(02)00131-3
+      notes: Hallenbeck & Benemann review biological hydrogen production,
+        including dark fermentative H2 generation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (fermentative hydrogen production);
     round 2, sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (fermentative H2 production) with
+    GO/CHEBI node groundings and METPO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

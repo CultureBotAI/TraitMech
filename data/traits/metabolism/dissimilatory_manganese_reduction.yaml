@@ -6,7 +6,7 @@ definition: An anaerobic respiratory metabolism in which an organism conserves e
 definition_source: DOI:10.1128/mr.55.2.259-287.1991
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000039
 synonyms:
@@ -20,6 +20,44 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini review iron and manganese in anaerobic respiration as
     terminal electron acceptors.
+causal_graphs:
+- graph_id: dmr_mn_oxide_respiration
+  title: Dissimilatory manganese reduction respires Mn(IV) to Mn(II)
+  description: Evidence-backed causal sketch linking Mn(IV) oxide as terminal
+    electron acceptor to soluble Mn(II) and anaerobic respiration.
+  nodes:
+  - node_id: dmr_trait
+    label: dissimilatory manganese reduction
+    node_type: TRAIT
+    grounding: traitmech:000108
+    description: Anaerobic respiration on Mn(IV) oxide as terminal acceptor.
+  - node_id: mn_iv_oxide
+    label: Mn(IV) oxide
+    node_type: CHEMICAL
+    description: Insoluble Mn(IV) oxide used as terminal electron acceptor.
+  - node_id: mn_ii
+    label: manganese(2+)
+    node_type: CHEMICAL
+    description: Soluble Mn(II) released after reduction.
+  edges:
+  - subject: mn_iv_oxide
+    predicate: oxidized to
+    object: mn_ii
+    description: Mn(IV) oxide is reduced to soluble Mn(II).
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Lovley establishes Mn(IV) reduction coupled to organic-matter
+        oxidation as energy-conserving anaerobic respiration.
+    predicate_id: METPO:2007405
+  - subject: mn_iv_oxide
+    predicate: enables
+    object: dmr_trait
+    description: Mn(IV) acts as terminal electron acceptor enabling DMR.
+    evidence:
+    - reference: PMID:7826009
+      notes: Nealson & Saffarini place Mn(IV) as a terminal electron acceptor in
+        anaerobic respiration.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -27,4 +65,10 @@ curation_history:
   changes: Proposed candidate METABOLISM trait (dissimilatory manganese reduction);
     round 2, parented to the existing dissimilatory metal reduction axis
     (traitmech:000039) alongside round-1 iron reduction.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (Mn(IV) → Mn(II) respiration) with
+    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

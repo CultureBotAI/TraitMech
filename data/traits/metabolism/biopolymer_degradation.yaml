@@ -6,7 +6,7 @@ definition: A metabolism in which an organism secretes enzymes to depolymerize
 definition_source: DOI:10.1016/j.cbpa.2015.10.018
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -21,10 +21,55 @@ evidence:
 - reference: DOI:10.1128/MMBR.66.3.506-577.2002
   notes: Lynd et al. review microbial utilization of cellulose, the archetypal
     biopolymer-degradation process.
+causal_graphs:
+- graph_id: biopolymer_degradation_extracellular_hydrolysis
+  title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly
+  description: Evidence-backed causal sketch linking secreted depolymerizing
+    enzymes to liberation of assimilable units from recalcitrant biopolymers.
+  nodes:
+  - node_id: biopolymer_degradation_trait
+    label: biopolymer degradation
+    node_type: TRAIT
+    grounding: traitmech:000110
+    description: Secreted enzymatic depolymerization of biopolymers (cellulose,
+      chitin, lignin, etc.).
+  - node_id: extracellular_enzymes
+    label: secreted depolymerizing enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Extracellular hydrolases / oxidoreductases acting on biopolymers.
+  - node_id: assimilable_units
+    label: assimilable mono- and oligosaccharides
+    node_type: CHEMICAL
+    description: Sugars, peptides, and oligomers released for uptake.
+  edges:
+  - subject: extracellular_enzymes
+    predicate: enables
+    object: biopolymer_degradation_trait
+    description: Secreted enzymes drive extracellular biopolymer breakdown.
+    evidence:
+    - reference: DOI:10.1016/j.cbpa.2015.10.018
+      notes: Cragg et al. review the complementary enzymes used to deconstruct
+        plant biopolymers across the tree of life.
+    predicate_id: RO:0002327
+  - subject: biopolymer_degradation_trait
+    predicate: produces
+    object: assimilable_units
+    description: Depolymerization releases assimilable units for cellular uptake.
+    evidence:
+    - reference: DOI:10.1128/MMBR.66.3.506-577.2002
+      notes: Lynd et al. review microbial cellulose utilization as the archetypal
+        biopolymer-degradation process.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM axis class (biopolymer degradation) to parent
     cellulolysis, chitinolysis, xylan degradation, and lignin degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (biopolymer-degradation axis) with
+    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

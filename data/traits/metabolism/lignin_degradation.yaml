@@ -6,7 +6,7 @@ definition: A biopolymer-degradation metabolism in which an organism breaks down
 definition_source: DOI:10.1039/c1np00042j
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000110
 synonyms:
@@ -19,10 +19,56 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. cover lignin breakdown as part of lignocellulose degradation
     across the tree of life.
+causal_graphs:
+- graph_id: lignin_degradation_peroxidase_laccase
+  title: Lignin degradation breaks down aromatic plant biopolymers via oxidative
+    enzymes
+  description: Evidence-backed causal sketch linking peroxidases and laccases to
+    oxidative cleavage of recalcitrant lignin aromatic heteropolymer.
+  nodes:
+  - node_id: lignin_degradation_trait
+    label: lignin degradation
+    node_type: TRAIT
+    grounding: traitmech:000114
+    description: Oxidative breakdown of lignin in plant cell walls.
+  - node_id: oxidative_enzymes
+    label: peroxidases and laccases
+    node_type: GENE_OR_PROTEIN
+    description: Secreted oxidative enzymes acting on the lignin aromatic
+      framework.
+  - node_id: aromatic_monomers
+    label: aromatic monomers / oligomers
+    node_type: CHEMICAL
+    description: Aromatic compounds released from depolymerized lignin.
+  edges:
+  - subject: oxidative_enzymes
+    predicate: enables
+    object: lignin_degradation_trait
+    description: Peroxidases and laccases drive oxidative lignin breakdown.
+    evidence:
+    - reference: DOI:10.1039/c1np00042j
+      notes: Bugg et al. review pathways for degradation of lignin in bacteria
+        and fungi.
+    predicate_id: RO:0002327
+  - subject: lignin_degradation_trait
+    predicate: produces
+    object: aromatic_monomers
+    description: Lignin oxidation releases aromatic monomers/oligomers.
+    evidence:
+    - reference: DOI:10.1016/j.cbpa.2015.10.018
+      notes: Cragg et al. cover lignin breakdown as part of lignocellulose
+        degradation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (lignin degradation); sub-variant of
     biopolymer degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (oxidative lignin degradation) with
+    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

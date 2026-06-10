@@ -7,7 +7,7 @@ definition: A phototrophic metabolism that uses light energy and chlorophyll- or
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000037
 evidence:
@@ -18,10 +18,57 @@ evidence:
   notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports
     reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of
     phototrophy distinct from rhodopsin-based light capture.
+causal_graphs:
+- graph_id: photosynthesis_chlorophyll_reaction_center
+  title: Chlorophyll-based photosynthesis drives electron flow and CO2 fixation
+  description: Evidence-backed causal sketch linking chlorophyll-based reaction
+    centers to electron flow that powers CO2 fixation.
+  nodes:
+  - node_id: photosynthesis_trait
+    label: photosynthesis
+    node_type: TRAIT
+    grounding: traitmech:000038
+    description: Chlorophyll/bacteriochlorophyll-based reaction-center metabolism.
+  - node_id: photosynthesis_process
+    label: photosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015979
+    description: Conversion of light energy to chemical energy via reaction centers.
+  - node_id: carbon_fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Assimilation of inorganic CO2 into organic carbon.
+  edges:
+  - subject: photosynthesis_process
+    predicate: enables
+    object: photosynthesis_trait
+    description: Reaction-center photochemistry underlies the photosynthetic trait.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2006.09.001
+      notes: Bryant & Frigaard treat reaction-center photosynthesis as encompassing
+        both oxygenic and anoxygenic forms.
+    predicate_id: RO:0002327
+  - subject: photosynthesis_trait
+    predicate: contributes to
+    object: carbon_fixation
+    description: Photosynthetic electron flow powers autotrophic CO2 fixation.
+    evidence:
+    - reference: DOI:10.1146/annurev-earth-060313-054810
+      notes: Fischer et al. frame reaction-center photosynthesis as the
+        chlorophyll-based, CO2-fixing branch of phototrophy.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Minted intermediate axis class (photosynthesis) under phototrophy to
     parent the oxygenic- and anoxygenic-photosynthesis traits.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (reaction-center photosynthesis /
+    CO2 fixation) with GO node groundings and RO predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

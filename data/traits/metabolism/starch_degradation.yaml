@@ -6,7 +6,7 @@ definition: A biopolymer-degradation metabolism in which an organism hydrolyzes 
 definition_source: DOI:10.1016/S0168-1656(01)00407-2
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000110
 synonyms:
@@ -20,10 +20,54 @@ evidence:
 - reference: DOI:10.1093/nar/gkt1178
   notes: The CAZy database review classifies the glycoside hydrolases (including
     amylases) that microorganisms use to degrade starch and other polysaccharides.
+causal_graphs:
+- graph_id: starch_degradation_amylase
+  title: Starch degradation hydrolyzes amylose/amylopectin to glucose
+  description: Evidence-backed causal sketch linking amylase systems to hydrolysis
+    of starch into maltooligosaccharides and glucose.
+  nodes:
+  - node_id: starch_degradation_trait
+    label: starch degradation
+    node_type: TRAIT
+    grounding: traitmech:000115
+    description: Hydrolysis of starch to assimilable sugars.
+  - node_id: amylase
+    label: amylases / starch-active glycoside hydrolases
+    node_type: GENE_OR_PROTEIN
+    description: Alpha-amylase family enzymes acting on starch.
+  - node_id: glucose
+    label: glucose
+    node_type: CHEMICAL
+    description: Monomeric sugar released from starch hydrolysis.
+  edges:
+  - subject: amylase
+    predicate: enables
+    object: starch_degradation_trait
+    description: Amylases hydrolyze starch's alpha-1,4 and alpha-1,6 linkages.
+    evidence:
+    - reference: DOI:10.1016/S0168-1656(01)00407-2
+      notes: van der Maarel et al. review alpha-amylase-family enzymes that
+        hydrolyze starch.
+    predicate_id: RO:0002327
+  - subject: starch_degradation_trait
+    predicate: produces
+    object: glucose
+    description: Starch hydrolysis yields maltodextrins and glucose.
+    evidence:
+    - reference: DOI:10.1093/nar/gkt1178
+      notes: CAZy review classifies glycoside hydrolases (including amylases)
+        used to degrade starch and other polysaccharides.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (starch degradation / amylolysis);
     leftover round, sub-variant of biopolymer degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (amylase hydrolysis of starch) with
+    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

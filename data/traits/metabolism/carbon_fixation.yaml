@@ -6,7 +6,7 @@ definition: A metabolic process in which an organism assimilates inorganic carbo
 definition_source: DOI:10.1128/AEM.02473-10
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000060
 synonyms:
@@ -25,6 +25,47 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert, "Beyond the Calvin cycle", supports multiple autotrophic
     carbon-fixation pathways operating among ocean microorganisms.
+causal_graphs:
+- graph_id: carbon_fixation_co2_assimilation
+  title: Autotrophic carbon fixation assimilates CO2 into organic carbon
+  description: Evidence-backed causal sketch linking inorganic CO2 to organic
+    carbon via six recognized autotrophic carbon-fixation pathways.
+  nodes:
+  - node_id: carbon_fixation_trait
+    label: carbon fixation
+    node_type: TRAIT
+    grounding: traitmech:000019
+    description: Assimilation of inorganic carbon into organic compounds
+      (autotrophy).
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon substrate fixed into biomass.
+  - node_id: carbon_fixation_process
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Conversion of inorganic CO2/bicarbonate into organic compounds.
+  edges:
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: carbon_fixation_trait
+    description: CO2 is the substrate fixed by autotrophic carbon-fixation
+      pathways.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg reviews the distribution of autotrophic CO2-fixation pathways.
+    predicate_id: METPO:2007404
+  - subject: carbon_fixation_process
+    predicate: enables
+    object: carbon_fixation_trait
+    description: The autotrophic carbon-fixation process realizes the trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-marine-120709-142712
+      notes: Hügler & Sievert support multiple autotrophic carbon-fixation
+        pathways operating among ocean microorganisms.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -32,4 +73,11 @@ curation_history:
   changes: Proposed candidate METABOLISM trait (autotrophic carbon fixation) from
     literature research to fill the carbon-fixation-pathway coverage gap. Parent of
     the six pathway-specific sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (CO2 assimilation axis) with
+    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true
