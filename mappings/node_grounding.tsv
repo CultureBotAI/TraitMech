@@ -13,6 +13,8 @@ proton	CHEMICAL	CHEBI:24636	proton	CHEBI	high	H+; pH-related transport, pmf grad
 ferrous iron	CHEMICAL	CHEBI:29033	iron(2+)	CHEBI	high	Fe2+; electron donor in iron-oxidizing lithotrophy
 organic carbon	CHEMICAL	CHEBI:50860	organic molecular entity	CHEBI	high	broad class — heterotroph carbon source, assimilated into biomass
 compatible solutes	CHEMICAL	CHEBI:65015	osmolyte	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts
+citrate	CHEMICAL	CHEBI:16947	citrate(3-)	CHEBI	high	TCA-cycle intermediate; carbon/electron-donor substrate for citrate-utilizers (Citrobacter, Klebsiella)
+fumarate	CHEMICAL	CHEBI:29806	fumarate(2-)	CHEBI	high	TCA-cycle intermediate; alternative terminal electron acceptor in anaerobic fumarate respiration
 peptidoglycan synthesis	BIOLOGICAL_PROCESS	GO:0009252	peptidoglycan biosynthetic process	GO	high	exact GO term; used in MreB/FtsZ cell-shape graphs
 methanogenesis	BIOLOGICAL_PROCESS	GO:0015948	methanogenesis	GO	high	exact label match
 aerobic respiration	BIOLOGICAL_PROCESS	GO:0009060	aerobic respiration	GO	high	exact label match

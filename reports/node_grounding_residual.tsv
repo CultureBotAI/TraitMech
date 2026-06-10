@@ -37,6 +37,7 @@ upper-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperat
 warm-mesophile adaptation	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_mid4.yaml|data/traits/environment/temperature_range_mid4.yaml
 psychrophile cold-adapted machinery	BIOLOGICAL_PROCESS	2	data/traits/environment/temperature_optimum_very_low.yaml|data/traits/environment/temperature_range_very_low.yaml
 high temperature	ENVIRONMENTAL_FACTOR	2	data/traits/environment/temperature_preference.yaml|data/traits/environment/thermophilic.yaml
+sox enzyme system	GENE_OR_PROTEIN	2	data/traits/metabolism/sulfur_oxidation.yaml|data/traits/physiology/chemolithotrophic.yaml
 rod complex	GENE_OR_PROTEIN	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
 isoprenoid precursors	CHEMICAL	2	data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
 adder size control	BIOLOGICAL_PROCESS	2	data/traits/morphology/cell_length.yaml|data/traits/morphology/cell_length_small.yaml
@@ -60,6 +61,7 @@ respiratory energy conservation	BIOLOGICAL_PROCESS	2	data/traits/physiology/chem
 reduced sulfur compound	CHEMICAL	2	data/traits/physiology/chemolithoheterotrophic.yaml|data/traits/physiology/lithotrophic.yaml
 cellular carbon	BIOLOGICAL_PROCESS	2	data/traits/physiology/hydrogenotrophic.yaml|data/traits/physiology/lithoautotrophic.yaml
 bacteriochlorophyll	CHEMICAL	2	data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/phototrophic.yaml
+environmental stress	ENVIRONMENTAL_FACTOR	2	data/traits/physiology/stress_response.yaml|data/traits/physiology/viable_but_nonculturable_state.yaml
 metazoan-adapted virulence factors	GENE_OR_PROTEIN	1	data/traits/ecology/animal_pathogen.yaml
 immune evasion	BIOLOGICAL_PROCESS	1	data/traits/ecology/animal_pathogen.yaml
 animal tissue colonization	BIOLOGICAL_PROCESS	1	data/traits/ecology/animal_pathogen.yaml
@@ -248,6 +250,7 @@ atp and reducing power	CHEMICAL	1	data/traits/metabolism/metabolism.yaml
 cellular growth	BIOLOGICAL_PROCESS	1	data/traits/metabolism/metabolism.yaml
 anoxic habitat	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/methanogenesis.yaml
 coenzyme f430	CHEMICAL	1	data/traits/metabolism/methanogenesis.yaml
+nitrogenase	GENE_OR_PROTEIN	1	data/traits/metabolism/nitrogen_fixation.yaml
 f1fo atp synthase	GENE_OR_PROTEIN	1	data/traits/metabolism/oxidative_phosphorylation.yaml
 fermentative condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
 high-energy phosphorylated intermediate	CHEMICAL	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
@@ -409,9 +412,12 @@ low visible chromophore accumulation	CHEMICAL	1	data/traits/morphology/white_pig
 visible white color	MOLECULAR_FUNCTION	1	data/traits/morphology/white_pigmented.yaml
 yellow carotenoids	CHEMICAL	1	data/traits/morphology/yellow_pigmented.yaml
 visible yellow color	MOLECULAR_FUNCTION	1	data/traits/morphology/yellow_pigmented.yaml
+drug efflux pump	GENE_OR_PROTEIN	1	data/traits/physiology/antibiotic_resistance.yaml
 energy and reductant	CHEMICAL	1	data/traits/physiology/autotrophic.yaml
+luciferase	GENE_OR_PROTEIN	1	data/traits/physiology/bioluminescence.yaml
 co-insensitive terminal oxidase	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
 reduced pyridine nucleotides	CHEMICAL	1	data/traits/physiology/carboxydotrophic.yaml
+catalase	GENE_OR_PROTEIN	1	data/traits/physiology/catalase_activity.yaml
 reduced inorganic compound	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
 nadph	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
 cellular biomass	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoautotrophic.yaml
@@ -419,8 +425,8 @@ inorganic chemical donor	CHEMICAL	1	data/traits/physiology/chemolithoheterotroph
 organic nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemolithoheterotrophic.yaml
 inorganic chemical electron donor	CHEMICAL	1	data/traits/physiology/chemolithotrophic.yaml
 hydroxylamine	CHEMICAL	1	data/traits/physiology/chemolithotrophic.yaml
-sox enzyme system	GENE_OR_PROTEIN	1	data/traits/physiology/chemolithotrophic.yaml
 organic substrate oxidation	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoorganotrophic.yaml
+chemical gradient	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/chemotaxis.yaml
 reduced chemical substrate	CHEMICAL	1	data/traits/physiology/chemotrophic.yaml
 inorganic compound	CHEMICAL	1	data/traits/physiology/chemotrophic.yaml
 high nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/copiotrophic.yaml
@@ -429,6 +435,7 @@ membrane transporters	GENE_OR_PROTEIN	1	data/traits/physiology/copiotrophic.yaml
 transcription and signal regulation	BIOLOGICAL_PROCESS	1	data/traits/physiology/copiotrophic.yaml
 rrna operons	GENE_OR_PROTEIN	1	data/traits/physiology/copiotrophic.yaml
 rapid growth	BIOLOGICAL_PROCESS	1	data/traits/physiology/copiotrophic.yaml
+unfavorable conditions	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/dormancy.yaml
 nutrient uptake	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 anabolism	BIOLOGICAL_PROCESS	1	data/traits/physiology/heterotrophic.yaml
 protons and electrons	CHEMICAL	1	data/traits/physiology/hydrogenotrophic.yaml
@@ -439,6 +446,7 @@ serine pathway	PATHWAY	1	data/traits/physiology/methylotrophic.yaml
 biomass precursor	BIOLOGICAL_PROCESS	1	data/traits/physiology/methylotrophic.yaml
 dissolved organic matter	CHEMICAL	1	data/traits/physiology/mixotrophic.yaml
 phototrophic energy capture	PATHWAY	1	data/traits/physiology/mixotrophic.yaml
+extracellular dna	CHEMICAL	1	data/traits/physiology/natural_competence.yaml
 ambient nutrient concentration	ENVIRONMENTAL_FACTOR	1	data/traits/physiology/nutrient_adaptation.yaml
 nutrient sensing	BIOLOGICAL_PROCESS	1	data/traits/physiology/nutrient_adaptation.yaml
 resource allocation strategy	BIOLOGICAL_PROCESS	1	data/traits/physiology/nutrient_adaptation.yaml
@@ -448,14 +456,18 @@ small cell architecture	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic
 efficient nutrient use	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
 slow growth	BIOLOGICAL_PROCESS	1	data/traits/physiology/oligotrophic.yaml
 central carbon metabolism	PATHWAY	1	data/traits/physiology/organoheterotrophic.yaml
+antibiotic tolerance	BIOLOGICAL_PROCESS	1	data/traits/physiology/persister_cell_formation.yaml
 photosystem ii	GENE_OR_PROTEIN	1	data/traits/physiology/photoautotrophic.yaml
 atp and nadph	CHEMICAL	1	data/traits/physiology/photoautotrophic.yaml
 sulfur oxidation	BIOLOGICAL_PROCESS	1	data/traits/physiology/photolithoautotrophic.yaml
 anoxygenic photosynthesis	PATHWAY	1	data/traits/physiology/photolithotrophic.yaml
+autoinducer	CHEMICAL	1	data/traits/physiology/quorum_sensing.yaml
+germinant	CHEMICAL	1	data/traits/physiology/spore_germination.yaml
 carbon source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 energy source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 electron donor utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 encoded metabolic pathways	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
+urease	GENE_OR_PROTEIN	1	data/traits/physiology/urease_activity.yaml
 gene product	GENE_OR_PROTEIN	1	data/traits/upper/biological_process.yaml
 assay or measurement process	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
 data item	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
