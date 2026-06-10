@@ -6,7 +6,7 @@ definition: A metal tolerance in which an organism grows in the presence of elev
 definition_source: DOI:10.1007/s10565-013-9262-1
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000012
 synonyms:
@@ -25,10 +25,71 @@ evidence:
     uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates copper (Cu2+) to
     a MIC of 5 mM.'
+causal_graphs:
+- graph_id: copper_tolerance_cop_efflux
+  title: Copper tolerance via cop/cue/cus/pco efflux systems
+  description: Evidence-backed causal sketch linking dedicated copper-efflux
+    machinery to cytoplasmic copper detoxification.
+  nodes:
+  - node_id: copper_tolerant_trait
+    label: copper tolerant
+    node_type: TRAIT
+    grounding: traitmech:000018
+    description: Capacity to grow at elevated Cu(I)/Cu(II) concentrations.
+  - node_id: copper_ion
+    label: copper(2+) ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29036
+    description: Cytoplasmic Cu(II) excess threatening Fenton-like damage.
+  - node_id: copper_efflux_system
+    label: copper efflux systems (cue/cus/pco/cop)
+    node_type: GENE_OR_PROTEIN
+    description: ATPase- and RND-driven pumps removing copper from the cytoplasm
+      or periplasm.
+  - node_id: copper_transport
+    label: copper ion transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0035434
+    description: Active export of copper ions across the cytoplasmic membrane.
+  edges:
+  - subject: copper_ion
+    predicate: challenges
+    object: copper_tolerant_trait
+    description: Elevated cytoplasmic copper is the toxic challenge the trait
+      counters.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Cupriavidus metallidurans BS1 tolerates Cu(2+) to a MIC of 5 mM.
+    predicate_id: METPO:2007406
+  - subject: copper_efflux_system
+    predicate: enables
+    object: copper_transport
+    description: Cue/cus/pco/cop pumps drive ATPase-mediated copper export.
+    evidence:
+    - reference: DOI:10.1007/s10565-013-9262-1
+      notes: Review supports ATPase-driven efflux via cue/cus/pco/cop systems as the
+        main copper detoxification mechanism.
+    predicate_id: RO:0002327
+  - subject: copper_transport
+    predicate: mitigates
+    object: copper_ion
+    description: Copper export depletes the cytoplasmic copper pool.
+    evidence:
+    - reference: DOI:10.1007/s10565-013-9262-1
+      notes: Cytoplasmic copper detoxification is the basis of bacterial copper
+        tolerance.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (copper tolerance) from literature
     research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (cop/cue/cus/pco copper efflux) with
+    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

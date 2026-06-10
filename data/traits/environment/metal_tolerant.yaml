@@ -7,7 +7,7 @@ definition: An environmental tolerance in which an organism grows in the presenc
 definition_source: PMID:12829273
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -30,6 +30,63 @@ evidence:
     and complexes
   notes: 'Organism example: Cupriavidus metallidurans is the model metallophilic
     bacterium tolerating many toxic metals via dedicated resistance gene clusters.'
+causal_graphs:
+- graph_id: metal_tolerance_efflux_detoxification
+  title: Metal tolerance via active efflux of heavy-metal ions
+  description: Evidence-backed causal sketch linking heavy-metal exposure to
+    efflux-pump-mediated detoxification underlying broad metal tolerance.
+  nodes:
+  - node_id: metal_tolerant_trait
+    label: metal tolerant
+    node_type: TRAIT
+    grounding: traitmech:000012
+    description: Capacity to grow at elevated heavy-metal or metalloid
+      concentrations.
+  - node_id: heavy_metal_ion
+    label: toxic heavy-metal ion
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Cytoplasmic excess of a transition-metal or metalloid cation.
+  - node_id: efflux_pump
+    label: metal efflux pump
+    node_type: GENE_OR_PROTEIN
+    description: RND-family CBA pumps, P-type ATPases, and cation diffusion
+      facilitators exporting metals.
+  - node_id: metal_ion_export
+    label: metal ion transmembrane export
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030001
+    description: Transport of metal cations across the cytoplasmic membrane.
+  edges:
+  - subject: heavy_metal_ion
+    predicate: challenges
+    object: metal_tolerant_trait
+    description: Elevated heavy-metal concentrations are the environmental challenge
+      the trait counters.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Cupriavidus metallidurans encodes many metal-resistance determinants
+        confronting multiple toxic metals.
+    predicate_id: METPO:2007406
+  - subject: efflux_pump
+    predicate: enables
+    object: metal_ion_export
+    description: CBA pumps, P-type ATPases, and CDFs export toxic metal cations
+      from the cytoplasm.
+    evidence:
+    - reference: PMID:12829273
+      notes: Nies reviews efflux-mediated heavy-metal resistance as the dominant
+        prokaryotic tolerance mechanism.
+    predicate_id: RO:0002327
+  - subject: metal_ion_export
+    predicate: enables
+    object: metal_tolerant_trait
+    description: Cytoplasmic detoxification by export realizes the metal-tolerant
+      phenotype.
+    evidence:
+    - reference: PMID:12829273
+      notes: Nies frames efflux-based export as the basis of broad heavy-metal
+        tolerance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -37,4 +94,11 @@ curation_history:
   changes: Proposed candidate ENVIRONMENT trait (general heavy-metal/metalloid
     tolerance) from literature research to fill the metal-tolerance coverage gap.
     Parent of the metal-specific sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (efflux-mediated metal detoxification)
+    with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

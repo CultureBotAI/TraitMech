@@ -6,7 +6,7 @@ definition: An environmental tolerance in which an organism survives high doses 
 definition_source: DOI:10.3390/genes14091803
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000007
 synonyms:
@@ -25,10 +25,70 @@ evidence:
     resistance
   notes: Review support — Deinococcus radiodurans is the reference organism for
     extreme UV and ionizing radiation resistance.
+causal_graphs:
+- graph_id: uv_tolerance_excision_repair
+  title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair
+  description: Evidence-backed causal sketch linking UV-induced pyrimidine dimers
+    to nucleotide-excision and photoreactivation repair.
+  nodes:
+  - node_id: uv_tolerant_trait
+    label: UV radiation tolerant
+    node_type: TRAIT
+    grounding: traitmech:000009
+    description: Survival of high doses of UV radiation.
+  - node_id: uv_radiation
+    label: ultraviolet radiation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Solar / UV-C exposure inducing pyrimidine dimers and 6-4
+      photoproducts.
+  - node_id: nucleotide_excision_repair
+    label: nucleotide-excision repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006289
+    description: Removal and replacement of UV-damaged DNA segments.
+  - node_id: photoreactivation
+    label: photoreactivation
+    node_type: BIOLOGICAL_PROCESS
+    description: Photolyase-mediated reversal of pyrimidine dimers.
+  edges:
+  - subject: uv_radiation
+    predicate: challenges
+    object: uv_tolerant_trait
+    description: UV exposure is the environmental challenge the trait counters.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.
+    predicate_id: METPO:2007406
+  - subject: nucleotide_excision_repair
+    predicate: enables
+    object: uv_tolerant_trait
+    description: NER removes UV-induced cyclobutane pyrimidine dimers and 6-4
+      photoproducts.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: D. radiodurans tolerates lethal UV-C doses via excision-based repair
+        of UV photoproducts.
+    predicate_id: RO:0002327
+  - subject: photoreactivation
+    predicate: enables
+    object: uv_tolerant_trait
+    description: Photolyase-mediated dimer reversal complements excision repair.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: D. radiodurans is the reference organism for extreme UV and ionizing
+        radiation resistance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (ultraviolet radiation tolerance)
     from literature research; sub-variant of radiotolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (NER + photoreactivation) with GO
+    node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

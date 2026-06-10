@@ -5,7 +5,7 @@ definition: A pressure phenotype with numerical limits that bounds the minimum a
 definition_source: DOI:10.1099/ijsem.0.001671
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 evidence:
@@ -18,6 +18,46 @@ evidence:
     to their preference for high pressure
   notes: Pressure-adaptation review supports the bounded span of growth-permissive
     hydrostatic pressure as a defining quantitative descriptor.
+causal_graphs:
+- graph_id: pressure_range_growth_bounded_span
+  title: 'Pressure range: bounded hydrostatic-pressure span supporting growth'
+  description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
+    minimum/maximum bounds within which growth is sustained.
+  nodes:
+  - node_id: pressure_range_trait
+    label: pressure range
+    node_type: TRAIT
+    grounding: traitmech:000005
+    description: Bounded min-to-max hydrostatic pressure supporting growth.
+  - node_id: hydrostatic_pressure
+    label: hydrostatic pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient hydrostatic pressure imposed on the cell.
+  - node_id: bounded_growth_span
+    label: growth-permissive pressure span
+    node_type: QUALITY
+    description: Continuous interval of hydrostatic pressures supporting growth.
+  edges:
+  - subject: hydrostatic_pressure
+    predicate: defines
+    object: pressure_range_trait
+    description: The hydrostatic-pressure axis defines the min/max bounds bracketed
+      by the pressure range.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Pressure-adaptation review frames the bounded span of growth-permissive
+        pressure as a defining quantitative descriptor.
+    predicate_id: METPO:2007500
+  - subject: pressure_range_trait
+    predicate: associated with
+    object: bounded_growth_span
+    description: The pressure range records the bounded interval of permissive
+      hydrostatic pressures.
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.001671
+      notes: Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting
+        pressure span (80-140 MPa).
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -25,4 +65,10 @@ curation_history:
   changes: Proposed quantitative companion trait (growth-supporting pressure span)
     mirroring the existing temperature_range / nacl_range pattern, to fill the
     pressure coverage gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (pressure-axis defines bounded growth
+    span) with METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

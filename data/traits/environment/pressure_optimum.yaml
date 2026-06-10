@@ -5,7 +5,7 @@ definition: A pressure phenotype with numerical limits giving the hydrostatic
 definition_source: DOI:10.1099/ijsem.0.001671
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 evidence:
@@ -18,6 +18,46 @@ evidence:
     to their preference for high pressure
   notes: Pressure-adaptation review supports an organism-specific optimal growth
     pressure as the defining quantity for piezophile classification.
+causal_graphs:
+- graph_id: pressure_optimum_balanced_adaptation
+  title: Pressure-optimum balanced adaptation
+  description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
+    organism-specific pressure at which growth rate is maximal.
+  nodes:
+  - node_id: pressure_optimum_trait
+    label: pressure optimum
+    node_type: TRAIT
+    grounding: traitmech:000004
+    description: Hydrostatic pressure at which growth rate is maximal.
+  - node_id: hydrostatic_pressure
+    label: hydrostatic pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient hydrostatic pressure imposed on the cell.
+  - node_id: maximal_growth_rate
+    label: maximal growth rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Peak specific growth rate achieved at the optimum pressure.
+  edges:
+  - subject: hydrostatic_pressure
+    predicate: defines
+    object: pressure_optimum_trait
+    description: The hydrostatic-pressure axis defines the value at which growth
+      is fastest.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Pressure-adaptation review supports an organism-specific optimal
+        growth pressure as the defining piezophile quantity.
+    predicate_id: METPO:2007500
+  - subject: pressure_optimum_trait
+    predicate: associated with
+    object: maximal_growth_rate
+    description: The optimum pressure marks the peak of the pressure-versus-growth
+      curve.
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.001671
+      notes: Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum
+        (120 MPa).
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -25,4 +65,10 @@ curation_history:
   changes: Proposed quantitative companion trait (optimal growth pressure) mirroring
     the existing temperature_optimum / nacl_optimum pattern, to fill the pressure
     coverage gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (pressure-axis defines optimum) with
+    METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
