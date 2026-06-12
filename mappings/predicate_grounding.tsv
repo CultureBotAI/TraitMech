@@ -38,3 +38,20 @@ oxidized to	METPO:2007405	oxidized to	METPO	high	proposed upstream in proposals/
 challenges	METPO:2007406	challenges	METPO	high	proposed upstream in proposals/metpo_traitmech_v2; 9 edges, paired-negative-of mitigates
 mitigates	METPO:2007407	mitigates	METPO	high	proposed upstream in proposals/metpo_traitmech_v2; 12 edges, paired-positive-of challenges
 defines	METPO:2007500	defines	METPO	high	proposed upstream in proposals/metpo_traitmech_v4; 14 edges — 12 environmental-axis → numerical-phenotype contexts (delta/range/optimum graphs) + 2 structural-feature → morphology-trait contexts (outer membrane → gram negative; periplasmic flagella → axially filamented)
+organism interacts with chemical	METPO:2000001	organism interacts with chemical	METPO	high	exact label match against METPO ObjectProperty; root organism↔chemical predicate (parent of uses-as-X, ferments, produces, etc.)
+ferments	METPO:2000011	ferments	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000037; organism + ferments + CHEBI:chemical assertion pattern
+does not ferment	METPO:2000037	does not ferment	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of ferments (METPO:2000011)
+uses for growth	METPO:2000012	uses for growth	METPO	high	exact label match against METPO ObjectProperty; generic organism + uses for growth + CHEBI:chemical assertion
+uses for respiration	METPO:2000019	uses for respiration	METPO	high	exact label match against METPO ObjectProperty; organism + uses for respiration + CHEBI:chemical (electron acceptor) assertion
+uses for aerobic growth	METPO:2000043	uses for aerobic growth	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000022
+does not use for aerobic growth	METPO:2000022	does not use for aerobic growth	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for aerobic growth (METPO:2000043)
+uses for aerobic catabolization	METPO:2000032	uses for aerobic catabolization	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000021
+does not use for aerobic catabolization	METPO:2000021	does not use for aerobic catabolization	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for aerobic catabolization (METPO:2000032)
+uses for anaerobic growth	METPO:2000049	uses for anaerobic growth	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000024
+does not use for anaerobic growth	METPO:2000024	does not use for anaerobic growth	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic growth (METPO:2000049)
+uses for anaerobic growth in the dark	METPO:2000050	uses for anaerobic growth in the dark	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000025; anaerobic dark-growth substrate
+does not use for anaerobic growth in the dark	METPO:2000025	does not use for anaerobic growth in the dark	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic growth in the dark (METPO:2000050)
+uses for anaerobic growth with light	METPO:2000051	uses for anaerobic growth with light	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000026; photoanaerobic substrate
+does not use for anaerobic growth with light	METPO:2000026	does not use for anaerobic growth with light	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic growth with light (METPO:2000051)
+uses for anaerobic catabolization	METPO:2000048	uses for anaerobic catabolization	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000023
+does not use for anaerobic catabolization	METPO:2000023	does not use for anaerobic catabolization	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic catabolization (METPO:2000048)
