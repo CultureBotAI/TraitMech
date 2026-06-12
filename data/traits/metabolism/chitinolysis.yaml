@@ -5,7 +5,7 @@ definition: A biopolymer-degradation metabolism in which an organism hydrolyzes 
 definition_source: DOI:10.3389/fmicb.2013.00149
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000110
 synonyms:
@@ -22,10 +22,53 @@ evidence:
 - reference: DOI:10.1080/07388550601168223
   notes: Bhattacharya et al. review the properties and potential of bacterial
     chitinases.
+causal_graphs:
+- graph_id: chitinolysis_chitinase
+  title: Chitinolysis hydrolyzes chitin to N-acetylglucosamine
+  description: Evidence-backed causal sketch linking secreted chitinases to
+    chitin hydrolysis into N-acetylglucosamine oligomers and monomers.
+  nodes:
+  - node_id: chitinolysis_trait
+    label: chitinolysis
+    node_type: TRAIT
+    grounding: traitmech:000112
+    description: Hydrolysis of chitin to assimilable sugars/oligomers.
+  - node_id: chitinase
+    label: chitinases
+    node_type: GENE_OR_PROTEIN
+    description: Secreted bacterial chitinases acting on chitin polymer.
+  - node_id: n_acetylglucosamine
+    label: N-acetylglucosamine
+    node_type: CHEMICAL
+    description: Monomer released from chitin hydrolysis.
+  edges:
+  - subject: chitinase
+    predicate: enables
+    object: chitinolysis_trait
+    description: Secreted chitinases drive chitin depolymerization.
+    evidence:
+    - reference: DOI:10.1080/07388550601168223
+      notes: Bhattacharya et al. review the properties and applications of
+        bacterial chitinases.
+    predicate_id: RO:0002327
+  - subject: chitinolysis_trait
+    predicate: produces
+    object: n_acetylglucosamine
+    description: Chitin hydrolysis yields N-acetylglucosamine.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2013.00149
+      notes: Beier & Bertilsson review bacterial chitin degradation strategies.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (chitinolysis); sub-variant of
     biopolymer degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (chitinase hydrolysis of chitin)
+    with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

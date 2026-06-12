@@ -7,7 +7,7 @@ definition: An anaerobic respiratory metabolism in which an organism conserves
 definition_source: DOI:10.1128/mr.55.2.259-287.1991
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000039
 synonyms:
@@ -28,10 +28,57 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     Fe(III) and Mn(IV) as terminal electron acceptors competitive with nitrate.
+causal_graphs:
+- graph_id: dir_ferric_iron_respiration
+  title: Dissimilatory iron reduction respires Fe(III) to Fe(II)
+  description: Evidence-backed causal sketch linking ferric iron as terminal
+    electron acceptor to anaerobic respiration in Geobacter and Shewanella.
+  nodes:
+  - node_id: dir_trait
+    label: dissimilatory iron reduction
+    node_type: TRAIT
+    grounding: traitmech:000031
+    description: Anaerobic respiration on Fe(III) as terminal electron acceptor.
+  - node_id: ferric_iron
+    label: iron(3+)
+    node_type: CHEMICAL
+    grounding: CHEBI:29034
+    description: Terminal electron acceptor reduced in DIR.
+  - node_id: ferrous_iron
+    label: iron(2+)
+    node_type: CHEMICAL
+    grounding: CHEBI:29033
+    description: Soluble product released after Fe(III) reduction.
+  edges:
+  - subject: ferric_iron
+    predicate: oxidized to
+    object: ferrous_iron
+    description: Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Lovley establishes Fe(III) reduction coupled to organic-matter
+        oxidation as energy-conserving anaerobic respiration.
+    predicate_id: METPO:2007405
+  - subject: ferric_iron
+    predicate: enables
+    object: dir_trait
+    description: Fe(III) acts as terminal electron acceptor enabling DIR.
+    evidence:
+    - reference: PMID:7826009
+      notes: Nealson & Saffarini support Fe(III) as a terminal electron acceptor
+        competitive with nitrate.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (dissimilatory iron reduction) from
     literature research to fill the metal-redox metabolism gap.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (Fe(III) → Fe(II) respiration) with
+    CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

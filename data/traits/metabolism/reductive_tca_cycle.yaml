@@ -7,7 +7,7 @@ definition: An autotrophic carbon-fixation pathway (reductive citric acid /
 definition_source: DOI:10.1128/AEM.02473-10
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000019
 synonyms:
@@ -27,10 +27,58 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert document the rTCA cycle in chemolithoautotrophs and green
     sulfur bacteria in marine systems.
+causal_graphs:
+- graph_id: rtca_reverse_tricarboxylic_acid_co2_fixation
+  title: Reductive TCA cycle runs the TCA cycle in reverse to fix CO2
+  description: Evidence-backed causal sketch linking reverse TCA cycle operation
+    in anaerobic/microaerophilic autotrophs to CO2 fixation.
+  nodes:
+  - node_id: rtca_trait
+    label: reductive tricarboxylic acid cycle
+    node_type: TRAIT
+    grounding: traitmech:000021
+    description: Autotrophic carbon-fixation pathway running TCA in reverse.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon substrate fixed by the cycle.
+  - node_id: citrate
+    label: citrate
+    node_type: CHEMICAL
+    grounding: CHEBI:16947
+    description: TCA-cycle intermediate that the reductive cycle generates from
+      CO2.
+  edges:
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: rtca_trait
+    description: CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg describes the reductive citric acid cycle as functional in
+        anaerobic/microaerophilic autotrophs.
+    predicate_id: METPO:2007404
+  - subject: rtca_trait
+    predicate: produces
+    object: citrate
+    description: The reverse cycle assembles citrate from CO2.
+    evidence:
+    - reference: DOI:10.1146/annurev-marine-120709-142712
+      notes: Hügler & Sievert document the rTCA cycle in chemolithoautotrophs and
+        green sulfur bacteria.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (reductive TCA carbon-fixation cycle);
     sub-variant of carbon fixation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (rTCA reverse TCA / CO2 fixation)
+    with CHEBI node groundings and METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

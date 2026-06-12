@@ -6,7 +6,7 @@ definition: An anaerobic respiratory metabolism in which an organism uses sulfat
 definition_source: DOI:10.1038/nrmicro1892
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000802
 synonyms:
@@ -19,10 +19,62 @@ evidence:
     sulfide in anoxic habitats.
 - reference: DOI:10.3389/fmicb.2011.00081
   notes: Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria.
+causal_graphs:
+- graph_id: sulfate_reduction_to_sulfide
+  title: Dissimilatory sulfate reduction respires sulfate to sulfide
+  description: Evidence-backed causal sketch linking sulfate as terminal electron
+    acceptor to sulfide production in anoxic anaerobic respiration.
+  nodes:
+  - node_id: sulfate_reduction_trait
+    label: dissimilatory sulfate reduction
+    node_type: TRAIT
+    grounding: traitmech:000105
+    description: Anaerobic respiration on sulfate as terminal electron acceptor.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    grounding: CHEBI:16189
+    description: Terminal electron acceptor reduced in this respiration.
+  - node_id: sulfide
+    label: sulfide
+    node_type: CHEMICAL
+    grounding: CHEBI:15138
+    description: Final reduction product released to anoxic habitats.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Energy-conserving respiration with non-O2 acceptor.
+  edges:
+  - subject: sulfate
+    predicate: oxidized to
+    object: sulfide
+    description: Sulfate is reduced stepwise to sulfide.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1892
+      notes: Muyzer & Stams review sulfate-reducing bacteria respiring sulfate to
+        sulfide.
+    predicate_id: METPO:2007405
+  - subject: sulfate_reduction_trait
+    predicate: participates in
+    object: anaerobic_respiration
+    description: Sulfate respiration is a major form of anaerobic respiration.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2011.00081
+      notes: Plugge et al. review the metabolic flexibility of sulfate-reducing
+        bacteria within anaerobic respiration.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (dissimilatory sulfate reduction);
     round 2, parented to anaerobic respiration (METPO:1000802).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (sulfate → sulfide respiration) with
+    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

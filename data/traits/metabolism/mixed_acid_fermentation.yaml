@@ -6,7 +6,7 @@ definition: A fermentation in which sugars are converted via the glycolytic path
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1002005
 evidence:
@@ -16,10 +16,56 @@ evidence:
 - reference: DOI:10.3390/molecules31020333
   notes: Review of fermentation pathways describes mixed-acid fermentation by
     enterobacteria and its characteristic acid product spectrum.
+causal_graphs:
+- graph_id: mixed_acid_fermentation_enterobacterial
+  title: Mixed-acid fermentation yields a spectrum of acids plus ethanol and gases
+  description: Evidence-backed causal sketch linking glycolytic sugar catabolism
+    to mixed acid + ethanol + CO2 + H2 production in enterobacteria.
+  nodes:
+  - node_id: mixed_acid_fermentation_trait
+    label: mixed-acid fermentation
+    node_type: TRAIT
+    grounding: traitmech:000027
+    description: Fermentation producing a mixture of acids and gases.
+  - node_id: fermentation_process
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006113
+    description: ATP-yielding catabolism with organic terminal acceptors.
+  - node_id: mixed_acid_products
+    label: mixed acid + ethanol + CO2/H2 products
+    node_type: CHEMICAL
+    description: Lactate, acetate, formate, succinate, ethanol, CO2, H2.
+  edges:
+  - subject: mixed_acid_fermentation_trait
+    predicate: participates in
+    object: fermentation_process
+    description: Mixed-acid fermentation is a class of fermentation metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Energy-conservation review lists the mixed-acid product spectrum.
+    predicate_id: biolink:participates_in
+  - subject: mixed_acid_fermentation_trait
+    predicate: produces
+    object: mixed_acid_products
+    description: The pathway yields the characteristic acid + ethanol + gas
+      spectrum.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Classical-fermentation review describes mixed-acid fermentation by
+        enterobacteria.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (mixed-acid fermentation);
     product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (mixed-acid fermentation) with GO
+    node grounding and METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

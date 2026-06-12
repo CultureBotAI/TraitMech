@@ -7,7 +7,7 @@ definition: An autotrophic carbon-fixation pathway (the reductive pentose phosph
 definition_source: DOI:10.1128/AEM.02473-10
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000019
 synonyms:
@@ -25,10 +25,68 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert support the Calvin cycle as the most common/widespread
     CO2-fixation pathway, including among marine cyanobacteria and proteobacteria.
+causal_graphs:
+- graph_id: cbb_rubisco_co2_fixation
+  title: Calvin-Benson-Bassham cycle fixes CO2 via RuBisCO
+  description: Evidence-backed causal sketch linking RuBisCO-catalyzed CO2
+    carboxylation of RuBP to the reductive pentose phosphate cycle.
+  nodes:
+  - node_id: cbb_trait
+    label: Calvin-Benson-Bassham cycle
+    node_type: TRAIT
+    grounding: traitmech:000020
+    description: Reductive pentose phosphate cycle that fixes CO2.
+  - node_id: cbb_pathway
+    label: Calvin-Benson cycle
+    node_type: PATHWAY
+    grounding: GO:0019253
+    description: Reductive pentose phosphate (Calvin-Benson-Bassham) cycle.
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Ribulose-1,5-bisphosphate carboxylase/oxygenase.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Substrate fixed by RuBisCO.
+  edges:
+  - subject: rubisco
+    predicate: enables
+    object: cbb_pathway
+    description: RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg identifies the CBB cycle as the reference autotrophic pathway.
+    predicate_id: RO:0002327
+  - subject: cbb_pathway
+    predicate: enables
+    object: cbb_trait
+    description: The reductive pentose phosphate cycle realizes the trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-marine-120709-142712
+      notes: Hügler & Sievert support the Calvin cycle as the most widespread
+        CO2-fixation pathway.
+    predicate_id: RO:0002327
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: cbb_trait
+    description: CO2 is the substrate fixed by the CBB cycle.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg identifies the CBB cycle as a CO2-fixing pathway.
+    predicate_id: METPO:2007404
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (Calvin-Benson-Bassham carbon-fixation
     cycle); sub-variant of carbon fixation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (CBB / RuBisCO CO2 fixation) with
+    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: An anaerobic respiratory metabolism in which an organism conserves
 definition_source: DOI:10.1128/mr.55.2.259-287.1991
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000802
 synonyms:
@@ -24,10 +24,59 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     metals as terminal electron acceptors in anaerobic respiration.
+causal_graphs:
+- graph_id: metal_reduction_anaerobic_respiration
+  title: Dissimilatory metal reduction couples organic oxidation to metal
+    respiration
+  description: Evidence-backed causal sketch linking oxidation of organic matter
+    or hydrogen to reduction of metal terminal electron acceptors.
+  nodes:
+  - node_id: metal_reduction_trait
+    label: dissimilatory metal reduction
+    node_type: TRAIT
+    grounding: traitmech:000039
+    description: Energy-conserving anaerobic respiration with a metal acceptor.
+  - node_id: metal_terminal_acceptor
+    label: terminal electron acceptor
+    node_type: CHEMICAL
+    grounding: METPO:1007504
+    description: Fe(III) or Mn(IV) oxide acting as terminal electron acceptor.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Energy-conserving respiration with non-O2 acceptor.
+  edges:
+  - subject: metal_terminal_acceptor
+    predicate: enables
+    object: metal_reduction_trait
+    description: Metal-ion acceptors enable energy-conserving anaerobic
+      respiration on metals.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Lovley establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction as
+        energy-conserving anaerobic respiration.
+    predicate_id: RO:0002327
+  - subject: metal_reduction_trait
+    predicate: participates in
+    object: anaerobic_respiration
+    description: Metal reduction is a class of anaerobic respiration.
+    evidence:
+    - reference: PMID:7826009
+      notes: Nealson & Saffarini place iron and manganese as terminal electron
+        acceptors within anaerobic respiration.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Minted intermediate axis class (dissimilatory metal reduction) under
     anaerobic respiration (METPO:1000802) to parent dissimilatory iron reduction.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (metal-acceptor anaerobic respiration)
+    with METPO/GO node groundings and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

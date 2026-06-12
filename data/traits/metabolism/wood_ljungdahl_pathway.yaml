@@ -7,7 +7,7 @@ definition: An autotrophic carbon-fixation pathway (the reductive acetyl-CoA
 definition_source: DOI:10.1016/j.bbapap.2008.08.012
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000019
 synonyms:
@@ -21,6 +21,46 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review places the reductive acetyl-CoA (Wood-Ljungdahl) pathway among
     the recognized autotrophic carbon-fixation pathways.
+causal_graphs:
+- graph_id: wood_ljungdahl_reductive_acetyl_coa
+  title: Wood-Ljungdahl pathway reduces 2 CO2 to acetyl-CoA
+  description: Evidence-backed causal sketch linking reduction of two CO2
+    molecules into acetyl-CoA via the reductive acetyl-CoA pathway.
+  nodes:
+  - node_id: wood_ljungdahl_trait
+    label: Wood-Ljungdahl pathway
+    node_type: TRAIT
+    grounding: traitmech:000022
+    description: Reductive acetyl-CoA pathway combining 2 CO2 into acetyl-CoA.
+  - node_id: wood_ljungdahl_pathway
+    label: Wood-Ljungdahl pathway
+    node_type: PATHWAY
+    grounding: GO:0046358
+    description: Acetyl-CoA biosynthetic process from carbon dioxide.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon substrate reduced to acetyl-CoA.
+  edges:
+  - subject: wood_ljungdahl_pathway
+    predicate: enables
+    object: wood_ljungdahl_trait
+    description: The reductive acetyl-CoA pathway underlies the trait.
+    evidence:
+    - reference: DOI:10.1016/j.bbapap.2008.08.012
+      notes: Ragsdale & Pierce review the Wood-Ljungdahl pathway as the reference
+        reductive acetyl-CoA pathway.
+    predicate_id: RO:0002327
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: wood_ljungdahl_trait
+    description: Two molecules of CO2 are fixed and combined into acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Berg places Wood-Ljungdahl among the recognized autotrophic
+        carbon-fixation pathways.
+    predicate_id: METPO:2007404
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -28,4 +68,11 @@ curation_history:
   changes: Proposed candidate METABOLISM trait (Wood-Ljungdahl / reductive acetyl-CoA
     carbon-fixation pathway); sub-variant of carbon fixation. Distinct from the
     existing acetogenesis metabolism class (which produces acetate via this pathway).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (Wood-Ljungdahl reductive acetyl-CoA)
+    with GO/CHEBI node groundings and RO/METPO predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: An anaerobic respiratory metabolism in which nitrate is reduced step
 definition_source: DOI:10.1128/mmbr.61.4.533-616.1997
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000802
 synonyms:
@@ -20,10 +20,62 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2018.9
   notes: Kuypers et al. place denitrification as a nitrogen-loss branch of the
     microbial nitrogen-cycling network.
+causal_graphs:
+- graph_id: denitrification_stepwise_nitrate_to_n2
+  title: Denitrification reduces nitrate stepwise to N2
+  description: Evidence-backed causal sketch linking nitrate reduction via nitrite,
+    NO, and N2O to gaseous N2 in anaerobic respiration.
+  nodes:
+  - node_id: denitrification_trait
+    label: denitrification
+    node_type: TRAIT
+    grounding: traitmech:000104
+    description: Anaerobic respiratory reduction of nitrate to N2.
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    grounding: CHEBI:17632
+    description: Terminal electron acceptor reduced in denitrification.
+  - node_id: dinitrogen
+    label: dinitrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:17997
+    description: Final gaseous product released to the atmosphere.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Energy-conserving respiration with a non-O2 terminal acceptor.
+  edges:
+  - subject: nitrate
+    predicate: oxidized to
+    object: dinitrogen
+    description: Nitrate is reduced stepwise via NO2-, NO, N2O to N2.
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      notes: Zumft reviews the stepwise respiratory reduction of nitrate to N2.
+    predicate_id: METPO:2007405
+  - subject: denitrification_trait
+    predicate: participates in
+    object: anaerobic_respiration
+    description: Denitrification is a nitrate-respiring form of anaerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.9
+      notes: Kuypers et al. place denitrification within the microbial
+        nitrogen-cycling network.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (denitrification); round 2, parented
     to anaerobic respiration (METPO:1000802). Complements round-1 DNRA.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (nitrate → N2 denitrification) with
+    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

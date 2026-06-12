@@ -6,7 +6,7 @@ definition: A biopolymer-degradation metabolism in which an organism hydrolyzes 
 definition_source: DOI:10.1111/j.1757-1707.2009.01004.x
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000110
 synonyms:
@@ -23,10 +23,53 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. include hemicellulose (xylan) degradation within lignocellulose
     breakdown across organisms.
+causal_graphs:
+- graph_id: xylan_degradation_xylanase
+  title: Xylan degradation hydrolyzes hemicellulose to xylose
+  description: Evidence-backed causal sketch linking xylanases and accessory
+    enzymes to xylan hydrolysis into xylose and xylo-oligosaccharides.
+  nodes:
+  - node_id: xylan_degradation_trait
+    label: xylan degradation
+    node_type: TRAIT
+    grounding: traitmech:000113
+    description: Hydrolysis of xylan to assimilable pentose sugars.
+  - node_id: xylanase
+    label: xylanase systems
+    node_type: GENE_OR_PROTEIN
+    description: Endo-/exo-xylanases and accessory enzymes acting on xylan.
+  - node_id: xylose
+    label: xylose
+    node_type: CHEMICAL
+    description: Pentose monosaccharide released from xylan.
+  edges:
+  - subject: xylanase
+    predicate: enables
+    object: xylan_degradation_trait
+    description: Xylanase systems drive xylan depolymerization extracellularly.
+    evidence:
+    - reference: DOI:10.1111/j.1757-1707.2009.01004.x
+      notes: Dodd & Cann review enzymatic deconstruction of xylan.
+    predicate_id: RO:0002327
+  - subject: xylan_degradation_trait
+    predicate: produces
+    object: xylose
+    description: Xylan hydrolysis yields xylose and xylo-oligosaccharides.
+    evidence:
+    - reference: DOI:10.1016/j.cbpa.2015.10.018
+      notes: Cragg et al. include hemicellulose (xylan) degradation within
+        lignocellulose breakdown across organisms.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (xylan / hemicellulose degradation);
     sub-variant of biopolymer degradation.
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (xylanase hydrolysis of xylan) with
+    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

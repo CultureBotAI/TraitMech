@@ -8,7 +8,7 @@ definition: A fermentation in which sugars are converted mainly to lactate, with
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1002005
 synonyms:
@@ -22,10 +22,55 @@ evidence:
 - reference: DOI:10.3390/molecules31020333
   notes: Review of classical food fermentations describes the lactic-acid pathway
     and lactic acid bacteria as its agents.
+causal_graphs:
+- graph_id: lactic_acid_fermentation_lactate
+  title: Lactic acid fermentation converts sugars to lactate
+  description: Evidence-backed causal sketch linking glycolysis-coupled lactate
+    production to substrate-level ATP generation in lactic acid bacteria.
+  nodes:
+  - node_id: lactic_acid_fermentation_trait
+    label: lactic acid fermentation
+    node_type: TRAIT
+    grounding: traitmech:000026
+    description: Fermentation producing lactate as the principal end product.
+  - node_id: fermentation_process
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006113
+    description: ATP-yielding catabolism with organic terminal acceptors.
+  - node_id: lactate
+    label: lactate
+    node_type: CHEMICAL
+    description: Principal end product of homolactic fermentation.
+  edges:
+  - subject: lactic_acid_fermentation_trait
+    predicate: participates in
+    object: fermentation_process
+    description: Lactic acid fermentation is a class of fermentation metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Energy-conservation review supports lactate as a fermentation end
+        product.
+    predicate_id: biolink:participates_in
+  - subject: lactic_acid_fermentation_trait
+    predicate: produces
+    object: lactate
+    description: Lactate is the characteristic end product of the pathway.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Classical-fermentation review describes the lactic-acid pathway.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (lactic acid fermentation);
     product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  llm_assisted: true
+- timestamp: '2026-06-10T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (lactic acid fermentation / lactate
+    production) with GO node grounding and METPO/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true
