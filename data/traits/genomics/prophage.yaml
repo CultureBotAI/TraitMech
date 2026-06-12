@@ -6,7 +6,7 @@ definition: A genomics trait describing possession of an integrated (or
 definition_source: DOI:10.1128/MMBR.67.2.238-276.2003
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000089
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/ismej.2017.16
   notes: Howard-Varona et al. review lysogeny in nature, the maintenance of temperate
     phage genomes within hosts.
+causal_graphs:
+- graph_id: prophage_lysogeny
+  title: Prophage maintenance during lysogeny alters host phenotype
+  description: Evidence-backed causal sketch linking prophage carriage to lysogenic
+    maintenance and lysogenic conversion of the host.
+  nodes:
+  - node_id: prophage_trait
+    label: prophage
+    node_type: TRAIT
+    grounding: traitmech:000091
+    description: Possession of an integrated or maintained temperate phage genome.
+  - node_id: lysogeny
+    label: lysogeny
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a temperate phage genome within the host without
+      lysis.
+  - node_id: host_phenotype
+    label: host phenotype
+    node_type: QUALITY
+    description: Phage-encoded gene functions expressed in the lysogen.
+  edges:
+  - subject: prophage_trait
+    predicate: enables
+    object: lysogeny
+    description: Prophage carriage is the genomic state realized during lysogeny.
+    evidence:
+    - reference: DOI:10.1128/MMBR.67.2.238-276.2003
+      notes: Canchaya et al. document widespread prophage maintenance in sequenced
+        bacterial genomes.
+    predicate_id: RO:0002327
+  - subject: prophage_trait
+    predicate: contributes to
+    object: host_phenotype
+    description: Prophage-encoded genes can alter host virulence or fitness
+      (lysogenic conversion).
+    evidence:
+    - reference: DOI:10.1038/ismej.2017.16
+      notes: Howard-Varona et al. review host-phenotype effects of lysogeny in
+        nature.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (prophage / lysogeny); sub-variant of
     mobile genetic element.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (prophage lysogeny) with RO predicate
+    groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

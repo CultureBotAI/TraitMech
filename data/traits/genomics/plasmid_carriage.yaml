@@ -6,7 +6,7 @@ definition: A genomics trait describing possession of one or more plasmids —
 definition_source: DOI:10.1128/MMBR.00020-10
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000089
 synonyms:
@@ -19,10 +19,55 @@ evidence:
     mobilizable plasmids as key vectors of horizontal gene transfer.
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include plasmids among the principal mobile genetic elements.
+causal_graphs:
+- graph_id: plasmid_conjugation_hgt
+  title: Plasmid carriage drives conjugative horizontal gene transfer
+  description: Evidence-backed causal sketch linking plasmid possession to
+    conjugation and accessory-function delivery.
+  nodes:
+  - node_id: plasmid_carriage_trait
+    label: plasmid carriage
+    node_type: TRAIT
+    grounding: traitmech:000090
+    description: Possession of extrachromosomal plasmid replicons.
+  - node_id: conjugation
+    label: conjugation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000746
+    description: Cell-to-cell transfer of genetic material via direct contact.
+  - node_id: accessory_function
+    label: accessory function
+    node_type: QUALITY
+    description: Plasmid-encoded resistance, virulence, or metabolic capability.
+  edges:
+  - subject: plasmid_carriage_trait
+    predicate: enables
+    object: conjugation
+    description: Conjugative plasmids encode the machinery for cell-to-cell
+      transfer.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00020-10
+      notes: Smillie et al. classify conjugative and mobilizable plasmids.
+    predicate_id: RO:0002327
+  - subject: plasmid_carriage_trait
+    predicate: contributes to
+    object: accessory_function
+    description: Plasmids carry accessory genes that extend host phenotype.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1235
+      notes: Frost et al. include plasmids among the principal MGEs delivering
+        accessory functions.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (plasmid carriage); sub-variant of mobile
     genetic element.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (plasmid conjugation / HGT) with GO
+    node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

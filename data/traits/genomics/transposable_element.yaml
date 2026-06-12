@@ -6,7 +6,7 @@ definition: A genomics trait describing possession of transposable elements — 
 definition_source: DOI:10.1111/1574-6976.12067
 trait_category: GENOMICS
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000089
 synonyms:
@@ -23,10 +23,55 @@ evidence:
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include transposons among the mobile genetic elements driving
     genome evolution.
+causal_graphs:
+- graph_id: te_transposition_rearrangement
+  title: Transposable elements drive DNA transposition and genome rearrangement
+  description: Evidence-backed causal sketch linking TE possession to DNA
+    transposition activity and resulting genome rearrangement and plasticity.
+  nodes:
+  - node_id: te_trait
+    label: transposable element
+    node_type: TRAIT
+    grounding: traitmech:000092
+    description: Possession of insertion sequences or transposons.
+  - node_id: dna_transposition
+    label: DNA transposition
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006313
+    description: Movement of a DNA segment to a new genomic location.
+  - node_id: genome_rearrangement
+    label: genome rearrangement
+    node_type: QUALITY
+    description: Insertions, deletions, and inversions of chromosomal segments.
+  edges:
+  - subject: te_trait
+    predicate: enables
+    object: dna_transposition
+    description: TEs encode transposases that catalyze transposition.
+    evidence:
+    - reference: DOI:10.1111/1574-6976.12067
+      notes: Siguier et al. review insertion-sequence transposase machinery and
+        activity.
+    predicate_id: RO:0002327
+  - subject: dna_transposition
+    predicate: causes
+    object: genome_rearrangement
+    description: Transposition events generate insertions and rearrangements.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1235
+      notes: Frost et al. cite transposons among MGEs driving genome evolution.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate GENOMICS trait (transposable element); sub-variant of
     mobile genetic element.
+  llm_assisted: true
+- timestamp: '2026-06-08T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (transposition / genome rearrangement)
+    with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

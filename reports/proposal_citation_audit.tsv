@@ -33,20 +33,6 @@ data/traits/environment/radiotolerant.yaml	traitmech:000007	2	DOI:10.1101/cshper
 data/traits/environment/uv_radiation_tolerant.yaml	traitmech:000009	2	DOI:10.3390/genes14091803; DOI:10.1101/cshperspect.a012765		yes
 data/traits/environment/xerophilic.yaml	traitmech:000011	2	DOI:10.1098/rstb.2004.1502; DOI:10.3390/microorganisms10020432		yes
 data/traits/environment/zinc_tolerant.yaml	traitmech:000014	3	PMID:12829273; DOI:10.1111/j.1365-2958.2009.06792.x; DOI:10.3389/fmicb.2020.00047		yes
-data/traits/genomics/codon_usage_bias.yaml	traitmech:000096	2	DOI:10.1038/nrg2899; DOI:10.1146/annurev.genet.42.110807.091442		yes
-data/traits/genomics/crispr_cas_system.yaml	traitmech:000094	2	DOI:10.1038/s41579-019-0299-x; DOI:10.1016/j.molcel.2014.03.011		yes
-data/traits/genomics/gc_skew.yaml	traitmech:000097	2	DOI:10.1093/oxfordjournals.molbev.a025626; DOI:10.1016/S0378-1119(99)00297-8		yes
-data/traits/genomics/genome_size.yaml	traitmech:000098	2	DOI:10.1038/nrmicro3331; DOI:10.1038/ismej.2014.60		yes
-data/traits/genomics/genome_streamlining.yaml	traitmech:000099	2	DOI:10.1038/ismej.2014.60; DOI:10.1038/nrmicro3331		yes
-data/traits/genomics/genomic_island.yaml	traitmech:000093	2	DOI:10.1038/nrmicro884; DOI:10.1111/j.1574-6976.2008.00136.x		yes
-data/traits/genomics/mobile_genetic_element.yaml	traitmech:000089	2	DOI:10.1038/nrmicro1235; DOI:10.1111/1574-6976.12067		yes
-data/traits/genomics/pangenome_openness.yaml	traitmech:000102	2	DOI:10.1073/pnas.0506758102; DOI:10.1038/nmicrobiol.2017.40		yes
-data/traits/genomics/plasmid_carriage.yaml	traitmech:000090	2	DOI:10.1128/MMBR.00020-10; DOI:10.1038/nrmicro1235		yes
-data/traits/genomics/ploidy.yaml	traitmech:000100	2	DOI:10.1159/000368855; DOI:10.1073/pnas.0707522105		yes
-data/traits/genomics/prophage.yaml	traitmech:000091	2	DOI:10.1128/MMBR.67.2.238-276.2003; DOI:10.1038/ismej.2017.16		yes
-data/traits/genomics/restriction_modification_system.yaml	traitmech:000095	2	DOI:10.1128/MMBR.00044-12; DOI:10.3389/fmicb.2015.00528		yes
-data/traits/genomics/rrna_operon_copy_number.yaml	traitmech:000101	2	DOI:10.1128/AEM.66.4.1328-1333.2000; DOI:10.1038/nmicrobiol.2016.160		yes
-data/traits/genomics/transposable_element.yaml	traitmech:000092	2	DOI:10.1111/1574-6976.12067; DOI:10.1038/nrmicro1235		yes
 data/traits/metabolism/anaerobic_oxidation_of_methane.yaml	traitmech:000033	2	DOI:10.1038/35036572; DOI:10.3389/fmars.2025.1609892		yes
 data/traits/metabolism/anoxygenic_photosynthesis.yaml	traitmech:000035	2	DOI:10.1016/j.tim.2006.09.001; DOI:10.3389/fmicb.2024.1417714		yes
 data/traits/metabolism/biopolymer_degradation.yaml	traitmech:000110	2	DOI:10.1016/j.cbpa.2015.10.018; DOI:10.1128/MMBR.66.3.506-577.2002		yes
