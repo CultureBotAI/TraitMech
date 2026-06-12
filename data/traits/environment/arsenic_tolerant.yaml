@@ -6,7 +6,7 @@ definition: A metalloid tolerance in which an organism grows in the presence of
 definition_source: DOI:10.3389/fmicb.2018.02473
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000012
 synonyms:
@@ -25,10 +25,69 @@ evidence:
     uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates arsenite (As3+)
     to a MIC of 3.5 mM.'
+causal_graphs:
+- graph_id: arsenic_tolerance_ars_efflux
+  title: Arsenic tolerance via ars-operon arsenite efflux
+  description: Evidence-backed causal sketch linking the ars operon and ArsB pump
+    to extrusion of cytoplasmic arsenite.
+  nodes:
+  - node_id: arsenic_tolerant_trait
+    label: arsenic tolerant
+    node_type: TRAIT
+    grounding: traitmech:000017
+    description: Capacity to grow at elevated arsenite/arsenate concentrations.
+  - node_id: arsenite
+    label: arsenite(3-)
+    node_type: CHEMICAL
+    grounding: CHEBI:29242
+    description: Toxic trivalent arsenic species accumulating in the cytoplasm.
+  - node_id: ars_operon
+    label: ars operon (ArsB pump)
+    node_type: GENE_OR_PROTEIN
+    description: Arsenite efflux machinery encoded by the near-ubiquitous ars
+      operon.
+  - node_id: arsenite_export
+    label: arsenite transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030001
+    description: Active export of arsenite across the cytoplasmic membrane.
+  edges:
+  - subject: arsenite
+    predicate: challenges
+    object: arsenic_tolerant_trait
+    description: Cytoplasmic arsenite is the toxic challenge the trait counters.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.
+    predicate_id: METPO:2007406
+  - subject: ars_operon
+    predicate: enables
+    object: arsenite_export
+    description: ArsB pumps arsenite out of the cytoplasm.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2018.02473
+      notes: ArsB is an integral membrane protein extruding arsenite from the cell
+        cytoplasm.
+    predicate_id: RO:0002327
+  - subject: arsenite_export
+    predicate: mitigates
+    object: arsenite
+    description: Active export depletes the cytoplasmic arsenite pool.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2018.02473
+      notes: The ars operon is the near-ubiquitous arsenic-resistance determinant.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (arsenic/metalloid tolerance) from
     literature research; sub-variant of metal tolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (ars-operon arsenite efflux) with
+    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

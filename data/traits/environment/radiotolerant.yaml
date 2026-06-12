@@ -6,7 +6,7 @@ definition: An environmental tolerance in which an organism survives doses of
 definition_source: DOI:10.1101/cshperspect.a012765
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -27,6 +27,63 @@ evidence:
     and oxidizing agents
   notes: 'Organism example: Deinococcus radiodurans tolerates ionizing radiation,
     UV radiation, and desiccation.'
+causal_graphs:
+- graph_id: radiotolerance_repair_antioxidant
+  title: Radiotolerance via DNA repair and Mn-antioxidant proteome protection
+  description: Evidence-backed causal sketch linking efficient DNA-damage repair
+    and manganese-antioxidant protection to survival of lethal radiation doses.
+  nodes:
+  - node_id: radiotolerant_trait
+    label: radiotolerant
+    node_type: TRAIT
+    grounding: traitmech:000007
+    description: Survival of ionizing and/or UV radiation doses lethal to most
+      microbes.
+  - node_id: radiation_exposure
+    label: ionizing or UV radiation exposure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High dose of ionizing or ultraviolet radiation.
+  - node_id: dna_damage_repair
+    label: DNA repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006281
+    description: Repair of radiation-induced DNA lesions (double-strand breaks,
+      adducts, dimers).
+  - node_id: mn_antioxidant_protection
+    label: manganese-antioxidant proteome protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Mn-driven protection of repair proteins from oxidative damage.
+  edges:
+  - subject: radiation_exposure
+    predicate: challenges
+    object: radiotolerant_trait
+    description: Radiation exposure is the environmental challenge the trait
+      counters.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: Deinococcus radiodurans is the reference organism for surviving
+        ionizing radiation, UV, desiccation, and oxidizing agents.
+    predicate_id: METPO:2007406
+  - subject: dna_damage_repair
+    predicate: enables
+    object: radiotolerant_trait
+    description: Efficient repair of radiation-induced DNA lesions enables
+      survival.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: Review of extreme radiation resistance highlights efficient DNA repair
+        as a core radiotolerance mechanism.
+    predicate_id: RO:0002327
+  - subject: mn_antioxidant_protection
+    predicate: enables
+    object: radiotolerant_trait
+    description: Mn-antioxidant protection of the proteome preserves repair
+      capacity under irradiation.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation
+        resistance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -34,4 +91,11 @@ curation_history:
   changes: Proposed candidate ENVIRONMENT trait (general radiation tolerance) from
     literature research to fill the radiation-tolerance coverage gap. Parent of the
     ionizing- and UV-specific sub-variants.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (radiotolerance via DNA repair +
+    Mn-antioxidant) with GO node grounding and RO/METPO predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A metal tolerance in which an organism grows in the presence of elev
 definition_source: PMID:12829273
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000012
 evidence:
@@ -20,10 +20,66 @@ evidence:
     uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates zinc to a MIC of
     20 mM.'
+causal_graphs:
+- graph_id: zinc_tolerance_czc_efflux
+  title: Zinc tolerance via czc cation-efflux system
+  description: Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc)
+    efflux determinant to cytoplasmic zinc detoxification.
+  nodes:
+  - node_id: zinc_tolerant_trait
+    label: zinc tolerant
+    node_type: TRAIT
+    grounding: traitmech:000014
+    description: Capacity to grow at elevated Zn(2+) concentrations.
+  - node_id: zinc_ion
+    label: zinc(2+) ion
+    node_type: CHEMICAL
+    grounding: CHEBI:29105
+    description: Cytoplasmic Zn(2+) excess threatening protein mismetallation.
+  - node_id: czc_efflux_system
+    label: czc cation-efflux system
+    node_type: GENE_OR_PROTEIN
+    description: CzcCBA/CzcP machinery exporting Zn, Cd, and Co cations.
+  - node_id: zinc_export
+    label: zinc ion transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006829
+    description: Active export of Zn(2+) across the cytoplasmic membrane.
+  edges:
+  - subject: zinc_ion
+    predicate: challenges
+    object: zinc_tolerant_trait
+    description: Cytoplasmic zinc excess is the challenge the trait counters.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Cupriavidus metallidurans BS1 tolerates Zn(2+) to a MIC of 20 mM.
+    predicate_id: METPO:2007406
+  - subject: czc_efflux_system
+    predicate: enables
+    object: zinc_export
+    description: CzcP exports zinc together with cadmium and cobalt cations.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+      notes: CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).
+    predicate_id: RO:0002327
+  - subject: zinc_export
+    predicate: mitigates
+    object: zinc_ion
+    description: Czc-mediated export depletes the cytoplasmic zinc pool.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+      notes: The czc efflux system of C. metallidurans confers zinc resistance.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (zinc tolerance) from literature
     research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (czc zinc efflux) with CHEBI/GO node
+    groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

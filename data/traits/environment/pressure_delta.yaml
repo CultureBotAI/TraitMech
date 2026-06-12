@@ -5,7 +5,7 @@ definition: A pressure phenotype with numerical limits expressing the breadth
 definition_source: DOI:10.3389/fmolb.2022.1058381
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 evidence:
@@ -18,6 +18,47 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa)
     illustrates the breadth this phenotype records.
+causal_graphs:
+- graph_id: pressure_delta_breadth_descriptor
+  title: 'Pressure delta: breadth of the pressure-tolerance span'
+  description: Evidence-backed sketch linking the hydrostatic-pressure axis to the
+    breadth (max − min) of the growth-supporting pressure range.
+  nodes:
+  - node_id: pressure_delta_trait
+    label: pressure delta
+    node_type: TRAIT
+    grounding: traitmech:000006
+    description: Breadth (max − min) of the growth-supporting hydrostatic-pressure
+      range.
+  - node_id: hydrostatic_pressure
+    label: hydrostatic pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient hydrostatic pressure imposed on the cell.
+  - node_id: pressure_tolerance_breadth
+    label: pressure-tolerance breadth
+    node_type: QUALITY
+    description: Width of the hydrostatic-pressure interval over which growth is
+      sustained.
+  edges:
+  - subject: hydrostatic_pressure
+    predicate: defines
+    object: pressure_delta_trait
+    description: The hydrostatic-pressure axis defines the values whose max minus
+      min yields the delta.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Pressure-adaptation review frames the breadth of the pressure-tolerance
+        span as a derived descriptor of pressure-adaptation flexibility.
+    predicate_id: METPO:2007500
+  - subject: pressure_delta_trait
+    predicate: associated with
+    object: pressure_tolerance_breadth
+    description: The delta encodes the breadth of pressure-tolerance flexibility.
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.001671
+      notes: The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa)
+        illustrates the breadth this phenotype records.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -25,4 +66,11 @@ curation_history:
   changes: Proposed quantitative companion trait (pressure-tolerance breadth)
     mirroring the existing temperature_delta / nacl_delta pattern, to fill the
     pressure coverage gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (pressure-axis defines tolerance
+    breadth) with METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

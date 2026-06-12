@@ -6,7 +6,7 @@ definition: A metal tolerance in which an organism grows in the presence of toxi
 definition_source: DOI:10.1016/S0168-6445(03)00046-9
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000012
 synonyms:
@@ -26,10 +26,68 @@ evidence:
     proteins
   notes: Heavy-metal resistance review situates mercury detoxification within the
     broader prokaryotic metal-resistance machinery.
+causal_graphs:
+- graph_id: mercury_tolerance_mer_reduction
+  title: Mercury tolerance via mer-operon MerA reductase
+  description: Evidence-backed causal sketch linking mer-operon mercuric reductase
+    to volatilization of Hg(II) into Hg(0).
+  nodes:
+  - node_id: mercury_tolerant_trait
+    label: mercury tolerant
+    node_type: TRAIT
+    grounding: traitmech:000016
+    description: Capacity to grow in the presence of toxic mercury compounds.
+  - node_id: mercury_ii_ion
+    label: mercury(2+) ion
+    node_type: CHEMICAL
+    grounding: CHEBI:25195
+    description: Reactive ionic mercury accumulating intracellularly.
+  - node_id: mer_operon
+    label: mer operon (MerA reductase)
+    node_type: GENE_OR_PROTEIN
+    description: Mercuric reductase reducing Hg(II) to volatile Hg(0).
+  - node_id: mercury_reduction
+    label: mercury(II) reduction
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic reduction of Hg(II) to volatile elemental Hg(0).
+  edges:
+  - subject: mercury_ii_ion
+    predicate: challenges
+    object: mercury_tolerant_trait
+    description: Reactive Hg(II) is the toxic challenge the trait counters.
+    evidence:
+    - reference: PMID:12829273
+      notes: Mercury detoxification sits within the broader prokaryotic
+        metal-resistance machinery.
+    predicate_id: METPO:2007406
+  - subject: mer_operon
+    predicate: enables
+    object: mercury_reduction
+    description: MerA reduces Hg(II) to volatile, inert Hg(0) vapour.
+    evidence:
+    - reference: DOI:10.1016/S0168-6445(03)00046-9
+      notes: MerA reduces reactive ionic Hg(II) to volatile, relatively inert,
+        monoatomic Hg(0) vapor.
+    predicate_id: RO:0002327
+  - subject: mercury_reduction
+    predicate: mitigates
+    object: mercury_ii_ion
+    description: Reduction to Hg(0) depletes the reactive Hg(II) pool.
+    evidence:
+    - reference: DOI:10.1016/S0168-6445(03)00046-9
+      notes: Mercury reduction is the basis of mer-mediated resistance.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (mercury tolerance) from literature
     research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (mer-operon Hg(II) reduction) with
+    CHEBI node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

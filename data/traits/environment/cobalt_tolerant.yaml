@@ -6,7 +6,7 @@ definition: A metal tolerance in which an organism grows in the presence of elev
 definition_source: PMID:12829273
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000012
 evidence:
@@ -20,10 +20,67 @@ evidence:
     uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates cobalt to a MIC
     of 20 mM.'
+causal_graphs:
+- graph_id: cobalt_tolerance_czc_cnr_efflux
+  title: Cobalt tolerance via czc/cnr cation-efflux systems
+  description: Evidence-backed causal sketch linking the czc and cnr efflux
+    determinants to cytoplasmic cobalt detoxification.
+  nodes:
+  - node_id: cobalt_tolerant_trait
+    label: cobalt tolerant
+    node_type: TRAIT
+    grounding: traitmech:000015
+    description: Capacity to grow at elevated Co(2+) concentrations.
+  - node_id: cobalt_ion
+    label: cobalt(2+) ion
+    node_type: CHEMICAL
+    grounding: CHEBI:48828
+    description: Toxic transition-metal cation accumulating in the cytoplasm.
+  - node_id: cobalt_efflux_system
+    label: czc/cnr cobalt efflux system
+    node_type: GENE_OR_PROTEIN
+    description: CzcCBA/CzcP and Cnr pumps exporting cobalt cations.
+  - node_id: cobalt_export
+    label: cobalt ion transmembrane transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030001
+    description: Active export of Co(2+) across the cytoplasmic membrane.
+  edges:
+  - subject: cobalt_ion
+    predicate: challenges
+    object: cobalt_tolerant_trait
+    description: Cytoplasmic cobalt is the toxic challenge the trait counters.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Cupriavidus metallidurans BS1 tolerates Co(2+) to a MIC of 20 mM.
+    predicate_id: METPO:2007406
+  - subject: cobalt_efflux_system
+    predicate: enables
+    object: cobalt_export
+    description: CzcP exports cobalt together with zinc and cadmium cations.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+      notes: CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).
+    predicate_id: RO:0002327
+  - subject: cobalt_export
+    predicate: mitigates
+    object: cobalt_ion
+    description: Czc/cnr-mediated export depletes the cytoplasmic cobalt pool.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+      notes: The czc efflux system of C. metallidurans confers cobalt resistance.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (cobalt tolerance) from literature
     research; metal-specific sub-variant of metal tolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (czc/cnr cobalt efflux) with CHEBI/GO
+    node groundings and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

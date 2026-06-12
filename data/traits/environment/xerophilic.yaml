@@ -6,7 +6,7 @@ definition: An environmental growth preference in which an organism grows at low
 definition_source: DOI:10.1098/rstb.2004.1502
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -25,10 +25,58 @@ evidence:
     suspension where the metabolism comes to a reversible standstill
   notes: Anhydrobiosis review supports low-water-activity adaptation as the
     physiological context distinguishing xerophilic growth from desiccation survival.
+causal_graphs:
+- graph_id: xerophilic_low_water_activity_growth
+  title: Xerophilic growth at low water activity
+  description: Evidence-backed causal sketch linking low-water-activity environments
+    to active growth via osmotic adaptation.
+  nodes:
+  - node_id: xerophilic_trait
+    label: xerophilic
+    node_type: TRAIT
+    grounding: traitmech:000011
+    description: Growth at low water activity (low aw) substrates.
+  - node_id: low_water_activity
+    label: low water activity environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Desiccated, high-sugar, or high-solute substrate with low aw.
+  - node_id: osmotic_adaptation
+    label: response to osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006970
+    description: Cellular response maintaining turgor under solute or water stress.
+  edges:
+  - subject: low_water_activity
+    predicate: selects for
+    object: xerophilic_trait
+    description: Persistent low-aw habitats favor organisms with active xerophilic
+      growth.
+    evidence:
+    - reference: DOI:10.1098/rstb.2004.1502
+      notes: Low-water-activity review supports growth at very low aw as the
+        defining xerophile feature.
+    predicate_id: METPO:2007401
+  - subject: xerophilic_trait
+    predicate: enables
+    object: osmotic_adaptation
+    description: Xerophilic organisms mount sustained osmotic adaptation supporting
+      growth under low-aw stress.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10020432
+      notes: Anhydrobiosis review supports low-aw adaptation as the physiological
+        context distinguishing xerophilic growth from desiccation survival.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (low-water-activity growth preference)
     from literature research to fill the water-availability coverage gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (xerophilic low-aw growth) with GO
+    node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

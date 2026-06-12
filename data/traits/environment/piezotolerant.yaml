@@ -6,7 +6,7 @@ definition: A pressure growth preference in which an organism can grow under ele
 definition_source: DOI:10.3389/fmolb.2022.1058381
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -24,6 +24,45 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: Provides the contrasting obligate-piezophile reference point against which
     piezotolerant (atmospheric-capable) growth is defined.
+causal_graphs:
+- graph_id: piezotolerance_pressure_range
+  title: 'Piezotolerance: growth across atmospheric and elevated pressures'
+  description: Evidence-backed causal sketch linking adaptation to elevated
+    hydrostatic pressure to growth that is sustained at atmospheric pressure.
+  nodes:
+  - node_id: piezotolerant_trait
+    label: piezotolerant
+    node_type: TRAIT
+    grounding: traitmech:000003
+    description: Growth across atmospheric and elevated hydrostatic pressures.
+  - node_id: hydrostatic_pressure
+    label: hydrostatic pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient hydrostatic pressure imposed on the cell.
+  - node_id: membrane_adaptation
+    label: membrane lipid adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Adjustment of membrane lipid composition under varying pressure.
+  edges:
+  - subject: hydrostatic_pressure
+    predicate: regulates
+    object: membrane_adaptation
+    description: Hydrostatic pressure modulates membrane fluidity, prompting
+      adaptive lipid composition.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: HHP adaptation involves unsaturated and branched-chain fatty acids.
+    predicate_id: RO:0002211
+  - subject: membrane_adaptation
+    predicate: enables
+    object: piezotolerant_trait
+    description: Membrane adaptation supports growth across the pressure range
+      atmospheric ↔ high.
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.001671
+      notes: Contrast with obligate piezophiles (growth limited to 80-140 MPa)
+        defines piezotolerant as the atmospheric-capable phenotype.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -31,4 +70,10 @@ curation_history:
   changes: Proposed candidate ENVIRONMENT trait (pressure-tolerant growth) from
     literature research to complete the pressure-preference axis alongside
     piezophilic and obligately piezophilic.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (membrane adaptation across pressure
+    range) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

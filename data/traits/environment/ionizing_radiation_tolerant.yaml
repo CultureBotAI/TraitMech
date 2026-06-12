@@ -6,7 +6,7 @@ definition: An environmental tolerance in which an organism survives high doses 
 definition_source: DOI:10.3390/genes14091803
 trait_category: ENVIRONMENT
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000007
 synonyms:
@@ -25,10 +25,72 @@ evidence:
     ratios and bacterial resistance to radiation
   notes: Mechanism support — manganese-mediated oxidative-damage protection underlies
     survival of lethal ionizing-radiation doses.
+causal_graphs:
+- graph_id: ionizing_radiation_tolerance_dsb_repair
+  title: Ionizing-radiation tolerance via double-strand-break repair
+  description: Evidence-backed causal sketch linking gamma-radiation exposure to
+    efficient repair of DNA double-strand breaks and Mn-mediated oxidative
+    protection.
+  nodes:
+  - node_id: ionizing_tolerant_trait
+    label: ionizing radiation tolerant
+    node_type: TRAIT
+    grounding: traitmech:000008
+    description: Survival of high doses of ionizing (gamma) radiation.
+  - node_id: gamma_radiation
+    label: gamma radiation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High-energy ionizing radiation causing DNA double-strand breaks.
+  - node_id: dsb_repair
+    label: double-strand break repair
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006302
+    description: Repair of radiation-induced DNA double-strand breaks.
+  - node_id: mn_antioxidant_protection
+    label: manganese-mediated oxidative-damage protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Mn(II)-antioxidant shielding of repair proteins from oxidative
+      damage.
+  edges:
+  - subject: gamma_radiation
+    predicate: challenges
+    object: ionizing_tolerant_trait
+    description: Gamma exposure is the environmental challenge the trait counters.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.
+    predicate_id: METPO:2007406
+  - subject: dsb_repair
+    predicate: enables
+    object: ionizing_tolerant_trait
+    description: Efficient DSB repair restores chromosomal integrity after
+      ionizing-radiation damage.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: D. radiodurans tolerates lethal gamma doses through DSB-repair
+        machinery.
+    predicate_id: RO:0002327
+  - subject: mn_antioxidant_protection
+    predicate: enables
+    object: ionizing_tolerant_trait
+    description: Mn-antioxidant proteome protection preserves repair capacity under
+      irradiation.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation
+        resistance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ENVIRONMENT trait (ionizing/gamma radiation tolerance)
     from literature research; sub-variant of radiotolerant.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (DSB repair + Mn-antioxidant) with GO
+    node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true
