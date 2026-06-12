@@ -6,7 +6,7 @@ definition: A membrane-bounded intracellular organelle containing a magnetic
 definition_source: DOI:10.1038/nrmicro.2016.99
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -20,10 +20,59 @@ evidence:
 - reference: DOI:10.1038/nrmicro842
   notes: Bazylinski & Frankel, "Magnetosome formation in prokaryotes", describe
     magnetosomes and the magnetotactic lifestyle they enable.
+causal_graphs:
+- graph_id: magnetosome_magnetotaxis
+  title: Magnetosome chains enable magnetotactic navigation
+  description: Evidence-backed causal sketch linking membrane-bounded
+    magnetic-mineral organelles arranged in chains to alignment with geomagnetic
+    fields and magnetotactic navigation.
+  nodes:
+  - node_id: magnetosome_trait
+    label: magnetosome
+    node_type: TRAIT
+    grounding: traitmech:000071
+    description: Membrane-bounded organelle containing a magnetic iron-mineral
+      crystal.
+  - node_id: magnetic_mineral_crystal
+    label: magnetic iron-mineral crystal
+    node_type: CHEMICAL
+    description: Magnetite (Fe3O4) or greigite (Fe3S4) crystal inside the
+      magnetosome.
+  - node_id: magnetotaxis
+    label: magnetotaxis
+    node_type: BIOLOGICAL_PROCESS
+    description: Movement biased along geomagnetic field lines.
+  edges:
+  - subject: magnetic_mineral_crystal
+    predicate: located in
+    object: magnetosome_trait
+    description: The magnetic mineral crystal sits inside the magnetosome
+      membrane.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.99
+      notes: Uebe & Schüler review magnetosome biogenesis as the formation of
+        membrane-bounded magnetic-mineral organelles.
+    predicate_id: biolink:located_in
+  - subject: magnetosome_trait
+    predicate: enables
+    object: magnetotaxis
+    description: Chains of magnetosomes act as a cellular compass, aligning the
+      organism with geomagnetic field lines.
+    evidence:
+    - reference: DOI:10.1038/nrmicro842
+      notes: Bazylinski & Frankel describe magnetosomes and the magnetotactic
+        lifestyle they enable.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (magnetosome); organelle sub-variant
     of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (magnetosome / magnetotaxis) with
+    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

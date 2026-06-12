@@ -6,7 +6,7 @@ definition: A bacterial microcompartment — a polyhedral protein-shelled organe
 definition_source: DOI:10.1038/nrmicro.2018.10
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -21,10 +21,71 @@ evidence:
   notes: Yeates et al. describe protein-based organelles in bacteria (carboxysomes
     and related microcompartments), including the carboxysome shell and its
     encapsulated enzymes.
+causal_graphs:
+- graph_id: carboxysome_co2_concentrating
+  title: Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation
+  description: Evidence-backed causal sketch linking the carboxysome protein shell
+    encapsulating RuBisCO and carbonic anhydrase to enhanced carbon fixation.
+  nodes:
+  - node_id: carboxysome_trait
+    label: carboxysome
+    node_type: TRAIT
+    grounding: traitmech:000072
+    description: Polyhedral protein-shelled microcompartment encapsulating RuBisCO.
+  - node_id: bacterial_microcompartment
+    label: bacterial microcompartment
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0031469
+    description: Protein-shelled prokaryotic microcompartment organelle.
+  - node_id: carbon_fixation
+    label: carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015977
+    description: Conversion of inorganic CO2 into organic carbon (Calvin cycle).
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: CO2 substrate concentrated by the carboxysome shell.
+  edges:
+  - subject: carboxysome_trait
+    predicate: example of
+    object: bacterial_microcompartment
+    description: The carboxysome is the archetypal bacterial microcompartment.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1913
+      notes: Yeates et al. describe the carboxysome shell and its encapsulated
+        enzymes.
+    predicate_id: rdfs:subClassOf
+  - subject: carboxysome_trait
+    predicate: contributes to
+    object: carbon_fixation
+    description: Carboxysomal CO2 concentration accelerates RuBisCO-catalysed
+      fixation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. frame the carboxysome as a CO2-concentrating
+        microcompartment supporting carbon fixation.
+    predicate_id: RO:0002326
+  - subject: carbon_dioxide
+    predicate: located in
+    object: carboxysome_trait
+    description: CO2 is concentrated within the carboxysome shell for fixation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: Kerfeld et al. review CO2 concentration inside the carboxysome.
+    predicate_id: biolink:located_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (carboxysome); protein-microcompartment
     sub-variant of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (carboxysome CO2-concentrating /
+    carbon fixation) with GO/CHEBI node groundings and RO/RDFS/biolink predicate
+    groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

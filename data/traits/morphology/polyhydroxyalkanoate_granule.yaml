@@ -6,7 +6,7 @@ definition: An intracellular storage inclusion composed of polyhydroxyalkanoate
 definition_source: DOI:10.1128/mr.54.4.450-472.1990
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -23,10 +23,55 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include storage granules such as PHA bodies among bacterial
     intracellular organelles.
+causal_graphs:
+- graph_id: pha_granule_carbon_energy_storage
+  title: PHA granules store carbon and energy as polyhydroxyalkanoate
+  description: Evidence-backed causal sketch linking polyhydroxyalkanoate
+    biosynthesis to intracellular storage granules serving as carbon and energy
+    reserves.
+  nodes:
+  - node_id: pha_granule_trait
+    label: polyhydroxyalkanoate granule
+    node_type: TRAIT
+    grounding: traitmech:000067
+    description: Cytoplasmic granule composed of polyhydroxyalkanoate (e.g. PHB).
+  - node_id: polyhydroxyalkanoate
+    label: polyhydroxyalkanoate
+    node_type: CHEMICAL
+    description: Polyester carbon/energy storage polymer (chiefly PHB).
+  - node_id: carbon_energy_storage
+    label: carbon and energy storage
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of carbon/energy reserves under nutrient excess.
+  edges:
+  - subject: polyhydroxyalkanoate
+    predicate: located in
+    object: pha_granule_trait
+    description: PHA polymer accumulates inside cytoplasmic granules.
+    evidence:
+    - reference: DOI:10.1128/mr.54.4.450-472.1990
+      notes: Anderson & Dawes describe PHAs (chiefly PHB) as carbon/energy
+        reserves stored as cytoplasmic granules.
+    predicate_id: biolink:located_in
+  - subject: pha_granule_trait
+    predicate: enables
+    object: carbon_energy_storage
+    description: PHA granules realize the carbon/energy storage function.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0413-0
+      notes: Greening & Lithgow include PHA bodies among bacterial intracellular
+        organelles.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (polyhydroxyalkanoate/PHB granule);
     storage sub-variant of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (PHA granule carbon/energy storage)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

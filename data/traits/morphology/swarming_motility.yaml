@@ -6,7 +6,7 @@ definition: A flagella-dependent, multicellular surface motility in which cells 
 definition_source: DOI:10.1038/nrmicro2405
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000702
 synonyms:
@@ -21,10 +21,71 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.57.030502.091014
   notes: Harshey, "Bacterial motility on a surface", places swarming among the
     surface-motility modes of bacteria.
+causal_graphs:
+- graph_id: swarming_hyperflagellation_surfactant
+  title: Swarming motility via hyperflagellation and surfactant secretion
+  description: Evidence-backed causal sketch linking flagellar hyperflagellation
+    and wetting-surfactant secretion to multicellular surface swarming.
+  nodes:
+  - node_id: swarming_trait
+    label: swarming motility
+    node_type: TRAIT
+    grounding: traitmech:000062
+    description: Flagella-dependent multicellular surface motility.
+  - node_id: bacterial_flagellum
+    label: bacterial-type flagellum
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009288
+    description: Helical proteinaceous locomotory organelle (hyperflagellation
+      under swarming).
+  - node_id: surfactant
+    label: wetting surfactant
+    node_type: CHEMICAL
+    description: Secreted surfactant lowering surface tension to support spreading.
+  - node_id: flagellar_motility
+    label: bacterial flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+    description: Swimming/swarming motility driven by flagellar rotation.
+  edges:
+  - subject: bacterial_flagellum
+    predicate: enables
+    object: swarming_trait
+    description: Hyperflagellation provides the propulsive machinery for swarming.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2405
+      notes: Kearns defines swarming via increased flagella per cell.
+    predicate_id: RO:0002327
+  - subject: surfactant
+    predicate: enables
+    object: swarming_trait
+    description: Secreted wetting surfactant supports multicellular surface
+      spreading.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2405
+      notes: Kearns defines swarming via surfactant secretion accompanying
+        hyperflagellation.
+    predicate_id: RO:0002327
+  - subject: swarming_trait
+    predicate: participates in
+    object: flagellar_motility
+    description: Swarming is a flagella-driven surface-motility mode.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.57.030502.091014
+      notes: Harshey places swarming among the surface-motility modes of
+        bacteria.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY/motility trait (swarming motility) under the
     existing motile class (METPO:1000702).
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (hyperflagellation + surfactant
+    swarming) with GO node groundings and RO/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
   llm_assisted: true

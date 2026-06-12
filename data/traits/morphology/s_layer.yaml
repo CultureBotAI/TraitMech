@@ -6,7 +6,7 @@ definition: A morphology trait in which the cell surface is coated by a crystall
 definition_source: DOI:10.1038/nrmicro3213
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,55 @@ evidence:
 - reference: DOI:10.1038/s41579-025-01258-8
   notes: Review of assembly, architecture and functional roles of microbial surface
     layers supports the S-layer as a defined cell-surface structure.
+causal_graphs:
+- graph_id: s_layer_2d_protein_array
+  title: S-layer crystalline (glyco)protein surface array
+  description: Evidence-backed causal sketch linking self-assembly of (glyco)protein
+    subunits into a regular 2D array to the S-layer surface coating.
+  nodes:
+  - node_id: s_layer_trait
+    label: S-layer
+    node_type: TRAIT
+    grounding: traitmech:000064
+    description: Crystalline 2D (glyco)protein array coating the cell surface.
+  - node_id: s_layer_subunits
+    label: S-layer (glyco)protein subunits
+    node_type: GENE_OR_PROTEIN
+    description: Self-assembling proteinaceous building blocks of the S-layer.
+  - node_id: s_layer_assembly
+    label: S-layer assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Self-assembly of S-layer subunits into a regularly spaced 2D
+      array.
+  edges:
+  - subject: s_layer_subunits
+    predicate: enables
+    object: s_layer_assembly
+    description: Self-assembling (glyco)protein subunits build the S-layer array.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3213
+      notes: Fagan & Fairweather describe self-assembled (glyco)protein arrays
+        forming the S-layer.
+    predicate_id: RO:0002327
+  - subject: s_layer_assembly
+    predicate: enables
+    object: s_layer_trait
+    description: Completed 2D assembly realizes the S-layer surface coating.
+    evidence:
+    - reference: DOI:10.1038/s41579-025-01258-8
+      notes: Review of assembly, architecture, and functional roles of microbial
+        surface layers.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (S-layer) from literature research to
     fill the cell-surface-structure gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (S-layer 2D protein array assembly)
+    with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

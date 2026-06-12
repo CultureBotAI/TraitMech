@@ -6,7 +6,7 @@ definition: An intracellular (or periplasmic) inclusion of elemental sulfur form
 definition_source: DOI:10.1016/S0065-2911(08)00002-7
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include sulfur globules among bacterial intracellular
     storage inclusions/organelles.
+causal_graphs:
+- graph_id: sulfur_globule_sulfur_oxidation_intermediate
+  title: Sulfur globules store elemental sulfur during oxidative sulfur metabolism
+  description: Evidence-backed causal sketch linking oxidative sulfur metabolism
+    to deposition of elemental sulfur as intracellular/periplasmic globules.
+  nodes:
+  - node_id: sulfur_globule_trait
+    label: sulfur globule
+    node_type: TRAIT
+    grounding: traitmech:000069
+    description: Intracellular / periplasmic inclusion of elemental sulfur.
+  - node_id: elemental_sulfur
+    label: elemental sulfur
+    node_type: CHEMICAL
+    description: S0 stored as a globule intermediate.
+  - node_id: oxidative_sulfur_metabolism
+    label: oxidative sulfur metabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).
+  edges:
+  - subject: oxidative_sulfur_metabolism
+    predicate: produces
+    object: elemental_sulfur
+    description: Oxidation of reduced sulfur compounds generates elemental sulfur
+      as an intermediate.
+    evidence:
+    - reference: DOI:10.1016/S0065-2911(08)00002-7
+      notes: Frigaard & Dahl describe sulfur globules as sulfur-storage
+        intermediates formed during oxidative sulfur metabolism.
+    predicate_id: METPO:2000202
+  - subject: elemental_sulfur
+    predicate: located in
+    object: sulfur_globule_trait
+    description: The deposited elemental sulfur forms a globule inclusion.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0413-0
+      notes: Greening & Lithgow include sulfur globules among bacterial
+        intracellular storage inclusions.
+    predicate_id: biolink:located_in
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (sulfur globule); storage sub-variant
     of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (oxidative sulfur metabolism →
+    elemental sulfur globule) with METPO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

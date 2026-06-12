@@ -6,7 +6,7 @@ definition: A morphology trait describing the number and spatial distribution of
 definition_source: DOI:10.1093/femsre/fuv034
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000704
 synonyms:
@@ -21,6 +21,45 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Bacterial flagellum review supports the flagellum as the locomotory organelle
     whose number and placement define flagellar arrangement.
+causal_graphs:
+- graph_id: flagellar_arrangement_flhf_flhg
+  title: Flagellar arrangement set by FlhF/FlhG flagellation pattern
+  description: Evidence-backed causal sketch linking FlhF/FlhG-regulated flagellar
+    placement to the cellular flagellation pattern.
+  nodes:
+  - node_id: flagellar_arrangement_trait
+    label: flagellar arrangement
+    node_type: TRAIT
+    grounding: traitmech:000056
+    description: Number and spatial distribution of flagella on the cell.
+  - node_id: bacterial_flagellum
+    label: bacterial-type flagellum
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009288
+    description: Helical proteinaceous locomotory organelle of bacteria.
+  - node_id: flhf_flhg_regulation
+    label: FlhF/FlhG flagellar placement regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulatory system setting flagellar number and cellular position.
+  edges:
+  - subject: bacterial_flagellum
+    predicate: defines
+    object: flagellar_arrangement_trait
+    description: The cellular distribution of flagella defines the arrangement.
+    evidence:
+    - reference: DOI:10.3390/biom9070279
+      notes: Bacterial flagellum review supports the flagellum as the locomotory
+        organelle whose number and placement define the arrangement.
+    predicate_id: METPO:2007500
+  - subject: flhf_flhg_regulation
+    predicate: regulates
+    object: flagellar_arrangement_trait
+    description: FlhF/FlhG set the species-specific flagellation pattern.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: Schuhmacher et al. describe FlhF/FlhG governance of the flagellation
+        pattern.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -28,4 +67,11 @@ curation_history:
   changes: Proposed candidate MORPHOLOGY axis class (flagellar arrangement) under the
     existing flagellated class (METPO:1000704); parent of monotrichous/lophotrichous/
     amphitrichous/peritrichous.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (FlhF/FlhG flagellation pattern) with
+    GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
   llm_assisted: true

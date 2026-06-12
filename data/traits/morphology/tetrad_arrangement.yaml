@@ -5,7 +5,7 @@ definition: A cell arrangement in which cocci divide in two perpendicular planes
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000666
 synonyms:
@@ -19,10 +19,57 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Two-plane division with incomplete daughter-cell separation yields
     four-cell tetrads.
+causal_graphs:
+- graph_id: tetrad_two_plane_division
+  title: Tetrad arrangement via two-plane perpendicular division
+  description: Evidence-backed causal sketch linking division in two perpendicular
+    planes with incomplete separation to four-cell tetrads.
+  nodes:
+  - node_id: tetrad_trait
+    label: tetrad arrangement
+    node_type: TRAIT
+    grounding: traitmech:000119
+    description: Cocci attached as groups of four (tetrads).
+  - node_id: cell_division
+    label: cell division
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0051301
+    description: Bacterial binary fission.
+  - node_id: two_plane_perpendicular_division
+    label: two perpendicular division planes
+    node_type: QUALITY
+    description: Successive division planes oriented perpendicular to each other.
+  edges:
+  - subject: two_plane_perpendicular_division
+    predicate: causes
+    object: tetrad_trait
+    description: Two perpendicular division planes with incomplete daughter
+      separation yield four-cell tetrads.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      notes: Two-plane division with incomplete daughter-cell separation yields
+        four-cell tetrads.
+    predicate_id: biolink:causes
+  - subject: cell_division
+    predicate: enables
+    object: tetrad_trait
+    description: Bacterial cell division underlies tetrad formation.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00001-06
+      notes: Young treats the tetrad as a division-plane-determined coccal
+        arrangement.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (tetrad arrangement); leftover round,
     cell-arrangement sibling of diplococcus shaped.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (two-plane perpendicular division →
+    tetrad) with GO node grounding and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
   llm_assisted: true

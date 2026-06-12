@@ -5,7 +5,7 @@ definition: An intracellular gas-filled proteinaceous inclusion that provides bu
 definition_source: DOI:10.1038/nrmicro2834
 trait_category: MORPHOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000066
 synonyms:
@@ -19,10 +19,56 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include gas vesicles among bacterial intracellular
     organelles.
+causal_graphs:
+- graph_id: gas_vesicle_buoyancy
+  title: Gas vesicles provide buoyancy and water-column positioning
+  description: Evidence-backed causal sketch linking proteinaceous gas-filled
+    intracellular vesicles to buoyancy and vertical positioning in the water
+    column.
+  nodes:
+  - node_id: gas_vesicle_trait
+    label: gas vesicle
+    node_type: TRAIT
+    grounding: traitmech:000070
+    description: Intracellular gas-filled proteinaceous flotation structure.
+  - node_id: buoyancy
+    label: cellular buoyancy
+    node_type: QUALITY
+    description: Reduced effective cell density permitting vertical positioning.
+  - node_id: water_column_positioning
+    label: water-column positioning
+    node_type: BIOLOGICAL_PROCESS
+    description: Vertical migration of planktonic microbes within the water column.
+  edges:
+  - subject: gas_vesicle_trait
+    predicate: enables
+    object: buoyancy
+    description: Internal gas-filled vesicles lower effective density and provide
+      buoyancy.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2834
+      notes: Pfeifer describes gas vesicles as gas-filled flotation structures.
+    predicate_id: RO:0002327
+  - subject: buoyancy
+    predicate: enables
+    object: water_column_positioning
+    description: Buoyancy allows planktonic bacteria/archaea to position in the
+      water column.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0413-0
+      notes: Greening & Lithgow include gas vesicles among bacterial intracellular
+        organelles.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate MORPHOLOGY trait (gas vesicle / gas vacuole); buoyancy
     sub-variant of intracellular inclusion.
+  llm_assisted: true
+- timestamp: '2026-06-09T15:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (gas vesicle buoyancy / water-column
+    positioning) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
