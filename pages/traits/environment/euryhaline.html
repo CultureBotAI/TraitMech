@@ -60,7 +60,7 @@
             <strong>wide salinity range</strong>
             <span class="edge-predicate">defines</span>
             <strong>euryhaline</strong>
-            
+            <code>METPO:2007500</code>
             <p>Euryhaline organisms tolerate or grow across broad salinity ranges.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>salinity gradient</strong>
             <span class="edge-predicate">selects for</span>
             <strong>euryhaline</strong>
-            
+            <code>METPO:2007401</code>
             <p>Variable salinity environments select for broad salinity tolerance.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>salinity gradient</strong>
             <span class="edge-predicate">causes</span>
             <strong>osmotic imbalance</strong>
-            
+            <code>biolink:causes</code>
             <p>Movement across salinity gradients changes osmotic pressure on the cell.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">mitigates</span>
             <strong>osmotic imbalance</strong>
-            
+            <code>METPO:2007407</code>
             <p>Compatible solutes help balance external osmotic pressure across changing salinity.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>salinity-adaptation genes</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>euryhaline</strong>
-            
+            <code>RO:0002326</code>
             <p>Salinity-adaptation gene repertoires contribute to broad salinity tolerance.</p>
             <ul>
               
@@ -301,6 +301,36 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed euryhaline causal graph for broad salinity tolerance, salinity gradients, compatible solutes, and salinity-adaptation genes.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:23Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1, METPO:2007407×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:37:59Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:65015×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -660,7 +690,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking euryhalinity to broad salinity ranges, osmotic imbalance, compatible solutes, and salinity-adaptation genes.", "edges": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "wide_salinity_range", "target": "euryhaline_trait"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "salinity_gradient", "target": "euryhaline_trait"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "salinity_gradient", "target": "osmotic_imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "compatible_solutes", "target": "osmotic_imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "salinity_adaptation_genes", "target": "euryhaline_trait"}], "evidence_rows": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "edge_id": "edge-1", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "predicate": "defines", "predicate_id": null, "source": "wide salinity range", "target": "euryhaline"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "edge_id": "edge-2", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "predicate": "selects for", "predicate_id": null, "source": "salinity gradient", "target": "euryhaline"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "predicate": "causes", "predicate_id": null, "source": "salinity gradient", "target": "osmotic imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": null, "source": "compatible solutes", "target": "osmotic imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "predicate": "contributes to", "predicate_id": null, "source": "salinity-adaptation genes", "target": "euryhaline"}], "graph_id": "euryhaline_wide_salinity_tolerance", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake of osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated to adjust cell osmotic potential.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerance of a wide range of salinity conditions.", "grounding": "METPO:1000627", "id": "euryhaline_trait", "is_orphan": false, "label": "euryhaline", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Difference between external and internal osmotic potential.", "grounding": null, "id": "osmotic_imbalance", "is_orphan": false, "label": "osmotic imbalance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Gene families associated with microbial salinity adaptation across gradients.", "grounding": null, "id": "salinity_adaptation_genes", "is_orphan": false, "label": "salinity-adaptation genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Spatial or temporal gradient from low to high salinity.", "grounding": null, "id": "salinity_gradient", "is_orphan": false, "label": "salinity gradient", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Environmental salinity range broad enough to require flexible osmoadaptation.", "grounding": null, "id": "wide_salinity_range", "is_orphan": false, "label": "wide salinity range", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Euryhaline wide-salinity tolerance mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking euryhalinity to broad salinity ranges, osmotic imbalance, compatible solutes, and salinity-adaptation genes.", "edges": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide_salinity_range", "target": "euryhaline_trait"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity_gradient", "target": "euryhaline_trait"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity_gradient", "target": "osmotic_imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity_adaptation_genes", "target": "euryhaline_trait"}], "evidence_rows": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "edge_id": "edge-1", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide salinity range", "target": "euryhaline"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "edge_id": "edge-2", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity gradient", "target": "euryhaline"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity gradient", "target": "osmotic imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity-adaptation genes", "target": "euryhaline"}], "graph_id": "euryhaline_wide_salinity_tolerance", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake of osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated to adjust cell osmotic potential.", "grounding": "CHEBI:65015", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerance of a wide range of salinity conditions.", "grounding": "METPO:1000627", "id": "euryhaline_trait", "is_orphan": false, "label": "euryhaline", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Difference between external and internal osmotic potential.", "grounding": null, "id": "osmotic_imbalance", "is_orphan": false, "label": "osmotic imbalance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Gene families associated with microbial salinity adaptation across gradients.", "grounding": null, "id": "salinity_adaptation_genes", "is_orphan": false, "label": "salinity-adaptation genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Spatial or temporal gradient from low to high salinity.", "grounding": null, "id": "salinity_gradient", "is_orphan": false, "label": "salinity gradient", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Environmental salinity range broad enough to require flexible osmoadaptation.", "grounding": null, "id": "wide_salinity_range", "is_orphan": false, "label": "wide salinity range", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Euryhaline wide-salinity tolerance mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -671,10 +701,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>human-adapted virulence factors</strong>
             <span class="edge-predicate">enables</span>
             <strong>human tissue tropism</strong>
-            
+            <code>RO:0002327</code>
             <p>Human-adapted virulence factors enable preferential adhesion and growth in human tissues.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>human tissue tropism</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>human disease</strong>
-            
+            <code>RO:0002327</code>
             <p>Tissue tropism supports establishment of human disease at specific anatomical sites.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>human immune evasion</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>human disease</strong>
-            
+            <code>RO:0002327</code>
             <p>Evasion of human immunity supports sustained infection and disease.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>human disease</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>human pathogen</strong>
-            
+            <code>METPO:2007400</code>
             <p>Human disease manifests the human-pathogen trait.</p>
             <ul>
               
@@ -261,6 +261,30 @@
           <time>2026-05-11T23:15:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking human-adapted virulence factors, tissue tropism, immune evasion, and disease to the human-pathogen trait.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: supports → enables ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:20Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
         </li>
         
       </ol>
@@ -620,7 +644,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking human-adapted virulence factors, body-temperature and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.", "edges": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "human_virulence_factors", "target": "human_tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "human_tropism", "target": "human_disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-3", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "human_immune_evasion", "target": "human_disease"}, {"description": "Human disease manifests the human-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "human_disease", "target": "human_pathogen_trait"}], "evidence_rows": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": null, "source": "human-adapted virulence factors", "target": "human tissue tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "supports", "predicate_id": null, "source": "human tissue tropism", "target": "human disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "supports", "predicate_id": null, "source": "human immune evasion", "target": "human disease"}, {"description": "Human disease manifests the human-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": null, "source": "human disease", "target": "human pathogen"}], "graph_id": "human_pathogen_anthropoid_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Pathology produced in a human host.", "grounding": null, "id": "human_disease", "is_orphan": false, "label": "human disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading human innate and adaptive immunity.", "grounding": null, "id": "human_immune_evasion", "is_orphan": false, "label": "human immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of Homo sapiens.", "grounding": "METPO:1004004", "id": "human_pathogen_trait", "is_orphan": false, "label": "human pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Preferential adhesion and growth in human-specific tissues at body-core temperatures.", "grounding": null, "id": "human_tropism", "is_orphan": false, "label": "human tissue tropism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to human-cell receptors and biology.", "grounding": null, "id": "human_virulence_factors", "is_orphan": false, "label": "human-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Human-pathogen Homo sapiens host adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking human-adapted virulence factors, body-temperature and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.", "edges": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_virulence_factors", "target": "human_tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_tropism", "target": "human_disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_immune_evasion", "target": "human_disease"}, {"description": "Human disease manifests the human-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human_disease", "target": "human_pathogen_trait"}], "evidence_rows": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human-adapted virulence factors", "target": "human tissue tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human tissue tropism", "target": "human disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human immune evasion", "target": "human disease"}, {"description": "Human disease manifests the human-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human disease", "target": "human pathogen"}], "graph_id": "human_pathogen_anthropoid_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Pathology produced in a human host.", "grounding": null, "id": "human_disease", "is_orphan": false, "label": "human disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading human innate and adaptive immunity.", "grounding": null, "id": "human_immune_evasion", "is_orphan": false, "label": "human immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of Homo sapiens.", "grounding": "METPO:1004004", "id": "human_pathogen_trait", "is_orphan": false, "label": "human pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Preferential adhesion and growth in human-specific tissues at body-core temperatures.", "grounding": null, "id": "human_tropism", "is_orphan": false, "label": "human tissue tropism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to human-cell receptors and biology.", "grounding": null, "id": "human_virulence_factors", "is_orphan": false, "label": "human-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Human-pathogen Homo sapiens host adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +655,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

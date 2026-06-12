@@ -77,7 +77,7 @@
             <strong>minimal osmoadaptive load</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl optimum low</strong>
-            
+            <code>METPO:2000202</code>
             <p>Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>NaCl optimum low</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl optimum low is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
               
@@ -248,6 +248,12 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking minimal osmoadaptive load at low ambient NaCl to the non-halophile / halotolerant NaCl-optimum bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -607,7 +613,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking minimal osmoadaptive load at low ambient NaCl to a low NaCl-optimum (\u22641% w/v) consistent with non-halophilic or halotolerant physiology.", "edges": [{"description": "Low ambient NaCl imposes minimal osmoadaptive demand on the cell.", "evidence": [{"notes": "Supports low-salt environments as the context for non-halophilic optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "low_ambient_nacl", "target": "minimal_osmoadaptive_load"}, {"description": "Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.", "evidence": [{"notes": "Supports low-salt optima as the non-halophile / halotolerant outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "minimal_osmoadaptive_load", "target": "nacl_optimum_low_trait"}, {"description": "NaCl optimum low is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports low-salt optima as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_optimum_low_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Low ambient NaCl imposes minimal osmoadaptive demand on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-salt environments as the context for non-halophilic optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "imposes", "predicate_id": null, "source": "low ambient NaCl", "target": "minimal osmoadaptive load"}, {"description": "Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low-salt optima as the non-halophile / halotolerant outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "produces", "predicate_id": null, "source": "minimal osmoadaptive load", "target": "NaCl optimum low"}, {"description": "NaCl optimum low is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports low-salt optima as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": null, "source": "NaCl optimum low", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_low_non_halophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Freshwater-like or mildly saline external NaCl \u2264 ~1% w/v.", "grounding": null, "id": "low_ambient_nacl", "is_orphan": false, "label": "low ambient NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Low demand on osmolyte and ion-transport machinery at low salt.", "grounding": null, "id": "minimal_osmoadaptive_load", "is_orphan": false, "label": "minimal osmoadaptive load", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum at or below ~1% w/v.", "grounding": "METPO:1000465", "id": "nacl_optimum_low_trait", "is_orphan": false, "label": "NaCl optimum low", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-optimum-low non-halophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking minimal osmoadaptive load at low ambient NaCl to a low NaCl-optimum (\u22641% w/v) consistent with non-halophilic or halotolerant physiology.", "edges": [{"description": "Low ambient NaCl imposes minimal osmoadaptive demand on the cell.", "evidence": [{"notes": "Supports low-salt environments as the context for non-halophilic optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "low_ambient_nacl", "target": "minimal_osmoadaptive_load"}, {"description": "Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.", "evidence": [{"notes": "Supports low-salt optima as the non-halophile / halotolerant outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal_osmoadaptive_load", "target": "nacl_optimum_low_trait"}, {"description": "NaCl optimum low is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports low-salt optima as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_low_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Low ambient NaCl imposes minimal osmoadaptive demand on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-salt environments as the context for non-halophilic optima.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "imposes", "predicate_id": null, "source": "low ambient NaCl", "target": "minimal osmoadaptive load"}, {"description": "Minimal osmoadaptive demand yields a low NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low-salt optima as the non-halophile / halotolerant outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal osmoadaptive load", "target": "NaCl optimum low"}, {"description": "NaCl optimum low is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports low-salt optima as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum low", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_low_non_halophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Freshwater-like or mildly saline external NaCl \u2264 ~1% w/v.", "grounding": null, "id": "low_ambient_nacl", "is_orphan": false, "label": "low ambient NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Low demand on osmolyte and ion-transport machinery at low salt.", "grounding": null, "id": "minimal_osmoadaptive_load", "is_orphan": false, "label": "minimal osmoadaptive load", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum at or below ~1% w/v.", "grounding": "METPO:1000465", "id": "nacl_optimum_low_trait", "is_orphan": false, "label": "NaCl optimum low", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-optimum-low non-halophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -618,10 +624,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

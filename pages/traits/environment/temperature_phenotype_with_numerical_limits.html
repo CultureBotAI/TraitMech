@@ -60,7 +60,7 @@
             <strong>ambient temperature axis</strong>
             <span class="edge-predicate">defines</span>
             <strong>temperature phenotype with numerical limits</strong>
-            
+            <code>METPO:2007500</code>
             <p>Ambient temperature is the quantitative axis defining temperature phenotypes.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>temperature optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature optimum is a numerical-limit temperature phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>temperature range</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature range is a numerical-limit temperature phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>temperature delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature delta is a numerical-limit temperature phenotype.</p>
             <ul>
               
@@ -265,6 +265,18 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking the ambient temperature axis to temperature optimum, range, and delta measurement types.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -624,7 +636,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient temperature to the three numerical-limit measurement types (optimum, range, delta) that together classify psychrophile, mesophile, and thermophile physiology.", "edges": [{"description": "Ambient temperature is the quantitative axis defining temperature phenotypes.", "evidence": [{"notes": "Supports ambient temperature as the descriptor axis for microbial temperature phenotypes.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "ambient_temperature_axis", "target": "temperature_phenotype_trait"}, {"description": "Temperature optimum is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature optima as the set-point at which membrane and protein adaptations maintain growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_optimum", "target": "temperature_phenotype_trait"}, {"description": "Temperature range is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature ranges as the span of temperatures sustaining growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_range", "target": "temperature_phenotype_trait"}, {"description": "Temperature delta is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature delta as a derived breadth descriptor over the temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_delta", "target": "temperature_phenotype_trait"}], "evidence_rows": [{"description": "Ambient temperature is the quantitative axis defining temperature phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports ambient temperature as the descriptor axis for microbial temperature phenotypes.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "defines", "predicate_id": null, "source": "ambient temperature axis", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature optimum is a numerical-limit temperature phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports temperature optima as the set-point at which membrane and protein adaptations maintain growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": null, "source": "temperature optimum", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature range is a numerical-limit temperature phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature ranges as the span of temperatures sustaining growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": null, "source": "temperature range", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature delta is a numerical-limit temperature phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a derived breadth descriptor over the temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": null, "source": "temperature delta", "target": "temperature phenotype with numerical limits"}], "graph_id": "temperature_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient temperature as a continuous environmental variable.", "grounding": null, "id": "ambient_temperature_axis", "is_orphan": false, "label": "ambient temperature axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature supporting the most efficient growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical ambient-temperature descriptor.", "grounding": "METPO:1000533", "id": "temperature_phenotype_trait", "is_orphan": false, "label": "temperature phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature phenotype numerical-limits axis"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient temperature to the three numerical-limit measurement types (optimum, range, delta) that together classify psychrophile, mesophile, and thermophile physiology.", "edges": [{"description": "Ambient temperature is the quantitative axis defining temperature phenotypes.", "evidence": [{"notes": "Supports ambient temperature as the descriptor axis for microbial temperature phenotypes.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient_temperature_axis", "target": "temperature_phenotype_trait"}, {"description": "Temperature optimum is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature optima as the set-point at which membrane and protein adaptations maintain growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum", "target": "temperature_phenotype_trait"}, {"description": "Temperature range is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature ranges as the span of temperatures sustaining growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range", "target": "temperature_phenotype_trait"}, {"description": "Temperature delta is a numerical-limit temperature phenotype.", "evidence": [{"notes": "Supports temperature delta as a derived breadth descriptor over the temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta", "target": "temperature_phenotype_trait"}], "evidence_rows": [{"description": "Ambient temperature is the quantitative axis defining temperature phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports ambient temperature as the descriptor axis for microbial temperature phenotypes.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient temperature axis", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature optimum is a numerical-limit temperature phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports temperature optima as the set-point at which membrane and protein adaptations maintain growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature range is a numerical-limit temperature phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature ranges as the span of temperatures sustaining growth.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range", "target": "temperature phenotype with numerical limits"}, {"description": "Temperature delta is a numerical-limit temperature phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a derived breadth descriptor over the temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta", "target": "temperature phenotype with numerical limits"}], "graph_id": "temperature_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient temperature as a continuous environmental variable.", "grounding": null, "id": "ambient_temperature_axis", "is_orphan": false, "label": "ambient temperature axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature supporting the most efficient growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical ambient-temperature descriptor.", "grounding": "METPO:1000533", "id": "temperature_phenotype_trait", "is_orphan": false, "label": "temperature phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature phenotype numerical-limits axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +647,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

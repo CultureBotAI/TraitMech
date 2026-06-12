@@ -77,7 +77,7 @@
             <strong>carbon monoxide dehydrogenase</strong>
             <span class="edge-predicate">oxidizes</span>
             <strong>carbon monoxide</strong>
-            
+            <code>METPO:2000016</code>
             <p>CODH catalyzes carbon monoxide oxidation.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>carbon monoxide</strong>
             <span class="edge-predicate">oxidized to</span>
             <strong>carbon dioxide</strong>
-            
+            <code>METPO:2007405</code>
             <p>CO oxidation yields carbon dioxide.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>carbon monoxide dehydrogenase</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
-            
+            <code>METPO:2007402</code>
             <p>CO oxidation is coupled to respiratory electron transfer.</p>
             <ul>
               
@@ -143,9 +143,9 @@
           
           <li id="pathograph-1-edge-6">
             <strong>respiratory chain</strong>
-            <span class="edge-predicate">requires</span>
+            <span class="edge-predicate">depends on</span>
             <strong>CO-insensitive terminal oxidase</strong>
-            
+            <code>RO:0002502</code>
             <p>CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.</p>
             <ul>
               
@@ -162,7 +162,7 @@
             <strong>respiratory chain</strong>
             <span class="edge-predicate">generates</span>
             <strong>proton motive force</strong>
-            
+            <code>biolink:produces</code>
             <p>Respiratory CO oxidation conserves energy as proton motive force.</p>
             <ul>
               
@@ -320,6 +320,60 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for CODH-mediated carbon monoxide oxidation, respiratory-chain coupling, and energy conservation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000016×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007405×1, METPO:2007402×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022904×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A061JSS8×1, UniProtKB:A0A099I9V3×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: requires → depends on ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:51Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002502×1).</p>
         </li>
         
       </ol>
@@ -679,7 +733,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking carbon monoxide, carbon monoxide dehydrogenase, respiratory electron transport, and energy conservation.", "edges": [{"description": "Carboxydotrophs use carbon monoxide to support growth or metabolism.", "evidence": [{"notes": "Supports carbon monoxide as an energy-supporting substrate.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO supports the growth and metabolism"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy substrate", "predicate_id": null, "source": "carboxydotrophic_trait", "target": "carbon_monoxide"}, {"description": "CODH catalyzes carbon monoxide oxidation.", "evidence": [{"notes": "Supports CODH-mediated CO oxidation.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO dehydrogenase (CODH), to oxidize CO"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "carbon_monoxide_dehydrogenase", "target": "carbon_monoxide"}, {"description": "Aerobic CO oxidizers use a molybdenum hydroxylase CODH.", "evidence": [{"notes": "Supports molybdenum hydroxylase classification of aerobic CODH.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "use a molybdenum hydroxylase"}], "id": "edge-3", "is_orphan": false, "predicate": "enzyme class for", "predicate_id": null, "source": "molybdenum_hydroxylase", "target": "carbon_monoxide_dehydrogenase"}, {"description": "CO oxidation yields carbon dioxide.", "evidence": [{"notes": "Supports CO-to-CO2 conversion by CODH.", "reference": "DOI:10.1007/s00775-018-1541-0", "snippet": "oxidation of CO to CO2"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": null, "source": "carbon_monoxide", "target": "carbon_dioxide"}, {"description": "CO oxidation is coupled to respiratory electron transfer.", "evidence": [{"notes": "Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "branched respiratory chain"}], "id": "edge-5", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": null, "source": "carbon_monoxide_dehydrogenase", "target": "respiratory_chain"}, {"description": "CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.", "evidence": [{"notes": "Supports terminal oxidase adaptation for CO metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "CO-insensitive terminal oxidase"}], "id": "edge-6", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "respiratory_chain", "target": "co_insensitive_terminal_oxidase"}, {"description": "Respiratory CO oxidation conserves energy as proton motive force.", "evidence": [{"notes": "Supports pmf involvement in aerobic carboxydotrophic energy metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "pmf-driven reversed electron transfer"}], "id": "edge-7", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "respiratory_chain", "target": "proton_motive_force"}, {"description": "Reverse electron transfer can form reduced pyridine nucleotides.", "evidence": [{"notes": "Supports pmf-driven reverse electron transfer output.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "formation of reduced pyridine nucleotides"}], "id": "edge-8", "is_orphan": false, "predicate": "drives formation of", "predicate_id": null, "source": "proton_motive_force", "target": "reduced_pyridine_nucleotides"}], "evidence_rows": [{"description": "Carboxydotrophs use carbon monoxide to support growth or metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carbon monoxide as an energy-supporting substrate.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO supports the growth and metabolism"}], "predicate": "uses energy substrate", "predicate_id": null, "source": "carboxydotrophic", "target": "carbon monoxide"}, {"description": "CODH catalyzes carbon monoxide oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CODH-mediated CO oxidation.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO dehydrogenase (CODH), to oxidize CO"}], "predicate": "oxidizes", "predicate_id": null, "source": "carbon monoxide dehydrogenase", "target": "carbon monoxide"}, {"description": "Aerobic CO oxidizers use a molybdenum hydroxylase CODH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports molybdenum hydroxylase classification of aerobic CODH.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "use a molybdenum hydroxylase"}], "predicate": "enzyme class for", "predicate_id": null, "source": "molybdenum hydroxylase", "target": "carbon monoxide dehydrogenase"}, {"description": "CO oxidation yields carbon dioxide.", "edge_id": "edge-4", "evidence": [{"notes": "Supports CO-to-CO2 conversion by CODH.", "reference": "DOI:10.1007/s00775-018-1541-0", "snippet": "oxidation of CO to CO2"}], "predicate": "oxidized to", "predicate_id": null, "source": "carbon monoxide", "target": "carbon dioxide"}, {"description": "CO oxidation is coupled to respiratory electron transfer.", "edge_id": "edge-5", "evidence": [{"notes": "Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "branched respiratory chain"}], "predicate": "feeds electrons into", "predicate_id": null, "source": "carbon monoxide dehydrogenase", "target": "respiratory chain"}, {"description": "CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.", "edge_id": "edge-6", "evidence": [{"notes": "Supports terminal oxidase adaptation for CO metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "CO-insensitive terminal oxidase"}], "predicate": "requires", "predicate_id": null, "source": "respiratory chain", "target": "CO-insensitive terminal oxidase"}, {"description": "Respiratory CO oxidation conserves energy as proton motive force.", "edge_id": "edge-7", "evidence": [{"notes": "Supports pmf involvement in aerobic carboxydotrophic energy metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "pmf-driven reversed electron transfer"}], "predicate": "generates", "predicate_id": null, "source": "respiratory chain", "target": "proton motive force"}, {"description": "Reverse electron transfer can form reduced pyridine nucleotides.", "edge_id": "edge-8", "evidence": [{"notes": "Supports pmf-driven reverse electron transfer output.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "formation of reduced pyridine nucleotides"}], "predicate": "drives formation of", "predicate_id": null, "source": "proton motive force", "target": "reduced pyridine nucleotides"}], "graph_id": "carboxydotrophic_co_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Oxidized product of CO oxidation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced C1 gas used as an energy substrate.", "grounding": "CHEBI:17245", "id": "carbon_monoxide", "is_orphan": false, "label": "carbon monoxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "CODH enzyme oxidizing carbon monoxide.", "grounding": null, "id": "carbon_monoxide_dehydrogenase", "is_orphan": false, "label": "carbon monoxide dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type deriving energy from carbon monoxide oxidation.", "grounding": "METPO:1000633", "id": "carboxydotrophic_trait", "is_orphan": false, "label": "carboxydotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal oxidase enabling respiration during CO oxidation.", "grounding": null, "id": "co_insensitive_terminal_oxidase", "is_orphan": false, "label": "CO-insensitive terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Aerobic CODH enzyme class described for CO oxidizers.", "grounding": null, "id": "molybdenum_hydroxylase", "is_orphan": false, "label": "molybdenum hydroxylase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Ion gradient used for energy conservation.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced NAD(P)-type carriers generated by reverse electron transfer.", "grounding": null, "id": "reduced_pyridine_nucleotides", "is_orphan": false, "label": "reduced pyridine nucleotides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system coupled to CO oxidation.", "grounding": null, "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}], "title": "Carboxydotrophic carbon monoxide oxidation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking carbon monoxide, carbon monoxide dehydrogenase, respiratory electron transport, and energy conservation.", "edges": [{"description": "Carboxydotrophs use carbon monoxide to support growth or metabolism.", "evidence": [{"notes": "Supports carbon monoxide as an energy-supporting substrate.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO supports the growth and metabolism"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy substrate", "predicate_id": null, "source": "carboxydotrophic_trait", "target": "carbon_monoxide"}, {"description": "CODH catalyzes carbon monoxide oxidation.", "evidence": [{"notes": "Supports CODH-mediated CO oxidation.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO dehydrogenase (CODH), to oxidize CO"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "carbon_monoxide_dehydrogenase", "target": "carbon_monoxide"}, {"description": "Aerobic CO oxidizers use a molybdenum hydroxylase CODH.", "evidence": [{"notes": "Supports molybdenum hydroxylase classification of aerobic CODH.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "use a molybdenum hydroxylase"}], "id": "edge-3", "is_orphan": false, "predicate": "enzyme class for", "predicate_id": null, "source": "molybdenum_hydroxylase", "target": "carbon_monoxide_dehydrogenase"}, {"description": "CO oxidation yields carbon dioxide.", "evidence": [{"notes": "Supports CO-to-CO2 conversion by CODH.", "reference": "DOI:10.1007/s00775-018-1541-0", "snippet": "oxidation of CO to CO2"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "carbon_monoxide", "target": "carbon_dioxide"}, {"description": "CO oxidation is coupled to respiratory electron transfer.", "evidence": [{"notes": "Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "branched respiratory chain"}], "id": "edge-5", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "carbon_monoxide_dehydrogenase", "target": "respiratory_chain"}, {"description": "CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.", "evidence": [{"notes": "Supports terminal oxidase adaptation for CO metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "CO-insensitive terminal oxidase"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "respiratory_chain", "target": "co_insensitive_terminal_oxidase"}, {"description": "Respiratory CO oxidation conserves energy as proton motive force.", "evidence": [{"notes": "Supports pmf involvement in aerobic carboxydotrophic energy metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "pmf-driven reversed electron transfer"}], "id": "edge-7", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory_chain", "target": "proton_motive_force"}, {"description": "Reverse electron transfer can form reduced pyridine nucleotides.", "evidence": [{"notes": "Supports pmf-driven reverse electron transfer output.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "formation of reduced pyridine nucleotides"}], "id": "edge-8", "is_orphan": false, "predicate": "drives formation of", "predicate_id": null, "source": "proton_motive_force", "target": "reduced_pyridine_nucleotides"}], "evidence_rows": [{"description": "Carboxydotrophs use carbon monoxide to support growth or metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carbon monoxide as an energy-supporting substrate.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO supports the growth and metabolism"}], "predicate": "uses energy substrate", "predicate_id": null, "source": "carboxydotrophic", "target": "carbon monoxide"}, {"description": "CODH catalyzes carbon monoxide oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CODH-mediated CO oxidation.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "CO dehydrogenase (CODH), to oxidize CO"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "carbon monoxide dehydrogenase", "target": "carbon monoxide"}, {"description": "Aerobic CO oxidizers use a molybdenum hydroxylase CODH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports molybdenum hydroxylase classification of aerobic CODH.", "reference": "DOI:10.1038/nrmicro1595", "snippet": "use a molybdenum hydroxylase"}], "predicate": "enzyme class for", "predicate_id": null, "source": "molybdenum hydroxylase", "target": "carbon monoxide dehydrogenase"}, {"description": "CO oxidation yields carbon dioxide.", "edge_id": "edge-4", "evidence": [{"notes": "Supports CO-to-CO2 conversion by CODH.", "reference": "DOI:10.1007/s00775-018-1541-0", "snippet": "oxidation of CO to CO2"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "carbon monoxide", "target": "carbon dioxide"}, {"description": "CO oxidation is coupled to respiratory electron transfer.", "edge_id": "edge-5", "evidence": [{"notes": "Supports respiratory-chain coupling in aerobic CO-utilizing bacteria.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "branched respiratory chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "carbon monoxide dehydrogenase", "target": "respiratory chain"}, {"description": "CO-utilizing bacteria use a CO-insensitive terminal oxidase branch.", "edge_id": "edge-6", "evidence": [{"notes": "Supports terminal oxidase adaptation for CO metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "CO-insensitive terminal oxidase"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "respiratory chain", "target": "CO-insensitive terminal oxidase"}, {"description": "Respiratory CO oxidation conserves energy as proton motive force.", "edge_id": "edge-7", "evidence": [{"notes": "Supports pmf involvement in aerobic carboxydotrophic energy metabolism.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "pmf-driven reversed electron transfer"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory chain", "target": "proton motive force"}, {"description": "Reverse electron transfer can form reduced pyridine nucleotides.", "edge_id": "edge-8", "evidence": [{"notes": "Supports pmf-driven reverse electron transfer output.", "reference": "DOI:10.1111/j.1574-6968.1986.tb01858.x", "snippet": "formation of reduced pyridine nucleotides"}], "predicate": "drives formation of", "predicate_id": null, "source": "proton motive force", "target": "reduced pyridine nucleotides"}], "graph_id": "carboxydotrophic_co_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Oxidized product of CO oxidation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced C1 gas used as an energy substrate.", "grounding": "CHEBI:17245", "id": "carbon_monoxide", "is_orphan": false, "label": "carbon monoxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "CODH enzyme oxidizing carbon monoxide.", "grounding": "UniProtKB:A0A061JSS8", "id": "carbon_monoxide_dehydrogenase", "is_orphan": false, "label": "carbon monoxide dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type deriving energy from carbon monoxide oxidation.", "grounding": "METPO:1000633", "id": "carboxydotrophic_trait", "is_orphan": false, "label": "carboxydotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal oxidase enabling respiration during CO oxidation.", "grounding": null, "id": "co_insensitive_terminal_oxidase", "is_orphan": false, "label": "CO-insensitive terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Aerobic CODH enzyme class described for CO oxidizers.", "grounding": "UniProtKB:A0A099I9V3", "id": "molybdenum_hydroxylase", "is_orphan": false, "label": "molybdenum hydroxylase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Ion gradient used for energy conservation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced NAD(P)-type carriers generated by reverse electron transfer.", "grounding": null, "id": "reduced_pyridine_nucleotides", "is_orphan": false, "label": "reduced pyridine nucleotides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system coupled to CO oxidation.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}], "title": "Carboxydotrophic carbon monoxide oxidation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -690,10 +744,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

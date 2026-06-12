@@ -60,7 +60,7 @@
             <strong>very high temperature</strong>
             <span class="edge-predicate">selects for</span>
             <strong>hyperthermophilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Very high-temperature environments select for hyperthermophilic growth capacity.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>thermostable enzymes</strong>
             <span class="edge-predicate">enables</span>
             <strong>hyperthermophilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Thermostable enzymes support metabolism at very high temperature.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>reverse gyrase</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>hyperthermophilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Reverse gyrase is associated with DNA stabilization in hyperthermophiles.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>archaeal molecular chaperonins</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>thermostable enzymes</strong>
-            
+            <code>RO:0002211</code>
             <p>Chaperonin systems support protein folding under heat stress.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>membrane lipid composition</strong>
             <span class="edge-predicate">enables</span>
             <strong>hyperthermophilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Membrane lipid adaptation contributes to growth near the upper temperature range for life.</p>
             <ul>
               
@@ -286,6 +286,42 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed hyperthermophily causal graph for thermostable enzymes, reverse gyrase, chaperonins, and membrane adaptation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2, RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A088E825×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001637×1).</p>
         </li>
         
       </ol>
@@ -645,7 +681,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking hyperthermophily to very high temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and membrane adaptation.", "edges": [{"description": "Very high-temperature environments select for hyperthermophilic growth capacity.", "evidence": [{"notes": "Review supports hyperthermophile growth temperature range.", "reference": "DOI:10.1111/j.1574-6976.1996.tb00233.x", "snippet": "optimal growth temperatures between 80\u00b0C and 110\u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "very_high_temperature", "target": "hyperthermophilic_trait"}, {"description": "Thermostable enzymes support metabolism at very high temperature.", "evidence": [{"notes": "Supports enzyme thermostability in hyperthermophiles.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "thermostable ... optimally active at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "thermostable_enzymes", "target": "hyperthermophilic_trait"}, {"description": "Reverse gyrase is associated with DNA stabilization in hyperthermophiles.", "evidence": [{"notes": "Review supports the strong association of reverse gyrase with hyperthermophily.", "reference": "DOI:10.3389/fmicb.2021.661411", "snippet": "reverse gyrase is present in all the hyperthermophiles"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "reverse_gyrase", "target": "hyperthermophilic_trait"}, {"description": "Chaperonin systems support protein folding under heat stress.", "evidence": [{"notes": "Review supports archaeal chaperonins in hyperthermophile heat-stress protein folding.", "reference": "DOI:10.1038/nrmicro866", "snippet": "protein-folding system to cope with heat stress"}], "id": "edge-4", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "molecular_chaperonins", "target": "thermostable_enzymes"}, {"description": "Membrane lipid adaptation contributes to growth near the upper temperature range for life.", "evidence": [{"notes": "Supports membrane lipid changes as high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changes in the membrane lipid composition"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "membrane_lipid_composition", "target": "hyperthermophilic_trait"}], "evidence_rows": [{"description": "Very high-temperature environments select for hyperthermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports hyperthermophile growth temperature range.", "reference": "DOI:10.1111/j.1574-6976.1996.tb00233.x", "snippet": "optimal growth temperatures between 80\u00b0C and 110\u00b0C"}], "predicate": "selects for", "predicate_id": null, "source": "very high temperature", "target": "hyperthermophilic"}, {"description": "Thermostable enzymes support metabolism at very high temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports enzyme thermostability in hyperthermophiles.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "thermostable ... optimally active at high temperatures"}], "predicate": "enables", "predicate_id": null, "source": "thermostable enzymes", "target": "hyperthermophilic"}, {"description": "Reverse gyrase is associated with DNA stabilization in hyperthermophiles.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports the strong association of reverse gyrase with hyperthermophily.", "reference": "DOI:10.3389/fmicb.2021.661411", "snippet": "reverse gyrase is present in all the hyperthermophiles"}], "predicate": "contributes to", "predicate_id": null, "source": "reverse gyrase", "target": "hyperthermophilic"}, {"description": "Chaperonin systems support protein folding under heat stress.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports archaeal chaperonins in hyperthermophile heat-stress protein folding.", "reference": "DOI:10.1038/nrmicro866", "snippet": "protein-folding system to cope with heat stress"}], "predicate": "maintains", "predicate_id": null, "source": "archaeal molecular chaperonins", "target": "thermostable enzymes"}, {"description": "Membrane lipid adaptation contributes to growth near the upper temperature range for life.", "edge_id": "edge-5", "evidence": [{"notes": "Supports membrane lipid changes as high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changes in the membrane lipid composition"}], "predicate": "enables", "predicate_id": null, "source": "membrane lipid composition", "target": "hyperthermophilic"}], "graph_id": "hyperthermophilic_thermostability", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Growth is favored at very high temperatures, typically at or above 80 degrees C.", "grounding": "METPO:1000617", "id": "hyperthermophilic_trait", "is_orphan": false, "label": "hyperthermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features supporting stability at very high temperature.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Protein-folding systems in hyperthermophilic archaea.", "grounding": null, "id": "molecular_chaperonins", "is_orphan": false, "label": "archaeal molecular chaperonins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Topoisomerase associated with hyperthermophiles and positive DNA supercoiling.", "grounding": null, "id": "reverse_gyrase", "is_orphan": false, "label": "reverse gyrase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes resistant to irreversible inactivation at high temperatures.", "grounding": null, "id": "thermostable_enzymes", "is_orphan": false, "label": "thermostable enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Growth condition around 80 degrees C or hotter.", "grounding": null, "id": "very_high_temperature", "is_orphan": false, "label": "very high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Hyperthermophilic thermostability mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking hyperthermophily to very high temperature, thermostable enzymes, reverse gyrase, archaeal chaperonins, and membrane adaptation.", "edges": [{"description": "Very high-temperature environments select for hyperthermophilic growth capacity.", "evidence": [{"notes": "Review supports hyperthermophile growth temperature range.", "reference": "DOI:10.1111/j.1574-6976.1996.tb00233.x", "snippet": "optimal growth temperatures between 80\u00b0C and 110\u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "very_high_temperature", "target": "hyperthermophilic_trait"}, {"description": "Thermostable enzymes support metabolism at very high temperature.", "evidence": [{"notes": "Supports enzyme thermostability in hyperthermophiles.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "thermostable ... optimally active at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable_enzymes", "target": "hyperthermophilic_trait"}, {"description": "Reverse gyrase is associated with DNA stabilization in hyperthermophiles.", "evidence": [{"notes": "Review supports the strong association of reverse gyrase with hyperthermophily.", "reference": "DOI:10.3389/fmicb.2021.661411", "snippet": "reverse gyrase is present in all the hyperthermophiles"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reverse_gyrase", "target": "hyperthermophilic_trait"}, {"description": "Chaperonin systems support protein folding under heat stress.", "evidence": [{"notes": "Review supports archaeal chaperonins in hyperthermophile heat-stress protein folding.", "reference": "DOI:10.1038/nrmicro866", "snippet": "protein-folding system to cope with heat stress"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "molecular_chaperonins", "target": "thermostable_enzymes"}, {"description": "Membrane lipid adaptation contributes to growth near the upper temperature range for life.", "evidence": [{"notes": "Supports membrane lipid changes as high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changes in the membrane lipid composition"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane_lipid_composition", "target": "hyperthermophilic_trait"}], "evidence_rows": [{"description": "Very high-temperature environments select for hyperthermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports hyperthermophile growth temperature range.", "reference": "DOI:10.1111/j.1574-6976.1996.tb00233.x", "snippet": "optimal growth temperatures between 80\u00b0C and 110\u00b0C"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "very high temperature", "target": "hyperthermophilic"}, {"description": "Thermostable enzymes support metabolism at very high temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports enzyme thermostability in hyperthermophiles.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "thermostable ... optimally active at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable enzymes", "target": "hyperthermophilic"}, {"description": "Reverse gyrase is associated with DNA stabilization in hyperthermophiles.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports the strong association of reverse gyrase with hyperthermophily.", "reference": "DOI:10.3389/fmicb.2021.661411", "snippet": "reverse gyrase is present in all the hyperthermophiles"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reverse gyrase", "target": "hyperthermophilic"}, {"description": "Chaperonin systems support protein folding under heat stress.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports archaeal chaperonins in hyperthermophile heat-stress protein folding.", "reference": "DOI:10.1038/nrmicro866", "snippet": "protein-folding system to cope with heat stress"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "archaeal molecular chaperonins", "target": "thermostable enzymes"}, {"description": "Membrane lipid adaptation contributes to growth near the upper temperature range for life.", "edge_id": "edge-5", "evidence": [{"notes": "Supports membrane lipid changes as high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changes in the membrane lipid composition"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane lipid composition", "target": "hyperthermophilic"}], "graph_id": "hyperthermophilic_thermostability", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Growth is favored at very high temperatures, typically at or above 80 degrees C.", "grounding": "METPO:1000617", "id": "hyperthermophilic_trait", "is_orphan": false, "label": "hyperthermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features supporting stability at very high temperature.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Protein-folding systems in hyperthermophilic archaea.", "grounding": null, "id": "molecular_chaperonins", "is_orphan": false, "label": "archaeal molecular chaperonins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Topoisomerase associated with hyperthermophiles and positive DNA supercoiling.", "grounding": "UniProtKB:A0A088E825", "id": "reverse_gyrase", "is_orphan": false, "label": "reverse gyrase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes resistant to irreversible inactivation at high temperatures.", "grounding": null, "id": "thermostable_enzymes", "is_orphan": false, "label": "thermostable enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Growth condition around 80 degrees C or hotter.", "grounding": "PATO:0001637", "id": "very_high_temperature", "is_orphan": false, "label": "very high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Hyperthermophilic thermostability mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -656,10 +692,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

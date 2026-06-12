@@ -60,7 +60,7 @@
             <strong>moderate pathogen hazard</strong>
             <span class="edge-predicate">produces</span>
             <strong>biosafety level 2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Moderate pathogen hazard with available countermeasures yields BSL-2 classification.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>biosafety level 2</strong>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>BSL-2 is a member of the biosafety-level classification.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T13:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking moderate pathogen hazard to BSL-2 classification.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate pathogen virulence and the presence of effective countermeasures to BSL-2 classification.", "edges": [{"description": "Moderate pathogen hazard with available countermeasures yields BSL-2 classification.", "evidence": [{"notes": "Supports moderate virulence with treatability as the basis of BSL-2 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "moderate_pathogen_hazard", "target": "bsl2_trait"}, {"description": "BSL-2 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-2 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "bsl2_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Moderate pathogen hazard with available countermeasures yields BSL-2 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports moderate virulence with treatability as the basis of BSL-2 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "produces", "predicate_id": null, "source": "moderate pathogen hazard", "target": "biosafety level 2"}, {"description": "BSL-2 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-2 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": null, "source": "biosafety level 2", "target": "biosafety level"}], "graph_id": "biosafety_level_2_moderate_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Moderate-risk agents associated with community human diseases; biosafety cabinets and PPE required.", "grounding": "METPO:1001103", "id": "bsl2_trait", "is_orphan": false, "label": "biosafety level 2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Pathogens with established virulence in healthy adults but generally treatable with available countermeasures.", "grounding": null, "id": "moderate_pathogen_hazard", "is_orphan": false, "label": "moderate pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "BSL-2 moderate-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate pathogen virulence and the presence of effective countermeasures to BSL-2 classification.", "edges": [{"description": "Moderate pathogen hazard with available countermeasures yields BSL-2 classification.", "evidence": [{"notes": "Supports moderate virulence with treatability as the basis of BSL-2 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate_pathogen_hazard", "target": "bsl2_trait"}, {"description": "BSL-2 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-2 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl2_trait", "target": "biosafety_level"}], "evidence_rows": [{"description": "Moderate pathogen hazard with available countermeasures yields BSL-2 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports moderate virulence with treatability as the basis of BSL-2 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate pathogen hazard", "target": "biosafety level 2"}, {"description": "BSL-2 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-2 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 2", "target": "biosafety level"}], "graph_id": "biosafety_level_2_moderate_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Moderate-risk agents associated with community human diseases; biosafety cabinets and PPE required.", "grounding": "METPO:1001103", "id": "bsl2_trait", "is_orphan": false, "label": "biosafety level 2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Pathogens with established virulence in healthy adults but generally treatable with available countermeasures.", "grounding": null, "id": "moderate_pathogen_hazard", "is_orphan": false, "label": "moderate pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "BSL-2 moderate-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

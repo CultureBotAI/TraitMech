@@ -60,7 +60,7 @@
             <strong>virulence factors</strong>
             <span class="edge-predicate">enables</span>
             <strong>host colonization</strong>
-            
+            <code>RO:0002327</code>
             <p>Virulence factors enable adhesion, immune evasion, and tissue invasion required for host colonization.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>host colonization</strong>
             <span class="edge-predicate">enables</span>
             <strong>host damage</strong>
-            
+            <code>RO:0002327</code>
             <p>Established host colonization enables sustained damage to host tissues.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>host damage</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pathogenic to host</strong>
-            
+            <code>METPO:2007400</code>
             <p>Host damage manifests the pathogenic-to-host trait.</p>
             <ul>
               
@@ -157,12 +157,14 @@
 
     
     <div class="card">
-      <h2>Children (3)</h2>
+      <h2>Children (4)</h2>
       <ul>
         
         <li><a href="../../traits/ecology/animal_pathogen.html">animal pathogen <code>METPO:1004002</code></a></li>
         
         <li><a href="../../traits/ecology/human_pathogen.html">human pathogen <code>METPO:1004004</code></a></li>
+        
+        <li><a href="../../traits/ecology/opportunistic_pathogen.html">opportunistic pathogen <code>traitmech:000046</code></a></li>
         
         <li><a href="../../traits/ecology/plant_pathogen.html">plant pathogen <code>METPO:1004003</code></a></li>
         
@@ -276,6 +278,18 @@
           <time>2026-05-11T23:15:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking virulence factors, secretion systems, host colonization, and host damage to the pathogenic-to-host trait.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -635,7 +649,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking encoded virulence factors, secretion-based effector delivery, host colonization, and host damage to the pathogenic-to-host phenotype.", "edges": [{"description": "Virulence factors enable adhesion, immune evasion, and tissue invasion required for host colonization.", "evidence": [{"notes": "Supports virulence factors as enablers of host colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "virulence_factors", "target": "host_colonization"}, {"description": "Bacterial protein secretion systems deliver effector virulence factors into host environments or host cells.", "evidence": [{"notes": "Supports secretion systems as delivery machinery for effectors.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-2", "is_orphan": false, "predicate": "delivers", "predicate_id": null, "source": "secretion_systems", "target": "virulence_factors"}, {"description": "Established host colonization enables sustained damage to host tissues.", "evidence": [{"notes": "Supports the colonization-to-damage progression characteristic of pathogens.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "host_colonization", "target": "host_damage"}, {"description": "Host damage manifests the pathogenic-to-host trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "host_damage", "target": "pathogenic_to_host_trait"}], "evidence_rows": [{"description": "Virulence factors enable adhesion, immune evasion, and tissue invasion required for host colonization.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of host colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": null, "source": "virulence factors", "target": "host colonization"}, {"description": "Bacterial protein secretion systems deliver effector virulence factors into host environments or host cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports secretion systems as delivery machinery for effectors.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "delivers", "predicate_id": null, "source": "protein secretion systems", "target": "virulence factors"}, {"description": "Established host colonization enables sustained damage to host tissues.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the colonization-to-damage progression characteristic of pathogens.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": null, "source": "host colonization", "target": "host damage"}, {"description": "Host damage manifests the pathogenic-to-host trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": null, "source": "host damage", "target": "pathogenic to host"}], "graph_id": "pathogenic_to_host_virulence_factor_program", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Establishment of microbial growth within host tissues.", "grounding": null, "id": "host_colonization", "is_orphan": false, "label": "host colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Tissue, cell, or systemic damage produced in the host.", "grounding": null, "id": "host_damage", "is_orphan": false, "label": "host damage", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to cause disease in a host organism.", "grounding": "METPO:1004000", "id": "pathogenic_to_host_trait", "is_orphan": false, "label": "pathogenic to host", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS) delivering effectors to host cells.", "grounding": null, "id": "secretion_systems", "is_orphan": false, "label": "protein secretion systems", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Encoded toxins, adhesins, and effector proteins enabling host colonization and damage.", "grounding": null, "id": "virulence_factors", "is_orphan": false, "label": "virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Pathogenic-to-host virulence-factor program"}];
+  var graphs = [{"description": "DOI-backed graph linking encoded virulence factors, secretion-based effector delivery, host colonization, and host damage to the pathogenic-to-host phenotype.", "edges": [{"description": "Virulence factors enable adhesion, immune evasion, and tissue invasion required for host colonization.", "evidence": [{"notes": "Supports virulence factors as enablers of host colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "virulence_factors", "target": "host_colonization"}, {"description": "Bacterial protein secretion systems deliver effector virulence factors into host environments or host cells.", "evidence": [{"notes": "Supports secretion systems as delivery machinery for effectors.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-2", "is_orphan": false, "predicate": "delivers", "predicate_id": null, "source": "secretion_systems", "target": "virulence_factors"}, {"description": "Established host colonization enables sustained damage to host tissues.", "evidence": [{"notes": "Supports the colonization-to-damage progression characteristic of pathogens.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "host_colonization", "target": "host_damage"}, {"description": "Host damage manifests the pathogenic-to-host trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "host_damage", "target": "pathogenic_to_host_trait"}], "evidence_rows": [{"description": "Virulence factors enable adhesion, immune evasion, and tissue invasion required for host colonization.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of host colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "virulence factors", "target": "host colonization"}, {"description": "Bacterial protein secretion systems deliver effector virulence factors into host environments or host cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports secretion systems as delivery machinery for effectors.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "delivers", "predicate_id": null, "source": "protein secretion systems", "target": "virulence factors"}, {"description": "Established host colonization enables sustained damage to host tissues.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the colonization-to-damage progression characteristic of pathogens.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "host colonization", "target": "host damage"}, {"description": "Host damage manifests the pathogenic-to-host trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "host damage", "target": "pathogenic to host"}], "graph_id": "pathogenic_to_host_virulence_factor_program", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Establishment of microbial growth within host tissues.", "grounding": null, "id": "host_colonization", "is_orphan": false, "label": "host colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Tissue, cell, or systemic damage produced in the host.", "grounding": null, "id": "host_damage", "is_orphan": false, "label": "host damage", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to cause disease in a host organism.", "grounding": "METPO:1004000", "id": "pathogenic_to_host_trait", "is_orphan": false, "label": "pathogenic to host", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS) delivering effectors to host cells.", "grounding": null, "id": "secretion_systems", "is_orphan": false, "label": "protein secretion systems", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Encoded toxins, adhesins, and effector proteins enabling host colonization and damage.", "grounding": null, "id": "virulence_factors", "is_orphan": false, "label": "virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Pathogenic-to-host virulence-factor program"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -646,10 +660,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

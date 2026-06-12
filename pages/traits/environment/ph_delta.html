@@ -60,7 +60,7 @@
             <strong>pH-homeostasis flexibility</strong>
             <span class="edge-predicate">enables</span>
             <strong>pH tolerance breadth</strong>
-            
+            <code>RO:0002327</code>
             <p>pH-homeostasis flexibility enables broad pH tolerance.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH tolerance breadth</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pH delta</strong>
-            
+            <code>METPO:2007400</code>
             <p>The breadth between minimum and maximum growth-supporting external pH manifests the pH-delta phenotype.</p>
             <ul>
               
@@ -239,6 +239,18 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking pH-homeostasis flexibility and the proton motive force to the pH-delta breadth phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -598,7 +610,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the flexibility of pH-homeostasis machinery to the breadth of the pH growth range (delta = max \u2212 min).", "edges": [{"description": "pH-homeostasis flexibility enables broad pH tolerance.", "evidence": [{"notes": "Supports the breadth of pH homeostasis as the basis of broad pH tolerance.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "ph_homeostasis_flexibility", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting external pH manifests the pH-delta phenotype.", "evidence": [{"notes": "Supports the bounded proton motive force as the determinant of the pH tolerance breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "tolerance_breadth", "target": "ph_delta_trait"}], "evidence_rows": [{"description": "pH-homeostasis flexibility enables broad pH tolerance.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the breadth of pH homeostasis as the basis of broad pH tolerance.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "enables", "predicate_id": null, "source": "pH-homeostasis flexibility", "target": "pH tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting external pH manifests the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the bounded proton motive force as the determinant of the pH tolerance breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "manifests as", "predicate_id": null, "source": "pH tolerance breadth", "target": "pH delta"}], "graph_id": "ph_delta_homeostasis_flexibility", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta_trait", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel proton extrusion, K+/H+ antiport, and envelope buffering across a wide span of external pH.", "grounding": null, "id": "ph_homeostasis_flexibility", "is_orphan": false, "label": "pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting external pH.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "pH tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-delta homeostasis flexibility"}];
+  var graphs = [{"description": "DOI-backed graph linking the flexibility of pH-homeostasis machinery to the breadth of the pH growth range (delta = max \u2212 min).", "edges": [{"description": "pH-homeostasis flexibility enables broad pH tolerance.", "evidence": [{"notes": "Supports the breadth of pH homeostasis as the basis of broad pH tolerance.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ph_homeostasis_flexibility", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting external pH manifests the pH-delta phenotype.", "evidence": [{"notes": "Supports the bounded proton motive force as the determinant of the pH tolerance breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "ph_delta_trait"}], "evidence_rows": [{"description": "pH-homeostasis flexibility enables broad pH tolerance.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the breadth of pH homeostasis as the basis of broad pH tolerance.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "pH-homeostasis flexibility", "target": "pH tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting external pH manifests the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the bounded proton motive force as the determinant of the pH tolerance breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "pH tolerance breadth", "target": "pH delta"}], "graph_id": "ph_delta_homeostasis_flexibility", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta_trait", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel proton extrusion, K+/H+ antiport, and envelope buffering across a wide span of external pH.", "grounding": null, "id": "ph_homeostasis_flexibility", "is_orphan": false, "label": "pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting external pH.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "pH tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-delta homeostasis flexibility"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -609,10 +621,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

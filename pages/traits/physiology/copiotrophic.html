@@ -60,7 +60,7 @@
             <strong>high nutrient concentration</strong>
             <span class="edge-predicate">selects for</span>
             <strong>copiotrophic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Copiotrophs grow optimally in high-nutrient environments.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>copiotrophic</strong>
             <span class="edge-predicate">associated with</span>
             <strong>membrane transporters</strong>
-            
+            <code>biolink:associated_with</code>
             <p>Copiotrophic genomes encode energetically costly nutrient acquisition systems.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>copiotrophic</strong>
             <span class="edge-predicate">associated with</span>
             <strong>transcription and signal regulation</strong>
-            
+            <code>biolink:associated_with</code>
             <p>Copiotrophs have regulatory capacity to respond to resource pulses.</p>
             <ul>
               
@@ -126,9 +126,9 @@
           
           <li id="pathograph-1-edge-5">
             <strong>rRNA operons</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>rapid growth</strong>
-            
+            <code>RO:0002327</code>
             <p>Higher rRNA operon copy number supports rapid response and growth.</p>
             <ul>
               
@@ -295,6 +295,30 @@
           <time>2026-05-09T00:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · Codex
           <p class="changes">Added DOI-backed copiotrophy graph for nutrient-rich environments, transport/regulatory capacity, rRNA operons, and rapid growth.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:25Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:associated_with×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -654,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking nutrient-rich environments, regulatory capacity, transport systems, ribosomal capacity, and rapid growth.", "edges": [{"description": "Copiotrophs grow optimally in high-nutrient environments.", "evidence": [{"notes": "Supports high nutrient concentration as the environmental driver.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "high_nutrient_environment", "target": "copiotrophic_trait"}, {"description": "Copiotrophs exploit diverse carbon sources under nutrient-rich conditions.", "evidence": [{"notes": "Supports growth strategy tied to resource-rich habitats.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "grow optimally at either high"}], "id": "edge-2", "is_orphan": false, "predicate": "uses substrate pool", "predicate_id": null, "source": "copiotrophic_trait", "target": "diverse_carbon_sources"}, {"description": "Copiotrophic genomes encode energetically costly nutrient acquisition systems.", "evidence": [{"notes": "Supports transporter investment as a genomic feature of copiotrophy.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "use energetically expensive transporters"}], "id": "edge-3", "is_orphan": false, "predicate": "associated with", "predicate_id": null, "source": "copiotrophic_trait", "target": "membrane_transporters"}, {"description": "Copiotrophs have regulatory capacity to respond to resource pulses.", "evidence": [{"notes": "Supports regulatory systems as part of copiotrophic adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "regulate metabolism"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": null, "source": "copiotrophic_trait", "target": "regulatory_systems"}, {"description": "Higher rRNA operon copy number supports rapid response and growth.", "evidence": [{"notes": "Supports rRNA operon copy number as a genomic indicator of reproductive strategy.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000", "snippet": "rRNA Operon Copy Number Reflects Ecological Strategies"}], "id": "edge-5", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "rrna_operons", "target": "rapid_growth"}, {"description": "Rapid growth is a characteristic outcome of copiotrophic strategy.", "evidence": [{"notes": "Supports rapid growth as part of the copiotroph/oligotroph contrast.", "reference": "DOI:10.1002/bies.1091", "snippet": "Bacteria can grow rapidly"}], "id": "edge-6", "is_orphan": false, "predicate": "characteristic of", "predicate_id": null, "source": "rapid_growth", "target": "copiotrophic_trait"}], "evidence_rows": [{"description": "Copiotrophs grow optimally in high-nutrient environments.", "edge_id": "edge-1", "evidence": [{"notes": "Supports high nutrient concentration as the environmental driver.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "selects for", "predicate_id": null, "source": "high nutrient concentration", "target": "copiotrophic"}, {"description": "Copiotrophs exploit diverse carbon sources under nutrient-rich conditions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports growth strategy tied to resource-rich habitats.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "grow optimally at either high"}], "predicate": "uses substrate pool", "predicate_id": null, "source": "copiotrophic", "target": "diverse carbon sources"}, {"description": "Copiotrophic genomes encode energetically costly nutrient acquisition systems.", "edge_id": "edge-3", "evidence": [{"notes": "Supports transporter investment as a genomic feature of copiotrophy.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "use energetically expensive transporters"}], "predicate": "associated with", "predicate_id": null, "source": "copiotrophic", "target": "membrane transporters"}, {"description": "Copiotrophs have regulatory capacity to respond to resource pulses.", "edge_id": "edge-4", "evidence": [{"notes": "Supports regulatory systems as part of copiotrophic adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "regulate metabolism"}], "predicate": "associated with", "predicate_id": null, "source": "copiotrophic", "target": "transcription and signal regulation"}, {"description": "Higher rRNA operon copy number supports rapid response and growth.", "edge_id": "edge-5", "evidence": [{"notes": "Supports rRNA operon copy number as a genomic indicator of reproductive strategy.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000", "snippet": "rRNA Operon Copy Number Reflects Ecological Strategies"}], "predicate": "supports", "predicate_id": null, "source": "rRNA operons", "target": "rapid growth"}, {"description": "Rapid growth is a characteristic outcome of copiotrophic strategy.", "edge_id": "edge-6", "evidence": [{"notes": "Supports rapid growth as part of the copiotroph/oligotroph contrast.", "reference": "DOI:10.1002/bies.1091", "snippet": "Bacteria can grow rapidly"}], "predicate": "characteristic of", "predicate_id": null, "source": "rapid growth", "target": "copiotrophic"}], "graph_id": "copiotrophic_high_nutrient_fast_growth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Nutrient adaptation to high-resource environments.", "grounding": "METPO:1000642", "id": "copiotrophic_trait", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Multiple available organic substrates.", "grounding": null, "id": "diverse_carbon_sources", "is_orphan": false, "label": "diverse carbon sources", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Resource-rich condition favoring copiotrophic growth.", "grounding": null, "id": "high_nutrient_environment", "is_orphan": false, "label": "high nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Nutrient-acquisition proteins used during resource pulses.", "grounding": null, "id": "membrane_transporters", "is_orphan": false, "label": "membrane transporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Fast biomass accumulation under nutrient-rich conditions.", "grounding": null, "id": "rapid_growth", "is_orphan": false, "label": "rapid growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Regulatory capacity for responding to changing substrates.", "grounding": null, "id": "regulatory_systems", "is_orphan": false, "label": "transcription and signal regulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Ribosomal RNA gene copies associated with growth strategy.", "grounding": null, "id": "rrna_operons", "is_orphan": false, "label": "rRNA operons", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Copiotrophic high-nutrient rapid-growth strategy"}];
+  var graphs = [{"description": "DOI-backed graph linking nutrient-rich environments, regulatory capacity, transport systems, ribosomal capacity, and rapid growth.", "edges": [{"description": "Copiotrophs grow optimally in high-nutrient environments.", "evidence": [{"notes": "Supports high nutrient concentration as the environmental driver.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_nutrient_environment", "target": "copiotrophic_trait"}, {"description": "Copiotrophs exploit diverse carbon sources under nutrient-rich conditions.", "evidence": [{"notes": "Supports growth strategy tied to resource-rich habitats.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "grow optimally at either high"}], "id": "edge-2", "is_orphan": false, "predicate": "uses substrate pool", "predicate_id": null, "source": "copiotrophic_trait", "target": "diverse_carbon_sources"}, {"description": "Copiotrophic genomes encode energetically costly nutrient acquisition systems.", "evidence": [{"notes": "Supports transporter investment as a genomic feature of copiotrophy.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "use energetically expensive transporters"}], "id": "edge-3", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "copiotrophic_trait", "target": "membrane_transporters"}, {"description": "Copiotrophs have regulatory capacity to respond to resource pulses.", "evidence": [{"notes": "Supports regulatory systems as part of copiotrophic adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "regulate metabolism"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "copiotrophic_trait", "target": "regulatory_systems"}, {"description": "Higher rRNA operon copy number supports rapid response and growth.", "evidence": [{"notes": "Supports rRNA operon copy number as a genomic indicator of reproductive strategy.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000", "snippet": "rRNA Operon Copy Number Reflects Ecological Strategies"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rrna_operons", "target": "rapid_growth"}, {"description": "Rapid growth is a characteristic outcome of copiotrophic strategy.", "evidence": [{"notes": "Supports rapid growth as part of the copiotroph/oligotroph contrast.", "reference": "DOI:10.1002/bies.1091", "snippet": "Bacteria can grow rapidly"}], "id": "edge-6", "is_orphan": false, "predicate": "characteristic of", "predicate_id": null, "source": "rapid_growth", "target": "copiotrophic_trait"}], "evidence_rows": [{"description": "Copiotrophs grow optimally in high-nutrient environments.", "edge_id": "edge-1", "evidence": [{"notes": "Supports high nutrient concentration as the environmental driver.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high nutrient concentration", "target": "copiotrophic"}, {"description": "Copiotrophs exploit diverse carbon sources under nutrient-rich conditions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports growth strategy tied to resource-rich habitats.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "grow optimally at either high"}], "predicate": "uses substrate pool", "predicate_id": null, "source": "copiotrophic", "target": "diverse carbon sources"}, {"description": "Copiotrophic genomes encode energetically costly nutrient acquisition systems.", "edge_id": "edge-3", "evidence": [{"notes": "Supports transporter investment as a genomic feature of copiotrophy.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "use energetically expensive transporters"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "copiotrophic", "target": "membrane transporters"}, {"description": "Copiotrophs have regulatory capacity to respond to resource pulses.", "edge_id": "edge-4", "evidence": [{"notes": "Supports regulatory systems as part of copiotrophic adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "regulate metabolism"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "copiotrophic", "target": "transcription and signal regulation"}, {"description": "Higher rRNA operon copy number supports rapid response and growth.", "edge_id": "edge-5", "evidence": [{"notes": "Supports rRNA operon copy number as a genomic indicator of reproductive strategy.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000", "snippet": "rRNA Operon Copy Number Reflects Ecological Strategies"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "rRNA operons", "target": "rapid growth"}, {"description": "Rapid growth is a characteristic outcome of copiotrophic strategy.", "edge_id": "edge-6", "evidence": [{"notes": "Supports rapid growth as part of the copiotroph/oligotroph contrast.", "reference": "DOI:10.1002/bies.1091", "snippet": "Bacteria can grow rapidly"}], "predicate": "characteristic of", "predicate_id": null, "source": "rapid growth", "target": "copiotrophic"}], "graph_id": "copiotrophic_high_nutrient_fast_growth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Nutrient adaptation to high-resource environments.", "grounding": "METPO:1000642", "id": "copiotrophic_trait", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Multiple available organic substrates.", "grounding": null, "id": "diverse_carbon_sources", "is_orphan": false, "label": "diverse carbon sources", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Resource-rich condition favoring copiotrophic growth.", "grounding": null, "id": "high_nutrient_environment", "is_orphan": false, "label": "high nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Nutrient-acquisition proteins used during resource pulses.", "grounding": null, "id": "membrane_transporters", "is_orphan": false, "label": "membrane transporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Fast biomass accumulation under nutrient-rich conditions.", "grounding": null, "id": "rapid_growth", "is_orphan": false, "label": "rapid growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Regulatory capacity for responding to changing substrates.", "grounding": null, "id": "regulatory_systems", "is_orphan": false, "label": "transcription and signal regulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Ribosomal RNA gene copies associated with growth strategy.", "grounding": null, "id": "rrna_operons", "is_orphan": false, "label": "rRNA operons", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Copiotrophic high-nutrient rapid-growth strategy"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -665,10 +689,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>alkaline exposure</strong>
             <span class="edge-predicate">challenges</span>
             <strong>alkalotolerant</strong>
-            
+            <code>METPO:2007406</code>
             <p>Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>alkaline exposure</strong>
             <span class="edge-predicate">challenges</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>METPO:2007406</code>
             <p>Alkaline pH requires maintenance of a less alkaline cytoplasm.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>proton retention</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>RO:0002326</code>
             <p>Proton capture and retention support pH homeostasis in alkaline environments.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>cation/proton antiporter</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>RO:0002326</code>
             <p>Cation/proton antiporters help regulate intracellular pH under alkaline stress.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>cytoplasmic pH homeostasis</strong>
             <span class="edge-predicate">enables</span>
             <strong>alkalotolerant</strong>
-            
+            <code>RO:0002327</code>
             <p>Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.</p>
             <ul>
               
@@ -278,6 +278,30 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed alkalotolerant trait and added DOI-backed evidence and causal graph for alkaline-stress pH homeostasis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×2, RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007406×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:37:59Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0030641×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:13Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A0H3JRG4×1).</p>
         </li>
         
       </ol>
@@ -637,7 +661,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking alkalotolerance to alkaline exposure, proton retention, and cation/proton antiport.", "edges": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "alkaline_exposure", "target": "alkalotolerant_trait"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "alkaline_exposure", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "proton_retention", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "cation_proton_antiporter", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cytoplasmic_ph_homeostasis", "target": "alkalotolerant_trait"}], "evidence_rows": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "edge_id": "edge-1", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "predicate": "challenges", "predicate_id": null, "source": "alkaline exposure", "target": "alkalotolerant"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "predicate": "challenges", "predicate_id": null, "source": "alkaline exposure", "target": "cytoplasmic pH homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "contributes to", "predicate_id": null, "source": "proton retention", "target": "cytoplasmic pH homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "predicate": "contributes to", "predicate_id": null, "source": "cation/proton antiporter", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "predicate": "enables", "predicate_id": null, "source": "cytoplasmic pH homeostasis", "target": "alkalotolerant"}], "graph_id": "alkalotolerant_alkaline_stress_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral.", "grounding": null, "id": "alkaline_exposure", "is_orphan": false, "label": "alkaline exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates alkaline pH while growing optimally near neutral pH.", "grounding": "METPO:1003009", "id": "alkalotolerant_trait", "is_orphan": false, "label": "alkalotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporter exchanging cations for protons during pH stress.", "grounding": null, "id": "cation_proton_antiporter", "is_orphan": false, "label": "cation/proton antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH during alkaline challenge.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Retaining or capturing protons at the cell surface or cytoplasm.", "grounding": null, "id": "proton_retention", "is_orphan": false, "label": "proton retention", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Alkalotolerant alkaline-stress pH homeostasis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking alkalotolerance to alkaline exposure, proton retention, and cation/proton antiport.", "edges": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "alkalotolerant_trait"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_retention", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation_proton_antiporter", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "alkalotolerant_trait"}], "evidence_rows": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "edge_id": "edge-1", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "alkalotolerant"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "cytoplasmic pH homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton retention", "target": "cytoplasmic pH homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation/proton antiporter", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "alkalotolerant"}], "graph_id": "alkalotolerant_alkaline_stress_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral.", "grounding": null, "id": "alkaline_exposure", "is_orphan": false, "label": "alkaline exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates alkaline pH while growing optimally near neutral pH.", "grounding": "METPO:1003009", "id": "alkalotolerant_trait", "is_orphan": false, "label": "alkalotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporter exchanging cations for protons during pH stress.", "grounding": "UniProtKB:A0A0H3JRG4", "id": "cation_proton_antiporter", "is_orphan": false, "label": "cation/proton antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH during alkaline challenge.", "grounding": "GO:0030641", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Retaining or capturing protons at the cell surface or cytoplasm.", "grounding": null, "id": "proton_retention", "is_orphan": false, "label": "proton retention", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Alkalotolerant alkaline-stress pH homeostasis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +672,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

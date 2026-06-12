@@ -60,7 +60,7 @@
             <strong>robust osmoadaptive flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl delta mid2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Robust osmoadaptive flexibility yields a 3–8% NaCl-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl delta mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking robust osmoadaptive flexibility to the broad-breadth NaCl-delta bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking robust osmoadaptive flexibility to a 3\u20138% (w/v) NaCl growth breadth.", "edges": [{"description": "Robust osmoadaptive flexibility yields a 3\u20138% NaCl-delta breadth.", "evidence": [{"notes": "Supports robust osmoadaptive flexibility as the basis of a broad breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "robust_osmoadaptive_flexibility", "target": "nacl_delta_mid2_trait"}, {"description": "NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the 3\u20138% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_delta_mid2_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Robust osmoadaptive flexibility yields a 3\u20138% NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports robust osmoadaptive flexibility as the basis of a broad breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": null, "source": "robust osmoadaptive flexibility", "target": "NaCl delta mid2"}, {"description": "NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl delta mid2", "target": "NaCl delta"}], "graph_id": "nacl_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth approximately 3\u20138% w/v.", "grounding": "METPO:1000481", "id": "nacl_delta_mid2_trait", "is_orphan": false, "label": "NaCl delta mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Strong osmolyte-remodeling capacity supporting growth across a broad salinity span.", "grounding": null, "id": "robust_osmoadaptive_flexibility", "is_orphan": false, "label": "robust osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-delta-mid2 broad-breadth osmoadaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking robust osmoadaptive flexibility to a 3\u20138% (w/v) NaCl growth breadth.", "edges": [{"description": "Robust osmoadaptive flexibility yields a 3\u20138% NaCl-delta breadth.", "evidence": [{"notes": "Supports robust osmoadaptive flexibility as the basis of a broad breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "robust_osmoadaptive_flexibility", "target": "nacl_delta_mid2_trait"}, {"description": "NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the 3\u20138% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta_mid2_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Robust osmoadaptive flexibility yields a 3\u20138% NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports robust osmoadaptive flexibility as the basis of a broad breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "robust osmoadaptive flexibility", "target": "NaCl delta mid2"}, {"description": "NaCl delta mid2 is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta mid2", "target": "NaCl delta"}], "graph_id": "nacl_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth approximately 3\u20138% w/v.", "grounding": "METPO:1000481", "id": "nacl_delta_mid2_trait", "is_orphan": false, "label": "NaCl delta mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Strong osmolyte-remodeling capacity supporting growth across a broad salinity span.", "grounding": null, "id": "robust_osmoadaptive_flexibility", "is_orphan": false, "label": "robust osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-delta-mid2 broad-breadth osmoadaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

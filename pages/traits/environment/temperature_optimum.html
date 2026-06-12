@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>ambient temperature</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            
+            <code>RO:0002211</code>
             <p>Ambient temperature sets a target membrane fluidity that the cell must match.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>homoviscous lipid composition</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            
+            <code>RO:0002211</code>
             <p>Homoviscous lipid composition maintains target membrane fluidity at the optimum temperature.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>ambient temperature</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>enzyme kinetics</strong>
-            
+            <code>RO:0002211</code>
             <p>Ambient temperature scales enzyme turnover rates across the cellular network.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>enzyme kinetics</strong>
             <span class="edge-predicate">enables</span>
             <strong>maximal growth rate</strong>
-            
+            <code>RO:0002327</code>
             <p>Adequately fast enzyme kinetics enable peak growth at the optimal temperature.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>maximal growth rate</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>temperature optimum</strong>
-            
+            <code>METPO:2007400</code>
             <p>The ambient temperature supporting peak growth manifests the temperature-optimum phenotype.</p>
             <ul>
               
@@ -292,6 +292,54 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking ambient temperature, homoviscous membrane adaptation, enzyme kinetics, and maximal growth to the temperature-optimum phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007505×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: influences → regulates ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×2).</p>
         </li>
         
       </ol>
@@ -651,7 +699,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the ambient temperature at which membrane fluidity, protein folding, and enzyme kinetics jointly maintain maximal growth to the temperature-optimum phenotype.", "edges": [{"description": "Ambient temperature sets a target membrane fluidity that the cell must match.", "evidence": [{"notes": "Supports temperature as the input to membrane-fluidity adaptation.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "ambient_temperature", "target": "membrane_fluidity"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at the optimum temperature.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Ambient temperature scales enzyme turnover rates across the cellular network.", "evidence": [{"notes": "Supports temperature as the determinant of enzyme function in adapted organisms.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "ambient_temperature", "target": "enzyme_kinetics"}, {"description": "Adequately fast enzyme kinetics enable peak growth at the optimal temperature.", "evidence": [{"notes": "Supports balanced enzyme kinetics at adapted temperature as the basis of peak growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "enzyme_kinetics", "target": "maximal_growth_rate"}, {"description": "The ambient temperature supporting peak growth manifests the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "maximal_growth_rate", "target": "temperature_optimum_trait"}], "evidence_rows": [{"description": "Ambient temperature sets a target membrane fluidity that the cell must match.", "edge_id": "edge-1", "evidence": [{"notes": "Supports temperature as the input to membrane-fluidity adaptation.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "influences", "predicate_id": null, "source": "ambient temperature", "target": "membrane fluidity"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at the optimum temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "maintains", "predicate_id": null, "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Ambient temperature scales enzyme turnover rates across the cellular network.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature as the determinant of enzyme function in adapted organisms.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "influences", "predicate_id": null, "source": "ambient temperature", "target": "enzyme kinetics"}, {"description": "Adequately fast enzyme kinetics enable peak growth at the optimal temperature.", "edge_id": "edge-4", "evidence": [{"notes": "Supports balanced enzyme kinetics at adapted temperature as the basis of peak growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "enables", "predicate_id": null, "source": "enzyme kinetics", "target": "maximal growth rate"}, {"description": "The ambient temperature supporting peak growth manifests the temperature-optimum phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "manifests as", "predicate_id": null, "source": "maximal growth rate", "target": "temperature optimum"}], "graph_id": "temperature_optimum_balanced_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient growth temperature imposed on the cell.", "grounding": null, "id": "ambient_temperature", "is_orphan": false, "label": "ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Temperature dependence of enzyme turnover for biosynthesis and energy conservation.", "grounding": null, "id": "enzyme_kinetics", "is_orphan": false, "label": "enzyme kinetics", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain a target fluidity at the growth temperature.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal temperature.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature at which growth rate is maximal.", "grounding": "METPO:1000304", "id": "temperature_optimum_trait", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-optimum balanced adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking the ambient temperature at which membrane fluidity, protein folding, and enzyme kinetics jointly maintain maximal growth to the temperature-optimum phenotype.", "edges": [{"description": "Ambient temperature sets a target membrane fluidity that the cell must match.", "evidence": [{"notes": "Supports temperature as the input to membrane-fluidity adaptation.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ambient_temperature", "target": "membrane_fluidity"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at the optimum temperature.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Ambient temperature scales enzyme turnover rates across the cellular network.", "evidence": [{"notes": "Supports temperature as the determinant of enzyme function in adapted organisms.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ambient_temperature", "target": "enzyme_kinetics"}, {"description": "Adequately fast enzyme kinetics enable peak growth at the optimal temperature.", "evidence": [{"notes": "Supports balanced enzyme kinetics at adapted temperature as the basis of peak growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "enzyme_kinetics", "target": "maximal_growth_rate"}, {"description": "The ambient temperature supporting peak growth manifests the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal_growth_rate", "target": "temperature_optimum_trait"}], "evidence_rows": [{"description": "Ambient temperature sets a target membrane fluidity that the cell must match.", "edge_id": "edge-1", "evidence": [{"notes": "Supports temperature as the input to membrane-fluidity adaptation.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ambient temperature", "target": "membrane fluidity"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at the optimum temperature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Ambient temperature scales enzyme turnover rates across the cellular network.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature as the determinant of enzyme function in adapted organisms.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ambient temperature", "target": "enzyme kinetics"}, {"description": "Adequately fast enzyme kinetics enable peak growth at the optimal temperature.", "edge_id": "edge-4", "evidence": [{"notes": "Supports balanced enzyme kinetics at adapted temperature as the basis of peak growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "enzyme kinetics", "target": "maximal growth rate"}, {"description": "The ambient temperature supporting peak growth manifests the temperature-optimum phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal growth rate", "target": "temperature optimum"}], "graph_id": "temperature_optimum_balanced_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient growth temperature imposed on the cell.", "grounding": null, "id": "ambient_temperature", "is_orphan": false, "label": "ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Temperature dependence of enzyme turnover for biosynthesis and energy conservation.", "grounding": null, "id": "enzyme_kinetics", "is_orphan": false, "label": "enzyme kinetics", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain a target fluidity at the growth temperature.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal temperature.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature at which growth rate is maximal.", "grounding": "METPO:1000304", "id": "temperature_optimum_trait", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-optimum balanced adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -662,10 +710,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

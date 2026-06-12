@@ -60,7 +60,7 @@
             <strong>broad thermal-adaptation flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>temperature delta mid2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Broad thermal-adaptation flexibility yields a 20–30 °C temperature-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>temperature delta mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking broad thermal-adaptation flexibility to the temperature-delta-mid2 bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking broad thermal-adaptation flexibility to a 20\u201330 \u00b0C temperature growth breadth.", "edges": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "broad_thermal_adaptation", "target": "temperature_delta_mid2_trait"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_delta_mid2_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": null, "source": "broad thermal-adaptation flexibility", "target": "temperature delta mid2"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": null, "source": "temperature delta mid2", "target": "temperature delta"}], "graph_id": "temperature_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Strong capacity to remodel membrane lipids and enzymes across temperature shifts of ~20\u201330 \u00b0C.", "grounding": null, "id": "broad_thermal_adaptation", "is_orphan": false, "label": "broad thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 20\u201330 \u00b0C.", "grounding": "METPO:1000486", "id": "temperature_delta_mid2_trait", "is_orphan": false, "label": "temperature delta mid2", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-mid2 broad-breadth thermal adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking broad thermal-adaptation flexibility to a 20\u201330 \u00b0C temperature growth breadth.", "edges": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad_thermal_adaptation", "target": "temperature_delta_mid2_trait"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_mid2_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad thermal-adaptation flexibility", "target": "temperature delta mid2"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta mid2", "target": "temperature delta"}], "graph_id": "temperature_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Strong capacity to remodel membrane lipids and enzymes across temperature shifts of ~20\u201330 \u00b0C.", "grounding": null, "id": "broad_thermal_adaptation", "is_orphan": false, "label": "broad thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 20\u201330 \u00b0C.", "grounding": "METPO:1000486", "id": "temperature_delta_mid2_trait", "is_orphan": false, "label": "temperature delta mid2", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-mid2 broad-breadth thermal adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

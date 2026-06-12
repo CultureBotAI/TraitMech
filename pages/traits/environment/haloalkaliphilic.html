@@ -94,7 +94,7 @@
             <strong>high-salt environment</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>haloalkaliphilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Haloalkaliphiles require high-salt adaptation.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>alkaline pH</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>haloalkaliphilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Haloalkaliphiles also require adaptation to high pH.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>haloalkaliphilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Compatible solutes support osmoadaptation in haloalkaliphiles.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>alkaline pH homeostasis</strong>
             <span class="edge-predicate">enables</span>
             <strong>haloalkaliphilic</strong>
-            
+            <code>RO:0002327</code>
             <p>pH homeostasis is required for growth under alkaline conditions.</p>
             <ul>
               
@@ -301,6 +301,24 @@
           <time>2026-05-10T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for combined high-salt and alkaline-pH adaptation in haloalkaliphily.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×3, RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:37:59Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:65015×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01000687×1).</p>
         </li>
         
       </ol>
@@ -660,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking haloalkaliphily to combined hypersaline and alkaline conditions.", "edges": [{"description": "Soda lakes combine salinity with alkaline chemistry.", "evidence": [{"notes": "Review supports soda lakes as alkaline saline environments.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "alkaline sodium carbonate/bicarbonate fraction"}], "id": "edge-1", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "soda_lake_environment", "target": "high_salt_environment"}, {"description": "Soda lake buffering maintains high pH.", "evidence": [{"notes": "Supports persistent alkaline pH in haloalkaliphilic habitats.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "stable, high-to-extremely high pH"}], "id": "edge-2", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "soda_lake_environment", "target": "alkaline_ph"}, {"description": "Haloalkaliphiles require high-salt adaptation.", "evidence": [{"notes": "Natronomonas pharaonis proteomics paper supports combined salt and alkaline survival.", "reference": "DOI:10.1021/pr060352q", "snippet": "survive in salt-saturated lakes of pH 11"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "high_salt_environment", "target": "haloalkaliphilic_trait"}, {"description": "Haloalkaliphiles also require adaptation to high pH.", "evidence": [{"notes": "Supports high-pH component of the haloalkaliphilic trait.", "reference": "DOI:10.1021/pr060352q", "snippet": "salt-saturated lakes of pH 11"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "alkaline_ph", "target": "haloalkaliphilic_trait"}, {"description": "Compatible solutes support osmoadaptation in haloalkaliphiles.", "evidence": [{"notes": "Review supports compatible solutes as osmoadaptation mechanisms in haloalkaliphiles.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "ectoine and glycine betaine"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "compatible_solutes", "target": "haloalkaliphilic_trait"}, {"description": "pH homeostasis is required for growth under alkaline conditions.", "evidence": [{"notes": "Review supports pH homeostasis as a physiological mechanism integrated with salinity and other factors.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "bacterial pH homeostasis is a cell-wide physiological process"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "alkaline_ph_homeostasis", "target": "haloalkaliphilic_trait"}], "evidence_rows": [{"description": "Soda lakes combine salinity with alkaline chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports soda lakes as alkaline saline environments.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "alkaline sodium carbonate/bicarbonate fraction"}], "predicate": "provides", "predicate_id": null, "source": "saline soda lake environment", "target": "high-salt environment"}, {"description": "Soda lake buffering maintains high pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports persistent alkaline pH in haloalkaliphilic habitats.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "stable, high-to-extremely high pH"}], "predicate": "provides", "predicate_id": null, "source": "saline soda lake environment", "target": "alkaline pH"}, {"description": "Haloalkaliphiles require high-salt adaptation.", "edge_id": "edge-3", "evidence": [{"notes": "Natronomonas pharaonis proteomics paper supports combined salt and alkaline survival.", "reference": "DOI:10.1021/pr060352q", "snippet": "survive in salt-saturated lakes of pH 11"}], "predicate": "contributes to", "predicate_id": null, "source": "high-salt environment", "target": "haloalkaliphilic"}, {"description": "Haloalkaliphiles also require adaptation to high pH.", "edge_id": "edge-4", "evidence": [{"notes": "Supports high-pH component of the haloalkaliphilic trait.", "reference": "DOI:10.1021/pr060352q", "snippet": "salt-saturated lakes of pH 11"}], "predicate": "contributes to", "predicate_id": null, "source": "alkaline pH", "target": "haloalkaliphilic"}, {"description": "Compatible solutes support osmoadaptation in haloalkaliphiles.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports compatible solutes as osmoadaptation mechanisms in haloalkaliphiles.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "ectoine and glycine betaine"}], "predicate": "contributes to", "predicate_id": null, "source": "compatible solutes", "target": "haloalkaliphilic"}, {"description": "pH homeostasis is required for growth under alkaline conditions.", "edge_id": "edge-6", "evidence": [{"notes": "Review supports pH homeostasis as a physiological mechanism integrated with salinity and other factors.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "bacterial pH homeostasis is a cell-wide physiological process"}], "predicate": "enables", "predicate_id": null, "source": "alkaline pH homeostasis", "target": "haloalkaliphilic"}], "graph_id": "haloalkaliphilic_salt_alkaline_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "High pH growth condition.", "grounding": null, "id": "alkaline_ph", "is_orphan": false, "label": "alkaline pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular maintenance of internal pH under alkaline conditions.", "grounding": null, "id": "alkaline_ph_homeostasis", "is_orphan": false, "label": "alkaline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Ectoine, glycine betaine, or related osmoprotectants.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Requires both high salt and alkaline pH for optimal growth.", "grounding": "METPO:1000621", "id": "haloalkaliphilic_trait", "is_orphan": false, "label": "haloalkaliphilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Saline or salt-saturated environmental condition.", "grounding": null, "id": "high_salt_environment", "is_orphan": false, "label": "high-salt environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Sodium carbonate-rich, alkaline, saline habitat.", "grounding": null, "id": "soda_lake_environment", "is_orphan": false, "label": "saline soda lake environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Haloalkaliphilic salt and alkaline-pH adaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking haloalkaliphily to combined hypersaline and alkaline conditions.", "edges": [{"description": "Soda lakes combine salinity with alkaline chemistry.", "evidence": [{"notes": "Review supports soda lakes as alkaline saline environments.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "alkaline sodium carbonate/bicarbonate fraction"}], "id": "edge-1", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "soda_lake_environment", "target": "high_salt_environment"}, {"description": "Soda lake buffering maintains high pH.", "evidence": [{"notes": "Supports persistent alkaline pH in haloalkaliphilic habitats.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "stable, high-to-extremely high pH"}], "id": "edge-2", "is_orphan": false, "predicate": "provides", "predicate_id": null, "source": "soda_lake_environment", "target": "alkaline_ph"}, {"description": "Haloalkaliphiles require high-salt adaptation.", "evidence": [{"notes": "Natronomonas pharaonis proteomics paper supports combined salt and alkaline survival.", "reference": "DOI:10.1021/pr060352q", "snippet": "survive in salt-saturated lakes of pH 11"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high_salt_environment", "target": "haloalkaliphilic_trait"}, {"description": "Haloalkaliphiles also require adaptation to high pH.", "evidence": [{"notes": "Supports high-pH component of the haloalkaliphilic trait.", "reference": "DOI:10.1021/pr060352q", "snippet": "salt-saturated lakes of pH 11"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alkaline_ph", "target": "haloalkaliphilic_trait"}, {"description": "Compatible solutes support osmoadaptation in haloalkaliphiles.", "evidence": [{"notes": "Review supports compatible solutes as osmoadaptation mechanisms in haloalkaliphiles.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "ectoine and glycine betaine"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible_solutes", "target": "haloalkaliphilic_trait"}, {"description": "pH homeostasis is required for growth under alkaline conditions.", "evidence": [{"notes": "Review supports pH homeostasis as a physiological mechanism integrated with salinity and other factors.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "bacterial pH homeostasis is a cell-wide physiological process"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaline_ph_homeostasis", "target": "haloalkaliphilic_trait"}], "evidence_rows": [{"description": "Soda lakes combine salinity with alkaline chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports soda lakes as alkaline saline environments.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "alkaline sodium carbonate/bicarbonate fraction"}], "predicate": "provides", "predicate_id": null, "source": "saline soda lake environment", "target": "high-salt environment"}, {"description": "Soda lake buffering maintains high pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports persistent alkaline pH in haloalkaliphilic habitats.", "reference": "DOI:10.1016/j.femsre.2004.10.005", "snippet": "stable, high-to-extremely high pH"}], "predicate": "provides", "predicate_id": null, "source": "saline soda lake environment", "target": "alkaline pH"}, {"description": "Haloalkaliphiles require high-salt adaptation.", "edge_id": "edge-3", "evidence": [{"notes": "Natronomonas pharaonis proteomics paper supports combined salt and alkaline survival.", "reference": "DOI:10.1021/pr060352q", "snippet": "survive in salt-saturated lakes of pH 11"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high-salt environment", "target": "haloalkaliphilic"}, {"description": "Haloalkaliphiles also require adaptation to high pH.", "edge_id": "edge-4", "evidence": [{"notes": "Supports high-pH component of the haloalkaliphilic trait.", "reference": "DOI:10.1021/pr060352q", "snippet": "salt-saturated lakes of pH 11"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alkaline pH", "target": "haloalkaliphilic"}, {"description": "Compatible solutes support osmoadaptation in haloalkaliphiles.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports compatible solutes as osmoadaptation mechanisms in haloalkaliphiles.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "ectoine and glycine betaine"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible solutes", "target": "haloalkaliphilic"}, {"description": "pH homeostasis is required for growth under alkaline conditions.", "edge_id": "edge-6", "evidence": [{"notes": "Review supports pH homeostasis as a physiological mechanism integrated with salinity and other factors.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "bacterial pH homeostasis is a cell-wide physiological process"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaline pH homeostasis", "target": "haloalkaliphilic"}], "graph_id": "haloalkaliphilic_salt_alkaline_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "High pH growth condition.", "grounding": null, "id": "alkaline_ph", "is_orphan": false, "label": "alkaline pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular maintenance of internal pH under alkaline conditions.", "grounding": null, "id": "alkaline_ph_homeostasis", "is_orphan": false, "label": "alkaline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Ectoine, glycine betaine, or related osmoprotectants.", "grounding": "CHEBI:65015", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Requires both high salt and alkaline pH for optimal growth.", "grounding": "METPO:1000621", "id": "haloalkaliphilic_trait", "is_orphan": false, "label": "haloalkaliphilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Saline or salt-saturated environmental condition.", "grounding": "ENVO:01000687", "id": "high_salt_environment", "is_orphan": false, "label": "high-salt environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Sodium carbonate-rich, alkaline, saline habitat.", "grounding": null, "id": "soda_lake_environment", "is_orphan": false, "label": "saline soda lake environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Haloalkaliphilic salt and alkaline-pH adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -671,10 +689,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

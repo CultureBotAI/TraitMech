@@ -60,7 +60,7 @@
             <strong>numerical environmental axis</strong>
             <span class="edge-predicate">defines</span>
             <strong>delta phenotype with numerical limits</strong>
-            
+            <code>METPO:2007500</code>
             <p>A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>delta phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl delta is an axis-specific delta phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>pH delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>delta phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH delta is an axis-specific delta phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>temperature delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>delta phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature delta is an axis-specific delta phenotype.</p>
             <ul>
               
@@ -265,6 +265,18 @@
           <time>2026-05-13T12:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing the delta phenotype as a cross-axis breadth descriptor with axis-specific children for NaCl, pH, and temperature.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -624,7 +636,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph framing the delta phenotype as a generic derived breadth descriptor over any numerical environmental axis, with `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "numerical_environmental_axis", "target": "delta_phenotype_trait"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_delta", "target": "delta_phenotype_trait"}, {"description": "pH delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_delta", "target": "delta_phenotype_trait"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_delta", "target": "delta_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": null, "source": "numerical environmental axis", "target": "delta phenotype with numerical limits"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl delta", "target": "delta phenotype with numerical limits"}, {"description": "pH delta is an axis-specific delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": null, "source": "pH delta", "target": "delta phenotype with numerical limits"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": null, "source": "temperature delta", "target": "delta phenotype with numerical limits"}], "graph_id": "delta_phenotype_breadth_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Phenotype defined by the max \u2212 min span of a growth-supporting environmental variable.", "grounding": "METPO:1000534", "id": "delta_phenotype_trait", "is_orphan": false, "label": "delta phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}], "title": "Delta phenotype breadth descriptor across environmental axes"}];
+  var graphs = [{"description": "DOI-backed graph framing the delta phenotype as a generic derived breadth descriptor over any numerical environmental axis, with `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "delta_phenotype_trait"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta", "target": "delta_phenotype_trait"}, {"description": "pH delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta", "target": "delta_phenotype_trait"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta", "target": "delta_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "delta phenotype with numerical limits"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta", "target": "delta phenotype with numerical limits"}, {"description": "pH delta is an axis-specific delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta", "target": "delta phenotype with numerical limits"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta", "target": "delta phenotype with numerical limits"}], "graph_id": "delta_phenotype_breadth_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Phenotype defined by the max \u2212 min span of a growth-supporting environmental variable.", "grounding": "METPO:1000534", "id": "delta_phenotype_trait", "is_orphan": false, "label": "delta phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}], "title": "Delta phenotype breadth descriptor across environmental axes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +647,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>phz operons</strong>
             <span class="edge-predicate">encodes</span>
             <strong>phenazine biosynthesis</strong>
-            
+            <code>biolink:encodes</code>
             <p>phz operons encode enzymes required for phenazine biosynthesis.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>phenazine biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>pyocyanin</strong>
-            
+            <code>METPO:2000202</code>
             <p>Phenazine biosynthesis produces pyocyanin.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>pyocyanin</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible green color</strong>
-            
+            <code>biolink:causes</code>
             <p>Pyocyanin contributes blue-green visible pigmentation.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>visible green color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>green pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible green or blue-green culture color manifests the green-pigmented phenotype.</p>
             <ul>
               
@@ -261,6 +261,30 @@
           <time>2026-05-11T18:45:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for phz operons, phenazine biosynthesis, pyocyanin, and visible green/blue-green color.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:encodes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -620,7 +644,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking green or blue-green microbial pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and visible green culture color.", "edges": [{"description": "phz operons encode enzymes required for phenazine biosynthesis.", "evidence": [{"notes": "Supports phz genes as pyocyanin/phenazine biosynthesis machinery.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "phenazine synthesis operons including phzA1, phzA2, phzS, and phzM"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "phz_operons", "target": "phenazine_biosynthesis"}, {"description": "Phenazine biosynthesis produces pyocyanin.", "evidence": [{"notes": "Supports pyocyanin production as a phenazine biosynthetic process.", "reference": "DOI:10.1128/jb.138.3.846-852.1979", "snippet": "pyocyanine biosynthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "phenazine_biosynthesis", "target": "pyocyanin"}, {"description": "Pyocyanin contributes blue-green visible pigmentation.", "evidence": [{"notes": "Supports pyocyanin as a visible blue/green pigment.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "Pyocyanin is a blue phenazine pigment"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "pyocyanin", "target": "visible_green_color"}, {"description": "Visible green or blue-green culture color manifests the green-pigmented phenotype.", "evidence": [{"notes": "Supports trait-level green pigmentation from pyocyanin and related pigments in representative cultures.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "lead to the green colorization of the culture plate"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_green_color", "target": "green_pigmented_trait"}], "evidence_rows": [{"description": "phz operons encode enzymes required for phenazine biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phz genes as pyocyanin/phenazine biosynthesis machinery.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "phenazine synthesis operons including phzA1, phzA2, phzS, and phzM"}], "predicate": "encodes", "predicate_id": null, "source": "phz operons", "target": "phenazine biosynthesis"}, {"description": "Phenazine biosynthesis produces pyocyanin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pyocyanin production as a phenazine biosynthetic process.", "reference": "DOI:10.1128/jb.138.3.846-852.1979", "snippet": "pyocyanine biosynthesis"}], "predicate": "produces", "predicate_id": null, "source": "phenazine biosynthesis", "target": "pyocyanin"}, {"description": "Pyocyanin contributes blue-green visible pigmentation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pyocyanin as a visible blue/green pigment.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "Pyocyanin is a blue phenazine pigment"}], "predicate": "causes", "predicate_id": null, "source": "pyocyanin", "target": "visible green color"}, {"description": "Visible green or blue-green culture color manifests the green-pigmented phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports trait-level green pigmentation from pyocyanin and related pigments in representative cultures.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "lead to the green colorization of the culture plate"}], "predicate": "manifests as", "predicate_id": null, "source": "visible green color", "target": "green pigmented"}], "graph_id": "green_pigmented_pyocyanin_phenazine", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Microbial pigmentation appearing green or blue-green.", "grounding": "METPO:1003025", "id": "green_pigmented_trait", "is_orphan": false, "label": "green pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthetic pathway producing phenazine pigments.", "grounding": null, "id": "phenazine_biosynthesis", "is_orphan": false, "label": "phenazine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Phenazine biosynthesis gene clusters in representative bacteria.", "grounding": null, "id": "phz_operons", "is_orphan": false, "label": "phz operons", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Blue-green phenazine pigment produced by Pseudomonas aeruginosa.", "grounding": null, "id": "pyocyanin", "is_orphan": false, "label": "pyocyanin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Observed green or blue-green culture color.", "grounding": null, "id": "visible_green_color", "is_orphan": false, "label": "visible green color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Green pigmentation pyocyanin phenazine mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking green or blue-green microbial pigmentation to phenazine biosynthesis, phz genes, pyocyanin production, and visible green culture color.", "edges": [{"description": "phz operons encode enzymes required for phenazine biosynthesis.", "evidence": [{"notes": "Supports phz genes as pyocyanin/phenazine biosynthesis machinery.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "phenazine synthesis operons including phzA1, phzA2, phzS, and phzM"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": "biolink:encodes", "source": "phz_operons", "target": "phenazine_biosynthesis"}, {"description": "Phenazine biosynthesis produces pyocyanin.", "evidence": [{"notes": "Supports pyocyanin production as a phenazine biosynthetic process.", "reference": "DOI:10.1128/jb.138.3.846-852.1979", "snippet": "pyocyanine biosynthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "phenazine_biosynthesis", "target": "pyocyanin"}, {"description": "Pyocyanin contributes blue-green visible pigmentation.", "evidence": [{"notes": "Supports pyocyanin as a visible blue/green pigment.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "Pyocyanin is a blue phenazine pigment"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "pyocyanin", "target": "visible_green_color"}, {"description": "Visible green or blue-green culture color manifests the green-pigmented phenotype.", "evidence": [{"notes": "Supports trait-level green pigmentation from pyocyanin and related pigments in representative cultures.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "lead to the green colorization of the culture plate"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_green_color", "target": "green_pigmented_trait"}], "evidence_rows": [{"description": "phz operons encode enzymes required for phenazine biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phz genes as pyocyanin/phenazine biosynthesis machinery.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "phenazine synthesis operons including phzA1, phzA2, phzS, and phzM"}], "predicate": "encodes", "predicate_id": "biolink:encodes", "source": "phz operons", "target": "phenazine biosynthesis"}, {"description": "Phenazine biosynthesis produces pyocyanin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pyocyanin production as a phenazine biosynthetic process.", "reference": "DOI:10.1128/jb.138.3.846-852.1979", "snippet": "pyocyanine biosynthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "phenazine biosynthesis", "target": "pyocyanin"}, {"description": "Pyocyanin contributes blue-green visible pigmentation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pyocyanin as a visible blue/green pigment.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "Pyocyanin is a blue phenazine pigment"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "pyocyanin", "target": "visible green color"}, {"description": "Visible green or blue-green culture color manifests the green-pigmented phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports trait-level green pigmentation from pyocyanin and related pigments in representative cultures.", "reference": "DOI:10.1186/s12934-023-02122-1", "snippet": "lead to the green colorization of the culture plate"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible green color", "target": "green pigmented"}], "graph_id": "green_pigmented_pyocyanin_phenazine", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Microbial pigmentation appearing green or blue-green.", "grounding": "METPO:1003025", "id": "green_pigmented_trait", "is_orphan": false, "label": "green pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthetic pathway producing phenazine pigments.", "grounding": null, "id": "phenazine_biosynthesis", "is_orphan": false, "label": "phenazine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Phenazine biosynthesis gene clusters in representative bacteria.", "grounding": null, "id": "phz_operons", "is_orphan": false, "label": "phz operons", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Blue-green phenazine pigment produced by Pseudomonas aeruginosa.", "grounding": null, "id": "pyocyanin", "is_orphan": false, "label": "pyocyanin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Observed green or blue-green culture color.", "grounding": null, "id": "visible_green_color", "is_orphan": false, "label": "visible green color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Green pigmentation pyocyanin phenazine mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +655,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

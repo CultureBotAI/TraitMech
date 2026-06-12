@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>carbon source utilization</strong>
-            <span class="edge-predicate">determines</span>
+            <span class="edge-predicate">causes</span>
             <strong>trophic type</strong>
-            
+            <code>biolink:causes</code>
             <p>Carbon-source utilization defines the auto/heterotrophy axis of the trophic classification.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>energy source utilization</strong>
-            <span class="edge-predicate">determines</span>
+            <span class="edge-predicate">causes</span>
             <strong>trophic type</strong>
-            
+            <code>biolink:causes</code>
             <p>Energy-source utilization defines the photo/chemotrophy axis of the trophic classification.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>electron donor utilization</strong>
-            <span class="edge-predicate">determines</span>
+            <span class="edge-predicate">causes</span>
             <strong>trophic type</strong>
-            
+            <code>biolink:causes</code>
             <p>Electron-donor utilization defines the litho/organotrophy axis of the trophic classification.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>autotrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>trophic type</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Autotrophy is a child phenotype of trophic type.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>heterotrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>trophic type</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Heterotrophy is a child phenotype of trophic type.</p>
             <ul>
               
@@ -162,7 +162,7 @@
             <strong>phototrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>trophic type</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Phototrophy is a child phenotype of trophic type.</p>
             <ul>
               
@@ -179,7 +179,7 @@
             <strong>chemotrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>trophic type</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Chemotrophy is a child phenotype of trophic type.</p>
             <ul>
               
@@ -396,6 +396,24 @@
           <time>2026-05-11T22:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing trophic type by its three classification axes (carbon source, energy source, electron donor) and child phenotypes (autotroph, heterotroph, phototroph, chemotroph).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:32Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×4).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 3 causal-edge predicate label(s) to align with existing groundings: determines → causes ×3.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:51Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×3).</p>
         </li>
         
       </ol>
@@ -755,7 +773,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the three classification axes (carbon source, energy source, electron donor) to the metabolic pathways an organism encodes, which jointly determine its trophic type.", "edges": [{"description": "Carbon-source utilization defines the auto/heterotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports carbon-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-1", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "carbon_source_use", "target": "trophic_type_trait"}, {"description": "Energy-source utilization defines the photo/chemotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports energy-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-2", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "energy_source_use", "target": "trophic_type_trait"}, {"description": "Electron-donor utilization defines the litho/organotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports electron-donor utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "electron donor"}], "id": "edge-3", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "electron_donor_use", "target": "trophic_type_trait"}, {"description": "The genome-encoded set of carbon-fixation, energy-conserving, and electron-transfer pathways realizes the organism\u0027s trophic type.", "evidence": [{"notes": "Supports genome-encoded pathway repertoires as the proximate determinant of trophic phenotypes.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "molecular mechanisms of adaptation"}], "id": "edge-4", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "encoded_metabolic_pathways", "target": "trophic_type_trait"}, {"description": "Autotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports autotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "autotrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Heterotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports heterotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "heterotrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Phototrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports phototrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "phototrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Chemotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports chemotrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-8", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "chemotrophic_phenotype", "target": "trophic_type_trait"}], "evidence_rows": [{"description": "Carbon-source utilization defines the auto/heterotrophy axis of the trophic classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carbon-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "determines", "predicate_id": null, "source": "carbon source utilization", "target": "trophic type"}, {"description": "Energy-source utilization defines the photo/chemotrophy axis of the trophic classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "determines", "predicate_id": null, "source": "energy source utilization", "target": "trophic type"}, {"description": "Electron-donor utilization defines the litho/organotrophy axis of the trophic classification.", "edge_id": "edge-3", "evidence": [{"notes": "Supports electron-donor utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "electron donor"}], "predicate": "determines", "predicate_id": null, "source": "electron donor utilization", "target": "trophic type"}, {"description": "The genome-encoded set of carbon-fixation, energy-conserving, and electron-transfer pathways realizes the organism\u0027s trophic type.", "edge_id": "edge-4", "evidence": [{"notes": "Supports genome-encoded pathway repertoires as the proximate determinant of trophic phenotypes.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "molecular mechanisms of adaptation"}], "predicate": "realizes", "predicate_id": null, "source": "encoded metabolic pathways", "target": "trophic type"}, {"description": "Autotrophy is a child phenotype of trophic type.", "edge_id": "edge-5", "evidence": [{"notes": "Supports autotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "is a", "predicate_id": null, "source": "autotrophic", "target": "trophic type"}, {"description": "Heterotrophy is a child phenotype of trophic type.", "edge_id": "edge-6", "evidence": [{"notes": "Supports heterotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "is a", "predicate_id": null, "source": "heterotrophic", "target": "trophic type"}, {"description": "Phototrophy is a child phenotype of trophic type.", "edge_id": "edge-7", "evidence": [{"notes": "Supports phototrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "is a", "predicate_id": null, "source": "phototrophic", "target": "trophic type"}, {"description": "Chemotrophy is a child phenotype of trophic type.", "edge_id": "edge-8", "evidence": [{"notes": "Supports chemotrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "is a", "predicate_id": null, "source": "chemotrophic", "target": "trophic type"}], "graph_id": "trophic_type_classification_axes", "issues": [], "nodes": [{"color": "#dbeafe", "description": "CO2-fixing trophic phenotype.", "grounding": "METPO:1000632", "id": "autotrophic_phenotype", "is_orphan": false, "label": "autotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Use of inorganic (CO2) or organic carbon for biosynthesis.", "grounding": null, "id": "carbon_source_use", "is_orphan": false, "label": "carbon source utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Chemical-energy-driven trophic phenotype.", "grounding": "METPO:1000641", "id": "chemotrophic_phenotype", "is_orphan": false, "label": "chemotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Use of inorganic (lithotrophy) or organic (organotrophy) electron donors.", "grounding": null, "id": "electron_donor_use", "is_orphan": false, "label": "electron donor utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "The set of biosynthetic, energy-conserving, and electron-transfer pathways present in the genome.", "grounding": null, "id": "encoded_metabolic_pathways", "is_orphan": false, "label": "encoded metabolic pathways", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Use of light (phototrophy) or chemical (chemotrophy) energy.", "grounding": null, "id": "energy_source_use", "is_orphan": false, "label": "energy source utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Organic-carbon-utilizing trophic phenotype.", "grounding": "METPO:1000644", "id": "heterotrophic_phenotype", "is_orphan": false, "label": "heterotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven energy-acquisition trophic phenotype.", "grounding": "METPO:1000660", "id": "phototrophic_phenotype", "is_orphan": false, "label": "phototrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Classification of how an organism obtains carbon and energy.", "grounding": "METPO:1000631", "id": "trophic_type_trait", "is_orphan": false, "label": "trophic type", "node_type": "TRAIT", "xrefs": []}], "title": "Trophic type classification axes"}];
+  var graphs = [{"description": "DOI-backed graph linking the three classification axes (carbon source, energy source, electron donor) to the metabolic pathways an organism encodes, which jointly determine its trophic type.", "edges": [{"description": "Carbon-source utilization defines the auto/heterotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports carbon-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "carbon_source_use", "target": "trophic_type_trait"}, {"description": "Energy-source utilization defines the photo/chemotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports energy-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "energy_source_use", "target": "trophic_type_trait"}, {"description": "Electron-donor utilization defines the litho/organotrophy axis of the trophic classification.", "evidence": [{"notes": "Supports electron-donor utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "electron donor"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "electron_donor_use", "target": "trophic_type_trait"}, {"description": "The genome-encoded set of carbon-fixation, energy-conserving, and electron-transfer pathways realizes the organism\u0027s trophic type.", "evidence": [{"notes": "Supports genome-encoded pathway repertoires as the proximate determinant of trophic phenotypes.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "molecular mechanisms of adaptation"}], "id": "edge-4", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "encoded_metabolic_pathways", "target": "trophic_type_trait"}, {"description": "Autotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports autotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "autotrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Heterotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports heterotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "heterotrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Phototrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports phototrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phototrophic_phenotype", "target": "trophic_type_trait"}, {"description": "Chemotrophy is a child phenotype of trophic type.", "evidence": [{"notes": "Supports chemotrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "id": "edge-8", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "chemotrophic_phenotype", "target": "trophic_type_trait"}], "evidence_rows": [{"description": "Carbon-source utilization defines the auto/heterotrophy axis of the trophic classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carbon-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "carbon source utilization", "target": "trophic type"}, {"description": "Energy-source utilization defines the photo/chemotrophy axis of the trophic classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy-source utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "energy source utilization", "target": "trophic type"}, {"description": "Electron-donor utilization defines the litho/organotrophy axis of the trophic classification.", "edge_id": "edge-3", "evidence": [{"notes": "Supports electron-donor utilization as a primary trophic-type axis.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "electron donor"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "electron donor utilization", "target": "trophic type"}, {"description": "The genome-encoded set of carbon-fixation, energy-conserving, and electron-transfer pathways realizes the organism\u0027s trophic type.", "edge_id": "edge-4", "evidence": [{"notes": "Supports genome-encoded pathway repertoires as the proximate determinant of trophic phenotypes.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "molecular mechanisms of adaptation"}], "predicate": "realizes", "predicate_id": null, "source": "encoded metabolic pathways", "target": "trophic type"}, {"description": "Autotrophy is a child phenotype of trophic type.", "edge_id": "edge-5", "evidence": [{"notes": "Supports autotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "autotrophic", "target": "trophic type"}, {"description": "Heterotrophy is a child phenotype of trophic type.", "edge_id": "edge-6", "evidence": [{"notes": "Supports heterotrophy as one carbon-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "carbon source"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "heterotrophic", "target": "trophic type"}, {"description": "Phototrophy is a child phenotype of trophic type.", "edge_id": "edge-7", "evidence": [{"notes": "Supports phototrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phototrophic", "target": "trophic type"}, {"description": "Chemotrophy is a child phenotype of trophic type.", "edge_id": "edge-8", "evidence": [{"notes": "Supports chemotrophy as one energy-source-defined trophic phenotype.", "reference": "DOI:10.1146/annurev.micro.61.080706.093130", "snippet": "energy source"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "chemotrophic", "target": "trophic type"}], "graph_id": "trophic_type_classification_axes", "issues": [], "nodes": [{"color": "#dbeafe", "description": "CO2-fixing trophic phenotype.", "grounding": "METPO:1000632", "id": "autotrophic_phenotype", "is_orphan": false, "label": "autotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Use of inorganic (CO2) or organic carbon for biosynthesis.", "grounding": null, "id": "carbon_source_use", "is_orphan": false, "label": "carbon source utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Chemical-energy-driven trophic phenotype.", "grounding": "METPO:1000641", "id": "chemotrophic_phenotype", "is_orphan": false, "label": "chemotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Use of inorganic (lithotrophy) or organic (organotrophy) electron donors.", "grounding": null, "id": "electron_donor_use", "is_orphan": false, "label": "electron donor utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "The set of biosynthetic, energy-conserving, and electron-transfer pathways present in the genome.", "grounding": null, "id": "encoded_metabolic_pathways", "is_orphan": false, "label": "encoded metabolic pathways", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Use of light (phototrophy) or chemical (chemotrophy) energy.", "grounding": null, "id": "energy_source_use", "is_orphan": false, "label": "energy source utilization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Organic-carbon-utilizing trophic phenotype.", "grounding": "METPO:1000644", "id": "heterotrophic_phenotype", "is_orphan": false, "label": "heterotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven energy-acquisition trophic phenotype.", "grounding": "METPO:1000660", "id": "phototrophic_phenotype", "is_orphan": false, "label": "phototrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Classification of how an organism obtains carbon and energy.", "grounding": "METPO:1000631", "id": "trophic_type_trait", "is_orphan": false, "label": "trophic type", "node_type": "TRAIT", "xrefs": []}], "title": "Trophic type classification axes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -766,10 +784,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

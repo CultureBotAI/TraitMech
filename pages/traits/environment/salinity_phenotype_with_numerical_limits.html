@@ -60,7 +60,7 @@
             <strong>NaCl concentration axis</strong>
             <span class="edge-predicate">defines</span>
             <strong>salinity phenotype with numerical limits</strong>
-            
+            <code>METPO:2007500</code>
             <p>Ambient NaCl concentration is the quantitative axis defining salinity phenotypes.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>salinity phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl optimum is a numerical-limit salinity phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>NaCl range</strong>
             <span class="edge-predicate">is a</span>
             <strong>salinity phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl range is a numerical-limit salinity phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>NaCl delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>salinity phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl delta is a numerical-limit salinity phenotype.</p>
             <ul>
               
@@ -265,6 +265,18 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking the NaCl concentration axis to NaCl optimum, range, and delta measurement types.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -624,7 +636,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the ambient NaCl concentration axis to the three numerical-limit measurement types (optimum, range, delta) that together classify halophily.", "edges": [{"description": "Ambient NaCl concentration is the quantitative axis defining salinity phenotypes.", "evidence": [{"notes": "Supports NaCl concentration as the quantitative axis underlying salinity-phenotype descriptors.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "nacl_concentration_axis", "target": "salinity_phenotype_trait"}, {"description": "NaCl optimum is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports NaCl optimum as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_optimum", "target": "salinity_phenotype_trait"}, {"description": "NaCl range is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports NaCl range as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_range", "target": "salinity_phenotype_trait"}, {"description": "NaCl delta is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports growth-range breadth as a derived numerical salinity descriptor of the same axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_delta", "target": "salinity_phenotype_trait"}], "evidence_rows": [{"description": "Ambient NaCl concentration is the quantitative axis defining salinity phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl concentration as the quantitative axis underlying salinity-phenotype descriptors.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "defines", "predicate_id": null, "source": "NaCl concentration axis", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl optimum is a numerical-limit salinity phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl optimum as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": null, "source": "NaCl optimum", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl range is a numerical-limit salinity phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports NaCl range as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl range", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl delta is a numerical-limit salinity phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports growth-range breadth as a derived numerical salinity descriptor of the same axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl delta", "target": "salinity phenotype with numerical limits"}], "graph_id": "salinity_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl concentration as a continuous environmental variable.", "grounding": null, "id": "nacl_concentration_axis", "is_orphan": false, "label": "NaCl concentration axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting the most efficient growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical NaCl concentration descriptor.", "grounding": "METPO:1000532", "id": "salinity_phenotype_trait", "is_orphan": false, "label": "salinity phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}], "title": "Salinity phenotype numerical-limits axis"}];
+  var graphs = [{"description": "DOI-backed graph linking the ambient NaCl concentration axis to the three numerical-limit measurement types (optimum, range, delta) that together classify halophily.", "edges": [{"description": "Ambient NaCl concentration is the quantitative axis defining salinity phenotypes.", "evidence": [{"notes": "Supports NaCl concentration as the quantitative axis underlying salinity-phenotype descriptors.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "nacl_concentration_axis", "target": "salinity_phenotype_trait"}, {"description": "NaCl optimum is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports NaCl optimum as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum", "target": "salinity_phenotype_trait"}, {"description": "NaCl range is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports NaCl range as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range", "target": "salinity_phenotype_trait"}, {"description": "NaCl delta is a numerical-limit salinity phenotype.", "evidence": [{"notes": "Supports growth-range breadth as a derived numerical salinity descriptor of the same axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta", "target": "salinity_phenotype_trait"}], "evidence_rows": [{"description": "Ambient NaCl concentration is the quantitative axis defining salinity phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl concentration as the quantitative axis underlying salinity-phenotype descriptors.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "NaCl concentration axis", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl optimum is a numerical-limit salinity phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl optimum as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl range is a numerical-limit salinity phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports NaCl range as a recognized salinity descriptor.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range", "target": "salinity phenotype with numerical limits"}, {"description": "NaCl delta is a numerical-limit salinity phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports growth-range breadth as a derived numerical salinity descriptor of the same axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta", "target": "salinity phenotype with numerical limits"}], "graph_id": "salinity_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl concentration as a continuous environmental variable.", "grounding": null, "id": "nacl_concentration_axis", "is_orphan": false, "label": "NaCl concentration axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting the most efficient growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical NaCl concentration descriptor.", "grounding": "METPO:1000532", "id": "salinity_phenotype_trait", "is_orphan": false, "label": "salinity phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}], "title": "Salinity phenotype numerical-limits axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +647,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

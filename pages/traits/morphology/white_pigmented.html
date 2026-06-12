@@ -60,7 +60,7 @@
             <strong>crtOPQMN operon</strong>
             <span class="edge-predicate">encodes</span>
             <strong>staphyloxanthin biosynthesis</strong>
-            
+            <code>biolink:encodes</code>
             <p>The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>staphyloxanthin biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>staphyloxanthin</strong>
-            
+            <code>METPO:2000202</code>
             <p>Staphyloxanthin biosynthesis produces the golden carotenoid pigment.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>low visible chromophore accumulation</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible white color</strong>
-            
+            <code>biolink:causes</code>
             <p>Lack of accumulated chromophore yields a white or nonpigmented colony appearance.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>visible white color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>white pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible white colony color manifests the white-pigmented trait.</p>
             <ul>
               
@@ -278,6 +278,30 @@
           <time>2026-05-11T19:10:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for staphyloxanthin biosynthesis machinery, low visible chromophore accumulation, and white colony appearance.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:25Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:encodes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -637,7 +661,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking white colony pigmentation to reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery, and absence or silencing of carotenoid production in representative bacteria.", "edges": [{"description": "The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "crtOPQMN_operon", "target": "staphyloxanthin_biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "staphyloxanthin_biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "id": "edge-3", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "low_visible_chromophore", "target": "staphyloxanthin_biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "low_visible_chromophore", "target": "visible_white_color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_white_color", "target": "white_pigmented_trait"}], "evidence_rows": [{"description": "The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "predicate": "encodes", "predicate_id": null, "source": "crtOPQMN operon", "target": "staphyloxanthin biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "predicate": "produces", "predicate_id": null, "source": "staphyloxanthin biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "predicate": "results from reduced", "predicate_id": null, "source": "low visible chromophore accumulation", "target": "staphyloxanthin biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "predicate": "causes", "predicate_id": null, "source": "low visible chromophore accumulation", "target": "visible white color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "predicate": "manifests as", "predicate_id": null, "source": "visible white color", "target": "white pigmented"}], "graph_id": "white_pigmented_low_chromophore", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "S. aureus carotenoid biosynthesis gene cluster for staphyloxanthin production.", "grounding": null, "id": "crtOPQMN_operon", "is_orphan": false, "label": "crtOPQMN operon", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Absence or low accumulation of colored pigment molecules.", "grounding": null, "id": "low_visible_chromophore", "is_orphan": false, "label": "low visible chromophore accumulation", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Golden carotenoid pigment of Staphylococcus aureus.", "grounding": null, "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis of the golden carotenoid pigment staphyloxanthin.", "grounding": null, "id": "staphyloxanthin_biosynthesis", "is_orphan": false, "label": "staphyloxanthin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Observed white or nonpigmented colony color.", "grounding": null, "id": "visible_white_color", "is_orphan": false, "label": "visible white color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "White or nonpigmented microbial colony or cell appearance.", "grounding": "METPO:1003029", "id": "white_pigmented_trait", "is_orphan": false, "label": "white pigmented", "node_type": "TRAIT", "xrefs": []}], "title": "White pigmentation low-chromophore mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking white colony pigmentation to reduced visible pigment accumulation, staphyloxanthin biosynthesis machinery, and absence or silencing of carotenoid production in representative bacteria.", "edges": [{"description": "The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": "biolink:encodes", "source": "crtOPQMN_operon", "target": "staphyloxanthin_biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "staphyloxanthin_biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "id": "edge-3", "is_orphan": false, "predicate": "results from reduced", "predicate_id": null, "source": "low_visible_chromophore", "target": "staphyloxanthin_biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "low_visible_chromophore", "target": "visible_white_color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_white_color", "target": "white_pigmented_trait"}], "evidence_rows": [{"description": "The crtOPQMN operon encodes machinery for staphyloxanthin biosynthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the operon as staphyloxanthin biosynthetic machinery.", "reference": "DOI:10.1038/s41426-018-0078-1", "snippet": "controlled by the crtOPQMN operon"}], "predicate": "encodes", "predicate_id": "biolink:encodes", "source": "crtOPQMN operon", "target": "staphyloxanthin biosynthesis"}, {"description": "Staphyloxanthin biosynthesis produces the golden carotenoid pigment.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link from carotenoid biosynthesis to visible golden pigment in S. aureus.", "reference": "DOI:10.1084/jem.20050846", "snippet": "Golden color imparted by carotenoid pigments"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "staphyloxanthin biosynthesis", "target": "staphyloxanthin"}, {"description": "Reduced or absent staphyloxanthin biosynthesis lowers visible pigment accumulation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports white colony phenotype when staphyloxanthin synthesis machinery is absent in a representative case.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white-colony phenotype actually lacked the crtOPQMN operon"}], "predicate": "results from reduced", "predicate_id": null, "source": "low visible chromophore accumulation", "target": "staphyloxanthin biosynthesis"}, {"description": "Lack of accumulated chromophore yields a white or nonpigmented colony appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports white appearance as a phenotype of low or absent visible pigment.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "low visible chromophore accumulation", "target": "visible white color"}, {"description": "Visible white colony color manifests the white-pigmented trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level white pigmentation in a representative microbial context.", "reference": "DOI:10.2147/IDR.S49039", "snippet": "white phenotypic variant of Staphylococcus aureus"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible white color", "target": "white pigmented"}], "graph_id": "white_pigmented_low_chromophore", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "S. aureus carotenoid biosynthesis gene cluster for staphyloxanthin production.", "grounding": null, "id": "crtOPQMN_operon", "is_orphan": false, "label": "crtOPQMN operon", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Absence or low accumulation of colored pigment molecules.", "grounding": null, "id": "low_visible_chromophore", "is_orphan": false, "label": "low visible chromophore accumulation", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Golden carotenoid pigment of Staphylococcus aureus.", "grounding": null, "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis of the golden carotenoid pigment staphyloxanthin.", "grounding": null, "id": "staphyloxanthin_biosynthesis", "is_orphan": false, "label": "staphyloxanthin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Observed white or nonpigmented colony color.", "grounding": null, "id": "visible_white_color", "is_orphan": false, "label": "visible white color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "White or nonpigmented microbial colony or cell appearance.", "grounding": "METPO:1003029", "id": "white_pigmented_trait", "is_orphan": false, "label": "white pigmented", "node_type": "TRAIT", "xrefs": []}], "title": "White pigmentation low-chromophore mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +672,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>extreme-alkaliphile Na+/H+ antiport</strong>
             <span class="edge-predicate">enables</span>
             <strong>pH range high</strong>
-            
+            <code>RO:0002327</code>
             <p>Robust Na+/H+ antiport enables growth at pH &gt; 10.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH range high</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH range high is a quantitative bin of the pH-range phenotype.</p>
             <ul>
               
@@ -233,6 +233,12 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking extreme-alkaliphile Na+/H+ antiport to the pH-range-high bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -592,7 +598,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity to a pH growth range extending above 10.", "edges": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "extreme_alkaliphile_antiport", "target": "ph_range_high_trait"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_range_high_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "edge_id": "edge-1", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": null, "source": "extreme-alkaliphile Na+/H+ antiport", "target": "pH range high"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "is a", "predicate_id": null, "source": "pH range high", "target": "pH range"}], "graph_id": "ph_range_high_extreme_alkaliphile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Robust Na+/H+ antiporter activity importing H+ at strongly alkaline external pH.", "grounding": null, "id": "extreme_alkaliphile_antiport", "is_orphan": false, "label": "extreme-alkaliphile Na+/H+ antiport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range extending above ~10.", "grounding": "METPO:1000464", "id": "ph_range_high_trait", "is_orphan": false, "label": "pH range high", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-high extreme-alkaliphile range"}];
+  var graphs = [{"description": "DOI-backed graph linking extreme-alkaliphile Na+/H+ antiporter activity to a pH growth range extending above 10.", "edges": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "extreme_alkaliphile_antiport", "target": "ph_range_high_trait"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_high_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Robust Na+/H+ antiport enables growth at pH \u003e 10.", "edge_id": "edge-1", "evidence": [{"notes": "Supports antiporter-driven proton re-import as the extreme-alkaliphile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "extreme-alkaliphile Na+/H+ antiport", "target": "pH range high"}, {"description": "pH range high is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 10\u201314 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range high", "target": "pH range"}], "graph_id": "ph_range_high_extreme_alkaliphile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Robust Na+/H+ antiporter activity importing H+ at strongly alkaline external pH.", "grounding": null, "id": "extreme_alkaliphile_antiport", "is_orphan": false, "label": "extreme-alkaliphile Na+/H+ antiport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range extending above ~10.", "grounding": "METPO:1000464", "id": "ph_range_high_trait", "is_orphan": false, "label": "pH range high", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-high extreme-alkaliphile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,10 +609,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

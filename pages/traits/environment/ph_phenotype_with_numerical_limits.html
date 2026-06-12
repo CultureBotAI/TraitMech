@@ -60,7 +60,7 @@
             <strong>external pH axis</strong>
             <span class="edge-predicate">defines</span>
             <strong>pH phenotype with numerical limits</strong>
-            
+            <code>METPO:2007500</code>
             <p>External pH is the quantitative axis defining pH phenotypes.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH optimum is a numerical-limit pH phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>pH range</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH range is a numerical-limit pH phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>pH delta</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH delta is a numerical-limit pH phenotype.</p>
             <ul>
               
@@ -265,6 +265,18 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking the external pH axis to pH optimum, range, and delta measurement types.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -624,7 +636,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the external pH (H+ activity) axis to the three numerical-limit measurement types (optimum, range, delta) that together classify acidophile, neutrophile, and alkaliphile physiology.", "edges": [{"description": "External pH is the quantitative axis defining pH phenotypes.", "evidence": [{"notes": "Supports external pH as the standard descriptor axis for microbial pH phenotypes.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "external_ph_axis", "target": "ph_phenotype_trait"}, {"description": "pH optimum is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_optimum", "target": "ph_phenotype_trait"}, {"description": "pH range is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH range as the span of external pH over which the proton motive force remains compatible with growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_range", "target": "ph_phenotype_trait"}, {"description": "pH delta is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_delta", "target": "ph_phenotype_trait"}], "evidence_rows": [{"description": "External pH is the quantitative axis defining pH phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the standard descriptor axis for microbial pH phenotypes.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": null, "source": "external pH axis", "target": "pH phenotype with numerical limits"}, {"description": "pH optimum is a numerical-limit pH phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": null, "source": "pH optimum", "target": "pH phenotype with numerical limits"}, {"description": "pH range is a numerical-limit pH phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH range as the span of external pH over which the proton motive force remains compatible with growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": null, "source": "pH range", "target": "pH phenotype with numerical limits"}, {"description": "pH delta is a numerical-limit pH phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": null, "source": "pH delta", "target": "pH phenotype with numerical limits"}], "graph_id": "ph_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External proton activity (pH) as a continuous environmental variable.", "grounding": null, "id": "external_ph_axis", "is_orphan": false, "label": "external pH axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting the most efficient growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical external-pH descriptor.", "grounding": "METPO:1000531", "id": "ph_phenotype_trait", "is_orphan": false, "label": "pH phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}], "title": "pH phenotype numerical-limits axis"}];
+  var graphs = [{"description": "DOI-backed graph linking the external pH (H+ activity) axis to the three numerical-limit measurement types (optimum, range, delta) that together classify acidophile, neutrophile, and alkaliphile physiology.", "edges": [{"description": "External pH is the quantitative axis defining pH phenotypes.", "evidence": [{"notes": "Supports external pH as the standard descriptor axis for microbial pH phenotypes.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external_ph_axis", "target": "ph_phenotype_trait"}, {"description": "pH optimum is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum", "target": "ph_phenotype_trait"}, {"description": "pH range is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH range as the span of external pH over which the proton motive force remains compatible with growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range", "target": "ph_phenotype_trait"}, {"description": "pH delta is a numerical-limit pH phenotype.", "evidence": [{"notes": "Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta", "target": "ph_phenotype_trait"}], "evidence_rows": [{"description": "External pH is the quantitative axis defining pH phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the standard descriptor axis for microbial pH phenotypes.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external pH axis", "target": "pH phenotype with numerical limits"}, {"description": "pH optimum is a numerical-limit pH phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum", "target": "pH phenotype with numerical limits"}, {"description": "pH range is a numerical-limit pH phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH range as the span of external pH over which the proton motive force remains compatible with growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range", "target": "pH phenotype with numerical limits"}, {"description": "pH delta is a numerical-limit pH phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta", "target": "pH phenotype with numerical limits"}], "graph_id": "ph_phenotype_numerical_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External proton activity (pH) as a continuous environmental variable.", "grounding": null, "id": "external_ph_axis", "is_orphan": false, "label": "external pH axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting the most efficient growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by a numerical external-pH descriptor.", "grounding": "METPO:1000531", "id": "ph_phenotype_trait", "is_orphan": false, "label": "pH phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}], "title": "pH phenotype numerical-limits axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +647,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

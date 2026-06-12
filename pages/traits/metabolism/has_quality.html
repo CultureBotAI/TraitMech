@@ -99,9 +99,21 @@
         </li>
         
         <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/microbe.html">microbe</a>
+          <span class="sim">0.436</span>
+        </li>
+        
+        <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/enzyme_activity_analyzed.html">enzyme activity analyzed</a>
           <span class="sim">0.436</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/enzyme.html">enzyme</a>
+          <span class="sim">0.433</span>
         </li>
         
         <li>
@@ -120,18 +132,6 @@
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/does_not_show_activity_of.html">does not show activity of</a>
           <span class="sim">0.425</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">observation</span>
-          <a href="../../traits/observation/ph_observation.html">pH observation</a>
-          <span class="sim">0.423</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">observation</span>
-          <a href="../../traits/observation/nacl_range_observation.html">NaCl range observation</a>
-          <span class="sim">0.423</span>
         </li>
         
       </ul>
@@ -155,6 +155,19 @@
           <time>2026-05-10T00:00:00-07:00</time> ·
           <strong>DEPRECATED_PROPERTY_RECORD</strong> · codex
           <p class="changes">Deprecated generic metabolism relation carrier; later replacement should use more specific trait records that combine the relation with the chemical, phenotype, quality, compartment, enzyme or activity target, growth context, measurement, or other entity.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-17T15:30:00-07:00</time> ·
+          <strong>DEPRECATION_CONFIRMED_AS_OUT_OF_SCOPE</strong> · claude
+          <p class="changes">DEPRECATED status confirmed as final after the predicate+class composition
+pivot (#54/#55/#56). This record&#39;s observation-shape modelling is out of
+scope for TraitMech; the trait vocabulary + mechanism need is met by the un-
+deprecated METPO predicates, and per-organism numeric observations belong
+downstream (KG-Microbe / BacDive). See
+docs/DEPRECATED_REPLACEMENT_PROPOSAL.md, section &#39;Observation-value records
+stay deprecated&#39;, for the rationale.
+</p>
         </li>
         
       </ol>
@@ -202,10 +215,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

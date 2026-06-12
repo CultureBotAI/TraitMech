@@ -60,7 +60,7 @@
             <strong>chemolithotrophic</strong>
             <span class="edge-predicate">uses electron donor</span>
             <strong>inorganic chemical electron donor</strong>
-            
+            <code>METPO:2000009</code>
             <p>Chemolithotrophy uses inorganic chemicals as electron donors.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>ammonia monooxygenase</strong>
             <span class="edge-predicate">oxidizes</span>
             <strong>ammonia</strong>
-            
+            <code>METPO:2000016</code>
             <p>Ammonia monooxygenase initiates ammonia oxidation.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>ammonia</strong>
             <span class="edge-predicate">oxidized to</span>
             <strong>hydroxylamine</strong>
-            
+            <code>METPO:2007405</code>
             <p>Ammonia oxidation proceeds through hydroxylamine.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>hydroxylamine</strong>
             <span class="edge-predicate">oxidized to</span>
             <strong>nitrite</strong>
-            
+            <code>METPO:2007405</code>
             <p>Hydroxylamine oxidation yields nitrite in ammonia oxidizers.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>Sox enzyme system</strong>
             <span class="edge-predicate">oxidizes</span>
             <strong>thiosulfate</strong>
-            
+            <code>METPO:2000016</code>
             <p>Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>inorganic chemical electron donor</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
-            
+            <code>METPO:2007402</code>
             <p>Oxidation of inorganic donors feeds electrons into respiratory chains.</p>
             <ul>
               
@@ -162,7 +162,7 @@
             <strong>respiratory chain</strong>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            
+            <code>METPO:2000202</code>
             <p>Respiratory energy conservation produces ATP.</p>
             <ul>
               
@@ -312,6 +312,42 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for inorganic chemical electron donors, ammonia oxidation, sulfur oxidation, respiratory energy conservation, and ATP synthesis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-16T05:00:00-07:00</time> ·
+          <strong>ADDED_ORGANISM_EXAMPLE</strong> · claude
+          <p class="changes">Added Nitrosomonas europaea organism example with PMID-backed evidence.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000016×2, METPO:2000009×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007405×2, METPO:2007402×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022904×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A059V4Z9×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:33Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:33542×1).</p>
         </li>
         
       </ol>
@@ -671,7 +707,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph for inorganic chemical electron donors, representative ammonia and sulfur oxidation, and respiratory energy conservation.", "edges": [{"description": "Chemolithotrophy uses inorganic chemicals as electron donors.", "evidence": [{"notes": "Supports inorganic chemical oxidation as chemolithotrophy.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithotrophic_trait", "target": "inorganic_chemical_donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation.", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic process.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "ammonia-oxidizing bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "ammonia_monooxygenase", "target": "ammonia"}, {"description": "Ammonia oxidation proceeds through hydroxylamine.", "evidence": [{"notes": "Supports AMO-catalyzed ammonia-to-hydroxylamine conversion.", "reference": "DOI:10.1007/s00775-020-01820-0", "snippet": "convert ammonia to hydroxylamine"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": null, "source": "ammonia", "target": "hydroxylamine"}, {"description": "Hydroxylamine oxidation yields nitrite in ammonia oxidizers.", "evidence": [{"notes": "Supports hydroxylamine oxidation as the next nitrification step.", "reference": "DOI:10.3389/fmicb.2012.00210", "snippet": "oxidation of hydroxylamine to nitrite"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": null, "source": "hydroxylamine", "target": "nitrite"}, {"description": "Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.", "evidence": [{"notes": "Supports the Sox multienzyme system in lithotrophic sulfur oxidation.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "oxidation of thiosulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "sox_enzyme_system", "target": "thiosulfate"}, {"description": "Oxidation of inorganic donors feeds electrons into respiratory chains.", "evidence": [{"notes": "Supports respiratory chains as energy-conserving redox systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-6", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic_chemical_donor", "target": "respiratory_chain"}, {"description": "Respiratory energy conservation produces ATP.", "evidence": [{"notes": "Supports ATP synthesis from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "respiratory_chain", "target": "atp"}], "evidence_rows": [{"description": "Chemolithotrophy uses inorganic chemicals as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic chemical oxidation as chemolithotrophy.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithotrophic", "target": "inorganic chemical electron donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic process.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "ammonia-oxidizing bacteria"}], "predicate": "oxidizes", "predicate_id": null, "source": "ammonia monooxygenase", "target": "ammonia"}, {"description": "Ammonia oxidation proceeds through hydroxylamine.", "edge_id": "edge-3", "evidence": [{"notes": "Supports AMO-catalyzed ammonia-to-hydroxylamine conversion.", "reference": "DOI:10.1007/s00775-020-01820-0", "snippet": "convert ammonia to hydroxylamine"}], "predicate": "oxidized to", "predicate_id": null, "source": "ammonia", "target": "hydroxylamine"}, {"description": "Hydroxylamine oxidation yields nitrite in ammonia oxidizers.", "edge_id": "edge-4", "evidence": [{"notes": "Supports hydroxylamine oxidation as the next nitrification step.", "reference": "DOI:10.3389/fmicb.2012.00210", "snippet": "oxidation of hydroxylamine to nitrite"}], "predicate": "oxidized to", "predicate_id": null, "source": "hydroxylamine", "target": "nitrite"}, {"description": "Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the Sox multienzyme system in lithotrophic sulfur oxidation.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "oxidation of thiosulfate"}], "predicate": "oxidizes", "predicate_id": null, "source": "Sox enzyme system", "target": "thiosulfate"}, {"description": "Oxidation of inorganic donors feeds electrons into respiratory chains.", "edge_id": "edge-6", "evidence": [{"notes": "Supports respiratory chains as energy-conserving redox systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic chemical electron donor", "target": "respiratory chain"}, {"description": "Respiratory energy conservation produces ATP.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP synthesis from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": null, "source": "respiratory chain", "target": "ATP"}], "graph_id": "chemolithotrophic_inorganic_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reduced nitrogen electron donor.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme initiating aerobic ammonia oxidation.", "grounding": null, "id": "ammonia_monooxygenase", "is_orphan": false, "label": "ammonia monooxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced by respiratory energy conservation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemicals for energy generation.", "grounding": "METPO:1000639", "id": "chemolithotrophic_trait", "is_orphan": false, "label": "chemolithotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate formed from ammonia oxidation.", "grounding": null, "id": "hydroxylamine", "is_orphan": false, "label": "hydroxylamine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic chemical substrate.", "grounding": null, "id": "inorganic_chemical_donor", "is_orphan": false, "label": "inorganic chemical electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized nitrogen product of ammonia oxidation.", "grounding": "CHEBI:16301", "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system conserving energy from donor oxidation.", "grounding": null, "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfur-oxidizing multienzyme system.", "grounding": null, "id": "sox_enzyme_system", "is_orphan": false, "label": "Sox enzyme system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Representative reduced sulfur donor.", "grounding": null, "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Chemolithotrophic inorganic chemical oxidation"}];
+  var graphs = [{"description": "DOI-backed graph for inorganic chemical electron donors, representative ammonia and sulfur oxidation, and respiratory energy conservation.", "edges": [{"description": "Chemolithotrophy uses inorganic chemicals as electron donors.", "evidence": [{"notes": "Supports inorganic chemical oxidation as chemolithotrophy.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "chemolithotrophic_trait", "target": "inorganic_chemical_donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation.", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic process.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "ammonia-oxidizing bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "ammonia_monooxygenase", "target": "ammonia"}, {"description": "Ammonia oxidation proceeds through hydroxylamine.", "evidence": [{"notes": "Supports AMO-catalyzed ammonia-to-hydroxylamine conversion.", "reference": "DOI:10.1007/s00775-020-01820-0", "snippet": "convert ammonia to hydroxylamine"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ammonia", "target": "hydroxylamine"}, {"description": "Hydroxylamine oxidation yields nitrite in ammonia oxidizers.", "evidence": [{"notes": "Supports hydroxylamine oxidation as the next nitrification step.", "reference": "DOI:10.3389/fmicb.2012.00210", "snippet": "oxidation of hydroxylamine to nitrite"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "hydroxylamine", "target": "nitrite"}, {"description": "Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.", "evidence": [{"notes": "Supports the Sox multienzyme system in lithotrophic sulfur oxidation.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "oxidation of thiosulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "sox_enzyme_system", "target": "thiosulfate"}, {"description": "Oxidation of inorganic donors feeds electrons into respiratory chains.", "evidence": [{"notes": "Supports respiratory chains as energy-conserving redox systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-6", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_chemical_donor", "target": "respiratory_chain"}, {"description": "Respiratory energy conservation produces ATP.", "evidence": [{"notes": "Supports ATP synthesis from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_chain", "target": "atp"}], "evidence_rows": [{"description": "Chemolithotrophy uses inorganic chemicals as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic chemical oxidation as chemolithotrophy.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "oxidize inorganic atoms or molecules"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "chemolithotrophic", "target": "inorganic chemical electron donor"}, {"description": "Ammonia monooxygenase initiates ammonia oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ammonia oxidation as a chemolithoautotrophic process.", "reference": "DOI:10.1146/annurev.micro.55.1.485", "snippet": "ammonia-oxidizing bacteria"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "ammonia monooxygenase", "target": "ammonia"}, {"description": "Ammonia oxidation proceeds through hydroxylamine.", "edge_id": "edge-3", "evidence": [{"notes": "Supports AMO-catalyzed ammonia-to-hydroxylamine conversion.", "reference": "DOI:10.1007/s00775-020-01820-0", "snippet": "convert ammonia to hydroxylamine"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ammonia", "target": "hydroxylamine"}, {"description": "Hydroxylamine oxidation yields nitrite in ammonia oxidizers.", "edge_id": "edge-4", "evidence": [{"notes": "Supports hydroxylamine oxidation as the next nitrification step.", "reference": "DOI:10.3389/fmicb.2012.00210", "snippet": "oxidation of hydroxylamine to nitrite"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "hydroxylamine", "target": "nitrite"}, {"description": "Sox proteins mediate oxidation of reduced sulfur compounds such as thiosulfate.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the Sox multienzyme system in lithotrophic sulfur oxidation.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "oxidation of thiosulfate"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "Sox enzyme system", "target": "thiosulfate"}, {"description": "Oxidation of inorganic donors feeds electrons into respiratory chains.", "edge_id": "edge-6", "evidence": [{"notes": "Supports respiratory chains as energy-conserving redox systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic chemical electron donor", "target": "respiratory chain"}, {"description": "Respiratory energy conservation produces ATP.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP synthesis from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory chain", "target": "ATP"}], "graph_id": "chemolithotrophic_inorganic_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reduced nitrogen electron donor.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme initiating aerobic ammonia oxidation.", "grounding": "UniProtKB:A0A059V4Z9", "id": "ammonia_monooxygenase", "is_orphan": false, "label": "ammonia monooxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced by respiratory energy conservation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic chemicals for energy generation.", "grounding": "METPO:1000639", "id": "chemolithotrophic_trait", "is_orphan": false, "label": "chemolithotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate formed from ammonia oxidation.", "grounding": null, "id": "hydroxylamine", "is_orphan": false, "label": "hydroxylamine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic chemical substrate.", "grounding": null, "id": "inorganic_chemical_donor", "is_orphan": false, "label": "inorganic chemical electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized nitrogen product of ammonia oxidation.", "grounding": "CHEBI:16301", "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system conserving energy from donor oxidation.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfur-oxidizing multienzyme system.", "grounding": null, "id": "sox_enzyme_system", "is_orphan": false, "label": "Sox enzyme system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Representative reduced sulfur donor.", "grounding": "CHEBI:33542", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Chemolithotrophic inorganic chemical oxidation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -682,10 +718,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

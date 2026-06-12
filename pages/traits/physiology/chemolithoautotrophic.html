@@ -60,7 +60,7 @@
             <strong>chemolithoautotrophic</strong>
             <span class="edge-predicate">uses electron donor</span>
             <strong>inorganic electron donor</strong>
-            
+            <code>METPO:2000009</code>
             <p>Chemolithoautotrophs obtain energy from inorganic electron donors.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>inorganic electron donor</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>electron transport chain</strong>
-            
+            <code>METPO:2007402</code>
             <p>Donor oxidation supplies electrons to energy-conserving respiratory chains.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>electron transport chain</strong>
             <span class="edge-predicate">generates</span>
             <strong>proton motive force</strong>
-            
+            <code>biolink:produces</code>
             <p>Respiratory chains generate an electrochemical ion gradient.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">fixed by</span>
             <strong>CO2 fixation pathway</strong>
-            
+            <code>METPO:2007404</code>
             <p>Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.</p>
             <ul>
               
@@ -160,9 +160,9 @@
           
           <li id="pathograph-1-edge-7">
             <strong>ATP</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>CO2 fixation pathway</strong>
-            
+            <code>RO:0002327</code>
             <p>ATP generated from donor oxidation supports autotrophic CO2 fixation.</p>
             <ul>
               
@@ -177,9 +177,9 @@
           
           <li id="pathograph-1-edge-8">
             <strong>reducing power</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>CO2 fixation pathway</strong>
-            
+            <code>RO:0002327</code>
             <p>Reducing power supports reductive CO2 assimilation.</p>
             <ul>
               
@@ -196,7 +196,7 @@
             <strong>CO2 fixation pathway</strong>
             <span class="edge-predicate">produces</span>
             <strong>biomass</strong>
-            
+            <code>METPO:2000202</code>
             <p>CO2 fixation generates cellular biomass.</p>
             <ul>
               
@@ -346,6 +346,60 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for inorganic donor oxidation, respiratory energy conservation, ATP/reductant generation, and CO2 fixation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000009×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007402×1, METPO:2007404×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: supports → enables ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007502×1, METPO:1007500×1, METPO:1007503×1, METPO:1007501×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:34:58Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:33Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022900×1, GO:0015977×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 2 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1; reducing power: CHEMICAL → CAPACITY ×1.</p>
         </li>
         
       </ol>
@@ -705,7 +759,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking inorganic donor oxidation, respiratory energy conservation, reductant generation, and autotrophic CO2 fixation.", "edges": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithoautotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-2", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic_electron_donor", "target": "electron_transport_chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "electron_transport_chain", "target": "proton_motive_force"}, {"description": "The ion gradient drives ATP synthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "drives synthesis of", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "id": "edge-5", "is_orphan": false, "predicate": "supports generation of", "predicate_id": null, "source": "inorganic_electron_donor", "target": "reducing_power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": null, "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "atp", "target": "co2_fixation_pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "reducing_power", "target": "co2_fixation_pathway"}, {"description": "CO2 fixation generates cellular biomass.", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "co2_fixation_pathway", "target": "biomass"}], "evidence_rows": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "predicate": "uses electron donor", "predicate_id": null, "source": "chemolithoautotrophic", "target": "inorganic electron donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": null, "source": "inorganic electron donor", "target": "electron transport chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": null, "source": "electron transport chain", "target": "proton motive force"}, {"description": "The ion gradient drives ATP synthesis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives synthesis of", "predicate_id": null, "source": "proton motive force", "target": "ATP"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "predicate": "supports generation of", "predicate_id": null, "source": "inorganic electron donor", "target": "reducing power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "predicate": "fixed by", "predicate_id": null, "source": "carbon dioxide", "target": "CO2 fixation pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "predicate": "supports", "predicate_id": null, "source": "ATP", "target": "CO2 fixation pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "predicate": "supports", "predicate_id": null, "source": "reducing power", "target": "CO2 fixation pathway"}, {"description": "CO2 fixation generates cellular biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "predicate": "produces", "predicate_id": null, "source": "CO2 fixation pathway", "target": "biomass"}], "graph_id": "chemolithoautotrophic_energy_and_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier supporting biosynthesis.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular material generated from fixed carbon.", "grounding": null, "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Primary carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic donor oxidation and CO2 fixation.", "grounding": "METPO:1000637", "id": "chemolithoautotrophic_trait", "is_orphan": false, "label": "chemolithoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic pathway reducing CO2 into cell carbon.", "grounding": null, "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2 fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor oxidation.", "grounding": null, "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound oxidized for energy.", "grounding": null, "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient generated by energy-conserving electron transfer.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "NAD(P)H or related reductants supporting CO2 reduction.", "grounding": null, "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CHEMICAL", "xrefs": []}], "title": "Chemolithoautotrophic energy and CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking inorganic donor oxidation, respiratory energy conservation, reductant generation, and autotrophic CO2 fixation.", "edges": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "chemolithoautotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-2", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic_electron_donor", "target": "electron_transport_chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron_transport_chain", "target": "proton_motive_force"}, {"description": "The ion gradient drives ATP synthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "drives synthesis of", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "id": "edge-5", "is_orphan": false, "predicate": "supports generation of", "predicate_id": null, "source": "inorganic_electron_donor", "target": "reducing_power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "id": "edge-6", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp", "target": "co2_fixation_pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reducing_power", "target": "co2_fixation_pathway"}, {"description": "CO2 fixation generates cellular biomass.", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "co2_fixation_pathway", "target": "biomass"}], "evidence_rows": [{"description": "Chemolithoautotrophs obtain energy from inorganic electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic reductants as energy sources.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "growth-supporting reductant and energy source"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "chemolithoautotrophic", "target": "inorganic electron donor"}, {"description": "Donor oxidation supplies electrons to energy-conserving respiratory chains.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane-bound respiratory chains as redox energy-conserving systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "inorganic electron donor", "target": "electron transport chain"}, {"description": "Respiratory chains generate an electrochemical ion gradient.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton motive force generation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron transport chain", "target": "proton motive force"}, {"description": "The ion gradient drives ATP synthesis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ATP synthesis from respiratory ion gradients.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives synthesis of", "predicate_id": null, "source": "proton motive force", "target": "ATP"}, {"description": "Electrons from inorganic donors provide reduced cofactors for biosynthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports reduced cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "serve as reductive power"}], "predicate": "supports generation of", "predicate_id": null, "source": "inorganic electron donor", "target": "reducing power"}, {"description": "Chemolithoautotrophs use CO2 fixation pathways for carbon assimilation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports CO2 fixation in chemoautotrophic bacteria.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "Carbon Dioxide Fixation in Chemoautotrophs"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "CO2 fixation pathway"}, {"description": "ATP generated from donor oxidation supports autotrophic CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports energy demand of autotrophic CO2 fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP", "target": "CO2 fixation pathway"}, {"description": "Reducing power supports reductive CO2 assimilation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports reductant use in CO2 fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reducing power", "target": "CO2 fixation pathway"}, {"description": "CO2 fixation generates cellular biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Review scope supports chemoautotrophic growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "CO2 fixation pathway", "target": "biomass"}], "graph_id": "chemolithoautotrophic_energy_and_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier supporting biosynthesis.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Cellular material generated from fixed carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Primary carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic donor oxidation and CO2 fixation.", "grounding": "METPO:1000637", "id": "chemolithoautotrophic_trait", "is_orphan": false, "label": "chemolithoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic pathway reducing CO2 into cell carbon.", "grounding": "GO:0015977", "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2 fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor oxidation.", "grounding": "GO:0022900", "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound oxidized for energy.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical gradient generated by energy-conserving electron transfer.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#f3f4f6", "description": "NAD(P)H or related reductants supporting CO2 reduction.", "grounding": "METPO:1007503", "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CAPACITY", "xrefs": []}], "title": "Chemolithoautotrophic energy and CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -716,10 +770,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

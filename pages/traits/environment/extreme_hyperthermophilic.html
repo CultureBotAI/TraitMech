@@ -60,7 +60,7 @@
             <strong>very high temperature</strong>
             <span class="edge-predicate">selects for</span>
             <strong>extreme hyperthermophilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Very-high-temperature habitats select for extreme hyperthermophily.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>hyperthermostable proteins</strong>
             <span class="edge-predicate">enables</span>
             <strong>hyperthermophile bioenergetics</strong>
-            
+            <code>RO:0002327</code>
             <p>Hyperthermostable proteins enable continued energy conservation at very high temperature.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>hyperthermophile bioenergetics</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>extreme hyperthermophilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Heat-adapted bioenergetics supports growth at extreme hyperthermophilic temperatures.</p>
             <ul>
               
@@ -275,6 +275,36 @@
           <time>2026-05-13T22:45:00-07:00</time> ·
           <strong>IMPROVED_CAUSAL_GRAPH_EVIDENCE</strong> · codex
           <p class="changes">Replaced Pyrolobus fumarii PMID fallback with the article DOI in definition, record evidence, and CausalEdge evidence.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:20Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001637×1).</p>
         </li>
         
       </ol>
@@ -634,7 +664,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking extreme hyperthermophily to archaeal tetraether membrane lipids, hyperthermostable proteins, and bioenergetic adaptation at temperatures above 90 \u00b0C.", "edges": [{"description": "Very-high-temperature habitats select for extreme hyperthermophily.", "evidence": [{"notes": "Supports growth above 90 \u00b0C in extreme hyperthermophiles.", "reference": "DOI:10.1007/s007920050010", "snippet": "It grew at between 90 degrees C and 113 degrees C"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "very_high_temperature", "target": "extreme_hyperthermophilic_trait"}, {"description": "Archaeal tetraether lipids form heat-resistant membranes that protect against very-high-temperature membrane stress.", "evidence": [{"notes": "Membrane-adaptation review supports membrane lipid composition as the primary tunable mechanism for thermal adaptation; in hyperthermophilic archaea this is realized via tetraether (GDGT) monolayer membranes.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "membrane lipid composition"}], "id": "edge-2", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "tetraether_lipids", "target": "very_high_temperature"}, {"description": "Hyperthermostable proteins enable continued energy conservation at very high temperature.", "evidence": [{"notes": "Supports protein hyperthermostability as a hyperthermophile feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "hyperthermostable_proteins", "target": "hyperthermophile_bioenergetics"}, {"description": "Heat-adapted bioenergetics supports growth at extreme hyperthermophilic temperatures.", "evidence": [{"notes": "Supports temperature-adapted energy transduction as the basis of thermophile and hyperthermophile growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-4", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "hyperthermophile_bioenergetics", "target": "extreme_hyperthermophilic_trait"}], "evidence_rows": [{"description": "Very-high-temperature habitats select for extreme hyperthermophily.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth above 90 \u00b0C in extreme hyperthermophiles.", "reference": "DOI:10.1007/s007920050010", "snippet": "It grew at between 90 degrees C and 113 degrees C"}], "predicate": "selects for", "predicate_id": null, "source": "very high temperature", "target": "extreme hyperthermophilic"}, {"description": "Archaeal tetraether lipids form heat-resistant membranes that protect against very-high-temperature membrane stress.", "edge_id": "edge-2", "evidence": [{"notes": "Membrane-adaptation review supports membrane lipid composition as the primary tunable mechanism for thermal adaptation; in hyperthermophilic archaea this is realized via tetraether (GDGT) monolayer membranes.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "membrane lipid composition"}], "predicate": "protects against", "predicate_id": null, "source": "archaeal tetraether membrane lipids", "target": "very high temperature"}, {"description": "Hyperthermostable proteins enable continued energy conservation at very high temperature.", "edge_id": "edge-3", "evidence": [{"notes": "Supports protein hyperthermostability as a hyperthermophile feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": null, "source": "hyperthermostable proteins", "target": "hyperthermophile bioenergetics"}, {"description": "Heat-adapted bioenergetics supports growth at extreme hyperthermophilic temperatures.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature-adapted energy transduction as the basis of thermophile and hyperthermophile growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "supports", "predicate_id": null, "source": "hyperthermophile bioenergetics", "target": "extreme hyperthermophilic"}], "graph_id": "extreme_hyperthermophilic_archaeal_adaptation", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Optimal growth at temperatures above 90 \u00b0C.", "grounding": "METPO:1000721", "id": "extreme_hyperthermophilic_trait", "is_orphan": false, "label": "extreme hyperthermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Energy transduction tuned to function in very-high-temperature environments.", "grounding": null, "id": "hyperthermophile_bioenergetics", "is_orphan": false, "label": "hyperthermophile bioenergetics", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with extreme resistance to denaturation, including enzymes active at \u003e90 \u00b0C.", "grounding": null, "id": "hyperthermostable_proteins", "is_orphan": false, "label": "hyperthermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Glycerol-dibiphytanyl-glycerol-tetraether (GDGT) lipids forming heat-resistant monolayer membranes in hyperthermophilic archaea.", "grounding": null, "id": "tetraether_lipids", "is_orphan": false, "label": "archaeal tetraether membrane lipids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature above 90 \u00b0C, typical of hydrothermal vents and geothermal springs.", "grounding": null, "id": "very_high_temperature", "is_orphan": false, "label": "very high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Extreme-hyperthermophilic archaeal heat-adaptation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking extreme hyperthermophily to archaeal tetraether membrane lipids, hyperthermostable proteins, and bioenergetic adaptation at temperatures above 90 \u00b0C.", "edges": [{"description": "Very-high-temperature habitats select for extreme hyperthermophily.", "evidence": [{"notes": "Supports growth above 90 \u00b0C in extreme hyperthermophiles.", "reference": "DOI:10.1007/s007920050010", "snippet": "It grew at between 90 degrees C and 113 degrees C"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "very_high_temperature", "target": "extreme_hyperthermophilic_trait"}, {"description": "Archaeal tetraether lipids form heat-resistant membranes that protect against very-high-temperature membrane stress.", "evidence": [{"notes": "Membrane-adaptation review supports membrane lipid composition as the primary tunable mechanism for thermal adaptation; in hyperthermophilic archaea this is realized via tetraether (GDGT) monolayer membranes.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "membrane lipid composition"}], "id": "edge-2", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "tetraether_lipids", "target": "very_high_temperature"}, {"description": "Hyperthermostable proteins enable continued energy conservation at very high temperature.", "evidence": [{"notes": "Supports protein hyperthermostability as a hyperthermophile feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hyperthermostable_proteins", "target": "hyperthermophile_bioenergetics"}, {"description": "Heat-adapted bioenergetics supports growth at extreme hyperthermophilic temperatures.", "evidence": [{"notes": "Supports temperature-adapted energy transduction as the basis of thermophile and hyperthermophile growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "hyperthermophile_bioenergetics", "target": "extreme_hyperthermophilic_trait"}], "evidence_rows": [{"description": "Very-high-temperature habitats select for extreme hyperthermophily.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth above 90 \u00b0C in extreme hyperthermophiles.", "reference": "DOI:10.1007/s007920050010", "snippet": "It grew at between 90 degrees C and 113 degrees C"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "very high temperature", "target": "extreme hyperthermophilic"}, {"description": "Archaeal tetraether lipids form heat-resistant membranes that protect against very-high-temperature membrane stress.", "edge_id": "edge-2", "evidence": [{"notes": "Membrane-adaptation review supports membrane lipid composition as the primary tunable mechanism for thermal adaptation; in hyperthermophilic archaea this is realized via tetraether (GDGT) monolayer membranes.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "membrane lipid composition"}], "predicate": "protects against", "predicate_id": null, "source": "archaeal tetraether membrane lipids", "target": "very high temperature"}, {"description": "Hyperthermostable proteins enable continued energy conservation at very high temperature.", "edge_id": "edge-3", "evidence": [{"notes": "Supports protein hyperthermostability as a hyperthermophile feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "hyperthermostable proteins", "target": "hyperthermophile bioenergetics"}, {"description": "Heat-adapted bioenergetics supports growth at extreme hyperthermophilic temperatures.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature-adapted energy transduction as the basis of thermophile and hyperthermophile growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "hyperthermophile bioenergetics", "target": "extreme hyperthermophilic"}], "graph_id": "extreme_hyperthermophilic_archaeal_adaptation", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Optimal growth at temperatures above 90 \u00b0C.", "grounding": "METPO:1000721", "id": "extreme_hyperthermophilic_trait", "is_orphan": false, "label": "extreme hyperthermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Energy transduction tuned to function in very-high-temperature environments.", "grounding": null, "id": "hyperthermophile_bioenergetics", "is_orphan": false, "label": "hyperthermophile bioenergetics", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with extreme resistance to denaturation, including enzymes active at \u003e90 \u00b0C.", "grounding": null, "id": "hyperthermostable_proteins", "is_orphan": false, "label": "hyperthermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Glycerol-dibiphytanyl-glycerol-tetraether (GDGT) lipids forming heat-resistant monolayer membranes in hyperthermophilic archaea.", "grounding": null, "id": "tetraether_lipids", "is_orphan": false, "label": "archaeal tetraether membrane lipids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature above 90 \u00b0C, typical of hydrothermal vents and geothermal springs.", "grounding": "PATO:0001637", "id": "very_high_temperature", "is_orphan": false, "label": "very high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Extreme-hyperthermophilic archaeal heat-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -645,10 +675,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

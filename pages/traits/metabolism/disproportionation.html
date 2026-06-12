@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>Disproportionation</strong>
-            <span class="edge-predicate">occurs under</span>
+            <span class="edge-predicate">occurs in</span>
             <strong>anoxic condition</strong>
-            
+            <code>biolink:occurs_in</code>
             <p>Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>elemental sulfur</strong>
             <span class="edge-predicate">example of</span>
             <strong>inorganic sulfur intermediate</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Elemental sulfur is a disproportionation substrate.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>thiosulfate</strong>
             <span class="edge-predicate">example of</span>
             <strong>inorganic sulfur intermediate</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Thiosulfate is a disproportionation substrate.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>inorganic sulfur intermediate</strong>
             <span class="edge-predicate">oxidized to</span>
             <strong>sulfate</strong>
-            
+            <code>METPO:2007405</code>
             <p>One fraction of the substrate is oxidized to sulfate.</p>
             <ul>
               
@@ -162,7 +162,7 @@
             <strong>reverse sulfate reduction pathway</strong>
             <span class="edge-predicate">participates in</span>
             <strong>Disproportionation</strong>
-            
+            <code>biolink:participates_in</code>
             <p>Some disproportionating microbes use reversed sulfate-reduction enzymes.</p>
             <ul>
               
@@ -303,6 +303,48 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for sulfur disproportionation substrates, donor/acceptor redox split, sulfide and sulfate products, and reverse sulfate-reduction pathway involvement.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:participates_in×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:49Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007405×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01001057×1, CHEBI:15138×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:33542×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: occurs under → occurs in ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:occurs_in×1).</p>
         </li>
         
       </ol>
@@ -662,7 +704,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking a single sulfur intermediate to simultaneous oxidation and reduction products under anoxic conditions.", "edges": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs under", "predicate_id": null, "source": "disproportionation_trait", "target": "anoxic_condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "id": "edge-2", "is_orphan": false, "predicate": "serves as electron donor and acceptor", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "disproportionation_trait"}, {"description": "Elemental sulfur is a disproportionation substrate.", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "elemental_sulfur", "target": "inorganic_sulfur_intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "thiosulfate", "target": "inorganic_sulfur_intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidized to", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": null, "source": "reverse_sulfate_reduction_pathway", "target": "disproportionation_trait"}], "evidence_rows": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "predicate": "occurs under", "predicate_id": null, "source": "Disproportionation", "target": "anoxic condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "edge_id": "edge-2", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "predicate": "serves as electron donor and acceptor", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "Disproportionation"}, {"description": "Elemental sulfur is a disproportionation substrate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "predicate": "example of", "predicate_id": null, "source": "elemental sulfur", "target": "inorganic sulfur intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "predicate": "example of", "predicate_id": null, "source": "thiosulfate", "target": "inorganic sulfur intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "edge_id": "edge-5", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "reduced to", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "edge_id": "edge-6", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "oxidized to", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "predicate": "participates in", "predicate_id": null, "source": "reverse sulfate reduction pathway", "target": "Disproportionation"}], "graph_id": "sulfur_disproportionation_redox_split", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-free condition for many microbial sulfur disproportionation processes.", "grounding": null, "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Metabolism in which one substrate is both oxidized and reduced.", "grounding": "METPO:1000806", "id": "disproportionation_trait", "is_orphan": false, "label": "Disproportionation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur compound that can act as both electron donor and acceptor.", "grounding": null, "id": "inorganic_sulfur_intermediate", "is_orphan": false, "label": "inorganic sulfur intermediate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic route proposed for some sulfur disproportionators.", "grounding": null, "id": "reverse_sulfate_reduction_pathway", "is_orphan": false, "label": "reverse sulfate reduction pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur product.", "grounding": null, "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": null, "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Sulfur disproportionation redox split"}];
+  var graphs = [{"description": "DOI-backed graph linking a single sulfur intermediate to simultaneous oxidation and reduction products under anoxic conditions.", "edges": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "disproportionation_trait", "target": "anoxic_condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "id": "edge-2", "is_orphan": false, "predicate": "serves as electron donor and acceptor", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "disproportionation_trait"}, {"description": "Elemental sulfur is a disproportionation substrate.", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental_sulfur", "target": "inorganic_sulfur_intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "target": "inorganic_sulfur_intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-5", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "inorganic_sulfur_intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic_sulfur_intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse_sulfate_reduction_pathway", "target": "disproportionation_trait"}], "evidence_rows": [{"description": "Sulfur disproportionation is commonly observed as anaerobic microbial metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports microbial sulfur disproportionation under non-oxygenated sulfur cycling contexts.", "reference": "DOI:10.1080/17415990802105770", "snippet": "microbiologically catalyzed chemolithotrophic process"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "Disproportionation", "target": "anoxic condition"}, {"description": "A single sulfur intermediate provides both donor and acceptor halves.", "edge_id": "edge-2", "evidence": [{"notes": "Directly supports the defining redox split.", "reference": "DOI:10.1080/17415990802105770", "snippet": "serve as both electron donor and acceptor"}], "predicate": "serves as electron donor and acceptor", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "Disproportionation"}, {"description": "Elemental sulfur is a disproportionation substrate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports elemental sulfur as a substrate.", "reference": "DOI:10.1016/j.gca.2013.03.013", "snippet": "elemental sulfur disproportionation"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "elemental sulfur", "target": "inorganic sulfur intermediate"}, {"description": "Thiosulfate is a disproportionation substrate.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thiosulfate among disproportionated sulfur intermediates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "elemental sulfur, thiosulfate, and sulfite"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "thiosulfate", "target": "inorganic sulfur intermediate"}, {"description": "One fraction of the substrate is reduced to sulfide.", "edge_id": "edge-5", "evidence": [{"notes": "Supports sulfide as reduced product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "reduced to", "predicate_id": null, "source": "inorganic sulfur intermediate", "target": "sulfide"}, {"description": "One fraction of the substrate is oxidized to sulfate.", "edge_id": "edge-6", "evidence": [{"notes": "Supports sulfate as oxidized product.", "reference": "DOI:10.1080/17415990802105770", "snippet": "generate hydrogen sulfide and sulfate"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "inorganic sulfur intermediate", "target": "sulfate"}, {"description": "Some disproportionating microbes use reversed sulfate-reduction enzymes.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the proposed pathway mechanism for some isolates.", "reference": "DOI:10.1080/17415990802105770", "snippet": "reverse the sulfate reduction pathway"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "reverse sulfate reduction pathway", "target": "Disproportionation"}], "graph_id": "sulfur_disproportionation_redox_split", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-free condition for many microbial sulfur disproportionation processes.", "grounding": "ENVO:01001057", "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Metabolism in which one substrate is both oxidized and reduced.", "grounding": "METPO:1000806", "id": "disproportionation_trait", "is_orphan": false, "label": "Disproportionation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Sulfur compound that can act as both electron donor and acceptor.", "grounding": null, "id": "inorganic_sulfur_intermediate", "is_orphan": false, "label": "inorganic sulfur intermediate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic route proposed for some sulfur disproportionators.", "grounding": null, "id": "reverse_sulfate_reduction_pathway", "is_orphan": false, "label": "reverse sulfate reduction pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur product.", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Representative sulfur disproportionation substrate.", "grounding": "CHEBI:33542", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Sulfur disproportionation redox split"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -673,10 +715,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

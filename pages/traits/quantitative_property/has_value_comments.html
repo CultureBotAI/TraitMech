@@ -97,6 +97,19 @@
           <p class="changes">Deprecated datatype-property comment carrier; later replacement should use more specific trait records that combine the comment relation with the measured quantity, chemical, observation, or other entity.</p>
         </li>
         
+        <li>
+          <time>2026-05-17T15:30:00-07:00</time> ·
+          <strong>DEPRECATION_CONFIRMED_AS_OUT_OF_SCOPE</strong> · claude
+          <p class="changes">DEPRECATED status confirmed as final after the predicate+class composition
+pivot (#54/#55/#56). This record&#39;s observation-shape modelling is out of
+scope for TraitMech; the trait vocabulary + mechanism need is met by the un-
+deprecated METPO predicates, and per-organism numeric observations belong
+downstream (KG-Microbe / BacDive). See
+docs/DEPRECATED_REPLACEMENT_PROPOSAL.md, section &#39;Observation-value records
+stay deprecated&#39;, for the rationale.
+</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -137,10 +150,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

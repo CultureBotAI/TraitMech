@@ -60,7 +60,7 @@
             <strong>osmoadaptive flexibility</strong>
             <span class="edge-predicate">enables</span>
             <strong>euryhaline physiology</strong>
-            
+            <code>RO:0002327</code>
             <p>Osmoadaptive flexibility enables euryhaline growth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>euryhaline physiology</strong>
             <span class="edge-predicate">produces</span>
             <strong>tolerance breadth</strong>
-            
+            <code>METPO:2000202</code>
             <p>Euryhaline physiology produces a wide growth-supporting NaCl range.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>tolerance breadth</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>NaCl delta</strong>
-            
+            <code>METPO:2007400</code>
             <p>The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.</p>
             <ul>
               
@@ -252,6 +252,18 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking osmoadaptive flexibility and euryhaline physiology to the NaCl-delta breadth phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -611,7 +623,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking osmoadaptive flexibility to the breadth of the NaCl growth range (delta = max \u2212 min).", "edges": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "osmoadaptive_flexibility", "target": "euryhaline_physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "euryhaline_physiology", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "tolerance_breadth", "target": "nacl_delta_trait"}], "evidence_rows": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "enables", "predicate_id": null, "source": "osmoadaptive flexibility", "target": "euryhaline physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": null, "source": "euryhaline physiology", "target": "tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": null, "source": "tolerance breadth", "target": "NaCl delta"}], "graph_id": "nacl_delta_euryhaline_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Physiology supporting growth over a broad salinity range.", "grounding": null, "id": "euryhaline_physiology", "is_orphan": false, "label": "euryhaline physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta_trait", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel osmolyte pools and ion transport across a wide span of ambient salinities.", "grounding": null, "id": "osmoadaptive_flexibility", "is_orphan": false, "label": "osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting NaCl.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-delta euryhaline tolerance breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking osmoadaptive flexibility to the breadth of the NaCl growth range (delta = max \u2212 min).", "edges": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive_flexibility", "target": "euryhaline_physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "euryhaline_physiology", "target": "tolerance_breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance_breadth", "target": "nacl_delta_trait"}], "evidence_rows": [{"description": "Osmoadaptive flexibility enables euryhaline growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports osmoadaptive flexibility as the basis of broad-salinity growth.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "osmoadaptive flexibility", "target": "euryhaline physiology"}, {"description": "Euryhaline physiology produces a wide growth-supporting NaCl range.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the link between osmoadaptive physiology and tolerance breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "euryhaline physiology", "target": "tolerance breadth"}, {"description": "The breadth between minimum and maximum growth-supporting NaCl manifests the NaCl-delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tolerance breadth", "target": "NaCl delta"}], "graph_id": "nacl_delta_euryhaline_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Physiology supporting growth over a broad salinity range.", "grounding": null, "id": "euryhaline_physiology", "is_orphan": false, "label": "euryhaline physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta_trait", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to remodel osmolyte pools and ion transport across a wide span of ambient salinities.", "grounding": null, "id": "osmoadaptive_flexibility", "is_orphan": false, "label": "osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span between the minimum and maximum growth-supporting NaCl.", "grounding": null, "id": "tolerance_breadth", "is_orphan": false, "label": "tolerance breadth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-delta euryhaline tolerance breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -622,10 +634,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

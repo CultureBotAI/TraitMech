@@ -60,7 +60,7 @@
             <strong>low-level carotenoid biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>low pigment accumulation</strong>
-            
+            <code>METPO:2000202</code>
             <p>Limited carotenoid (or analogous) pigment biosynthesis produces low pigment accumulation.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>pale cream coloration</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>cream pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Pale coloration manifests the cream-pigmented trait.</p>
             <ul>
               
@@ -244,6 +244,18 @@
           <time>2026-05-11T23:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking low-density carotenoid biosynthesis to cream/pale colony pigmentation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -603,7 +615,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking low-level carotenoid (or analogous light-absorbing pigment) biosynthesis and limited pigment accumulation to a cream/pale-colored colony phenotype.", "edges": [{"description": "Limited carotenoid (or analogous) pigment biosynthesis produces low pigment accumulation.", "evidence": [{"notes": "Supports carotenoid biosynthesis as the source of bacterial pigmentation.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "low_carotenoid_biosynthesis", "target": "low_pigment_accumulation"}, {"description": "Low pigment density yields a pale, cream-colored optical phenotype.", "evidence": [{"notes": "Supports pigment density as the determinant of colony color intensity.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "yields", "predicate_id": null, "source": "low_pigment_accumulation", "target": "pale_coloration"}, {"description": "Pale coloration manifests the cream-pigmented trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "pale_coloration", "target": "cream_pigmented_trait"}], "evidence_rows": [{"description": "Limited carotenoid (or analogous) pigment biosynthesis produces low pigment accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carotenoid biosynthesis as the source of bacterial pigmentation.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "produces", "predicate_id": null, "source": "low-level carotenoid biosynthesis", "target": "low pigment accumulation"}, {"description": "Low pigment density yields a pale, cream-colored optical phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pigment density as the determinant of colony color intensity.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "yields", "predicate_id": null, "source": "low pigment accumulation", "target": "pale cream coloration"}, {"description": "Pale coloration manifests the cream-pigmented trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "manifests as", "predicate_id": null, "source": "pale cream coloration", "target": "cream pigmented"}], "graph_id": "cream_pigmented_low_carotenoid_density", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cream/pale colony or cell coloration.", "grounding": "METPO:1003024", "id": "cream_pigmented_trait", "is_orphan": false, "label": "cream pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced flux through the bacterial isoprenoid pigment biosynthesis pathway compared to brightly pigmented lineages.", "grounding": "GO:0016117", "id": "low_carotenoid_biosynthesis", "is_orphan": false, "label": "low-level carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced steady-state pigment levels relative to brightly pigmented lineages.", "grounding": null, "id": "low_pigment_accumulation", "is_orphan": false, "label": "low pigment accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Optical phenotype of off-white pigmented colonies.", "grounding": null, "id": "pale_coloration", "is_orphan": false, "label": "pale cream coloration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Cream-pigmentation low carotenoid density"}];
+  var graphs = [{"description": "DOI-backed graph linking low-level carotenoid (or analogous light-absorbing pigment) biosynthesis and limited pigment accumulation to a cream/pale-colored colony phenotype.", "edges": [{"description": "Limited carotenoid (or analogous) pigment biosynthesis produces low pigment accumulation.", "evidence": [{"notes": "Supports carotenoid biosynthesis as the source of bacterial pigmentation.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "low_carotenoid_biosynthesis", "target": "low_pigment_accumulation"}, {"description": "Low pigment density yields a pale, cream-colored optical phenotype.", "evidence": [{"notes": "Supports pigment density as the determinant of colony color intensity.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-2", "is_orphan": false, "predicate": "yields", "predicate_id": null, "source": "low_pigment_accumulation", "target": "pale_coloration"}, {"description": "Pale coloration manifests the cream-pigmented trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "pale_coloration", "target": "cream_pigmented_trait"}], "evidence_rows": [{"description": "Limited carotenoid (or analogous) pigment biosynthesis produces low pigment accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports carotenoid biosynthesis as the source of bacterial pigmentation.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "low-level carotenoid biosynthesis", "target": "low pigment accumulation"}, {"description": "Low pigment density yields a pale, cream-colored optical phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pigment density as the determinant of colony color intensity.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "yields", "predicate_id": null, "source": "low pigment accumulation", "target": "pale cream coloration"}, {"description": "Pale coloration manifests the cream-pigmented trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162844", "snippet": "bacterial carotenoid pigments"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "pale cream coloration", "target": "cream pigmented"}], "graph_id": "cream_pigmented_low_carotenoid_density", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cream/pale colony or cell coloration.", "grounding": "METPO:1003024", "id": "cream_pigmented_trait", "is_orphan": false, "label": "cream pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced flux through the bacterial isoprenoid pigment biosynthesis pathway compared to brightly pigmented lineages.", "grounding": "GO:0016117", "id": "low_carotenoid_biosynthesis", "is_orphan": false, "label": "low-level carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced steady-state pigment levels relative to brightly pigmented lineages.", "grounding": null, "id": "low_pigment_accumulation", "is_orphan": false, "label": "low pigment accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Optical phenotype of off-white pigmented colonies.", "grounding": null, "id": "pale_coloration", "is_orphan": false, "label": "pale cream coloration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Cream-pigmentation low carotenoid density"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +626,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

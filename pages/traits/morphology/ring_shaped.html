@@ -60,7 +60,7 @@
             <strong>strongly curved peptidoglycan growth</strong>
             <span class="edge-predicate">produces</span>
             <strong>pole-to-pole closure</strong>
-            
+            <code>METPO:2000202</code>
             <p>Strong axial curvature brings the poles into proximity.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>pole-to-pole closure</strong>
-            <span class="edge-predicate">shapes</span>
+            <span class="edge-predicate">causes</span>
             <strong>toroidal geometry</strong>
-            
+            <code>biolink:causes</code>
             <p>Pole-to-pole closure yields a toroidal body.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>toroidal geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>ring shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Toroidal geometry manifests the ring-shaped trait.</p>
             <ul>
               
@@ -246,6 +246,30 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking strongly curved peptidoglycan growth and pole-to-pole closure to ring-shaped morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: shapes → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -605,7 +629,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole closure to toroidal ring morphology.", "edges": [{"description": "Strong axial curvature brings the poles into proximity.", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "curved_pg_growth", "target": "pole_to_pole_closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "pole_to_pole_closure", "target": "toroidal_geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "toroidal_geometry", "target": "ring_shaped_trait"}], "evidence_rows": [{"description": "Strong axial curvature brings the poles into proximity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "produces", "predicate_id": null, "source": "strongly curved peptidoglycan growth", "target": "pole-to-pole closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "shapes", "predicate_id": null, "source": "pole-to-pole closure", "target": "toroidal geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "manifests as", "predicate_id": null, "source": "toroidal geometry", "target": "ring shaped"}], "graph_id": "ring_shaped_curved_growth_closure", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Asymmetric lateral wall synthesis producing high cell curvature.", "grounding": null, "id": "curved_pg_growth", "is_orphan": false, "label": "strongly curved peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Connection or near-contact of the two cell poles producing a ring.", "grounding": null, "id": "pole_to_pole_closure", "is_orphan": false, "label": "pole-to-pole closure", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Closed circular or toroidal cell geometry.", "grounding": "METPO:1000680", "id": "ring_shaped_trait", "is_orphan": false, "label": "ring shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Closed ring-like cell-body geometry.", "grounding": null, "id": "toroidal_geometry", "is_orphan": false, "label": "toroidal geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Ring-shape curved growth and pole closure"}];
+  var graphs = [{"description": "DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole closure to toroidal ring morphology.", "edges": [{"description": "Strong axial curvature brings the poles into proximity.", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "curved_pg_growth", "target": "pole_to_pole_closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole_to_pole_closure", "target": "toroidal_geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal_geometry", "target": "ring_shaped_trait"}], "evidence_rows": [{"description": "Strong axial curvature brings the poles into proximity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "strongly curved peptidoglycan growth", "target": "pole-to-pole closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole-to-pole closure", "target": "toroidal geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal geometry", "target": "ring shaped"}], "graph_id": "ring_shaped_curved_growth_closure", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Asymmetric lateral wall synthesis producing high cell curvature.", "grounding": null, "id": "curved_pg_growth", "is_orphan": false, "label": "strongly curved peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Connection or near-contact of the two cell poles producing a ring.", "grounding": null, "id": "pole_to_pole_closure", "is_orphan": false, "label": "pole-to-pole closure", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Closed circular or toroidal cell geometry.", "grounding": "METPO:1000680", "id": "ring_shaped_trait", "is_orphan": false, "label": "ring shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Closed ring-like cell-body geometry.", "grounding": null, "id": "toroidal_geometry", "is_orphan": false, "label": "toroidal geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Ring-shape curved growth and pole closure"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +640,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

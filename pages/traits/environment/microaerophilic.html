@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>microoxic environment</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>microaerophilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Microaerophiles grow optimally in microoxic conditions.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>high-affinity terminal oxidase</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>microaerophilic</strong>
-            
+            <code>RO:0002326</code>
             <p>High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.</p>
             <ul>
               
@@ -277,6 +277,24 @@
           <time>2026-05-10T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for microoxic respiration via high-affinity terminal oxidases.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -636,7 +654,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking microaerophily to microoxic environments and high-affinity terminal oxidases.", "edges": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "microoxic_environment", "target": "microaerophilic_trait"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "enables use of", "predicate_id": null, "source": "high_affinity_terminal_oxidase", "target": "molecular_oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "high_affinity_terminal_oxidase", "target": "microaerophilic_trait"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "id": "edge-4", "is_orphan": false, "predicate": "has function", "predicate_id": null, "source": "cbb3_oxidase", "target": "high_affinity_terminal_oxidase"}], "evidence_rows": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "predicate": "supports", "predicate_id": null, "source": "microoxic environment", "target": "microaerophilic"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "predicate": "enables use of", "predicate_id": null, "source": "high-affinity terminal oxidase", "target": "molecular oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "predicate": "contributes to", "predicate_id": null, "source": "high-affinity terminal oxidase", "target": "microaerophilic"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "predicate": "has function", "predicate_id": null, "source": "cytochrome cbb3 oxidase", "target": "high-affinity terminal oxidase"}], "graph_id": "microaerophile_low_oxygen_respiration", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "High-affinity cytochrome oxidase associated with microaerobic metabolism.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cytochrome cbb3 oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory oxidase enabling oxygen use at low concentration.", "grounding": null, "id": "high_affinity_terminal_oxidase", "is_orphan": false, "label": "high-affinity terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires oxygen below atmospheric concentration.", "grounding": "METPO:1000604", "id": "microaerophilic_trait", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen zone that supports microaerobic respiration.", "grounding": null, "id": "microoxic_environment", "is_orphan": false, "label": "microoxic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen present at low concentration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Microaerophilic low-oxygen respiration mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking microaerophily to microoxic environments and high-affinity terminal oxidases.", "edges": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic_environment", "target": "microaerophilic_trait"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "enables use of", "predicate_id": null, "source": "high_affinity_terminal_oxidase", "target": "molecular_oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high_affinity_terminal_oxidase", "target": "microaerophilic_trait"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "id": "edge-4", "is_orphan": false, "predicate": "has function", "predicate_id": null, "source": "cbb3_oxidase", "target": "high_affinity_terminal_oxidase"}], "evidence_rows": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic environment", "target": "microaerophilic"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "predicate": "enables use of", "predicate_id": null, "source": "high-affinity terminal oxidase", "target": "molecular oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high-affinity terminal oxidase", "target": "microaerophilic"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "predicate": "has function", "predicate_id": null, "source": "cytochrome cbb3 oxidase", "target": "high-affinity terminal oxidase"}], "graph_id": "microaerophile_low_oxygen_respiration", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "High-affinity cytochrome oxidase associated with microaerobic metabolism.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cytochrome cbb3 oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory oxidase enabling oxygen use at low concentration.", "grounding": null, "id": "high_affinity_terminal_oxidase", "is_orphan": false, "label": "high-affinity terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires oxygen below atmospheric concentration.", "grounding": "METPO:1000604", "id": "microaerophilic_trait", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen zone that supports microaerobic respiration.", "grounding": null, "id": "microoxic_environment", "is_orphan": false, "label": "microoxic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen present at low concentration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Microaerophilic low-oxygen respiration mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -647,10 +665,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

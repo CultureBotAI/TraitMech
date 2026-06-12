@@ -60,7 +60,7 @@
             <strong>maximal pH-homeostasis flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>pH delta high</strong>
-            
+            <code>METPO:2000202</code>
             <p>Maximal pH-homeostasis flexibility yields an extreme pH-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH delta high</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH delta high is a quantitative bin of the pH-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking maximal pH-homeostasis flexibility to the euryphilic pH-delta-high bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking maximal pH-homeostasis flexibility to a pH growth breadth of approximately 5\u20139 pH units.", "edges": [{"description": "Maximal pH-homeostasis flexibility yields an extreme pH-delta breadth.", "evidence": [{"notes": "Supports maximal pH-homeostasis flexibility as the basis of euryphilic breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "maximal_ph_homeostasis", "target": "ph_delta_high_trait"}, {"description": "pH delta high is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports the 5\u20139 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_delta_high_trait", "target": "ph_delta"}], "evidence_rows": [{"description": "Maximal pH-homeostasis flexibility yields an extreme pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal pH-homeostasis flexibility as the basis of euryphilic breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "produces", "predicate_id": null, "source": "maximal pH-homeostasis flexibility", "target": "pH delta high"}, {"description": "pH delta high is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 5\u20139 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": null, "source": "pH delta high", "target": "pH delta"}], "graph_id": "ph_delta_high_euryphilic_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined proton-extrusion and Na+/H+ antiport flexibility supporting growth across an extreme pH span.", "grounding": null, "id": "maximal_ph_homeostasis", "is_orphan": false, "label": "maximal pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth approximately 5\u20139 pH units.", "grounding": "METPO:1000478", "id": "ph_delta_high_trait", "is_orphan": false, "label": "pH delta high", "node_type": "TRAIT", "xrefs": []}], "title": "pH-delta-high euryphilic breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking maximal pH-homeostasis flexibility to a pH growth breadth of approximately 5\u20139 pH units.", "edges": [{"description": "Maximal pH-homeostasis flexibility yields an extreme pH-delta breadth.", "evidence": [{"notes": "Supports maximal pH-homeostasis flexibility as the basis of euryphilic breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal_ph_homeostasis", "target": "ph_delta_high_trait"}, {"description": "pH delta high is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports the 5\u20139 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta_high_trait", "target": "ph_delta"}], "evidence_rows": [{"description": "Maximal pH-homeostasis flexibility yields an extreme pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal pH-homeostasis flexibility as the basis of euryphilic breadth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal pH-homeostasis flexibility", "target": "pH delta high"}, {"description": "pH delta high is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 5\u20139 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta high", "target": "pH delta"}], "graph_id": "ph_delta_high_euryphilic_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined proton-extrusion and Na+/H+ antiport flexibility supporting growth across an extreme pH span.", "grounding": null, "id": "maximal_ph_homeostasis", "is_orphan": false, "label": "maximal pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth approximately 5\u20139 pH units.", "grounding": "METPO:1000478", "id": "ph_delta_high_trait", "is_orphan": false, "label": "pH delta high", "node_type": "TRAIT", "xrefs": []}], "title": "pH-delta-high euryphilic breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

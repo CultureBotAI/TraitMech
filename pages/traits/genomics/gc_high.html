@@ -60,7 +60,7 @@
             <strong>AT-biased mutation pressure</strong>
             <span class="edge-predicate">produces</span>
             <strong>GC high</strong>
-            
+            <code>METPO:2000202</code>
             <p>AT-biased mutation pressure produces low genome-wide GC composition.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>GC high</strong>
             <span class="edge-predicate">is a</span>
             <strong>GC content</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>GC high is a quantitative bin of the GC-content phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T13:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition (derived from METPO synonym GC_&lt;=42.65) and causal graph linking AT-biased mutation pressure to this GC bin. Documented the upstream label-vs-threshold inconsistency.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking AT-biased mutation pressure to a GC content at or below ~42.65% (the threshold encoded by the METPO synonym GC_\u003c=42.65 on this record).", "edges": [{"description": "AT-biased mutation pressure produces low genome-wide GC composition.", "evidence": [{"notes": "Supports mutation bias as the primary driver of low-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "mutation bias"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "at_mutation_bias", "target": "gc_high_trait"}, {"description": "GC high is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the \u226442.65% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "gc_high_trait", "target": "gc_content"}], "evidence_rows": [{"description": "AT-biased mutation pressure produces low genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports mutation bias as the primary driver of low-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "mutation bias"}], "predicate": "produces", "predicate_id": null, "source": "AT-biased mutation pressure", "target": "GC high"}, {"description": "GC high is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u226442.65% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": null, "source": "GC high", "target": "GC content"}], "graph_id": "gc_high_low_gc_bin", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mutational bias favoring AT base pairs that lowers genome-wide GC content.", "grounding": null, "id": "at_mutation_bias", "is_orphan": false, "label": "AT-biased mutation pressure", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content at or below ~42.65% (per METPO synonym GC_\u003c=42.65).", "grounding": "METPO:1000432", "id": "gc_high_trait", "is_orphan": false, "label": "GC high", "node_type": "TRAIT", "xrefs": []}], "title": "GC-high (METPO \u226442.65%) low-GC bin"}];
+  var graphs = [{"description": "DOI-backed graph linking AT-biased mutation pressure to a GC content at or below ~42.65% (the threshold encoded by the METPO synonym GC_\u003c=42.65 on this record).", "edges": [{"description": "AT-biased mutation pressure produces low genome-wide GC composition.", "evidence": [{"notes": "Supports mutation bias as the primary driver of low-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "mutation bias"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "at_mutation_bias", "target": "gc_high_trait"}, {"description": "GC high is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the \u226442.65% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_high_trait", "target": "gc_content"}], "evidence_rows": [{"description": "AT-biased mutation pressure produces low genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports mutation bias as the primary driver of low-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "mutation bias"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "AT-biased mutation pressure", "target": "GC high"}, {"description": "GC high is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u226442.65% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC high", "target": "GC content"}], "graph_id": "gc_high_low_gc_bin", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mutational bias favoring AT base pairs that lowers genome-wide GC content.", "grounding": null, "id": "at_mutation_bias", "is_orphan": false, "label": "AT-biased mutation pressure", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content at or below ~42.65% (per METPO synonym GC_\u003c=42.65).", "grounding": "METPO:1000432", "id": "gc_high_trait", "is_orphan": false, "label": "GC high", "node_type": "TRAIT", "xrefs": []}], "title": "GC-high (METPO \u226442.65%) low-GC bin"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

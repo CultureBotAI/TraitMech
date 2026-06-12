@@ -60,7 +60,7 @@
             <strong>maximal osmoadaptive flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl delta high</strong>
-            
+            <code>METPO:2000202</code>
             <p>Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl delta high</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl delta high is a quantitative bin of the NaCl-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking maximal osmoadaptive flexibility to the extreme-euryhaline NaCl-delta bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking maximal osmoadaptive flexibility to NaCl growth breadths exceeding 8% (w/v).", "edges": [{"description": "Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.", "evidence": [{"notes": "Supports maximal osmoadaptive flexibility as the basis of extreme euryhalinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "maximal_osmoadaptive_flexibility", "target": "nacl_delta_high_trait"}, {"description": "NaCl delta high is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports \u003e8% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_delta_high_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal osmoadaptive flexibility as the basis of extreme euryhalinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "produces", "predicate_id": null, "source": "maximal osmoadaptive flexibility", "target": "NaCl delta high"}, {"description": "NaCl delta high is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports \u003e8% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl delta high", "target": "NaCl delta"}], "graph_id": "nacl_delta_high_extreme_euryhaline", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined osmolyte-remodeling and salt-in capacity supporting growth across an extreme salinity span.", "grounding": null, "id": "maximal_osmoadaptive_flexibility", "is_orphan": false, "label": "maximal osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth exceeding ~8% w/v.", "grounding": "METPO:1000482", "id": "nacl_delta_high_trait", "is_orphan": false, "label": "NaCl delta high", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-delta-high extreme-euryhaline breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking maximal osmoadaptive flexibility to NaCl growth breadths exceeding 8% (w/v).", "edges": [{"description": "Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.", "evidence": [{"notes": "Supports maximal osmoadaptive flexibility as the basis of extreme euryhalinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal_osmoadaptive_flexibility", "target": "nacl_delta_high_trait"}, {"description": "NaCl delta high is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports \u003e8% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta_high_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Maximal osmoadaptive flexibility yields an extreme NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal osmoadaptive flexibility as the basis of extreme euryhalinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal osmoadaptive flexibility", "target": "NaCl delta high"}, {"description": "NaCl delta high is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports \u003e8% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta high", "target": "NaCl delta"}], "graph_id": "nacl_delta_high_extreme_euryhaline", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined osmolyte-remodeling and salt-in capacity supporting growth across an extreme salinity span.", "grounding": null, "id": "maximal_osmoadaptive_flexibility", "is_orphan": false, "label": "maximal osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth exceeding ~8% w/v.", "grounding": "METPO:1000482", "id": "nacl_delta_high_trait", "is_orphan": false, "label": "NaCl delta high", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-delta-high extreme-euryhaline breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

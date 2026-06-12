@@ -77,7 +77,7 @@
             <strong>tyrosinase/laccase oxidases</strong>
             <span class="edge-predicate">catalyzes</span>
             <strong>melanin biosynthesis</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>Oxidases catalyze precursor oxidation in melanin formation.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>melanin biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>black-brown melanin</strong>
-            
+            <code>METPO:2000202</code>
             <p>Melanin biosynthesis produces dark melanin polymers.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>black-brown melanin</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible black color</strong>
-            
+            <code>biolink:causes</code>
             <p>Dark melanin polymers cause visible black pigmentation when sufficiently accumulated.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>visible black color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>black pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible black color manifests the black-pigmented phenotype.</p>
             <ul>
               
@@ -278,6 +278,24 @@
           <time>2026-05-11T19:10:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for phenolic precursors, oxidative melanin biosynthesis, black-brown melanin polymers, and visible black color.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1, biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -637,7 +655,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking black microbial pigmentation to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin polymers, and visible black color.", "edges": [{"description": "Phenolic precursors feed oxidative melanin-forming pathways.", "evidence": [{"notes": "Supports phenolic or tyrosine-derived precursors as melanin biosynthetic substrates.", "reference": "DOI:10.1007/s11274-020-02941-z", "snippet": "oxidative polymerization of tyrosine derivatives"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "phenolic_precursors", "target": "melanin_biosynthesis"}, {"description": "Oxidases catalyze precursor oxidation in melanin formation.", "evidence": [{"notes": "Supports oxidative enzymatic routes for microbial melanin formation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "biosynthesis ... oxidative polymerization"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "tyrosinase_laccase_oxidases", "target": "melanin_biosynthesis"}, {"description": "Melanin biosynthesis produces dark melanin polymers.", "evidence": [{"notes": "Supports black-brown melanins as microbial colorants.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "Eumelanin and allomelanin impart black/brown color"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "melanin_biosynthesis", "target": "black_brown_melanin"}, {"description": "Dark melanin polymers cause visible black pigmentation when sufficiently accumulated.", "evidence": [{"notes": "Supports black color as an outcome of dark melanin accumulation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "black_brown_melanin", "target": "visible_black_color"}, {"description": "Visible black color manifests the black-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level assignment.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color to the cells"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_black_color", "target": "black_pigmented_trait"}], "evidence_rows": [{"description": "Phenolic precursors feed oxidative melanin-forming pathways.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phenolic or tyrosine-derived precursors as melanin biosynthetic substrates.", "reference": "DOI:10.1007/s11274-020-02941-z", "snippet": "oxidative polymerization of tyrosine derivatives"}], "predicate": "feed into", "predicate_id": null, "source": "phenolic precursors", "target": "melanin biosynthesis"}, {"description": "Oxidases catalyze precursor oxidation in melanin formation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxidative enzymatic routes for microbial melanin formation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "biosynthesis ... oxidative polymerization"}], "predicate": "catalyzes", "predicate_id": null, "source": "tyrosinase/laccase oxidases", "target": "melanin biosynthesis"}, {"description": "Melanin biosynthesis produces dark melanin polymers.", "edge_id": "edge-3", "evidence": [{"notes": "Supports black-brown melanins as microbial colorants.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "Eumelanin and allomelanin impart black/brown color"}], "predicate": "produces", "predicate_id": null, "source": "melanin biosynthesis", "target": "black-brown melanin"}, {"description": "Dark melanin polymers cause visible black pigmentation when sufficiently accumulated.", "edge_id": "edge-4", "evidence": [{"notes": "Supports black color as an outcome of dark melanin accumulation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color"}], "predicate": "causes", "predicate_id": null, "source": "black-brown melanin", "target": "visible black color"}, {"description": "Visible black color manifests the black-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level assignment.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color to the cells"}], "predicate": "manifests as", "predicate_id": null, "source": "visible black color", "target": "black pigmented"}], "graph_id": "black_pigmented_melanin_polymer", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Dark melanin polymer causing black or brown pigmentation.", "grounding": null, "id": "black_brown_melanin", "is_orphan": false, "label": "black-brown melanin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing black or very dark.", "grounding": "METPO:1003022", "id": "black_pigmented_trait", "is_orphan": false, "label": "black pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidative polymerization process producing microbial melanins.", "grounding": null, "id": "melanin_biosynthesis", "is_orphan": false, "label": "melanin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Tyrosine-derived, DOPA-like, DHN-like, or HGA-like precursors for melanin formation.", "grounding": null, "id": "phenolic_precursors", "is_orphan": false, "label": "phenolic precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxidative enzymes that can catalyze melanin precursor oxidation.", "grounding": null, "id": "tyrosinase_laccase_oxidases", "is_orphan": false, "label": "tyrosinase/laccase oxidases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Observed black or very dark colony or cell color.", "grounding": null, "id": "visible_black_color", "is_orphan": false, "label": "visible black color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Black pigmentation melanin polymer mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking black microbial pigmentation to phenolic precursors, oxidase-catalyzed melanin biosynthesis, dark melanin polymers, and visible black color.", "edges": [{"description": "Phenolic precursors feed oxidative melanin-forming pathways.", "evidence": [{"notes": "Supports phenolic or tyrosine-derived precursors as melanin biosynthetic substrates.", "reference": "DOI:10.1007/s11274-020-02941-z", "snippet": "oxidative polymerization of tyrosine derivatives"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "phenolic_precursors", "target": "melanin_biosynthesis"}, {"description": "Oxidases catalyze precursor oxidation in melanin formation.", "evidence": [{"notes": "Supports oxidative enzymatic routes for microbial melanin formation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "biosynthesis ... oxidative polymerization"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "tyrosinase_laccase_oxidases", "target": "melanin_biosynthesis"}, {"description": "Melanin biosynthesis produces dark melanin polymers.", "evidence": [{"notes": "Supports black-brown melanins as microbial colorants.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "Eumelanin and allomelanin impart black/brown color"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "melanin_biosynthesis", "target": "black_brown_melanin"}, {"description": "Dark melanin polymers cause visible black pigmentation when sufficiently accumulated.", "evidence": [{"notes": "Supports black color as an outcome of dark melanin accumulation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "black_brown_melanin", "target": "visible_black_color"}, {"description": "Visible black color manifests the black-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level assignment.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color to the cells"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_black_color", "target": "black_pigmented_trait"}], "evidence_rows": [{"description": "Phenolic precursors feed oxidative melanin-forming pathways.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phenolic or tyrosine-derived precursors as melanin biosynthetic substrates.", "reference": "DOI:10.1007/s11274-020-02941-z", "snippet": "oxidative polymerization of tyrosine derivatives"}], "predicate": "feed into", "predicate_id": null, "source": "phenolic precursors", "target": "melanin biosynthesis"}, {"description": "Oxidases catalyze precursor oxidation in melanin formation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxidative enzymatic routes for microbial melanin formation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "biosynthesis ... oxidative polymerization"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "tyrosinase/laccase oxidases", "target": "melanin biosynthesis"}, {"description": "Melanin biosynthesis produces dark melanin polymers.", "edge_id": "edge-3", "evidence": [{"notes": "Supports black-brown melanins as microbial colorants.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "Eumelanin and allomelanin impart black/brown color"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "melanin biosynthesis", "target": "black-brown melanin"}, {"description": "Dark melanin polymers cause visible black pigmentation when sufficiently accumulated.", "edge_id": "edge-4", "evidence": [{"notes": "Supports black color as an outcome of dark melanin accumulation.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "black-brown melanin", "target": "visible black color"}, {"description": "Visible black color manifests the black-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level assignment.", "reference": "DOI:10.1016/j.biotechadv.2021.107773", "snippet": "black/brown color to the cells"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible black color", "target": "black pigmented"}], "graph_id": "black_pigmented_melanin_polymer", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Dark melanin polymer causing black or brown pigmentation.", "grounding": null, "id": "black_brown_melanin", "is_orphan": false, "label": "black-brown melanin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing black or very dark.", "grounding": "METPO:1003022", "id": "black_pigmented_trait", "is_orphan": false, "label": "black pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidative polymerization process producing microbial melanins.", "grounding": null, "id": "melanin_biosynthesis", "is_orphan": false, "label": "melanin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Tyrosine-derived, DOPA-like, DHN-like, or HGA-like precursors for melanin formation.", "grounding": null, "id": "phenolic_precursors", "is_orphan": false, "label": "phenolic precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxidative enzymes that can catalyze melanin precursor oxidation.", "grounding": null, "id": "tyrosinase_laccase_oxidases", "is_orphan": false, "label": "tyrosinase/laccase oxidases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Observed black or very dark colony or cell color.", "grounding": null, "id": "visible_black_color", "is_orphan": false, "label": "visible black color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Black pigmentation melanin polymer mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +666,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

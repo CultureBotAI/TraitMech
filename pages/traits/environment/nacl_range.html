@@ -60,7 +60,7 @@
             <strong>ambient NaCl concentration</strong>
             <span class="edge-predicate">defines</span>
             <strong>bounded growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>Ambient NaCl defines the axis over which the growth window is bounded.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>low-salt tolerance</strong>
-            <span class="edge-predicate">sets</span>
+            <span class="edge-predicate">defines</span>
             <strong>bounded growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>Tolerance to low salt sets the lower bound of the growth window.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>high-salt tolerance</strong>
-            <span class="edge-predicate">sets</span>
+            <span class="edge-predicate">defines</span>
             <strong>bounded growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>Tolerance to high salt sets the upper bound of the growth window.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>bounded growth window</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>NaCl range</strong>
-            
+            <code>METPO:2007400</code>
             <p>The bounded growth window manifests the NaCl-range phenotype.</p>
             <ul>
               
@@ -269,6 +269,30 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking ambient NaCl and low/high-salt tolerance to the bounded NaCl-range phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: sets → defines ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×2).</p>
         </li>
         
       </ol>
@@ -628,7 +652,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low and high salt, and the bounded span of growth-supporting NaCl concentrations.", "edges": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "ambient_nacl", "target": "bounded_growth_window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "sets", "predicate_id": null, "source": "low_salt_tolerance", "target": "bounded_growth_window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "sets", "predicate_id": null, "source": "high_salt_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "bounded_growth_window", "target": "nacl_range_trait"}], "evidence_rows": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": null, "source": "ambient NaCl concentration", "target": "bounded growth window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "sets", "predicate_id": null, "source": "low-salt tolerance", "target": "bounded growth window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "predicate": "sets", "predicate_id": null, "source": "high-salt tolerance", "target": "bounded growth window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": null, "source": "bounded growth window", "target": "NaCl range"}], "graph_id": "nacl_range_tolerance_breadth", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl level imposed on the cell.", "grounding": null, "id": "ambient_nacl", "is_orphan": false, "label": "ambient NaCl concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Span of NaCl concentrations between the minimum and maximum that support growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain osmotic balance under elevated NaCl.", "grounding": null, "id": "high_salt_tolerance", "is_orphan": false, "label": "high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain turgor and ion homeostasis at low ambient NaCl.", "grounding": null, "id": "low_salt_tolerance", "is_orphan": false, "label": "low-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range_trait", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-range osmotic-tolerance breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low and high salt, and the bounded span of growth-supporting NaCl concentrations.", "edges": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient_nacl", "target": "bounded_growth_window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low_salt_tolerance", "target": "bounded_growth_window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high_salt_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "nacl_range_trait"}], "evidence_rows": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient NaCl concentration", "target": "bounded growth window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low-salt tolerance", "target": "bounded growth window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high-salt tolerance", "target": "bounded growth window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded growth window", "target": "NaCl range"}], "graph_id": "nacl_range_tolerance_breadth", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl level imposed on the cell.", "grounding": null, "id": "ambient_nacl", "is_orphan": false, "label": "ambient NaCl concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Span of NaCl concentrations between the minimum and maximum that support growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain osmotic balance under elevated NaCl.", "grounding": null, "id": "high_salt_tolerance", "is_orphan": false, "label": "high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain turgor and ion homeostasis at low ambient NaCl.", "grounding": null, "id": "low_salt_tolerance", "is_orphan": false, "label": "low-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range_trait", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-range osmotic-tolerance breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -639,10 +663,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

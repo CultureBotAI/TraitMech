@@ -60,7 +60,7 @@
             <strong>curvature scaffold</strong>
             <span class="edge-predicate">localizes to</span>
             <strong>inner cell curvature</strong>
-            
+            <code>biolink:located_in</code>
             <p>Curvature scaffolds mark or constrain the inner curve of the cell.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>peptidoglycan growth pattern</strong>
             <span class="edge-predicate">generates</span>
             <strong>cell-body curvature</strong>
-            
+            <code>biolink:produces</code>
             <p>Spatially patterned wall growth or constraint generates cell-body curvature.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>cell-body curvature</strong>
             <span class="edge-predicate">produces</span>
             <strong>curved shaped</strong>
-            
+            <code>METPO:2000202</code>
             <p>Cell-body curvature produces the curved-shape trait.</p>
             <ul>
               
@@ -263,6 +263,18 @@
           <time>2026-05-11T18:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed curved shape and added DOI-backed causal graph for curvature scaffolds, inner curvature, and spatial peptidoglycan growth.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×1, biolink:produces×1).</p>
         </li>
         
       </ol>
@@ -622,7 +634,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking curved bacterial morphology to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.", "edges": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": null, "source": "curvature_scaffold", "target": "inner_cell_curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "curvature_scaffold", "target": "peptidoglycan_growth_pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "peptidoglycan_growth_pattern", "target": "cell_body_curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "cell_body_curvature", "target": "curved_shaped_trait"}], "evidence_rows": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "predicate": "localizes to", "predicate_id": null, "source": "curvature scaffold", "target": "inner cell curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "edge_id": "edge-2", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "predicate": "guides", "predicate_id": null, "source": "curvature scaffold", "target": "peptidoglycan growth pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "edge_id": "edge-3", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "generates", "predicate_id": null, "source": "peptidoglycan growth pattern", "target": "cell-body curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "predicate": "produces", "predicate_id": null, "source": "cell-body curvature", "target": "curved shaped"}], "graph_id": "curved_shaped_scaffolded_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Curving of the bacterial cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Shape-determining scaffold such as crescentin or CrvA that marks the inner curve.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Bent or curved bacterial cell-body morphology.", "grounding": "METPO:1000670", "id": "curved_shaped_trait", "is_orphan": false, "label": "curved shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Concave region of a curved bacterial cell body.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Spatial pattern of wall synthesis and remodeling that shapes the cell body.", "grounding": null, "id": "peptidoglycan_growth_pattern", "is_orphan": false, "label": "peptidoglycan growth pattern", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Curved-shape scaffolded morphogenesis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking curved bacterial morphology to scaffold-mediated inner curvature and spatially biased peptidoglycan growth.", "edges": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature_scaffold", "target": "inner_cell_curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "curvature_scaffold", "target": "peptidoglycan_growth_pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan_growth_pattern", "target": "cell_body_curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell_body_curvature", "target": "curved_shaped_trait"}], "evidence_rows": [{"description": "Curvature scaffolds mark or constrain the inner curve of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a common structural theme for curved and helical cells.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "curvature scaffold", "target": "inner cell curvature"}, {"description": "Curvature scaffolds bias wall growth or structural constraints along the inner curve.", "edge_id": "edge-2", "evidence": [{"notes": "Supports scaffold-guided peptidoglycan synthesis as a curvature mechanism in representative bacteria.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "guide PG synthesis"}], "predicate": "guides", "predicate_id": null, "source": "curvature scaffold", "target": "peptidoglycan growth pattern"}, {"description": "Spatially patterned wall growth or constraint generates cell-body curvature.", "edge_id": "edge-3", "evidence": [{"notes": "Vibrio evidence supports asymmetric PG insertion as one concrete route to curved rods.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan growth pattern", "target": "cell-body curvature"}, {"description": "Cell-body curvature produces the curved-shape trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports curved morphology as a recognized bacterial cell-shape class.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "vibrioid (curved) morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell-body curvature", "target": "curved shaped"}], "graph_id": "curved_shaped_scaffolded_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Curving of the bacterial cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Shape-determining scaffold such as crescentin or CrvA that marks the inner curve.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Bent or curved bacterial cell-body morphology.", "grounding": "METPO:1000670", "id": "curved_shaped_trait", "is_orphan": false, "label": "curved shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Concave region of a curved bacterial cell body.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Spatial pattern of wall synthesis and remodeling that shapes the cell body.", "grounding": null, "id": "peptidoglycan_growth_pattern", "is_orphan": false, "label": "peptidoglycan growth pattern", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Curved-shape scaffolded morphogenesis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -633,10 +645,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

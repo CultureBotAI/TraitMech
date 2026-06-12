@@ -60,7 +60,7 @@
             <strong>mixotrophic</strong>
             <span class="edge-predicate">uses carbon source</span>
             <strong>organic carbon</strong>
-            
+            <code>METPO:2000006</code>
             <p>Mixotrophs can use organic carbon as a carbon source.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>mixotrophic</strong>
             <span class="edge-predicate">uses carbon source</span>
             <strong>carbon dioxide</strong>
-            
+            <code>METPO:2000006</code>
             <p>Mixotrophy can include inorganic carbon acquisition by CO2 fixation.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">fixed by</span>
             <strong>CO2-fixation pathway</strong>
-            
+            <code>METPO:2007404</code>
             <p>Inorganic carbon assimilation converts CO2 into cellular carbon.</p>
             <ul>
               
@@ -295,6 +295,42 @@
           <time>2026-05-09T00:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · Codex
           <p class="changes">Added DOI-backed mixotrophy graph for dual organic/inorganic carbon use and light-associated energy capture.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000006×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007404×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:50860×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007501×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:34:59Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:33Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0015977×1).</p>
         </li>
         
       </ol>
@@ -654,7 +690,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking organic carbon uptake, inorganic carbon fixation, light or chemical energy capture, and biomass production.", "edges": [{"description": "Mixotrophs can use organic carbon as a carbon source.", "evidence": [{"notes": "Supports organic carbon use as part of mixotrophic metabolism.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "organic carbon (C) for their C needs"}], "id": "edge-1", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": null, "source": "mixotrophic_trait", "target": "organic_carbon"}, {"description": "Mixotrophy can include inorganic carbon acquisition by CO2 fixation.", "evidence": [{"notes": "Supports combining autotrophic and heterotrophic carbon-acquisition modes.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "obtain its energy and carbon"}], "id": "edge-2", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": null, "source": "mixotrophic_trait", "target": "carbon_dioxide"}, {"description": "Dissolved organic matter provides organic substrates in aquatic mixotrophy.", "evidence": [{"notes": "Figure legend identifies dissolved organic matter as a substrate pool in bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "DOM, dissolved organic matter"}], "id": "edge-3", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "dissolved_organic_matter", "target": "organic_carbon"}, {"description": "Some microbial mixotrophs supplement organic carbon use with light-harvesting energy systems.", "evidence": [{"notes": "Review discusses pigment/rhodopsin-associated bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "rhodopsin and other pigment"}], "id": "edge-4", "is_orphan": false, "predicate": "can use energy capture route", "predicate_id": null, "source": "mixotrophic_trait", "target": "phototrophic_energy_capture"}, {"description": "Inorganic carbon assimilation converts CO2 into cellular carbon.", "evidence": [{"notes": "Supports CO2 fixation as the inorganic-carbon assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-5", "is_orphan": false, "predicate": "fixed by", "predicate_id": null, "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "Organic carbon contributes to cell material in mixotrophic growth.", "evidence": [{"notes": "Supports assimilatory conversion of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-6", "is_orphan": false, "predicate": "incorporated into", "predicate_id": null, "source": "organic_carbon", "target": "biomass"}], "evidence_rows": [{"description": "Mixotrophs can use organic carbon as a carbon source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic carbon use as part of mixotrophic metabolism.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "organic carbon (C) for their C needs"}], "predicate": "uses carbon source", "predicate_id": null, "source": "mixotrophic", "target": "organic carbon"}, {"description": "Mixotrophy can include inorganic carbon acquisition by CO2 fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports combining autotrophic and heterotrophic carbon-acquisition modes.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "obtain its energy and carbon"}], "predicate": "uses carbon source", "predicate_id": null, "source": "mixotrophic", "target": "carbon dioxide"}, {"description": "Dissolved organic matter provides organic substrates in aquatic mixotrophy.", "edge_id": "edge-3", "evidence": [{"notes": "Figure legend identifies dissolved organic matter as a substrate pool in bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "DOM, dissolved organic matter"}], "predicate": "supplies", "predicate_id": null, "source": "dissolved organic matter", "target": "organic carbon"}, {"description": "Some microbial mixotrophs supplement organic carbon use with light-harvesting energy systems.", "edge_id": "edge-4", "evidence": [{"notes": "Review discusses pigment/rhodopsin-associated bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "rhodopsin and other pigment"}], "predicate": "can use energy capture route", "predicate_id": null, "source": "mixotrophic", "target": "phototrophic energy capture"}, {"description": "Inorganic carbon assimilation converts CO2 into cellular carbon.", "edge_id": "edge-5", "evidence": [{"notes": "Supports CO2 fixation as the inorganic-carbon assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "fixed by", "predicate_id": null, "source": "carbon dioxide", "target": "CO2-fixation pathway"}, {"description": "Organic carbon contributes to cell material in mixotrophic growth.", "edge_id": "edge-6", "evidence": [{"notes": "Supports assimilatory conversion of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "incorporated into", "predicate_id": null, "source": "organic carbon", "target": "biomass"}], "graph_id": "mixotrophic_dual_carbon_energy_use", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell material formed from combined carbon acquisition.", "grounding": null, "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source fixed by autotrophic modules.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic carbon assimilation route.", "grounding": null, "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2-fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Environmental organic substrate pool available to aquatic microbes.", "grounding": null, "id": "dissolved_organic_matter", "is_orphan": false, "label": "dissolved organic matter", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type combining organic and inorganic carbon-use modes.", "grounding": "METPO:1000652", "id": "mixotrophic_trait", "is_orphan": false, "label": "mixotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Organic compounds assimilated or catabolized by mixotrophs.", "grounding": null, "id": "organic_carbon", "is_orphan": false, "label": "organic carbon", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Light-driven energy capture, including rhodopsin or photosynthetic systems.", "grounding": null, "id": "phototrophic_energy_capture", "is_orphan": false, "label": "phototrophic energy capture", "node_type": "PATHWAY", "xrefs": []}], "title": "Mixotrophic dual carbon and energy use"}];
+  var graphs = [{"description": "DOI-backed graph linking organic carbon uptake, inorganic carbon fixation, light or chemical energy capture, and biomass production.", "edges": [{"description": "Mixotrophs can use organic carbon as a carbon source.", "evidence": [{"notes": "Supports organic carbon use as part of mixotrophic metabolism.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "organic carbon (C) for their C needs"}], "id": "edge-1", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "mixotrophic_trait", "target": "organic_carbon"}, {"description": "Mixotrophy can include inorganic carbon acquisition by CO2 fixation.", "evidence": [{"notes": "Supports combining autotrophic and heterotrophic carbon-acquisition modes.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "obtain its energy and carbon"}], "id": "edge-2", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "mixotrophic_trait", "target": "carbon_dioxide"}, {"description": "Dissolved organic matter provides organic substrates in aquatic mixotrophy.", "evidence": [{"notes": "Figure legend identifies dissolved organic matter as a substrate pool in bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "DOM, dissolved organic matter"}], "id": "edge-3", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "dissolved_organic_matter", "target": "organic_carbon"}, {"description": "Some microbial mixotrophs supplement organic carbon use with light-harvesting energy systems.", "evidence": [{"notes": "Review discusses pigment/rhodopsin-associated bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "rhodopsin and other pigment"}], "id": "edge-4", "is_orphan": false, "predicate": "can use energy capture route", "predicate_id": null, "source": "mixotrophic_trait", "target": "phototrophic_energy_capture"}, {"description": "Inorganic carbon assimilation converts CO2 into cellular carbon.", "evidence": [{"notes": "Supports CO2 fixation as the inorganic-carbon assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-5", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "co2_fixation_pathway"}, {"description": "Organic carbon contributes to cell material in mixotrophic growth.", "evidence": [{"notes": "Supports assimilatory conversion of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-6", "is_orphan": false, "predicate": "incorporated into", "predicate_id": null, "source": "organic_carbon", "target": "biomass"}], "evidence_rows": [{"description": "Mixotrophs can use organic carbon as a carbon source.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic carbon use as part of mixotrophic metabolism.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "organic carbon (C) for their C needs"}], "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "mixotrophic", "target": "organic carbon"}, {"description": "Mixotrophy can include inorganic carbon acquisition by CO2 fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports combining autotrophic and heterotrophic carbon-acquisition modes.", "reference": "DOI:10.1073/pnas.1305998110", "snippet": "obtain its energy and carbon"}], "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "mixotrophic", "target": "carbon dioxide"}, {"description": "Dissolved organic matter provides organic substrates in aquatic mixotrophy.", "edge_id": "edge-3", "evidence": [{"notes": "Figure legend identifies dissolved organic matter as a substrate pool in bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "DOM, dissolved organic matter"}], "predicate": "supplies", "predicate_id": null, "source": "dissolved organic matter", "target": "organic carbon"}, {"description": "Some microbial mixotrophs supplement organic carbon use with light-harvesting energy systems.", "edge_id": "edge-4", "evidence": [{"notes": "Review discusses pigment/rhodopsin-associated bacterial metabolic modes.", "reference": "DOI:10.1128/AEM.01559-06", "snippet": "rhodopsin and other pigment"}], "predicate": "can use energy capture route", "predicate_id": null, "source": "mixotrophic", "target": "phototrophic energy capture"}, {"description": "Inorganic carbon assimilation converts CO2 into cellular carbon.", "edge_id": "edge-5", "evidence": [{"notes": "Supports CO2 fixation as the inorganic-carbon assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "CO2-fixation pathway"}, {"description": "Organic carbon contributes to cell material in mixotrophic growth.", "edge_id": "edge-6", "evidence": [{"notes": "Supports assimilatory conversion of organic compounds into biomass.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "incorporated into", "predicate_id": null, "source": "organic carbon", "target": "biomass"}], "graph_id": "mixotrophic_dual_carbon_energy_use", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cell material formed from combined carbon acquisition.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source fixed by autotrophic modules.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic carbon assimilation route.", "grounding": "GO:0015977", "id": "co2_fixation_pathway", "is_orphan": false, "label": "CO2-fixation pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Environmental organic substrate pool available to aquatic microbes.", "grounding": null, "id": "dissolved_organic_matter", "is_orphan": false, "label": "dissolved organic matter", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type combining organic and inorganic carbon-use modes.", "grounding": "METPO:1000652", "id": "mixotrophic_trait", "is_orphan": false, "label": "mixotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Organic compounds assimilated or catabolized by mixotrophs.", "grounding": "CHEBI:50860", "id": "organic_carbon", "is_orphan": false, "label": "organic carbon", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Light-driven energy capture, including rhodopsin or photosynthetic systems.", "grounding": null, "id": "phototrophic_energy_capture", "is_orphan": false, "label": "phototrophic energy capture", "node_type": "PATHWAY", "xrefs": []}], "title": "Mixotrophic dual carbon and energy use"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -665,10 +701,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

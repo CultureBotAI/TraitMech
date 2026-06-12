@@ -77,7 +77,7 @@
             <strong>high-salt exposure</strong>
             <span class="edge-predicate">causes</span>
             <strong>osmotic stress</strong>
-            
+            <code>biolink:causes</code>
             <p>External salinity creates osmotic stress in halotolerant organisms.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">mitigates</span>
             <strong>osmotic stress</strong>
-            
+            <code>METPO:2007407</code>
             <p>Compatible solutes are a mechanism for tolerating salt stress.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>stress protection</strong>
-            
+            <code>RO:0002326</code>
             <p>Compatible solutes can stabilize cells under saline stress.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>stress protection</strong>
             <span class="edge-predicate">enables</span>
             <strong>halotolerant</strong>
-            
+            <code>RO:0002327</code>
             <p>Stress-protection mechanisms allow tolerance of salt exposure.</p>
             <ul>
               
@@ -307,6 +307,30 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed halotolerance source and added a compatible-solute transport edge to the existing causal graph.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1, RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007407×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006970×1, CHEBI:65015×1).</p>
         </li>
         
       </ol>
@@ -666,7 +690,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking halotolerance to survival under high salinity without strict salt requirement.", "edges": [{"description": "Halotolerant organisms can survive elevated salinity without requiring it.", "evidence": [{"notes": "Review distinguishes halotolerant microorganisms in high-salt environments.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "highly halotolerant representatives"}], "id": "edge-1", "is_orphan": false, "predicate": "tolerated by", "predicate_id": null, "source": "high_salt_exposure", "target": "halotolerant_trait"}, {"description": "External salinity creates osmotic stress in halotolerant organisms.", "evidence": [{"notes": "Review supports high environmental salt as the stress context.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "high salt concentrations in the environment"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "high_salt_exposure", "target": "osmotic_stress"}, {"description": "Compatible solutes are a mechanism for tolerating salt stress.", "evidence": [{"notes": "Supports organic osmotic solutes as an osmoadaptation strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "organic osmotic solutes"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "compatible_solutes", "target": "osmotic_stress"}, {"description": "Uptake systems import osmoprotectants that support halotolerance.", "evidence": [{"notes": "Adds explicit source support for transport-mediated compatible-solute accumulation in bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes can stabilize cells under saline stress.", "evidence": [{"notes": "Haloalkaliphile review supports compatible solutes as stabilizing osmoprotectants; mechanism is shared with halotolerance.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "stabilizers of intracellular proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "compatible_solutes", "target": "stress_protection"}, {"description": "Stress-protection mechanisms allow tolerance of salt exposure.", "evidence": [{"notes": "Supports osmoadaptation as a mechanism for growth under salt stress.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "stress_protection", "target": "halotolerant_trait"}], "evidence_rows": [{"description": "Halotolerant organisms can survive elevated salinity without requiring it.", "edge_id": "edge-1", "evidence": [{"notes": "Review distinguishes halotolerant microorganisms in high-salt environments.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "highly halotolerant representatives"}], "predicate": "tolerated by", "predicate_id": null, "source": "high-salt exposure", "target": "halotolerant"}, {"description": "External salinity creates osmotic stress in halotolerant organisms.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports high environmental salt as the stress context.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "high salt concentrations in the environment"}], "predicate": "causes", "predicate_id": null, "source": "high-salt exposure", "target": "osmotic stress"}, {"description": "Compatible solutes are a mechanism for tolerating salt stress.", "edge_id": "edge-3", "evidence": [{"notes": "Supports organic osmotic solutes as an osmoadaptation strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "organic osmotic solutes"}], "predicate": "mitigates", "predicate_id": null, "source": "compatible solutes", "target": "osmotic stress"}, {"description": "Uptake systems import osmoprotectants that support halotolerance.", "edge_id": "edge-4", "evidence": [{"notes": "Adds explicit source support for transport-mediated compatible-solute accumulation in bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes can stabilize cells under saline stress.", "edge_id": "edge-5", "evidence": [{"notes": "Haloalkaliphile review supports compatible solutes as stabilizing osmoprotectants; mechanism is shared with halotolerance.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "stabilizers of intracellular proteins"}], "predicate": "contributes to", "predicate_id": null, "source": "compatible solutes", "target": "stress protection"}, {"description": "Stress-protection mechanisms allow tolerance of salt exposure.", "edge_id": "edge-6", "evidence": [{"notes": "Supports osmoadaptation as a mechanism for growth under salt stress.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "predicate": "enables", "predicate_id": null, "source": "stress protection", "target": "halotolerant"}], "graph_id": "halotolerant_salt_stress_response", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake systems importing osmoprotectants under high-salt stress.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes that support salt tolerance.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates high salt but does not require it for growth.", "grounding": "METPO:1000622", "id": "halotolerant_trait", "is_orphan": false, "label": "halotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Salt stress condition tolerated by the organism.", "grounding": null, "id": "high_salt_exposure", "is_orphan": false, "label": "high-salt exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stress caused by external salinity.", "grounding": null, "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Protective cellular response to saline conditions.", "grounding": null, "id": "stress_protection", "is_orphan": false, "label": "stress protection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Halotolerant salt-stress response mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking halotolerance to survival under high salinity without strict salt requirement.", "edges": [{"description": "Halotolerant organisms can survive elevated salinity without requiring it.", "evidence": [{"notes": "Review distinguishes halotolerant microorganisms in high-salt environments.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "highly halotolerant representatives"}], "id": "edge-1", "is_orphan": false, "predicate": "tolerated by", "predicate_id": null, "source": "high_salt_exposure", "target": "halotolerant_trait"}, {"description": "External salinity creates osmotic stress in halotolerant organisms.", "evidence": [{"notes": "Review supports high environmental salt as the stress context.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "high salt concentrations in the environment"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "high_salt_exposure", "target": "osmotic_stress"}, {"description": "Compatible solutes are a mechanism for tolerating salt stress.", "evidence": [{"notes": "Supports organic osmotic solutes as an osmoadaptation strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "organic osmotic solutes"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_stress"}, {"description": "Uptake systems import osmoprotectants that support halotolerance.", "evidence": [{"notes": "Adds explicit source support for transport-mediated compatible-solute accumulation in bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes can stabilize cells under saline stress.", "evidence": [{"notes": "Haloalkaliphile review supports compatible solutes as stabilizing osmoprotectants; mechanism is shared with halotolerance.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "stabilizers of intracellular proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible_solutes", "target": "stress_protection"}, {"description": "Stress-protection mechanisms allow tolerance of salt exposure.", "evidence": [{"notes": "Supports osmoadaptation as a mechanism for growth under salt stress.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "stress_protection", "target": "halotolerant_trait"}], "evidence_rows": [{"description": "Halotolerant organisms can survive elevated salinity without requiring it.", "edge_id": "edge-1", "evidence": [{"notes": "Review distinguishes halotolerant microorganisms in high-salt environments.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "highly halotolerant representatives"}], "predicate": "tolerated by", "predicate_id": null, "source": "high-salt exposure", "target": "halotolerant"}, {"description": "External salinity creates osmotic stress in halotolerant organisms.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports high environmental salt as the stress context.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "high salt concentrations in the environment"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "high-salt exposure", "target": "osmotic stress"}, {"description": "Compatible solutes are a mechanism for tolerating salt stress.", "edge_id": "edge-3", "evidence": [{"notes": "Supports organic osmotic solutes as an osmoadaptation strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "organic osmotic solutes"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic stress"}, {"description": "Uptake systems import osmoprotectants that support halotolerance.", "edge_id": "edge-4", "evidence": [{"notes": "Adds explicit source support for transport-mediated compatible-solute accumulation in bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes can stabilize cells under saline stress.", "edge_id": "edge-5", "evidence": [{"notes": "Haloalkaliphile review supports compatible solutes as stabilizing osmoprotectants; mechanism is shared with halotolerance.", "reference": "DOI:10.1139/cjm-2014-0233", "snippet": "stabilizers of intracellular proteins"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible solutes", "target": "stress protection"}, {"description": "Stress-protection mechanisms allow tolerance of salt exposure.", "edge_id": "edge-6", "evidence": [{"notes": "Supports osmoadaptation as a mechanism for growth under salt stress.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "stress protection", "target": "halotolerant"}], "graph_id": "halotolerant_salt_stress_response", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake systems importing osmoprotectants under high-salt stress.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes that support salt tolerance.", "grounding": "CHEBI:65015", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates high salt but does not require it for growth.", "grounding": "METPO:1000622", "id": "halotolerant_trait", "is_orphan": false, "label": "halotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Salt stress condition tolerated by the organism.", "grounding": null, "id": "high_salt_exposure", "is_orphan": false, "label": "high-salt exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stress caused by external salinity.", "grounding": "GO:0006970", "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Protective cellular response to saline conditions.", "grounding": null, "id": "stress_protection", "is_orphan": false, "label": "stress protection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Halotolerant salt-stress response mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -677,10 +701,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

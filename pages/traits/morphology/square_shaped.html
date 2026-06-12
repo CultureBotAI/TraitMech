@@ -60,7 +60,7 @@
             <strong>planar envelope growth</strong>
             <span class="edge-predicate">enables</span>
             <strong>right-angle growth geometry</strong>
-            
+            <code>RO:0002327</code>
             <p>Planar envelope growth in two axes supports rectangular geometry.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>S-layer constraints</strong>
-            <span class="edge-predicate">shapes</span>
+            <span class="edge-predicate">causes</span>
             <strong>right-angle growth geometry</strong>
-            
+            <code>biolink:causes</code>
             <p>The paracrystalline S-layer constrains envelope geometry toward right angles.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>right-angle growth geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>square shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Right-angle planar geometry manifests the square-shaped trait.</p>
             <ul>
               
@@ -207,20 +207,20 @@
         
         <li>
           <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/enzyme.html">enzyme</a>
+          <span class="sim">0.245</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">upper</span>
           <a href="../../traits/upper/material_entity.html">material entity</a>
           <span class="sim">0.238</span>
         </li>
         
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/pleomorphic_shaped.html">pleomorphic shaped</a>
-          <span class="sim">0.231</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
-          <span class="sim">0.229</span>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/chemical_entity.html">chemical entity</a>
+          <span class="sim">0.233</span>
         </li>
         
       </ul>
@@ -244,6 +244,30 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking planar anisotropic envelope growth and S-layer constraints to square-shaped halophile morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: shapes → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -603,7 +627,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking anisotropic planar cell-envelope growth and S-layer-constrained right-angle geometry to flat square cells.", "edges": [{"description": "Planar envelope growth in two axes supports rectangular geometry.", "evidence": [{"notes": "Supports planar growth as the cellular basis for flat square cells.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "planar_envelope_growth", "target": "right_angle_growth"}, {"description": "The paracrystalline S-layer constrains envelope geometry toward right angles.", "evidence": [{"notes": "Supports envelope architectural constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "slayer_constraints", "target": "right_angle_growth"}, {"description": "Right-angle planar geometry manifests the square-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "square or disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "right_angle_growth", "target": "square_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth in two axes supports rectangular geometry.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar growth as the cellular basis for flat square cells.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "enables", "predicate_id": null, "source": "planar envelope growth", "target": "right-angle growth geometry"}, {"description": "The paracrystalline S-layer constrains envelope geometry toward right angles.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope architectural constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "shapes", "predicate_id": null, "source": "S-layer constraints", "target": "right-angle growth geometry"}, {"description": "Right-angle planar geometry manifests the square-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "square or disc-shaped cells"}], "predicate": "manifests as", "predicate_id": null, "source": "right-angle growth geometry", "target": "square shaped"}], "graph_id": "square_shaped_planar_anisotropic_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-envelope expansion in two orthogonal in-plane directions.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Growth pattern producing perpendicular cell edges.", "grounding": null, "id": "right_angle_growth", "is_orphan": false, "label": "right-angle growth geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Paracrystalline S-layer that imposes geometric constraints on cell shape.", "grounding": "GO:0030115", "id": "slayer_constraints", "is_orphan": false, "label": "S-layer constraints", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Flat square or rectangular cell geometry.", "grounding": "METPO:1000694", "id": "square_shaped_trait", "is_orphan": false, "label": "square shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Square-shape planar anisotropic envelope growth"}];
+  var graphs = [{"description": "DOI-backed graph linking anisotropic planar cell-envelope growth and S-layer-constrained right-angle geometry to flat square cells.", "edges": [{"description": "Planar envelope growth in two axes supports rectangular geometry.", "evidence": [{"notes": "Supports planar growth as the cellular basis for flat square cells.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar_envelope_growth", "target": "right_angle_growth"}, {"description": "The paracrystalline S-layer constrains envelope geometry toward right angles.", "evidence": [{"notes": "Supports envelope architectural constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "slayer_constraints", "target": "right_angle_growth"}, {"description": "Right-angle planar geometry manifests the square-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "square or disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "right_angle_growth", "target": "square_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth in two axes supports rectangular geometry.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar growth as the cellular basis for flat square cells.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar envelope growth", "target": "right-angle growth geometry"}, {"description": "The paracrystalline S-layer constrains envelope geometry toward right angles.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope architectural constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "S-layer constraints", "target": "right-angle growth geometry"}, {"description": "Right-angle planar geometry manifests the square-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "square or disc-shaped cells"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "right-angle growth geometry", "target": "square shaped"}], "graph_id": "square_shaped_planar_anisotropic_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-envelope expansion in two orthogonal in-plane directions.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Growth pattern producing perpendicular cell edges.", "grounding": null, "id": "right_angle_growth", "is_orphan": false, "label": "right-angle growth geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Paracrystalline S-layer that imposes geometric constraints on cell shape.", "grounding": "GO:0030115", "id": "slayer_constraints", "is_orphan": false, "label": "S-layer constraints", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Flat square or rectangular cell geometry.", "grounding": "METPO:1000694", "id": "square_shaped_trait", "is_orphan": false, "label": "square shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Square-shape planar anisotropic envelope growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +638,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

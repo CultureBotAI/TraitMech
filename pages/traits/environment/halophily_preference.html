@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>environmental salinity</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>halophily preference</strong>
-            
+            <code>RO:0002211</code>
             <p>Salt concentration determines whether growth requires, tolerates, or avoids salinity.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>environmental salinity</strong>
             <span class="edge-predicate">causes</span>
             <strong>osmotic stress</strong>
-            
+            <code>biolink:causes</code>
             <p>Salinity changes impose osmotic stress on cells.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>osmotic stress</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>water flux across cytoplasmic membrane</strong>
-            
+            <code>RO:0002211</code>
             <p>Osmotic imbalance drives water movement across the cytoplasmic membrane.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>potassium ion</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>osmotic stress</strong>
-            
+            <code>RO:0002326</code>
             <p>Potassium accumulation is an early response to osmotic upshift in many bacteria.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">mitigates</span>
             <strong>osmotic stress</strong>
-            
+            <code>METPO:2007407</code>
             <p>Compatible solutes maintain turgor and protect macromolecular function under salt stress.</p>
             <ul>
               
@@ -322,6 +322,54 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed halophily preference trait and added DOI-backed causal graph for salinity-driven osmotic stress, ion homeostasis, and compatible-solute osmoadaptation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007407×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006970×1, CHEBI:65015×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: influences → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:49Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -681,7 +729,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental salinity, osmotic stress, water flux, ion homeostasis, and compatible-solute accumulation to halophily preference.", "edges": [{"description": "Salt concentration determines whether growth requires, tolerates, or avoids salinity.", "evidence": [{"notes": "Review frames halophily as microbial life under high salt concentration.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "life at high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "environmental_salinity", "target": "halophily_preference_trait"}, {"description": "Salinity changes impose osmotic stress on cells.", "evidence": [{"notes": "Review describes bacterial mechanisms for salt-stress responses.", "reference": "DOI:10.1111/j.1574-6976.2002.tb00598.x", "snippet": "overcome salt stress"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "environmental_salinity", "target": "osmotic_stress"}, {"description": "Osmotic imbalance drives water movement across the cytoplasmic membrane.", "evidence": [{"notes": "Supports osmotic-gradient balancing as central to microbial osmotic stress.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "balance the osmotic gradient across their cytoplasmic membrane"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "osmotic_stress", "target": "water_flux"}, {"description": "Potassium accumulation is an early response to osmotic upshift in many bacteria.", "evidence": [{"notes": "Supports K+ uptake as an emergency osmotic-stress response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "potassium_ion", "target": "osmotic_stress"}, {"description": "Transport systems import compatible solutes that relieve osmotic stress.", "evidence": [{"notes": "Review supports uptake and biosynthesis of compatible solutes in bacterial high-salinity responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-5", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes maintain turgor and protect macromolecular function under salt stress.", "evidence": [{"notes": "Review supports compatible solutes as osmolytes for osmotic balance.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-6", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "compatible_solutes", "target": "osmotic_stress"}], "evidence_rows": [{"description": "Salt concentration determines whether growth requires, tolerates, or avoids salinity.", "edge_id": "edge-1", "evidence": [{"notes": "Review frames halophily as microbial life under high salt concentration.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "life at high salt concentrations"}], "predicate": "influences", "predicate_id": null, "source": "environmental salinity", "target": "halophily preference"}, {"description": "Salinity changes impose osmotic stress on cells.", "edge_id": "edge-2", "evidence": [{"notes": "Review describes bacterial mechanisms for salt-stress responses.", "reference": "DOI:10.1111/j.1574-6976.2002.tb00598.x", "snippet": "overcome salt stress"}], "predicate": "causes", "predicate_id": null, "source": "environmental salinity", "target": "osmotic stress"}, {"description": "Osmotic imbalance drives water movement across the cytoplasmic membrane.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic-gradient balancing as central to microbial osmotic stress.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "balance the osmotic gradient across their cytoplasmic membrane"}], "predicate": "drives", "predicate_id": null, "source": "osmotic stress", "target": "water flux across cytoplasmic membrane"}, {"description": "Potassium accumulation is an early response to osmotic upshift in many bacteria.", "edge_id": "edge-4", "evidence": [{"notes": "Supports K+ uptake as an emergency osmotic-stress response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "predicate": "contributes to", "predicate_id": null, "source": "potassium ion", "target": "osmotic stress"}, {"description": "Transport systems import compatible solutes that relieve osmotic stress.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports uptake and biosynthesis of compatible solutes in bacterial high-salinity responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes maintain turgor and protect macromolecular function under salt stress.", "edge_id": "edge-6", "evidence": [{"notes": "Review supports compatible solutes as osmolytes for osmotic balance.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": null, "source": "compatible solutes", "target": "osmotic stress"}], "graph_id": "halophily_preference_osmoadaptation", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake systems importing osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated by synthesis or uptake under salt stress.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Salt concentration of the growth environment.", "grounding": null, "id": "environmental_salinity", "is_orphan": false, "label": "environmental salinity", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requirement or tolerance with respect to environmental salt concentration.", "grounding": "METPO:1000629", "id": "halophily_preference_trait", "is_orphan": false, "label": "halophily preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stress caused by a mismatch between external and cytoplasmic osmotic potential.", "grounding": null, "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic ion rapidly accumulated during some osmotic upshifts.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Osmotically driven water movement across the membrane.", "grounding": null, "id": "water_flux", "is_orphan": false, "label": "water flux across cytoplasmic membrane", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Salinity preference and osmoadaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental salinity, osmotic stress, water flux, ion homeostasis, and compatible-solute accumulation to halophily preference.", "edges": [{"description": "Salt concentration determines whether growth requires, tolerates, or avoids salinity.", "evidence": [{"notes": "Review frames halophily as microbial life under high salt concentration.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "life at high salt concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental_salinity", "target": "halophily_preference_trait"}, {"description": "Salinity changes impose osmotic stress on cells.", "evidence": [{"notes": "Review describes bacterial mechanisms for salt-stress responses.", "reference": "DOI:10.1111/j.1574-6976.2002.tb00598.x", "snippet": "overcome salt stress"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "environmental_salinity", "target": "osmotic_stress"}, {"description": "Osmotic imbalance drives water movement across the cytoplasmic membrane.", "evidence": [{"notes": "Supports osmotic-gradient balancing as central to microbial osmotic stress.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "balance the osmotic gradient across their cytoplasmic membrane"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "osmotic_stress", "target": "water_flux"}, {"description": "Potassium accumulation is an early response to osmotic upshift in many bacteria.", "evidence": [{"notes": "Supports K+ uptake as an emergency osmotic-stress response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium_ion", "target": "osmotic_stress"}, {"description": "Transport systems import compatible solutes that relieve osmotic stress.", "evidence": [{"notes": "Review supports uptake and biosynthesis of compatible solutes in bacterial high-salinity responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-5", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes maintain turgor and protect macromolecular function under salt stress.", "evidence": [{"notes": "Review supports compatible solutes as osmolytes for osmotic balance.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-6", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_stress"}], "evidence_rows": [{"description": "Salt concentration determines whether growth requires, tolerates, or avoids salinity.", "edge_id": "edge-1", "evidence": [{"notes": "Review frames halophily as microbial life under high salt concentration.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "life at high salt concentrations"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental salinity", "target": "halophily preference"}, {"description": "Salinity changes impose osmotic stress on cells.", "edge_id": "edge-2", "evidence": [{"notes": "Review describes bacterial mechanisms for salt-stress responses.", "reference": "DOI:10.1111/j.1574-6976.2002.tb00598.x", "snippet": "overcome salt stress"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "environmental salinity", "target": "osmotic stress"}, {"description": "Osmotic imbalance drives water movement across the cytoplasmic membrane.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic-gradient balancing as central to microbial osmotic stress.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "balance the osmotic gradient across their cytoplasmic membrane"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "osmotic stress", "target": "water flux across cytoplasmic membrane"}, {"description": "Potassium accumulation is an early response to osmotic upshift in many bacteria.", "edge_id": "edge-4", "evidence": [{"notes": "Supports K+ uptake as an emergency osmotic-stress response.", "reference": "DOI:10.1128/AEM.01934-12", "snippet": "initially importing substantial amounts of potassium ions"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "potassium ion", "target": "osmotic stress"}, {"description": "Transport systems import compatible solutes that relieve osmotic stress.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports uptake and biosynthesis of compatible solutes in bacterial high-salinity responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": null, "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes maintain turgor and protect macromolecular function under salt stress.", "edge_id": "edge-6", "evidence": [{"notes": "Review supports compatible solutes as osmolytes for osmotic balance.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic stress"}], "graph_id": "halophily_preference_osmoadaptation", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake systems importing osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated by synthesis or uptake under salt stress.", "grounding": "CHEBI:65015", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Salt concentration of the growth environment.", "grounding": null, "id": "environmental_salinity", "is_orphan": false, "label": "environmental salinity", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requirement or tolerance with respect to environmental salt concentration.", "grounding": "METPO:1000629", "id": "halophily_preference_trait", "is_orphan": false, "label": "halophily preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stress caused by a mismatch between external and cytoplasmic osmotic potential.", "grounding": "GO:0006970", "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic ion rapidly accumulated during some osmotic upshifts.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Osmotically driven water movement across the membrane.", "grounding": null, "id": "water_flux", "is_orphan": false, "label": "water flux across cytoplasmic membrane", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Salinity preference and osmoadaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -692,10 +740,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

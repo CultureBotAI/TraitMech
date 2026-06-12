@@ -60,7 +60,7 @@
             <strong>cold environment</strong>
             <span class="edge-predicate">selects for</span>
             <strong>psychrophile cold-adapted machinery</strong>
-            
+            <code>METPO:2007401</code>
             <p>Cold environments select for cold-adapted enzymes and lipids.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>psychrophile cold-adapted machinery</strong>
             <span class="edge-predicate">produces</span>
             <strong>temperature optimum very low</strong>
-            
+            <code>METPO:2000202</code>
             <p>Psychrophile cold-adapted machinery yields a very-low temperature optimum.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>temperature optimum very low</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature optimum</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.</p>
             <ul>
               
@@ -246,6 +246,18 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking psychrophile cold-adapted machinery to the temperature-optimum-very-low bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
         </li>
         
       </ol>
@@ -605,7 +617,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking cold-adapted membrane and enzyme machinery to a temperature optimum at or below ~10 \u00b0C.", "edges": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "cold_environment", "target": "psychrophile_machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "psychrophile_machinery", "target": "temperature_optimum_very_low_trait"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_optimum_very_low_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "selects for", "predicate_id": null, "source": "cold environment", "target": "psychrophile cold-adapted machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": null, "source": "psychrophile cold-adapted machinery", "target": "temperature optimum very low"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": null, "source": "temperature optimum very low", "target": "temperature optimum"}], "graph_id": "temperature_optimum_very_low_psychrophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Habitat ambient temperature near the freezing point of water.", "grounding": null, "id": "cold_environment", "is_orphan": false, "label": "cold environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes sustaining function at very low temperature.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum at or below ~10 \u00b0C.", "grounding": "METPO:1000441", "id": "temperature_optimum_very_low_trait", "is_orphan": false, "label": "temperature optimum very low", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-optimum-very-low psychrophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking cold-adapted membrane and enzyme machinery to a temperature optimum at or below ~10 \u00b0C.", "edges": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold_environment", "target": "psychrophile_machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "psychrophile_machinery", "target": "temperature_optimum_very_low_trait"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_very_low_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Cold environments select for cold-adapted enzymes and lipids.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold habitats as the context for psychrophile machinery.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "cold environment", "target": "psychrophile cold-adapted machinery"}, {"description": "Psychrophile cold-adapted machinery yields a very-low temperature optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting the psychrophile optimum.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "psychrophile cold-adapted machinery", "target": "temperature optimum very low"}, {"description": "Temperature optimum very low is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a \u226410 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum very low", "target": "temperature optimum"}], "graph_id": "temperature_optimum_very_low_psychrophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Habitat ambient temperature near the freezing point of water.", "grounding": null, "id": "cold_environment", "is_orphan": false, "label": "cold environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cold-active enzymes and unsaturated-lipid membranes sustaining function at very low temperature.", "grounding": null, "id": "psychrophile_machinery", "is_orphan": false, "label": "psychrophile cold-adapted machinery", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum at or below ~10 \u00b0C.", "grounding": "METPO:1000441", "id": "temperature_optimum_very_low_trait", "is_orphan": false, "label": "temperature optimum very low", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-optimum-very-low psychrophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +628,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

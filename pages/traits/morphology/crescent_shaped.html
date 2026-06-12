@@ -60,7 +60,7 @@
             <strong>crescentin</strong>
             <span class="edge-predicate">localizes to</span>
             <strong>inner cell curvature</strong>
-            
+            <code>biolink:located_in</code>
             <p>Crescentin localizes along the inner curvature of the cell.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>crescentin</strong>
-            <span class="edge-predicate">constrains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan growth bias</strong>
-            
+            <code>RO:0002211</code>
             <p>Crescentin mechanically constrains cell-wall growth to create differential curvature.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>peptidoglycan growth bias</strong>
             <span class="edge-predicate">generates</span>
             <strong>crescent cell curvature</strong>
-            
+            <code>biolink:produces</code>
             <p>Biased peptidoglycan growth or strain generates curved geometry.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>crescent cell curvature</strong>
             <span class="edge-predicate">produces</span>
             <strong>crescent shaped</strong>
-            
+            <code>METPO:2000202</code>
             <p>Curved cell-body geometry produces the crescent-shaped trait.</p>
             <ul>
               
@@ -261,6 +261,36 @@
           <time>2026-05-11T20:05:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for crescentin, inner cell curvature, peptidoglycan growth bias, and crescent morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×1, biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A2N9AY16×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: constrains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -620,7 +650,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking crescent morphology to crescentin localization, inner-curvature mechanical constraint, peptidoglycan growth bias, and curved cell-body geometry.", "edges": [{"description": "Crescentin localizes along the inner curvature of the cell.", "evidence": [{"notes": "Supports crescentin as an inner-curvature-localized shape protein.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "localizes to the inner cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": null, "source": "crescentin", "target": "inner_cell_curvature"}, {"description": "Crescentin mechanically constrains cell-wall growth to create differential curvature.", "evidence": [{"notes": "Supports a mechanical growth-control role for crescentin.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "mechanical control of cell growth"}], "id": "edge-2", "is_orphan": false, "predicate": "constrains", "predicate_id": null, "source": "crescentin", "target": "peptidoglycan_growth_bias"}, {"description": "Biased peptidoglycan growth or strain generates curved geometry.", "evidence": [{"notes": "Supports differential growth mechanics as a curvature mechanism.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "bacterial cell curvature through mechanical control"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "peptidoglycan_growth_bias", "target": "crescent_cell_curvature"}, {"description": "Curved cell-body geometry produces the crescent-shaped trait.", "evidence": [{"notes": "Supports crescentin-dependent curved morphology as the trait endpoint.", "reference": "DOI:10.1016/S0092-8674(03)00935-8", "snippet": "required for the ... shapes of Caulobacter"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "crescent_cell_curvature", "target": "crescent_shaped_trait"}], "evidence_rows": [{"description": "Crescentin localizes along the inner curvature of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports crescentin as an inner-curvature-localized shape protein.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "localizes to the inner cell curvature"}], "predicate": "localizes to", "predicate_id": null, "source": "crescentin", "target": "inner cell curvature"}, {"description": "Crescentin mechanically constrains cell-wall growth to create differential curvature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a mechanical growth-control role for crescentin.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "mechanical control of cell growth"}], "predicate": "constrains", "predicate_id": null, "source": "crescentin", "target": "peptidoglycan growth bias"}, {"description": "Biased peptidoglycan growth or strain generates curved geometry.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential growth mechanics as a curvature mechanism.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "bacterial cell curvature through mechanical control"}], "predicate": "generates", "predicate_id": null, "source": "peptidoglycan growth bias", "target": "crescent cell curvature"}, {"description": "Curved cell-body geometry produces the crescent-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports crescentin-dependent curved morphology as the trait endpoint.", "reference": "DOI:10.1016/S0092-8674(03)00935-8", "snippet": "required for the ... shapes of Caulobacter"}], "predicate": "produces", "predicate_id": null, "source": "crescent cell curvature", "target": "crescent shaped"}], "graph_id": "crescent_shaped_crescentin_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a curved crescent cell body.", "grounding": null, "id": "crescent_cell_curvature", "is_orphan": false, "label": "crescent cell curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Curved crescent-like bacterial cell morphology.", "grounding": "METPO:1000669", "id": "crescent_shaped_trait", "is_orphan": false, "label": "crescent shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate-filament-like cytoskeletal protein encoded by creS.", "grounding": null, "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Concave side of a crescent-shaped cell.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Differential wall growth or strain that bends the cell body.", "grounding": null, "id": "peptidoglycan_growth_bias", "is_orphan": false, "label": "peptidoglycan growth bias", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Crescent-shape crescentin curvature mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking crescent morphology to crescentin localization, inner-curvature mechanical constraint, peptidoglycan growth bias, and curved cell-body geometry.", "edges": [{"description": "Crescentin localizes along the inner curvature of the cell.", "evidence": [{"notes": "Supports crescentin as an inner-curvature-localized shape protein.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "localizes to the inner cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "crescentin", "target": "inner_cell_curvature"}, {"description": "Crescentin mechanically constrains cell-wall growth to create differential curvature.", "evidence": [{"notes": "Supports a mechanical growth-control role for crescentin.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "mechanical control of cell growth"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "crescentin", "target": "peptidoglycan_growth_bias"}, {"description": "Biased peptidoglycan growth or strain generates curved geometry.", "evidence": [{"notes": "Supports differential growth mechanics as a curvature mechanism.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "bacterial cell curvature through mechanical control"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan_growth_bias", "target": "crescent_cell_curvature"}, {"description": "Curved cell-body geometry produces the crescent-shaped trait.", "evidence": [{"notes": "Supports crescentin-dependent curved morphology as the trait endpoint.", "reference": "DOI:10.1016/S0092-8674(03)00935-8", "snippet": "required for the ... shapes of Caulobacter"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crescent_cell_curvature", "target": "crescent_shaped_trait"}], "evidence_rows": [{"description": "Crescentin localizes along the inner curvature of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports crescentin as an inner-curvature-localized shape protein.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "localizes to the inner cell curvature"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "crescentin", "target": "inner cell curvature"}, {"description": "Crescentin mechanically constrains cell-wall growth to create differential curvature.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a mechanical growth-control role for crescentin.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "mechanical control of cell growth"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "crescentin", "target": "peptidoglycan growth bias"}, {"description": "Biased peptidoglycan growth or strain generates curved geometry.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential growth mechanics as a curvature mechanism.", "reference": "DOI:10.1038/emboj.2009.61", "snippet": "bacterial cell curvature through mechanical control"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "peptidoglycan growth bias", "target": "crescent cell curvature"}, {"description": "Curved cell-body geometry produces the crescent-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports crescentin-dependent curved morphology as the trait endpoint.", "reference": "DOI:10.1016/S0092-8674(03)00935-8", "snippet": "required for the ... shapes of Caulobacter"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crescent cell curvature", "target": "crescent shaped"}], "graph_id": "crescent_shaped_crescentin_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a curved crescent cell body.", "grounding": null, "id": "crescent_cell_curvature", "is_orphan": false, "label": "crescent cell curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Curved crescent-like bacterial cell morphology.", "grounding": "METPO:1000669", "id": "crescent_shaped_trait", "is_orphan": false, "label": "crescent shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate-filament-like cytoskeletal protein encoded by creS.", "grounding": "UniProtKB:A0A2N9AY16", "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Concave side of a crescent-shaped cell.", "grounding": null, "id": "inner_cell_curvature", "is_orphan": false, "label": "inner cell curvature", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Differential wall growth or strain that bends the cell body.", "grounding": null, "id": "peptidoglycan_growth_bias", "is_orphan": false, "label": "peptidoglycan growth bias", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Crescent-shape crescentin curvature mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +661,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

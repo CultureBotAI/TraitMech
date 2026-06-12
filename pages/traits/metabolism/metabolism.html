@@ -77,7 +77,7 @@
             <strong>catabolism</strong>
             <span class="edge-predicate">produces</span>
             <strong>ATP and reducing power</strong>
-            
+            <code>METPO:2000202</code>
             <p>Catabolic reactions generate ATP and reducing equivalents.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>ATP and reducing power</strong>
-            <span class="edge-predicate">powers</span>
+            <span class="edge-predicate">enables</span>
             <strong>biosynthesis</strong>
-            
+            <code>RO:0002327</code>
             <p>ATP and reducing power fuel biosynthetic reactions.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>biosynthesis</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>cellular growth</strong>
-            
+            <code>RO:0002327</code>
             <p>Biosynthesis supports accumulation of biomass and growth.</p>
             <ul>
               
@@ -174,7 +174,7 @@
 
     
     <div class="card">
-      <h2>Children (10)</h2>
+      <h2>Children (17)</h2>
       <ul>
         
         <li><a href="../../traits/metabolism/acetogenesis.html">Acetogenesis <code>METPO:1000845</code></a></li>
@@ -195,7 +195,21 @@
         
         <li><a href="../../traits/metabolism/syntrophy.html">Syntrophy <code>METPO:1002006</code></a></li>
         
+        <li><a href="../../traits/metabolism/biopolymer_degradation.html">biopolymer degradation <code>traitmech:000110</code></a></li>
+        
+        <li><a href="../../traits/metabolism/carbon_fixation.html">carbon fixation <code>traitmech:000019</code></a></li>
+        
+        <li><a href="../../traits/metabolism/iron_oxidation.html">iron oxidation <code>traitmech:000107</code></a></li>
+        
+        <li><a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation <code>traitmech:000032</code></a></li>
+        
+        <li><a href="../../traits/metabolism/nitrogen_fixation.html">nitrogen fixation <code>traitmech:000103</code></a></li>
+        
+        <li><a href="../../traits/metabolism/phototrophy.html">phototrophy <code>traitmech:000037</code></a></li>
+        
         <li><a href="../../traits/metabolism/respiration.html">respiration <code>METPO:1000800</code></a></li>
+        
+        <li><a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation <code>traitmech:000106</code></a></li>
         
       </ul>
     </div>
@@ -296,6 +310,36 @@
           <time>2026-05-11T23:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing metabolism as the integrated substrate-uptake / catabolism / biosynthesis / growth flow that maintains cellular life.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: powers → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -655,7 +699,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking substrate uptake, catabolism producing ATP and reducing power, biosynthesis, and growth as the core organization of cellular metabolism.", "edges": [{"description": "Imported substrates feed the catabolic reactions of the cell.", "evidence": [{"notes": "Supports substrate uptake as the input to catabolic energy flow.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds", "predicate_id": null, "source": "substrate_uptake", "target": "catabolism"}, {"description": "Catabolic reactions generate ATP and reducing equivalents.", "evidence": [{"notes": "Supports ATP and reducing power as canonical outputs of catabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "catabolism", "target": "atp_and_reducing_power"}, {"description": "ATP and reducing power fuel biosynthetic reactions.", "evidence": [{"notes": "Supports ATP-driven biosynthesis as the central coupling of energy to anabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "atp_and_reducing_power", "target": "biosynthesis"}, {"description": "Biosynthesis supports accumulation of biomass and growth.", "evidence": [{"notes": "Supports biosynthesis-driven growth as the goal of cellular metabolism.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-4", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "biosynthesis", "target": "cellular_growth"}, {"description": "The coordinated substrate-uptake / catabolism / biosynthesis / growth flow realizes the metabolism phenotype.", "evidence": [{"notes": "Supports metabolism as the integrated process maintaining microbial life.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-5", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "cellular_growth", "target": "metabolism_trait"}], "evidence_rows": [{"description": "Imported substrates feed the catabolic reactions of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports substrate uptake as the input to catabolic energy flow.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "feeds", "predicate_id": null, "source": "substrate uptake", "target": "catabolism"}, {"description": "Catabolic reactions generate ATP and reducing equivalents.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ATP and reducing power as canonical outputs of catabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "predicate": "produces", "predicate_id": null, "source": "catabolism", "target": "ATP and reducing power"}, {"description": "ATP and reducing power fuel biosynthetic reactions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ATP-driven biosynthesis as the central coupling of energy to anabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "predicate": "powers", "predicate_id": null, "source": "ATP and reducing power", "target": "biosynthesis"}, {"description": "Biosynthesis supports accumulation of biomass and growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports biosynthesis-driven growth as the goal of cellular metabolism.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "supports", "predicate_id": null, "source": "biosynthesis", "target": "cellular growth"}, {"description": "The coordinated substrate-uptake / catabolism / biosynthesis / growth flow realizes the metabolism phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports metabolism as the integrated process maintaining microbial life.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "realizes", "predicate_id": null, "source": "cellular growth", "target": "metabolism"}], "graph_id": "metabolism_substrate_to_growth", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy currency (ATP) and electron carriers (NAD(P)H, FADH2) produced by catabolism.", "grounding": null, "id": "atp_and_reducing_power", "is_orphan": false, "label": "ATP and reducing power", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Anabolic synthesis of cellular building blocks and macromolecules.", "grounding": "GO:0009058", "id": "biosynthesis", "is_orphan": false, "label": "biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Breakdown of substrates yielding ATP and reducing equivalents.", "grounding": "GO:0009056", "id": "catabolism", "is_orphan": false, "label": "catabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Net accumulation of biomass enabling division and survival.", "grounding": null, "id": "cellular_growth", "is_orphan": false, "label": "cellular growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Integrated biological process of substrate, energy, and material flow maintaining cellular life.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Transport of carbon, nitrogen, and other substrates into the cell.", "grounding": null, "id": "substrate_uptake", "is_orphan": false, "label": "substrate uptake", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Metabolism substrate-to-growth flow"}];
+  var graphs = [{"description": "DOI-backed graph linking substrate uptake, catabolism producing ATP and reducing power, biosynthesis, and growth as the core organization of cellular metabolism.", "edges": [{"description": "Imported substrates feed the catabolic reactions of the cell.", "evidence": [{"notes": "Supports substrate uptake as the input to catabolic energy flow.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds", "predicate_id": null, "source": "substrate_uptake", "target": "catabolism"}, {"description": "Catabolic reactions generate ATP and reducing equivalents.", "evidence": [{"notes": "Supports ATP and reducing power as canonical outputs of catabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catabolism", "target": "atp_and_reducing_power"}, {"description": "ATP and reducing power fuel biosynthetic reactions.", "evidence": [{"notes": "Supports ATP-driven biosynthesis as the central coupling of energy to anabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp_and_reducing_power", "target": "biosynthesis"}, {"description": "Biosynthesis supports accumulation of biomass and growth.", "evidence": [{"notes": "Supports biosynthesis-driven growth as the goal of cellular metabolism.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "biosynthesis", "target": "cellular_growth"}, {"description": "The coordinated substrate-uptake / catabolism / biosynthesis / growth flow realizes the metabolism phenotype.", "evidence": [{"notes": "Supports metabolism as the integrated process maintaining microbial life.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "id": "edge-5", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "cellular_growth", "target": "metabolism_trait"}], "evidence_rows": [{"description": "Imported substrates feed the catabolic reactions of the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports substrate uptake as the input to catabolic energy flow.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "feeds", "predicate_id": null, "source": "substrate uptake", "target": "catabolism"}, {"description": "Catabolic reactions generate ATP and reducing equivalents.", "edge_id": "edge-2", "evidence": [{"notes": "Supports ATP and reducing power as canonical outputs of catabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catabolism", "target": "ATP and reducing power"}, {"description": "ATP and reducing power fuel biosynthetic reactions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ATP-driven biosynthesis as the central coupling of energy to anabolism.", "reference": "DOI:10.1146/annurev.biochem.71.110601.135503", "snippet": "ATP synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP and reducing power", "target": "biosynthesis"}, {"description": "Biosynthesis supports accumulation of biomass and growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports biosynthesis-driven growth as the goal of cellular metabolism.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "biosynthesis", "target": "cellular growth"}, {"description": "The coordinated substrate-uptake / catabolism / biosynthesis / growth flow realizes the metabolism phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports metabolism as the integrated process maintaining microbial life.", "reference": "DOI:10.1126/science.1238842", "snippet": "energy and microbial life"}], "predicate": "realizes", "predicate_id": null, "source": "cellular growth", "target": "metabolism"}], "graph_id": "metabolism_substrate_to_growth", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy currency (ATP) and electron carriers (NAD(P)H, FADH2) produced by catabolism.", "grounding": null, "id": "atp_and_reducing_power", "is_orphan": false, "label": "ATP and reducing power", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Anabolic synthesis of cellular building blocks and macromolecules.", "grounding": "GO:0009058", "id": "biosynthesis", "is_orphan": false, "label": "biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Breakdown of substrates yielding ATP and reducing equivalents.", "grounding": "GO:0009056", "id": "catabolism", "is_orphan": false, "label": "catabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Net accumulation of biomass enabling division and survival.", "grounding": null, "id": "cellular_growth", "is_orphan": false, "label": "cellular growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Integrated biological process of substrate, energy, and material flow maintaining cellular life.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Transport of carbon, nitrogen, and other substrates into the cell.", "grounding": null, "id": "substrate_uptake", "is_orphan": false, "label": "substrate uptake", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Metabolism substrate-to-growth flow"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -666,10 +710,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

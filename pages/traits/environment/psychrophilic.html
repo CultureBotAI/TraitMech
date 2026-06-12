@@ -60,7 +60,7 @@
             <strong>low temperature</strong>
             <span class="edge-predicate">selects for</span>
             <strong>psychrophilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Permanently cold environments select for microorganisms able to grow near freezing.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>unsaturated and branched-chain fatty acids</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            
+            <code>RO:0002211</code>
             <p>Unsaturated and branched-chain fatty acids maintain membrane fluidity during cold growth.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>cold-adapted enzymes</strong>
             <span class="edge-predicate">enables</span>
             <strong>psychrophilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Cold-active enzymes support catalysis at low temperature.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>cold-shock proteins</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>psychrophilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Cold-shock proteins support cellular acclimation to low temperature.</p>
             <ul>
               
@@ -301,6 +301,48 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed psychrophily causal graph for cold adaptation, membrane fluidity, cold-active enzymes, cold-shock proteins, and cryoprotection.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0000383×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007505×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.</p>
         </li>
         
       </ol>
@@ -660,7 +702,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking psychrophily to low temperature, membrane remodeling, cold-active enzymes, and cryoprotection.", "edges": [{"description": "Permanently cold environments select for microorganisms able to grow near freezing.", "evidence": [{"notes": "Review supports psychrophile growth in near-freezing environments.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "low_temperature", "target": "psychrophilic_trait"}, {"description": "Cold reduces membrane fluidity, altering transport and waste exchange.", "evidence": [{"notes": "Supports membrane rigidification as a low-temperature challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity during cold growth.", "evidence": [{"notes": "Review supports homoviscous membrane adaptation as temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-3", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-active enzymes support catalysis at low temperature.", "evidence": [{"notes": "Review connects psychrophile omics signatures with cold-adaptation mechanisms.", "reference": "DOI:10.1016/j.tim.2010.05.002", "snippet": "genes involved in cold adaptation"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cold_adapted_enzymes", "target": "psychrophilic_trait"}, {"description": "Cold-shock proteins support cellular acclimation to low temperature.", "evidence": [{"notes": "Supports cold-shock proteins as psychrophile-associated adaptations.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "cold_shock_proteins", "target": "psychrophilic_trait"}, {"description": "Antifreeze and ice-binding proteins mitigate ice-associated stress in cold habitats.", "evidence": [{"notes": "Review identifies ice formation as a cold challenge and cites bacterial antifreeze protein activity.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "intracellular ice formation"}], "id": "edge-6", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "antifreeze_proteins", "target": "low_temperature"}], "evidence_rows": [{"description": "Permanently cold environments select for microorganisms able to grow near freezing.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports psychrophile growth in near-freezing environments.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point"}], "predicate": "selects for", "predicate_id": null, "source": "low temperature", "target": "psychrophilic"}, {"description": "Cold reduces membrane fluidity, altering transport and waste exchange.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane rigidification as a low-temperature challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity during cold growth.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports homoviscous membrane adaptation as temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "maintains", "predicate_id": null, "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-active enzymes support catalysis at low temperature.", "edge_id": "edge-4", "evidence": [{"notes": "Review connects psychrophile omics signatures with cold-adaptation mechanisms.", "reference": "DOI:10.1016/j.tim.2010.05.002", "snippet": "genes involved in cold adaptation"}], "predicate": "enables", "predicate_id": null, "source": "cold-adapted enzymes", "target": "psychrophilic"}, {"description": "Cold-shock proteins support cellular acclimation to low temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as psychrophile-associated adaptations.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": null, "source": "cold-shock proteins", "target": "psychrophilic"}, {"description": "Antifreeze and ice-binding proteins mitigate ice-associated stress in cold habitats.", "edge_id": "edge-6", "evidence": [{"notes": "Review identifies ice formation as a cold challenge and cites bacterial antifreeze protein activity.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "intracellular ice formation"}], "predicate": "protects against", "predicate_id": null, "source": "antifreeze and ice-binding proteins", "target": "low temperature"}], "graph_id": "psychrophilic_cold_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins that mitigate ice formation or recrystallization damage.", "grounding": null, "id": "antifreeze_proteins", "is_orphan": false, "label": "antifreeze and ice-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with activity at low temperature, often associated with increased structural flexibility.", "grounding": null, "id": "cold_adapted_enzymes", "is_orphan": false, "label": "cold-adapted enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins induced during cold shock or cold acclimation.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Cold environment near the freezing point of water.", "grounding": null, "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Physical state of the membrane needed for transport and growth.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at low temperatures.", "grounding": "METPO:1000614", "id": "psychrophilic_trait", "is_orphan": false, "label": "psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that reduce packing order and maintain fluidity at low temperature.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Psychrophilic cold-adaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking psychrophily to low temperature, membrane remodeling, cold-active enzymes, and cryoprotection.", "edges": [{"description": "Permanently cold environments select for microorganisms able to grow near freezing.", "evidence": [{"notes": "Review supports psychrophile growth in near-freezing environments.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low_temperature", "target": "psychrophilic_trait"}, {"description": "Cold reduces membrane fluidity, altering transport and waste exchange.", "evidence": [{"notes": "Supports membrane rigidification as a low-temperature challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity during cold growth.", "evidence": [{"notes": "Review supports homoviscous membrane adaptation as temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-active enzymes support catalysis at low temperature.", "evidence": [{"notes": "Review connects psychrophile omics signatures with cold-adaptation mechanisms.", "reference": "DOI:10.1016/j.tim.2010.05.002", "snippet": "genes involved in cold adaptation"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cold_adapted_enzymes", "target": "psychrophilic_trait"}, {"description": "Cold-shock proteins support cellular acclimation to low temperature.", "evidence": [{"notes": "Supports cold-shock proteins as psychrophile-associated adaptations.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_shock_proteins", "target": "psychrophilic_trait"}, {"description": "Antifreeze and ice-binding proteins mitigate ice-associated stress in cold habitats.", "evidence": [{"notes": "Review identifies ice formation as a cold challenge and cites bacterial antifreeze protein activity.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "intracellular ice formation"}], "id": "edge-6", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "antifreeze_proteins", "target": "low_temperature"}], "evidence_rows": [{"description": "Permanently cold environments select for microorganisms able to grow near freezing.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports psychrophile growth in near-freezing environments.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low temperature", "target": "psychrophilic"}, {"description": "Cold reduces membrane fluidity, altering transport and waste exchange.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane rigidification as a low-temperature challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity during cold growth.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports homoviscous membrane adaptation as temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-active enzymes support catalysis at low temperature.", "edge_id": "edge-4", "evidence": [{"notes": "Review connects psychrophile omics signatures with cold-adaptation mechanisms.", "reference": "DOI:10.1016/j.tim.2010.05.002", "snippet": "genes involved in cold adaptation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cold-adapted enzymes", "target": "psychrophilic"}, {"description": "Cold-shock proteins support cellular acclimation to low temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as psychrophile-associated adaptations.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold-shock proteins", "target": "psychrophilic"}, {"description": "Antifreeze and ice-binding proteins mitigate ice-associated stress in cold habitats.", "edge_id": "edge-6", "evidence": [{"notes": "Review identifies ice formation as a cold challenge and cites bacterial antifreeze protein activity.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "intracellular ice formation"}], "predicate": "protects against", "predicate_id": null, "source": "antifreeze and ice-binding proteins", "target": "low temperature"}], "graph_id": "psychrophilic_cold_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins that mitigate ice formation or recrystallization damage.", "grounding": null, "id": "antifreeze_proteins", "is_orphan": false, "label": "antifreeze and ice-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with activity at low temperature, often associated with increased structural flexibility.", "grounding": null, "id": "cold_adapted_enzymes", "is_orphan": false, "label": "cold-adapted enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins induced during cold shock or cold acclimation.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Cold environment near the freezing point of water.", "grounding": "PATO:0000383", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane needed for transport and growth.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at low temperatures.", "grounding": "METPO:1000614", "id": "psychrophilic_trait", "is_orphan": false, "label": "psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that reduce packing order and maintain fluidity at low temperature.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Psychrophilic cold-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -671,10 +713,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

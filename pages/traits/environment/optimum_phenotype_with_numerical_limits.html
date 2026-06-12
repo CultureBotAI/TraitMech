@@ -60,7 +60,7 @@
             <strong>numerical environmental axis</strong>
             <span class="edge-predicate">defines</span>
             <strong>optimum phenotype with numerical limits</strong>
-            
+            <code>METPO:2007500</code>
             <p>A numerical environmental axis defines the values whose peak-growth setting yields the optimum phenotype.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>optimum phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl optimum is an axis-specific optimum phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>pH optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>optimum phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH optimum is an axis-specific optimum phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>temperature optimum</strong>
             <span class="edge-predicate">is a</span>
             <strong>optimum phenotype with numerical limits</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature optimum is an axis-specific optimum phenotype.</p>
             <ul>
               
@@ -265,6 +265,18 @@
           <time>2026-05-13T12:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing the optimum phenotype as a cross-axis peak-growth descriptor with axis-specific children for NaCl, pH, and temperature.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×3).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -624,7 +636,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph framing the optimum phenotype as a generic peak-growth setpoint over any numerical environmental axis, with `is a` edges to the axis-specific optimum phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose peak-growth setting yields the optimum phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which an optimum is identified.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "numerical_environmental_axis", "target": "optimum_phenotype_trait"}, {"description": "NaCl optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Supports NaCl optimum as an optimum phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_optimum", "target": "optimum_phenotype_trait"}, {"description": "pH optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Supports pH optimum as an optimum phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_optimum", "target": "optimum_phenotype_trait"}, {"description": "Temperature optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned setpoint on the temperature axis.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_optimum", "target": "optimum_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose peak-growth setting yields the optimum phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which an optimum is identified.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "defines", "predicate_id": null, "source": "numerical environmental axis", "target": "optimum phenotype with numerical limits"}, {"description": "NaCl optimum is an axis-specific optimum phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl optimum as an optimum phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": null, "source": "NaCl optimum", "target": "optimum phenotype with numerical limits"}, {"description": "pH optimum is an axis-specific optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH optimum as an optimum phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": null, "source": "pH optimum", "target": "optimum phenotype with numerical limits"}, {"description": "Temperature optimum is an axis-specific optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned setpoint on the temperature axis.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": null, "source": "temperature optimum", "target": "optimum phenotype with numerical limits"}], "graph_id": "optimum_phenotype_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by the value of an environmental variable at which growth rate is maximal.", "grounding": "METPO:1000536", "id": "optimum_phenotype_trait", "is_orphan": false, "label": "optimum phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}], "title": "Optimum phenotype descriptor across environmental axes"}];
+  var graphs = [{"description": "DOI-backed graph framing the optimum phenotype as a generic peak-growth setpoint over any numerical environmental axis, with `is a` edges to the axis-specific optimum phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose peak-growth setting yields the optimum phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which an optimum is identified.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "optimum_phenotype_trait"}, {"description": "NaCl optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Supports NaCl optimum as an optimum phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum", "target": "optimum_phenotype_trait"}, {"description": "pH optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Supports pH optimum as an optimum phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum", "target": "optimum_phenotype_trait"}, {"description": "Temperature optimum is an axis-specific optimum phenotype.", "evidence": [{"notes": "Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned setpoint on the temperature axis.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum", "target": "optimum_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose peak-growth setting yields the optimum phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which an optimum is identified.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "optimum phenotype with numerical limits"}, {"description": "NaCl optimum is an axis-specific optimum phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl optimum as an optimum phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum", "target": "optimum phenotype with numerical limits"}, {"description": "pH optimum is an axis-specific optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH optimum as an optimum phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum", "target": "optimum phenotype with numerical limits"}, {"description": "Temperature optimum is an axis-specific optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned setpoint on the temperature axis.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum", "target": "optimum phenotype with numerical limits"}], "graph_id": "optimum_phenotype_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by the value of an environmental variable at which growth rate is maximal.", "grounding": "METPO:1000536", "id": "optimum_phenotype_trait", "is_orphan": false, "label": "optimum phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}], "title": "Optimum phenotype descriptor across environmental axes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +647,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

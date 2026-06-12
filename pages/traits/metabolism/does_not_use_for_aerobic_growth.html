@@ -29,7 +29,9 @@
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
     <h1>does not use for aerobic growth</h1>
-    <p class="curie"><code>METPO:2000022</code> · OBJECT_PROPERTY · DEPRECATED</p>
+    <p class="curie"><code>METPO:2000022</code> · OBJECT_PROPERTY · REVIEWED</p>
+    
+    <p class="definition">An OBJECT_PROPERTY asserting that an organism does NOT grow under aerobic conditions using a given chemical. Negation companion of &#39;uses for aerobic growth&#39;.</p>
     
   </header>
 
@@ -41,7 +43,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         
-        
+        <dt>Definition source</dt><dd>DOI:10.1146/annurev.micro.55.1.485</dd>
         
         
       </dl>
@@ -166,6 +168,12 @@
           <p class="changes">Deprecated generic negative use-context relation carrier; later replacement should use more specific trait records that combine the relation with the chemical, growth or respiration context, experimental condition, and negative usage evidence.</p>
         </li>
         
+        <li>
+          <time>2026-05-16T08:50:00-07:00</time> ·
+          <strong>UNDEPRECATED_AS_COMPOSITION_PRIMITIVE</strong> · claude
+          <p class="changes">Restored from DEPRECATED to REVIEWED under the predicate+class composition pattern (intended use: &lt;organism&gt; + this predicate + CHEBI chemical class). Added DOI/PMID-backed definition, evidence, and explicit domain/range slots.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -193,7 +201,7 @@
       <dt>Term kind</dt>
       <dd>OBJECT_PROPERTY</dd>
       <dt>Status</dt>
-      <dd>DEPRECATED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
@@ -211,10 +219,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

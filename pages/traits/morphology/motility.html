@@ -60,7 +60,7 @@
             <strong>flagellar motor</strong>
             <span class="edge-predicate">enables</span>
             <strong>motility</strong>
-            
+            <code>RO:0002327</code>
             <p>Rotary flagellar motors enable bacterial swimming and related motility modes.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>type IV pilus</strong>
             <span class="edge-predicate">enables</span>
             <strong>motility</strong>
-            
+            <code>RO:0002327</code>
             <p>Type IV pili enable twitching motility through extension, adhesion, and retraction.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>gliding motility machinery</strong>
             <span class="edge-predicate">enables</span>
             <strong>motility</strong>
-            
+            <code>RO:0002327</code>
             <p>Gliding machinery allows surface movement without external flagella.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>ion motive force</strong>
-            <span class="edge-predicate">powers</span>
+            <span class="edge-predicate">enables</span>
             <strong>flagellar motor</strong>
-            
+            <code>RO:0002327</code>
             <p>Ion motive force powers rotation of many bacterial flagellar motors.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>chemotaxis signaling</strong>
             <span class="edge-predicate">regulates</span>
             <strong>motility</strong>
-            
+            <code>RO:0002211</code>
             <p>Chemotaxis signaling regulates the direction and pattern of bacterial movement.</p>
             <ul>
               
@@ -291,6 +291,30 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed motility trait and added DOI-backed causal graph for flagellar, pili-mediated, gliding, chemotaxis, and ion-motive-force mechanisms.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×3, RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:R6TBR9×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: powers → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -650,7 +674,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking motility to flagella, type IV pili, gliding systems, chemotaxis, and energy transduction.", "edges": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "flagellar_motor", "target": "motility_trait"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "type_iv_pilus", "target": "motility_trait"}, {"description": "Gliding machinery allows surface movement without external flagella.", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "gliding_motility_machinery", "target": "motility_trait"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "chemotaxis_signaling", "target": "motility_trait"}], "evidence_rows": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "edge_id": "edge-1", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "predicate": "enables", "predicate_id": null, "source": "flagellar motor", "target": "motility"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "edge_id": "edge-2", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "predicate": "enables", "predicate_id": null, "source": "type IV pilus", "target": "motility"}, {"description": "Gliding machinery allows surface movement without external flagella.", "edge_id": "edge-3", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "enables", "predicate_id": null, "source": "gliding motility machinery", "target": "motility"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "powers", "predicate_id": null, "source": "ion motive force", "target": "flagellar motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "predicate": "regulates", "predicate_id": null, "source": "chemotaxis signaling", "target": "motility"}], "graph_id": "motility_locomotion_machinery", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Signal transduction that changes motility direction in response to environmental cues.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that powers flagellar swimming or swarming.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-envelope motors and adhesins that move bacteria over surfaces without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient used to power motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Independent movement through the environment.", "grounding": "METPO:1000701", "id": "motility_trait", "is_orphan": false, "label": "motility", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Dynamic pilus that powers twitching and related surface motility.", "grounding": null, "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Bacterial motility machinery"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking motility to flagella, type IV pili, gliding systems, chemotaxis, and energy transduction.", "edges": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar_motor", "target": "motility_trait"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_pilus", "target": "motility_trait"}, {"description": "Gliding machinery allows surface movement without external flagella.", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "gliding_motility_machinery", "target": "motility_trait"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "motility_trait"}], "evidence_rows": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "edge_id": "edge-1", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar motor", "target": "motility"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "edge_id": "edge-2", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus", "target": "motility"}, {"description": "Gliding machinery allows surface movement without external flagella.", "edge_id": "edge-3", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "gliding motility machinery", "target": "motility"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion motive force", "target": "flagellar motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "target": "motility"}], "graph_id": "motility_locomotion_machinery", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Signal transduction that changes motility direction in response to environmental cues.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that powers flagellar swimming or swarming.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-envelope motors and adhesins that move bacteria over surfaces without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient used to power motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Independent movement through the environment.", "grounding": "METPO:1000701", "id": "motility_trait", "is_orphan": false, "label": "motility", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Dynamic pilus that powers twitching and related surface motility.", "grounding": "UniProtKB:R6TBR9", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Bacterial motility machinery"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -661,10 +685,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

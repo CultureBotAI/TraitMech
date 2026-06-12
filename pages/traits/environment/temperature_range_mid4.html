@@ -60,7 +60,7 @@
             <strong>warm-mesophile adaptation</strong>
             <span class="edge-predicate">enables</span>
             <strong>temperature range mid4</strong>
-            
+            <code>RO:0002327</code>
             <p>Warm-mesophile adaptation enables growth across 34–40 °C.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>temperature range mid4</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature range mid4 is a quantitative bin of the temperature-range phenotype.</p>
             <ul>
               
@@ -229,6 +229,12 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking warm-mesophile adaptation to the temperature-range-mid4 bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -588,7 +594,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking warm-mesophile adaptation to a temperature growth range of approximately 34\u201340 \u00b0C.", "edges": [{"description": "Warm-mesophile adaptation enables growth across 34\u201340 \u00b0C.", "evidence": [{"notes": "Supports warm-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "warm_mesophile_adaptation", "target": "temperature_range_mid4_trait"}, {"description": "Temperature range mid4 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_range_mid4_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Warm-mesophile adaptation enables growth across 34\u201340 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports warm-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": null, "source": "warm-mesophile adaptation", "target": "temperature range mid4"}, {"description": "Temperature range mid4 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": null, "source": "temperature range mid4", "target": "temperature range"}], "graph_id": "temperature_range_mid4_warm_mesophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 34\u201340 \u00b0C.", "grounding": "METPO:1000453", "id": "temperature_range_mid4_trait", "is_orphan": false, "label": "temperature range mid4", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane and enzyme repertoires tuned for warm host-body temperatures.", "grounding": null, "id": "warm_mesophile_adaptation", "is_orphan": false, "label": "warm-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-range-mid4 warm-mesophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking warm-mesophile adaptation to a temperature growth range of approximately 34\u201340 \u00b0C.", "edges": [{"description": "Warm-mesophile adaptation enables growth across 34\u201340 \u00b0C.", "evidence": [{"notes": "Supports warm-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "warm_mesophile_adaptation", "target": "temperature_range_mid4_trait"}, {"description": "Temperature range mid4 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_mid4_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Warm-mesophile adaptation enables growth across 34\u201340 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports warm-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "warm-mesophile adaptation", "target": "temperature range mid4"}, {"description": "Temperature range mid4 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range mid4", "target": "temperature range"}], "graph_id": "temperature_range_mid4_warm_mesophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 34\u201340 \u00b0C.", "grounding": "METPO:1000453", "id": "temperature_range_mid4_trait", "is_orphan": false, "label": "temperature range mid4", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane and enzyme repertoires tuned for warm host-body temperatures.", "grounding": null, "id": "warm_mesophile_adaptation", "is_orphan": false, "label": "warm-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-range-mid4 warm-mesophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -599,10 +605,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

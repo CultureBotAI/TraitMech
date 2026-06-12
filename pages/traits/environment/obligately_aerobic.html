@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>obligately aerobic</strong>
-            <span class="edge-predicate">requires</span>
+            <span class="edge-predicate">depends on</span>
             <strong>molecular oxygen</strong>
-            
+            <code>RO:0002502</code>
             <p>Obligate aerobic growth depends on oxygen availability.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>terminal respiratory oxidases</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>proton motive force</strong>
-            
+            <code>RO:0002326</code>
             <p>Oxygen reductases contribute to proton motive force generation.</p>
             <ul>
               
@@ -275,6 +275,36 @@
           <time>2026-05-10T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for obligate aerobic respiration and oxygen-reducing terminal oxidases.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:12Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: requires → depends on ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002502×1).</p>
         </li>
         
       </ol>
@@ -634,7 +664,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking obligate aerobic growth to oxygen-dependent terminal oxidase respiration.", "edges": [{"description": "Obligate aerobic growth depends on oxygen availability.", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen requirement in an obligately aerobic bacterium.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "id": "edge-1", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "obligate_aerobic_trait", "target": "molecular_oxygen"}, {"description": "Terminal oxidases use oxygen as the respiratory electron acceptor.", "evidence": [{"notes": "Supports oxygen reduction by terminal oxidases in an obligate aerobe.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "id": "edge-2", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "terminal_oxidases", "target": "molecular_oxygen"}, {"description": "Oxygen-dependent respiratory chains terminate in oxygen reductases.", "evidence": [{"notes": "Review supports terminal oxygen reductases as respiratory chain enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "id": "edge-3", "is_orphan": false, "predicate": "includes", "predicate_id": null, "source": "electron_transport_chain", "target": "terminal_oxidases"}, {"description": "Oxygen reductases contribute to proton motive force generation.", "evidence": [{"notes": "Supports bioenergetic coupling by cytochrome bd oxygen reductases.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "production of a proton motive force"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "terminal_oxidases", "target": "proton_motive_force"}], "evidence_rows": [{"description": "Obligate aerobic growth depends on oxygen availability.", "edge_id": "edge-1", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen requirement in an obligately aerobic bacterium.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "predicate": "requires", "predicate_id": null, "source": "obligately aerobic", "target": "molecular oxygen"}, {"description": "Terminal oxidases use oxygen as the respiratory electron acceptor.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen reduction by terminal oxidases in an obligate aerobe.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "predicate": "reduces", "predicate_id": null, "source": "terminal respiratory oxidases", "target": "molecular oxygen"}, {"description": "Oxygen-dependent respiratory chains terminate in oxygen reductases.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports terminal oxygen reductases as respiratory chain enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "predicate": "includes", "predicate_id": null, "source": "electron transport chain", "target": "terminal respiratory oxidases"}, {"description": "Oxygen reductases contribute to proton motive force generation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports bioenergetic coupling by cytochrome bd oxygen reductases.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "production of a proton motive force"}], "predicate": "contributes to", "predicate_id": null, "source": "terminal respiratory oxidases", "target": "proton motive force"}], "graph_id": "obligate_aerobe_oxygen_respiration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Respiratory chain that transfers electrons to terminal acceptors.", "grounding": "GO:0022900", "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen required for respiratory growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires molecular oxygen.", "grounding": "METPO:1000606", "id": "obligate_aerobic_trait", "is_orphan": false, "label": "obligately aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient powering ATP synthesis.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-reducing terminal oxidase complexes.", "grounding": null, "id": "terminal_oxidases", "is_orphan": false, "label": "terminal respiratory oxidases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Obligate aerobe oxygen-dependent respiration mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking obligate aerobic growth to oxygen-dependent terminal oxidase respiration.", "edges": [{"description": "Obligate aerobic growth depends on oxygen availability.", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen requirement in an obligately aerobic bacterium.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "id": "edge-1", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "obligate_aerobic_trait", "target": "molecular_oxygen"}, {"description": "Terminal oxidases use oxygen as the respiratory electron acceptor.", "evidence": [{"notes": "Supports oxygen reduction by terminal oxidases in an obligate aerobe.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "id": "edge-2", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "terminal_oxidases", "target": "molecular_oxygen"}, {"description": "Oxygen-dependent respiratory chains terminate in oxygen reductases.", "evidence": [{"notes": "Review supports terminal oxygen reductases as respiratory chain enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "id": "edge-3", "is_orphan": false, "predicate": "includes", "predicate_id": null, "source": "electron_transport_chain", "target": "terminal_oxidases"}, {"description": "Oxygen reductases contribute to proton motive force generation.", "evidence": [{"notes": "Supports bioenergetic coupling by cytochrome bd oxygen reductases.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "production of a proton motive force"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "terminal_oxidases", "target": "proton_motive_force"}], "evidence_rows": [{"description": "Obligate aerobic growth depends on oxygen availability.", "edge_id": "edge-1", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen requirement in an obligately aerobic bacterium.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "obligately aerobic", "target": "molecular oxygen"}, {"description": "Terminal oxidases use oxygen as the respiratory electron acceptor.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen reduction by terminal oxidases in an obligate aerobe.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "predicate": "reduces", "predicate_id": null, "source": "terminal respiratory oxidases", "target": "molecular oxygen"}, {"description": "Oxygen-dependent respiratory chains terminate in oxygen reductases.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports terminal oxygen reductases as respiratory chain enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "predicate": "includes", "predicate_id": null, "source": "electron transport chain", "target": "terminal respiratory oxidases"}, {"description": "Oxygen reductases contribute to proton motive force generation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports bioenergetic coupling by cytochrome bd oxygen reductases.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "production of a proton motive force"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "terminal respiratory oxidases", "target": "proton motive force"}], "graph_id": "obligate_aerobe_oxygen_respiration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Respiratory chain that transfers electrons to terminal acceptors.", "grounding": "GO:0022900", "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen required for respiratory growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires molecular oxygen.", "grounding": "METPO:1000606", "id": "obligate_aerobic_trait", "is_orphan": false, "label": "obligately aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical gradient powering ATP synthesis.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-reducing terminal oxidase complexes.", "grounding": null, "id": "terminal_oxidases", "is_orphan": false, "label": "terminal respiratory oxidases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Obligate aerobe oxygen-dependent respiration mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -645,10 +675,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

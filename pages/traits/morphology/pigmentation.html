@@ -60,7 +60,7 @@
             <strong>pigment biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>chromophore-containing metabolites</strong>
-            
+            <code>METPO:2000202</code>
             <p>Pigment biosynthetic pathways produce colored metabolites.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>chromophore-containing metabolites</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible colony color</strong>
-            
+            <code>biolink:causes</code>
             <p>Chromophore-containing metabolites cause visible microbial color.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>visible colony color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pigmentation</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible colony color manifests the pigmentation phenotype.</p>
             <ul>
               
@@ -279,6 +279,24 @@
           <time>2026-05-11T18:45:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed pigmentation and added DOI-backed causal graph for pigment biosynthesis, chromophore metabolites, environmental regulation, and visible colony color.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -638,7 +656,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking microbial pigmentation to pigment biosynthesis pathways, chromophore-containing metabolites, environmental regulation, and visible colony color.", "edges": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "pigment_biosynthesis", "target": "chromophore_metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "chromophore_metabolites", "target": "visible_colony_color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": null, "source": "environmental_regulation", "target": "pigment_biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_colony_color", "target": "pigmentation_trait"}], "evidence_rows": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "predicate": "produces", "predicate_id": null, "source": "pigment biosynthesis", "target": "chromophore-containing metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "edge_id": "edge-2", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "predicate": "causes", "predicate_id": null, "source": "chromophore-containing metabolites", "target": "visible colony color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "predicate": "modulates", "predicate_id": null, "source": "environmental regulation", "target": "pigment biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "predicate": "manifests as", "predicate_id": null, "source": "visible colony color", "target": "pigmentation"}], "graph_id": "pigmentation_biosynthetic_colorants", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Colored molecules such as carotenoids, prodiginines, melanins, and phenazines.", "grounding": null, "id": "chromophore_metabolites", "is_orphan": false, "label": "chromophore-containing metabolites", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Culture and environmental conditions that alter pigment production.", "grounding": null, "id": "environmental_regulation", "is_orphan": false, "label": "environmental regulation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic production of colored microbial metabolites.", "grounding": null, "id": "pigment_biosynthesis", "is_orphan": false, "label": "pigment biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial phenotype defined by pigment-derived color.", "grounding": "METPO:1003021", "id": "pigmentation_trait", "is_orphan": false, "label": "pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Absorption and reflection phenotype observed as microbial color.", "grounding": null, "id": "visible_colony_color", "is_orphan": false, "label": "visible colony color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Microbial pigmentation biosynthetic mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking microbial pigmentation to pigment biosynthesis pathways, chromophore-containing metabolites, environmental regulation, and visible colony color.", "edges": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment_biosynthesis", "target": "chromophore_metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore_metabolites", "target": "visible_colony_color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": null, "source": "environmental_regulation", "target": "pigment_biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_colony_color", "target": "pigmentation_trait"}], "evidence_rows": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment biosynthesis", "target": "chromophore-containing metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "edge_id": "edge-2", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore-containing metabolites", "target": "visible colony color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "predicate": "modulates", "predicate_id": null, "source": "environmental regulation", "target": "pigment biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible colony color", "target": "pigmentation"}], "graph_id": "pigmentation_biosynthetic_colorants", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Colored molecules such as carotenoids, prodiginines, melanins, and phenazines.", "grounding": null, "id": "chromophore_metabolites", "is_orphan": false, "label": "chromophore-containing metabolites", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Culture and environmental conditions that alter pigment production.", "grounding": null, "id": "environmental_regulation", "is_orphan": false, "label": "environmental regulation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic production of colored microbial metabolites.", "grounding": null, "id": "pigment_biosynthesis", "is_orphan": false, "label": "pigment biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial phenotype defined by pigment-derived color.", "grounding": "METPO:1003021", "id": "pigmentation_trait", "is_orphan": false, "label": "pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Absorption and reflection phenotype observed as microbial color.", "grounding": null, "id": "visible_colony_color", "is_orphan": false, "label": "visible colony color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Microbial pigmentation biosynthetic mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -649,10 +667,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

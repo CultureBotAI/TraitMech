@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>unsaturated and branched-chain fatty acids</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            
+            <code>RO:0002211</code>
             <p>Lipid remodeling maintains membrane function during cold growth.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>cold-shock proteins</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>facultative psychrophilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Cold-shock proteins contribute to growth after temperature downshift.</p>
             <ul>
               
@@ -280,6 +280,42 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed facultative psychrophilic trait, corrected temperature text encoding, and added DOI-backed causal graph for low-temperature growth with moderate-temperature optimum.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:20Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:37:59Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0000383×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007505×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:12Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.</p>
         </li>
         
       </ol>
@@ -639,7 +675,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking facultative psychrophily to low-temperature growth, moderate-temperature optima, membrane remodeling, and cold acclimation proteins.", "edges": [{"description": "Facultative psychrophiles can grow at low temperature.", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "is tolerated by", "predicate_id": null, "source": "low_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "id": "edge-2", "is_orphan": false, "predicate": "supports optimum of", "predicate_id": null, "source": "moderate_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Cold temperature decreases membrane fluidity.", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "cold_shock_proteins", "target": "facultative_psychrophilic_trait"}], "evidence_rows": [{"description": "Facultative psychrophiles can grow at low temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "predicate": "is tolerated by", "predicate_id": null, "source": "low temperature", "target": "facultative psychrophilic"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "predicate": "supports optimum of", "predicate_id": null, "source": "moderate temperature", "target": "facultative psychrophilic"}, {"description": "Cold temperature decreases membrane fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "predicate": "maintains", "predicate_id": null, "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": null, "source": "cold-shock proteins", "target": "facultative psychrophilic"}], "graph_id": "facultative_psychrophilic_cold_tolerance", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins involved in cold shock and cold acclimation responses.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at low temperatures while retaining optimal growth at moderate temperatures.", "grounding": "METPO:1000720", "id": "facultative_psychrophilic_trait", "is_orphan": false, "label": "facultative psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition near 0 degrees C.", "grounding": null, "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Physical state of the membrane needed for transport and growth.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Temperature range where facultative psychrophiles can show optimal growth.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that maintain fluidity under cold conditions.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Facultative psychrophily cold-tolerance mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking facultative psychrophily to low-temperature growth, moderate-temperature optima, membrane remodeling, and cold acclimation proteins.", "edges": [{"description": "Facultative psychrophiles can grow at low temperature.", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "is tolerated by", "predicate_id": null, "source": "low_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "id": "edge-2", "is_orphan": false, "predicate": "supports optimum of", "predicate_id": null, "source": "moderate_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Cold temperature decreases membrane fluidity.", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_shock_proteins", "target": "facultative_psychrophilic_trait"}], "evidence_rows": [{"description": "Facultative psychrophiles can grow at low temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "predicate": "is tolerated by", "predicate_id": null, "source": "low temperature", "target": "facultative psychrophilic"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "predicate": "supports optimum of", "predicate_id": null, "source": "moderate temperature", "target": "facultative psychrophilic"}, {"description": "Cold temperature decreases membrane fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold-shock proteins", "target": "facultative psychrophilic"}], "graph_id": "facultative_psychrophilic_cold_tolerance", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins involved in cold shock and cold acclimation responses.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at low temperatures while retaining optimal growth at moderate temperatures.", "grounding": "METPO:1000720", "id": "facultative_psychrophilic_trait", "is_orphan": false, "label": "facultative psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition near 0 degrees C.", "grounding": "PATO:0000383", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane needed for transport and growth.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "Temperature range where facultative psychrophiles can show optimal growth.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that maintain fluidity under cold conditions.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Facultative psychrophily cold-tolerance mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -650,10 +686,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

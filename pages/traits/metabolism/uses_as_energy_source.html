@@ -29,7 +29,9 @@
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
     <h1>uses as energy source</h1>
-    <p class="curie"><code>METPO:2000010</code> · OBJECT_PROPERTY · DEPRECATED</p>
+    <p class="curie"><code>METPO:2000010</code> · OBJECT_PROPERTY · REVIEWED</p>
+    
+    <p class="definition">An OBJECT_PROPERTY relating an organism to a chemical entity that the organism uses as a source of energy for metabolism.</p>
     
   </header>
 
@@ -41,7 +43,7 @@
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
         
-        
+        <dt>Definition source</dt><dd>DOI:10.1146/annurev.micro.55.1.485</dd>
         
         
       </dl>
@@ -71,6 +73,13 @@
     </div>
     
 
+    
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        <li><code>MICRO:0001461</code></li>
+      </ul>
+    </div>
     
 
     <div class="card kg-context">
@@ -166,6 +175,18 @@
           <p class="changes">Deprecated generic chemical-use relation carrier; later replacement should use more specific trait records that combine the relation with the chemical, metabolic role, growth condition, and positive or negative usage context.</p>
         </li>
         
+        <li>
+          <time>2026-05-16T08:50:00-07:00</time> ·
+          <strong>UNDEPRECATED_AS_COMPOSITION_PRIMITIVE</strong> · claude
+          <p class="changes">Restored from DEPRECATED to REVIEWED under the predicate+class composition pattern (intended use: &lt;organism&gt; + this predicate + CHEBI chemical class). Added DOI/PMID-backed definition, evidence, and explicit domain/range slots.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-17T10:00:00-07:00</time> ·
+          <strong>ADDED_EXTERNAL_PREDICATE_XREF</strong> · claude
+          <p class="changes">Added xrefs [&#39;MICRO:0001461&#39;] to record an external equivalence predicate (MICRO:0001461 &#39;uses energy source&#39;). MICRO:0001461 &#39;uses energy source&#39; is the direct equivalent. Source: OLS4 property search.</p>
+        </li>
+        
       </ol>
     </div>
     
@@ -193,7 +214,7 @@
       <dt>Term kind</dt>
       <dd>OBJECT_PROPERTY</dd>
       <dt>Status</dt>
-      <dd>DEPRECATED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
@@ -211,10 +232,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

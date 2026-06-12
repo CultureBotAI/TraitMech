@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>elevated temperature</strong>
-            <span class="edge-predicate">triggers</span>
+            <span class="edge-predicate">causes</span>
             <strong>heat-shock response</strong>
-            
+            <code>biolink:causes</code>
             <p>Elevated temperature triggers heat-shock chaperone induction.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>chaperone proteins</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>limited thermostability</strong>
-            
+            <code>RO:0002327</code>
             <p>Chaperone proteins support limited thermostability sufficient for facultative high-temperature growth.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>limited thermostability</strong>
             <span class="edge-predicate">enables</span>
             <strong>thermotolerant</strong>
-            
+            <code>RO:0002327</code>
             <p>Limited thermostability enables facultative growth at elevated temperatures.</p>
             <ul>
               
@@ -256,6 +256,36 @@
           <time>2026-05-13T22:45:00-07:00</time> ·
           <strong>IMPROVED_CAUSAL_GRAPH_EVIDENCE</strong> · codex
           <p class="changes">Replaced Pseudomonas thermotolerans PMID fallback with the article DOI in definition, record evidence, and CausalEdge evidence.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: triggers → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -615,7 +645,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking thermotolerance to limited heat-stress tolerance machinery that permits growth at elevated temperatures without requiring them.", "edges": [{"description": "Elevated temperature triggers heat-shock chaperone induction.", "evidence": [{"notes": "Supports protein-stability physiology as a high-temperature response.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "elevated_temperature", "target": "heat_shock_response"}, {"description": "Chaperone proteins support limited thermostability sufficient for facultative high-temperature growth.", "evidence": [{"notes": "Supports chaperone-mediated heat-stress tolerance.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "chaperone_proteins", "target": "limited_thermostability"}, {"description": "Limited thermostability enables facultative growth at elevated temperatures.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/00207713-52-6-2203", "snippet": "Pseudomonas thermotolerans sp. nov., a thermotolerant species"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "limited_thermostability", "target": "thermotolerant_trait"}], "evidence_rows": [{"description": "Elevated temperature triggers heat-shock chaperone induction.", "edge_id": "edge-1", "evidence": [{"notes": "Supports protein-stability physiology as a high-temperature response.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "triggers", "predicate_id": null, "source": "elevated temperature", "target": "heat-shock response"}, {"description": "Chaperone proteins support limited thermostability sufficient for facultative high-temperature growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports chaperone-mediated heat-stress tolerance.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "supports", "predicate_id": null, "source": "chaperone proteins", "target": "limited thermostability"}, {"description": "Limited thermostability enables facultative growth at elevated temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/00207713-52-6-2203", "snippet": "Pseudomonas thermotolerans sp. nov., a thermotolerant species"}], "predicate": "enables", "predicate_id": null, "source": "limited thermostability", "target": "thermotolerant"}], "graph_id": "thermotolerant_facultative_heat_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Molecular chaperones refolding heat-damaged proteins.", "grounding": null, "id": "chaperone_proteins", "is_orphan": false, "label": "chaperone proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature above the mesophile optimum range.", "grounding": null, "id": "elevated_temperature", "is_orphan": false, "label": "elevated temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Induction of heat-shock chaperones (GroEL, DnaK) protecting protein folding under heat stress.", "grounding": null, "id": "heat_shock_response", "is_orphan": false, "label": "heat-shock response", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Modest protein and membrane stability at elevated temperatures compared with obligate thermophiles.", "grounding": null, "id": "limited_thermostability", "is_orphan": false, "label": "limited thermostability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth at elevated temperatures without obligate high-temperature preference.", "grounding": "METPO:1000619", "id": "thermotolerant_trait", "is_orphan": false, "label": "thermotolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Thermotolerant facultative heat-adaptation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking thermotolerance to limited heat-stress tolerance machinery that permits growth at elevated temperatures without requiring them.", "edges": [{"description": "Elevated temperature triggers heat-shock chaperone induction.", "evidence": [{"notes": "Supports protein-stability physiology as a high-temperature response.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "elevated_temperature", "target": "heat_shock_response"}, {"description": "Chaperone proteins support limited thermostability sufficient for facultative high-temperature growth.", "evidence": [{"notes": "Supports chaperone-mediated heat-stress tolerance.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "chaperone_proteins", "target": "limited_thermostability"}, {"description": "Limited thermostability enables facultative growth at elevated temperatures.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/00207713-52-6-2203", "snippet": "Pseudomonas thermotolerans sp. nov., a thermotolerant species"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "limited_thermostability", "target": "thermotolerant_trait"}], "evidence_rows": [{"description": "Elevated temperature triggers heat-shock chaperone induction.", "edge_id": "edge-1", "evidence": [{"notes": "Supports protein-stability physiology as a high-temperature response.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "elevated temperature", "target": "heat-shock response"}, {"description": "Chaperone proteins support limited thermostability sufficient for facultative high-temperature growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports chaperone-mediated heat-stress tolerance.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "chaperone proteins", "target": "limited thermostability"}, {"description": "Limited thermostability enables facultative growth at elevated temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1099/00207713-52-6-2203", "snippet": "Pseudomonas thermotolerans sp. nov., a thermotolerant species"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "limited thermostability", "target": "thermotolerant"}], "graph_id": "thermotolerant_facultative_heat_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Molecular chaperones refolding heat-damaged proteins.", "grounding": null, "id": "chaperone_proteins", "is_orphan": false, "label": "chaperone proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature above the mesophile optimum range.", "grounding": null, "id": "elevated_temperature", "is_orphan": false, "label": "elevated temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Induction of heat-shock chaperones (GroEL, DnaK) protecting protein folding under heat stress.", "grounding": null, "id": "heat_shock_response", "is_orphan": false, "label": "heat-shock response", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Modest protein and membrane stability at elevated temperatures compared with obligate thermophiles.", "grounding": null, "id": "limited_thermostability", "is_orphan": false, "label": "limited thermostability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth at elevated temperatures without obligate high-temperature preference.", "grounding": "METPO:1000619", "id": "thermotolerant_trait", "is_orphan": false, "label": "thermotolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Thermotolerant facultative heat-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -626,10 +656,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

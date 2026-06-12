@@ -60,7 +60,7 @@
             <strong>lithoautotrophic</strong>
             <span class="edge-predicate">uses electron donor</span>
             <strong>inorganic electron donor</strong>
-            
+            <code>METPO:2000009</code>
             <p>Lithoautotrophy uses inorganic compounds as electron donors.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>inorganic electron donor</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>respiratory energy conservation</strong>
-            
+            <code>RO:0002327</code>
             <p>Oxidation of inorganic donors supplies redox energy.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>respiratory energy conservation</strong>
             <span class="edge-predicate">generates</span>
             <strong>reducing power</strong>
-            
+            <code>biolink:produces</code>
             <p>Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>carbon dioxide</strong>
             <span class="edge-predicate">fixed by</span>
             <strong>autotrophic CO2 fixation</strong>
-            
+            <code>METPO:2007404</code>
             <p>CO2 is assimilated by autotrophic carbon fixation pathways.</p>
             <ul>
               
@@ -126,9 +126,9 @@
           
           <li id="pathograph-1-edge-5">
             <strong>reducing power</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>autotrophic CO2 fixation</strong>
-            
+            <code>RO:0002327</code>
             <p>Reducing equivalents support conversion of CO2 into cell carbon.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>autotrophic CO2 fixation</strong>
             <span class="edge-predicate">produces</span>
             <strong>cellular carbon</strong>
-            
+            <code>METPO:2000202</code>
             <p>Autotrophic CO2 fixation produces cellular organic carbon.</p>
             <ul>
               
@@ -295,6 +295,54 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for inorganic electron donors, reducing power, and autotrophic CO2 fixation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000009×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007404×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: supports → enables ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007502×1, METPO:1007503×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:33Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0015977×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: reducing power: CHEMICAL → CAPACITY ×1.</p>
         </li>
         
       </ol>
@@ -654,7 +702,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking inorganic electron donors to energy conservation, reducing power, and autotrophic CO2 fixation.", "edges": [{"description": "Lithoautotrophy uses inorganic compounds as electron donors.", "evidence": [{"notes": "Supports inorganic electron donors for lithotrophic growth.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": null, "source": "lithoautotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Oxidation of inorganic donors supplies redox energy.", "evidence": [{"notes": "Supports energy conservation from respiratory redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-2", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "inorganic_electron_donor", "target": "respiratory_energy_conservation"}, {"description": "Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.", "evidence": [{"notes": "Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "respiratory_energy_conservation", "target": "reducing_power"}, {"description": "CO2 is assimilated by autotrophic carbon fixation pathways.", "evidence": [{"notes": "Supports CO2 fixation as the autotrophic carbon-assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-4", "is_orphan": false, "predicate": "fixed by", "predicate_id": null, "source": "carbon_dioxide", "target": "autotrophic_co2_fixation"}, {"description": "Reducing equivalents support conversion of CO2 into cell carbon.", "evidence": [{"notes": "Supports reductant use for CO2 reduction.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2 in the carbon fixation mechanisms"}], "id": "edge-5", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "reducing_power", "target": "autotrophic_co2_fixation"}, {"description": "Autotrophic CO2 fixation produces cellular organic carbon.", "evidence": [{"notes": "Supports assimilation of CO2 into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "autotrophic_co2_fixation", "target": "cellular_carbon"}], "evidence_rows": [{"description": "Lithoautotrophy uses inorganic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic electron donors for lithotrophic growth.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "predicate": "uses electron donor", "predicate_id": null, "source": "lithoautotrophic", "target": "inorganic electron donor"}, {"description": "Oxidation of inorganic donors supplies redox energy.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy conservation from respiratory redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "supports", "predicate_id": null, "source": "inorganic electron donor", "target": "respiratory energy conservation"}, {"description": "Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "predicate": "generates", "predicate_id": null, "source": "respiratory energy conservation", "target": "reducing power"}, {"description": "CO2 is assimilated by autotrophic carbon fixation pathways.", "edge_id": "edge-4", "evidence": [{"notes": "Supports CO2 fixation as the autotrophic carbon-assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "fixed by", "predicate_id": null, "source": "carbon dioxide", "target": "autotrophic CO2 fixation"}, {"description": "Reducing equivalents support conversion of CO2 into cell carbon.", "edge_id": "edge-5", "evidence": [{"notes": "Supports reductant use for CO2 reduction.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2 in the carbon fixation mechanisms"}], "predicate": "supports", "predicate_id": null, "source": "reducing power", "target": "autotrophic CO2 fixation"}, {"description": "Autotrophic CO2 fixation produces cellular organic carbon.", "edge_id": "edge-6", "evidence": [{"notes": "Supports assimilation of CO2 into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "predicate": "produces", "predicate_id": null, "source": "autotrophic CO2 fixation", "target": "cellular carbon"}], "graph_id": "lithoautotrophic_inorganic_donor_co2_fixation", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Pathways that assimilate CO2 into cellular carbon.", "grounding": null, "id": "autotrophic_co2_fixation", "is_orphan": false, "label": "autotrophic CO2 fixation", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source for autotrophy.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Organic cellular material derived from fixed CO2.", "grounding": null, "id": "cellular_carbon", "is_orphan": false, "label": "cellular carbon", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound used for energy and reducing equivalents.", "grounding": null, "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic electron donors and CO2 as carbon source.", "grounding": "METPO:1000647", "id": "lithoautotrophic_trait", "is_orphan": false, "label": "lithoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced electron carriers used in biosynthesis.", "grounding": null, "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of redox energy into ion gradients and ATP.", "grounding": null, "id": "respiratory_energy_conservation", "is_orphan": false, "label": "respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Lithoautotrophic inorganic-donor CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking inorganic electron donors to energy conservation, reducing power, and autotrophic CO2 fixation.", "edges": [{"description": "Lithoautotrophy uses inorganic compounds as electron donors.", "evidence": [{"notes": "Supports inorganic electron donors for lithotrophic growth.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithoautotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Oxidation of inorganic donors supplies redox energy.", "evidence": [{"notes": "Supports energy conservation from respiratory redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "inorganic_electron_donor", "target": "respiratory_energy_conservation"}, {"description": "Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.", "evidence": [{"notes": "Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "id": "edge-3", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory_energy_conservation", "target": "reducing_power"}, {"description": "CO2 is assimilated by autotrophic carbon fixation pathways.", "evidence": [{"notes": "Supports CO2 fixation as the autotrophic carbon-assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "id": "edge-4", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "autotrophic_co2_fixation"}, {"description": "Reducing equivalents support conversion of CO2 into cell carbon.", "evidence": [{"notes": "Supports reductant use for CO2 reduction.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2 in the carbon fixation mechanisms"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reducing_power", "target": "autotrophic_co2_fixation"}, {"description": "Autotrophic CO2 fixation produces cellular organic carbon.", "evidence": [{"notes": "Supports assimilation of CO2 into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "autotrophic_co2_fixation", "target": "cellular_carbon"}], "evidence_rows": [{"description": "Lithoautotrophy uses inorganic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic electron donors for lithotrophic growth.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithoautotrophic", "target": "inorganic electron donor"}, {"description": "Oxidation of inorganic donors supplies redox energy.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy conservation from respiratory redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "inorganic electron donor", "target": "respiratory energy conservation"}, {"description": "Lithoautotrophic energy metabolism supplies reducing equivalents for biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Review discusses reduced redox cofactors generated from chemolithoautotrophic electron donors.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "respiratory energy conservation", "target": "reducing power"}, {"description": "CO2 is assimilated by autotrophic carbon fixation pathways.", "edge_id": "edge-4", "evidence": [{"notes": "Supports CO2 fixation as the autotrophic carbon-assimilation process.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "autotrophic CO2 fixation"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "autotrophic CO2 fixation"}, {"description": "Reducing equivalents support conversion of CO2 into cell carbon.", "edge_id": "edge-5", "evidence": [{"notes": "Supports reductant use for CO2 reduction.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2 in the carbon fixation mechanisms"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reducing power", "target": "autotrophic CO2 fixation"}, {"description": "Autotrophic CO2 fixation produces cellular organic carbon.", "edge_id": "edge-6", "evidence": [{"notes": "Supports assimilation of CO2 into cellular carbon.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "CO2 ... into cellular carbon"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "autotrophic CO2 fixation", "target": "cellular carbon"}], "graph_id": "lithoautotrophic_inorganic_donor_co2_fixation", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Pathways that assimilate CO2 into cellular carbon.", "grounding": "GO:0015977", "id": "autotrophic_co2_fixation", "is_orphan": false, "label": "autotrophic CO2 fixation", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source for autotrophy.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Organic cellular material derived from fixed CO2.", "grounding": null, "id": "cellular_carbon", "is_orphan": false, "label": "cellular carbon", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound used for energy and reducing equivalents.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic electron donors and CO2 as carbon source.", "grounding": "METPO:1000647", "id": "lithoautotrophic_trait", "is_orphan": false, "label": "lithoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced electron carriers used in biosynthesis.", "grounding": "METPO:1007503", "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CAPACITY", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of redox energy into ion gradients and ATP.", "grounding": null, "id": "respiratory_energy_conservation", "is_orphan": false, "label": "respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Lithoautotrophic inorganic-donor CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -665,10 +713,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

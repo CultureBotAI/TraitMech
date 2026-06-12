@@ -77,7 +77,7 @@
             <strong>Crt enzymes</strong>
             <span class="edge-predicate">catalyzes</span>
             <strong>carotenoid biosynthesis</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>Crt enzymes catalyze reactions in carotenoid biosynthesis.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>carotenoid biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>pink carotenoids</strong>
-            
+            <code>METPO:2000202</code>
             <p>Carotenoid biosynthesis can produce pink bacterial pigments.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>pink carotenoids</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible pink color</strong>
-            
+            <code>biolink:causes</code>
             <p>Pink carotenoids cause visible pink pigmentation.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>visible pink color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pink pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible pink color manifests the pink-pigmented phenotype.</p>
             <ul>
               
@@ -278,6 +278,30 @@
           <time>2026-05-11T19:10:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for isoprenoid precursors, Crt enzymes, carotenoid biosynthesis, pink carotenoids, and visible pink color.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1, biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0016117×1).</p>
         </li>
         
       </ol>
@@ -637,7 +661,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking pink microbial pigmentation to carotenoid biosynthesis, conjugated carotenoid pigments, and visible pink color.", "edges": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as an upstream step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "isoprenoid_precursors", "target": "carotenoid_biosynthesis"}, {"description": "Crt enzymes catalyze reactions in carotenoid biosynthesis.", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis can produce pink bacterial pigments.", "evidence": [{"notes": "Supports carotenoids as one source of pink bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "carotenoid_biosynthesis", "target": "pink_carotenoids"}, {"description": "Pink carotenoids cause visible pink pigmentation.", "evidence": [{"notes": "Supports the color-producing role of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "pink_carotenoids", "target": "visible_pink_color"}, {"description": "Visible pink color manifests the pink-pigmented phenotype.", "evidence": [{"notes": "Supports trait-level pink pigmentation from bacterial carotenoids.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_pink_color", "target": "pink_pigmented_trait"}], "evidence_rows": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "edge_id": "edge-1", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as an upstream step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "predicate": "feed into", "predicate_id": null, "source": "isoprenoid precursors", "target": "carotenoid biosynthesis"}, {"description": "Crt enzymes catalyze reactions in carotenoid biosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": null, "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis can produce pink bacterial pigments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports carotenoids as one source of pink bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "predicate": "produces", "predicate_id": null, "source": "carotenoid biosynthesis", "target": "pink carotenoids"}, {"description": "Pink carotenoids cause visible pink pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the color-producing role of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "predicate": "causes", "predicate_id": null, "source": "pink carotenoids", "target": "visible pink color"}, {"description": "Visible pink color manifests the pink-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level pink pigmentation from bacterial carotenoids.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": null, "source": "visible pink color", "target": "pink pigmented"}], "graph_id": "pink_pigmented_carotenoid_color", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": null, "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Prenyl building blocks used in carotenoid biosynthesis.", "grounding": null, "id": "isoprenoid_precursors", "is_orphan": false, "label": "isoprenoid precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments that produce pink or rose coloration.", "grounding": null, "id": "pink_carotenoids", "is_orphan": false, "label": "pink carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing pink.", "grounding": "METPO:1003027", "id": "pink_pigmented_trait", "is_orphan": false, "label": "pink pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Observed pink colony or cell color.", "grounding": null, "id": "visible_pink_color", "is_orphan": false, "label": "visible pink color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Pink pigmentation carotenoid mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking pink microbial pigmentation to carotenoid biosynthesis, conjugated carotenoid pigments, and visible pink color.", "edges": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as an upstream step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "isoprenoid_precursors", "target": "carotenoid_biosynthesis"}, {"description": "Crt enzymes catalyze reactions in carotenoid biosynthesis.", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis can produce pink bacterial pigments.", "evidence": [{"notes": "Supports carotenoids as one source of pink bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid_biosynthesis", "target": "pink_carotenoids"}, {"description": "Pink carotenoids cause visible pink pigmentation.", "evidence": [{"notes": "Supports the color-producing role of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "pink_carotenoids", "target": "visible_pink_color"}, {"description": "Visible pink color manifests the pink-pigmented phenotype.", "evidence": [{"notes": "Supports trait-level pink pigmentation from bacterial carotenoids.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_pink_color", "target": "pink_pigmented_trait"}], "evidence_rows": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "edge_id": "edge-1", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as an upstream step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "predicate": "feed into", "predicate_id": null, "source": "isoprenoid precursors", "target": "carotenoid biosynthesis"}, {"description": "Crt enzymes catalyze reactions in carotenoid biosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis can produce pink bacterial pigments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports carotenoids as one source of pink bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid biosynthesis", "target": "pink carotenoids"}, {"description": "Pink carotenoids cause visible pink pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the color-producing role of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "pink carotenoids", "target": "visible pink color"}, {"description": "Visible pink color manifests the pink-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports trait-level pink pigmentation from bacterial carotenoids.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "pink ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible pink color", "target": "pink pigmented"}], "graph_id": "pink_pigmented_carotenoid_color", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Prenyl building blocks used in carotenoid biosynthesis.", "grounding": null, "id": "isoprenoid_precursors", "is_orphan": false, "label": "isoprenoid precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments that produce pink or rose coloration.", "grounding": null, "id": "pink_carotenoids", "is_orphan": false, "label": "pink carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing pink.", "grounding": "METPO:1003027", "id": "pink_pigmented_trait", "is_orphan": false, "label": "pink pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Observed pink colony or cell color.", "grounding": null, "id": "visible_pink_color", "is_orphan": false, "label": "visible pink color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Pink pigmentation carotenoid mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +672,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

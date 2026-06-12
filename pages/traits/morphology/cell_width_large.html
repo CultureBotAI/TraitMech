@@ -77,7 +77,7 @@
             <strong>Rod-complex peptidoglycan synthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>cell width large</strong>
-            
+            <code>METPO:2000202</code>
             <p>Elevated Rod-complex activity yields a wide rod radius.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>cell width large</strong>
             <span class="edge-predicate">is a</span>
             <strong>cell width</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Large cell width is a quantitative bin of the cell-width phenotype.</p>
             <ul>
               
@@ -244,6 +244,12 @@
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking rich growth conditions and elevated Rod-complex activity to large cell width (&gt;0.9 μm).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -603,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking nutrient-rich growth conditions and an elevated MreB-driven wall-radius set-point to wide rods (\u003e0.9 \u03bcm).", "edges": [{"description": "Rich growth conditions shift Rod-complex activity toward a larger radius set-point.", "evidence": [{"notes": "Supports growth-rate-dependent enlargement of cell radius.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "shifts", "predicate_id": null, "source": "rich_growth_conditions", "target": "rod_complex_pg"}, {"description": "Elevated Rod-complex activity yields a wide rod radius.", "evidence": [{"notes": "Supports lateral PG synthesis as the producer of the wide cell radius.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "rod_complex_pg", "target": "cell_width_large_trait"}, {"description": "Large cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports large width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "cell_width_large_trait", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Rich growth conditions shift Rod-complex activity toward a larger radius set-point.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth-rate-dependent enlargement of cell radius.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "shifts", "predicate_id": null, "source": "rich growth conditions", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Elevated Rod-complex activity yields a wide rod radius.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG synthesis as the producer of the wide cell radius.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "produces", "predicate_id": null, "source": "Rod-complex peptidoglycan synthesis", "target": "cell width large"}, {"description": "Large cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": null, "source": "cell width large", "target": "cell width"}], "graph_id": "cell_width_large_setpoint_increase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell width exceeding approximately 0.9 \u03bcm.", "grounding": "METPO:1000890", "id": "cell_width_large_trait", "is_orphan": false, "label": "cell width large", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Nutrient-rich conditions promoting fast growth and larger cells.", "grounding": null, "id": "rich_growth_conditions", "is_orphan": false, "label": "rich growth conditions", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized lateral peptidoglycan assembly.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Large cell-width by elevated wall-radius set-point"}];
+  var graphs = [{"description": "DOI-backed graph linking nutrient-rich growth conditions and an elevated MreB-driven wall-radius set-point to wide rods (\u003e0.9 \u03bcm).", "edges": [{"description": "Rich growth conditions shift Rod-complex activity toward a larger radius set-point.", "evidence": [{"notes": "Supports growth-rate-dependent enlargement of cell radius.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "shifts", "predicate_id": null, "source": "rich_growth_conditions", "target": "rod_complex_pg"}, {"description": "Elevated Rod-complex activity yields a wide rod radius.", "evidence": [{"notes": "Supports lateral PG synthesis as the producer of the wide cell radius.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "rod_complex_pg", "target": "cell_width_large_trait"}, {"description": "Large cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports large width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_large_trait", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Rich growth conditions shift Rod-complex activity toward a larger radius set-point.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth-rate-dependent enlargement of cell radius.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "shifts", "predicate_id": null, "source": "rich growth conditions", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Elevated Rod-complex activity yields a wide rod radius.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG synthesis as the producer of the wide cell radius.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Rod-complex peptidoglycan synthesis", "target": "cell width large"}, {"description": "Large cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width large", "target": "cell width"}], "graph_id": "cell_width_large_setpoint_increase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell width exceeding approximately 0.9 \u03bcm.", "grounding": "METPO:1000890", "id": "cell_width_large_trait", "is_orphan": false, "label": "cell width large", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Nutrient-rich conditions promoting fast growth and larger cells.", "grounding": null, "id": "rich_growth_conditions", "is_orphan": false, "label": "rich growth conditions", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized lateral peptidoglycan assembly.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Large cell-width by elevated wall-radius set-point"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
