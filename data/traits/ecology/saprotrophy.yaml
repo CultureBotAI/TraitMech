@@ -6,7 +6,7 @@ definition: A trophic-ecology lifestyle in which an organism feeds on dead or
 definition_source: DOI:10.3389/fmicb.2012.00348
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -23,10 +23,55 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer supports decomposer/saprotrophic activity as a key function of soil
     microbial communities.
+causal_graphs:
+- graph_id: saprotrophy_decomposition_cycling
+  title: Saprotrophy decomposes dead organic matter and drives nutrient cycling
+  description: Evidence-backed causal sketch linking decomposer activity on dead
+    organic matter to carbon and nutrient cycling.
+  nodes:
+  - node_id: saprotrophy_trait
+    label: saprotrophy
+    node_type: TRAIT
+    grounding: traitmech:000055
+    description: Feeding on dead or decaying organic matter.
+  - node_id: dead_organic_matter
+    label: dead organic matter
+    node_type: CHEMICAL
+    description: Plant litter, detritus, and other non-living organic substrates.
+  - node_id: decomposition
+    label: organic matter decomposition
+    node_type: BIOLOGICAL_PROCESS
+    description: Microbial mineralization of organic matter releasing CO2 and
+      inorganic nutrients.
+  edges:
+  - subject: saprotrophy_trait
+    predicate: enables
+    object: decomposition
+    description: Saprotrophic activity breaks down dead organic matter.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2012.00348
+      notes: Schimel & Schaeffer support microbial decomposition of organic matter
+        as a central ecosystem process.
+    predicate_id: RO:0002327
+  - subject: decomposition
+    predicate: consumes
+    object: dead_organic_matter
+    description: Decomposition uses dead organic matter as substrate.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      notes: Fierer supports decomposer activity as a key function of soil microbial
+        communities.
+    predicate_id: biolink:consumes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (saprotrophy/decomposer) from literature
     research to fill the trophic-ecology gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (saprotrophy / decomposition) with
+    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

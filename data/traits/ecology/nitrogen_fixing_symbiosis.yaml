@@ -6,7 +6,7 @@ definition: A mutualistic symbiosis in which a diazotrophic bacterium fixes
 definition_source: DOI:10.1038/nrmicro.2017.171
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000041
 synonyms:
@@ -23,10 +23,57 @@ evidence:
 - reference: DOI:10.1038/nrmicro2990
   notes: Oldroyd, "Speak, friend, and enter", supports the symbiotic signalling that
     establishes beneficial nitrogen-fixing plant-microbe associations.
+causal_graphs:
+- graph_id: rhizobia_legume_n2_fixation
+  title: Rhizobia–legume root-nodule N2-fixing mutualism
+  description: Evidence-backed causal sketch linking symbiotic signalling and
+    root-nodule colonization to N2 fixation in exchange for plant photosynthate.
+  nodes:
+  - node_id: n2_fix_symbiosis_trait
+    label: nitrogen-fixing symbiosis
+    node_type: TRAIT
+    grounding: traitmech:000044
+    description: Mutualistic N2 fixation in plant-microbe associations.
+  - node_id: symbiotic_signalling
+    label: nodulation signalling
+    node_type: BIOLOGICAL_PROCESS
+    description: Nod-factor signalling establishing the rhizobium-legume
+      partnership.
+  - node_id: nitrogen_fixation
+    label: nitrogen fixation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009399
+    description: Reduction of atmospheric N2 to ammonia by nitrogenase.
+  edges:
+  - subject: symbiotic_signalling
+    predicate: enables
+    object: n2_fix_symbiosis_trait
+    description: Nod-factor signalling between rhizobia and legume hosts establishes
+      the symbiosis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2990
+      notes: Oldroyd reviews symbiotic signalling establishing nitrogen-fixing
+        plant-microbe associations.
+    predicate_id: RO:0002327
+  - subject: n2_fix_symbiosis_trait
+    predicate: enables
+    object: nitrogen_fixation
+    description: The symbiosis houses bacteroids that fix N2 inside root nodules.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.171
+      notes: Poole et al. describe the free-living-to-endosymbiont transition of
+        rhizobia forming N2-fixing legume root nodules.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (nitrogen-fixing symbiosis); sub-variant
     of mutualism.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (rhizobia-legume N2 fixation) with GO
+    node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A habitat association in which an organism lives in the rhizosphere 
 definition_source: DOI:10.1038/nrmicro3109
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000047
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer supports the rhizosphere as a high-activity subset of the broader
     soil microbiome.
+causal_graphs:
+- graph_id: rhizosphere_root_exudate
+  title: Root exudates structure the rhizosphere microbial habitat
+  description: Evidence-backed causal sketch linking root exudates to the
+    high-activity rhizosphere community.
+  nodes:
+  - node_id: rhizosphere_trait
+    label: rhizosphere association
+    node_type: TRAIT
+    grounding: traitmech:000051
+    description: Persistent residence in the root-influenced soil zone.
+  - node_id: root_exudates
+    label: root exudates
+    node_type: CHEMICAL
+    description: Plant-derived carbon compounds released from roots into
+      surrounding soil.
+  - node_id: rhizosphere_habitat
+    label: rhizosphere habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Root-influenced soil zone with elevated microbial activity.
+  edges:
+  - subject: root_exudates
+    predicate: causes
+    object: rhizosphere_habitat
+    description: Root exudates create a distinct, C-enriched soil microhabitat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3109
+      notes: Philippot et al. define the rhizosphere as a root-influenced soil zone
+        shaped by exudates.
+    predicate_id: biolink:causes
+  - subject: rhizosphere_habitat
+    predicate: enables
+    object: rhizosphere_trait
+    description: The rhizosphere habitat supports the rhizosphere-associated
+      lifestyle.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      notes: Fierer documents the rhizosphere as a high-activity subset of the
+        broader soil microbiome.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (rhizosphere association); sub-variant of
     habitat association.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (rhizosphere / root exudate habitat)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

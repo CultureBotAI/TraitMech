@@ -6,7 +6,7 @@ definition: A symbiosis in which the microorganism lives inside the cells or tis
 definition_source: DOI:10.1038/nrmicro2670
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000040
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.171
   notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root
     nodules, an example of the endosymbiotic lifestyle.
+causal_graphs:
+- graph_id: endosymbiosis_intracellular_genome_reduction
+  title: Intracellular endosymbiosis drives extreme genome reduction
+  description: Evidence-backed causal sketch linking intracellular host localization
+    to long-term genome reduction in obligate endosymbionts.
+  nodes:
+  - node_id: endosymbiosis_trait
+    label: endosymbiosis
+    node_type: TRAIT
+    grounding: traitmech:000045
+    description: Symbiosis with intracellular or intra-tissue localization.
+  - node_id: intracellular_localization
+    label: intracellular host localization
+    node_type: CELLULAR_LOCALIZATION
+    description: Persistent residence inside host cells or tissues.
+  - node_id: reductive_genome_evolution
+    label: reductive genome evolution
+    node_type: BIOLOGICAL_PROCESS
+    description: Long-term loss of genomic content under relaxed selection and
+      small effective population sizes.
+  edges:
+  - subject: intracellular_localization
+    predicate: enables
+    object: endosymbiosis_trait
+    description: Sustained residence inside host cells defines endosymbiosis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.171
+      notes: Poole et al. describe rhizobia as plant-cell endosymbionts within
+        root nodules.
+    predicate_id: RO:0002327
+  - subject: endosymbiosis_trait
+    predicate: causes
+    object: reductive_genome_evolution
+    description: Long-term intracellular life with small Ne drives extreme genome
+      reduction in obligate endosymbionts.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2670
+      notes: McCutcheon & Moran review extreme genome reduction in obligate
+        symbiotic bacteria.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (endosymbiosis); spatial sub-variant of
     symbiosis.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (intracellular endosymbiosis / genome
+    reduction) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

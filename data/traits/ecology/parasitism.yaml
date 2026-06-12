@@ -5,7 +5,7 @@ definition: A symbiosis in which the microorganism benefits at the expense of it
 definition_source: DOI:10.1038/s41579-021-00550-7
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000040
 synonyms:
@@ -19,10 +19,54 @@ evidence:
 - reference: DOI:10.1073/pnas.1218525110
   notes: McFall-Ngai et al. support host-exploitative associations as one outcome of
     the shared host-colonization toolkit.
+causal_graphs:
+- graph_id: parasitism_host_fitness_cost
+  title: Parasitism extracts resources at the host's expense
+  description: Evidence-backed causal sketch linking host-resource exploitation to
+    reduced host fitness in chronic parasitic association.
+  nodes:
+  - node_id: parasitism_trait
+    label: parasitism
+    node_type: TRAIT
+    grounding: traitmech:000043
+    description: Symbiosis with positive microbe fitness and negative host fitness.
+  - node_id: host_resource_exploitation
+    label: host resource exploitation
+    node_type: BIOLOGICAL_PROCESS
+    description: Acquisition of nutrients or shelter from the host at fitness cost.
+  - node_id: host_fitness_cost
+    label: host fitness cost
+    node_type: QUALITY
+    description: Net negative fitness change for the host partner.
+  edges:
+  - subject: host_resource_exploitation
+    predicate: causes
+    object: host_fitness_cost
+    description: Sustained resource extraction reduces host fitness.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00550-7
+      notes: Drew et al. define parasitism as the harmful pole of the
+        parasite-mutualist continuum.
+    predicate_id: biolink:causes
+  - subject: host_fitness_cost
+    predicate: enables
+    object: parasitism_trait
+    description: Chronic host fitness cost realizes the parasitic lifestyle.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. support host-exploitative associations as one
+        outcome of the shared host-colonization toolkit.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (parasitism); sub-variant of symbiosis.
     Distinct from pathogenic_to_host (acute disease causation).
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (parasitism / host fitness cost) with
+    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

@@ -6,7 +6,7 @@ definition: A trophic-ecology lifestyle in which a bacterium actively kills and
 definition_source: DOI:10.1146/annurev.micro.091208.073346
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -20,10 +20,54 @@ evidence:
 - reference: DOI:10.1111/1462-2920.13171
   notes: Pérez et al. survey predatory bacteria, their hunting strategies, prey
     ranges, and genome characteristics.
+causal_graphs:
+- graph_id: predatory_bacterium_prey_killing
+  title: Predatory bacteria kill and consume other bacteria
+  description: Evidence-backed causal sketch linking prey invasion to bacteriolytic
+    killing and predator nutrient acquisition.
+  nodes:
+  - node_id: predatory_trait
+    label: predatory bacterium
+    node_type: TRAIT
+    grounding: traitmech:000054
+    description: Bacterial lifestyle of killing and consuming other bacteria.
+  - node_id: prey_bacterium
+    label: prey bacterium
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Target bacterial cell of the predatory attack.
+  - node_id: prey_killing
+    label: bacteriolytic killing
+    node_type: BIOLOGICAL_PROCESS
+    description: Lysis or digestion of prey bacterial cells.
+  edges:
+  - subject: predatory_trait
+    predicate: enables
+    object: prey_killing
+    description: Predatory bacteria invade and lyse prey cells for nutrients.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.091208.073346
+      notes: Sockett describes Bdellovibrio invasion and digestion of prey
+        bacteria.
+    predicate_id: RO:0002327
+  - subject: prey_killing
+    predicate: consumes
+    object: prey_bacterium
+    description: Killed prey cells provide nutrients to the predator.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13171
+      notes: Pérez et al. survey predatory bacteria and their prey-killing
+        strategies.
+    predicate_id: biolink:consumes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (predatory bacterium) from literature
     research to fill the trophic-ecology gap.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (predator / prey killing) with
+    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

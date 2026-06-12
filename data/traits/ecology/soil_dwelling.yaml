@@ -6,7 +6,7 @@ definition: A habitat association in which an organism's primary environment is 
 definition_source: DOI:10.1038/nrmicro.2017.87
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000047
 synonyms:
@@ -20,10 +20,56 @@ evidence:
 - reference: DOI:10.1038/nrmicro1341
   notes: Martiny et al. support soil communities as biogeographically structured
     microbial habitats.
+causal_graphs:
+- graph_id: soil_dwelling_biogeochemistry
+  title: Soil-dwelling microbes drive terrestrial biogeochemical cycling
+  description: Evidence-backed causal sketch linking soil habitat to participation
+    in biogeochemical cycling.
+  nodes:
+  - node_id: soil_dwelling_trait
+    label: soil-dwelling
+    node_type: TRAIT
+    grounding: traitmech:000050
+    description: Persistent residence in soil habitat.
+  - node_id: soil_habitat
+    label: soil habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Complex terrestrial soil environment.
+  - node_id: biogeochemical_cycling
+    label: biogeochemical cycling
+    node_type: BIOLOGICAL_PROCESS
+    description: Microbially mediated cycling of C, N, S, and other elements in
+      soils.
+  edges:
+  - subject: soil_habitat
+    predicate: enables
+    object: soil_dwelling_trait
+    description: Soil substrate and pore-water chemistry sustain soil-resident
+      microbes.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      notes: Fierer characterizes the soil microbiome as a distinct microbial
+        habitat.
+    predicate_id: RO:0002327
+  - subject: soil_dwelling_trait
+    predicate: contributes to
+    object: biogeochemical_cycling
+    description: Soil microbes drive terrestrial biogeochemical cycling.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1341
+      notes: Martiny et al. show soil communities are biogeographically structured
+        habitats central to ecosystem function.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (soil-dwelling); sub-variant of habitat
     association.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (soil-dwelling / biogeochemical
+    cycling) with RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true

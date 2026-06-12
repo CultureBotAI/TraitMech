@@ -6,7 +6,7 @@ definition: An ecological lifestyle in which a microorganism lives in persistent
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - METPO:1000059
 synonyms:
@@ -21,6 +21,48 @@ evidence:
 - reference: DOI:10.1038/s41579-021-00550-7
   notes: Drew et al. frame symbioses as a parasite-mutualist continuum, supporting
     symbiosis as the umbrella lifestyle for these interaction modes.
+causal_graphs:
+- graph_id: symbiosis_host_interaction
+  title: Symbiosis as persistent host-microbe interaction
+  description: Evidence-backed causal sketch linking host-microbe interaction to
+    persistent symbiotic association along the parasite-mutualist continuum.
+  nodes:
+  - node_id: symbiosis_trait
+    label: symbiosis
+    node_type: TRAIT
+    grounding: traitmech:000040
+    description: Persistent physical association with a host or partner.
+  - node_id: host_organism
+    label: host organism
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Eukaryotic or microbial partner with which the focal microbe
+      persistently interacts.
+  - node_id: symbiotic_interaction
+    label: biological process involved in symbiotic interaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0044403
+    description: Persistent biological interaction between organisms living
+      together.
+  edges:
+  - subject: host_organism
+    predicate: causes
+    object: symbiotic_interaction
+    description: Presence of a host or partner organism establishes the symbiotic
+      interaction.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. document host-microbe association as a pervasive
+        feature of animal biology.
+    predicate_id: biolink:causes
+  - subject: symbiotic_interaction
+    predicate: enables
+    object: symbiosis_trait
+    description: Sustained symbiotic interaction realizes the symbiotic lifestyle.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00550-7
+      notes: Drew et al. frame symbioses as a parasite-mutualist continuum of
+        persistent interactions.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -28,4 +70,11 @@ curation_history:
   changes: Proposed candidate ECOLOGY axis class (symbiosis) from literature research
     to fill the host-interaction lifestyle gap; parent of mutualism, commensalism,
     parasitism, and endosymbiosis.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (host-microbe symbiotic interaction)
+    with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
   llm_assisted: true

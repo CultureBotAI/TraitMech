@@ -6,7 +6,7 @@ definition: A symbiosis in which the microorganism benefits from the association
 definition_source: DOI:10.1038/s41579-021-00550-7
 trait_category: ECOLOGY
 term_kind: CLASS
-mapping_status: PROPOSED
+mapping_status: REVIEWED
 parent_traits:
 - traitmech:000040
 synonyms:
@@ -20,9 +20,56 @@ evidence:
 - reference: DOI:10.1073/pnas.1218525110
   notes: McFall-Ngai et al. support commensal colonization as a major class of
     host-associated microbial lifestyles.
+causal_graphs:
+- graph_id: commensalism_neutral_host
+  title: Commensalism benefits microbe without affecting host fitness
+  description: Evidence-backed causal sketch linking host colonization to microbial
+    benefit while host fitness is essentially neutral.
+  nodes:
+  - node_id: commensalism_trait
+    label: commensalism
+    node_type: TRAIT
+    grounding: traitmech:000042
+    description: Microbe benefits from association; host fitness essentially
+      neutral.
+  - node_id: host_colonization
+    label: host colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Persistent establishment of microbes on or in a host.
+  - node_id: neutral_host_fitness
+    label: neutral host fitness effect
+    node_type: QUALITY
+    description: No detectable net fitness change for the host partner.
+  edges:
+  - subject: host_colonization
+    predicate: enables
+    object: commensalism_trait
+    description: Persistent colonization without harm or benefit to the host
+      realizes the commensal lifestyle.
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      notes: McFall-Ngai et al. support commensal colonization as a major class of
+        host-associated microbial lifestyles.
+    predicate_id: RO:0002327
+  - subject: commensalism_trait
+    predicate: associated with
+    object: neutral_host_fitness
+    description: Commensal interactions sit on the near-neutral point of the
+      parasite-mutualist continuum.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00550-7
+      notes: Drew et al. place commensalism on the parasite-mutualist continuum as
+        a near-neutral host interaction.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate ECOLOGY trait (commensalism); sub-variant of symbiosis.
+  llm_assisted: true
+- timestamp: '2026-06-09T14:00:00Z'
+  curator: claude
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added evidence-backed causal graph (commensalism / neutral host fitness)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
