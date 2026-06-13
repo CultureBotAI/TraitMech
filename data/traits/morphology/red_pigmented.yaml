@@ -54,6 +54,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1531
       snippet: culminating in the PigC/RedH catalysed condensation
       notes: Supports PigC/RedH condensation as a key step in prodiginine biosynthesis.
+    predicate_id: biolink:has_part
   - subject: pigC_redH_condensation
     predicate: produces
     object: prodigiosin
@@ -110,4 +111,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:has_part×1).
   llm_assisted: true

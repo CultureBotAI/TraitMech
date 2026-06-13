@@ -55,6 +55,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cub.2021.04.041
       snippet: peptidoglycan assembly during the cell cycle
       notes: Supports septal PG assembly during ovococcal division.
+    predicate_id: biolink:produces
   - subject: pcsB_hydrolase_system
     predicate: splits
     object: septal_cross_wall
@@ -100,4 +101,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

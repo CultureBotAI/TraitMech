@@ -10,17 +10,17 @@ created_by: Anthea Guo
 evidence:
 - reference: DOI:10.3233/AO-220262
   snippet: BFO is a genuine top-level ontology
-  notes: Supports material entity as a top-level ontology class rather than a
-    concrete microbial trait.
+  notes: Supports material entity as a top-level ontology class rather than a concrete
+    microbial trait.
 - reference: DOI:10.7551/mitpress/9780262527811.001.0001
   snippet: specific top-level ontology, the Basic Formal Ontology
   notes: Supports BFO as the upper ontology context for material entity.
 causal_graphs:
 - graph_id: material_entity_bfo_upper_context
   title: Material entity upper-class context
-  description: DOI-backed upper-ontology context graph linking material entities
-    to qualities, observations, and processes without asserting a taxon-specific
-    microbial mechanism.
+  description: DOI-backed upper-ontology context graph linking material entities to
+    qualities, observations, and processes without asserting a taxon-specific microbial
+    mechanism.
   nodes:
   - node_id: material_entity_trait
     label: material entity
@@ -38,8 +38,7 @@ causal_graphs:
     label: observation
     node_type: EXPERIMENTAL_FACTOR
     grounding: METPO:1001000
-    description: Measurement or data-collection context about an entity or its
-      qualities.
+    description: Measurement or data-collection context about an entity or its qualities.
   - node_id: biological_process_trait
     label: biological process
     node_type: BIOLOGICAL_PROCESS
@@ -49,8 +48,7 @@ causal_graphs:
   - subject: material_entity_trait
     predicate: can bear
     object: quality_trait
-    description: Material entities provide bearers for qualities used in trait
-      descriptions.
+    description: Material entities provide bearers for qualities used in trait descriptions.
     evidence:
     - reference: DOI:10.1186/gb-2010-11-1-r2
       snippet: entity that is observed to be affected
@@ -58,23 +56,23 @@ causal_graphs:
   - subject: observation_trait
     predicate: can be about
     object: material_entity_trait
-    description: Observations and investigation outputs can be about material
-      entities and their qualities.
+    description: Observations and investigation outputs can be about material entities
+      and their qualities.
     evidence:
     - reference: DOI:10.1371/journal.pone.0154556
       snippet: results of a study can be about any material entity
-      notes: Supports material entities as subjects of biomedical investigation
-        data.
+      notes: Supports material entities as subjects of biomedical investigation data.
   - subject: material_entity_trait
     predicate: can participate in
     object: biological_process_trait
-    description: Material entities can participate in biological processes, but
-      this upper record has no direct TraitMech children.
+    description: Material entities can participate in biological processes, but this
+      upper record has no direct TraitMech children.
     evidence:
     - reference: DOI:10.3233/AO-220262
       snippet: support information integration, retrieval, and analysis
-      notes: Supports BFO as the upper ontology used to place material entities
-        in scientific-domain representations.
+      notes: Supports BFO as the upper ontology used to place material entities in
+        scientific-domain representations.
+    predicate_id: biolink:participates_in
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811703+00:00'
   curator: seed_from_metpo
@@ -84,6 +82,12 @@ curation_history:
 - timestamp: '2026-05-15T00:35:00-07:00'
   curator: codex
   action: CURATED_UPPER_CONTEXT
-  changes: Reviewed material entity as an upper classifier and added a
-    DOI-backed context graph; no direct TraitMech children were present.
+  changes: Reviewed material entity as an upper classifier and added a DOI-backed
+    context graph; no direct TraitMech children were present.
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:27Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:participates_in×1).
   llm_assisted: true

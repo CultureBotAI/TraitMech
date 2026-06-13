@@ -55,3 +55,27 @@ uses for anaerobic growth with light	METPO:2000051	uses for anaerobic growth wit
 does not use for anaerobic growth with light	METPO:2000026	does not use for anaerobic growth with light	skos:exactMatch	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic growth with light (METPO:2000051)
 uses for anaerobic catabolization	METPO:2000048	uses for anaerobic catabolization	skos:exactMatch	METPO	high	exact label match against METPO ObjectProperty; paired-negative at METPO:2000023
 does not use for anaerobic catabolization	METPO:2000023	does not use for anaerobic catabolization	skos:exactMatch	METPO	high	exact label match against METPO ObjectProperty; paired-negative-of uses for anaerobic catabolization (METPO:2000048)
+inhibits	RO:0002212	negatively regulates	skos:closeMatch	RO	high	corpus 'X inhibits Y' = X negatively regulates Y
+suppresses	RO:0002212	negatively regulates	skos:closeMatch	RO	high	synonym of inhibits; negative regulation
+prevents	RO:0002212	negatively regulates	skos:closeMatch	RO	high	strong negative-regulation sense in causal graphs
+decreases	RO:0002212	negatively regulates	skos:closeMatch	RO	medium	'X decreases Y' read as negative regulation of Y
+limits	RO:0002212	negatively regulates	skos:closeMatch	RO	medium	'X limits Y' = caps/negatively regulates Y
+promotes	RO:0002213	positively regulates	skos:closeMatch	RO	high	'X promotes Y' = positive regulation of Y
+activates	RO:0002213	positively regulates	skos:closeMatch	RO	high	biological 'activates' = positively regulates
+increases	RO:0002213	positively regulates	skos:closeMatch	RO	medium	'X increases Y' read as positive regulation of Y
+modulates	RO:0002211	regulates	skos:closeMatch	RO	high	'modulates' = regulates (direction unspecified)
+drives production of	biolink:produces	produces	skos:closeMatch	biolink	high	causal driver of a product; same family as grounded 'generates'
+drives synthesis of	biolink:produces	produces	skos:closeMatch	biolink	high	synthesis = production
+drives formation of	biolink:produces	produces	skos:closeMatch	biolink	high	formation = production
+causes formation of	biolink:produces	produces	skos:closeMatch	biolink	high	formation = production
+forms	biolink:produces	produces	skos:closeMatch	biolink	high	'X forms Y' = X produces Y
+yields	biolink:produces	produces	skos:closeMatch	biolink	high	'X yields Y' = X produces Y
+creates	biolink:produces	produces	skos:closeMatch	biolink	high	'X creates Y' = X produces Y
+builds	biolink:produces	produces	skos:closeMatch	biolink	medium	'X builds Y' (e.g. polymer/structure) = produces Y
+catalyzes formation of	biolink:catalyzes	catalyzes	skos:closeMatch	biolink	high	enzyme catalyzing product formation; same as grounded 'catalyzes'
+includes	biolink:has_part	has part	skos:closeMatch	biolink	high	'whole includes part' = has_part
+incorporated into	biolink:part_of	part of	skos:closeMatch	biolink	high	'X incorporated into Y' = X part_of Y (end state)
+embedded in	biolink:located_in	located in	skos:closeMatch	biolink	high	'protein embedded in membrane' = located_in
+can participate in	biolink:participates_in	participates in	skos:closeMatch	biolink	high	modal variant of grounded 'participates in'
+interact with	biolink:interacts_with	interacts with	skos:closeMatch	biolink	high	plural/uninflected variant of grounded 'interacts with'
+has function	RO:0000085	has function	skos:exactMatch	RO	high	exact label match against RO has-function

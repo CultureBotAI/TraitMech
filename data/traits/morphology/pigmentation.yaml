@@ -70,6 +70,7 @@ causal_graphs:
       snippet: bacterial pigments ... production ... genetic engineering
       notes: Supports pigment production as condition- and regulation-sensitive; retained
         as a broad regulatory edge.
+    predicate_id: RO:0002211
   - subject: visible_colony_color
     predicate: manifests as
     object: pigmentation_trait
@@ -108,4 +109,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

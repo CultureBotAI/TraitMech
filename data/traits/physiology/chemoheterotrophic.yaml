@@ -147,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of compounds into cell material.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869925+00:00'
   curator: seed_from_metpo
@@ -176,4 +177,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:27Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×1).
   llm_assisted: true

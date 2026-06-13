@@ -135,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1111/j.1574-6968.1986.tb01858.x
       snippet: formation of reduced pyridine nucleotides
       notes: Supports pmf-driven reverse electron transfer output.
+    predicate_id: biolink:produces
 curation_history:
 - timestamp: '2026-05-05T01:35:46.868229+00:00'
   curator: seed_from_metpo
@@ -200,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002502×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:27Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

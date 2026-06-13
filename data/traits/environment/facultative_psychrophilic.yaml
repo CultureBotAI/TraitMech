@@ -82,6 +82,7 @@ causal_graphs:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
       notes: Supports membrane rigidification as a cold challenge.
+    predicate_id: RO:0002212
   - subject: unsaturated_fatty_acids
     predicate: regulates
     object: membrane_fluidity
@@ -148,4 +149,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

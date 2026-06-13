@@ -68,6 +68,7 @@ causal_graphs:
     - reference: DOI:10.1016/S1369-5274(00)00141-7
       snippet: steps that lead to activation of Spo0A
       notes: Supports Spo0A activation as the initiation control point for sporulation.
+    predicate_id: RO:0002213
   - subject: spo0a_phosphorelay
     predicate: initiates
     object: asymmetric_septation
@@ -150,4 +151,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true
