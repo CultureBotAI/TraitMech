@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>environmental temperature</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>microbial growth rate</strong>
-            
+            <code>RO:0002211</code>
             <p>Microbial growth rate varies with growth temperature.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>high temperature</strong>
             <span class="edge-predicate">challenges</span>
             <strong>protein stability</strong>
-            
+            <code>METPO:2007406</code>
             <p>Elevated temperature challenges protein folding and functional stability.</p>
             <ul>
               
@@ -126,9 +126,9 @@
           
           <li id="pathograph-1-edge-5">
             <strong>membrane fluidity</strong>
-            <span class="edge-predicate">constrains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>temperature preference</strong>
-            
+            <code>RO:0002211</code>
             <p>Temperature preference reflects the range in which membrane function remains compatible with growth.</p>
             <ul>
               
@@ -143,9 +143,9 @@
           
           <li id="pathograph-1-edge-6">
             <strong>protein stability</strong>
-            <span class="edge-predicate">constrains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>temperature preference</strong>
-            
+            <code>RO:0002211</code>
             <p>Growth at preferred temperatures requires proteins to remain active and stable.</p>
             <ul>
               
@@ -320,6 +320,42 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed temperature preference trait and added DOI-backed causal graph for temperature effects on membrane fluidity, protein stability, and growth.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007406×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0000383×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007505×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 3 causal-edge predicate label(s) to align with existing groundings: constrains → regulates ×2; influences → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×3).</p>
         </li>
         
       </ol>
@@ -679,7 +715,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental temperature to membrane fluidity, protein stability, and growth-rate phenotypes.", "edges": [{"description": "Microbial growth rate varies with growth temperature.", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "environmental_temperature", "target": "growth_rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "high_temperature", "target": "protein_stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "high_temperature", "target": "membrane_fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "id": "edge-5", "is_orphan": false, "predicate": "constrains", "predicate_id": null, "source": "membrane_fluidity", "target": "temperature_preference_trait"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "id": "edge-6", "is_orphan": false, "predicate": "constrains", "predicate_id": null, "source": "protein_stability", "target": "temperature_preference_trait"}], "evidence_rows": [{"description": "Microbial growth rate varies with growth temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "predicate": "influences", "predicate_id": null, "source": "environmental temperature", "target": "microbial growth rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "edge_id": "edge-2", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "challenges", "predicate_id": null, "source": "high temperature", "target": "protein stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "edge_id": "edge-4", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": null, "source": "high temperature", "target": "membrane fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "predicate": "constrains", "predicate_id": null, "source": "membrane fluidity", "target": "temperature preference"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "edge_id": "edge-6", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "predicate": "constrains", "predicate_id": null, "source": "protein stability", "target": "temperature preference"}], "graph_id": "temperature_preference_growth_physiology", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Growth temperature experienced by the organism.", "grounding": null, "id": "environmental_temperature", "is_orphan": false, "label": "environmental temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Rate of population growth under a given temperature regime.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "microbial growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Hot growth condition that challenges protein and membrane stability.", "grounding": null, "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition that reduces molecular motion and membrane fluidity.", "grounding": null, "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Physical state of the membrane affecting transport and cell function.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Capacity of proteins to retain folded, functional conformations.", "grounding": null, "id": "protein_stability", "is_orphan": false, "label": "protein stability", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Growth phenotype characterized by preferred environmental temperature.", "grounding": "METPO:1000613", "id": "temperature_preference_trait", "is_orphan": false, "label": "temperature preference", "node_type": "TRAIT", "xrefs": []}], "title": "Environmental temperature control of growth preference"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental temperature to membrane fluidity, protein stability, and growth-rate phenotypes.", "edges": [{"description": "Microbial growth rate varies with growth temperature.", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental_temperature", "target": "growth_rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high_temperature", "target": "protein_stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "high_temperature", "target": "membrane_fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane_fluidity", "target": "temperature_preference_trait"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein_stability", "target": "temperature_preference_trait"}], "evidence_rows": [{"description": "Microbial growth rate varies with growth temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental temperature", "target": "microbial growth rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "edge_id": "edge-2", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": null, "source": "low temperature", "target": "membrane fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high temperature", "target": "protein stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "edge_id": "edge-4", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": null, "source": "high temperature", "target": "membrane fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane fluidity", "target": "temperature preference"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "edge_id": "edge-6", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein stability", "target": "temperature preference"}], "graph_id": "temperature_preference_growth_physiology", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Growth temperature experienced by the organism.", "grounding": null, "id": "environmental_temperature", "is_orphan": false, "label": "environmental temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Rate of population growth under a given temperature regime.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "microbial growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Hot growth condition that challenges protein and membrane stability.", "grounding": null, "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition that reduces molecular motion and membrane fluidity.", "grounding": "PATO:0000383", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane affecting transport and cell function.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#cffafe", "description": "Capacity of proteins to retain folded, functional conformations.", "grounding": null, "id": "protein_stability", "is_orphan": false, "label": "protein stability", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Growth phenotype characterized by preferred environmental temperature.", "grounding": "METPO:1000613", "id": "temperature_preference_trait", "is_orphan": false, "label": "temperature preference", "node_type": "TRAIT", "xrefs": []}], "title": "Environmental temperature control of growth preference"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -690,10 +726,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

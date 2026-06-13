@@ -60,7 +60,7 @@
             <strong>DivIVA</strong>
             <span class="edge-predicate">localizes to</span>
             <strong>apical polarisome</strong>
-            
+            <code>biolink:located_in</code>
             <p>DivIVA localizes at hyphal tips as part of the polar growth machinery.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>Scy</strong>
-            <span class="edge-predicate">organizes</span>
+            <span class="edge-predicate">enables</span>
             <strong>apical polarisome</strong>
-            
+            <code>RO:0002327</code>
             <p>Scy is a component of the tip-organizing center controlling polar growth.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>apical peptidoglycan synthesis</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>hyphal tip extension</strong>
-            
+            <code>RO:0002211</code>
             <p>Localized wall synthesis at the tip drives filament extension.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>hyphal tip extension</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>filament shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Hyphal tip extension manifests filamentous morphology.</p>
             <ul>
               
@@ -282,6 +282,48 @@
           <time>2026-05-11T21:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for DivIVA, Scy, apical polarisome, apical peptidoglycan synthesis, and hyphal tip extension.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:Q1IYG2×1, UniProtKB:A0A191V3Q4×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: organizes → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -641,7 +683,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.", "edges": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": null, "source": "divIVA", "target": "apical_polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "id": "edge-2", "is_orphan": false, "predicate": "organizes", "predicate_id": null, "source": "scy", "target": "apical_polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "id": "edge-3", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "apical_polarisome", "target": "apical_peptidoglycan_synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "apical_peptidoglycan_synthesis", "target": "hyphal_tip_extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "hyphal_tip_extension", "target": "filament_shaped_trait"}], "evidence_rows": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "predicate": "localizes to", "predicate_id": null, "source": "DivIVA", "target": "apical polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "predicate": "organizes", "predicate_id": null, "source": "Scy", "target": "apical polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "edge_id": "edge-3", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "predicate": "recruits", "predicate_id": null, "source": "apical polarisome", "target": "apical peptidoglycan synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "edge_id": "edge-4", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "predicate": "drives", "predicate_id": null, "source": "apical peptidoglycan synthesis", "target": "hyphal tip extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "predicate": "manifests as", "predicate_id": null, "source": "hyphal tip extension", "target": "filament shaped"}], "graph_id": "filament_shaped_streptomyces_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-wall synthesis localized at the hyphal tip.", "grounding": null, "id": "apical_peptidoglycan_synthesis", "is_orphan": false, "label": "apical peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Hyphal-tip organizing center for polar growth.", "grounding": null, "id": "apical_polarisome", "is_orphan": false, "label": "apical polarisome", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Polarity determinant for Streptomyces apical growth.", "grounding": null, "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated filamentous bacterial morphology.", "grounding": "METPO:1000674", "id": "filament_shaped_trait", "is_orphan": false, "label": "filament shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Extension of filamentous hyphae by polar growth.", "grounding": null, "id": "hyphal_tip_extension", "is_orphan": false, "label": "hyphal tip extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Streptomyces cytoskeletal element associated with the polarisome.", "grounding": null, "id": "scy", "is_orphan": false, "label": "Scy", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Filament-shape Streptomyces polar growth mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.", "edges": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "divIVA", "target": "apical_polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "scy", "target": "apical_polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "id": "edge-3", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "apical_polarisome", "target": "apical_peptidoglycan_synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical_peptidoglycan_synthesis", "target": "hyphal_tip_extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal_tip_extension", "target": "filament_shaped_trait"}], "evidence_rows": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "DivIVA", "target": "apical polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Scy", "target": "apical polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "edge_id": "edge-3", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "predicate": "recruits", "predicate_id": null, "source": "apical polarisome", "target": "apical peptidoglycan synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "edge_id": "edge-4", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical peptidoglycan synthesis", "target": "hyphal tip extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal tip extension", "target": "filament shaped"}], "graph_id": "filament_shaped_streptomyces_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-wall synthesis localized at the hyphal tip.", "grounding": null, "id": "apical_peptidoglycan_synthesis", "is_orphan": false, "label": "apical peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Hyphal-tip organizing center for polar growth.", "grounding": null, "id": "apical_polarisome", "is_orphan": false, "label": "apical polarisome", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Polarity determinant for Streptomyces apical growth.", "grounding": "UniProtKB:Q1IYG2", "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated filamentous bacterial morphology.", "grounding": "METPO:1000674", "id": "filament_shaped_trait", "is_orphan": false, "label": "filament shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Extension of filamentous hyphae by polar growth.", "grounding": null, "id": "hyphal_tip_extension", "is_orphan": false, "label": "hyphal tip extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Streptomyces cytoskeletal element associated with the polarisome.", "grounding": "UniProtKB:A0A191V3Q4", "id": "scy", "is_orphan": false, "label": "Scy", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Filament-shape Streptomyces polar growth mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -652,10 +694,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

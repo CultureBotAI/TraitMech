@@ -60,7 +60,7 @@
             <strong>Crt enzymes</strong>
             <span class="edge-predicate">catalyzes</span>
             <strong>carotenoid biosynthesis</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>carotenoid biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>orange carotenoids</strong>
-            
+            <code>METPO:2000202</code>
             <p>Carotenoid biosynthesis produces orange pigments in representative bacteria.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>carotenoid biosynthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>staphyloxanthin</strong>
-            
+            <code>METPO:2000202</code>
             <p>The S. aureus carotenoid pathway produces staphyloxanthin.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>orange carotenoids</strong>
             <span class="edge-predicate">causes</span>
             <strong>visible orange color</strong>
-            
+            <code>biolink:causes</code>
             <p>Orange carotenoids cause visible orange pigmentation.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>visible orange color</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>orange pigmented</strong>
-            
+            <code>METPO:2007400</code>
             <p>Visible orange color manifests the orange-pigmented phenotype.</p>
             <ul>
               
@@ -278,6 +278,30 @@
           <time>2026-05-11T19:10:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for Crt enzymes, carotenoid biosynthesis, orange carotenoids, staphyloxanthin, and visible orange color.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1, biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0016117×1).</p>
         </li>
         
       </ol>
@@ -637,7 +661,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking orange microbial pigmentation to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible orange color.", "edges": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "carotenoid_biosynthesis", "target": "orange_carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "carotenoid_biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "orange_carotenoids", "target": "visible_orange_color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "visible_orange_color", "target": "orange_pigmented_trait"}], "evidence_rows": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": null, "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "produces", "predicate_id": null, "source": "carotenoid biosynthesis", "target": "orange carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "edge_id": "edge-3", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "predicate": "produces", "predicate_id": null, "source": "carotenoid biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "predicate": "causes", "predicate_id": null, "source": "orange carotenoids", "target": "visible orange color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": null, "source": "visible orange color", "target": "orange pigmented"}], "graph_id": "orange_pigmented_carotenoid_accumulation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": null, "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments with orange visible coloration.", "grounding": null, "id": "orange_carotenoids", "is_orphan": false, "label": "orange carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing orange.", "grounding": "METPO:1003026", "id": "orange_pigmented_trait", "is_orphan": false, "label": "orange pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Golden-orange C30 carotenoid pigment from Staphylococcus aureus.", "grounding": null, "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Observed orange colony or cell color.", "grounding": null, "id": "visible_orange_color", "is_orphan": false, "label": "visible orange color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Orange pigmentation carotenoid mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking orange microbial pigmentation to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible orange color.", "edges": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid_biosynthesis", "target": "orange_carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid_biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange_carotenoids", "target": "visible_orange_color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_orange_color", "target": "orange_pigmented_trait"}], "evidence_rows": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid biosynthesis", "target": "orange carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "edge_id": "edge-3", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange carotenoids", "target": "visible orange color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible orange color", "target": "orange pigmented"}], "graph_id": "orange_pigmented_carotenoid_accumulation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments with orange visible coloration.", "grounding": null, "id": "orange_carotenoids", "is_orphan": false, "label": "orange carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing orange.", "grounding": "METPO:1003026", "id": "orange_pigmented_trait", "is_orphan": false, "label": "orange pigmented", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Golden-orange C30 carotenoid pigment from Staphylococcus aureus.", "grounding": null, "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Observed orange colony or cell color.", "grounding": null, "id": "visible_orange_color", "is_orphan": false, "label": "visible orange color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Orange pigmentation carotenoid mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +672,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

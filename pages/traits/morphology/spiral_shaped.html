@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>curvature scaffold</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan remodeling</strong>
-            
+            <code>RO:0002211</code>
             <p>Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>peptidoglycan remodeling</strong>
             <span class="edge-predicate">enables</span>
             <strong>helical curvature</strong>
-            
+            <code>RO:0002327</code>
             <p>Peptidoglycan remodeling enables helical curvature and twist.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>helical curvature</strong>
             <span class="edge-predicate">produces</span>
             <strong>spiral shaped</strong>
-            
+            <code>METPO:2000202</code>
             <p>Helical curvature produces a spiral-shaped cell body.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>spiral shaped</strong>
             <span class="edge-predicate">associated with</span>
             <strong>viscous motility environment</strong>
-            
+            <code>biolink:associated_with</code>
             <p>Spiral and curved morphologies can be associated with motility in viscous media.</p>
             <ul>
               
@@ -265,6 +265,30 @@
           <time>2026-05-11T18:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added definition and DOI-backed causal graph for spiral morphology, peptidoglycan remodeling, curvature scaffolds, helical curvature, and viscous motility association.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:associated_with×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: influences → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:51Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -624,7 +648,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking spiral morphology to scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell geometry.", "edges": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "id": "edge-1", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "curvature_scaffold", "target": "peptidoglycan_remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "peptidoglycan_remodeling", "target": "helical_curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "helical_curvature", "target": "spiral_shaped_trait"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": null, "source": "spiral_shaped_trait", "target": "viscous_motility_environment"}], "evidence_rows": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "predicate": "influences", "predicate_id": null, "source": "curvature scaffold", "target": "peptidoglycan remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "edge_id": "edge-2", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": null, "source": "peptidoglycan remodeling", "target": "helical curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "edge_id": "edge-3", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "predicate": "produces", "predicate_id": null, "source": "helical curvature", "target": "spiral shaped"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "edge_id": "edge-4", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "predicate": "associated with", "predicate_id": null, "source": "spiral shaped", "target": "viscous motility environment"}], "graph_id": "spiral_shaped_curvature_mechanisms", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein scaffold or shape complex that biases cell curvature.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Curved and twisted cell-wall geometry.", "grounding": null, "id": "helical_curvature", "is_orphan": false, "label": "helical curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Local cell-wall synthesis, relaxation, or crosslink remodeling.", "grounding": null, "id": "peptidoglycan_remodeling", "is_orphan": false, "label": "peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Spiral or helically curved bacterial morphology.", "grounding": "METPO:1000684", "id": "spiral_shaped_trait", "is_orphan": false, "label": "spiral shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Viscous surroundings where curved or helical morphology can affect movement.", "grounding": null, "id": "viscous_motility_environment", "is_orphan": false, "label": "viscous motility environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Spiral-shape curvature and cell-wall mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking spiral morphology to scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell geometry.", "edges": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature_scaffold", "target": "peptidoglycan_remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan_remodeling", "target": "helical_curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "helical_curvature", "target": "spiral_shaped_trait"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral_shaped_trait", "target": "viscous_motility_environment"}], "evidence_rows": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature scaffold", "target": "peptidoglycan remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "edge_id": "edge-2", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan remodeling", "target": "helical curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "edge_id": "edge-3", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "helical curvature", "target": "spiral shaped"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "edge_id": "edge-4", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral shaped", "target": "viscous motility environment"}], "graph_id": "spiral_shaped_curvature_mechanisms", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein scaffold or shape complex that biases cell curvature.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Curved and twisted cell-wall geometry.", "grounding": null, "id": "helical_curvature", "is_orphan": false, "label": "helical curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Local cell-wall synthesis, relaxation, or crosslink remodeling.", "grounding": null, "id": "peptidoglycan_remodeling", "is_orphan": false, "label": "peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Spiral or helically curved bacterial morphology.", "grounding": "METPO:1000684", "id": "spiral_shaped_trait", "is_orphan": false, "label": "spiral shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Viscous surroundings where curved or helical morphology can affect movement.", "grounding": null, "id": "viscous_motility_environment", "is_orphan": false, "label": "viscous motility environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Spiral-shape curvature and cell-wall mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -635,10 +659,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

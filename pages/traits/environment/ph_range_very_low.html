@@ -60,7 +60,7 @@
             <strong>extreme-acidophile envelope barrier</strong>
             <span class="edge-predicate">enables</span>
             <strong>pH range very low</strong>
-            
+            <code>RO:0002327</code>
             <p>Extreme-acidophile envelope barriers enable growth at pH ≤ 4.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH range very low</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH range very low is a quantitative bin of the pH-range phenotype.</p>
             <ul>
               
@@ -237,6 +237,12 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking extreme-acidophile envelope barriers to the pH-range-very-low bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -596,7 +602,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking extreme-acidophile proton-exclusion physiology to a pH growth range reaching \u2264 ~4.", "edges": [{"description": "Extreme-acidophile envelope barriers enable growth at pH \u2264 4.", "evidence": [{"notes": "Supports envelope and membrane-potential mechanisms as enablers of growth at strongly acidic pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "extreme_acidophile_envelope", "target": "ph_range_very_low_trait"}, {"description": "pH range very low is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports a very-low pH range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_range_very_low_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Extreme-acidophile envelope barriers enable growth at pH \u2264 4.", "edge_id": "edge-1", "evidence": [{"notes": "Supports envelope and membrane-potential mechanisms as enablers of growth at strongly acidic pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "predicate": "enables", "predicate_id": null, "source": "extreme-acidophile envelope barrier", "target": "pH range very low"}, {"description": "pH range very low is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a very-low pH range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "predicate": "is a", "predicate_id": null, "source": "pH range very low", "target": "pH range"}], "graph_id": "ph_range_very_low_extreme_acidophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined low-permeability membrane and reversed membrane potential preventing cytoplasmic acidification at strongly acidic external pH.", "grounding": null, "id": "extreme_acidophile_envelope", "is_orphan": false, "label": "extreme-acidophile envelope barrier", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range reaching \u2264 ~4.", "grounding": "METPO:1000459", "id": "ph_range_very_low_trait", "is_orphan": false, "label": "pH range very low", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-very-low extreme-acidophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking extreme-acidophile proton-exclusion physiology to a pH growth range reaching \u2264 ~4.", "edges": [{"description": "Extreme-acidophile envelope barriers enable growth at pH \u2264 4.", "evidence": [{"notes": "Supports envelope and membrane-potential mechanisms as enablers of growth at strongly acidic pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "extreme_acidophile_envelope", "target": "ph_range_very_low_trait"}, {"description": "pH range very low is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports a very-low pH range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_very_low_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Extreme-acidophile envelope barriers enable growth at pH \u2264 4.", "edge_id": "edge-1", "evidence": [{"notes": "Supports envelope and membrane-potential mechanisms as enablers of growth at strongly acidic pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "extreme-acidophile envelope barrier", "target": "pH range very low"}, {"description": "pH range very low is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a very-low pH range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range very low", "target": "pH range"}], "graph_id": "ph_range_very_low_extreme_acidophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined low-permeability membrane and reversed membrane potential preventing cytoplasmic acidification at strongly acidic external pH.", "grounding": null, "id": "extreme_acidophile_envelope", "is_orphan": false, "label": "extreme-acidophile envelope barrier", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range reaching \u2264 ~4.", "grounding": "METPO:1000459", "id": "ph_range_very_low_trait", "is_orphan": false, "label": "pH range very low", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-very-low extreme-acidophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -607,10 +613,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

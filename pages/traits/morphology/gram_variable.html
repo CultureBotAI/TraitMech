@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>culture aging</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan thinning</strong>
-            
+            <code>RO:0002211</code>
             <p>Aging cultures undergo cell-wall thinning via autolysis.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>peptidoglycan thinning</strong>
             <span class="edge-predicate">causes</span>
             <strong>crystal-violet retention loss</strong>
-            
+            <code>biolink:causes</code>
             <p>Thinned peptidoglycan no longer retains the gram-stain dye.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>crystal-violet retention loss</strong>
             <span class="edge-predicate">produces</span>
             <strong>mixed-population gram staining</strong>
-            
+            <code>METPO:2000202</code>
             <p>Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>mixed-population gram staining</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>gram variable</strong>
-            
+            <code>METPO:2007400</code>
             <p>Mixed staining manifests the gram-variable trait.</p>
             <ul>
               
@@ -261,6 +261,36 @@
           <time>2026-05-11T23:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking culture-age-dependent peptidoglycan thinning and loss of crystal-violet retention to gram-variable staining.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -620,7 +650,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking culture-age-dependent peptidoglycan thinning and autolysis to inconsistent gram-staining within a single bacterial population.", "edges": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "id": "edge-1", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "culture_aging", "target": "peptidoglycan_thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "peptidoglycan_thinning", "target": "crystal_violet_retention_loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "crystal_violet_retention_loss", "target": "mixed_staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "mixed_staining", "target": "gram_variable_trait"}], "evidence_rows": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "predicate": "drives", "predicate_id": null, "source": "culture aging", "target": "peptidoglycan thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "edge_id": "edge-2", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "predicate": "causes", "predicate_id": null, "source": "peptidoglycan thinning", "target": "crystal-violet retention loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "predicate": "produces", "predicate_id": null, "source": "crystal-violet retention loss", "target": "mixed-population gram staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "predicate": "manifests as", "predicate_id": null, "source": "mixed-population gram staining", "target": "gram variable"}], "graph_id": "gram_variable_wall_thinning", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Loss of the thick PG layer required to retain the gram-stain dye.", "grounding": null, "id": "crystal_violet_retention_loss", "is_orphan": false, "label": "crystal-violet retention loss", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Stationary-phase or post-exponential growth conditions promoting cell-wall remodeling.", "grounding": null, "id": "culture_aging", "is_orphan": false, "label": "culture aging", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Mixed gram-positive and gram-negative staining within a single culture.", "grounding": "METPO:1000700", "id": "gram_variable_trait", "is_orphan": false, "label": "gram variable", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Co-existence of gram-positive and gram-negative-staining cells in the same culture.", "grounding": null, "id": "mixed_staining", "is_orphan": false, "label": "mixed-population gram staining", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall degradation or thinning due to autolysis or stress.", "grounding": null, "id": "peptidoglycan_thinning", "is_orphan": false, "label": "peptidoglycan thinning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Gram-variable peptidoglycan thinning"}];
+  var graphs = [{"description": "DOI-backed graph linking culture-age-dependent peptidoglycan thinning and autolysis to inconsistent gram-staining within a single bacterial population.", "edges": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture_aging", "target": "peptidoglycan_thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_thinning", "target": "crystal_violet_retention_loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal_violet_retention_loss", "target": "mixed_staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed_staining", "target": "gram_variable_trait"}], "evidence_rows": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture aging", "target": "peptidoglycan thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "edge_id": "edge-2", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan thinning", "target": "crystal-violet retention loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal-violet retention loss", "target": "mixed-population gram staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed-population gram staining", "target": "gram variable"}], "graph_id": "gram_variable_wall_thinning", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Loss of the thick PG layer required to retain the gram-stain dye.", "grounding": null, "id": "crystal_violet_retention_loss", "is_orphan": false, "label": "crystal-violet retention loss", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Stationary-phase or post-exponential growth conditions promoting cell-wall remodeling.", "grounding": null, "id": "culture_aging", "is_orphan": false, "label": "culture aging", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Mixed gram-positive and gram-negative staining within a single culture.", "grounding": "METPO:1000700", "id": "gram_variable_trait", "is_orphan": false, "label": "gram variable", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Co-existence of gram-positive and gram-negative-staining cells in the same culture.", "grounding": null, "id": "mixed_staining", "is_orphan": false, "label": "mixed-population gram staining", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall degradation or thinning due to autolysis or stress.", "grounding": null, "id": "peptidoglycan_thinning", "is_orphan": false, "label": "peptidoglycan thinning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Gram-variable peptidoglycan thinning"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +661,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

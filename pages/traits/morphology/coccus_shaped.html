@@ -77,7 +77,7 @@
             <strong>penicillin-binding proteins</strong>
             <span class="edge-predicate">catalyzes</span>
             <strong>septal peptidoglycan synthesis</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>PBPs catalyze peptidoglycan assembly at the septum.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>septal peptidoglycan synthesis</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>coccus shaped</strong>
-            
+            <code>RO:0002211</code>
             <p>Septum-centered peptidoglycan synthesis supports spherical coccus morphology.</p>
             <ul>
               
@@ -269,6 +269,24 @@
           <time>2026-05-11T18:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed coccoid growth review and added causal graph for FtsZ-associated septal peptidoglycan synthesis and spherical morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -628,7 +646,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking spherical coccus morphology to septal peptidoglycan synthesis, FtsZ-directed division, and reduced reliance on lateral elongation systems.", "edges": [{"description": "FtsZ-associated division machinery recruits cell-wall enzymes for septal synthesis in cocci.", "evidence": [{"notes": "Review describes coccal growth as relying on division-septum wall synthesis machinery.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "one type of cell wall synthesis machinery"}], "id": "edge-1", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "ftsZ_division_ring", "target": "penicillin_binding_proteins"}, {"description": "PBPs catalyze peptidoglycan assembly at the septum.", "evidence": [{"notes": "Supports wall-synthesis enzymes as the proximal machinery for septal peptidoglycan synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "catalysed by one type of cell wall synthesis machinery"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "penicillin_binding_proteins", "target": "septal_peptidoglycan_synthesis"}, {"description": "Septum-centered peptidoglycan synthesis supports spherical coccus morphology.", "evidence": [{"notes": "Supports septal-only wall synthesis as a mechanism for spherical coccal growth.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "id": "edge-3", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "septal_peptidoglycan_synthesis", "target": "coccus_shaped_trait"}, {"description": "Cocci lack the sustained lateral elongation mode that produces rod morphology.", "evidence": [{"notes": "Review contrasts mechanisms for cocci with rod-shaped lateral growth; edge is retained as a broad mechanistic distinction rather than a universal gene-loss claim.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "round, rod-shaped, curved and spiral cells"}], "id": "edge-4", "is_orphan": false, "predicate": "reduced in", "predicate_id": null, "source": "lateral_elongation", "target": "coccus_shaped_trait"}], "evidence_rows": [{"description": "FtsZ-associated division machinery recruits cell-wall enzymes for septal synthesis in cocci.", "edge_id": "edge-1", "evidence": [{"notes": "Review describes coccal growth as relying on division-septum wall synthesis machinery.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "one type of cell wall synthesis machinery"}], "predicate": "recruits", "predicate_id": null, "source": "FtsZ division ring", "target": "penicillin-binding proteins"}, {"description": "PBPs catalyze peptidoglycan assembly at the septum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall-synthesis enzymes as the proximal machinery for septal peptidoglycan synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "catalysed by one type of cell wall synthesis machinery"}], "predicate": "catalyzes", "predicate_id": null, "source": "penicillin-binding proteins", "target": "septal peptidoglycan synthesis"}, {"description": "Septum-centered peptidoglycan synthesis supports spherical coccus morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports septal-only wall synthesis as a mechanism for spherical coccal growth.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "predicate": "maintains", "predicate_id": null, "source": "septal peptidoglycan synthesis", "target": "coccus shaped"}, {"description": "Cocci lack the sustained lateral elongation mode that produces rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Review contrasts mechanisms for cocci with rod-shaped lateral growth; edge is retained as a broad mechanistic distinction rather than a universal gene-loss claim.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "round, rod-shaped, curved and spiral cells"}], "predicate": "reduced in", "predicate_id": null, "source": "lateral cell-wall elongation", "target": "coccus shaped"}], "graph_id": "coccus_shaped_septal_growth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Spherical or nearly spherical bacterial cell morphology.", "grounding": "METPO:1000668", "id": "coccus_shaped_trait", "is_orphan": false, "label": "coccus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like division scaffold that recruits septal synthesis machinery.", "grounding": null, "id": "ftsZ_division_ring", "is_orphan": false, "label": "FtsZ division ring", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth mode common in rod-shaped bacteria.", "grounding": null, "id": "lateral_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall synthesis enzymes recruited to division sites.", "grounding": null, "id": "penicillin_binding_proteins", "is_orphan": false, "label": "penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis localized to the division septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Coccus-shape septal growth mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking spherical coccus morphology to septal peptidoglycan synthesis, FtsZ-directed division, and reduced reliance on lateral elongation systems.", "edges": [{"description": "FtsZ-associated division machinery recruits cell-wall enzymes for septal synthesis in cocci.", "evidence": [{"notes": "Review describes coccal growth as relying on division-septum wall synthesis machinery.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "one type of cell wall synthesis machinery"}], "id": "edge-1", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "ftsZ_division_ring", "target": "penicillin_binding_proteins"}, {"description": "PBPs catalyze peptidoglycan assembly at the septum.", "evidence": [{"notes": "Supports wall-synthesis enzymes as the proximal machinery for septal peptidoglycan synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "catalysed by one type of cell wall synthesis machinery"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "penicillin_binding_proteins", "target": "septal_peptidoglycan_synthesis"}, {"description": "Septum-centered peptidoglycan synthesis supports spherical coccus morphology.", "evidence": [{"notes": "Supports septal-only wall synthesis as a mechanism for spherical coccal growth.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "septal_peptidoglycan_synthesis", "target": "coccus_shaped_trait"}, {"description": "Cocci lack the sustained lateral elongation mode that produces rod morphology.", "evidence": [{"notes": "Review contrasts mechanisms for cocci with rod-shaped lateral growth; edge is retained as a broad mechanistic distinction rather than a universal gene-loss claim.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "round, rod-shaped, curved and spiral cells"}], "id": "edge-4", "is_orphan": false, "predicate": "reduced in", "predicate_id": null, "source": "lateral_elongation", "target": "coccus_shaped_trait"}], "evidence_rows": [{"description": "FtsZ-associated division machinery recruits cell-wall enzymes for septal synthesis in cocci.", "edge_id": "edge-1", "evidence": [{"notes": "Review describes coccal growth as relying on division-septum wall synthesis machinery.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "one type of cell wall synthesis machinery"}], "predicate": "recruits", "predicate_id": null, "source": "FtsZ division ring", "target": "penicillin-binding proteins"}, {"description": "PBPs catalyze peptidoglycan assembly at the septum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall-synthesis enzymes as the proximal machinery for septal peptidoglycan synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "catalysed by one type of cell wall synthesis machinery"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "penicillin-binding proteins", "target": "septal peptidoglycan synthesis"}, {"description": "Septum-centered peptidoglycan synthesis supports spherical coccus morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports septal-only wall synthesis as a mechanism for spherical coccal growth.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "septal peptidoglycan synthesis", "target": "coccus shaped"}, {"description": "Cocci lack the sustained lateral elongation mode that produces rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Review contrasts mechanisms for cocci with rod-shaped lateral growth; edge is retained as a broad mechanistic distinction rather than a universal gene-loss claim.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "round, rod-shaped, curved and spiral cells"}], "predicate": "reduced in", "predicate_id": null, "source": "lateral cell-wall elongation", "target": "coccus shaped"}], "graph_id": "coccus_shaped_septal_growth", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Spherical or nearly spherical bacterial cell morphology.", "grounding": "METPO:1000668", "id": "coccus_shaped_trait", "is_orphan": false, "label": "coccus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like division scaffold that recruits septal synthesis machinery.", "grounding": null, "id": "ftsZ_division_ring", "is_orphan": false, "label": "FtsZ division ring", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth mode common in rod-shaped bacteria.", "grounding": null, "id": "lateral_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall synthesis enzymes recruited to division sites.", "grounding": null, "id": "penicillin_binding_proteins", "is_orphan": false, "label": "penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis localized to the division septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Coccus-shape septal growth mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -639,10 +657,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>modest alkaline-tolerance physiology</strong>
             <span class="edge-predicate">enables</span>
             <strong>pH range mid2</strong>
-            
+            <code>RO:0002327</code>
             <p>Modest alkaline-tolerance physiology enables growth across pH 7–8.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH range mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH range mid2 is a quantitative bin of the pH-range phenotype.</p>
             <ul>
               
@@ -235,6 +235,12 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking modest alkaline-tolerance physiology to the pH-range-mid2 bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -594,7 +600,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth range of approximately 7\u20138.", "edges": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "modest_alkaline_tolerance", "target": "ph_range_mid2_trait"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_range_mid2_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "edge_id": "edge-1", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": null, "source": "modest alkaline-tolerance physiology", "target": "pH range mid2"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": null, "source": "pH range mid2", "target": "pH range"}], "graph_id": "ph_range_mid2_mild_alkaline_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mild K+/H+ antiport and cytoplasmic acidification activity enabling growth at slightly basic external pH.", "grounding": null, "id": "modest_alkaline_tolerance", "is_orphan": false, "label": "modest alkaline-tolerance physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 7\u20138.", "grounding": "METPO:1000462", "id": "ph_range_mid2_trait", "is_orphan": false, "label": "pH range mid2", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid2 mild-alkaline-tolerance range"}];
+  var graphs = [{"description": "DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth range of approximately 7\u20138.", "edges": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest_alkaline_tolerance", "target": "ph_range_mid2_trait"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid2_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "edge_id": "edge-1", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest alkaline-tolerance physiology", "target": "pH range mid2"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid2", "target": "pH range"}], "graph_id": "ph_range_mid2_mild_alkaline_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mild K+/H+ antiport and cytoplasmic acidification activity enabling growth at slightly basic external pH.", "grounding": null, "id": "modest_alkaline_tolerance", "is_orphan": false, "label": "modest alkaline-tolerance physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 7\u20138.", "grounding": "METPO:1000462", "id": "ph_range_mid2_trait", "is_orphan": false, "label": "pH range mid2", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid2 mild-alkaline-tolerance range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,10 +611,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

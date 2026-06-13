@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>oligotrophic environment</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>streamlining selection</strong>
-            
+            <code>RO:0002211</code>
             <p>Persistent oligotrophy selects for streamlined narrow cells.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>streamlining selection</strong>
             <span class="edge-predicate">produces</span>
             <strong>cell width very small</strong>
-            
+            <code>METPO:2000202</code>
             <p>Streamlining selection produces very narrow rods.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>cell width very small</strong>
             <span class="edge-predicate">is a</span>
             <strong>cell width</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Very small cell width is a quantitative bin of the cell-width phenotype.</p>
             <ul>
               
@@ -244,6 +244,24 @@
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking oligotrophic streamlining selection to very narrow cell width (≤0.5 μm).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -603,7 +621,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking nutrient streamlining to a very-narrow rod radius (\u22640.5 \u03bcm).", "edges": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-1", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "oligotrophic_environment", "target": "streamlining_selection"}, {"description": "Streamlining selection produces very narrow rods.", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "streamlining_selection", "target": "cell_width_very_small_trait"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "cell_width_very_small_trait", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "drives", "predicate_id": null, "source": "oligotrophic environment", "target": "streamlining selection"}, {"description": "Streamlining selection produces very narrow rods.", "edge_id": "edge-2", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "predicate": "produces", "predicate_id": null, "source": "streamlining selection", "target": "cell width very small"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": null, "source": "cell width very small", "target": "cell width"}], "graph_id": "cell_width_very_small_streamlining", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Cell width at most ~0.5 \u03bcm.", "grounding": "METPO:1000887", "id": "cell_width_very_small_trait", "is_orphan": false, "label": "cell width very small", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Persistent low-nutrient setting that favors miniaturized cells.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Selection for reduced surface-to-volume ratio under chronic nutrient limitation.", "grounding": null, "id": "streamlining_selection", "is_orphan": false, "label": "streamlining selection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Very-narrow cell width by streamlining"}];
+  var graphs = [{"description": "DOI-backed graph linking nutrient streamlining to a very-narrow rod radius (\u22640.5 \u03bcm).", "edges": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic_environment", "target": "streamlining_selection"}, {"description": "Streamlining selection produces very narrow rods.", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "streamlining_selection", "target": "cell_width_very_small_trait"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_very_small_trait", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic environment", "target": "streamlining selection"}, {"description": "Streamlining selection produces very narrow rods.", "edge_id": "edge-2", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "streamlining selection", "target": "cell width very small"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width very small", "target": "cell width"}], "graph_id": "cell_width_very_small_streamlining", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Cell width at most ~0.5 \u03bcm.", "grounding": "METPO:1000887", "id": "cell_width_very_small_trait", "is_orphan": false, "label": "cell width very small", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Persistent low-nutrient setting that favors miniaturized cells.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Selection for reduced surface-to-volume ratio under chronic nutrient limitation.", "grounding": null, "id": "streamlining_selection", "is_orphan": false, "label": "streamlining selection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Very-narrow cell width by streamlining"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +632,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

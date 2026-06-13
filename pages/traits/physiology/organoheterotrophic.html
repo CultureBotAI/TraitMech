@@ -60,7 +60,7 @@
             <strong>organoheterotrophic</strong>
             <span class="edge-predicate">uses electron donor</span>
             <strong>organic compound</strong>
-            
+            <code>METPO:2000009</code>
             <p>Organoheterotrophy uses organic compounds as electron donors.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>organoheterotrophic</strong>
             <span class="edge-predicate">uses carbon source</span>
             <strong>organic compound</strong>
-            
+            <code>METPO:2000006</code>
             <p>Heterotrophy uses organic compounds as carbon sources.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>central carbon metabolism</strong>
             <span class="edge-predicate">feeds electrons into</span>
             <strong>respiratory chain</strong>
-            
+            <code>METPO:2007402</code>
             <p>Oxidation of organic substrates supplies reducing equivalents to respiratory chains.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>respiratory chain</strong>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            
+            <code>METPO:2000202</code>
             <p>Respiratory electron transfer conserves energy as ATP.</p>
             <ul>
               
@@ -312,6 +312,42 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for organic compounds as electron donors and carbon sources supporting respiration, ATP, and biomass.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000009×1, METPO:2000006×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007402×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0022904×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007501×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:34:59Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: biomass: BIOLOGICAL_PROCESS → CHEMICAL ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:33Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:50860×1).</p>
         </li>
         
       </ol>
@@ -671,7 +707,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking organic compounds as electron donors and carbon sources to central metabolism, respiratory energy conservation, ATP, and biomass.", "edges": [{"description": "Organoheterotrophy uses organic compounds as electron donors.", "evidence": [{"notes": "Supports organic molecules as electron sources in organoheterotrophic categories.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... electron source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": null, "source": "organoheterotrophic_trait", "target": "organic_compound"}, {"description": "Heterotrophy uses organic compounds as carbon sources.", "evidence": [{"notes": "Supports organic compounds as the carbon source for heterotrophic growth.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "organic compounds as the primary sources of carbon"}], "id": "edge-2", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": null, "source": "organoheterotrophic_trait", "target": "organic_compound"}, {"description": "Organic compounds enter central metabolism for catabolism and biosynthesis.", "evidence": [{"notes": "Supports breakdown of nutrients to provide energy and biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "catabolism"}], "id": "edge-3", "is_orphan": false, "predicate": "metabolized by", "predicate_id": null, "source": "organic_compound", "target": "central_carbon_metabolism"}, {"description": "Oxidation of organic substrates supplies reducing equivalents to respiratory chains.", "evidence": [{"notes": "Supports respiratory energy conservation through electron transfer.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": null, "source": "central_carbon_metabolism", "target": "respiratory_chain"}, {"description": "Organic substrate oxidation can release CO2.", "evidence": [{"notes": "Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "dissimilation"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidizes carbon to", "predicate_id": null, "source": "central_carbon_metabolism", "target": "carbon_dioxide"}, {"description": "Respiratory electron transfer conserves energy as ATP.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "respiratory_chain", "target": "atp"}, {"description": "Organic carbon supplies building blocks for biomass.", "evidence": [{"notes": "Supports assimilation of organic nutrients into new cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-7", "is_orphan": false, "predicate": "assimilated into", "predicate_id": null, "source": "organic_compound", "target": "biomass"}], "evidence_rows": [{"description": "Organoheterotrophy uses organic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic molecules as electron sources in organoheterotrophic categories.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... electron source"}], "predicate": "uses electron donor", "predicate_id": null, "source": "organoheterotrophic", "target": "organic compound"}, {"description": "Heterotrophy uses organic compounds as carbon sources.", "edge_id": "edge-2", "evidence": [{"notes": "Supports organic compounds as the carbon source for heterotrophic growth.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "organic compounds as the primary sources of carbon"}], "predicate": "uses carbon source", "predicate_id": null, "source": "organoheterotrophic", "target": "organic compound"}, {"description": "Organic compounds enter central metabolism for catabolism and biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports breakdown of nutrients to provide energy and biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "catabolism"}], "predicate": "metabolized by", "predicate_id": null, "source": "organic compound", "target": "central carbon metabolism"}, {"description": "Oxidation of organic substrates supplies reducing equivalents to respiratory chains.", "edge_id": "edge-4", "evidence": [{"notes": "Supports respiratory energy conservation through electron transfer.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "feeds electrons into", "predicate_id": null, "source": "central carbon metabolism", "target": "respiratory chain"}, {"description": "Organic substrate oxidation can release CO2.", "edge_id": "edge-5", "evidence": [{"notes": "Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "dissimilation"}], "predicate": "oxidizes carbon to", "predicate_id": null, "source": "central carbon metabolism", "target": "carbon dioxide"}, {"description": "Respiratory electron transfer conserves energy as ATP.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": null, "source": "respiratory chain", "target": "ATP"}, {"description": "Organic carbon supplies building blocks for biomass.", "edge_id": "edge-7", "evidence": [{"notes": "Supports assimilation of organic nutrients into new cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "assimilated into", "predicate_id": null, "source": "organic compound", "target": "biomass"}], "graph_id": "organoheterotrophic_organic_donor_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced during metabolism.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Cell material built from organic carbon.", "grounding": null, "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized carbon product of organic substrate dissimilation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Core metabolic routes that oxidize and assimilate organic carbon.", "grounding": null, "id": "central_carbon_metabolism", "is_orphan": false, "label": "central carbon metabolism", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced organic molecule serving as electron donor and carbon source.", "grounding": null, "id": "organic_compound", "is_orphan": false, "label": "organic compound", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using organic compounds for electrons and carbon.", "grounding": "METPO:1000664", "id": "organoheterotrophic_trait", "is_orphan": false, "label": "organoheterotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system conserving redox energy.", "grounding": null, "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}], "title": "Organoheterotrophic organic donor and carbon use"}];
+  var graphs = [{"description": "DOI-backed graph linking organic compounds as electron donors and carbon sources to central metabolism, respiratory energy conservation, ATP, and biomass.", "edges": [{"description": "Organoheterotrophy uses organic compounds as electron donors.", "evidence": [{"notes": "Supports organic molecules as electron sources in organoheterotrophic categories.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... electron source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "organoheterotrophic_trait", "target": "organic_compound"}, {"description": "Heterotrophy uses organic compounds as carbon sources.", "evidence": [{"notes": "Supports organic compounds as the carbon source for heterotrophic growth.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "organic compounds as the primary sources of carbon"}], "id": "edge-2", "is_orphan": false, "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "organoheterotrophic_trait", "target": "organic_compound"}, {"description": "Organic compounds enter central metabolism for catabolism and biosynthesis.", "evidence": [{"notes": "Supports breakdown of nutrients to provide energy and biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "catabolism"}], "id": "edge-3", "is_orphan": false, "predicate": "metabolized by", "predicate_id": null, "source": "organic_compound", "target": "central_carbon_metabolism"}, {"description": "Oxidation of organic substrates supplies reducing equivalents to respiratory chains.", "evidence": [{"notes": "Supports respiratory energy conservation through electron transfer.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-4", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "central_carbon_metabolism", "target": "respiratory_chain"}, {"description": "Organic substrate oxidation can release CO2.", "evidence": [{"notes": "Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "dissimilation"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidizes carbon to", "predicate_id": null, "source": "central_carbon_metabolism", "target": "carbon_dioxide"}, {"description": "Respiratory electron transfer conserves energy as ATP.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_chain", "target": "atp"}, {"description": "Organic carbon supplies building blocks for biomass.", "evidence": [{"notes": "Supports assimilation of organic nutrients into new cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-7", "is_orphan": false, "predicate": "assimilated into", "predicate_id": null, "source": "organic_compound", "target": "biomass"}], "evidence_rows": [{"description": "Organoheterotrophy uses organic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic molecules as electron sources in organoheterotrophic categories.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... electron source"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "organoheterotrophic", "target": "organic compound"}, {"description": "Heterotrophy uses organic compounds as carbon sources.", "edge_id": "edge-2", "evidence": [{"notes": "Supports organic compounds as the carbon source for heterotrophic growth.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "organic compounds as the primary sources of carbon"}], "predicate": "uses carbon source", "predicate_id": "METPO:2000006", "source": "organoheterotrophic", "target": "organic compound"}, {"description": "Organic compounds enter central metabolism for catabolism and biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports breakdown of nutrients to provide energy and biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "catabolism"}], "predicate": "metabolized by", "predicate_id": null, "source": "organic compound", "target": "central carbon metabolism"}, {"description": "Oxidation of organic substrates supplies reducing equivalents to respiratory chains.", "edge_id": "edge-4", "evidence": [{"notes": "Supports respiratory energy conservation through electron transfer.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "central carbon metabolism", "target": "respiratory chain"}, {"description": "Organic substrate oxidation can release CO2.", "edge_id": "edge-5", "evidence": [{"notes": "Supports oxidation of nutrients to provide energy for biosynthesis and maintenance.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "dissimilation"}], "predicate": "oxidizes carbon to", "predicate_id": null, "source": "central carbon metabolism", "target": "carbon dioxide"}, {"description": "Respiratory electron transfer conserves energy as ATP.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory chain", "target": "ATP"}, {"description": "Organic carbon supplies building blocks for biomass.", "edge_id": "edge-7", "evidence": [{"notes": "Supports assimilation of organic nutrients into new cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "assimilated into", "predicate_id": null, "source": "organic compound", "target": "biomass"}], "graph_id": "organoheterotrophic_organic_donor_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced during metabolism.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Cell material built from organic carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized carbon product of organic substrate dissimilation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Core metabolic routes that oxidize and assimilate organic carbon.", "grounding": null, "id": "central_carbon_metabolism", "is_orphan": false, "label": "central carbon metabolism", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced organic molecule serving as electron donor and carbon source.", "grounding": "CHEBI:50860", "id": "organic_compound", "is_orphan": false, "label": "organic compound", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using organic compounds for electrons and carbon.", "grounding": "METPO:1000664", "id": "organoheterotrophic_trait", "is_orphan": false, "label": "organoheterotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transfer system conserving redox energy.", "grounding": "GO:0022904", "id": "respiratory_chain", "is_orphan": false, "label": "respiratory chain", "node_type": "PATHWAY", "xrefs": []}], "title": "Organoheterotrophic organic donor and carbon use"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -682,10 +718,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

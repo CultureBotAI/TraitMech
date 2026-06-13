@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>MreB</strong>
-            <span class="edge-predicate">organizes</span>
+            <span class="edge-predicate">enables</span>
             <strong>Rod complex</strong>
-            
+            <code>RO:0002327</code>
             <p>MreB organizes rod-shape elongation machinery.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>Rod complex</strong>
             <span class="edge-predicate">directs</span>
             <strong>peptidoglycan synthesis</strong>
-            
+            <code>RO:0002211</code>
             <p>Rod complexes direct sidewall peptidoglycan synthesis.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>peptidoglycan synthesis</strong>
             <span class="edge-predicate">produces</span>
             <strong>lateral cell-wall elongation</strong>
-            
+            <code>METPO:2000202</code>
             <p>Directed peptidoglycan synthesis elongates rod-shaped cells.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>lateral cell-wall elongation</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>rod shaped</strong>
-            
+            <code>RO:0002211</code>
             <p>Lateral wall elongation preserves the cylindrical rod morphology.</p>
             <ul>
               
@@ -286,6 +286,54 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed rod-shape source and added causal graph for MreB, Rod complex, peptidoglycan synthesis, lateral wall elongation, and FtsZ coupling.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009252×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A1B1UYY2×1, UniProtKB:C0LUM8×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: organizes → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:51Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -645,7 +693,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking rod shape to MreB-guided peptidoglycan synthesis, Rod complex activity, cell-wall elongation, and FtsZ division coupling.", "edges": [{"description": "MreB organizes rod-shape elongation machinery.", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "organizes", "predicate_id": null, "source": "mreB", "target": "rod_complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "directs", "predicate_id": null, "source": "rod_complex", "target": "peptidoglycan_synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "peptidoglycan_synthesis", "target": "lateral_cell_wall_elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "id": "edge-4", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "lateral_cell_wall_elongation", "target": "rod_shaped_trait"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "coordinates with", "predicate_id": null, "source": "ftsZ", "target": "peptidoglycan_synthesis"}], "evidence_rows": [{"description": "MreB organizes rod-shape elongation machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "predicate": "organizes", "predicate_id": null, "source": "MreB", "target": "Rod complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "predicate": "directs", "predicate_id": null, "source": "Rod complex", "target": "peptidoglycan synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "predicate": "produces", "predicate_id": null, "source": "peptidoglycan synthesis", "target": "lateral cell-wall elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "predicate": "maintains", "predicate_id": null, "source": "lateral cell-wall elongation", "target": "rod shaped"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "coordinates with", "predicate_id": null, "source": "FtsZ", "target": "peptidoglycan synthesis"}], "graph_id": "rod_shaped_mreB_peptidoglycan", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Division-ring protein coordinating septal growth.", "grounding": null, "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth that lengthens rod-shaped cells.", "grounding": null, "id": "lateral_cell_wall_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein involved in rod-shape maintenance.", "grounding": null, "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": null, "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall elongation machinery associated with MreB in rod-shaped bacteria.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical bacterial morphology.", "grounding": "METPO:1000681", "id": "rod_shaped_trait", "is_orphan": false, "label": "rod shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Rod-shape MreB and peptidoglycan mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking rod shape to MreB-guided peptidoglycan synthesis, Rod complex activity, cell-wall elongation, and FtsZ division coupling.", "edges": [{"description": "MreB organizes rod-shape elongation machinery.", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreB", "target": "rod_complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "rod_complex", "target": "peptidoglycan_synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "peptidoglycan_synthesis", "target": "lateral_cell_wall_elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral_cell_wall_elongation", "target": "rod_shaped_trait"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "coordinates with", "predicate_id": null, "source": "ftsZ", "target": "peptidoglycan_synthesis"}], "evidence_rows": [{"description": "MreB organizes rod-shape elongation machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB", "target": "Rod complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "Rod complex", "target": "peptidoglycan synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "peptidoglycan synthesis", "target": "lateral cell-wall elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral cell-wall elongation", "target": "rod shaped"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "coordinates with", "predicate_id": null, "source": "FtsZ", "target": "peptidoglycan synthesis"}], "graph_id": "rod_shaped_mreB_peptidoglycan", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Division-ring protein coordinating septal growth.", "grounding": "UniProtKB:C0LUM8", "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth that lengthens rod-shaped cells.", "grounding": null, "id": "lateral_cell_wall_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein involved in rod-shape maintenance.", "grounding": "UniProtKB:A0A1B1UYY2", "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall elongation machinery associated with MreB in rod-shaped bacteria.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical bacterial morphology.", "grounding": "METPO:1000681", "id": "rod_shaped_trait", "is_orphan": false, "label": "rod shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Rod-shape MreB and peptidoglycan mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -656,10 +704,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

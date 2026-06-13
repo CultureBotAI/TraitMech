@@ -77,7 +77,7 @@
             <strong>weak or absent peptidoglycan wall</strong>
             <span class="edge-predicate">enables</span>
             <strong>variable cell geometry</strong>
-            
+            <code>RO:0002327</code>
             <p>Reduced or absent cell wall enables membrane-driven shape variability.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>variable cell geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pleomorphic shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Variable geometry across cells manifests pleomorphism.</p>
             <ul>
               
@@ -248,6 +248,18 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking weak shape-determining cytoskeleton and reduced cell wall to pleomorphic populations.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -607,7 +619,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall shape control to multi-morphology populations.", "edges": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "relaxes", "predicate_id": null, "source": "weak_cytoskeleton", "target": "variable_geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "weak_cell_wall", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "variable_geometry", "target": "pleomorphic_shaped_trait"}], "evidence_rows": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "relaxes", "predicate_id": null, "source": "weak/absent shape-determining cytoskeleton", "target": "variable cell geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "predicate": "enables", "predicate_id": null, "source": "weak or absent peptidoglycan wall", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": null, "source": "variable cell geometry", "target": "pleomorphic shaped"}], "graph_id": "pleomorphic_shaped_relaxed_shape_control", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Population exhibiting multiple cell shapes.", "grounding": "METPO:1000679", "id": "pleomorphic_shaped_trait", "is_orphan": false, "label": "pleomorphic shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Cell wall reduced (L-form/Mycoplasma) or compromised.", "grounding": "GO:0009274", "id": "weak_cell_wall", "is_orphan": false, "label": "weak or absent peptidoglycan wall", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#f3e8ff", "description": "Reduced MreB or analogous shape-determining cytoskeletal activity.", "grounding": null, "id": "weak_cytoskeleton", "is_orphan": false, "label": "weak/absent shape-determining cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Pleomorphic-shape relaxed shape control"}];
+  var graphs = [{"description": "DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall shape control to multi-morphology populations.", "edges": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "relaxes", "predicate_id": null, "source": "weak_cytoskeleton", "target": "variable_geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak_cell_wall", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "pleomorphic_shaped_trait"}], "evidence_rows": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "relaxes", "predicate_id": null, "source": "weak/absent shape-determining cytoskeleton", "target": "variable cell geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak or absent peptidoglycan wall", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "target": "pleomorphic shaped"}], "graph_id": "pleomorphic_shaped_relaxed_shape_control", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Population exhibiting multiple cell shapes.", "grounding": "METPO:1000679", "id": "pleomorphic_shaped_trait", "is_orphan": false, "label": "pleomorphic shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Cell wall reduced (L-form/Mycoplasma) or compromised.", "grounding": "GO:0009274", "id": "weak_cell_wall", "is_orphan": false, "label": "weak or absent peptidoglycan wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Reduced MreB or analogous shape-determining cytoskeletal activity.", "grounding": null, "id": "weak_cytoskeleton", "is_orphan": false, "label": "weak/absent shape-determining cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Pleomorphic-shape relaxed shape control"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -618,10 +630,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

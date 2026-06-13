@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>midcell peptidoglycan assembly</strong>
-            <span class="edge-predicate">shapes</span>
+            <span class="edge-predicate">causes</span>
             <strong>ovoid geometry</strong>
-            
+            <code>biolink:causes</code>
             <p>Midcell peptidoglycan assembly shapes ovoid cell geometry.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>DivIVA</strong>
             <span class="edge-predicate">controls</span>
             <strong>septum splitting</strong>
-            
+            <code>RO:0002211</code>
             <p>DivIVA controls septum splitting and elongation dynamics.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>septum splitting</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>ovoid geometry</strong>
-            
+            <code>RO:0002326</code>
             <p>Septum splitting and elongation dynamics contribute to ovoid morphology.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>ovoid geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>ovoid shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Ovoid cell-body geometry manifests the ovoid-shaped trait.</p>
             <ul>
               
@@ -280,6 +280,36 @@
           <time>2026-05-11T20:05:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Added DOI-backed definition and causal graph for MapZ, DivIVA, midcell peptidoglycan assembly, septum splitting, and ovoid cell geometry.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1, METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: shapes → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:22Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:Q1IYG2×1).</p>
         </li>
         
       </ol>
@@ -639,7 +669,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth, and rounded ovoid geometry.", "edges": [{"description": "MapZ participates in division-site placement for ovoid growth.", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "id": "edge-1", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mapZ", "target": "midcell_pg_assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "id": "edge-2", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "midcell_pg_assembly", "target": "ovoid_geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "id": "edge-3", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "divIVA", "target": "septum_splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "septum_splitting", "target": "ovoid_geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "ovoid_geometry", "target": "ovoid_shaped_trait"}], "evidence_rows": [{"description": "MapZ participates in division-site placement for ovoid growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "predicate": "positions", "predicate_id": null, "source": "MapZ", "target": "midcell peptidoglycan assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "predicate": "shapes", "predicate_id": null, "source": "midcell peptidoglycan assembly", "target": "ovoid geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "predicate": "controls", "predicate_id": null, "source": "DivIVA", "target": "septum splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "predicate": "contributes to", "predicate_id": null, "source": "septum splitting", "target": "ovoid geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "predicate": "manifests as", "predicate_id": null, "source": "ovoid geometry", "target": "ovoid shaped"}], "graph_id": "ovoid_shaped_midcell_pg_assembly", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein involved in septum splitting and elongation in ovococci.", "grounding": null, "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane protein involved in division-site placement in S. pneumoniae.", "grounding": null, "id": "mapZ", "is_orphan": false, "label": "MapZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Wall synthesis and assembly in an annular midcell region.", "grounding": null, "id": "midcell_pg_assembly", "is_orphan": false, "label": "midcell peptidoglycan assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Rounded, egg-like cell-body geometry.", "grounding": null, "id": "ovoid_geometry", "is_orphan": false, "label": "ovoid geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Rounded ovoid bacterial morphology.", "grounding": "METPO:1000677", "id": "ovoid_shaped_trait", "is_orphan": false, "label": "ovoid shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Separation and remodeling of the division septum.", "grounding": null, "id": "septum_splitting", "is_orphan": false, "label": "septum splitting", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Ovoid-shape midcell peptidoglycan mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking ovoid morphology to midcell peptidoglycan assembly, MapZ division-site placement, DivIVA-associated growth, and rounded ovoid geometry.", "edges": [{"description": "MapZ participates in division-site placement for ovoid growth.", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "id": "edge-1", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mapZ", "target": "midcell_pg_assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "midcell_pg_assembly", "target": "ovoid_geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "id": "edge-3", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "divIVA", "target": "septum_splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septum_splitting", "target": "ovoid_geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ovoid_geometry", "target": "ovoid_shaped_trait"}], "evidence_rows": [{"description": "MapZ participates in division-site placement for ovoid growth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MapZ as a division-positioning factor in S. pneumoniae.", "reference": "DOI:10.1016/j.mib.2016.07.014", "snippet": "relies on the membrane protein MapZ"}], "predicate": "positions", "predicate_id": null, "source": "MapZ", "target": "midcell peptidoglycan assembly"}, {"description": "Midcell peptidoglycan assembly shapes ovoid cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PG assembly dynamics in ovoid S. pneumoniae.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan synthesis ... in the ovoid bacterium"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "midcell peptidoglycan assembly", "target": "ovoid geometry"}, {"description": "DivIVA controls septum splitting and elongation dynamics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports DivIVA in ovococcal cell morphogenesis.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "DivIVA controls the dynamics of septum splitting and cell elongation"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "DivIVA", "target": "septum splitting"}, {"description": "Septum splitting and elongation dynamics contribute to ovoid morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports septum/elongation dynamics as relevant to ovoid bacterial proliferation.", "reference": "DOI:10.1128/mbio.01311-24", "snippet": "how ovoid bacteria proliferate"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septum splitting", "target": "ovoid geometry"}, {"description": "Ovoid cell-body geometry manifests the ovoid-shaped trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "ovoid-shaped bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "ovoid geometry", "target": "ovoid shaped"}], "graph_id": "ovoid_shaped_midcell_pg_assembly", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein involved in septum splitting and elongation in ovococci.", "grounding": "UniProtKB:Q1IYG2", "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane protein involved in division-site placement in S. pneumoniae.", "grounding": null, "id": "mapZ", "is_orphan": false, "label": "MapZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Wall synthesis and assembly in an annular midcell region.", "grounding": null, "id": "midcell_pg_assembly", "is_orphan": false, "label": "midcell peptidoglycan assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Rounded, egg-like cell-body geometry.", "grounding": null, "id": "ovoid_geometry", "is_orphan": false, "label": "ovoid geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Rounded ovoid bacterial morphology.", "grounding": "METPO:1000677", "id": "ovoid_shaped_trait", "is_orphan": false, "label": "ovoid shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Separation and remodeling of the division septum.", "grounding": null, "id": "septum_splitting", "is_orphan": false, "label": "septum splitting", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Ovoid-shape midcell peptidoglycan mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -650,10 +680,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

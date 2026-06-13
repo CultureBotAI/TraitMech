@@ -60,7 +60,7 @@
             <strong>fast elongation rate</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cell length large</strong>
-            
+            <code>RO:0002326</code>
             <p>Fast elongation between divisions yields longer cells.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>division-timing delay</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cell length large</strong>
-            
+            <code>RO:0002326</code>
             <p>Delaying division allows continued elongation past the typical size.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>cell length large</strong>
             <span class="edge-predicate">is a</span>
             <strong>cell length</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Large cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
               
@@ -244,6 +244,12 @@
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking fast elongation and division-timing delay to large cell length (&gt;3 μm).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×2, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -603,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction, or filamentous growth programs to large cell length (\u003e3 \u03bcm).", "edges": [{"description": "Fast elongation between divisions yields longer cells.", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "fast_elongation", "target": "cell_length_large_trait"}, {"description": "Delaying division allows continued elongation past the typical size.", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "division_timing_delay", "target": "cell_length_large_trait"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "cell_length_large_trait", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Fast elongation between divisions yields longer cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "contributes to", "predicate_id": null, "source": "fast elongation rate", "target": "cell length large"}, {"description": "Delaying division allows continued elongation past the typical size.", "edge_id": "edge-2", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "contributes to", "predicate_id": null, "source": "division-timing delay", "target": "cell length large"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": null, "source": "cell length large", "target": "cell length"}], "graph_id": "cell_length_large_division_delay", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length exceeding approximately 3 \u03bcm.", "grounding": "METPO:1000886", "id": "cell_length_large_trait", "is_orphan": false, "label": "cell length large", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Postponement of FtsZ-ring constriction extending elongation.", "grounding": null, "id": "division_timing_delay", "is_orphan": false, "label": "division-timing delay", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Rapid axial elongation between divisions.", "grounding": null, "id": "fast_elongation", "is_orphan": false, "label": "fast elongation rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Large cell-length from fast growth or division delay"}];
+  var graphs = [{"description": "DOI-backed graph linking fast elongation, delayed FtsZ-ring constriction, or filamentous growth programs to large cell length (\u003e3 \u03bcm).", "edges": [{"description": "Fast elongation between divisions yields longer cells.", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast_elongation", "target": "cell_length_large_trait"}, {"description": "Delaying division allows continued elongation past the typical size.", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division_timing_delay", "target": "cell_length_large_trait"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_large_trait", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Fast elongation between divisions yields longer cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports fast growth as a producer of larger cell sizes.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fast elongation rate", "target": "cell length large"}, {"description": "Delaying division allows continued elongation past the typical size.", "edge_id": "edge-2", "evidence": [{"notes": "Supports division timing as a control point for cell length.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "division-timing delay", "target": "cell length large"}, {"description": "Large cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports large length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length large", "target": "cell length"}], "graph_id": "cell_length_large_division_delay", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length exceeding approximately 3 \u03bcm.", "grounding": "METPO:1000886", "id": "cell_length_large_trait", "is_orphan": false, "label": "cell length large", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Postponement of FtsZ-ring constriction extending elongation.", "grounding": null, "id": "division_timing_delay", "is_orphan": false, "label": "division-timing delay", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Rapid axial elongation between divisions.", "grounding": null, "id": "fast_elongation", "is_orphan": false, "label": "fast elongation rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Large cell-length from fast growth or division delay"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

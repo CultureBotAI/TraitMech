@@ -60,7 +60,7 @@
             <strong>maximal thermal-adaptation flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>temperature delta high</strong>
-            
+            <code>METPO:2000202</code>
             <p>Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>temperature delta high</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature delta high is a quantitative bin of the temperature-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking maximal thermal-adaptation flexibility to the eurythermal temperature-delta-high bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking maximal thermal-adaptation flexibility to a temperature growth breadth above 30 \u00b0C.", "edges": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "maximal_thermal_adaptation", "target": "temperature_delta_high_trait"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_delta_high_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": null, "source": "maximal thermal-adaptation flexibility", "target": "temperature delta high"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": null, "source": "temperature delta high", "target": "temperature delta"}], "graph_id": "temperature_delta_high_eurythermal", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined membrane remodeling and protein-thermostability capacity supporting growth across an extreme temperature span.", "grounding": null, "id": "maximal_thermal_adaptation", "is_orphan": false, "label": "maximal thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth above ~30 \u00b0C.", "grounding": "METPO:1000487", "id": "temperature_delta_high_trait", "is_orphan": false, "label": "temperature delta high", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-high eurythermal breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking maximal thermal-adaptation flexibility to a temperature growth breadth above 30 \u00b0C.", "edges": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal_thermal_adaptation", "target": "temperature_delta_high_trait"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_high_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal thermal-adaptation flexibility", "target": "temperature delta high"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta high", "target": "temperature delta"}], "graph_id": "temperature_delta_high_eurythermal", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined membrane remodeling and protein-thermostability capacity supporting growth across an extreme temperature span.", "grounding": null, "id": "maximal_thermal_adaptation", "is_orphan": false, "label": "maximal thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth above ~30 \u00b0C.", "grounding": "METPO:1000487", "id": "temperature_delta_high_trait", "is_orphan": false, "label": "temperature delta high", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-high eurythermal breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

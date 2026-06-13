@@ -60,7 +60,7 @@
             <strong>external pH</strong>
             <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>External pH defines the axis over which the growth window is bounded.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>acid tolerance</strong>
-            <span class="edge-predicate">sets</span>
+            <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>Acid tolerance sets the lower bound of the pH growth window.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>alkaline tolerance</strong>
-            <span class="edge-predicate">sets</span>
+            <span class="edge-predicate">defines</span>
             <strong>bounded pH growth window</strong>
-            
+            <code>METPO:2007500</code>
             <p>Alkaline tolerance sets the upper bound of the pH growth window.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>bounded pH growth window</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pH range</strong>
-            
+            <code>METPO:2007400</code>
             <p>The bounded pH growth window manifests the pH-range phenotype.</p>
             <ul>
               
@@ -273,6 +273,30 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking acid- and alkaline-tolerance to the bounded pH-range phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: sets → defines ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×2).</p>
         </li>
         
       </ol>
@@ -632,7 +656,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking acid- and alkaline-tolerance to the bounded span of growth-supporting external pH.", "edges": [{"description": "External pH defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "external_ph", "target": "bounded_growth_window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-2", "is_orphan": false, "predicate": "sets", "predicate_id": null, "source": "acid_tolerance", "target": "bounded_growth_window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-3", "is_orphan": false, "predicate": "sets", "predicate_id": null, "source": "alkaline_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "bounded_growth_window", "target": "ph_range_trait"}], "evidence_rows": [{"description": "External pH defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": null, "source": "external pH", "target": "bounded pH growth window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "sets", "predicate_id": null, "source": "acid tolerance", "target": "bounded pH growth window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "sets", "predicate_id": null, "source": "alkaline tolerance", "target": "bounded pH growth window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "manifests as", "predicate_id": null, "source": "bounded pH growth window", "target": "pH range"}], "graph_id": "ph_range_bounded_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an inward H+ gradient at low external pH.", "grounding": null, "id": "acid_tolerance", "is_orphan": false, "label": "acid tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an outward H+ gradient at high external pH.", "grounding": null, "id": "alkaline_tolerance", "is_orphan": false, "label": "alkaline tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span of external pH between the minimum and maximum that supports growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded pH growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range_trait", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range bounded cytoplasmic homeostasis"}];
+  var graphs = [{"description": "DOI-backed graph linking acid- and alkaline-tolerance to the bounded span of growth-supporting external pH.", "edges": [{"description": "External pH defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external_ph", "target": "bounded_growth_window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid_tolerance", "target": "bounded_growth_window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "ph_range_trait"}], "evidence_rows": [{"description": "External pH defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports external pH as the axis bounding the growth window.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "external pH", "target": "bounded pH growth window"}, {"description": "Acid tolerance sets the lower bound of the pH growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope proton barriers as the lower-bound mechanism for low-pH growth.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "acid tolerance", "target": "bounded pH growth window"}, {"description": "Alkaline tolerance sets the upper bound of the pH growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-tolerance physiology as the upper-bound mechanism for high-pH growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "alkaline tolerance", "target": "bounded pH growth window"}, {"description": "The bounded pH growth window manifests the pH-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded pH growth window", "target": "pH range"}], "graph_id": "ph_range_bounded_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an inward H+ gradient at low external pH.", "grounding": null, "id": "acid_tolerance", "is_orphan": false, "label": "acid tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain cytoplasmic pH against an outward H+ gradient at high external pH.", "grounding": null, "id": "alkaline_tolerance", "is_orphan": false, "label": "alkaline tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Span of external pH between the minimum and maximum that supports growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded pH growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range_trait", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range bounded cytoplasmic homeostasis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -643,10 +667,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

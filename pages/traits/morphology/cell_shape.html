@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>peptidoglycan cell wall</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>cell shape</strong>
-            
+            <code>RO:0002211</code>
             <p>The peptidoglycan wall has a primary role in maintaining bacterial cell shape.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>penicillin-binding proteins</strong>
             <span class="edge-predicate">catalyzes</span>
             <strong>peptidoglycan synthesis</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>PBPs synthesize and remodel peptidoglycan during growth and division.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>peptidoglycan synthesis</strong>
-            <span class="edge-predicate">determines</span>
+            <span class="edge-predicate">causes</span>
             <strong>cell shape</strong>
-            
+            <code>biolink:causes</code>
             <p>Spatial regulation of wall synthesis determines growth morphology.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>FtsZ</strong>
             <span class="edge-predicate">regulates</span>
             <strong>cell shape</strong>
-            
+            <code>RO:0002211</code>
             <p>FtsZ controls division-associated shape generation and septal wall synthesis.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>crescentin</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cell shape</strong>
-            
+            <code>RO:0002326</code>
             <p>Crescentin contributes to curved-rod cell shape in representative bacteria.</p>
             <ul>
               
@@ -191,7 +191,7 @@
 
     
     <div class="card">
-      <h2>Children (30)</h2>
+      <h2>Children (34)</h2>
       <ul>
         
         <li><a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped <code>METPO:1000667</code></a></li>
@@ -234,6 +234,8 @@
         
         <li><a href="../../traits/morphology/rod_shaped.html">rod shaped <code>METPO:1000681</code></a></li>
         
+        <li><a href="../../traits/morphology/sarcina_arrangement.html">sarcina arrangement <code>traitmech:000120</code></a></li>
+        
         <li><a href="../../traits/morphology/sphere_shaped.html">sphere shaped <code>METPO:1000683</code></a></li>
         
         <li><a href="../../traits/morphology/spindle_shaped.html">spindle shaped <code>METPO:1000692</code></a></li>
@@ -246,9 +248,15 @@
         
         <li><a href="../../traits/morphology/square_shaped.html">square shaped <code>METPO:1000694</code></a></li>
         
+        <li><a href="../../traits/morphology/staphylococcus_arrangement.html">staphylococcus arrangement <code>traitmech:000118</code></a></li>
+        
         <li><a href="../../traits/morphology/star_shaped.html">star shaped <code>METPO:1000685</code></a></li>
         
+        <li><a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement <code>traitmech:000117</code></a></li>
+        
         <li><a href="../../traits/morphology/tailed_shaped.html">tailed shaped <code>METPO:1000695</code></a></li>
+        
+        <li><a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement <code>traitmech:000119</code></a></li>
         
         <li><a href="../../traits/morphology/triangular_shaped.html">triangular shaped <code>METPO:1000696</code></a></li>
         
@@ -364,6 +372,54 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed cell shape trait and added DOI-backed causal graph for peptidoglycan cell wall, PBPs, MreB, FtsZ, crescentin, and localized wall growth.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1, RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009252×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A1B1UYY2×1, UniProtKB:C0LUM8×1, UniProtKB:A0A2N9AY16×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: determines → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -723,7 +779,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.", "edges": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "id": "edge-1", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan_cell_wall", "target": "cell_shape_trait"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": null, "source": "penicillin_binding_proteins", "target": "peptidoglycan_synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "id": "edge-3", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "peptidoglycan_synthesis", "target": "cell_shape_trait"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "id": "edge-4", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mreB", "target": "peptidoglycan_synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "ftsZ", "target": "cell_shape_trait"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "crescentin", "target": "cell_shape_trait"}], "evidence_rows": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "predicate": "maintains", "predicate_id": null, "source": "peptidoglycan cell wall", "target": "cell shape"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "predicate": "catalyzes", "predicate_id": null, "source": "penicillin-binding proteins", "target": "peptidoglycan synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "predicate": "determines", "predicate_id": null, "source": "peptidoglycan synthesis", "target": "cell shape"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "predicate": "positions", "predicate_id": null, "source": "MreB", "target": "peptidoglycan synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "predicate": "regulates", "predicate_id": null, "source": "FtsZ", "target": "cell shape"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "edge_id": "edge-6", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "predicate": "contributes to", "predicate_id": null, "source": "crescentin", "target": "cell shape"}], "graph_id": "cell_shape_peptidoglycan_cytoskeleton", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Characteristic three-dimensional microbial cell morphology.", "grounding": "METPO:1000666", "id": "cell_shape_trait", "is_orphan": false, "label": "cell shape", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate-filament-like protein required for curved rod shape in Caulobacter.", "grounding": null, "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like bacterial cell-division protein.", "grounding": null, "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like bacterial cytoskeletal protein involved in rod-shape determination.", "grounding": null, "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that synthesize and remodel peptidoglycan.", "grounding": null, "id": "penicillin_binding_proteins", "is_orphan": false, "label": "penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer network maintaining bacterial shape.", "grounding": null, "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis and remodeling of the bacterial cell wall.", "grounding": null, "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Bacterial cell-shape morphogenesis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking cell shape to peptidoglycan synthesis, PBPs, MreB, FtsZ, crescentin, and localized wall growth.", "edges": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "cell_shape_trait"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "penicillin_binding_proteins", "target": "peptidoglycan_synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_synthesis", "target": "cell_shape_trait"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "id": "edge-4", "is_orphan": false, "predicate": "positions", "predicate_id": null, "source": "mreB", "target": "peptidoglycan_synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ftsZ", "target": "cell_shape_trait"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crescentin", "target": "cell_shape_trait"}], "evidence_rows": [{"description": "The peptidoglycan wall has a primary role in maintaining bacterial cell shape.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports peptidoglycan wall as central to cell shape.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "cell shape"}, {"description": "PBPs synthesize and remodel peptidoglycan during growth and division.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PBPs in peptidoglycan synthesis/remodeling.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "carry out the reactions for synthesis and remodelling"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "penicillin-binding proteins", "target": "peptidoglycan synthesis"}, {"description": "Spatial regulation of wall synthesis determines growth morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports regulated peptidoglycan synthesis as a determinant of morphology.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "peptidoglycan synthesis to bacterial growth and morphology"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan synthesis", "target": "cell shape"}, {"description": "MreB helps organize or position peptidoglycan synthesis machinery.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB in spatial organization of cell-wall synthesis.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "positions peptidoglycan biosynthesis machineries"}], "predicate": "positions", "predicate_id": null, "source": "MreB", "target": "peptidoglycan synthesis"}, {"description": "FtsZ controls division-associated shape generation and septal wall synthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ as a shape-related cytoskeletal protein through cell division.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ is essential for cell division"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "FtsZ", "target": "cell shape"}, {"description": "Crescentin contributes to curved-rod cell shape in representative bacteria.", "edge_id": "edge-6", "evidence": [{"notes": "Supports crescentin as a cell-shape determinant in Caulobacter.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "crescentin is required for the curved-rod shape"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crescentin", "target": "cell shape"}], "graph_id": "cell_shape_peptidoglycan_cytoskeleton", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Characteristic three-dimensional microbial cell morphology.", "grounding": "METPO:1000666", "id": "cell_shape_trait", "is_orphan": false, "label": "cell shape", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate-filament-like protein required for curved rod shape in Caulobacter.", "grounding": "UniProtKB:A0A2N9AY16", "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like bacterial cell-division protein.", "grounding": "UniProtKB:C0LUM8", "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like bacterial cytoskeletal protein involved in rod-shape determination.", "grounding": "UniProtKB:A0A1B1UYY2", "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that synthesize and remodel peptidoglycan.", "grounding": null, "id": "penicillin_binding_proteins", "is_orphan": false, "label": "penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer network maintaining bacterial shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis and remodeling of the bacterial cell wall.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Bacterial cell-shape morphogenesis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -734,10 +790,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

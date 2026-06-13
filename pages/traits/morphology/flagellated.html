@@ -60,7 +60,7 @@
             <strong>flagellar filament</strong>
             <span class="edge-predicate">enables</span>
             <strong>flagellated</strong>
-            
+            <code>RO:0002327</code>
             <p>A flagellar filament is the locomotory appendage of flagellated cells.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>ion motive force</strong>
-            <span class="edge-predicate">powers</span>
+            <span class="edge-predicate">enables</span>
             <strong>flagellar stator complex</strong>
-            
+            <code>RO:0002327</code>
             <p>Ion flux through stator complexes powers torque generation.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>chemotaxis signaling</strong>
             <span class="edge-predicate">regulates</span>
             <strong>flagellated</strong>
-            
+            <code>RO:0002211</code>
             <p>Chemotaxis signaling changes flagellar motor behavior and movement direction.</p>
             <ul>
               
@@ -172,6 +172,15 @@
     </div>
     
 
+    
+    <div class="card">
+      <h2>Children (1)</h2>
+      <ul>
+        
+        <li><a href="../../traits/morphology/flagellar_arrangement.html">flagellar arrangement <code>traitmech:000056</code></a></li>
+        
+      </ul>
+    </div>
     
 
     
@@ -278,6 +287,24 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed flagellated trait and added DOI-backed causal graph for flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: powers → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -637,7 +664,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the flagellated phenotype to flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.", "edges": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "flagellar_filament", "target": "flagellated_trait"}, {"description": "The hook couples the motor to the filament.", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "id": "edge-2", "is_orphan": false, "predicate": "connects", "predicate_id": null, "source": "flagellar_hook", "target": "flagellar_filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "id": "edge-3", "is_orphan": false, "predicate": "rotates", "predicate_id": null, "source": "flagellar_basal_body", "target": "flagellar_filament"}, {"description": "Ion flux through stator complexes powers torque generation.", "evidence": [{"notes": "Supports ion motive force coupling to flagellar motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "ion_motive_force", "target": "stator_complex"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "chemotaxis_signaling", "target": "flagellated_trait"}], "evidence_rows": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "predicate": "enables", "predicate_id": null, "source": "flagellar filament", "target": "flagellated"}, {"description": "The hook couples the motor to the filament.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "predicate": "connects", "predicate_id": null, "source": "flagellar hook", "target": "flagellar filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "edge_id": "edge-3", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "predicate": "rotates", "predicate_id": null, "source": "flagellar basal body", "target": "flagellar filament"}, {"description": "Ion flux through stator complexes powers torque generation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force coupling to flagellar motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "powers", "predicate_id": null, "source": "ion motive force", "target": "flagellar stator complex"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "predicate": "regulates", "predicate_id": null, "source": "chemotaxis signaling", "target": "flagellated"}], "graph_id": "flagellated_flagellar_motor", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulation of flagellar rotation and movement direction.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor complex embedded in the cell envelope.", "grounding": null, "id": "flagellar_basal_body", "is_orphan": false, "label": "flagellar basal body", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Helical filament that acts as a propeller or molecular screw.", "grounding": null, "id": "flagellar_filament", "is_orphan": false, "label": "flagellar filament", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Universal-joint-like connector between motor and filament.", "grounding": null, "id": "flagellar_hook", "is_orphan": false, "label": "flagellar hook", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of flagella for locomotion.", "grounding": "METPO:1000704", "id": "flagellated_trait", "is_orphan": false, "label": "flagellated", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Proton or sodium motive force powering motor rotation.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Force-generating motor units coupled to ion flow.", "grounding": null, "id": "stator_complex", "is_orphan": false, "label": "flagellar stator complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Flagellated locomotion mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the flagellated phenotype to flagellar filament, hook, basal body, stator, ion motive force, and chemotaxis.", "edges": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar_filament", "target": "flagellated_trait"}, {"description": "The hook couples the motor to the filament.", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "id": "edge-2", "is_orphan": false, "predicate": "connects", "predicate_id": null, "source": "flagellar_hook", "target": "flagellar_filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "id": "edge-3", "is_orphan": false, "predicate": "rotates", "predicate_id": null, "source": "flagellar_basal_body", "target": "flagellar_filament"}, {"description": "Ion flux through stator complexes powers torque generation.", "evidence": [{"notes": "Supports ion motive force coupling to flagellar motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion_motive_force", "target": "stator_complex"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "flagellated_trait"}], "evidence_rows": [{"description": "A flagellar filament is the locomotory appendage of flagellated cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the filament as the locomotory flagellar structure.", "reference": "DOI:10.3390/biom9070279", "snippet": "helical filamentous organelle responsible for motility"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar filament", "target": "flagellated"}, {"description": "The hook couples the motor to the filament.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the hook\u0027s coupling role.", "reference": "DOI:10.3390/biom9070279", "snippet": "hook as a universal joint"}], "predicate": "connects", "predicate_id": null, "source": "flagellar hook", "target": "flagellar filament"}, {"description": "The basal body motor rotates the filament for propulsion.", "edge_id": "edge-3", "evidence": [{"notes": "Supports basal body motor rotation of flagella.", "reference": "DOI:10.1016/S1937-6448(08)01402-0", "snippet": "reversible rotary motor"}], "predicate": "rotates", "predicate_id": null, "source": "flagellar basal body", "target": "flagellar filament"}, {"description": "Ion flux through stator complexes powers torque generation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force coupling to flagellar motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion motive force", "target": "flagellar stator complex"}, {"description": "Chemotaxis signaling changes flagellar motor behavior and movement direction.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis regulation of flagellated motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "regulate the direction of flagella-driven motility"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "target": "flagellated"}], "graph_id": "flagellated_flagellar_motor", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulation of flagellar rotation and movement direction.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor complex embedded in the cell envelope.", "grounding": null, "id": "flagellar_basal_body", "is_orphan": false, "label": "flagellar basal body", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Helical filament that acts as a propeller or molecular screw.", "grounding": null, "id": "flagellar_filament", "is_orphan": false, "label": "flagellar filament", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Universal-joint-like connector between motor and filament.", "grounding": null, "id": "flagellar_hook", "is_orphan": false, "label": "flagellar hook", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of flagella for locomotion.", "grounding": "METPO:1000704", "id": "flagellated_trait", "is_orphan": false, "label": "flagellated", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Proton or sodium motive force powering motor rotation.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Force-generating motor units coupled to ion flow.", "grounding": null, "id": "stator_complex", "is_orphan": false, "label": "flagellar stator complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Flagellated locomotion mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,10 +675,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

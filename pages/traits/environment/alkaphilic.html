@@ -60,7 +60,7 @@
             <strong>alkaline external pH</strong>
             <span class="edge-predicate">selects for</span>
             <strong>alkaphilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Alkaline environments select for organisms with alkaline growth optima.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>alkaline external pH</strong>
             <span class="edge-predicate">challenges</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>METPO:2007406</code>
             <p>High external pH challenges the cell&#39;s ability to keep cytoplasm near functional pH.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>cytoplasmic pH homeostasis</strong>
             <span class="edge-predicate">enables</span>
             <strong>alkaphilic</strong>
-            
+            <code>RO:0002327</code>
             <p>Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH exposure.</p>
             <ul>
               
@@ -284,6 +284,36 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed alkaphilic trait and added DOI-backed evidence and causal graph for sodium-cycle alkaline pH homeostasis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1, METPO:2007406×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:37:59Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0030641×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:13Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A068T423×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001429×1).</p>
         </li>
         
       </ol>
@@ -643,7 +673,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking alkaliphily to high external pH, Na+/H+ antiport, and cytoplasmic acidification relative to the medium.", "edges": [{"description": "Alkaline environments select for organisms with alkaline growth optima.", "evidence": [{"notes": "Review supports growth of extreme alkaliphiles at high external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH range of 9.5-11.0"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "alkaline_external_ph", "target": "alkaphilic_trait"}, {"description": "High external pH challenges the cell\u0027s ability to keep cytoplasm near functional pH.", "evidence": [{"notes": "Supports cytoplasmic pH control below alkaline external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH ... below an external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "alkaline_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Na+/H+ antiport is central to the sodium cycle in alkaliphiles.", "evidence": [{"notes": "Supports Na+/H+ antiport as a key alkaliphile sodium-cycle component.", "reference": "DOI:10.1007/BF00762685", "snippet": "secondary Na+/H+ antiporter"}], "id": "edge-3", "is_orphan": false, "predicate": "exchanges", "predicate_id": null, "source": "sodium_proton_antiporter", "target": "sodium_ion"}, {"description": "Electrogenic Na+/H+ antiport contributes to cytoplasmic acidification under alkaline conditions.", "evidence": [{"notes": "Review supports proton capture/retention mechanisms in alkaline pH homeostasis.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "sodium_proton_antiporter", "target": "proton"}, {"description": "Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH exposure.", "evidence": [{"notes": "Supports homeostasis as the enabling process for alkaline growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH sensing and homeostasis"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cytoplasmic_ph_homeostasis", "target": "alkaphilic_trait"}], "evidence_rows": [{"description": "Alkaline environments select for organisms with alkaline growth optima.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports growth of extreme alkaliphiles at high external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH range of 9.5-11.0"}], "predicate": "selects for", "predicate_id": null, "source": "alkaline external pH", "target": "alkaphilic"}, {"description": "High external pH challenges the cell\u0027s ability to keep cytoplasm near functional pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports cytoplasmic pH control below alkaline external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH ... below an external pH"}], "predicate": "challenges", "predicate_id": null, "source": "alkaline external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "Na+/H+ antiport is central to the sodium cycle in alkaliphiles.", "edge_id": "edge-3", "evidence": [{"notes": "Supports Na+/H+ antiport as a key alkaliphile sodium-cycle component.", "reference": "DOI:10.1007/BF00762685", "snippet": "secondary Na+/H+ antiporter"}], "predicate": "exchanges", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "sodium ion"}, {"description": "Electrogenic Na+/H+ antiport contributes to cytoplasmic acidification under alkaline conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports proton capture/retention mechanisms in alkaline pH homeostasis.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "imports", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "proton"}, {"description": "Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports homeostasis as the enabling process for alkaline growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH sensing and homeostasis"}], "predicate": "enables", "predicate_id": null, "source": "cytoplasmic pH homeostasis", "target": "alkaphilic"}], "graph_id": "alkaliphilic_na_cycle_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral, often pH 9 or higher.", "grounding": null, "id": "alkaline_external_ph", "is_orphan": false, "label": "alkaline external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth occurs at alkaline pH.", "grounding": "METPO:1003002", "id": "alkaphilic_trait", "is_orphan": false, "label": "alkaphilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH below highly alkaline external pH.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion imported or retained to acidify the cytoplasm.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Sodium ion participating in alkaliphile Na+ cycles.", "grounding": "CHEBI:29101", "id": "sodium_ion", "is_orphan": false, "label": "sodium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Secondary transporter exchanging sodium and protons.", "grounding": null, "id": "sodium_proton_antiporter", "is_orphan": false, "label": "Na+/H+ antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Alkaliphilic sodium-cycle pH homeostasis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking alkaliphily to high external pH, Na+/H+ antiport, and cytoplasmic acidification relative to the medium.", "edges": [{"description": "Alkaline environments select for organisms with alkaline growth optima.", "evidence": [{"notes": "Review supports growth of extreme alkaliphiles at high external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH range of 9.5-11.0"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "alkaline_external_ph", "target": "alkaphilic_trait"}, {"description": "High external pH challenges the cell\u0027s ability to keep cytoplasm near functional pH.", "evidence": [{"notes": "Supports cytoplasmic pH control below alkaline external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH ... below an external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Na+/H+ antiport is central to the sodium cycle in alkaliphiles.", "evidence": [{"notes": "Supports Na+/H+ antiport as a key alkaliphile sodium-cycle component.", "reference": "DOI:10.1007/BF00762685", "snippet": "secondary Na+/H+ antiporter"}], "id": "edge-3", "is_orphan": false, "predicate": "exchanges", "predicate_id": null, "source": "sodium_proton_antiporter", "target": "sodium_ion"}, {"description": "Electrogenic Na+/H+ antiport contributes to cytoplasmic acidification under alkaline conditions.", "evidence": [{"notes": "Review supports proton capture/retention mechanisms in alkaline pH homeostasis.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": null, "source": "sodium_proton_antiporter", "target": "proton"}, {"description": "Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH exposure.", "evidence": [{"notes": "Supports homeostasis as the enabling process for alkaline growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH sensing and homeostasis"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "alkaphilic_trait"}], "evidence_rows": [{"description": "Alkaline environments select for organisms with alkaline growth optima.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports growth of extreme alkaliphiles at high external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH range of 9.5-11.0"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "alkaline external pH", "target": "alkaphilic"}, {"description": "High external pH challenges the cell\u0027s ability to keep cytoplasm near functional pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports cytoplasmic pH control below alkaline external pH.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH ... below an external pH"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "Na+/H+ antiport is central to the sodium cycle in alkaliphiles.", "edge_id": "edge-3", "evidence": [{"notes": "Supports Na+/H+ antiport as a key alkaliphile sodium-cycle component.", "reference": "DOI:10.1007/BF00762685", "snippet": "secondary Na+/H+ antiporter"}], "predicate": "exchanges", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "sodium ion"}, {"description": "Electrogenic Na+/H+ antiport contributes to cytoplasmic acidification under alkaline conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports proton capture/retention mechanisms in alkaline pH homeostasis.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "imports", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "proton"}, {"description": "Alkaliphilic growth requires maintaining cytoplasmic pH during high-pH exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports homeostasis as the enabling process for alkaline growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH sensing and homeostasis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "alkaphilic"}], "graph_id": "alkaliphilic_na_cycle_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral, often pH 9 or higher.", "grounding": "PATO:0001429", "id": "alkaline_external_ph", "is_orphan": false, "label": "alkaline external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth occurs at alkaline pH.", "grounding": "METPO:1003002", "id": "alkaphilic_trait", "is_orphan": false, "label": "alkaphilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH below highly alkaline external pH.", "grounding": "GO:0030641", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion imported or retained to acidify the cytoplasm.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Sodium ion participating in alkaliphile Na+ cycles.", "grounding": "CHEBI:29101", "id": "sodium_ion", "is_orphan": false, "label": "sodium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Secondary transporter exchanging sodium and protons.", "grounding": "UniProtKB:A0A068T423", "id": "sodium_proton_antiporter", "is_orphan": false, "label": "Na+/H+ antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Alkaliphilic sodium-cycle pH homeostasis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -654,10 +684,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

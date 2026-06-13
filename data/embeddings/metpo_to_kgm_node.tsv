@@ -1,14 +1,30 @@
 metpo_curie	label	category	match_method	n_kgm_nodes	kgm_nodes
 METPO:1004002	animal pathogen	ecology	direct_metpo	1	METPO:1004002
+traitmech:000053	biofilm formation	ecology	no_match	0	
 METPO:1001101	biosafety level	ecology	direct_metpo	1	METPO:1001101
 METPO:1001102	biosafety level 1	ecology	direct_metpo	1	METPO:1001102
 METPO:1001103	biosafety level 2	ecology	direct_metpo	1	METPO:1001103
 METPO:1001104	biosafety level 3	ecology	direct_metpo	1	METPO:1001104
 METPO:1001105	biosafety level 4	ecology	direct_metpo	1	METPO:1001105
 METPO:1001106	biosafety level 5	ecology	direct_metpo	1	METPO:1001106
+traitmech:000042	commensalism	ecology	no_match	0	
+traitmech:000045	endosymbiosis	ecology	no_match	0	
+traitmech:000048	free-living	ecology	no_match	0	
+traitmech:000052	gut-associated	ecology	no_match	0	
+traitmech:000047	habitat association	ecology	no_match	0	
+traitmech:000049	host-associated	ecology	no_match	0	
 METPO:1004004	human pathogen	ecology	direct_metpo	1	METPO:1004004
+traitmech:000041	mutualism	ecology	no_match	0	
+traitmech:000044	nitrogen-fixing symbiosis	ecology	no_match	0	
+traitmech:000046	opportunistic pathogen	ecology	no_match	0	
+traitmech:000043	parasitism	ecology	no_match	0	
 METPO:1004000	pathogenic to host	ecology	direct_metpo	1	METPO:1004000
 METPO:1004003	plant pathogen	ecology	direct_metpo	1	METPO:1004003
+traitmech:000054	predatory bacterium	ecology	no_match	0	
+traitmech:000051	rhizosphere association	ecology	no_match	0	
+traitmech:000055	saprotrophy	ecology	no_match	0	
+traitmech:000050	soil-dwelling	ecology	no_match	0	
+traitmech:000040	symbiosis	ecology	no_match	0	
 METPO:1003003	acidophilic	environment	direct_metpo	1	METPO:1003003
 METPO:1003008	acidotolerant	environment	direct_metpo	1	METPO:1003008
 METPO:1000602	aerobic	environment	direct_metpo	1	METPO:1000602
@@ -16,7 +32,12 @@ METPO:1000609	aerotolerant	environment	direct_metpo	1	METPO:1000609
 METPO:1003009	alkalotolerant	environment	direct_metpo	1	METPO:1003009
 METPO:1003002	alkaphilic	environment	direct_metpo	1	METPO:1003002
 METPO:1000603	anaerobic	environment	direct_metpo	1	METPO:1000603
+traitmech:000017	arsenic tolerant	environment	no_match	0	
+traitmech:000013	cadmium tolerant	environment	no_match	0	
+traitmech:000015	cobalt tolerant	environment	no_match	0	
+traitmech:000018	copper tolerant	environment	no_match	0	
 METPO:1000534	delta phenotype with numerical limits	environment	direct_metpo	1	METPO:1000534
+traitmech:000010	desiccation tolerant	environment	no_match	0	
 METPO:1000627	euryhaline	environment	direct_metpo	1	METPO:1000627
 METPO:1000721	extreme hyperthermophilic	environment	direct_metpo	1	METPO:1000721
 METPO:1000628	extremely halophilic	environment	direct_metpo	1	METPO:1000628
@@ -32,7 +53,10 @@ METPO:1000620	halophilic	environment	direct_metpo	1	METPO:1000620
 METPO:1000629	halophily preference	environment	direct_metpo	1	METPO:1000629
 METPO:1000622	halotolerant	environment	direct_metpo	1	METPO:1000622
 METPO:1000617	hyperthermophilic	environment	direct_metpo	1	METPO:1000617
+traitmech:000008	ionizing radiation tolerant	environment	no_match	0	
+traitmech:000016	mercury tolerant	environment	no_match	0	
 METPO:1000615	mesophilic	environment	direct_metpo	1	METPO:1000615
+traitmech:000012	metal tolerant	environment	no_match	0	
 METPO:1000604	microaerophilic	environment	direct_metpo	1	METPO:1000604
 METPO:1000610	microaerotolerant	environment	direct_metpo	1	METPO:1000610
 METPO:1000623	moderately halophilic	environment	direct_metpo	1	METPO:1000623
@@ -57,6 +81,7 @@ METPO:1003006	obligately acidophilic	environment	direct_metpo	1	METPO:1003006
 METPO:1000606	obligately aerobic	environment	direct_metpo	1	METPO:1000606
 METPO:1003004	obligately alkaphilic	environment	direct_metpo	1	METPO:1003004
 METPO:1000607	obligately anaerobic	environment	direct_metpo	1	METPO:1000607
+traitmech:000002	obligately piezophilic	environment	no_match	0	
 METPO:1000536	optimum phenotype with numerical limits	environment	direct_metpo	1	METPO:1000536
 METPO:1000601	oxygen preference	environment	direct_metpo	1	METPO:1000601
 METPO:1000232	pH delta	environment	direct_metpo	1	METPO:1000232
@@ -80,8 +105,14 @@ METPO:1000461	pH range mid1	environment	direct_metpo	1	METPO:1000461
 METPO:1000462	pH range mid2	environment	direct_metpo	1	METPO:1000462
 METPO:1000463	pH range mid3	environment	direct_metpo	1	METPO:1000463
 METPO:1000459	pH range very low	environment	direct_metpo	1	METPO:1000459
+traitmech:000001	piezophilic	environment	no_match	0	
+traitmech:000003	piezotolerant	environment	no_match	0	
+traitmech:000006	pressure delta	environment	no_match	0	
+traitmech:000004	pressure optimum	environment	no_match	0	
+traitmech:000005	pressure range	environment	no_match	0	
 METPO:1000614	psychrophilic	environment	direct_metpo	1	METPO:1000614
 METPO:1000618	psychrotolerant	environment	direct_metpo	1	METPO:1000618
+traitmech:000007	radiotolerant	environment	no_match	0	
 METPO:1000532	salinity phenotype with numerical limits	environment	direct_metpo	1	METPO:1000532
 METPO:1000625	slightly halophilic	environment	direct_metpo	1	METPO:1000625
 METPO:1000626	stenohaline	environment	direct_metpo	1	METPO:1000626
@@ -112,25 +143,56 @@ METPO:1000453	temperature range mid4	environment	direct_metpo	1	METPO:1000453
 METPO:1000448	temperature range very low	environment	direct_metpo	1	METPO:1000448
 METPO:1000616	thermophilic	environment	direct_metpo	1	METPO:1000616
 METPO:1000619	thermotolerant	environment	direct_metpo	1	METPO:1000619
+traitmech:000009	UV radiation tolerant	environment	no_match	0	
+traitmech:000011	xerophilic	environment	no_match	0	
+traitmech:000014	zinc tolerant	environment	no_match	0	
+traitmech:000096	codon usage bias	genomics	no_match	0	
+traitmech:000094	CRISPR-Cas system	genomics	no_match	0	
 METPO:1000127	GC content	genomics	direct_metpo	1	METPO:1000127
 METPO:1000432	GC high	genomics	direct_metpo	1	METPO:1000432
 METPO:1000429	GC low	genomics	direct_metpo	1	METPO:1000429
 METPO:1000430	GC mid1	genomics	direct_metpo	1	METPO:1000430
 METPO:1000431	GC mid2	genomics	direct_metpo	1	METPO:1000431
+traitmech:000097	GC skew	genomics	no_match	0	
+traitmech:000098	genome size	genomics	no_match	0	
+traitmech:000099	genome streamlining	genomics	no_match	0	
+traitmech:000093	genomic island	genomics	no_match	0	
+traitmech:000089	mobile genetic element	genomics	no_match	0	
+traitmech:000102	pangenome openness	genomics	no_match	0	
+traitmech:000090	plasmid carriage	genomics	no_match	0	
+traitmech:000100	ploidy	genomics	no_match	0	
+traitmech:000091	prophage	genomics	no_match	0	
+traitmech:000095	restriction-modification system	genomics	no_match	0	
+traitmech:000101	rRNA operon copy number	genomics	no_match	0	
+traitmech:000092	transposable element	genomics	no_match	0	
 METPO:2000210	accumulates	metabolism	direct_metpo	1	METPO:2000210
 METPO:1000845	Acetogenesis	metabolism	direct_metpo	1	METPO:1000845
 METPO:1000801	Aerobic respiration	metabolism	direct_metpo	1	METPO:1000801
+traitmech:000033	anaerobic oxidation of methane	metabolism	no_match	0	
 METPO:1000802	Anaerobic respiration	metabolism	direct_metpo	1	METPO:1000802
+traitmech:000035	anoxygenic photosynthesis	metabolism	no_match	0	
 METPO:2000002	assimilates	metabolism	direct_metpo	1	METPO:2000002
+traitmech:000110	biopolymer degradation	metabolism	no_match	0	
 METPO:2000003	builds acid from	metabolism	direct_metpo	1	METPO:2000003
 METPO:2000004	builds base from	metabolism	direct_metpo	1	METPO:2000004
 METPO:2000005	builds gas from	metabolism	direct_metpo	1	METPO:2000005
 METPO:1002003	Cable bacteria metabolism	metabolism	direct_metpo	1	METPO:1002003
+traitmech:000020	Calvin-Benson-Bassham cycle	metabolism	no_match	0	
 METPO:2000103	capable of	metabolism	no_match	0	
+traitmech:000019	carbon fixation	metabolism	no_match	0	
+traitmech:000111	cellulolysis	metabolism	no_match	0	
+traitmech:000112	chitinolysis	metabolism	no_match	0	
 METPO:2000212	compartmentalizes	metabolism	direct_metpo	1	METPO:2000212
 METPO:2000007	degrades	metabolism	direct_metpo	1	METPO:2000007
+traitmech:000104	denitrification	metabolism	no_match	0	
+traitmech:000025	dicarboxylate/4-hydroxybutyrate cycle	metabolism	no_match	0	
 METPO:2000200	disproportionates	metabolism	direct_metpo	1	METPO:2000200
 METPO:1000806	Disproportionation	metabolism	direct_metpo	1	METPO:1000806
+traitmech:000031	dissimilatory iron reduction	metabolism	no_match	0	
+traitmech:000108	dissimilatory manganese reduction	metabolism	no_match	0	
+traitmech:000039	dissimilatory metal reduction	metabolism	no_match	0	
+traitmech:000030	dissimilatory nitrate reduction to ammonium	metabolism	no_match	0	
+traitmech:000105	dissimilatory sulfate reduction	metabolism	no_match	0	
 METPO:2000230	does not accumulate	metabolism	direct_metpo	1	METPO:2000230
 METPO:2000027	does not assimilate	metabolism	direct_metpo	1	METPO:2000027
 METPO:2000028	does not build acid from	metabolism	direct_metpo	1	METPO:2000028
@@ -166,8 +228,10 @@ METPO:2000046	does not use for respiration	metabolism	direct_metpo	1	METPO:20000
 METPO:2000041	does not use in other way	metabolism	direct_metpo	1	METPO:2000041
 METPO:1000805	Electron transfer	metabolism	direct_metpo	1	METPO:1000805
 METPO:2000301	enzyme activity analyzed	metabolism	direct_metpo	1	METPO:2000301
+traitmech:000028	ethanol fermentation	metabolism	no_match	0	
 METPO:2000209	exports	metabolism	direct_metpo	1	METPO:2000209
 METPO:1002005	Fermentation	metabolism	direct_metpo	1	METPO:1002005
+traitmech:000109	fermentative hydrogen production	metabolism	no_match	0	
 METPO:2000011	ferments	metabolism	direct_metpo	1	METPO:2000011
 METPO:2000508	has growth NaCl observation	metabolism	direct_metpo	1	METPO:2000508
 METPO:2000514	has growth oxygen observation	metabolism	direct_metpo	1	METPO:2000514
@@ -195,20 +259,37 @@ METPO:2000052	has temperature observation	metabolism	direct_metpo	1	METPO:200005
 METPO:1000846	Homoacetogenesis	metabolism	direct_metpo	1	METPO:1000846
 METPO:2000013	hydrolyzes	metabolism	direct_metpo	1	METPO:2000013
 METPO:2000208	imports	metabolism	direct_metpo	1	METPO:2000208
+traitmech:000107	iron oxidation	metabolism	no_match	0	
 METPO:2000045	is not required for growth	metabolism	direct_metpo	1	METPO:2000045
+traitmech:000026	lactic acid fermentation	metabolism	no_match	0	
+traitmech:000114	lignin degradation	metabolism	no_match	0	
+traitmech:000032	manganese oxidation	metabolism	no_match	0	
 METPO:1000060	metabolism	metabolism	direct_metpo	1	METPO:1000060
 METPO:1000844	Methanogenesis	metabolism	direct_metpo	1	METPO:1000844
+traitmech:000027	mixed-acid fermentation	metabolism	no_match	0	
+traitmech:000103	nitrogen fixation	metabolism	no_match	0	
 METPO:2000001	organism interacts with chemical	metabolism	direct_metpo	1	METPO:2000001
 METPO:1000803	Oxidative phosphorylation	metabolism	direct_metpo	1	METPO:1000803
 METPO:2000016	oxidizes	metabolism	direct_metpo	1	METPO:2000016
+traitmech:000034	oxygenic photosynthesis	metabolism	no_match	0	
+traitmech:000038	photosynthesis	metabolism	no_match	0	
+traitmech:000037	phototrophy	metabolism	no_match	0	
 METPO:2000202	produces	metabolism	direct_metpo	1	METPO:2000202
+traitmech:000029	propionic acid fermentation	metabolism	no_match	0	
+traitmech:000116	proteolysis	metabolism	no_match	0	
+traitmech:000036	proteorhodopsin phototrophy	metabolism	no_match	0	
 METPO:2000017	reduces	metabolism	direct_metpo	1	METPO:2000017
+traitmech:000021	reductive tricarboxylic acid cycle	metabolism	no_match	0	
 METPO:2000018	requires for growth	metabolism	direct_metpo	1	METPO:2000018
 METPO:1000800	respiration	metabolism	direct_metpo	1	METPO:1000800
 METPO:2000211	sequesters	metabolism	direct_metpo	1	METPO:2000211
 METPO:2000302	shows activity of	metabolism	direct_metpo	1	METPO:2000302
+traitmech:000115	starch degradation	metabolism	no_match	0	
 METPO:1000804	Substrate-level phosphorylation	metabolism	direct_metpo	1	METPO:1000804
+traitmech:000106	sulfur oxidation	metabolism	no_match	0	
 METPO:1002006	Syntrophy	metabolism	direct_metpo	1	METPO:1002006
+traitmech:000023	3-hydroxypropionate bicycle	metabolism	no_match	0	
+traitmech:000024	3-hydroxypropionate/4-hydroxybutyrate cycle	metabolism	no_match	0	
 METPO:2000207	transports	metabolism	direct_metpo	1	METPO:2000207
 METPO:2000006	uses as carbon source	metabolism	direct_metpo	1	METPO:2000006
 METPO:2000008	uses as electron acceptor	metabolism	direct_metpo	1	METPO:2000008
@@ -225,11 +306,16 @@ METPO:2000051	uses for anaerobic growth with light	metabolism	direct_metpo	1	MET
 METPO:2000012	uses for growth	metabolism	direct_metpo	1	METPO:2000012
 METPO:2000019	uses for respiration	metabolism	direct_metpo	1	METPO:2000019
 METPO:2000015	uses in other way	metabolism	direct_metpo	1	METPO:2000015
+traitmech:000022	Wood-Ljungdahl pathway	metabolism	no_match	0	
+traitmech:000113	xylan degradation	metabolism	no_match	0	
+traitmech:000059	amphitrichous	morphology	no_match	0	
 METPO:1000705	axially filamented	morphology	direct_metpo	1	METPO:1000705
 METPO:1000667	bacillus shaped	morphology	direct_metpo	1	METPO:1000667
 METPO:1003022	black pigmented	morphology	direct_metpo	1	METPO:1003022
 METPO:1000687	branched shaped	morphology	direct_metpo	1	METPO:1000687
 METPO:1003023	brown pigmented	morphology	direct_metpo	1	METPO:1003023
+traitmech:000063	capsule	morphology	no_match	0	
+traitmech:000072	carboxysome	morphology	no_match	0	
 METPO:1003031	carotenoid pigmentation	morphology	direct_metpo	1	METPO:1003031
 METPO:1000881	cell length	morphology	direct_metpo	1	METPO:1000881
 METPO:1000886	cell length large	morphology	direct_metpo	1	METPO:1000886
@@ -252,9 +338,11 @@ METPO:1000689	disc shaped	morphology	direct_metpo	1	METPO:1000689
 METPO:1000672	dumbbell shaped	morphology	direct_metpo	1	METPO:1000672
 METPO:1000673	ellipsoidal	morphology	direct_metpo	1	METPO:1000673
 METPO:1000674	filament shaped	morphology	direct_metpo	1	METPO:1000674
+traitmech:000056	flagellar arrangement	morphology	no_match	0	
 METPO:1000704	flagellated	morphology	direct_metpo	1	METPO:1000704
 METPO:1000675	flask shaped	morphology	direct_metpo	1	METPO:1000675
 METPO:1000690	fusiform shaped	morphology	direct_metpo	1	METPO:1000690
+traitmech:000070	gas vesicle	morphology	no_match	0	
 METPO:1000706	gliding	morphology	direct_metpo	1	METPO:1000706
 METPO:1000699	gram negative	morphology	direct_metpo	1	METPO:1000699
 METPO:1000698	gram positive	morphology	direct_metpo	1	METPO:1000698
@@ -262,20 +350,32 @@ METPO:1000697	gram stain	morphology	direct_metpo	1	METPO:1000697
 METPO:1000700	gram variable	morphology	direct_metpo	1	METPO:1000700
 METPO:1003025	green pigmented	morphology	direct_metpo	1	METPO:1003025
 METPO:1000676	helical shaped	morphology	direct_metpo	1	METPO:1000676
+traitmech:000073	heterocyst	morphology	no_match	0	
+traitmech:000066	intracellular inclusion	morphology	no_match	0	
 METPO:1000691	irregular shaped	morphology	direct_metpo	1	METPO:1000691
+traitmech:000058	lophotrichous	morphology	no_match	0	
+traitmech:000071	magnetosome	morphology	no_match	0	
+traitmech:000057	monotrichous	morphology	no_match	0	
 METPO:1000702	motile	morphology	direct_metpo	1	METPO:1000702
 METPO:1000701	motility	morphology	direct_metpo	1	METPO:1000701
+traitmech:000074	mycelial growth	morphology	no_match	0	
 METPO:1000703	non motile	morphology	direct_metpo	1	METPO:1000703
 METPO:1000872	non-spore forming	morphology	direct_metpo	1	METPO:1000872
 METPO:1003026	orange pigmented	morphology	direct_metpo	1	METPO:1003026
 METPO:1000678	oval shaped	morphology	direct_metpo	1	METPO:1000678
 METPO:1000677	ovoid shaped	morphology	direct_metpo	1	METPO:1000677
+traitmech:000060	peritrichous	morphology	no_match	0	
 METPO:1003021	pigmentation	morphology	direct_metpo	1	METPO:1003021
 METPO:1003027	pink pigmented	morphology	direct_metpo	1	METPO:1003027
 METPO:1000679	pleomorphic shaped	morphology	direct_metpo	1	METPO:1000679
+traitmech:000067	polyhydroxyalkanoate granule	morphology	no_match	0	
+traitmech:000068	polyphosphate granule	morphology	no_match	0	
+traitmech:000065	prosthecate	morphology	no_match	0	
 METPO:1003028	red pigmented	morphology	direct_metpo	1	METPO:1003028
 METPO:1000680	ring shaped	morphology	direct_metpo	1	METPO:1000680
 METPO:1000681	rod shaped	morphology	direct_metpo	1	METPO:1000681
+traitmech:000064	S-layer	morphology	no_match	0	
+traitmech:000120	sarcina arrangement	morphology	no_match	0	
 METPO:1000683	sphere shaped	morphology	direct_metpo	1	METPO:1000683
 METPO:1000692	spindle shaped	morphology	direct_metpo	1	METPO:1000692
 METPO:1000684	spiral shaped	morphology	direct_metpo	1	METPO:1000684
@@ -284,9 +384,15 @@ METPO:1000871	spore forming	morphology	direct_metpo	1	METPO:1000871
 METPO:1000682	spore shaped	morphology	direct_metpo	1	METPO:1000682
 METPO:1000870	sporulation	morphology	direct_metpo	1	METPO:1000870
 METPO:1000694	square shaped	morphology	direct_metpo	1	METPO:1000694
+traitmech:000118	staphylococcus arrangement	morphology	no_match	0	
 METPO:1000685	star shaped	morphology	direct_metpo	1	METPO:1000685
+traitmech:000117	streptococcus arrangement	morphology	no_match	0	
+traitmech:000069	sulfur globule	morphology	no_match	0	
+traitmech:000062	swarming motility	morphology	no_match	0	
 METPO:1000695	tailed shaped	morphology	direct_metpo	1	METPO:1000695
+traitmech:000119	tetrad arrangement	morphology	no_match	0	
 METPO:1000696	triangular shaped	morphology	direct_metpo	1	METPO:1000696
+traitmech:000061	twitching motility	morphology	no_match	0	
 METPO:1000686	vibrio shaped	morphology	direct_metpo	1	METPO:1000686
 METPO:1003029	white pigmented	morphology	direct_metpo	1	METPO:1003029
 METPO:1003030	yellow pigmented	morphology	direct_metpo	1	METPO:1003030
@@ -310,8 +416,11 @@ METPO:1001015	pH range observation	observation	direct_metpo	1	METPO:1001015
 METPO:1001004	temperature delta observation	observation	direct_metpo	1	METPO:1001004
 METPO:1001021	temperature observation	observation	direct_metpo	1	METPO:1001021
 METPO:1001003	temperature range observation	observation	direct_metpo	1	METPO:1001003
+traitmech:000088	antibiotic resistance	physiology	no_match	0	
 METPO:1000632	autotrophic	physiology	direct_metpo	1	METPO:1000632
+traitmech:000085	bioluminescence	physiology	no_match	0	
 METPO:1000633	carboxydotrophic	physiology	direct_metpo	1	METPO:1000633
+traitmech:000075	catalase activity	physiology	no_match	0	
 METPO:1000634	chemoautolithotrophic	physiology	direct_metpo	1	METPO:1000634
 METPO:1000635	chemoautotrophic	physiology	direct_metpo	1	METPO:1000635
 METPO:1000636	chemoheterotrophic	physiology	direct_metpo	1	METPO:1000636
@@ -320,8 +429,10 @@ METPO:1000638	chemolithoheterotrophic	physiology	direct_metpo	1	METPO:1000638
 METPO:1000639	chemolithotrophic	physiology	direct_metpo	1	METPO:1000639
 METPO:1000640	chemoorganoheterotrophic	physiology	direct_metpo	1	METPO:1000640
 METPO:1000663	chemoorganotrophic	physiology	direct_metpo	1	METPO:1000663
+traitmech:000086	chemotaxis	physiology	no_match	0	
 METPO:1000641	chemotrophic	physiology	direct_metpo	1	METPO:1000641
 METPO:1000642	copiotrophic	physiology	direct_metpo	1	METPO:1000642
+traitmech:000080	dormancy	physiology	no_match	0	
 METPO:1000644	heterotrophic	physiology	direct_metpo	1	METPO:1000644
 METPO:1000646	hydrogenotrophic	physiology	direct_metpo	1	METPO:1000646
 METPO:1000647	lithoautotrophic	physiology	direct_metpo	1	METPO:1000647
@@ -330,17 +441,26 @@ METPO:1000649	lithotrophic	physiology	direct_metpo	1	METPO:1000649
 METPO:1000650	methanotrophic	physiology	direct_metpo	1	METPO:1000650
 METPO:1000651	methylotrophic	physiology	direct_metpo	1	METPO:1000651
 METPO:1000652	mixotrophic	physiology	direct_metpo	1	METPO:1000652
+traitmech:000087	natural competence	physiology	no_match	0	
 METPO:1000731	nutrient adaptation	physiology	direct_metpo	1	METPO:1000731
 METPO:1000654	oligotrophic	physiology	direct_metpo	1	METPO:1000654
 METPO:1000664	organoheterotrophic	physiology	direct_metpo	1	METPO:1000664
 METPO:1000655	organotrophic	physiology	direct_metpo	1	METPO:1000655
+traitmech:000076	oxidase activity	physiology	no_match	0	
+traitmech:000079	oxidative stress response	physiology	no_match	0	
+traitmech:000082	persister cell formation	physiology	no_match	0	
 METPO:1000656	photoautotrophic	physiology	direct_metpo	1	METPO:1000656
 METPO:1000657	photoheterotrophic	physiology	direct_metpo	1	METPO:1000657
 METPO:1000665	photolithoautotrophic	physiology	direct_metpo	1	METPO:1000665
 METPO:1000658	photolithotrophic	physiology	direct_metpo	1	METPO:1000658
 METPO:1000659	photoorganoheterotrophic	physiology	direct_metpo	1	METPO:1000659
 METPO:1000660	phototrophic	physiology	direct_metpo	1	METPO:1000660
+traitmech:000084	quorum sensing	physiology	no_match	0	
+traitmech:000083	spore germination	physiology	no_match	0	
+traitmech:000078	stress response	physiology	no_match	0	
 METPO:1000631	trophic type	physiology	direct_metpo	1	METPO:1000631
+traitmech:000077	urease activity	physiology	no_match	0	
+traitmech:000081	viable but nonculturable state	physiology	no_match	0	
 METPO:2000060	has maximum observed value	quantitative_property	no_match	0	
 METPO:2000059	has minimum observed value	quantitative_property	no_match	0	
 METPO:2000058	has observed spot value	quantitative_property	no_match	0	
@@ -349,7 +469,10 @@ METPO:2000061	has value comments	quantitative_property	no_match	0
 METPO:2000062	is negative data	quantitative_property	no_match	0	
 METPO:2000063	observation data property	quantitative_property	no_match	0	
 METPO:1000630	biological process	upper	direct_metpo	1	METPO:1000630
+METPO:1000526	chemical entity	upper	direct_metpo	1	METPO:1000526
+METPO:1000527	enzyme	upper	direct_metpo	1	METPO:1000527
 METPO:1000186	material entity	upper	direct_metpo	1	METPO:1000186
+METPO:1000525	microbe	upper	direct_metpo	1	METPO:1000525
 METPO:1001000	observation	upper	direct_metpo	1	METPO:1001000
 METPO:1000059	phenotype	upper	direct_metpo	1	METPO:1000059
 METPO:1000188	quality	upper	direct_metpo	1	METPO:1000188

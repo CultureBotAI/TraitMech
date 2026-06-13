@@ -60,7 +60,7 @@
             <strong>psychrotolerant adaptation</strong>
             <span class="edge-predicate">enables</span>
             <strong>temperature range low</strong>
-            
+            <code>RO:0002327</code>
             <p>Psychrotolerant adaptation enables growth across 10–22 °C.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>temperature range low</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature range low is a quantitative bin of the temperature-range phenotype.</p>
             <ul>
               
@@ -231,6 +231,12 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking psychrotolerant adaptation to the temperature-range-low bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -590,7 +596,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking psychrotolerant adaptation to a temperature growth range of approximately 10\u201322 \u00b0C.", "edges": [{"description": "Psychrotolerant adaptation enables growth across 10\u201322 \u00b0C.", "evidence": [{"notes": "Supports cold-shock and acclimation responses as the cool-range mechanism.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "psychrotolerant_adaptation", "target": "temperature_range_low_trait"}, {"description": "Temperature range low is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 10\u201322 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_range_low_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Psychrotolerant adaptation enables growth across 10\u201322 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-shock and acclimation responses as the cool-range mechanism.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "enables", "predicate_id": null, "source": "psychrotolerant adaptation", "target": "temperature range low"}, {"description": "Temperature range low is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 10\u201322 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": null, "source": "temperature range low", "target": "temperature range"}], "graph_id": "temperature_range_low_psychrotolerant", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mild cold-adaptation of membrane and enzyme function sustaining growth at cool temperatures.", "grounding": null, "id": "psychrotolerant_adaptation", "is_orphan": false, "label": "psychrotolerant adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 10\u201322 \u00b0C.", "grounding": "METPO:1000449", "id": "temperature_range_low_trait", "is_orphan": false, "label": "temperature range low", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-range-low psychrotolerant range"}];
+  var graphs = [{"description": "DOI-backed graph linking psychrotolerant adaptation to a temperature growth range of approximately 10\u201322 \u00b0C.", "edges": [{"description": "Psychrotolerant adaptation enables growth across 10\u201322 \u00b0C.", "evidence": [{"notes": "Supports cold-shock and acclimation responses as the cool-range mechanism.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "psychrotolerant_adaptation", "target": "temperature_range_low_trait"}, {"description": "Temperature range low is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 10\u201322 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_low_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Psychrotolerant adaptation enables growth across 10\u201322 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cold-shock and acclimation responses as the cool-range mechanism.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "psychrotolerant adaptation", "target": "temperature range low"}, {"description": "Temperature range low is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 10\u201322 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "growing well at temperatures around the freezing point of water"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range low", "target": "temperature range"}], "graph_id": "temperature_range_low_psychrotolerant", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mild cold-adaptation of membrane and enzyme function sustaining growth at cool temperatures.", "grounding": null, "id": "psychrotolerant_adaptation", "is_orphan": false, "label": "psychrotolerant adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 10\u201322 \u00b0C.", "grounding": "METPO:1000449", "id": "temperature_range_low_trait", "is_orphan": false, "label": "temperature range low", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-range-low psychrotolerant range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -601,10 +607,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

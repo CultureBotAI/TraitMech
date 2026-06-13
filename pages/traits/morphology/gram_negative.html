@@ -60,7 +60,7 @@
             <strong>outer membrane</strong>
             <span class="edge-predicate">defines</span>
             <strong>gram negative</strong>
-            
+            <code>METPO:2007500</code>
             <p>The outer membrane is a defining feature of the Gram-negative cell envelope.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>lipopolysaccharide</strong>
             <span class="edge-predicate">localized in</span>
             <strong>outer membrane</strong>
-            
+            <code>biolink:located_in</code>
             <p>LPS is found on the outer surface of the Gram-negative outer membrane.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>thin peptidoglycan layer</strong>
             <span class="edge-predicate">localized in</span>
             <strong>periplasmic space</strong>
-            
+            <code>biolink:located_in</code>
             <p>Gram-negative peptidoglycan is a thin layer in the periplasm.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>counterstain</strong>
             <span class="edge-predicate">produces</span>
             <strong>gram negative</strong>
-            
+            <code>METPO:2000202</code>
             <p>Counterstain gives decolorized Gram-negative cells their pink/red appearance.</p>
             <ul>
               
@@ -286,6 +286,30 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed Gram-negative envelope source and added causal graph for outer membrane, lipopolysaccharide, periplasmic thin peptidoglycan, dye loss, and counterstaining.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:located_in×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0019867×1, GO:0042597×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:40Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -645,7 +669,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-negative staining to outer membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization, and counterstain uptake.", "edges": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "outer_membrane", "target": "gram_negative_trait"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "id": "edge-2", "is_orphan": false, "predicate": "localized in", "predicate_id": null, "source": "lipopolysaccharide", "target": "outer_membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "id": "edge-3", "is_orphan": false, "predicate": "localized in", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "periplasmic_space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to retain", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "crystal_violet_iodine_complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "counterstain", "target": "gram_negative_trait"}], "evidence_rows": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "edge_id": "edge-1", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "defines", "predicate_id": null, "source": "outer membrane", "target": "gram negative"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "predicate": "localized in", "predicate_id": null, "source": "lipopolysaccharide", "target": "outer membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "edge_id": "edge-3", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "predicate": "localized in", "predicate_id": null, "source": "thin peptidoglycan layer", "target": "periplasmic space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "edge_id": "edge-4", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "fails to retain", "predicate_id": null, "source": "thin peptidoglycan layer", "target": "crystal violet-iodine complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "predicate": "produces", "predicate_id": null, "source": "counterstain", "target": "gram negative"}], "graph_id": "gram_negative_outer_membrane_dye_loss", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Safranin or similar stain producing pink/red appearance.", "grounding": null, "id": "counterstain", "is_orphan": false, "label": "counterstain", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex removed during decolorization in Gram-negative cells.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells lose crystal violet and appear pink or red after counterstaining.", "grounding": "METPO:1000699", "id": "gram_negative_trait", "is_orphan": false, "label": "gram negative", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Glycolipid found in the outer leaflet of Gram-negative outer membranes.", "grounding": null, "id": "lipopolysaccharide", "is_orphan": false, "label": "lipopolysaccharide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative outer membrane outside the peptidoglycan layer.", "grounding": null, "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-envelope compartment between inner and outer membranes.", "grounding": null, "id": "periplasmic_space", "is_orphan": false, "label": "periplasmic space", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Thin peptidoglycan layer in the Gram-negative periplasm.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}], "title": "Gram-negative outer-membrane dye-loss mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-negative staining to outer membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization, and counterstain uptake.", "edges": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer_membrane", "target": "gram_negative_trait"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "id": "edge-2", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "target": "outer_membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "id": "edge-3", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin_peptidoglycan_layer", "target": "periplasmic_space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to retain", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "crystal_violet_iodine_complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "counterstain", "target": "gram_negative_trait"}], "evidence_rows": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "edge_id": "edge-1", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer membrane", "target": "gram negative"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "target": "outer membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "edge_id": "edge-3", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin peptidoglycan layer", "target": "periplasmic space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "edge_id": "edge-4", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "fails to retain", "predicate_id": null, "source": "thin peptidoglycan layer", "target": "crystal violet-iodine complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "counterstain", "target": "gram negative"}], "graph_id": "gram_negative_outer_membrane_dye_loss", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Safranin or similar stain producing pink/red appearance.", "grounding": null, "id": "counterstain", "is_orphan": false, "label": "counterstain", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex removed during decolorization in Gram-negative cells.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells lose crystal violet and appear pink or red after counterstaining.", "grounding": "METPO:1000699", "id": "gram_negative_trait", "is_orphan": false, "label": "gram negative", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Glycolipid found in the outer leaflet of Gram-negative outer membranes.", "grounding": null, "id": "lipopolysaccharide", "is_orphan": false, "label": "lipopolysaccharide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative outer membrane outside the peptidoglycan layer.", "grounding": "GO:0019867", "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-envelope compartment between inner and outer membranes.", "grounding": "GO:0042597", "id": "periplasmic_space", "is_orphan": false, "label": "periplasmic space", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Thin peptidoglycan layer in the Gram-negative periplasm.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}], "title": "Gram-negative outer-membrane dye-loss mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -656,10 +680,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

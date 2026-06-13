@@ -60,7 +60,7 @@
             <strong>phototrophic</strong>
             <span class="edge-predicate">uses energy source</span>
             <strong>light</strong>
-            
+            <code>METPO:2000010</code>
             <p>Phototrophic growth uses light as the energy input.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>bacteriochlorophyll</strong>
             <span class="edge-predicate">part of</span>
             <strong>photosynthetic reaction center</strong>
-            
+            <code>biolink:part_of</code>
             <p>Bacteriochlorophyll-containing complexes harvest light in many bacterial phototrophs.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>photosynthetic electron transport</strong>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            
+            <code>METPO:2000202</code>
             <p>Photosynthetic electron transport produces ATP.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>photosynthetic electron transport</strong>
             <span class="edge-predicate">produces</span>
             <strong>reducing power</strong>
-            
+            <code>METPO:2000202</code>
             <p>Photosynthetic electron transport generates reducing equivalents.</p>
             <ul>
               
@@ -299,6 +299,36 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for light capture, reaction centers, photosynthetic electron transport, ATP, and reductant generation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:32Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×2, METPO:2000010×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:25Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:part_of×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:01Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001717×1, GO:0009767×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007503×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:14Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: reducing power: CHEMICAL → CAPACITY ×1.</p>
         </li>
         
       </ol>
@@ -658,7 +688,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph for bacterial light capture, photosynthetic electron transport, ATP generation, and reductant formation.", "edges": [{"description": "Phototrophic growth uses light as the energy input.", "evidence": [{"notes": "Supports light as the defining energy source for phototrophic bacteria.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "use light as the energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy source", "predicate_id": null, "source": "phototrophic_trait", "target": "light"}, {"description": "Bacteriochlorophyll-containing complexes harvest light in many bacterial phototrophs.", "evidence": [{"notes": "Supports pigment-reaction-center coupling in aerobic anoxygenic phototrophs.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "bacteriochlorophyll-containing reaction centers"}], "id": "edge-2", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "bacteriochlorophyll", "target": "photosynthetic_reaction_center"}, {"description": "Reaction centers convert absorbed light into charge separation.", "evidence": [{"notes": "Supports light harvesting by reaction centers.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "harvest light energy"}], "id": "edge-3", "is_orphan": false, "predicate": "captured by", "predicate_id": null, "source": "light", "target": "photosynthetic_reaction_center"}, {"description": "Photochemical reaction centers initiate electron transport.", "evidence": [{"notes": "Supports reaction-center-driven photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "light-induced electron transport"}], "id": "edge-4", "is_orphan": false, "predicate": "initiates", "predicate_id": null, "source": "photosynthetic_reaction_center", "target": "photosynthetic_electron_transport"}, {"description": "Photosynthetic electron transport produces ATP.", "evidence": [{"notes": "Supports ATP as a product of phototrophic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "produce phosphate bond energy (ATP)"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "photosynthetic_electron_transport", "target": "atp"}, {"description": "Photosynthetic electron transport generates reducing equivalents.", "evidence": [{"notes": "Supports reductant production by photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "reductants [e.g., NAD(P)H and reduced ferredoxin]"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "photosynthetic_electron_transport", "target": "reducing_power"}], "evidence_rows": [{"description": "Phototrophic growth uses light as the energy input.", "edge_id": "edge-1", "evidence": [{"notes": "Supports light as the defining energy source for phototrophic bacteria.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "use light as the energy source"}], "predicate": "uses energy source", "predicate_id": null, "source": "phototrophic", "target": "light"}, {"description": "Bacteriochlorophyll-containing complexes harvest light in many bacterial phototrophs.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pigment-reaction-center coupling in aerobic anoxygenic phototrophs.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "bacteriochlorophyll-containing reaction centers"}], "predicate": "part of", "predicate_id": null, "source": "bacteriochlorophyll", "target": "photosynthetic reaction center"}, {"description": "Reaction centers convert absorbed light into charge separation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports light harvesting by reaction centers.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "harvest light energy"}], "predicate": "captured by", "predicate_id": null, "source": "light", "target": "photosynthetic reaction center"}, {"description": "Photochemical reaction centers initiate electron transport.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reaction-center-driven photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "light-induced electron transport"}], "predicate": "initiates", "predicate_id": null, "source": "photosynthetic reaction center", "target": "photosynthetic electron transport"}, {"description": "Photosynthetic electron transport produces ATP.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP as a product of phototrophic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "produce phosphate bond energy (ATP)"}], "predicate": "produces", "predicate_id": null, "source": "photosynthetic electron transport", "target": "ATP"}, {"description": "Photosynthetic electron transport generates reducing equivalents.", "edge_id": "edge-6", "evidence": [{"notes": "Supports reductant production by photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "reductants [e.g., NAD(P)H and reduced ferredoxin]"}], "predicate": "produces", "predicate_id": null, "source": "photosynthetic electron transport", "target": "reducing power"}], "graph_id": "phototrophic_light_energy_capture", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier generated by phototrophic electron transport.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Light-harvesting pigment in many anoxygenic phototrophic bacteria.", "grounding": null, "id": "bacteriochlorophyll", "is_orphan": false, "label": "bacteriochlorophyll", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Electromagnetic energy harvested by phototrophic cells.", "grounding": null, "id": "light", "is_orphan": false, "label": "light", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#e0e7ff", "description": "Light-induced electron-transfer route producing ATP and reductants.", "grounding": null, "id": "photosynthetic_electron_transport", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that initiates photochemical charge separation.", "grounding": null, "id": "photosynthetic_reaction_center", "is_orphan": false, "label": "photosynthetic reaction center", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using light as an energy source.", "grounding": "METPO:1000660", "id": "phototrophic_trait", "is_orphan": false, "label": "phototrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "NAD(P)H or reduced ferredoxin generated by photosynthetic electron transport.", "grounding": null, "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CHEMICAL", "xrefs": []}], "title": "Phototrophic light-energy capture mechanism"}];
+  var graphs = [{"description": "DOI-backed graph for bacterial light capture, photosynthetic electron transport, ATP generation, and reductant formation.", "edges": [{"description": "Phototrophic growth uses light as the energy input.", "evidence": [{"notes": "Supports light as the defining energy source for phototrophic bacteria.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "use light as the energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy source", "predicate_id": "METPO:2000010", "source": "phototrophic_trait", "target": "light"}, {"description": "Bacteriochlorophyll-containing complexes harvest light in many bacterial phototrophs.", "evidence": [{"notes": "Supports pigment-reaction-center coupling in aerobic anoxygenic phototrophs.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "bacteriochlorophyll-containing reaction centers"}], "id": "edge-2", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "bacteriochlorophyll", "target": "photosynthetic_reaction_center"}, {"description": "Reaction centers convert absorbed light into charge separation.", "evidence": [{"notes": "Supports light harvesting by reaction centers.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "harvest light energy"}], "id": "edge-3", "is_orphan": false, "predicate": "captured by", "predicate_id": null, "source": "light", "target": "photosynthetic_reaction_center"}, {"description": "Photochemical reaction centers initiate electron transport.", "evidence": [{"notes": "Supports reaction-center-driven photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "light-induced electron transport"}], "id": "edge-4", "is_orphan": false, "predicate": "initiates", "predicate_id": null, "source": "photosynthetic_reaction_center", "target": "photosynthetic_electron_transport"}, {"description": "Photosynthetic electron transport produces ATP.", "evidence": [{"notes": "Supports ATP as a product of phototrophic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "produce phosphate bond energy (ATP)"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "photosynthetic_electron_transport", "target": "atp"}, {"description": "Photosynthetic electron transport generates reducing equivalents.", "evidence": [{"notes": "Supports reductant production by photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "reductants [e.g., NAD(P)H and reduced ferredoxin]"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "photosynthetic_electron_transport", "target": "reducing_power"}], "evidence_rows": [{"description": "Phototrophic growth uses light as the energy input.", "edge_id": "edge-1", "evidence": [{"notes": "Supports light as the defining energy source for phototrophic bacteria.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "use light as the energy source"}], "predicate": "uses energy source", "predicate_id": "METPO:2000010", "source": "phototrophic", "target": "light"}, {"description": "Bacteriochlorophyll-containing complexes harvest light in many bacterial phototrophs.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pigment-reaction-center coupling in aerobic anoxygenic phototrophs.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "bacteriochlorophyll-containing reaction centers"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "bacteriochlorophyll", "target": "photosynthetic reaction center"}, {"description": "Reaction centers convert absorbed light into charge separation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports light harvesting by reaction centers.", "reference": "DOI:10.1093/femsre/fuv032", "snippet": "harvest light energy"}], "predicate": "captured by", "predicate_id": null, "source": "light", "target": "photosynthetic reaction center"}, {"description": "Photochemical reaction centers initiate electron transport.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reaction-center-driven photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "light-induced electron transport"}], "predicate": "initiates", "predicate_id": null, "source": "photosynthetic reaction center", "target": "photosynthetic electron transport"}, {"description": "Photosynthetic electron transport produces ATP.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP as a product of phototrophic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "produce phosphate bond energy (ATP)"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "photosynthetic electron transport", "target": "ATP"}, {"description": "Photosynthetic electron transport generates reducing equivalents.", "edge_id": "edge-6", "evidence": [{"notes": "Supports reductant production by photosynthetic electron transport.", "reference": "DOI:10.3389/fmicb.2011.00165", "snippet": "reductants [e.g., NAD(P)H and reduced ferredoxin]"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "photosynthetic electron transport", "target": "reducing power"}], "graph_id": "phototrophic_light_energy_capture", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier generated by phototrophic electron transport.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Light-harvesting pigment in many anoxygenic phototrophic bacteria.", "grounding": null, "id": "bacteriochlorophyll", "is_orphan": false, "label": "bacteriochlorophyll", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Electromagnetic energy harvested by phototrophic cells.", "grounding": "PATO:0001717", "id": "light", "is_orphan": false, "label": "light", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#e0e7ff", "description": "Light-induced electron-transfer route producing ATP and reductants.", "grounding": "GO:0009767", "id": "photosynthetic_electron_transport", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that initiates photochemical charge separation.", "grounding": null, "id": "photosynthetic_reaction_center", "is_orphan": false, "label": "photosynthetic reaction center", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using light as an energy source.", "grounding": "METPO:1000660", "id": "phototrophic_trait", "is_orphan": false, "label": "phototrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "NAD(P)H or reduced ferredoxin generated by photosynthetic electron transport.", "grounding": "METPO:1007503", "id": "reducing_power", "is_orphan": false, "label": "reducing power", "node_type": "CAPACITY", "xrefs": []}], "title": "Phototrophic light-energy capture mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -669,10 +699,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>denitrification</strong>
-            <span class="edge-predicate">occurs under</span>
+            <span class="edge-predicate">occurs in</span>
             <strong>anaerobic or microaerophilic condition</strong>
-            
+            <code>biolink:occurs_in</code>
             <p>Denitrification can occur under anaerobic and microaerophilic conditions.</p>
             <ul>
               
@@ -173,6 +173,23 @@
     
 
     
+    <div class="card">
+      <h2>Children (5)</h2>
+      <ul>
+        
+        <li><a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane <code>traitmech:000033</code></a></li>
+        
+        <li><a href="../../traits/metabolism/denitrification.html">denitrification <code>traitmech:000104</code></a></li>
+        
+        <li><a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction <code>traitmech:000039</code></a></li>
+        
+        <li><a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium <code>traitmech:000030</code></a></li>
+        
+        <li><a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction <code>traitmech:000105</code></a></li>
+        
+      </ul>
+    </div>
+    
 
     
     <div class="card">
@@ -280,6 +297,24 @@
           <time>2026-05-07T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for anaerobic respiration using denitrification and nitrogen oxide terminal electron acceptors.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007504×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: occurs under → occurs in ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:occurs_in×1).</p>
         </li>
         
       </ol>
@@ -639,7 +674,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch using denitrification as a representative anaerobic respiratory process.", "edges": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs under", "predicate_id": null, "source": "denitrification", "target": "low_oxygen_condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "id": "edge-2", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "nitrogen_oxides", "target": "terminal_electron_acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "id": "edge-3", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen_oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "energy_conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "id": "edge-5", "is_orphan": false, "predicate": "exemplified by", "predicate_id": null, "source": "anaerobic_respiration_trait", "target": "denitrification"}], "evidence_rows": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "predicate": "occurs under", "predicate_id": null, "source": "denitrification", "target": "anaerobic or microaerophilic condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "predicate": "acts as", "predicate_id": null, "source": "nitrogen oxides", "target": "terminal electron acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "cellular energy conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "edge_id": "edge-5", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "predicate": "exemplified by", "predicate_id": null, "source": "Anaerobic respiration", "target": "denitrification"}], "graph_id": "anaerobic_respiration_denitrification", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Respiration using terminal electron acceptors other than oxygen.", "grounding": "METPO:1000802", "id": "anaerobic_respiration_trait", "is_orphan": false, "label": "Anaerobic respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory reduction of nitrogen oxides.", "grounding": "GO:0019330", "id": "denitrification", "is_orphan": false, "label": "denitrification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Bioenergetic output of respiratory electron transport.", "grounding": null, "id": "energy_conservation", "is_orphan": false, "label": "cellular energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen condition permissive for denitrifying respiration.", "grounding": null, "id": "low_oxygen_condition", "is_orphan": false, "label": "anaerobic or microaerophilic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Non-oxygen terminal electron acceptors used in denitrification.", "grounding": null, "id": "nitrogen_oxides", "is_orphan": false, "label": "nitrogen oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Electron-accepting role in respiratory bioenergetics.", "grounding": null, "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Anaerobic respiration with nitrogen oxide acceptors"}];
+  var graphs = [{"description": "Evidence-backed causal sketch using denitrification as a representative anaerobic respiratory process.", "edges": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "low_oxygen_condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "id": "edge-2", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "nitrogen_oxides", "target": "terminal_electron_acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "id": "edge-3", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen_oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "energy_conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "id": "edge-5", "is_orphan": false, "predicate": "exemplified by", "predicate_id": null, "source": "anaerobic_respiration_trait", "target": "denitrification"}], "evidence_rows": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "anaerobic or microaerophilic condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "predicate": "acts as", "predicate_id": null, "source": "nitrogen oxides", "target": "terminal electron acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "cellular energy conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "edge_id": "edge-5", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "predicate": "exemplified by", "predicate_id": null, "source": "Anaerobic respiration", "target": "denitrification"}], "graph_id": "anaerobic_respiration_denitrification", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Respiration using terminal electron acceptors other than oxygen.", "grounding": "METPO:1000802", "id": "anaerobic_respiration_trait", "is_orphan": false, "label": "Anaerobic respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory reduction of nitrogen oxides.", "grounding": "GO:0019330", "id": "denitrification", "is_orphan": false, "label": "denitrification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Bioenergetic output of respiratory electron transport.", "grounding": null, "id": "energy_conservation", "is_orphan": false, "label": "cellular energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen condition permissive for denitrifying respiration.", "grounding": null, "id": "low_oxygen_condition", "is_orphan": false, "label": "anaerobic or microaerophilic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Non-oxygen terminal electron acceptors used in denitrification.", "grounding": null, "id": "nitrogen_oxides", "is_orphan": false, "label": "nitrogen oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Electron-accepting role in respiratory bioenergetics.", "grounding": "METPO:1007504", "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Anaerobic respiration with nitrogen oxide acceptors"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -650,10 +685,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>high-salt environment</strong>
             <span class="edge-predicate">selects for</span>
             <strong>halophilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Halophilic microorganisms are adapted to growth in high-salt environments.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>sodium chloride</strong>
             <span class="edge-predicate">causes</span>
             <strong>osmotic stress</strong>
-            
+            <code>biolink:causes</code>
             <p>Elevated NaCl creates osmotic pressure that requires cellular adaptation.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">mitigates</span>
             <strong>osmotic stress</strong>
-            
+            <code>METPO:2007407</code>
             <p>Compatible solutes are one major osmoadaptation mechanism in halophilic microorganisms.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>salt-in strategy</strong>
             <span class="edge-predicate">mitigates</span>
             <strong>osmotic stress</strong>
-            
+            <code>METPO:2007407</code>
             <p>Salt-in ion accumulation is an alternative osmoadaptation strategy.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>compatible solutes</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>halophilic</strong>
-            
+            <code>RO:0002326</code>
             <p>Compatible-solute accumulation supports growth under high salinity.</p>
             <ul>
               
@@ -284,6 +284,36 @@
           <time>2026-05-10T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for halophilic osmoadaptation mechanisms.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007407×2, METPO:2007401×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0006970×1, CHEBI:65015×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01000687×1).</p>
         </li>
         
       </ol>
@@ -643,7 +673,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking halophilic growth to high-salt environments and osmotic adaptation strategies.", "edges": [{"description": "Halophilic microorganisms are adapted to growth in high-salt environments.", "evidence": [{"notes": "Review supports hypersaline habitats as the environmental context for halophily.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "Hypersaline environments ... inhabited by halophilic"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "high_salt_environment", "target": "halophilic_trait"}, {"description": "Elevated NaCl creates osmotic pressure that requires cellular adaptation.", "evidence": [{"notes": "Review frames halophily around coping with high environmental salt.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "ways they cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "sodium_chloride", "target": "osmotic_stress"}, {"description": "Compatible solutes are one major osmoadaptation mechanism in halophilic microorganisms.", "evidence": [{"notes": "Supports organic compatible-solute accumulation as an osmotic adaptation mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "compatible_solutes", "target": "osmotic_stress"}, {"description": "Salt-in ion accumulation is an alternative osmoadaptation strategy.", "evidence": [{"notes": "Supports intracellular KCl accumulation as a high-salt adaptation.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "salt_in_strategy", "target": "osmotic_stress"}, {"description": "Compatible-solute accumulation supports growth under high salinity.", "evidence": [{"notes": "Halomonas elongata study supports compatible solutes as a mechanism enabling halophilic growth.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "compatible_solutes", "target": "halophilic_trait"}], "evidence_rows": [{"description": "Halophilic microorganisms are adapted to growth in high-salt environments.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports hypersaline habitats as the environmental context for halophily.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "Hypersaline environments ... inhabited by halophilic"}], "predicate": "selects for", "predicate_id": null, "source": "high-salt environment", "target": "halophilic"}, {"description": "Elevated NaCl creates osmotic pressure that requires cellular adaptation.", "edge_id": "edge-2", "evidence": [{"notes": "Review frames halophily around coping with high environmental salt.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "ways they cope with the high salt concentrations"}], "predicate": "causes", "predicate_id": null, "source": "sodium chloride", "target": "osmotic stress"}, {"description": "Compatible solutes are one major osmoadaptation mechanism in halophilic microorganisms.", "edge_id": "edge-3", "evidence": [{"notes": "Supports organic compatible-solute accumulation as an osmotic adaptation mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "mitigates", "predicate_id": null, "source": "compatible solutes", "target": "osmotic stress"}, {"description": "Salt-in ion accumulation is an alternative osmoadaptation strategy.", "edge_id": "edge-4", "evidence": [{"notes": "Supports intracellular KCl accumulation as a high-salt adaptation.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "mitigates", "predicate_id": null, "source": "salt-in strategy", "target": "osmotic stress"}, {"description": "Compatible-solute accumulation supports growth under high salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Halomonas elongata study supports compatible solutes as a mechanism enabling halophilic growth.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "predicate": "contributes to", "predicate_id": null, "source": "compatible solutes", "target": "halophilic"}], "graph_id": "halophilic_osmoadaptation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Organic osmolytes such as ectoine and glycine betaine.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Requires high salt concentrations for growth and survival.", "grounding": "METPO:1000620", "id": "halophilic_trait", "is_orphan": false, "label": "halophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Hypersaline or elevated NaCl condition.", "grounding": null, "id": "high_salt_environment", "is_orphan": false, "label": "high-salt environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular water and turgor stress caused by external salinity.", "grounding": null, "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular inorganic ion accumulation for osmotic balance.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "NaCl as the dominant salt exposure in many halophilic habitats.", "grounding": "CHEBI:26710", "id": "sodium_chloride", "is_orphan": false, "label": "sodium chloride", "node_type": "CHEMICAL", "xrefs": []}], "title": "Halophilic osmoadaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking halophilic growth to high-salt environments and osmotic adaptation strategies.", "edges": [{"description": "Halophilic microorganisms are adapted to growth in high-salt environments.", "evidence": [{"notes": "Review supports hypersaline habitats as the environmental context for halophily.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "Hypersaline environments ... inhabited by halophilic"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_salt_environment", "target": "halophilic_trait"}, {"description": "Elevated NaCl creates osmotic pressure that requires cellular adaptation.", "evidence": [{"notes": "Review frames halophily around coping with high environmental salt.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "ways they cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "sodium_chloride", "target": "osmotic_stress"}, {"description": "Compatible solutes are one major osmoadaptation mechanism in halophilic microorganisms.", "evidence": [{"notes": "Supports organic compatible-solute accumulation as an osmotic adaptation mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_stress"}, {"description": "Salt-in ion accumulation is an alternative osmoadaptation strategy.", "evidence": [{"notes": "Supports intracellular KCl accumulation as a high-salt adaptation.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "salt_in_strategy", "target": "osmotic_stress"}, {"description": "Compatible-solute accumulation supports growth under high salinity.", "evidence": [{"notes": "Halomonas elongata study supports compatible solutes as a mechanism enabling halophilic growth.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible_solutes", "target": "halophilic_trait"}], "evidence_rows": [{"description": "Halophilic microorganisms are adapted to growth in high-salt environments.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports hypersaline habitats as the environmental context for halophily.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "Hypersaline environments ... inhabited by halophilic"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high-salt environment", "target": "halophilic"}, {"description": "Elevated NaCl creates osmotic pressure that requires cellular adaptation.", "edge_id": "edge-2", "evidence": [{"notes": "Review frames halophily around coping with high environmental salt.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "ways they cope with the high salt concentrations"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "sodium chloride", "target": "osmotic stress"}, {"description": "Compatible solutes are one major osmoadaptation mechanism in halophilic microorganisms.", "edge_id": "edge-3", "evidence": [{"notes": "Supports organic compatible-solute accumulation as an osmotic adaptation mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic stress"}, {"description": "Salt-in ion accumulation is an alternative osmoadaptation strategy.", "edge_id": "edge-4", "evidence": [{"notes": "Supports intracellular KCl accumulation as a high-salt adaptation.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "salt-in strategy", "target": "osmotic stress"}, {"description": "Compatible-solute accumulation supports growth under high salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Halomonas elongata study supports compatible solutes as a mechanism enabling halophilic growth.", "reference": "DOI:10.1371/journal.pone.0168818", "snippet": "allows microorganisms to cope with high salinities"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "compatible solutes", "target": "halophilic"}], "graph_id": "halophilic_osmoadaptation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Organic osmolytes such as ectoine and glycine betaine.", "grounding": "CHEBI:65015", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Requires high salt concentrations for growth and survival.", "grounding": "METPO:1000620", "id": "halophilic_trait", "is_orphan": false, "label": "halophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Hypersaline or elevated NaCl condition.", "grounding": "ENVO:01000687", "id": "high_salt_environment", "is_orphan": false, "label": "high-salt environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular water and turgor stress caused by external salinity.", "grounding": "GO:0006970", "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular inorganic ion accumulation for osmotic balance.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "NaCl as the dominant salt exposure in many halophilic habitats.", "grounding": "CHEBI:26710", "id": "sodium_chloride", "is_orphan": false, "label": "sodium chloride", "node_type": "CHEMICAL", "xrefs": []}], "title": "Halophilic osmoadaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -654,10 +684,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

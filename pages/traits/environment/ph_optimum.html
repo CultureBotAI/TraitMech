@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>cytoplasmic pH homeostasis</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>proton motive force</strong>
-            
+            <code>RO:0002211</code>
             <p>Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>proton motive force</strong>
             <span class="edge-predicate">enables</span>
             <strong>maximal growth rate</strong>
-            
+            <code>RO:0002327</code>
             <p>A balanced proton motive force enables peak growth.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>maximal growth rate</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>pH optimum</strong>
-            
+            <code>METPO:2007400</code>
             <p>The external pH supporting peak growth manifests the pH-optimum phenotype.</p>
             <ul>
               
@@ -269,6 +269,48 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking external pH, cytoplasmic pH homeostasis, the proton motive force, and maximal growth to the pH-optimum phenotype.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0030641×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:12Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
         
       </ol>
@@ -628,7 +670,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the external pH at which cytoplasmic pH-homeostasis machinery operates with minimal load to maximal growth and the pH-optimum phenotype.", "edges": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes gradient of", "predicate_id": null, "source": "external_ph", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "cytoplasmic_ph_homeostasis", "target": "proton_motive_force"}, {"description": "A balanced proton motive force enables peak growth.", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "proton_motive_force", "target": "maximal_growth_rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "maximal_growth_rate", "target": "ph_optimum_trait"}], "evidence_rows": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "predicate": "imposes gradient of", "predicate_id": null, "source": "external pH", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "maintains", "predicate_id": null, "source": "cytoplasmic pH homeostasis", "target": "proton motive force"}, {"description": "A balanced proton motive force enables peak growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": null, "source": "proton motive force", "target": "maximal growth rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "manifests as", "predicate_id": null, "source": "maximal growth rate", "target": "pH optimum"}], "graph_id": "ph_optimum_balanced_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against the external H+ gradient.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal external pH.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "External pH at which growth rate is maximal.", "grounding": "METPO:1000331", "id": "ph_optimum_trait", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "H+ ion whose transmembrane gradient drives the proton motive force.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical proton gradient powering ATP synthesis and transport.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-optimum balanced cytoplasmic homeostasis"}];
+  var graphs = [{"description": "DOI-backed graph linking the external pH at which cytoplasmic pH-homeostasis machinery operates with minimal load to maximal growth and the pH-optimum phenotype.", "edges": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes gradient of", "predicate_id": null, "source": "external_ph", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic_ph_homeostasis", "target": "proton_motive_force"}, {"description": "A balanced proton motive force enables peak growth.", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton_motive_force", "target": "maximal_growth_rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal_growth_rate", "target": "ph_optimum_trait"}], "evidence_rows": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "predicate": "imposes gradient of", "predicate_id": null, "source": "external pH", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic pH homeostasis", "target": "proton motive force"}, {"description": "A balanced proton motive force enables peak growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton motive force", "target": "maximal growth rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal growth rate", "target": "pH optimum"}], "graph_id": "ph_optimum_balanced_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against the external H+ gradient.", "grounding": "GO:0030641", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal external pH.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "External pH at which growth rate is maximal.", "grounding": "METPO:1000331", "id": "ph_optimum_trait", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "H+ ion whose transmembrane gradient drives the proton motive force.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical proton gradient powering ATP synthesis and transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}], "title": "pH-optimum balanced cytoplasmic homeostasis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -639,10 +681,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

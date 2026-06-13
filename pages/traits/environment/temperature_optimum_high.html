@@ -60,7 +60,7 @@
             <strong>hot environment</strong>
             <span class="edge-predicate">selects for</span>
             <strong>thermophile protein thermostability</strong>
-            
+            <code>METPO:2007401</code>
             <p>Hot environments select for thermophile thermostable machinery.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>thermophile protein thermostability</strong>
             <span class="edge-predicate">produces</span>
             <strong>temperature optimum high</strong>
-            
+            <code>METPO:2000202</code>
             <p>Thermophile thermostability yields a &gt;40 °C optimum.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>temperature optimum high</strong>
             <span class="edge-predicate">is a</span>
             <strong>temperature optimum</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Temperature optimum high is a quantitative bin of the temperature-optimum phenotype.</p>
             <ul>
               
@@ -246,6 +246,18 @@
           <time>2026-05-13T11:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking thermophile thermostability to the temperature-optimum-high bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
         </li>
         
       </ol>
@@ -605,7 +617,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking thermophile membrane and protein thermostability adaptation to a temperature optimum above 40 \u00b0C.", "edges": [{"description": "Hot environments select for thermophile thermostable machinery.", "evidence": [{"notes": "Supports hot environments as the context for thermophile optima.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "hot_environment", "target": "thermophile_thermostability"}, {"description": "Thermophile thermostability yields a \u003e40 \u00b0C optimum.", "evidence": [{"notes": "Supports thermostability as the mechanism producing thermophile optima.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "thermophile_thermostability", "target": "temperature_optimum_high_trait"}, {"description": "Temperature optimum high is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the \u003e40 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "temperature_optimum_high_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Hot environments select for thermophile thermostable machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports hot environments as the context for thermophile optima.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": null, "source": "hot environment", "target": "thermophile protein thermostability"}, {"description": "Thermophile thermostability yields a \u003e40 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports thermostability as the mechanism producing thermophile optima.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": null, "source": "thermophile protein thermostability", "target": "temperature optimum high"}, {"description": "Temperature optimum high is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the \u003e40 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": null, "source": "temperature optimum high", "target": "temperature optimum"}], "graph_id": "temperature_optimum_high_thermophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Habitat ambient temperature above ~40 \u00b0C, typical of hot springs and compost.", "grounding": null, "id": "hot_environment", "is_orphan": false, "label": "hot environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum above ~40 \u00b0C.", "grounding": "METPO:1000447", "id": "temperature_optimum_high_trait", "is_orphan": false, "label": "temperature optimum high", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Heat-stable membrane lipids and proteins that retain function at elevated temperatures.", "grounding": null, "id": "thermophile_thermostability", "is_orphan": false, "label": "thermophile protein thermostability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-optimum-high thermophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking thermophile membrane and protein thermostability adaptation to a temperature optimum above 40 \u00b0C.", "edges": [{"description": "Hot environments select for thermophile thermostable machinery.", "evidence": [{"notes": "Supports hot environments as the context for thermophile optima.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hot_environment", "target": "thermophile_thermostability"}, {"description": "Thermophile thermostability yields a \u003e40 \u00b0C optimum.", "evidence": [{"notes": "Supports thermostability as the mechanism producing thermophile optima.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "thermophile_thermostability", "target": "temperature_optimum_high_trait"}, {"description": "Temperature optimum high is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the \u003e40 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_high_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Hot environments select for thermophile thermostable machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports hot environments as the context for thermophile optima.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hot environment", "target": "thermophile protein thermostability"}, {"description": "Thermophile thermostability yields a \u003e40 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports thermostability as the mechanism producing thermophile optima.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "thermophile protein thermostability", "target": "temperature optimum high"}, {"description": "Temperature optimum high is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the \u003e40 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum high", "target": "temperature optimum"}], "graph_id": "temperature_optimum_high_thermophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Habitat ambient temperature above ~40 \u00b0C, typical of hot springs and compost.", "grounding": null, "id": "hot_environment", "is_orphan": false, "label": "hot environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum above ~40 \u00b0C.", "grounding": "METPO:1000447", "id": "temperature_optimum_high_trait", "is_orphan": false, "label": "temperature optimum high", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Heat-stable membrane lipids and proteins that retain function at elevated temperatures.", "grounding": null, "id": "thermophile_thermostability", "is_orphan": false, "label": "thermophile protein thermostability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-optimum-high thermophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +628,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

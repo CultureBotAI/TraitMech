@@ -60,7 +60,7 @@
             <strong>midcell constriction</strong>
             <span class="edge-predicate">produces</span>
             <strong>dumbbell intermediate</strong>
-            
+            <code>METPO:2000202</code>
             <p>Strong midcell constriction creates a two-lobe pre-division morphology.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>dumbbell intermediate</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>dumbbell shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>The dumbbell intermediate manifests the dumbbell-shaped trait.</p>
             <ul>
               
@@ -246,6 +246,18 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking midcell constriction and snapping division to dumbbell cell morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -605,7 +617,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking pre-separation septum constriction and snapping/incomplete cell division to dumbbell cell pairs.", "edges": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "midcell_constriction", "target": "dumbbell_intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "snapping_division", "target": "dumbbell_intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "dumbbell_intermediate", "target": "dumbbell_shaped_trait"}], "evidence_rows": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "produces", "predicate_id": null, "source": "midcell constriction", "target": "dumbbell intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "stabilizes", "predicate_id": null, "source": "snapping division", "target": "dumbbell intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "manifests as", "predicate_id": null, "source": "dumbbell intermediate", "target": "dumbbell shaped"}], "graph_id": "dumbbell_shaped_snapping_division", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Two-lobe cell pair joined by an isthmus prior to full separation.", "grounding": null, "id": "dumbbell_intermediate", "is_orphan": false, "label": "dumbbell intermediate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Two-lobe cell body joined by a central isthmus.", "grounding": "METPO:1000672", "id": "dumbbell_shaped_trait", "is_orphan": false, "label": "dumbbell shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Division-site constriction pinching the cell at midcell.", "grounding": null, "id": "midcell_constriction", "is_orphan": false, "label": "midcell constriction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Incomplete outer-layer separation that keeps daughter cells linked.", "grounding": null, "id": "snapping_division", "is_orphan": false, "label": "snapping division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Dumbbell-shape snapping division intermediate"}];
+  var graphs = [{"description": "DOI-backed graph linking pre-separation septum constriction and snapping/incomplete cell division to dumbbell cell pairs.", "edges": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell_constriction", "target": "dumbbell_intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "snapping_division", "target": "dumbbell_intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell_intermediate", "target": "dumbbell_shaped_trait"}], "evidence_rows": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell constriction", "target": "dumbbell intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "stabilizes", "predicate_id": null, "source": "snapping division", "target": "dumbbell intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell intermediate", "target": "dumbbell shaped"}], "graph_id": "dumbbell_shaped_snapping_division", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Two-lobe cell pair joined by an isthmus prior to full separation.", "grounding": null, "id": "dumbbell_intermediate", "is_orphan": false, "label": "dumbbell intermediate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Two-lobe cell body joined by a central isthmus.", "grounding": "METPO:1000672", "id": "dumbbell_shaped_trait", "is_orphan": false, "label": "dumbbell shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Division-site constriction pinching the cell at midcell.", "grounding": null, "id": "midcell_constriction", "is_orphan": false, "label": "midcell constriction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Incomplete outer-layer separation that keeps daughter cells linked.", "grounding": null, "id": "snapping_division", "is_orphan": false, "label": "snapping division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Dumbbell-shape snapping division intermediate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +628,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

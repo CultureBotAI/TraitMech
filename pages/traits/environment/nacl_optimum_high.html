@@ -60,7 +60,7 @@
             <strong>hypersaline NaCl</strong>
             <span class="edge-predicate">selects for</span>
             <strong>salt-in strategy</strong>
-            
+            <code>METPO:2007401</code>
             <p>Hypersaline conditions select for intracellular ion-accumulation osmoadaptation.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>salt-in strategy</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl optimum high</strong>
-            
+            <code>METPO:2000202</code>
             <p>Salt-in ion accumulation yields a &gt;8% NaCl-optimum setpoint.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>NaCl optimum high</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
               
@@ -246,6 +246,18 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking salt-in ion-accumulation strategy under hypersaline NaCl to the extreme-halophile NaCl-optimum bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1).</p>
         </li>
         
       </ol>
@@ -605,7 +617,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking salt-in ion-accumulation strategy under hypersaline NaCl to a \u003e8% (w/v) NaCl-optimum (extreme halophile).", "edges": [{"description": "Hypersaline conditions select for intracellular ion-accumulation osmoadaptation.", "evidence": [{"notes": "Supports the salt-in strategy in extreme-halophile lineages.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "hypersaline_nacl", "target": "salt_in_strategy"}, {"description": "Salt-in ion accumulation yields a \u003e8% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the \u003e8% optimum as the extreme-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "extreme halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "salt_in_strategy", "target": "nacl_optimum_high_trait"}, {"description": "NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports \u003e8% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_optimum_high_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Hypersaline conditions select for intracellular ion-accumulation osmoadaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the salt-in strategy in extreme-halophile lineages.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "selects for", "predicate_id": null, "source": "hypersaline NaCl", "target": "salt-in strategy"}, {"description": "Salt-in ion accumulation yields a \u003e8% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e8% optimum as the extreme-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "extreme halophile"}], "predicate": "produces", "predicate_id": null, "source": "salt-in strategy", "target": "NaCl optimum high"}, {"description": "NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports \u003e8% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": null, "source": "NaCl optimum high", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_high_extreme_halophile", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External NaCl above ~8% w/v, typical of brines and salt lakes.", "grounding": null, "id": "hypersaline_nacl", "is_orphan": false, "label": "hypersaline NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum exceeding ~8% w/v.", "grounding": "METPO:1000468", "id": "nacl_optimum_high_trait", "is_orphan": false, "label": "NaCl optimum high", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular K+ accumulation balancing high external NaCl osmotic activity.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-optimum-high extreme-halophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking salt-in ion-accumulation strategy under hypersaline NaCl to a \u003e8% (w/v) NaCl-optimum (extreme halophile).", "edges": [{"description": "Hypersaline conditions select for intracellular ion-accumulation osmoadaptation.", "evidence": [{"notes": "Supports the salt-in strategy in extreme-halophile lineages.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline_nacl", "target": "salt_in_strategy"}, {"description": "Salt-in ion accumulation yields a \u003e8% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the \u003e8% optimum as the extreme-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "extreme halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "salt_in_strategy", "target": "nacl_optimum_high_trait"}, {"description": "NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports \u003e8% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_high_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Hypersaline conditions select for intracellular ion-accumulation osmoadaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the salt-in strategy in extreme-halophile lineages.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline NaCl", "target": "salt-in strategy"}, {"description": "Salt-in ion accumulation yields a \u003e8% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e8% optimum as the extreme-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "extreme halophile"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "salt-in strategy", "target": "NaCl optimum high"}, {"description": "NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports \u003e8% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum high", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_high_extreme_halophile", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External NaCl above ~8% w/v, typical of brines and salt lakes.", "grounding": null, "id": "hypersaline_nacl", "is_orphan": false, "label": "hypersaline NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum exceeding ~8% w/v.", "grounding": "METPO:1000468", "id": "nacl_optimum_high_trait", "is_orphan": false, "label": "NaCl optimum high", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular K+ accumulation balancing high external NaCl osmotic activity.", "grounding": null, "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-optimum-high extreme-halophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +628,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>moderate GC-biased gene conversion</strong>
             <span class="edge-predicate">produces</span>
             <strong>GC mid2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>GC mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>GC content</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>GC mid2 is a quantitative bin of the GC-content phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T13:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition (derived from METPO synonym GC_57.0_66.3) and causal graph linking moderate GC-biased gene conversion to this GC bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate GC-biased gene conversion to a GC content of ~57.0\u201366.3% (the threshold encoded by the METPO synonym GC_57.0_66.3 on this record).", "edges": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "moderate_gbgc", "target": "gc_mid2_trait"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "gc_mid2_trait", "target": "gc_content"}], "evidence_rows": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": null, "source": "moderate GC-biased gene conversion", "target": "GC mid2"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": null, "source": "GC mid2", "target": "GC content"}], "graph_id": "gc_mid2_mid_high_gc_bin", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content ~57.0\u201366.3% (per METPO synonym GC_57.0_66.3).", "grounding": "METPO:1000431", "id": "gc_mid2_trait", "is_orphan": false, "label": "GC mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated GC-favoring activity sufficient to elevate GC content into the mid-high range.", "grounding": null, "id": "moderate_gbgc", "is_orphan": false, "label": "moderate GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid2 (METPO 57.0\u201366.3%) mid-high GC bin"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate GC-biased gene conversion to a GC content of ~57.0\u201366.3% (the threshold encoded by the METPO synonym GC_57.0_66.3 on this record).", "edges": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate_gbgc", "target": "gc_mid2_trait"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_mid2_trait", "target": "gc_content"}], "evidence_rows": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate GC-biased gene conversion", "target": "GC mid2"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC mid2", "target": "GC content"}], "graph_id": "gc_mid2_mid_high_gc_bin", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content ~57.0\u201366.3% (per METPO synonym GC_57.0_66.3).", "grounding": "METPO:1000431", "id": "gc_mid2_trait", "is_orphan": false, "label": "GC mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated GC-favoring activity sufficient to elevate GC content into the mid-high range.", "grounding": null, "id": "moderate_gbgc", "is_orphan": false, "label": "moderate GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid2 (METPO 57.0\u201366.3%) mid-high GC bin"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>ambient nutrient concentration</strong>
-            <span class="edge-predicate">triggers</span>
+            <span class="edge-predicate">causes</span>
             <strong>nutrient sensing</strong>
-            
+            <code>biolink:causes</code>
             <p>Ambient nutrient levels are detected by cellular sensing systems.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>nutrient sensing</strong>
             <span class="edge-predicate">controls</span>
             <strong>resource allocation strategy</strong>
-            
+            <code>RO:0002211</code>
             <p>Sensing of nutrient status shifts allocation between growth and maintenance functions.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>resource allocation strategy</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>copiotrophic</strong>
-            
+            <code>METPO:2007400</code>
             <p>Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>resource allocation strategy</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>oligotrophic</strong>
-            
+            <code>METPO:2007400</code>
             <p>Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>copiotrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>nutrient adaptation</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Copiotrophy is a child phenotype of nutrient adaptation.</p>
             <ul>
               
@@ -145,7 +145,7 @@
             <strong>oligotrophic</strong>
             <span class="edge-predicate">is a</span>
             <strong>nutrient adaptation</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Oligotrophy is a child phenotype of nutrient adaptation.</p>
             <ul>
               
@@ -297,6 +297,30 @@
           <time>2026-05-11T22:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph framing nutrient adaptation as a sensing/resource-allocation axis manifesting as copiotrophic and oligotrophic phenotypes.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×2, RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: triggers → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:51Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -656,7 +680,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient nutrient availability to sensing, resource-allocation strategy, and the copiotroph/oligotroph life-history phenotypes that fall under nutrient adaptation.", "edges": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "ambient_nutrient_concentration", "target": "nutrient_sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "id": "edge-2", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "nutrient_sensing", "target": "resource_allocation"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "resource_allocation", "target": "copiotrophic_phenotype"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "resource_allocation", "target": "oligotrophic_phenotype"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "copiotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "oligotrophic_phenotype", "target": "nutrient_adaptation_trait"}], "evidence_rows": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "edge_id": "edge-1", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "triggers", "predicate_id": null, "source": "ambient nutrient concentration", "target": "nutrient sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "predicate": "controls", "predicate_id": null, "source": "nutrient sensing", "target": "resource allocation strategy"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "predicate": "manifests as", "predicate_id": null, "source": "resource allocation strategy", "target": "copiotrophic"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "manifests as", "predicate_id": null, "source": "resource allocation strategy", "target": "oligotrophic"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "predicate": "is a", "predicate_id": null, "source": "copiotrophic", "target": "nutrient adaptation"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "predicate": "is a", "predicate_id": null, "source": "oligotrophic", "target": "nutrient adaptation"}], "graph_id": "nutrient_adaptation_life_history_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Concentration of carbon, nitrogen, and phosphorus available in the habitat.", "grounding": null, "id": "ambient_nutrient_concentration", "is_orphan": false, "label": "ambient nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring fast growth in nutrient-rich conditions.", "grounding": "METPO:1000642", "id": "copiotrophic_phenotype", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Physiological and metabolic adaptation to specific nutrient availability regimes.", "grounding": "METPO:1000731", "id": "nutrient_adaptation_trait", "is_orphan": false, "label": "nutrient adaptation", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular detection of nutrient status that adjusts gene expression and growth.", "grounding": null, "id": "nutrient_sensing", "is_orphan": false, "label": "nutrient sensing", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring efficient growth in nutrient-poor conditions.", "grounding": "METPO:1000654", "id": "oligotrophic_phenotype", "is_orphan": false, "label": "oligotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Allocation of cellular resources between rapid growth machinery and high-affinity uptake or stress tolerance.", "grounding": null, "id": "resource_allocation", "is_orphan": false, "label": "resource allocation strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Nutrient adaptation life-history axis"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient nutrient availability to sensing, resource-allocation strategy, and the copiotroph/oligotroph life-history phenotypes that fall under nutrient adaptation.", "edges": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient_nutrient_concentration", "target": "nutrient_sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "id": "edge-2", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient_sensing", "target": "resource_allocation"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "copiotrophic_phenotype"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource_allocation", "target": "oligotrophic_phenotype"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic_phenotype", "target": "nutrient_adaptation_trait"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic_phenotype", "target": "nutrient_adaptation_trait"}], "evidence_rows": [{"description": "Ambient nutrient levels are detected by cellular sensing systems.", "edge_id": "edge-1", "evidence": [{"notes": "Supports nutrient concentration as the environmental driver of the adaptation axis.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) or low (oligotrophic) nutrient concentrations"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "ambient nutrient concentration", "target": "nutrient sensing"}, {"description": "Sensing of nutrient status shifts allocation between growth and maintenance functions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports nutrient regime as a driver of resource-allocation strategy.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "selection for efficient use of nutrients"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "nutrient sensing", "target": "resource allocation strategy"}, {"description": "Allocation favoring rapid growth machinery yields a copiotrophic phenotype under nutrient-rich conditions.", "edge_id": "edge-3", "evidence": [{"notes": "Supports copiotrophy as one expression of nutrient adaptation.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "high (copiotrophic) nutrient concentrations"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "target": "copiotrophic"}, {"description": "Allocation favoring high-affinity uptake and streamlining yields an oligotrophic phenotype under nutrient-poor conditions.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oligotrophy as a streamlining-driven expression of nutrient adaptation.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resource allocation strategy", "target": "oligotrophic"}, {"description": "Copiotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports copiotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "copiotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "copiotrophic", "target": "nutrient adaptation"}, {"description": "Oligotrophy is a child phenotype of nutrient adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports oligotrophy as a recognized nutrient-adaptation phenotype.", "reference": "DOI:10.1073/pnas.0903507106", "snippet": "oligotrophic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "oligotrophic", "target": "nutrient adaptation"}], "graph_id": "nutrient_adaptation_life_history_axis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Concentration of carbon, nitrogen, and phosphorus available in the habitat.", "grounding": null, "id": "ambient_nutrient_concentration", "is_orphan": false, "label": "ambient nutrient concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring fast growth in nutrient-rich conditions.", "grounding": "METPO:1000642", "id": "copiotrophic_phenotype", "is_orphan": false, "label": "copiotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Physiological and metabolic adaptation to specific nutrient availability regimes.", "grounding": "METPO:1000731", "id": "nutrient_adaptation_trait", "is_orphan": false, "label": "nutrient adaptation", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular detection of nutrient status that adjusts gene expression and growth.", "grounding": null, "id": "nutrient_sensing", "is_orphan": false, "label": "nutrient sensing", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Adaptation favoring efficient growth in nutrient-poor conditions.", "grounding": "METPO:1000654", "id": "oligotrophic_phenotype", "is_orphan": false, "label": "oligotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Allocation of cellular resources between rapid growth machinery and high-affinity uptake or stress tolerance.", "grounding": null, "id": "resource_allocation", "is_orphan": false, "label": "resource allocation strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Nutrient adaptation life-history axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -667,10 +691,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

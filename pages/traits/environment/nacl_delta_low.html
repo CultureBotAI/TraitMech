@@ -60,7 +60,7 @@
             <strong>limited osmoadaptive flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl delta low</strong>
-            
+            <code>METPO:2000202</code>
             <p>Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl delta low</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl delta low is a quantitative bin of the NaCl-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking limited osmoadaptive flexibility to the stenohaline NaCl-delta bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking limited osmoadaptive flexibility to a narrow NaCl growth breadth (\u2264 ~1% w/v).", "edges": [{"description": "Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.", "evidence": [{"notes": "Supports limited osmoadaptive flexibility as the basis of stenohaline breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "limited_osmoadaptive_flexibility", "target": "nacl_delta_low_trait"}, {"description": "NaCl delta low is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports a narrow breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_delta_low_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited osmoadaptive flexibility as the basis of stenohaline breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": null, "source": "limited osmoadaptive flexibility", "target": "NaCl delta low"}, {"description": "NaCl delta low is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a narrow breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl delta low", "target": "NaCl delta"}], "graph_id": "nacl_delta_low_stenohaline", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Narrow capacity to remodel osmolyte pools and ion transport across ambient salinities.", "grounding": null, "id": "limited_osmoadaptive_flexibility", "is_orphan": false, "label": "limited osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth \u2264 ~1% w/v.", "grounding": "METPO:1000479", "id": "nacl_delta_low_trait", "is_orphan": false, "label": "NaCl delta low", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-delta-low stenohaline breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking limited osmoadaptive flexibility to a narrow NaCl growth breadth (\u2264 ~1% w/v).", "edges": [{"description": "Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.", "evidence": [{"notes": "Supports limited osmoadaptive flexibility as the basis of stenohaline breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited_osmoadaptive_flexibility", "target": "nacl_delta_low_trait"}, {"description": "NaCl delta low is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports a narrow breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta_low_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Limited osmoadaptive flexibility yields a narrow NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited osmoadaptive flexibility as the basis of stenohaline breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited osmoadaptive flexibility", "target": "NaCl delta low"}, {"description": "NaCl delta low is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a narrow breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta low", "target": "NaCl delta"}], "graph_id": "nacl_delta_low_stenohaline", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Narrow capacity to remodel osmolyte pools and ion transport across ambient salinities.", "grounding": null, "id": "limited_osmoadaptive_flexibility", "is_orphan": false, "label": "limited osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth \u2264 ~1% w/v.", "grounding": "METPO:1000479", "id": "nacl_delta_low_trait", "is_orphan": false, "label": "NaCl delta low", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-delta-low stenohaline breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

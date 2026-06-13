@@ -60,7 +60,7 @@
             <strong>reduced cell-wall patterning</strong>
             <span class="edge-predicate">enables</span>
             <strong>stochastic growth</strong>
-            
+            <code>RO:0002327</code>
             <p>Reduced patterning permits stochastic growth-zone placement.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>stochastic growth</strong>
             <span class="edge-predicate">produces</span>
             <strong>variable cell geometry</strong>
-            
+            <code>METPO:2000202</code>
             <p>Stochastic growth produces variable cell geometry.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>variable cell geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>irregular shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Variable geometry across cells manifests the irregular-shaped trait.</p>
             <ul>
               
@@ -244,6 +244,18 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking reduced cell-wall patterning and stochastic growth to irregular morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -603,7 +615,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking reduced or stochastic cell-wall patterning to inconsistent, irregular cell geometry.", "edges": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "reduced_wall_patterning", "target": "stochastic_growth"}, {"description": "Stochastic growth produces variable cell geometry.", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "stochastic_growth", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "variable_geometry", "target": "irregular_shaped_trait"}], "evidence_rows": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "edge_id": "edge-1", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "enables", "predicate_id": null, "source": "reduced cell-wall patterning", "target": "stochastic growth"}, {"description": "Stochastic growth produces variable cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "predicate": "produces", "predicate_id": null, "source": "stochastic growth", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": null, "source": "variable cell geometry", "target": "irregular shaped"}], "graph_id": "irregular_shaped_loss_of_patterning", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Inconsistent cell geometry across a population.", "grounding": "METPO:1000691", "id": "irregular_shaped_trait", "is_orphan": false, "label": "irregular shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Diminished spatial control of peptidoglycan synthesis.", "grounding": null, "id": "reduced_wall_patterning", "is_orphan": false, "label": "reduced cell-wall patterning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-by-cell variation in growth-zone placement and extent.", "grounding": null, "id": "stochastic_growth", "is_orphan": false, "label": "stochastic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Irregular-shape loss of wall patterning"}];
+  var graphs = [{"description": "DOI-backed graph linking reduced or stochastic cell-wall patterning to inconsistent, irregular cell geometry.", "edges": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced_wall_patterning", "target": "stochastic_growth"}, {"description": "Stochastic growth produces variable cell geometry.", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic_growth", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "irregular_shaped_trait"}], "evidence_rows": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "edge_id": "edge-1", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced cell-wall patterning", "target": "stochastic growth"}, {"description": "Stochastic growth produces variable cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic growth", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "target": "irregular shaped"}], "graph_id": "irregular_shaped_loss_of_patterning", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Inconsistent cell geometry across a population.", "grounding": "METPO:1000691", "id": "irregular_shaped_trait", "is_orphan": false, "label": "irregular shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Diminished spatial control of peptidoglycan synthesis.", "grounding": null, "id": "reduced_wall_patterning", "is_orphan": false, "label": "reduced cell-wall patterning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-by-cell variation in growth-zone placement and extent.", "grounding": null, "id": "stochastic_growth", "is_orphan": false, "label": "stochastic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Irregular-shape loss of wall patterning"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +626,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

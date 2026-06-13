@@ -77,7 +77,7 @@
             <strong>growth-rate size law</strong>
             <span class="edge-predicate">produces</span>
             <strong>cell length medium</strong>
-            
+            <code>METPO:2000202</code>
             <p>At moderate growth rates the size law produces medium cell length.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>cell length medium</strong>
             <span class="edge-predicate">is a</span>
             <strong>cell length</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Medium cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
               
@@ -244,6 +244,12 @@
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking moderate growth rate and the growth-rate size law to medium cell length (2–3 μm).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -603,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate elongation rate and the growth-rate size law to a medium cell-length range (2\u20133 \u03bcm).", "edges": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "moderate_growth_rate", "target": "growth_rate_size_law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "growth_rate_size_law", "target": "cell_length_medium_trait"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "cell_length_medium_trait", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "feeds into", "predicate_id": null, "source": "moderate growth rate", "target": "growth-rate size law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "produces", "predicate_id": null, "source": "growth-rate size law", "target": "cell length medium"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": null, "source": "cell length medium", "target": "cell length"}], "graph_id": "cell_length_medium_growth_rate", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length approximately 2\u20133 \u03bcm.", "grounding": "METPO:1000885", "id": "cell_length_medium_trait", "is_orphan": false, "label": "cell length medium", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Empirical scaling of average cell size with growth rate.", "grounding": null, "id": "growth_rate_size_law", "is_orphan": false, "label": "growth-rate size law", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Moderate exponential growth rate typical of common bacterial culture.", "grounding": null, "id": "moderate_growth_rate", "is_orphan": false, "label": "moderate growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Medium cell-length under moderate growth"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate elongation rate and the growth-rate size law to a medium cell-length range (2\u20133 \u03bcm).", "edges": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds into", "predicate_id": null, "source": "moderate_growth_rate", "target": "growth_rate_size_law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "growth_rate_size_law", "target": "cell_length_medium_trait"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_length_medium_trait", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Moderate exponential growth rates engage the growth-rate size law.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth rate as the input to the size-scaling relationship.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "feeds into", "predicate_id": null, "source": "moderate growth rate", "target": "growth-rate size law"}, {"description": "At moderate growth rates the size law produces medium cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports medium length as the expected size at moderate growth rates.", "reference": "DOI:10.1126/science.aaa1313", "snippet": "cell size scales with growth rate"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "growth-rate size law", "target": "cell length medium"}, {"description": "Medium cell length is a quantitative bin of the cell-length phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports medium length as a value within the regulated cell-length distribution.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell length medium", "target": "cell length"}], "graph_id": "cell_length_medium_growth_rate", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell length approximately 2\u20133 \u03bcm.", "grounding": "METPO:1000885", "id": "cell_length_medium_trait", "is_orphan": false, "label": "cell length medium", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated longer cellular dimension.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Empirical scaling of average cell size with growth rate.", "grounding": null, "id": "growth_rate_size_law", "is_orphan": false, "label": "growth-rate size law", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Moderate exponential growth rate typical of common bacterial culture.", "grounding": null, "id": "moderate_growth_rate", "is_orphan": false, "label": "moderate growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Medium cell-length under moderate growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

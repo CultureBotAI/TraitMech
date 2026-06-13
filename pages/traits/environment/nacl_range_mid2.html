@@ -60,7 +60,7 @@
             <strong>robust osmoadaptive tolerance</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl range mid2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Robust osmoadaptive tolerance yields a 3–8% NaCl growth range.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>NaCl range mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl range</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl range mid2 is a quantitative bin of the NaCl-range phenotype.</p>
             <ul>
               
@@ -231,6 +231,12 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking robust osmoadaptive tolerance to the moderate-halophile NaCl-range bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -590,7 +596,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking robust osmoadaptive tolerance to a 3\u20138% (w/v) NaCl growth range.", "edges": [{"description": "Robust osmoadaptive tolerance yields a 3\u20138% NaCl growth range.", "evidence": [{"notes": "Supports the 3\u20138% range as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "robust_osmoadaptive_tolerance", "target": "nacl_range_mid2_trait"}, {"description": "NaCl range mid2 is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports the 3\u20138% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_range_mid2_trait", "target": "nacl_range"}], "evidence_rows": [{"description": "Robust osmoadaptive tolerance yields a 3\u20138% NaCl growth range.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the 3\u20138% range as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "produces", "predicate_id": null, "source": "robust osmoadaptive tolerance", "target": "NaCl range mid2"}, {"description": "NaCl range mid2 is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": null, "source": "NaCl range mid2", "target": "NaCl range"}], "graph_id": "nacl_range_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range approximately 3\u20138% w/v.", "grounding": "METPO:1000471", "id": "nacl_range_mid2_trait", "is_orphan": false, "label": "NaCl range mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Strong compatible-solute and ion-balance capacity sustaining growth at saline-lake / salt-marsh NaCl levels.", "grounding": null, "id": "robust_osmoadaptive_tolerance", "is_orphan": false, "label": "robust osmoadaptive tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-range-mid2 moderate-halophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking robust osmoadaptive tolerance to a 3\u20138% (w/v) NaCl growth range.", "edges": [{"description": "Robust osmoadaptive tolerance yields a 3\u20138% NaCl growth range.", "evidence": [{"notes": "Supports the 3\u20138% range as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "robust_osmoadaptive_tolerance", "target": "nacl_range_mid2_trait"}, {"description": "NaCl range mid2 is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports the 3\u20138% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range_mid2_trait", "target": "nacl_range"}], "evidence_rows": [{"description": "Robust osmoadaptive tolerance yields a 3\u20138% NaCl growth range.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the 3\u20138% range as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "robust osmoadaptive tolerance", "target": "NaCl range mid2"}, {"description": "NaCl range mid2 is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range mid2", "target": "NaCl range"}], "graph_id": "nacl_range_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range approximately 3\u20138% w/v.", "grounding": "METPO:1000471", "id": "nacl_range_mid2_trait", "is_orphan": false, "label": "NaCl range mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Strong compatible-solute and ion-balance capacity sustaining growth at saline-lake / salt-marsh NaCl levels.", "grounding": null, "id": "robust_osmoadaptive_tolerance", "is_orphan": false, "label": "robust osmoadaptive tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-range-mid2 moderate-halophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -601,10 +607,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

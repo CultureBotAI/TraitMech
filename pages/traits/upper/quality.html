@@ -30,19 +30,19 @@
     </p>
     <h1>quality</h1>
     <p class="curie"><code>METPO:1000188</code> · CLASS · REVIEWED</p>
-
+    
     <p class="definition">A characteristic of an entity that depends on the entity&#39;s existence, size, color, and physiological traits.</p>
-
+    
   </header>
 
-
+  
   <section class="causal-graphs">
-
-
+    
+    
     <div class="card causal-graph-card">
       <h2>Quality upper-class child context</h2>
       <p class="meta">DOI-backed upper-ontology context graph linking quality to phenotype and biosafety-level child classes while excluding the genomic GC content child from this batch.</p>
-
+      
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -51,199 +51,225 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-
+      
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-
+          
           <li id="pathograph-1-edge-1">
             <strong>quality</strong>
             <span class="edge-predicate">characterizes</span>
             <strong>material entity</strong>
-
+            
             <p>Qualities characterize or inhere in entities.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1186/gb-2010-11-1-r2</code>
                 <span class="evidence-snippet">specific characteristic or quality of that entity</span>
                 <span class="meta">Supports entity-dependent qualities in phenotype descriptions.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
           <li id="pathograph-1-edge-2">
             <strong>phenotype</strong>
             <span class="edge-predicate">is a</span>
             <strong>quality</strong>
-
+            <code>rdfs:subClassOf</code>
             <p>Phenotype is a quality-derived child class in TraitMech.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1186/gb-2010-11-1-r2</code>
                 <span class="evidence-snippet">Phenotype and Trait ontology</span>
                 <span class="meta">Supports phenotype and trait descriptions using quality classes.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
           <li id="pathograph-1-edge-3">
             <strong>biosafety level</strong>
             <span class="edge-predicate">is a</span>
             <strong>quality</strong>
-
+            <code>rdfs:subClassOf</code>
             <p>Biosafety level is a reviewed non-genomic child quality in TraitMech&#39;s ecology category.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1146/annurev.micro.62.081307.162938</code>
                 <span class="evidence-snippet">virulence factors</span>
                 <span class="meta">Supports hazard-related biological-agent properties as inputs to biosafety-level classification.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
         </ul>
       </div>
-
+      
     </div>
-
+    
   </section>
-
+  
 
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
-
+        
         <dt>Definition source</dt><dd>DOI:10.1186/gb-2010-11-1-r2</dd>
-
-
+        
+        
       </dl>
     </div>
 
+    
 
-
-
+    
     <div class="card">
-      <h2>Children (3)</h2>
+      <h2>Children (13)</h2>
       <ul>
-
+        
+        <li><a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system <code>traitmech:000094</code></a></li>
+        
         <li><a href="../../traits/genomics/gc_content.html">GC content <code>METPO:1000127</code></a></li>
-
+        
+        <li><a href="../../traits/genomics/gc_skew.html">GC skew <code>traitmech:000097</code></a></li>
+        
         <li><a href="../../traits/ecology/biosafety_level.html">biosafety level <code>METPO:1001101</code></a></li>
-
+        
+        <li><a href="../../traits/genomics/codon_usage_bias.html">codon usage bias <code>traitmech:000096</code></a></li>
+        
+        <li><a href="../../traits/genomics/genome_size.html">genome size <code>traitmech:000098</code></a></li>
+        
+        <li><a href="../../traits/genomics/genome_streamlining.html">genome streamlining <code>traitmech:000099</code></a></li>
+        
+        <li><a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element <code>traitmech:000089</code></a></li>
+        
+        <li><a href="../../traits/genomics/pangenome_openness.html">pangenome openness <code>traitmech:000102</code></a></li>
+        
         <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a></li>
-
+        
+        <li><a href="../../traits/genomics/ploidy.html">ploidy <code>traitmech:000100</code></a></li>
+        
+        <li><a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number <code>traitmech:000101</code></a></li>
+        
+        <li><a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system <code>traitmech:000095</code></a></li>
+        
       </ul>
     </div>
+    
 
+    
 
-
-
-
+    
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-
+      
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-
+        
         <li><code>METPO:1000188</code> <span class="dim-preview">[-0.373, -2.738, -0.308, -0.415, …]</span></li>
-
+        
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-
+      
     </div>
 
-
+    
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-
+        
         <li>
           <span class="nn-cat">upper</span>
           <a href="../../traits/upper/phenotype.html">phenotype</a>
           <span class="sim">0.841</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits</a>
           <span class="sim">0.810</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_phenotype_with_numerical_limits.html">pH phenotype with numerical limits</a>
           <span class="sim">0.802</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
           <span class="sim">0.797</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range.html">temperature range</a>
           <span class="sim">0.793</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/gram_stain.html">gram stain</a>
           <span class="sim">0.793</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/nacl_optimum.html">NaCl optimum</a>
           <span class="sim">0.793</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range.html">pH range</a>
           <span class="sim">0.793</span>
         </li>
-
+        
       </ul>
     </div>
+    
 
+    
 
-
-
-
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-
+        
         <li>
           <time>2026-05-05T01:35:46.812123+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-
+        
         <li>
           <time>2026-05-15T00:35:00-07:00</time> ·
           <strong>CURATED_UPPER_CONTEXT</strong> · codex
           <p class="changes">Reviewed quality as an upper classifier and added a DOI-backed context graph covering non-genomic child classes phenotype and biosafety level.</p>
         </li>
-
+        
+        <li>
+          <time>2026-05-20T03:35:32Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×2).</p>
+        </li>
+        
       </ol>
     </div>
-
+    
   </section>
 </article>
 
@@ -272,12 +298,12 @@
     </dl>
   </div>
 
-
+  
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-
+  
 </aside>
 </div>
 
@@ -598,7 +624,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed upper-ontology context graph linking quality to phenotype and biosafety-level child classes while excluding the genomic GC content child from this batch.", "edges": [{"description": "Qualities characterize or inhere in entities.", "evidence": [{"notes": "Supports entity-dependent qualities in phenotype descriptions.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "specific characteristic or quality of that entity"}], "id": "edge-1", "is_orphan": false, "predicate": "characterizes", "predicate_id": null, "source": "quality_trait", "target": "material_entity"}, {"description": "Phenotype is a quality-derived child class in TraitMech.", "evidence": [{"notes": "Supports phenotype and trait descriptions using quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "Phenotype and Trait ontology"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "phenotype_trait", "target": "quality_trait"}, {"description": "Biosafety level is a reviewed non-genomic child quality in TraitMech\u0027s ecology category.", "evidence": [{"notes": "Supports hazard-related biological-agent properties as inputs to biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "biosafety_level_trait", "target": "quality_trait"}], "evidence_rows": [{"description": "Qualities characterize or inhere in entities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports entity-dependent qualities in phenotype descriptions.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "specific characteristic or quality of that entity"}], "predicate": "characterizes", "predicate_id": null, "source": "quality", "target": "material entity"}, {"description": "Phenotype is a quality-derived child class in TraitMech.", "edge_id": "edge-2", "evidence": [{"notes": "Supports phenotype and trait descriptions using quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "Phenotype and Trait ontology"}], "predicate": "is a", "predicate_id": null, "source": "phenotype", "target": "quality"}, {"description": "Biosafety level is a reviewed non-genomic child quality in TraitMech\u0027s ecology category.", "edge_id": "edge-3", "evidence": [{"notes": "Supports hazard-related biological-agent properties as inputs to biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": null, "source": "biosafety level", "target": "quality"}], "graph_id": "quality_upper_child_context", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ecology child class that classifies biological-agent hazard and containment level.", "grounding": "METPO:1001101", "id": "biosafety_level_trait", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Entity that can bear a quality.", "grounding": "METPO:1000186", "id": "material_entity", "is_orphan": false, "label": "material entity", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "TraitMech child class for observable organismal qualities.", "grounding": "METPO:1000059", "id": "phenotype_trait", "is_orphan": false, "label": "phenotype", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Upper class for entity-dependent characteristics.", "grounding": "METPO:1000188", "id": "quality_trait", "is_orphan": false, "label": "quality", "node_type": "TRAIT", "xrefs": []}], "title": "Quality upper-class child context"}];
+  var graphs = [{"description": "DOI-backed upper-ontology context graph linking quality to phenotype and biosafety-level child classes while excluding the genomic GC content child from this batch.", "edges": [{"description": "Qualities characterize or inhere in entities.", "evidence": [{"notes": "Supports entity-dependent qualities in phenotype descriptions.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "specific characteristic or quality of that entity"}], "id": "edge-1", "is_orphan": false, "predicate": "characterizes", "predicate_id": null, "source": "quality_trait", "target": "material_entity"}, {"description": "Phenotype is a quality-derived child class in TraitMech.", "evidence": [{"notes": "Supports phenotype and trait descriptions using quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "Phenotype and Trait ontology"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype_trait", "target": "quality_trait"}, {"description": "Biosafety level is a reviewed non-genomic child quality in TraitMech\u0027s ecology category.", "evidence": [{"notes": "Supports hazard-related biological-agent properties as inputs to biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety_level_trait", "target": "quality_trait"}], "evidence_rows": [{"description": "Qualities characterize or inhere in entities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports entity-dependent qualities in phenotype descriptions.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "specific characteristic or quality of that entity"}], "predicate": "characterizes", "predicate_id": null, "source": "quality", "target": "material entity"}, {"description": "Phenotype is a quality-derived child class in TraitMech.", "edge_id": "edge-2", "evidence": [{"notes": "Supports phenotype and trait descriptions using quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "Phenotype and Trait ontology"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype", "target": "quality"}, {"description": "Biosafety level is a reviewed non-genomic child quality in TraitMech\u0027s ecology category.", "edge_id": "edge-3", "evidence": [{"notes": "Supports hazard-related biological-agent properties as inputs to biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level", "target": "quality"}], "graph_id": "quality_upper_child_context", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ecology child class that classifies biological-agent hazard and containment level.", "grounding": "METPO:1001101", "id": "biosafety_level_trait", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Entity that can bear a quality.", "grounding": "METPO:1000186", "id": "material_entity", "is_orphan": false, "label": "material entity", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "TraitMech child class for observable organismal qualities.", "grounding": "METPO:1000059", "id": "phenotype_trait", "is_orphan": false, "label": "phenotype", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Upper class for entity-dependent characteristics.", "grounding": "METPO:1000188", "id": "quality_trait", "is_orphan": false, "label": "quality", "node_type": "TRAIT", "xrefs": []}], "title": "Quality upper-class child context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -609,10 +635,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:38 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

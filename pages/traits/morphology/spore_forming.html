@@ -60,7 +60,7 @@
             <strong>forespore</strong>
             <span class="edge-predicate">develops into</span>
             <strong>resistant endospore</strong>
-            
+            <code>biolink:develops_into</code>
             <p>The forespore compartment matures into a resistant endospore.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>spore cortex</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>resistant endospore</strong>
-            
+            <code>RO:0002326</code>
             <p>Cortex synthesis contributes to endospore structure and resistance.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>dipicolinic acid</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>resistant endospore</strong>
-            
+            <code>RO:0002326</code>
             <p>Dipicolinic acid contributes to spore resistance and stability.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>resistant endospore</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>spore forming</strong>
-            
+            <code>METPO:2007400</code>
             <p>Production of resistant endospores manifests the spore-forming trait.</p>
             <ul>
               
@@ -286,6 +286,24 @@
           <time>2026-05-11T21:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced definition source with DOI-backed endospore source and added causal graph for forespore development, cortex, coat, dipicolinic acid, and resistant endospore formation.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:24Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:develops_into×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
         </li>
         
       </ol>
@@ -645,7 +663,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking forespore development to cortex synthesis, coat assembly, dipicolinic acid accumulation, and the spore-forming phenotype.", "edges": [{"description": "The forespore compartment matures into a resistant endospore.", "evidence": [{"notes": "Supports forespore development into the spore.", "reference": "DOI:10.1146/annurev.genet.30.1.297", "snippet": "within which a spore is produced"}], "id": "edge-1", "is_orphan": false, "predicate": "develops into", "predicate_id": null, "source": "forespore", "target": "resistant_endospore"}, {"description": "Cortex synthesis contributes to endospore structure and resistance.", "evidence": [{"notes": "Supports specialized spore layers as functional components of the endospore.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "spore surface layers"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "spore_cortex", "target": "resistant_endospore"}, {"description": "The multilayered coat protects and structures the endospore surface.", "evidence": [{"notes": "Supports the spore coat as a protective assembly.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "assembly and functions of the multilayered coat"}], "id": "edge-3", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "spore_coat", "target": "resistant_endospore"}, {"description": "Dipicolinic acid contributes to spore resistance and stability.", "evidence": [{"notes": "Supports chemical and structural factors in Bacillus spore resistance.", "reference": "DOI:10.1111/j.1365-2672.2005.02736.x", "snippet": "mechanisms are responsible for the resistance of spores"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "dipicolinic_acid", "target": "resistant_endospore"}, {"description": "Production of resistant endospores manifests the spore-forming trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "production of a highly resistant dormant cell type known as the spore"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "resistant_endospore", "target": "spore_forming_trait"}], "evidence_rows": [{"description": "The forespore compartment matures into a resistant endospore.", "edge_id": "edge-1", "evidence": [{"notes": "Supports forespore development into the spore.", "reference": "DOI:10.1146/annurev.genet.30.1.297", "snippet": "within which a spore is produced"}], "predicate": "develops into", "predicate_id": null, "source": "forespore", "target": "resistant endospore"}, {"description": "Cortex synthesis contributes to endospore structure and resistance.", "edge_id": "edge-2", "evidence": [{"notes": "Supports specialized spore layers as functional components of the endospore.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "spore surface layers"}], "predicate": "contributes to", "predicate_id": null, "source": "spore cortex", "target": "resistant endospore"}, {"description": "The multilayered coat protects and structures the endospore surface.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the spore coat as a protective assembly.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "assembly and functions of the multilayered coat"}], "predicate": "protects", "predicate_id": null, "source": "spore coat", "target": "resistant endospore"}, {"description": "Dipicolinic acid contributes to spore resistance and stability.", "edge_id": "edge-4", "evidence": [{"notes": "Supports chemical and structural factors in Bacillus spore resistance.", "reference": "DOI:10.1111/j.1365-2672.2005.02736.x", "snippet": "mechanisms are responsible for the resistance of spores"}], "predicate": "contributes to", "predicate_id": null, "source": "dipicolinic acid", "target": "resistant endospore"}, {"description": "Production of resistant endospores manifests the spore-forming trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "production of a highly resistant dormant cell type known as the spore"}], "predicate": "manifests as", "predicate_id": null, "source": "resistant endospore", "target": "spore forming"}], "graph_id": "spore_forming_endospore_assembly", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Pyridine dicarboxylic acid enriched in bacterial spores.", "grounding": null, "id": "dipicolinic_acid", "is_orphan": false, "label": "dipicolinic acid", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Developing spore compartment within the sporangium.", "grounding": null, "id": "forespore", "is_orphan": false, "label": "forespore", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fce7f3", "description": "Dormant stress-resistant spore produced by endospore-forming bacteria.", "grounding": null, "id": "resistant_endospore", "is_orphan": false, "label": "resistant endospore", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#ede9fe", "description": "Multilayered proteinaceous protective surface of the endospore.", "grounding": null, "id": "spore_coat", "is_orphan": false, "label": "spore coat", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Specialized peptidoglycan layer surrounding the spore core.", "grounding": null, "id": "spore_cortex", "is_orphan": false, "label": "spore cortex", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to produce bacterial endospores.", "grounding": "METPO:1000871", "id": "spore_forming_trait", "is_orphan": false, "label": "spore forming", "node_type": "TRAIT", "xrefs": []}], "title": "Spore-forming endospore assembly mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking forespore development to cortex synthesis, coat assembly, dipicolinic acid accumulation, and the spore-forming phenotype.", "edges": [{"description": "The forespore compartment matures into a resistant endospore.", "evidence": [{"notes": "Supports forespore development into the spore.", "reference": "DOI:10.1146/annurev.genet.30.1.297", "snippet": "within which a spore is produced"}], "id": "edge-1", "is_orphan": false, "predicate": "develops into", "predicate_id": "biolink:develops_into", "source": "forespore", "target": "resistant_endospore"}, {"description": "Cortex synthesis contributes to endospore structure and resistance.", "evidence": [{"notes": "Supports specialized spore layers as functional components of the endospore.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "spore surface layers"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "spore_cortex", "target": "resistant_endospore"}, {"description": "The multilayered coat protects and structures the endospore surface.", "evidence": [{"notes": "Supports the spore coat as a protective assembly.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "assembly and functions of the multilayered coat"}], "id": "edge-3", "is_orphan": false, "predicate": "protects", "predicate_id": null, "source": "spore_coat", "target": "resistant_endospore"}, {"description": "Dipicolinic acid contributes to spore resistance and stability.", "evidence": [{"notes": "Supports chemical and structural factors in Bacillus spore resistance.", "reference": "DOI:10.1111/j.1365-2672.2005.02736.x", "snippet": "mechanisms are responsible for the resistance of spores"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dipicolinic_acid", "target": "resistant_endospore"}, {"description": "Production of resistant endospores manifests the spore-forming trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "production of a highly resistant dormant cell type known as the spore"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resistant_endospore", "target": "spore_forming_trait"}], "evidence_rows": [{"description": "The forespore compartment matures into a resistant endospore.", "edge_id": "edge-1", "evidence": [{"notes": "Supports forespore development into the spore.", "reference": "DOI:10.1146/annurev.genet.30.1.297", "snippet": "within which a spore is produced"}], "predicate": "develops into", "predicate_id": "biolink:develops_into", "source": "forespore", "target": "resistant endospore"}, {"description": "Cortex synthesis contributes to endospore structure and resistance.", "edge_id": "edge-2", "evidence": [{"notes": "Supports specialized spore layers as functional components of the endospore.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "spore surface layers"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "spore cortex", "target": "resistant endospore"}, {"description": "The multilayered coat protects and structures the endospore surface.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the spore coat as a protective assembly.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "assembly and functions of the multilayered coat"}], "predicate": "protects", "predicate_id": null, "source": "spore coat", "target": "resistant endospore"}, {"description": "Dipicolinic acid contributes to spore resistance and stability.", "edge_id": "edge-4", "evidence": [{"notes": "Supports chemical and structural factors in Bacillus spore resistance.", "reference": "DOI:10.1111/j.1365-2672.2005.02736.x", "snippet": "mechanisms are responsible for the resistance of spores"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dipicolinic acid", "target": "resistant endospore"}, {"description": "Production of resistant endospores manifests the spore-forming trait.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2921", "snippet": "production of a highly resistant dormant cell type known as the spore"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "resistant endospore", "target": "spore forming"}], "graph_id": "spore_forming_endospore_assembly", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Pyridine dicarboxylic acid enriched in bacterial spores.", "grounding": null, "id": "dipicolinic_acid", "is_orphan": false, "label": "dipicolinic acid", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Developing spore compartment within the sporangium.", "grounding": null, "id": "forespore", "is_orphan": false, "label": "forespore", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fce7f3", "description": "Dormant stress-resistant spore produced by endospore-forming bacteria.", "grounding": null, "id": "resistant_endospore", "is_orphan": false, "label": "resistant endospore", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#ede9fe", "description": "Multilayered proteinaceous protective surface of the endospore.", "grounding": null, "id": "spore_coat", "is_orphan": false, "label": "spore coat", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Specialized peptidoglycan layer surrounding the spore core.", "grounding": null, "id": "spore_cortex", "is_orphan": false, "label": "spore cortex", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to produce bacterial endospores.", "grounding": "METPO:1000871", "id": "spore_forming_trait", "is_orphan": false, "label": "spore forming", "node_type": "TRAIT", "xrefs": []}], "title": "Spore-forming endospore assembly mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -656,10 +674,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

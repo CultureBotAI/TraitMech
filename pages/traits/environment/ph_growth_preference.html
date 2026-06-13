@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>environmental pH</strong>
-            <span class="edge-predicate">influences</span>
+            <span class="edge-predicate">regulates</span>
             <strong>pH growth preference</strong>
-            
+            <code>RO:0002211</code>
             <p>Environmental pH determines which pH conditions support growth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>acidic external pH</strong>
             <span class="edge-predicate">challenges</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>METPO:2007406</code>
             <p>Acidic environments impose inward proton stress that must be managed for growth.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>alkaline external pH</strong>
             <span class="edge-predicate">challenges</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>METPO:2007406</code>
             <p>Alkaline environments require active proton accumulation or generation to maintain cytoplasmic pH.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>pH sensing</strong>
             <span class="edge-predicate">regulates</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            
+            <code>RO:0002211</code>
             <p>pH-sensing and signalling systems regulate homeostasis responses to acid or alkali.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>cytoplasmic pH homeostasis</strong>
             <span class="edge-predicate">enables</span>
             <strong>pH growth preference</strong>
-            
+            <code>RO:0002327</code>
             <p>Growth at preferred pH depends on maintaining intracellular pH compatible with cellular processes.</p>
             <ul>
               
@@ -294,6 +294,42 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed pH growth preference trait and added DOI-backed evidence and causal graph for pH sensing and cytoplasmic pH homeostasis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1, RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007406×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:38:00Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0030641×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001428×1, PATO:0001429×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: influences → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -653,7 +689,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental pH, pH sensing, and cytoplasmic pH homeostasis to growth preference phenotypes.", "edges": [{"description": "Environmental pH determines which pH conditions support growth.", "evidence": [{"notes": "Review frames pH growth as a response to external pH outside the cytoplasmic range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "tolerate or grow at external pH values"}], "id": "edge-1", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "environmental_ph", "target": "ph_growth_preference_trait"}, {"description": "Acidic environments impose inward proton stress that must be managed for growth.", "evidence": [{"notes": "Supports active mechanisms under acid challenge.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "acid challenge conditions include increased expression and activity"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "acidic_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline environments require active proton accumulation or generation to maintain cytoplasmic pH.", "evidence": [{"notes": "Supports alkaline-pH homeostasis as a growth-enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "active proton accumulation or generation in the cytoplasm"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": null, "source": "alkaline_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "pH-sensing and signalling systems regulate homeostasis responses to acid or alkali.", "evidence": [{"notes": "Supports regulatory sensing as part of homeostasis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH-sensing and signalling capabilities"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "ph_sensing", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Growth at preferred pH depends on maintaining intracellular pH compatible with cellular processes.", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis as central to growth under pH stress.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cytoplasmic_ph_homeostasis", "target": "ph_growth_preference_trait"}], "evidence_rows": [{"description": "Environmental pH determines which pH conditions support growth.", "edge_id": "edge-1", "evidence": [{"notes": "Review frames pH growth as a response to external pH outside the cytoplasmic range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "tolerate or grow at external pH values"}], "predicate": "influences", "predicate_id": null, "source": "environmental pH", "target": "pH growth preference"}, {"description": "Acidic environments impose inward proton stress that must be managed for growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports active mechanisms under acid challenge.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "acid challenge conditions include increased expression and activity"}], "predicate": "challenges", "predicate_id": null, "source": "acidic external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline environments require active proton accumulation or generation to maintain cytoplasmic pH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-pH homeostasis as a growth-enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "active proton accumulation or generation in the cytoplasm"}], "predicate": "challenges", "predicate_id": null, "source": "alkaline external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "pH-sensing and signalling systems regulate homeostasis responses to acid or alkali.", "edge_id": "edge-4", "evidence": [{"notes": "Supports regulatory sensing as part of homeostasis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH-sensing and signalling capabilities"}], "predicate": "regulates", "predicate_id": null, "source": "pH sensing", "target": "cytoplasmic pH homeostasis"}, {"description": "Growth at preferred pH depends on maintaining intracellular pH compatible with cellular processes.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis as central to growth under pH stress.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "predicate": "enables", "predicate_id": null, "source": "cytoplasmic pH homeostasis", "target": "pH growth preference"}], "graph_id": "ph_growth_preference_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH below the cytoplasmic pH range compatible with growth.", "grounding": null, "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "External pH above the cytoplasmic pH range compatible with growth.", "grounding": null, "id": "alkaline_external_ph", "is_orphan": false, "label": "alkaline external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of intracellular pH within a range compatible with growth.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Acidity or alkalinity of the growth environment.", "grounding": null, "id": "environmental_ph", "is_orphan": false, "label": "environmental pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth-rate and growth-extent phenotype shaped by environmental pH.", "grounding": "METPO:1003000", "id": "ph_growth_preference_trait", "is_orphan": false, "label": "pH growth preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Detection of external or envelope pH change by regulatory proteins and transporters.", "grounding": null, "id": "ph_sensing", "is_orphan": false, "label": "pH sensing", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Environmental pH control of growth preference"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental pH, pH sensing, and cytoplasmic pH homeostasis to growth preference phenotypes.", "edges": [{"description": "Environmental pH determines which pH conditions support growth.", "evidence": [{"notes": "Review frames pH growth as a response to external pH outside the cytoplasmic range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "tolerate or grow at external pH values"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental_ph", "target": "ph_growth_preference_trait"}, {"description": "Acidic environments impose inward proton stress that must be managed for growth.", "evidence": [{"notes": "Supports active mechanisms under acid challenge.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "acid challenge conditions include increased expression and activity"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "acidic_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline environments require active proton accumulation or generation to maintain cytoplasmic pH.", "evidence": [{"notes": "Supports alkaline-pH homeostasis as a growth-enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "active proton accumulation or generation in the cytoplasm"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_external_ph", "target": "cytoplasmic_ph_homeostasis"}, {"description": "pH-sensing and signalling systems regulate homeostasis responses to acid or alkali.", "evidence": [{"notes": "Supports regulatory sensing as part of homeostasis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH-sensing and signalling capabilities"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "ph_sensing", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Growth at preferred pH depends on maintaining intracellular pH compatible with cellular processes.", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis as central to growth under pH stress.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "ph_growth_preference_trait"}], "evidence_rows": [{"description": "Environmental pH determines which pH conditions support growth.", "edge_id": "edge-1", "evidence": [{"notes": "Review frames pH growth as a response to external pH outside the cytoplasmic range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "tolerate or grow at external pH values"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental pH", "target": "pH growth preference"}, {"description": "Acidic environments impose inward proton stress that must be managed for growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports active mechanisms under acid challenge.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "acid challenge conditions include increased expression and activity"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "acidic external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline environments require active proton accumulation or generation to maintain cytoplasmic pH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports alkaline-pH homeostasis as a growth-enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "active proton accumulation or generation in the cytoplasm"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline external pH", "target": "cytoplasmic pH homeostasis"}, {"description": "pH-sensing and signalling systems regulate homeostasis responses to acid or alkali.", "edge_id": "edge-4", "evidence": [{"notes": "Supports regulatory sensing as part of homeostasis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH-sensing and signalling capabilities"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "pH sensing", "target": "cytoplasmic pH homeostasis"}, {"description": "Growth at preferred pH depends on maintaining intracellular pH compatible with cellular processes.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis as central to growth under pH stress.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "pH growth preference"}], "graph_id": "ph_growth_preference_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH below the cytoplasmic pH range compatible with growth.", "grounding": "PATO:0001428", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "External pH above the cytoplasmic pH range compatible with growth.", "grounding": "PATO:0001429", "id": "alkaline_external_ph", "is_orphan": false, "label": "alkaline external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of intracellular pH within a range compatible with growth.", "grounding": "GO:0030641", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Acidity or alkalinity of the growth environment.", "grounding": null, "id": "environmental_ph", "is_orphan": false, "label": "environmental pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth-rate and growth-extent phenotype shaped by environmental pH.", "grounding": "METPO:1003000", "id": "ph_growth_preference_trait", "is_orphan": false, "label": "pH growth preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Detection of external or envelope pH change by regulatory proteins and transporters.", "grounding": null, "id": "ph_sensing", "is_orphan": false, "label": "pH sensing", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Environmental pH control of growth preference"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -664,10 +700,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

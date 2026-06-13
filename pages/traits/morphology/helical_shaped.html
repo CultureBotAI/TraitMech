@@ -77,7 +77,7 @@
             <strong>CcmA</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>peptidoglycan crosslink relaxation</strong>
-            
+            <code>RO:0002326</code>
             <p>CcmA contributes to the shape-generating pathway for helical morphology.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>peptidoglycan crosslink relaxation</strong>
             <span class="edge-predicate">enables</span>
             <strong>helical curvature and twist</strong>
-            
+            <code>RO:0002327</code>
             <p>Relaxed peptidoglycan crosslinking enables curvature and twist.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>helical curvature and twist</strong>
             <span class="edge-predicate">produces</span>
             <strong>helical shaped</strong>
-            
+            <code>METPO:2000202</code>
             <p>Helical curvature and twist produce the helical-shaped trait.</p>
             <ul>
               
@@ -261,6 +261,18 @@
           <time>2026-05-11T18:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Reviewed helical shape and added DOI-backed causal graph for Csd proteins, CcmA, peptidoglycan crosslink relaxation, and helical curvature.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1, RO:0002327×1, METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:E0X6H3×1).</p>
         </li>
         
       </ol>
@@ -620,7 +632,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking helical cell shape to H. pylori shape proteins, peptidoglycan crosslink relaxation, and curvature plus twist.", "edges": [{"description": "Csd peptidoglycan endopeptidase homologs contribute to reduced crosslinking in helical-shape generation.", "evidence": [{"notes": "Supports Csd proteins as required genes in the H. pylori helical shape pathway.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs"}], "id": "edge-1", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "csd_shape_proteins", "target": "peptidoglycan_crosslink_relaxation"}, {"description": "CcmA contributes to the shape-generating pathway for helical morphology.", "evidence": [{"notes": "Supports CcmA as one of the proteins required for helical shape.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs ... and a ccmA homolog"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "ccmA", "target": "peptidoglycan_crosslink_relaxation"}, {"description": "Relaxed peptidoglycan crosslinking enables curvature and twist.", "evidence": [{"notes": "Direct evidence for PG crosslink relaxation causing helical geometry.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "peptidoglycan_crosslink_relaxation", "target": "helical_curvature_twist"}, {"description": "Helical curvature and twist produce the helical-shaped trait.", "evidence": [{"notes": "Supports the morphology endpoint of the graph.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "helical cell curvature and twist"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "helical_curvature_twist", "target": "helical_shaped_trait"}], "evidence_rows": [{"description": "Csd peptidoglycan endopeptidase homologs contribute to reduced crosslinking in helical-shape generation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Csd proteins as required genes in the H. pylori helical shape pathway.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs"}], "predicate": "promotes", "predicate_id": null, "source": "Csd shape proteins", "target": "peptidoglycan crosslink relaxation"}, {"description": "CcmA contributes to the shape-generating pathway for helical morphology.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CcmA as one of the proteins required for helical shape.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs ... and a ccmA homolog"}], "predicate": "contributes to", "predicate_id": null, "source": "CcmA", "target": "peptidoglycan crosslink relaxation"}, {"description": "Relaxed peptidoglycan crosslinking enables curvature and twist.", "edge_id": "edge-3", "evidence": [{"notes": "Direct evidence for PG crosslink relaxation causing helical geometry.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": null, "source": "peptidoglycan crosslink relaxation", "target": "helical curvature and twist"}, {"description": "Helical curvature and twist produce the helical-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the morphology endpoint of the graph.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "helical cell curvature and twist"}], "predicate": "produces", "predicate_id": null, "source": "helical curvature and twist", "target": "helical shaped"}], "graph_id": "helical_shaped_pg_relaxation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Bactofilin-like protein implicated in H. pylori helical shape.", "grounding": null, "id": "ccmA", "is_orphan": false, "label": "CcmA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "H. pylori Csd1-Csd3 peptidoglycan endopeptidase homologs.", "grounding": null, "id": "csd_shape_proteins", "is_orphan": false, "label": "Csd shape proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall geometry that produces a helical cell body.", "grounding": null, "id": "helical_curvature_twist", "is_orphan": false, "label": "helical curvature and twist", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Corkscrew-like bacterial morphology with curvature and twist.", "grounding": "METPO:1000676", "id": "helical_shaped_trait", "is_orphan": false, "label": "helical shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Local reduction or remodeling of peptidoglycan crosslinks.", "grounding": null, "id": "peptidoglycan_crosslink_relaxation", "is_orphan": false, "label": "peptidoglycan crosslink relaxation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Helical-shape peptidoglycan relaxation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking helical cell shape to H. pylori shape proteins, peptidoglycan crosslink relaxation, and curvature plus twist.", "edges": [{"description": "Csd peptidoglycan endopeptidase homologs contribute to reduced crosslinking in helical-shape generation.", "evidence": [{"notes": "Supports Csd proteins as required genes in the H. pylori helical shape pathway.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs"}], "id": "edge-1", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "csd_shape_proteins", "target": "peptidoglycan_crosslink_relaxation"}, {"description": "CcmA contributes to the shape-generating pathway for helical morphology.", "evidence": [{"notes": "Supports CcmA as one of the proteins required for helical shape.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs ... and a ccmA homolog"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ccmA", "target": "peptidoglycan_crosslink_relaxation"}, {"description": "Relaxed peptidoglycan crosslinking enables curvature and twist.", "evidence": [{"notes": "Direct evidence for PG crosslink relaxation causing helical geometry.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan_crosslink_relaxation", "target": "helical_curvature_twist"}, {"description": "Helical curvature and twist produce the helical-shaped trait.", "evidence": [{"notes": "Supports the morphology endpoint of the graph.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "helical cell curvature and twist"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "helical_curvature_twist", "target": "helical_shaped_trait"}], "evidence_rows": [{"description": "Csd peptidoglycan endopeptidase homologs contribute to reduced crosslinking in helical-shape generation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Csd proteins as required genes in the H. pylori helical shape pathway.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs"}], "predicate": "promotes", "predicate_id": null, "source": "Csd shape proteins", "target": "peptidoglycan crosslink relaxation"}, {"description": "CcmA contributes to the shape-generating pathway for helical morphology.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CcmA as one of the proteins required for helical shape.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "three LytM peptidoglycan endopeptidase homologs ... and a ccmA homolog"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CcmA", "target": "peptidoglycan crosslink relaxation"}, {"description": "Relaxed peptidoglycan crosslinking enables curvature and twist.", "edge_id": "edge-3", "evidence": [{"notes": "Direct evidence for PG crosslink relaxation causing helical geometry.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan crosslink relaxation", "target": "helical curvature and twist"}, {"description": "Helical curvature and twist produce the helical-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the morphology endpoint of the graph.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "helical cell curvature and twist"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "helical curvature and twist", "target": "helical shaped"}], "graph_id": "helical_shaped_pg_relaxation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Bactofilin-like protein implicated in H. pylori helical shape.", "grounding": "UniProtKB:E0X6H3", "id": "ccmA", "is_orphan": false, "label": "CcmA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "H. pylori Csd1-Csd3 peptidoglycan endopeptidase homologs.", "grounding": null, "id": "csd_shape_proteins", "is_orphan": false, "label": "Csd shape proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall geometry that produces a helical cell body.", "grounding": null, "id": "helical_curvature_twist", "is_orphan": false, "label": "helical curvature and twist", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Corkscrew-like bacterial morphology with curvature and twist.", "grounding": "METPO:1000676", "id": "helical_shaped_trait", "is_orphan": false, "label": "helical shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Local reduction or remodeling of peptidoglycan crosslinks.", "grounding": null, "id": "peptidoglycan_crosslink_relaxation", "is_orphan": false, "label": "peptidoglycan crosslink relaxation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Helical-shape peptidoglycan relaxation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +643,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

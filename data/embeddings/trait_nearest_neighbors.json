@@ -243,10 +243,10 @@
       "similarity": 0.2675769579174551
     },
     {
-      "id": "METPO:2000208",
-      "label": "imports",
-      "category": "metabolism",
-      "similarity": 0.2618026625945862
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.2661240938401117
     }
   ],
   "METPO:1001105": [
@@ -7381,22 +7381,22 @@
       "similarity": 0.42516293865512905
     },
     {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.4234570299600702
+    },
+    {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.42040645246580877
+    },
+    {
       "id": "METPO:2000511",
       "label": "has observation",
       "category": "metabolism",
       "similarity": 0.4145193089268595
-    },
-    {
-      "id": "METPO:1001010",
-      "label": "optimum NaCl observation",
-      "category": "observation",
-      "similarity": 0.4144002278613462
-    },
-    {
-      "id": "METPO:1001023",
-      "label": "pH observation",
-      "category": "observation",
-      "similarity": 0.41423930822860555
     }
   ],
   "METPO:2000227": [
@@ -8275,28 +8275,28 @@
       "similarity": 0.4541862972483923
     },
     {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.43741045522037664
+    },
+    {
       "id": "METPO:2000101",
       "label": "has quality",
       "category": "metabolism",
       "similarity": 0.43640227780654256
     },
     {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.4335997472315839
+    },
+    {
       "id": "METPO:2000511",
       "label": "has observation",
       "category": "metabolism",
       "similarity": 0.4318560237593334
-    },
-    {
-      "id": "METPO:1001010",
-      "label": "optimum NaCl observation",
-      "category": "observation",
-      "similarity": 0.4315993992849604
-    },
-    {
-      "id": "METPO:1001022",
-      "label": "NaCl observation",
-      "category": "observation",
-      "similarity": 0.42959562765868636
     }
   ],
   "METPO:2000209": [
@@ -9263,10 +9263,22 @@
       "similarity": 0.4569422772759473
     },
     {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.4364783421700069
+    },
+    {
       "id": "METPO:2000301",
       "label": "enzyme activity analyzed",
       "category": "metabolism",
       "similarity": 0.43640227780654256
+    },
+    {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.43269940059844403
     },
     {
       "id": "METPO:2000302",
@@ -9285,18 +9297,6 @@
       "label": "does not show activity of",
       "category": "metabolism",
       "similarity": 0.42516293865512905
-    },
-    {
-      "id": "METPO:1001023",
-      "label": "pH observation",
-      "category": "observation",
-      "similarity": 0.42323072912062204
-    },
-    {
-      "id": "METPO:1001009",
-      "label": "NaCl range observation",
-      "category": "observation",
-      "similarity": 0.42297106286935515
     }
   ],
   "METPO:2000509": [
@@ -10331,22 +10331,22 @@
       "similarity": 0.42998698879315334
     },
     {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.42534446993121633
+    },
+    {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.42366841272638506
+    },
+    {
       "id": "METPO:2000511",
       "label": "has observation",
       "category": "metabolism",
       "similarity": 0.4157518268691346
-    },
-    {
-      "id": "METPO:2000503",
-      "label": "has range pH observation",
-      "category": "metabolism",
-      "similarity": 0.41234482621744495
-    },
-    {
-      "id": "METPO:2000239",
-      "label": "has pH observation",
-      "category": "metabolism",
-      "similarity": 0.4119204452910451
     }
   ],
   "METPO:1000804": [
@@ -11293,10 +11293,10 @@
       "similarity": 0.24880671287717987
     },
     {
-      "id": "METPO:1000461",
-      "label": "pH range mid1",
-      "category": "environment",
-      "similarity": 0.2394117574072453
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.2415129107981096
     }
   ],
   "METPO:1000667": [
@@ -14181,22 +14181,22 @@
       "similarity": 0.2457521115949885
     },
     {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.24454832366780827
+    },
+    {
       "id": "METPO:1000186",
       "label": "material entity",
       "category": "upper",
       "similarity": 0.23831027781573902
     },
     {
-      "id": "METPO:1000679",
-      "label": "pleomorphic shaped",
-      "category": "morphology",
-      "similarity": 0.23073280463850548
-    },
-    {
-      "id": "METPO:1002003",
-      "label": "Cable bacteria metabolism",
-      "category": "metabolism",
-      "similarity": 0.22903617301989188
+      "id": "METPO:1000526",
+      "label": "chemical entity",
+      "category": "upper",
+      "similarity": 0.2331440937443235
     }
   ],
   "METPO:1000685": [
@@ -17099,7 +17099,125 @@
       "similarity": 0.8935138619346431
     }
   ],
+  "METPO:1000526": [
+    {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.9758632834657506
+    },
+    {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.9697269431783674
+    },
+    {
+      "id": "METPO:1000186",
+      "label": "material entity",
+      "category": "upper",
+      "similarity": 0.9679830188901943
+    },
+    {
+      "id": "METPO:2000102",
+      "label": "has phenotype",
+      "category": "metabolism",
+      "similarity": 0.42282637326421224
+    },
+    {
+      "id": "METPO:2000301",
+      "label": "enzyme activity analyzed",
+      "category": "metabolism",
+      "similarity": 0.41671474049330637
+    },
+    {
+      "id": "METPO:2000101",
+      "label": "has quality",
+      "category": "metabolism",
+      "similarity": 0.4103591288579719
+    },
+    {
+      "id": "METPO:2000302",
+      "label": "shows activity of",
+      "category": "metabolism",
+      "similarity": 0.40468404200328306
+    },
+    {
+      "id": "METPO:2000303",
+      "label": "does not show activity of",
+      "category": "metabolism",
+      "similarity": 0.40071469334153964
+    }
+  ],
+  "METPO:1000527": [
+    {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.9772408126217658
+    },
+    {
+      "id": "METPO:1000526",
+      "label": "chemical entity",
+      "category": "upper",
+      "similarity": 0.9758632834657506
+    },
+    {
+      "id": "METPO:1000186",
+      "label": "material entity",
+      "category": "upper",
+      "similarity": 0.967072888679174
+    },
+    {
+      "id": "METPO:2000102",
+      "label": "has phenotype",
+      "category": "metabolism",
+      "similarity": 0.445788766432594
+    },
+    {
+      "id": "METPO:2000301",
+      "label": "enzyme activity analyzed",
+      "category": "metabolism",
+      "similarity": 0.43741045522037664
+    },
+    {
+      "id": "METPO:2000101",
+      "label": "has quality",
+      "category": "metabolism",
+      "similarity": 0.43269940059844403
+    },
+    {
+      "id": "METPO:2000302",
+      "label": "shows activity of",
+      "category": "metabolism",
+      "similarity": 0.42534446993121633
+    },
+    {
+      "id": "METPO:2000303",
+      "label": "does not show activity of",
+      "category": "metabolism",
+      "similarity": 0.4234570299600702
+    }
+  ],
   "METPO:1000186": [
+    {
+      "id": "METPO:1000526",
+      "label": "chemical entity",
+      "category": "upper",
+      "similarity": 0.9679830188901943
+    },
+    {
+      "id": "METPO:1000527",
+      "label": "enzyme",
+      "category": "upper",
+      "similarity": 0.967072888679174
+    },
+    {
+      "id": "METPO:1000525",
+      "label": "microbe",
+      "category": "upper",
+      "similarity": 0.9645935639047117
+    },
     {
       "id": "METPO:2000102",
       "label": "has phenotype",
@@ -17129,24 +17247,56 @@
       "label": "does not show activity of",
       "category": "metabolism",
       "similarity": 0.3986211793157921
-    },
+    }
+  ],
+  "METPO:1000525": [
     {
-      "id": "METPO:1001000",
-      "label": "observation",
+      "id": "METPO:1000527",
+      "label": "enzyme",
       "category": "upper",
-      "similarity": 0.38205846354880224
+      "similarity": 0.9772408126217658
     },
     {
-      "id": "METPO:2000210",
-      "label": "accumulates",
-      "category": "metabolism",
-      "similarity": 0.3806062493023301
+      "id": "METPO:1000526",
+      "label": "chemical entity",
+      "category": "upper",
+      "similarity": 0.9697269431783674
     },
     {
-      "id": "METPO:2000239",
-      "label": "has pH observation",
+      "id": "METPO:1000186",
+      "label": "material entity",
+      "category": "upper",
+      "similarity": 0.9645935639047117
+    },
+    {
+      "id": "METPO:2000102",
+      "label": "has phenotype",
       "category": "metabolism",
-      "similarity": 0.37696928522302464
+      "similarity": 0.4487370267776156
+    },
+    {
+      "id": "METPO:2000101",
+      "label": "has quality",
+      "category": "metabolism",
+      "similarity": 0.4364783421700069
+    },
+    {
+      "id": "METPO:2000301",
+      "label": "enzyme activity analyzed",
+      "category": "metabolism",
+      "similarity": 0.4335997472315839
+    },
+    {
+      "id": "METPO:2000302",
+      "label": "shows activity of",
+      "category": "metabolism",
+      "similarity": 0.42366841272638506
+    },
+    {
+      "id": "METPO:2000303",
+      "label": "does not show activity of",
+      "category": "metabolism",
+      "similarity": 0.42040645246580877
     }
   ],
   "METPO:1001000": [
@@ -17299,7 +17449,127 @@
       "similarity": 0.7925016706649226
     }
   ],
+  "traitmech:000053": [],
+  "traitmech:000042": [],
+  "traitmech:000045": [],
+  "traitmech:000048": [],
+  "traitmech:000052": [],
+  "traitmech:000047": [],
+  "traitmech:000049": [],
+  "traitmech:000041": [],
+  "traitmech:000044": [],
+  "traitmech:000046": [],
+  "traitmech:000043": [],
+  "traitmech:000054": [],
+  "traitmech:000051": [],
+  "traitmech:000055": [],
+  "traitmech:000050": [],
+  "traitmech:000040": [],
+  "traitmech:000017": [],
+  "traitmech:000013": [],
+  "traitmech:000015": [],
+  "traitmech:000018": [],
+  "traitmech:000010": [],
+  "traitmech:000008": [],
+  "traitmech:000016": [],
+  "traitmech:000012": [],
+  "traitmech:000002": [],
+  "traitmech:000001": [],
+  "traitmech:000003": [],
+  "traitmech:000006": [],
+  "traitmech:000004": [],
+  "traitmech:000005": [],
+  "traitmech:000007": [],
+  "traitmech:000009": [],
+  "traitmech:000011": [],
+  "traitmech:000014": [],
+  "traitmech:000096": [],
+  "traitmech:000094": [],
+  "traitmech:000097": [],
+  "traitmech:000098": [],
+  "traitmech:000099": [],
+  "traitmech:000093": [],
+  "traitmech:000089": [],
+  "traitmech:000102": [],
+  "traitmech:000090": [],
+  "traitmech:000100": [],
+  "traitmech:000091": [],
+  "traitmech:000095": [],
+  "traitmech:000101": [],
+  "traitmech:000092": [],
+  "traitmech:000033": [],
+  "traitmech:000035": [],
+  "traitmech:000110": [],
+  "traitmech:000020": [],
   "METPO:2000103": [],
+  "traitmech:000019": [],
+  "traitmech:000111": [],
+  "traitmech:000112": [],
+  "traitmech:000104": [],
+  "traitmech:000025": [],
+  "traitmech:000031": [],
+  "traitmech:000108": [],
+  "traitmech:000039": [],
+  "traitmech:000030": [],
+  "traitmech:000105": [],
+  "traitmech:000028": [],
+  "traitmech:000109": [],
+  "traitmech:000107": [],
+  "traitmech:000026": [],
+  "traitmech:000114": [],
+  "traitmech:000032": [],
+  "traitmech:000027": [],
+  "traitmech:000103": [],
+  "traitmech:000034": [],
+  "traitmech:000038": [],
+  "traitmech:000037": [],
+  "traitmech:000029": [],
+  "traitmech:000116": [],
+  "traitmech:000036": [],
+  "traitmech:000021": [],
+  "traitmech:000115": [],
+  "traitmech:000106": [],
+  "traitmech:000023": [],
+  "traitmech:000024": [],
+  "traitmech:000022": [],
+  "traitmech:000113": [],
+  "traitmech:000059": [],
+  "traitmech:000063": [],
+  "traitmech:000072": [],
+  "traitmech:000056": [],
+  "traitmech:000070": [],
+  "traitmech:000073": [],
+  "traitmech:000066": [],
+  "traitmech:000058": [],
+  "traitmech:000071": [],
+  "traitmech:000057": [],
+  "traitmech:000074": [],
+  "traitmech:000060": [],
+  "traitmech:000067": [],
+  "traitmech:000068": [],
+  "traitmech:000065": [],
+  "traitmech:000064": [],
+  "traitmech:000120": [],
+  "traitmech:000118": [],
+  "traitmech:000117": [],
+  "traitmech:000069": [],
+  "traitmech:000062": [],
+  "traitmech:000119": [],
+  "traitmech:000061": [],
+  "traitmech:000088": [],
+  "traitmech:000085": [],
+  "traitmech:000075": [],
+  "traitmech:000086": [],
+  "traitmech:000080": [],
+  "traitmech:000087": [],
+  "traitmech:000076": [],
+  "traitmech:000079": [],
+  "traitmech:000082": [],
+  "traitmech:000084": [],
+  "traitmech:000083": [],
+  "traitmech:000078": [],
+  "traitmech:000077": [],
+  "traitmech:000081": [],
   "METPO:2000060": [],
   "METPO:2000059": [],
   "METPO:2000058": [],

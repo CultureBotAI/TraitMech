@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>unipolar peptidoglycan growth</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>polar neck extension</strong>
-            
+            <code>RO:0002211</code>
             <p>Unipolar PG growth extends one pole into a narrower neck.</p>
             <ul>
               
@@ -75,7 +75,7 @@
           
           <li id="pathograph-1-edge-2">
             <strong>polar neck extension</strong>
-            <span class="edge-predicate">combines_with</span>
+            <span class="edge-predicate">combines with</span>
             <strong>bulbous body</strong>
             
             <p>A narrow polar neck adjoining a wider body yields flask geometry.</p>
@@ -94,7 +94,7 @@
             <strong>bulbous body</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>flask shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>The combined neck+body geometry manifests flask morphology.</p>
             <ul>
               
@@ -246,6 +246,24 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking unipolar peptidoglycan growth and neck extension to flask-shaped morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -605,7 +623,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking unipolar peptidoglycan growth and tapered neck extension to flask-shaped cell morphology.", "edges": [{"description": "Unipolar PG growth extends one pole into a narrower neck.", "evidence": [{"notes": "Supports unipolar growth as the mechanism for asymmetric pole extension.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-1", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "unipolar_pg_growth", "target": "polar_neck_extension"}, {"description": "A narrow polar neck adjoining a wider body yields flask geometry.", "evidence": [{"notes": "Supports asymmetric growth as a genetically determined shape program.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "combines_with", "predicate_id": null, "source": "polar_neck_extension", "target": "bulbous_body"}, {"description": "The combined neck+body geometry manifests flask morphology.", "evidence": [{"notes": "Supports the trait endpoint via asymmetric polar growth.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "bulbous_body", "target": "flask_shaped_trait"}], "evidence_rows": [{"description": "Unipolar PG growth extends one pole into a narrower neck.", "edge_id": "edge-1", "evidence": [{"notes": "Supports unipolar growth as the mechanism for asymmetric pole extension.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "drives", "predicate_id": null, "source": "unipolar peptidoglycan growth", "target": "polar neck extension"}, {"description": "A narrow polar neck adjoining a wider body yields flask geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports asymmetric growth as a genetically determined shape program.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "combines_with", "predicate_id": null, "source": "polar neck extension", "target": "bulbous body"}, {"description": "The combined neck+body geometry manifests flask morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via asymmetric polar growth.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "manifests as", "predicate_id": null, "source": "bulbous body", "target": "flask shaped"}], "graph_id": "flask_shaped_asymmetric_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Wider rounded body region opposite the neck.", "grounding": null, "id": "bulbous_body", "is_orphan": false, "label": "bulbous body", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Bulbous cell body with a narrower polar neck.", "grounding": "METPO:1000675", "id": "flask_shaped_trait", "is_orphan": false, "label": "flask shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Tapered extension of one pole producing the flask neck.", "grounding": null, "id": "polar_neck_extension", "is_orphan": false, "label": "polar neck extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Peptidoglycan synthesis localized to a single cell pole.", "grounding": null, "id": "unipolar_pg_growth", "is_orphan": false, "label": "unipolar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Flask-shape asymmetric polar growth"}];
+  var graphs = [{"description": "DOI-backed graph linking unipolar peptidoglycan growth and tapered neck extension to flask-shaped cell morphology.", "edges": [{"description": "Unipolar PG growth extends one pole into a narrower neck.", "evidence": [{"notes": "Supports unipolar growth as the mechanism for asymmetric pole extension.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unipolar_pg_growth", "target": "polar_neck_extension"}, {"description": "A narrow polar neck adjoining a wider body yields flask geometry.", "evidence": [{"notes": "Supports asymmetric growth as a genetically determined shape program.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "combines with", "predicate_id": null, "source": "polar_neck_extension", "target": "bulbous_body"}, {"description": "The combined neck+body geometry manifests flask morphology.", "evidence": [{"notes": "Supports the trait endpoint via asymmetric polar growth.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bulbous_body", "target": "flask_shaped_trait"}], "evidence_rows": [{"description": "Unipolar PG growth extends one pole into a narrower neck.", "edge_id": "edge-1", "evidence": [{"notes": "Supports unipolar growth as the mechanism for asymmetric pole extension.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unipolar peptidoglycan growth", "target": "polar neck extension"}, {"description": "A narrow polar neck adjoining a wider body yields flask geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports asymmetric growth as a genetically determined shape program.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "combines with", "predicate_id": null, "source": "polar neck extension", "target": "bulbous body"}, {"description": "The combined neck+body geometry manifests flask morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via asymmetric polar growth.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bulbous body", "target": "flask shaped"}], "graph_id": "flask_shaped_asymmetric_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Wider rounded body region opposite the neck.", "grounding": null, "id": "bulbous_body", "is_orphan": false, "label": "bulbous body", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Bulbous cell body with a narrower polar neck.", "grounding": "METPO:1000675", "id": "flask_shaped_trait", "is_orphan": false, "label": "flask shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Tapered extension of one pole producing the flask neck.", "grounding": null, "id": "polar_neck_extension", "is_orphan": false, "label": "polar neck extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Peptidoglycan synthesis localized to a single cell pole.", "grounding": null, "id": "unipolar_pg_growth", "is_orphan": false, "label": "unipolar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Flask-shape asymmetric polar growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,10 +634,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

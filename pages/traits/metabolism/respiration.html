@@ -77,7 +77,7 @@
             <strong>electron donor</strong>
             <span class="edge-predicate">transfers electrons to</span>
             <strong>terminal electron acceptor</strong>
-            
+            <code>METPO:2007403</code>
             <p>Electrons move from donors to terminal acceptors.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>molecular oxygen</strong>
             <span class="edge-predicate">example of</span>
             <strong>terminal electron acceptor</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Oxygen is the terminal electron acceptor in aerobic respiration.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>nitrate</strong>
             <span class="edge-predicate">example of</span>
             <strong>terminal electron acceptor</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Nitrate is a representative anaerobic terminal electron acceptor.</p>
             <ul>
               
@@ -143,9 +143,9 @@
           
           <li id="pathograph-1-edge-6">
             <strong>proton motive force</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>ATP synthase</strong>
-            
+            <code>RO:0002211</code>
             <p>Proton motive force powers ATP synthase.</p>
             <ul>
               
@@ -162,7 +162,7 @@
             <strong>ATP synthase</strong>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            
+            <code>METPO:2000202</code>
             <p>ATP synthase produces ATP during respiration.</p>
             <ul>
               
@@ -325,6 +325,60 @@
           <time>2026-05-08T00:00:00-07:00</time> ·
           <strong>ADDED_CAUSAL_GRAPH</strong> · codex
           <p class="changes">Added DOI-backed causal graph for donor-to-acceptor respiratory electron flow, membrane ion-gradient generation, and ATP synthesis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:49Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007403×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:04Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007504×1, METPO:1007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A415TT77×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T08:14:32Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17499×1, GO:0022900×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:13Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.</p>
         </li>
         
       </ol>
@@ -684,7 +738,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking electron donors, terminal electron acceptors, membrane electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Respiration begins with reduced electron donors.", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration_trait", "target": "electron_donor"}, {"description": "Electrons move from donors to terminal acceptors.", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-2", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": null, "source": "electron_donor", "target": "terminal_electron_acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "oxygen", "target": "terminal_electron_acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": null, "source": "nitrate", "target": "terminal_electron_acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane_electron_transport_chain", "target": "proton_motive_force"}, {"description": "Proton motive force powers ATP synthase.", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase produces ATP during respiration.", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "atp_synthase", "target": "atp"}], "evidence_rows": [{"description": "Respiration begins with reduced electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration", "target": "electron donor"}, {"description": "Electrons move from donors to terminal acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "transfers electrons to", "predicate_id": null, "source": "electron donor", "target": "terminal electron acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "predicate": "example of", "predicate_id": null, "source": "molecular oxygen", "target": "terminal electron acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "predicate": "example of", "predicate_id": null, "source": "nitrate", "target": "terminal electron acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane electron transport chain", "target": "proton motive force"}, {"description": "Proton motive force powers ATP synthase.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "target": "ATP synthase"}, {"description": "ATP synthase produces ATP during respiration.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "predicate": "produces", "predicate_id": null, "source": "ATP synthase", "target": "ATP"}], "graph_id": "respiration_electron_acceptor_energy_conservation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced by respiration.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme complex using proton motive force for ATP synthesis.", "grounding": null, "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced substrate supplying electrons.", "grounding": null, "id": "electron_donor", "is_orphan": false, "label": "electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor-to-acceptor electron flow.", "grounding": null, "id": "membrane_electron_transport_chain", "is_orphan": false, "label": "membrane electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Alternative anaerobic terminal electron acceptor.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Aerobic terminal electron acceptor.", "grounding": "CHEBI:15379", "id": "oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient generated across a coupling membrane.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Energy metabolism using electron transport to a terminal electron acceptor.", "grounding": "METPO:1000800", "id": "respiration_trait", "is_orphan": false, "label": "respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized substrate receiving electrons at the end of a respiratory chain.", "grounding": null, "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "CHEMICAL", "xrefs": []}], "title": "Respiration electron acceptor energy conservation"}];
+  var graphs = [{"description": "DOI-backed graph linking electron donors, terminal electron acceptors, membrane electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Respiration begins with reduced electron donors.", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration_trait", "target": "electron_donor"}, {"description": "Electrons move from donors to terminal acceptors.", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "id": "edge-2", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "electron_donor", "target": "terminal_electron_acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "oxygen", "target": "terminal_electron_acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "id": "edge-4", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "nitrate", "target": "terminal_electron_acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane_electron_transport_chain", "target": "proton_motive_force"}, {"description": "Proton motive force powers ATP synthase.", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase produces ATP during respiration.", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "atp_synthase", "target": "atp"}], "evidence_rows": [{"description": "Respiration begins with reduced electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports respiratory energy conservation from redox reactions.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "uses electron flow from", "predicate_id": null, "source": "respiration", "target": "electron donor"}, {"description": "Electrons move from donors to terminal acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports donor-to-acceptor electron flow in respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "electron transfer process"}], "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "electron donor", "target": "terminal electron acceptor"}, {"description": "Oxygen is the terminal electron acceptor in aerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen as a respiratory terminal acceptor.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "oxygen as terminal electron acceptor"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "molecular oxygen", "target": "terminal electron acceptor"}, {"description": "Nitrate is a representative anaerobic terminal electron acceptor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports nitrate use in anaerobic respiration.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "utilization of nitrate"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "nitrate", "target": "terminal electron acceptor"}, {"description": "Respiratory chains conserve redox energy as an ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ion-gradient generation by membrane electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "couples electron flow to", "predicate_id": null, "source": "membrane electron transport chain", "target": "proton motive force"}, {"description": "Proton motive force powers ATP synthase.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthase as the downstream energy-conservation output.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton motive force", "target": "ATP synthase"}, {"description": "ATP synthase produces ATP during respiration.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP production from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "ATP synthase", "target": "ATP"}], "graph_id": "respiration_electron_acceptor_energy_conservation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced by respiration.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme complex using proton motive force for ATP synthesis.", "grounding": "UniProtKB:A0A415TT77", "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced substrate supplying electrons.", "grounding": "CHEBI:17499", "id": "electron_donor", "is_orphan": false, "label": "electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane redox chain conserving energy from donor-to-acceptor electron flow.", "grounding": "GO:0022900", "id": "membrane_electron_transport_chain", "is_orphan": false, "label": "membrane electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Alternative anaerobic terminal electron acceptor.", "grounding": "CHEBI:17632", "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Aerobic terminal electron acceptor.", "grounding": "CHEBI:15379", "id": "oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient generated across a coupling membrane.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#dbeafe", "description": "Energy metabolism using electron transport to a terminal electron acceptor.", "grounding": "METPO:1000800", "id": "respiration_trait", "is_orphan": false, "label": "respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized substrate receiving electrons at the end of a respiratory chain.", "grounding": "METPO:1007504", "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "CHEMICAL", "xrefs": []}], "title": "Respiration electron acceptor energy conservation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -695,10 +749,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

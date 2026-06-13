@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>aerobic</strong>
-            <span class="edge-predicate">requires</span>
+            <span class="edge-predicate">depends on</span>
             <strong>molecular oxygen</strong>
-            
+            <code>RO:0002502</code>
             <p>Aerobic growth depends on molecular oxygen availability.</p>
             <ul>
               
@@ -92,9 +92,9 @@
           
           <li id="pathograph-1-edge-3">
             <strong>aerobic respiration</strong>
-            <span class="edge-predicate">requires</span>
+            <span class="edge-predicate">depends on</span>
             <strong>molecular oxygen</strong>
-            
+            <code>RO:0002502</code>
             <p>Aerobic respiration requires oxygen.</p>
             <ul>
               
@@ -289,6 +289,24 @@
           <time>2026-05-13T22:45:00-07:00</time> ·
           <strong>IMPROVED_CAUSAL_GRAPH_EVIDENCE</strong> · codex
           <p class="changes">Removed PMID and GO fallback references from CausalEdge evidence where DOI-backed evidence already supported the same oxygen-use mechanisms.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007504×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:47Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 2 causal-edge predicate label(s) to align with existing groundings: requires → depends on ×2.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:49Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002502×2).</p>
         </li>
         
       </ol>
@@ -648,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the aerobic trait to oxygen-dependent respiration.", "edges": [{"description": "Aerobic growth depends on molecular oxygen availability.", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen dependence for aerobic growth.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "id": "edge-1", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "aerobic_trait", "target": "molecular_oxygen"}, {"description": "The aerobic trait is mechanistically tied to oxygen-dependent respiration.", "evidence": [{"notes": "Review supports oxygen-reducing terminal oxidases as core aerobic respiratory enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "id": "edge-2", "is_orphan": false, "predicate": "has mechanistic process", "predicate_id": null, "source": "aerobic_trait", "target": "aerobic_respiration"}, {"description": "Aerobic respiration requires oxygen.", "evidence": [{"notes": "Supports molecular oxygen as the terminal acceptor for bacterial respiratory electron transport.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "id": "edge-3", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "aerobic_respiration", "target": "molecular_oxygen"}, {"description": "In aerobic energy metabolism, molecular oxygen acts as the terminal electron acceptor.", "evidence": [{"notes": "Supports oxygen\u0027s electron-acceptor role in terminal oxidase activity.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "terminal oxidases transfer electrons from the ETC to O2"}], "id": "edge-4", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "molecular_oxygen", "target": "terminal_electron_acceptor"}], "evidence_rows": [{"description": "Aerobic growth depends on molecular oxygen availability.", "edge_id": "edge-1", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen dependence for aerobic growth.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "predicate": "requires", "predicate_id": null, "source": "aerobic", "target": "molecular oxygen"}, {"description": "The aerobic trait is mechanistically tied to oxygen-dependent respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports oxygen-reducing terminal oxidases as core aerobic respiratory enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "predicate": "has mechanistic process", "predicate_id": null, "source": "aerobic", "target": "aerobic respiration"}, {"description": "Aerobic respiration requires oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Supports molecular oxygen as the terminal acceptor for bacterial respiratory electron transport.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "predicate": "requires", "predicate_id": null, "source": "aerobic respiration", "target": "molecular oxygen"}, {"description": "In aerobic energy metabolism, molecular oxygen acts as the terminal electron acceptor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oxygen\u0027s electron-acceptor role in terminal oxidase activity.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "terminal oxidases transfer electrons from the ETC to O2"}], "predicate": "acts as", "predicate_id": null, "source": "molecular oxygen", "target": "terminal electron acceptor"}], "graph_id": "aerobic_trait_mechanism", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy release process requiring oxygen as terminal electron acceptor.", "grounding": "GO:0009060", "id": "aerobic_respiration", "is_orphan": false, "label": "aerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth occurs in the presence of molecular oxygen.", "grounding": "METPO:1000602", "id": "aerobic_trait", "is_orphan": false, "label": "aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen used by aerobes as terminal electron acceptor.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Functional role played by oxygen in aerobic respiration.", "grounding": null, "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Aerobic growth oxygen-use mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the aerobic trait to oxygen-dependent respiration.", "edges": [{"description": "Aerobic growth depends on molecular oxygen availability.", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen dependence for aerobic growth.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "id": "edge-1", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "aerobic_trait", "target": "molecular_oxygen"}, {"description": "The aerobic trait is mechanistically tied to oxygen-dependent respiration.", "evidence": [{"notes": "Review supports oxygen-reducing terminal oxidases as core aerobic respiratory enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "id": "edge-2", "is_orphan": false, "predicate": "has mechanistic process", "predicate_id": null, "source": "aerobic_trait", "target": "aerobic_respiration"}, {"description": "Aerobic respiration requires oxygen.", "evidence": [{"notes": "Supports molecular oxygen as the terminal acceptor for bacterial respiratory electron transport.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "id": "edge-3", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "aerobic_respiration", "target": "molecular_oxygen"}, {"description": "In aerobic energy metabolism, molecular oxygen acts as the terminal electron acceptor.", "evidence": [{"notes": "Supports oxygen\u0027s electron-acceptor role in terminal oxidase activity.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "terminal oxidases transfer electrons from the ETC to O2"}], "id": "edge-4", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "molecular_oxygen", "target": "terminal_electron_acceptor"}], "evidence_rows": [{"description": "Aerobic growth depends on molecular oxygen availability.", "edge_id": "edge-1", "evidence": [{"notes": "Mycobacterium tuberculosis example supports oxygen dependence for aerobic growth.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "obligate aerobe ... exposed to hypoxia, stops growing"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "aerobic", "target": "molecular oxygen"}, {"description": "The aerobic trait is mechanistically tied to oxygen-dependent respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports oxygen-reducing terminal oxidases as core aerobic respiratory enzymes.", "reference": "DOI:10.1016/j.bbabio.2011.06.016", "snippet": "respiratory quinol:O2 oxidoreductase"}], "predicate": "has mechanistic process", "predicate_id": null, "source": "aerobic", "target": "aerobic respiration"}, {"description": "Aerobic respiration requires oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Supports molecular oxygen as the terminal acceptor for bacterial respiratory electron transport.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "transfer electrons from the ETC to O2"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "aerobic respiration", "target": "molecular oxygen"}, {"description": "In aerobic energy metabolism, molecular oxygen acts as the terminal electron acceptor.", "edge_id": "edge-4", "evidence": [{"notes": "Supports oxygen\u0027s electron-acceptor role in terminal oxidase activity.", "reference": "DOI:10.1016/j.celrep.2023.112444", "snippet": "terminal oxidases transfer electrons from the ETC to O2"}], "predicate": "acts as", "predicate_id": null, "source": "molecular oxygen", "target": "terminal electron acceptor"}], "graph_id": "aerobic_trait_mechanism", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Energy release process requiring oxygen as terminal electron acceptor.", "grounding": "GO:0009060", "id": "aerobic_respiration", "is_orphan": false, "label": "aerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth occurs in the presence of molecular oxygen.", "grounding": "METPO:1000602", "id": "aerobic_trait", "is_orphan": false, "label": "aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen used by aerobes as terminal electron acceptor.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Functional role played by oxygen in aerobic respiration.", "grounding": "METPO:1007504", "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Aerobic growth oxygen-use mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -659,10 +677,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

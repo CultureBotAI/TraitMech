@@ -60,7 +60,7 @@
             <strong>elongation rate</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>cell length</strong>
-            
+            <code>RO:0002326</code>
             <p>Elongation rate sets how rapidly a cell extends along its long axis between divisions.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>adder size control</strong>
             <span class="edge-predicate">regulates</span>
             <strong>cell length</strong>
-            
+            <code>RO:0002211</code>
             <p>Adder size control sets the inter-division length increment that determines average cell length.</p>
             <ul>
               
@@ -109,9 +109,9 @@
           
           <li id="pathograph-1-edge-4">
             <strong>division-site placement</strong>
-            <span class="edge-predicate">triggers</span>
+            <span class="edge-predicate">causes</span>
             <strong>cytokinesis</strong>
-            
+            <code>biolink:causes</code>
             <p>Division-site placement directs constriction and cytokinesis.</p>
             <ul>
               
@@ -284,6 +284,24 @@
           <time>2026-05-11T22:30:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking elongation rate, adder size control, FtsZ-divisome division-site placement, and cytokinesis to cell length.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1, RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: triggers → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -643,7 +661,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking growth rate, division-site placement, and the adder size-control principle to the observed cell-length phenotype.", "edges": [{"description": "Elongation rate sets how rapidly a cell extends along its long axis between divisions.", "evidence": [{"notes": "Supports growth/elongation rate as a determinant of cell size.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "growth_rate", "target": "cell_length_trait"}, {"description": "Adder size control sets the inter-division length increment that determines average cell length.", "evidence": [{"notes": "Supports the adder principle as the size-control rule producing the length distribution.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "adder_principle", "target": "cell_length_trait"}, {"description": "FtsZ assembles at the future division site to initiate cytokinesis.", "evidence": [{"notes": "Supports FtsZ-ring assembly as the proximate divisome event.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "FtsZ ring at the future division site"}], "id": "edge-3", "is_orphan": false, "predicate": "assembles at", "predicate_id": null, "source": "ftsz_ring", "target": "division_site_placement"}, {"description": "Division-site placement directs constriction and cytokinesis.", "evidence": [{"notes": "Supports division-site placement as the trigger for cytokinesis.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-4", "is_orphan": false, "predicate": "triggers", "predicate_id": null, "source": "division_site_placement", "target": "cytokinesis"}, {"description": "Cytokinesis halves the mother cell, resetting daughter cell length.", "evidence": [{"notes": "Supports division as the event that resets length each generation.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "id": "edge-5", "is_orphan": false, "predicate": "resets", "predicate_id": null, "source": "cytokinesis", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Elongation rate sets how rapidly a cell extends along its long axis between divisions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth/elongation rate as a determinant of cell size.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "contributes to", "predicate_id": null, "source": "elongation rate", "target": "cell length"}, {"description": "Adder size control sets the inter-division length increment that determines average cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the adder principle as the size-control rule producing the length distribution.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "predicate": "regulates", "predicate_id": null, "source": "adder size control", "target": "cell length"}, {"description": "FtsZ assembles at the future division site to initiate cytokinesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports FtsZ-ring assembly as the proximate divisome event.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "FtsZ ring at the future division site"}], "predicate": "assembles at", "predicate_id": null, "source": "FtsZ ring (divisome)", "target": "division-site placement"}, {"description": "Division-site placement directs constriction and cytokinesis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports division-site placement as the trigger for cytokinesis.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "triggers", "predicate_id": null, "source": "division-site placement", "target": "cytokinesis"}, {"description": "Cytokinesis halves the mother cell, resetting daughter cell length.", "edge_id": "edge-5", "evidence": [{"notes": "Supports division as the event that resets length each generation.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "predicate": "resets", "predicate_id": null, "source": "cytokinesis", "target": "cell length"}], "graph_id": "cell_length_division_growth_control", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mechanism by which cells add a fixed length increment between consecutive divisions.", "grounding": null, "id": "adder_principle", "is_orphan": false, "label": "adder size control", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Longer dimension of the rod-like or elongated cell body.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cell division that resets cell length each generation.", "grounding": null, "id": "cytokinesis", "is_orphan": false, "label": "cytokinesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Spatial selection of the midcell division site.", "grounding": null, "id": "division_site_placement", "is_orphan": false, "label": "division-site placement", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like FtsZ-based contractile ring that organizes division.", "grounding": null, "id": "ftsz_ring", "is_orphan": false, "label": "FtsZ ring (divisome)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Rate at which the cell elongates between divisions.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "elongation rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Cell-length control by growth and division timing"}];
+  var graphs = [{"description": "DOI-backed graph linking growth rate, division-site placement, and the adder size-control principle to the observed cell-length phenotype.", "edges": [{"description": "Elongation rate sets how rapidly a cell extends along its long axis between divisions.", "evidence": [{"notes": "Supports growth/elongation rate as a determinant of cell size.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "growth_rate", "target": "cell_length_trait"}, {"description": "Adder size control sets the inter-division length increment that determines average cell length.", "evidence": [{"notes": "Supports the adder principle as the size-control rule producing the length distribution.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "adder_principle", "target": "cell_length_trait"}, {"description": "FtsZ assembles at the future division site to initiate cytokinesis.", "evidence": [{"notes": "Supports FtsZ-ring assembly as the proximate divisome event.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "FtsZ ring at the future division site"}], "id": "edge-3", "is_orphan": false, "predicate": "assembles at", "predicate_id": null, "source": "ftsz_ring", "target": "division_site_placement"}, {"description": "Division-site placement directs constriction and cytokinesis.", "evidence": [{"notes": "Supports division-site placement as the trigger for cytokinesis.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "division_site_placement", "target": "cytokinesis"}, {"description": "Cytokinesis halves the mother cell, resetting daughter cell length.", "evidence": [{"notes": "Supports division as the event that resets length each generation.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "id": "edge-5", "is_orphan": false, "predicate": "resets", "predicate_id": null, "source": "cytokinesis", "target": "cell_length_trait"}], "evidence_rows": [{"description": "Elongation rate sets how rapidly a cell extends along its long axis between divisions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports growth/elongation rate as a determinant of cell size.", "reference": "DOI:10.1016/j.cub.2014.07.022", "snippet": "cell size is tightly controlled"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "elongation rate", "target": "cell length"}, {"description": "Adder size control sets the inter-division length increment that determines average cell length.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the adder principle as the size-control rule producing the length distribution.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "adder size control", "target": "cell length"}, {"description": "FtsZ assembles at the future division site to initiate cytokinesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports FtsZ-ring assembly as the proximate divisome event.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "FtsZ ring at the future division site"}], "predicate": "assembles at", "predicate_id": null, "source": "FtsZ ring (divisome)", "target": "division-site placement"}, {"description": "Division-site placement directs constriction and cytokinesis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports division-site placement as the trigger for cytokinesis.", "reference": "DOI:10.1038/nrmicro2671", "snippet": "directs cell division"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "division-site placement", "target": "cytokinesis"}, {"description": "Cytokinesis halves the mother cell, resetting daughter cell length.", "edge_id": "edge-5", "evidence": [{"notes": "Supports division as the event that resets length each generation.", "reference": "DOI:10.1016/j.cell.2014.11.022", "snippet": "cells grow by a fixed amount between divisions"}], "predicate": "resets", "predicate_id": null, "source": "cytokinesis", "target": "cell length"}], "graph_id": "cell_length_division_growth_control", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mechanism by which cells add a fixed length increment between consecutive divisions.", "grounding": null, "id": "adder_principle", "is_orphan": false, "label": "adder size control", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Longer dimension of the rod-like or elongated cell body.", "grounding": "METPO:1000881", "id": "cell_length_trait", "is_orphan": false, "label": "cell length", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cell division that resets cell length each generation.", "grounding": null, "id": "cytokinesis", "is_orphan": false, "label": "cytokinesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Spatial selection of the midcell division site.", "grounding": null, "id": "division_site_placement", "is_orphan": false, "label": "division-site placement", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like FtsZ-based contractile ring that organizes division.", "grounding": null, "id": "ftsz_ring", "is_orphan": false, "label": "FtsZ ring (divisome)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Rate at which the cell elongates between divisions.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "elongation rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Cell-length control by growth and division timing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -654,10 +672,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -60,7 +60,7 @@
             <strong>ambient molecular oxygen</strong>
             <span class="edge-predicate">defines</span>
             <strong>oxygen preference</strong>
-            
+            <code>METPO:2007500</code>
             <p>Ambient molecular-oxygen concentration is the quantitative axis defining oxygen-preference phenotypes.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>aerobic</strong>
             <span class="edge-predicate">is a</span>
             <strong>oxygen preference</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Aerobic is a child oxygen-preference phenotype.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>anaerobic</strong>
             <span class="edge-predicate">is a</span>
             <strong>oxygen preference</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Anaerobic is a child oxygen-preference phenotype.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>microaerophilic</strong>
             <span class="edge-predicate">is a</span>
             <strong>oxygen preference</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Microaerophilic is a child oxygen-preference phenotype.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>facultative oxygen preference</strong>
             <span class="edge-predicate">is a</span>
             <strong>oxygen preference</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>Facultative oxygen preference is a child oxygen-preference phenotype.</p>
             <ul>
               
@@ -313,6 +313,18 @@
           <time>2026-05-13T22:45:00-07:00</time> ·
           <strong>IMPROVED_CAUSAL_GRAPH_EVIDENCE</strong> · codex
           <p class="changes">Replaced PMID fallback CausalEdge references with DOI-backed oxygen-utilization and facultative oxygen-response citations.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×4).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T07:37:39Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
         </li>
         
       </ol>
@@ -672,7 +684,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient molecular-oxygen availability to the four child oxygen-preference phenotypes (aerobic, anaerobic, microaerophilic, facultative) that classify how organisms use or tolerate O2.", "edges": [{"description": "Ambient molecular-oxygen concentration is the quantitative axis defining oxygen-preference phenotypes.", "evidence": [{"notes": "Supports molecular oxygen utilization as the classification axis for oxygen-preference phenotypes.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "various capacities in their utilization of molecular oxygen"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": null, "source": "ambient_oxygen", "target": "oxygen_preference_trait"}, {"description": "Aerobic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports aerobic as an oxygen-use phenotype within oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic ... respiration capacities"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "aerobic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Anaerobic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports anaerobic as a distinct oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic, microaerobic, and anaerobic reductases"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "anaerobic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Microaerophilic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports microaerophilic as a low-O2 setting on the oxygen-preference axis.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerophilic, microaerophilic, or anaerobic"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "microaerophilic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Facultative oxygen preference is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports facultative organisms as a mixed-O2 setting on the oxygen-preference axis, switching between aerobic and anaerobic metabolism.", "reference": "DOI:10.1111/cmi.13338", "snippet": "cope with changing oxygen levels"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "facultative_phenotype", "target": "oxygen_preference_trait"}], "evidence_rows": [{"description": "Ambient molecular-oxygen concentration is the quantitative axis defining oxygen-preference phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports molecular oxygen utilization as the classification axis for oxygen-preference phenotypes.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "various capacities in their utilization of molecular oxygen"}], "predicate": "defines", "predicate_id": null, "source": "ambient molecular oxygen", "target": "oxygen preference"}, {"description": "Aerobic is a child oxygen-preference phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports aerobic as an oxygen-use phenotype within oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic ... respiration capacities"}], "predicate": "is a", "predicate_id": null, "source": "aerobic", "target": "oxygen preference"}, {"description": "Anaerobic is a child oxygen-preference phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports anaerobic as a distinct oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic, microaerobic, and anaerobic reductases"}], "predicate": "is a", "predicate_id": null, "source": "anaerobic", "target": "oxygen preference"}, {"description": "Microaerophilic is a child oxygen-preference phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports microaerophilic as a low-O2 setting on the oxygen-preference axis.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerophilic, microaerophilic, or anaerobic"}], "predicate": "is a", "predicate_id": null, "source": "microaerophilic", "target": "oxygen preference"}, {"description": "Facultative oxygen preference is a child oxygen-preference phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports facultative organisms as a mixed-O2 setting on the oxygen-preference axis, switching between aerobic and anaerobic metabolism.", "reference": "DOI:10.1111/cmi.13338", "snippet": "cope with changing oxygen levels"}], "predicate": "is a", "predicate_id": null, "source": "facultative oxygen preference", "target": "oxygen preference"}], "graph_id": "oxygen_preference_o2_availability_axis", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Growth in the presence of molecular oxygen using O2 as terminal electron acceptor.", "grounding": "METPO:1000602", "id": "aerobic_phenotype", "is_orphan": false, "label": "aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient O2 concentration imposed on the cell.", "grounding": null, "id": "ambient_oxygen", "is_orphan": false, "label": "ambient molecular oxygen", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth in the absence of molecular oxygen.", "grounding": "METPO:1000603", "id": "anaerobic_phenotype", "is_orphan": false, "label": "anaerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Growth across a range of oxygen availabilities, switching between aerobic and anaerobic metabolism.", "grounding": "METPO:1000612", "id": "facultative_phenotype", "is_orphan": false, "label": "facultative oxygen preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low molecular-oxygen concentrations.", "grounding": "METPO:1000604", "id": "microaerophilic_phenotype", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Classification of an organism\u0027s oxygen requirements or tolerance for growth.", "grounding": "METPO:1000601", "id": "oxygen_preference_trait", "is_orphan": false, "label": "oxygen preference", "node_type": "TRAIT", "xrefs": []}], "title": "Oxygen-preference O2-availability axis"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient molecular-oxygen availability to the four child oxygen-preference phenotypes (aerobic, anaerobic, microaerophilic, facultative) that classify how organisms use or tolerate O2.", "edges": [{"description": "Ambient molecular-oxygen concentration is the quantitative axis defining oxygen-preference phenotypes.", "evidence": [{"notes": "Supports molecular oxygen utilization as the classification axis for oxygen-preference phenotypes.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "various capacities in their utilization of molecular oxygen"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient_oxygen", "target": "oxygen_preference_trait"}, {"description": "Aerobic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports aerobic as an oxygen-use phenotype within oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic ... respiration capacities"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "aerobic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Anaerobic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports anaerobic as a distinct oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic, microaerobic, and anaerobic reductases"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "anaerobic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Microaerophilic is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports microaerophilic as a low-O2 setting on the oxygen-preference axis.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerophilic, microaerophilic, or anaerobic"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "microaerophilic_phenotype", "target": "oxygen_preference_trait"}, {"description": "Facultative oxygen preference is a child oxygen-preference phenotype.", "evidence": [{"notes": "Supports facultative organisms as a mixed-O2 setting on the oxygen-preference axis, switching between aerobic and anaerobic metabolism.", "reference": "DOI:10.1111/cmi.13338", "snippet": "cope with changing oxygen levels"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "facultative_phenotype", "target": "oxygen_preference_trait"}], "evidence_rows": [{"description": "Ambient molecular-oxygen concentration is the quantitative axis defining oxygen-preference phenotypes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports molecular oxygen utilization as the classification axis for oxygen-preference phenotypes.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "various capacities in their utilization of molecular oxygen"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient molecular oxygen", "target": "oxygen preference"}, {"description": "Aerobic is a child oxygen-preference phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports aerobic as an oxygen-use phenotype within oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic ... respiration capacities"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "aerobic", "target": "oxygen preference"}, {"description": "Anaerobic is a child oxygen-preference phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports anaerobic as a distinct oxygen-preference classification.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerobic, microaerobic, and anaerobic reductases"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "anaerobic", "target": "oxygen preference"}, {"description": "Microaerophilic is a child oxygen-preference phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports microaerophilic as a low-O2 setting on the oxygen-preference axis.", "reference": "DOI:10.3389/fmicb.2014.00674", "snippet": "aerophilic, microaerophilic, or anaerobic"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "microaerophilic", "target": "oxygen preference"}, {"description": "Facultative oxygen preference is a child oxygen-preference phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports facultative organisms as a mixed-O2 setting on the oxygen-preference axis, switching between aerobic and anaerobic metabolism.", "reference": "DOI:10.1111/cmi.13338", "snippet": "cope with changing oxygen levels"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "facultative oxygen preference", "target": "oxygen preference"}], "graph_id": "oxygen_preference_o2_availability_axis", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Growth in the presence of molecular oxygen using O2 as terminal electron acceptor.", "grounding": "METPO:1000602", "id": "aerobic_phenotype", "is_orphan": false, "label": "aerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient O2 concentration imposed on the cell.", "grounding": null, "id": "ambient_oxygen", "is_orphan": false, "label": "ambient molecular oxygen", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth in the absence of molecular oxygen.", "grounding": "METPO:1000603", "id": "anaerobic_phenotype", "is_orphan": false, "label": "anaerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Growth across a range of oxygen availabilities, switching between aerobic and anaerobic metabolism.", "grounding": "METPO:1000612", "id": "facultative_phenotype", "is_orphan": false, "label": "facultative oxygen preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low molecular-oxygen concentrations.", "grounding": "METPO:1000604", "id": "microaerophilic_phenotype", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Classification of an organism\u0027s oxygen requirements or tolerance for growth.", "grounding": "METPO:1000601", "id": "oxygen_preference_trait", "is_orphan": false, "label": "oxygen preference", "node_type": "TRAIT", "xrefs": []}], "title": "Oxygen-preference O2-availability axis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -683,10 +695,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

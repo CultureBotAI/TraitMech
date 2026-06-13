@@ -60,7 +60,7 @@
             <strong>moderate ambient temperature</strong>
             <span class="edge-predicate">selects for</span>
             <strong>mesophilic</strong>
-            
+            <code>METPO:2007401</code>
             <p>Moderate ambient temperatures select for mesophilic physiology.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>homoviscous lipid composition</strong>
-            <span class="edge-predicate">maintains</span>
+            <span class="edge-predicate">regulates</span>
             <strong>membrane fluidity</strong>
-            
+            <code>RO:0002211</code>
             <p>Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>mesophile enzyme repertoire</strong>
             <span class="edge-predicate">enables</span>
             <strong>balanced mesophilic growth</strong>
-            
+            <code>RO:0002327</code>
             <p>Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>balanced mesophilic growth</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>mesophilic</strong>
-            
+            <code>METPO:2007400</code>
             <p>Balanced growth at moderate temperatures manifests the mesophilic trait.</p>
             <ul>
               
@@ -273,6 +273,42 @@
           <time>2026-05-13T22:45:00-07:00</time> ·
           <strong>IMPROVED_CAUSAL_GRAPH_EVIDENCE</strong> · codex
           <p class="changes">Replaced Escherichia coli mesophile PMID fallback with the article DOI in definition, record evidence, and CausalEdge evidence.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:06Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007401×1, METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: maintains → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:41:03Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007505×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T02:30:12Z</time> ·
+          <strong>RETYPE_CAUSAL_NODES</strong> · claude
+          <p class="changes">Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.</p>
         </li>
         
       </ol>
@@ -632,7 +668,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking mesophily to moderate ambient temperature, homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced growth at intermediate temperatures.", "edges": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "moderate_temperature", "target": "mesophilic_trait"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "mesophile_enzyme_repertoire", "target": "balanced_growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "balanced_growth", "target": "mesophilic_trait"}], "evidence_rows": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "selects for", "predicate_id": null, "source": "moderate ambient temperature", "target": "mesophilic"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "maintains", "predicate_id": null, "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": null, "source": "mesophile enzyme repertoire", "target": "balanced mesophilic growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "manifests as", "predicate_id": null, "source": "balanced mesophilic growth", "target": "mesophilic"}], "graph_id": "mesophilic_homoviscous_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Sustained growth rate at intermediate temperatures.", "grounding": null, "id": "balanced_growth", "is_orphan": false, "label": "balanced mesophilic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain target membrane fluidity at mesophilic temperatures.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with peak activity in the mesophile temperature range.", "grounding": null, "id": "mesophile_enzyme_repertoire", "is_orphan": false, "label": "mesophile enzyme repertoire", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at intermediate temperatures (~20\u201345 \u00b0C).", "grounding": "METPO:1000615", "id": "mesophilic_trait", "is_orphan": false, "label": "mesophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature in the ~20\u201345 \u00b0C mesophilic range.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Mesophilic homoviscous and enzymatic adaptation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking mesophily to moderate ambient temperature, homoviscous membrane lipid composition, mesophile enzyme repertoire, and balanced growth at intermediate temperatures.", "edges": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate_temperature", "target": "mesophilic_trait"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous_lipid_composition", "target": "membrane_fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile_enzyme_repertoire", "target": "balanced_growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced_growth", "target": "mesophilic_trait"}], "evidence_rows": [{"description": "Moderate ambient temperatures select for mesophilic physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a representative mesophile thriving at moderate temperatures.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "moderate ambient temperature", "target": "mesophilic"}, {"description": "Homoviscous lipid composition maintains target membrane fluidity at mesophilic temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports homoviscous adaptation as the mechanism setting membrane fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "homoviscous lipid composition", "target": "membrane fluidity"}, {"description": "Mesophile enzyme repertoire enables balanced growth at intermediate temperatures.", "edge_id": "edge-3", "evidence": [{"notes": "Supports temperature-tuned enzyme repertoires as the basis of adapted growth.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mesophile enzyme repertoire", "target": "balanced mesophilic growth"}, {"description": "Balanced growth at moderate temperatures manifests the mesophilic trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint in a representative organism.", "reference": "DOI:10.1016/j.bpj.2013.06.029", "snippet": "Escherichia coli, a mesophilic bacterium"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "balanced mesophilic growth", "target": "mesophilic"}], "graph_id": "mesophilic_homoviscous_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Sustained growth rate at intermediate temperatures.", "grounding": null, "id": "balanced_growth", "is_orphan": false, "label": "balanced mesophilic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Lipid composition tuned to maintain target membrane fluidity at mesophilic temperatures.", "grounding": null, "id": "homoviscous_lipid_composition", "is_orphan": false, "label": "homoviscous lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes with peak activity in the mesophile temperature range.", "grounding": null, "id": "mesophile_enzyme_repertoire", "is_orphan": false, "label": "mesophile enzyme repertoire", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at intermediate temperatures (~20\u201345 \u00b0C).", "grounding": "METPO:1000615", "id": "mesophilic_trait", "is_orphan": false, "label": "mesophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient temperature in the ~20\u201345 \u00b0C mesophilic range.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate ambient temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Mesophilic homoviscous and enzymatic adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -643,10 +679,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

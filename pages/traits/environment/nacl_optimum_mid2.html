@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>elevated NaCl</strong>
-            <span class="edge-predicate">drives</span>
+            <span class="edge-predicate">regulates</span>
             <strong>pronounced compatible-solute accumulation</strong>
-            
+            <code>RO:0002211</code>
             <p>Elevated NaCl drives substantial compatible-solute accumulation.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pronounced compatible-solute accumulation</strong>
             <span class="edge-predicate">produces</span>
             <strong>NaCl optimum mid2</strong>
-            
+            <code>METPO:2000202</code>
             <p>Pronounced compatible-solute accumulation yields a 3–8% NaCl-optimum setpoint.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>NaCl optimum mid2</strong>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
               
@@ -248,6 +248,24 @@
           <time>2026-05-12T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking pronounced compatible-solute accumulation at elevated NaCl to the moderate-halophile NaCl-optimum bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: drives → regulates ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
         </li>
         
       </ol>
@@ -607,7 +625,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking pronounced compatible-solute accumulation at elevated NaCl to a 3\u20138% (w/v) NaCl-optimum (moderate halophile).", "edges": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-1", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "elevated_nacl", "target": "pronounced_compatible_solutes"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "pronounced_compatible_solutes", "target": "nacl_optimum_mid2_trait"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "nacl_optimum_mid2_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "drives", "predicate_id": null, "source": "elevated NaCl", "target": "pronounced compatible-solute accumulation"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "produces", "predicate_id": null, "source": "pronounced compatible-solute accumulation", "target": "NaCl optimum mid2"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": null, "source": "NaCl optimum mid2", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External NaCl ~3\u20138% w/v, typical of saline lakes and salt marshes.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 3\u20138% w/v.", "grounding": "METPO:1000467", "id": "nacl_optimum_mid2_trait", "is_orphan": false, "label": "NaCl optimum mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Substantial accumulation of organic osmolytes (ectoine, glycine betaine) under moderately hypersaline conditions.", "grounding": null, "id": "pronounced_compatible_solutes", "is_orphan": false, "label": "pronounced compatible-solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-optimum-mid2 moderate-halophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking pronounced compatible-solute accumulation at elevated NaCl to a 3\u20138% (w/v) NaCl-optimum (moderate halophile).", "edges": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated_nacl", "target": "pronounced_compatible_solutes"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pronounced_compatible_solutes", "target": "nacl_optimum_mid2_trait"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_mid2_trait", "target": "nacl_optimum"}], "evidence_rows": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated NaCl", "target": "pronounced compatible-solute accumulation"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pronounced compatible-solute accumulation", "target": "NaCl optimum mid2"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum mid2", "target": "NaCl optimum"}], "graph_id": "nacl_optimum_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External NaCl ~3\u20138% w/v, typical of saline lakes and salt marshes.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 3\u20138% w/v.", "grounding": "METPO:1000467", "id": "nacl_optimum_mid2_trait", "is_orphan": false, "label": "NaCl optimum mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Substantial accumulation of organic osmolytes (ectoine, glycine betaine) under moderately hypersaline conditions.", "grounding": null, "id": "pronounced_compatible_solutes", "is_orphan": false, "label": "pronounced compatible-solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "NaCl-optimum-mid2 moderate-halophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -618,10 +636,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

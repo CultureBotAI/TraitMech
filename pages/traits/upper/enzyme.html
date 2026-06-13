@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>enzyme — UPPER — TraitMech</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">TraitMech</a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../umap.html">Embedding space</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+      <a href="https://w3id.org/metpo">METPO</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<div class="layout-2col">
+<article class="trait">
+  <header class="trait-header">
+    <p class="breadcrumb">
+      <a href="../../index.html">TraitMech</a>
+      <span>›</span>
+      <a href="../../category/upper.html">UPPER</a>
+    </p>
+    <h1>enzyme</h1>
+    <p class="curie"><code>METPO:1000527</code> · CLASS · REVIEWED</p>
+    
+    <p class="definition">A biological macromolecule (typically a protein, occasionally a catalytic RNA) that catalyses a specific biochemical reaction. This class is the material-entity sense of &#34;enzyme&#34; (the molecule itself), matching METPO:1000527&#39;s placement as a subclass of METPO:1000186 (material entity). Used as the range class for METPO enzyme-related OBJECT_PROPERTYs (shows_activity_of, enzyme_activity_analyzed, does_not_show_activity_of).</p>
+    
+  </header>
+
+  
+
+  <section class="grid">
+    <div class="card">
+      <h2>Provenance</h2>
+      <dl>
+        <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
+        
+        <dt>Definition source</dt><dd>DOI:10.1093/nar/gku1003</dd>
+        
+        
+      </dl>
+    </div>
+
+    
+    <div class="card">
+      <h2>Parent traits (1)</h2>
+      <ul>
+        
+        <li><a href="../../traits/upper/material_entity.html" >material entity <code>METPO:1000186</code></a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    <div class="card kg-context">
+      <h2>kg-microbe context</h2>
+      
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>direct_metpo</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000527</code> <span class="dim-preview">[-0.279, -0.378, -1.117, -1.472, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
+      
+    </div>
+
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/microbe.html">microbe</a>
+          <span class="sim">0.977</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/chemical_entity.html">chemical entity</a>
+          <span class="sim">0.976</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/material_entity.html">material entity</a>
+          <span class="sim">0.967</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/has_phenotype.html">has phenotype</a>
+          <span class="sim">0.446</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/enzyme_activity_analyzed.html">enzyme activity analyzed</a>
+          <span class="sim">0.437</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/has_quality.html">has quality</a>
+          <span class="sim">0.433</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/shows_activity_of.html">shows activity of</a>
+          <span class="sim">0.425</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/does_not_show_activity_of.html">does not show activity of</a>
+          <span class="sim">0.423</span>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+    <div class="card">
+      <h2>Curation history</h2>
+      <ol>
+        
+        <li>
+          <time>2026-05-16T09:30:00-07:00</time> ·
+          <strong>CREATED_UPPER_CLASS_RECORD</strong> · claude
+          <p class="changes">Created upper-ontology CLASS record for METPO:1000527 (enzyme) so that the range of un-deprecated activity-assay OBJECT_PROPERTYs (shows_activity_of, enzyme_activity_analyzed, and their negation companions) resolves to a curated TraitMech record.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-16T09:45:00-07:00</time> ·
+          <strong>REMOVED_NON_EQUIVALENT_XREFS_AND_TIGHTENED_DEFINITION</strong> · claude
+          <p class="changes">Per Copilot review of PR #55, removed xrefs to GO:0003824 (catalytic activity) and CHEBI:23357 (catalyst). Neither is an equivalence mapping: GO:0003824 is an activity/process class and CHEBI:23357 is a role, while this record represents the enzyme material entity. The definition was rewritten to be strictly about the enzyme molecule itself, removing the earlier wording that conflated material entity with catalytic activity. No clean cross-ontology equivalent for the material-entity &#34;enzyme&#34; class is available (CHEBI does not have a single enzyme class; PR is too broad as &#34;protein&#34;), so xrefs is left empty.</p>
+        </li>
+        
+      </ol>
+    </div>
+    
+  </section>
+</article>
+
+<aside class="rail">
+  <div class="card source-card">
+    <h2>Source</h2>
+    <p class="rail-path"><code>data/traits/upper/enzyme.yaml</code></p>
+    <ul class="rail-links">
+      <li><a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/upper/enzyme.yaml" target="_blank" rel="noopener">View YAML on GitHub</a></li>
+      <li><a href="https://raw.githubusercontent.com/CultureBotAI/TraitMech/main/data/traits/upper/enzyme.yaml" target="_blank" rel="noopener">Raw YAML</a></li>
+      <li><a href="https://github.com/CultureBotAI/TraitMech/edit/main/data/traits/upper/enzyme.yaml" target="_blank" rel="noopener">Edit on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Identifier</h2>
+    <dl class="rail-meta">
+      <dt>METPO CURIE</dt>
+      <dd><a href="https://w3id.org/metpo/1000527" target="_blank" rel="noopener"><code>METPO:1000527</code></a></dd>
+      <dt>Category</dt>
+      <dd>UPPER</dd>
+      <dt>Term kind</dt>
+      <dd>CLASS</dd>
+      <dt>Status</dt>
+      <dd>REVIEWED</dd>
+    </dl>
+  </div>
+
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (direct_metpo)</p>
+  </div>
+  
+</aside>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    Built 2026-06-12 07:21 UTC from
+    <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
+    · 477 TraitRecords
+    · embedding coverage 73.2%
+    (kg-microbe deepwalk 512-D, 2026-04-25)
+  </div>
+</footer>
+</body>
+</html>

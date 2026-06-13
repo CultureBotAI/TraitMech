@@ -60,7 +60,7 @@
             <strong>metazoan-adapted virulence factors</strong>
             <span class="edge-predicate">enables</span>
             <strong>animal tissue colonization</strong>
-            
+            <code>RO:0002327</code>
             <p>Metazoan-adapted virulence factors enable adhesion and invasion of animal tissues.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>immune evasion</strong>
-            <span class="edge-predicate">supports</span>
+            <span class="edge-predicate">enables</span>
             <strong>animal tissue colonization</strong>
-            
+            <code>RO:0002327</code>
             <p>Immune evasion supports sustained colonization despite host defenses.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>animal tissue colonization</strong>
             <span class="edge-predicate">causes</span>
             <strong>animal disease</strong>
-            
+            <code>biolink:causes</code>
             <p>Established colonization in animal tissues causes disease.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>animal disease</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>animal pathogen</strong>
-            
+            <code>METPO:2007400</code>
             <p>Animal disease manifests the animal-pathogen trait.</p>
             <ul>
               
@@ -261,6 +261,36 @@
           <time>2026-05-11T23:15:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking metazoan-adapted virulence factors, immune evasion, animal tissue colonization, and disease to the animal-pathogen trait.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:29Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T05:49:23Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:05Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:18Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: supports → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:20Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -620,7 +650,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking metazoan-adapted virulence factors, immune-evasion strategies, and animal-tissue colonization to the animal-pathogen phenotype.", "edges": [{"description": "Metazoan-adapted virulence factors enable adhesion and invasion of animal tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of animal tissue colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "metazoan_virulence_factors", "target": "animal_tissue_colonization"}, {"description": "Immune evasion supports sustained colonization despite host defenses.", "evidence": [{"notes": "Supports effector-delivery-based immune evasion in animal pathogens.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-2", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "immune_evasion", "target": "animal_tissue_colonization"}, {"description": "Established colonization in animal tissues causes disease.", "evidence": [{"notes": "Supports colonization-to-disease progression in animal hosts.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "animal_tissue_colonization", "target": "animal_disease"}, {"description": "Animal disease manifests the animal-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "animal_disease", "target": "animal_pathogen_trait"}], "evidence_rows": [{"description": "Metazoan-adapted virulence factors enable adhesion and invasion of animal tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of animal tissue colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": null, "source": "metazoan-adapted virulence factors", "target": "animal tissue colonization"}, {"description": "Immune evasion supports sustained colonization despite host defenses.", "edge_id": "edge-2", "evidence": [{"notes": "Supports effector-delivery-based immune evasion in animal pathogens.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "supports", "predicate_id": null, "source": "immune evasion", "target": "animal tissue colonization"}, {"description": "Established colonization in animal tissues causes disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports colonization-to-disease progression in animal hosts.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "causes", "predicate_id": null, "source": "animal tissue colonization", "target": "animal disease"}, {"description": "Animal disease manifests the animal-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": null, "source": "animal disease", "target": "animal pathogen"}], "graph_id": "animal_pathogen_metazoan_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Pathology produced in an animal host.", "grounding": null, "id": "animal_disease", "is_orphan": false, "label": "animal disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of metazoan hosts.", "grounding": "METPO:1004002", "id": "animal_pathogen_trait", "is_orphan": false, "label": "animal pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of microbial growth in metazoan tissues.", "grounding": null, "id": "animal_tissue_colonization", "is_orphan": false, "label": "animal tissue colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading innate and adaptive immunity of metazoans.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to animal-cell receptors and tissues.", "grounding": null, "id": "metazoan_virulence_factors", "is_orphan": false, "label": "metazoan-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Animal-pathogen metazoan host adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking metazoan-adapted virulence factors, immune-evasion strategies, and animal-tissue colonization to the animal-pathogen phenotype.", "edges": [{"description": "Metazoan-adapted virulence factors enable adhesion and invasion of animal tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of animal tissue colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "metazoan_virulence_factors", "target": "animal_tissue_colonization"}, {"description": "Immune evasion supports sustained colonization despite host defenses.", "evidence": [{"notes": "Supports effector-delivery-based immune evasion in animal pathogens.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "immune_evasion", "target": "animal_tissue_colonization"}, {"description": "Established colonization in animal tissues causes disease.", "evidence": [{"notes": "Supports colonization-to-disease progression in animal hosts.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "animal_tissue_colonization", "target": "animal_disease"}, {"description": "Animal disease manifests the animal-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "animal_disease", "target": "animal_pathogen_trait"}], "evidence_rows": [{"description": "Metazoan-adapted virulence factors enable adhesion and invasion of animal tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of animal tissue colonization.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metazoan-adapted virulence factors", "target": "animal tissue colonization"}, {"description": "Immune evasion supports sustained colonization despite host defenses.", "edge_id": "edge-2", "evidence": [{"notes": "Supports effector-delivery-based immune evasion in animal pathogens.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "immune evasion", "target": "animal tissue colonization"}, {"description": "Established colonization in animal tissues causes disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports colonization-to-disease progression in animal hosts.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "animal tissue colonization", "target": "animal disease"}, {"description": "Animal disease manifests the animal-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "animal disease", "target": "animal pathogen"}], "graph_id": "animal_pathogen_metazoan_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Pathology produced in an animal host.", "grounding": null, "id": "animal_disease", "is_orphan": false, "label": "animal disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of metazoan hosts.", "grounding": "METPO:1004002", "id": "animal_pathogen_trait", "is_orphan": false, "label": "animal pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of microbial growth in metazoan tissues.", "grounding": null, "id": "animal_tissue_colonization", "is_orphan": false, "label": "animal tissue colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading innate and adaptive immunity of metazoans.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to animal-cell receptors and tissues.", "grounding": null, "id": "metazoan_virulence_factors", "is_orphan": false, "label": "metazoan-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Animal-pathogen metazoan host adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -631,10 +661,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

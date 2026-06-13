@@ -60,7 +60,7 @@
             <strong>moderate pH-homeostasis flexibility</strong>
             <span class="edge-predicate">produces</span>
             <strong>pH delta mid1</strong>
-            
+            <code>METPO:2000202</code>
             <p>Moderate pH-homeostasis flexibility yields a 2–3 pH-unit pH-delta breadth.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>pH delta mid1</strong>
             <span class="edge-predicate">is a</span>
             <strong>pH delta</strong>
-            
+            <code>rdfs:subClassOf</code>
             <p>pH delta mid1 is a quantitative bin of the pH-delta phenotype.</p>
             <ul>
               
@@ -227,6 +227,12 @@
           <time>2026-05-13T10:00:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed definition and causal graph linking moderate pH-homeostasis flexibility to the moderate-breadth pH-delta-mid1 bin.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:30Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
         </li>
         
       </ol>
@@ -586,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate pH-homeostasis flexibility to a pH growth breadth of approximately 2\u20133 pH units.", "edges": [{"description": "Moderate pH-homeostasis flexibility yields a 2\u20133 pH-unit pH-delta breadth.", "evidence": [{"notes": "Supports moderate flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "moderate_ph_homeostasis", "target": "ph_delta_mid1_trait"}, {"description": "pH delta mid1 is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports the 2\u20133 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "ph_delta_mid1_trait", "target": "ph_delta"}], "evidence_rows": [{"description": "Moderate pH-homeostasis flexibility yields a 2\u20133 pH-unit pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports moderate flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": null, "source": "moderate pH-homeostasis flexibility", "target": "pH delta mid1"}, {"description": "pH delta mid1 is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 2\u20133 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": null, "source": "pH delta mid1", "target": "pH delta"}], "graph_id": "ph_delta_mid1_moderate_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mid-range capacity to remodel proton extrusion and envelope buffering across a few pH units.", "grounding": null, "id": "moderate_ph_homeostasis", "is_orphan": false, "label": "moderate pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth approximately 2\u20133 pH units.", "grounding": "METPO:1000475", "id": "ph_delta_mid1_trait", "is_orphan": false, "label": "pH delta mid1", "node_type": "TRAIT", "xrefs": []}], "title": "pH-delta-mid1 moderate-breadth pH homeostasis"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate pH-homeostasis flexibility to a pH growth breadth of approximately 2\u20133 pH units.", "edges": [{"description": "Moderate pH-homeostasis flexibility yields a 2\u20133 pH-unit pH-delta breadth.", "evidence": [{"notes": "Supports moderate flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate_ph_homeostasis", "target": "ph_delta_mid1_trait"}, {"description": "pH delta mid1 is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports the 2\u20133 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta_mid1_trait", "target": "ph_delta"}], "evidence_rows": [{"description": "Moderate pH-homeostasis flexibility yields a 2\u20133 pH-unit pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports moderate flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate pH-homeostasis flexibility", "target": "pH delta mid1"}, {"description": "pH delta mid1 is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 2\u20133 unit breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta mid1", "target": "pH delta"}], "graph_id": "ph_delta_mid1_moderate_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mid-range capacity to remodel proton extrusion and envelope buffering across a few pH units.", "grounding": null, "id": "moderate_ph_homeostasis", "is_orphan": false, "label": "moderate pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth approximately 2\u20133 pH units.", "grounding": "METPO:1000475", "id": "ph_delta_mid1_trait", "is_orphan": false, "label": "pH delta mid1", "node_type": "TRAIT", "xrefs": []}], "title": "pH-delta-mid1 moderate-breadth pH homeostasis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

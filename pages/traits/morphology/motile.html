@@ -60,7 +60,7 @@
             <strong>metabolic energy</strong>
             <span class="edge-predicate">generates</span>
             <strong>ion motive force</strong>
-            
+            <code>biolink:produces</code>
             <p>Metabolism supports ion gradients that can power motility.</p>
             <ul>
               
@@ -75,9 +75,9 @@
           
           <li id="pathograph-1-edge-2">
             <strong>ion motive force</strong>
-            <span class="edge-predicate">powers</span>
+            <span class="edge-predicate">enables</span>
             <strong>flagellar motor</strong>
-            
+            <code>RO:0002327</code>
             <p>Ion motive force powers rotation of the flagellar motor.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>flagellar motor</strong>
             <span class="edge-predicate">enables</span>
             <strong>motile</strong>
-            
+            <code>RO:0002327</code>
             <p>Flagellar rotation enables independent bacterial movement.</p>
             <ul>
               
@@ -111,7 +111,7 @@
             <strong>type IV pilus</strong>
             <span class="edge-predicate">enables</span>
             <strong>motile</strong>
-            
+            <code>RO:0002327</code>
             <p>Type IV pilus extension and retraction enable surface motility.</p>
             <ul>
               
@@ -128,7 +128,7 @@
             <strong>chemotaxis signaling</strong>
             <span class="edge-predicate">directs</span>
             <strong>motile</strong>
-            
+            <code>RO:0002211</code>
             <p>Chemotaxis signaling regulates motility direction in response to environmental changes.</p>
             <ul>
               
@@ -174,7 +174,7 @@
 
     
     <div class="card">
-      <h2>Children (3)</h2>
+      <h2>Children (5)</h2>
       <ul>
         
         <li><a href="../../traits/morphology/axially_filamented.html">axially filamented <code>METPO:1000705</code></a></li>
@@ -182,6 +182,10 @@
         <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a></li>
         
         <li><a href="../../traits/morphology/gliding.html">gliding <code>METPO:1000706</code></a></li>
+        
+        <li><a href="../../traits/morphology/swarming_motility.html">swarming motility <code>traitmech:000062</code></a></li>
+        
+        <li><a href="../../traits/morphology/twitching_motility.html">twitching motility <code>traitmech:000061</code></a></li>
         
       </ul>
     </div>
@@ -299,6 +303,42 @@
           <time>2026-05-11T00:00:00-07:00</time> ·
           <strong>CURATED_WITH_LITERATURE</strong> · codex
           <p class="changes">Replaced PMID definition source with DOI-backed motility review and added causal graph for energy-dependent locomotion by flagella, type IV pili, ion motive force, and chemotaxis.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T05:05:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:R6TBR9×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:48Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: powers → enables ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-26T05:00:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
         </li>
         
       </ol>
@@ -658,7 +698,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking motile phenotype to metabolic energy, ion motive force, flagella, pili, and directional regulation.", "edges": [{"description": "Metabolism supports ion gradients that can power motility.", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "id": "edge-1", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "metabolic_energy", "target": "ion_motive_force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "id": "edge-2", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "flagellar_motor", "target": "motile_trait"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "type_iv_pilus", "target": "motile_trait"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "id": "edge-5", "is_orphan": false, "predicate": "directs", "predicate_id": null, "source": "chemotaxis_signaling", "target": "motile_trait"}], "evidence_rows": [{"description": "Metabolism supports ion gradients that can power motility.", "edge_id": "edge-1", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "predicate": "generates", "predicate_id": null, "source": "metabolic energy", "target": "ion motive force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "edge_id": "edge-2", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "predicate": "powers", "predicate_id": null, "source": "ion motive force", "target": "flagellar motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "edge_id": "edge-3", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "predicate": "enables", "predicate_id": null, "source": "flagellar motor", "target": "motile"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "predicate": "enables", "predicate_id": null, "source": "type IV pilus", "target": "motile"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "predicate": "directs", "predicate_id": null, "source": "chemotaxis signaling", "target": "motile"}], "graph_id": "motile_energy_dependent_locomotion", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulatory system that biases movement toward favorable conditions.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that turns bacterial flagella.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient used by many motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Energy generated by cellular metabolism and converted into ion gradients or ATP-dependent movement.", "grounding": null, "id": "metabolic_energy", "is_orphan": false, "label": "metabolic energy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to move independently using metabolic energy.", "grounding": "METPO:1000702", "id": "motile_trait", "is_orphan": false, "label": "motile", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Pilus machinery that extends, adheres, and retracts.", "grounding": null, "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Energy-dependent bacterial locomotion"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking motile phenotype to metabolic energy, ion motive force, flagella, pili, and directional regulation.", "edges": [{"description": "Metabolism supports ion gradients that can power motility.", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "id": "edge-1", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "metabolic_energy", "target": "ion_motive_force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar_motor", "target": "motile_trait"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_pilus", "target": "motile_trait"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "id": "edge-5", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "motile_trait"}], "evidence_rows": [{"description": "Metabolism supports ion gradients that can power motility.", "edge_id": "edge-1", "evidence": [{"notes": "Supports energy transduction from ion gradients into motor function.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "ion motive force powering the bacterial flagellar motor"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "metabolic energy", "target": "ion motive force"}, {"description": "Ion motive force powers rotation of the flagellar motor.", "edge_id": "edge-2", "evidence": [{"notes": "Review directly addresses ion motive force powering flagellar motors.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "The Dynamic Ion Motive Force Powering"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ion motive force", "target": "flagellar motor"}, {"description": "Flagellar rotation enables independent bacterial movement.", "edge_id": "edge-3", "evidence": [{"notes": "Supports flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "responsible for motility"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "flagellar motor", "target": "motile"}, {"description": "Type IV pilus extension and retraction enable surface motility.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pilus-mediated twitching and related motility functions.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "enable T4P to perform"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus", "target": "motile"}, {"description": "Chemotaxis signaling regulates motility direction in response to environmental changes.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis regulation of motile behavior.", "reference": "DOI:10.3390/biom9070279", "snippet": "migrate towards more desirable environments"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "target": "motile"}], "graph_id": "motile_energy_dependent_locomotion", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Regulatory system that biases movement toward favorable conditions.", "grounding": null, "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that turns bacterial flagella.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical gradient used by many motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Energy generated by cellular metabolism and converted into ion gradients or ATP-dependent movement.", "grounding": null, "id": "metabolic_energy", "is_orphan": false, "label": "metabolic energy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ability to move independently using metabolic energy.", "grounding": "METPO:1000702", "id": "motile_trait", "is_orphan": false, "label": "motile", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Pilus machinery that extends, adheres, and retracts.", "grounding": "UniProtKB:R6TBR9", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Energy-dependent bacterial locomotion"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -669,10 +709,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

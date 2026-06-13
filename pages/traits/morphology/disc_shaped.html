@@ -58,9 +58,9 @@
           
           <li id="pathograph-1-edge-1">
             <strong>planar envelope growth</strong>
-            <span class="edge-predicate">shapes</span>
+            <span class="edge-predicate">causes</span>
             <strong>flat disc geometry</strong>
-            
+            <code>biolink:causes</code>
             <p>Planar envelope growth produces a 2D-expanded cell body.</p>
             <ul>
               
@@ -77,7 +77,7 @@
             <strong>axial extension suppression</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>flat disc geometry</strong>
-            
+            <code>RO:0002326</code>
             <p>Suppression of axial extension keeps cells thin.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>flat disc geometry</strong>
             <span class="edge-predicate">manifests as</span>
             <strong>disc shaped</strong>
-            
+            <code>METPO:2007400</code>
             <p>Flat geometry manifests the disc-shaped trait.</p>
             <ul>
               
@@ -244,6 +244,30 @@
           <time>2026-05-11T22:45:00-07:00</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added DOI-backed causal graph linking planar envelope growth and axial-extension suppression to disc-shaped morphology.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-20T03:35:31Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T21:30:07Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:19Z</time> ·
+          <strong>RENAME_PREDICATE_LABELS</strong> · claude
+          <p class="changes">Renamed 1 causal-edge predicate label(s) to align with existing groundings: shapes → causes ×1.</p>
+        </li>
+        
+        <li>
+          <time>2026-05-24T04:13:21Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
         </li>
         
       </ol>
@@ -603,7 +627,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer growth and suppressed axial extension to flat disc-shaped cell geometry.", "edges": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "planar_envelope_growth", "target": "flat_geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "axial_extension_suppression", "target": "flat_geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "flat_geometry", "target": "disc_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "shapes", "predicate_id": null, "source": "planar envelope growth", "target": "flat disc geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "contributes to", "predicate_id": null, "source": "axial extension suppression", "target": "flat disc geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "predicate": "manifests as", "predicate_id": null, "source": "flat disc geometry", "target": "disc shaped"}], "graph_id": "disc_shaped_anisotropic_wall_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced or absent extension along the orthogonal cell axis.", "grounding": null, "id": "axial_extension_suppression", "is_orphan": false, "label": "axial extension suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flat, circular cellular morphology.", "grounding": "METPO:1000689", "id": "disc_shaped_trait", "is_orphan": false, "label": "disc shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Resulting flat, plate-like cell body.", "grounding": null, "id": "flat_geometry", "is_orphan": false, "label": "flat disc geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-envelope (peptidoglycan or S-layer) expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Disc-shape anisotropic cell-wall growth"}];
+  var graphs = [{"description": "DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer growth and suppressed axial extension to flat disc-shaped cell geometry.", "edges": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar_envelope_growth", "target": "flat_geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial_extension_suppression", "target": "flat_geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat_geometry", "target": "disc_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar envelope growth", "target": "flat disc geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial extension suppression", "target": "flat disc geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat disc geometry", "target": "disc shaped"}], "graph_id": "disc_shaped_anisotropic_wall_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced or absent extension along the orthogonal cell axis.", "grounding": null, "id": "axial_extension_suppression", "is_orphan": false, "label": "axial extension suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flat, circular cellular morphology.", "grounding": "METPO:1000689", "id": "disc_shaped_trait", "is_orphan": false, "label": "disc shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Resulting flat, plate-like cell body.", "grounding": null, "id": "flat_geometry", "is_orphan": false, "label": "flat disc geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-envelope (peptidoglycan or S-layer) expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Disc-shape anisotropic cell-wall growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,10 +638,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:12 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -30,19 +30,19 @@
     </p>
     <h1>biological process</h1>
     <p class="curie"><code>METPO:1000630</code> · CLASS · REVIEWED</p>
-
+    
     <p class="definition">A execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</p>
-
+    
   </header>
 
-
+  
   <section class="causal-graphs">
-
-
+    
+    
     <div class="card causal-graph-card">
       <h2>Biological process upper-class context</h2>
       <p class="meta">DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.</p>
-
+      
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
@@ -51,195 +51,214 @@
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
       </div>
-
+      
       <div class="edge-evidence">
         <h3>Edge evidence</h3>
         <ul>
-
+          
           <li id="pathograph-1-edge-1">
             <strong>gene product</strong>
             <span class="edge-predicate">carries out</span>
             <strong>molecular function</strong>
-
+            
             <p>Gene products are annotated to molecular functions that describe their activities.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1093/database/bat054</code>
                 <span class="evidence-snippet">Elemental activities, such as catalysis or binding</span>
                 <span class="meta">Supports molecular function as gene-product activity.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
           <li id="pathograph-1-edge-2">
             <strong>molecular function</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>biological process</strong>
-
+            <code>RO:0002326</code>
             <p>Molecular functions collectively accomplish broader biological processes.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1093/database/bat054</code>
                 <span class="evidence-snippet">Molecular Function, Biological Process and Cellular Component</span>
                 <span class="meta">Supports GO annotation across molecular functions and biological processes.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
           <li id="pathograph-1-edge-3">
             <strong>metabolism</strong>
             <span class="edge-predicate">specializes</span>
             <strong>biological process</strong>
-
+            <code>rdfs:subClassOf</code>
             <p>In TraitMech, metabolism is the non-environmental child class under biological process.</p>
             <ul>
-
+              
               <li>
                 <code>DOI:10.1093/database/bat054</code>
                 <span class="evidence-snippet">child term is a subtype of the parent term</span>
                 <span class="meta">Supports parent-child is-a interpretation for GO-style process hierarchies.</span>
               </li>
-
+              
             </ul>
           </li>
-
+          
         </ul>
       </div>
-
+      
     </div>
-
+    
   </section>
-
+  
 
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
       <dl>
         <dt>Source</dt><dd><a href="https://w3id.org/metpo">METPO</a> (2025-11-25)</dd>
-
+        
         <dt>Definition source</dt><dd>DOI:10.1093/database/bat054</dd>
-
-
+        
+        
       </dl>
     </div>
 
+    
 
-
-
+    
     <div class="card">
       <h2>Children (1)</h2>
       <ul>
-
+        
         <li><a href="../../traits/metabolism/metabolism.html">metabolism <code>METPO:1000060</code></a></li>
-
+        
       </ul>
     </div>
+    
 
+    
 
-
-
-
+    
+    <div class="card">
+      <h2>Cross-references</h2>
+      <ul class="xrefs">
+        <li><code>GO:0008150</code></li>
+      </ul>
+    </div>
+    
 
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
-
+      
       <p class="match-method">Matched <strong>1</strong>
         kg-microbe node
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
-
+        
         <li><code>METPO:1000630</code> <span class="dim-preview">[+0.471, -0.965, -0.707, -0.709, …]</span></li>
-
+        
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
-
+      
     </div>
 
-
+    
     <div class="card">
       <h2>Nearest neighbors in embedding space</h2>
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
           <span class="sim">0.925</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.921</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/homoacetogenesis.html">Homoacetogenesis</a>
           <span class="sim">0.919</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
           <span class="sim">0.916</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
           <span class="sim">0.915</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
           <span class="sim">0.912</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/oxidative_phosphorylation.html">Oxidative phosphorylation</a>
           <span class="sim">0.905</span>
         </li>
-
+        
         <li>
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/respiration.html">respiration</a>
           <span class="sim">0.894</span>
         </li>
-
+        
       </ul>
     </div>
+    
 
+    
 
-
-
-
+    
     <div class="card">
       <h2>Curation history</h2>
       <ol>
-
+        
         <li>
           <time>2026-05-05T01:35:46.866352+00:00</time> ·
           <strong>SEEDED_FROM_METPO</strong> · seed_from_metpo
           <p class="changes">imported from data/raw/metpo.owl (CLASS)</p>
         </li>
-
+        
         <li>
           <time>2026-05-15T00:35:00-07:00</time> ·
           <strong>CURATED_UPPER_CONTEXT</strong> · codex
           <p class="changes">Reviewed biological process as an upper classifier and added a DOI-backed context graph linking molecular functions, gene products, and the metabolism child class.</p>
         </li>
-
+        
+        <li>
+          <time>2026-05-20T03:35:32Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002326×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-05-23T08:21:50Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (rdfs:subClassOf×1).</p>
+        </li>
+        
       </ol>
     </div>
-
+    
   </section>
 </article>
 
@@ -268,12 +287,12 @@
     </dl>
   </div>
 
-
+  
   <div class="card rail-kgm">
     <h2>kg-microbe</h2>
     <p class="meta">1 matching node (direct_metpo)</p>
   </div>
-
+  
 </aside>
 </div>
 
@@ -594,7 +613,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.", "edges": [{"description": "Gene products are annotated to molecular functions that describe their activities.", "evidence": [{"notes": "Supports molecular function as gene-product activity.", "reference": "DOI:10.1093/database/bat054", "snippet": "Elemental activities, such as catalysis or binding"}], "id": "edge-1", "is_orphan": false, "predicate": "carries out", "predicate_id": null, "source": "gene_product", "target": "molecular_function"}, {"description": "Molecular functions collectively accomplish broader biological processes.", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "molecular_function", "target": "biological_process_trait"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "id": "edge-3", "is_orphan": false, "predicate": "specializes", "predicate_id": null, "source": "metabolism_trait", "target": "biological_process_trait"}], "evidence_rows": [{"description": "Gene products are annotated to molecular functions that describe their activities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports molecular function as gene-product activity.", "reference": "DOI:10.1093/database/bat054", "snippet": "Elemental activities, such as catalysis or binding"}], "predicate": "carries out", "predicate_id": null, "source": "gene product", "target": "molecular function"}, {"description": "Molecular functions collectively accomplish broader biological processes.", "edge_id": "edge-2", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "predicate": "contributes to", "predicate_id": null, "source": "molecular function", "target": "biological process"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "edge_id": "edge-3", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "predicate": "specializes", "predicate_id": null, "source": "metabolism", "target": "biological process"}], "graph_id": "biological_process_go_upper_context", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Upper-level process class for genetically encoded biological programs.", "grounding": "METPO:1000630", "id": "biological_process_trait", "is_orphan": false, "label": "biological process", "node_type": "BIOLOGICAL_PROCESS", "xrefs": ["GO:0008150"]}, {"color": "#f3e8ff", "description": "Gene, protein, RNA, or macromolecular complex annotated to GO.", "grounding": null, "id": "gene_product", "is_orphan": false, "label": "gene product", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental TraitMech child class under biological process.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Elemental molecular activity carried out by a gene product.", "grounding": "GO:0003674", "id": "molecular_function", "is_orphan": false, "label": "molecular function", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Biological process upper-class context"}];
+  var graphs = [{"description": "DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.", "edges": [{"description": "Gene products are annotated to molecular functions that describe their activities.", "evidence": [{"notes": "Supports molecular function as gene-product activity.", "reference": "DOI:10.1093/database/bat054", "snippet": "Elemental activities, such as catalysis or binding"}], "id": "edge-1", "is_orphan": false, "predicate": "carries out", "predicate_id": null, "source": "gene_product", "target": "molecular_function"}, {"description": "Molecular functions collectively accomplish broader biological processes.", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular_function", "target": "biological_process_trait"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "id": "edge-3", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism_trait", "target": "biological_process_trait"}], "evidence_rows": [{"description": "Gene products are annotated to molecular functions that describe their activities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports molecular function as gene-product activity.", "reference": "DOI:10.1093/database/bat054", "snippet": "Elemental activities, such as catalysis or binding"}], "predicate": "carries out", "predicate_id": null, "source": "gene product", "target": "molecular function"}, {"description": "Molecular functions collectively accomplish broader biological processes.", "edge_id": "edge-2", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular function", "target": "biological process"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "edge_id": "edge-3", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism", "target": "biological process"}], "graph_id": "biological_process_go_upper_context", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Upper-level process class for genetically encoded biological programs.", "grounding": "METPO:1000630", "id": "biological_process_trait", "is_orphan": false, "label": "biological process", "node_type": "BIOLOGICAL_PROCESS", "xrefs": ["GO:0008150"]}, {"color": "#f3e8ff", "description": "Gene, protein, RNA, or macromolecular complex annotated to GO.", "grounding": null, "id": "gene_product", "is_orphan": false, "label": "gene product", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental TraitMech child class under biological process.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Elemental molecular activity carried out by a gene product.", "grounding": "GO:0003674", "id": "molecular_function", "is_orphan": false, "label": "molecular function", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Biological process upper-class context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,10 +624,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-05-15 07:38 UTC from
+    Built 2026-06-12 07:21 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
-    · 354 TraitRecords
-    · embedding coverage 97.7%
+    · 477 TraitRecords
+    · embedding coverage 73.2%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
