@@ -121,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: drives ATP synthesis
       notes: Supports ATP production from respiratory energy conservation.
+    predicate_id: biolink:produces
   - subject: organic_compound
     predicate: assimilated into
     object: biomass
@@ -182,4 +183,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:27Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

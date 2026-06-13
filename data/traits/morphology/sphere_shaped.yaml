@@ -67,6 +67,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       snippet: synthesize peptidoglycan only at the division septum
       notes: Supports septal-only PG synthesis in spherical cocci.
+    predicate_id: biolink:produces
   - subject: lateral_elongation
     predicate: reduced in
     object: sphere_shaped_trait
@@ -122,4 +123,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

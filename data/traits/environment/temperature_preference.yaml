@@ -76,6 +76,7 @@ causal_graphs:
     - reference: DOI:10.1038/sj.embor.7400662
       snippet: decreased membrane fluidity
       notes: Review identifies membrane fluidity loss as a core cold challenge.
+    predicate_id: RO:0002212
   - subject: high_temperature
     predicate: challenges
     object: protein_stability
@@ -95,6 +96,7 @@ causal_graphs:
       snippet: proton permeability ... increase with the temperature
       notes: Review links increased membrane permeability to upper temperature growth
         limits.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: regulates
     object: temperature_preference_trait
@@ -163,4 +165,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×3).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, RO:0002213×1).
   llm_assisted: true

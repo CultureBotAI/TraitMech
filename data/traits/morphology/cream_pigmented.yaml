@@ -64,6 +64,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.62.081307.162844
       snippet: bacterial carotenoid pigments
       notes: Supports pigment density as the determinant of colony color intensity.
+    predicate_id: biolink:produces
   - subject: pale_coloration
     predicate: manifests as
     object: cream_pigmented_trait
@@ -96,4 +97,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
   llm_assisted: true

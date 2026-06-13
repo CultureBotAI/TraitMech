@@ -71,6 +71,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: oxygen blocks their growth
       notes: Supports oxygen as an inhibitory exposure for obligate anaerobes.
+    predicate_id: RO:0002212
   - subject: molecular_oxygen
     predicate: causes formation of
     object: reactive_oxygen_species
@@ -79,6 +80,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: molecular oxygen and ROS
       notes: Review links oxygen exposure to ROS stress in anaerobes.
+    predicate_id: biolink:produces
   - subject: reactive_oxygen_species
     predicate: damages
     object: oxygen_sensitive_enzymes
@@ -119,4 +121,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:01001057×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, biolink:produces×1).
   llm_assisted: true

@@ -79,6 +79,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2011.06.016
       snippet: respiratory quinol:O2 oxidoreductase
       notes: Review supports terminal oxygen reductases as respiratory chain enzymes.
+    predicate_id: biolink:has_part
   - subject: terminal_oxidases
     predicate: contributes to
     object: proton_motive_force
@@ -139,4 +140,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002502×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:has_part×1).
   llm_assisted: true
