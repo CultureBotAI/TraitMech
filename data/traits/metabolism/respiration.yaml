@@ -119,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbabio.2008.09.008
       snippet: generation of an electrochemical ion gradient
       notes: Supports ion-gradient generation by membrane electron transport.
+    predicate_id: METPO:2007602
   - subject: proton_motive_force
     predicate: regulates
     object: atp_synthase
@@ -202,4 +203,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007602×1).
   llm_assisted: true

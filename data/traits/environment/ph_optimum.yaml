@@ -63,6 +63,7 @@ causal_graphs:
       snippet: major contributor to the proton motive force
       notes: Supports the transmembrane H+ gradient as the determinant of the proton
         motive force.
+    predicate_id: METPO:2007601
   - subject: cytoplasmic_ph_homeostasis
     predicate: regulates
     object: proton_motive_force
@@ -146,4 +147,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007601×1).
   llm_assisted: true

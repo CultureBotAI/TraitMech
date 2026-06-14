@@ -90,6 +90,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.822229
       snippet: external to internal proton gradient
       notes: Supports proton-gradient stress during low-pH growth.
+    predicate_id: METPO:2007601
   - subject: proton_export_pumps
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -155,4 +156,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001428×1, PATO:0001432×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007601×1).
   llm_assisted: true
