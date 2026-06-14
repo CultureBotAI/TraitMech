@@ -1,92 +1,92 @@
-label	node_type	target_curie	target_label	source	confidence	notes
-molecular oxygen	CHEMICAL	CHEBI:15379	dioxygen	CHEBI	high	canonical CHEBI for O2; used in aerobic respiration / oxidative stress contexts
-carbon dioxide	CHEMICAL	CHEBI:16526	carbon dioxide	CHEBI	high	canonical CHEBI for CO2; substrate for fixation pathways, product of respiration
-carbon monoxide	CHEMICAL	CHEBI:17245	carbon monoxide	CHEBI	high	used in carboxydotrophic + Wood-Ljungdahl contexts
-molecular hydrogen	CHEMICAL	CHEBI:18276	dihydrogen	CHEBI	high	H2; electron donor in hydrogenotrophic methanogenesis + lithotrophy
-methane	CHEMICAL	CHEBI:16183	methane	CHEBI	high	product of methanogenesis, substrate for methanotrophs
-methanol	CHEMICAL	CHEBI:17790	methanol	CHEBI	high	C1 substrate for methylotrophs
-ammonia	CHEMICAL	CHEBI:16134	ammonia	CHEBI	high	NH3; nitrification substrate
-nitrate	CHEMICAL	CHEBI:17632	nitrate	CHEBI	high	terminal electron acceptor in denitrification
-sulfate	CHEMICAL	CHEBI:16189	sulfate	CHEBI	high	terminal electron acceptor in sulfate reduction; product of sulfide oxidation
-sulfide	CHEMICAL	CHEBI:15138	sulfide(2-)	CHEBI	high	electron donor in sulfur-oxidizing chemolithotrophy
-proton	CHEMICAL	CHEBI:24636	proton	CHEBI	high	H+; pH-related transport, pmf gradient ion
-ferrous iron	CHEMICAL	CHEBI:29033	iron(2+)	CHEBI	high	Fe2+; electron donor in iron-oxidizing lithotrophy
-organic carbon	CHEMICAL	CHEBI:50860	organic molecular entity	CHEBI	high	broad class — heterotroph carbon source, assimilated into biomass
-compatible solutes	CHEMICAL	CHEBI:65015	osmolyte	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts
-citrate	CHEMICAL	CHEBI:16947	citrate(3-)	CHEBI	high	TCA-cycle intermediate; carbon/electron-donor substrate for citrate-utilizers (Citrobacter, Klebsiella)
-fumarate	CHEMICAL	CHEBI:29806	fumarate(2-)	CHEBI	high	TCA-cycle intermediate; alternative terminal electron acceptor in anaerobic fumarate respiration
-peptidoglycan synthesis	BIOLOGICAL_PROCESS	GO:0009252	peptidoglycan biosynthetic process	GO	high	exact GO term; used in MreB/FtsZ cell-shape graphs
-methanogenesis	BIOLOGICAL_PROCESS	GO:0015948	methanogenesis	GO	high	exact label match
-aerobic respiration	BIOLOGICAL_PROCESS	GO:0009060	aerobic respiration	GO	high	exact label match
-anaerobic respiration	BIOLOGICAL_PROCESS	GO:0009061	anaerobic respiration	GO	high	exact label match
-photosynthesis	BIOLOGICAL_PROCESS	GO:0015979	photosynthesis	GO	high	exact label match
-nitrogen fixation	BIOLOGICAL_PROCESS	GO:0009399	nitrogen fixation	GO	high	exact label match
-fermentation	BIOLOGICAL_PROCESS	GO:0006113	fermentation	GO	high	exact label match
-carbon fixation	BIOLOGICAL_PROCESS	GO:0015977	carbon fixation	GO	high	exact label match
-oxidative phosphorylation	BIOLOGICAL_PROCESS	GO:0006119	oxidative phosphorylation	GO	high	exact label match
-cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	GO:0030641	regulation of cellular pH	GO	high	GO doesn't distinguish cytoplasmic from cellular pH; closest exact term
-osmotic stress	BIOLOGICAL_PROCESS	GO:0006970	response to osmotic stress	GO	high	process-level GO term covering the response axis used in halotolerance graphs
-periplasmic space	CELLULAR_LOCALIZATION	GO:0042597	periplasmic space	GO	high	exact GO-CC term
-outer membrane	CELLULAR_LOCALIZATION	GO:0019867	outer membrane	GO	high	exact GO-CC term; applies to Gram-negatives + mitochondria
-plasma membrane	CELLULAR_LOCALIZATION	GO:0005886	plasma membrane	GO	high	exact GO-CC term
-cytoplasm	CELLULAR_LOCALIZATION	GO:0005737	cytoplasm	GO	high	exact GO-CC term
-kinase reaction	MOLECULAR_FUNCTION	GO:0016301	kinase activity	GO	high	maps the reaction node onto the GO-MF kinase activity class
-redox reaction	MOLECULAR_FUNCTION	GO:0016491	oxidoreductase activity	GO	high	canonical GO-MF for redox catalysis
-respiratory chain	PATHWAY	GO:0022904	respiratory electron transport chain	GO	high	GO term for the ETC; the corpus uses "respiratory chain" as shorthand
-photosynthetic electron transport	PATHWAY	GO:0009767	photosynthetic electron transport chain	GO	high	exact GO term
-calvin-benson cycle	PATHWAY	GO:0019253	reductive pentose-phosphate cycle	GO	high	GO's name for the Calvin-Benson cycle
-wood-ljungdahl pathway	PATHWAY	GO:0046358	acetyl-CoA biosynthetic process from carbon dioxide	GO	high	GO term for the Wood-Ljungdahl pathway
-light	ENVIRONMENTAL_FACTOR	PATO:0001717	light intensity	PATO	high	corpus uses "light" as photosynthesis-context environmental input; PATO captures the radiant-energy axis
-low temperature	ENVIRONMENTAL_FACTOR	PATO:0000383	decreased temperature	PATO	high	PATO quality term used in psychrophilic / psychrotolerant contexts
-anaerobic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	ENVO	high	exact ENVO term
-anoxic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	ENVO	high	ENVO collapses anoxic and anaerobic into one environment class
-carotenoid biosynthesis	BIOLOGICAL_PROCESS	GO:0016117	carotenoid biosynthetic process	GO	high	exact GO term; pigmentation contexts
-proton motive force	STATE	METPO:1007500	proton motive force	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → STATE after CausalNodeTypeEnum gained the STATE permissible value (bioenergetic gradient, not a process)
-biomass	CHEMICAL	METPO:1007501	microbial biomass	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → CHEMICAL via scripts/retype_causal_nodes.py (closest existing CausalNodeTypeEnum fit for aggregate biochemistry)
-inorganic electron donor	CHEMICAL	METPO:1007502	inorganic electron donor	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 7 nodes — class-of-chemicals abstraction for lithotrophy
-reducing power	CAPACITY	METPO:1007503	reducing power	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 4 nodes — re-typed CHEMICAL → CAPACITY after CausalNodeTypeEnum gained the CAPACITY permissible value (electron-donating pool, not a single chemical)
-terminal electron acceptor	CHEMICAL	METPO:1007504	terminal electron acceptor	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 3 nodes as CHEMICAL (also 2 as MOLECULAR_FUNCTION below)
-terminal electron acceptor	MOLECULAR_FUNCTION	METPO:1007504	terminal electron acceptor	METPO	high	same proposed METPO class covers both senses; MOLECULAR_FUNCTION typing surfaces the role-of interpretation
-membrane fluidity	QUALITY	METPO:1007505	membrane fluidity	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 6 nodes — re-typed BIOLOGICAL_PROCESS → QUALITY after CausalNodeTypeEnum gained the QUALITY permissible value (PATO-style attribute, not a process)
-mreb	GENE_OR_PROTEIN	UniProtKB:A0A1B1UYY2	MreB	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-na+/h+ antiporter	GENE_OR_PROTEIN	UniProtKB:A0A068T423	Na+/H+ antiporter	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-ftsz	GENE_OR_PROTEIN	UniProtKB:C0LUM8	FtsZ	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-diviva	GENE_OR_PROTEIN	UniProtKB:Q1IYG2	DivIVA	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-cation/proton antiporter	GENE_OR_PROTEIN	UniProtKB:A0A0H3JRG4	Cation/proton antiporter	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-atp synthase	GENE_OR_PROTEIN	UniProtKB:A0A415TT77	ATP synthase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-crescentin	GENE_OR_PROTEIN	UniProtKB:A0A2N9AY16	Crescentin (CreS)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-pbp2b	GENE_OR_PROTEIN	UniProtKB:A0A892RPK7	Penicillin-binding protein PBP2B	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-type iv pilus	GENE_OR_PROTEIN	UniProtKB:R6TBR9	Component of type IV pilus	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A010SCY7	Methanol dehydrogenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-superoxide dismutase	GENE_OR_PROTEIN	UniProtKB:A0A009QPW9	Superoxide dismutase (Cu-Zn)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-reverse gyrase	GENE_OR_PROTEIN	UniProtKB:A0A088E825	Reverse gyrase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-cytochrome c oxidase	GENE_OR_PROTEIN	UniProtKB:A0A075NZN5	Cytochrome C oxidase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-redox protein	GENE_OR_PROTEIN	UniProtKB:A0A076EJF0	Redox protein	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-c-type cytochrome	GENE_OR_PROTEIN	UniProtKB:A0A072TMC1	C-type cytochrome (Cytochrome C)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-methyl-coenzyme m reductase	GENE_OR_PROTEIN	UniProtKB:A0A099T5Q9	Methyl-coenzyme M reductase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-acetate kinase	GENE_OR_PROTEIN	UniProtKB:A0A081KVG3	Acetate kinase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-4-hydroxyphenylpyruvate dioxygenase	GENE_OR_PROTEIN	UniProtKB:A0A009PXB6	4-hydroxyphenylpyruvate dioxygenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-scy	GENE_OR_PROTEIN	UniProtKB:A0A191V3Q4	Polarized growth protein Scy	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-ccma	GENE_OR_PROTEIN	UniProtKB:E0X6H3	CcmA	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-flab	GENE_OR_PROTEIN	UniProtKB:A8WEP6	FlaB	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-carbon monoxide dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A061JSS8	Carbon monoxide dehydrogenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-molybdenum hydroxylase	GENE_OR_PROTEIN	UniProtKB:A0A099I9V3	Molybdenum hydroxylase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-ammonia monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A059V4Z9	Ammonia monooxygenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-hydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A059XQG3	Hydrogenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-methane monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A0A3YNQ7	Methane monooxygenase	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A4U8YZA6	PQQ-dependent methanol dehydrogenase (Alpha subunit)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-acidic external ph	ENVIRONMENTAL_FACTOR	PATO:0001428	acidic pH	PATO	high	exact PATO quality term for acidic-pH condition
-alkaline external ph	ENVIRONMENTAL_FACTOR	PATO:0001429	alkaline pH	PATO	high	exact PATO quality term for alkaline-pH condition
-near-neutral external ph	ENVIRONMENTAL_FACTOR	PATO:0001432	neutral pH	PATO	high	closest PATO quality term ("near-neutral" → PATO neutral)
-very high temperature	ENVIRONMENTAL_FACTOR	PATO:0001637	extremely high temperature	PATO	high	PATO quality term for thermophilic / hyperthermophilic conditions
-high-salt environment	ENVIRONMENTAL_FACTOR	ENVO:01000687	saline environment	ENVO	high	exact ENVO term for high-salinity environmental context
-thiosulfate	CHEMICAL	CHEBI:33542	thiosulfate(2-)	CHEBI	high	exact CHEBI; sulfur-redox metabolism substrate
-electron donor	CHEMICAL	CHEBI:17499	electron donor	CHEBI	high	exact CHEBI term for the electron-donor chemical-role class
-organic compound	CHEMICAL	CHEBI:50860	organic molecular entity	CHEBI	high	same CHEBI as "organic carbon" — both are the broad class of carbon-containing molecules
-membrane electron transport chain	PATHWAY	GO:0022900	electron transport chain	GO	high	GO term for membrane-bound ETC; the corpus uses several near-synonym labels (see also "electron transport chain", "electron transport system")
-electron transport chain	PATHWAY	GO:0022900	electron transport chain	GO	high	exact GO match
-electron transport system	PATHWAY	GO:0022900	electron transport chain	GO	high	corpus paraphrase of electron transport chain
-co2-fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	GO carbon-fixation process subsumes the various CO2-fixation pathway labels
-autotrophic co2 fixation	PATHWAY	GO:0015977	carbon fixation	GO	high	autotrophic-context paraphrase of carbon fixation
-co2 fixation pathway	PATHWAY	GO:0015977	carbon fixation	GO	high	corpus typo variant of co2-fixation pathway (hyphen dropped)
-rubisco	GENE_OR_PROTEIN	UniProtKB:A0A075WF79	Ribulose bisphosphate carboxylase (RuBisCO)	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (paren-content match: label appears as a parenthesized alt-name "(RuBisCO)" — tier-3 picker; shortest-cleaned-name + alphabetic-first CURIE)
+label	node_type	target_curie	target_label	predicate_id	source	confidence	notes
+molecular oxygen	CHEMICAL	CHEBI:15379	dioxygen	skos:exactMatch	CHEBI	high	canonical CHEBI for O2; used in aerobic respiration / oxidative stress contexts
+carbon dioxide	CHEMICAL	CHEBI:16526	carbon dioxide	skos:exactMatch	CHEBI	high	canonical CHEBI for CO2; substrate for fixation pathways, product of respiration
+carbon monoxide	CHEMICAL	CHEBI:17245	carbon monoxide	skos:exactMatch	CHEBI	high	used in carboxydotrophic + Wood-Ljungdahl contexts
+molecular hydrogen	CHEMICAL	CHEBI:18276	dihydrogen	skos:exactMatch	CHEBI	high	H2; electron donor in hydrogenotrophic methanogenesis + lithotrophy
+methane	CHEMICAL	CHEBI:16183	methane	skos:exactMatch	CHEBI	high	product of methanogenesis, substrate for methanotrophs
+methanol	CHEMICAL	CHEBI:17790	methanol	skos:exactMatch	CHEBI	high	C1 substrate for methylotrophs
+ammonia	CHEMICAL	CHEBI:16134	ammonia	skos:exactMatch	CHEBI	high	NH3; nitrification substrate
+nitrate	CHEMICAL	CHEBI:17632	nitrate	skos:exactMatch	CHEBI	high	terminal electron acceptor in denitrification
+sulfate	CHEMICAL	CHEBI:16189	sulfate	skos:exactMatch	CHEBI	high	terminal electron acceptor in sulfate reduction; product of sulfide oxidation
+sulfide	CHEMICAL	CHEBI:15138	sulfide(2-)	skos:exactMatch	CHEBI	high	electron donor in sulfur-oxidizing chemolithotrophy
+proton	CHEMICAL	CHEBI:24636	proton	skos:exactMatch	CHEBI	high	H+; pH-related transport, pmf gradient ion
+ferrous iron	CHEMICAL	CHEBI:29033	iron(2+)	skos:exactMatch	CHEBI	high	Fe2+; electron donor in iron-oxidizing lithotrophy
+organic carbon	CHEMICAL	CHEBI:50860	organic molecular entity	skos:closeMatch	CHEBI	high	broad class — heterotroph carbon source, assimilated into biomass
+compatible solutes	CHEMICAL	CHEBI:65015	osmolyte	skos:closeMatch	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts
+citrate	CHEMICAL	CHEBI:16947	citrate(3-)	skos:exactMatch	CHEBI	high	TCA-cycle intermediate; carbon/electron-donor substrate for citrate-utilizers (Citrobacter, Klebsiella)
+fumarate	CHEMICAL	CHEBI:29806	fumarate(2-)	skos:exactMatch	CHEBI	high	TCA-cycle intermediate; alternative terminal electron acceptor in anaerobic fumarate respiration
+peptidoglycan synthesis	BIOLOGICAL_PROCESS	GO:0009252	peptidoglycan biosynthetic process	skos:exactMatch	GO	high	exact GO term; used in MreB/FtsZ cell-shape graphs
+methanogenesis	BIOLOGICAL_PROCESS	GO:0015948	methanogenesis	skos:exactMatch	GO	high	exact label match
+aerobic respiration	BIOLOGICAL_PROCESS	GO:0009060	aerobic respiration	skos:exactMatch	GO	high	exact label match
+anaerobic respiration	BIOLOGICAL_PROCESS	GO:0009061	anaerobic respiration	skos:exactMatch	GO	high	exact label match
+photosynthesis	BIOLOGICAL_PROCESS	GO:0015979	photosynthesis	skos:exactMatch	GO	high	exact label match
+nitrogen fixation	BIOLOGICAL_PROCESS	GO:0009399	nitrogen fixation	skos:exactMatch	GO	high	exact label match
+fermentation	BIOLOGICAL_PROCESS	GO:0006113	fermentation	skos:exactMatch	GO	high	exact label match
+carbon fixation	BIOLOGICAL_PROCESS	GO:0015977	carbon fixation	skos:exactMatch	GO	high	exact label match
+oxidative phosphorylation	BIOLOGICAL_PROCESS	GO:0006119	oxidative phosphorylation	skos:exactMatch	GO	high	exact label match
+cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	GO:0030641	regulation of cellular pH	skos:exactMatch	GO	high	GO doesn't distinguish cytoplasmic from cellular pH; closest exact term
+osmotic stress	BIOLOGICAL_PROCESS	GO:0006970	response to osmotic stress	skos:closeMatch	GO	high	process-level GO term covering the response axis used in halotolerance graphs
+periplasmic space	CELLULAR_LOCALIZATION	GO:0042597	periplasmic space	skos:exactMatch	GO	high	exact GO-CC term
+outer membrane	CELLULAR_LOCALIZATION	GO:0019867	outer membrane	skos:exactMatch	GO	high	exact GO-CC term; applies to Gram-negatives + mitochondria
+plasma membrane	CELLULAR_LOCALIZATION	GO:0005886	plasma membrane	skos:exactMatch	GO	high	exact GO-CC term
+cytoplasm	CELLULAR_LOCALIZATION	GO:0005737	cytoplasm	skos:exactMatch	GO	high	exact GO-CC term
+kinase reaction	MOLECULAR_FUNCTION	GO:0016301	kinase activity	skos:closeMatch	GO	high	maps the reaction node onto the GO-MF kinase activity class
+redox reaction	MOLECULAR_FUNCTION	GO:0016491	oxidoreductase activity	skos:closeMatch	GO	high	canonical GO-MF for redox catalysis
+respiratory chain	PATHWAY	GO:0022904	respiratory electron transport chain	skos:closeMatch	GO	high	"GO term for the ETC; the corpus uses ""respiratory chain"" as shorthand"
+photosynthetic electron transport	PATHWAY	GO:0009767	photosynthetic electron transport chain	skos:exactMatch	GO	high	exact GO term
+calvin-benson cycle	PATHWAY	GO:0019253	reductive pentose-phosphate cycle	skos:exactMatch	GO	high	GO's name for the Calvin-Benson cycle
+wood-ljungdahl pathway	PATHWAY	GO:0046358	acetyl-CoA biosynthetic process from carbon dioxide	skos:exactMatch	GO	high	GO term for the Wood-Ljungdahl pathway
+light	ENVIRONMENTAL_FACTOR	PATO:0001717	light intensity	skos:closeMatch	PATO	high	"corpus uses ""light"" as photosynthesis-context environmental input; PATO captures the radiant-energy axis"
+low temperature	ENVIRONMENTAL_FACTOR	PATO:0000383	decreased temperature	skos:closeMatch	PATO	high	PATO quality term used in psychrophilic / psychrotolerant contexts
+anaerobic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	skos:exactMatch	ENVO	high	exact ENVO term
+anoxic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	skos:closeMatch	ENVO	high	ENVO collapses anoxic and anaerobic into one environment class
+carotenoid biosynthesis	BIOLOGICAL_PROCESS	GO:0016117	carotenoid biosynthetic process	skos:exactMatch	GO	high	exact GO term; pigmentation contexts
+proton motive force	STATE	METPO:1007500	proton motive force	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → STATE after CausalNodeTypeEnum gained the STATE permissible value (bioenergetic gradient, not a process)
+biomass	CHEMICAL	METPO:1007501	microbial biomass	skos:closeMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → CHEMICAL via scripts/retype_causal_nodes.py (closest existing CausalNodeTypeEnum fit for aggregate biochemistry)
+inorganic electron donor	CHEMICAL	METPO:1007502	inorganic electron donor	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 7 nodes — class-of-chemicals abstraction for lithotrophy
+reducing power	CAPACITY	METPO:1007503	reducing power	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 4 nodes — re-typed CHEMICAL → CAPACITY after CausalNodeTypeEnum gained the CAPACITY permissible value (electron-donating pool, not a single chemical)
+terminal electron acceptor	CHEMICAL	METPO:1007504	terminal electron acceptor	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 3 nodes as CHEMICAL (also 2 as MOLECULAR_FUNCTION below)
+terminal electron acceptor	MOLECULAR_FUNCTION	METPO:1007504	terminal electron acceptor	skos:exactMatch	METPO	high	same proposed METPO class covers both senses; MOLECULAR_FUNCTION typing surfaces the role-of interpretation
+membrane fluidity	QUALITY	METPO:1007505	membrane fluidity	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 6 nodes — re-typed BIOLOGICAL_PROCESS → QUALITY after CausalNodeTypeEnum gained the QUALITY permissible value (PATO-style attribute, not a process)
+mreb	GENE_OR_PROTEIN	UniProtKB:A0A1B1UYY2	MreB	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+na+/h+ antiporter	GENE_OR_PROTEIN	UniProtKB:A0A068T423	Na+/H+ antiporter	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+ftsz	GENE_OR_PROTEIN	UniProtKB:C0LUM8	FtsZ	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+diviva	GENE_OR_PROTEIN	UniProtKB:Q1IYG2	DivIVA	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+cation/proton antiporter	GENE_OR_PROTEIN	UniProtKB:A0A0H3JRG4	Cation/proton antiporter	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+atp synthase	GENE_OR_PROTEIN	UniProtKB:A0A415TT77	ATP synthase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+crescentin	GENE_OR_PROTEIN	UniProtKB:A0A2N9AY16	Crescentin (CreS)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+pbp2b	GENE_OR_PROTEIN	UniProtKB:A0A892RPK7	Penicillin-binding protein PBP2B	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+type iv pilus	GENE_OR_PROTEIN	UniProtKB:R6TBR9	Component of type IV pilus	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A010SCY7	Methanol dehydrogenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+superoxide dismutase	GENE_OR_PROTEIN	UniProtKB:A0A009QPW9	Superoxide dismutase (Cu-Zn)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+reverse gyrase	GENE_OR_PROTEIN	UniProtKB:A0A088E825	Reverse gyrase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+cytochrome c oxidase	GENE_OR_PROTEIN	UniProtKB:A0A075NZN5	Cytochrome C oxidase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+redox protein	GENE_OR_PROTEIN	UniProtKB:A0A076EJF0	Redox protein	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+c-type cytochrome	GENE_OR_PROTEIN	UniProtKB:A0A072TMC1	C-type cytochrome (Cytochrome C)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+methyl-coenzyme m reductase	GENE_OR_PROTEIN	UniProtKB:A0A099T5Q9	Methyl-coenzyme M reductase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+acetate kinase	GENE_OR_PROTEIN	UniProtKB:A0A081KVG3	Acetate kinase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+4-hydroxyphenylpyruvate dioxygenase	GENE_OR_PROTEIN	UniProtKB:A0A009PXB6	4-hydroxyphenylpyruvate dioxygenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+scy	GENE_OR_PROTEIN	UniProtKB:A0A191V3Q4	Polarized growth protein Scy	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+ccma	GENE_OR_PROTEIN	UniProtKB:E0X6H3	CcmA	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+flab	GENE_OR_PROTEIN	UniProtKB:A8WEP6	FlaB	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+carbon monoxide dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A061JSS8	Carbon monoxide dehydrogenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+molybdenum hydroxylase	GENE_OR_PROTEIN	UniProtKB:A0A099I9V3	Molybdenum hydroxylase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+ammonia monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A059V4Z9	Ammonia monooxygenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+hydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A059XQG3	Hydrogenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+methane monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A0A3YNQ7	Methane monooxygenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A4U8YZA6	PQQ-dependent methanol dehydrogenase (Alpha subunit)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
+acidic external ph	ENVIRONMENTAL_FACTOR	PATO:0001428	acidic pH	skos:exactMatch	PATO	high	exact PATO quality term for acidic-pH condition
+alkaline external ph	ENVIRONMENTAL_FACTOR	PATO:0001429	alkaline pH	skos:exactMatch	PATO	high	exact PATO quality term for alkaline-pH condition
+near-neutral external ph	ENVIRONMENTAL_FACTOR	PATO:0001432	neutral pH	skos:closeMatch	PATO	high	"closest PATO quality term (""near-neutral"" → PATO neutral)"
+very high temperature	ENVIRONMENTAL_FACTOR	PATO:0001637	extremely high temperature	skos:closeMatch	PATO	high	PATO quality term for thermophilic / hyperthermophilic conditions
+high-salt environment	ENVIRONMENTAL_FACTOR	ENVO:01000687	saline environment	skos:exactMatch	ENVO	high	exact ENVO term for high-salinity environmental context
+thiosulfate	CHEMICAL	CHEBI:33542	thiosulfate(2-)	skos:exactMatch	CHEBI	high	exact CHEBI; sulfur-redox metabolism substrate
+electron donor	CHEMICAL	CHEBI:17499	electron donor	skos:exactMatch	CHEBI	high	exact CHEBI term for the electron-donor chemical-role class
+organic compound	CHEMICAL	CHEBI:50860	organic molecular entity	skos:closeMatch	CHEBI	high	"same CHEBI as ""organic carbon"" — both are the broad class of carbon-containing molecules"
+membrane electron transport chain	PATHWAY	GO:0022900	electron transport chain	skos:closeMatch	GO	high	"GO term for membrane-bound ETC; the corpus uses several near-synonym labels (see also ""electron transport chain"", ""electron transport system"")"
+electron transport chain	PATHWAY	GO:0022900	electron transport chain	skos:exactMatch	GO	high	exact GO match
+electron transport system	PATHWAY	GO:0022900	electron transport chain	skos:closeMatch	GO	high	corpus paraphrase of electron transport chain
+co2-fixation pathway	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	GO carbon-fixation process subsumes the various CO2-fixation pathway labels
+autotrophic co2 fixation	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	autotrophic-context paraphrase of carbon fixation
+co2 fixation pathway	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	corpus typo variant of co2-fixation pathway (hyphen dropped)
+rubisco	GENE_OR_PROTEIN	UniProtKB:A0A075WF79	Ribulose bisphosphate carboxylase (RuBisCO)	skos:closeMatch	UniProt	high	"representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (paren-content match: label appears as a parenthesized alt-name ""(RuBisCO)"" — tier-3 picker; shortest-cleaned-name + alphabetic-first CURIE)"
