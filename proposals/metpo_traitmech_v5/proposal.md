@@ -1,5 +1,7 @@
 # METPO ROBOT Template Proposal — TraitMech Synthetic Trait Lift (v5, 2026-06)
 
+> **Upstream submission:** consolidated in [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535) (2026-06-14) — requesting real METPO IDs for this cohort.
+
 ## Context
 
 TraitMech is a consumer of METPO: seeded trait records carry `METPO:` identifiers.

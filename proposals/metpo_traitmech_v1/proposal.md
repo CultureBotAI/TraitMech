@@ -1,5 +1,7 @@
 # METPO ROBOT Template Proposal — TraitMech Lift (v1, 2026-05)
 
+> **Upstream submission:** consolidated in [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535) (2026-06-14) — requesting real METPO IDs for this cohort.
+
 ## Context
 
 [TraitMech](https://github.com/CultureBotAI/TraitMech) is a microbial-trait

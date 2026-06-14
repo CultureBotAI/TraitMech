@@ -1,5 +1,7 @@
 # METPO ROBOT Template Proposal — TraitMech Predicate Lift (v4, 2026-08)
 
+> **Upstream submission:** consolidated in [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535) (2026-06-14) — requesting real METPO IDs for this cohort.
+
 ## Context
 
 Follow-on to the v2 predicate cohort (`metpo_traitmech_v2`, 8
