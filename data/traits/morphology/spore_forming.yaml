@@ -37,6 +37,7 @@ causal_graphs:
     label: forespore
     node_type: CELLULAR_LOCALIZATION
     description: Developing spore compartment within the sporangium.
+    grounding: GO:0042763
   - node_id: spore_cortex
     label: spore cortex
     node_type: CELLULAR_LOCALIZATION
@@ -49,6 +50,7 @@ causal_graphs:
     label: dipicolinic acid
     node_type: CHEMICAL
     description: Pyridine dicarboxylic acid enriched in bacterial spores.
+    grounding: CHEBI:46837
   - node_id: resistant_endospore
     label: resistant endospore
     node_type: ORGANELLE
@@ -133,4 +135,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042763×1, CHEBI:46837×1).
   llm_assisted: true

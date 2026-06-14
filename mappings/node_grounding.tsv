@@ -90,3 +90,34 @@ co2-fixation pathway	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	
 autotrophic co2 fixation	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	autotrophic-context paraphrase of carbon fixation
 co2 fixation pathway	PATHWAY	GO:0015977	carbon fixation	skos:closeMatch	GO	high	corpus typo variant of co2-fixation pathway (hyphen dropped)
 rubisco	GENE_OR_PROTEIN	UniProtKB:A0A075WF79	Ribulose bisphosphate carboxylase (RuBisCO)	skos:closeMatch	UniProt	high	"representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (paren-content match: label appears as a parenthesized alt-name ""(RuBisCO)"" — tier-3 picker; shortest-cleaned-name + alphabetic-first CURIE)"
+organic molecule	CHEMICAL	CHEBI:72695	organic molecule	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+staphyloxanthin	CHEMICAL	CHEBI:71690	staphyloxanthin	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+bacteriochlorophyll	CHEMICAL	CHEBI:38201	bacteriochlorophyll	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+homogentisic acid	CHEMICAL	CHEBI:44747	homogentisic acid	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+crystal violet	CHEMICAL	CHEBI:41688	crystal violet	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+prodigiosin	CHEMICAL	CHEBI:82758	prodigiosin	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+dipicolinic acid	CHEMICAL	CHEBI:46837	dipicolinic acid	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+hydroxylamine	CHEMICAL	CHEBI:15429	hydroxylamine	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+autoinducer	CHEMICAL	CHEBI:71338	autoinducer	skos:exactMatch	CHEBI	high	exact name match via kg-microbe merged-kg
+nitrogen oxides	CHEMICAL	CHEBI:35196	nitrogen oxide	skos:closeMatch	CHEBI	high	plural of CHEBI 'nitrogen oxide' class via kg-microbe merged-kg
+adp	CHEMICAL	CHEBI:16761	ADP	skos:exactMatch	CHEBI	high	canonical neutral ADP via kg-microbe merged-kg
+nadph	CHEMICAL	CHEBI:16474	NADPH	skos:exactMatch	CHEBI	high	canonical neutral NADPH via kg-microbe merged-kg
+lipopolysaccharide	CHEMICAL	CHEBI:16412	lipopolysaccharide	skos:exactMatch	CHEBI	high	canonical LPS class via kg-microbe merged-kg
+elemental sulfur	CHEMICAL	CHEBI:26833	sulfur	skos:closeMatch	CHEBI	high	elemental sulfur = CHEBI 'sulfur' substance via kg-microbe merged-kg
+acetyl phosphate	CHEMICAL	CHEBI:15350	acetyl phosphate	skos:exactMatch	CHEBI	high	canonical acetyl phosphate via kg-microbe merged-kg
+coenzyme f430	CHEMICAL	CHEBI:28265	coenzyme F430	skos:exactMatch	CHEBI	high	canonical coenzyme F430 via kg-microbe merged-kg
+cellular growth	BIOLOGICAL_PROCESS	GO:0016049	cell growth	skos:closeMatch	GO	high	GO 'cell growth' via kg-microbe merged-kg
+melanin biosynthesis	BIOLOGICAL_PROCESS	GO:0042438	melanin biosynthetic process	skos:closeMatch	GO	high	GO biosynthetic process via kg-microbe merged-kg
+tyrosine catabolism	BIOLOGICAL_PROCESS	GO:0006572	tyrosine catabolic process	skos:closeMatch	GO	high	GO catabolic process via kg-microbe merged-kg
+cytokinesis	BIOLOGICAL_PROCESS	GO:0000910	cytokinesis	skos:exactMatch	GO	high	exact GO term via kg-microbe merged-kg
+pigment biosynthesis	BIOLOGICAL_PROCESS	GO:0046148	pigment biosynthetic process	skos:closeMatch	GO	high	GO biosynthetic process via kg-microbe merged-kg
+nutrient sensing	BIOLOGICAL_PROCESS	GO:0009594	detection of nutrient	skos:closeMatch	GO	medium	GO 'detection of nutrient' via kg-microbe merged-kg
+sulfur oxidation	BIOLOGICAL_PROCESS	GO:0019417	sulfur oxidation	skos:exactMatch	GO	high	exact GO term via kg-microbe merged-kg
+flagellar filament	CELLULAR_LOCALIZATION	GO:0009420	bacterial-type flagellum filament	skos:closeMatch	GO	high	GO-CC bacterial flagellum filament via kg-microbe merged-kg
+flagellar hook	CELLULAR_LOCALIZATION	GO:0009424	bacterial-type flagellum hook	skos:closeMatch	GO	high	GO-CC bacterial flagellum hook via kg-microbe merged-kg
+forespore	CELLULAR_LOCALIZATION	GO:0042763	intracellular immature spore	skos:closeMatch	GO	medium	forespore = immature spore via kg-microbe merged-kg
+formaldehyde assimilation	PATHWAY	GO:0019649	formaldehyde assimilation	skos:exactMatch	GO	high	exact GO term via kg-microbe merged-kg
+ribulose monophosphate cycle	PATHWAY	GO:0019647	formaldehyde assimilation via ribulose monophosphate cycle	skos:closeMatch	GO	high	GO RuMP-cycle term via kg-microbe merged-kg
+high temperature	ENVIRONMENTAL_FACTOR	PATO:0001305	increased temperature	skos:closeMatch	PATO	high	PATO increased-temperature quality via kg-microbe merged-kg
+high osmolarity	ENVIRONMENTAL_FACTOR	PATO:0001657	increased osmolarity	skos:closeMatch	PATO	high	PATO increased-osmolarity quality via kg-microbe merged-kg
+cold environment	ENVIRONMENTAL_FACTOR	ENVO:01000309	cold environment	skos:exactMatch	ENVO	high	exact ENVO term via kg-microbe merged-kg

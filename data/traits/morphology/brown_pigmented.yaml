@@ -33,6 +33,7 @@ causal_graphs:
     label: tyrosine catabolism
     node_type: BIOLOGICAL_PROCESS
     description: Catabolic pathway generating homogentisic acid intermediates.
+    grounding: GO:0006572
   - node_id: hppD
     label: 4-hydroxyphenylpyruvate dioxygenase
     node_type: GENE_OR_PROTEIN
@@ -42,6 +43,7 @@ causal_graphs:
     label: homogentisic acid
     node_type: CHEMICAL
     description: HGA precursor that oxidizes and polymerizes to pyomelanin.
+    grounding: CHEBI:44747
   - node_id: pyomelanin
     label: pyomelanin
     node_type: CHEMICAL
@@ -137,4 +139,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006572×1, CHEBI:44747×1).
   llm_assisted: true

@@ -44,6 +44,7 @@ causal_graphs:
     label: high temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Hot growth condition that challenges protein and membrane stability.
+    grounding: PATO:0001305
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
@@ -171,4 +172,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:45Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001305×1).
   llm_assisted: true

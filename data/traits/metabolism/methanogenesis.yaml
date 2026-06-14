@@ -65,6 +65,7 @@ causal_graphs:
     label: coenzyme F430
     node_type: CHEMICAL
     description: Nickel-containing prosthetic group of methyl-coenzyme M reductase.
+    grounding: CHEBI:28265
   - node_id: methane
     label: methane
     node_type: CHEMICAL
@@ -157,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:28265×1).
   llm_assisted: true

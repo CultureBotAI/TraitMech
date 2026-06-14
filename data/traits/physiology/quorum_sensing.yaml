@@ -35,6 +35,7 @@ causal_graphs:
     label: autoinducer
     node_type: CHEMICAL
     description: Diffusible signal whose concentration tracks cell density.
+    grounding: CHEBI:71338
   - node_id: quorum_sensing_process
     label: quorum sensing
     node_type: BIOLOGICAL_PROCESS
@@ -61,12 +62,18 @@ curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY trait (quorum sensing) from literature
-    research to fill the cell-cell-signaling gap.
+  changes: Proposed candidate PHYSIOLOGY trait (quorum sensing) from literature research
+    to fill the cell-cell-signaling gap.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (autoinducer quorum sensing) with GO
     node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:71338×1).
   llm_assisted: true

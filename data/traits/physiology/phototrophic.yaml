@@ -52,6 +52,7 @@ causal_graphs:
     label: bacteriochlorophyll
     node_type: CHEMICAL
     description: Light-harvesting pigment in many anoxygenic phototrophic bacteria.
+    grounding: CHEBI:38201
   - node_id: photosynthetic_electron_transport
     label: photosynthetic electron transport
     node_type: PATHWAY
@@ -163,4 +164,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: reducing power: CHEMICAL → CAPACITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:38201×1).
   llm_assisted: true

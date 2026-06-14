@@ -59,6 +59,7 @@ causal_graphs:
     label: sulfur oxidation
     node_type: BIOLOGICAL_PROCESS
     description: Oxidation of reduced sulfur compounds during phototrophic metabolism.
+    grounding: GO:0019417
   - node_id: reducing_power
     label: reducing power
     node_type: CAPACITY
@@ -226,4 +227,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: reducing power: CHEMICAL → CAPACITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019417×1).
   llm_assisted: true
