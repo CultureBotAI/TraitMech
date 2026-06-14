@@ -60,6 +60,7 @@ causal_graphs:
     - reference: DOI:10.1089/mdr.2014.0032
       snippet: PBP2b of ovococci
       notes: Supports PBP2b as part of the ovococcal elongation system.
+    predicate_id: RO:0002213
   - subject: divIVA
     predicate: regulates
     object: septal_and_peripheral_synthesis
@@ -140,4 +141,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A892RPK7×1, UniProtKB:Q1IYG2×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

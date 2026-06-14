@@ -106,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1021/acs.biochem.9b00164
       snippet: catalyzes the reversible reduction of methyl-coenzyme M
       notes: Source describes methane formation by methyl-coenzyme M reductase.
+    predicate_id: biolink:catalyzes
   - subject: methanogenesis_trait
     predicate: produces
     object: methane
@@ -150,4 +151,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
   llm_assisted: true

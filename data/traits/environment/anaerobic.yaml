@@ -73,6 +73,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: oxygen blocks their growth
       notes: Supports oxygen as an inhibitory factor for anaerobic growth.
+    predicate_id: RO:0002212
   - subject: molecular_oxygen
     predicate: generates stress via
     object: reactive_oxygen_species
@@ -117,4 +118,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

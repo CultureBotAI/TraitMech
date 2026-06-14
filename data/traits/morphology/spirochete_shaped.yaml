@@ -58,6 +58,7 @@ causal_graphs:
       snippet: gene encoding the major periplasmic flagellar filament protein FlaB
       notes: Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia
         burgdorferi.
+    predicate_id: biolink:produces
   - subject: periplasmic_flagella
     predicate: interact with
     object: cell_cylinder
@@ -68,6 +69,7 @@ causal_graphs:
       snippet: complex interaction between the cell cylinder and the internal periplasmic
         flagella
       notes: Supports a physical interaction between flagella and cell cylinder.
+    predicate_id: biolink:interacts_with
   - subject: periplasmic_flagella
     predicate: confers
     object: flat_wave_morphology
@@ -112,4 +114,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A8WEP6×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, biolink:interacts_with×1).
   llm_assisted: true

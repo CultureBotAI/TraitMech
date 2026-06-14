@@ -76,6 +76,7 @@ causal_graphs:
       snippet: peptidoglycan-attached
       notes: Supports teichoic acids as peptidoglycan-attached Gram-positive wall
         polymers.
+    predicate_id: biolink:located_in
   - subject: lipoteichoic_acids
     predicate: contributes to
     object: thick_peptidoglycan_cell_wall
@@ -128,4 +129,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1).
   llm_assisted: true

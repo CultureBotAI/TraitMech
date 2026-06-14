@@ -57,6 +57,7 @@ causal_graphs:
       snippet: three LytM peptidoglycan endopeptidase homologs
       notes: Supports Csd proteins as required genes in the H. pylori helical shape
         pathway.
+    predicate_id: RO:0002213
   - subject: ccmA
     predicate: contributes to
     object: peptidoglycan_crosslink_relaxation
@@ -108,4 +109,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:E0X6H3×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

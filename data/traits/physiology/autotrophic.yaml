@@ -153,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2016.130
       snippet: microbial autotrophic production
       notes: Supports production of biomass and products from autotrophic CO2 fixation.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-05-05T01:35:46.867544+00:00'
   curator: seed_from_metpo
@@ -235,4 +236,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A075WF79×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:27Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×1).
   llm_assisted: true

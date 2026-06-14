@@ -55,6 +55,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: activation of these sigma factors to landmark events in morphogenesis
       notes: Supports the Spo0A/sigma cascade as the gatekeeper of sporulation morphogenesis.
+    predicate_id: RO:0002212
   - subject: no_asymmetric_septation
     predicate: prevents
     object: no_endospore_formation
@@ -64,6 +65,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.genet.30.1.297
       snippet: activation of these sigma factors to landmark events in morphogenesis
       notes: Supports asymmetric septation as a required step for endospore formation.
+    predicate_id: RO:0002212
   - subject: no_endospore_formation
     predicate: manifests as
     object: non_spore_forming_trait
@@ -95,4 +97,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2).
   llm_assisted: true

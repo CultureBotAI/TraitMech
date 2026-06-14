@@ -69,6 +69,7 @@ causal_graphs:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: proton permeability ... increase with the temperature
       notes: Supports membrane proton permeability as a high-temperature growth constraint.
+    predicate_id: RO:0002213
   - subject: membrane_lipid_composition
     predicate: limits
     object: membrane_proton_permeability
@@ -77,6 +78,7 @@ causal_graphs:
     - reference: DOI:10.1016/s0300-9629(97)00003-0
       snippet: changing the lipid composition
       notes: Supports lipid composition as an adaptation to membrane permeability.
+    predicate_id: RO:0002212
   - subject: thermostable_proteins
     predicate: enables
     object: thermophilic_trait
@@ -138,4 +140,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:26Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002212×1).
   llm_assisted: true

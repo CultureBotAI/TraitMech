@@ -88,6 +88,7 @@ causal_graphs:
       snippet: effector proteins
       notes: Supports T3SS-delivered effector proteins as the plant-immunity-suppressing
         factors.
+    predicate_id: RO:0002212
   - subject: plant_immune_suppression
     predicate: enables
     object: plant_tissue_colonization
@@ -158,4 +159,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-13T21:03:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true
