@@ -64,6 +64,7 @@ causal_graphs:
     label: ribulose monophosphate cycle
     node_type: PATHWAY
     description: Prokaryotic formaldehyde assimilation pathway.
+    grounding: GO:0019647
   - node_id: serine_pathway
     label: serine pathway
     node_type: PATHWAY
@@ -187,4 +188,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A010SCY7×1, UniProtKB:A0A4U8YZA6×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019647×1).
   llm_assisted: true

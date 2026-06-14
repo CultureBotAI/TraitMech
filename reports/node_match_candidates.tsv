@@ -1,0 +1,39 @@
+label	node_type	edge_count	candidate_id	candidate_name	via	status
+organic molecule	CHEMICAL	3	CHEBI:72695	organic molecule	name	unique
+staphyloxanthin	CHEMICAL	2	CHEBI:71690	staphyloxanthin	name	unique
+bacteriochlorophyll	CHEMICAL	2	CHEBI:38201	bacteriochlorophyll	name	unique
+high temperature	ENVIRONMENTAL_FACTOR	2	PATO:0001305	increased temperature	synonym	unique
+immune evasion	BIOLOGICAL_PROCESS	1	GO:0051842|GO:0042783	obsolete evasion or tolerance of symbiont immune response	synonym	ambiguous
+plant tissue colonization	BIOLOGICAL_PROCESS	1	GO:0140649	cell-to-cell migration by invasive hypha	synonym	unique
+cellular growth	BIOLOGICAL_PROCESS	1	GO:0016049	cell growth	synonym	unique
+melanin biosynthesis	BIOLOGICAL_PROCESS	1	GO:0042438	melanin biosynthetic process	synonym	unique
+tyrosine catabolism	BIOLOGICAL_PROCESS	1	GO:0006572	tyrosine catabolic process	synonym	unique
+cytokinesis	BIOLOGICAL_PROCESS	1	GO:0000910	cytokinesis	name	unique
+pigment biosynthesis	BIOLOGICAL_PROCESS	1	GO:0046148	pigment biosynthetic process	synonym	unique
+nutrient uptake	BIOLOGICAL_PROCESS	1	GO:0009935	obsolete nutrient import	synonym	unique
+nutrient sensing	BIOLOGICAL_PROCESS	1	GO:0009594	detection of nutrient	synonym	unique
+sulfur oxidation	BIOLOGICAL_PROCESS	1	GO:0019417	sulfur oxidation	name	unique
+flagellar filament	CELLULAR_LOCALIZATION	1	GO:0009420	bacterial-type flagellum filament	synonym	unique
+flagellar hook	CELLULAR_LOCALIZATION	1	GO:0009424	bacterial-type flagellum hook	synonym	unique
+forespore	CELLULAR_LOCALIZATION	1	GO:0042763	intracellular immature spore	synonym	unique
+spore coat	CELLULAR_LOCALIZATION	1	GO:0031160	spore wall	synonym	unique
+intracellular membrane	CELLULAR_LOCALIZATION	1	GO:0031090	organelle membrane	synonym	unique
+nitrogen oxides	CHEMICAL	1	CHEBI:35196	nitrogen oxide	synonym	unique
+elemental sulfur	CHEMICAL	1	CHEBI:26833|CHEBI:33403	sulfur atom	synonym	ambiguous
+electron acceptor	CHEMICAL	1	CHEBI:17654|CHEBI:39143	electron acceptor	name	ambiguous
+coenzyme f430	CHEMICAL	1	CHEBI:28265|CHEBI:60540	coenzyme F430	name	ambiguous
+adp	CHEMICAL	1	CHEBI:16761|CHEBI:456216|CHEBI:73342	ADP	name	ambiguous
+acetyl phosphate	CHEMICAL	1	CHEBI:15350|CHEBI:22191	acetyl dihydrogen phosphate	synonym	ambiguous
+homogentisic acid	CHEMICAL	1	CHEBI:44747	homogentisic acid	name	unique
+lipopolysaccharide	CHEMICAL	1	CHEBI:16412|CHEBI:89981	lipopolysaccharide	name	ambiguous
+crystal violet	CHEMICAL	1	CHEBI:41688	crystal violet	name	unique
+pyocyanin	CHEMICAL	1	CHEBI:62220|CHEBI:8653	pyocyanine(1+)	synonym	ambiguous
+prodigiosin	CHEMICAL	1	CHEBI:82758	prodigiosin	name	unique
+dipicolinic acid	CHEMICAL	1	CHEBI:46837	dipicolinic acid	name	unique
+nadph	CHEMICAL	1	CHEBI:16474|CHEBI:57783	NADPH	name	ambiguous
+hydroxylamine	CHEMICAL	1	CHEBI:15429	hydroxylamine	name	unique
+autoinducer	CHEMICAL	1	CHEBI:71338	autoinducer	name	unique
+high osmolarity	ENVIRONMENTAL_FACTOR	1	PATO:0001657	increased osmolarity	synonym	unique
+cold environment	ENVIRONMENTAL_FACTOR	1	ENVO:01000309	cold environment	name	unique
+formaldehyde assimilation	PATHWAY	1	GO:0019649	formaldehyde assimilation	name	unique
+ribulose monophosphate cycle	PATHWAY	1	GO:0019647	formaldehyde assimilation via ribulose monophosphate cycle	synonym	unique

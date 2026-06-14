@@ -53,6 +53,7 @@ causal_graphs:
     label: cellular growth
     node_type: BIOLOGICAL_PROCESS
     description: Net accumulation of biomass enabling division and survival.
+    grounding: GO:0016049
   edges:
   - subject: substrate_uptake
     predicate: feeds
@@ -140,4 +141,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0016049×1).
   llm_assisted: true

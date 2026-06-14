@@ -44,6 +44,7 @@ causal_graphs:
     label: nitrogen oxides
     node_type: CHEMICAL
     description: Non-oxygen terminal electron acceptors used in denitrification.
+    grounding: CHEBI:35196
   - node_id: terminal_electron_acceptor
     label: terminal electron acceptor
     node_type: MOLECULAR_FUNCTION
@@ -124,4 +125,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:45Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:35196×1).
   llm_assisted: true

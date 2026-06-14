@@ -40,6 +40,7 @@ causal_graphs:
     label: cold environment
     node_type: ENVIRONMENTAL_FACTOR
     description: Habitat ambient temperature near the freezing point of water.
+    grounding: ENVO:01000309
   - node_id: psychrophile_machinery
     label: psychrophile cold-adapted machinery
     node_type: BIOLOGICAL_PROCESS
@@ -99,4 +100,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:45Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:01000309×1).
   llm_assisted: true

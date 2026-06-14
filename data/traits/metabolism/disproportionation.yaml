@@ -44,6 +44,7 @@ causal_graphs:
     label: elemental sulfur
     node_type: CHEMICAL
     description: Representative sulfur disproportionation substrate.
+    grounding: CHEBI:26833
   - node_id: thiosulfate
     label: thiosulfate
     node_type: CHEMICAL
@@ -181,4 +182,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:26833×1).
   llm_assisted: true

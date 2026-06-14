@@ -39,6 +39,7 @@ causal_graphs:
     label: ADP
     node_type: CHEMICAL
     description: Phosphoryl acceptor converted to ATP.
+    grounding: CHEBI:16761
   - node_id: kinase_reaction
     label: kinase reaction
     node_type: MOLECULAR_FUNCTION
@@ -53,6 +54,7 @@ causal_graphs:
     label: acetyl phosphate
     node_type: CHEMICAL
     description: High-energy intermediate in acetate dissimilation.
+    grounding: CHEBI:15350
   - node_id: acetate_kinase
     label: acetate kinase
     node_type: GENE_OR_PROTEIN
@@ -154,4 +156,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A081KVG3×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16761×1, CHEBI:15350×1).
   llm_assisted: true

@@ -31,10 +31,12 @@ causal_graphs:
     label: flagellar filament
     node_type: CELLULAR_LOCALIZATION
     description: Helical filament that acts as a propeller or molecular screw.
+    grounding: GO:0009420
   - node_id: flagellar_hook
     label: flagellar hook
     node_type: CELLULAR_LOCALIZATION
     description: Universal-joint-like connector between motor and filament.
+    grounding: GO:0009424
   - node_id: flagellar_basal_body
     label: flagellar basal body
     node_type: GENE_OR_PROTEIN
@@ -125,4 +127,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:46Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009420×1, GO:0009424×1).
   llm_assisted: true

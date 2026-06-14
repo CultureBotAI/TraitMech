@@ -55,6 +55,7 @@ causal_graphs:
     label: hydroxylamine
     node_type: CHEMICAL
     description: Intermediate formed from ammonia oxidation.
+    grounding: CHEBI:15429
   - node_id: nitrite
     label: nitrite
     node_type: CHEMICAL
@@ -190,4 +191,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:33542×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15429×1).
   llm_assisted: true

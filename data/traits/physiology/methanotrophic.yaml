@@ -67,6 +67,7 @@ causal_graphs:
     label: formaldehyde assimilation
     node_type: PATHWAY
     description: RuMP or serine pathway incorporation of formaldehyde into biomass.
+    grounding: GO:0019649
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -191,4 +192,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:participates_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T05:51:47Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019649×1).
   llm_assisted: true
