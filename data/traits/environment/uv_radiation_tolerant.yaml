@@ -1,8 +1,8 @@
 identifier: traitmech:000009
 label: UV radiation tolerant
 definition: An environmental tolerance in which an organism survives high doses of
-  ultraviolet radiation, typically via photoreactivation and nucleotide-excision
-  repair of cyclobutane pyrimidine dimers and 6-4 photoproducts.
+  ultraviolet radiation, typically via photoreactivation and nucleotide-excision repair
+  of cyclobutane pyrimidine dimers and 6-4 photoproducts.
 definition_source: DOI:10.3390/genes14091803
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -18,13 +18,13 @@ evidence:
   snippet: Deinococcus radiodurans R1 demonstrates a significantly higher radiation
     resistance with D10 values exceeding 12 kGy for gamma radiation and 700 J/m2 for
     UV-C radiation
-  notes: 'Organism example: Deinococcus radiodurans tolerates UV-C radiation D10
-    doses of 700 J/m2.'
+  notes: 'Organism example: Deinococcus radiodurans tolerates UV-C radiation D10 doses
+    of 700 J/m2.'
 - reference: DOI:10.1101/cshperspect.a012765
   snippet: The bacterium Deinococcus radiodurans is a champion of extreme radiation
     resistance
-  notes: Review support — Deinococcus radiodurans is the reference organism for
-    extreme UV and ionizing radiation resistance.
+  notes: Review support — Deinococcus radiodurans is the reference organism for extreme
+    UV and ionizing radiation resistance.
 causal_graphs:
 - graph_id: uv_tolerance_excision_repair
   title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair
@@ -39,8 +39,8 @@ causal_graphs:
   - node_id: uv_radiation
     label: ultraviolet radiation
     node_type: ENVIRONMENTAL_FACTOR
-    description: Solar / UV-C exposure inducing pyrimidine dimers and 6-4
-      photoproducts.
+    description: Solar / UV-C exposure inducing pyrimidine dimers and 6-4 photoproducts.
+    grounding: ENVO:21001216
   - node_id: nucleotide_excision_repair
     label: nucleotide-excision repair
     node_type: BIOLOGICAL_PROCESS
@@ -62,8 +62,7 @@ causal_graphs:
   - subject: nucleotide_excision_repair
     predicate: enables
     object: uv_tolerant_trait
-    description: NER removes UV-induced cyclobutane pyrimidine dimers and 6-4
-      photoproducts.
+    description: NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.
     evidence:
     - reference: DOI:10.3390/genes14091803
       notes: D. radiodurans tolerates lethal UV-C doses via excision-based repair
@@ -88,7 +87,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (NER + photoreactivation) with GO
-    node grounding and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (NER + photoreactivation) with GO node
+    grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:21001216×1).
   llm_assisted: true

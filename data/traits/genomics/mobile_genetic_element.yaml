@@ -1,8 +1,8 @@
 identifier: traitmech:000089
 label: mobile genetic element
-definition: A genomics trait describing possession of DNA segments that can move
-  within or between genomes and mediate horizontal gene transfer, including plasmids,
-  prophages, transposable elements, and genomic islands.
+definition: A genomics trait describing possession of DNA segments that can move within
+  or between genomes and mediate horizontal gene transfer, including plasmids, prophages,
+  transposable elements, and genomic islands.
 definition_source: DOI:10.1038/nrmicro1235
 trait_category: GENOMICS
 term_kind: CLASS
@@ -19,8 +19,8 @@ evidence:
     transfer and genome plasticity; parent of the plasmid, prophage, transposable-
     element, and genomic-island sub-variants.
 - reference: DOI:10.1111/1574-6976.12067
-  notes: Siguier, Gourbeyre & Chandler review insertion sequences as a major class of
-    mobile genetic elements shaping bacterial genomes.
+  notes: Siguier, Gourbeyre & Chandler review insertion sequences as a major class
+    of mobile genetic elements shaping bacterial genomes.
 causal_graphs:
 - graph_id: mge_horizontal_gene_transfer
   title: Mobile genetic elements mediate horizontal gene transfer
@@ -35,8 +35,8 @@ causal_graphs:
   - node_id: horizontal_gene_transfer
     label: horizontal gene transfer
     node_type: BIOLOGICAL_PROCESS
-    description: Transfer of genetic material between organisms outside vertical
-      descent.
+    description: Transfer of genetic material between organisms outside vertical descent.
+    grounding: GO:0009292
   - node_id: genome_plasticity
     label: genome plasticity
     node_type: QUALITY
@@ -70,4 +70,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (MGE-mediated horizontal gene transfer)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
   llm_assisted: true

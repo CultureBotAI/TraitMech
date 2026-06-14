@@ -1,8 +1,7 @@
 identifier: traitmech:000111
 label: cellulolysis
-definition: A biopolymer-degradation metabolism in which an organism hydrolyzes
-  cellulose to cellodextrins and glucose using cellulase systems, sometimes organized
-  into cellulosomes.
+definition: A biopolymer-degradation metabolism in which an organism hydrolyzes cellulose
+  to cellodextrins and glucose using cellulase systems, sometimes organized into cellulosomes.
 definition_source: DOI:10.1128/MMBR.66.3.506-577.2002
 trait_category: METABOLISM
 term_kind: CLASS
@@ -18,17 +17,16 @@ synonyms:
   source: DOI:10.1128/MMBR.66.3.506-577.2002
 evidence:
 - reference: DOI:10.1128/MMBR.66.3.506-577.2002
-  notes: Lynd et al. review microbial cellulose utilization, its enzymology, and
-    cellulosome systems.
+  notes: Lynd et al. review microbial cellulose utilization, its enzymology, and cellulosome
+    systems.
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation
     across diverse organisms.
 causal_graphs:
 - graph_id: cellulolysis_cellulase_systems
   title: Cellulolysis hydrolyzes cellulose to glucose
-  description: Evidence-backed causal sketch linking cellulase systems
-    (cellulosomes / free enzymes) to cellulose hydrolysis into cellodextrins and
-    glucose.
+  description: Evidence-backed causal sketch linking cellulase systems (cellulosomes
+    / free enzymes) to cellulose hydrolysis into cellodextrins and glucose.
   nodes:
   - node_id: cellulolysis_trait
     label: cellulolysis
@@ -38,12 +36,12 @@ causal_graphs:
   - node_id: cellulase
     label: cellulase systems
     node_type: GENE_OR_PROTEIN
-    description: Endoglucanases, exoglucanases, and beta-glucosidases (sometimes
-      cellulosomal).
+    description: Endoglucanases, exoglucanases, and beta-glucosidases (sometimes cellulosomal).
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
     description: Monomeric assimilable sugar released from cellulose.
+    grounding: CHEBI:17234
   edges:
   - subject: cellulase
     predicate: enables
@@ -60,19 +58,24 @@ causal_graphs:
     description: Cellulose hydrolysis yields cellodextrins and glucose.
     evidence:
     - reference: DOI:10.1016/j.cbpa.2015.10.018
-      notes: Cragg et al. place cellulose deconstruction within lignocellulose
-        degradation.
+      notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation.
     predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (cellulolysis); sub-variant of
-    biopolymer degradation.
+  changes: Proposed candidate METABOLISM trait (cellulolysis); sub-variant of biopolymer
+    degradation.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (cellulase hydrolysis of cellulose)
     with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17234×1).
   llm_assisted: true

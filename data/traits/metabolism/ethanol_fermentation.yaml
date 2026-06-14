@@ -1,8 +1,8 @@
 identifier: traitmech:000028
 label: ethanol fermentation
-definition: A fermentation in which pyruvate is decarboxylated to acetaldehyde
-  (releasing CO2) and then reduced by NADH to ethanol, regenerating NAD+ for
-  glycolysis. Characteristic of yeasts and the bacterium Zymomonas mobilis.
+definition: A fermentation in which pyruvate is decarboxylated to acetaldehyde (releasing
+  CO2) and then reduced by NADH to ethanol, regenerating NAD+ for glycolysis. Characteristic
+  of yeasts and the bacterium Zymomonas mobilis.
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
@@ -18,8 +18,8 @@ evidence:
   notes: Review of classical fermentations describes the alcoholic (ethanol) pathway
     in which pyruvate is decarboxylated and reduced to ethanol.
 - reference: DOI:10.3389/fmicb.2021.703525
-  notes: Review of fermentative energy conservation supports ethanol as an
-    NADH-reoxidizing fermentation end product.
+  notes: Review of fermentative energy conservation supports ethanol as an NADH-reoxidizing
+    fermentation end product.
 causal_graphs:
 - graph_id: ethanol_fermentation_pyruvate_to_ethanol
   title: Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2
@@ -40,6 +40,7 @@ causal_graphs:
     label: ethanol
     node_type: CHEMICAL
     description: Reduced end product regenerating NAD+ from NADH.
+    grounding: CHEBI:16236
   edges:
   - subject: ethanol_fermentation_trait
     predicate: participates in
@@ -47,8 +48,8 @@ causal_graphs:
     description: Alcoholic fermentation is a class of fermentation metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
-      notes: Energy-conservation review supports ethanol as an NADH-reoxidizing
-        fermentation end product.
+      notes: Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation
+        end product.
     predicate_id: biolink:participates_in
   - subject: ethanol_fermentation_trait
     predicate: produces
@@ -63,13 +64,19 @@ curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (ethanol/alcoholic fermentation);
-    product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  changes: Proposed candidate METABOLISM trait (ethanol/alcoholic fermentation); product-specific
+    sub-variant of the existing Fermentation class (METPO:1002005).
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (alcoholic fermentation / ethanol
-    production) with GO node grounding and METPO/biolink predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (alcoholic fermentation / ethanol production)
+    with GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16236×1).
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000029
 label: propionic acid fermentation
-definition: A fermentation that produces propionate (with acetate and CO2) from
-  sugars or lactate, typically via the Wood-Werkman (methylmalonyl-CoA) pathway.
-  Characteristic of propionibacteria (e.g. Propionibacterium freudenreichii).
+definition: A fermentation that produces propionate (with acetate and CO2) from sugars
+  or lactate, typically via the Wood-Werkman (methylmalonyl-CoA) pathway. Characteristic
+  of propionibacteria (e.g. Propionibacterium freudenreichii).
 definition_source: DOI:10.3390/molecules31020333
 trait_category: METABOLISM
 term_kind: CLASS
@@ -15,18 +15,17 @@ synonyms:
   source: DOI:10.3390/molecules31020333
 evidence:
 - reference: DOI:10.3390/molecules31020333
-  notes: Review of classical fermentations describes propionic acid fermentation
-    (acetic acid, propionic acid, CO2) and propionibacteria as its agents, including
-    the Wood-Werkman route.
+  notes: Review of classical fermentations describes propionic acid fermentation (acetic
+    acid, propionic acid, CO2) and propionibacteria as its agents, including the Wood-Werkman
+    route.
 - reference: DOI:10.3389/fmicb.2021.703525
-  notes: Review of fermentative energy conservation supports propionate formation as
-    a redox-balancing, energy-conserving fermentation route.
+  notes: Review of fermentative energy conservation supports propionate formation
+    as a redox-balancing, energy-conserving fermentation route.
 causal_graphs:
 - graph_id: propionic_acid_fermentation_propionate
-  title: Propionic acid fermentation produces propionate via the Wood-Werkman
-    pathway
-  description: Evidence-backed causal sketch linking methylmalonyl-CoA-pathway
-    catabolism of sugars or lactate to propionate, acetate, and CO2.
+  title: Propionic acid fermentation produces propionate via the Wood-Werkman pathway
+  description: Evidence-backed causal sketch linking methylmalonyl-CoA-pathway catabolism
+    of sugars or lactate to propionate, acetate, and CO2.
   nodes:
   - node_id: propionic_acid_fermentation_trait
     label: propionic acid fermentation
@@ -42,6 +41,7 @@ causal_graphs:
     label: propionate
     node_type: CHEMICAL
     description: Reduced end product characteristic of propionibacteria.
+    grounding: CHEBI:17272
   edges:
   - subject: propionic_acid_fermentation_trait
     predicate: participates in
@@ -49,8 +49,8 @@ causal_graphs:
     description: Propionic acid fermentation is a class of fermentation metabolism.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
-      notes: Energy-conservation review supports propionate formation as a
-        redox-balancing fermentation route.
+      notes: Energy-conservation review supports propionate formation as a redox-balancing
+        fermentation route.
     predicate_id: biolink:participates_in
   - subject: propionic_acid_fermentation_trait
     predicate: produces
@@ -58,20 +58,25 @@ causal_graphs:
     description: Propionate is the characteristic end product of the pathway.
     evidence:
     - reference: DOI:10.3390/molecules31020333
-      notes: Classical-fermentation review describes propionic acid fermentation
-        via the Wood-Werkman pathway in propionibacteria.
+      notes: Classical-fermentation review describes propionic acid fermentation via
+        the Wood-Werkman pathway in propionibacteria.
     predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (propionic acid fermentation);
-    product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  changes: Proposed candidate METABOLISM trait (propionic acid fermentation); product-specific
+    sub-variant of the existing Fermentation class (METPO:1002005).
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (propionic acid fermentation) with
-    GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED
-    to REVIEWED.
+  changes: Added evidence-backed causal graph (propionic acid fermentation) with GO
+    node grounding and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17272×1).
   llm_assisted: true
