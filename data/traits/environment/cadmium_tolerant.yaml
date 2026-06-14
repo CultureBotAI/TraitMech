@@ -16,8 +16,8 @@ evidence:
     confers cadmium resistance.
 - reference: DOI:10.3389/fmicb.2020.00047
   snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
-    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
-    uM) and Pb2+ (1.7 mM)
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+
+    (1 uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates cadmium to a MIC
     of 2.5 mM.'
 causal_graphs:
@@ -40,6 +40,7 @@ causal_graphs:
     label: czc cation-efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.
+    grounding: UniProtKB:B0VPE1
   - node_id: cadmium_export
     label: cadmium ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -80,7 +81,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (czc cadmium efflux) with CHEBI/GO
-    node groundings and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (czc cadmium efflux) with CHEBI/GO node
+    groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:B0VPE1×1).
   llm_assisted: true

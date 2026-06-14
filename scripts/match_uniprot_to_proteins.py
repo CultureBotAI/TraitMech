@@ -273,9 +273,14 @@ def main() -> int:
         with MAPPING_TSV.open("a") as fh:
             for label, curie, name in picked:
                 short_name = name.replace("\t", " ").strip()
+                # predicate_id: a single UniProt sequence stands in for a
+                # generic protein concept, so the match is skos:closeMatch
+                # (never exact). Column added in #83 (issue tracking mappings
+                # vs definition_source); keep this writer in lock-step with
+                # mappings/node_grounding.tsv's 8-column header.
                 fh.write(
                     f"{label}\tGENE_OR_PROTEIN\t{curie}\t{short_name}\t"
-                    f"UniProt\thigh\trepresentative UniProt entry "
+                    f"skos:closeMatch\tUniProt\thigh\trepresentative UniProt entry "
                     f"selected via kg-microbe merged-kg_uniprot_nodes.tsv "
                     f"(name-ends-with-label + alphabetic-first CURIE)\n"
                 )

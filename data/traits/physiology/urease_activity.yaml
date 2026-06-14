@@ -18,8 +18,7 @@ evidence:
   notes: Mobley, Island & Hausinger review the molecular biology of microbial ureases
     that hydrolyze urea to ammonia and carbon dioxide.
 - reference: DOI:10.1128/mr.53.1.85-108.1989
-  notes: Mobley & Hausinger review the significance and regulation of microbial
-    ureases.
+  notes: Mobley & Hausinger review the significance and regulation of microbial ureases.
 causal_graphs:
 - graph_id: urease_activity_urea_hydrolysis
   title: Urease-catalyzed urea hydrolysis
@@ -35,6 +34,7 @@ causal_graphs:
     label: urease
     node_type: GENE_OR_PROTEIN
     description: Nickel metalloenzyme hydrolyzing urea.
+    grounding: UniProtKB:A0A090IGX8
   - node_id: urease_function
     label: urease activity
     node_type: MOLECULAR_FUNCTION
@@ -79,8 +79,8 @@ curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY trait (urease activity) from literature
-    research to fill the enzyme-activity-phenotype gap.
+  changes: Proposed candidate PHYSIOLOGY trait (urease activity) from literature research
+    to fill the enzyme-activity-phenotype gap.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
@@ -88,4 +88,10 @@ curation_history:
   changes: Added evidence-backed causal graph (urease urea hydrolysis) with GO/CHEBI
     node groundings and RO/METPO/biolink predicate groundings; promoted PROPOSED to
     REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A090IGX8×1).
   llm_assisted: true

@@ -1,9 +1,8 @@
 identifier: traitmech:000036
 label: proteorhodopsin phototrophy
-definition: A light-harvesting metabolism in which a retinal-containing membrane
-  protein (proteorhodopsin) acts as a light-driven proton pump, generating proton
-  motive force without chlorophyll-based reaction centers. Widespread among marine
-  bacterioplankton.
+definition: A light-harvesting metabolism in which a retinal-containing membrane protein
+  (proteorhodopsin) acts as a light-driven proton pump, generating proton motive force
+  without chlorophyll-based reaction centers. Widespread among marine bacterioplankton.
 definition_source: DOI:10.1126/science.289.5486.1902
 trait_category: METABOLISM
 term_kind: CLASS
@@ -16,19 +15,18 @@ synonyms:
   source: DOI:10.1038/35081051
 evidence:
 - reference: DOI:10.1126/science.289.5486.1902
-  notes: Béjà et al. identified proteorhodopsin, a retinal-binding light-driven
-    proton pump in an uncultivated marine bacterium, as evidence for a new type of
-    phototrophy in the sea.
+  notes: Béjà et al. identified proteorhodopsin, a retinal-binding light-driven proton
+    pump in an uncultivated marine bacterium, as evidence for a new type of phototrophy
+    in the sea.
 - reference: DOI:10.1038/35081051
-  notes: Béjà et al., "Proteorhodopsin phototrophy in the ocean", supports
-    proteorhodopsin as a widespread, spectrally tuned light-energy capture system in
-    marine bacteria.
+  notes: Béjà et al., "Proteorhodopsin phototrophy in the ocean", supports proteorhodopsin
+    as a widespread, spectrally tuned light-energy capture system in marine bacteria.
 causal_graphs:
 - graph_id: proteorhodopsin_light_driven_proton_pump
   title: Proteorhodopsin pumps protons under illumination, generating PMF
   description: Evidence-backed causal sketch linking retinal-based proteorhodopsin
-    light-driven proton pumping to proton motive force without chlorophyll-based
-    reaction centers.
+    light-driven proton pumping to proton motive force without chlorophyll-based reaction
+    centers.
   nodes:
   - node_id: proteorhodopsin_trait
     label: proteorhodopsin phototrophy
@@ -39,6 +37,7 @@ causal_graphs:
     label: proteorhodopsin
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump.
+    grounding: UniProtKB:A0A1D7QWW9
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -51,8 +50,8 @@ causal_graphs:
     description: The retinal-binding pump realizes proteorhodopsin phototrophy.
     evidence:
     - reference: DOI:10.1126/science.289.5486.1902
-      notes: Béjà et al. identified proteorhodopsin as a retinal-binding
-        light-driven proton pump.
+      notes: Béjà et al. identified proteorhodopsin as a retinal-binding light-driven
+        proton pump.
     predicate_id: RO:0002327
   - subject: proteorhodopsin_trait
     predicate: enables
@@ -60,8 +59,8 @@ causal_graphs:
     description: Light-driven proton pumping by proteorhodopsin generates PMF.
     evidence:
     - reference: DOI:10.1038/35081051
-      notes: Béjà et al. support proteorhodopsin as a widespread light-energy
-        capture system in marine bacteria.
+      notes: Béjà et al. support proteorhodopsin as a widespread light-energy capture
+        system in marine bacteria.
     predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
@@ -76,4 +75,10 @@ curation_history:
   changes: Added evidence-backed causal graph (proteorhodopsin light-driven proton
     pump) with METPO node grounding and RO predicate groundings; promoted PROPOSED
     to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1D7QWW9×1).
   llm_assisted: true

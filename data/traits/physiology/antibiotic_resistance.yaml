@@ -1,8 +1,8 @@
 identifier: traitmech:000088
 label: antibiotic resistance
-definition: A physiological capacity to grow in the presence of antibiotic
-  concentrations that inhibit susceptible cells, mediated by efflux, target
-  modification, drug inactivation, or reduced permeability.
+definition: A physiological capacity to grow in the presence of antibiotic concentrations
+  that inhibit susceptible cells, mediated by efflux, target modification, drug inactivation,
+  or reduced permeability.
 definition_source: DOI:10.1038/nrmicro3380
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
   source: DOI:10.1038/nrmicro3380
 evidence:
 - reference: DOI:10.1038/nrmicro3380
-  notes: Blair et al. review the molecular mechanisms of antibiotic resistance
-    (efflux, target alteration, drug inactivation, reduced uptake).
+  notes: Blair et al. review the molecular mechanisms of antibiotic resistance (efflux,
+    target alteration, drug inactivation, reduced uptake).
 - reference: DOI:10.1038/s41579-022-00820-y
   notes: Updated review revisits molecular mechanisms of antibiotic resistance.
 causal_graphs:
@@ -34,6 +34,7 @@ causal_graphs:
     label: drug efflux pump
     node_type: GENE_OR_PROTEIN
     description: Transporter that expels antibiotics from the cell.
+    grounding: UniProtKB:A3RNR9
   - node_id: antibiotic_response_process
     label: response to antibiotic
     node_type: BIOLOGICAL_PROCESS
@@ -68,4 +69,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (resistance mechanisms) with GO node
     grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A3RNR9×1).
   llm_assisted: true

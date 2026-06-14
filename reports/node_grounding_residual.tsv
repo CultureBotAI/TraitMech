@@ -23,7 +23,6 @@ biogeographic community structure	QUALITY	2	data/traits/ecology/free_living.yaml
 low proton permeability membrane	CELLULAR_LOCALIZATION	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 reversed membrane potential	BIOLOGICAL_PROCESS	2	data/traits/environment/acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 anaerobic growth	BIOLOGICAL_PROCESS	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
-czc cation-efflux system	GENE_OR_PROTEIN	2	data/traits/environment/cadmium_tolerant.yaml|data/traits/environment/zinc_tolerant.yaml
 osmotic imbalance	BIOLOGICAL_PROCESS	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
 salinity-adaptation genes	GENE_OR_PROTEIN	2	data/traits/environment/euryhaline.yaml|data/traits/environment/stenohaline.yaml
 unsaturated and branched-chain fatty acids	CHEMICAL	2	data/traits/environment/facultative_psychrophilic.yaml|data/traits/environment/psychrophilic.yaml
@@ -155,7 +154,6 @@ moderate ambient temperature	ENVIRONMENTAL_FACTOR	1	data/traits/environment/meso
 mesophile enzyme repertoire	GENE_OR_PROTEIN	1	data/traits/environment/mesophilic.yaml
 balanced mesophilic growth	BIOLOGICAL_PROCESS	1	data/traits/environment/mesophilic.yaml
 toxic heavy-metal ion	ENVIRONMENTAL_FACTOR	1	data/traits/environment/metal_tolerant.yaml
-metal efflux pump	GENE_OR_PROTEIN	1	data/traits/environment/metal_tolerant.yaml
 microoxic environment	ENVIRONMENTAL_FACTOR	1	data/traits/environment/microaerophilic.yaml
 high-affinity terminal oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
 cytochrome cbb3 oxidase	GENE_OR_PROTEIN	1	data/traits/environment/microaerophilic.yaml
@@ -315,18 +313,15 @@ fermentation products	CHEMICAL	1	data/traits/metabolism/fermentation.yaml
 lactate	CHEMICAL	1	data/traits/metabolism/lactic_acid_fermentation.yaml
 peroxidases and laccases	GENE_OR_PROTEIN	1	data/traits/metabolism/lignin_degradation.yaml
 aromatic monomers / oligomers	CHEMICAL	1	data/traits/metabolism/lignin_degradation.yaml
-multicopper oxidase	GENE_OR_PROTEIN	1	data/traits/metabolism/manganese_oxidation.yaml
 mn(iii/iv) oxides	CHEMICAL	1	data/traits/metabolism/manganese_oxidation.yaml
 substrate uptake	BIOLOGICAL_PROCESS	1	data/traits/metabolism/metabolism.yaml
 atp and reducing power	CHEMICAL	1	data/traits/metabolism/metabolism.yaml
 anoxic habitat	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/methanogenesis.yaml
 mixed acid + ethanol + co2/h2 products	CHEMICAL	1	data/traits/metabolism/mixed_acid_fermentation.yaml
-nitrogenase	GENE_OR_PROTEIN	1	data/traits/metabolism/nitrogen_fixation.yaml
 f1fo atp synthase	GENE_OR_PROTEIN	1	data/traits/metabolism/oxidative_phosphorylation.yaml
 propionate	CHEMICAL	1	data/traits/metabolism/propionic_acid_fermentation.yaml
 secreted proteases	GENE_OR_PROTEIN	1	data/traits/metabolism/proteolysis.yaml
 amino acids / short peptides	CHEMICAL	1	data/traits/metabolism/proteolysis.yaml
-proteorhodopsin	GENE_OR_PROTEIN	1	data/traits/metabolism/proteorhodopsin_phototrophy.yaml
 amylases / starch-active glycoside hydrolases	GENE_OR_PROTEIN	1	data/traits/metabolism/starch_degradation.yaml
 fermentative condition	ENVIRONMENTAL_FACTOR	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
 high-energy phosphorylated intermediate	CHEMICAL	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
@@ -507,12 +502,9 @@ low visible chromophore accumulation	CHEMICAL	1	data/traits/morphology/white_pig
 visible white color	MOLECULAR_FUNCTION	1	data/traits/morphology/white_pigmented.yaml
 yellow carotenoids	CHEMICAL	1	data/traits/morphology/yellow_pigmented.yaml
 visible yellow color	MOLECULAR_FUNCTION	1	data/traits/morphology/yellow_pigmented.yaml
-drug efflux pump	GENE_OR_PROTEIN	1	data/traits/physiology/antibiotic_resistance.yaml
 energy and reductant	CHEMICAL	1	data/traits/physiology/autotrophic.yaml
-luciferase	GENE_OR_PROTEIN	1	data/traits/physiology/bioluminescence.yaml
 co-insensitive terminal oxidase	GENE_OR_PROTEIN	1	data/traits/physiology/carboxydotrophic.yaml
 reduced pyridine nucleotides	CHEMICAL	1	data/traits/physiology/carboxydotrophic.yaml
-catalase	GENE_OR_PROTEIN	1	data/traits/physiology/catalase_activity.yaml
 reduced inorganic compound	CHEMICAL	1	data/traits/physiology/chemoautotrophic.yaml
 cellular biomass	BIOLOGICAL_PROCESS	1	data/traits/physiology/chemoautotrophic.yaml
 inorganic chemical donor	CHEMICAL	1	data/traits/physiology/chemolithoheterotrophic.yaml
@@ -555,7 +547,6 @@ carbon source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_ty
 energy source utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 electron donor utilization	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
 encoded metabolic pathways	BIOLOGICAL_PROCESS	1	data/traits/physiology/trophic_type.yaml
-urease	GENE_OR_PROTEIN	1	data/traits/physiology/urease_activity.yaml
 gene product	GENE_OR_PROTEIN	1	data/traits/upper/biological_process.yaml
 assay or measurement process	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml
 data item	EXPERIMENTAL_FACTOR	1	data/traits/upper/observation.yaml

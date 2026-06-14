@@ -1,10 +1,12 @@
 label	match_count	representative_curie	representative_name	example_other_curies
 crt enzymes	0			
 photosynthetic reaction center	356			
+czc cation-efflux system	2	UniProtKB:B0VPE1	Component of the czc cation-efflux system (CzcI)	UniProtKB:A0A0B9WKN8
 salinity-adaptation genes	0		(SKIPPED — abstract category)	
 cold-shock proteins	0		(SKIPPED — abstract category)	
 proton export pumps and antiporters	0		(SKIPPED — abstract category)	
 na+/h+ antiporters	0			
+sox enzyme system	0			
 rod complex	0		(SKIPPED — abstract category)	
 penicillin-binding proteins	3			
 mreb cytoskeleton	0			
@@ -19,6 +21,9 @@ protein secretion systems	0
 plant-cell-wall-degrading enzymes	0			
 type iii secretion system	500			
 t3ss effector proteins	0			
+ars operon (arsb pump)	0			
+czc/cnr cobalt efflux system	0			
+copper efflux systems (cue/cus/pco/cop)	0			
 hyperthermostable proteins	0			
 acidic halophilic proteins	0			
 oxygen-sensing regulation	0			
@@ -26,7 +31,9 @@ fnr-type oxygen-responsive regulation	0
 fnr oxygen-responsive regulator	0			
 thermostable enzymes	0			
 archaeal molecular chaperonins	0			
+mer operon (mera reductase)	0			
 mesophile enzyme repertoire	0			
+metal efflux pump	500	UniProtKB:A0A067YD12	Heavy metal efflux pump	UniProtKB:A0A7W7ZNW6|UniProtKB:I8WLR6|UniProtKB:A0A379IF14|UniProtKB:K1ITB9|UniProtKB:Q0A8U8
 high-affinity terminal oxidase	0			
 cytochrome cbb3 oxidase	28			
 oxidative stress defense enzymes	0			
@@ -39,7 +46,18 @@ oxygen-sensitive enzymes	0
 thermostable proteins	0		(SKIPPED — abstract category)	
 energy-transducing enzymes	0			
 chaperone proteins	1		(SKIPPED — abstract category)	
+cas proteins	0			
+secreted depolymerizing enzymes	0			
+cellulase systems	0			
+chitinases	0			
+peroxidases and laccases	0			
+multicopper oxidase	500	UniProtKB:A0A059ZYC2	Multicopper oxidase	UniProtKB:A0A0N9HZ18|UniProtKB:A0A1X4BKQ8|UniProtKB:A0A378AER7|UniProtKB:A0A4P6U2Z3|UniProtKB:A0A514V6G9
+nitrogenase	500	UniProtKB:A0A089HR75	Nitrogenase	UniProtKB:A0A068T2L8|UniProtKB:A0A0F7FBC1|UniProtKB:A0A2P0ZWG3|UniProtKB:A0A2U8DU29|UniProtKB:A0A4U1KVW8
 f1fo atp synthase	0			
+secreted proteases	0			
+proteorhodopsin	4	UniProtKB:A0A1D7QWW9	Proteorhodopsin	UniProtKB:A0A0J6YLH9|UniProtKB:L7W6K7|UniProtKB:A0A0T5P794
+amylases / starch-active glycoside hydrolases	0			
+xylanase systems	0			
 flagellar basal motor	0			
 tyrosinase/laccase oxidases	0			
 diviva foci	0			
@@ -54,13 +72,17 @@ csd shape proteins	0
 mapz/ftsz division-positioning system	0			
 mapz	24			
 weak/absent shape-determining cytoskeleton	0			
+s-layer (glyco)protein subunits	0			
 spo0a phosphorelay	0			
 compartment-specific sigma factors	0			
 crva	0			
 crtopqmn operon	0			
+drug efflux pump	79	UniProtKB:A3RNR9	Transmembrane drug efflux pump	UniProtKB:A0A0S4TSS6|UniProtKB:A0A2N9DWW2|UniProtKB:A0A3M6AWC4|UniProtKB:A0A0P9ZNE9|UniProtKB:A0A090IJ22
+luciferase	500	UniProtKB:A0A010SSZ8	Luciferase	UniProtKB:A0A076EUL6|UniProtKB:A0A0M8PJT5|UniProtKB:A0A1A2Q4Q4|UniProtKB:A0A1H0UQU6|UniProtKB:A0A1N6CLL5
 co-insensitive terminal oxidase	0			
-sox enzyme system	0			
+catalase	500	UniProtKB:A0A071MK53	Catalase 	UniProtKB:A0A085B3Y9|UniProtKB:A0A088TYY5|UniProtKB:A0A0B5AH80|UniProtKB:A0A174WZX1|UniProtKB:A0A174WZX1
 membrane transporters	19		(SKIPPED — abstract category)	
 rrna operons	0			
 photosystem ii	212			
+urease	500	UniProtKB:A0A090IGX8	Urease	UniProtKB:A0A0A8XL67|UniProtKB:A0A0D5Y6G8|UniProtKB:A0A0P0DSA7|UniProtKB:A0A0R0QZS0|UniProtKB:A0A174G6L0
 gene product	83		(SKIPPED — abstract category)	
