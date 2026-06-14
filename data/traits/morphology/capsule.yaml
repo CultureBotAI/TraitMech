@@ -1,8 +1,8 @@
 identifier: traitmech:000063
 label: capsule
 definition: A morphology trait in which the cell is surrounded by a well-organized
-  layer of polysaccharide (or rarely polypeptide) external to the cell envelope,
-  mediating adhesion, desiccation resistance, and immune evasion.
+  layer of polysaccharide (or rarely polypeptide) external to the cell envelope, mediating
+  adhesion, desiccation resistance, and immune evasion.
 definition_source: DOI:10.1146/annurev.micro.50.1.285
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -18,18 +18,17 @@ synonyms:
   source: DOI:10.1146/annurev.biochem.75.103004.142545
 evidence:
 - reference: DOI:10.1146/annurev.micro.50.1.285
-  notes: Roberts, "The biochemistry and genetics of capsular polysaccharide
-    production in bacteria", treats the capsule as an organized external polysaccharide
-    layer.
+  notes: Roberts, "The biochemistry and genetics of capsular polysaccharide production
+    in bacteria", treats the capsule as an organized external polysaccharide layer.
 - reference: DOI:10.1146/annurev.biochem.75.103004.142545
   notes: Whitfield reviews biosynthesis and assembly of capsular polysaccharides in
     Escherichia coli.
 causal_graphs:
 - graph_id: capsule_polysaccharide_protection
   title: Capsule polysaccharide layer mediates adhesion and immune evasion
-  description: Evidence-backed causal sketch linking capsular polysaccharide
-    biosynthesis to a surface polysaccharide layer that mediates adhesion,
-    desiccation resistance, and immune evasion.
+  description: Evidence-backed causal sketch linking capsular polysaccharide biosynthesis
+    to a surface polysaccharide layer that mediates adhesion, desiccation resistance,
+    and immune evasion.
   nodes:
   - node_id: capsule_trait
     label: capsule
@@ -39,8 +38,9 @@ causal_graphs:
   - node_id: capsular_polysaccharide
     label: capsular polysaccharide
     node_type: CHEMICAL
-    description: High-MW (often acidic) polysaccharide attached external to the
-      cell envelope.
+    description: High-MW (often acidic) polysaccharide attached external to the cell
+      envelope.
+    grounding: CHEBI:3379
   - node_id: capsule_assembly
     label: capsular polysaccharide assembly
     node_type: BIOLOGICAL_PROCESS
@@ -53,8 +53,7 @@ causal_graphs:
   - subject: capsule_assembly
     predicate: enables
     object: capsule_trait
-    description: Surface assembly of capsule polymers realizes the capsulated
-      phenotype.
+    description: Surface assembly of capsule polymers realizes the capsulated phenotype.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.75.103004.142545
       notes: Whitfield reviews biosynthesis and assembly of capsular polysaccharides.
@@ -65,19 +64,25 @@ causal_graphs:
     description: The capsule masks surface antigens and reduces phagocytic uptake.
     evidence:
     - reference: DOI:10.1146/annurev.micro.50.1.285
-      notes: Roberts frames capsular polysaccharide as an immune-evasion and
-        adhesion structure.
+      notes: Roberts frames capsular polysaccharide as an immune-evasion and adhesion
+        structure.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (capsule) from literature research to
-    fill the cell-surface-structure gap.
+  changes: Proposed candidate MORPHOLOGY trait (capsule) from literature research
+    to fill the cell-surface-structure gap.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (capsule polysaccharide / immune
-    evasion) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (capsule polysaccharide / immune evasion)
+    with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:3379×1).
   llm_assisted: true

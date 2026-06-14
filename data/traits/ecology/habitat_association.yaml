@@ -1,8 +1,8 @@
 identifier: traitmech:000047
 label: habitat association
-definition: An ecological classification of the primary environment or niche an
-  organism inhabits (e.g. free-living vs host-associated; soil, rhizosphere, gut).
-  Microbial taxa show biogeographic structure across such habitats.
+definition: An ecological classification of the primary environment or niche an organism
+  inhabits (e.g. free-living vs host-associated; soil, rhizosphere, gut). Microbial
+  taxa show biogeographic structure across such habitats.
 definition_source: DOI:10.1038/nrmicro1341
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
   source: DOI:10.1038/nrmicro1341
 evidence:
 - reference: DOI:10.1038/nrmicro1341
-  notes: Martiny et al., "Microbial biogeography", support habitat/niche as a
-    structuring axis of microbial distribution; parent of the habitat sub-variants.
+  notes: Martiny et al., "Microbial biogeography", support habitat/niche as a structuring
+    axis of microbial distribution; parent of the habitat sub-variants.
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer, "Embracing the unknown", supports environment-specific microbial
     community membership (e.g. the soil microbiome) underpinning habitat association.
@@ -35,6 +35,7 @@ causal_graphs:
     label: habitat
     node_type: ENVIRONMENTAL_FACTOR
     description: Free-living, host-associated, soil, rhizosphere, or gut habitat.
+    grounding: ENVO:01000739
   - node_id: biogeographic_structure
     label: biogeographic community structure
     node_type: QUALITY
@@ -43,18 +44,15 @@ causal_graphs:
   - subject: habitat
     predicate: causes
     object: habitat_association_trait
-    description: The organism's primary habitat sets its habitat-association
-      classification.
+    description: The organism's primary habitat sets its habitat-association classification.
     evidence:
     - reference: DOI:10.1038/nrmicro1341
-      notes: Martiny et al. show habitat as a structuring axis of microbial
-        biogeography.
+      notes: Martiny et al. show habitat as a structuring axis of microbial biogeography.
     predicate_id: biolink:causes
   - subject: habitat_association_trait
     predicate: associated with
     object: biogeographic_structure
-    description: Habitat-associated taxa display environment-specific community
-      membership.
+    description: Habitat-associated taxa display environment-specific community membership.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
       notes: Fierer documents environment-specific community membership (e.g. the
@@ -72,4 +70,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (habitat / biogeographic structure)
     with biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:37Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:01000739×1).
   llm_assisted: true

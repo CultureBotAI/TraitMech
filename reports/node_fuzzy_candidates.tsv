@@ -1,0 +1,23 @@
+label	node_type	edge_count	candidate_id	matched_variant	status
+glucose	CHEMICAL	2	CHEBI:17234|CHEBI:4167|CHEBI:42758		ambiguous
+immune evasion	BIOLOGICAL_PROCESS	1	GO:0042783|GO:0051842		ambiguous
+n-acetylglucosamine	CHEMICAL	1	CHEBI:28009|CHEBI:59640		ambiguous
+electron acceptor	CHEMICAL	1	CHEBI:17654|CHEBI:39143		ambiguous
+pyocyanin	CHEMICAL	1	CHEBI:62220|CHEBI:8653		ambiguous
+polyhydroxyalkanoate	CHEMICAL	1	CHEBI:53387|CHEBI:78037		ambiguous
+horizontal gene transfer	BIOLOGICAL_PROCESS	3	GO:0009292	horizontal gene transfer	unique
+habitat	ENVIRONMENTAL_FACTOR	1	ENVO:01000739	habitat	unique
+plant tissue colonization	BIOLOGICAL_PROCESS	1	GO:0140649	plant tissue colonization	unique
+ultraviolet radiation	ENVIRONMENTAL_FACTOR	1	ENVO:21001216	ultraviolet radiation	unique
+manganese(2+)	CHEMICAL	1	CHEBI:29035	manganese(2+)	unique
+ethanol	CHEMICAL	1	CHEBI:16236	ethanol	unique
+lactate	CHEMICAL	1	CHEBI:24996	lactate	unique
+propionate	CHEMICAL	1	CHEBI:17272	propionate	unique
+xylose	CHEMICAL	1	CHEBI:18222	xylose	unique
+capsular polysaccharide	CHEMICAL	1	CHEBI:3379	capsular polysaccharide	unique
+lipoteichoic acids	CHEMICAL	1	CHEBI:28640	lipoteichoic acid	unique
+phenazine biosynthesis	BIOLOGICAL_PROCESS	1	GO:0002047	phenazine biosynthetic process	unique
+spore coat	CELLULAR_LOCALIZATION	1	GO:0031160	spore coat	unique
+type iv pilus	CELLULAR_LOCALIZATION	1	GO:0044096	type iv pilus	unique
+nutrient uptake	BIOLOGICAL_PROCESS	1	GO:0009935	nutrient uptake	unique
+intracellular membrane	CELLULAR_LOCALIZATION	1	GO:0031090	intracellular membrane	unique

@@ -1,9 +1,9 @@
 identifier: traitmech:000093
 label: genomic island
-definition: A genomics trait describing possession of a genomic island — a
-  horizontally acquired chromosomal region (e.g. a pathogenicity, symbiosis, or
-  metabolic island) that often retains mobility signatures such as flanking repeats
-  and atypical nucleotide composition.
+definition: A genomics trait describing possession of a genomic island — a horizontally
+  acquired chromosomal region (e.g. a pathogenicity, symbiosis, or metabolic island)
+  that often retains mobility signatures such as flanking repeats and atypical nucleotide
+  composition.
 definition_source: DOI:10.1038/nrmicro884
 trait_category: GENOMICS
 term_kind: CLASS
@@ -16,17 +16,16 @@ synonyms:
   source: DOI:10.1038/nrmicro884
 evidence:
 - reference: DOI:10.1038/nrmicro884
-  notes: Dobrindt et al. review genomic islands in pathogenic and environmental
-    microorganisms.
+  notes: Dobrindt et al. review genomic islands in pathogenic and environmental microorganisms.
 - reference: DOI:10.1111/j.1574-6976.2008.00136.x
   notes: Juhas et al. review genomic islands as tools of bacterial horizontal gene
     transfer and evolution.
 causal_graphs:
 - graph_id: gi_hgt_accessory_function
   title: Genomic islands acquired by HGT carry accessory functions
-  description: Evidence-backed causal sketch linking horizontal gene transfer to
-    acquisition of genomic islands that confer accessory phenotypes (pathogenicity,
-    symbiosis, metabolism).
+  description: Evidence-backed causal sketch linking horizontal gene transfer to acquisition
+    of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis,
+    metabolism).
   nodes:
   - node_id: gi_trait
     label: genomic island
@@ -36,8 +35,8 @@ causal_graphs:
   - node_id: horizontal_gene_transfer
     label: horizontal gene transfer
     node_type: BIOLOGICAL_PROCESS
-    description: Transfer of genetic material between organisms outside vertical
-      descent.
+    description: Transfer of genetic material between organisms outside vertical descent.
+    grounding: GO:0009292
   - node_id: accessory_function
     label: accessory function
     node_type: QUALITY
@@ -55,12 +54,12 @@ causal_graphs:
   - subject: gi_trait
     predicate: contributes to
     object: accessory_function
-    description: Genomic islands deliver pathogenicity, symbiosis, or metabolic
-      modules to the host.
+    description: Genomic islands deliver pathogenicity, symbiosis, or metabolic modules
+      to the host.
     evidence:
     - reference: DOI:10.1038/nrmicro884
-      notes: Dobrindt et al. review genomic islands carrying virulence and
-        metabolic functions in pathogens and environmental microbes.
+      notes: Dobrindt et al. review genomic islands carrying virulence and metabolic
+        functions in pathogens and environmental microbes.
     predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
@@ -74,4 +73,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (HGT-acquired genomic island accessory
     function) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
   llm_assisted: true

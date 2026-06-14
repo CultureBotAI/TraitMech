@@ -1,8 +1,8 @@
 identifier: traitmech:000102
 label: pangenome openness
 definition: A genomics trait describing the structure of a species' pangenome — the
-  balance of core versus accessory genes and whether the pangenome is open
-  (continually acquiring new genes across genomes) or closed.
+  balance of core versus accessory genes and whether the pangenome is open (continually
+  acquiring new genes across genomes) or closed.
 definition_source: DOI:10.1073/pnas.0506758102
 trait_category: GENOMICS
 term_kind: CLASS
@@ -35,6 +35,7 @@ causal_graphs:
     label: horizontal gene transfer
     node_type: BIOLOGICAL_PROCESS
     description: Acquisition of genes between lineages outside vertical descent.
+    grounding: GO:0009292
   - node_id: accessory_gene_pool
     label: accessory gene pool
     node_type: QUALITY
@@ -43,22 +44,20 @@ causal_graphs:
   - subject: horizontal_gene_transfer
     predicate: causes
     object: pangenome_openness_trait
-    description: HGT continually adds new accessory genes, keeping the pangenome
-      open.
+    description: HGT continually adds new accessory genes, keeping the pangenome open.
     evidence:
     - reference: DOI:10.1073/pnas.0506758102
-      notes: Tettelin et al. introduce the pan-genome concept distinguishing
-        open vs closed pangenomes.
+      notes: Tettelin et al. introduce the pan-genome concept distinguishing open
+        vs closed pangenomes.
     predicate_id: biolink:causes
   - subject: pangenome_openness_trait
     predicate: associated with
     object: accessory_gene_pool
-    description: Open pangenomes accumulate large accessory gene pools across
-      strains.
+    description: Open pangenomes accumulate large accessory gene pools across strains.
     evidence:
     - reference: DOI:10.1038/nmicrobiol.2017.40
-      notes: McInerney et al. review the ecological and population drivers of
-        pangenome openness.
+      notes: McInerney et al. review the ecological and population drivers of pangenome
+        openness.
     predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
@@ -70,6 +69,12 @@ curation_history:
 - timestamp: '2026-06-08T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (HGT-driven open pangenome) with
-    biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (HGT-driven open pangenome) with biolink
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:55:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
   llm_assisted: true
