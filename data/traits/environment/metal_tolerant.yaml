@@ -1,7 +1,7 @@
 identifier: traitmech:000012
 label: metal tolerant
-definition: An environmental tolerance in which an organism grows in the presence of
-  elevated concentrations of toxic heavy-metal or metalloid ions, typically via
+definition: An environmental tolerance in which an organism grows in the presence
+  of elevated concentrations of toxic heavy-metal or metalloid ions, typically via
   efflux-based resistance determinants (RND-family CBA pumps, P-type ATPases, and
   cation diffusion facilitators).
 definition_source: PMID:12829273
@@ -19,29 +19,27 @@ synonyms:
   source: PMID:12829273
 evidence:
 - reference: PMID:12829273
-  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell
-    division superfamily, P-type ATPases, cation diffusion facilitator and chromate
-    proteins
-  notes: Review of efflux-mediated heavy-metal resistance supports active metal
-    export as the dominant prokaryotic tolerance mechanism.
+  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell division
+    superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins
+  notes: Review of efflux-mediated heavy-metal resistance supports active metal export
+    as the dominant prokaryotic tolerance mechanism.
 - reference: DOI:10.3389/fmicb.2020.00047
   snippet: This metallophilic strain BS1, harbors numerous gene clusters encoding
     metal-resistance determinants enabling detoxification of transition metal ions
     and complexes
-  notes: 'Organism example: Cupriavidus metallidurans is the model metallophilic
-    bacterium tolerating many toxic metals via dedicated resistance gene clusters.'
+  notes: 'Organism example: Cupriavidus metallidurans is the model metallophilic bacterium
+    tolerating many toxic metals via dedicated resistance gene clusters.'
 causal_graphs:
 - graph_id: metal_tolerance_efflux_detoxification
   title: Metal tolerance via active efflux of heavy-metal ions
-  description: Evidence-backed causal sketch linking heavy-metal exposure to
-    efflux-pump-mediated detoxification underlying broad metal tolerance.
+  description: Evidence-backed causal sketch linking heavy-metal exposure to efflux-pump-mediated
+    detoxification underlying broad metal tolerance.
   nodes:
   - node_id: metal_tolerant_trait
     label: metal tolerant
     node_type: TRAIT
     grounding: traitmech:000012
-    description: Capacity to grow at elevated heavy-metal or metalloid
-      concentrations.
+    description: Capacity to grow at elevated heavy-metal or metalloid concentrations.
   - node_id: heavy_metal_ion
     label: toxic heavy-metal ion
     node_type: ENVIRONMENTAL_FACTOR
@@ -49,8 +47,9 @@ causal_graphs:
   - node_id: efflux_pump
     label: metal efflux pump
     node_type: GENE_OR_PROTEIN
-    description: RND-family CBA pumps, P-type ATPases, and cation diffusion
-      facilitators exporting metals.
+    description: RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators
+      exporting metals.
+    grounding: UniProtKB:A0A067YD12
   - node_id: metal_ion_export
     label: metal ion transmembrane export
     node_type: BIOLOGICAL_PROCESS
@@ -70,12 +69,12 @@ causal_graphs:
   - subject: efflux_pump
     predicate: enables
     object: metal_ion_export
-    description: CBA pumps, P-type ATPases, and CDFs export toxic metal cations
-      from the cytoplasm.
+    description: CBA pumps, P-type ATPases, and CDFs export toxic metal cations from
+      the cytoplasm.
     evidence:
     - reference: PMID:12829273
-      notes: Nies reviews efflux-mediated heavy-metal resistance as the dominant
-        prokaryotic tolerance mechanism.
+      notes: Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic
+        tolerance mechanism.
     predicate_id: RO:0002327
   - subject: metal_ion_export
     predicate: enables
@@ -84,21 +83,26 @@ causal_graphs:
       phenotype.
     evidence:
     - reference: PMID:12829273
-      notes: Nies frames efflux-based export as the basis of broad heavy-metal
-        tolerance.
+      notes: Nies frames efflux-based export as the basis of broad heavy-metal tolerance.
     predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ENVIRONMENT trait (general heavy-metal/metalloid
-    tolerance) from literature research to fill the metal-tolerance coverage gap.
-    Parent of the metal-specific sub-variants.
+  changes: Proposed candidate ENVIRONMENT trait (general heavy-metal/metalloid tolerance)
+    from literature research to fill the metal-tolerance coverage gap. Parent of the
+    metal-specific sub-variants.
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (efflux-mediated metal detoxification)
-    with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED
-    to REVIEWED.
+    with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A067YD12×1).
   llm_assisted: true

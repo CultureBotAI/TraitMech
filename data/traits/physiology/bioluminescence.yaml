@@ -1,8 +1,8 @@
 identifier: traitmech:000085
 label: bioluminescence
-definition: A physiological capability to emit visible light through a
-  luciferase-catalyzed reaction, frequently regulated by quorum sensing in marine
-  bacteria such as Aliivibrio and Photobacterium.
+definition: A physiological capability to emit visible light through a luciferase-catalyzed
+  reaction, frequently regulated by quorum sensing in marine bacteria such as Aliivibrio
+  and Photobacterium.
 definition_source: DOI:10.1016/j.csbj.2018.11.003
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -15,8 +15,8 @@ synonyms:
   source: DOI:10.1016/j.csbj.2018.11.003
 evidence:
 - reference: DOI:10.1016/j.csbj.2018.11.003
-  notes: Brodl, Winkler & Macheroux review the molecular mechanisms of bacterial
-    bioluminescence and the luciferase reaction.
+  notes: Brodl, Winkler & Macheroux review the molecular mechanisms of bacterial bioluminescence
+    and the luciferase reaction.
 - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
   notes: Waters & Bassler support quorum-sensing regulation of light production in
     luminous bacteria.
@@ -35,6 +35,7 @@ causal_graphs:
     label: luciferase
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing the light-emitting reaction.
+    grounding: UniProtKB:A0A010SSZ8
   - node_id: bioluminescence_process
     label: bioluminescence
     node_type: BIOLOGICAL_PROCESS
@@ -74,13 +75,17 @@ curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY trait (bioluminescence) from literature
-    research.
+  changes: Proposed candidate PHYSIOLOGY trait (bioluminescence) from literature research.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (luciferase light emission) with
-    GO/CHEBI node groundings and RO/biolink predicate groundings; promoted PROPOSED
-    to REVIEWED.
+  changes: Added evidence-backed causal graph (luciferase light emission) with GO/CHEBI
+    node groundings and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A010SSZ8×1).
   llm_assisted: true

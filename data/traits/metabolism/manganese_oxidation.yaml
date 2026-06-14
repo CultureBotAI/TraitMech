@@ -1,8 +1,8 @@
 identifier: traitmech:000032
 label: manganese oxidation
-definition: A metabolism in which bacteria oxidize soluble Mn(II) to insoluble
-  Mn(III/IV) oxides, typically catalyzed by multicopper oxidases. Characteristic of
-  organisms such as Bacillus sp. SG-1, Leptothrix, and Pseudomonas putida.
+definition: A metabolism in which bacteria oxidize soluble Mn(II) to insoluble Mn(III/IV)
+  oxides, typically catalyzed by multicopper oxidases. Characteristic of organisms
+  such as Bacillus sp. SG-1, Leptothrix, and Pseudomonas putida.
 definition_source: DOI:10.1016/j.tim.2005.07.009
 trait_category: METABOLISM
 term_kind: CLASS
@@ -15,11 +15,11 @@ synonyms:
   source: DOI:10.1016/j.tim.2005.07.009
 evidence:
 - reference: DOI:10.1016/j.tim.2005.07.009
-  notes: Tebo et al., "Geomicrobiology of manganese(II) oxidation", supports
-    bacterial Mn(II) oxidation to Mn oxides via a multicopper-oxidase mechanism.
+  notes: Tebo et al., "Geomicrobiology of manganese(II) oxidation", supports bacterial
+    Mn(II) oxidation to Mn oxides via a multicopper-oxidase mechanism.
 - reference: DOI:10.1146/annurev.earth.32.101802.120213
-  notes: Tebo et al., "Biogenic manganese oxides", supports the formation and
-    properties of bacterially produced Mn(III/IV) oxides.
+  notes: Tebo et al., "Biogenic manganese oxides", supports the formation and properties
+    of bacterially produced Mn(III/IV) oxides.
 causal_graphs:
 - graph_id: manganese_oxidation_multicopper_oxidase
   title: Manganese oxidation produces insoluble Mn(III/IV) oxides
@@ -35,6 +35,7 @@ causal_graphs:
     label: multicopper oxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme family catalyzing Mn(II) oxidation in bacteria.
+    grounding: UniProtKB:A0A059ZYC2
   - node_id: mn_oxides
     label: Mn(III/IV) oxides
     node_type: CHEMICAL
@@ -43,12 +44,11 @@ causal_graphs:
   - subject: multicopper_oxidase
     predicate: enables
     object: manganese_oxidation_trait
-    description: Multicopper oxidases catalyze the Mn(II) → Mn(III/IV)
-      oxidation step.
+    description: Multicopper oxidases catalyze the Mn(II) → Mn(III/IV) oxidation step.
     evidence:
     - reference: DOI:10.1016/j.tim.2005.07.009
-      notes: Tebo et al. support bacterial Mn(II) oxidation via a multicopper-
-        oxidase mechanism.
+      notes: Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase
+        mechanism.
     predicate_id: RO:0002327
   - subject: manganese_oxidation_trait
     predicate: produces
@@ -71,4 +71,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (multicopper-oxidase Mn(II) → Mn(III/IV)
     oxidation) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-14T06:38:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A059ZYC2×1).
   llm_assisted: true
