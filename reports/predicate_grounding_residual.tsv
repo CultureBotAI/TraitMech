@@ -4,7 +4,6 @@ imports	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryha
 initiates	4	data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml
 can proceed through	4	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 assimilated into	4	data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
-increases gradient of	3	data/traits/environment/acidophilic.yaml|data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/obligately_acidophilic.yaml
 damages	3	data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
 uses	3	data/traits/environment/extremely_halophilic.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/metabolism/fermentation.yaml
 has alternative process	3	data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
@@ -30,7 +29,6 @@ reduced to	2	data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabol
 oxidized during	2	data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/physiology/chemoorganotrophic.yaml
 converted to	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/lithoheterotrophic.yaml
 supports formation of	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/chemolithoheterotrophic.yaml
-transfers electrons via	2	data/traits/metabolism/syntrophy.yaml
 rotates	2	data/traits/morphology/axially_filamented.yaml|data/traits/morphology/flagellated.yaml
 coordinates with	2	data/traits/morphology/bacillus_shaped.yaml|data/traits/morphology/rod_shaped.yaml
 recruits	2	data/traits/morphology/coccus_shaped.yaml|data/traits/morphology/filament_shaped.yaml
@@ -67,7 +65,6 @@ enables tolerance of	1	data/traits/environment/non_halophilic.yaml
 suppresses influx of	1	data/traits/environment/obligately_acidophilic.yaml
 is required for	1	data/traits/environment/obligately_alkaphilic.yaml
 poisons	1	data/traits/environment/obligately_anaerobic.yaml
-imposes gradient of	1	data/traits/environment/ph_optimum.yaml
 exceeds tolerance of	1	data/traits/environment/stenohaline.yaml
 carries	1	data/traits/genomics/gc_content.yaml
 precursor of	1	data/traits/metabolism/acetogenesis.yaml
@@ -77,7 +74,6 @@ provides electron donor	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
 provides electron acceptor	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
 mediates	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
 reduced during	1	data/traits/metabolism/cable_bacteria_metabolism.yaml
-serves as electron donor and acceptor	1	data/traits/metabolism/disproportionation.yaml
 transfers electrons from	1	data/traits/metabolism/electron_transfer.yaml
 mediates transfer between	1	data/traits/metabolism/electron_transfer.yaml
 performs	1	data/traits/metabolism/electron_transfer.yaml
@@ -86,13 +82,11 @@ uses protein	1	data/traits/metabolism/electron_transfer.yaml
 oxidation reduces	1	data/traits/metabolism/fermentation.yaml
 reoxidized by	1	data/traits/metabolism/fermentation.yaml
 conserves energy by	1	data/traits/metabolism/fermentation.yaml
-provides electrons for	1	data/traits/metabolism/homoacetogenesis.yaml
 feeds	1	data/traits/metabolism/metabolism.yaml
 reduced with electron donor	1	data/traits/metabolism/methanogenesis.yaml
 has prosthetic group	1	data/traits/metabolism/methanogenesis.yaml
 uses pathway	1	data/traits/metabolism/oxidative_phosphorylation.yaml
 uses electron flow from	1	data/traits/metabolism/respiration.yaml
-couples electron flow to	1	data/traits/metabolism/respiration.yaml
 donates phosphoryl group to	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
 substrate for	1	data/traits/metabolism/substrate_level_phosphorylation.yaml
 requires partner interaction	1	data/traits/metabolism/syntrophy.yaml
@@ -127,13 +121,11 @@ supports generation of	1	data/traits/physiology/chemolithoautotrophic.yaml
 uses substrate pool	1	data/traits/physiology/copiotrophic.yaml
 characteristic of	1	data/traits/physiology/copiotrophic.yaml
 used by	1	data/traits/physiology/heterotrophic.yaml
-donates electrons to	1	data/traits/physiology/lithotrophic.yaml
 uses oxidant	1	data/traits/physiology/methanotrophic.yaml
 can use energy capture route	1	data/traits/physiology/mixotrophic.yaml
 favors	1	data/traits/physiology/oligotrophic.yaml
 metabolized by	1	data/traits/physiology/organoheterotrophic.yaml
 oxidizes carbon to	1	data/traits/physiology/organoheterotrophic.yaml
-provides electrons to	1	data/traits/physiology/photolithoautotrophic.yaml
 fixed during	1	data/traits/physiology/photolithotrophic.yaml
 carries out	1	data/traits/upper/biological_process.yaml
 can bear	1	data/traits/upper/material_entity.yaml

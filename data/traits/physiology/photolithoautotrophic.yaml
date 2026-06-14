@@ -109,6 +109,7 @@ causal_graphs:
       snippet: reduced sulfur compounds as an electron donor
       notes: Supports reduced inorganic sulfur compounds as electron donors for anoxygenic
         photolithotrophy.
+    predicate_id: METPO:2007403
   - subject: sulfide
     predicate: participates in
     object: sulfur_oxidation
@@ -233,4 +234,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0019417×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×1).
   llm_assisted: true

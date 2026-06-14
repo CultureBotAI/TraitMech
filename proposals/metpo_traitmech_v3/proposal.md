@@ -1,5 +1,7 @@
 # METPO ROBOT Template Proposal — TraitMech Node-Class Lift (v3, 2026-07)
 
+> **Upstream submission:** consolidated in [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535) (2026-06-14) — requesting real METPO IDs for this cohort.
+
 ## Context
 
 The TraitMech v1 cohort lifted the *causal-graph scaffolding* (graph,

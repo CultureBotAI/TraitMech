@@ -79,3 +79,11 @@ embedded in	biolink:located_in	located in	skos:closeMatch	biolink	high	'protein 
 can participate in	biolink:participates_in	participates in	skos:closeMatch	biolink	high	modal variant of grounded 'participates in'
 interact with	biolink:interacts_with	interacts with	skos:closeMatch	biolink	high	plural/uninflected variant of grounded 'interacts with'
 has function	RO:0000085	has function	skos:exactMatch	RO	high	exact label match against RO has-function
+transfers electrons via	METPO:2007600	transfers electrons via	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v6; 2 edges, interspecies (H2/formate) electron shuttling in syntrophy
+increases gradient of	METPO:2007601	imposes gradient of	skos:closeMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v6; 3 edges, acidophily proton-gradient contexts (variant of 'imposes gradient of')
+imposes gradient of	METPO:2007601	imposes gradient of	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v6; 1 edge, pH-optimum proton-gradient context
+couples electron flow to	METPO:2007602	couples electron flow to	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v6; 1 edge, respiratory ETC -> proton motive force
+serves as electron donor and acceptor	METPO:2007603	serves as electron donor and acceptor	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v6; 1 edge, sulfur disproportionation
+donates electrons to	METPO:2007403	transfers electrons to	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'transfers electrons to'; lithotrophic donor -> ETC
+provides electrons to	METPO:2007403	transfers electrons to	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'transfers electrons to'; donor -> photosynthetic ET
+provides electrons for	METPO:2007402	feeds electrons into	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'feeds electrons into'; H2 -> Wood-Ljungdahl pathway

@@ -70,6 +70,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2166
       snippet: Hydrogen and formate are key components
       notes: Supports hydrogen as a key interspecies electron-transfer carrier.
+    predicate_id: METPO:2007600
   - subject: syntrophic_product_formation
     predicate: transfers electrons via
     object: formate
@@ -78,6 +79,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2166
       snippet: transfer of hydrogen and formate
       notes: Supports formate-mediated interspecies electron transfer.
+    predicate_id: METPO:2007600
   - subject: methanogenic_product_consumption
     predicate: consumes
     object: molecular_hydrogen
@@ -142,4 +144,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007600×2).
   llm_assisted: true

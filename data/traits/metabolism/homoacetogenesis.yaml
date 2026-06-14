@@ -108,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbapap.2008.08.012
       snippet: acetyl-CoA from CO or CO2 + H2
       notes: Supports H2 as an electron donor with CO2.
+    predicate_id: METPO:2007402
   - subject: carbon_monoxide
     predicate: participates in
     object: wood_ljungdahl_pathway
@@ -186,4 +187,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:participates_in×2, biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1).
   llm_assisted: true

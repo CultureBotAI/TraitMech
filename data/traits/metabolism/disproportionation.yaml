@@ -84,6 +84,7 @@ causal_graphs:
     - reference: DOI:10.1080/17415990802105770
       snippet: serve as both electron donor and acceptor
       notes: Directly supports the defining redox split.
+    predicate_id: METPO:2007603
   - subject: elemental_sulfur
     predicate: example of
     object: inorganic_sulfur_intermediate
@@ -188,4 +189,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:26833×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007603×1).
   llm_assisted: true

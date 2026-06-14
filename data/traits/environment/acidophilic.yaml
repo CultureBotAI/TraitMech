@@ -72,6 +72,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.tim.2007.02.005
       snippet: major contributor to the proton motive force
       notes: Review links low-pH growth to the transmembrane proton gradient.
+    predicate_id: METPO:2007601
   - subject: low_proton_permeability_membrane
     predicate: limits influx of
     object: proton
@@ -133,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001428×1).
+  llm_assisted: true
+- timestamp: '2026-06-14T07:26:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007601×1).
   llm_assisted: true
