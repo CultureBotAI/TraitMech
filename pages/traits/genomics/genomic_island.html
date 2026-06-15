@@ -139,13 +139,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.373, -2.738, -0.308, -0.415, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/transposable_element.html">transposable element</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/prophage.html">prophage</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ploidy.html">ploidy</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/plasmid_carriage.html">plasmid carriage</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -165,6 +227,12 @@
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (HGT-acquired genomic island accessory function) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:38Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009292×1).</p>
         </li>
         
       </ol>
@@ -198,6 +266,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -519,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "genomic island"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "target": "accessory function"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": null, "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Genomic islands acquired by HGT carry accessory functions"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Juhas et al. review genomic islands as tools of bacterial HGT.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "genomic island"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Dobrindt et al. review genomic islands carrying virulence and metabolic functions in pathogens and environmental microbes.", "reference": "DOI:10.1038/nrmicro884"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "target": "accessory function"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Genomic islands acquired by HGT carry accessory functions"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -530,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

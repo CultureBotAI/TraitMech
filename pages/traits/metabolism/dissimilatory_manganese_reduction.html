@@ -29,12 +29,73 @@
       <a href="../../category/metabolism.html">METABOLISM</a>
     </p>
     <h1>dissimilatory manganese reduction</h1>
-    <p class="curie"><code>traitmech:000108</code> · CLASS · PROPOSED</p>
+    <p class="curie"><code>traitmech:000108</code> · CLASS · REVIEWED</p>
     
     <p class="definition">An anaerobic respiratory metabolism in which an organism conserves energy by reducing Mn(IV) oxides to soluble Mn(II) as a terminal electron acceptor while oxidizing organic matter or hydrogen.</p>
     
   </header>
 
+  
+  <section class="causal-graphs">
+    
+    
+    <div class="card causal-graph-card">
+      <h2>Dissimilatory manganese reduction respires Mn(IV) to Mn(II)</h2>
+      <p class="meta">Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron acceptor to soluble Mn(II) and anaerobic respiration.</p>
+      
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Dissimilatory manganese reduction respires Mn(IV) to Mn(II)</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for dissimilatory manganese reduction.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+      
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+          
+          <li id="pathograph-1-edge-1">
+            <strong>Mn(IV) oxide</strong>
+            <span class="edge-predicate">oxidized to</span>
+            <strong>manganese(2+)</strong>
+            <code>METPO:2007405</code>
+            <p>Mn(IV) oxide is reduced to soluble Mn(II).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mr.55.2.259-287.1991</code>
+                
+                <span class="meta">Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-2">
+            <strong>Mn(IV) oxide</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>dissimilatory manganese reduction</strong>
+            <code>RO:0002327</code>
+            <p>Mn(IV) acts as terminal electron acceptor enabling DMR.</p>
+            <ul>
+              
+              <li>
+                <code>PMID:7826009</code>
+                
+                <span class="meta">Nealson &amp; Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+    
+  </section>
   
 
   <section class="grid">
@@ -78,13 +139,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000802</code> <span class="dim-preview">[+1.763, -0.865, -1.187, -1.091, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/denitrification.html">denitrification</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/aerobic_respiration.html">Aerobic respiration</a>
+          <span class="sim">0.989</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -98,6 +221,18 @@
           <time>2026-06-08T00:00:00Z</time> ·
           <strong>PROPOSED_FROM_RESEARCH</strong> · claude
           <p class="changes">Proposed candidate METABOLISM trait (dissimilatory manganese reduction); round 2, parented to the existing dissimilatory metal reduction axis (traitmech:000039) alongside round-1 iron reduction.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-10T14:00:00Z</time> ·
+          <strong>CURATED_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added evidence-backed causal graph (Mn(IV) → Mn(II) respiration) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:38Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:29035×1).</p>
         </li>
         
       </ol>
@@ -127,23 +262,351 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>REVIEWED</dd>
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
 
 
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed causal sketch linking Mn(IV) oxide as terminal electron acceptor to soluble Mn(II) and anaerobic respiration.", "edges": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "mn_iv_oxide", "target": "mn_ii"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mn_iv_oxide", "target": "dmr_trait"}], "evidence_rows": [{"description": "Mn(IV) oxide is reduced to soluble Mn(II).", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Mn(IV) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "Mn(IV) oxide", "target": "manganese(2+)"}, {"description": "Mn(IV) acts as terminal electron acceptor enabling DMR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic respiration.", "reference": "PMID:7826009"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Mn(IV) oxide", "target": "dissimilatory manganese reduction"}], "graph_id": "dmr_mn_oxide_respiration", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Anaerobic respiration on Mn(IV) oxide as terminal acceptor.", "grounding": "traitmech:000108", "id": "dmr_trait", "is_orphan": false, "label": "dissimilatory manganese reduction", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Mn(II) released after reduction.", "grounding": "CHEBI:29035", "id": "mn_ii", "is_orphan": false, "label": "manganese(2+)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Mn(IV) oxide used as terminal electron acceptor.", "grounding": null, "id": "mn_iv_oxide", "is_orphan": false, "label": "Mn(IV) oxide", "node_type": "CHEMICAL", "xrefs": []}], "title": "Dissimilatory manganese reduction respires Mn(IV) to Mn(II)"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

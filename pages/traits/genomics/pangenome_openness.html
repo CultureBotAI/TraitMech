@@ -139,13 +139,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.373, -2.738, -0.308, -0.415, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/transposable_element.html">transposable element</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/prophage.html">prophage</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ploidy.html">ploidy</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/plasmid_carriage.html">plasmid carriage</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -165,6 +227,12 @@
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (HGT-driven open pangenome) with biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:38Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0009292×1).</p>
         </li>
         
       </ol>
@@ -198,6 +266,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -519,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking HGT and ecological breadth to open versus closed pangenome structure.", "edges": [{"description": "HGT continually adds new accessory genes, keeping the pangenome open.", "evidence": [{"notes": "Tettelin et al. introduce the pan-genome concept distinguishing open vs closed pangenomes.", "reference": "DOI:10.1073/pnas.0506758102"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "pangenome_openness_trait"}, {"description": "Open pangenomes accumulate large accessory gene pools across strains.", "evidence": [{"notes": "McInerney et al. review the ecological and population drivers of pangenome openness.", "reference": "DOI:10.1038/nmicrobiol.2017.40"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pangenome_openness_trait", "target": "accessory_gene_pool"}], "evidence_rows": [{"description": "HGT continually adds new accessory genes, keeping the pangenome open.", "edge_id": "edge-1", "evidence": [{"notes": "Tettelin et al. introduce the pan-genome concept distinguishing open vs closed pangenomes.", "reference": "DOI:10.1073/pnas.0506758102"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "pangenome openness"}, {"description": "Open pangenomes accumulate large accessory gene pools across strains.", "edge_id": "edge-2", "evidence": [{"notes": "McInerney et al. review the ecological and population drivers of pangenome openness.", "reference": "DOI:10.1038/nmicrobiol.2017.40"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pangenome openness", "target": "accessory gene pool"}], "graph_id": "pangenome_openness_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Strain-variable genes outside the species core.", "grounding": null, "id": "accessory_gene_pool", "is_orphan": false, "label": "accessory gene pool", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Acquisition of genes between lineages outside vertical descent.", "grounding": null, "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Open versus closed structure of a species\u0027 pangenome.", "grounding": "traitmech:000102", "id": "pangenome_openness_trait", "is_orphan": false, "label": "pangenome openness", "node_type": "TRAIT", "xrefs": []}], "title": "Horizontal gene transfer drives open pangenomes"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking HGT and ecological breadth to open versus closed pangenome structure.", "edges": [{"description": "HGT continually adds new accessory genes, keeping the pangenome open.", "evidence": [{"notes": "Tettelin et al. introduce the pan-genome concept distinguishing open vs closed pangenomes.", "reference": "DOI:10.1073/pnas.0506758102"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "pangenome_openness_trait"}, {"description": "Open pangenomes accumulate large accessory gene pools across strains.", "evidence": [{"notes": "McInerney et al. review the ecological and population drivers of pangenome openness.", "reference": "DOI:10.1038/nmicrobiol.2017.40"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pangenome_openness_trait", "target": "accessory_gene_pool"}], "evidence_rows": [{"description": "HGT continually adds new accessory genes, keeping the pangenome open.", "edge_id": "edge-1", "evidence": [{"notes": "Tettelin et al. introduce the pan-genome concept distinguishing open vs closed pangenomes.", "reference": "DOI:10.1073/pnas.0506758102"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "pangenome openness"}, {"description": "Open pangenomes accumulate large accessory gene pools across strains.", "edge_id": "edge-2", "evidence": [{"notes": "McInerney et al. review the ecological and population drivers of pangenome openness.", "reference": "DOI:10.1038/nmicrobiol.2017.40"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pangenome openness", "target": "accessory gene pool"}], "graph_id": "pangenome_openness_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Strain-variable genes outside the species core.", "grounding": null, "id": "accessory_gene_pool", "is_orphan": false, "label": "accessory gene pool", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Acquisition of genes between lineages outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Open versus closed structure of a species\u0027 pangenome.", "grounding": "traitmech:000102", "id": "pangenome_openness_trait", "is_orphan": false, "label": "pangenome openness", "node_type": "TRAIT", "xrefs": []}], "title": "Horizontal gene transfer drives open pangenomes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -530,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

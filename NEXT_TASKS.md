@@ -7,20 +7,21 @@ deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 
 Last reconciled: 2026-06-14.
 
-## 1. Improve embedding coverage — 128/477 traits unmatched (26.8%)
+## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
-`just build-embeddings` matched 349/477 TraitRecords to ≥1 kg-microbe node
-(73.2%); **128 are `no_match`** (see `data/embeddings/metpo_to_kgm_node.tsv`,
-`method == no_match`). These have no embedding → no UMAP point / nearest
-neighbors.
+`just build-embeddings` now matches **469/477 TraitRecords (98.3%)**:
+349 `direct_metpo` + 120 `parent_proxy`. The parent-proxy tier (added to
+`scripts/build_embedding_index.py`) walks `parent_traits` transitively to the
+nearest ancestor CURIE present in the deepwalk and borrows its embedding, so
+the 120 synthetic `traitmech:` traits now get a UMAP point near their semantic
+parent (clearly tagged `parent_proxy`).
 
-- Improve the alias path: extend `../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv`
-  (label → METPO CURIE) and/or the label-match fallback so more METPO classes
-  resolve to a kg-microbe node.
-- Re-run `just build-embeddings` then `just gen-pages`; coverage prints at the end.
-- Some no_match are legitimately absent from the embedding (newly minted METPO
-  classes the 2026-04-25 deepwalk run never ingested) — track those separately
-  rather than forcing a match.
+The remaining **8 `no_match`** are abstract value-carrier properties
+(`METPO:2000058`–`2000063`, `2000071`, `2000103` — `has value`, `has observed
+spot value`, `capable of`, …); they have no meaningful node embedding and are
+left absent by design. Re-deriving real embeddings for the newly-minted METPO
+classes would need a fresh kg-microbe deepwalk run (post-2026-04-25). No
+further action unless a newer deepwalk lands.
 
 ## 2. Vendor the id↔label validator (decide: join the Mech trio?)
 
@@ -35,9 +36,20 @@ METPO/CHEBI/etc. `(id, label)` pairs that would benefit from the same QC.
   `refresh-validator-pin` recipes and a CI guard. Coordinate with
   culturebotai-claw#6 (pin should ideally also cover tests/conf).
 
-## 3. Continue trait promotion PROPOSED → REVIEWED
+## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
-The metabolism / morphology / environment / ecology batches (+ citrate/fumarate
-groundings) have been promoted and merged. Continue with the remaining trait
-categories (e.g. physiology, upper-level/ontology classes), each as a
-`promote-reviewed-<category>` batch with causal graphs.
+All categories are promoted: the corpus is **427 REVIEWED + 50 DEPRECATED,
+0 PROPOSED**. The 50 DEPRECATED are observation-value carriers, deliberately
+out of scope (see `docs/DEPRECATED_REPLACEMENT_PROPOSAL.md`). No promotion work
+remains.
+
+## 4. Grounding tail + METPO upstream round-trip (deferred)
+
+- Causal-graph grounding stands at **predicates 84% (1082/1284)** and
+  **nodes 61% (1011/1643)**. The remaining residual is non-ontological
+  descriptive phrases / one-off LLM verbs; raising it needs fuzzy matching or
+  new term proposals (diminishing returns, higher risk).
+- Upstream submission [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535)
+  requests real METPO IDs for cohorts v1-v6 (143 classes + 13 predicates).
+  When minted, run the documented round-trip (swap placeholder
+  `1007xxx`/`2007xxx` for real CURIEs, re-seed).

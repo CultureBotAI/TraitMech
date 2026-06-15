@@ -139,13 +139,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/oxidative_stress_response.html">oxidative stress response</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -165,6 +227,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (oxidative sulfur metabolism → elemental sulfur globule) with METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T05:51:46Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:26833×1).</p>
         </li>
         
       </ol>
@@ -198,6 +266,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -519,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking oxidative sulfur metabolism to deposition of elemental sulfur as intracellular/periplasmic globules.", "edges": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative_sulfur_metabolism", "target": "elemental_sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental_sulfur", "target": "sulfur_globule_trait"}], "evidence_rows": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative sulfur metabolism", "target": "elemental sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental sulfur", "target": "sulfur globule"}], "graph_id": "sulfur_globule_sulfur_oxidation_intermediate", "issues": [], "nodes": [{"color": "#fef3c7", "description": "S0 stored as a globule intermediate.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).", "grounding": null, "id": "oxidative_sulfur_metabolism", "is_orphan": false, "label": "oxidative sulfur metabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular / periplasmic inclusion of elemental sulfur.", "grounding": "traitmech:000069", "id": "sulfur_globule_trait", "is_orphan": false, "label": "sulfur globule", "node_type": "TRAIT", "xrefs": []}], "title": "Sulfur globules store elemental sulfur during oxidative sulfur metabolism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking oxidative sulfur metabolism to deposition of elemental sulfur as intracellular/periplasmic globules.", "edges": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative_sulfur_metabolism", "target": "elemental_sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental_sulfur", "target": "sulfur_globule_trait"}], "evidence_rows": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative sulfur metabolism", "target": "elemental sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental sulfur", "target": "sulfur globule"}], "graph_id": "sulfur_globule_sulfur_oxidation_intermediate", "issues": [], "nodes": [{"color": "#fef3c7", "description": "S0 stored as a globule intermediate.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).", "grounding": null, "id": "oxidative_sulfur_metabolism", "is_orphan": false, "label": "oxidative sulfur metabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular / periplasmic inclusion of elemental sulfur.", "grounding": "traitmech:000069", "id": "sulfur_globule_trait", "is_orphan": false, "label": "sulfur globule", "node_type": "TRAIT", "xrefs": []}], "title": "Sulfur globules store elemental sulfur during oxidative sulfur metabolism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -530,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

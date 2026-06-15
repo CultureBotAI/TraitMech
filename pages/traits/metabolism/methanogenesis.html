@@ -111,7 +111,7 @@
             <strong>methyl-coenzyme M reductase</strong>
             <span class="edge-predicate">catalyzes formation of</span>
             <strong>methane</strong>
-            
+            <code>biolink:catalyzes</code>
             <p>Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.</p>
             <ul>
               
@@ -235,32 +235,32 @@
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/metabolism.html">metabolism</a>
+          <a href="../../traits/metabolism/iron_oxidation.html">iron oxidation</a>
           <span class="sim">0.453</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/disproportionation.html">Disproportionation</a>
-          <span class="sim">0.449</span>
+          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
+          <span class="sim">0.453</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
-          <span class="sim">0.448</span>
+          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
+          <span class="sim">0.453</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/cable_bacteria_metabolism.html">Cable bacteria metabolism</a>
-          <span class="sim">0.439</span>
+          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
+          <span class="sim">0.453</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/syntrophy.html">Syntrophy</a>
-          <span class="sim">0.439</span>
+          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <span class="sim">0.453</span>
         </li>
         
       </ul>
@@ -308,6 +308,18 @@
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:occurs_in×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-13T21:03:26Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:catalyzes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T05:51:46Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:28265×1).</p>
         </li>
         
       </ol>
@@ -667,7 +679,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking anoxic C1 reduction, methyl-coenzyme M reductase, and methane formation.", "edges": [{"description": "Hydrogenotrophic methanogenesis is associated with anoxic habitats.", "evidence": [{"notes": "Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "terminal step of microbial biomass degradation in anoxic habitats"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "methanogenesis_trait", "target": "anoxic_habitat"}, {"description": "Carbon dioxide is reduced using electrons derived from hydrogen.", "evidence": [{"notes": "Supports the CO2 plus H2 substrate relationship.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "id": "edge-2", "is_orphan": false, "predicate": "reduced with electron donor", "predicate_id": null, "source": "carbon_dioxide", "target": "molecular_hydrogen"}, {"description": "Methyl-coenzyme M reductase contains nickel coenzyme F430.", "evidence": [{"notes": "Supports F430 as the prosthetic group of the enzyme.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "harbors the nickel(I) hydrocorphin coenzyme F-430"}], "id": "edge-3", "is_orphan": false, "predicate": "has prosthetic group", "predicate_id": null, "source": "methyl_coenzyme_m_reductase", "target": "coenzyme_f430"}, {"description": "Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.", "evidence": [{"notes": "Source describes methane formation by methyl-coenzyme M reductase.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "catalyzes the reversible reduction of methyl-coenzyme M"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes formation of", "predicate_id": null, "source": "methyl_coenzyme_m_reductase", "target": "methane"}, {"description": "The defining output of methanogenesis is methane.", "evidence": [{"notes": "Supports methane as the reduced product of hydrogenotrophic methanogenesis.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanogenesis_trait", "target": "methane"}], "evidence_rows": [{"description": "Hydrogenotrophic methanogenesis is associated with anoxic habitats.", "edge_id": "edge-1", "evidence": [{"notes": "Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "terminal step of microbial biomass degradation in anoxic habitats"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "Methanogenesis", "target": "anoxic habitat"}, {"description": "Carbon dioxide is reduced using electrons derived from hydrogen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the CO2 plus H2 substrate relationship.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "predicate": "reduced with electron donor", "predicate_id": null, "source": "carbon dioxide", "target": "molecular hydrogen"}, {"description": "Methyl-coenzyme M reductase contains nickel coenzyme F430.", "edge_id": "edge-3", "evidence": [{"notes": "Supports F430 as the prosthetic group of the enzyme.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "harbors the nickel(I) hydrocorphin coenzyme F-430"}], "predicate": "has prosthetic group", "predicate_id": null, "source": "methyl-coenzyme M reductase", "target": "coenzyme F430"}, {"description": "Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.", "edge_id": "edge-4", "evidence": [{"notes": "Source describes methane formation by methyl-coenzyme M reductase.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "catalyzes the reversible reduction of methyl-coenzyme M"}], "predicate": "catalyzes formation of", "predicate_id": null, "source": "methyl-coenzyme M reductase", "target": "methane"}, {"description": "The defining output of methanogenesis is methane.", "edge_id": "edge-5", "evidence": [{"notes": "Supports methane as the reduced product of hydrogenotrophic methanogenesis.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Methanogenesis", "target": "methane"}], "graph_id": "methanogenesis_c1_reduction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-depleted condition where hydrogenotrophic methanogenesis occurs.", "grounding": null, "id": "anoxic_habitat", "is_orphan": false, "label": "anoxic habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "C1 substrate reduced during hydrogenotrophic methanogenesis.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Nickel-containing prosthetic group of methyl-coenzyme M reductase.", "grounding": null, "id": "coenzyme_f430", "is_orphan": false, "label": "coenzyme F430", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Primary reduced carbon end product.", "grounding": "CHEBI:16183", "id": "methane", "is_orphan": false, "label": "methane", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Methane-producing archaeal metabolism.", "grounding": "METPO:1000844", "id": "methanogenesis_trait", "is_orphan": false, "label": "Methanogenesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Nickel F430 enzyme catalyzing the terminal methane-forming step.", "grounding": "UniProtKB:A0A099T5Q9", "id": "methyl_coenzyme_m_reductase", "is_orphan": false, "label": "methyl-coenzyme M reductase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for hydrogenotrophic methanogenesis.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Methanogenesis C1 reduction mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking anoxic C1 reduction, methyl-coenzyme M reductase, and methane formation.", "edges": [{"description": "Hydrogenotrophic methanogenesis is associated with anoxic habitats.", "evidence": [{"notes": "Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "terminal step of microbial biomass degradation in anoxic habitats"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "methanogenesis_trait", "target": "anoxic_habitat"}, {"description": "Carbon dioxide is reduced using electrons derived from hydrogen.", "evidence": [{"notes": "Supports the CO2 plus H2 substrate relationship.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "id": "edge-2", "is_orphan": false, "predicate": "reduced with electron donor", "predicate_id": null, "source": "carbon_dioxide", "target": "molecular_hydrogen"}, {"description": "Methyl-coenzyme M reductase contains nickel coenzyme F430.", "evidence": [{"notes": "Supports F430 as the prosthetic group of the enzyme.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "harbors the nickel(I) hydrocorphin coenzyme F-430"}], "id": "edge-3", "is_orphan": false, "predicate": "has prosthetic group", "predicate_id": null, "source": "methyl_coenzyme_m_reductase", "target": "coenzyme_f430"}, {"description": "Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.", "evidence": [{"notes": "Source describes methane formation by methyl-coenzyme M reductase.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "catalyzes the reversible reduction of methyl-coenzyme M"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes formation of", "predicate_id": "biolink:catalyzes", "source": "methyl_coenzyme_m_reductase", "target": "methane"}, {"description": "The defining output of methanogenesis is methane.", "evidence": [{"notes": "Supports methane as the reduced product of hydrogenotrophic methanogenesis.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanogenesis_trait", "target": "methane"}], "evidence_rows": [{"description": "Hydrogenotrophic methanogenesis is associated with anoxic habitats.", "edge_id": "edge-1", "evidence": [{"notes": "Review places hydrogenotrophic methanogenesis in anoxic microbial biomass degradation.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "terminal step of microbial biomass degradation in anoxic habitats"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "Methanogenesis", "target": "anoxic habitat"}, {"description": "Carbon dioxide is reduced using electrons derived from hydrogen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the CO2 plus H2 substrate relationship.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "predicate": "reduced with electron donor", "predicate_id": null, "source": "carbon dioxide", "target": "molecular hydrogen"}, {"description": "Methyl-coenzyme M reductase contains nickel coenzyme F430.", "edge_id": "edge-3", "evidence": [{"notes": "Supports F430 as the prosthetic group of the enzyme.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "harbors the nickel(I) hydrocorphin coenzyme F-430"}], "predicate": "has prosthetic group", "predicate_id": null, "source": "methyl-coenzyme M reductase", "target": "coenzyme F430"}, {"description": "Methyl-coenzyme M reductase catalyzes the terminal methane-forming reaction.", "edge_id": "edge-4", "evidence": [{"notes": "Source describes methane formation by methyl-coenzyme M reductase.", "reference": "DOI:10.1021/acs.biochem.9b00164", "snippet": "catalyzes the reversible reduction of methyl-coenzyme M"}], "predicate": "catalyzes formation of", "predicate_id": "biolink:catalyzes", "source": "methyl-coenzyme M reductase", "target": "methane"}, {"description": "The defining output of methanogenesis is methane.", "edge_id": "edge-5", "evidence": [{"notes": "Supports methane as the reduced product of hydrogenotrophic methanogenesis.", "reference": "DOI:10.1146/annurev-micro-011720-122807", "snippet": "from CO2 and H2 to methane"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Methanogenesis", "target": "methane"}], "graph_id": "methanogenesis_c1_reduction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-depleted condition where hydrogenotrophic methanogenesis occurs.", "grounding": null, "id": "anoxic_habitat", "is_orphan": false, "label": "anoxic habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "C1 substrate reduced during hydrogenotrophic methanogenesis.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Nickel-containing prosthetic group of methyl-coenzyme M reductase.", "grounding": "CHEBI:28265", "id": "coenzyme_f430", "is_orphan": false, "label": "coenzyme F430", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Primary reduced carbon end product.", "grounding": "CHEBI:16183", "id": "methane", "is_orphan": false, "label": "methane", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Methane-producing archaeal metabolism.", "grounding": "METPO:1000844", "id": "methanogenesis_trait", "is_orphan": false, "label": "Methanogenesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Nickel F430 enzyme catalyzing the terminal methane-forming step.", "grounding": "UniProtKB:A0A099T5Q9", "id": "methyl_coenzyme_m_reductase", "is_orphan": false, "label": "methyl-coenzyme M reductase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for hydrogenotrophic methanogenesis.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Methanogenesis C1 reduction mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -678,10 +690,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -156,13 +156,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/oxidative_stress_response.html">oxidative stress response</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -182,6 +244,12 @@
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (luciferase light emission) with GO/CHEBI node groundings and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:38:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A010SSZ8×1).</p>
         </li>
         
       </ol>
@@ -215,6 +283,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -536,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking luciferase to oxygen-dependent light emission, often under quorum-sensing control.", "edges": [{"description": "Luciferase carries out the light-emitting reaction.", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence_process"}, {"description": "Light emission consumes molecular oxygen.", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence_process", "target": "molecular_oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "bioluminescence_process", "target": "bioluminescence_trait"}], "evidence_rows": [{"description": "Luciferase carries out the light-emitting reaction.", "edge_id": "edge-1", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence"}, {"description": "Light emission consumes molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence", "target": "molecular oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "edge_id": "edge-3", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "bioluminescence", "target": "bioluminescence"}], "graph_id": "bioluminescence_luciferase", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic emission of visible light.", "grounding": "GO:0008218", "id": "bioluminescence_process", "is_orphan": false, "label": "bioluminescence", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to emit visible light enzymatically.", "grounding": "traitmech:000085", "id": "bioluminescence_trait", "is_orphan": false, "label": "bioluminescence", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing the light-emitting reaction.", "grounding": null, "id": "luciferase", "is_orphan": false, "label": "luciferase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Co-substrate of the luciferase reaction.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Luciferase-catalyzed light emission"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking luciferase to oxygen-dependent light emission, often under quorum-sensing control.", "edges": [{"description": "Luciferase carries out the light-emitting reaction.", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence_process"}, {"description": "Light emission consumes molecular oxygen.", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence_process", "target": "molecular_oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "bioluminescence_process", "target": "bioluminescence_trait"}], "evidence_rows": [{"description": "Luciferase carries out the light-emitting reaction.", "edge_id": "edge-1", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence"}, {"description": "Light emission consumes molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence", "target": "molecular oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "edge_id": "edge-3", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "bioluminescence", "target": "bioluminescence"}], "graph_id": "bioluminescence_luciferase", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic emission of visible light.", "grounding": "GO:0008218", "id": "bioluminescence_process", "is_orphan": false, "label": "bioluminescence", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to emit visible light enzymatically.", "grounding": "traitmech:000085", "id": "bioluminescence_trait", "is_orphan": false, "label": "bioluminescence", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing the light-emitting reaction.", "grounding": "UniProtKB:A0A010SSZ8", "id": "luciferase", "is_orphan": false, "label": "luciferase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Co-substrate of the luciferase reaction.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Luciferase-catalyzed light emission"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -547,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

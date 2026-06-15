@@ -173,13 +173,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000060</code> <span class="dim-preview">[+1.883, -0.670, -0.808, -0.747, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/calvin_benson_bassham_cycle.html">Calvin-Benson-Bassham cycle</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/carbon_fixation.html">carbon fixation</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/cellulolysis.html">cellulolysis</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/chitinolysis.html">chitinolysis</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/metabolism.html">metabolism</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/xylan_degradation.html">xylan degradation</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -199,6 +261,12 @@
           <time>2026-06-08T12:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (nitrogenase-catalyzed N2 reduction) with CHEBI/GO node groundings and RO/METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:38:15Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A089HR75×1).</p>
         </li>
         
       </ol>
@@ -232,6 +300,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -553,7 +626,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the nitrogenase complex to reduction of atmospheric dinitrogen to ammonia.", "edges": [{"description": "The nitrogenase complex carries out biological nitrogen fixation.", "evidence": [{"notes": "Dixon \u0026 Kahn review nitrogenase as the catalyst of biological nitrogen fixation.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nitrogenase", "target": "nitrogen_fixation_process"}, {"description": "Nitrogen fixation consumes atmospheric dinitrogen.", "evidence": [{"notes": "Kuypers et al. place N2 reduction as the reductive entry to the nitrogen cycle.", "reference": "DOI:10.1038/nrmicro.2018.9"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "nitrogen_fixation_process", "target": "dinitrogen"}, {"description": "Nitrogen fixation produces ammonia.", "evidence": [{"notes": "Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "nitrogen_fixation_process", "target": "ammonia"}, {"description": "The nitrogen-fixation trait depends on the nitrogenase complex.", "evidence": [{"notes": "Supports nitrogenase as required for the trait.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-4", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "nitrogen_fixation_trait", "target": "nitrogenase"}], "evidence_rows": [{"description": "The nitrogenase complex carries out biological nitrogen fixation.", "edge_id": "edge-1", "evidence": [{"notes": "Dixon \u0026 Kahn review nitrogenase as the catalyst of biological nitrogen fixation.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "nitrogenase", "target": "nitrogen fixation"}, {"description": "Nitrogen fixation consumes atmospheric dinitrogen.", "edge_id": "edge-2", "evidence": [{"notes": "Kuypers et al. place N2 reduction as the reductive entry to the nitrogen cycle.", "reference": "DOI:10.1038/nrmicro.2018.9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "nitrogen fixation", "target": "dinitrogen"}, {"description": "Nitrogen fixation produces ammonia.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "nitrogen fixation", "target": "ammonia"}, {"description": "The nitrogen-fixation trait depends on the nitrogenase complex.", "edge_id": "edge-4", "evidence": [{"notes": "Supports nitrogenase as required for the trait.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "nitrogen fixation", "target": "nitrogenase"}], "graph_id": "nitrogen_fixation_nitrogenase", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Fixed-nitrogen product.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Atmospheric N2 substrate.", "grounding": "CHEBI:17997", "id": "dinitrogen", "is_orphan": false, "label": "dinitrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Reduction of dinitrogen to ammonia.", "grounding": "GO:0009399", "id": "nitrogen_fixation_process", "is_orphan": false, "label": "nitrogen fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to reduce N2 to ammonia.", "grounding": "traitmech:000103", "id": "nitrogen_fixation_trait", "is_orphan": false, "label": "nitrogen fixation", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-sensitive enzyme complex that reduces dinitrogen.", "grounding": null, "id": "nitrogenase", "is_orphan": false, "label": "nitrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Nitrogenase-catalyzed dinitrogen reduction"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the nitrogenase complex to reduction of atmospheric dinitrogen to ammonia.", "edges": [{"description": "The nitrogenase complex carries out biological nitrogen fixation.", "evidence": [{"notes": "Dixon \u0026 Kahn review nitrogenase as the catalyst of biological nitrogen fixation.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nitrogenase", "target": "nitrogen_fixation_process"}, {"description": "Nitrogen fixation consumes atmospheric dinitrogen.", "evidence": [{"notes": "Kuypers et al. place N2 reduction as the reductive entry to the nitrogen cycle.", "reference": "DOI:10.1038/nrmicro.2018.9"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "nitrogen_fixation_process", "target": "dinitrogen"}, {"description": "Nitrogen fixation produces ammonia.", "evidence": [{"notes": "Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "nitrogen_fixation_process", "target": "ammonia"}, {"description": "The nitrogen-fixation trait depends on the nitrogenase complex.", "evidence": [{"notes": "Supports nitrogenase as required for the trait.", "reference": "DOI:10.1038/nrmicro954"}], "id": "edge-4", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "nitrogen_fixation_trait", "target": "nitrogenase"}], "evidence_rows": [{"description": "The nitrogenase complex carries out biological nitrogen fixation.", "edge_id": "edge-1", "evidence": [{"notes": "Dixon \u0026 Kahn review nitrogenase as the catalyst of biological nitrogen fixation.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "nitrogenase", "target": "nitrogen fixation"}, {"description": "Nitrogen fixation consumes atmospheric dinitrogen.", "edge_id": "edge-2", "evidence": [{"notes": "Kuypers et al. place N2 reduction as the reductive entry to the nitrogen cycle.", "reference": "DOI:10.1038/nrmicro.2018.9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "nitrogen fixation", "target": "dinitrogen"}, {"description": "Nitrogen fixation produces ammonia.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ammonia as the product of nitrogenase-catalyzed N2 reduction.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "nitrogen fixation", "target": "ammonia"}, {"description": "The nitrogen-fixation trait depends on the nitrogenase complex.", "edge_id": "edge-4", "evidence": [{"notes": "Supports nitrogenase as required for the trait.", "reference": "DOI:10.1038/nrmicro954"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "nitrogen fixation", "target": "nitrogenase"}], "graph_id": "nitrogen_fixation_nitrogenase", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Fixed-nitrogen product.", "grounding": "CHEBI:16134", "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Atmospheric N2 substrate.", "grounding": "CHEBI:17997", "id": "dinitrogen", "is_orphan": false, "label": "dinitrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Reduction of dinitrogen to ammonia.", "grounding": "GO:0009399", "id": "nitrogen_fixation_process", "is_orphan": false, "label": "nitrogen fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to reduce N2 to ammonia.", "grounding": "traitmech:000103", "id": "nitrogen_fixation_trait", "is_orphan": false, "label": "nitrogen fixation", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-sensitive enzyme complex that reduces dinitrogen.", "grounding": "UniProtKB:A0A089HR75", "id": "nitrogenase", "is_orphan": false, "label": "nitrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Nitrogenase-catalyzed dinitrogen reduction"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -564,10 +637,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

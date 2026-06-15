@@ -77,7 +77,7 @@
             <strong>high temperature</strong>
             <span class="edge-predicate">increases</span>
             <strong>membrane proton permeability</strong>
-            
+            <code>RO:0002213</code>
             <p>Elevated temperature increases proton permeability of the cytoplasmic membrane.</p>
             <ul>
               
@@ -94,7 +94,7 @@
             <strong>membrane lipid composition</strong>
             <span class="edge-predicate">limits</span>
             <strong>membrane proton permeability</strong>
-            
+            <code>RO:0002212</code>
             <p>Lipid composition changes can reduce high-temperature membrane leakiness.</p>
             <ul>
               
@@ -235,26 +235,26 @@
         
         <li>
           <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/fermentative_hydrogen_production.html">fermentative hydrogen production</a>
+          <span class="sim">0.873</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
           <span class="sim">0.873</span>
         </li>
         
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/photoautotrophic.html">photoautotrophic</a>
-          <span class="sim">0.867</span>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/ethanol_fermentation.html">ethanol fermentation</a>
+          <span class="sim">0.873</span>
         </li>
         
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/psychrophilic.html">psychrophilic</a>
-          <span class="sim">0.863</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/strictly_anaerobic.html">strictly anaerobic</a>
-          <span class="sim">0.860</span>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/propionic_acid_fermentation.html">propionic acid fermentation</a>
+          <span class="sim">0.873</span>
         </li>
         
       </ul>
@@ -308,6 +308,18 @@
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-13T21:03:26Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002213×1, RO:0002212×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T05:51:45Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (PATO:0001305×1).</p>
         </li>
         
       </ol>
@@ -667,7 +679,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking thermophily to elevated temperature, membrane lipid adaptation, thermostable proteins, and energy transduction constraints.", "edges": [{"description": "High-temperature environments select for thermophilic growth capacity.", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_temperature", "target": "thermophilic_trait"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "high_temperature", "target": "membrane_proton_permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "id": "edge-3", "is_orphan": false, "predicate": "limits", "predicate_id": null, "source": "membrane_lipid_composition", "target": "membrane_proton_permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable_proteins", "target": "thermophilic_trait"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy_transducing_enzymes", "target": "thermophilic_trait"}], "evidence_rows": [{"description": "High-temperature environments select for thermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high temperature", "target": "thermophilic"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": null, "source": "high temperature", "target": "membrane proton permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "predicate": "limits", "predicate_id": null, "source": "membrane lipid composition", "target": "membrane proton permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable proteins", "target": "thermophilic"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy-transducing enzymes", "target": "thermophilic"}], "graph_id": "thermophilic_heat_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzymes involved in membrane bioenergetics at elevated temperature.", "grounding": null, "id": "energy_transducing_enzymes", "is_orphan": false, "label": "energy-transducing enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Elevated-temperature growth condition.", "grounding": null, "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features altered during high-temperature adaptation.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Proton leakiness of the cytoplasmic membrane at elevated temperature.", "grounding": null, "id": "membrane_proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at elevated temperatures.", "grounding": "METPO:1000616", "id": "thermophilic_trait", "is_orphan": false, "label": "thermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with increased resistance to thermal denaturation.", "grounding": null, "id": "thermostable_proteins", "is_orphan": false, "label": "thermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Thermophilic heat-adaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking thermophily to elevated temperature, membrane lipid adaptation, thermostable proteins, and energy transduction constraints.", "edges": [{"description": "High-temperature environments select for thermophilic growth capacity.", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_temperature", "target": "thermophilic_trait"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_temperature", "target": "membrane_proton_permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "id": "edge-3", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane_lipid_composition", "target": "membrane_proton_permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable_proteins", "target": "thermophilic_trait"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy_transducing_enzymes", "target": "thermophilic_trait"}], "evidence_rows": [{"description": "High-temperature environments select for thermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high temperature", "target": "thermophilic"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high temperature", "target": "membrane proton permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane lipid composition", "target": "membrane proton permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable proteins", "target": "thermophilic"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy-transducing enzymes", "target": "thermophilic"}], "graph_id": "thermophilic_heat_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzymes involved in membrane bioenergetics at elevated temperature.", "grounding": null, "id": "energy_transducing_enzymes", "is_orphan": false, "label": "energy-transducing enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Elevated-temperature growth condition.", "grounding": "PATO:0001305", "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features altered during high-temperature adaptation.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Proton leakiness of the cytoplasmic membrane at elevated temperature.", "grounding": null, "id": "membrane_proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at elevated temperatures.", "grounding": "METPO:1000616", "id": "thermophilic_trait", "is_orphan": false, "label": "thermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with increased resistance to thermal denaturation.", "grounding": null, "id": "thermostable_proteins", "is_orphan": false, "label": "thermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Thermophilic heat-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -678,10 +690,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
