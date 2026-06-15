@@ -23,18 +23,38 @@ left absent by design. Re-deriving real embeddings for the newly-minted METPO
 classes would need a fresh kg-microbe deepwalk run (post-2026-04-25). No
 further action unless a newer deepwalk lands.
 
-## 2. Vendor the id↔label validator (decide: join the Mech trio?)
+## 2. id↔label validator — ADOPTED (Phase 1, report-only)
 
-CultureMech / MIM / CommunityMech share a byte-identical
-`scripts/validate_id_label_correspondence.py` + pin guard that gates
-ontology `(id, label)` pairs. **TraitMech has no copy.** Its trait pages carry
-METPO/CHEBI/etc. `(id, label)` pairs that would benefit from the same QC.
+TraitMech joined the Mech trio. Vendored byte-identical (sha256 matches
+CommunityMech/CultureMech): `scripts/validate_id_label_correspondence.py` + the
+two shared tests + `scripts/.validate_id_label_correspondence.sha256` pin.
+`conf/id_label_targets.yaml` targets the two ontology grounding tables
+(`mappings/node_grounding.tsv`, `mappings/predicate_grounding.tsv`) with
+CHEBI/GO/ENVO/PATO/RO adapters; METPO/traitmech/biolink/rdfs/UniProtKB are
+ignored prefixes. Recipes: `validate-products`, `report-label-drift`,
+`verify-validator-pin`, `refresh-validator-pin`. CI workflow
+`label-correspondence.yaml`: pin guard blocking; drift report non-blocking.
 
-- Decide whether TraitMech joins the trio. If yes: copy the validator
-  byte-for-byte, add a `conf/id_label_targets.yaml` for TraitMech's surfaces
-  (trait YAML term blocks + rendered pages), add `verify-validator-pin` +
-  `refresh-validator-pin` recipes and a CI guard. Coordinate with
-  culturebotai-claw#6 (pin should ideally also cover tests/conf).
+**Phase 2 prerequisite — triage 15 pre-existing id↔label MISMATCHES** (caught
+on first run; all in `mappings/node_grounding.tsv`, mostly wrong CURIEs that
+need the correct id + a re-grounding migration that *overwrites* the wrong
+`grounding:` values already written into trait YAMLs — `ground_causal_nodes.py`
+only fills empty slots):
+
+- `PATO:0000383` (is "female") labeled "decreased temperature" — wrong id
+- `PATO:0001428` (is "medium acidity") labeled "acidic pH"
+- `PATO:0001429` (is "acidic") labeled "alkaline pH"
+- `PATO:0001432` (is "decayed") labeled "neutral pH"
+- `PATO:0001637` labeled "extremely high temperature"; `PATO:0001717` "light intensity"
+- `ENVO:01001057` (is "environment associated with a plant part…") labeled "anaerobic environment" (x2)
+- `ENVO:01000687` (is "coast") labeled "saline environment"
+- `CHEBI:65015` (is "paromamine(3+)") labeled "osmolyte"
+- `CHEBI:33542` thiosulfate(2-)→canonical "trioxidosulfanidosulfate(1-)" (likely a real synonym; may move to exceptions)
+- `CHEBI:17499` electron donor→"hydrogen donor"; `GO:0046358` wood-ljungdahl label; `GO:0030641` obsolete; `GO:0006572` "L-tyrosine catabolic process" (synonym → exceptions)
+
+After fixing the wrong CURIEs (+ re-grounding) and moving true residuals to
+`exceptions:`, flip CI to the blocking `validate-products` gate (Phase 2),
+mirroring CommunityMech.
 
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
