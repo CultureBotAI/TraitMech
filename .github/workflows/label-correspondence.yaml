@@ -1,14 +1,16 @@
 name: label-correspondence
 
-# Phase 1 (report-only): `just report-label-drift` generates and uploads an
-# id↔label drift report for the ontology grounding tables, but does NOT block
-# the build. TraitMech carries pre-existing residuals (wrong PATO/ENVO/CHEBI
-# CURIEs in mappings/node_grounding.tsv — see NEXT_TASKS.md); the enforcing
-# `just validate-products` gate is deferred to Phase 2 until those are triaged
-# (fixed to the correct CURIE + re-grounded, or accepted into conf exceptions).
+# Phase 2 (enforcing): `just validate-products` is a BLOCKING gate — any
+# id↔label MISMATCH / ID_NOT_FOUND / UNKNOWN_PREFIX / ADAPTER_ERROR /
+# MISSING_COLUMN in the ontology grounding tables fails the build. The 15
+# pre-existing wrong CURIEs found at Phase-1 adoption have been corrected
+# (verified vs OAK) and the trait-YAML groundings re-migrated; the one
+# curator-accepted residual (PATO:0001717 "light intensity") stays green via the
+# `exceptions:` allow-list in conf/id_label_targets.yaml. The drift report is
+# still generated and uploaded as a triage artifact even when the gate passes.
 #
-# The validator-pin job below IS blocking: it is fast and dependency-free, and
-# guards the cross-repo byte-identical vendoring of the validator + its tests.
+# The validator-pin job below is also blocking: it is fast and dependency-free,
+# and guards the cross-repo byte-identical vendoring of the validator + tests.
 
 on:
   pull_request:
@@ -61,7 +63,8 @@ jobs:
           path: ~/.data/oaklib
           key: oaklib-${{ runner.os }}-v1
 
-      # Phase 1: generate + upload the drift report for triage. Non-blocking.
+      # Always generate + upload the drift report first, so the triage artifact
+      # exists even when the enforce step below fails the build.
       - name: Generate id↔label drift report
         run: just report-label-drift
 
@@ -72,3 +75,8 @@ jobs:
           name: label-drift-report-${{ github.run_id }}
           path: reports/label_drift.tsv
           if-no-files-found: warn
+
+      # Phase 2 blocking gate: fail on any id↔label error-class verdict.
+      # Curator-accepted residuals pass as OK_EXCEPTION.
+      - name: Enforce id↔label correspondence
+        run: just validate-products

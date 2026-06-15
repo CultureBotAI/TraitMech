@@ -40,7 +40,7 @@ causal_graphs:
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH above neutral, often pH 9 or higher.
-    grounding: PATO:0001429
+    grounding: PATO:0001430
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
@@ -60,7 +60,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of internal pH below highly alkaline external pH.
-    grounding: GO:0030641
+    grounding: GO:0051453
   edges:
   - subject: alkaline_external_ph
     predicate: selects for
@@ -149,4 +149,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001429×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:21:43Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
+    verified vs OAK).
   llm_assisted: true

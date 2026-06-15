@@ -39,12 +39,12 @@ causal_graphs:
     label: anaerobic condition
     node_type: ENVIRONMENTAL_FACTOR
     description: Oxygen-free condition required for many acetogenic enzymes.
-    grounding: ENVO:01001057
+    grounding: PATO:0001456
   - node_id: wood_ljungdahl_pathway
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
     description: Reductive acetyl-CoA pathway used by acetogens.
-    grounding: GO:0046358
+    grounding: GO:0030634
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -155,4 +155,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:participates_in×2, biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:37Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
   llm_assisted: true

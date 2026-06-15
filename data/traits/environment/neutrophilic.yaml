@@ -38,12 +38,12 @@ causal_graphs:
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH around neutrality.
-    grounding: PATO:0001432
+    grounding: PATO:0001428
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of intracellular pH compatible with growth.
-    grounding: GO:0030641
+    grounding: GO:0051453
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -157,4 +157,16 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:21:43Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
+    verified vs OAK).
   llm_assisted: true

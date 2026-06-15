@@ -34,7 +34,7 @@ causal_graphs:
     label: acidic external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH below neutral, often below pH 5 for acidophiles.
-    grounding: PATO:0001428
+    grounding: PATO:0001429
   - node_id: proton
     label: proton
     node_type: CHEMICAL
@@ -44,7 +44,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of a less acidic cytoplasm during growth at low pH.
-    grounding: GO:0030641
+    grounding: GO:0051453
   - node_id: low_proton_permeability_membrane
     label: low proton permeability membrane
     node_type: CELLULAR_LOCALIZATION
@@ -140,4 +140,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007601×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:21:43Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
+    verified vs OAK).
   llm_assisted: true

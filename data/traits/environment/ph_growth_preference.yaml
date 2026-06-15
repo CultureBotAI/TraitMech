@@ -31,12 +31,12 @@ causal_graphs:
     label: acidic external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH below the cytoplasmic pH range compatible with growth.
-    grounding: PATO:0001428
+    grounding: PATO:0001429
   - node_id: alkaline_external_ph
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH above the cytoplasmic pH range compatible with growth.
-    grounding: PATO:0001429
+    grounding: PATO:0001430
   - node_id: ph_sensing
     label: pH sensing
     node_type: MOLECULAR_FUNCTION
@@ -46,7 +46,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of intracellular pH within a range compatible with growth.
-    grounding: GO:0030641
+    grounding: GO:0051453
   edges:
   - subject: environmental_ph
     predicate: regulates
@@ -145,4 +145,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:21:43Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 2 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
+    verified vs OAK).
   llm_assisted: true

@@ -50,6 +50,11 @@ targets:
     policy: canonical_or_synonym
     pairs:
       - [target_curie, target_label]
+    # Curator-accepted residual: the id resolves but its OAK canonical label is
+    # an awkward technical string; the table keeps a curator-facing label.
+    # Accepted as OK_EXCEPTION (exact (id, label) match only).
+    exceptions:
+      - { id: "PATO:0001717", label: "light intensity", reason: "PATO canonical is 'radiation emitting intensity quality'; 'light intensity' is the curator-facing label for the photosynthesis light input" }
 
   # Causal-predicate grounding table: (target_curie, target_label) across
   # RO (plus ignored METPO / biolink / rdfs).

@@ -37,7 +37,7 @@ causal_graphs:
     label: electron donor
     node_type: CHEMICAL
     description: Reduced substrate supplying electrons.
-    grounding: CHEBI:17499
+    grounding: CHEBI:15022
   - node_id: terminal_electron_acceptor
     label: terminal electron acceptor
     node_type: CHEMICAL
@@ -209,4 +209,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007602×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

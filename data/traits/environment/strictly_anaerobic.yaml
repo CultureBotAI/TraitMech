@@ -37,7 +37,7 @@ causal_graphs:
     label: anoxic condition
     node_type: ENVIRONMENTAL_FACTOR
     description: Oxygen-excluding environment required for strict anaerobic growth.
-    grounding: ENVO:01001057
+    grounding: PATO:0001456
   - node_id: molecular_oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -127,4 +127,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

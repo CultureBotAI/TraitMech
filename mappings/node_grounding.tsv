@@ -12,7 +12,7 @@ sulfide	CHEMICAL	CHEBI:15138	sulfide(2-)	skos:exactMatch	CHEBI	high	electron don
 proton	CHEMICAL	CHEBI:24636	proton	skos:exactMatch	CHEBI	high	H+; pH-related transport, pmf gradient ion
 ferrous iron	CHEMICAL	CHEBI:29033	iron(2+)	skos:exactMatch	CHEBI	high	Fe2+; electron donor in iron-oxidizing lithotrophy
 organic carbon	CHEMICAL	CHEBI:50860	organic molecular entity	skos:closeMatch	CHEBI	high	broad class — heterotroph carbon source, assimilated into biomass
-compatible solutes	CHEMICAL	CHEBI:65015	osmolyte	skos:closeMatch	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts
+compatible solutes	CHEMICAL	CHEBI:25728	osmolyte	skos:closeMatch	CHEBI	high	osmoprotectant class — proline, glycine betaine, etc.; used in halotolerance contexts | phase-2 fix: was CHEBI:65015 (wrong); corrected to CHEBI:25728 verified vs OAK
 citrate	CHEMICAL	CHEBI:16947	citrate(3-)	skos:exactMatch	CHEBI	high	TCA-cycle intermediate; carbon/electron-donor substrate for citrate-utilizers (Citrobacter, Klebsiella)
 fumarate	CHEMICAL	CHEBI:29806	fumarate(2-)	skos:exactMatch	CHEBI	high	TCA-cycle intermediate; alternative terminal electron acceptor in anaerobic fumarate respiration
 peptidoglycan synthesis	BIOLOGICAL_PROCESS	GO:0009252	peptidoglycan biosynthetic process	skos:exactMatch	GO	high	exact GO term; used in MreB/FtsZ cell-shape graphs
@@ -24,7 +24,7 @@ nitrogen fixation	BIOLOGICAL_PROCESS	GO:0009399	nitrogen fixation	skos:exactMatc
 fermentation	BIOLOGICAL_PROCESS	GO:0006113	fermentation	skos:exactMatch	GO	high	exact label match
 carbon fixation	BIOLOGICAL_PROCESS	GO:0015977	carbon fixation	skos:exactMatch	GO	high	exact label match
 oxidative phosphorylation	BIOLOGICAL_PROCESS	GO:0006119	oxidative phosphorylation	skos:exactMatch	GO	high	exact label match
-cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	GO:0030641	regulation of cellular pH	skos:exactMatch	GO	high	GO doesn't distinguish cytoplasmic from cellular pH; closest exact term
+cytoplasmic ph homeostasis	BIOLOGICAL_PROCESS	GO:0051453	regulation of intracellular pH	skos:closeMatch	GO	high	GO doesn't distinguish cytoplasmic from cellular pH; closest exact term | phase-2 fix: was GO:0030641 (wrong); corrected to GO:0051453 verified vs OAK
 osmotic stress	BIOLOGICAL_PROCESS	GO:0006970	response to osmotic stress	skos:closeMatch	GO	high	process-level GO term covering the response axis used in halotolerance graphs
 periplasmic space	CELLULAR_LOCALIZATION	GO:0042597	periplasmic space	skos:exactMatch	GO	high	exact GO-CC term
 outer membrane	CELLULAR_LOCALIZATION	GO:0019867	outer membrane	skos:exactMatch	GO	high	exact GO-CC term; applies to Gram-negatives + mitochondria
@@ -35,11 +35,11 @@ redox reaction	MOLECULAR_FUNCTION	GO:0016491	oxidoreductase activity	skos:closeM
 respiratory chain	PATHWAY	GO:0022904	respiratory electron transport chain	skos:closeMatch	GO	high	"GO term for the ETC; the corpus uses ""respiratory chain"" as shorthand"
 photosynthetic electron transport	PATHWAY	GO:0009767	photosynthetic electron transport chain	skos:exactMatch	GO	high	exact GO term
 calvin-benson cycle	PATHWAY	GO:0019253	reductive pentose-phosphate cycle	skos:exactMatch	GO	high	GO's name for the Calvin-Benson cycle
-wood-ljungdahl pathway	PATHWAY	GO:0046358	acetyl-CoA biosynthetic process from carbon dioxide	skos:exactMatch	GO	high	GO term for the Wood-Ljungdahl pathway
+wood-ljungdahl pathway	PATHWAY	GO:0030634	carbon fixation by acetyl-CoA pathway	skos:closeMatch	GO	high	GO term for the Wood-Ljungdahl pathway | phase-2 fix: was GO:0046358 (wrong); corrected to GO:0030634 verified vs OAK
 light	ENVIRONMENTAL_FACTOR	PATO:0001717	light intensity	skos:closeMatch	PATO	high	"corpus uses ""light"" as photosynthesis-context environmental input; PATO captures the radiant-energy axis"
-low temperature	ENVIRONMENTAL_FACTOR	PATO:0000383	decreased temperature	skos:closeMatch	PATO	high	PATO quality term used in psychrophilic / psychrotolerant contexts
-anaerobic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	skos:exactMatch	ENVO	high	exact ENVO term
-anoxic condition	ENVIRONMENTAL_FACTOR	ENVO:01001057	anaerobic environment	skos:closeMatch	ENVO	high	ENVO collapses anoxic and anaerobic into one environment class
+low temperature	ENVIRONMENTAL_FACTOR	PATO:0001306	decreased temperature	skos:closeMatch	PATO	high	PATO quality term used in psychrophilic / psychrotolerant contexts | phase-2 fix: was PATO:0000383 (wrong); corrected to PATO:0001306 verified vs OAK
+anaerobic condition	ENVIRONMENTAL_FACTOR	PATO:0001456	anaerobic	skos:closeMatch	ENVO	high	exact ENVO term | phase-2 fix: was ENVO:01001057 (wrong); corrected to PATO:0001456 verified vs OAK
+anoxic condition	ENVIRONMENTAL_FACTOR	PATO:0001456	anaerobic	skos:closeMatch	ENVO	high	ENVO collapses anoxic and anaerobic into one environment class | phase-2 fix: was ENVO:01001057 (wrong); corrected to PATO:0001456 verified vs OAK
 carotenoid biosynthesis	BIOLOGICAL_PROCESS	GO:0016117	carotenoid biosynthetic process	skos:exactMatch	GO	high	exact GO term; pigmentation contexts
 proton motive force	STATE	METPO:1007500	proton motive force	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → STATE after CausalNodeTypeEnum gained the STATE permissible value (bioenergetic gradient, not a process)
 biomass	CHEMICAL	METPO:1007501	microbial biomass	skos:closeMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v3; 16 nodes — re-typed BIOLOGICAL_PROCESS → CHEMICAL via scripts/retype_causal_nodes.py (closest existing CausalNodeTypeEnum fit for aggregate biochemistry)
@@ -75,13 +75,13 @@ ammonia monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A059V4Z9	Ammonia monooxygenase
 hydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A059XQG3	Hydrogenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 methane monooxygenase	GENE_OR_PROTEIN	UniProtKB:A0A0A3YNQ7	Methane monooxygenase	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 pqq-dependent methanol dehydrogenase	GENE_OR_PROTEIN	UniProtKB:A0A4U8YZA6	PQQ-dependent methanol dehydrogenase (Alpha subunit)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-acidic external ph	ENVIRONMENTAL_FACTOR	PATO:0001428	acidic pH	skos:exactMatch	PATO	high	exact PATO quality term for acidic-pH condition
-alkaline external ph	ENVIRONMENTAL_FACTOR	PATO:0001429	alkaline pH	skos:exactMatch	PATO	high	exact PATO quality term for alkaline-pH condition
-near-neutral external ph	ENVIRONMENTAL_FACTOR	PATO:0001432	neutral pH	skos:closeMatch	PATO	high	"closest PATO quality term (""near-neutral"" → PATO neutral)"
-very high temperature	ENVIRONMENTAL_FACTOR	PATO:0001637	extremely high temperature	skos:closeMatch	PATO	high	PATO quality term for thermophilic / hyperthermophilic conditions
-high-salt environment	ENVIRONMENTAL_FACTOR	ENVO:01000687	saline environment	skos:exactMatch	ENVO	high	exact ENVO term for high-salinity environmental context
-thiosulfate	CHEMICAL	CHEBI:33542	thiosulfate(2-)	skos:exactMatch	CHEBI	high	exact CHEBI; sulfur-redox metabolism substrate
-electron donor	CHEMICAL	CHEBI:17499	electron donor	skos:exactMatch	CHEBI	high	exact CHEBI term for the electron-donor chemical-role class
+acidic external ph	ENVIRONMENTAL_FACTOR	PATO:0001429	acidic	skos:closeMatch	PATO	high	exact PATO quality term for acidic-pH condition | phase-2 fix: was PATO:0001428 (wrong); corrected to PATO:0001429 verified vs OAK
+alkaline external ph	ENVIRONMENTAL_FACTOR	PATO:0001430	alkaline	skos:closeMatch	PATO	high	exact PATO quality term for alkaline-pH condition | phase-2 fix: was PATO:0001429 (wrong); corrected to PATO:0001430 verified vs OAK
+near-neutral external ph	ENVIRONMENTAL_FACTOR	PATO:0001428	medium acidity	skos:closeMatch	PATO	high	"closest PATO quality term (""near-neutral"" → PATO neutral) | phase-2 fix: was PATO:0001432 (wrong); corrected to PATO:0001428 verified vs OAK"
+very high temperature	ENVIRONMENTAL_FACTOR	PATO:0001305	increased temperature	skos:closeMatch	PATO	high	PATO quality term for thermophilic / hyperthermophilic conditions | phase-2 fix: was PATO:0001637 (wrong); corrected to PATO:0001305 verified vs OAK
+high-salt environment	ENVIRONMENTAL_FACTOR	ENVO:01001040	saline environment	skos:closeMatch	ENVO	high	exact ENVO term for high-salinity environmental context | phase-2 fix: was ENVO:01000687 (wrong); corrected to ENVO:01001040 verified vs OAK
+thiosulfate	CHEMICAL	CHEBI:16094	thiosulfate(2-)	skos:exactMatch	CHEBI	high	exact CHEBI; sulfur-redox metabolism substrate | phase-2 fix: was CHEBI:33542 (wrong); corrected to CHEBI:16094 verified vs OAK
+electron donor	CHEMICAL	CHEBI:15022	electron donor	skos:exactMatch	CHEBI	high	exact CHEBI term for the electron-donor chemical-role class | phase-2 fix: was CHEBI:17499 (wrong); corrected to CHEBI:15022 verified vs OAK
 organic compound	CHEMICAL	CHEBI:50860	organic molecular entity	skos:closeMatch	CHEBI	high	"same CHEBI as ""organic carbon"" — both are the broad class of carbon-containing molecules"
 membrane electron transport chain	PATHWAY	GO:0022900	electron transport chain	skos:closeMatch	GO	high	"GO term for membrane-bound ETC; the corpus uses several near-synonym labels (see also ""electron transport chain"", ""electron transport system"")"
 electron transport chain	PATHWAY	GO:0022900	electron transport chain	skos:exactMatch	GO	high	exact GO match
@@ -108,7 +108,7 @@ acetyl phosphate	CHEMICAL	CHEBI:15350	acetyl phosphate	skos:exactMatch	CHEBI	hig
 coenzyme f430	CHEMICAL	CHEBI:28265	coenzyme F430	skos:exactMatch	CHEBI	high	canonical coenzyme F430 via kg-microbe merged-kg
 cellular growth	BIOLOGICAL_PROCESS	GO:0016049	cell growth	skos:closeMatch	GO	high	GO 'cell growth' via kg-microbe merged-kg
 melanin biosynthesis	BIOLOGICAL_PROCESS	GO:0042438	melanin biosynthetic process	skos:closeMatch	GO	high	GO biosynthetic process via kg-microbe merged-kg
-tyrosine catabolism	BIOLOGICAL_PROCESS	GO:0006572	tyrosine catabolic process	skos:closeMatch	GO	high	GO catabolic process via kg-microbe merged-kg
+tyrosine catabolism	BIOLOGICAL_PROCESS	GO:0006572	L-tyrosine catabolic process	skos:closeMatch	GO	high	GO catabolic process via kg-microbe merged-kg | phase-2 fix: was GO:0006572 (wrong); corrected to GO:0006572 verified vs OAK
 cytokinesis	BIOLOGICAL_PROCESS	GO:0000910	cytokinesis	skos:exactMatch	GO	high	exact GO term via kg-microbe merged-kg
 pigment biosynthesis	BIOLOGICAL_PROCESS	GO:0046148	pigment biosynthetic process	skos:closeMatch	GO	high	GO biosynthetic process via kg-microbe merged-kg
 nutrient sensing	BIOLOGICAL_PROCESS	GO:0009594	detection of nutrient	skos:closeMatch	GO	medium	GO 'detection of nutrient' via kg-microbe merged-kg
