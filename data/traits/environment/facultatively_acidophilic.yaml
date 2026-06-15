@@ -37,13 +37,13 @@ causal_graphs:
     label: acidic external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH below neutral that supports acidophilic growth.
-    grounding: PATO:0001428
+    grounding: PATO:0001429
   - node_id: near_neutral_external_ph
     label: near-neutral external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: External pH near neutrality that facultative acidophiles can tolerate
       or grow in.
-    grounding: PATO:0001432
+    grounding: PATO:0001428
   - node_id: proton
     label: proton
     node_type: CHEMICAL
@@ -53,7 +53,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of intracellular pH across acidic and near-neutral environments.
-    grounding: GO:0030641
+    grounding: GO:0051453
   - node_id: proton_export_pumps
     label: proton export pumps and antiporters
     node_type: GENE_OR_PROTEIN
@@ -162,4 +162,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007601×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:21:43Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 2 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
+    verified vs OAK).
   llm_assisted: true

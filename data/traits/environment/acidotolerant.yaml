@@ -43,7 +43,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Cellular control of internal pH during acid stress.
-    grounding: GO:0030641
+    grounding: GO:0051453
   - node_id: proton_efflux_transport
     label: proton efflux transport
     node_type: MOLECULAR_FUNCTION
@@ -114,4 +114,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0030641×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:36Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
   llm_assisted: true

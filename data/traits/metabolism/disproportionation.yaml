@@ -35,7 +35,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Oxygen-free condition for many microbial sulfur disproportionation
       processes.
-    grounding: ENVO:01001057
+    grounding: PATO:0001456
   - node_id: inorganic_sulfur_intermediate
     label: inorganic sulfur intermediate
     node_type: CHEMICAL
@@ -49,7 +49,7 @@ causal_graphs:
     label: thiosulfate
     node_type: CHEMICAL
     description: Representative sulfur disproportionation substrate.
-    grounding: CHEBI:33542
+    grounding: CHEBI:16094
   - node_id: sulfide
     label: sulfide
     node_type: CHEMICAL
@@ -195,4 +195,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007603×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 2 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

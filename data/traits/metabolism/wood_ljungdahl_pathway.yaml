@@ -1,9 +1,9 @@
 identifier: traitmech:000022
 label: Wood-Ljungdahl pathway
-definition: An autotrophic carbon-fixation pathway (the reductive acetyl-CoA
-  pathway) in which two molecules of CO2 are reduced and combined into acetyl-CoA.
-  It is energetically efficient and used by acetogenic bacteria, methanogenic
-  archaea, and some sulfate-reducing bacteria.
+definition: An autotrophic carbon-fixation pathway (the reductive acetyl-CoA pathway)
+  in which two molecules of CO2 are reduced and combined into acetyl-CoA. It is energetically
+  efficient and used by acetogenic bacteria, methanogenic archaea, and some sulfate-reducing
+  bacteria.
 definition_source: DOI:10.1016/j.bbapap.2008.08.012
 trait_category: METABOLISM
 term_kind: CLASS
@@ -16,16 +16,16 @@ synonyms:
   source: DOI:10.1016/j.bbapap.2008.08.012
 evidence:
 - reference: DOI:10.1016/j.bbapap.2008.08.012
-  notes: Ragsdale & Pierce, "Acetogenesis and the Wood-Ljungdahl pathway of CO2
-    fixation", is the reference treatment of this reductive acetyl-CoA pathway.
+  notes: Ragsdale & Pierce, "Acetogenesis and the Wood-Ljungdahl pathway of CO2 fixation",
+    is the reference treatment of this reductive acetyl-CoA pathway.
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review places the reductive acetyl-CoA (Wood-Ljungdahl) pathway among
     the recognized autotrophic carbon-fixation pathways.
 causal_graphs:
 - graph_id: wood_ljungdahl_reductive_acetyl_coa
   title: Wood-Ljungdahl pathway reduces 2 CO2 to acetyl-CoA
-  description: Evidence-backed causal sketch linking reduction of two CO2
-    molecules into acetyl-CoA via the reductive acetyl-CoA pathway.
+  description: Evidence-backed causal sketch linking reduction of two CO2 molecules
+    into acetyl-CoA via the reductive acetyl-CoA pathway.
   nodes:
   - node_id: wood_ljungdahl_trait
     label: Wood-Ljungdahl pathway
@@ -35,7 +35,7 @@ causal_graphs:
   - node_id: wood_ljungdahl_pathway
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
-    grounding: GO:0046358
+    grounding: GO:0030634
     description: Acetyl-CoA biosynthetic process from carbon dioxide.
   - node_id: carbon_dioxide
     label: carbon dioxide
@@ -58,21 +58,27 @@ causal_graphs:
     description: Two molecules of CO2 are fixed and combined into acetyl-CoA.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
-      notes: Berg places Wood-Ljungdahl among the recognized autotrophic
-        carbon-fixation pathways.
+      notes: Berg places Wood-Ljungdahl among the recognized autotrophic carbon-fixation
+        pathways.
     predicate_id: METPO:2007404
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Proposed candidate METABOLISM trait (Wood-Ljungdahl / reductive acetyl-CoA
-    carbon-fixation pathway); sub-variant of carbon fixation. Distinct from the
-    existing acetogenesis metabolism class (which produces acetate via this pathway).
+    carbon-fixation pathway); sub-variant of carbon fixation. Distinct from the existing
+    acetogenesis metabolism class (which produces acetate via this pathway).
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (Wood-Ljungdahl reductive acetyl-CoA)
-    with GO/CHEBI node groundings and RO/METPO predicate groundings; promoted
-    PROPOSED to REVIEWED.
+    with GO/CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-15T07:20:37Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
+    vs OAK).
   llm_assisted: true

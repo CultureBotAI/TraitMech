@@ -44,7 +44,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Organic osmolytes (ectoine, glycine betaine) maintaining cytoplasmic
       osmotic activity.
-    grounding: CHEBI:65015
+    grounding: CHEBI:25728
   - node_id: na_h_antiporters
     label: Na+/H+ antiporters
     node_type: GENE_OR_PROTEIN
@@ -158,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

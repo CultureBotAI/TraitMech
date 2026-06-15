@@ -176,8 +176,8 @@ qc: validate-strict audit-schema audit-writers audit-proposals
 
 # Verify (id,label) pairs in TraitMech's ontology grounding tables correspond to
 # the ontology (CHEBI/GO/ENVO/PATO/RO via OAK). Exits non-zero on any mismatch.
-# NOTE: currently report-only in CI (Phase 1) — pre-existing residuals tracked
-# in NEXT_TASKS.md must be triaged before this becomes a blocking gate.
+# BLOCKING gate in CI (Phase 2); curator-accepted residuals pass via the
+# `exceptions:` allow-list in conf/id_label_targets.yaml.
 validate-products:
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
 

@@ -39,7 +39,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Cold growth condition that reduces molecular motion and membrane
       fluidity.
-    grounding: PATO:0000383
+    grounding: PATO:0001306
   - node_id: high_temperature
     label: high temperature
     node_type: ENVIRONMENTAL_FACTOR
@@ -178,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001305×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

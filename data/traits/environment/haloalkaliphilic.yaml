@@ -35,7 +35,7 @@ causal_graphs:
     label: high-salt environment
     node_type: ENVIRONMENTAL_FACTOR
     description: Saline or salt-saturated environmental condition.
-    grounding: ENVO:01000687
+    grounding: ENVO:01001040
   - node_id: alkaline_ph
     label: alkaline pH
     node_type: ENVIRONMENTAL_FACTOR
@@ -44,7 +44,7 @@ causal_graphs:
     label: compatible solutes
     node_type: CHEMICAL
     description: Ectoine, glycine betaine, or related osmoprotectants.
-    grounding: CHEBI:65015
+    grounding: CHEBI:25728
   - node_id: alkaline_ph_homeostasis
     label: alkaline pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -138,4 +138,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:01000687×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 2 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true

@@ -35,7 +35,7 @@ causal_graphs:
     label: low temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient temperature below the mesophile optimum range.
-    grounding: PATO:0000383
+    grounding: PATO:0001306
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
@@ -164,4 +164,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-15T07:19:08Z'
+  curator: claude
+  action: FIX_NODE_GROUNDING_CURIE
+  changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
+    fix; verified vs OAK).
   llm_assisted: true
