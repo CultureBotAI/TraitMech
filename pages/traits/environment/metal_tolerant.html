@@ -177,13 +177,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/oxidase_activity.html">oxidase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -203,6 +265,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (efflux-mediated metal detoxification) with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:38:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A067YD12×1).</p>
         </li>
         
       </ol>
@@ -236,6 +304,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -557,7 +630,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking heavy-metal exposure to efflux-pump-mediated detoxification underlying broad metal tolerance.", "edges": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "heavy_metal_ion", "target": "metal_tolerant_trait"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "efflux_pump", "target": "metal_ion_export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal_ion_export", "target": "metal_tolerant_trait"}], "evidence_rows": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "toxic heavy-metal ion", "target": "metal tolerant"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal efflux pump", "target": "metal ion transmembrane export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal ion transmembrane export", "target": "metal tolerant"}], "graph_id": "metal_tolerance_efflux_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators exporting metals.", "grounding": null, "id": "efflux_pump", "is_orphan": false, "label": "metal efflux pump", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Cytoplasmic excess of a transition-metal or metalloid cation.", "grounding": null, "id": "heavy_metal_ion", "is_orphan": false, "label": "toxic heavy-metal ion", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Transport of metal cations across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "metal_ion_export", "is_orphan": false, "label": "metal ion transmembrane export", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated heavy-metal or metalloid concentrations.", "grounding": "traitmech:000012", "id": "metal_tolerant_trait", "is_orphan": false, "label": "metal tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Metal tolerance via active efflux of heavy-metal ions"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking heavy-metal exposure to efflux-pump-mediated detoxification underlying broad metal tolerance.", "edges": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "heavy_metal_ion", "target": "metal_tolerant_trait"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "efflux_pump", "target": "metal_ion_export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal_ion_export", "target": "metal_tolerant_trait"}], "evidence_rows": [{"description": "Elevated heavy-metal concentrations are the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans encodes many metal-resistance determinants confronting multiple toxic metals.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "toxic heavy-metal ion", "target": "metal tolerant"}, {"description": "CBA pumps, P-type ATPases, and CDFs export toxic metal cations from the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Nies reviews efflux-mediated heavy-metal resistance as the dominant prokaryotic tolerance mechanism.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal efflux pump", "target": "metal ion transmembrane export"}, {"description": "Cytoplasmic detoxification by export realizes the metal-tolerant phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Nies frames efflux-based export as the basis of broad heavy-metal tolerance.", "reference": "PMID:12829273"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metal ion transmembrane export", "target": "metal tolerant"}], "graph_id": "metal_tolerance_efflux_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators exporting metals.", "grounding": "UniProtKB:A0A067YD12", "id": "efflux_pump", "is_orphan": false, "label": "metal efflux pump", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Cytoplasmic excess of a transition-metal or metalloid cation.", "grounding": null, "id": "heavy_metal_ion", "is_orphan": false, "label": "toxic heavy-metal ion", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Transport of metal cations across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "metal_ion_export", "is_orphan": false, "label": "metal ion transmembrane export", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated heavy-metal or metalloid concentrations.", "grounding": "traitmech:000012", "id": "metal_tolerant_trait", "is_orphan": false, "label": "metal tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Metal tolerance via active efflux of heavy-metal ions"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -568,10 +641,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -154,13 +154,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -180,6 +242,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (habitat / biogeographic structure) with biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:37Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:01000739×1).</p>
         </li>
         
       </ol>
@@ -213,6 +281,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -534,7 +607,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental habitat to the biogeographic patterning of microbial taxa.", "edges": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat_association_trait"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat_association_trait", "target": "biogeographic_structure"}], "evidence_rows": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "edge_id": "edge-1", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat association"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat association", "target": "biogeographic community structure"}], "graph_id": "habitat_association_biogeographic_structure", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Habitat-specific microbial community membership.", "grounding": null, "id": "biogeographic_structure", "is_orphan": false, "label": "biogeographic community structure", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "Free-living, host-associated, soil, rhizosphere, or gut habitat.", "grounding": null, "id": "habitat", "is_orphan": false, "label": "habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Ecological classification of the organism\u0027s primary environment.", "grounding": "traitmech:000047", "id": "habitat_association_trait", "is_orphan": false, "label": "habitat association", "node_type": "TRAIT", "xrefs": []}], "title": "Habitat association structures microbial biogeography"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental habitat to the biogeographic patterning of microbial taxa.", "edges": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat_association_trait"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat_association_trait", "target": "biogeographic_structure"}], "evidence_rows": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "edge_id": "edge-1", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat association"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat association", "target": "biogeographic community structure"}], "graph_id": "habitat_association_biogeographic_structure", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Habitat-specific microbial community membership.", "grounding": null, "id": "biogeographic_structure", "is_orphan": false, "label": "biogeographic community structure", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "Free-living, host-associated, soil, rhizosphere, or gut habitat.", "grounding": "ENVO:01000739", "id": "habitat", "is_orphan": false, "label": "habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Ecological classification of the organism\u0027s primary environment.", "grounding": "traitmech:000047", "id": "habitat_association_trait", "is_orphan": false, "label": "habitat association", "node_type": "TRAIT", "xrefs": []}], "title": "Habitat association structures microbial biogeography"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -545,10 +618,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

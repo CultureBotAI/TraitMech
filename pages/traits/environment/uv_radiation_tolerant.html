@@ -156,13 +156,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/oxidative_stress_response.html">oxidative stress response</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -182,6 +244,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (NER + photoreactivation) with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:38Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (ENVO:21001216×1).</p>
         </li>
         
       </ol>
@@ -215,6 +283,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -536,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking UV-induced pyrimidine dimers to nucleotide-excision and photoreactivation repair.", "edges": [{"description": "UV exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "uv_radiation", "target": "uv_tolerant_trait"}, {"description": "NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.", "evidence": [{"notes": "D. radiodurans tolerates lethal UV-C doses via excision-based repair of UV photoproducts.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nucleotide_excision_repair", "target": "uv_tolerant_trait"}, {"description": "Photolyase-mediated dimer reversal complements excision repair.", "evidence": [{"notes": "D. radiodurans is the reference organism for extreme UV and ionizing radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photoreactivation", "target": "uv_tolerant_trait"}], "evidence_rows": [{"description": "UV exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "ultraviolet radiation", "target": "UV radiation tolerant"}, {"description": "NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.", "edge_id": "edge-2", "evidence": [{"notes": "D. radiodurans tolerates lethal UV-C doses via excision-based repair of UV photoproducts.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "nucleotide-excision repair", "target": "UV radiation tolerant"}, {"description": "Photolyase-mediated dimer reversal complements excision repair.", "edge_id": "edge-3", "evidence": [{"notes": "D. radiodurans is the reference organism for extreme UV and ionizing radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photoreactivation", "target": "UV radiation tolerant"}], "graph_id": "uv_tolerance_excision_repair", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Removal and replacement of UV-damaged DNA segments.", "grounding": "GO:0006289", "id": "nucleotide_excision_repair", "is_orphan": false, "label": "nucleotide-excision repair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Photolyase-mediated reversal of pyrimidine dimers.", "grounding": null, "id": "photoreactivation", "is_orphan": false, "label": "photoreactivation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Solar / UV-C exposure inducing pyrimidine dimers and 6-4 photoproducts.", "grounding": null, "id": "uv_radiation", "is_orphan": false, "label": "ultraviolet radiation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Survival of high doses of UV radiation.", "grounding": "traitmech:000009", "id": "uv_tolerant_trait", "is_orphan": false, "label": "UV radiation tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "UV-radiation tolerance via nucleotide-excision and photoreactivation repair"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking UV-induced pyrimidine dimers to nucleotide-excision and photoreactivation repair.", "edges": [{"description": "UV exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "uv_radiation", "target": "uv_tolerant_trait"}, {"description": "NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.", "evidence": [{"notes": "D. radiodurans tolerates lethal UV-C doses via excision-based repair of UV photoproducts.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nucleotide_excision_repair", "target": "uv_tolerant_trait"}, {"description": "Photolyase-mediated dimer reversal complements excision repair.", "evidence": [{"notes": "D. radiodurans is the reference organism for extreme UV and ionizing radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photoreactivation", "target": "uv_tolerant_trait"}], "evidence_rows": [{"description": "UV exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans tolerates UV-C D10 doses of 700 J/m2.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "ultraviolet radiation", "target": "UV radiation tolerant"}, {"description": "NER removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.", "edge_id": "edge-2", "evidence": [{"notes": "D. radiodurans tolerates lethal UV-C doses via excision-based repair of UV photoproducts.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "nucleotide-excision repair", "target": "UV radiation tolerant"}, {"description": "Photolyase-mediated dimer reversal complements excision repair.", "edge_id": "edge-3", "evidence": [{"notes": "D. radiodurans is the reference organism for extreme UV and ionizing radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photoreactivation", "target": "UV radiation tolerant"}], "graph_id": "uv_tolerance_excision_repair", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Removal and replacement of UV-damaged DNA segments.", "grounding": "GO:0006289", "id": "nucleotide_excision_repair", "is_orphan": false, "label": "nucleotide-excision repair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Photolyase-mediated reversal of pyrimidine dimers.", "grounding": null, "id": "photoreactivation", "is_orphan": false, "label": "photoreactivation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Solar / UV-C exposure inducing pyrimidine dimers and 6-4 photoproducts.", "grounding": "ENVO:21001216", "id": "uv_radiation", "is_orphan": false, "label": "ultraviolet radiation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Survival of high doses of UV radiation.", "grounding": "traitmech:000009", "id": "uv_tolerant_trait", "is_orphan": false, "label": "UV radiation tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "UV-radiation tolerance via nucleotide-excision and photoreactivation repair"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -547,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

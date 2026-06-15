@@ -139,13 +139,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000702</code> <span class="dim-preview">[-6.040, -32.814, +6.039, +64.391, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/motile.html">motile</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/swarming_motility.html">swarming motility</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped</a>
+          <span class="sim">0.706</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/non_spore_forming.html">non-spore forming</a>
+          <span class="sim">0.599</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/facultatively_aerobic.html">facultatively aerobic</a>
+          <span class="sim">0.549</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/spore_forming.html">spore forming</a>
+          <span class="sim">0.510</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/vibrio_shaped.html">vibrio shaped</a>
+          <span class="sim">0.481</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/gram_negative.html">gram negative</a>
+          <span class="sim">0.469</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -165,6 +227,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (type IV pilus retraction → twitching) with GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:55:38Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0044096×1).</p>
         </li>
         
       </ol>
@@ -198,6 +266,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -519,7 +592,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking type-IV-pilus dynamics (extension, surface attachment, retraction) to flagella-independent surface translocation.", "edges": [{"description": "Type IV pili are the molecular engines of twitching motility.", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_pilus", "target": "twitching_trait"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pilus_assembly", "target": "twitching_trait"}], "evidence_rows": [{"description": "Type IV pili are the molecular engines of twitching motility.", "edge_id": "edge-1", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus", "target": "twitching motility"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "edge_id": "edge-2", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus assembly", "target": "twitching motility"}], "graph_id": "twitching_type_iv_pilus_retraction", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Polymerization and disassembly cycles driving pilus extension and retraction.", "grounding": "GO:0043107", "id": "pilus_assembly", "is_orphan": false, "label": "type IV pilus assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flagella-independent surface motility on moist substrates.", "grounding": "traitmech:000061", "id": "twitching_trait", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Surface filament that extends, attaches, and retracts to pull the cell forward.", "grounding": null, "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}], "title": "Twitching motility via type IV pilus extension and retraction"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking type-IV-pilus dynamics (extension, surface attachment, retraction) to flagella-independent surface translocation.", "edges": [{"description": "Type IV pili are the molecular engines of twitching motility.", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_pilus", "target": "twitching_trait"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pilus_assembly", "target": "twitching_trait"}], "evidence_rows": [{"description": "Type IV pili are the molecular engines of twitching motility.", "edge_id": "edge-1", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus", "target": "twitching motility"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "edge_id": "edge-2", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus assembly", "target": "twitching motility"}], "graph_id": "twitching_type_iv_pilus_retraction", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Polymerization and disassembly cycles driving pilus extension and retraction.", "grounding": "GO:0043107", "id": "pilus_assembly", "is_orphan": false, "label": "type IV pilus assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flagella-independent surface motility on moist substrates.", "grounding": "traitmech:000061", "id": "twitching_trait", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Surface filament that extends, attaches, and retracts to pull the cell forward.", "grounding": "GO:0044096", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}], "title": "Twitching motility via type IV pilus extension and retraction"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -530,10 +603,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

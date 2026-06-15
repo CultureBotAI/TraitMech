@@ -156,13 +156,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -182,6 +244,12 @@
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (terminal oxidase reducing O2) with GO/CHEBI node groundings and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T05:51:47Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A075NZN5×1).</p>
         </li>
         
       </ol>
@@ -215,6 +283,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -536,7 +609,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a terminal respiratory oxidase to reduction of molecular oxygen, the basis of the oxidase test.", "edges": [{"description": "Cytochrome c oxidase carries out terminal oxidase activity.", "evidence": [{"notes": "Hederstedt reviews bacterial cytochrome c oxidase.", "reference": "DOI:10.3390/microorganisms10050926"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome_c_oxidase", "target": "cytochrome_c_oxidase_function"}, {"description": "The terminal oxidase reduces molecular oxygen to water.", "evidence": [{"notes": "Borisov et al. review terminal oxidases that reduce O2.", "reference": "DOI:10.1089/ars.2020.8039"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cytochrome_c_oxidase_function", "target": "molecular_oxygen"}, {"description": "Possession of a terminal oxidase confers the oxidase-activity phenotype.", "evidence": [{"notes": "Supports the oxidase-test basis.", "reference": "DOI:10.3390/microorganisms10050926"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome_c_oxidase", "target": "oxidase_activity_trait"}], "evidence_rows": [{"description": "Cytochrome c oxidase carries out terminal oxidase activity.", "edge_id": "edge-1", "evidence": [{"notes": "Hederstedt reviews bacterial cytochrome c oxidase.", "reference": "DOI:10.3390/microorganisms10050926"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome c oxidase", "target": "cytochrome-c oxidase activity"}, {"description": "The terminal oxidase reduces molecular oxygen to water.", "edge_id": "edge-2", "evidence": [{"notes": "Borisov et al. review terminal oxidases that reduce O2.", "reference": "DOI:10.1089/ars.2020.8039"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cytochrome-c oxidase activity", "target": "molecular oxygen"}, {"description": "Possession of a terminal oxidase confers the oxidase-activity phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the oxidase-test basis.", "reference": "DOI:10.3390/microorganisms10050926"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome c oxidase", "target": "oxidase activity"}], "graph_id": "oxidase_activity_terminal_oxidase", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Terminal oxidase of the respiratory chain.", "grounding": null, "id": "cytochrome_c_oxidase", "is_orphan": false, "label": "cytochrome c oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Reduction of molecular oxygen using ferrocytochrome c.", "grounding": "GO:0004129", "id": "cytochrome_c_oxidase_function", "is_orphan": false, "label": "cytochrome-c oxidase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced to water.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a terminal respiratory oxidase.", "grounding": "traitmech:000076", "id": "oxidase_activity_trait", "is_orphan": false, "label": "oxidase activity", "node_type": "TRAIT", "xrefs": []}], "title": "Terminal respiratory oxidase reducing oxygen"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a terminal respiratory oxidase to reduction of molecular oxygen, the basis of the oxidase test.", "edges": [{"description": "Cytochrome c oxidase carries out terminal oxidase activity.", "evidence": [{"notes": "Hederstedt reviews bacterial cytochrome c oxidase.", "reference": "DOI:10.3390/microorganisms10050926"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome_c_oxidase", "target": "cytochrome_c_oxidase_function"}, {"description": "The terminal oxidase reduces molecular oxygen to water.", "evidence": [{"notes": "Borisov et al. review terminal oxidases that reduce O2.", "reference": "DOI:10.1089/ars.2020.8039"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cytochrome_c_oxidase_function", "target": "molecular_oxygen"}, {"description": "Possession of a terminal oxidase confers the oxidase-activity phenotype.", "evidence": [{"notes": "Supports the oxidase-test basis.", "reference": "DOI:10.3390/microorganisms10050926"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome_c_oxidase", "target": "oxidase_activity_trait"}], "evidence_rows": [{"description": "Cytochrome c oxidase carries out terminal oxidase activity.", "edge_id": "edge-1", "evidence": [{"notes": "Hederstedt reviews bacterial cytochrome c oxidase.", "reference": "DOI:10.3390/microorganisms10050926"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome c oxidase", "target": "cytochrome-c oxidase activity"}, {"description": "The terminal oxidase reduces molecular oxygen to water.", "edge_id": "edge-2", "evidence": [{"notes": "Borisov et al. review terminal oxidases that reduce O2.", "reference": "DOI:10.1089/ars.2020.8039"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cytochrome-c oxidase activity", "target": "molecular oxygen"}, {"description": "Possession of a terminal oxidase confers the oxidase-activity phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the oxidase-test basis.", "reference": "DOI:10.3390/microorganisms10050926"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytochrome c oxidase", "target": "oxidase activity"}], "graph_id": "oxidase_activity_terminal_oxidase", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Terminal oxidase of the respiratory chain.", "grounding": "UniProtKB:A0A075NZN5", "id": "cytochrome_c_oxidase", "is_orphan": false, "label": "cytochrome c oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Reduction of molecular oxygen using ferrocytochrome c.", "grounding": "GO:0004129", "id": "cytochrome_c_oxidase_function", "is_orphan": false, "label": "cytochrome-c oxidase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced to water.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a terminal respiratory oxidase.", "grounding": "traitmech:000076", "id": "oxidase_activity_trait", "is_orphan": false, "label": "oxidase activity", "node_type": "TRAIT", "xrefs": []}], "title": "Terminal respiratory oxidase reducing oxygen"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -547,10 +620,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

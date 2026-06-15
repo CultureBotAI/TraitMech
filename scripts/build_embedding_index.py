@@ -134,11 +134,12 @@ def load_alias_table(path: Path) -> dict[str, str]:
     return out
 
 
-def load_metpo_records(traits_dir: Path) -> list[tuple[str, str, list[str], str]]:
-    """Return list of (curie, label, synonyms, category_dir) tuples for every
-    seeded TraitRecord. Skips files that fail to parse."""
+def load_metpo_records(traits_dir: Path) -> list[tuple[str, str, list[str], str, list[str]]]:
+    """Return list of (curie, label, synonyms, category_dir, parents) tuples for
+    every seeded TraitRecord. ``parents`` is the record's ``parent_traits`` CURIE
+    list (used by the parent-proxy match tier). Skips files that fail to parse."""
     import yaml  # lazy import; only this script needs it
-    out: list[tuple[str, str, list[str], str]] = []
+    out: list[tuple[str, str, list[str], str, list[str]]] = []
     for path in sorted(traits_dir.rglob("*.yaml")):
         try:
             doc = yaml.safe_load(path.read_text())
@@ -155,21 +156,46 @@ def load_metpo_records(traits_dir: Path) -> list[tuple[str, str, list[str], str]
             txt = (s.get("synonym_text") or "").strip()
             if txt:
                 synonyms.append(txt)
+        parents = [p.strip() for p in (doc.get("parent_traits") or []) if isinstance(p, str) and p.strip()]
         category_dir = path.parent.name
-        out.append((curie, label, synonyms, category_dir))
+        out.append((curie, label, synonyms, category_dir, parents))
     return out
 
 
 def build_match_table(
-    metpo_records: list[tuple[str, str, list[str], str]],
+    metpo_records: list[tuple[str, str, list[str], str, list[str]]],
     deepwalk_nodes: set[str],
     alias_table: dict[str, str],
 ) -> list[dict[str, str]]:
-    """Match each METPO CURIE to ≥0 kg-microbe trait nodes via:
-      1. Direct alias-table lookup on label / synonyms (METPO → kg-microbe text-form).
-      2. Normalised-label substring match on the value half of `<prefix>:<value>`
-         kg-microbe nodes.
+    """Match each record to ≥0 kg-microbe trait nodes via, in order:
+      1. direct_metpo — the record's own CURIE is in the deepwalk.
+      2. alias_table  — reverse alias lookup (METPO → known label → node).
+      3. label_match  — normalised label / synonym matches a node value-form.
+      4. parent_proxy — for records whose own CURIE is absent (synthetic
+         ``traitmech:`` traits, or METPO classes minted after the deepwalk
+         run), walk ``parent_traits`` transitively to the nearest ancestor
+         whose CURIE *is* in the deepwalk and borrow its embedding. The trait
+         is positioned with its semantic parent rather than dropped entirely.
     """
+    # Parent map for the proxy tier: curie -> list of parent curies (may chain
+    # traitmech: -> traitmech: -> METPO:).
+    parent_map: dict[str, list[str]] = {
+        curie: parents for curie, _, _, _, parents in metpo_records
+    }
+
+    def resolve_parent_proxy(curie: str) -> str | None:
+        """BFS up the parent chain to the first ancestor CURIE in the deepwalk."""
+        seen: set[str] = {curie}
+        queue: list[str] = list(parent_map.get(curie, []))
+        while queue:
+            p = queue.pop(0)
+            if p in seen:
+                continue
+            seen.add(p)
+            if p in deepwalk_nodes:
+                return p
+            queue.extend(parent_map.get(p, []))
+        return None
     # Build reverse alias index: METPO CURIE -> set of acceptable normalised labels
     metpo_to_norm_labels: dict[str, set[str]] = {}
     for norm, curie in alias_table.items():
@@ -189,7 +215,7 @@ def build_match_table(
         nodes_by_normvalue.setdefault(_normalise(node), set()).add(node)
 
     rows: list[dict[str, str]] = []
-    for curie, label, synonyms, category in metpo_records:
+    for curie, label, synonyms, category, _parents in metpo_records:
         candidates: set[str] = set()
         method = ""
 
@@ -215,6 +241,13 @@ def build_match_table(
                     candidates.update(nodes_by_normvalue[norm])
                     if not method:
                         method = "label_match"
+
+        # 4. Parent proxy: borrow the nearest embedded ancestor's vector.
+        if not candidates:
+            proxy = resolve_parent_proxy(curie)
+            if proxy:
+                candidates.add(proxy)
+                method = "parent_proxy"
 
         rows.append({
             "metpo_curie": curie,
@@ -275,7 +308,7 @@ def compute_umap_and_neighbors(
 
     # Index match table by curie
     match_by_curie = {r["metpo_curie"]: r for r in match_rows}
-    record_by_curie = {c: (lbl, syn, cat) for c, lbl, syn, cat in metpo_records}
+    record_by_curie = {c: (lbl, syn, cat) for c, lbl, syn, cat, _par in metpo_records}
 
     # Build matrix: take ANY matched node's vector for each METPO record;
     # when multiple nodes match, average them.
@@ -333,7 +366,7 @@ def compute_umap_and_neighbors(
 
     # Records without embeddings still get an entry (empty list) so the renderer
     # can distinguish "no embedding" from "no neighbors found".
-    for curie, _, _, _ in metpo_records:
+    for curie, _, _, _, _ in metpo_records:
         nn_map.setdefault(curie, [])
     return umap_points, nn_map
 

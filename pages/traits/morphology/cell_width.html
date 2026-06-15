@@ -77,7 +77,7 @@
             <strong>Rod-complex peptidoglycan synthesis</strong>
             <span class="edge-predicate">builds</span>
             <strong>peptidoglycan cell wall</strong>
-            
+            <code>biolink:produces</code>
             <p>Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.</p>
             <ul>
               
@@ -218,32 +218,32 @@
         
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
+          <a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a>
           <span class="sim">0.602</span>
         </li>
         
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
-          <span class="sim">0.586</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
-          <span class="sim">0.573</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/temperature_range_low.html">temperature range low</a>
-          <span class="sim">0.570</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
+          <span class="sim">0.602</span>
         </li>
         
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/cell_width_very_small.html">cell width very small</a>
-          <span class="sim">0.570</span>
+          <a href="../../traits/morphology/sarcina_arrangement.html">sarcina arrangement</a>
+          <span class="sim">0.602</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/staphylococcus_arrangement.html">staphylococcus arrangement</a>
+          <span class="sim">0.602</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
+          <span class="sim">0.602</span>
         </li>
         
       </ul>
@@ -279,6 +279,12 @@
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-13T21:03:26Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
         </li>
         
       </ol>
@@ -638,7 +644,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking MreB cytoskeletal organization, Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width phenotype.", "edges": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": null, "source": "rod_complex_pg", "target": "peptidoglycan_cell_wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "cell_width_trait"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "balances", "predicate_id": null, "source": "turgor_pressure", "target": "peptidoglycan_cell_wall"}], "evidence_rows": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "builds", "predicate_id": null, "source": "Rod-complex peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "cell width"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "edge_id": "edge-4", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "balances", "predicate_id": null, "source": "turgor pressure", "target": "peptidoglycan cell wall"}], "graph_id": "cell_width_mreb_lateral_wall", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Shorter dimension of the cell body, perpendicular to the long axis.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments that pattern lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Load-bearing peptidoglycan sacculus that constrains cell shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized peptidoglycan synthesis along the cylindrical wall.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Internal hydrostatic pressure pushing against the cell wall.", "grounding": null, "id": "turgor_pressure", "is_orphan": false, "label": "turgor pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Cell-width control by MreB-directed lateral cell-wall assembly"}];
+  var graphs = [{"description": "DOI-backed graph linking MreB cytoskeletal organization, Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width phenotype.", "edges": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "rod_complex_pg", "target": "peptidoglycan_cell_wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "cell_width_trait"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "balances", "predicate_id": null, "source": "turgor_pressure", "target": "peptidoglycan_cell_wall"}], "evidence_rows": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "Rod-complex peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "cell width"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "edge_id": "edge-4", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "balances", "predicate_id": null, "source": "turgor pressure", "target": "peptidoglycan cell wall"}], "graph_id": "cell_width_mreb_lateral_wall", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Shorter dimension of the cell body, perpendicular to the long axis.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments that pattern lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Load-bearing peptidoglycan sacculus that constrains cell shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized peptidoglycan synthesis along the cylindrical wall.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Internal hydrostatic pressure pushing against the cell wall.", "grounding": null, "id": "turgor_pressure", "is_orphan": false, "label": "turgor pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Cell-width control by MreB-directed lateral cell-wall assembly"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -649,10 +655,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

@@ -94,7 +94,7 @@
             <strong>T3SS effector proteins</strong>
             <span class="edge-predicate">suppresses</span>
             <strong>plant immune suppression</strong>
-            
+            <code>RO:0002212</code>
             <p>Translocated T3SS effectors suppress plant innate immunity.</p>
             <ul>
               
@@ -233,45 +233,45 @@
         </li>
         
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/phenotype.html">phenotype</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/opportunistic_pathogen.html">opportunistic pathogen</a>
+          <span class="sim">0.663</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/magnetosome.html">magnetosome</a>
           <span class="sim">0.476</span>
         </li>
         
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/quality.html">quality</a>
-          <span class="sim">0.413</span>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">0.476</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">0.476</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <span class="sim">0.476</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">0.476</span>
         </li>
         
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gram_variable.html">gram variable</a>
-          <span class="sim">0.412</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gram_stain.html">gram stain</a>
-          <span class="sim">0.412</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/growth_range_phenotype_with_numerical_limits.html">growth range phenotype with numerical limits</a>
-          <span class="sim">0.375</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/salinity_phenotype_with_numerical_limits.html">salinity phenotype with numerical limits</a>
-          <span class="sim">0.360</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/delta_phenotype_with_numerical_limits.html">delta phenotype with numerical limits</a>
-          <span class="sim">0.356</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">0.476</span>
         </li>
         
       </ul>
@@ -325,6 +325,12 @@
           <time>2026-05-24T04:13:20Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-13T21:03:25Z</time> ·
+          <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
+          <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002212×1).</p>
         </li>
         
       </ol>
@@ -684,7 +690,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking plant-cell-wall degradation, type III secretion of effectors, suppression of plant immunity, and plant tissue colonization to the plant-pathogen phenotype.", "edges": [{"description": "Plant-cell-wall-degrading enzymes enable bacterial spread within plant tissues.", "evidence": [{"notes": "Supports CWD enzymes as virulence factors in plant infection.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cwd_enzymes", "target": "plant_tissue_colonization"}, {"description": "The T3SS translocates effector proteins from the bacterium into plant cells.", "evidence": [{"notes": "Supports the T3SS as the delivery system for bacterial effectors into plant cells.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion system"}], "id": "edge-2", "is_orphan": false, "predicate": "delivers", "predicate_id": null, "source": "t3ss", "target": "t3ss_effectors"}, {"description": "Translocated T3SS effectors suppress plant innate immunity.", "evidence": [{"notes": "Supports T3SS-delivered effector proteins as the plant-immunity-suppressing factors.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "effector proteins"}], "id": "edge-3", "is_orphan": false, "predicate": "suppresses", "predicate_id": null, "source": "t3ss_effectors", "target": "plant_immune_suppression"}, {"description": "Immune suppression supports sustained colonization of plant tissues.", "evidence": [{"notes": "Supports immune-suppression-driven colonization as a hallmark of plant-pathogen infection biology.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "plant pathogen"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant_immune_suppression", "target": "plant_tissue_colonization"}, {"description": "Established colonization of plant tissues causes plant disease.", "evidence": [{"notes": "Supports colonization-to-disease progression in plant pathogens.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "plant_tissue_colonization", "target": "plant_disease"}, {"description": "Plant disease manifests the plant-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion"}], "id": "edge-6", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "plant_disease", "target": "plant_pathogen_trait"}], "evidence_rows": [{"description": "Plant-cell-wall-degrading enzymes enable bacterial spread within plant tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports CWD enzymes as virulence factors in plant infection.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant-cell-wall-degrading enzymes", "target": "plant tissue colonization"}, {"description": "The T3SS translocates effector proteins from the bacterium into plant cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the T3SS as the delivery system for bacterial effectors into plant cells.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion system"}], "predicate": "delivers", "predicate_id": null, "source": "type III secretion system", "target": "T3SS effector proteins"}, {"description": "Translocated T3SS effectors suppress plant innate immunity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports T3SS-delivered effector proteins as the plant-immunity-suppressing factors.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "effector proteins"}], "predicate": "suppresses", "predicate_id": null, "source": "T3SS effector proteins", "target": "plant immune suppression"}, {"description": "Immune suppression supports sustained colonization of plant tissues.", "edge_id": "edge-4", "evidence": [{"notes": "Supports immune-suppression-driven colonization as a hallmark of plant-pathogen infection biology.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "plant pathogen"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant immune suppression", "target": "plant tissue colonization"}, {"description": "Established colonization of plant tissues causes plant disease.", "edge_id": "edge-5", "evidence": [{"notes": "Supports colonization-to-disease progression in plant pathogens.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "plant tissue colonization", "target": "plant disease"}, {"description": "Plant disease manifests the plant-pathogen trait.", "edge_id": "edge-6", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "plant disease", "target": "plant pathogen"}], "graph_id": "plant_pathogen_t3ss_effector_program", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Secreted enzymes (e.g., pectinases, cellulases) degrading the plant cell wall.", "grounding": null, "id": "cwd_enzymes", "is_orphan": false, "label": "plant-cell-wall-degrading enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Pathology produced in a plant host.", "grounding": null, "id": "plant_disease", "is_orphan": false, "label": "plant disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Suppression of plant innate immunity by translocated effectors.", "grounding": null, "id": "plant_immune_suppression", "is_orphan": false, "label": "plant immune suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of plant hosts.", "grounding": "METPO:1004003", "id": "plant_pathogen_trait", "is_orphan": false, "label": "plant pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of microbial growth in plant tissues.", "grounding": null, "id": "plant_tissue_colonization", "is_orphan": false, "label": "plant tissue colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial T3SS delivering effector proteins into plant cells.", "grounding": null, "id": "t3ss", "is_orphan": false, "label": "type III secretion system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial effector proteins translocated into plant cells by the T3SS.", "grounding": null, "id": "t3ss_effectors", "is_orphan": false, "label": "T3SS effector proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Plant-pathogen T3SS-effector and wall-degradation program"}];
+  var graphs = [{"description": "DOI-backed graph linking plant-cell-wall degradation, type III secretion of effectors, suppression of plant immunity, and plant tissue colonization to the plant-pathogen phenotype.", "edges": [{"description": "Plant-cell-wall-degrading enzymes enable bacterial spread within plant tissues.", "evidence": [{"notes": "Supports CWD enzymes as virulence factors in plant infection.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cwd_enzymes", "target": "plant_tissue_colonization"}, {"description": "The T3SS translocates effector proteins from the bacterium into plant cells.", "evidence": [{"notes": "Supports the T3SS as the delivery system for bacterial effectors into plant cells.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion system"}], "id": "edge-2", "is_orphan": false, "predicate": "delivers", "predicate_id": null, "source": "t3ss", "target": "t3ss_effectors"}, {"description": "Translocated T3SS effectors suppress plant innate immunity.", "evidence": [{"notes": "Supports T3SS-delivered effector proteins as the plant-immunity-suppressing factors.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "effector proteins"}], "id": "edge-3", "is_orphan": false, "predicate": "suppresses", "predicate_id": "RO:0002212", "source": "t3ss_effectors", "target": "plant_immune_suppression"}, {"description": "Immune suppression supports sustained colonization of plant tissues.", "evidence": [{"notes": "Supports immune-suppression-driven colonization as a hallmark of plant-pathogen infection biology.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "plant pathogen"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant_immune_suppression", "target": "plant_tissue_colonization"}, {"description": "Established colonization of plant tissues causes plant disease.", "evidence": [{"notes": "Supports colonization-to-disease progression in plant pathogens.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "plant_tissue_colonization", "target": "plant_disease"}, {"description": "Plant disease manifests the plant-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion"}], "id": "edge-6", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "plant_disease", "target": "plant_pathogen_trait"}], "evidence_rows": [{"description": "Plant-cell-wall-degrading enzymes enable bacterial spread within plant tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports CWD enzymes as virulence factors in plant infection.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant-cell-wall-degrading enzymes", "target": "plant tissue colonization"}, {"description": "The T3SS translocates effector proteins from the bacterium into plant cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the T3SS as the delivery system for bacterial effectors into plant cells.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion system"}], "predicate": "delivers", "predicate_id": null, "source": "type III secretion system", "target": "T3SS effector proteins"}, {"description": "Translocated T3SS effectors suppress plant innate immunity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports T3SS-delivered effector proteins as the plant-immunity-suppressing factors.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "effector proteins"}], "predicate": "suppresses", "predicate_id": "RO:0002212", "source": "T3SS effector proteins", "target": "plant immune suppression"}, {"description": "Immune suppression supports sustained colonization of plant tissues.", "edge_id": "edge-4", "evidence": [{"notes": "Supports immune-suppression-driven colonization as a hallmark of plant-pathogen infection biology.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "plant pathogen"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plant immune suppression", "target": "plant tissue colonization"}, {"description": "Established colonization of plant tissues causes plant disease.", "edge_id": "edge-5", "evidence": [{"notes": "Supports colonization-to-disease progression in plant pathogens.", "reference": "DOI:10.1146/annurev.micro.55.1.535", "snippet": "cell-wall-degrading enzymes"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "plant tissue colonization", "target": "plant disease"}, {"description": "Plant disease manifests the plant-pathogen trait.", "edge_id": "edge-6", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.phyto.43.040204.135923", "snippet": "type III secretion"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "plant disease", "target": "plant pathogen"}], "graph_id": "plant_pathogen_t3ss_effector_program", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Secreted enzymes (e.g., pectinases, cellulases) degrading the plant cell wall.", "grounding": null, "id": "cwd_enzymes", "is_orphan": false, "label": "plant-cell-wall-degrading enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Pathology produced in a plant host.", "grounding": null, "id": "plant_disease", "is_orphan": false, "label": "plant disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Suppression of plant innate immunity by translocated effectors.", "grounding": null, "id": "plant_immune_suppression", "is_orphan": false, "label": "plant immune suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of plant hosts.", "grounding": "METPO:1004003", "id": "plant_pathogen_trait", "is_orphan": false, "label": "plant pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of microbial growth in plant tissues.", "grounding": null, "id": "plant_tissue_colonization", "is_orphan": false, "label": "plant tissue colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial T3SS delivering effector proteins into plant cells.", "grounding": null, "id": "t3ss", "is_orphan": false, "label": "type III secretion system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial effector proteins translocated into plant cells by the T3SS.", "grounding": null, "id": "t3ss_effectors", "is_orphan": false, "label": "T3SS effector proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Plant-pathogen T3SS-effector and wall-degradation program"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -695,10 +701,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

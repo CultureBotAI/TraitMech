@@ -147,13 +147,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
       
-      <p class="no-match">No kg-microbe node embedding for this METPO class
-        in the 2026-04-25 deepwalk. Most unmatched terms are
-        DatatypeProperties (e.g. <code>METPO:has_*_value</code>) that the
-        graph encodes as edge attributes, not entity nodes.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+        
+        <li><code>METPO:1000059</code> <span class="dim-preview">[+0.489, -2.541, +0.926, -1.301, …]</span></li>
+        
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
       
     </div>
 
+    
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/oxidase_activity.html">oxidase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+      </ul>
+    </div>
     
 
     
@@ -173,6 +235,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (czc cadmium efflux) with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-14T06:38:14Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:B0VPE1×1).</p>
         </li>
         
       </ol>
@@ -206,6 +274,11 @@
     </dl>
   </div>
 
+  
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
   
 </aside>
 </div>
@@ -527,7 +600,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic cadmium detoxification.", "edges": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium_ion", "target": "cadmium_tolerant_trait"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "cadmium_export"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_export", "target": "cadmium_ion"}], "evidence_rows": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium(2+) ion", "target": "cadmium tolerant"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "target": "cadmium ion transmembrane transport"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion transmembrane transport", "target": "cadmium(2+) ion"}], "graph_id": "cadmium_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Active export of Cd(2+) across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "cadmium_export", "is_orphan": false, "label": "cadmium ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Toxic transition-metal cation accumulating in the cytoplasm.", "grounding": "CHEBI:48775", "id": "cadmium_ion", "is_orphan": false, "label": "cadmium(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Cd(2+) concentrations.", "grounding": "traitmech:000013", "id": "cadmium_tolerant_trait", "is_orphan": false, "label": "cadmium tolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.", "grounding": null, "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Cadmium tolerance via czc cation-efflux system"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic cadmium detoxification.", "edges": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium_ion", "target": "cadmium_tolerant_trait"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "cadmium_export"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_export", "target": "cadmium_ion"}], "evidence_rows": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium(2+) ion", "target": "cadmium tolerant"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "target": "cadmium ion transmembrane transport"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion transmembrane transport", "target": "cadmium(2+) ion"}], "graph_id": "cadmium_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Active export of Cd(2+) across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "cadmium_export", "is_orphan": false, "label": "cadmium ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Toxic transition-metal cation accumulating in the cytoplasm.", "grounding": "CHEBI:48775", "id": "cadmium_ion", "is_orphan": false, "label": "cadmium(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Cd(2+) concentrations.", "grounding": "traitmech:000013", "id": "cadmium_tolerant_trait", "is_orphan": false, "label": "cadmium tolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.", "grounding": "UniProtKB:B0VPE1", "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Cadmium tolerance via czc cation-efflux system"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -538,10 +611,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-12 07:21 UTC from
+    Built 2026-06-15 06:46 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 73.2%
+    · embedding coverage 98.3%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
