@@ -1,0 +1,74 @@
+name: label-correspondence
+
+# Phase 1 (report-only): `just report-label-drift` generates and uploads an
+# id↔label drift report for the ontology grounding tables, but does NOT block
+# the build. TraitMech carries pre-existing residuals (wrong PATO/ENVO/CHEBI
+# CURIEs in mappings/node_grounding.tsv — see NEXT_TASKS.md); the enforcing
+# `just validate-products` gate is deferred to Phase 2 until those are triaged
+# (fixed to the correct CURIE + re-grounded, or accepted into conf exceptions).
+#
+# The validator-pin job below IS blocking: it is fast and dependency-free, and
+# guards the cross-repo byte-identical vendoring of the validator + its tests.
+
+on:
+  pull_request:
+    paths: &trigger_paths
+      - "mappings/**"
+      - "scripts/validate_id_label_correspondence.py"
+      - "conf/id_label_targets.yaml"
+      - ".github/workflows/label-correspondence.yaml"
+  push:
+    branches: [main]
+    paths: *trigger_paths
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # Cross-repo durability guard: the validator is vendored byte-identical across
+  # the Mech repos, so fail fast if this copy drifts from its pinned sha256.
+  # Fast and dependency-free (no uv / OAK), so it blocks even though the drift
+  # report below is non-blocking.
+  validator-pin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify validator pin
+        run: sha256sum -c scripts/.validate_id_label_correspondence.sha256
+
+  label-correspondence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: extractions/setup-just@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync
+
+      # Cache OAK sqlite ontologies (CHEBI/GO/ENVO/PATO/RO) across runs.
+      - name: Cache OAK ontologies
+        uses: actions/cache@v4
+        with:
+          path: ~/.data/oaklib
+          key: oaklib-${{ runner.os }}-v1
+
+      # Phase 1: generate + upload the drift report for triage. Non-blocking.
+      - name: Generate id↔label drift report
+        run: just report-label-drift
+
+      - name: Upload drift report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: label-drift-report-${{ github.run_id }}
+          path: reports/label_drift.tsv
+          if-no-files-found: warn

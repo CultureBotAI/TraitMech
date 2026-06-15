@@ -171,3 +171,46 @@ check: lint test
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
 qc: validate-strict audit-schema audit-writers audit-proposals
+
+# --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
+
+# Verify (id,label) pairs in TraitMech's ontology grounding tables correspond to
+# the ontology (CHEBI/GO/ENVO/PATO/RO via OAK). Exits non-zero on any mismatch.
+# NOTE: currently report-only in CI (Phase 1) — pre-existing residuals tracked
+# in NEXT_TASKS.md must be triaged before this becomes a blocking gate.
+validate-products:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
+
+# Baseline (non-failing): id↔label drift report across the grounding tables to
+# reports/label_drift.tsv. Used by CI to publish a triage artifact.
+report-label-drift:
+    uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/label_drift.tsv
+
+# Vendored id-label files that must stay byte-identical across the CultureMech /
+# MIM / CommunityMech / TraitMech Mech repos and must not silently diverge: the
+# validator + its two shared tests. conf/id_label_targets.yaml is deliberately
+# per-repo (different adapters/targets) so it is NOT here.
+VENDORED_IDLABEL_FILES := "scripts/validate_id_label_correspondence.py tests/test_id_label_empty_adapter.py tests/test_id_label_unknown_prefix.py"
+
+# Durability guard: fail if any vendored id-label file drifts from its pinned
+# sha256. CI runs this so an accidental edit to one copy can't silently diverge.
+verify-validator-pin:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if command -v sha256sum >/dev/null 2>&1; then
+        sha256sum -c scripts/.validate_id_label_correspondence.sha256
+    else
+        shasum -a 256 -c scripts/.validate_id_label_correspondence.sha256
+    fi
+
+# Intentional sync only: re-pin the sha256 manifest to the CURRENT contents of
+# the vendored files after a deliberate, all-repos byte-identical update.
+refresh-validator-pin:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    : > scripts/.validate_id_label_correspondence.sha256
+    for f in {{VENDORED_IDLABEL_FILES}}; do
+        if command -v sha256sum >/dev/null 2>&1; then h=$(sha256sum "$f" | cut -d' ' -f1); else h=$(shasum -a 256 "$f" | cut -d' ' -f1); fi
+        printf '%s  %s\n' "$h" "$f" >> scripts/.validate_id_label_correspondence.sha256
+        echo "re-pinned $f to $h"
+    done

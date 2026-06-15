@@ -1,0 +1,62 @@
+# Targets for scripts/validate_id_label_correspondence.py.
+#
+# Declares which TraitMech surfaces carry ontology (id, label) pairs and how
+# strictly the label must correspond to the id's ontology label.
+#
+# A CURIE prefix is handled three ways:
+#   * in `adapters`          → looked up against that OAK ontology.
+#   * in `ignored_prefixes`  → legitimate non-OAK-ontology id (METPO:, biolink:,
+#                              UniProtKB:, …); SKIPPED_NO_ADAPTER, never looked up.
+#   * neither                → UNKNOWN_PREFIX (ERROR) — a typo (CHBEI:) or an
+#                              unexpected new prefix that must be triaged (added
+#                              to `adapters` or `ignored_prefixes`) rather than
+#                              silently passing the gate.
+#
+# TraitMech's primary ids are METPO (its own ontology) and traitmech: (synthetic
+# fallbacks); neither is in the OAK semsql set, so they are ignored here. The
+# value of this gate is QC on the CROSS-ONTOLOGY references TraitMech embeds —
+# the CHEBI/GO/ENVO/PATO/RO (id, label) pairs in the causal-graph grounding
+# tables, which OAK can resolve.
+
+adapters:
+  CHEBI: sqlite:obo:chebi
+  GO: sqlite:obo:go
+  ENVO: sqlite:obo:envo
+  PATO: sqlite:obo:pato
+  RO: sqlite:obo:ro
+
+# Legitimate NON-OAK-ontology id prefixes — skipped without a lookup, but
+# acknowledged so a typoed ontology prefix (CHBEI:, CHEB:) is NOT mistaken for
+# one of these and instead fails as UNKNOWN_PREFIX. Keep in sync with the
+# prefixes actually emitted into the (id, label) target columns.
+ignored_prefixes:
+  - METPO              # TraitMech's primary ontology (not in OAK semsql)
+  - traitmech          # synthetic fallback ids minted in this repo
+  - biolink            # biolink model predicate slots (not an OBO sqlite)
+  - rdfs               # rdfs:subClassOf etc. — not an ontology term lookup
+  - UniProtKB          # representative protein accessions; the label is the
+                       # protein name, not a single canonical ontology label
+
+synonym_scope: exact_related
+
+targets:
+  # Causal-node grounding table: (target_curie, target_label) across
+  # CHEBI / GO / ENVO / PATO (plus ignored METPO / UniProtKB). Labels are the
+  # ontology canonical (or a close synonym), so accept canonical OR synonym.
+  - name: node_grounding
+    kind: tabular
+    format: tsv
+    glob: "mappings/node_grounding.tsv"
+    policy: canonical_or_synonym
+    pairs:
+      - [target_curie, target_label]
+
+  # Causal-predicate grounding table: (target_curie, target_label) across
+  # RO (plus ignored METPO / biolink / rdfs).
+  - name: predicate_grounding
+    kind: tabular
+    format: tsv
+    glob: "mappings/predicate_grounding.tsv"
+    policy: canonical_or_synonym
+    pairs:
+      - [target_curie, target_label]

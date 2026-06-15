@@ -1,0 +1,16 @@
+surface	file	locator	id	current_label	canonical_label	verdict	policy
+node_grounding	mappings/node_grounding.tsv	line 15 [target_curie/target_label]	CHEBI:65015	osmolyte	paromamine(3+)	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 27 [target_curie/target_label]	GO:0030641	regulation of cellular pH	obsolete regulation of cellular pH	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 38 [target_curie/target_label]	GO:0046358	acetyl-CoA biosynthetic process from carbon dioxide	butyrate biosynthetic process	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 39 [target_curie/target_label]	PATO:0001717	light intensity	radiation emitting intensity quality	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 40 [target_curie/target_label]	PATO:0000383	decreased temperature	female	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 41 [target_curie/target_label]	ENVO:01001057	anaerobic environment	environment associated with a plant part or small plant	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 42 [target_curie/target_label]	ENVO:01001057	anaerobic environment	environment associated with a plant part or small plant	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 78 [target_curie/target_label]	PATO:0001428	acidic pH	medium acidity	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 79 [target_curie/target_label]	PATO:0001429	alkaline pH	acidic	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 80 [target_curie/target_label]	PATO:0001432	neutral pH	decayed	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 81 [target_curie/target_label]	PATO:0001637	extremely high temperature	necessity of occurrent	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 82 [target_curie/target_label]	ENVO:01000687	saline environment	coast	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 83 [target_curie/target_label]	CHEBI:33542	thiosulfate(2-)	trioxidosulfanidosulfate(1-)	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 84 [target_curie/target_label]	CHEBI:17499	electron donor	hydrogen donor	MISMATCH	canonical_or_synonym
+node_grounding	mappings/node_grounding.tsv	line 111 [target_curie/target_label]	GO:0006572	tyrosine catabolic process	L-tyrosine catabolic process	MISMATCH	canonical_or_synonym
