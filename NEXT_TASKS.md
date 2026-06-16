@@ -5,7 +5,7 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-06-14.
+Last reconciled: 2026-06-15.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -25,9 +25,11 @@ further action unless a newer deepwalk lands.
 
 ## 2. id↔label validator — ADOPTED + ENFORCING (Phase 2) — DONE
 
-TraitMech joined the Mech trio. Vendored byte-identical (sha256 matches
-CommunityMech/CultureMech): `scripts/validate_id_label_correspondence.py` + the
-two shared tests + `scripts/.validate_id_label_correspondence.sha256` pin.
+TraitMech joined the Mech group — the byte-identical pin is now a **4-repo
+invariant** (CultureMech / MIM / CommunityMech / TraitMech). Vendored
+byte-identical (sha256 matches all three siblings):
+`scripts/validate_id_label_correspondence.py` + the two shared tests +
+`scripts/.validate_id_label_correspondence.sha256` pin.
 `conf/id_label_targets.yaml` targets the two ontology grounding tables
 (`mappings/node_grounding.tsv`, `mappings/predicate_grounding.tsv`) with
 CHEBI/GO/ENVO/PATO/RO adapters; METPO/traitmech/biolink/rdfs/UniProtKB are
