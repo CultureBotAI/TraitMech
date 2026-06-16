@@ -51,6 +51,16 @@ causal_graphs:
     description: Reduced recognition and clearance by host innate immunity.
   edges:
   - subject: capsule_assembly
+    predicate: produces
+    object: capsular_polysaccharide
+    description: Capsule biosynthesis synthesizes and exports the high-MW capsular
+      polysaccharide.
+    evidence:
+    - reference: DOI:10.1146/annurev.biochem.75.103004.142545
+      notes: Whitfield reviews biosynthesis, export, and surface assembly of the
+        capsular polysaccharide polymer.
+    predicate_id: biolink:produces
+  - subject: capsule_assembly
     predicate: enables
     object: capsule_trait
     description: Surface assembly of capsule polymers realizes the capsulated phenotype.
@@ -85,4 +95,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:3379×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T00:00:00Z'
+  curator: claude
+  action: FIX_ORPHAN_NODE
+  changes: Connected the previously-orphaned capsular_polysaccharide node via a
+    'produces' (biolink:produces) edge from capsule_assembly.
   llm_assisted: true

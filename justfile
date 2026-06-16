@@ -48,6 +48,12 @@ audit-writers *args:
 audit-proposals *args:
     uv run python scripts/audit_proposals.py {{args}}
 
+# Structural-integrity audit of causal graphs: flag dangling edges (subject/
+# object not a declared node) and orphan nodes (declared but unreferenced).
+# Emits reports/causal_graph_audit.tsv; exits 1 on any defect.
+audit-graphs *args:
+    uv run python scripts/audit_causal_graphs.py {{args}}
+
 # Verify a METPO ROBOT-template proposal cohort under proposals/.
 # Runs column-count, header, parent integrity, subset tag, and scope-A/C
 # coverage checks. See .claude/skills/metpo-proposal/SKILL.md.
@@ -170,7 +176,7 @@ check: lint test
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: validate-strict audit-schema audit-writers audit-proposals
+qc: validate-strict audit-schema audit-writers audit-proposals audit-graphs
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

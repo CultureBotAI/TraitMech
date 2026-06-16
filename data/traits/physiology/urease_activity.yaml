@@ -75,6 +75,16 @@ causal_graphs:
     - reference: DOI:10.1128/mr.53.1.85-108.1989
       notes: Mobley & Hausinger support ammonia release from urea hydrolysis.
     predicate_id: METPO:2000202
+  - subject: urease_function
+    predicate: manifests as
+    object: urease_activity_trait
+    description: Urease enzymatic activity manifests as the observable urease-activity
+      phenotype scored by the diagnostic urease test.
+    evidence:
+    - reference: DOI:10.1128/mr.59.3.451-480.1995
+      notes: Urease activity (urea-to-ammonia hydrolysis raising local pH) is the
+        assayable phenotype used to score urease-positive organisms.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -94,4 +104,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A090IGX8×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T00:00:00Z'
+  curator: claude
+  action: FIX_ORPHAN_NODE
+  changes: Connected the previously-orphaned urease_activity_trait node via a
+    'manifests as' (METPO:2007400) edge from urease_function, so the molecular
+    function links to the observable trait.
   llm_assisted: true
