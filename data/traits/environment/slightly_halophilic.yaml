@@ -87,6 +87,7 @@ causal_graphs:
       snippet: organic osmotic solutes
       notes: Review supports accumulation of organic osmotic solutes in bacterial
         osmoadaptation.
+    predicate_id: METPO:2000210
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863572+00:00'
   curator: seed_from_metpo
@@ -138,4 +139,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000210×1).
   llm_assisted: true

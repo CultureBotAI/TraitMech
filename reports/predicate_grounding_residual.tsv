@@ -1,13 +1,11 @@
 predicate_label	edge_count	example_files
 engages	7	data/traits/environment/nacl_optimum_mid1.yaml|data/traits/environment/ph_optimum_mid2.yaml|data/traits/environment/temperature_optimum_low.yaml
-imports	5	data/traits/environment/alkaphilic.yaml|data/traits/environment/euryhaline.yaml|data/traits/environment/halophily_preference.yaml
 initiates	4	data/traits/morphology/sporulation.yaml|data/traits/physiology/photoheterotrophic.yaml|data/traits/physiology/photoorganoheterotrophic.yaml
 can proceed through	4	data/traits/physiology/chemoheterotrophic.yaml|data/traits/physiology/chemoorganoheterotrophic.yaml
 assimilated into	4	data/traits/physiology/chemoorganotrophic.yaml|data/traits/physiology/organoheterotrophic.yaml|data/traits/physiology/photoheterotrophic.yaml
 damages	3	data/traits/environment/anaerobic.yaml|data/traits/environment/obligately_anaerobic.yaml|data/traits/environment/strictly_anaerobic.yaml
 uses	3	data/traits/environment/extremely_halophilic.yaml|data/traits/metabolism/anaerobic_respiration.yaml|data/traits/metabolism/fermentation.yaml
 has alternative process	3	data/traits/environment/facultative_oxygen_preference.yaml|data/traits/environment/facultatively_aerobic.yaml|data/traits/environment/facultatively_anaerobic.yaml
-accumulates	3	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml|data/traits/environment/slightly_halophilic.yaml
 has mechanistic pathway	3	data/traits/metabolism/acetogenesis.yaml|data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/homoacetogenesis.yaml
 realizes	3	data/traits/metabolism/metabolism.yaml|data/traits/morphology/axially_filamented.yaml|data/traits/physiology/trophic_type.yaml
 feed into	3	data/traits/morphology/black_pigmented.yaml|data/traits/morphology/carotenoid_pigmentation.yaml|data/traits/morphology/pink_pigmented.yaml
@@ -20,11 +18,9 @@ acts as	2	data/traits/environment/aerobic.yaml|data/traits/metabolism/anaerobic_
 can generate	2	data/traits/environment/aerotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 protects against	2	data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/psychrophilic.yaml
 is compatible with	2	data/traits/environment/facultatively_acidophilic.yaml|data/traits/environment/facultatively_alkaphilic.yaml
-exports	2	data/traits/environment/facultatively_alkaphilic.yaml|data/traits/environment/obligately_alkaphilic.yaml
 provides	2	data/traits/environment/haloalkaliphilic.yaml
 tolerated by	2	data/traits/environment/halotolerant.yaml|data/traits/environment/microaerotolerant.yaml
 imposes	2	data/traits/environment/nacl_optimum_low.yaml|data/traits/environment/ph_optimum_mid1.yaml
-reduces	2	data/traits/environment/obligately_aerobic.yaml|data/traits/metabolism/aerobic_respiration.yaml
 reduced to	2	data/traits/metabolism/aerobic_respiration.yaml|data/traits/metabolism/disproportionation.yaml
 oxidized during	2	data/traits/metabolism/cable_bacteria_metabolism.yaml|data/traits/physiology/chemoorganotrophic.yaml
 converted to	2	data/traits/metabolism/homoacetogenesis.yaml|data/traits/physiology/lithoheterotrophic.yaml

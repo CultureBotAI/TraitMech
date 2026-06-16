@@ -91,6 +91,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.biophys.27.1.329
       snippet: electron transfer from cytochrome c to molecular oxygen
       notes: Supports oxygen as terminal electron acceptor for cytochrome c oxidase.
+    predicate_id: METPO:2000017
   - subject: molecular_oxygen
     predicate: reduced to
     object: water
@@ -179,4 +180,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×1).
   llm_assisted: true

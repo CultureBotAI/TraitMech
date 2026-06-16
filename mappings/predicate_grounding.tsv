@@ -87,3 +87,7 @@ serves as electron donor and acceptor	METPO:2007603	serves as electron donor and
 donates electrons to	METPO:2007403	transfers electrons to	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'transfers electrons to'; lithotrophic donor -> ETC
 provides electrons to	METPO:2007403	transfers electrons to	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'transfers electrons to'; donor -> photosynthetic ET
 provides electrons for	METPO:2007402	feeds electrons into	skos:closeMatch	METPO	high	maps to existing proposals/metpo_traitmech_v2 predicate 'feeds electrons into'; H2 -> Wood-Ljungdahl pathway
+imports	METPO:2000208	imports	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; transporter -> imported chemical
+exports	METPO:2000209	exports	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; antiporter -> exported ion
+accumulates	METPO:2000210	accumulates	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; transporter -> accumulated solute
+reduces	METPO:2000017	reduces	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; redox sense (oxidase -> O2), paired with oxidizes (METPO:2000016)

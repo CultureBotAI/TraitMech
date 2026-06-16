@@ -71,6 +71,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.celrep.2023.112444
       snippet: transfer electrons from the ETC to O2
       notes: Supports oxygen reduction by terminal oxidases in an obligate aerobe.
+    predicate_id: METPO:2000017
   - subject: electron_transport_chain
     predicate: includes
     object: terminal_oxidases
@@ -146,4 +147,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:has_part×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×1).
   llm_assisted: true
