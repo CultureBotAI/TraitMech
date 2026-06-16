@@ -1,8 +1,8 @@
 identifier: traitmech:000098
 label: genome size
-definition: A quantitative genomics property describing the total length of an
-  organism's genome (typically expressed in megabase pairs), which varies widely
-  across prokaryotes and reflects lifestyle and evolutionary forces.
+definition: A quantitative genomics property describing the total length of an organism's
+  genome (typically expressed in megabase pairs), which varies widely across prokaryotes
+  and reflects lifestyle and evolutionary forces.
 definition_source: DOI:10.1038/nrmicro3331
 trait_category: GENOMICS
 term_kind: CLASS
@@ -15,11 +15,11 @@ synonyms:
   source: DOI:10.1038/nrmicro3331
 evidence:
 - reference: DOI:10.1038/nrmicro3331
-  notes: Batut et al. review reductive genome evolution, linking genome size to
-    population size and lifestyle across prokaryotes.
+  notes: Batut et al. review reductive genome evolution, linking genome size to population
+    size and lifestyle across prokaryotes.
 - reference: DOI:10.1038/ismej.2014.60
-  notes: Giovannoni et al. discuss streamlining theory and the small genomes of
-    abundant free-living microbes.
+  notes: Giovannoni et al. discuss streamlining theory and the small genomes of abundant
+    free-living microbes.
 causal_graphs:
 - graph_id: genome_size_population_lifestyle
   title: Genome size reflects effective population size and lifestyle
@@ -39,6 +39,7 @@ causal_graphs:
     label: reductive genome evolution
     node_type: BIOLOGICAL_PROCESS
     description: Selective and drift-driven loss of genomic content.
+    grounding: METPO:1007721
   edges:
   - subject: effective_population_size
     predicate: regulates
@@ -47,8 +48,8 @@ causal_graphs:
       permits drift-driven loss in symbionts.
     evidence:
     - reference: DOI:10.1038/nrmicro3331
-      notes: Batut et al. compare reductive genome evolution at both ends of the
-        population-size spectrum.
+      notes: Batut et al. compare reductive genome evolution at both ends of the population-size
+        spectrum.
     predicate_id: RO:0002211
   - subject: reductive_genome_evolution
     predicate: causes
@@ -56,8 +57,8 @@ causal_graphs:
     description: Reductive evolution sets the observed genome length.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
-      notes: Giovannoni et al. link streamlining theory to small genomes in
-        abundant free-living microbes.
+      notes: Giovannoni et al. link streamlining theory to small genomes in abundant
+        free-living microbes.
     predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
@@ -68,6 +69,12 @@ curation_history:
 - timestamp: '2026-06-08T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (genome size / population-size and
-    lifestyle) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (genome size / population-size and lifestyle)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:40Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007721×1).
   llm_assisted: true

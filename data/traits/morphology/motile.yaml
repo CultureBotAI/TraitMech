@@ -56,6 +56,7 @@ causal_graphs:
     label: chemotaxis signaling
     node_type: BIOLOGICAL_PROCESS
     description: Regulatory system that biases movement toward favorable conditions.
+    grounding: GO:0006935
   edges:
   - subject: metabolic_energy
     predicate: generates
@@ -156,4 +157,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:40Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006935×1).
   llm_assisted: true

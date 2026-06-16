@@ -52,13 +52,21 @@ All categories are promoted: the corpus is **427 REVIEWED + 50 DEPRECATED,
 out of scope (see `docs/DEPRECATED_REPLACEMENT_PROPOSAL.md`). No promotion work
 remains.
 
-## 4. Grounding tail + METPO upstream round-trip (deferred)
+## 4. METPO upstream round-trip (BLOCKED on upstream) + residual floor
 
-- Causal-graph grounding stands at **predicates 84% (1082/1284)** and
-  **nodes 61% (1011/1643)**. The remaining residual is non-ontological
-  descriptive phrases / one-off LLM verbs; raising it needs fuzzy matching or
-  new term proposals (diminishing returns, higher risk).
+- Causal-graph grounding now stands at **predicates 85% (1094/1284)** and
+  **nodes 62% (1024/1643)**. The remaining residual is non-ontological
+  graph-narrative phrases (adaptation states, composite descriptors) and vague
+  verbs — these are NOT ontology concepts and should stay as free-text node/edge
+  labels, not be force-matched or proposed. This is the quality floor.
+- Genuinely-novel recurring concepts have been proposed: electron-transfer
+  predicates ([v6](proposals/metpo_traitmech_v6/)) and 2 causal-mechanism
+  classes ([v7](proposals/metpo_traitmech_v7/): salt-in strategy, reductive
+  genome evolution).
 - Upstream submission [berkeleybop/metpo#535](https://github.com/berkeleybop/metpo/issues/535)
-  requests real METPO IDs for cohorts v1-v6 (143 classes + 13 predicates).
-  When minted, run the documented round-trip (swap placeholder
-  `1007xxx`/`2007xxx` for real CURIEs, re-seed).
+  now requests real METPO IDs for cohorts **v1–v7 (145 classes + 13 predicates)**,
+  with concrete suggested mintable ranges from the 2026-06-12 release
+  (classes `1007094–1007238`, predicates `2000735–2000747`). **Blocked on the
+  METPO maintainers minting.** When minted, run the documented round-trip (swap
+  placeholder `1007xxx`/`2007xxx` for real CURIEs in `data/raw/metpo.owl` +
+  groundings, re-seed).

@@ -17,9 +17,9 @@ evidence:
 - reference: DOI:10.3389/fmolb.2022.1058381
   snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
     to their preference for high pressure
-  notes: Pressure-adaptation review distinguishes piezotolerant organisms, which
-    withstand high hydrostatic pressure but grow at similar or faster rates at
-    atmospheric pressure, from obligate piezophiles.
+  notes: Pressure-adaptation review distinguishes piezotolerant organisms, which withstand
+    high hydrostatic pressure but grow at similar or faster rates at atmospheric pressure,
+    from obligate piezophiles.
 - reference: DOI:10.1099/ijsem.0.001671
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: Provides the contrasting obligate-piezophile reference point against which
@@ -27,8 +27,8 @@ evidence:
 causal_graphs:
 - graph_id: piezotolerance_pressure_range
   title: 'Piezotolerance: growth across atmospheric and elevated pressures'
-  description: Evidence-backed causal sketch linking adaptation to elevated
-    hydrostatic pressure to growth that is sustained at atmospheric pressure.
+  description: Evidence-backed causal sketch linking adaptation to elevated hydrostatic
+    pressure to growth that is sustained at atmospheric pressure.
   nodes:
   - node_id: piezotolerant_trait
     label: piezotolerant
@@ -39,6 +39,7 @@ causal_graphs:
     label: hydrostatic pressure
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient hydrostatic pressure imposed on the cell.
+    grounding: PATO:0001025
   - node_id: membrane_adaptation
     label: membrane lipid adaptation
     node_type: BIOLOGICAL_PROCESS
@@ -47,8 +48,8 @@ causal_graphs:
   - subject: hydrostatic_pressure
     predicate: regulates
     object: membrane_adaptation
-    description: Hydrostatic pressure modulates membrane fluidity, prompting
-      adaptive lipid composition.
+    description: Hydrostatic pressure modulates membrane fluidity, prompting adaptive
+      lipid composition.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: HHP adaptation involves unsaturated and branched-chain fatty acids.
@@ -56,24 +57,30 @@ causal_graphs:
   - subject: membrane_adaptation
     predicate: enables
     object: piezotolerant_trait
-    description: Membrane adaptation supports growth across the pressure range
-      atmospheric ↔ high.
+    description: Membrane adaptation supports growth across the pressure range atmospheric
+      ↔ high.
     evidence:
     - reference: DOI:10.1099/ijsem.0.001671
-      notes: Contrast with obligate piezophiles (growth limited to 80-140 MPa)
-        defines piezotolerant as the atmospheric-capable phenotype.
+      notes: Contrast with obligate piezophiles (growth limited to 80-140 MPa) defines
+        piezotolerant as the atmospheric-capable phenotype.
     predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ENVIRONMENT trait (pressure-tolerant growth) from
-    literature research to complete the pressure-preference axis alongside
-    piezophilic and obligately piezophilic.
+  changes: Proposed candidate ENVIRONMENT trait (pressure-tolerant growth) from literature
+    research to complete the pressure-preference axis alongside piezophilic and obligately
+    piezophilic.
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (membrane adaptation across pressure
     range) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001025×1).
   llm_assisted: true
