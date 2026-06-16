@@ -1,8 +1,8 @@
 identifier: traitmech:000099
 label: genome streamlining
 definition: A genomics trait describing selective reduction of genome size and gene
-  content in free-living microbes with very large effective population sizes,
-  minimizing the cellular cost of replication and biosynthesis.
+  content in free-living microbes with very large effective population sizes, minimizing
+  the cellular cost of replication and biosynthesis.
 definition_source: DOI:10.1038/ismej.2014.60
 trait_category: GENOMICS
 term_kind: CLASS
@@ -39,22 +39,23 @@ causal_graphs:
     label: reductive genome evolution
     node_type: BIOLOGICAL_PROCESS
     description: Selective and drift-driven loss of genomic content.
+    grounding: METPO:1007721
   edges:
   - subject: oligotrophic_environment
     predicate: selects for
     object: streamlining_trait
-    description: Resource limitation and large Ne favor minimizing cellular cost
-      via genome reduction.
+    description: Resource limitation and large Ne favor minimizing cellular cost via
+      genome reduction.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
-      notes: Giovannoni et al. articulate streamlining theory for abundant
-        oligotrophic microbes.
+      notes: Giovannoni et al. articulate streamlining theory for abundant oligotrophic
+        microbes.
     predicate_id: METPO:2007401
   - subject: reductive_genome_evolution
     predicate: causes
     object: streamlining_trait
-    description: Reductive evolution is the population-genetic process realizing
-      the streamlined-genome phenotype.
+    description: Reductive evolution is the population-genetic process realizing the
+      streamlined-genome phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro3331
       notes: Batut et al. compare reductive genome evolution across the bacterial
@@ -71,6 +72,11 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (oligotrophic selection / reductive
-    evolution) with METPO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    evolution) with METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:40Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007721×1).
   llm_assisted: true

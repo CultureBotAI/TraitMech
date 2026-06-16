@@ -1,7 +1,7 @@
 identifier: traitmech:000004
 label: pressure optimum
-definition: A pressure phenotype with numerical limits giving the hydrostatic
-  pressure at which an organism grows fastest.
+definition: A pressure phenotype with numerical limits giving the hydrostatic pressure
+  at which an organism grows fastest.
 definition_source: DOI:10.1099/ijsem.0.001671
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -11,13 +11,13 @@ parent_traits:
 evidence:
 - reference: DOI:10.1099/ijsem.0.001671
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
-  notes: Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum
-    (120 MPa), the quantitative value this phenotype records.
+  notes: Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum (120
+    MPa), the quantitative value this phenotype records.
 - reference: DOI:10.3389/fmolb.2022.1058381
   snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
     to their preference for high pressure
-  notes: Pressure-adaptation review supports an organism-specific optimal growth
-    pressure as the defining quantity for piezophile classification.
+  notes: Pressure-adaptation review supports an organism-specific optimal growth pressure
+    as the defining quantity for piezophile classification.
 causal_graphs:
 - graph_id: pressure_optimum_balanced_adaptation
   title: Pressure-optimum balanced adaptation
@@ -33,6 +33,7 @@ causal_graphs:
     label: hydrostatic pressure
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient hydrostatic pressure imposed on the cell.
+    grounding: PATO:0001025
   - node_id: maximal_growth_rate
     label: maximal growth rate
     node_type: BIOLOGICAL_PROCESS
@@ -41,12 +42,12 @@ causal_graphs:
   - subject: hydrostatic_pressure
     predicate: defines
     object: pressure_optimum_trait
-    description: The hydrostatic-pressure axis defines the value at which growth
-      is fastest.
+    description: The hydrostatic-pressure axis defines the value at which growth is
+      fastest.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      notes: Pressure-adaptation review supports an organism-specific optimal
-        growth pressure as the defining piezophile quantity.
+      notes: Pressure-adaptation review supports an organism-specific optimal growth
+        pressure as the defining piezophile quantity.
     predicate_id: METPO:2007500
   - subject: pressure_optimum_trait
     predicate: associated with
@@ -71,4 +72,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (pressure-axis defines optimum) with
     METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001025×1).
   llm_assisted: true

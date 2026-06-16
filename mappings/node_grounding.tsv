@@ -143,3 +143,7 @@ phenazine biosynthesis	BIOLOGICAL_PROCESS	GO:0002047	phenazine biosynthetic proc
 type iv pilus	CELLULAR_LOCALIZATION	GO:0044096	type IV pilus	skos:exactMatch	GO	high	exact GO-CC term via kg-microbe merged-kg (normalized match, verified)
 habitat	ENVIRONMENTAL_FACTOR	ENVO:01000739	habitat	skos:exactMatch	ENVO	medium	exact ENVO term (generic) via kg-microbe merged-kg (normalized match, verified)
 ultraviolet radiation	ENVIRONMENTAL_FACTOR	ENVO:21001216	ultraviolet radiation	skos:exactMatch	ENVO	high	exact ENVO term via kg-microbe merged-kg (normalized match, verified)
+hydrostatic pressure	ENVIRONMENTAL_FACTOR	PATO:0001025	pressure	skos:closeMatch	PATO	high	grounding-tail: PATO pressure quality
+chemotaxis signaling	BIOLOGICAL_PROCESS	GO:0006935	chemotaxis	skos:closeMatch	GO	medium	grounding-tail: GO chemotaxis (signal-transduction sense)
+salt-in strategy	BIOLOGICAL_PROCESS	METPO:1007720	salt-in strategy	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v7
+reductive genome evolution	BIOLOGICAL_PROCESS	METPO:1007721	reductive genome evolution	skos:exactMatch	METPO	high	proposed upstream in proposals/metpo_traitmech_v7

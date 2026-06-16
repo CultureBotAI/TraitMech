@@ -1,8 +1,8 @@
 identifier: traitmech:000045
 label: endosymbiosis
 definition: A symbiosis in which the microorganism lives inside the cells or tissues
-  of its host. Obligate intracellular endosymbionts (e.g. of insects) frequently
-  undergo extreme genome reduction.
+  of its host. Obligate intracellular endosymbionts (e.g. of insects) frequently undergo
+  extreme genome reduction.
 definition_source: DOI:10.1038/nrmicro2670
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,11 +15,11 @@ synonyms:
   source: DOI:10.1038/nrmicro2670
 evidence:
 - reference: DOI:10.1038/nrmicro2670
-  notes: McCutcheon & Moran, "Extreme genome reduction in symbiotic bacteria",
-    characterize intracellular endosymbionts and their diminished genomes.
+  notes: McCutcheon & Moran, "Extreme genome reduction in symbiotic bacteria", characterize
+    intracellular endosymbionts and their diminished genomes.
 - reference: DOI:10.1038/nrmicro.2017.171
-  notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root
-    nodules, an example of the endosymbiotic lifestyle.
+  notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules,
+    an example of the endosymbiotic lifestyle.
 causal_graphs:
 - graph_id: endosymbiosis_intracellular_genome_reduction
   title: Intracellular endosymbiosis drives extreme genome reduction
@@ -38,8 +38,9 @@ causal_graphs:
   - node_id: reductive_genome_evolution
     label: reductive genome evolution
     node_type: BIOLOGICAL_PROCESS
-    description: Long-term loss of genomic content under relaxed selection and
-      small effective population sizes.
+    description: Long-term loss of genomic content under relaxed selection and small
+      effective population sizes.
+    grounding: METPO:1007721
   edges:
   - subject: intracellular_localization
     predicate: enables
@@ -47,8 +48,8 @@ causal_graphs:
     description: Sustained residence inside host cells defines endosymbiosis.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.171
-      notes: Poole et al. describe rhizobia as plant-cell endosymbionts within
-        root nodules.
+      notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root
+        nodules.
     predicate_id: RO:0002327
   - subject: endosymbiosis_trait
     predicate: causes
@@ -57,8 +58,8 @@ causal_graphs:
       reduction in obligate endosymbionts.
     evidence:
     - reference: DOI:10.1038/nrmicro2670
-      notes: McCutcheon & Moran review extreme genome reduction in obligate
-        symbiotic bacteria.
+      notes: McCutcheon & Moran review extreme genome reduction in obligate symbiotic
+        bacteria.
     predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
@@ -72,4 +73,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (intracellular endosymbiosis / genome
     reduction) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007721×1).
   llm_assisted: true

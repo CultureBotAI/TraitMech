@@ -45,6 +45,7 @@ causal_graphs:
     label: salt-in strategy
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular inorganic salt accumulation for osmotic balance.
+    grounding: METPO:1007720
   - node_id: acidic_halophilic_proteins
     label: acidic halophilic proteins
     node_type: GENE_OR_PROTEIN
@@ -127,4 +128,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:54:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007720×1).
   llm_assisted: true
