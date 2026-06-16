@@ -98,6 +98,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.bbamem.2005.09.010
       snippet: promote proton capture and retention
       notes: Review supports proton capture/retention mechanisms in alkaline pH homeostasis.
+    predicate_id: METPO:2000208
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: alkaphilic_trait
@@ -161,4 +162,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000208×1).
   llm_assisted: true

@@ -105,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1016/S0005-2728(00)00285-1
       snippet: Na+ efflux
       notes: Supports sodium efflux through Na+/H+ antiporters.
+    predicate_id: METPO:2000209
   - subject: sodium_proton_antiporter
     predicate: accumulates
     object: proton
@@ -114,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1016/S0005-2728(00)00285-1
       snippet: net H+ accumulation
       notes: Supports proton accumulation by antiporters in alkaliphiles.
+    predicate_id: METPO:2000210
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: facultatively_alkaphilic_trait
@@ -188,4 +190,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 2 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000209×1, METPO:2000210×1).
   llm_assisted: true

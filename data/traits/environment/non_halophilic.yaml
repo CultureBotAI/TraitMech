@@ -110,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01934-12
       snippet: osmotically controlled uptake systems
       notes: Supports uptake systems for compatible solutes in Bacillus subtilis.
+    predicate_id: METPO:2000208
   - subject: proline
     predicate: enables tolerance of
     object: high_osmolarity
@@ -160,4 +161,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001657×1).
+  llm_assisted: true
+- timestamp: '2026-06-16T06:30:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000208×1).
   llm_assisted: true
