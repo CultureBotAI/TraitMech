@@ -58,6 +58,23 @@
           
           <li id="pathograph-1-edge-1">
             <strong>capsular polysaccharide assembly</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>capsular polysaccharide</strong>
+            <code>biolink:produces</code>
+            <p>Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev.biochem.75.103004.142545</code>
+                
+                <span class="meta">Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-2">
+            <strong>capsular polysaccharide assembly</strong>
             <span class="edge-predicate">enables</span>
             <strong>capsule</strong>
             <code>RO:0002327</code>
@@ -73,7 +90,7 @@
             </ul>
           </li>
           
-          <li id="pathograph-1-edge-2">
+          <li id="pathograph-1-edge-3">
             <strong>capsule</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>host immune evasion</strong>
@@ -235,6 +252,12 @@
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:3379×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-16T00:00:00Z</time> ·
+          <strong>FIX_ORPHAN_NODE</strong> · claude
+          <p class="changes">Connected the previously-orphaned capsular_polysaccharide node via a &#39;produces&#39; (biolink:produces) edge from capsule_assembly.</p>
         </li>
         
       </ol>
@@ -594,7 +617,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking capsular polysaccharide biosynthesis to a surface polysaccharide layer that mediates adhesion, desiccation resistance, and immune evasion.", "edges": [{"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "capsule_assembly", "target": "capsule_trait"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule_trait", "target": "immune_evasion"}], "evidence_rows": [{"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "capsular polysaccharide assembly", "target": "capsule"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "edge_id": "edge-2", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule", "target": "host immune evasion"}], "graph_id": "capsule_polysaccharide_protection", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Synthesis, export, and surface assembly of capsule polymers.", "grounding": null, "id": "capsule_assembly", "is_orphan": false, "label": "capsular polysaccharide assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a well-organized external polysaccharide layer.", "grounding": "traitmech:000063", "id": "capsule_trait", "is_orphan": false, "label": "capsule", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced recognition and clearance by host innate immunity.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "host immune evasion", "node_type": "QUALITY", "xrefs": []}], "title": "Capsule polysaccharide layer mediates adhesion and immune evasion"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking capsular polysaccharide biosynthesis to a surface polysaccharide layer that mediates adhesion, desiccation resistance, and immune evasion.", "edges": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsule_assembly", "target": "capsular_polysaccharide"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "capsule_assembly", "target": "capsule_trait"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule_trait", "target": "immune_evasion"}], "evidence_rows": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "edge_id": "edge-1", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsular polysaccharide assembly", "target": "capsular polysaccharide"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "capsular polysaccharide assembly", "target": "capsule"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "edge_id": "edge-3", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule", "target": "host immune evasion"}], "graph_id": "capsule_polysaccharide_protection", "issues": [], "nodes": [{"color": "#fef3c7", "description": "High-MW (often acidic) polysaccharide attached external to the cell envelope.", "grounding": "CHEBI:3379", "id": "capsular_polysaccharide", "is_orphan": false, "label": "capsular polysaccharide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis, export, and surface assembly of capsule polymers.", "grounding": null, "id": "capsule_assembly", "is_orphan": false, "label": "capsular polysaccharide assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a well-organized external polysaccharide layer.", "grounding": "traitmech:000063", "id": "capsule_trait", "is_orphan": false, "label": "capsule", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced recognition and clearance by host innate immunity.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "host immune evasion", "node_type": "QUALITY", "xrefs": []}], "title": "Capsule polysaccharide layer mediates adhesion and immune evasion"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,7 +628,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-16 06:55 UTC from
+    Built 2026-06-16 07:35 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%
