@@ -68,6 +68,14 @@ def main() -> int:
     ap.add_argument("--category", default="", help="restrict to one category")
     args = ap.parse_args()
 
+    # The Edison platform credential is provisioned as EDISON_PLATFORM_API_KEY
+    # (the name the edison_client SDK reads), but this harness's preflight and the
+    # research_trait.py subprocess it spawns (which inherits this env) read
+    # EDISON_API_KEY. Alias it so a run works regardless of which name is set —
+    # mirrors research_trait.py:research_env().
+    if not os.environ.get("EDISON_API_KEY") and os.environ.get("EDISON_PLATFORM_API_KEY"):
+        os.environ["EDISON_API_KEY"] = os.environ["EDISON_PLATFORM_API_KEY"]
+
     if not args.dry_run and not (os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
         print("ERROR: EDISON_API_KEY / FUTUREHOUSE_API_KEY unset — set it or use --dry-run.", file=sys.stderr)
         return 2
