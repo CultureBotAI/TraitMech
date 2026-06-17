@@ -9,9 +9,6 @@ mapping_status: REVIEWED
 parent_traits:
 - METPO:1000607
 synonyms:
-- synonym_text: strictly anaerobic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 - synonym_text: strict obligate anaerobe
   synonym_type: RELATED_SYNONYM
   source: https://www.ncbi.nlm.nih.gov/books/NBK482349/
@@ -133,4 +130,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

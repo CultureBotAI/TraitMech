@@ -12,9 +12,6 @@ synonyms:
 - synonym_text: moderate-halophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: moderately halophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 created_by: Anthea Guo
 evidence:
 - reference: PMID:9758852
@@ -140,4 +137,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006970×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

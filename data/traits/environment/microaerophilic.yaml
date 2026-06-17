@@ -15,9 +15,6 @@ synonyms:
 - synonym_text: microaerophile
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: microaerophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: https://www.ncbi.nlm.nih.gov/books/NBK154539/
   snippet: require oxygen to survive but require its presence in lower concentrations
@@ -137,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0000085×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

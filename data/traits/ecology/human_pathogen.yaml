@@ -7,10 +7,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
-synonyms:
-- synonym_text: human pathogen
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1146/annurev.micro.62.081307.162938
   snippet: virulence factors
@@ -122,4 +118,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×2).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

@@ -15,9 +15,6 @@ synonyms:
 - synonym_text: Physiology and metabolism.spore formation.spore formation
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: sporulation
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1146/annurev.genet.30.1.297
   snippet: conversion of a growing cell into a two-cell-chamber sporangium
@@ -157,4 +154,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:44Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

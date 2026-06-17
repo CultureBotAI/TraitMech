@@ -7,10 +7,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1004000
-synonyms:
-- synonym_text: plant pathogen
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1146/annurev.phyto.43.040204.135923
   snippet: type III secretion
@@ -165,4 +161,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

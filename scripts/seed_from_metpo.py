@@ -321,10 +321,21 @@ def to_record(curie: str, rec: dict[str, Any], category: str) -> dict[str, Any]:
     if rec["parents"]:
         out["parent_traits"] = sorted(set(rec["parents"]))
     if rec["synonyms"]:
-        out["synonyms"] = [
-            {"synonym_text": s["text"], "synonym_type": s["type"], "source": "metpo.owl"}
-            for s in rec["synonyms"]
-        ]
+        # Drop synonyms that merely duplicate the label (case-insensitive) —
+        # they carry no information beyond the label itself and are redundant
+        # noise per OBO convention. De-dupe repeated synonym_texts too.
+        _label_norm = (rec["label"] or "").strip().lower()
+        _seen: set[str] = set()
+        syn_out = []
+        for s in rec["synonyms"]:
+            txt = (s["text"] or "").strip()
+            key = txt.lower()
+            if not txt or key == _label_norm or key in _seen:
+                continue
+            _seen.add(key)
+            syn_out.append({"synonym_text": txt, "synonym_type": s["type"], "source": "metpo.owl"})
+        if syn_out:
+            out["synonyms"] = syn_out
     if rec["xrefs"]:
         out["xrefs"] = sorted(set(rec["xrefs"]))
     if rec["domain"]:

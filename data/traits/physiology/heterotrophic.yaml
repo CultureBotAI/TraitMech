@@ -18,9 +18,6 @@ synonyms:
 - synonym_text: heterotroph
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: heterotrophic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1016/B978-012373944-5.00083-3
   snippet: organic compounds as the primary sources of carbon
@@ -166,4 +163,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:72695×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:45Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

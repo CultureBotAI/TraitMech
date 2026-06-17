@@ -12,9 +12,6 @@ synonyms:
 - synonym_text: extreme thermophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: hyperthermophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1111/j.1574-6976.1996.tb00233.x
   snippet: optimal growth temperatures between 80°C and 110°C
@@ -165,4 +162,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

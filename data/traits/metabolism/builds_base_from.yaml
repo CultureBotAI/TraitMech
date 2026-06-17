@@ -8,10 +8,6 @@ term_kind: OBJECT_PROPERTY
 mapping_status: REVIEWED
 parent_traits:
 - METPO:2000001
-synonyms:
-- synonym_text: builds base from
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 domain: https://w3id.org/metpo/1000525
 range_: http://purl.obolibrary.org/obo/CHEBI_24431
 evidence:
@@ -39,4 +35,10 @@ curation_history:
   changes: 'Restored from DEPRECATED to REVIEWED under the predicate+class composition
     pattern (intended use: <organism> + this predicate + CHEBI chemical class). Added
     DOI/PMID-backed definition, evidence, and explicit domain/range slots.'
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:44Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

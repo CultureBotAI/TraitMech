@@ -13,9 +13,6 @@ synonyms:
 - synonym_text: extreme-halophilic
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: extremely halophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: PMID:11790755
@@ -134,4 +131,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007720×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

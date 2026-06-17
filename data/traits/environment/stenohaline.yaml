@@ -9,10 +9,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1000629
-synonyms:
-- synonym_text: stenohaline
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 created_by: Luke Wang
 evidence:
 - reference: DOI:10.1186/s40168-024-01817-w
@@ -149,4 +145,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true
