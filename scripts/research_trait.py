@@ -108,8 +108,19 @@ def provider_args(provider: str) -> list[str]:
 
 
 def research_env(provider: str) -> dict[str, str]:
-    """Build subprocess environment, including a FutureHouse Falcon key alias."""
+    """Build subprocess environment, aliasing Edison / Falcon keys to EDISON_API_KEY.
+
+    This script and the deep-research-client read ``EDISON_API_KEY``, but the
+    Edison platform credential is provisioned in the environment under
+    ``EDISON_PLATFORM_API_KEY`` (the name the ``edison_client`` SDK reads by
+    default) — and this script has no ``load_dotenv``, so a run outside ``just``
+    (whose ``dotenv-load`` injects the per-repo ``.env``) would otherwise see no
+    ``EDISON_API_KEY`` at all. Alias the platform key so research works on every
+    invocation path. FutureHouse Falcon uses its own key.
+    """
     env = os.environ.copy()
+    if not env.get("EDISON_API_KEY") and env.get("EDISON_PLATFORM_API_KEY"):
+        env["EDISON_API_KEY"] = env["EDISON_PLATFORM_API_KEY"]
     if provider == "falcon" and not env.get("EDISON_API_KEY") and env.get("FUTUREHOUSE_API_KEY"):
         env["EDISON_API_KEY"] = env["FUTUREHOUSE_API_KEY"]
     return env
