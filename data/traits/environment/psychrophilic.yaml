@@ -8,10 +8,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
-synonyms:
-- synonym_text: psychrophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1038/sj.embor.7400662
   snippet: growing well at temperatures around the freezing point of water
@@ -186,4 +182,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

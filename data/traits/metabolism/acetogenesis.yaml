@@ -13,9 +13,6 @@ synonyms:
 - synonym_text: Acetate fermentation
   synonym_type: RELATED_SYNONYM
   source: metpo.owl
-- synonym_text: acetogenesis
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1016/j.bbapap.2008.08.012
@@ -167,4 +164,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
     vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:44Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

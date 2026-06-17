@@ -8,10 +8,6 @@ term_kind: CLASS
 mapping_status: REVIEWED
 parent_traits:
 - METPO:1000613
-synonyms:
-- synonym_text: mesophilic
-  synonym_type: RELATED_SYNONYM
-  source: metpo.owl
 evidence:
 - reference: DOI:10.1016/j.bpj.2013.06.029
   snippet: Escherichia coli, a mesophilic bacterium
@@ -155,4 +151,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: membrane fluidity: BIOLOGICAL_PROCESS → QUALITY ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

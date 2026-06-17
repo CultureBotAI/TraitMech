@@ -12,9 +12,6 @@ synonyms:
 - synonym_text: obligate acidophile
   synonym_type: EXACT_SYNONYM
   source: metpo.owl
-- synonym_text: obligately acidophilic
-  synonym_type: EXACT_SYNONYM
-  source: metpo.owl
 created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.3389/fmicb.2021.822229
@@ -171,4 +168,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-17T04:09:43Z'
+  curator: claude
+  action: REMOVE_REDUNDANT_SYNONYM
+  changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
+    no information lost).
   llm_assisted: true

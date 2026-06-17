@@ -193,12 +193,10 @@
 
     
     <div class="card">
-      <h2>Synonyms (2)</h2>
+      <h2>Synonyms (1)</h2>
       <ul class="synonyms">
         
         <li>Acetate fermentation <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
-        
-        <li>acetogenesis <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
         
       </ul>
     </div>
@@ -333,6 +331,12 @@
           <time>2026-06-15T07:20:37Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -&gt; corrected, verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-17T04:09:44Z</time> ·
+          <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
+          <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
         </li>
         
       </ol>
@@ -703,7 +707,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-16 07:35 UTC from
+    Built 2026-06-17 04:10 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%
