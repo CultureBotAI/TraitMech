@@ -128,6 +128,12 @@ build-embeddings:
 gen-pages *args:
     /opt/homebrew/bin/python3.13 scripts/render_trait_pages.py {{args}}
 
+# QC coverage dashboard (shared kg_microbe_qc generator in culturebotai-claw).
+# Reads conf/qc_config.yaml; writes dashboard/index.html + coverage.png.
+gen-qc-dashboard:
+    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+      -m kg_microbe_qc --config conf/qc_config.yaml --output dashboard
+
 # ============== Deep Research ==============
 
 research_dir := "research"
