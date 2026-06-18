@@ -174,3 +174,32 @@ curation_history:
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-93e87bc8aba3
+  prompt: 'Knowledge gap for biosafety level: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:41494000
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.
+    explanation: Gap-signal sentence (explicit_gap, future_work, limitations_barriers) from the cited abstract.
+  - reference: PMID:41556562
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: This review outlines the possibilities, as well as the limitations of their use in food production.
+    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
+  - reference: PMID:41647993
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Given the knowledge gap on the characteristics and significance of microbiome in early-onset pancreatic ductal adenocarcinoma (eoPDAC, age 50 years).
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:41683313
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).'
+    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
+  posed_by: kg-microbe-kgscan

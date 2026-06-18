@@ -80,3 +80,32 @@ curation_history:
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007721×1).
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-a6758e26f5a6
+  prompt: 'Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:42130304
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:41612704
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Disrupting this obligate symbiosis represents a promising pest control strategy, yet the molecular mechanisms maintaining host-symbiont homeostasis remain poorly understood.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:40831140
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: This review explores the origin and evolution of plastids, their protein-import machinery, compartmentalization, and interactions with other cellular compartments, and highlights key unanswered questions in these areas.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:41764142
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Detritivorous E. murphyi larvae can increase soil nitrogen levels by up to five times compared with similar uncolonized substrates, although the mechanisms involved remain unknown.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  posed_by: kg-microbe-kgscan

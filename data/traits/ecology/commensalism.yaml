@@ -73,3 +73,32 @@ curation_history:
   changes: Added evidence-backed causal graph (commensalism / neutral host fitness)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-3606bdcc991b
+  prompt: 'Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:40945860
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.
+    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
+  - reference: PMID:40574831
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Emerging evidence suggests the gut microbiota plays a role in immune regulation, yet its impact on ITP remains unclear.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:42197356
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:41808832
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Given its promising anti-inflammatory properties, further research is warranted.
+    explanation: Gap-signal sentence (future_work) from the cited abstract.
+  posed_by: kg-microbe-kgscan
