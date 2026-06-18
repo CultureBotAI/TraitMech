@@ -29,7 +29,9 @@ import csv
 import os
 import subprocess
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import yaml
@@ -64,7 +66,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--limit", type=int, default=0, help="cap number of NEW calls (0 = all)")
-    ap.add_argument("--sleep", type=float, default=2.0, help="seconds between calls")
+    ap.add_argument("--sleep", type=float, default=2.0, help="seconds to stagger worker launches")
+    ap.add_argument("--workers", type=int, default=1, help="concurrent deep-research-client calls")
     ap.add_argument("--category", default="", help="restrict to one category")
     args = ap.parse_args()
 
@@ -97,27 +100,53 @@ def main() -> int:
     if new:
         w.writerow(["category", "slug", "status", "output"])
 
-    ok = fail = 0
-    for i, (cat, slug, label) in enumerate(pending, 1):
+    if args.dry_run:
+        for i, (cat, slug, label) in enumerate(pending, 1):
+            cmd = ["uv", "run", "python", "scripts/research_trait.py",
+                   "--provider", PROVIDER, "--category", cat, "--slug", slug]
+            print(f"[{i}/{len(pending)}] {cat}/{slug}  ({label})")
+            print("   " + " ".join(cmd))
+        mf.close()
+        return 0
+
+    lock = threading.Lock()
+    counts = {"ok": 0, "fail": 0, "started": 0}
+    total = len(pending)
+
+    def run_one(item: tuple[str, str, str]) -> None:
+        cat, slug, label = item
+        # Stagger launches so N workers don't all hit the API in the same instant.
+        with lock:
+            counts["started"] += 1
+            idx = counts["started"]
+        if args.sleep:
+            time.sleep(args.sleep * ((idx - 1) % max(args.workers, 1)))
         cmd = ["uv", "run", "python", "scripts/research_trait.py",
                "--provider", PROVIDER, "--category", cat, "--slug", slug]
-        print(f"[{i}/{len(pending)}] {cat}/{slug}  ({label})", file=sys.stderr)
-        if args.dry_run:
-            print("   " + " ".join(cmd))
-            continue
+        print(f"[start {idx}/{total}] {cat}/{slug}  ({label})", file=sys.stderr)
         try:
-            subprocess.run(cmd, check=True, cwd=REPO_ROOT)
-            w.writerow([cat, slug, "ok", str(output_path(cat, slug).relative_to(REPO_ROOT))]); mf.flush()
-            ok += 1
+            subprocess.run(cmd, check=True, cwd=REPO_ROOT,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            status, ok = "ok", True
         except subprocess.CalledProcessError as e:
-            w.writerow([cat, slug, f"fail:{e.returncode}", ""]); mf.flush()
-            fail += 1
-            print(f"   FAILED ({e.returncode})", file=sys.stderr)
-        if args.sleep:
-            time.sleep(args.sleep)
+            status, ok = f"fail:{e.returncode}", False
+        with lock:
+            counts["ok" if ok else "fail"] += 1
+            w.writerow([cat, slug, status,
+                        str(output_path(cat, slug).relative_to(REPO_ROOT)) if ok else ""])
+            mf.flush()
+            done = counts["ok"] + counts["fail"]
+            print(f"[done {done}/{total}] {cat}/{slug}  -> {status}  "
+                  f"(ok={counts['ok']} fail={counts['fail']})", file=sys.stderr)
+
+    with ThreadPoolExecutor(max_workers=max(args.workers, 1)) as ex:
+        futures = [ex.submit(run_one, item) for item in pending]
+        for _ in as_completed(futures):
+            pass
 
     mf.close()
-    print(f"\ndone: ok={ok} fail={fail} (skipped {done_already} already-researched)", file=sys.stderr)
+    print(f"\ndone: ok={counts['ok']} fail={counts['fail']} "
+          f"(skipped {done_already} already-researched)", file=sys.stderr)
     return 0
 
 
