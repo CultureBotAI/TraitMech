@@ -70,6 +70,64 @@
   </section>
   {% endif %}
 
+  {% if trait.datasets %}
+  <section class="datasets">
+    <div class="card">
+      <h2>Datasets <span class="meta">({{ trait.datasets|length }})</span></h2>
+      <table>
+        <thead><tr><th>Dataset</th><th>Type</th><th>Repository</th><th>Accession</th></tr></thead>
+        <tbody>
+        {% for ds in trait.datasets %}
+          <tr>
+            <td>{{ ds.title or ds.accession }}{% if ds.description %}<br><span class="meta">{{ ds.description }}</span>{% endif %}</td>
+            <td>{% if ds.dataset_type %}<code>{{ ds.dataset_type }}</code>{% endif %}</td>
+            <td>{{ ds.repository or '' }}</td>
+            <td>{% if ds.url %}<a href="{{ ds.url }}" rel="nofollow noreferrer">{{ ds.accession or ds.url }}</a>{% else %}{{ ds.accession or '' }}{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if trait.discussions %}
+  <section class="discussions">
+    <div class="card">
+      <h2>Knowledge gaps &amp; discussions <span class="meta">({{ trait.discussions|length }})</span></h2>
+      {% for d in trait.discussions %}
+      <div class="discussion">
+        <h3>{% if d.kind %}<code>{{ d.kind }}</code>{% endif %} {% if d.status %}<code>{{ d.status }}</code>{% endif %} {{ d.prompt }}</h3>
+        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
+        {% if d.attaches_to %}<p class="meta">Attaches to: {% for a in d.attaches_to %}<code>{{ a }}</code>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+        {% if d.proposed_experiments %}
+        <details>
+          <summary class="meta">{{ d.proposed_experiments|length }} proposed experiment(s)</summary>
+          {% for exp in d.proposed_experiments %}
+          <div class="meta"><strong>{{ exp.name or exp.experiment_id or 'Experiment ' ~ loop.index }}</strong>{% if exp.approach %} — {{ exp.approach }}{% endif %}{% if exp.decision_criterion %} (decision: {{ exp.decision_criterion }}){% endif %}</div>
+          {% endfor %}
+        </details>
+        {% endif %}
+        {% if d.evidence %}
+        <details>
+          <summary class="meta">{{ d.evidence|length }} evidence item(s)</summary>
+          {% for ev in d.evidence %}
+          <div class="edge-evidence">
+            {% if ev.supports %}<code>{{ ev.supports }}</code>{% endif %}
+            {% if ev.reference %}{% set ref = ev.reference %}{% if ref.startswith('PMID:') %}<a href="https://pubmed.ncbi.nlm.nih.gov/{{ ref|replace('PMID:','') }}/" rel="nofollow noreferrer">{{ ref }}</a>{% else %}{{ ref }}{% endif %}{% endif %}
+            {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
+            {% if ev.explanation %}<span class="meta">{{ ev.explanation }}</span>{% endif %}
+          </div>
+          {% endfor %}
+        </details>
+        {% endif %}
+        {% if d.resolution_note %}<p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <section class="grid">
     <div class="card">
       <h2>Provenance</h2>
