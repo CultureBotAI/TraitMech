@@ -78,3 +78,32 @@ curation_history:
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-e770cf01677c
+  prompt: 'Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:37362850
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:41914886
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:40044492
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:39682751
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.
+    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
+  posed_by: kg-microbe-kgscan

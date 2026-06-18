@@ -1,0 +1,470 @@
+{
+  "repo_name": "TraitMech",
+  "engine": "europepmc",
+  "records_scanned": 12,
+  "min_score": 18,
+  "proposed": 10,
+  "applied": 0,
+  "results": [
+    {
+      "name": "animal pathogen",
+      "record_id": "METPO:1004002",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/animal_pathogen.yaml",
+      "score": 30,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-30bcdf4a32b0",
+        "prompt": "Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:40891913",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Prokaryotes in such plastispheres are unknown to date.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42279816",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, in South America, their use is still limited because of complicated regulations and inconsistent evidence requirements.",
+            "explanation": "Gap-signal sentence (controversy_conflict) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41639266",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, the interacting effects of climate factors and seasonal variations in nutritional components on PMCs remain poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42197358",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "While plant growth-promoting bacteria (PGPB) are known to alleviate heavy metal toxicity, their role under MP-HM co-contamination and the differential responses of rhizosphere microbial communities remain unclear.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "biofilm formation",
+      "record_id": "traitmech:000053",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/biofilm_formation.yaml",
+      "score": 47,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-aa46cc9b34ab",
+        "prompt": "Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:42039744",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41245847",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.",
+            "explanation": "Gap-signal sentence (explicit_gap, future_work) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41661098",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42125129",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, contradictions persist regarding pH's effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "biosafety level",
+      "record_id": "METPO:1001101",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/biosafety_level.yaml",
+      "score": 50,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-93e87bc8aba3",
+        "prompt": "Knowledge gap for biosafety level: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:41494000",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.",
+            "explanation": "Gap-signal sentence (explicit_gap, future_work, limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41556562",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "This review outlines the possibilities, as well as the limitations of their use in food production.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41647993",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Given the knowledge gap on the characteristics and significance of microbiome in early-onset pancreatic ductal adenocarcinoma (eoPDAC, age 50 years).",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41683313",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).",
+            "explanation": "Gap-signal sentence (controversy_conflict) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "biosafety level 2",
+      "record_id": "METPO:1001103",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/biosafety_level_2.yaml",
+      "score": 27,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-066a51aacfb6",
+        "prompt": "Knowledge gap for biosafety level 2: Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:41683313",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).",
+            "explanation": "Gap-signal sentence (controversy_conflict) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41413233",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Recently, the gut microbiota (GM) has gained attention for its potential involvement in blood pressure regulation; however, polyamine metabolism involvement remains poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41640410",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, their clinical translation is hampered by challenges within the harsh gastrointestinal milieu, including low viability, poor colonization, and insufficient target specificity.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41490313",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, how these core strains interact with each other and with other gut microbes is largely unknown.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "biosafety level 3",
+      "record_id": "METPO:1001104",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/biosafety_level_3.yaml",
+      "score": 38,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-2ee31ba13f9c",
+        "prompt": "Knowledge gap for biosafety level 3: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:41494000",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.",
+            "explanation": "Gap-signal sentence (explicit_gap, future_work, limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:40514544",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Although T cells are essential for immunity to TB, the mechanisms that provide protective immunity are poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41552424",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "In the field of microbiological diagnosis, HTS provides a complementary or alternative approach to traditional diagnostic tests, particularly in cases with non-specific symptoms or when the etiology is unknown.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41917383",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "While its virulence genes critically regulate intracellular survival and replication, the molecular mechanisms underlying pathogenesis remain elusive.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "biosafety level 4",
+      "record_id": "METPO:1001105",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/biosafety_level_4.yaml",
+      "score": 31,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-e770cf01677c",
+        "prompt": "Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:37362850",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41914886",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:40044492",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:39682751",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "commensalism",
+      "record_id": "traitmech:000042",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/commensalism.yaml",
+      "score": 72,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-3606bdcc991b",
+        "prompt": "Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:40945860",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:40574831",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Emerging evidence suggests the gut microbiota plays a role in immune regulation, yet its impact on ITP remains unclear.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42197356",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41808832",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Given its promising anti-inflammatory properties, further research is warranted.",
+            "explanation": "Gap-signal sentence (future_work) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "endosymbiosis",
+      "record_id": "traitmech:000045",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/endosymbiosis.yaml",
+      "score": 42,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-a6758e26f5a6",
+        "prompt": "Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:42130304",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41612704",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Disrupting this obligate symbiosis represents a promising pest control strategy, yet the molecular mechanisms maintaining host-symbiont homeostasis remain poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:40831140",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "This review explores the origin and evolution of plastids, their protein-import machinery, compartmentalization, and interactions with other cellular compartments, and highlights key unanswered questions in these areas.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41764142",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Detritivorous E. murphyi larvae can increase soil nitrogen levels by up to five times compared with similar uncolonized substrates, although the mechanisms involved remain unknown.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "free-living",
+      "record_id": "traitmech:000048",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/free_living.yaml",
+      "score": 42,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-d5aefedf82bb",
+        "prompt": "Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:41989588",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42039802",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41943163",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.",
+            "explanation": "Gap-signal sentence (unclear_unknown) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42125129",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "However, contradictions persist regarding pH's effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    },
+    {
+      "name": "gut-associated",
+      "record_id": "traitmech:000052",
+      "file": "/private/tmp/r3-tm/conf/../data/traits/ecology/gut_associated.yaml",
+      "score": 65,
+      "write_status": "dedup",
+      "discussion": {
+        "discussion_id": "kgscan-4fc1a06fa1e3",
+        "prompt": "Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.",
+        "attaches_to": [],
+        "evidence": [
+          {
+            "reference": "PMID:40945860",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.",
+            "explanation": "Gap-signal sentence (limitations_barriers) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42278360",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "By integrating microbiological, immunological, and clinical perspectives, this review highlights key knowledge gaps and outlines future research directions aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management and eradication.",
+            "explanation": "Gap-signal sentence (explicit_gap, future_work) from the cited abstract."
+          },
+          {
+            "reference": "PMID:41808832",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Given its promising anti-inflammatory properties, further research is warranted.",
+            "explanation": "Gap-signal sentence (future_work) from the cited abstract."
+          },
+          {
+            "reference": "PMID:42197356",
+            "supports": "NO_EVIDENCE",
+            "evidence_source": "abstract",
+            "snippet": "Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.",
+            "explanation": "Gap-signal sentence (explicit_gap) from the cited abstract."
+          }
+        ],
+        "posed_by": "kg-microbe-kgscan"
+      }
+    }
+  ]
+}

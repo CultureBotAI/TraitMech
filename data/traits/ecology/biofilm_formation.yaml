@@ -74,3 +74,32 @@ curation_history:
   changes: Added evidence-backed causal graph (biofilm EPS matrix / community) with
     GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-aa46cc9b34ab
+  prompt: 'Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:42039744
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:41245847
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.
+    explanation: Gap-signal sentence (explicit_gap, future_work) from the cited abstract.
+  - reference: PMID:41661098
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  - reference: PMID:42125129
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, contradictions persist regarding pH's effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  posed_by: kg-microbe-kgscan
