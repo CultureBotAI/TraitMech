@@ -1,0 +1,58 @@
+# TraitMech QC config — drives the kg_microbe_qc dashboard generator
+# (lives in culturebotai-claw/src/kg_microbe_qc/; invoked via `just gen-qc-dashboard`).
+#
+# Each slot is checked against every TraitRecord YAML under data/traits (rglob
+# recurses category subdirs). threshold = coverage to pass (0.0-1.0);
+# required=true reports FAIL, false reports WARN.
+
+repo_name: TraitMech
+yaml_dir: ../data/traits
+pattern: "*.yaml"
+
+slots:
+  # core identity (must be 100%)
+  - path: identifier
+    threshold: 1.0
+    required: true
+  - path: label
+    threshold: 1.0
+    required: true
+  - path: term_kind
+    threshold: 1.0
+    required: true
+  - path: mapping_status
+    threshold: 1.0
+    required: true
+
+  # definition + provenance (high coverage expected)
+  - path: definition
+    threshold: 0.90
+    required: false
+  - path: definition_source
+    threshold: 0.80
+    required: false
+  - path: curation_history
+    threshold: 0.85
+    required: false
+
+  # graph + evidence (partial coverage acceptable; only CLASS traits carry graphs)
+  - path: causal_graphs
+    threshold: 0.40
+    required: false
+  - path: evidence
+    threshold: 0.40
+    required: false
+  - path: parent_traits
+    threshold: 0.60
+    required: false
+  - path: synonyms
+    threshold: 0.40
+    required: false
+
+  # new shared sections (no data yet → low bar, never blocking)
+  - path: datasets
+    threshold: 0.0
+    required: false
+  - path: discussions
+    threshold: 0.0
+    required: false
