@@ -70,3 +70,18 @@ remains.
   METPO maintainers minting.** When minted, run the documented round-trip (swap
   placeholder `1007xxx`/`2007xxx` for real CURIEs in `data/raw/metpo.owl` +
   groundings, re-seed).
+
+## Adopt DisMech knowledge-gaps + datasets + QC dashboard (claw#7)
+
+Coordinated cross-Mech adoption of DisMech's domain-general features. Full plan,
+locked decisions, and DisMech schema references live in culturebotai-claw#7 (the
+shared, pinned LinkML module is authored once and vendored across all four Mechs).
+This repo's slice:
+- Knowledge gaps — add a `discussions` slot (broad `Discussion` supertype; `kind`
+  incl. KNOWLEDGE_GAP / OPEN_QUESTION / CONTROVERSY / CURATION_TODO) to
+  `TraitRecord`, imported from the shared module; bind `attaches_to` anchors to
+  `causal_graphs#…` (pairs naturally with the existing evidence-backed causal
+  edges). Wire a `knowledge-gap-scan` recipe over the existing Edison harness.
+- Datasets — add the canonical shared `Dataset` slot (TraitMech models none today).
+- QC dashboard — adopt the generalized dashboard from Phase 3 (TraitMech currently
+  has only TSV/MD reports, no rendered dashboard).
