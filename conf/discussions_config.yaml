@@ -1,0 +1,7 @@
+# TraitMech discussions browser config — drives kg_microbe_discussions (in culturebotai-claw).
+repo_name: TraitMech
+record_glob: ../data/traits/**/*.yaml
+name_fields: [label, preferred_term, name]
+id_field: identifier
+discussions_field: discussions
+page_url_template: "../pages/traits/{category}/{stem}.html#{discussion_id}"

@@ -254,3 +254,9 @@ refresh-validator-pin:
         printf '%s  %s\n' "$h" "$f" >> scripts/.validate_id_label_correspondence.sha256
         echo "re-pinned $f to $h"
     done
+
+# Discussions / knowledge-gap browser (shared kg_microbe_discussions in claw).
+# Writes app/discussions/{index.html,data.js} from every record's discussions.
+gen-discussions-data:
+    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+      -m kg_microbe_discussions --config conf/discussions_config.yaml --output app/discussions
