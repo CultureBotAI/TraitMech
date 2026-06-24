@@ -167,3 +167,32 @@ curation_history:
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-066a51aacfb6
+  prompt: 'Knowledge gap for biosafety level 2: Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:41683313
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: 'Background : Untargeted microbiome modulation has achieved conflicting results in post-infectious irritable bowel syndrome (PI-IBS).'
+    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
+  - reference: PMID:41413233
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Recently, the gut microbiota (GM) has gained attention for its potential involvement in blood pressure regulation; however, polyamine metabolism involvement remains poorly understood.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:41640410
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, their clinical translation is hampered by challenges within the harsh gastrointestinal milieu, including low viability, poor colonization, and insufficient target specificity.
+    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
+  - reference: PMID:41490313
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, how these core strains interact with each other and with other gut microbes is largely unknown.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  posed_by: kg-microbe-kgscan

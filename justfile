@@ -128,6 +128,19 @@ build-embeddings:
 gen-pages *args:
     /opt/homebrew/bin/python3.13 scripts/render_trait_pages.py {{args}}
 
+# QC coverage dashboard (shared kg_microbe_qc generator in culturebotai-claw).
+# Reads conf/qc_config.yaml; writes dashboard/index.html + coverage.png.
+gen-qc-dashboard:
+    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+      -m kg_microbe_qc --config conf/qc_config.yaml --output dashboard
+
+# Knowledge-gap scan (Europe PMC, free) via shared kg_microbe_kgscan in claw.
+# Dry-run by default → reports/knowledge_gap_scan.{json,md}. Pass `--apply` (and
+# e.g. --limit/--min-score) to seed Discussion(kind=KNOWLEDGE_GAP) into records.
+knowledge-gap-scan *args:
+    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+      -m kg_microbe_kgscan --config conf/kgscan_config.yaml {{args}}
+
 # ============== Deep Research ==============
 
 research_dir := "research"
@@ -156,6 +169,27 @@ research-provider provider:
 
 # Composite: refresh METPO → seed → build embeddings → render pages.
 gen-site: seed-apply build-embeddings gen-pages
+
+# Durability guard for the shared LinkML module (Discussion + Dataset), vendored
+# byte-identical across the Mech repos — see culturebotai-claw#7.
+SHARED_SCHEMA_MODULE := "src/traitmech/schema/mech_shared.yaml"
+verify-schema-pin:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if command -v sha256sum >/dev/null 2>&1; then
+        sha256sum -c src/traitmech/schema/.mech_shared.sha256
+    else
+        shasum -a 256 -c src/traitmech/schema/.mech_shared.sha256
+    fi
+
+# Intentional sync only: re-pin after a deliberate, all-repos byte-identical update.
+refresh-schema-pin:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    f={{SHARED_SCHEMA_MODULE}}
+    if command -v sha256sum >/dev/null 2>&1; then h=$(sha256sum "$f" | cut -d' ' -f1); else h=$(shasum -a 256 "$f" | cut -d' ' -f1); fi
+    printf '%s  %s\n' "$h" "$f" > src/traitmech/schema/.mech_shared.sha256
+    echo "re-pinned $f to $h"
 
 # Run tests with coverage
 test:
@@ -220,3 +254,9 @@ refresh-validator-pin:
         printf '%s  %s\n' "$h" "$f" >> scripts/.validate_id_label_correspondence.sha256
         echo "re-pinned $f to $h"
     done
+
+# Discussions / knowledge-gap browser (shared kg_microbe_discussions in claw).
+# Writes app/discussions/{index.html,data.js} from every record's discussions.
+gen-discussions-data:
+    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+      -m kg_microbe_discussions --config conf/discussions_config.yaml --output app/discussions

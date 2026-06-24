@@ -283,3 +283,32 @@ curation_history:
   changes: Added 11 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-30bcdf4a32b0
+  prompt: 'Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:40891913
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Prokaryotes in such plastispheres are unknown to date.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:42279816
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, in South America, their use is still limited because of complicated regulations and inconsistent evidence requirements.
+    explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
+  - reference: PMID:41639266
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: However, the interacting effects of climate factors and seasonal variations in nutritional components on PMCs remain poorly understood.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  - reference: PMID:42197358
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: While plant growth-promoting bacteria (PGPB) are known to alleviate heavy metal toxicity, their role under MP-HM co-contamination and the differential responses of rhizosphere microbial communities remain unclear.
+    explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
+  posed_by: kg-microbe-kgscan

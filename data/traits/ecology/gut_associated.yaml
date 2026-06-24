@@ -178,3 +178,32 @@ curation_history:
   changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
   llm_assisted: true
+discussions:
+- discussion_id: kgscan-4fc1a06fa1e3
+  prompt: 'Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.'
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  attaches_to: []
+  evidence:
+  - reference: PMID:40945860
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.
+    explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
+  - reference: PMID:42278360
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: By integrating microbiological, immunological, and clinical perspectives, this review highlights key knowledge gaps and outlines future research directions aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management and eradication.
+    explanation: Gap-signal sentence (explicit_gap, future_work) from the cited abstract.
+  - reference: PMID:41808832
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Given its promising anti-inflammatory properties, further research is warranted.
+    explanation: Gap-signal sentence (future_work) from the cited abstract.
+  - reference: PMID:42197356
+    supports: NO_EVIDENCE
+    evidence_source: abstract
+    snippet: Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.
+    explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
+  posed_by: kg-microbe-kgscan
