@@ -50,6 +50,7 @@ causal_graphs:
     label: unsaturated fatty acids
     node_type: CHEMICAL
     description: Unsaturated acyl chains that lower membrane melting point.
+    grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity at low temperature
     node_type: QUALITY
@@ -73,6 +74,7 @@ causal_graphs:
     label: glycine betaine
     node_type: CHEMICAL
     description: Compatible solute stabilizing proteins and membranes under cold stress.
+    grounding: CHEBI:17750
   - node_id: protein_membrane_stabilization
     label: protein and membrane stabilization under cold stress
     node_type: BIOLOGICAL_PROCESS
@@ -190,6 +192,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: AFPs lower freezing point via thermal hysteresis
+    predicate_id: biolink:causes
   - subject: enzyme_structural_flexibility
     predicate: increases
     object: catalytic_activity_low_temperature
@@ -199,6 +202,7 @@ causal_graphs:
     - reference: DOI:10.17159/sajs.2018/20170254
       notes: Cold-adapted enzymes display increased structural flexibility and higher
         catalytic efficiency
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818713+00:00'
   curator: seed_from_metpo
@@ -234,4 +238,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (13 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1, CHEBI:17750×1).
   llm_assisted: true

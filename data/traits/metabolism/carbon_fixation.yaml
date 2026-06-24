@@ -50,6 +50,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Dissolved inorganic carbon species; substrate/intermediate in carbon
       fixation.
+    grounding: CHEBI:17544
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -75,6 +76,7 @@ causal_graphs:
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
     description: Reductive acetyl-CoA autotrophic carbon-fixation pathway.
+    grounding: GO:0030634
   - node_id: acetyl_coa
     label: acetyl-CoA
     node_type: CHEMICAL
@@ -87,10 +89,12 @@ causal_graphs:
     label: NADPH
     node_type: CHEMICAL
     description: Reducing-equivalent cofactor consumed by carbon-fixation pathways.
+    grounding: CHEBI:16474
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: CHEMICAL
     description: Low-potential electron carrier required by the reverse TCA cycle.
+    grounding: CHEBI:17513
   - node_id: atp_citrate_lyase
     label: ATP citrate lyase (aclAB)
     node_type: GENE_OR_PROTEIN
@@ -138,6 +142,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40643-023-00705-9
       notes: 'Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.'
+    predicate_id: biolink:consumes
   - subject: cbb_cycle
     predicate: consumes
     object: nadph
@@ -145,6 +150,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40643-023-00705-9
       notes: 'Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.'
+    predicate_id: biolink:consumes
   - subject: rtca_cycle
     predicate: requires
     object: reduced_ferredoxin
@@ -176,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-024-01704-y
       notes: 'Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to
         run the TCA cycle in reverse.'
+    predicate_id: RO:0002327
   - subject: carbonic_anhydrase
     predicate: produces
     object: bicarbonate
@@ -184,6 +191,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       notes: Connecting edge wiring the enrichment node into the graph.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -209,4 +217,22 @@ curation_history:
   action: FIX_ORPHAN_NODE
   changes: Connected orphaned node 'bicarbonate' via carbonic_anhydrase -[produces]->
     bicarbonate.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:consumes×2, RO:0002327×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0030634×1, CHEBI:16474×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17544×1, CHEBI:17513×1).
   llm_assisted: true

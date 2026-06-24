@@ -67,6 +67,7 @@ causal_graphs:
     label: Mg2+
     node_type: CHEMICAL
     description: Magnesium ion, an environmental modifier of cell-wall hydrolase activity.
+    grounding: CHEBI:18420
   edges:
   - subject: mreb_cytoskeleton
     predicate: enables
@@ -103,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: MreC favors the open, active PBP2 state; PBP2 suppressor alleles bypass
         defective MreC and increase polymerization activity (conserved Rod complex).
+    predicate_id: RO:0002213
   - subject: roda_pbp2_open
     predicate: increases
     object: pg_polymerization_crosslinking
@@ -112,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Structural opening couples activation of polymerization and crosslinking;
         open-state mutants show stronger polymerization (conserved SEDS-bPBP systems).
+    predicate_id: RO:0002213
   - subject: pg_polymerization_crosslinking
     predicate: contributes to
     object: rod_complex_pg
@@ -121,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Open-state activation links RodA-PBP2 conformation to peptidoglycan synthetic
         output of the Rod complex.
+    predicate_id: RO:0002326
   - subject: mreb_cytoskeleton
     predicate: required for
     object: rod_diameter_control
@@ -138,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2018.02.050
       notes: Width/diameter control governs the steady-state rod radius producing
         the narrow width phenotype.
+    predicate_id: METPO:2000202
   - subject: magnesium_ion
     predicate: inhibits
     object: pg_hydrolase_activity
@@ -146,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-04294-5
       notes: Exogenous Mg2+ inhibits autolysins/CW hydrolases and compensates increased
         DL-endopeptidase activity (clearest environmental modifier edge).
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921682+00:00'
   curator: seed_from_metpo
@@ -181,4 +187,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002326×1, METPO:2000202×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18420×1).
   llm_assisted: true

@@ -40,6 +40,7 @@ causal_graphs:
     label: pyruvate
     node_type: CHEMICAL
     description: Central glycolytic intermediate feeding fermentation branches.
+    grounding: CHEBI:15361
   - node_id: pyruvate_formate_lyase
     label: pyruvate formate lyase (PflB)
     node_type: GENE_OR_PROTEIN
@@ -68,10 +69,12 @@ causal_graphs:
     label: carbon dioxide
     node_type: CHEMICAL
     description: Gas product of formate disproportionation.
+    grounding: CHEBI:16526
   - node_id: hydrogen
     label: molecular hydrogen
     node_type: CHEMICAL
     description: Gas product of formate disproportionation by FHL.
+    grounding: CHEBI:18276
   - node_id: acidic_conditions
     label: acidic conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -125,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1128/iai.00176-23
       notes: Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into
         formate and acetyl-CoA.
+    predicate_id: METPO:2000202
   - subject: pta_acka
     predicate: converts
     object: acetate
@@ -148,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01472-24
       notes: Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase
         complex via FdhF and hydrogenase 3 (HycE).
+    predicate_id: METPO:2000202
   - subject: fhl_complex
     predicate: produces
     object: co2
@@ -156,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01472-24
       notes: Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase
         complex.
+    predicate_id: METPO:2000202
   - subject: acidic_conditions
     predicate: positively regulates
     object: fhl_complex
@@ -171,6 +177,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.35812/cellulosechemtechnol.2024.58.90
       notes: The presence of oxygen prevents the generation of hydrogen.
+    predicate_id: RO:0002212
   - subject: mixed_acid_fermentation_trait
     predicate: lowers
     object: cytoplasm_ph
@@ -186,6 +193,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2021.703525
       notes: Connecting edge wiring the enrichment node into the graph.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -210,4 +218,22 @@ curation_history:
   action: FIX_ORPHAN_NODE
   changes: Connected orphaned node 'acetyl_coa' via pyruvate_formate_lyase -[produces]->
     acetyl_coa.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×4, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16526×1, CHEBI:18276×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15361×1).
   llm_assisted: true

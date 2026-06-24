@@ -99,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: Organisms can obtain energy by completely oxidizing organic compounds
         to CO2 with Fe(III) or Mn(IV) as the sole acceptor.
+    predicate_id: rdfs:subClassOf
   - subject: organic_matter_oxidation
     predicate: coupled to
     object: ferric_iron
@@ -143,4 +144,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1).
   llm_assisted: true

@@ -59,6 +59,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Physical fluidity/viscosity state of the cell membrane lipid bilayer.
+    grounding: METPO:1007505
   - node_id: branched_chain_amino_acids
     label: branched-chain amino acids
     node_type: CHEMICAL
@@ -116,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Membrane rigidification and increased thickness act as the primary physical
         signal upon cooling.
+    predicate_id: biolink:causes
   - subject: fatty_acid_desaturation
     predicate: increases
     object: membrane_fluidity
@@ -125,6 +127,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Desaturation fluidizes the membrane and reduces thickness; strong and
         broadly conserved principle.
+    predicate_id: RO:0002213
   - subject: anteiso_branched_fatty_acids
     predicate: increases
     object: membrane_fluidity
@@ -134,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.3390/cells12101353
       notes: Anteiso-BCFAs are more effective at fluidizing membranes than iso-BCFAs;
         generalizable across many Gram-positives.
+    predicate_id: RO:0002213
   - subject: branched_chain_amino_acids
     predicate: precursor for
     object: anteiso_branched_fatty_acids
@@ -184,4 +188,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

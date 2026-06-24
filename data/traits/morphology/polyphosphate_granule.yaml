@@ -92,6 +92,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3002558
       notes: Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism
         edge.
+    predicate_id: METPO:2000007
   - subject: inorganic_polyphosphate
     predicate: binds
     object: divalent_cations
@@ -110,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom14080937
       notes: PolyP serves as phosphate/energy storage and supports survival in stationary
         phase and nutrient starvation; ppk mutants show stress sensitivity.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -128,4 +130,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000007×1).
   llm_assisted: true

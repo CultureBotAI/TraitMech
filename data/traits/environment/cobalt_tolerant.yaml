@@ -111,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms26125716
       notes: CzcCBA, an RND-superfamily chemiosmotic divalent cation/proton antiporter,
         deals with the efflux of Cd2+, Zn2+, and Co2+.
+    predicate_id: METPO:2000209
   - subject: czcRS_two_component
     predicate: activates transcription of
     object: czcCBA_expression
@@ -127,6 +128,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/ijms26125716
       notes: czcCBA encodes the CzcCBA system mediating Co2+ efflux.
+    predicate_id: RO:0002327
   - subject: cnr_operon
     predicate: confers resistance to
     object: cobalt_tolerant_trait
@@ -143,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.1007/s44274-025-00301-y
       notes: Co2+ is the preferred substrate for the DmeF protein in Cupriavidus metallidurans
         CH34.
+    predicate_id: METPO:2000209
   - subject: rcnA_exporter
     predicate: enables
     object: cobalt_export
@@ -153,6 +156,7 @@ causal_graphs:
       notes: yohM encodes a membrane-bound polypeptide conferring increased nickel
         and cobalt resistance in E. coli; YohM is the first described efflux system
         for nickel and cobalt in E. coli.
+    predicate_id: RO:0002327
   - subject: cobalt_export
     predicate: contributes to
     object: cobalt_homeostasis
@@ -162,6 +166,7 @@ causal_graphs:
     - reference: DOI:10.1093/mtomcs/mfae058
       notes: Czc-CBA proteins were also present in control cells cultivated without
         added metals so that Czc has also a function in metal homeostasis.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -180,4 +185,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000209×2, RO:0002327×2, RO:0002326×1).
   llm_assisted: true

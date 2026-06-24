@@ -114,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules29102293
       notes: PHA accumulation is stimulated by a high C/N ratio, depletion of N, S,
         and P, or a low rate of respiration.
+    predicate_id: RO:0002213
   - subject: nutrient_limitation_high_cn
     predicate: induces
     object: pha_accumulation
@@ -129,6 +130,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/polym15143027
       notes: PhbC polymerizing beta-hydroxybutyryl-CoA into PHB.
+    predicate_id: biolink:catalyzes
   - subject: phasin_phap
     predicate: stabilizes
     object: polyhydroxyalkanoate
@@ -143,6 +145,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/polym15143027
       notes: Phasins control the size of the PHB granules.
+    predicate_id: RO:0002211
   - subject: phar_regulator
     predicate: represses transcription of
     object: phap_gene
@@ -185,4 +188,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, biolink:catalyzes×1, RO:0002211×1).
   llm_assisted: true

@@ -125,6 +125,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/spectrum.00732-24
       notes: to retain the CV-iodide complex, resulting in the loss of the CV
+    predicate_id: METPO:2000017
   - subject: cv_iodide_complex_retention
     predicate: regulates
     object: crystal_violet_retention_loss
@@ -134,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.00732-24
       notes: Reduced CV-iodide complex retention underlies the loss of crystal violet
         during decolorization.
+    predicate_id: RO:0002211
   - subject: cell_wall_deficient_forms
     predicate: produces
     object: mixed_staining
@@ -143,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.1101/2023.11.16.566987
       notes: mechanisms that can produce cell-wall alterations or loss that would
         lead to mixed Gram reactions in a single culture
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo
@@ -190,4 +193,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×1, RO:0002211×1, METPO:2000202×1).
   llm_assisted: true

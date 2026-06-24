@@ -65,10 +65,12 @@ causal_graphs:
     label: electron transport chain
     node_type: PATHWAY
     description: Membrane redox chain transferring electrons to terminal acceptors.
+    grounding: GO:0022900
   - node_id: atp_synthesis
     label: ATP synthesis
     node_type: BIOLOGICAL_PROCESS
     description: Formation of ATP coupling energy metabolism to cellular work.
+    grounding: GO:0006754
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -77,6 +79,7 @@ causal_graphs:
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key CBB enzyme.
+    grounding: UniProtKB:A0A075WF79
   - node_id: cbb_cycle
     label: Calvin-Benson-Bassham cycle
     node_type: PATHWAY
@@ -166,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.02177-23
       notes: Proton-pump rhodopsin acts as a photosystem-independent proton pump creating
         a proton gradient.
+    predicate_id: biolink:produces
   - subject: rubisco
     predicate: enables
     object: cbb_cycle
@@ -173,6 +177,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00599-24
       notes: MAGs encode Form II RuBisCO (rbcL/cbbM) and a full CBB cycle.
+    predicate_id: RO:0002327
   - subject: cbb_cycle
     predicate: fixes
     object: carbon_dioxide
@@ -257,4 +262,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0022900×1, UniProtKB:A0A075WF79×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006754×1).
   llm_assisted: true

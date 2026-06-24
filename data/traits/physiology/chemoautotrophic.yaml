@@ -73,6 +73,7 @@ causal_graphs:
     node_type: ORGANELLE
     description: Bacterial microcompartment that encapsulates RuBisCO and carbonic
       anhydrase to concentrate CO2.
+    grounding: GO:0031470
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -83,6 +84,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Dissolved inorganic carbon species imported and converted to CO2
       for fixation.
+    grounding: CHEBI:17544
   - node_id: dic_transporter
     label: dissolved inorganic carbon transporter
     node_type: GENE_OR_PROTEIN
@@ -208,6 +210,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/AEM.01075-24
       notes: Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.
+    predicate_id: METPO:2000202
   - subject: carbonic_anhydrase
     predicate: uses substrate
     object: bicarbonate
@@ -223,6 +226,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/AEM.01075-24
       notes: CCMs consist of CO2 and HCO3- transporters and carboxysomes.
+    predicate_id: RO:0002327
   - subject: carbon_concentrating_mechanism
     predicate: enables
     object: calvin_benson_cycle
@@ -232,6 +236,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01075-24
       notes: CCMs consisting of transporters and carboxysomes concentrate CO2 for
         RubisCO-mediated fixation.
+    predicate_id: RO:0002327
   - subject: calvin_benson_cycle
     predicate: enables
     object: inorganic_carbon_assimilation
@@ -240,6 +245,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1101/2024.08.01.606197
       notes: The CBB cycle accounts for >99% of global autotrophy and is used in chemolithoautotrophs.
+    predicate_id: RO:0002327
   - subject: carbon_dioxide
     predicate: fixed by
     object: hp_hb_cycle
@@ -249,6 +255,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-024-06432-x
       notes: Currently considered the most energy-efficient aerobic carbon fixation
         pathway.
+    predicate_id: METPO:2007404
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869416+00:00'
   curator: seed_from_metpo
@@ -314,4 +321,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, METPO:2000202×1, METPO:2007404×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031470×1, CHEBI:17544×1).
   llm_assisted: true

@@ -104,6 +104,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-026-71228-y
       notes: Spontaneous cytosine deamination produces unrepaired uracil read as thymine,
         causing G->A transitions (pages 6-7).
+    predicate_id: RO:0002326
   - subject: udg_loss
     predicate: causally promotes
     object: gc_high_trait
@@ -151,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-026-71228-y
       notes: Substitution of third codon positions with AT-rich nucleotides identified
         as a principal driver of decreased GC (pages 9-10).
+    predicate_id: RO:0002326
   - subject: purifying_selection_bgc
     predicate: opposes
     object: gc_high_trait
@@ -184,4 +186,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2).
   llm_assisted: true

@@ -117,6 +117,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40793-024-00643-9
       notes: narG (NO3- reductase) supports the canonical first step of denitrification.
+    predicate_id: RO:0002327
   - subject: nirs
     predicate: enables
     object: nitrite_reduction_to_no
@@ -125,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.1093/ismeco/ycae020
       notes: Nitrite is reduced to gaseous NO by nitrite reductases including cytochrome
         cd1 NirS; strong general mechanistic support.
+    predicate_id: RO:0002327
   - subject: nor
     predicate: enables
     object: no_reduction_to_n2o
@@ -133,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1218207
       notes: NO reductase (NOR), encoded by norB, reduces NO to N2O; canonical N2O-producing
         step.
+    predicate_id: RO:0002327
   - subject: nosz
     predicate: enables
     object: n2o_reduction_to_n2
@@ -141,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1218207
       notes: N2O reductase (NOS) catalyzes reduction of N2O to N2; canonical terminal
         step.
+    predicate_id: RO:0002327
   - subject: nosz
     predicate: part_of
     object: denitrification_trait
@@ -164,6 +168,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-51688-w
       notes: The modular nature of the denitrification pathway affects phenotypes
         and transient accumulation of intermediates.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -183,4 +188,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×4, biolink:causes×1).
   llm_assisted: true

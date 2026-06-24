@@ -54,6 +54,7 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: The extracellular matrix (ECM) that is the defining hallmark of bacterial
       biofilms.
+    grounding: GO:0031012
   - node_id: c_di_gmp
     label: bis(3'-5')-cyclic dimeric GMP (c-di-GMP)
     node_type: CHEMICAL
@@ -67,6 +68,7 @@ causal_graphs:
     label: nitric oxide
     node_type: CHEMICAL
     description: Signaling molecule that induces biofilm dispersal at low concentrations.
+    grounding: CHEBI:16480
   - node_id: biofilm_dispersal
     label: biofilm dispersal
     node_type: BIOLOGICAL_PROCESS
@@ -129,6 +131,7 @@ causal_graphs:
       notes: 'Wang et al.: c-di-GMP modulated EPS synthesis and flagellar motility,
         facilitating the transition from planktonic to sessile state. Broadly accepted
         central regulator.'
+    predicate_id: RO:0002213
   - subject: sessile_state
     predicate: enables
     object: biofilm_formation_process
@@ -136,6 +139,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/w17131944
       notes: 'Wang et al.: transition to the sessile state underlies biofilm formation.'
+    predicate_id: RO:0002327
   - subject: nitric_oxide
     predicate: induces
     object: biofilm_dispersal
@@ -170,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.3390/bacteria3030008
       notes: 'Erkihun et al.: QS signals (AHLs, AIPs, AI-2) participate in biofilm
         formation.'
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -189,32 +194,54 @@ curation_history:
   changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002327×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031012×1, CHEBI:16480×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-aa46cc9b34ab
-  prompt: 'Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.'
+  prompt: 'Knowledge gap for biofilm formation: How immune homeostasis is maintained
+    in this constantly challenged environment remains however a central and largely
+    unanswered question.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
+    future_work, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:42039744
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.
+    snippet: How immune homeostasis is maintained in this constantly challenged environment
+      remains however a central and largely unanswered question.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   - reference: PMID:41245847
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.
+    snippet: We present a research agenda identifying key research gaps and organizing
+      them into priority areas to guide future investigations in this high-risk population.
     explanation: Gap-signal sentence (explicit_gap, future_work) from the cited abstract.
   - reference: PMID:41661098
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.
+    snippet: Finally, we identify major knowledge gaps and research priorities necessary
+      to advance a more integrated understanding of maternal microbial influences
+      on reproductive and neonatal health.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   - reference: PMID:42125129
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, contradictions persist regarding pH's effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.
+    snippet: However, contradictions persist regarding pH's effect on microbial diversity,
+      with unresolved questions about how specific environmental conditions regulate
+      microbial taxa.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   posed_by: kg-microbe-kgscan

@@ -67,6 +67,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Residual respiratory ATP synthesis maintaining proton motive force
       in persisters.
+    grounding: GO:0006119
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -134,6 +135,7 @@ causal_graphs:
       notes: Persisters still actively generated PMF by undergoing a certain level
         of oxidative phosphorylation, even after complete nutrient starvation for
         24 h.
+    predicate_id: RO:0002327
   - subject: oxidative_phosphorylation
     predicate: results in
     object: proton_motive_force
@@ -161,4 +163,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006119×1).
   llm_assisted: true

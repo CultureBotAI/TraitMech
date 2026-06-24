@@ -50,6 +50,7 @@ causal_graphs:
     label: plant tissue colonization
     node_type: BIOLOGICAL_PROCESS
     description: Establishment of microbial growth in plant tissues.
+    grounding: GO:0140649
   - node_id: plant_disease
     label: plant disease
     node_type: BIOLOGICAL_PROCESS
@@ -59,10 +60,12 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell-density-dependent signaling (e.g., AHL, DSF) coordinating group
       behaviors in bacterial pathogens.
+    grounding: GO:0009372
   - node_id: biofilm_formation
     label: biofilm formation
     node_type: BIOLOGICAL_PROCESS
     description: Formation of structured surface-attached microbial communities.
+    grounding: GO:0042710
   - node_id: eps_production
     label: exopolysaccharide production
     node_type: BIOLOGICAL_PROCESS
@@ -73,6 +76,7 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Plant-type cell wall, the structural barrier degraded during host
       invasion.
+    grounding: GO:0009505
   - node_id: apoplastic_effector_secretion
     label: ER-Golgi apoplastic effector secretion
     node_type: BIOLOGICAL_PROCESS
@@ -167,6 +171,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/plants12112207
       notes: EPS form the matrix of cooperative biofilms in plant-pathogenic bacteria.
+    predicate_id: RO:0002327
   - subject: cwd_enzymes
     predicate: degrades
     object: plant_cell_wall
@@ -175,6 +180,7 @@ causal_graphs:
     - reference: DOI:10.21608/mb.2024.307263.1134
       notes: Secretion of cell-wall-degrading enzymes (pectinase, chitinase, cellulase,
         protease) that enable invasion and colonization.
+    predicate_id: METPO:2000007
   - subject: apoplastic_effector_secretion
     predicate: delivers
     object: apoplastic_effectors
@@ -192,6 +198,7 @@ causal_graphs:
     - reference: DOI:10.1094/MPMI-12-23-0212-CR
       notes: Apoplastic effectors delivered to the host act to subvert plant defenses
         and permit infection.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949239+00:00'
   curator: seed_from_metpo
@@ -252,4 +259,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0140649×1, GO:0009372×1, GO:0042710×1, GO:0009505×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:36Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000007×1).
   llm_assisted: true

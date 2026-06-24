@@ -123,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00145-24
       notes: simultaneously accumulating compatible solutes and K+; general osmoadaptation
         edge
+    predicate_id: RO:0002326
   - subject: compatible_solute_strategy
     predicate: characterizes
     object: halotolerant_and_moderate_halophiles
@@ -155,4 +156,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

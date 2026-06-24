@@ -43,6 +43,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of polyunsaturated fatty acids incorporated into membrane
       lipids.
+    grounding: GO:0006636
   - node_id: membrane_fluidity_hhp
     label: membrane fluidity under high hydrostatic pressure
     node_type: QUALITY
@@ -98,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure;
         broad mechanism across taxa.
+    predicate_id: RO:0002213
   - subject: unsaturated_membrane_lipids
     predicate: positively regulates
     object: pressure_range_trait
@@ -158,4 +160,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006636×1).
   llm_assisted: true

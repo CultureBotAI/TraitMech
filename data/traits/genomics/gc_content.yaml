@@ -90,6 +90,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Error-prone DNA synthesis past lesions by specialized polymerases,
       causally linked to increased genomic GC.
+    grounding: GO:0042276
   edges:
   - subject: genomic_dna
     predicate: carries
@@ -178,6 +179,7 @@ causal_graphs:
       snippet: cytosine deamination reduces the GC content
       notes: Strong mechanistic statement from bacterial comparative study; general
         mutation-bias edge.
+    predicate_id: RO:0002212
   - subject: guanine_oxidation
     predicate: decreases
     object: gc_content_trait
@@ -188,6 +190,7 @@ causal_graphs:
       snippet: guanine oxidation (8OG) causes A mis-pairing
       notes: Source-backed oxidative-damage mechanism shifting the mutational spectrum
         toward AT.
+    predicate_id: RO:0002212
   - subject: dna_repair_replication_system
     predicate: causes
     object: gc_content_trait
@@ -199,6 +202,7 @@ causal_graphs:
         biases that shaped GC-content evolution
       notes: Core, directly stated high-level mechanistic edge for the mutation-bias
         module.
+    predicate_id: biolink:causes
   - subject: translesion_synthesis
     predicate: increases
     object: gc_content_trait
@@ -210,6 +214,7 @@ causal_graphs:
         GC
       notes: Direction explicit in comparative study; complements existing mutation-bias
         drivers.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811180+00:00'
   curator: seed_from_metpo
@@ -246,4 +251,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2, biolink:causes×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042276×1).
   llm_assisted: true

@@ -136,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad062
       notes: pH homeostasis mediated by the proton-translocating F1F0-ATPase; general
         across taxa.
+    predicate_id: RO:0002326
   - subject: acidic_external_ph
     predicate: induces
     object: amino_acid_decarboxylase_systems
@@ -153,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad062
       notes: amino-acid decarboxylase systems that consume protons and raise cytoplasmic
         alkalinity.
+    predicate_id: RO:0002327
   - subject: amino_acid_decarboxylation
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -161,6 +163,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuad062
       notes: consume protons and raise cytoplasmic alkalinity.
+    predicate_id: RO:0002326
   - subject: na_h_antiport
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -170,6 +173,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Na+/H+ antiporters (notably the multicomponent Mrp system) are the major
         mechanism for alkaliphile pH homeostasis.
+    predicate_id: RO:0002326
   - subject: proton_consuming_reaction_genes
     predicate: associated with
     object: acidic_external_ph
@@ -179,6 +183,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.adf8998
       notes: proton-consuming reactions (decarboxylases, deaminases) consistently
         associated with pH preference across environments.
+    predicate_id: biolink:associated_with
   - subject: na_h_antiporter_genes
     predicate: associated with
     object: alkaline_external_ph
@@ -188,6 +193,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.adf8998
       notes: Na+/H+ antiporters PhaGF, MnhG, MrpF, YufB associated with higher pH
         preference.
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936639+00:00'
   curator: seed_from_metpo
@@ -253,4 +259,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×3, biolink:associated_with×2, RO:0002327×1).
   llm_assisted: true

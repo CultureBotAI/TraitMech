@@ -60,6 +60,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Environmental pH affecting hydrogenase activity and fermentative
       H2 yield.
+    grounding: PATO:0001842
   edges:
   - subject: fermentative_h2_trait
     predicate: participates in
@@ -86,6 +87,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/en16083321
       notes: '[FeFe]-hydrogenases explicitly noted as producers of H2 in dark fermentation.'
+    predicate_id: METPO:2000202
   - subject: low_h2_partial_pressure
     predicate: stimulates
     object: fermentative_h2_trait
@@ -101,6 +103,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00634-23
       notes: High H2 inhibited H2 formation.
+    predicate_id: RO:0002212
   - subject: environmental_ph
     predicate: affects
     object: fermentative_h2_trait
@@ -128,4 +131,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001842×1).
   llm_assisted: true

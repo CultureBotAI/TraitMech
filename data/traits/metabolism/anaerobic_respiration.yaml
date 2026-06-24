@@ -73,11 +73,13 @@ causal_graphs:
     label: nitrate
     node_type: CHEMICAL
     description: Oxidized nitrogen oxyanion reduced to nitrite during nitrate respiration.
+    grounding: CHEBI:17632
   - node_id: nitrite
     label: nitrite
     node_type: CHEMICAL
     description: Reduced product of nitrate reduction and substrate for subsequent
       denitrification or DNRA.
+    grounding: CHEBI:16301
   - node_id: nitrous_oxide_reductase
     label: nitrous oxide reductase (NosZ)
     node_type: GENE_OR_PROTEIN
@@ -86,10 +88,12 @@ causal_graphs:
     label: nitrous oxide
     node_type: CHEMICAL
     description: Denitrification intermediate reduced to dinitrogen by NosZ.
+    grounding: CHEBI:17045
   - node_id: dinitrogen
     label: dinitrogen
     node_type: CHEMICAL
     description: Gaseous end product of complete denitrification.
+    grounding: CHEBI:17997
   edges:
   - subject: denitrification
     predicate: occurs in
@@ -157,6 +161,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/msystems.00967-23
       notes: NarGHI nitrate reductase produces nitrite from nitrate.
+    predicate_id: METPO:2000202
   - subject: nitrous_oxide_reductase
     predicate: reduces
     object: nitrous_oxide
@@ -165,6 +170,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/msystems.00967-23
       notes: NosZ reduces N2O to N2; canonical terminal denitrification step.
+    predicate_id: METPO:2000017
   - subject: nitrous_oxide_reductase
     predicate: produces
     object: dinitrogen
@@ -172,6 +178,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/msystems.00967-23
       notes: NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912036+00:00'
   curator: seed_from_metpo
@@ -213,4 +220,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17632×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16301×1, CHEBI:17045×1, CHEBI:17997×1).
   llm_assisted: true

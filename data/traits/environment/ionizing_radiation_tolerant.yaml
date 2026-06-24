@@ -95,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1007/978-3-031-18810-7_9
       notes: Ionizing radiation produces single- and double-strand DNA breaks, abasic
         sites and complex clustered lesions (broad radiobiology, across taxa).
+    predicate_id: biolink:causes
   - subject: dsb_repair
     predicate: repairs
     object: dsb_clustered_lesions
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome
         during irradiation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -140,4 +142,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (2 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002327×1).
   llm_assisted: true

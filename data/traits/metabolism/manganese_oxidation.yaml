@@ -87,6 +87,7 @@ causal_graphs:
     - reference: DOI:10.1021/jacs.3c06537
       notes: Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes
         for Mn(II) oxidation.
+    predicate_id: RO:0002327
   - subject: manganese_oxidation_trait
     predicate: produces
     object: mn_iii_oh_mn_iii_intermediate
@@ -96,6 +97,7 @@ causal_graphs:
     - reference: DOI:10.1021/jacs.3c06537
       notes: 'Cryo-EM mechanistic model: a cooperative two-electron step producing
         a Mn(III)(OH)Mn(III) intermediate.'
+    predicate_id: METPO:2000202
   - subject: mn_iii_oh_mn_iii_intermediate
     predicate: disproportionates to form
     object: mn_iv_o_mn_iv_intermediate
@@ -119,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1021/jacs.3c06537
       notes: MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product
         of the oxidation cascade.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -143,4 +146,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2000202×1, rdfs:subClassOf×1).
   llm_assisted: true

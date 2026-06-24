@@ -134,6 +134,7 @@ causal_graphs:
     - reference: DOI:10.1039/d4cc03114h
       notes: HVA framed as a universal paradigm of membrane adaptation spanning diverse
         extremophiles and stressors, supporting breadth of growth-supporting conditions.
+    predicate_id: RO:0002327
   - subject: compatible_solutes
     predicate: stabilizes
     object: membrane_fluidity
@@ -152,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Membrane stability is modulated by alteration of the ratio of saturated
         and unsaturated fatty acids; maintenance across temperature shifts.
+    predicate_id: RO:0002211
   - subject: core_metabolism
     predicate: maintained across
     object: temperature_delta
@@ -191,4 +193,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1).
   llm_assisted: true

@@ -112,6 +112,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1099/mic.0.001483
       notes: (p)ppGpp inhibits ribosome biosynthesis, inducing a slow-growth phenotype.
+    predicate_id: RO:0002212
   - subject: ppgpp
     predicate: enhances
     object: stress_tolerance
@@ -143,6 +144,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/mmbr.00151-22
       notes: Hfq is needed for sRNA-dependent RpoS translation.
+    predicate_id: RO:0002327
   - subject: general_stress_resistance
     predicate: enables
     object: stress_response_trait
@@ -151,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-090110-102946
       notes: RpoS-mediated general stress resistance is the protective program defining
         the trait.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -170,4 +173,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002212×1).
   llm_assisted: true

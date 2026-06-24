@@ -144,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.1002/ece3.70121
       notes: Compensatory evolution of chromosomes and plasmids counteracts the plasmid
         fitness cost.
+    predicate_id: METPO:2000017
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -162,4 +163,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×1).
   llm_assisted: true

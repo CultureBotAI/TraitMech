@@ -85,6 +85,7 @@ causal_graphs:
     label: cytoplasm
     node_type: CELLULAR_LOCALIZATION
     description: Intracellular cytoplasmic compartment.
+    grounding: GO:0005737
   - node_id: cytoplasmic_acidification
     label: cytoplasmic acidification
     node_type: BIOLOGICAL_PROCESS
@@ -119,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1128/9781555818821.ch4.3.1
       notes: generate positive (inside) membrane potentials via the active influx
         of cations, such as K+; mechanism general to acidophiles.
+    predicate_id: biolink:causes
   - subject: reversed_membrane_potential
     predicate: reduces
     object: proton_influx
@@ -128,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: maintain a large transmembrane ΔpH supported by a reversed membrane potential
         (inside-positive); links reversed Δψ to reduced proton entry.
+    predicate_id: METPO:2000017
   - subject: low_proton_permeability
     predicate: enables maintenance of
     object: near_neutral_cytoplasmic_ph
@@ -178,4 +181,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0005737×1).
   llm_assisted: true

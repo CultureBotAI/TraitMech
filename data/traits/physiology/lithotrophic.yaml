@@ -70,6 +70,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Reduced inorganic sulfur compound used as a lithotrophic electron
       donor.
+    grounding: CHEBI:16094
   - node_id: sox_multienzyme_system
     label: Sox multienzyme system
     node_type: GENE_OR_PROTEIN
@@ -86,6 +87,7 @@ causal_graphs:
     label: ammonia
     node_type: CHEMICAL
     description: Inorganic nitrogen electron donor for ammonia-oxidizing lithotrophs.
+    grounding: CHEBI:16134
   - node_id: ammonia_monooxygenase
     label: ammonia monooxygenase (AMO)
     node_type: GENE_OR_PROTEIN
@@ -94,6 +96,7 @@ causal_graphs:
     label: hydroxylamine
     node_type: CHEMICAL
     description: Intermediate of ammonia oxidation.
+    grounding: CHEBI:15429
   - node_id: hydroxylamine_oxidoreductase
     label: hydroxylamine oxidoreductase (HAO)
     node_type: GENE_OR_PROTEIN
@@ -102,6 +105,7 @@ causal_graphs:
     label: nitrite
     node_type: CHEMICAL
     description: Inorganic nitrogen electron donor for nitrite-oxidizing lithotrophs.
+    grounding: CHEBI:16301
   - node_id: nitrite_oxidoreductase
     label: nitrite oxidoreductase (NXR)
     node_type: GENE_OR_PROTEIN
@@ -110,10 +114,12 @@ causal_graphs:
     label: molecular oxygen
     node_type: CHEMICAL
     description: Terminal electron acceptor for aerobic lithotrophic oxidation.
+    grounding: CHEBI:15379
   - node_id: sulfur_oxidation_process
     label: sulfur oxidation
     node_type: BIOLOGICAL_PROCESS
     description: Oxidation of reduced sulfur compounds for energy conservation.
+    grounding: GO:0019417
   edges:
   - subject: lithotrophic_trait
     predicate: uses electron donor
@@ -280,4 +286,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16094×1, CHEBI:16134×1, CHEBI:15429×1, CHEBI:15379×1, GO:0019417×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16301×1).
   llm_assisted: true

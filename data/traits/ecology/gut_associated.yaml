@@ -105,6 +105,7 @@ causal_graphs:
       notes: Adhesion primarily relies on adhesins; binding of bacterial adhesins
         to host receptors is a prerequisite for long-term colonization (Lin et al.,
         2024).
+    predicate_id: RO:0002327
   - subject: mucosal_adhesion
     predicate: prerequisite for
     object: gut_associated_trait
@@ -132,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2024.05.011
       notes: Bile salts and Paneth-cell antimicrobial peptides inhibit growth of many
         bacteria in the small intestine (Muramatsu & Winter, 2024).
+    predicate_id: RO:0002212
   - subject: antimicrobial_peptides
     predicate: inhibits
     object: small_intestinal_bacterial_growth
@@ -141,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2024.05.011
       notes: Antimicrobial peptides released by Paneth cells inhibit growth of many
         bacteria in the small intestine (Muramatsu & Winter, 2024).
+    predicate_id: RO:0002212
   - subject: peristalsis
     predicate: reduces
     object: duodenal_retention
@@ -150,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12051026
       notes: The duodenum is hostile to retention due to bile, antimicrobials, and
         strong peristalsis (Lin et al., 2024).
+    predicate_id: METPO:2000017
   - subject: luminal_oxygen_limitation
     predicate: enables
     object: primary_fermenter_community
@@ -160,6 +164,7 @@ causal_graphs:
       notes: During homeostasis, host functions that limit oxygen diffusion into the
         colonic lumen shelter a community dominated by primary fermenters (Lee et
         al., 2024).
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -178,32 +183,52 @@ curation_history:
   changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002212×2, METPO:2000017×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3
-  prompt: 'Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.'
+  prompt: 'Knowledge gap for gut-associated: MicroRNAs (miRNAs) are small, noncoding
+    RNAs involved in posttranscriptional gene regulation in both animal and plant.
+    miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom
+    barriers and to modulate mammalian gene expression.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
+    explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review
+    required: set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:40945860
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.
+    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional
+      gene regulation in both animal and plant. miRNAs derived from edible plants,
+      referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate
+      mammalian gene expression.
     explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
   - reference: PMID:42278360
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: By integrating microbiological, immunological, and clinical perspectives, this review highlights key knowledge gaps and outlines future research directions aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV management and eradication.
+    snippet: By integrating microbiological, immunological, and clinical perspectives,
+      this review highlights key knowledge gaps and outlines future research directions
+      aimed at harnessing the gut microbiome as a novel therapeutic avenue in HIV
+      management and eradication.
     explanation: Gap-signal sentence (explicit_gap, future_work) from the cited abstract.
   - reference: PMID:41808832
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Given its promising anti-inflammatory properties, further research is warranted.
+    snippet: Given its promising anti-inflammatory properties, further research is
+      warranted.
     explanation: Gap-signal sentence (future_work) from the cited abstract.
   - reference: PMID:42197356
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.
+    snippet: Examining the existing literature may identify knowledge gaps regarding
+      precise mechanisms through which the development of GM influences the maturation
+      of the immune system.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   posed_by: kg-microbe-kgscan

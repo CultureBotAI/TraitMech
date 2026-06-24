@@ -98,6 +98,7 @@ causal_graphs:
     - reference: DOI:10.34293/sijash.v7i3.473
       notes: Microbes respond to low aw primarily via intracellular accumulation of
         compatible solutes (osmolytes) — broad cross-microbial statement.
+    predicate_id: RO:0002213
   - subject: low_mw_polyols
     predicate: enables
     object: osmotic_adjustment
@@ -107,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1007/978-3-031-81904-9_3
       notes: Polyols with lower molecular weight such as glycerol, erythritol, and
         arabitol were more effective for osmotic adjustment.
+    predicate_id: RO:0002327
   - subject: hog_pathway
     predicate: increases
     object: osmotic_adaptation
@@ -116,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.3390/jof10040290
       notes: Adaptation by activating the high osmolarity glycerol (HOG) pathway;
         pathway-level edge relevant across low-aw settings.
+    predicate_id: RO:0002213
   - subject: low_water_activity
     predicate: increases
     object: membrane_fluidity_remodeling
@@ -125,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.3390/jof10040290
       notes: Fungi employ physiological adaptations including altering plasma membrane
         fluidity; broad adaptation likely relevant across low-aw settings.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -143,4 +147,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3, RO:0002327×1).
   llm_assisted: true

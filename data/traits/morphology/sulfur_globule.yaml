@@ -89,6 +89,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms252010962
       notes: Initial oxidation of sulfide occurs under the action of SQR, producing
         sulfane sulfur; generalizes broadly to intracellular sulfur oxidizers.
+    predicate_id: METPO:2000202
   - subject: sqr
     predicate: produces
     object: polysulfide
@@ -98,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01941-21
       notes: SQR oxidized H2S into short-chain inorganic polysulfide (H2Sn, n >= 2);
         broad sulfur-chemistry mechanism.
+    predicate_id: METPO:2000202
   - subject: polysulfide
     predicate: precursor of
     object: sulfur_globule_trait
@@ -116,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms252010962
       notes: 'PDO acts on GSSH: GSSH + O2 + H2O -> GSH + SO3^2- + 2H+; well-defined
         enzymatic edge.'
+    predicate_id: METPO:2000016
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -141,4 +144,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000016×1).
   llm_assisted: true

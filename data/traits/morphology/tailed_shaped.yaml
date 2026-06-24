@@ -64,6 +64,7 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog directing cell-wall synthesis for stalk formation.
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: roda
     label: RodA
     node_type: GENE_OR_PROTEIN
@@ -109,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.86577
       notes: In C. crescentus and A. biprosthecum bactofilin polymers localize to
         the stalk base to direct proper stalk formation.
+    predicate_id: biolink:located_in
   - subject: bactofilin_polymers
     predicate: regulates
     object: pg_biosynthesis_at_stalk_base
@@ -118,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.86577
       notes: Required to efficiently initiate stalk formation and limit peptidoglycan
         biosynthesis to the stalk base.
+    predicate_id: RO:0002211
   - subject: bactofilin_polymers
     predicate: recruits
     object: cell_wall_synthase
@@ -200,4 +203,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1B1UYY2×1).
   llm_assisted: true

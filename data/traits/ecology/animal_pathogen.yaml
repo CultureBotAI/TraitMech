@@ -142,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Expression of bacterial surface adhesins is critical for adherence to
         host tissues; common colonization mechanism across body sites.
+    predicate_id: RO:0002327
   - subject: host_cell_attachment
     predicate: enables
     object: animal_tissue_colonization
@@ -151,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Colonization of metazoan barrier sites commonly begins with adhesion
         to host surfaces.
+    predicate_id: RO:0002327
   - subject: complement_regulator_binding_proteins
     predicate: mediates
     object: complement_evasion
@@ -168,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Complement evasion is a major determinant shaping immune resistance in
         animal pathogens.
+    predicate_id: RO:0002327
   - subject: type_iii_secretion_system
     predicate: enables
     object: t3ss_effector_delivery
@@ -177,6 +180,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.02224-23
       notes: T3SSs form syringe-like structures allowing effector proteins to be delivered
         from bacteria into the host-cell cytoplasm.
+    predicate_id: RO:0002327
   - subject: t3ss_effector_delivery
     predicate: enables
     object: immune_evasion
@@ -185,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.02224-23
       notes: Effector delivery into host cytoplasm is a canonical virulence mechanism
         subverting host defenses.
+    predicate_id: RO:0002327
   - subject: type_iv_secretion_system
     predicate: enables
     object: effector_translocation_t4ss
@@ -194,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-023-00974-3
       notes: Many T4SSs have acquired functionalities relating to translocation of
         effector proteins or toxins, supporting host-pathogen interactions.
+    predicate_id: RO:0002327
   - subject: effector_translocation_t4ss
     predicate: enables
     object: animal_tissue_colonization
@@ -202,6 +208,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-023-00974-3
       notes: T4SSs are versatile nanomachines central to host-pathogen interactions.
+    predicate_id: RO:0002327
   - subject: low_iron_environment
     predicate: enables
     object: siderophore_biosynthesis
@@ -211,6 +218,7 @@ causal_graphs:
     - reference: DOI:10.1039/d4cb00175c
       notes: When iron decreases, Fur releases Fe2+ allowing siderophore biosynthesis
         gene expression.
+    predicate_id: RO:0002327
   - subject: tonb_dependent_transporters
     predicate: enables
     object: siderophore_iron_import
@@ -220,6 +228,7 @@ causal_graphs:
     - reference: DOI:10.1039/d4cb00175c
       notes: Siderophore-Fe3+ complexes are imported via TonB-dependent transporters
         into the periplasm.
+    predicate_id: RO:0002327
   - subject: siderophore_iron_import
     predicate: enables
     object: animal_tissue_colonization
@@ -228,6 +237,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/d4cb00175c
       notes: Iron scavenging uptake is central to nutrient acquisition in host environments.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948723+00:00'
   curator: seed_from_metpo
@@ -283,12 +293,21 @@ curation_history:
   changes: Added 11 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 10 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×10).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0
-  prompt: 'Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.'
+  prompt: 'Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are
+    unknown to date.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
+    explicit_gap, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:40891913
@@ -299,16 +318,20 @@ discussions:
   - reference: PMID:42279816
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, in South America, their use is still limited because of complicated regulations and inconsistent evidence requirements.
+    snippet: However, in South America, their use is still limited because of complicated
+      regulations and inconsistent evidence requirements.
     explanation: Gap-signal sentence (controversy_conflict) from the cited abstract.
   - reference: PMID:41639266
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, the interacting effects of climate factors and seasonal variations in nutritional components on PMCs remain poorly understood.
+    snippet: However, the interacting effects of climate factors and seasonal variations
+      in nutritional components on PMCs remain poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:42197358
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: While plant growth-promoting bacteria (PGPB) are known to alleviate heavy metal toxicity, their role under MP-HM co-contamination and the differential responses of rhizosphere microbial communities remain unclear.
+    snippet: While plant growth-promoting bacteria (PGPB) are known to alleviate heavy
+      metal toxicity, their role under MP-HM co-contamination and the differential
+      responses of rhizosphere microbial communities remain unclear.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   posed_by: kg-microbe-kgscan

@@ -133,6 +133,7 @@ causal_graphs:
       notes: '"decreasing membrane proton permeability prevents the accumulation of
         intracellular protons" after conversion to cyclopropane fatty acids; generalizable
         membrane adaptation.'
+    predicate_id: RO:0002212
   - subject: undissociated_weak_acids
     predicate: undergoes
     object: weak_acid_influx
@@ -160,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Acidophile genomes encode "a P-type ATPase proton efflux pump"; active
         ATP-driven proton export underlies cytoplasmic pH homeostasis.
+    predicate_id: METPO:2000209
   - subject: h_atpase
     predicate: contributes to
     object: acidophile_homeostasis
@@ -170,6 +172,7 @@ causal_graphs:
       notes: '"acid stress tolerance... facilitated by an active export of protons
         via the expenditure of ATP... carried out by H+-ATPases"; broad principle
         of homeostasis.'
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.829744+00:00'
   curator: seed_from_metpo
@@ -193,4 +196,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, METPO:2000209×1, RO:0002326×1).
   llm_assisted: true

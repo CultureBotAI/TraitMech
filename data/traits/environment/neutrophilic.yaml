@@ -126,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.1128/msystems.01037-23
       notes: At low pH, H+ can permeate into the cytoplasm via protonated water chains,
         ion channels, or damaged membranes (general for neutralophilic bacteria).
+    predicate_id: RO:0002213
   - subject: cytoplasmic_buffering_capacity
     predicate: contributes to
     object: intracellular_ph
@@ -135,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1128/msystems.01037-23
       notes: Protons can be sequestered by side-chains of proteins, inorganic phosphates,
         polyphosphates, or polyamines (general for neutralophiles).
+    predicate_id: RO:0002326
   - subject: amino_acid_decarboxylation
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -144,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.3390/antibiotics12091474
       notes: The decarboxylation of amino acids is an enzyme-catalyzed reaction that
         consumes protons (general acid-tolerance mechanism in neutralophiles).
+    predicate_id: RO:0002326
   - subject: amino_acid_decarboxylation
     predicate: contributes to
     object: proton_motive_force
@@ -154,6 +157,7 @@ causal_graphs:
       notes: The chemistry of the decarboxylation reaction requires a proton, and
         the equivalent of 1 proton is pumped per molecule decarboxylated (general
         mechanism).
+    predicate_id: RO:0002326
   - subject: f1f0_atpase_proton_pump
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -163,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.3390/antibiotics12091474
       notes: Common mechanisms involved in bacterial acid tolerance include the F1-F0-ATPase
         proton pump (general).
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937067+00:00'
   curator: seed_from_metpo
@@ -246,4 +251,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×4, RO:0002213×1).
   llm_assisted: true

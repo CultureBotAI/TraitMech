@@ -52,6 +52,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Biosynthesis of the compatible solute ectoine via the ectABC/ectBACD
       pathway.
+    grounding: GO:0019491
   - node_id: ect_gene_cluster
     label: ectABC/ectBACD gene cluster
     node_type: GENE_OR_PROTEIN
@@ -60,6 +61,7 @@ causal_graphs:
     label: ectoine
     node_type: CHEMICAL
     description: A major compatible solute (osmolyte) accumulated under salt stress.
+    grounding: CHEBI:27592
   - node_id: ion_homeostasis
     label: ion homeostasis during salt stress
     node_type: BIOLOGICAL_PROCESS
@@ -118,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01905-23
       notes: ectoine biosynthesis genes are denoted by ectABC; ectBACD up-regulated
         as an osmoadaptation system.
+    predicate_id: RO:0002327
   - subject: ectoine_biosynthesis
     predicate: produces
     object: ectoine
@@ -125,6 +128,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.01905-23
       notes: Wild-type accumulates ectoine as its major osmolyte via the ectABC pathway.
+    predicate_id: METPO:2000202
   - subject: ectoine
     predicate: increases
     object: salt_tolerance
@@ -133,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01905-23
       notes: Wild-type accumulates ectoine as its major osmolyte while the ectABC-deleted
         strain is salt-sensitive.
+    predicate_id: RO:0002213
   - subject: osmoprotectant_transport
     predicate: increases
     object: salt_tolerance
@@ -142,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy026
       notes: Salt-out strategists exclude salt and/or synthesize or uptake compatible
         solutes (e.g. glycine betaine); dominant strategy in many halophilic bacteria.
+    predicate_id: RO:0002213
   - subject: na_k_transcription
     predicate: supports
     object: ion_homeostasis
@@ -220,4 +226,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002327×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019491×1, CHEBI:27592×1).
   llm_assisted: true

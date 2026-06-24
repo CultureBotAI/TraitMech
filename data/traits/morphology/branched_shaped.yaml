@@ -145,6 +145,7 @@ causal_graphs:
       notes: Splitting of polarisomes at growing tips generates daughter polarisomes
         that coordinate emergence of new lateral branches upon reaching a critical
         size.
+    predicate_id: biolink:causes
   - subject: divIVA_scy_filp_polarisome
     predicate: localizes
     object: pg_enzyme_localization
@@ -182,6 +183,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsml/uqad020
       notes: AfsK phosphorylates DivIVA in response to cell-wall stress (e.g., bacitracin,
         vancomycin).
+    predicate_id: RO:0002213
   - subject: stlp_membrane_microdomains
     predicate: enables
     object: proper_polar_growth_branch_spacing
@@ -191,6 +193,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-025-58093-x
       notes: Loss of StlP leads to branching of filaments; constitutive stlP expression
         notably reduces lateral branching and increases tip-to-branch distance.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896783+00:00'
   curator: seed_from_metpo
@@ -226,4 +229,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002213×1, RO:0002327×1).
   llm_assisted: true

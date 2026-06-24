@@ -152,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       notes: 'Pinho 2013: spherical cocci can alternate division in two or three orthogonal
         planes; a morphology-associated arrangement behavior.'
+    predicate_id: biolink:associated_with
   - subject: peripheral_peptidoglycan_synthesis
     predicate: produces
     object: ovoid_shape
@@ -161,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       notes: 'Pinho 2013: peripheral synthesis occurring at mid-cell, between the
         equatorial rings, drives slight longitudinal elongation and the ovoid shape.'
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.886046+00:00'
   curator: seed_from_metpo
@@ -202,4 +204,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:associated_with×1, METPO:2000202×1).
   llm_assisted: true

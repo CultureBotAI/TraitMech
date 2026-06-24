@@ -74,6 +74,7 @@ causal_graphs:
     label: cyclic di-GMP
     node_type: CHEMICAL
     description: Second messenger that inversely regulates motility and biofilm formation.
+    grounding: CHEBI:49537
   - node_id: archaellum
     label: archaellum
     node_type: GENE_OR_PROTEIN
@@ -158,6 +159,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00442-23
       notes: T4P retraction generates the pulling forces underlying twitching motility.
+    predicate_id: biolink:produces
   - subject: c_di_gmp
     predicate: inhibits
     object: motility_trait
@@ -167,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-024-07392-y
       notes: Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP
         -> motility edge).
+    predicate_id: RO:0002212
   - subject: archaellum
     predicate: enables
     object: motility_trait
@@ -175,6 +178,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-024-50277-1
       notes: The archaellum enables cell motility in archaea.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.904440+00:00'
   curator: seed_from_metpo
@@ -228,4 +232,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, RO:0002212×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:49537×1).
   llm_assisted: true

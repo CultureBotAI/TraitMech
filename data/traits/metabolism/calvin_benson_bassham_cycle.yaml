@@ -58,16 +58,19 @@ causal_graphs:
     label: 3-phospho-D-glycerate
     node_type: CHEMICAL
     description: Product of RuBisCO carboxylation of RuBP; first stable CBB intermediate.
+    grounding: CHEBI:17794
   - node_id: carboxysome
     label: carboxysome
     node_type: ORGANELLE
     description: Bacterial microcompartment that encapsulates RuBisCO and carbonic
       anhydrase as part of the CO2-concentrating mechanism.
+    grounding: GO:0031470
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
     description: HCO3-, inorganic carbon species converted to CO2 by carbonic anhydrase
       near RuBisCO.
+    grounding: CHEBI:17544
   - node_id: carboxysomal_ca
     label: carboxysomal carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -213,4 +216,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17794×1, GO:0031470×1, CHEBI:17544×1).
   llm_assisted: true

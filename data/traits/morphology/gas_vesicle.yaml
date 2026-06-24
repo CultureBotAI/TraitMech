@@ -46,6 +46,7 @@ causal_graphs:
     label: gas vesicle shell
     node_type: CELLULAR_LOCALIZATION
     description: Hollow proteinaceous wall enclosing the gas-filled lumen.
+    grounding: GO:0033172
   - node_id: gvpc_protein
     label: GvpC
     node_type: GENE_OR_PROTEIN
@@ -63,6 +64,7 @@ causal_graphs:
     label: hydrostatic pressure
     node_type: ENVIRONMENTAL_FACTOR
     description: External physical pressure acting on the gas vesicle.
+    grounding: PATO:0001025
   - node_id: gas_vesicle_collapse
     label: gas vesicle collapse
     node_type: BIOLOGICAL_PROCESS
@@ -76,6 +78,7 @@ causal_graphs:
     label: gas vesicle formation
     node_type: BIOLOGICAL_PROCESS
     description: Biogenesis and assembly of gas vesicles.
+    grounding: GO:0031412
   - node_id: ultrasound_scattering
     label: ultrasound scattering
     node_type: BIOLOGICAL_PROCESS
@@ -109,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: GvpA is the structural protein that forms the hollow protein structure
         of GV.
+    predicate_id: biolink:produces
   - subject: gvpc_protein
     predicate: strengthens
     object: gas_vesicle_shell
@@ -125,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1038/s44318-024-00178-2
       notes: GVs maintain an inner gas compartment via a hydrophobic inner surface
         that prevents condensation of water into liquid.
+    predicate_id: RO:0002212
   - subject: hydrostatic_pressure
     predicate: causes
     object: gas_vesicle_collapse
@@ -133,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: When GVs are under pressure, there is a critical point at which the GV
         irreversibly collapses.
+    predicate_id: biolink:causes
   - subject: gvpd_protein
     predicate: inhibits
     object: gas_vesicle_formation
@@ -140,6 +146,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: GvpD has an inhibitory effect on GV formation.
+    predicate_id: RO:0002212
   - subject: gas_vesicle_shell
     predicate: enables
     object: ultrasound_scattering
@@ -149,6 +156,7 @@ causal_graphs:
     - reference: DOI:10.1021/acssynbio.4c00283
       notes: GVs scatter US due to the difference in density and compressibility of
         their gaseous interior relative to surrounding aqueous medium.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -167,4 +175,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2, biolink:produces×1, biolink:causes×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001025×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0033172×1, GO:0031412×1).
   llm_assisted: true

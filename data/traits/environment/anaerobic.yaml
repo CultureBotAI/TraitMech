@@ -76,6 +76,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Energy generation using terminal electron acceptors other than molecular
       oxygen.
+    grounding: GO:0009061
   edges:
   - subject: anoxic_condition
     predicate: enables
@@ -130,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1038/s43705-023-00251-7
       notes: Anti-oxidative enzymes (Sod/Cat/peroxidases) detoxify ROS, mediating
         ROS detoxification.
+    predicate_id: RO:0002327
   - subject: ros_detoxification
     predicate: protects against
     object: reactive_oxygen_species
@@ -157,6 +159,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01560-2
       notes: Molecules in anaerobic ecosystems serve as respiratory electron acceptors
         for anaerobic respiration.
+    predicate_id: RO:0002327
   - subject: anaerobic_respiration
     predicate: enables
     object: anaerobic_trait
@@ -166,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01560-2
       notes: Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic
         respiration, enabling growth without O2.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849856+00:00'
   curator: seed_from_metpo
@@ -211,4 +215,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009061×1).
   llm_assisted: true

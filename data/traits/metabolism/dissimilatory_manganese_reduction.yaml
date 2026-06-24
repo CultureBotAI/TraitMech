@@ -48,6 +48,7 @@ causal_graphs:
     label: dihydrogen
     node_type: CHEMICAL
     description: H2 used as electron donor for dissimilatory manganese reduction.
+    grounding: CHEBI:18276
   - node_id: anoxia
     label: anoxic conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -91,6 +92,7 @@ causal_graphs:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: 'Lovley: organisms with Mn(IV) as sole electron acceptor can completely
         oxidize hydrogen.'
+    predicate_id: METPO:2007403
   - subject: anoxia
     predicate: enables
     object: dmr_trait
@@ -99,6 +101,7 @@ causal_graphs:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments,
         soils, and groundwater under anaerobic conditions.
+    predicate_id: RO:0002327
   - subject: methane_oxidation
     predicate: is coupled to
     object: dmr_trait
@@ -132,4 +135,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18276×1).
   llm_assisted: true

@@ -158,6 +158,7 @@ causal_graphs:
       notes: Review describes inside-positive membrane potential via potassium-transporting
         ATPases and K+ uptake systems (kdp, Kef) forming an electrochemical barrier
         to proton influx.
+    predicate_id: RO:0002213
   - subject: p_type_proton_atpase
     predicate: increases
     object: proton_efflux
@@ -166,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Dopson review lists active proton efflux via P-type ATPases as a pH homeostasis
         strategy in acidophiles.
+    predicate_id: RO:0002213
   - subject: proton_efflux
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -175,6 +177,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Proton pumps/ATPases maintain a near-neutral cytoplasm during acidophilic
         growth.
+    predicate_id: RO:0002326
   - subject: na_h_antiporter
     predicate: exports
     object: proton
@@ -184,6 +187,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Dopson lists Na+/H+ exchange (nhaA sodium/proton antiporter) among acidophile
         pH-homeostasis systems.
+    predicate_id: METPO:2000209
   - subject: hopanoid_membrane
     predicate: decreases
     object: low_proton_permeability_membrane
@@ -193,6 +197,7 @@ causal_graphs:
     - reference: DOI:10.1111/1758-2229.70019
       notes: Acid resistance is linked to hopanoid membrane lipids and reduced proton
         permeability as a core proton-exclusion strategy.
+    predicate_id: RO:0002212
   - subject: cyclopropane_fatty_acids
     predicate: decreases
     object: low_proton_permeability_membrane
@@ -201,6 +206,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Review includes cyclopropane-fatty-acyl-phospholipid synthase among membrane
         adaptations that reduce proton permeability.
+    predicate_id: RO:0002212
   - subject: glutamate_decarboxylase
     predicate: consumes
     object: proton
@@ -210,6 +216,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: Review lists decarboxylases (Adi, Gad) as cytoplasmic proton-consuming
         systems used in acidophile pH homeostasis.
+    predicate_id: biolink:consumes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940216+00:00'
   curator: seed_from_metpo
@@ -276,4 +283,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002212×2, RO:0002326×1, METPO:2000209×1, biolink:consumes×1).
   llm_assisted: true

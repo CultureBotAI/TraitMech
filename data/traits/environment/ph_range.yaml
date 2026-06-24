@@ -63,6 +63,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of a near-constant cytoplasmic pH compatible with macromolecular
       function.
+    grounding: GO:0051453
   - node_id: membrane_proton_impermeability
     label: membrane proton impermeability
     node_type: QUALITY
@@ -126,6 +127,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: PMF architecture (Δψ − 59 ΔpH) determines the range of pHout over which
         bacteria can tolerate or grow.
+    predicate_id: RO:0002326
   - subject: membrane_potential
     predicate: compensates for
     object: external_ph
@@ -144,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Bacteria maintain a distinct cytoplasmic pH required for protein function,
         bounding the phenotype.
+    predicate_id: RO:0002327
   - subject: membrane_proton_impermeability
     predicate: extends
     object: acid_tolerance
@@ -212,4 +215,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0051453×1).
   llm_assisted: true

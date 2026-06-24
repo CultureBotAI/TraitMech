@@ -43,6 +43,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Second-messenger nucleotide acting as a master regulator of osmotic
       balance.
+    grounding: CHEBI:71578
   - node_id: potassium_uptake_systems
     label: potassium uptake systems
     node_type: GENE_OR_PROTEIN
@@ -75,6 +76,7 @@ causal_graphs:
     label: sodium ion
     node_type: CHEMICAL
     description: Na+ cation.
+    grounding: CHEBI:29101
   - node_id: water_retention
     label: water retention / reduced pericellular Na+ toxicity
     node_type: BIOLOGICAL_PROCESS
@@ -106,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: Binding of c-di-AMP to transporters and riboswitches inhibits potassium
         import (KupA/KupB, KimA, kdp operon).
+    predicate_id: RO:0002212
   - subject: cyclic_di_amp
     predicate: modulates
     object: cell_volume_regulation
@@ -113,6 +116,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: Review argues cyclic di-AMP is a master regulator of cell volume.
+    predicate_id: RO:0002211
   - subject: osmolality
     predicate: upregulates
     object: kdpfabc_complex
@@ -128,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1111/mec.16316
       notes: Compatible-solute biosynthesis/uptake and transporter genes -> osmotic
         protection.
+    predicate_id: biolink:causes
   - subject: eps_matrix
     predicate: binds
     object: sodium_ion
@@ -143,6 +148,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuaf020
       notes: Lowering effective pericellular Na+ and retaining water.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842087+00:00'
   curator: seed_from_metpo
@@ -166,4 +172,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, RO:0002211×1, biolink:causes×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:71578×1, CHEBI:29101×1).
   llm_assisted: true

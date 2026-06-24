@@ -68,6 +68,7 @@ causal_graphs:
     label: glycine betaine biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: Two-step oxidative conversion of choline to glycine betaine by BetA/BetB.
+    grounding: GO:0031456
   - node_id: ectoine
     label: ectoine
     node_type: CHEMICAL
@@ -77,6 +78,7 @@ causal_graphs:
     label: ectoine biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: Five-step biosynthesis of ectoine from L-aspartate (lysC/asd/ectB/ectA/ectC).
+    grounding: GO:0019491
   - node_id: mechanosensitive_channels
     label: mechanosensitive channels (Msc)
     node_type: GENE_OR_PROTEIN
@@ -91,6 +93,7 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Antiporter that expels sodium ions from the cytoplasm.
+    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_sodium
     label: cytoplasmic sodium ions
     node_type: CHEMICAL
@@ -171,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Choline is transformed into glycine betaine in two oxidative steps carried
         out by BetA (K00108) and BetB (K00130).
+    predicate_id: METPO:2000202
   - subject: choline
     predicate: is precursor of
     object: glycine_betaine
@@ -187,6 +191,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Glycine betaine is a compatible solute used in the salt-out osmoadaptation
         strategy.
+    predicate_id: METPO:2007407
   - subject: ectoine_biosynthesis
     predicate: produces
     object: ectoine
@@ -195,6 +200,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Ectoine is obtained from L-aspartate in five steps mediated by lysC,
         asd, ectB, ectA, and ectC.
+    predicate_id: METPO:2000202
   - subject: ectoine
     predicate: mitigates
     object: osmotic_imbalance
@@ -204,6 +210,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1192059
       notes: Ectoine widely implicated in halophily and salinity tolerance; protects
         cell components under stress.
+    predicate_id: METPO:2007407
   - subject: mechanosensitive_channels
     predicate: responds to
     object: osmotic_downshock
@@ -223,6 +230,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12081738
       notes: Sodium ions are expelled from the cytoplasm, usually performed with the
         help of Na+/H+ antiporters.
+    predicate_id: METPO:2000209
   - subject: proteome_acidification
     predicate: contributes to
     object: euryhaline_trait
@@ -232,6 +240,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.adg2059
       notes: Increase in acidic amino acids (notably glutamate); acidification of
         the proteome essential for protein solubility at higher ionic strength.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864669+00:00'
   curator: seed_from_metpo
@@ -302,4 +311,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2007407×2, METPO:2000209×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A068T423×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031456×1, GO:0019491×1).
   llm_assisted: true

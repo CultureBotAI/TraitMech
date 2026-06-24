@@ -52,6 +52,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Second messenger nucleotide that regulates osmolyte and K+ transport
       in bacteria.
+    grounding: CHEBI:71578
   - node_id: k_import_systems
     label: K+ import systems
     node_type: GENE_OR_PROTEIN
@@ -154,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: c-di-AMP binds RCK-type gating subunits inhibiting potassium influx;
         broad regulatory principle across c-di-AMP bacteria.
+    predicate_id: RO:0002212
   - subject: c_di_amp
     predicate: inhibits
     object: opua_importer
@@ -163,6 +165,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: Binds CBS-containing compatible-solute importers (OpuA, OpuC, OpuD) and
         negatively regulates transport; general osmoadaptation regulation.
+    predicate_id: RO:0002212
   - subject: low_c_di_amp_state
     predicate: increases
     object: k_solute_uptake
@@ -171,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: Low c-di-AMP mutants show increased uptake of K+ and compatible solutes;
         broad bacterial principle.
+    predicate_id: RO:0002213
   - subject: osmotic_upshift
     predicate: triggers
     object: rapid_k_import
@@ -198,6 +202,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-024-01817-w
       notes: COG0580 linked to GO:0015250 and described as enabling facilitated diffusion
         of water; functional edge.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864123+00:00'
   curator: seed_from_metpo
@@ -258,4 +263,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2, RO:0002213×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:71578×1).
   llm_assisted: true

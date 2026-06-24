@@ -63,6 +63,7 @@ causal_graphs:
     node_type: QUALITY
     description: Physical fluidity of the cytoplasmic membrane that must be maintained
       for function at low temperature.
+    grounding: METPO:1007505
   - node_id: chaperone_systems
     label: molecular chaperone systems
     node_type: BIOLOGICAL_PROCESS
@@ -73,6 +74,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cryoprotective osmolytes (e.g. glycine betaine, trehalose, glycerol)
       accumulated to protect against low-temperature stress.
+    grounding: CHEBI:25728
   - node_id: two_component_cold_sensing
     label: two-component cold sensing
     node_type: BIOLOGICAL_PROCESS
@@ -126,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: E. coli increases unsaturated cis-vaccenic acid and decreases palmitic
         acid with cold; broad bacterial mechanism affecting the lower growth bound.
+    predicate_id: RO:0002213
   - subject: lipid_desaturase_activity
     predicate: increases
     object: membrane_fluidity
@@ -134,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: Upregulation of genes for fatty acid synthesis/desaturation maintains
         membrane fluidity at low temperature.
+    predicate_id: RO:0002213
   - subject: membrane_lipid_unsaturation
     predicate: increases
     object: membrane_fluidity
@@ -143,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: Fatty acid desaturation maintains membrane fluidity, a broadly supported
         homeoviscous adaptation underpinning cold tolerance.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: enables
     object: cold_tolerance
@@ -152,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: Maintaining membrane fluidity at low temperature is a core mechanism
         supporting growth at the cold end of the range.
+    predicate_id: RO:0002327
   - subject: ambient_temperature
     predicate: induces
     object: chaperone_systems
@@ -170,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Chaperone-mediated protein folding supports the upper-bound (Tmax) heat-tolerance
         mechanism.
+    predicate_id: RO:0002327
   - subject: compatible_solutes
     predicate: protects against
     object: cold_tolerance
@@ -189,6 +196,7 @@ causal_graphs:
       notes: Cold sensing via changes in the liquid-crystalline membrane state that
         activate two-component signal transduction; generic edge linking membrane
         state to regulatory response.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814231+00:00'
   curator: seed_from_metpo
@@ -230,4 +238,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×4, RO:0002327×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1, CHEBI:25728×1).
   llm_assisted: true

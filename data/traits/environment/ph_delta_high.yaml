@@ -51,6 +51,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of near-neutral internal pH despite external pH variation.
+    grounding: GO:0051453
   - node_id: respiratory_proton_pumps
     label: respiratory proton-pumping enzymes
     node_type: GENE_OR_PROTEIN
@@ -118,6 +119,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters.
+    predicate_id: RO:0002326
   - subject: respiratory_proton_pumps
     predicate: helps maintain
     object: cytoplasmic_ph_homeostasis
@@ -135,6 +137,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
       notes: F0F1-ATPase is named among key regulators of bacterial pH homeostasis.
+    predicate_id: RO:0002326
   - subject: metabolite_decarboxylation
     predicate: contributes to
     object: ph_delta_high_trait
@@ -142,6 +145,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Metabolite decarboxylation pathways are key regulators of pH homeostasis.
+    predicate_id: RO:0002326
   - subject: cytoplasmic_buffering_capacity
     predicate: stabilizes
     object: cytoplasmic_ph_homeostasis
@@ -158,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Neutralophiles grow at external pH ~5.5-9.0 while maintaining cytoplasmic
         pH ~7.5-7.7.
+    predicate_id: RO:0002327
   - subject: constant_pmf
     predicate: supports
     object: ph_delta_high_trait
@@ -176,6 +181,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Membrane lipid and porin composition changes minimize inward proton leakage
         during acid stress.
+    predicate_id: METPO:2000017
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840309+00:00'
   curator: seed_from_metpo
@@ -199,4 +205,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×3, RO:0002327×1, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0051453×1).
   llm_assisted: true

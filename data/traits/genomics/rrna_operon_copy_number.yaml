@@ -44,6 +44,7 @@ causal_graphs:
     label: rRNA transcription
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of ribosomal RNA from rrn operons by RNA polymerase.
+    grounding: GO:0009303
   - node_id: growth_efficiency
     label: growth efficiency
     node_type: QUALITY
@@ -95,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1038/nmicrobiol.2016.160
       notes: 'Roller et al.: growth efficiency is inversely related to maximal growth
         rate and rrn copy number.'
+    predicate_id: RO:0002212
   - subject: rrna_copy_trait
     predicate: positively associated with
     object: chemotactic_motility
@@ -131,4 +133,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009303×1).
   llm_assisted: true

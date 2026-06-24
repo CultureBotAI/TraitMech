@@ -76,6 +76,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of the heme cofactor required for catalase maturation and
       activity.
+    grounding: GO:0006783
   edges:
   - subject: catalase
     predicate: enables
@@ -135,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3032
       notes: An intracellular H2O2 concentration of ~200 nM is sufficient to drive
         OxyR into a disulfide-bonded (active) form.
+    predicate_id: RO:0002213
   - subject: hydrogen_peroxide
     predicate: favors scavenging by
     object: catalase_activity_trait
@@ -154,6 +156,7 @@ causal_graphs:
     - reference: DOI:10.3389/fimmu.2021.667343
       notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
         control peroxide defense systems.
+    predicate_id: RO:0002211
   - subject: perr_regulator
     predicate: regulates
     object: peroxide_defense_systems
@@ -163,6 +166,7 @@ causal_graphs:
     - reference: DOI:10.3389/fimmu.2021.667343
       notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
         control peroxide defense systems.
+    predicate_id: RO:0002211
   - subject: heme_biosynthesis
     predicate: required for
     object: catalase
@@ -197,4 +201,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006783×1).
   llm_assisted: true

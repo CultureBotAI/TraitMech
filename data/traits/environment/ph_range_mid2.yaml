@@ -59,6 +59,7 @@ causal_graphs:
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of internal pH near 7.0-7.5 despite external pH variation.
+    grounding: GO:0051453
   - node_id: cytoplasmic_buffering
     label: cytoplasmic buffering
     node_type: BIOLOGICAL_PROCESS
@@ -73,6 +74,7 @@ causal_graphs:
     label: cytoplasm
     node_type: CELLULAR_LOCALIZATION
     description: Intracellular compartment whose pH is regulated by antiport activity.
+    grounding: GO:0005737
   - node_id: proton_motive_force
     label: proton motive force
     node_type: BIOLOGICAL_PROCESS
@@ -96,6 +98,7 @@ causal_graphs:
     label: ATP synthesis
     node_type: BIOLOGICAL_PROCESS
     description: Generation of ATP driven by the proton motive force.
+    grounding: GO:0006754
   - node_id: proton_ion_antiporters
     label: proton:ion antiporters
     node_type: GENE_OR_PROTEIN
@@ -205,4 +208,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0051453×1, GO:0005737×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006754×1).
   llm_assisted: true

@@ -100,6 +100,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adi3338
       notes: 'Wilde et al. 2024: host controls (immunity, barrier, homeostasis, transit)
         generate natural selection for microbial traits that benefit the host.'
+    predicate_id: METPO:2007401
   - subject: host_beneficial_microbial_traits
     predicate: enables
     object: mutualism_trait
@@ -109,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adi3338
       notes: Host control selecting for host-beneficial microbial traits underpins
         stable host-microbe mutualism.
+    predicate_id: RO:0002327
   - subject: cross_feeding_architecture
     predicate: creates
     object: obligate_mutualism_syntrophy
@@ -119,6 +121,7 @@ causal_graphs:
       notes: 'Peng et al. 2024: in co-auxotrophic consortia each member depends on
         others supplying a nutrient it cannot synthesize, defining syntrophy/obligate
         mutualism.'
+    predicate_id: biolink:produces
   - subject: micronutrient_exchange
     predicate: enables
     object: mutualism_trait
@@ -128,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.3390/plants13060829
       notes: 'Burgunter-Delamare et al. 2024: mutualistic benefits are framed as provision
         of metabolites (N-sources, vitamins, micronutrients).'
+    predicate_id: RO:0002327
   - subject: metabolite_secretion_profile
     predicate: determines
     object: interaction_outcome_state
@@ -154,4 +158,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, METPO:2007401×1, biolink:produces×1).
   llm_assisted: true

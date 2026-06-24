@@ -132,6 +132,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-023-41487-0
       notes: Delay cell division until the cell reaches a larger size.
+    predicate_id: RO:0002211
   - subject: ftsn
     predicate: activates
     object: ftswi_complex
@@ -140,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-52217-5
       notes: Activation of the sPG synthase (FtsWI within the FtsQLBWI complex) depends
         on FtsN.
+    predicate_id: RO:0002213
   - subject: septal_pg_synthesis
     predicate: promotes
     object: zring_condensation
@@ -149,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-52217-5
       notes: Septal cell wall synthesis feeds back to promote Z ring condensation
         and stability.
+    predicate_id: RO:0002213
   - subject: ftsz_protoring
     predicate: organizes
     object: divisome_assembly
@@ -200,4 +203,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002211×1).
   llm_assisted: true

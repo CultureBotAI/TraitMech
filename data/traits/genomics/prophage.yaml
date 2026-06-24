@@ -77,6 +77,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Switch from lysogeny to the lytic cycle following derepression of
       phage lytic genes.
+    grounding: GO:0098689
   - node_id: phage_plasmid
     label: phage-plasmid
     node_type: GENE_OR_PROTEIN
@@ -132,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.2407832121
       notes: Replication inhibition creates ssDNA gaps that trigger the classical
         SOS response.
+    predicate_id: RO:0002213
   - subject: reca_filament
     predicate: promotes autocleavage of
     object: lexa_repressor
@@ -159,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41586-023-06376-y
       notes: CI repression must be relieved (cI inactivation) to de-repress lysis
         and drive prophage induction.
+    predicate_id: RO:0002212
   - subject: phage_plasmid
     predicate: enables
     object: extrachromosomal_maintenance
@@ -168,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-45757-3
       notes: Phage-plasmids are temperate phages maintained extrachromosomally as
         low-copy-number episomal forms.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -186,4 +190,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002212×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0098689×1).
   llm_assisted: true

@@ -46,6 +46,7 @@ causal_graphs:
     label: spore coat
     node_type: CELLULAR_LOCALIZATION
     description: Multilayered proteinaceous protective surface of the endospore.
+    grounding: GO:0031160
   - node_id: dipicolinic_acid
     label: dipicolinic acid
     node_type: CHEMICAL
@@ -166,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.3390/microbiolres14020035
       notes: Cortex synthesis within the intermembrane space and coat assembly follow
         engulfment.
+    predicate_id: RO:0002326
   - subject: coat_assembly
     predicate: contributes to
     object: spore_core_dormancy
@@ -174,6 +176,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microbiolres14020035
       notes: Coat proteins influence core protection, spore-core dehydration and dormancy.
+    predicate_id: RO:0002326
   - subject: spo0e_phosphatases
     predicate: negatively regulates
     object: spo0a_phosphorylated
@@ -229,4 +232,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031160×1).
   llm_assisted: true

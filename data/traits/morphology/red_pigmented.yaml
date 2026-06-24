@@ -71,6 +71,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Red-colored carotenoid pigment produced via the phytoene synthase
       pathway.
+    grounding: CHEBI:15948
   edges:
   - subject: prodiginine_biosynthesis
     predicate: includes
@@ -118,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11122920
       notes: Prodiginines are red tripyrrole pigments genetically encoded by variable
         gene clusters (Pig in Serratia, Red in Streptomyces); broad cross-taxon mechanism.
+    predicate_id: RO:0002327
   - subject: pig_red_gene_cluster
     predicate: has part
     object: pigC_ligase
@@ -135,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1412776
       notes: The ligase encoded by pigC is the key enzyme that links MAP and MBC to
         form prodigiosin.
+    predicate_id: biolink:catalyzes
   - subject: cpxA_cpxR_system
     predicate: represses transcription of
     object: pig_red_gene_cluster
@@ -154,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11122920
       notes: Two GGPP molecules condensed by phytoene synthase form phytoene, ultimately
         yielding lycopene, a red-colored pigment.
+    predicate_id: METPO:2000202
   - subject: lycopene
     predicate: causes
     object: visible_red_color
@@ -162,6 +166,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms11122920
       notes: Lycopene described explicitly as 'a red-colored pigment'.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946258+00:00'
   curator: seed_from_metpo
@@ -209,4 +214,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:catalyzes×1, METPO:2000202×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15948×1).
   llm_assisted: true

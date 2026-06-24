@@ -75,11 +75,13 @@ causal_graphs:
     node_type: CHEMICAL
     description: Inorganic electron acceptor reducible by H2 oxidation in anaerobic
       respiration.
+    grounding: CHEBI:17632
   - node_id: sulfate
     label: sulfate
     node_type: CHEMICAL
     description: Inorganic electron acceptor reducible by H2 oxidation in anaerobic
       respiration.
+    grounding: CHEBI:16189
   - node_id: h2_oxidation
     label: H2 oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -165,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.2138/gselements.16.1.39
       notes: Splitting H2 yields electrons and protons that can generate proton gradients
         and ATP; general mechanistic process-level edge.
+    predicate_id: biolink:produces
   - subject: h2_oxidation
     predicate: coupled to reduction of
     object: carbon_dioxide
@@ -283,4 +286,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17632×1, CHEBI:16189×1).
   llm_assisted: true

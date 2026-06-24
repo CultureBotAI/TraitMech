@@ -103,6 +103,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: Membrane lipid adaptation (unsaturated/branched fatty acids) is a homeoviscous
         response maintaining membrane fluidity under high hydrostatic pressure.
+    predicate_id: RO:0002327
   - subject: membrane_fluidity_maintenance
     predicate: contributes to
     object: pressure_dependent_machinery
@@ -112,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: Membrane fluidity maintenance via lipid adaptation underlies the pressure-adapted
         membrane systems of piezophiles.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -131,4 +133,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002326×1).
   llm_assisted: true

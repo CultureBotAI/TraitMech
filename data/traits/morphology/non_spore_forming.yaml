@@ -131,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1111/1462-2920.16145
       notes: Asporogenic phenotypes can result from inactivation or loss of a considerable
         fraction of sporulation genes (generic edge).
+    predicate_id: biolink:causes
   - subject: low_spo0a_activity
     predicate: causes
     object: loss_sporulation_capacity
@@ -139,6 +140,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.630573
       notes: Spo0A is the master regulator of endospore formation; elevated Spo0A~P
         is required to trigger sporulation.
+    predicate_id: biolink:causes
   - subject: loss_sporulation_capacity
     predicate: manifests as
     object: non_spore_forming_trait
@@ -147,6 +149,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.630573
       notes: Failure to produce/activate Spo0A prevents sporulation, yielding the
         non-spore-forming trait.
+    predicate_id: METPO:2007400
   - subject: rap_phosphatases
     predicate: dephosphorylates
     object: spo0f_dephosphorylation
@@ -173,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11081928
       notes: The phosphorelay signals the start of sporulation; mutants arrest at
         stages 0/I when initiation fails.
+    predicate_id: RO:0002212
   - subject: no_sporulation_entry
     predicate: manifests as
     object: non_spore_forming_trait
@@ -180,6 +184,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms11081928
       notes: Arrest at sporulation initiation produces the non-spore-forming endpoint.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917903+00:00'
   curator: seed_from_metpo
@@ -214,4 +219,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2, METPO:2007400×2, RO:0002212×1).
   llm_assisted: true

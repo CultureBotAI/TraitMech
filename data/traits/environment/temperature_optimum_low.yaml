@@ -53,10 +53,12 @@ causal_graphs:
     label: low temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Cool ambient temperature stress (~0-20 C) experienced by the cell.
+    grounding: PATO:0001306
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
     description: Physical state of the lipid bilayer enabling proper membrane function.
+    grounding: METPO:1007505
   - node_id: membrane_unsaturation
     label: fatty-acyl unsaturation
     node_type: QUALITY
@@ -71,6 +73,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Osmolytes (e.g. glycine betaine, trehalose, glycerol) accumulated
       under cold stress.
+    grounding: CHEBI:25728
   - node_id: protein_membrane_stabilization
     label: protein and membrane stabilization
     node_type: BIOLOGICAL_PROCESS
@@ -131,6 +134,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: fluidizing the membrane and reducing bilayer thickness; broadly generalizable
         homeoviscous adaptation.
+    predicate_id: RO:0002213
   - subject: low_temperature
     predicate: induces
     object: cold_shock_proteins
@@ -163,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: AFGPs play crucial roles in protecting cells by binding to ice crystal
         surfaces.
+    predicate_id: RO:0002212
   - subject: low_temperature
     predicate: increases
     object: oxidative_stress
@@ -170,6 +175,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.37256/amtt.5220244537
       notes: Cold causes increased oxygen solubility and ROS.
+    predicate_id: RO:0002213
   - subject: pufa_biosynthesis
     predicate: maintains
     object: membrane_fluidity
@@ -200,4 +206,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001306×1, METPO:1007505×1, CHEBI:25728×1).
   llm_assisted: true

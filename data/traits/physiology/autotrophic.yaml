@@ -98,6 +98,7 @@ causal_graphs:
     node_type: ORGANELLE
     description: Protein-shell microcompartment encapsulating RuBisCO and carbonic
       anhydrase.
+    grounding: GO:0031470
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -106,6 +107,7 @@ causal_graphs:
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
     description: Reductive acetyl-CoA pathway fixing two CO2 into acetyl-CoA.
+    grounding: GO:0030634
   - node_id: acetyl_coa
     label: acetyl-CoA
     node_type: CHEMICAL
@@ -244,6 +246,7 @@ causal_graphs:
     - reference: DOI:10.1039/D4CB00099D
       notes: Two CO2 molecules are fixed to acetyl-CoA via the WLP, requiring one
         ATP and eight electrons.
+    predicate_id: rdfs:subClassOf
   - subject: wood_ljungdahl_pathway
     predicate: produces
     object: acetyl_coa
@@ -251,6 +254,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/D4CB00099D
       notes: Two CO2 molecules to acetyl-CoA via the WLP.
+    predicate_id: METPO:2000202
   - subject: codh_acs
     predicate: catalyzes
     object: wood_ljungdahl_pathway
@@ -260,6 +264,7 @@ causal_graphs:
     - reference: DOI:10.1039/D4CB00099D
       notes: CO dehydrogenase/acetyl-CoA synthase (CODH/ACS) produces acetyl-CoA in
         the WLP.
+    predicate_id: biolink:catalyzes
   - subject: molecular_hydrogen
     predicate: provides reductant for
     object: wood_ljungdahl_pathway
@@ -363,4 +368,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1, METPO:2000202×1, biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0030634×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031470×1).
   llm_assisted: true

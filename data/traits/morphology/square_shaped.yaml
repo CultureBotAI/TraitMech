@@ -110,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-022-01215-8
       notes: S-layers are known to fulfil roles in defining the cell-shape, providing
         mechanical stability and functioning as molecular sieves.
+    predicate_id: METPO:2007500
   - subject: archaeal_slayer
     predicate: provides
     object: mechanical_stability
@@ -180,4 +181,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007500×1).
   llm_assisted: true

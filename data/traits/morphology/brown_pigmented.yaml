@@ -57,6 +57,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Tyrosine catabolism intermediate converted to homogentisic acid by
       HppD.
+    grounding: CHEBI:36242
   - node_id: hmgA
     label: homogentisate 1,2-dioxygenase
     node_type: GENE_OR_PROTEIN
@@ -72,6 +73,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Auto-oxidation product of homogentisic acid that self-polymerizes
       into pyomelanin.
+    grounding: CHEBI:137246
   edges:
   - subject: tyrosine_catabolism
     predicate: produces
@@ -126,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01517-5
       notes: Tyrosine aminotransferases convert L-tyrosine into 4-hydroxyphenylpyruvate;
         biochemically generalizable precursor step.
+    predicate_id: METPO:2000202
   - subject: four_hydroxyphenylpyruvate
     predicate: converted to
     object: homogentisic_acid
@@ -212,4 +215,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:36242×1, CHEBI:137246×1).
   llm_assisted: true

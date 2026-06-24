@@ -96,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1101/2023.11.15.567178
       notes: Lagging strand exposed as ssDNA, increasing cytosine-to-thymine mutations
         and thus contributing to GC skew.
+    predicate_id: RO:0002213
   - subject: cytosine_deamination
     predicate: contributes to
     object: gc_skew_trait
@@ -105,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2026.1727296
       notes: Cytosine deamination at the replication fork is explicitly implicated
         in generating GC skew.
+    predicate_id: RO:0002326
   - subject: gene_strand_bias
     predicate: contributes to
     object: gc_skew_trait
@@ -114,6 +116,7 @@ causal_graphs:
     - reference: DOI:10.1101/2023.11.15.567178
       notes: Biased gene density on leading vs lagging strands is highlighted as a
         major contributor to skew.
+    predicate_id: RO:0002326
   - subject: translational_selection
     predicate: contributes to
     object: gc_skew_trait
@@ -123,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2026.1727296
       notes: Translational selection and the nature of the genetic code are universal
         determinants of asymmetric G/C distributions.
+    predicate_id: RO:0002326
   - subject: third_codon_mutational_bias
     predicate: contributes to
     object: gc_skew_trait
@@ -132,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1007/pl00006428
       notes: Third-position skews probably reflect mutational biases, separating mutational
         from protein-coding constraints.
+    predicate_id: RO:0002326
   - subject: strand_specific_repair
     predicate: contributes to
     object: gc_skew_trait
@@ -141,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2026.1727296
       notes: Strand-specific DNA repair pathways (MutSL-dependent MMR, transcription-coupled
         NER) contribute to asymmetry.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -160,4 +166,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×5, RO:0002213×1).
   llm_assisted: true

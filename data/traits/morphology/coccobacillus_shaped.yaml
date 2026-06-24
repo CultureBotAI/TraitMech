@@ -125,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.03235-23
       notes: This elongation depends on the SEDS/PBP pair RodA/PBP3 and is seen as
         an increased ratio of long to short cell axes.
+    predicate_id: RO:0002213
   - subject: length_to_width_ratio
     predicate: determines
     object: short_rod_geometry
@@ -143,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.03235-23
       notes: a gpsB mutant shows the strongest morphological phenotype, driven by
         partial delocalization of PBP2 and PBP4 away from the division septum.
+    predicate_id: RO:0002211
   - subject: pbp2_localization
     predicate: controls
     object: peptidoglycan_synthesis
@@ -152,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.03235-23
       notes: Increased PBP2/PBP4 at the cell periphery raises peptidoglycan insertion
         and crosslinking throughout the cell, impairing elongation.
+    predicate_id: RO:0002211
   - subject: ftsZ_filament
     predicate: directs
     object: peptidoglycan_synthesis
@@ -161,6 +164,7 @@ causal_graphs:
     - reference: DOI:10.1128/mBio.00908-16
       notes: altered FtsZ filaments direct asymmetric, helical cell-wall insertion,
         generating elongation; this helical pattern of wall insertion leads to elongation.
+    predicate_id: RO:0002211
   - subject: pbp2_elongasome
     predicate: required for
     object: short_rod_geometry
@@ -223,4 +227,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×3, RO:0002213×1).
   llm_assisted: true

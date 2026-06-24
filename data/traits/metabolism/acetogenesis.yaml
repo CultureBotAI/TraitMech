@@ -82,6 +82,7 @@ causal_graphs:
     label: acetyl phosphate
     node_type: CHEMICAL
     description: Activated acetyl intermediate from phosphotransacetylase.
+    grounding: CHEBI:15350
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -211,6 +212,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: ACK convert acetyl-phosphate to acetate, yielding ATP via SLP.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.915402+00:00'
   curator: seed_from_metpo
@@ -270,4 +272,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15350×1).
   llm_assisted: true

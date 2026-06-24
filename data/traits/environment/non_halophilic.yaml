@@ -152,6 +152,7 @@ causal_graphs:
       notes: Under hypertonic stress water exits cells within milliseconds, causing
         cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased
         ionic strength.
+    predicate_id: biolink:causes
   - subject: osmotic_upshift
     predicate: induces
     object: rapid_k_uptake
@@ -233,4 +234,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

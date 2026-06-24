@@ -107,6 +107,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: The abundance of membrane lipids containing unsaturated and branched-chain
         fatty acids rises with increasing HHP.
+    predicate_id: RO:0002213
   - subject: pfa_operon
     predicate: enables
     object: omega3_pufa
@@ -115,6 +116,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms11071629
       notes: The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.
+    predicate_id: RO:0002327
   - subject: high_hydrostatic_pressure
     predicate: increases
     object: omega3_pufa
@@ -124,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: HHP-driven increases in C20:5/C22:6 in Photobacterium profundum SS9,
         Psychromonas, and Shewanella piezotolerans WP3.
+    predicate_id: RO:0002213
   - subject: omega3_pufa
     predicate: enables
     object: membrane_adaptation
@@ -133,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: Unsaturated/polyunsaturated fatty acids maintain membrane fluidity under
         high pressure.
+    predicate_id: RO:0002327
   - subject: high_hydrostatic_pressure
     predicate: induces accumulation of
     object: piezolytes
@@ -151,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11071629
       notes: TMAO and other compatible solutes are highlighted as pressure-tolerance
         molecules.
+    predicate_id: RO:0002327
   - subject: pressure_tolerance
     predicate: contributes to
     object: piezophilic_trait
@@ -159,6 +164,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms11071629
       notes: Piezolytes support growth and survival under high hydrostatic pressure.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -178,4 +184,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, RO:0002213×2, RO:0002326×1).
   llm_assisted: true

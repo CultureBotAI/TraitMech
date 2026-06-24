@@ -49,6 +49,7 @@ causal_graphs:
     label: decreased temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: A drop in ambient temperature toward the lower mesophilic range.
+    grounding: PATO:0001306
   - node_id: membrane_bilayer
     label: membrane bilayer
     node_type: CELLULAR_LOCALIZATION
@@ -71,6 +72,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Degree of fluidity/disorder of the membrane lipid bilayer.
+    grounding: METPO:1007505
   - node_id: chaperone_network
     label: molecular chaperone network
     node_type: GENE_OR_PROTEIN
@@ -135,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: '"The most common adaptation is the incorporation of monounsaturated
         fatty acids (MUFA), preferably cis-unsaturated ones."'
+    predicate_id: RO:0002213
   - subject: chaperone_network
     predicate: maintains
     object: proteostasis
@@ -167,4 +170,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001306×1).
   llm_assisted: true

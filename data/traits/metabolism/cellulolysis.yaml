@@ -46,6 +46,7 @@ causal_graphs:
     label: cellulose
     node_type: CHEMICAL
     description: Beta-1,4-linked glucose polymer substrate.
+    grounding: CHEBI:18246
   - node_id: endoglucanase
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
@@ -66,6 +67,7 @@ causal_graphs:
     label: cellulosome
     node_type: CELLULAR_LOCALIZATION
     description: Multienzyme complex built on scaffoldins for cellulose degradation.
+    grounding: GO:0043263
   - node_id: scaffoldin
     label: scaffoldin
     node_type: GENE_OR_PROTEIN
@@ -112,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1093/jambio/lxac002
       notes: Complete degradation of cellulose to glucose requires concerted action
         of cellobiohydrolases, endoglucanases and beta-glucosidases.
+    predicate_id: METPO:2000007
   - subject: cellobiohydrolase
     predicate: degrades
     object: cellulose
@@ -121,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1093/jambio/lxac002
       notes: Complete degradation of cellulose to glucose requires concerted action
         of cellobiohydrolases, endoglucanases and beta-glucosidases.
+    predicate_id: METPO:2000007
   - subject: beta_glucosidase
     predicate: hydrolyzes
     object: cellobiose
@@ -129,6 +133,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s13568-023-01658-0
       notes: Beta-glucosidase activity converting cellobiose into glucose.
+    predicate_id: METPO:2000013
   - subject: beta_glucosidase
     predicate: produces
     object: glucose
@@ -137,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13568-023-01658-0
       notes: Beta-glucosidase activity converting cellobiose into glucose; product
         edge directly stated.
+    predicate_id: METPO:2000202
   - subject: cellulosome
     predicate: has backbone component
     object: scaffoldin
@@ -192,4 +198,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18246×1, GO:0043263×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000007×2, METPO:2000013×1).
   llm_assisted: true

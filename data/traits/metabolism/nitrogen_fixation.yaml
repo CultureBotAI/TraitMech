@@ -150,6 +150,7 @@ causal_graphs:
     - reference: DOI:10.34133/bdr.0005
       notes: FeMo-co binds and reduces N2 to form NH3 and H2 in the canonical Mo-dependent
         nitrogenase.
+    predicate_id: RO:0002327
   - subject: nifh_fe_protein
     predicate: requires
     object: atp
@@ -167,6 +168,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00378-23
       notes: Nitrogenase is an O2-sensitive enzyme; broad, well-supported claim across
         diazotrophs.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -192,4 +194,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002212×1).
   llm_assisted: true

@@ -97,6 +97,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1008493
       notes: Sites with higher DSB rates are under selection for increased GC content;
         proposed unifying driver of GC content across prokaryotes.
+    predicate_id: METPO:2007401
   - subject: drr_system_composition
     predicate: strongly correlated with
     object: gc_mid1_trait
@@ -139,4 +140,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

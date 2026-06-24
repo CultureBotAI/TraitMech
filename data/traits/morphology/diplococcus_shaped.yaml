@@ -75,6 +75,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Resolution of two daughter cells after division; incomplete separation
       retains paired cells.
+    grounding: GO:0000920
   edges:
   - subject: septal_peptidoglycan_synthesis
     predicate: forms
@@ -131,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-023-04808-z
       notes: Septum cleavage is the proximate process producing paired cells rather
         than long chains.
+    predicate_id: RO:0002327
   - subject: hydrolase_septal_localization
     predicate: enables
     object: daughter_cell_separation
@@ -140,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-023-04808-z
       notes: Restricted septal localization of the autolysin confines its lethal activity
         to its site of action, enabling separation; mislocalization yields chaining.
+    predicate_id: RO:0002327
   - subject: wall_teichoic_acid
     predicate: promotes
     object: hydrolase_septal_localization
@@ -149,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.celrep.2023.112756
       notes: Separation-hydrolase binding is reduced in WTA-deficient cells but preserved
         in LTA-deficient cells; WTA acts as an envelope-polymer address for the autolysin.
+    predicate_id: RO:0002213
   - subject: lytr_lcp_enzyme
     predicate: produces
     object: wall_teichoic_acid
@@ -158,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3001990
       notes: LytR is the major enzyme mediating the final step in WTA formation, anchoring
         the TA precursor to PGN.
+    predicate_id: METPO:2000202
   - subject: daughter_cell_separation
     predicate: incomplete separation yields
     object: daughter_cell_pair
@@ -195,4 +200,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002213×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0000920×1).
   llm_assisted: true

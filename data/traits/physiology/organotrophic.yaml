@@ -152,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: Catabolic pathways (Krebs cycle and beta-oxidation) generate reduced
         carriers (NADH and FADH2).
+    predicate_id: biolink:produces
   - subject: reduced_electron_carriers
     predicate: donates electrons to
     object: nadh_dehydrogenase
@@ -161,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: NADH dehydrogenase (Complex I) extracts hydrogen/electrons from NADH;
         broad canonical ETC-entry edge.
+    predicate_id: METPO:2007403
   - subject: nadh_dehydrogenase
     predicate: feeds electrons into
     object: respiratory_chain
@@ -170,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: Reduced carriers feed electrons into membrane electron-transport systems
         via NADH dehydrogenase.
+    predicate_id: METPO:2007402
   - subject: organic_carbon_availability
     predicate: increases abundance of
     object: organotrophic_trait
@@ -243,4 +246,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, METPO:2007403×1, METPO:2007402×1).
   llm_assisted: true

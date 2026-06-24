@@ -60,6 +60,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Membrane acyl chains with cis double bonds that increase membrane
       fluidity.
+    grounding: CHEBI:27208
   - node_id: cold_shock
     label: cold shock
     node_type: ENVIRONMENTAL_FACTOR
@@ -73,6 +74,7 @@ causal_graphs:
     label: translation
     node_type: BIOLOGICAL_PROCESS
     description: Protein synthesis from mRNA, maintained during cold shock.
+    grounding: GO:0006412
   - node_id: heat_shock
     label: heat shock
     node_type: ENVIRONMENTAL_FACTOR
@@ -140,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Low-temperature adaptation includes increased unsaturation of membrane
         acyl chains; broad bacterial homeoviscous adaptation.
+    predicate_id: RO:0002213
   - subject: cold_shock
     predicate: induces
     object: cspa
@@ -157,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: CspA binds/unwinds RNA to promote single-strandedness and translation
         during cold shock.
+    predicate_id: RO:0002213
   - subject: heat_shock
     predicate: induces
     object: rpoh_sigma32
@@ -252,4 +256,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1, GO:0006412×1).
   llm_assisted: true

@@ -66,6 +66,7 @@ causal_graphs:
     label: lipoteichoic acid
     node_type: CHEMICAL
     description: Cell-wall anionic polymer involved in proper cell shape and division.
+    grounding: CHEBI:28640
   edges:
   - subject: parallel_division_planes
     predicate: causes
@@ -94,6 +95,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSphere.00119-21
       notes: Ovococci are elongated ellipsoids divided in successive parallel planes
         perpendicular to their long axis.
+    predicate_id: RO:0002327
   - subject: pg_hydrolases
     predicate: enables
     object: pg_remodeling
@@ -103,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2021.737396
       notes: PG hydrolases are required to release nascent glycan strands and cleave
         muropeptides, enabling integration of new material and eventual splitting.
+    predicate_id: RO:0002327
   - subject: pcsb_autolysin
     predicate: promotes
     object: pg_remodeling
@@ -111,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSphere.00119-21
       notes: The PG remodeling activity by PcsB is coordinated with cell division
         through its interaction with the FtsEX complex.
+    predicate_id: RO:0002213
   - subject: ftsex_complex
     predicate: required for
     object: pcsb_autolysin
@@ -128,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSphere.00119-21
       notes: Part of the residual structure of PG did not fully disintegrate, resulting
         in incomplete cell separation (chain phenotype).
+    predicate_id: RO:0002213
   - subject: daughter_cell_separation
     predicate: prevents
     object: streptococcus_trait
@@ -137,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1038/ncomms4842
       notes: Daughter-cell separation during division determines whether cocci stay
         attached in chains versus separating.
+    predicate_id: RO:0002212
   - subject: lipoteichoic_acid
     predicate: promotes
     object: cell_division
@@ -145,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13567-024-01287-w
       notes: LTA is involved in maintaining proper cell shape and influences cell
         shape and bacterial division.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -163,4 +170,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3, RO:0002327×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:28640×1).
   llm_assisted: true

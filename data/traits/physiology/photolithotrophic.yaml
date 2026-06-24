@@ -80,6 +80,7 @@ causal_graphs:
     label: elemental sulfur
     node_type: CHEMICAL
     description: Product of phototrophic hydrogen sulfide oxidation.
+    grounding: CHEBI:26833
   - node_id: co2_fixation
     label: photosynthetic CO2 fixation
     node_type: BIOLOGICAL_PROCESS
@@ -189,6 +190,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1417714
       notes: GSB oxidize H2S to elemental sulfur.
+    predicate_id: METPO:2000202
   - subject: inorganic_electron_donor
     predicate: supports
     object: co2_fixation
@@ -207,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41561-024-01560-9
       notes: Photoferrotrophy is the oxidation of reduced iron via anoxygenic photosynthesis;
         anoxygenic phototrophic Fe(II) oxidizers are photoferrotrophs.
+    predicate_id: METPO:2007500
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881359+00:00'
   curator: seed_from_metpo
@@ -272,4 +275,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:26833×1).
   llm_assisted: true

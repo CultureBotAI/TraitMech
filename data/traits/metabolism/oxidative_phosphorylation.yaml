@@ -76,6 +76,7 @@ causal_graphs:
     label: proton
     node_type: CHEMICAL
     description: Translocated ion forming the transmembrane gradient.
+    grounding: CHEBI:24636
   - node_id: proton_translocation
     label: proton translocation
     node_type: BIOLOGICAL_PROCESS
@@ -154,6 +155,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/ijms252413421
       notes: oxidation of NADH by ubiquinone; reduces the membrane quinone pool.
+    predicate_id: METPO:2000017
   - subject: complex_i
     predicate: translocates
     object: proton
@@ -177,6 +179,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms252413421
       notes: energy conservation in the form of an electrochemical gradient (proton
         motive force, pmf).
+    predicate_id: biolink:produces
   - subject: terminal_oxidase
     predicate: reduces
     object: oxygen
@@ -185,6 +188,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms25021277
       notes: Terminal oxidases catalyze four-electron reduction of O2 to 2H2O (general
         bacterial claim).
+    predicate_id: METPO:2000017
   - subject: heme_copper_oxidase
     predicate: translocates
     object: proton
@@ -245,4 +249,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×2, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:24636×1).
   llm_assisted: true

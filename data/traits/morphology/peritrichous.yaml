@@ -105,6 +105,7 @@ causal_graphs:
       notes: 'Dornes et al. 2024: FlhG''s modulation of FlhF controls FliG interaction
         with FliM/FliN, thereby regulating progression of flagellar assembly; general
         placement/number control.'
+    predicate_id: RO:0002211
   - subject: flagellar_filament_number
     predicate: positively influences (saturating)
     object: swimming_velocity
@@ -143,4 +144,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -153,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11020344
       notes: Strains encode specific virulence traits that render them capable of
         causing disease.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.932513+00:00'
   curator: seed_from_metpo
@@ -175,4 +176,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

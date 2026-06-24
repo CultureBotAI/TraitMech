@@ -46,6 +46,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Physical fluidity of the cell membrane, central to homeoviscous adaptation.
+    grounding: METPO:1007505
   - node_id: cold_shock
     label: cold shock
     node_type: ENVIRONMENTAL_FACTOR
@@ -95,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: Proportionally more unsaturated fatty acids maintain membrane fluidity
         within an optimal range; broad across microbes.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: decreased by reduced unsaturated fatty acids
     object: unsaturated_fatty_acid_content
@@ -143,4 +145,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

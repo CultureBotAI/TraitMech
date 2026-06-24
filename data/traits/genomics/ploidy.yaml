@@ -94,6 +94,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11092267
       notes: All five characterized polyploid prokaryotic species grow without environmental
         phosphate by reducing genome copy numbers.
+    predicate_id: RO:0002212
   - subject: genome_copy_number
     predicate: enables
     object: growth_without_phosphate
@@ -104,6 +105,7 @@ causal_graphs:
       notes: Multiple polyploid prokaryotes grow without external phosphate by reducing
         intracellular genome copy number; monoploid E. coli showed no growth without
         phosphate.
+    predicate_id: RO:0002327
   - subject: genome_copy_number
     predicate: has function
     object: dna_phosphate_storage
@@ -112,6 +114,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms11092267
       notes: Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.
+    predicate_id: RO:0000085
   - subject: ploidy_trait
     predicate: increases
     object: segregational_drift
@@ -121,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1010829
       notes: Alleles on polyploid replicons segregate stochastically during cell division,
         termed segregational drift; shown with experiments and modeling.
+    predicate_id: RO:0002213
   - subject: segregational_drift
     predicate: causes
     object: beneficial_allele_loss
@@ -130,6 +134,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1010829
       notes: Resistance alleles in polyploid elements are lost frequently versus monoploid
         elements due to segregational drift.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -148,4 +153,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, RO:0002327×1, RO:0000085×1, RO:0002213×1, biolink:causes×1).
   llm_assisted: true

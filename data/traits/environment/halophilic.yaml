@@ -53,10 +53,12 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane antiporter that exports sodium from the cytoplasm in exchange
       for protons.
+    grounding: UniProtKB:A0A068T423
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
     description: Na+ cation that must be excluded from the cytoplasm.
+    grounding: CHEBI:29101
   - node_id: k_uniport
     label: K+ uniport system
     node_type: GENE_OR_PROTEIN
@@ -65,6 +67,7 @@ causal_graphs:
     label: potassium ion
     node_type: CHEMICAL
     description: K+ cation accumulated intracellularly during salt-in osmoadaptation.
+    grounding: CHEBI:29103
   - node_id: acidified_proteome
     label: acidified proteome
     node_type: STATE
@@ -83,6 +86,7 @@ causal_graphs:
     label: ectoine
     node_type: CHEMICAL
     description: Compatible solute synthesized de novo from L-aspartic acid.
+    grounding: CHEBI:27592
   - node_id: l_aspartic_acid
     label: L-aspartic acid
     node_type: CHEMICAL
@@ -153,6 +157,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms12081738
       notes: Potassium enters the cell through a uniport system
+    predicate_id: METPO:2000208
   - subject: salt_in_strategy
     predicate: associated with
     object: acidified_proteome
@@ -160,6 +165,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms12081738
       notes: microorganisms employing this strategy exhibit an acidified proteome
+    predicate_id: biolink:associated_with
   - subject: sodium_chloride
     predicate: induces
     object: oxidative_stress
@@ -190,6 +196,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00479-23
       notes: Ectoine is a canonical compatible solute synthesized via the ectABC operon.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860938+00:00'
   curator: seed_from_metpo
@@ -259,4 +266,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000208×1, biolink:associated_with×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A068T423×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:29101×1, CHEBI:29103×1, CHEBI:27592×1).
   llm_assisted: true

@@ -44,6 +44,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Template-directed exchange/repair pathway that drives GC-biased gene
       conversion.
+    grounding: GO:0035825
   - node_id: mutation_bias_at
     label: mutation bias toward AT
     node_type: BIOLOGICAL_PROCESS
@@ -162,4 +163,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0035825×1).
   llm_assisted: true

@@ -67,6 +67,7 @@ causal_graphs:
     label: flagellar motility
     node_type: BIOLOGICAL_PROCESS
     description: Flagellum-dependent cell motility.
+    grounding: GO:0003341
   - node_id: climate_extreme_event
     label: extreme climatic event
     node_type: ENVIRONMENTAL_FACTOR
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-53753-w
       notes: 'Zhou et al.: high potential growth in resource-rich, acid-neutral soils
         of cold, humid regions (18O-H2O DNA incorporation).'
+    predicate_id: RO:0002213
   - subject: aridity
     predicate: decreases
     object: potential_growth_rate
@@ -130,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-53753-w
       notes: 'Zhou et al.: aridity was a stronger predictor of community growth than
         temperature; dry soils had lower potential growth.'
+    predicate_id: RO:0002212
   - subject: soil_carbon_availability
     predicate: increases prevalence of
     object: flagellar_motility
@@ -147,6 +150,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41586-024-08185-3
       notes: 'Knight et al.: dormancy and sporulation genes increased across flood,
         freeze and heat; 46% of annotated genes shifted at disturbance end.'
+    predicate_id: RO:0002213
   - subject: soil_pH_precip_cn
     predicate: predicts
     object: life_history_axes
@@ -174,4 +178,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0003341×1).
   llm_assisted: true

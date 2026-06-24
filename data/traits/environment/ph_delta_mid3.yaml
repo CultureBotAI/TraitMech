@@ -146,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: F1Fo-ATPase hydrolytic activity can drive H+ extrusion; key regulator
         in low-pH contexts.
+    predicate_id: RO:0002326
   - subject: phosphate_buffering
     predicate: stabilizes
     object: intracellular_ph_stability
@@ -164,6 +165,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Decarboxylation releases ~20 kJ/mol that can be stored as PMF; decarboxylation
         pathways are key pH regulators.
+    predicate_id: RO:0002326
   - subject: membrane_lipid_remodeling
     predicate: reduces
     object: proton_permeability
@@ -172,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2022.1034164
       notes: Membrane composition adjustments limit proton permeability and alter
         phospholipid headgroups under high pH.
+    predicate_id: METPO:2000017
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839862+00:00'
   curator: seed_from_metpo
@@ -195,4 +198,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, METPO:2000017×1).
   llm_assisted: true

@@ -52,6 +52,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Ribosome assembly and start-codon recognition that begins protein
       synthesis.
+    grounding: GO:0006413
   edges:
   - subject: codon_bias_trait
     predicate: regulates
@@ -101,6 +102,7 @@ causal_graphs:
       notes: 'Plotkin & Kudla: 5'' structure generally disadvantageous; GFP expression
         in E. coli strongly inhibited when 5'' folding energy below ~-10 kcal/mol
         (RBS/SD/start-codon occlusion).'
+    predicate_id: RO:0002212
   - subject: translation_initiation
     predicate: part of
     object: translation
@@ -109,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrg2899
       notes: Plotkin & Kudla discuss translation initiation as a major mechanism linking
         5' sequence features to expression.
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -128,4 +131,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006413×1).
   llm_assisted: true

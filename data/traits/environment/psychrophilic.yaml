@@ -64,6 +64,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Low-molecular-weight osmolytes (e.g. trehalose, glycine betaine,
       glycerol) accumulated for cryoprotection.
+    grounding: CHEBI:25728
   - node_id: trehalose
     label: trehalose
     node_type: CHEMICAL
@@ -84,6 +85,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: ROS whose concentration rises at low temperature due to increased
       gas solubility.
+    grounding: CHEBI:26523
   edges:
   - subject: low_temperature
     predicate: selects for
@@ -151,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1002/embr.201338170
       notes: cold-shock proteins (CSPs) regulate a variety of cellular processes,
         including transcription, translation.
+    predicate_id: RO:0002211
   - subject: trehalose
     predicate: prevents
     object: protein_membrane_stability
@@ -160,6 +163,7 @@ causal_graphs:
     - reference: DOI:10.1038/sj.embor.7400662
       notes: Trehalose is thought to have a colligative effect, but probably also
         helps in preventing protein denaturation and aggregation.
+    predicate_id: RO:0002212
   - subject: compatible_solutes
     predicate: maintains
     object: protein_membrane_stability
@@ -186,6 +190,7 @@ causal_graphs:
     - reference: DOI:10.1002/embr.201338170
       notes: The solubility of gases increases at lower temperatures, resulting in
         increased concentrations of reactive oxygen species.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857091+00:00'
   curator: seed_from_metpo
@@ -268,4 +273,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:25728×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:26523×1).
   llm_assisted: true

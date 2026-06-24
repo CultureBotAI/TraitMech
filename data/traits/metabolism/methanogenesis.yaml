@@ -157,6 +157,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/mmbr.00024-22
       notes: A key genetic requirement across these pathways is the presence of mcrABG.
+    predicate_id: RO:0002327
   - subject: acetate
     predicate: serves as substrate for
     object: acetoclastic_methanogenesis
@@ -195,6 +196,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1296008
       notes: Reduced coenzyme F420 (F420H2) donates electrons for reductions of methenyl/methylene
         intermediates.
+    predicate_id: METPO:2007403
 curation_history:
 - timestamp: '2026-05-05T01:35:46.914643+00:00'
   curator: seed_from_metpo
@@ -254,4 +256,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2007403×1).
   llm_assisted: true

@@ -58,6 +58,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Acquisition of genes via plasmids, transduction, transposons, and
       IS elements.
+    grounding: GO:0009292
   - node_id: virulence_gene_acquisition
     label: acquisition of virulence/host-adaptation genes
     node_type: BIOLOGICAL_PROCESS
@@ -78,6 +79,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Surface-attached communities increasing treatment resistance and
       persistence.
+    grounding: GO:0042710
   - node_id: treatment_resistance_persistence
     label: treatment resistance and persistence
     node_type: QUALITY
@@ -130,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-023-00974-3
       notes: T4SSs function as protein effector translocators delivering effectors
         or toxins; viable targets to thwart infection by pathogens.
+    predicate_id: RO:0002327
   - subject: host_cell_manipulation
     predicate: enables
     object: human_disease
@@ -139,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-023-00974-3
       notes: Effector translocation enables host cell manipulation and infection by
         pathogens.
+    predicate_id: RO:0002327
   - subject: horizontal_gene_transfer
     predicate: enables
     object: virulence_gene_acquisition
@@ -148,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: HGT via conjugation, transduction, transposons, IS elements can be associated
         with gain of genes facilitating host tropism and virulence factors.
+    predicate_id: RO:0002327
   - subject: virulence_gene_acquisition
     predicate: enables
     object: human_virulence_factors
@@ -157,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Gene acquisition facilitates changes in host species tropism, including
         virulence factors enabling human-pathogenic lineages.
+    predicate_id: RO:0002327
   - subject: within_host_genetic_diversification
     predicate: enables
     object: within_host_adaptation
@@ -166,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-pathmechdis-051122-111408
       notes: Secondary mechanisms including hypermutation, structural variation, and
         MGE/phage insertions can increase pathogenicity and facilitate long-term persistence.
+    predicate_id: RO:0002327
   - subject: within_host_adaptation
     predicate: enables
     object: human_disease
@@ -175,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-pathmechdis-051122-111408
       notes: Within-host evolution can increase pathogenicity and facilitate long-term
         persistence in the host.
+    predicate_id: RO:0002327
   - subject: biofilm_formation
     predicate: enables
     object: treatment_resistance_persistence
@@ -183,6 +191,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1370818
       notes: Bacteria can form biofilms, making them resistant to treatment.
+    predicate_id: RO:0002327
   - subject: treatment_resistance_persistence
     predicate: enables
     object: human_disease
@@ -192,6 +201,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1370818
       notes: Biofilm-associated resistance to treatment contributes to infection severity
         and persistence.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949749+00:00'
   curator: seed_from_metpo
@@ -239,4 +249,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 8 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×8).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042710×1).
   llm_assisted: true

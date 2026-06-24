@@ -121,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1098/rstb.2015.0494
       notes: Wall-deficient L-form state is characterized by pleomorphic morphology
         across diverse bacteria.
+    predicate_id: METPO:2007400
   - subject: excess_membrane_synthesis
     predicate: drives proliferation of
     object: lform_wall_deficient_state
@@ -139,6 +140,7 @@ causal_graphs:
     - reference: DOI:10.1042/bst20160435
       notes: Proliferation appears to require only an increased rate of membrane synthesis,
         producing an increased surface area-to-volume ratio.
+    predicate_id: RO:0002327
   - subject: oxidative_stress_ros
     predicate: limits or kills
     object: lform_wall_deficient_state
@@ -157,6 +159,7 @@ causal_graphs:
     - reference: DOI:10.3390/bioengineering11010081
       notes: Rod-shaped bacteria (e.g., E. coli, B. subtilis) exhibit spherical or
         pleomorphic shapes due to the lack of cell walls.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.892214+00:00'
   curator: seed_from_metpo
@@ -186,4 +189,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007400×1, RO:0002327×1, biolink:causes×1).
   llm_assisted: true

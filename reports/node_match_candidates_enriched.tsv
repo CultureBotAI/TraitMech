@@ -1,0 +1,178 @@
+label	node_type	count	curie	name	status
+bicarbonate	CHEMICAL	8	CHEBI:17544	hydrogencarbonate	unique
+pyruvate	CHEMICAL	7	CHEBI:15361	pyruvate	unique
+biofilm formation	BIOLOGICAL_PROCESS	6	GO:0042710	biofilm formation	unique
+atp synthesis	BIOLOGICAL_PROCESS	6	GO:0006754	ATP biosynthetic process	unique
+hydrogen peroxide	CHEMICAL	6	CHEBI:16240	hydrogen peroxide	unique
+ectoine	CHEMICAL	6	CHEBI:27592	ectoine	unique
+glycine betaine	CHEMICAL	6	CHEBI:17750	glycine betaine	unique
+unsaturated fatty acids	CHEMICAL	6	CHEBI:27208	unsaturated fatty acid	unique
+cyclic di-amp	CHEMICAL	6	CHEBI:71578	cyclic di-AMP	unique
+atp	CHEMICAL	6	CHEBI:15422|CHEBI:30616		ambiguous
+acetyl-coa	CHEMICAL	6	CHEBI:15351|CHEBI:57288		ambiguous
+trehalose	CHEMICAL	5	CHEBI:16551|CHEBI:27082		ambiguous
+formate	CHEMICAL	5	CHEBI:15740|CHEBI:52343		ambiguous
+oxygen	CHEMICAL	5	CHEBI:15379|CHEBI:25805		ambiguous
+lycopene	CHEMICAL	5	CHEBI:15948	lycopene	unique
+reactive oxygen species	CHEMICAL	4	CHEBI:26523	reactive oxygen species	unique
+carboxysome	ORGANELLE	4	GO:0031470	carboxysome	unique
+sulfite	CHEMICAL	4	CHEBI:17359|CHEBI:26823|CHEBI:48854		ambiguous
+quorum sensing	BIOLOGICAL_PROCESS	3	GO:0009372	quorum sensing	unique
+glycine betaine biosynthesis	BIOLOGICAL_PROCESS	3	GO:0031456	glycine betaine biosynthetic process	unique
+ectoine biosynthesis	BIOLOGICAL_PROCESS	3	GO:0019491	ectoine biosynthetic process	unique
+sodium ion	CHEMICAL	3	CHEBI:29101	sodium(1+)	unique
+l-proline	CHEMICAL	3	CHEBI:17203|CHEBI:50342|CHEBI:60039		ambiguous
+reduced ferredoxin	CHEMICAL	3	CHEBI:17513	reduced ferredoxin	unique
+beta-carotene	CHEMICAL	3	CHEBI:17579	beta-carotene	unique
+cell pole	CELLULAR_LOCALIZATION	3	GO:0060187	cell pole	unique
+immune evasion	BIOLOGICAL_PROCESS	2	GO:0042783|GO:0051842		ambiguous
+cellulose	CHEMICAL	2	CHEBI:18246	(1->4)-beta-D-glucan	unique
+lignin	CHEMICAL	2	CHEBI:6457	lignin	unique
+superoxide dismutase activity	MOLECULAR_FUNCTION	2	GO:0004784	superoxide dismutase activity	unique
+potassium ion	CHEMICAL	2	CHEBI:29103	potassium(1+)	unique
+superoxide	CHEMICAL	2	CHEBI:18421	superoxide	unique
+homologous recombination	BIOLOGICAL_PROCESS	2	GO:0035825	homologous recombination	unique
+unsaturated fatty acid biosynthesis	BIOLOGICAL_PROCESS	2	GO:0006636	unsaturated fatty acid biosynthetic process	unique
+nitrite	CHEMICAL	2	CHEBI:16301	nitrite	unique
+nitrous oxide	CHEMICAL	2	CHEBI:17045	dinitrogen oxide	unique
+carbon catabolite repression	BIOLOGICAL_PROCESS	2	GO:0045013|GO:0061985		ambiguous
+oxaloacetate	CHEMICAL	2	CHEBI:16452	oxaloacetate(2-)	unique
+4-hydroxybutyryl-coa	CHEMICAL	2	CHEBI:28522	4-hydroxybutyryl-CoA	unique
+crotonyl-coa	CHEMICAL	2	CHEBI:15473|CHEBI:36926		ambiguous
+nadh	CHEMICAL	2	CHEBI:16908|CHEBI:57945		ambiguous
+nad+	CHEMICAL	2	CHEBI:15846	NAD(+)	unique
+acetate	CHEMICAL	2	CHEBI:30089|CHEBI:47622		ambiguous
+succinate	CHEMICAL	2	CHEBI:26806|CHEBI:30031		ambiguous
+succinyl-coa	CHEMICAL	2	CHEBI:15380|CHEBI:57292		ambiguous
+propionyl-coa	CHEMICAL	2	CHEBI:15539	propionyl-CoA	unique
+4-hydroxyphenylpyruvate	CHEMICAL	2	CHEBI:36242	3-(4-hydroxyphenyl)pyruvate	unique
+lipid ii	CHEMICAL	2	CHEBI:27692	lipid II	unique
+daughter cell separation	BIOLOGICAL_PROCESS	2	GO:0000920	septum digestion after cytokinesis	unique
+cyclic di-gmp	CHEMICAL	2	CHEBI:49537	c-di-GMP	unique
+oxygen	ENVIRONMENTAL_FACTOR	2	ENVO:01001495	dioxygen dissolved in marine water	unique
+spore coat	CELLULAR_LOCALIZATION	2	GO:0031160	spore wall	unique
+extracellular matrix	CELLULAR_LOCALIZATION	1	GO:0031012	extracellular matrix	unique
+nitric oxide	CHEMICAL	1	CHEBI:16480	nitric oxide	unique
+flavonoids	CHEMICAL	1	CHEBI:47916|CHEBI:72544		ambiguous
+organic acids	CHEMICAL	1	CHEBI:64709	organic acid	unique
+plant tissue colonization	BIOLOGICAL_PROCESS	1	GO:0140649	cell-to-cell migration by invasive hypha	unique
+plant cell wall	CELLULAR_LOCALIZATION	1	GO:0009505	plant-type cell wall	unique
+hemicellulose	CHEMICAL	1	CHEBI:61266	hemicellulose	unique
+flagellar motility	BIOLOGICAL_PROCESS	1	GO:0003341	cilium movement	unique
+hydrogen peroxide detoxification	BIOLOGICAL_PROCESS	1	GO:0033355	ascorbate glutathione cycle	unique
+hydroxide ion	CHEMICAL	1	CHEBI:16234	hydroxide	unique
+arsenate(3-)	CHEMICAL	1	CHEBI:29125	arsenate(3-)	unique
+zinc(2+) ion	CHEMICAL	1	CHEBI:29105	zinc(2+)	unique
+catalase activity	MOLECULAR_FUNCTION	1	GO:0004096	catalase activity	unique
+compatible osmolytes	CHEMICAL	1	CHEBI:23366	compatible osmolytes	unique
+hopanoid biosynthetic process	BIOLOGICAL_PROCESS	1	GO:0019746	hopanoid biosynthetic process	unique
+l-aspartic acid	CHEMICAL	1	CHEBI:17053|CHEBI:29958		ambiguous
+macrocyclic archaeol	CHEMICAL	1	CHEBI:193595	macrocyclic archaeol	unique
+mercury(0)	CHEMICAL	1	CHEBI:16170	mercury(0)	unique
+translation	BIOLOGICAL_PROCESS	1	GO:0006412	translation	unique
+hydroxyectoine	CHEMICAL	1	CHEBI:49432	5-hydroxyectoine	unique
+potassium ion uptake	BIOLOGICAL_PROCESS	1	GO:1990573	potassium ion import across plasma membrane	unique
+response to osmotic stress	BIOLOGICAL_PROCESS	1	GO:0006970	response to osmotic stress	unique
+potassium import	BIOLOGICAL_PROCESS	1	GO:1990573	potassium ion import across plasma membrane	unique
+l-glutamate	CHEMICAL	1	CHEBI:29985|CHEBI:29988		ambiguous
+hydroxyl radical	CHEMICAL	1	CHEBI:29191	hydroxyl	unique
+polyunsaturated fatty acid biosynthesis	BIOLOGICAL_PROCESS	1	GO:0006636	unsaturated fatty acid biosynthetic process	unique
+cis-trans isomerase activity	MOLECULAR_FUNCTION	1	GO:0016859	cis-trans isomerase activity	unique
+branched-chain fatty acids	CHEMICAL	1	CHEBI:35819	branched-chain fatty acid	unique
+decreased temperature	ENVIRONMENTAL_FACTOR	1	PATO:0001306	decreased temperature	unique
+protein folding	BIOLOGICAL_PROCESS	1	GO:0006457	protein folding	unique
+mycosporine-like amino acids	CHEMICAL	1	CHEBI:35738	mycosporine-like amino acid	unique
+polyphosphate	CHEMICAL	1	CHEBI:16838	polyphosphate	unique
+translation initiation	BIOLOGICAL_PROCESS	1	GO:0006413	translational initiation	unique
+error-prone translesion synthesis	BIOLOGICAL_PROCESS	1	GO:0042276	error-prone translesion synthesis	unique
+soil ph	ENVIRONMENTAL_FACTOR	1	ENVO:09200010	acidity of soil	unique
+transposition	BIOLOGICAL_PROCESS	1	GO:0032196	transposition	unique
+prophage induction	BIOLOGICAL_PROCESS	1	GO:0098689	latency-replication decision	unique
+rrna transcription	BIOLOGICAL_PROCESS	1	GO:0009303	rRNA transcription	unique
+dinitrogen	CHEMICAL	1	CHEBI:17997	dinitrogen	unique
+oligosaccharides	CHEMICAL	1	CHEBI:50699	oligosaccharide	unique
+cell envelope	CELLULAR_LOCALIZATION	1	GO:0030313	cell envelope	unique
+3-phospho-d-glycerate	CHEMICAL	1	CHEBI:17794	3-phospho-D-glyceric acid	unique
+cellobiose	CHEMICAL	1	CHEBI:17057|CHEBI:36217		ambiguous
+cellulosome	CELLULAR_LOCALIZATION	1	GO:0043263	cellulosome	unique
+n-acetylglucosamine	CHEMICAL	1	CHEBI:28009|CHEBI:59640		ambiguous
+chitin	CHEMICAL	1	CHEBI:17029	chitin	unique
+phosphoenolpyruvate	CHEMICAL	1	CHEBI:18021|CHEBI:44897|CHEBI:58702		ambiguous
+tetrathionate	CHEMICAL	1	CHEBI:15226|CHEBI:16094		ambiguous
+dihydrogen	CHEMICAL	1	CHEBI:18276	dihydrogen	unique
+electron acceptor	CHEMICAL	1	CHEBI:17654|CHEBI:39143		ambiguous
+ubiquinone	CHEMICAL	1	CHEBI:16389|CHEBI:46245		ambiguous
+ubiquinol	CHEMICAL	1	CHEBI:17976	ubiquinol	unique
+acetaldehyde	CHEMICAL	1	CHEBI:15343	acetaldehyde	unique
+ph	ENVIRONMENTAL_FACTOR	1	PATO:0001842	acidity	unique
+mn2+	CHEMICAL	1	CHEBI:29035	manganese(2+)	unique
+respiratory electron transport chain	BIOLOGICAL_PROCESS	1	GO:0022904	respiratory electron transport chain	unique
+coenzyme b	CHEMICAL	1	CHEBI:28890|CHEBI:58596		ambiguous
+coenzyme m	CHEMICAL	1	CHEBI:17905|CHEBI:58319		ambiguous
+photosynthetic electron transport chain	BIOLOGICAL_PROCESS	1	GO:0009767	photosynthetic electron transport chain	unique
+malate	CHEMICAL	1	CHEBI:15595|CHEBI:25115|CHEBI:30797		ambiguous
+methylmalonyl-coa	CHEMICAL	1	CHEBI:16625|CHEBI:59916		ambiguous
+biotin	CHEMICAL	1	CHEBI:15956|CHEBI:57586		ambiguous
+nad(p)h	CHEMICAL	1	CHEBI:13392	NAD(P)H	unique
+maltooligosaccharides	CHEMICAL	1	CHEBI:17593	maltooligosaccharide	unique
+malonyl-coa	CHEMICAL	1	CHEBI:15531|CHEBI:57384		ambiguous
+3-hydroxypropionate	CHEMICAL	1	CHEBI:16510	3-hydroxypropionate	unique
+4-hydroxybutyrate	CHEMICAL	1	CHEBI:16724	4-hydroxybutyrate	unique
+moenomycin	CHEMICAL	1	CHEBI:28908	bambermycin	unique
+l-tyrosine	CHEMICAL	1	CHEBI:17895|CHEBI:46858|CHEBI:58315		ambiguous
+benzoquinoneacetic acid	CHEMICAL	1	CHEBI:137246	benzoquinoneacetic acid	unique
+phytoene	CHEMICAL	1	CHEBI:26119|CHEBI:8191		ambiguous
+cyclic carotenes	CHEMICAL	1	CHEBI:35163	cyclic carotene	unique
+sos response	BIOLOGICAL_PROCESS	1	GO:0009432	SOS response	unique
+cell wall synthesis	BIOLOGICAL_PROCESS	1	GO:0009273|GO:0009832|GO:0043164		ambiguous
+mg2+	CHEMICAL	1	CHEBI:18420	magnesium(2+)	unique
+gas vesicle shell	CELLULAR_LOCALIZATION	1	GO:0033172	gas vesicle shell	unique
+gas vesicle formation	BIOLOGICAL_PROCESS	1	GO:0031412	gas vesicle organization	unique
+pyocyanin	CHEMICAL	1	CHEBI:62220|CHEBI:8653		ambiguous
+chorismate	CHEMICAL	1	CHEBI:29748	chorismate(2-)	unique
+heterocyst differentiation	BIOLOGICAL_PROCESS	1	GO:0043158	heterocyst development	unique
+pha granule	CELLULAR_LOCALIZATION	1	GO:0070088	polyhydroxyalkanoate granule	unique
+gas vesicle	ORGANELLE	1	GO:0031411	gas vesicle	unique
+sulfide oxidation	BIOLOGICAL_PROCESS	1	GO:0019418	sulfide oxidation	unique
+twitching motility	BIOLOGICAL_PROCESS	1	GO:0043107	type IV pilus-dependent motility	unique
+zeaxanthin	CHEMICAL	1	CHEBI:27547	zeaxanthin	unique
+carotenoid biosynthesis	PATHWAY	1	GO:0016117	carotenoid biosynthetic process	unique
+shikimate pathway	PATHWAY	1	GO:0009423	chorismate biosynthetic process	unique
+beta-carotene biosynthesis	PATHWAY	1	GO:1901812	beta-carotene biosynthetic process	unique
+homogentisate	CHEMICAL	1	CHEBI:16169	homogentisate	unique
+polyhydroxyalkanoate	CHEMICAL	1	CHEBI:53387|CHEBI:78037		ambiguous
+cytoplasmic membrane	CELLULAR_LOCALIZATION	1	GO:0005886|GO:0009280		ambiguous
+division septum formation	BIOLOGICAL_PROCESS	1	GO:0000917	division septum assembly	unique
+cell body	CELLULAR_LOCALIZATION	1	GO:0044297	cell body	unique
+lipoteichoic acid	CHEMICAL	1	CHEBI:28640	lipoteichoic acid	unique
+division septum assembly	BIOLOGICAL_PROCESS	1	GO:0000917	division septum assembly	unique
+peptidoglycan layer	CELLULAR_LOCALIZATION	1	GO:0030063	obsolete murein sacculus	unique
+melanin	CHEMICAL	1	CHEBI:89634	Melanin	unique
+lycopene biosynthesis	BIOLOGICAL_PROCESS	1	GO:1901177	lycopene biosynthetic process	unique
+beta-lactam antibiotic	CHEMICAL	1	CHEBI:27933	beta-lactam antibiotic	unique
+macrolide antibiotic	CHEMICAL	1	CHEBI:25105	macrolide antibiotic	unique
+dioxygen	CHEMICAL	1	CHEBI:15379	dioxygen	unique
+heme biosynthesis	BIOLOGICAL_PROCESS	1	GO:0006783	heme biosynthetic process	unique
+short-chain fatty acids	CHEMICAL	1	CHEBI:26666	short-chain fatty acid	unique
+mannitol	CHEMICAL	1	CHEBI:16899|CHEBI:29864		ambiguous
+fructose-6-phosphate	CHEMICAL	1	CHEBI:15946|CHEBI:16084		ambiguous
+chemotaxis	BIOLOGICAL_PROCESS	1	GO:0006935	chemotaxis	unique
+protein synthesis	BIOLOGICAL_PROCESS	1	GO:0006412	translation	unique
+ribosome	ORGANELLE	1	GO:0005840	ribosome	unique
+nutrient uptake	BIOLOGICAL_PROCESS	1	GO:0009935	obsolete nutrient import	unique
+anabolism	BIOLOGICAL_PROCESS	1	GO:0009058	biosynthetic process	unique
+tca cycle	PATHWAY	1	GO:0006099	tricarboxylic acid cycle	unique
+glyoxylate cycle	PATHWAY	1	GO:0006097	glyoxylate cycle	unique
+electron transport chain	BIOLOGICAL_PROCESS	1	GO:0022900	electron transport chain	unique
+intracellular membrane	CELLULAR_LOCALIZATION	1	GO:0031090	organelle membrane	unique
+copper	CHEMICAL	1	CHEBI:28694|CHEBI:30052		ambiguous
+methanobactin	CHEMICAL	1	CHEBI:222862	Methanobactin	unique
+periplasm	CELLULAR_LOCALIZATION	1	GO:0042597	periplasmic space	unique
+tricarboxylic acid cycle	PATHWAY	1	GO:0006099	tricarboxylic acid cycle	unique
+oxidative phosphorylation	PATHWAY	1	GO:0006119	oxidative phosphorylation	unique
+reduced cytochrome c	CHEMICAL	1	CHEBI:16928	ferrocytochrome c	unique
+heme a	CHEMICAL	1	CHEBI:24479	heme a	unique
+carotenoid	CHEMICAL	1	CHEBI:23044	carotenoid	unique
+hydroxide	CHEMICAL	1	CHEBI:16234	hydroxide	unique
+carbonic anhydrase activity	MOLECULAR_FUNCTION	1	GO:0004089	carbonate dehydratase activity	unique
+cellular component	CELLULAR_LOCALIZATION	1	GO:0005575	cellular_component	unique

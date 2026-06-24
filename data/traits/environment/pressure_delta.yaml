@@ -114,6 +114,7 @@ causal_graphs:
         chains allow better adaptation to higher pressures (general HHP mechanism).
     - reference: DOI:10.1021/acs.chemrev.3c00432
       notes: Membrane fluidity adjustment is a core pressure-adaptation node.
+    predicate_id: RO:0002327
   - subject: hydrostatic_pressure
     predicate: causes
     object: membrane_fluidity_loss
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1293928
       notes: High pressure causes loss of membrane fluidity (cross-taxa physiological
         mechanism).
+    predicate_id: biolink:causes
   - subject: membrane_fluidity_loss
     predicate: restricts
     object: pressure_tolerance_breadth
@@ -140,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1038/s43247-023-01045-4
       notes: High pressure causes ribosome dissociation; translation/replication become
         dysfunctional, preventing growth and division.
+    predicate_id: biolink:causes
   - subject: ribosome_dissociation
     predicate: restricts
     object: pressure_tolerance_breadth
@@ -158,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.1021/acs.chemrev.3c00432
       notes: Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular
         function under HHP (general mechanism).
+    predicate_id: RO:0002327
   - subject: nuo_complex_i
     predicate: supports
     object: high_pressure_energy_conservation
@@ -177,6 +181,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12864-020-07102-y
       notes: Range-bound examples (e.g., MTCD1 80-140 MPa => delta = 60 MPa) show
         min/max bounds defining the pressure-delta breadth descriptor.
+    predicate_id: METPO:2007500
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -202,4 +207,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, biolink:causes×2, METPO:2007500×1).
   llm_assisted: true

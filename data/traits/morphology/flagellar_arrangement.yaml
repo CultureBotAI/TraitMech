@@ -65,6 +65,7 @@ causal_graphs:
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
     description: Polar region of the bacterial cell where flagellar assembly is nucleated.
+    grounding: GO:0060187
   - node_id: flagellar_assembly_site_marking
     label: marking of future flagellar assembly site
     node_type: BIOLOGICAL_PROCESS
@@ -162,4 +163,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0060187×1).
   llm_assisted: true

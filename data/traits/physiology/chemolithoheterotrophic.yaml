@@ -87,10 +87,12 @@ causal_graphs:
     label: thiosulfate
     node_type: CHEMICAL
     description: Reduced inorganic sulfur electron donor oxidized to sulfate.
+    grounding: CHEBI:16094
   - node_id: sulfate
     label: sulfate
     node_type: CHEMICAL
     description: Fully oxidized sulfur end product of sulfur-compound oxidation.
+    grounding: CHEBI:16189
   - node_id: branched_thiosulfate_oxidation
     label: branched thiosulfate oxidation pathway
     node_type: PATHWAY
@@ -100,6 +102,7 @@ causal_graphs:
     label: elemental sulfur
     node_type: CHEMICAL
     description: S0 intermediate of branched sulfur-compound oxidation.
+    grounding: CHEBI:26833
   - node_id: organic_carbon_importer
     label: organic carbon import system
     node_type: GENE_OR_PROTEIN
@@ -197,6 +200,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41396-021-01163-x
       notes: Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete
         oxidation of thiosulfate to sulfate, without free intermediates.
+    predicate_id: RO:0002327
   - subject: thiosulfate
     predicate: oxidized by
     object: sox_pathway
@@ -295,4 +299,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16094×1, CHEBI:16189×1, CHEBI:26833×1).
   llm_assisted: true

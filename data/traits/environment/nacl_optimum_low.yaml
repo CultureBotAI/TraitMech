@@ -71,6 +71,7 @@ causal_graphs:
     label: cyclic di-AMP
     node_type: CHEMICAL
     description: Second messenger nucleotide that regulates osmolyte and ion transport.
+    grounding: CHEBI:71578
   - node_id: k_uptake_systems
     label: K+ uptake systems (Trk/Ktr/Kup/KimA)
     node_type: GENE_OR_PROTEIN
@@ -125,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40201-020-00519-3
       notes: halotolerant organisms are those non-halophilic able to grow at high
         salt concentrations.
+    predicate_id: rdfs:subClassOf
   - subject: compatible_solute_accumulation
     predicate: supports
     object: osmotic_stress_adaptation
@@ -152,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: gating subunits of Trk/Ktr bind cyclic di-AMP; KUP-family activity is
         inhibited by cyclic di-AMP.
+    predicate_id: RO:0002212
   - subject: cyclic_di_amp
     predicate: negatively regulates
     object: opua_opuc_transport
@@ -184,4 +187,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:71578×1).
   llm_assisted: true

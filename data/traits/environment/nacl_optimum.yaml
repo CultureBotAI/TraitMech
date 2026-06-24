@@ -59,11 +59,13 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cellular stress imposed by an external salt concentration that perturbs
       water activity.
+    grounding: GO:0006970
   - node_id: salt_in_strategy
     label: salt-in strategy
     node_type: BIOLOGICAL_PROCESS
     description: Osmoadaptive strategy of accumulating molar inorganic ions (notably
       KCl) in the cytoplasm.
+    grounding: METPO:1007720
   - node_id: intracellular_k_accumulation
     label: intracellular K+ accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -170,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       notes: The first involves accumulation of molar concentrations of KCl; strong
         general mechanism across extreme halophiles.
+    predicate_id: RO:0002213
   - subject: acidic_proteome
     predicate: enables
     object: protein_stability_high_salt
@@ -179,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       notes: The proteome of such organisms is highly acidic; requires adaptation
         of the intracellular enzymatic machinery at near-saturating salt.
+    predicate_id: RO:0002327
   - subject: compatible_solute_accumulation
     predicate: regulates
     object: osmotic_balance
@@ -188,6 +192,7 @@ causal_graphs:
     - reference: DOI:10.1186/1746-1448-4-2
       notes: Exclude salt from the cytoplasm and synthesize/accumulate organic compatible
         solutes that do not interfere with enzymatic activity; broad canonical mechanism.
+    predicate_id: RO:0002211
   - subject: compatible_solute_uptake
     predicate: associated with
     object: lower_energetic_cost
@@ -197,6 +202,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2022.846677
       notes: Uptake of compatible solute from the medium is preferred over de novo
         synthesis, reflecting an energetically favored mechanism.
+    predicate_id: biolink:associated_with
   - subject: na_antiport_activity
     predicate: regulates
     object: cytoplasmic_na_homeostasis
@@ -206,6 +212,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00145-24
       notes: Na+/H+ antiporters function to lower cytoplasmic Na+ to prevent toxicity
         and contribute to salt acclimation.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815612+00:00'
   curator: seed_from_metpo
@@ -272,4 +279,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2, RO:0002213×1, RO:0002327×1, biolink:associated_with×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006970×1, METPO:1007720×1).
   llm_assisted: true

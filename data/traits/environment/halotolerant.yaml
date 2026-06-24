@@ -67,6 +67,7 @@ causal_graphs:
     label: ectoine biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: De novo synthesis of the compatible solute ectoine.
+    grounding: GO:0019491
   - node_id: betA_betB
     label: betA/betB
     node_type: GENE_OR_PROTEIN
@@ -76,6 +77,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of the compatible solute glycine betaine from environmental
       choline.
+    grounding: GO:0031456
   edges:
   - subject: high_salt_exposure
     predicate: tolerated by
@@ -141,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.58088/07hg-r941
       notes: Compatible solutes are accumulated in response to osmotic stress; broad
         mechanistic claim across marine bacteria.
+    predicate_id: RO:0002213
   - subject: salt_out_strategy
     predicate: relies on
     object: compatible_solute_accumulation
@@ -159,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.58088/07hg-r941
       notes: Ectoine is synthesized de novo from aspartic acid via the ectABC operon;
         general bacterial mechanism.
+    predicate_id: RO:0002327
   - subject: betA_betB
     predicate: enables
     object: glycine_betaine_biosynthesis
@@ -167,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.58088/07hg-r941
       notes: Glycine betaine is produced from environmental choline via betA and betB;
         canonical pathway edge, broadly applicable.
+    predicate_id: RO:0002327
   - subject: ectoine_biosynthesis
     predicate: produces
     object: compatible_solutes
@@ -174,6 +179,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.58088/07hg-r941
       notes: Ectoine is a compatible solute synthesized de novo via the ectABC operon.
+    predicate_id: METPO:2000202
   - subject: glycine_betaine_biosynthesis
     predicate: produces
     object: compatible_solutes
@@ -183,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.58088/07hg-r941
       notes: Glycine betaine is produced from environmental choline and acts as a
         compatible solute.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861954+00:00'
   curator: seed_from_metpo
@@ -252,4 +259,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, METPO:2000202×2, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019491×1, GO:0031456×1).
   llm_assisted: true

@@ -54,6 +54,7 @@ causal_graphs:
     label: arsenate(3-)
     node_type: CHEMICAL
     description: Pentavalent arsenic species; substrate for arsenate reductase.
+    grounding: CHEBI:29125
   - node_id: arsR_repressor
     label: ArsR transcriptional repressor
     node_type: GENE_OR_PROTEIN
@@ -137,6 +138,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/antibiotics12091474
       notes: ArsC is an arsenate reductase that converts intracellular As(V) to As(III).
+    predicate_id: RO:0002327
   - subject: arsenate_reduction
     predicate: produces
     object: arsenite
@@ -144,6 +146,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/antibiotics12091474
       notes: ArsC converts intracellular As(V) to As(III), feeding the efflux route.
+    predicate_id: METPO:2000202
   - subject: arsB_pump
     predicate: enables
     object: arsenite_export
@@ -152,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.3390/antibiotics12091474
       notes: ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+
         from the cytoplasm.
+    predicate_id: RO:0002327
   - subject: acr3_pump
     predicate: enables
     object: arsenite_export
@@ -159,6 +163,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms12010074
       notes: Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.
+    predicate_id: RO:0002327
   - subject: arsM_methyltransferase
     predicate: enables
     object: arsenite_methylation
@@ -167,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.7717/peerj.18383
       notes: arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile
         methylated arsenicals.
+    predicate_id: RO:0002327
   - subject: arsenite_methylation
     predicate: mitigates
     object: arsenite
@@ -176,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.7717/peerj.18383
       notes: Produced arsenite is methylated by arsM to volatile methylated arsenic,
         removing it from the cell.
+    predicate_id: METPO:2007407
   - subject: arsC_reductase
     predicate: reduces
     object: arsenate
@@ -184,6 +191,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2020.00047
       notes: Connecting edge wiring the enrichment node into the graph.
+    predicate_id: METPO:2000017
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -207,4 +215,16 @@ curation_history:
   curator: claude
   action: FIX_ORPHAN_NODE
   changes: Connected orphaned node 'arsenate' via arsC_reductase -[reduces]-> arsenate.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×4, METPO:2000202×1, METPO:2007407×1, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:29125×1).
   llm_assisted: true

@@ -49,6 +49,7 @@ causal_graphs:
     label: PHA granule
     node_type: CELLULAR_LOCALIZATION
     description: Polyhydroxyalkanoate storage inclusion body.
+    grounding: GO:0070088
   - node_id: nitrogen_depletion
     label: nitrogen depletion
     node_type: ENVIRONMENTAL_FACTOR
@@ -69,6 +70,7 @@ causal_graphs:
     label: gas vesicle
     node_type: ORGANELLE
     description: Hollow gas-filled protein nanocompartment.
+    grounding: GO:0031411
   - node_id: buoyancy
     label: buoyancy
     node_type: CAPACITY
@@ -81,6 +83,7 @@ causal_graphs:
     label: sulfide oxidation
     node_type: BIOLOGICAL_PROCESS
     description: Oxidation of sulfide via elemental sulfur intermediate.
+    grounding: GO:0019418
   - node_id: sulfur_globule
     label: intracellular sulfur globule
     node_type: CELLULAR_LOCALIZATION
@@ -112,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules29102293
       notes: '"Synthesized PHA chains form intracellular inclusion bodies commonly
         called PHA granules"; storage-granule subclass.'
+    predicate_id: METPO:2000202
   - subject: nitrogen_depletion
     predicate: increases accumulation of
     object: pha_granule
@@ -135,6 +139,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: '"gene-encoded, inert, hollow, gas-filled protein nanoparticles"; direct
         definitional edge.'
+    predicate_id: biolink:encodes
   - subject: gas_vesicle
     predicate: enables
     object: buoyancy
@@ -142,6 +147,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s13036-024-00426-3
       notes: '"enabling buoyancy for microbes"; core phenotype/function edge.'
+    predicate_id: RO:0002327
   - subject: bacterial_microcompartment
     predicate: encapsulates
     object: bmc_metabolic_cargo
@@ -160,6 +166,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0310265
       notes: '"oxidized to sulfate through an intermediate accumulation of elemental
         sulfur (S0) within the cell in the form of sulfur globules"; definitional.'
+    predicate_id: biolink:produces
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -178,4 +185,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, biolink:encodes×1, RO:0002327×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0070088×1, GO:0031411×1, GO:0019418×1).
   llm_assisted: true

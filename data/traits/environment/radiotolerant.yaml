@@ -74,6 +74,7 @@ causal_graphs:
     label: homologous recombination
     node_type: BIOLOGICAL_PROCESS
     description: Homologous recombination repair of DNA double-strand breaks.
+    grounding: GO:0035825
   - node_id: ner_uvrabc
     label: nucleotide excision repair (UvrABC)
     node_type: BIOLOGICAL_PROCESS
@@ -120,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0304810
       notes: Another aftermath of irradiation is the production of reactive oxygen
         species (ROS); general mechanism across microbes.
+    predicate_id: biolink:causes
   - subject: mn2_ion
     predicate: acts as antioxidant against
     object: reactive_oxygen_species
@@ -136,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03838-23
       notes: Iron furthers the spread of ROS through Fenton chemistry; mechanistic
         basis of Mn/Fe ratio association with tolerance.
+    predicate_id: RO:0002213
   - subject: mn2_ion
     predicate: part of
     object: mn_antioxidant_protection
@@ -145,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03838-23
       notes: Intracellular Mn/Fe ratio is the best-understood predictor of IR tolerance;
         Mn acts as a ROS sponge protecting the proteome.
+    predicate_id: biolink:part_of
   - subject: reca_protein
     predicate: mediates
     object: homologous_recombination
@@ -161,6 +165,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/su17177864
       notes: HR is central for double-strand break repair of radiation-induced lesions.
+    predicate_id: biolink:part_of
   - subject: ner_uvrabc
     predicate: part of
     object: dna_damage_repair
@@ -170,6 +175,7 @@ causal_graphs:
     - reference: DOI:10.3390/genes14091803
       notes: UvrA is the initial damage sensor in NER, recruiting UvrB and, with UvrC,
         performing dual-incision to remove UV-induced damaged DNA.
+    predicate_id: biolink:part_of
   - subject: carotenoid_pigments
     predicate: scavenges
     object: reactive_oxygen_species
@@ -198,4 +204,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×3, biolink:causes×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0035825×1).
   llm_assisted: true

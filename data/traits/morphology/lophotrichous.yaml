@@ -43,6 +43,7 @@ causal_graphs:
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
     description: The cell pole where polar flagellar assembly is nucleated.
+    grounding: GO:0060187
   - node_id: flig_protein
     label: FliG
     node_type: GENE_OR_PROTEIN
@@ -153,4 +154,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0060187×1).
   llm_assisted: true

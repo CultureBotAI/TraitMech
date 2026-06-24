@@ -87,6 +87,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Physical fluidity of the lipid bilayer, increased by high temperature.
+    grounding: METPO:1007505
   - node_id: compensatory_adaptation
     label: compensatory membrane adaptation
     node_type: BIOLOGICAL_PROCESS
@@ -135,6 +136,7 @@ causal_graphs:
       notes: A temperature-sensitive metabolic valve at the fatty-acid branchpoint
         reallocates flux between saturated and unsaturated fatty acid synthesis via
         FabI and FabB.
+    predicate_id: RO:0002327
   - subject: fab_c10_competition
     predicate: regulates
     object: membrane_lipid_composition
@@ -144,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-53677-5
       notes: FabA, FabI and FabB compete for a common C10:1 pool forming a metabolic
         valve that shifts flux between saturated and unsaturated fatty acids.
+    predicate_id: RO:0002211
   - subject: membrane_fluidity_restoration
     predicate: enables
     object: growth_after_temperature_shock
@@ -153,6 +156,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-53677-5
       notes: Restores optimal membrane fluidity within a single generation after a
         temperature shock.
+    predicate_id: RO:0002327
   - subject: heat_stress
     predicate: causes
     object: protein_unfolding_aggregation
@@ -161,6 +165,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12864-023-09266-9
       notes: High temperatures cause a suite of problems for cells, including protein
         unfolding and aggregation.
+    predicate_id: biolink:causes
   - subject: protein_unfolding_aggregation
     predicate: causes
     object: mesophile_growth_impairment
@@ -170,6 +175,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12864-023-09266-9
       notes: General mechanistic background applicable to the warm-mesophile upper
         range; protein damage impairs growth unless compensated.
+    predicate_id: biolink:causes
   - subject: heat_stress
     predicate: causes
     object: membrane_fluidity
@@ -179,6 +185,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12864-023-09266-9
       notes: High temperatures cause a suite of problems for cells, including increased
         membrane fluidity.
+    predicate_id: biolink:causes
   - subject: membrane_fluidity
     predicate: requires
     object: compensatory_adaptation
@@ -206,6 +213,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.03105-23
       notes: 'Canonical heat-response: chaperone systems refold stress-damaged proteins
         to protect against heat stress.'
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825319+00:00'
   curator: seed_from_metpo
@@ -229,4 +237,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (14 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, biolink:causes×3, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

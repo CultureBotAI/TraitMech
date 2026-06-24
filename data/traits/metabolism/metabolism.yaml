@@ -59,6 +59,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Membrane electron transfer through respiratory chains that translocates
       protons.
+    grounding: GO:0022904
   - node_id: proton_motive_force
     label: proton motive force
     node_type: CHEMICAL
@@ -69,6 +70,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound enzyme complex that phosphorylates ADP to ATP using
       the proton motive force.
+    grounding: UniProtKB:A0A415TT77
   - node_id: atp_production
     label: ATP production
     node_type: BIOLOGICAL_PROCESS
@@ -146,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.heliyon.2023.e22459
       notes: Proton movement driven by respiratory electron transfer creates the gradient
         that powers ATP synthesis.
+    predicate_id: biolink:produces
   - subject: atp_synthase
     predicate: uses
     object: proton_motive_force
@@ -164,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.heliyon.2023.e22459
       notes: Membrane-bound ATP synthase converts potential energy to ATP by phosphorylating
         ADP.
+    predicate_id: METPO:2000202
   - subject: respiration_energy_cost
     predicate: decreases
     object: carbon_use_efficiency
@@ -173,6 +177,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-52160-5
       notes: CUE declines when more carbon is diverted to respiration to generate
         energy for uptake, maintenance, and enzyme production.
+    predicate_id: RO:0002212
   - subject: substrate_complexity
     predicate: increases
     object: metabolic_energy_cost
@@ -182,6 +187,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-52160-5
       notes: Energy required depends on whether compounds are directly taken up or
         need enzymatic degradation.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.810665+00:00'
   curator: seed_from_metpo
@@ -235,4 +241,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, METPO:2000202×1, RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A415TT77×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0022904×1).
   llm_assisted: true

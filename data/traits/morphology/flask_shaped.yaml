@@ -113,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.1002565
       notes: Caulobacter prostheca arises from zonal growth at the pole; general mechanism
         for asymmetric morphologies.
+    predicate_id: METPO:2000202
   - subject: pg_growth_zone_position
     predicate: regulates
     object: appendage_position_shape
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.1002565
       notes: Asticcacaulis prosthecate variants result from repositioning growth zones
         to subpolar/bilateral sites.
+    predicate_id: RO:0002211
   - subject: bactofilin_lmdc_module
     predicate: regulates
     object: cell_wall_biosynthesis
@@ -131,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.7554/elife.86577.2
       notes: Bactofilins and M23 peptidases form a conserved functional module that
         promotes local changes in cell wall biosynthesis.
+    predicate_id: RO:0002211
   - subject: bactofilin_cytoskeleton
     predicate: regulates
     object: asymmetric_compartment_growth
@@ -140,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.7554/elife.86577.2
       notes: Loss of bactofilins causes unconstrained growth of the stalk and bud
         compartments.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890141+00:00'
   curator: seed_from_metpo
@@ -175,4 +179,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×3, METPO:2000202×1).
   llm_assisted: true

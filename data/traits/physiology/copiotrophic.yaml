@@ -69,6 +69,7 @@ causal_graphs:
     label: chemotaxis
     node_type: BIOLOGICAL_PROCESS
     description: Directed movement toward nutrients; enriched in copiotrophs.
+    grounding: GO:0006935
   - node_id: outer_membrane_secreted_proteins
     label: outer membrane and secreted proteins
     node_type: GENE_OR_PROTEIN
@@ -154,6 +155,7 @@ causal_graphs:
       notes: Copiotrophs had larger genomes versus oligotrophs (curate as association).
     - reference: DOI:10.1073/pnas.0903507106
       notes: 'Comparative genomics: copiotrophs show larger genomes than oligotrophs.'
+    predicate_id: biolink:associated_with
   - subject: copiotrophic_trait
     predicate: associated with
     object: motility_functions
@@ -161,6 +163,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       notes: Cell motility (COG category N) high in copiotrophs vs low in oligotrophs.
+    predicate_id: biolink:associated_with
   - subject: copiotrophic_trait
     predicate: associated with
     object: chemotaxis
@@ -168,6 +171,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/ismeco/ycae081
       notes: Oligotrophs under-represented in chemotaxis/motility; copiotrophs enriched.
+    predicate_id: biolink:associated_with
   - subject: copiotrophic_trait
     predicate: associated with
     object: outer_membrane_secreted_proteins
@@ -175,6 +179,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       notes: More outer-membrane and secreted proteins in copiotrophs.
+    predicate_id: biolink:associated_with
   - subject: catabolite_repression
     predicate: enables
     object: proteome_reallocation
@@ -184,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-48591-9
       notes: Strong transcriptional regulation (e.g. catabolite repression) dynamically
         reallocates proteome sectors.
+    predicate_id: RO:0002327
   - subject: ribosome_synthesis
     predicate: promotes
     object: rapid_growth
@@ -193,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-48591-9
       notes: Achieve rapid growth via maximizing ribosome synthesis during favorable
         conditions.
+    predicate_id: RO:0002213
   - subject: minimum_doubling_time
     predicate: indicates
     object: copiotrophic_trait
@@ -241,4 +248,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:associated_with×4, RO:0002327×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006935×1).
   llm_assisted: true

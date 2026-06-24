@@ -57,6 +57,7 @@ causal_graphs:
     label: glucose
     node_type: CHEMICAL
     description: Assimilable monosaccharide released by terminal saccharification.
+    grounding: CHEBI:17234
   - node_id: susc_transporter
     label: SusC-like TonB-dependent transporter
     node_type: GENE_OR_PROTEIN
@@ -66,6 +67,7 @@ causal_graphs:
     label: oligosaccharides
     node_type: CHEMICAL
     description: Oligomeric breakdown products captured at the cell surface and imported.
+    grounding: CHEBI:50699
   - node_id: periplasmic_gh3
     label: periplasmic GH3 hydrolase
     node_type: GENE_OR_PROTEIN
@@ -86,6 +88,7 @@ causal_graphs:
     label: lignin
     node_type: CHEMICAL
     description: Recalcitrant aromatic plant biopolymer.
+    grounding: CHEBI:6457
   edges:
   - subject: extracellular_enzymes
     predicate: enables
@@ -132,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02599-23
       notes: 'Wong 2024: "SusC is a TonB-dependent transporter that imports maltooligosaccharides
         into the periplasm" (strong).'
+    predicate_id: METPO:2000208
   - subject: periplasmic_gh3
     predicate: converts
     object: glucose
@@ -176,4 +180,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000208×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17234×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:50699×1, CHEBI:6457×1).
   llm_assisted: true

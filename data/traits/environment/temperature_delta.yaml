@@ -42,11 +42,13 @@ causal_graphs:
     label: unsaturated fatty acids
     node_type: CHEMICAL
     description: Fatty acids bearing cis double bonds incorporated into membrane lipids.
+    grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
     description: Physical state of the lipid bilayer; higher fluidity corresponds
       to lower lipid order and lower transition temperature.
+    grounding: METPO:1007505
   - node_id: anteiso_branched_chain_fatty_acids
     label: anteiso-branched-chain fatty acids
     node_type: CHEMICAL
@@ -87,6 +89,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity;
         foundational and broadly applicable.
+    predicate_id: RO:0002213
   - subject: unsaturated_fatty_acids
     predicate: supports
     object: low_temperature_growth
@@ -106,6 +109,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm;
         generalized across bacteria using branched lipids.
+    predicate_id: RO:0002213
   - subject: anteiso_branched_chain_fatty_acids
     predicate: required for
     object: low_temperature_growth
@@ -124,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: Membrane homeoviscous adaptation extends low-temperature growth, broadening
         the temperature tolerance span (delta).
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812991+00:00'
   curator: seed_from_metpo
@@ -153,4 +158,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1).
   llm_assisted: true

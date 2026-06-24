@@ -45,6 +45,7 @@ causal_graphs:
     label: low temperature
     node_type: ENVIRONMENTAL_FACTOR
     description: Ambient temperature at or below ~10 C imposing cold stress.
+    grounding: PATO:0001306
   - node_id: membrane_fatty_acid_desaturation
     label: membrane fatty-acid desaturation
     node_type: BIOLOGICAL_PROCESS
@@ -54,6 +55,7 @@ causal_graphs:
     node_type: QUALITY
     description: Physical fluidity of the membrane bilayer required for function in
       the cold.
+    grounding: METPO:1007505
   - node_id: two_component_cold_signaling
     label: two-component cold signaling
     node_type: BIOLOGICAL_PROCESS
@@ -122,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Cells adapt membrane composition (increasing double bonds in lipids)
         to maintain fluidity and function.
+    predicate_id: RO:0002213
   - subject: low_temperature
     predicate: activates
     object: two_component_cold_signaling
@@ -130,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Cold sensing occurs via changes in the liquid-crystalline state of membranes
         that activate two-component signaling systems.
+    predicate_id: RO:0002213
   - subject: cold_shock_proteins
     predicate: acts on
     object: rna_secondary_structure
@@ -164,6 +168,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1197797
       notes: AFPs bind ice, inhibit ice-crystal growth, produce thermal hysteresis,
         and show IRI activity.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822647+00:00'
   curator: seed_from_metpo
@@ -187,4 +192,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001306×1, METPO:1007505×1).
   llm_assisted: true

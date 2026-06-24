@@ -87,6 +87,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Organic osmolytes (glycine betaine, trehalose, glycerol, sucrose,
       mannitol) preventing cell shrinkage and water loss.
+    grounding: CHEBI:23366
   edges:
   - subject: low_temperature
     predicate: is tolerated by
@@ -149,6 +150,7 @@ causal_graphs:
     - reference: DOI:10.1016/B978-0-12-809633-8.02282-2
       notes: the desaturase acting on the acyl chains of the membrane lipids comes
         into play, thereby increasing the amount of unsaturated lipid
+    predicate_id: RO:0002213
   - subject: exopolysaccharides
     predicate: protects against
     object: freeze_thaw_cycles
@@ -167,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-023-41323-x
       notes: Trehalose... plays an important role in protecting bacteria against a
         range of stresses
+    predicate_id: RO:0002326
   - subject: cold_shock_proteins
     predicate: destabilizes
     object: rna_secondary_structure
@@ -186,6 +189,7 @@ causal_graphs:
       notes: Accumulation of compatible osmolytes (glycine betaine, trehalose, glycerol,
         sucrose, mannitol etc.)... to prevent cell shrinkage and water loss during
         sub-zero temperature
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.908340+00:00'
   curator: seed_from_metpo
@@ -258,4 +262,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:23366×1).
   llm_assisted: true

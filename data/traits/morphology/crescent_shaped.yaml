@@ -117,6 +117,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/emboj.2009.61
       notes: would also generate a gradient of increasing peptidoglycan growth rates
+    predicate_id: RO:0002326
   - subject: differential_pg_insertion
     predicate: produces
     object: crescent_shaped_trait
@@ -126,6 +127,7 @@ causal_graphs:
     - reference: DOI:10.1038/emboj.2009.61
       notes: the crescentin structure caused differential peptidoglycan insertion
         rates around the cell circumference to produce cell curvature
+    predicate_id: METPO:2000202
   - subject: crescentin_envelope_association
     predicate: required for
     object: crescent_shaped_trait
@@ -182,4 +184,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, METPO:2000202×1).
   llm_assisted: true

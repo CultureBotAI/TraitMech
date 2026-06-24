@@ -166,6 +166,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1002/mbo3.1385
       notes: Peptidoglycan determines cell shape (broad bacterial claim).
+    predicate_id: RO:0002211
   - subject: mreB
     predicate: organizes
     object: rod_shape
@@ -188,6 +189,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00433-22
       notes: Increased lipid order or cardiolipin interferes with MreB assembly.
+    predicate_id: RO:0002212
   - subject: flotillins
     predicate: promotes
     object: cell_wall_synthesis
@@ -196,6 +198,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00433-22
       notes: Absence of flotillins downregulates MreB activity and cell wall synthesis.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884864+00:00'
   curator: seed_from_metpo
@@ -261,4 +264,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002212×1, RO:0002213×1).
   llm_assisted: true

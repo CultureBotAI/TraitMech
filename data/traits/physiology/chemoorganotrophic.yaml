@@ -82,15 +82,18 @@ causal_graphs:
     label: aerobic respiration
     node_type: BIOLOGICAL_PROCESS
     description: Respiratory metabolism using oxygen as terminal electron acceptor.
+    grounding: GO:0009060
   - node_id: anaerobic_respiration
     label: anaerobic respiration
     node_type: BIOLOGICAL_PROCESS
     description: Respiratory metabolism using inorganic acceptors such as nitrate
       or nitrite.
+    grounding: GO:0009061
   - node_id: oxygen
     label: oxygen
     node_type: ENVIRONMENTAL_FACTOR
     description: Molecular oxygen acting as terminal electron acceptor when present.
+    grounding: ENVO:01001495
   - node_id: nitrate_nitrite
     label: nitrate/nitrite
     node_type: ENVIRONMENTAL_FACTOR
@@ -104,6 +107,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Energy metabolism with electrons relocated onto an organic catabolic
       product.
+    grounding: GO:0006113
   - node_id: substrate_level_phosphorylation
     label: substrate-level phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -189,6 +193,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: Some dehydrogenases inject electrons into the quinone pool of the respiratory
         chain.
+    predicate_id: METPO:2007402
   - subject: quinone_pool
     predicate: transfers electrons to
     object: terminal_electron_acceptor
@@ -197,6 +202,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s13213-024-01761-y
       notes: Quinol oxidases pass electrons from ubiquinols/menaquinones to oxygen.
+    predicate_id: METPO:2007403
   - subject: oxygen
     predicate: enables
     object: aerobic_respiration
@@ -204,6 +210,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.2166/9781789062304_0009
       notes: Electron acceptors range from O2 in aerobic respiration.
+    predicate_id: RO:0002327
   - subject: nitrate_nitrite
     predicate: enables
     object: anaerobic_respiration
@@ -213,6 +220,7 @@ causal_graphs:
     - reference: DOI:10.2166/9781789062304_0009
       notes: Organisms catabolize an organic e-donor by respiration with an inorganic
         e-acceptor such as nitrite or nitrate.
+    predicate_id: RO:0002327
   - subject: acceptor_absence
     predicate: leads to
     object: fermentation
@@ -235,6 +243,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuae016
       notes: Fermentative ATP is produced by substrate-level phosphorylation.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883201+00:00'
   curator: seed_from_metpo
@@ -300,4 +309,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, METPO:2007402×1, METPO:2007403×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009060×1, GO:0009061×1, GO:0006113×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:01001495×1).
   llm_assisted: true

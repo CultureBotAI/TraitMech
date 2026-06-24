@@ -61,6 +61,7 @@ causal_graphs:
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
     description: Polar membrane region where flagellar assembly is nucleated.
+    grounding: GO:0060187
   - node_id: flhf_polar_localization
     label: FlhF polar localization
     node_type: BIOLOGICAL_PROCESS
@@ -114,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.93004.3
       notes: GTP-bound dimeric FlhF localizes to the cell pole where it recruits the
         initial flagellar building blocks.
+    predicate_id: biolink:located_in
   - subject: fipa_protein
     predicate: directly interacts with
     object: flhf_gtpase
@@ -130,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.93004.3
       notes: In the absence of FipA, polar localization of FlhF was significantly
         decreased in all three species.
+    predicate_id: RO:0002213
   - subject: flhg_atpase
     predicate: stimulates GTPase activity of
     object: flhf_gtpase
@@ -166,4 +169,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0060187×1).
   llm_assisted: true

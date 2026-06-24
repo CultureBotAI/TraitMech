@@ -46,6 +46,7 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog cytoskeletal protein.
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: roda
     label: RodA
     node_type: GENE_OR_PROTEIN
@@ -117,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1010788
       notes: 'Richter et al.: many bactofilins localize to zones of active cell wall
         growth.'
+    predicate_id: biolink:located_in
   - subject: stpabcd_complex
     predicate: composes
     object: stalk_crossbands
@@ -134,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00384-22
       notes: 'Barrows & Goley: crossbands that limit diffusion along the length of
         the stalk.'
+    predicate_id: RO:0002212
   - subject: prosthecate_trait
     predicate: facilitates
     object: uptake_surface_area
@@ -159,4 +162,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:located_in×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1B1UYY2×1).
   llm_assisted: true

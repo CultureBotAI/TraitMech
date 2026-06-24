@@ -189,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom14030311
       notes: Electrons are transferred directly from A0 to FX, with terminal acceptors
         FA and FB [4Fe-4S] clusters.
+    predicate_id: RO:0002327
   - subject: photosynthesis_gene_cluster
     predicate: enables
     object: bchl_photoheterotrophy
@@ -198,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.01112-23
       notes: PGCs include bch and crt genes and puf and puh operons and support anoxygenic
         phototrophy using bacteriochlorophyll-a-containing photosystems.
+    predicate_id: RO:0002327
   - subject: diurnal_cycle
     predicate: drives
     object: rhythmic_transcription
@@ -213,6 +215,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s43705-023-00334-5
       notes: Survival in stationary phase relies on functional reaction centers.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881966+00:00'
   curator: seed_from_metpo
@@ -278,4 +281,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002213×1).
   llm_assisted: true

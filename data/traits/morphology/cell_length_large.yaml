@@ -50,6 +50,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: DNA-damage/stress-activated regulatory program that induces division
       inhibitors.
+    grounding: GO:0009432
   - node_id: sula_division_inhibition
     label: SulA-mediated division inhibition
     node_type: BIOLOGICAL_PROCESS
@@ -67,6 +68,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Bacterial tubulin homolog whose abundance is rate-limiting for division.
+    grounding: UniProtKB:C0LUM8
   - node_id: constriction_onset
     label: onset of constriction
     node_type: BIOLOGICAL_PROCESS
@@ -149,4 +151,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:C0LUM8×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009432×1).
   llm_assisted: true

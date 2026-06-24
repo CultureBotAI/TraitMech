@@ -113,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox12030767
       notes: Activated by ATP sulfurylase (Sat) to form adenosine-5′-phosphosulfate
         (APS).
+    predicate_id: METPO:2000202
   - subject: aprab_complex
     predicate: reduces
     object: aps
@@ -121,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41396-023-01477-y
       notes: The APS reductase AprAB reduces APS to sulfite, serving as substrate
         of the Dsr cascade.
+    predicate_id: METPO:2000017
   - subject: aprab_complex
     predicate: produces
     object: sulfite
@@ -128,6 +130,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41396-023-01477-y
       notes: APS is reduced to sulfite serving as substrate of the Dsr cascade.
+    predicate_id: METPO:2000202
   - subject: dsrab_dsrc
     predicate: produces
     object: dsrc_trisulfide
@@ -135,6 +138,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41396-023-01477-y
       notes: DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.
+    predicate_id: METPO:2000202
   - subject: dsrmkjop_complex
     predicate: reduces
     object: dsrc_trisulfide
@@ -144,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41396-023-01477-y
       notes: DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling
         DsrC and releasing sulfide while coupling to energy conservation.
+    predicate_id: METPO:2000017
   - subject: dsrmkjop_complex
     predicate: produces
     object: sulfide
@@ -152,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41396-023-01477-y
       notes: DsrMK(JOP) reduction releases sulfide while coupling this reduction to
         energy conservation.
+    predicate_id: METPO:2000202
   - subject: dsrab_dsrc
     predicate: marker for
     object: srm
@@ -180,4 +186,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×4, METPO:2000017×2).
   llm_assisted: true
