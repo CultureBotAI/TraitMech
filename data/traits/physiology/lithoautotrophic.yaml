@@ -67,6 +67,7 @@ causal_graphs:
     label: electron transport chain
     node_type: BIOLOGICAL_PROCESS
     description: Membrane electron transfer coupling donor oxidation to proton translocation.
+    grounding: GO:0022900
   - node_id: proton_motive_force
     label: proton motive force
     node_type: CAPACITY
@@ -75,6 +76,7 @@ causal_graphs:
     label: ATP synthesis
     node_type: BIOLOGICAL_PROCESS
     description: PMF-driven generation of ATP via ATP synthase.
+    grounding: GO:0006754
   - node_id: reverse_electron_flow
     label: reverse electron flow
     node_type: BIOLOGICAL_PROCESS
@@ -167,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00748-24
       notes: drives the electron transport chain (ETC) to build up a proton motive
         force.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: drives
     object: atp_synthesis
@@ -182,6 +185,7 @@ causal_graphs:
     - reference: DOI:10.1007/s10295-020-02309-0
       notes: an uphill (endergonic) pathway to generate NAD(H) through reverse electron
         flow.
+    predicate_id: biolink:produces
   - subject: cytbc1_nadh_dehydrogenase
     predicate: mediates
     object: reverse_electron_flow
@@ -265,4 +269,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0022900×1, GO:0006754×1).
   llm_assisted: true

@@ -48,6 +48,7 @@ causal_graphs:
     label: bacteriochlorophyll
     node_type: CHEMICAL
     description: Light-harvesting pigment of anoxygenic phototrophs.
+    grounding: CHEBI:38201
   - node_id: light_energy
     label: light energy
     node_type: ENVIRONMENTAL_FACTOR
@@ -109,6 +110,7 @@ causal_graphs:
       notes: 'Niederman: diverse homodimeric Type I reaction-center photosystems underpin
         anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y
         showing Chloroflexota use a Type I RC.'
+    predicate_id: RO:0002327
   - subject: type_i_reaction_center
     predicate: part of
     object: photosynthetic_etc
@@ -118,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41586-024-07180-y
       notes: 'Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type
         I reaction centre for photosynthetic electron transport.'
+    predicate_id: biolink:part_of
   - subject: sulfide
     predicate: oxidized to
     object: elemental_sulfur
@@ -127,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1417714
       notes: 'Kushkevych et al.: H2S serves as electron donor and is oxidized to S0
         in green/purple sulfur bacteria anoxygenic photosynthesis.'
+    predicate_id: METPO:2007405
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -146,4 +150,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:part_of×1, METPO:2007405×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:38201×1).
   llm_assisted: true

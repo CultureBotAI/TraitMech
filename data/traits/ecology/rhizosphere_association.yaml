@@ -68,6 +68,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Aggregation of cells into structured, matrix-enclosed communities
       on root surfaces.
+    grounding: GO:0042710
   edges:
   - subject: root_exudates
     predicate: causes
@@ -110,6 +111,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/biology13020095
       notes: Chemotaxis is the first step in the root colonization by motile bacteria.
+    predicate_id: RO:0002327
   - subject: flagellar_motility
     predicate: positively regulates
     object: rhizosphere_trait
@@ -153,4 +155,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042710×1).
   llm_assisted: true

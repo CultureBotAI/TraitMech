@@ -51,10 +51,12 @@ causal_graphs:
     label: osmotic stress
     node_type: BIOLOGICAL_PROCESS
     description: Cellular response to high external solute/osmotic pressure.
+    grounding: GO:0006970
   - node_id: na_h_antiporter
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Membrane transporter mediating sodium exclusion in exchange for protons.
+    grounding: UniProtKB:A0A068T423
   - node_id: sodium_efflux
     label: sodium efflux
     node_type: BIOLOGICAL_PROCESS
@@ -129,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-024-02358-5
       notes: NaCl shock induced osmotic stress; environmental-to-stress edge broadly
         applicable.
+    predicate_id: biolink:causes
   - subject: osmotic_stress
     predicate: induces
     object: potassium_ion
@@ -215,4 +218,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006970×1, UniProtKB:A0A068T423×1).
   llm_assisted: true

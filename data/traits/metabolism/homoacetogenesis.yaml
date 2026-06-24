@@ -107,6 +107,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme generating ATP by substrate-level phosphorylation during acetate
       formation.
+    grounding: UniProtKB:A0A081KVG3
   - node_id: substrate_level_phosphorylation
     label: substrate-level phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -124,6 +125,7 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane enzyme using the ion gradient to synthesize ATP.
+    grounding: UniProtKB:A0A415TT77
   edges:
   - subject: homoacetogenesis_trait
     predicate: occurs in
@@ -219,6 +221,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/d4cb00099d
       notes: CO2 -> formate catalyzed by formate dehydrogenase (Fdh).
+    predicate_id: biolink:catalyzes
   - subject: formate
     predicate: converted by enzyme to
     object: formyl_thf
@@ -233,6 +236,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/d4cb00099d
       notes: formate -> formyl-THF by formyl-THF synthetase (Fhs).
+    predicate_id: biolink:catalyzes
   - subject: methyl_branch
     predicate: converges with
     object: carbonyl_branch
@@ -250,6 +254,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s13068-024-02554-w
       notes: the two WLP branches meet at the ACS/CODH complex to form acetyl-CoA.
+    predicate_id: METPO:2000202
   - subject: acetate_kinase
     predicate: generates
     object: atp
@@ -259,6 +264,7 @@ causal_graphs:
     - reference: DOI:10.1039/d4cb00099d
       notes: acetyl-CoA -> acetate via acetyl-phosphate with ATP from substrate-level
         phosphorylation (acetate kinase); WLP is otherwise net-zero ATP.
+    predicate_id: biolink:produces
   - subject: acetate_kinase
     predicate: participates in
     object: substrate_level_phosphorylation
@@ -267,6 +273,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/d4cb00099d
       notes: ATP from substrate-level phosphorylation at acetate kinase.
+    predicate_id: biolink:participates_in
   - subject: energy_conservation_module
     predicate: generates
     object: transmembrane_ion_gradient
@@ -279,6 +286,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1185739
       notes: membrane-associated energy-conservation module involving Rnf or Ech plus
         ATP synthase.
+    predicate_id: biolink:produces
   - subject: transmembrane_ion_gradient
     predicate: drives
     object: atp_synthase
@@ -295,6 +303,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1185739
       notes: ATP synthase couples the ion gradient to ATP synthesis in acetogens.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.916045+00:00'
   curator: seed_from_metpo
@@ -354,4 +363,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 11 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×2, METPO:2000202×2, biolink:produces×2, biolink:participates_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A081KVG3×1, UniProtKB:A0A415TT77×1).
   llm_assisted: true

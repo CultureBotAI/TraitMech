@@ -55,6 +55,7 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Cell outer membrane that conforms to the angular polygonal envelope
       geometry.
+    grounding: GO:0019867
   - node_id: peptidoglycan_layer
     label: peptidoglycan layer
     node_type: CELLULAR_LOCALIZATION
@@ -166,4 +167,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019867×1).
   llm_assisted: true

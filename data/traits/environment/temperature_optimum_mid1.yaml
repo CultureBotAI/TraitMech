@@ -49,10 +49,12 @@ causal_graphs:
     label: unsaturated fatty acids
     node_type: CHEMICAL
     description: Membrane fatty acids containing one or more double bonds.
+    grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
     description: Physical fluid state of the cell membrane lipid bilayer.
+    grounding: METPO:1007505
   - node_id: homeoviscous_adaptation
     label: homeoviscous adaptation
     node_type: BIOLOGICAL_PROCESS
@@ -71,6 +73,7 @@ causal_graphs:
     label: branched-chain fatty acids
     node_type: CHEMICAL
     description: Iso/anteiso branched membrane fatty acids derived from BCAA precursors.
+    grounding: CHEBI:35819
   edges:
   - subject: lower_mesophilic_environment
     predicate: engages
@@ -116,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Inserting double bonds into membrane fatty acids fluidizes the membrane
         and reverses the cold signal.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: is sensed as input to
     object: homeoviscous_adaptation
@@ -151,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Membrane fluidization via chain branching is a predominant longer-term
         cold adaptation mechanism.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.819857+00:00'
   curator: seed_from_metpo
@@ -174,4 +179,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1, CHEBI:35819×1).
   llm_assisted: true

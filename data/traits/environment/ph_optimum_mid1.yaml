@@ -113,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1011927
       notes: actively exporting protons via proton pumps such as the F0F1-ATPase;
         classic pH-homeostasis mechanism.
+    predicate_id: METPO:2000209
   - subject: amino_acid_decarboxylation
     predicate: consumes
     object: proton
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1011927
       notes: consume protons through amino-acid decarboxylation pathways (glutamate,
         lysine, arginine); general acid-resistance edge.
+    predicate_id: biolink:consumes
   - subject: gad_gaba_pathway
     predicate: consumes
     object: proton
@@ -130,6 +132,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00569-24
       notes: glutamate-based systems and the GABA metabolic pathway consume H+.
+    predicate_id: biolink:consumes
   - subject: ammonia
     predicate: binds
     object: proton
@@ -145,6 +148,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.00569-24
       notes: generated NH3 bind with intracellular free H+ to form NH4+.
+    predicate_id: biolink:produces
   - subject: f0f1_atpase
     predicate: contributes to
     object: minimal_ph_homeostasis_load
@@ -154,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1011927
       notes: Proton pumping via F0F1-ATPase maintains cytosolic pH; near-neutral external
         pH minimizes the pumping demand.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827192+00:00'
   curator: seed_from_metpo
@@ -189,4 +194,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:consumes×2, METPO:2000209×1, biolink:produces×1, RO:0002326×1).
   llm_assisted: true

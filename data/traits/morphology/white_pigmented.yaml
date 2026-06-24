@@ -56,11 +56,13 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: PKS-type biosynthesis of melanin pigments (e.g. DHN melanin) in fungi
       and bacteria.
+    grounding: GO:0042438
   - node_id: melanin
     label: melanin
     node_type: CHEMICAL
     description: Dark brown/black chromophore pigment class; a major visible microbial
       pigment.
+    grounding: CHEBI:89634
   - node_id: reduced_melanin
     label: reduced melanin accumulation
     node_type: CHEMICAL
@@ -133,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00792-024-01354-2
       notes: pks1 mutation abolishes melanization / decreased DHN melanin accumulation,
         establishing the PKS biosynthetic route to melanin.
+    predicate_id: METPO:2000202
   - subject: reduced_melanin
     predicate: results from reduced
     object: melanin_biosynthesis
@@ -150,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1080/21501203.2023.2249010
       notes: Mel- colonies are uneven with a white surface and white conidia; generic
         melanin-loss to white-pigment link.
+    predicate_id: biolink:causes
   - subject: sigB
     predicate: positively regulates
     object: staphyloxanthin_biosynthesis
@@ -215,4 +219,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042438×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:89634×1).
   llm_assisted: true

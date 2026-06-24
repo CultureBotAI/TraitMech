@@ -131,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: Bacteria perform homeoviscous adaptation by incorporating proportionally
         more unsaturated fatty acids as growth temperature decreases.
+    predicate_id: RO:0002213
   - subject: unsaturated_fatty_acid_proportion
     predicate: maintains
     object: membrane_fluidity_homeostasis
@@ -173,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Melting releases translation inhibition, allowing ribosome binding and
         translation initiation.
+    predicate_id: RO:0002327
   - subject: dnak_chaperone
     predicate: negatively regulates
     object: rpoh_sigma_factor
@@ -211,4 +213,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002327×1).
   llm_assisted: true

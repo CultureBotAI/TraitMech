@@ -147,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41522-024-00497-6
       notes: '"The polymer translocates across the outer membrane via Wza"; Wzx/Wzy-dependent
         pathway, broad mechanistic statement.'
+    predicate_id: METPO:2000209
   - subject: kpsmt_abc_transporter
     predicate: exports
     object: capsular_polysaccharide
@@ -156,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41522-024-00497-6
       notes: '"the ABC transporter (KpsMT) plays a pivotal role in exporting these
         chains"; general ABC-dependent capsule export.'
+    predicate_id: METPO:2000209
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -186,4 +188,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000209×2).
   llm_assisted: true

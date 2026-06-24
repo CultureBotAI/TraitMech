@@ -143,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Na+/H+ antiporter-dependent pH homeostasis; Mrp plays an indispensible
         role at high pH.
+    predicate_id: RO:0002327
   - subject: atp_synthase_c_subunit_motifs
     predicate: increases
     object: atp_synthase_proton_binding
@@ -152,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Two c-subunit motifs that alter rotor shape and promote tight proton
         binding in the ion site.
+    predicate_id: RO:0002213
   - subject: atp_synthase_proton_binding
     predicate: enables
     object: cytoplasmic_ph_homeostasis
@@ -161,6 +163,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: ATP synthase adaptation supports proton-coupled bioenergetics at high
         external pH.
+    predicate_id: RO:0002327
   - subject: acidic_cell_envelope_polymers
     predicate: enables
     object: surface_proton_retention
@@ -169,6 +172,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2022.842785
       notes: Acidic secondary cell walls and S-layer proteins attract H+.
+    predicate_id: RO:0002327
   - subject: surface_proton_retention
     predicate: contributes to
     object: cytoplasmic_ph_homeostasis
@@ -178,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2022.842785
       notes: Surface proton retention helps maintain a proton-rich microenvironment
         near the membrane.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937702+00:00'
   curator: seed_from_metpo
@@ -243,4 +248,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, RO:0002213×1, RO:0002326×1).
   llm_assisted: true

@@ -109,6 +109,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Surface translocation powered by cycles of type IV pilus extension
       and retraction.
+    grounding: GO:0043107
   - node_id: sprb_adhesin_movement
     label: SprB adhesin surface movement
     node_type: BIOLOGICAL_PROCESS
@@ -180,6 +181,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom14121488
       notes: conducts H+ through the channel to generate torque by electrostatic interactions
         between MotA and FliG
+    predicate_id: biolink:produces
   - subject: motor_torque
     predicate: acts on
     object: flig_rotor
@@ -197,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom14121488
       notes: a membrane-embedded rotary motor fueled by an ion motive force across
         the cytoplasmic membrane
+    predicate_id: RO:0002327
   - subject: chea_kinase
     predicate: phosphorylates
     object: chey_response_regulator
@@ -222,6 +225,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/biom14121488
       notes: allowing the motor to switch the direction of rotation from CCW to CW
+    predicate_id: RO:0002211
   - subject: pilb_atpase
     predicate: promotes
     object: t4p_extension
@@ -229,6 +233,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/msphere.00390-24
       notes: PilB (extension ATPase)
+    predicate_id: RO:0002213
   - subject: pilt_atpase
     predicate: promotes
     object: t4p_retraction
@@ -236,6 +241,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/msphere.00390-24
       notes: PilT (retraction ATPase)
+    predicate_id: RO:0002213
   - subject: t4p_extension
     predicate: enables
     object: twitching_motility
@@ -244,6 +250,7 @@ causal_graphs:
     - reference: DOI:10.1128/msphere.00390-24
       notes: recurrent cycles of T4P assembly (extension) and disassembly (retraction)
         power surface movement
+    predicate_id: RO:0002327
   - subject: t4p_retraction
     predicate: enables
     object: twitching_motility
@@ -252,6 +259,7 @@ causal_graphs:
     - reference: DOI:10.1128/msphere.00390-24
       notes: recurrent cycles of T4P assembly (extension) and disassembly (retraction)
         power surface movement
+    predicate_id: RO:0002327
   - subject: twitching_motility
     predicate: enables
     object: motile_trait
@@ -260,6 +268,7 @@ causal_graphs:
     - reference: DOI:10.1128/msphere.00390-24
       notes: recurrent cycles of T4P assembly and disassembly power surface movement
         (twitching motility)
+    predicate_id: RO:0002327
   - subject: sprb_adhesin_movement
     predicate: drives
     object: gliding_motility
@@ -276,6 +285,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00068-24
       notes: gliding is a form of surface motility driven by adhesin movement
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905197+00:00'
   curator: seed_from_metpo
@@ -347,4 +357,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 14 evidence-backed generic edges (14 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 9 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×5, RO:0002213×2, biolink:produces×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0043107×1).
   llm_assisted: true

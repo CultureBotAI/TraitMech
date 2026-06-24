@@ -65,6 +65,7 @@ causal_graphs:
     label: periplasm
     node_type: CELLULAR_LOCALIZATION
     description: Compartment to which bound DNA is transferred during uptake.
+    grounding: GO:0042597
   - node_id: dpra
     label: DprA
     node_type: GENE_OR_PROTEIN
@@ -114,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00125-23
       notes: Physical obstruction of T4P retraction decreased transformation rate
         (Zuke & Burton 2024).
+    predicate_id: RO:0002213
   - subject: comec
     predicate: required for
     object: dna_uptake
@@ -166,4 +168,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042597×1).
   llm_assisted: true

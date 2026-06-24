@@ -155,6 +155,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Structural opening promotes RodA polymerization activity.
+    predicate_id: RO:0002213
   - subject: pbp2_structural_opening
     predicate: enables
     object: pg_crosslinking
@@ -163,6 +164,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Opening of PBP2 elevates the TP domain, facilitating crosslinking.
+    predicate_id: RO:0002327
   - subject: mreC
     predicate: activates
     object: rodA_pbp2_complex
@@ -172,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: MreC is implicated as an activator that promotes the open, catalytically
         active conformation of PBP2.
+    predicate_id: RO:0002213
   - subject: rodA_polymerization
     predicate: regulates
     object: elongasome_processivity
@@ -181,6 +184,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-49785-x
       notes: RodA abundance regulates elongasome processivity, reversal frequency,
         and pausing.
+    predicate_id: RO:0002211
   - subject: elongasome_processivity
     predicate: contributes to
     object: sidewall_reinforcement
@@ -190,6 +194,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-49785-x
       notes: Long glycan strands act as barrel-hoop-like reinforcing structures of
         the rod sidewall.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893421+00:00'
   curator: seed_from_metpo
@@ -261,4 +266,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002327×1, RO:0002211×1, RO:0002326×1).
   llm_assisted: true

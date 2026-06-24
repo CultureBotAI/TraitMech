@@ -96,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1012001
       notes: Multiple thioredoxin systems are involved in the response to oxidative
         stresses, broadening thiol-repair scope beyond classic aerobes.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -114,4 +115,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1).
   llm_assisted: true

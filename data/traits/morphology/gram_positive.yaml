@@ -148,6 +148,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.52403/ijrr.20230934
       notes: When iodine is added, it interacts with CV+ to form large complexes.
+    predicate_id: biolink:causes
   - subject: cv_iodine_complex_formation
     predicate: produces
     object: crystal_violet_iodine_complex
@@ -157,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-026-10072-8
       notes: The Gram stain relies on retention of crystal violet-iodine complexes
         within the peptidoglycan mesh.
+    predicate_id: METPO:2000202
   - subject: peptidoglycan_mesh_low_porosity
     predicate: increases
     object: crystal_violet_iodine_complex
@@ -165,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.1038/s42003-026-10072-8
       notes: Crystal violet-iodine retention depends on the physical porosity of the
         peptidoglycan mesh; thick, low-porosity walls can trap the complex.
+    predicate_id: RO:0002213
   - subject: d_alanine_esters
     predicate: neutralizes
     object: teichoic_acid_negative_charge
@@ -183,6 +186,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuaa064
       notes: D-alanylation of both teichoic acid types leads to a more positively
         charged cell surface.
+    predicate_id: RO:0002213
   - subject: wall_teichoic_acids
     predicate: influences
     object: positively_charged_cell_surface
@@ -233,4 +237,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, biolink:causes×1, METPO:2000202×1).
   llm_assisted: true

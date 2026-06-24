@@ -133,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: 'Broad bacterial review: ''to maintain membrane fluidity at low temperature
         organisms alter membrane lipid composition (homeoviscous adaptation)''.'
+    predicate_id: RO:0002211
   - subject: membrane_fluidity
     predicate: enables
     object: maximal_growth_rate
@@ -142,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Membrane fluidity maintenance via homeoviscous adaptation supports the
         cellular processes underlying growth across the temperature range.
+    predicate_id: RO:0002327
   - subject: arrhenius_plot_deviation
     predicate: indicates
     object: stress_growth_regime
@@ -217,4 +219,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002327×1).
   llm_assisted: true

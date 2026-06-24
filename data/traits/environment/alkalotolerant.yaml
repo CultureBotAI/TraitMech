@@ -49,6 +49,7 @@ causal_graphs:
     label: alkaline external pH
     node_type: ENVIRONMENTAL_FACTOR
     description: Elevated extracellular pH above neutral.
+    grounding: PATO:0001430
   - node_id: electrogenic_na_h_antiport
     label: electrogenic Na+/H+ antiport
     node_type: MOLECULAR_FUNCTION
@@ -67,6 +68,7 @@ causal_graphs:
     label: hydroxide ion
     node_type: CHEMICAL
     description: Hydroxide ion (OH-) repelled by the negatively charged cell surface.
+    grounding: CHEBI:16234
   - node_id: sodium_motive_force
     label: sodium motive force
     node_type: BIOLOGICAL_PROCESS
@@ -212,4 +214,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (PATO:0001430×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16234×1).
   llm_assisted: true

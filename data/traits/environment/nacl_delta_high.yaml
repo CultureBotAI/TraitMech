@@ -119,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00145-24
       notes: Intracellular content of compatible solutes (glycine betaine, glutamate,
         proline) increases with rising salinity levels.
+    predicate_id: RO:0002213
   - subject: intracellular_k_accumulation
     predicate: supports
     object: salt_in_osmoadaptation
@@ -135,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41559-024-02505-6
       notes: Proteome acidification is a hallmark of extreme halophily; median protein
         isoelectric points <=4.4.
+    predicate_id: biolink:associated_with
   - subject: salinity_transition
     predicate: drives
     object: proteome_reorganization
@@ -161,6 +163,7 @@ causal_graphs:
     - reference: DOI:10.1038/s44185-024-00050-w
       notes: Hypersaline environments containing >100-150 g/L salts; halophiles grow
         at >100-150 g/L.
+    predicate_id: METPO:2007401
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842691+00:00'
   curator: seed_from_metpo
@@ -184,4 +187,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, biolink:associated_with×1, METPO:2007401×1).
   llm_assisted: true

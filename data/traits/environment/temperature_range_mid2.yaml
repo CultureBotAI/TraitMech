@@ -50,6 +50,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Fluid state of the lipid bilayer required for membrane function.
+    grounding: METPO:1007505
   - node_id: unsaturated_fatty_acid_fraction
     label: unsaturated fatty acid fraction
     node_type: CHEMICAL
@@ -119,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Higher unsaturated content increases fluidity; canonical general bacterial
         thermoadaptation mechanism.
+    predicate_id: RO:0002213
   - subject: hopanoids_sterol_like
     predicate: regulates
     object: membrane_fluidity
@@ -127,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Hopanoids and sterol-like molecules act as regulators of membrane fluidity;
         broad membrane-modulator edge.
+    predicate_id: RO:0002211
   - subject: membrane_fluidity
     predicate: enables
     object: temperature_range_mid2_trait
@@ -136,6 +139,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       notes: Functional membrane fluidity underlies homeoviscous adaptation supporting
         the mesophile range.
+    predicate_id: RO:0002327
   - subject: elevated_temperature
     predicate: opens
     object: rna_thermometer
@@ -194,4 +198,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002211×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

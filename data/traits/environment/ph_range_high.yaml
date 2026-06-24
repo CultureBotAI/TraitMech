@@ -123,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: The unusual hetero-oligomeric Mrp antiporter has an indispensable role
         at high pH.
+    predicate_id: RO:0002327
   - subject: mrp_operon
     predicate: encodes
     object: mrp_antiporter_complex
@@ -132,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Mrp antiporters are encoded in operons containing genes for seven hydrophobic
         proteins; all required to form the hetero-oligomeric complex.
+    predicate_id: biolink:encodes
   - subject: membrane_potential
     predicate: drives
     object: mrp_antiporter_complex
@@ -159,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Cytoplasmic Na+ is required to support high levels of alkaliphile antiport
         activity.
+    predicate_id: RO:0002327
   - subject: f1fo_atp_synthase
     predicate: contributes to
     object: alkaline_ph_homeostasis
@@ -168,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase
         contributes to alkaliphile pH homeostasis.
+    predicate_id: RO:0002326
   - subject: alkaline_ph_homeostasis
     predicate: enables
     object: ph_range_high_trait
@@ -177,6 +181,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH
         10.
+    predicate_id: RO:0002327
   - subject: external_ph_high
     predicate: shifts speciation toward
     object: carbonate_speciation
@@ -208,4 +213,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, biolink:encodes×1, RO:0002326×1).
   llm_assisted: true

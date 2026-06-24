@@ -103,6 +103,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: 'Barber & Fitzgerald 2024: bacterial adhesins are critical for adherence
         to host tissues.'
+    predicate_id: RO:0002213
   - subject: host_colonization
     predicate: enables
     object: host_resource_exploitation
@@ -111,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: 'Barber & Fitzgerald 2024: host colonization is the basis for downstream
         host exploitation.'
+    predicate_id: RO:0002327
   - subject: siderophore_secretion
     predicate: promotes
     object: host_metal_acquisition
@@ -120,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: 'Barber & Fitzgerald 2024: siderophores compete with host proteins for
         metals; metal-bound siderophores reacquired.'
+    predicate_id: RO:0002213
   - subject: host_metal_acquisition
     predicate: part of
     object: host_resource_exploitation
@@ -128,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: 'Barber & Fitzgerald 2024: nutrient/metal acquisition from host is a
         core exploitation mechanism.'
+    predicate_id: biolink:part_of
   - subject: deubiquitinase_activity
     predicate: promotes
     object: host_ubiquitin_pathway_exploitation
@@ -137,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.3389/fimmu.2023.1303072
       notes: 'Wehrmann & Vilchez 2023: DUBs are key factors exploiting/manipulating
         Ub-dependent host processes during infection.'
+    predicate_id: RO:0002213
   - subject: host_ubiquitin_pathway_exploitation
     predicate: promotes
     object: host_resource_exploitation
@@ -146,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.3389/fimmu.2023.1303072
       notes: 'Wehrmann & Vilchez 2023: manipulation of host Ub pathways supports infection
         establishment.'
+    predicate_id: RO:0002213
   - subject: hemoglobin_uptake
     predicate: part of
     object: host_resource_exploitation
@@ -155,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.3389/fcimb.2023.1150054
       notes: 'Reyes-Lopez et al. 2023: Hb and heme-uptake mechanisms allow protozoa
         to survive inside the host.'
+    predicate_id: biolink:part_of
   - subject: high_symbiont_density
     predicate: causes
     object: host_fitness_cost
@@ -164,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1002/ece3.11705
       notes: 'Hoffmann & Cooper 2024: high endosymbiont densities have particularly
         strong negative effects that can kill hosts.'
+    predicate_id: biolink:causes
   - subject: copper_stress
     predicate: exacerbates
     object: host_fitness_cost
@@ -191,4 +199,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 8 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×4, biolink:part_of×2, RO:0002327×1, biolink:causes×1).
   llm_assisted: true

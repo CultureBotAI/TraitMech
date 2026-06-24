@@ -116,6 +116,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.csbj.2018.11.003
       notes: The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation
         of aliphatic aldehydes to the corresponding acids.
+    predicate_id: biolink:catalyzes
   - subject: fmnh2
     predicate: is substrate for
     object: bioluminescence_process
@@ -150,6 +151,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.csbj.2018.11.003
       notes: LuxG converts free flavin (FMN) to reduced flavin (FMNH2).
+    predicate_id: METPO:2000202
   - subject: luxcde_complex
     predicate: supplies
     object: long_chain_aldehyde
@@ -192,6 +194,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00035-24
       notes: Activation of the lux locus drives expression of the light-production
         machinery including luciferase.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -215,4 +218,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 10 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, biolink:catalyzes×1).
   llm_assisted: true

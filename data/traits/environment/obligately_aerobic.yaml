@@ -56,6 +56,7 @@ causal_graphs:
     label: aerobic respiration
     node_type: BIOLOGICAL_PROCESS
     description: Oxygen-dependent respiratory metabolism.
+    grounding: GO:0009060
   - node_id: anoxia
     label: absence of oxygen (anoxia)
     node_type: ENVIRONMENTAL_FACTOR
@@ -64,14 +65,17 @@ causal_graphs:
     label: superoxide
     node_type: CHEMICAL
     description: Reactive oxygen species generated during aerobic metabolism.
+    grounding: CHEBI:18421
   - node_id: hydrogen_peroxide
     label: hydrogen peroxide
     node_type: CHEMICAL
     description: Reactive oxygen species generated during aerobic metabolism.
+    grounding: CHEBI:16240
   - node_id: superoxide_dismutase
     label: superoxide dismutase activity
     node_type: MOLECULAR_FUNCTION
     description: Enzyme activity that detoxifies superoxide.
+    grounding: GO:0004784
   - node_id: catalase
     label: catalase / catalase-peroxidase activity
     node_type: MOLECULAR_FUNCTION
@@ -126,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1111/cmi.13338
       notes: Aerobic respiration is identified as the main cause of bacterial oxygen
         consumption.
+    predicate_id: RO:0002327
   - subject: anoxia
     predicate: interrupts flux through
     object: electron_transport_chain
@@ -150,6 +155,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2020.10.001
       notes: Aerobes deploy scavenging enzymes (SOD, catalase, other peroxidases).
+    predicate_id: METPO:2007407
   - subject: catalase
     predicate: mitigates
     object: hydrogen_peroxide
@@ -158,6 +164,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tim.2020.10.001
       notes: Aerobes deploy scavenging enzymes (SOD, catalase, other peroxidases).
+    predicate_id: METPO:2007407
   - subject: superoxide
     predicate: inactivates
     object: fe_s_cluster_enzymes
@@ -235,4 +242,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×2, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009060×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18421×1, CHEBI:16240×1, GO:0004784×1).
   llm_assisted: true

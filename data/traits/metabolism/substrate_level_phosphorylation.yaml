@@ -74,6 +74,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Anaerobic catabolism in which ATP is produced by substrate-level
       phosphorylation.
+    grounding: GO:0006113
   - node_id: acka_pta_pathway
     label: AckA-Pta pathway
     node_type: PATHWAY
@@ -148,6 +149,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae016
       notes: Fermentation is a type of metabolism carried out by organisms in environments
         without oxygen.
+    predicate_id: RO:0002327
   - subject: fermentation
     predicate: produces ATP via
     object: substrate_level_phosphorylation_trait
@@ -221,4 +223,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006113×1).
   llm_assisted: true

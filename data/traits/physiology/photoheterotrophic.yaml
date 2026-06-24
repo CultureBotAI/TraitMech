@@ -90,6 +90,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Retinal-binding light-driven proton pump enabling rhodopsin-based
       phototrophy.
+    grounding: UniProtKB:A0A1D7QWW9
   - node_id: nadph_anabolic
     label: NAD(P)H for anabolic metabolism
     node_type: CHEMICAL
@@ -180,6 +181,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s12275-024-00125-0
       notes: the light-driven proton pumping by PR
+    predicate_id: RO:0002213
   - subject: proteorhodopsin_proton_pumping
     predicate: generates
     object: membrane_potential
@@ -188,6 +190,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-024-00125-0
       notes: PR-mediated proton transport could generate a sufficient membrane potential
         for ATP production
+    predicate_id: biolink:produces
   - subject: membrane_potential
     predicate: enables
     object: atp_production
@@ -195,6 +198,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s12275-024-00125-0
       notes: generate a sufficient membrane potential for ATP production
+    predicate_id: RO:0002327
   - subject: proteorhodopsin
     predicate: cannot generate
     object: nadph_anabolic
@@ -219,6 +223,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40793-024-00573-6
       notes: generate ATP by photophosphorylation using a unique type of bacteriochlorophyll-a-containing
         reaction center
+    predicate_id: METPO:2000202
   - subject: aerobic_anoxygenic_phototrophs
     predicate: relies primarily on
     object: dissolved_organic_matter
@@ -280,4 +285,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, biolink:produces×1, RO:0002327×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1D7QWW9×1).
   llm_assisted: true

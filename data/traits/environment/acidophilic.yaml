@@ -158,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: A major unifying principle of bacterial pH homeostasis... the demands
         of pH homeostasis
+    predicate_id: METPO:2007401
   - subject: cation_pumping
     predicate: reduces influx of
     object: proton
@@ -176,6 +177,7 @@ causal_graphs:
     - reference: DOI:10.1111/1758-2229.70019
       notes: hopanoid lipids... or membrane proteins such as Omp40 and PspA, are structural
         adaptations used for proton exclusion
+    predicate_id: RO:0002327
   - subject: bipolar_tetraether_lipids
     predicate: maintains
     object: low_passive_proton_permeability
@@ -244,4 +246,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, RO:0002327×1).
   llm_assisted: true

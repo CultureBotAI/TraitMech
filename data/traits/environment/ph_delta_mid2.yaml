@@ -125,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Primary proton pumps (respiratory chain pumps) generate PMF; broad mechanism
         across bacteria.
+    predicate_id: biolink:produces
   - subject: f1fo_atpase
     predicate: contributes to
     object: proton_translocation_homeostasis
@@ -134,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Proton-coupled ATPases are a primary strategy; F1-F0 ATPase proton pump
         is an active pH-homeostasis mechanism.
+    predicate_id: RO:0002326
   - subject: na_h_antiporter_activity
     predicate: supports
     object: alkaline_ph_homeostasis
@@ -152,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.3390/antibiotics12091474
       notes: Glutamate decarboxylase (GadB with its antiporter) is a proton-consuming
         acid-tolerance mechanism (GDAR), broadly curated in Gram-negatives.
+    predicate_id: biolink:consumes
   - subject: cytoplasmic_buffers
     predicate: buffers
     object: cytoplasmic_ph_buffering
@@ -184,4 +187,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, RO:0002326×1, biolink:consumes×1).
   llm_assisted: true

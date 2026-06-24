@@ -80,6 +80,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Reduced form of ubiquinone that donates electrons to the cytochrome
       bc1 complex.
+    grounding: CHEBI:17976
   - node_id: cytochrome_bc1
     label: cytochrome bc1 complex
     node_type: GENE_OR_PROTEIN
@@ -173,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms252413421
       notes: Complex I oxidizes NADH using ubiquinone (broad bacterial respiratory
         ETC).
+    predicate_id: METPO:2000017
   - subject: complex_i
     predicate: translocates
     object: proton_motive_force
@@ -191,6 +193,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.2307093120
       notes: UQH2:cyt c oxidoreductase (Complex III); electrons flow from quinone
         pool to the bc1 complex.
+    predicate_id: METPO:2007403
   - subject: cytochrome_bc1
     predicate: transfers electrons to
     object: cytochrome_c
@@ -198,6 +201,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1073/pnas.2307093120
       notes: Electrons flow to the bc1 complex and onward via cytochrome c.
+    predicate_id: METPO:2007403
   - subject: cytochrome_c
     predicate: transfers electrons to
     object: terminal_oxidase
@@ -207,6 +211,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.2307093120
       notes: Onward via cytochrome c to terminal oxidases (Complex IV) that reduce
         O2 to H2O.
+    predicate_id: METPO:2007403
   - subject: terminal_oxidase
     predicate: reduces
     object: oxygen
@@ -216,6 +221,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.2307093120
       notes: Terminal oxidases (Complex IV) reduce O2 to H2O (broad aerobic respiration
         edge).
+    predicate_id: METPO:2000017
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913647+00:00'
   curator: seed_from_metpo
@@ -264,4 +270,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×3, METPO:2000017×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17976×1).
   llm_assisted: true

@@ -126,6 +126,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.abq0619
       notes: Surface adhesin at bacterial focal adhesions immobilizes motility complexes
         against the substratum to generate traction.
+    predicate_id: RO:0002327
   - subject: substratum_coupling
     predicate: causes
     object: cell_propulsion
@@ -135,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pbio.3001443
       notes: Proton-dependent motors power adhesin surface translocation that propels
         the cell during gliding.
+    predicate_id: biolink:causes
   - subject: cell_propulsion
     predicate: realizes
     object: gliding_trait
@@ -206,4 +208,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:causes×1).
   llm_assisted: true

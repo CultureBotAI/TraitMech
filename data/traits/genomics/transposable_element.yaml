@@ -96,6 +96,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/MMBR.00119-22
       notes: tnp26 encodes a transposase required for movement (Harmer & Hall 2024).
+    predicate_id: RO:0002327
   - subject: te_insertion
     predicate: causes
     object: target_site_duplication
@@ -105,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39964-7
       notes: Insertion sequences typically create target site duplications (TSDs)
         upon insertion (Sheng et al. 2023).
+    predicate_id: biolink:causes
   - subject: te_insertion
     predicate: causes
     object: gene_disruption
@@ -112,6 +114,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-023-39964-7
       notes: Element movement causes gene disruption (Sheng et al. 2023).
+    predicate_id: biolink:causes
   - subject: homologous_recombination_is
     predicate: causes
     object: genome_rearrangement
@@ -120,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39964-7
       notes: Homologous recombination between identical IS copies can produce genome
         rearrangements (Sheng et al. 2023).
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -139,4 +143,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×3, RO:0002327×1).
   llm_assisted: true

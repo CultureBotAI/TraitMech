@@ -119,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1128/msystems.00967-23
       notes: Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI
         catalyzing the first step.
+    predicate_id: biolink:catalyzes
   - subject: nitrite
     predicate: reduced to
     object: ammonium
@@ -136,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00292-25
       notes: Cytochrome c nitrite reductase (NrfA) performs the canonical reduction
         of nitrite to ammonium.
+    predicate_id: biolink:catalyzes
   - subject: narx_narl
     predicate: activates expression of
     object: nrf_operon
@@ -180,4 +182,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×2).
   llm_assisted: true

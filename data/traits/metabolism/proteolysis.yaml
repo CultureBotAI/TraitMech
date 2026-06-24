@@ -93,6 +93,7 @@ causal_graphs:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"protein to oligopeptides" / "producing peptides of roughly 4-30 amino
         acids"; extracellular proteolytic enzymes produce peptides.'
+    predicate_id: METPO:2000202
   - subject: peptide_transport_systems
     predicate: imports
     object: peptides
@@ -101,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: 'Peptides "taken up by dedicated transporters: oligopeptide permease
         (Opp, an ATP-driven system)", DtpT and ABC transporter Dpp.'
+    predicate_id: METPO:2000208
   - subject: intracellular_peptidases
     predicate: hydrolyzes
     object: peptides
@@ -108,6 +110,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"Inside the cell, multiple peptidases... further hydrolyze peptides".'
+    predicate_id: METPO:2000013
   - subject: intracellular_peptidases
     predicate: produces
     object: amino_acids
@@ -115,6 +118,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s43014-023-00165-w
       notes: '"further hydrolyze peptides to free amino acids used for growth".'
+    predicate_id: METPO:2000202
   - subject: large_proteins
     predicate: necessitates
     object: proteolysis_trait
@@ -150,4 +154,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000208×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:38Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000013×1).
   llm_assisted: true

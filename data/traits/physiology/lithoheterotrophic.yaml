@@ -94,6 +94,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Reduced inorganic sulfur electron donor oxidized for lithotrophic
       energy.
+    grounding: CHEBI:15138
   - node_id: sqr
     label: sulfide:quinone oxidoreductase (SQR)
     node_type: GENE_OR_PROTEIN
@@ -103,6 +104,7 @@ causal_graphs:
     label: thiosulfate
     node_type: CHEMICAL
     description: Inorganic sulfur electron donor oxidized via the Sox system.
+    grounding: CHEBI:16094
   - node_id: sox_system
     label: periplasmic Sox system
     node_type: GENE_OR_PROTEIN
@@ -224,6 +226,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-021-81412-3
       notes: Fe(II) oxidation provides energy while organic carbon serves primarily
         as the carbon source
+    predicate_id: METPO:2007402
   - subject: sulfide
     predicate: example of
     object: inorganic_electron_donor
@@ -232,6 +235,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-025-56588-1
       notes: sulfide oxidation as lithotrophic energy metabolism in nitrate-reducing
         chemolithotrophs/heterotrophs
+    predicate_id: rdfs:subClassOf
   - subject: sqr
     predicate: oxidizes
     object: sulfide
@@ -241,6 +245,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-025-56588-1
       notes: a key enzyme that can catalyze sulfide detoxification in nitrate-reducing
         chemolithoautotrophs
+    predicate_id: METPO:2000016
   - subject: thiosulfate
     predicate: example of
     object: inorganic_electron_donor
@@ -249,6 +254,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-025-56588-1
       notes: periplasmic sox gene clusters encoding for thiosulfate oxidation
+    predicate_id: rdfs:subClassOf
   - subject: sox_system
     predicate: oxidizes
     object: thiosulfate
@@ -256,6 +262,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-025-56588-1
       notes: periplasmic sox gene clusters encoding for thiosulfate oxidation
+    predicate_id: METPO:2000016
   - subject: conductive_pili_cytochromes
     predicate: enables
     object: diet
@@ -265,6 +272,7 @@ causal_graphs:
     - reference: DOI:10.3390/life14050591
       notes: direct interspecies electron transfer (DIET) via conductive pili and
         outer-surface c-type cytochromes
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.875356+00:00'
   curator: seed_from_metpo
@@ -324,4 +332,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (rdfs:subClassOf×2, METPO:2000016×2, METPO:2007402×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15138×1, CHEBI:16094×1).
   llm_assisted: true

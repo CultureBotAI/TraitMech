@@ -122,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1007/s13205-021-02938-x
       notes: Alkaliphiles rely on dedicated Na+/H+ antiporters that import H+ in exchange
         for Na+, acidifying the cytoplasm for pH homeostasis.
+    predicate_id: biolink:causes
   - subject: cytoplasm_acidification
     predicate: contributes to
     object: intracellular_ph_homeostasis
@@ -131,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1007/s13205-021-02938-x
       notes: Proton import via antiport acidifies cytoplasm, a core alkaliphile pH-homeostasis
         mechanism.
+    predicate_id: RO:0002326
   - subject: acidic_cell_wall_polymers
     predicate: contributes to
     object: ph_range_mid3_trait
@@ -140,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1007/s13205-021-02938-x
       notes: Alkaliphilic Bacilli reinforce the cell wall with negatively charged
         teichuronic acid/acidic polymers, hypothesized to repel OH- and adsorb Na+/H+.
+    predicate_id: RO:0002326
   - subject: cardiolipin_membrane
     predicate: supports
     object: intracellular_ph_homeostasis
@@ -190,4 +193,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, biolink:causes×1).
   llm_assisted: true

@@ -111,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12866-024-03387-1
       notes: flagellum biogenesis was affected in mutants and lack of functional flagellum
         confirmed in motility assays.
+    predicate_id: RO:0002212
   - subject: wspr_dgc
     predicate: increases amount of
     object: c_di_gmp_high
@@ -127,6 +128,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00365-23
       notes: At high c-di-GMP, FleQ ceases to activate flagellar genes.
+    predicate_id: biolink:causes
   - subject: flhdc_master_operon
     predicate: positively regulates
     object: flagellar_gene_repression
@@ -144,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00365-23
       notes: Loss of flagellar gene activation lowers motility, which can manifest
         as a non-motile state.
+    predicate_id: biolink:causes
   - subject: reduced_motility_state
     predicate: manifests as
     object: non_motile_trait
@@ -151,6 +154,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.01548-23
       notes: Elevated c-di-GMP regulatory output yields a non-motile mutant phenotype.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905968+00:00'
   curator: seed_from_metpo
@@ -191,4 +195,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2, RO:0002212×1, METPO:2007400×1).
   llm_assisted: true

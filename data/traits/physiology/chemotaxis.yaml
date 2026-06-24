@@ -106,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-032421-110850
       notes: Upon effector binding to the receptor, the autophosphorylation activity
         of CheA is modulated by chemoreceptors.
+    predicate_id: RO:0002211
   - subject: chea_kinase
     predicate: phosphorylates
     object: chey
@@ -186,4 +187,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1).
   llm_assisted: true

@@ -108,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.heliyon.2024.e39538
       notes: CRISPR arrays are transcribed and processed into crRNAs; general edge
         across systems.
+    predicate_id: METPO:2000202
   - subject: crrna
     predicate: guides
     object: crrna_effector_complex
@@ -134,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.5483/bmbrep.2023-0050
       notes: CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids;
         broad ecological selection edge.
+    predicate_id: METPO:2007401
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -152,4 +154,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, METPO:2007401×1).
   llm_assisted: true

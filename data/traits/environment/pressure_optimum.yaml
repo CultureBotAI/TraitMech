@@ -98,6 +98,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: 'Review: abundance of membrane lipids with unsaturated and branched-chain
         fatty acids rises with increasing HHP.'
+    predicate_id: RO:0002327
   - subject: intracellular_cation_concentration
     predicate: increases
     object: intracellular_osmotic_pressure
@@ -106,6 +107,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.00958-23
       notes: Authors propose increased cation import to raise intracellular osmotic
         pressure under HHP.
+    predicate_id: RO:0002213
   - subject: intracellular_osmotic_pressure
     predicate: enables
     object: hhp_tolerance
@@ -115,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.00958-23
       notes: 'Proposed HHP-tolerance model: importing cations to raise intracellular
         osmotic pressure.'
+    predicate_id: RO:0002327
   - subject: compatible_solute_accumulation
     predicate: promotes
     object: protein_stabilization_preferential_hydration
@@ -124,6 +127,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11071629
       notes: Compatible solutes displace water bound to proteins via preferential
         hydration; glutamate/betaine/beta-hydroxybutyrate detected at 20-30 MPa.
+    predicate_id: RO:0002213
   - subject: compatible_solute_accumulation
     predicate: enables
     object: hhp_tolerance
@@ -132,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00253-023-12906-5
       notes: Osmolyte-based protection (proline, glutamate, betaine, beta-hydroxybutyrate,
         TMAO) supports pressure tolerance across taxa.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -157,4 +162,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, RO:0002213×2).
   llm_assisted: true

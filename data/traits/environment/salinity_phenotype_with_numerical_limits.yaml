@@ -65,6 +65,7 @@ causal_graphs:
     label: glycine betaine
     node_type: CHEMICAL
     description: Compatible solute accumulating with rising salinity.
+    grounding: CHEBI:17750
   - node_id: l_proline
     label: L-proline
     node_type: CHEMICAL
@@ -151,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00145-24
       notes: Intracellular content of compatible solutes including glycine betaine
         increases with rising salinity.
+    predicate_id: RO:0002326
   - subject: l_proline
     predicate: increases
     object: salinity_phenotype_trait
@@ -159,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01195-24
       notes: Overproduction of L-proline improves high-salinity stress tolerance;
         broadly plausible mechanism.
+    predicate_id: RO:0002213
   - subject: proline_biosynthesis_pathway
     predicate: produces
     object: l_proline
@@ -167,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01195-24
       notes: Pro is biosynthesized by sequential actions of three enzymes encoded
         by proB, proA, and proC; general across many bacteria.
+    predicate_id: METPO:2000202
   - subject: chaotropic_ions
     predicate: decreases
     object: salinity_phenotype_trait
@@ -176,6 +180,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41559-024-02505-6
       notes: Highly chaotropic brines are deleterious and seem devoid of microbial
         life; salt composition modifies salinity limits.
+    predicate_id: RO:0002212
   - subject: water_activity
     predicate: constrains
     object: salinity_phenotype_trait
@@ -214,4 +219,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002213×1, METPO:2000202×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17750×1).
   llm_assisted: true

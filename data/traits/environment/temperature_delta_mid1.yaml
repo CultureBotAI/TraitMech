@@ -54,6 +54,7 @@ causal_graphs:
     node_type: QUALITY
     description: Physical fluid state of the lipid bilayer that must be maintained
       across temperature shifts.
+    grounding: METPO:1007505
   - node_id: ufa_biosynthesis
     label: cis-unsaturated fatty acid biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -111,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: 'Ramon 2023 review: increased unsaturation (especially cis-MUFA) on temperature
         decrease; broad review support.'
+    predicate_id: RO:0002213
   - subject: ufa_biosynthesis
     predicate: increases
     object: membrane_unsaturated_fatty_acids
@@ -120,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: 'Ramon 2023: microbes increase cis-unsaturation to remodel membranes,
         a general cold-adaptation output.'
+    predicate_id: RO:0002213
   - subject: membrane_unsaturated_fatty_acids
     predicate: increases
     object: membrane_fluidity
@@ -129,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: 'Sidarta 2024: desaturation fluidizes membranes; central homeoviscous-adaptation
         edge, generalizable.'
+    predicate_id: RO:0002213
   - subject: membrane_physical_state_change
     predicate: activates
     object: two_component_cold_signaling
@@ -138,6 +142,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: 'Ramon 2023: cold sensing via changes in liquid-crystalline state of
         membranes that activate two-component signalling.'
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: enables
     object: moderate_thermal_adaptation
@@ -147,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: 'Sidarta 2024: homeoviscous adaptation restores fluidity, the membrane-target
         of thermal adaptation.'
+    predicate_id: RO:0002327
   - subject: tmin_tmax
     predicate: defines
     object: thermal_niche_breadth
@@ -156,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.3390/pr8010121
       notes: 'Noll 2020: Tmin and Tmax for growth flank the function and mark the
         thermal tolerance/niche of an organism.'
+    predicate_id: METPO:2007500
   - subject: thermal_niche_breadth
     predicate: is a
     object: temperature_delta
@@ -165,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.3390/pr8010121
       notes: 'Noll 2020: thermal breadth treated as a cardinal-temperature bounded
         niche property.'
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844372+00:00'
   curator: seed_from_metpo
@@ -188,4 +196,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×4, RO:0002327×1, METPO:2007500×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

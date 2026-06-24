@@ -119,6 +119,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1002602
       notes: Pgp1 is a novel peptidoglycan DL-carboxypeptidase cleaving monomeric
         tripeptides to dipeptides.
+    predicate_id: biolink:causes
   - subject: pg_stem_peptide_trimming
     predicate: promotes
     object: helical_shaped_trait
@@ -128,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1002602
       notes: Pgp1 DL-carboxypeptidase activity on peptidoglycan stem peptides is required
         for helical cell shape.
+    predicate_id: RO:0002213
   - subject: pg_modifying_enzyme_loss
     predicate: causes
     object: rod_shaped_morphology
@@ -136,6 +138,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1371/journal.ppat.1002602
       notes: Deletion of pgp1 resulted in a striking, rod-shaped morphology.
+    predicate_id: biolink:causes
   - subject: rod_shaped_morphology
     predicate: negatively regulates
     object: helical_shaped_trait
@@ -153,6 +156,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2010.03.046
       notes: Coordinated action of multiple proteins relaxes peptidoglycan crosslinking,
         enabling helical cell curvature and twist.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890639+00:00'
   curator: seed_from_metpo
@@ -188,4 +192,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2, RO:0002213×1, RO:0002327×1).
   llm_assisted: true

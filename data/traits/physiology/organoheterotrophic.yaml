@@ -71,10 +71,12 @@ causal_graphs:
     node_type: PATHWAY
     description: Cyclic pathway for oxidative catabolism of organic substrates yielding
       reducing equivalents and CO2.
+    grounding: GO:0006099
   - node_id: oxidative_phosphorylation
     label: oxidative phosphorylation
     node_type: PATHWAY
     description: ATP synthesis driven by electron transfer through respiratory complexes.
+    grounding: GO:0006119
   - node_id: nadh_dehydrogenase_complex_i
     label: NADH dehydrogenase (complex I)
     node_type: GENE_OR_PROTEIN
@@ -157,6 +159,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: Genome annotation identifies a complete glycolysis (Embden-Meyerhof)
         pathway; standard route for organic carbon catabolism.
+    predicate_id: RO:0002327
   - subject: tca_cycle
     predicate: enables
     object: central_carbon_metabolism
@@ -166,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: A complete tricarboxylic acid (TCA) cycle is present, indicating capacity
         for oxidative catabolism of organic substrates.
+    predicate_id: RO:0002327
   - subject: nadh_dehydrogenase_complex_i
     predicate: contributes to
     object: oxidative_phosphorylation
@@ -175,6 +179,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: A complete oxidative phosphorylation pathway is encoded, including NADH
         dehydrogenase (nuoABCDEFGHIJKLMN).
+    predicate_id: RO:0002326
   - subject: cytochrome_bc1_complex
     predicate: contributes to
     object: oxidative_phosphorylation
@@ -184,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: A complete oxidative phosphorylation pathway is encoded, including cytochrome
         bc1 (petABC).
+    predicate_id: RO:0002326
   - subject: oxidative_phosphorylation
     predicate: produces
     object: atp
@@ -192,6 +198,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.04110-22
       notes: A complete oxidative phosphorylation pathway is encoded, coupling electron
         transfer to ATP synthesis.
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883809+00:00'
   curator: seed_from_metpo
@@ -245,4 +252,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002326×2, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006099×1, GO:0006119×1).
   llm_assisted: true

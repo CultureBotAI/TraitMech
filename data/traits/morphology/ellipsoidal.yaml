@@ -158,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1111/mmi.14659
       notes: septal and peripheral peptidoglycan synthesis are spatially separated
         at midcell into two concentric structures
+    predicate_id: RO:0002327
   - subject: undecaprenyl_phosphate
     predicate: preferentially required for
     object: septal_pg_synthesis
@@ -235,4 +236,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

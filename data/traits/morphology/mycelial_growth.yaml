@@ -118,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1128/JB.00153-23
       notes: The DivIVA-polarisome drives the growth of both branching vegetative
         hyphae and non-branching aerial hyphae.
+    predicate_id: RO:0002211
   - subject: polarisome_splitting
     predicate: causes
     object: branch_emergence
@@ -127,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsml/uqad020
       notes: Splitting of the polarisomes at growing tips gives rise to daughter polarisomes
         coordinating branches.
+    predicate_id: biolink:causes
   - subject: cglA_ligase
     predicate: mediates
     object: wta_attachment
@@ -145,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01492-24
       notes: YPet-CglA localizes to regions of active cell-wall incorporation - hyphal
         tips and branching points.
+    predicate_id: biolink:located_in
   - subject: cglA_ligase
     predicate: enables
     object: ftsz_ring_positioning
@@ -154,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01492-24
       notes: Loss of CglA causes failures in FtsZ-ring formation and positioning and
         misplaced division septa.
+    predicate_id: RO:0002327
   - subject: ftsz_z_ladders
     predicate: drives
     object: sporulation_septation
@@ -172,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsml/uqad020
       notes: Aerial development involves chaplin/rodlin hydrophobic sheaths and surfactant
         SapB to overcome surface tension.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -190,4 +195,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, biolink:causes×1, biolink:located_in×1, RO:0002327×1, RO:0002213×1).
   llm_assisted: true

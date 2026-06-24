@@ -94,6 +94,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-42916-w
       notes: Defects in DNA repair create distinctive mutational signatures attributable
         to MMR, BER, or HR genes.
+    predicate_id: biolink:causes
   - subject: cytosine_deamination
     predicate: shifts toward
     object: at_enriching_spectrum
@@ -112,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-42916-w
       notes: Genomic G+C content negatively correlates with C>A/T proportion and positively
         with C>G mutations.
+    predicate_id: biolink:associated_with
   - subject: repair_enzyme_bias
     predicate: shapes
     object: gc_content
@@ -145,4 +147,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, biolink:associated_with×1).
   llm_assisted: true

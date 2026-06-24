@@ -106,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adi3338
       notes: IgA can act as a carrot as well as a stick, helping bacteria colonize
         the mucus layer.
+    predicate_id: RO:0002213
   - subject: mucus_layer
     predicate: provides resources for
     object: host_colonization
@@ -122,6 +123,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1126/science.adi3338
       notes: Bacteria attach to mucin via glycan-binding proteins.
+    predicate_id: RO:0002327
   - subject: mucin_attachment
     predicate: enables
     object: host_colonization
@@ -130,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adi3338
       notes: Attachment to mucin via glycan-binding proteins underlies persistent
         colonization of the mucus niche.
+    predicate_id: RO:0002327
   - subject: eps_production
     predicate: produces
     object: biofilm_matrix
@@ -137,6 +140,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fcimb.2024.1357631
       notes: Synthesis of extracellular glucans builds the EPS biofilm matrix.
+    predicate_id: METPO:2000202
   - subject: biofilm_matrix
     predicate: confers
     object: persistence_protection
@@ -152,6 +156,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fcimb.2024.1357631
       notes: Biofilm-conferred resistance supports persistence in a host niche.
+    predicate_id: RO:0002213
   - subject: low_virulence
     predicate: operationalizes
     object: commensalism_trait
@@ -179,32 +184,50 @@ curation_history:
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002327×2, METPO:2000202×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-3606bdcc991b
-  prompt: 'Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.'
+  prompt: 'Knowledge gap for commensalism: MicroRNAs (miRNAs) are small, noncoding
+    RNAs involved in posttranscriptional gene regulation in both animal and plant.
+    miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom
+    barriers and to modulate mammalian gene expression.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict, explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: controversy_conflict,
+    explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review
+    required: set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:40945860
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional gene regulation in both animal and plant. miRNAs derived from edible plants, referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate mammalian gene expression.
+    snippet: MicroRNAs (miRNAs) are small, noncoding RNAs involved in posttranscriptional
+      gene regulation in both animal and plant. miRNAs derived from edible plants,
+      referred to as xenomiRs, are proposed to cross-kingdom barriers and to modulate
+      mammalian gene expression.
     explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
   - reference: PMID:40574831
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Emerging evidence suggests the gut microbiota plays a role in immune regulation, yet its impact on ITP remains unclear.
+    snippet: Emerging evidence suggests the gut microbiota plays a role in immune
+      regulation, yet its impact on ITP remains unclear.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:42197356
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Examining the existing literature may identify knowledge gaps regarding precise mechanisms through which the development of GM influences the maturation of the immune system.
+    snippet: Examining the existing literature may identify knowledge gaps regarding
+      precise mechanisms through which the development of GM influences the maturation
+      of the immune system.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   - reference: PMID:41808832
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Given its promising anti-inflammatory properties, further research is warranted.
+    snippet: Given its promising anti-inflammatory properties, further research is
+      warranted.
     explanation: Gap-signal sentence (future_work) from the cited abstract.
   posed_by: kg-microbe-kgscan

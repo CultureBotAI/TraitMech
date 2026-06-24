@@ -89,6 +89,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Movement of insertion sequences and transposons within or between
       replicons.
+    grounding: GO:0032196
   - node_id: transduction
     label: transduction of host DNA
     node_type: BIOLOGICAL_PROCESS
@@ -157,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14408
       notes: transfer of a single-stranded DNA molecule, followed by integration into
         the recipient chromosome.
+    predicate_id: RO:0002327
   - subject: integrase_excisionase
     predicate: enables
     object: ice_excision
@@ -166,6 +168,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01360-24
       notes: excision mediated by an integrase (recombinase) and an excisionase, formation
         of a circular dsDNA intermediate.
+    predicate_id: RO:0002327
   - subject: ice_excision
     predicate: enables
     object: conjugative_dna_transfer
@@ -174,6 +177,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/AEM.01360-24
       notes: Circular dsDNA intermediate is the transferable form prior to conjugation.
+    predicate_id: RO:0002327
   - subject: integron_integrase
     predicate: catalyzes
     object: cassette_recombination
@@ -183,6 +187,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14408
       notes: IntI recognises attI/attC and catalyses site-specific recombination inserting
         cassettes.
+    predicate_id: biolink:catalyzes
   - subject: mge_trait
     predicate: enables
     object: transposition
@@ -192,6 +197,7 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-micro-032521-022006
       notes: transposons and insertion sequences excise and move or transpose between
         regions of the genome.
+    predicate_id: RO:0002327
   - subject: transposition
     predicate: contributes to
     object: genome_plasticity
@@ -199,6 +205,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1146/annurev-micro-032521-022006
       notes: IS/transposon mobility reshapes replicons, contributing to genome plasticity.
+    predicate_id: RO:0002326
   - subject: transduction
     predicate: contributes to
     object: horizontal_gene_transfer
@@ -208,6 +215,7 @@ causal_graphs:
     - reference: DOI:10.1093/nar/gkae489
       notes: host DNA packaged and transduced during both prophage induction and lytic
         infection.
+    predicate_id: RO:0002326
   - subject: antibiotic_selection
     predicate: enriches
     object: amr_cargo
@@ -241,4 +249,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 11 evidence-backed generic edges (13 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×4, RO:0002326×2, biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0032196×1).
   llm_assisted: true

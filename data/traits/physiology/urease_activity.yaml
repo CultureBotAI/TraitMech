@@ -54,10 +54,12 @@ causal_graphs:
     label: hydroxide
     node_type: CHEMICAL
     description: Hydroxide ion produced by urea hydrolysis, raising local pH.
+    grounding: CHEBI:16234
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
     description: CO2 product of urea hydrolysis; feeds carbonate chemistry.
+    grounding: CHEBI:16526
   - node_id: ph_quality
     label: pH
     node_type: QUALITY
@@ -66,10 +68,12 @@ causal_graphs:
     label: carbonic anhydrase activity
     node_type: MOLECULAR_FUNCTION
     description: Hydration of CO2 to bicarbonate.
+    grounding: GO:0004089
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
     description: Bicarbonate produced from CO2 hydration by carbonic anhydrase.
+    grounding: CHEBI:17544
   - node_id: calcium_carbonate_precipitation
     label: calcium carbonate precipitation
     node_type: BIOLOGICAL_PROCESS
@@ -116,6 +120,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.24263/2304-974x-2024-13-2-10
       notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
+    predicate_id: METPO:2000202
   - subject: urease_function
     predicate: produces
     object: carbon_dioxide
@@ -123,6 +128,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.24263/2304-974x-2024-13-2-10
       notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
+    predicate_id: METPO:2000202
   - subject: urease_function
     predicate: increases
     object: ph_quality
@@ -131,6 +137,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acs.est.3c06617
       notes: Urea hydrolysis produces NH4+ and OH-, causing a pH increase.
+    predicate_id: RO:0002213
   - subject: carbon_dioxide
     predicate: is substrate of
     object: carbonic_anhydrase_function
@@ -145,6 +152,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acs.est.3c06617
       notes: Increase in [HCO3-] following the hydration of CO2 to HCO3- by CA.
+    predicate_id: RO:0002213
   - subject: carbonic_anhydrase_function
     predicate: affects
     object: calcium_carbonate_precipitation
@@ -186,4 +194,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16526×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16234×1, GO:0004089×1, CHEBI:17544×1).
   llm_assisted: true

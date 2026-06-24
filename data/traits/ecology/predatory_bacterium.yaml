@@ -107,6 +107,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-47412-3
       notes: During invasion the predator modifies the prey cell wall, rounding the
         killed prey into a bdelloplast.
+    predicate_id: biolink:causes
   - subject: bdelloplast
     predicate: provides environment for
     object: intraperiplasmic_growth
@@ -124,6 +125,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41564-023-01401-2
       notes: After synchronous septation, progeny lyse the prey cell wall and exit.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -142,4 +144,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2).
   llm_assisted: true

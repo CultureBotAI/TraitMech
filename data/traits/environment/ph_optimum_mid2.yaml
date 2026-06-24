@@ -141,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Na+/H+ and K+/H+ antiporters are key regulators of bacterial pH homeostasis;
         general regulator.
+    predicate_id: RO:0002211
   - subject: respiratory_proton_pumping
     predicate: maintains
     object: intracellular_ph_homeostasis
@@ -159,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: The free energy change from decarboxylation reactions can be stored as
         a proton motive force; general, not taxon-specific.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: powers
     object: f0f1_atp_synthase
@@ -190,4 +192,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, biolink:produces×1).
   llm_assisted: true

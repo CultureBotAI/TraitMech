@@ -132,6 +132,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Na+/H+ antiport (notably the hetero-oligomeric Mrp system) is a major,
         causally important strategy for alkaline pH homeostasis.
+    predicate_id: RO:0002327
   - subject: f1fo_atpase_proton_pumping
     predicate: promotes
     object: acid_stress_survival
@@ -140,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Hydrolytic F1Fo-ATPase activity can be increased for ATP-dependent H+
         extrusion under acid stress; strong acid-side homeostasis mechanism.
+    predicate_id: RO:0002213
   - subject: glutamate_decarboxylase_system
     predicate: consumes
     object: cytoplasmic_proton_consumption
@@ -149,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: Amino acid decarboxylases like GadB with its antiporter coupling; canonical
         acid-resistance mechanism consuming cytoplasmic protons.
+    predicate_id: biolink:consumes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838042+00:00'
   curator: seed_from_metpo
@@ -172,4 +175,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002213×1, biolink:consumes×1).
   llm_assisted: true

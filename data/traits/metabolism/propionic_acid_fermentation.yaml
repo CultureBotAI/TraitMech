@@ -51,10 +51,12 @@ causal_graphs:
     label: pyruvate
     node_type: CHEMICAL
     description: Central glycolytic intermediate feeding the Wood-Werkman cycle.
+    grounding: CHEBI:15361
   - node_id: oxaloacetate
     label: oxaloacetate
     node_type: CHEMICAL
     description: Formed by biotin-dependent carboxylation of pyruvate.
+    grounding: CHEBI:16452
   - node_id: malate
     label: malate
     node_type: CHEMICAL
@@ -63,6 +65,7 @@ causal_graphs:
     label: fumarate
     node_type: CHEMICAL
     description: Dehydration product of malate in the Wood-Werkman route.
+    grounding: CHEBI:29806
   - node_id: succinate
     label: succinate
     node_type: CHEMICAL
@@ -79,6 +82,7 @@ causal_graphs:
     label: propionyl-CoA
     node_type: CHEMICAL
     description: Immediate CoA-thioester precursor of propionate.
+    grounding: CHEBI:15539
   - node_id: mmc_carboxytransferase
     label: methylmalonyl-CoA carboxytransferase
     node_type: GENE_OR_PROTEIN
@@ -205,4 +209,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:29806×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15361×1, CHEBI:16452×1, CHEBI:15539×1).
   llm_assisted: true

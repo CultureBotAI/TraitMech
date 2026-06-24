@@ -52,6 +52,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell-density signaling that regulates production of swarming-associated
       wetting surfactants.
+    grounding: GO:0009372
   - node_id: swarm_expansion
     label: swarm expansion
     node_type: BIOLOGICAL_PROCESS
@@ -127,4 +128,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (2 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009372×1).
   llm_assisted: true

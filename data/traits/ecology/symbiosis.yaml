@@ -62,6 +62,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Aggregated surface-associated bacterial community that protects from
       host stresses and supports persistence.
+    grounding: GO:0042710
   - node_id: o_antigen
     label: O-antigen
     node_type: CHEMICAL
@@ -129,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuac048
       notes: Chemotaxis and motility are broadly required across mutualists and pathogens;
         general edge spanning pathogenic, commensal, and mutualist lifestyles.
+    predicate_id: RO:0002213
   - subject: adhesins
     predicate: required for
     object: host_colonization
@@ -158,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuac048
       notes: O-antigen presence contributes to immune evasion, partly by cloaking
         MAMPs; strong envelope-modification edge across host systems.
+    predicate_id: RO:0002326
   - subject: immune_evasion
     predicate: promotes
     object: host_colonization
@@ -166,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuac048
       notes: Loss of O-antigen induces TLR4 activation and ROS bursts, impairing colonization;
         conversely immune evasion supports colonization (Wiesmann et al. 2023).
+    predicate_id: RO:0002213
   - subject: host_cues
     predicate: sensed by
     object: two_component_systems
@@ -215,4 +219,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042710×1).
   llm_assisted: true

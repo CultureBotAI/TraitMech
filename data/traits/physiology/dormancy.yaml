@@ -61,11 +61,13 @@ causal_graphs:
     label: protein synthesis
     node_type: BIOLOGICAL_PROCESS
     description: Translation of mRNA into protein.
+    grounding: GO:0006412
   - node_id: ribosome
     label: ribosome
     node_type: ORGANELLE
     description: Ribonucleoprotein machine for protein synthesis, protected during
       dormancy.
+    grounding: GO:0005840
   - node_id: rpf_proteins
     label: resuscitation-promoting factors (Rpf)
     node_type: GENE_OR_PROTEIN
@@ -97,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12866-024-03628-3
       notes: The stringent response mediated by (p)ppGpp is activated by nutrient/heat
         stresses.
+    predicate_id: RO:0002213
   - subject: ppgpp_stringent_response
     predicate: causes
     object: dormancy_process
@@ -106,6 +109,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12866-024-03628-3
       notes: (p)ppGpp can reprogram cellular life activities resulting in slow cell
         growth or dormancy.
+    predicate_id: biolink:causes
   - subject: ppgpp_stringent_response
     predicate: upregulates
     object: toxin_antitoxin_modules
@@ -137,6 +141,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms12081528
       notes: Rpfs reactivate dormant bacteria at very low concentrations.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -155,4 +160,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006412×1, GO:0005840×1).
   llm_assisted: true

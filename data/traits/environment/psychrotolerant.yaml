@@ -131,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Cold shock causes membrane rigidification and concomitant thickening,
         potentially culminating in a gel-phase transition.
+    predicate_id: biolink:causes
   - subject: low_temperature
     predicate: increases
     object: unsaturated_hopanoids
@@ -140,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: As the growth temperature decreased from 20 to 4 C, the total percent
         of unsaturated hopanoids increased from 27 to 49%.
+    predicate_id: RO:0002213
   - subject: compatible_solute_accumulation
     predicate: protects
     object: protein_membrane_stability
@@ -255,4 +257,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002213×1).
   llm_assisted: true

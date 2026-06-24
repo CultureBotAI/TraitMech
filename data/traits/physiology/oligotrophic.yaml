@@ -147,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-36988-x
       notes: Nutrient limitation is considered a strong selective force causing genome
         streamlining in the warm oligotrophic epipelagic ocean (Ngugi et al. 2023).
+    predicate_id: METPO:2007401
   - subject: low_nutrient_environment
     predicate: favors
     object: high_affinity_sbp
@@ -166,6 +167,7 @@ causal_graphs:
       notes: SBP affinities match observed environmental substrate concentrations
         (picomolar-low nanomolar), enabling uptake at ambient levels (Clifton et al.
         2024).
+    predicate_id: RO:0002213
   - subject: streamlined_genome
     predicate: reduces
     object: reduced_metabolic_redundancy
@@ -174,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41586-024-07924-w
       notes: Oligotrophic adaptation includes extreme genome streamlining with removal
         of non-essential genes (Clifton et al. 2024).
+    predicate_id: METPO:2000017
   - subject: oligotrophic_trait
     predicate: associated with
     object: small_cell_volume
@@ -182,6 +185,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-024-48591-9
       notes: Oligotrophs have very small cell volumes (~0.1 um3) (Zhu & Dai 2024).
+    predicate_id: biolink:associated_with
 curation_history:
 - timestamp: '2026-05-05T01:35:46.878135+00:00'
   curator: seed_from_metpo
@@ -223,4 +227,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, RO:0002213×1, METPO:2000017×1, biolink:associated_with×1).
   llm_assisted: true

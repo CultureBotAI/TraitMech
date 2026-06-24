@@ -89,6 +89,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Macrocyclized archaeal membrane lipid that increases membrane stability
       and rigidity.
+    grounding: CHEBI:193595
   edges:
   - subject: very_high_temperature
     predicate: selects for
@@ -176,6 +177,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-49650-x
       notes: GMGTs are thought to contribute to increased membrane rigidity at high
         temperature.
+    predicate_id: RO:0002326
   - subject: macrocyclic_archaeol
     predicate: increases
     object: membrane_rigidity
@@ -185,6 +187,7 @@ causal_graphs:
     - reference: DOI:10.1128/msystems.01159-22
       notes: Could increase overall membrane stability and rigidity and reduce membrane
         fluidity.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858819+00:00'
   curator: seed_from_metpo
@@ -255,4 +258,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:193595×1).
   llm_assisted: true

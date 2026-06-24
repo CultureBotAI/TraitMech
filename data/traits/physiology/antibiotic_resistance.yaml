@@ -62,6 +62,7 @@ causal_graphs:
     label: beta-lactam antibiotic
     node_type: CHEMICAL
     description: Antibiotic class containing a beta-lactam ring.
+    grounding: CHEBI:27933
   - node_id: qrdr_mutation
     label: QRDR mutation in DNA gyrase/topoisomerase IV
     node_type: GENE_OR_PROTEIN
@@ -82,6 +83,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Macrolide class antibiotic binding the 23S rRNA of the large ribosomal
       subunit.
+    grounding: CHEBI:25105
   edges:
   - subject: efflux_pump
     predicate: enables
@@ -108,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.3390/pharmaceutics16020170
       notes: Efflux pumps reduce intracellular antibiotic concentrations; upregulation
         under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).
+    predicate_id: RO:0002212
   - subject: outer_membrane_porin
     predicate: decreases
     object: antibiotic_influx
@@ -117,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.3390/pharmaceutics16020170
       notes: Reduced permeability/porin loss and modification of outer membrane porin
         channels listed as major resistance mechanisms.
+    predicate_id: RO:0002212
   - subject: beta_lactamase
     predicate: hydrolyzes
     object: beta_lactam_antibiotic
@@ -126,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1038/s43856-024-00591-y
       notes: Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam
         ring. Strong canonical mechanism.
+    predicate_id: METPO:2000013
   - subject: qrdr_mutation
     predicate: confers resistance to
     object: fluoroquinolone
@@ -168,4 +173,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27933×1, CHEBI:25105×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000013×1).
   llm_assisted: true

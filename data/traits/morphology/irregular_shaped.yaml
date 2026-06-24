@@ -122,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1101/2024.11.22.624946
       notes: Inhibition of MreB polymerization causes rounding/loss of rod shape across
         model bacteria; a broadly conserved shape-maintenance module.
+    predicate_id: biolink:causes
   - subject: synthase_hydrolase_imbalance
     predicate: contributes to
     object: reduced_wall_patterning
@@ -132,6 +133,7 @@ causal_graphs:
       notes: Coordinated peptidoglycan synthases and hydrolases stabilize the bacterial
         cell wall; uncoupling them (e.g. excess hydrolase activity) accelerates loss
         of regular shape as a general loss-of-patterning mechanism.
+    predicate_id: RO:0002326
   - subject: polar_growth_perturbation
     predicate: disrupts
     object: polar_growth_organization
@@ -152,6 +154,7 @@ causal_graphs:
       notes: Partial depletion of the polar scaffold DivIVA causes hyphal bulging
         and irregular branching, an irregular-shape outcome of disorganized polar
         growth.
+    predicate_id: METPO:2000202
   - subject: wall_less_state
     predicate: manifests as
     object: irregular_shaped_trait
@@ -162,6 +165,7 @@ causal_graphs:
       notes: Wall-less L-form cells have heterogeneous, amoeboid morphology; loss
         of the rigid wall removes shape constraints, a general consequence of wall
         absence.
+    predicate_id: METPO:2007400
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898746+00:00'
   curator: seed_from_metpo
@@ -191,4 +195,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002326×1, METPO:2000202×1, METPO:2007400×1).
   llm_assisted: true

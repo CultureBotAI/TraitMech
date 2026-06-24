@@ -157,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Activation of des (desaturase) transcription increases double bonds in
         membrane fatty acids; generic UFA-biosynthesis module.
+    predicate_id: RO:0002213
   - subject: unsaturated_membrane_fatty_acids
     predicate: increases
     object: membrane_fluidity
@@ -166,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Increasing double bonds in membrane fatty acids restores membrane fluidity;
         core homeoviscous-adaptation edge broadly curatable across microbes.
+    predicate_id: RO:0002213
   - subject: high_temperature
     predicate: melts
     object: rna_thermometer
@@ -277,4 +279,10 @@ curation_history:
   action: FIX_ORPHAN_NODE
   changes: Connected orphaned node 'fatty_acid_desaturase' via temperature_downshift
     -[induces]-> fatty_acid_desaturase.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true

@@ -96,6 +96,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-36988-x
       notes: 'Ngugi 2023: "small microbial genomes in the resource-poor photic ocean";
         broad comparative support across 364 marine metagenomes.'
+    predicate_id: METPO:2007401
   - subject: streamlining_trait
     predicate: associated with
     object: depletion_metabolic_genes
@@ -104,6 +105,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-50368-z
       notes: 'Dong 2024: "reduced genome sizes associated with a depletion of metabolic
         genes"; generalizable signature of streamlined genomes under stress.'
+    predicate_id: biolink:associated_with
   - subject: streamlining_trait
     predicate: promotes
     object: metabolic_cross_feeding
@@ -113,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-46374-w
       notes: 'Giordano 2024: "genome streamlining and metabolic auxotrophies as central
         joint mechanisms shaping bacterioplankton community assembly".'
+    predicate_id: RO:0002213
   - subject: reduced_cofactor_biosynthesis
     predicate: increases dependence on
     object: exogenous_bvitamin_dependence
@@ -155,4 +158,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1, biolink:associated_with×1, RO:0002213×1).
   llm_assisted: true

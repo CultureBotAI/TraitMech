@@ -49,6 +49,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Acyl chains bearing double bonds (CHEBI:27208) that fluidize the
       membrane.
+    grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity / homeoviscous adaptation
     node_type: BIOLOGICAL_PROCESS
@@ -107,6 +108,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Desaturation fluidizes the membrane; strong general mechanism.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: enables
     object: broad_thermal_adaptation
@@ -116,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Homeoviscous adaptation via fluidity maintenance underlies adaptation
         across a temperature range.
+    predicate_id: RO:0002327
   - subject: rpos_sigma_factor
     predicate: positively regulates expression of
     object: otsab_operon
@@ -131,6 +134,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Trehalose is synthesized by the otsAB operon.
+    predicate_id: METPO:2000202
   - subject: trehalose
     predicate: contributes to
     object: cold_tolerance
@@ -138,6 +142,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Trehalose helps cold shock tolerance.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844944+00:00'
   curator: seed_from_metpo
@@ -161,4 +166,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002327×1, METPO:2000202×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1).
   llm_assisted: true

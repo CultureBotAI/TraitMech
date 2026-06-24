@@ -65,6 +65,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Sodium/proton antiporter mediating Na+ exclusion and ion homeostasis
       under high salt.
+    grounding: UniProtKB:A0A068T423
   - node_id: acidic_proteome
     label: acidic proteome
     node_type: QUALITY
@@ -122,6 +123,7 @@ causal_graphs:
     - reference: DOI:10.1002/pro.5003
       notes: Halophiles accumulate intracellular concentrations of potassium chloride
         even above 3 M.
+    predicate_id: RO:0002213
   - subject: salt_in_strategy
     predicate: requires
     object: potassium_uptake_system
@@ -146,6 +148,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41559-024-02505-6
       notes: The salt-in strategy is concomitant with an excess of acidic amino acids.
+    predicate_id: METPO:2007401
   - subject: acidic_proteome
     predicate: enables
     object: protein_function_high_salinity
@@ -154,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41559-024-02505-6
       notes: Proteome acidification preserves protein structure/function under high
         intracellular salt.
+    predicate_id: RO:0002327
   - subject: acidic_aa_content
     predicate: increases
     object: protein_solubility_high_salt
@@ -163,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.1002/pro.5003
       notes: Increase the number of short, polar and acidic amino acids to improve
         salt-induced stabilization and solubility.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835295+00:00'
   curator: seed_from_metpo
@@ -198,4 +203,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, METPO:2007401×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A068T423×1).
   llm_assisted: true

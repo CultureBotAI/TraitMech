@@ -153,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1002/advs.202203260
       notes: A cell division inhibitor, sulA, blocks FtsZ / SulA interferes with FtsZ
         polymerization.
+    predicate_id: RO:0002212
   - subject: ftsz_polymerization
     predicate: regulates
     object: filament_shaped_trait
@@ -162,6 +163,7 @@ causal_graphs:
     - reference: DOI:10.1002/advs.202203260
       notes: FtsZ inhibition / blocked septation contributes to non-septate cellular
         filamentation.
+    predicate_id: RO:0002211
   - subject: apical_polarisome
     predicate: enables
     object: apical_growth
@@ -170,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00153-23
       notes: Hyphal growth occurs at the tips of the filamentous cells; this polar
         growth is mediated by DivIVA.
+    predicate_id: RO:0002327
   - subject: apical_polarisome
     predicate: promotes
     object: hyphal_branch_emergence
@@ -179,6 +182,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsml/uqad020
       notes: DivIVA forms discrete foci at growing tips; splitting of polarisomes
         produces daughter polarisomes coordinating emergence of new branches.
+    predicate_id: RO:0002213
   - subject: cgla
     predicate: enables
     object: cell_wall_glycopolymer_attachment
@@ -187,6 +191,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/mbio.01492-24
       notes: Identified the LCP-LytR_C domain protein CglA as a key glycopolymer ligase.
+    predicate_id: RO:0002327
   - subject: cell_wall_glycopolymer_attachment
     predicate: regulates
     object: filament_shaped_trait
@@ -196,6 +201,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01492-24
       notes: Reduced amount of glycopolymers in the cglA mutant results in enlarged
         vegetative hyphae.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.889558+00:00'
   curator: seed_from_metpo
@@ -255,4 +261,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2, RO:0002327×2, RO:0002212×1, RO:0002213×1).
   llm_assisted: true

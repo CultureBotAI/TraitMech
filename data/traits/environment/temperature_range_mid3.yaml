@@ -155,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: membrane rigidification and increased thickness are proposed as sensing
         signals that trigger adaptive responses
+    predicate_id: biolink:causes
   - subject: homeoviscous_adaptation
     predicate: maintains
     object: liquid_crystalline_membrane
@@ -186,4 +187,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1).
   llm_assisted: true

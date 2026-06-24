@@ -144,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters;
         stabilizes internal pH at the external-pH optimum.
+    predicate_id: RO:0002326
   - subject: f1f0_atp_synthase
     predicate: contributes to
     object: intracellular_ph_homeostasis
@@ -153,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: F1F0-ATP synthase activity contributes to pH homeostasis; general bacterial
         bioenergetic mechanism.
+    predicate_id: RO:0002326
   - subject: opua_transporter
     predicate: increases
     object: intracellular_glycine_betaine
@@ -162,6 +164,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: OpuA can accumulate the compatible solute glycine betaine to (sub)molar
         levels; mechanism for osmolarity optimum.
+    predicate_id: RO:0002213
   - subject: hyperosmotic_stress
     predicate: activates
     object: compatible_solute_accumulation
@@ -171,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Hypertonicity causes shrinkage/plasmolysis; active importers accumulate
         compatible solutes in response.
+    predicate_id: RO:0002213
   - subject: amino_acid_decarboxylation
     predicate: contributes to
     object: intracellular_ph_homeostasis
@@ -180,6 +184,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Amino-acid decarboxylases have low pH optima and activity increases when
         internal pH drops, contributing to pH homeostasis.
+    predicate_id: RO:0002326
   - subject: amino_acid_decarboxylation
     predicate: generates
     object: proton_motive_force
@@ -189,6 +194,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Decarboxylation plus antiporter exchange generates PMF, ~1 proton per
         molecule decarboxylated.
+    predicate_id: biolink:produces
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848187+00:00'
   curator: seed_from_metpo
@@ -218,4 +224,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×3, RO:0002213×2, biolink:produces×1).
   llm_assisted: true

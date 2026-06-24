@@ -105,6 +105,7 @@ causal_graphs:
       notes: FeRB transfers electrons to Fe(III), Fe(III) is reduced to Fe(II), and
         organic compounds are mineralized (Jiang et al., 2019); general respiratory
         coupling.
+    predicate_id: METPO:2007403
   - subject: mtrcab_complex
     predicate: transfers electrons to
     object: extracellular_acceptor
@@ -114,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.00044-24
       notes: The outer membrane complex MtrCAB creates a pathway that transfers electrons
         to an extracellular acceptor (Hsu et al., 2024); generalized EET conduit role.
+    predicate_id: METPO:2007403
   - subject: flavin_shuttle
     predicate: facilitates electron transfer to
     object: extracellular_acceptor
@@ -162,4 +164,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×2).
   llm_assisted: true

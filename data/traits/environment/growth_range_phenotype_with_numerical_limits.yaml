@@ -159,6 +159,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons
         when internal pH gets too high.
+    predicate_id: RO:0002327
   - subject: cytoplasm_acidification
     predicate: contributes to
     object: ph_range
@@ -168,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Cytoplasmic acidification counters alkaline external pH, extending the
         upper pH growth boundary.
+    predicate_id: RO:0002326
   - subject: proton_pumping_atpase_respiration
     predicate: enables
     object: prevent_cytoplasm_acidification
@@ -177,6 +179,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Activation/upregulation of proton-pumping respiratory chains and the
         F0F1-ATPase prevents cytoplasmic acidification.
+    predicate_id: RO:0002327
   - subject: aa_decarboxylase_antiporter
     predicate: enables
     object: cytoplasmic_ph_homeostasis
@@ -186,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Each decarboxylation pumps one proton equivalent; decarboxylases increase
         activity when internal pH falls, extending the acid-side boundary.
+    predicate_id: RO:0002327
   - subject: hypertonic_salinity_increase
     predicate: causes
     object: cell_shrinkage_low_turgor
@@ -195,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Hypertonicity leads to cell shrinkage and lowering of turgor; the lower
         turgor limit is reached before cell growth ceases.
+    predicate_id: biolink:causes
   - subject: opua_glycine_betaine_uptake
     predicate: enables
     object: compatible_solute_accumulation
@@ -204,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: OpuA accumulates the compatible solute glycine betaine to (sub)molar
         levels to counteract hyperosmotic stress.
+    predicate_id: RO:0002327
   - subject: compatible_solute_accumulation
     predicate: contributes to
     object: nacl_range
@@ -213,6 +219,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Compatible-solute accumulation offsets hyperosmotic stress, broadening
         the salinity growth range.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847733+00:00'
   curator: seed_from_metpo
@@ -242,4 +249,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 7 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×4, RO:0002326×2, biolink:causes×1).
   llm_assisted: true

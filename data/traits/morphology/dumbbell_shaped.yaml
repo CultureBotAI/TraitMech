@@ -54,6 +54,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Resolution of the septum into two physically separated daughter cells,
       often via V-snapping.
+    grounding: GO:0000920
   - node_id: outer_envelope_continuity
     label: outer envelope layer continuity
     node_type: STATE
@@ -117,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.2214599119
       notes: Daughter cell separation requires precisely timed and localized peptidoglycan
         hydrolysis at the septal junction.
+    predicate_id: RO:0002327
   - subject: septal_pg_hydrolysis
     predicate: combined with
     object: mechanical_snapping_separation
@@ -136,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00028-07
       notes: Continuity/intertwining of AG and mycolate outer layers forces a final
         mechanical rupture.
+    predicate_id: RO:0002213
   - subject: mechanical_snapping_separation
     predicate: produces
     object: v_shaped_daughters
@@ -145,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00028-07
       notes: Uneven rupturing produces the V-shape; snapping division produces angular
         daughter arrangements.
+    predicate_id: METPO:2000202
   - subject: septal_hydrolases
     predicate: mediates
     object: septal_pg_hydrolysis
@@ -191,4 +195,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002213×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0000920×1).
   llm_assisted: true

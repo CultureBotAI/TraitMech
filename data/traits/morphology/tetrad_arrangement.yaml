@@ -47,6 +47,7 @@ causal_graphs:
     label: division septum assembly
     node_type: BIOLOGICAL_PROCESS
     description: Assembly of the septal cell-wall and membrane between daughter cells.
+    grounding: GO:0000917
   - node_id: cell_wall_hydrolases
     label: cell wall hydrolases (autolysins)
     node_type: GENE_OR_PROTEIN
@@ -112,6 +113,7 @@ causal_graphs:
       notes: Tetrads arise when a spherical cell divides in one plane and then again
         in a perpendicular plane, producing four cells arranged as a square due to
         incomplete separation; failure to complete splitting yields the tetrad.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -131,4 +133,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0000917×1).
   llm_assisted: true

@@ -85,6 +85,7 @@ causal_graphs:
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate filament-like protein promoting cell curvature.
+    grounding: UniProtKB:A0A2N9AY16
   - node_id: cell_curvature
     label: cell curvature
     node_type: QUALITY
@@ -152,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.7554/eLife.86577.2
       notes: bactofilins and M23 peptidases form a conserved functional module that
         promotes local changes in the mode of cell wall biosynthesis; cross-taxon.
+    predicate_id: RO:0002213
   - subject: crva_polymer
     predicate: skews
     object: pg_synthesis_rate_skew
@@ -169,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-45196-0
       notes: the intermediate filament-like protein crescentin in C. crescentus generates
         curvature; canonical curvature determinant.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.892873+00:00'
   curator: seed_from_metpo
@@ -210,4 +213,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A2N9AY16×1).
   llm_assisted: true

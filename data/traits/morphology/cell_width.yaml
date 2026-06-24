@@ -115,6 +115,7 @@ causal_graphs:
       notes: Review states Rod and aPBP systems "act oppositely to set B. subtilis
         cell diameter"; MreB-directed PG synthesis identified as the control point
         governing cell width.
+    predicate_id: RO:0002211
   - subject: roda_pbp2_synthase
     predicate: enables
     object: rod_complex_pg
@@ -125,6 +126,7 @@ causal_graphs:
       notes: RodA-PBP2 undergoes dynamic exchange between closed and open states;
         structural opening couples activation of polymerization and crosslinking and
         is essential in vivo.
+    predicate_id: RO:0002327
   - subject: mre_accessory_proteins
     predicate: regulates
     object: roda_pbp2_synthase
@@ -134,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Rod complex has accessory components MreCD and RodZ; genetic studies
         implicated MreC as a potential regulator of enzymatic activity.
+    predicate_id: RO:0002211
   - subject: envelope_bending_rigidity
     predicate: regulates
     object: cell_width_trait
@@ -144,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1101/2024.11.22.624946
       notes: Width increases and saturates primarily under the control of envelope
         bending rigidity, which constrains width homeostasis.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918950+00:00'
   curator: seed_from_metpo
@@ -179,4 +183,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×3, RO:0002327×1).
   llm_assisted: true

@@ -60,10 +60,12 @@ causal_graphs:
     label: cellulose
     node_type: CHEMICAL
     description: Beta-1,4-linked glucose polymer, major plant cell-wall polysaccharide.
+    grounding: CHEBI:18246
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
     description: Monosaccharide product of cellulose depolymerization.
+    grounding: CHEBI:17234
   - node_id: cazymes
     label: carbohydrate-active enzymes (CAZymes)
     node_type: GENE_OR_PROTEIN
@@ -72,6 +74,7 @@ causal_graphs:
     label: hemicellulose
     node_type: CHEMICAL
     description: Heterogeneous matrix polysaccharides of plant cell walls.
+    grounding: CHEBI:61266
   - node_id: laccase
     label: laccase
     node_type: GENE_OR_PROTEIN
@@ -80,6 +83,7 @@ causal_graphs:
     label: lignin
     node_type: CHEMICAL
     description: Complex aromatic polymer in plant cell walls.
+    grounding: CHEBI:6457
   - node_id: manganese_peroxidase
     label: manganese peroxidase (MnP)
     node_type: GENE_OR_PROTEIN
@@ -143,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1093/jambio/lxac002
       notes: CAZymes act on glycosidic bonds; hemicellulose is targeted by xylanases,
         beta-mannanases, pectate lyases and related enzymes.
+    predicate_id: METPO:2000013
   - subject: laccase
     predicate: oxidizes and depolymerizes
     object: lignin
@@ -188,4 +193,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17234×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18246×1, CHEBI:61266×1, CHEBI:6457×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:36Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000013×1).
   llm_assisted: true

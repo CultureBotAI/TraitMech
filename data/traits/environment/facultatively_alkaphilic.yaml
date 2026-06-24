@@ -153,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.3389/fbioe.2015.00075
       notes: electrogenic exchange of outwardly moving sodium ions for a greater number
         of entering protons; broadly supported core adaptation.
+    predicate_id: METPO:2007401
   - subject: na_h_antiport_activity
     predicate: maintains
     object: cytoplasmic_ph_homeostasis
@@ -257,4 +258,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

@@ -122,6 +122,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00442-23
       notes: 'Geiger et al. 2024: twitching is movement that pulls the cell across
         a surface through cooperative binding, pulling, and unbinding.'
+    predicate_id: RO:0002327
   - subject: pilq_secretin
     predicate: enables surface exposure of
     object: pilus_filament_surface_exposure
@@ -140,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-53638-y
       notes: 'Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting
         of PilP, PilO, PilN, and PilM.'
+    predicate_id: biolink:part_of
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -164,4 +166,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:part_of×1).
   llm_assisted: true

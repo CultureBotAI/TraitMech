@@ -115,6 +115,7 @@ causal_graphs:
     node_type: ORGANELLE
     description: Proteinaceous microcompartment housing RuBisCO and carbonic anhydrase
       for CO2 fixation.
+    grounding: GO:0031470
   - node_id: carboxysomal_carbonic_anhydrase
     label: carboxysomal carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -124,6 +125,7 @@ causal_graphs:
     label: bicarbonate
     node_type: CHEMICAL
     description: Inorganic carbon species accumulated and converted to CO2 for fixation.
+    grounding: CHEBI:17544
   edges:
   - subject: photoautotrophic_trait
     predicate: uses energy source
@@ -207,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.3389/fpls.2024.1417680
       notes: Phototrophs use light energy to drive a photosynthetic electron transport
         chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.
+    predicate_id: RO:0002327
   - subject: carbon_concentrating_mechanism
     predicate: lowers
     object: rubisco_oxygenase_activity
@@ -297,4 +300,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031470×1, CHEBI:17544×1).
   llm_assisted: true

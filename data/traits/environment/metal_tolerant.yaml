@@ -130,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.7717/peerj.18383
       notes: '"a cooperative mechanism involving detoxification through arsenate reduction"
         via arsC/arsA/arsB/acr3 genes across mixed soil taxa.'
+    predicate_id: RO:0002327
   - subject: arsenic_tolerance
     predicate: is a
     object: metal_tolerant_trait
@@ -139,6 +140,7 @@ causal_graphs:
     - reference: DOI:10.52700/jmmg.v5i1.155
       notes: Arsenic detoxification (reduction + efflux) is part of generic bacterial
         heavy-metal/metalloid resistance.
+    predicate_id: rdfs:subClassOf
   - subject: efflux_pump
     predicate: mediates
     object: metal_tolerant_trait
@@ -174,4 +176,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, rdfs:subClassOf×1).
   llm_assisted: true

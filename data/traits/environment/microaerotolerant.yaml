@@ -53,6 +53,7 @@ causal_graphs:
     label: superoxide
     node_type: CHEMICAL
     description: Superoxide radical anion, a reactive oxygen species.
+    grounding: CHEBI:18421
   - node_id: superoxide_reductase
     label: superoxide reductase
     node_type: GENE_OR_PROTEIN
@@ -61,6 +62,7 @@ causal_graphs:
     label: hydrogen peroxide
     node_type: CHEMICAL
     description: H2O2, a reactive oxygen species generated during O2 exposure.
+    grounding: CHEBI:16240
   - node_id: rubrerythrin_peroxidase
     label: rubrerythrin/peroxidase
     node_type: GENE_OR_PROTEIN
@@ -143,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.1128/IAI.00502-24
       notes: Review notes SOR reduces superoxide using electrons from donors like
         NADH.
+    predicate_id: METPO:2000017
   - subject: superoxide_reductase
     predicate: produces
     object: hydrogen_peroxide
@@ -151,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.1128/IAI.00502-24
       notes: SOR reduces superoxide to H2O2 as part of the anaerobe oxygen-defense
         backbone.
+    predicate_id: METPO:2000202
   - subject: rubrerythrin_peroxidase
     predicate: reduces
     object: hydrogen_peroxide
@@ -158,6 +162,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/IAI.00502-24
       notes: Review states Rbr/peroxidases reduce H2O2 to water.
+    predicate_id: METPO:2000017
   - subject: reduced_electron_donors
     predicate: enables function of
     object: oxidative_stress_defense
@@ -215,4 +220,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000017×2, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:18421×1, CHEBI:16240×1).
   llm_assisted: true

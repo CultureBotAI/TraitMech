@@ -124,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy026
       notes: Salt-in proteins more hydrophilic and enriched in acidic residues, enabling
         functionality at very high ionic strength.
+    predicate_id: RO:0002326
   - subject: salt_in_physiology
     predicate: depends on
     object: intracellular_potassium
@@ -133,6 +134,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuy026
       notes: Cellular vitality of salt-in organisms dependent on high intracellular
         K+; proteins misfold when K+ falls below ~2.2 M.
+    predicate_id: RO:0002502
   - subject: compatible_solutes
     predicate: stabilizes
     object: protein_stabilization
@@ -164,4 +166,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, RO:0002502×1).
   llm_assisted: true

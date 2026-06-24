@@ -62,6 +62,7 @@ causal_graphs:
     label: nitrate
     node_type: CHEMICAL
     description: Alternative terminal electron acceptor supporting anaerobic respiration.
+    grounding: CHEBI:17632
   - node_id: terminal_oxidase_cytochrome_bd
     label: cytochrome bd terminal oxidase
     node_type: GENE_OR_PROTEIN
@@ -128,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1128/msphere.00774-23
       notes: '"addition of nitrate as a TEA promotes anaerobic respiration"; broadly
         relevant across facultative species with nitrate reductases.'
+    predicate_id: RO:0002213
   - subject: molecular_oxygen
     predicate: enables
     object: terminal_oxidase_cytochrome_bd
@@ -139,6 +141,7 @@ causal_graphs:
       notes: '"which of these terminal enzymes is active in electron transfer depends
         on the availability of the final electron acceptor: fumarate or oxygen"; supports
         electron-acceptor-dependent branch switching.'
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855860+00:00'
   curator: seed_from_metpo
@@ -162,4 +165,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17632×1).
   llm_assisted: true

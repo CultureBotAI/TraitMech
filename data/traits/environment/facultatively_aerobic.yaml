@@ -152,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1093/nar/gkad750
       notes: when active, Fnr activates anaerobic metabolism genes and represses aerobic
         genes.
+    predicate_id: RO:0002213
   - subject: fnr_type_regulation
     predicate: represses
     object: aerobic_metabolism_genes
@@ -201,4 +202,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

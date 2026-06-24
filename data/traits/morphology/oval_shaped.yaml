@@ -162,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-38904-9
       notes: mreC, pbp2B, and rodA act together in the elongation machinery whose
         loss makes cells spherical.
+    predicate_id: biolink:part_of
   - subject: mapZ_ftsZ_system
     predicate: positively regulates
     object: division_site_placement
@@ -211,4 +212,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×1).
   llm_assisted: true

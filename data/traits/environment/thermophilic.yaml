@@ -52,6 +52,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent topoisomerase that introduces positive DNA supercoils,
       characteristic of thermophiles.
+    grounding: UniProtKB:A0A088E825
   - node_id: positive_dna_supercoiling
     label: positive DNA supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -148,6 +149,7 @@ causal_graphs:
     - reference: DOI:10.1264/jsme2.me23087
       notes: 'Takemata 2024: "maintain the genome integrity of thermophiles by limiting
         DNA melting"; mechanism generalized across thermophiles.'
+    predicate_id: RO:0002212
   - subject: reverse_gyrase
     predicate: mediates
     object: genome_integrity
@@ -174,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.3389/frbis.2023.1338019
       notes: 'Chong 2024: "cyclopentane ring cyclization ... increase membrane condensation,
         packing tightness, rigidity".'
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858214+00:00'
   curator: seed_from_metpo
@@ -239,4 +242,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A088E825×1).
   llm_assisted: true

@@ -63,6 +63,7 @@ causal_graphs:
     label: lycopene
     node_type: CHEMICAL
     description: C40 carotenoid backbone intermediate.
+    grounding: CHEBI:15948
   - node_id: crti
     label: CrtI (phytoene desaturase)
     node_type: GENE_OR_PROTEIN
@@ -71,6 +72,7 @@ causal_graphs:
     label: lycopene biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: Pathway steps producing lycopene from phytoene.
+    grounding: GO:1901177
   - node_id: crty
     label: CrtY (lycopene beta-cyclase)
     node_type: GENE_OR_PROTEIN
@@ -79,6 +81,7 @@ causal_graphs:
     label: beta-carotene
     node_type: CHEMICAL
     description: Canonical yellow/orange carotenoid pigment.
+    grounding: CHEBI:17579
   - node_id: flexirubin_pigment
     label: flexirubin-type pigment
     node_type: CHEMICAL
@@ -143,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41598-024-58700-9
       notes: IdsA, the major geranylgeranyl diphosphate synthase converting IPP and
         DMAPP to GGPP; GGPPS annotated CrtE/IdsA.
+    predicate_id: biolink:catalyzes
   - subject: ggpp
     predicate: precursor of
     object: lycopene
@@ -157,6 +161,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms12040803
       notes: Phytoene desaturase (CrtI) to produce lycopene.
+    predicate_id: RO:0002327
   - subject: lycopene_biosynthesis
     predicate: produces
     object: lycopene
@@ -165,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12040803
       notes: Pathway proceeds through phytoene synthase (CrtB) and phytoene desaturase
         (CrtI) to produce lycopene.
+    predicate_id: METPO:2000202
   - subject: crty
     predicate: catalyzes conversion to
     object: beta_carotene
@@ -190,6 +196,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-54112-5
       notes: Flexirubin-type pigment-producing bacterium is yellow (or orange) in
         color; flexirubin is a known yellow pigment.
+    predicate_id: RO:0002326
   - subject: flexirubin_pigment
     predicate: protects against
     object: ros_damage
@@ -239,4 +246,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1, RO:0002327×1, METPO:2000202×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15948×1, GO:1901177×1, CHEBI:17579×1).
   llm_assisted: true

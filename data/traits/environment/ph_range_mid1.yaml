@@ -56,6 +56,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of near-neutral cytoplasmic pH (~7) across the external
       pH range.
+    grounding: GO:0051453
   - node_id: cation_proton_antiporters
     label: cation/proton antiporters
     node_type: GENE_OR_PROTEIN
@@ -101,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1103/PRXLife.2.043015
       notes: 'Terradot et al. 2024: decreasing the PMF''s strength impairs the cells''
         ability to maintain pH.'
+    predicate_id: RO:0002327
   - subject: cytoplasmic_ph_homeostasis
     predicate: enables
     object: ph_range_mid1_trait
@@ -109,6 +111,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1103/PRXLife.2.043015
       notes: Cytoplasmic pH held near neutral underlies the neutralophile growth range.
+    predicate_id: RO:0002327
   - subject: cation_proton_antiporters
     predicate: determines
     object: cytoplasmic_ph_homeostasis
@@ -136,6 +139,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: 'Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance
         under acid challenge.'
+    predicate_id: RO:0002327
   - subject: alkaline_challenge
     predicate: positively regulates
     object: cation_proton_antiporters
@@ -168,4 +172,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0051453×1).
   llm_assisted: true

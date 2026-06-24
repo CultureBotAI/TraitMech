@@ -81,6 +81,7 @@ causal_graphs:
     - reference: DOI:10.1126/science.adg9829
       notes: Ion release during germination drives expulsion of dipicolinic acid (CaDPA)
         through the SpoVA transport complex.
+    predicate_id: biolink:causes
   - subject: cadpa_release
     predicate: activates
     object: cortex_hydrolysis
@@ -90,6 +91,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02220-23
       notes: Ca-DPA release acts as a signal for a germination-specific cortex-lytic
         enzyme to begin cortex degradation.
+    predicate_id: RO:0002213
   - subject: cortex_hydrolysis
     predicate: causes
     object: core_rehydration_outgrowth
@@ -100,6 +102,7 @@ causal_graphs:
       notes: Once the cortex is hydrolyzed, the core can fully expand and rehydrate,
         allowing full metabolic capabilities and initiation of outgrowth; broadly
         supported across endospore formers.
+    predicate_id: biolink:causes
   - subject: core_rehydration_outgrowth
     predicate: enables
     object: spore_germination_trait
@@ -109,6 +112,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.02220-23
       notes: Core rehydration following cortex hydrolysis allows full metabolic capabilities
         and initiation of outgrowth, completing germination.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -129,4 +133,10 @@ curation_history:
   changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
     report, extending the downstream germination cascade (CaDPA release -> cortex
     hydrolysis -> core rehydration/outgrowth -> trait).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×2, RO:0002213×1, RO:0002327×1).
   llm_assisted: true

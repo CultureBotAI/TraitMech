@@ -65,6 +65,7 @@ causal_graphs:
     label: lycopene
     node_type: CHEMICAL
     description: Red C40 carotenoid intermediate formed by desaturation.
+    grounding: CHEBI:15948
   - node_id: lycopene_cyclases
     label: lycopene cyclases
     node_type: GENE_OR_PROTEIN
@@ -73,6 +74,7 @@ causal_graphs:
     label: cyclic carotenes
     node_type: CHEMICAL
     description: alpha-, epsilon-, and beta-carotene formed by lycopene cyclization.
+    grounding: CHEBI:35163
   edges:
   - subject: isoprenoid_precursors
     predicate: feed into
@@ -145,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules29174235
       notes: Phytoene is further dehydrogenated... which is subsequently converted
         into lycopene.
+    predicate_id: METPO:2000202
   - subject: lycopene_cyclases
     predicate: converts
     object: cyclic_carotenes
@@ -171,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules29174235
       notes: Cyclic carotenes (alpha-/epsilon-/beta-carotene) are conjugated carotenoid
         pigment products of the pathway.
+    predicate_id: rdfs:subClassOf
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947657+00:00'
   curator: seed_from_metpo
@@ -212,4 +216,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15948×1, CHEBI:35163×1).
   llm_assisted: true

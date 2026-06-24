@@ -91,6 +91,7 @@ causal_graphs:
       notes: Required for the C-terminal processing and covalent lipid attachment
         of S-layer glycoprotein, required for effective and stable plate-shaped cell
         formation.
+    predicate_id: RO:0002327
   - subject: disc_shaped_trait
     predicate: interconverts with
     object: rod_shaped_state
@@ -141,4 +142,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 2 evidence-backed generic edges (2 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
   llm_assisted: true

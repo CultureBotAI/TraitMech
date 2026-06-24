@@ -101,6 +101,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-024-01035-z
       notes: 'Uberoi et al.: barrier breach exposes sterile tissue to microbes (generalizable
         ecological/clinical edge).'
+    predicate_id: RO:0002327
   - subject: antibiotic_exposure
     predicate: promotes
     object: microbiota_dysbiosis
@@ -110,6 +111,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40588-023-00190-w
       notes: 'Jacobsen: antibiotic exposure is a common risk factor driving overgrowth
         of opportunists; curated as exposure to dysbiosis.'
+    predicate_id: RO:0002213
   - subject: microbiota_dysbiosis
     predicate: increases
     object: opportunist_colonization
@@ -118,6 +120,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40588-023-00190-w
       notes: 'Jacobsen: defects/dysbiosis permit expansion of normally controlled
         opportunists (high-level ecological edge).'
+    predicate_id: RO:0002213
   - subject: opportunist_colonization
     predicate: enables
     object: opportunistic_infection
@@ -126,6 +129,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s40588-023-00190-w
       notes: 'Jacobsen: colonization is a risk factor preceding opportunistic disease.'
+    predicate_id: RO:0002327
   - subject: host_colonization
     predicate: progresses to under host susceptibility
     object: opportunistic_infection
@@ -144,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14241
       notes: 'Sanchez-Jimenez: under iron limitation, high-affinity iron transport
         systems are promoted (general iron-acquisition biology).'
+    predicate_id: RO:0002213
   - subject: high_affinity_iron_acquisition
     predicate: contributes to
     object: opportunistic_infection
@@ -153,6 +158,7 @@ causal_graphs:
     - reference: DOI:10.1111/1751-7915.14241
       notes: 'Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence
         determinant of opportunists.'
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -171,4 +177,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3, RO:0002327×2, RO:0002326×1).
   llm_assisted: true

@@ -77,6 +77,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, the carboxylating
       enzyme of the CBB cycle.
+    grounding: UniProtKB:A0A075WF79
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -185,6 +186,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01557-23
       notes: Ribulose 1,5-bisphosphate carboxylase/oxygenase (RuBisCO) drives CBB-cycle
         CO2 fixation.
+    predicate_id: biolink:catalyzes
   - subject: carbonic_anhydrase
     predicate: facilitates supply of
     object: dissolved_inorganic_carbon
@@ -297,4 +299,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A075WF79×1).
   llm_assisted: true

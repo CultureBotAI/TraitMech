@@ -54,6 +54,7 @@ causal_graphs:
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like central divisome protein forming the cytokinetic Z-ring.
+    grounding: UniProtKB:C0LUM8
   - node_id: ftsz_ring
     label: FtsZ Z-ring
     node_type: CELLULAR_LOCALIZATION
@@ -101,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-024-01607-y
       notes: '"FacZ interacts directly with GpsB both in vitro and in vivo"; direct
         biochemical and cellular interaction.'
+    predicate_id: biolink:interacts_with
   - subject: facz
     predicate: antagonizes
     object: gpsb
@@ -146,4 +148,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:interacts_with×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:C0LUM8×1).
   llm_assisted: true

@@ -73,11 +73,13 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Energy conservation by ATP synthase powered by the proton motive
       force.
+    grounding: GO:0006754
   - node_id: reactive_oxygen_species
     label: reactive oxygen species
     node_type: CHEMICAL
     description: Superoxide, hydrogen peroxide and related species formed endogenously
       during aerobic respiration.
+    grounding: CHEBI:26523
   - node_id: ros_scavenging_enzymes
     label: ROS-scavenging enzymes
     node_type: GENE_OR_PROTEIN
@@ -131,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1128/ecosalplus.esp-0012-2015
       notes: Electrons are transferred from substrate-specific dehydrogenases to a
         quinone pool (menaquinone, ubiquinone, dimethylmenaquinone).
+    predicate_id: METPO:2007403
   - subject: quinone_pool
     predicate: transfers electrons to
     object: terminal_oxidases
@@ -140,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.1128/ecosalplus.esp-0012-2015
       notes: Quinol-to-O2 oxidation is catalyzed by quinol oxidases (cytochrome bo3,
         cytochrome bd) reducing O2 to H2O.
+    predicate_id: METPO:2007403
   - subject: terminal_oxidases
     predicate: reduces
     object: molecular_oxygen
@@ -148,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox13030383
       notes: Terminal oxidases catalyze the four-electron reduction of O2 to water
         and generate the proton motive force for ATP.
+    predicate_id: METPO:2000017
   - subject: terminal_oxidases
     predicate: generates
     object: proton_motive_force
@@ -156,6 +161,7 @@ causal_graphs:
     - reference: DOI:10.3390/antiox13030383
       notes: Terminal oxidases catalyze reduction of O2 to water and generate the
         proton motive force for ATP.
+    predicate_id: biolink:produces
   - subject: proton_motive_force
     predicate: powers
     object: atp_synthesis
@@ -172,6 +178,7 @@ causal_graphs:
     - reference: DOI:10.30970/sbi.1702.716
       notes: ROS are formed endogenously during aerobic respiration due to activity
         of respiratory flavoproteins.
+    predicate_id: biolink:produces
   - subject: ros_scavenging_enzymes
     predicate: detoxifies
     object: reactive_oxygen_species
@@ -242,4 +249,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×2, biolink:produces×2, METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006754×1, CHEBI:26523×1).
   llm_assisted: true

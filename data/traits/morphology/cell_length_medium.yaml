@@ -119,6 +119,7 @@ causal_graphs:
       notes: RodA is a glycosyltransferase and PBP2 a transpeptidase required for
         cell elongation; Rod-complex rotation supports even PG insertion along the
         cylinder (broadly curatable general rod-bacterium mechanism).
+    predicate_id: RO:0002327
   - subject: mreC_mreD_balance
     predicate: modulates
     object: pbp2_activity
@@ -128,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1002/mbo3.1385
       notes: '"the balance between MreC and MreD modulates PBP2 activity" - mechanistic
         edge for elongation control.'
+    predicate_id: RO:0002211
   - subject: rod_complex
     predicate: increases
     object: pg_density
@@ -137,6 +139,7 @@ causal_graphs:
     - reference: DOI:10.1002/mbo3.1385
       notes: '"The Rod complex may be a determinant not only for the whole shape of
         peptidoglycan but also for its highly dense structure."'
+    predicate_id: RO:0002213
   - subject: pg_density
     predicate: maintains
     object: rod_shape
@@ -179,4 +182,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002211×1, RO:0002213×1).
   llm_assisted: true

@@ -68,6 +68,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Formation and maturation of structured surface-attached microbial
       communities.
+    grounding: GO:0042710
   - node_id: persistent_infection
     label: persistent infection
     node_type: BIOLOGICAL_PROCESS
@@ -95,6 +96,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Acquisition and recombination of mobile genetic elements driving
       host adaptation.
+    grounding: GO:0009292
   edges:
   - subject: virulence_factors
     predicate: enables
@@ -142,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms25052655
       notes: Autoinducers are hormone-like molecules triggering sensor proteins to
         mediate changes in global gene expression; QS controls virulence factor production.
+    predicate_id: RO:0002213
   - subject: quorum_sensing_autoinducers
     predicate: promotes
     object: biofilm_formation
@@ -149,6 +152,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tcsw.2024.100133
       notes: QS is crucial for biofilm formation and maintenance.
+    predicate_id: RO:0002213
   - subject: biofilm_formation
     predicate: enables
     object: persistent_infection
@@ -156,6 +160,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1016/j.tcsw.2024.100133
       notes: QS-driven biofilm formation and maintenance underlies persistent infection.
+    predicate_id: RO:0002327
   - subject: biofilm_matrix
     predicate: enables
     object: antibiotic_tolerance
@@ -165,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.3390/bacteria3030008
       notes: EPS matrix protects deeper-layer cells from antimicrobials; biofilm bacteria
         increase resistance about 1000 fold (DOI:10.3390/ijms25052655).
+    predicate_id: RO:0002327
   - subject: biofilm_formation
     predicate: enables
     object: immune_evasion
@@ -173,6 +179,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/antibiotics13070619
       notes: Biofilms help bacteria evade the immune response.
+    predicate_id: RO:0002327
   - subject: capsule
     predicate: enables
     object: immune_evasion
@@ -182,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.58532/nbennurmmch1
       notes: An antiphagocytic capsule aids immune evasion; polysaccharide capsule
         resists phagocytosis to increase virulence.
+    predicate_id: RO:0002327
   - subject: immune_evasion
     predicate: enables
     object: host_colonization
@@ -191,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.58532/nbennurmmch1
       notes: Immune evasion via antiphagocytic capsule supports establishment within
         the host.
+    predicate_id: RO:0002327
   - subject: horizontal_gene_transfer
     predicate: contributes to
     object: virulence_factors
@@ -200,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuae019
       notes: Horizontal gene transfer, gene acquisition and deletion, and genome rearrangements
         are major drivers of host adaptation.
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948130+00:00'
   curator: seed_from_metpo
@@ -229,4 +239,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 8 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×5, RO:0002213×2, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:29Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0042710×1).
   llm_assisted: true

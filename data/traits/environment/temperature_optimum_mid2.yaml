@@ -58,10 +58,12 @@ causal_graphs:
     label: unsaturated fatty acids
     node_type: CHEMICAL
     description: Membrane fatty acyl chains bearing one or more double bonds (CHEBI:27208).
+    grounding: CHEBI:27208
   - node_id: membrane_fluidity
     label: membrane fluidity
     node_type: QUALITY
     description: Physical fluidity/disorder state of the cytoplasmic membrane.
+    grounding: METPO:1007505
   - node_id: mesophile_category
     label: mesophile category
     node_type: STATE
@@ -104,6 +106,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Temperature drops cause membrane rigidification and thickening and can
         induce a liquid-crystalline to gel phase change; general bacterial mechanism.
+    predicate_id: biolink:causes
   - subject: unsaturated_fatty_acids
     predicate: increases
     object: membrane_fluidity
@@ -112,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Increasing the saturated/unsaturated ratio toward UFAs increases fluidity;
         UFAs are central membrane fluidizers.
+    predicate_id: RO:0002213
   - subject: baseline_mesophile_adaptation
     predicate: increases
     object: unsaturated_fatty_acids
@@ -121,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Homeoviscous adaptation adjusts the saturated/unsaturated fatty-acid
         ratio to maintain membrane fluidity at the growth temperature.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: enables
     object: baseline_mesophile_adaptation
@@ -130,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.03925-23
       notes: Cells sense and correct membrane fluidity via desaturation to keep the
         bilayer functional at the ambient temperature.
+    predicate_id: RO:0002327
   - subject: temperature_optimum_mid2_trait
     predicate: subclass of
     object: mesophile_category
@@ -161,4 +167,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2, biolink:causes×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27208×1).
   llm_assisted: true

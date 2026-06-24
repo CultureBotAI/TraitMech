@@ -79,6 +79,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Respiratory generation of PMF and proton export contributing to cytoplasmic
       pH defense.
+    grounding: GO:0006119
   edges:
   - subject: ph_homeostasis_flexibility
     predicate: enables
@@ -109,6 +110,7 @@ causal_graphs:
       notes: Na+/H+ and K+/H+ antiporters and proton-pumping systems prevent internal
         pH from becoming too low, underpinning growth across pH (general bacteria,
         review).
+    predicate_id: RO:0002327
   - subject: proton_motive_force_generation
     predicate: supports
     object: ph_homeostasis
@@ -143,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2022.1034164
       notes: Membranes enriched in saturated fatty acids reduce proton permeability,
         minimizing proton influx in acidic environments (generalizable low-pH mechanism).
+    predicate_id: RO:0002212
   - subject: amino_acid_decarboxylase_acid_resistance
     predicate: increases
     object: low_ph_tolerance
@@ -152,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12091774
       notes: Amino-acid decarboxylase systems consume protons and export corresponding
         amines as a key acid-resistance mechanism (authoritative review).
+    predicate_id: RO:0002213
   - subject: oxidative_phosphorylation
     predicate: supports
     object: ph_homeostasis
@@ -190,4 +194,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006119×1).
   llm_assisted: true

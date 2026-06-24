@@ -118,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Activation of polymerization and crosslinking is the elongation activity
         underlying Rod-complex lateral wall synthesis.
+    predicate_id: METPO:2000202
   - subject: mrec_protein
     predicate: activates
     object: pbp2_protein
@@ -127,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1002/mbo3.1385
       notes: MreC interacts with PBP2 and is thought to cause a structural change
         in PBP2 and stimulate peptidoglycan polymerization and crosslinking.
+    predicate_id: RO:0002213
   - subject: mred_protein
     predicate: modulates activity of
     object: pbp2_protein
@@ -145,6 +147,7 @@ causal_graphs:
     - reference: DOI:10.1002/mbo3.1385
       notes: PBP2 activity drives peptidoglycan polymerization and crosslinking of
         the Rod complex.
+    predicate_id: RO:0002327
   - subject: apbp_proteins
     predicate: regulates
     object: cell_width_trait
@@ -154,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-41082-3
       notes: aPBPs regulate cell diameter; strains lacking aPBPs were moderately but
         significantly shorter and wider.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922158+00:00'
   curator: seed_from_metpo
@@ -189,4 +193,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, RO:0002213×1, RO:0002327×1, RO:0002211×1).
   llm_assisted: true

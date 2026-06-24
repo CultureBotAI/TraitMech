@@ -52,6 +52,7 @@ causal_graphs:
     label: lycopene
     node_type: CHEMICAL
     description: Central acyclic carotenoid precursor of colored downstream carotenoids.
+    grounding: CHEBI:15948
   - node_id: photosynthesis_gene_cluster
     label: photosynthesis gene cluster
     node_type: GENE_OR_PROTEIN
@@ -62,6 +63,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Environmental oxygen level regulating carotenoid biosynthetic gene
       expression.
+    grounding: ENVO:01001495
   - node_id: crt_operon
     label: crtI-crtB operon
     node_type: GENE_OR_PROTEIN
@@ -139,6 +141,7 @@ causal_graphs:
     - reference: DOI:10.3390/biology12101346
       notes: '"the genes of the carotenoid pathways are part of photosynthesis gene
         clusters" (Sandmann 2023).'
+    predicate_id: biolink:part_of
   - subject: photosynthesis_gene_cluster
     predicate: contributes to
     object: visible_pink_color
@@ -148,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.3390/biology12101346
       notes: '"The pigmentation of purple bacteria is caused by a combination of bacteriochlorophylls
         and carotenoids" with crt genes in PGCs.'
+    predicate_id: RO:0002326
   - subject: oxygen
     predicate: upregulates
     object: crt_operon
@@ -166,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.3390/biology12101346
       notes: crtB (phytoene synthase) and crtI (phytoene desaturase) catalyze committed
         steps producing colored carotenoids.
+    predicate_id: biolink:catalyzes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945783+00:00'
   curator: seed_from_metpo
@@ -207,4 +212,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×1, RO:0002326×1, biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15948×1, ENVO:01001495×1).
   llm_assisted: true

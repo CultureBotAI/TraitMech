@@ -56,6 +56,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Ferrocytochrome c, the physiological electron donor to cytochrome
       c oxidase.
+    grounding: CHEBI:16928
   - node_id: cua_center
     label: CuA center
     node_type: CHEMICAL
@@ -66,6 +67,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Low-spin heme A cofactor relaying electrons within family A cytochrome
       c oxidase.
+    grounding: CHEBI:24479
   - node_id: heme_a3_cub_binuclear_center
     label: heme a3-CuB binuclear center
     node_type: CHEMICAL
@@ -79,6 +81,7 @@ causal_graphs:
     label: carbon monoxide
     node_type: CHEMICAL
     description: Gaseous ligand that potently inhibits heme-copper terminal oxidases.
+    grounding: CHEBI:17245
   edges:
   - subject: cytochrome_c_oxidase
     predicate: enables
@@ -113,6 +116,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms10050926
       notes: 'Hederstedt: "reduced cytochrome c donates electrons to the CuA center
         in subunit II."'
+    predicate_id: METPO:2007403
   - subject: cua_center
     predicate: transfers electrons to
     object: heme_a
@@ -120,6 +124,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms10050926
       notes: 'Hederstedt: electrons pass from CuA "then to low-spin heme a."'
+    predicate_id: METPO:2007403
   - subject: heme_a3_cub_binuclear_center
     predicate: reduces
     object: molecular_oxygen
@@ -127,6 +132,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/microorganisms10050926
       notes: 'Hederstedt: "the dioxygen reduction site (heme a3 + CuB)."'
+    predicate_id: METPO:2000017
   - subject: family_a_cytochrome_c_oxidase
     predicate: has cofactor
     object: heme_a
@@ -154,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms26062809
       notes: 'Borisov & Forte 2025: "CO is a potent inhibitor of heme-copper cytochrome
         c oxidase (Ki ~0.3 uM)."'
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -179,4 +186,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007403×2, METPO:2000017×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17245×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16928×1, CHEBI:24479×1).
   llm_assisted: true

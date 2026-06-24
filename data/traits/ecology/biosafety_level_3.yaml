@@ -146,6 +146,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.26686/nzjhsp.v1i2.9540
       notes: '"safety management systems generally improve health and safety performance"'
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-05T01:35:46.933585+00:00'
   curator: seed_from_metpo
@@ -170,32 +171,47 @@ curation_history:
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007407×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-2ee31ba13f9c
-  prompt: 'Knowledge gap for biosafety level 3: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.'
+  prompt: 'Knowledge gap for biosafety level 3: Additionally, it identifies ongoing
+    challenges and critical knowledge gaps for future research.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
+    future_work, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:41494000
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.
-    explanation: Gap-signal sentence (explicit_gap, future_work, limitations_barriers) from the cited abstract.
+    snippet: Additionally, it identifies ongoing challenges and critical knowledge
+      gaps for future research.
+    explanation: Gap-signal sentence (explicit_gap, future_work, limitations_barriers)
+      from the cited abstract.
   - reference: PMID:40514544
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Although T cells are essential for immunity to TB, the mechanisms that provide protective immunity are poorly understood.
+    snippet: Although T cells are essential for immunity to TB, the mechanisms that
+      provide protective immunity are poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:41552424
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: In the field of microbiological diagnosis, HTS provides a complementary or alternative approach to traditional diagnostic tests, particularly in cases with non-specific symptoms or when the etiology is unknown.
+    snippet: In the field of microbiological diagnosis, HTS provides a complementary
+      or alternative approach to traditional diagnostic tests, particularly in cases
+      with non-specific symptoms or when the etiology is unknown.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:41917383
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: While its virulence genes critically regulate intracellular survival and replication, the molecular mechanisms underlying pathogenesis remain elusive.
+    snippet: While its virulence genes critically regulate intracellular survival
+      and replication, the molecular mechanisms underlying pathogenesis remain elusive.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   posed_by: kg-microbe-kgscan

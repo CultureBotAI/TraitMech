@@ -51,11 +51,13 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Rapid import of K+ as the principal cytoplasmic cation during osmotic
       upshift.
+    grounding: GO:1990573
   - node_id: osmoadaptation
     label: response to osmotic stress
     node_type: BIOLOGICAL_PROCESS
     description: Cellular adjustment of osmolyte and ion pools in response to osmotic
       stress.
+    grounding: GO:0006970
   - node_id: compatible_solute_accumulation
     label: compatible solute accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -71,6 +73,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Osmoadaptation by accumulating intracellular KCl matching environmental
       salinity, favored at very high salt.
+    grounding: METPO:1007720
   - node_id: high_maximal_nacl_tolerance
     label: high maximal NaCl tolerance
     node_type: QUALITY
@@ -123,6 +126,7 @@ causal_graphs:
       notes: To avoid K+-induced cytotoxicity and high ionic strength, cells accumulate
         or synthesize neutral compatible solutes (glycine betaine, trehalose, ectoine,
         proline).
+    predicate_id: RO:0002327
   - subject: hyperosmotic_upshift
     predicate: causes
     object: potassium_uptake
@@ -132,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.00181-23
       notes: Cells import large amounts of K+ during osmotic upshift; potassium is
         the principal cytoplasmic cation.
+    predicate_id: biolink:causes
   - subject: potassium_uptake
     predicate: contributes to
     object: osmoadaptation
@@ -141,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.00181-23
       notes: Cytoplasmic K+ levels ~250 mM (E. coli) to ~500 mM (C. glutamicum, L.
         lactis) accumulate as a core osmoadaptive response.
+    predicate_id: RO:0002326
   - subject: salt_out_strategy
     predicate: uses
     object: compatible_solute_accumulation
@@ -197,4 +203,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:causes×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007720×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:1990573×1, GO:0006970×1).
   llm_assisted: true

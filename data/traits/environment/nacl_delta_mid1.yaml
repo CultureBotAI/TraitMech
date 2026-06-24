@@ -47,6 +47,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Rapid cytoplasmic accumulation of K+ as a first-line osmoadaptive
       response.
+    grounding: GO:1990573
   - node_id: compatible_solute_accumulation
     label: compatible solute accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -66,11 +67,13 @@ causal_graphs:
     label: ectoine
     node_type: CHEMICAL
     description: Compatible solute (CHEBI:22586) contributing to salt tolerance.
+    grounding: CHEBI:27592
   - node_id: c_di_amp
     label: cyclic di-AMP
     node_type: CHEMICAL
     description: Second messenger (CHEBI:167606) central to osmoregulation of K+ and
       osmolyte economy.
+    grounding: CHEBI:71578
   - node_id: organic_osmolyte_influx_biosynthesis
     label: compatible organic osmolyte influx and biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -138,6 +141,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2019.02811
       notes: Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).
+    predicate_id: METPO:2000202
   - subject: ectoine
     predicate: contributes to
     object: compatible_solute_accumulation
@@ -145,6 +149,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/femsre/fuaf020
       notes: Ectoine is among the compatible solutes bacteria commonly use for osmoprotection.
+    predicate_id: RO:0002326
   - subject: c_di_amp
     predicate: decreases
     object: k_import
@@ -152,6 +157,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/MMBR.00181-23
       notes: High cyclic di-AMP reduces K+ import (review-level regulatory edge).
+    predicate_id: RO:0002212
   - subject: c_di_amp
     predicate: controls
     object: organic_osmolyte_influx_biosynthesis
@@ -161,6 +167,7 @@ causal_graphs:
     - reference: DOI:10.1128/JB.00190-24
       notes: c-di-AMP plays a key role by controlling (i) the influx of physiologically
         compatible organic osmolytes and (ii) the biosynthesis of such osmolytes.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.841250+00:00'
   curator: seed_from_metpo
@@ -184,4 +191,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, RO:0002326×1, RO:0002212×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:1990573×1, CHEBI:27592×1, CHEBI:71578×1).
   llm_assisted: true

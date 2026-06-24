@@ -146,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: F0F1-ATP synthase typically uses 3-5 protons per ATP, linking PMF to
         ATP synthesis and pH homeostasis.
+    predicate_id: RO:0002327
   - subject: na_h_antiporter
     predicate: regulates
     object: internal_ph_pmf
@@ -154,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
         (general bacteria).
+    predicate_id: RO:0002211
   - subject: k_h_antiporter
     predicate: regulates
     object: internal_ph_pmf
@@ -162,6 +164,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad033
       notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
         (general bacteria).
+    predicate_id: RO:0002211
   - subject: aa_decarboxylase_antiporter
     predicate: consumes
     object: intracellular_proton
@@ -172,6 +175,7 @@ causal_graphs:
       notes: Decarboxylation reaction consumes a proton, raising internal pH; the
         equivalent of 1 proton is pumped per molecule decarboxylated. Broad across
         amino-acid decarboxylase systems.
+    predicate_id: biolink:consumes
   - subject: phosphate_buffering
     predicate: stabilizes
     object: internal_ph
@@ -210,4 +214,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×2, RO:0002327×1, biolink:consumes×1).
   llm_assisted: true

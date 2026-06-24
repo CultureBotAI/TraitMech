@@ -84,6 +84,7 @@ causal_graphs:
     label: NADPH
     node_type: CHEMICAL
     description: Reduced electron carrier produced by photosynthetic electron transport.
+    grounding: CHEBI:16474
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
@@ -92,6 +93,7 @@ causal_graphs:
     label: bicarbonate
     node_type: CHEMICAL
     description: Dissolved inorganic carbon species in equilibrium with CO2.
+    grounding: CHEBI:17544
   - node_id: dic_transporter
     label: inorganic carbon transporter
     node_type: GENE_OR_PROTEIN
@@ -102,6 +104,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key autotrophic
       carboxylase.
+    grounding: UniProtKB:A0A075WF79
   edges:
   - subject: photolithoautotrophic_trait
     predicate: uses energy source
@@ -187,6 +190,7 @@ causal_graphs:
     - reference: DOI:10.1038/s44222-023-00093-x
       notes: Ferredoxin and FNR yield NADPH as the terminal reductant of phototrophic
         electron transport.
+    predicate_id: biolink:produces
   - subject: carbonic_anhydrase
     predicate: interconverts
     object: bicarbonate
@@ -203,6 +207,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/aem.01557-23
       notes: HCO3- uptake systems bridge environmental DIC supply to fixation demand.
+    predicate_id: METPO:2000208
   - subject: rubisco
     predicate: catalyzes
     object: autotrophic_co2_fixation
@@ -211,6 +216,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01557-23
       notes: RuBisCO is the key CO2-specific carboxylase for autotrophic CO2 fixation
         (broadly accepted).
+    predicate_id: biolink:catalyzes
   - subject: reducing_power
     predicate: has part
     object: nadph
@@ -309,4 +315,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, METPO:2000208×1, biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16474×1, UniProtKB:A0A075WF79×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17544×1).
   llm_assisted: true

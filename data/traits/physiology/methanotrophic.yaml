@@ -48,6 +48,7 @@ causal_graphs:
     label: intracellular membrane
     node_type: CELLULAR_LOCALIZATION
     description: Localization associated with particulate methane monooxygenase.
+    grounding: GO:0031090
   - node_id: methanol
     label: methanol
     node_type: CHEMICAL
@@ -106,6 +107,7 @@ causal_graphs:
     label: methanobactin
     node_type: CHEMICAL
     description: Ribosomally synthesized copper-chelating chalkophore.
+    grounding: CHEBI:222862
   - node_id: cuprous_ion
     label: Cu(I)
     node_type: CHEMICAL
@@ -209,6 +211,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       notes: pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB
         operon
+    predicate_id: biolink:encodes
   - subject: mmoxyz_genes
     predicate: encodes
     object: mmoh_subunits
@@ -217,6 +220,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/D3CY00737E
       notes: MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes
+    predicate_id: biolink:encodes
   - subject: methanobactin
     predicate: binds
     object: cuprous_ion
@@ -233,6 +237,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       notes: some methanotrophs produce methanobactin (high affinity for Cu(I)) for
         copper collection
+    predicate_id: RO:0002327
   - subject: copper_acquisition
     predicate: promotes
     object: particulate_methane_monooxygenase
@@ -241,6 +246,7 @@ causal_graphs:
     - reference: DOI:10.1021/acs.chemrev.3c00727
       notes: As a required cofactor for pMMO activity ... copper is central to methanotroph
         physiology
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.876493+00:00'
   curator: seed_from_metpo
@@ -300,4 +306,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:encodes×2, RO:0002327×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031090×1, CHEBI:222862×1).
   llm_assisted: true

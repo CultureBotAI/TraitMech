@@ -60,6 +60,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent topoisomerase that introduces positive supercoils into
       DNA; characteristic of hyperthermophiles.
+    grounding: UniProtKB:A0A088E825
   - node_id: dna_positive_supercoiling
     label: DNA positive supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -170,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00792-023-01330-2
       notes: cyclized GDGTs (introduced by GrsA/GrsB) increase membrane packing and
         stability (strong mechanistic membrane edge).
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909279+00:00'
   curator: seed_from_metpo
@@ -234,4 +236,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A088E825×1).
   llm_assisted: true

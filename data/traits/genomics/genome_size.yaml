@@ -48,11 +48,13 @@ causal_graphs:
     label: soil pH
     node_type: ENVIRONMENTAL_FACTOR
     description: Acidity/alkalinity of soil habitat.
+    grounding: ENVO:09200010
   - node_id: horizontal_gene_transfer
     label: horizontal gene transfer
     node_type: BIOLOGICAL_PROCESS
     description: Acquisition of genetic material between organisms, expanding gene
       content.
+    grounding: GO:0009292
   - node_id: mobile_genetic_elements
     label: mobile genetic elements
     node_type: CHEMICAL
@@ -111,6 +113,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41559-024-02357-0
       notes: 'Dmitrijeva 2024: HGT described as driving force behind genome expansion;
         ~42.5% of genes affected by HGT per species.'
+    predicate_id: RO:0002213
   - subject: mobile_genetic_elements
     predicate: mediates
     object: horizontal_gene_transfer
@@ -128,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-50368-z
       notes: 'Dong 2024: KO-abundance changes track genome size, indicating protein-coding
         gene loss and genome reduction.'
+    predicate_id: RO:0002212
   - subject: metabolic_versatility
     predicate: positively associated with
     object: genome_size_trait
@@ -159,4 +163,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (ENVO:09200010×1).
   llm_assisted: true

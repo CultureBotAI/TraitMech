@@ -65,6 +65,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Divalent metal cation that cross-induces the czc cadmium-resistance
       program.
+    grounding: CHEBI:29105
   edges:
   - subject: cadmium_ion
     predicate: challenges
@@ -98,6 +99,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40201-023-00887-6
       notes: Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration
         as a microbial resistance mechanism.
+    predicate_id: RO:0002327
   - subject: cadmium_sequestration
     predicate: mitigates
     object: cadmium_ion
@@ -107,6 +109,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40201-023-00887-6
       notes: Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II)
         as a detoxification mechanism.
+    predicate_id: METPO:2007407
   - subject: cada_ptype_atpase
     predicate: enables
     object: cadmium_export
@@ -115,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.1007/s40201-023-00887-6
       notes: P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to
         periplasm.
+    predicate_id: RO:0002327
   - subject: zinc_ion
     predicate: induces
     object: czc_efflux_system
@@ -148,4 +152,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:30Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:29105×1).
   llm_assisted: true

@@ -105,6 +105,7 @@ causal_graphs:
         adaptation includes components involved in ectoine synthesis.
     - reference: DOI:10.1371/journal.pone.0287947
       notes: Paracoccus carried the ectoine cluster in all strains.
+    predicate_id: RO:0002327
   - subject: glycine_betaine_system
     predicate: enables
     object: osmotic_stress_tolerance
@@ -114,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0287947
       notes: betA-betB, betI operon and multiple glycine-betaine transporters link
         these systems to persistence under environmental stress.
+    predicate_id: RO:0002327
   - subject: trehalose_biosynthesis
     predicate: enables
     object: environmental_stress_tolerance
@@ -123,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0287947
       notes: Trehalose synthesis/transport widely encoded; compatible-solute systems
         discussed as persistence traits, lost in some host-associated lineages.
+    predicate_id: RO:0002327
   - subject: osmotic_stress_tolerance
     predicate: promotes
     object: free_living_trait
@@ -132,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.48550/arxiv.2302.00582
       notes: Ectoine-related osmoadaptation is highlighted as part of adaptation to
         unstable or saline environmental conditions in free-living lineages.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -151,32 +155,53 @@ curation_history:
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×3, RO:0002213×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-d5aefedf82bb
-  prompt: 'Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.'
+  prompt: 'Knowledge gap for free-living: Interactions between parasites and the gut
+    microbiota play a key role in immune responses and susceptibility to zoonotic
+    diseases; however, many aspects of how protozoan infections alter microbial diversity
+    and how these changes influence parasite pathogenicity and host defense remain
+    poorly understood.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
+    future_work, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:41989588
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.
+    snippet: Interactions between parasites and the gut microbiota play a key role
+      in immune responses and susceptibility to zoonotic diseases; however, many aspects
+      of how protozoan infections alter microbial diversity and how these changes
+      influence parasite pathogenicity and host defense remain poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:42039802
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.
+    snippet: Engineered microbial assemblies tailored to specific host plants and
+      environmental conditions have shown potential in stabilizing crop performance
+      during drought, salinity, and nutrient limitations.
     explanation: Gap-signal sentence (limitations_barriers) from the cited abstract.
   - reference: PMID:41943163
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: 'OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.'
+    snippet: 'OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable
+      plastic, yet its environmental degradation remains poorly understood, particularly
+      in marine contexts.'
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:42125129
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: However, contradictions persist regarding pH's effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.
+    snippet: However, contradictions persist regarding pH's effect on microbial diversity,
+      with unresolved questions about how specific environmental conditions regulate
+      microbial taxa.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   posed_by: kg-microbe-kgscan

@@ -125,6 +125,7 @@ causal_graphs:
     - reference: DOI:10.1093/nar/gkad452
       notes: A restriction endonuclease cuts double-stranded DNA; unmethylated foreign
         DNA is cleaved (shaw2023).
+    predicate_id: RO:0000085
   - subject: endonuclease_cleavage
     predicate: mitigates
     object: foreign_dna
@@ -132,6 +133,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/nar/gkad452
       notes: Incoming foreign DNA lacking host methylation is cleaved (shaw2023).
+    predicate_id: METPO:2007407
   - subject: type_iv_restriction_enzyme
     predicate: cleaves
     object: methylated_dna_motif
@@ -176,4 +178,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0000085×1, METPO:2007407×1).
   llm_assisted: true

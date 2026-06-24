@@ -188,6 +188,7 @@ causal_graphs:
     - reference: DOI:10.1021/acsomega.3c02205
       notes: heterotrophic growth requires import of appropriate organic substrates
         into the cell
+    predicate_id: RO:0002327
   - subject: organic_molecule
     predicate: is required for
     object: reducing_power_nadph
@@ -213,6 +214,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40793-024-00572-7
       notes: microbes produce extracellular carbohydrate-active enzymes that hydrolyse
         complex plant polysaccharides
+    predicate_id: METPO:2000013
   - subject: substrate_transport_system
     predicate: feeds into
     object: energy_metabolism
@@ -268,4 +270,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:39Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000013×1).
   llm_assisted: true

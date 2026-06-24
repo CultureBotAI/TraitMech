@@ -158,6 +158,7 @@ causal_graphs:
       notes: Streamlining theory attributes small cells and genomes to selection for
         efficient use of nutrients where nutrients limit; broad across oligotrophic
         microbes.
+    predicate_id: METPO:2007401
   - subject: oligotrophic_phenotype
     predicate: negatively regulates
     object: chemotaxis_motility_genes
@@ -242,4 +243,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007401×1).
   llm_assisted: true

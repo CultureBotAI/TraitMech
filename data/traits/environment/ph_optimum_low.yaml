@@ -163,6 +163,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2023.1149903
       notes: rigid and impermeable membrane that is highly resistant to the influx
         of protons; high-level trait edge.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.826407+00:00'
   curator: seed_from_metpo
@@ -204,4 +205,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

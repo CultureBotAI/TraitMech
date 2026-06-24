@@ -53,6 +53,7 @@ causal_graphs:
     label: 4-hydroxybutyrate
     node_type: CHEMICAL
     description: Defining 4-hydroxybutyrate intermediate of the cycle.
+    grounding: CHEBI:16724
   - node_id: crotonyl_coa
     label: crotonyl-CoA
     node_type: CHEMICAL
@@ -61,10 +62,12 @@ causal_graphs:
     label: 4-hydroxybutyryl-CoA
     node_type: CHEMICAL
     description: Activated CoA-thioester of 4-hydroxybutyrate.
+    grounding: CHEBI:28522
   - node_id: nadph
     label: NADPH
     node_type: CHEMICAL
     description: Reducing cofactor consumed by reductive steps of the cycle.
+    grounding: CHEBI:16474
   - node_id: acetyl_propionyl_coa_carboxylase
     label: acetyl-CoA/propionyl-CoA carboxylase
     node_type: GENE_OR_PROTEIN
@@ -97,6 +100,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40643-023-00705-9
       notes: A complete 3HP/4HB cycle fixes two HCO3- to produce one acetyl-CoA.
+    predicate_id: METPO:2000202
   - subject: three_hp_four_hb_trait
     predicate: forms intermediate
     object: succinyl_coa
@@ -127,6 +131,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s42003-024-06432-x
       notes: The pathway diagram shows dehydration to crotonyl-CoA.
+    predicate_id: METPO:2000202
   - subject: crotonyl_coa
     predicate: regenerates
     object: acetyl_coa
@@ -172,4 +177,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16474×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16724×1, CHEBI:28522×1).
   llm_assisted: true

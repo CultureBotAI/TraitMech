@@ -118,6 +118,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2017.01264
       notes: the actin-like protein MreB localizes to specific curvature regions and
         directs localized cell-wall synthesis (broad mechanistic class).
+    predicate_id: RO:0002211
   - subject: peptidoglycan_growth_pattern
     predicate: occurs via
     object: zonal_peptidoglycan_remodeling
@@ -145,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-51790-z
       notes: curved and helical cell shapes ... are widespread among bacteria, promoting
         surface colonization, motility in viscous environments, and virulence.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887107+00:00'
   curator: seed_from_metpo
@@ -174,4 +176,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002213×1).
   llm_assisted: true

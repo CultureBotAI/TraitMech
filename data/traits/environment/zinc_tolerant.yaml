@@ -66,6 +66,7 @@ causal_graphs:
     label: polyphosphate
     node_type: CHEMICAL
     description: Cytoplasmic metal-binding polymer buffering zinc.
+    grounding: CHEBI:16838
   - node_id: glutathione
     label: glutathione
     node_type: CHEMICAL
@@ -107,6 +108,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00080-24
       notes: Efflux of zinc ions is mediated by the PIB2-type ATPase, ZntA.
+    predicate_id: METPO:2000209
   - subject: znta_atpase
     predicate: promotes
     object: zinc_tolerant_trait
@@ -115,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00080-24
       notes: Deletion of PIB2 ATPases sharply lowers IC50 (to 7.7 uM), showing their
         causal role in resistance.
+    predicate_id: RO:0002213
   - subject: zinc_ion
     predicate: upregulates
     object: znta_expression
@@ -145,6 +148,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00080-24
       notes: The plasmid-encoded RND transenvelope pump CzcCBA exports Co(II), Zn(II),
         and Cd(II).
+    predicate_id: METPO:2000209
   - subject: polyphosphate
     predicate: contributes to
     object: zinc_buffering
@@ -153,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00080-24
       notes: Metal-binding cytoplasmic components polyphosphate and glutathione influenced
         the flow equilibrium.
+    predicate_id: RO:0002326
   - subject: glutathione
     predicate: contributes to
     object: zinc_buffering
@@ -160,6 +165,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00080-24
       notes: Polyphosphate and glutathione influenced the flow equilibrium.
+    predicate_id: RO:0002326
   - subject: zinc_buffering
     predicate: mitigates
     object: zinc_ion
@@ -167,6 +173,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00080-24
       notes: Cytoplasmic buffering components influence the zinc flow equilibrium.
+    predicate_id: METPO:2007407
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -191,4 +198,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000209×2, RO:0002326×2, RO:0002213×1, METPO:2007407×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16838×1).
   llm_assisted: true

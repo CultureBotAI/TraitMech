@@ -98,10 +98,12 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion motive force.
+    grounding: UniProtKB:A0A415TT77
   - node_id: dioxygen
     label: dioxygen
     node_type: CHEMICAL
     description: Terminal electron acceptor in aerobic CO oxidation.
+    grounding: CHEBI:15379
   edges:
   - subject: carboxydotrophic_trait
     predicate: uses energy substrate
@@ -195,6 +197,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1128/jb.00332-22
       notes: Mo-CODH is encoded in cox operons that include coxS, coxM, and coxL.
+    predicate_id: biolink:encodes
   - subject: coo_operon
     predicate: encodes
     object: nife_codh
@@ -204,6 +207,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00332-22
       notes: coo operons specifically encode CODH plus accessory proteins for energy
         conservation.
+    predicate_id: biolink:encodes
   - subject: cooa_regulator
     predicate: activates transcription of
     object: coo_operon
@@ -221,6 +225,7 @@ causal_graphs:
     - reference: DOI:10.1128/jb.00332-22
       notes: RcoM regulates aerobic CO oxidation and was originally identified upstream
         of coxMSL genes.
+    predicate_id: RO:0002211
   - subject: proton_motive_force
     predicate: powers
     object: atp_synthase
@@ -312,4 +317,22 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:encodes×2, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A415TT77×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:15379×1).
   llm_assisted: true

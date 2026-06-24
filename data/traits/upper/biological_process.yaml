@@ -51,6 +51,7 @@ causal_graphs:
     label: cellular component
     node_type: CELLULAR_LOCALIZATION
     description: GO cellular component where a molecular activity occurs.
+    grounding: GO:0005575
   - node_id: chemical_input
     label: chemical input entity
     node_type: CHEMICAL
@@ -101,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40708-023-00208-5
       notes: a GO Molecular Function and a GO Biological Process (BP) are linked by
         mereological (part_of) relations
+    predicate_id: biolink:part_of
   - subject: molecular_function
     predicate: enabled by
     object: gene_product
@@ -116,6 +118,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1186/s40708-023-00208-5
       notes: Occurs in [BFO:0000066]; example "glucokinase activity occurs in cytosol".
+    predicate_id: biolink:occurs_in
   - subject: molecular_function
     predicate: has input
     object: chemical_input
@@ -169,4 +172,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×1, biolink:occurs_in×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:35Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0005575×1).
   llm_assisted: true

@@ -114,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1093/ismejo/wrae117
       notes: 'Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage
         characteristic of obligate endosymbionts.'
+    predicate_id: RO:0002326
   - subject: transmission_bottleneck
     predicate: associated with
     object: limited_recombination
@@ -122,6 +123,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1093/ismejo/wrae117
       notes: 'Song 2024: colonies originate from few ancestors, limited recombination.'
+    predicate_id: biolink:associated_with
   - subject: host_symbiont_aa_complementarity
     predicate: supports
     object: nutritional_compensation
@@ -166,32 +168,49 @@ curation_history:
   changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
   llm_assisted: true
+- timestamp: '2026-06-24T17:21:09Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, biolink:associated_with×1).
+  llm_assisted: true
 discussions:
 - discussion_id: kgscan-a6758e26f5a6
-  prompt: 'Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.'
+  prompt: 'Knowledge gap for endosymbiosis: Growth anomalies (GAs) are coral diseases
+    characterised by tumour-like skeletal lesions reported globally, yet their causes
+    remain poorly understood.'
   kind: KNOWLEDGE_GAP
   status: OPEN
-  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap, future_work, limitations_barriers, unclear_unknown). Curator review required: set attaches_to, refine the prompt, and weigh the cited evidence.'
+  rationale: 'Surfaced by the Europe PMC literature gap-signal scan (categories: explicit_gap,
+    future_work, limitations_barriers, unclear_unknown). Curator review required:
+    set attaches_to, refine the prompt, and weigh the cited evidence.'
   attaches_to: []
   evidence:
   - reference: PMID:42130304
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Growth anomalies (GAs) are coral diseases characterised by tumour-like skeletal lesions reported globally, yet their causes remain poorly understood.
+    snippet: Growth anomalies (GAs) are coral diseases characterised by tumour-like
+      skeletal lesions reported globally, yet their causes remain poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:41612704
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Disrupting this obligate symbiosis represents a promising pest control strategy, yet the molecular mechanisms maintaining host-symbiont homeostasis remain poorly understood.
+    snippet: Disrupting this obligate symbiosis represents a promising pest control
+      strategy, yet the molecular mechanisms maintaining host-symbiont homeostasis
+      remain poorly understood.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   - reference: PMID:40831140
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: This review explores the origin and evolution of plastids, their protein-import machinery, compartmentalization, and interactions with other cellular compartments, and highlights key unanswered questions in these areas.
+    snippet: This review explores the origin and evolution of plastids, their protein-import
+      machinery, compartmentalization, and interactions with other cellular compartments,
+      and highlights key unanswered questions in these areas.
     explanation: Gap-signal sentence (explicit_gap) from the cited abstract.
   - reference: PMID:41764142
     supports: NO_EVIDENCE
     evidence_source: abstract
-    snippet: Detritivorous E. murphyi larvae can increase soil nitrogen levels by up to five times compared with similar uncolonized substrates, although the mechanisms involved remain unknown.
+    snippet: Detritivorous E. murphyi larvae can increase soil nitrogen levels by
+      up to five times compared with similar uncolonized substrates, although the
+      mechanisms involved remain unknown.
     explanation: Gap-signal sentence (unclear_unknown) from the cited abstract.
   posed_by: kg-microbe-kgscan

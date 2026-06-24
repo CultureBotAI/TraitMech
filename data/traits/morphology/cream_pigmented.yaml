@@ -97,6 +97,7 @@ causal_graphs:
     - reference: DOI:10.3390/pathogens12010086
       notes: Insertions mapped to crtE, crtI, crtB, crtYc, crtYd involved in synthesis
         of beta-carotene; disrupted mutants retained an off-white appearance.
+    predicate_id: RO:0002327
   - subject: carotenoid_gene_disruption
     predicate: decreases
     object: low_carotenoid_biosynthesis
@@ -107,6 +108,7 @@ causal_graphs:
       notes: '"Most of these mutants failed to develop pigmentation upon light treatment
         and retained an off-white appearance" with insertions in crt-pathway genes
         (broad but not universal across taxa).'
+    predicate_id: RO:0002212
   - subject: isoprenoid_precursor_supply
     predicate: enables
     object: low_carotenoid_biosynthesis
@@ -117,6 +119,7 @@ causal_graphs:
       notes: Repression of the MEP-pathway gene ispG significantly lowered cellular
         carotenoid content; repression of MEP/carotenogenesis genes was expected to
         reduce pigmentation.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944295+00:00'
   curator: seed_from_metpo
@@ -152,4 +155,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×2, RO:0002212×1).
   llm_assisted: true

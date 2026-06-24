@@ -133,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.01649-23
       notes: Magnetosomes aligned into chains by MamK form the magnetic compass for
         navigation.
+    predicate_id: RO:0002327
   - subject: mamab_operon
     predicate: sufficient for
     object: biomineralization
@@ -149,6 +150,7 @@ causal_graphs:
     - reference: DOI:10.1111/mmi.15330
       notes: Magnetosome biomineralization yields the intracellular magnetic mineral
         crystal.
+    predicate_id: METPO:2000202
   - subject: mamb_protein
     predicate: promotes
     object: membrane_invagination
@@ -157,6 +159,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1111/mmi.15330
       notes: MamB likely recruits MAPs and promotes membrane invagination.
+    predicate_id: RO:0002213
   - subject: low_sulfide_environment
     predicate: favors
     object: magnetite_magnetosome
@@ -189,4 +192,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, METPO:2000202×1, RO:0002213×1).
   llm_assisted: true

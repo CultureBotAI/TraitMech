@@ -82,6 +82,7 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: The bacterial cell body (protoplasmic cylinder) whose shape is mechanically
       constrained.
+    grounding: GO:0044297
   edges:
   - subject: curvature_scaffold
     predicate: regulates
@@ -132,6 +133,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1162806
       notes: Peptidoglycan crosslinking relaxation promotes helical shape and colonization.
+    predicate_id: RO:0002213
   - subject: elongasome_entrapment
     predicate: biases
     object: biased_outer_curve_pg_biosynthesis
@@ -158,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-51790-z
       notes: Curvature established by biased outer-curve growth yields curved/helical
         cell morphology.
+    predicate_id: METPO:2000202
   - subject: periplasmic_flagella
     predicate: maintains
     object: spiral_shaped_trait
@@ -216,4 +219,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0044297×1).
   llm_assisted: true

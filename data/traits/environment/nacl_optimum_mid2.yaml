@@ -58,6 +58,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Major organic compatible solute (CHEBI:22563) accumulated during
       osmoadaptation.
+    grounding: CHEBI:27592
   - node_id: compatible_solute_strategy
     label: compatible-solute strategy
     node_type: BIOLOGICAL_PROCESS
@@ -68,6 +69,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Organic compatible solute (CHEBI:17750) used in compatible-solute
       osmoadaptation.
+    grounding: CHEBI:17750
   - node_id: l_proline
     label: L-proline
     node_type: CHEMICAL
@@ -131,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1128/aem.01905-23
       notes: Biosynthesis and intracellular accumulation of ectoine as a major compatible
         solute via the ectoine pathway (Zou et al. 2024).
+    predicate_id: METPO:2000202
   - subject: pronounced_compatible_solutes
     predicate: is a
     object: compatible_solute_strategy
@@ -140,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.3390/biotech14020049
       notes: The compatible-solute strategy accumulates small organic osmolytes including
         glycine, betaine, and ectoine (Neagu & Stancu 2025).
+    predicate_id: rdfs:subClassOf
   - subject: compatible_solute_strategy
     predicate: uses
     object: ectoine
@@ -201,4 +205,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:27592×1, CHEBI:17750×1).
   llm_assisted: true

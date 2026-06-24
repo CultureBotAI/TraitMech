@@ -189,6 +189,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00599-24
       notes: All MAGs encode Form II RuBisCO (rbcL/cbbM) and a full CBB cycle, indicating
         CO2 fixation potential.
+    predicate_id: RO:0002327
   - subject: co2_fixation
     predicate: causes
     object: carbon_source_use
@@ -198,6 +199,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00599-24
       notes: CBB-driven CO2 fixation defines autotrophic carbon assimilation on the
         carbon-source classification axis.
+    predicate_id: biolink:causes
   - subject: sox_sulfur_oxidation
     predicate: causes
     object: electron_donor_use
@@ -207,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00599-24
       notes: Presence of soxABXYZ (and soxCD) is tied to thiosulfate oxidation, enabling
         use of sulfur species as electron donors.
+    predicate_id: biolink:causes
   - subject: sugar_uptake_cazyme_catabolism
     predicate: causes
     object: carbon_source_use
@@ -216,6 +219,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00599-24
       notes: Sugar transporters (gtsABC, frcABC), maltodextrin import/degradation
         and CAZy enzymes indicate capacity for heterotrophic use of sugars and polysaccharides.
+    predicate_id: biolink:causes
   - subject: nife_hydrogenase_h2_oxidation
     predicate: causes
     object: electron_donor_use
@@ -225,6 +229,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSystems.00148-24
       notes: Hydrogenase genes link hydrogen-based lithotrophy to chemoautotrophic
         metabolism.
+    predicate_id: biolink:causes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
@@ -261,4 +266,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×4, RO:0002327×1).
   llm_assisted: true

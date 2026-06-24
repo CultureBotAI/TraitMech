@@ -157,6 +157,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.00145-24
       notes: Monovalent cation/proton antiporters import H+ and efflux Na+; Na+/H+
         antiporters effectively decrease the intracellular Na+ concentration.
+    predicate_id: RO:0002212
   - subject: trkah_k_uptake
     predicate: maintains
     object: alkaliphile_homeostasis
@@ -175,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.1515/hsz-2015-0137
       notes: Rnf transfers electrons from reduced ferredoxin to NAD and uses the redox
         difference to expel sodium, establishing a transmembrane sodium gradient.
+    predicate_id: biolink:produces
   - subject: terminal_oxidases
     predicate: produces
     object: proton_motive_force
@@ -184,6 +186,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2024.1468929
       notes: Cyt. aa3 pumps protons at 0.7 H+/electron; ba3 and bb3 pump at 0.5 H+/electron,
         supporting usable PMF at high pH.
+    predicate_id: METPO:2000202
   - subject: acidic_membrane_polymers
     predicate: enhances
     object: proton_motive_force
@@ -202,6 +205,7 @@ causal_graphs:
     - reference: DOI:10.3390/min14090861
       notes: Secretion of organic acids by alkaliphilic microbes is a crucial metabolic
         activity that permits pH balance.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.828378+00:00'
   curator: seed_from_metpo
@@ -256,4 +260,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, biolink:produces×1, METPO:2000202×1, RO:0002211×1).
   llm_assisted: true

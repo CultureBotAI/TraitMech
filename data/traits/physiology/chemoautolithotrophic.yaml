@@ -184,6 +184,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-023-01712-w
       notes: Energy produced by oxidizing reduced inorganic compounds is conserved
         via electron transport (Deng et al. 2023).
+    predicate_id: METPO:2007402
   - subject: chemoautolithotrophic_trait
     predicate: distinct from
     object: chemoorganoheterotrophy
@@ -252,4 +253,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (2 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2007402×1).
   llm_assisted: true

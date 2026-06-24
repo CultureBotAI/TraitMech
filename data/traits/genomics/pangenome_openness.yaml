@@ -100,6 +100,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1099/mgen.0.001021
       notes: Gene gain and loss mediated by mobile genetic elements including plasmids.
+    predicate_id: RO:0002327
   - subject: prophage
     predicate: promotes
     object: pangenome_openness_trait
@@ -109,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms12050986
       notes: Prophages, integrases, and transfer/mobile elements identified as main
         drivers of pangenome openness.
+    predicate_id: RO:0002213
   - subject: gene_gain_loss_dynamics
     predicate: shapes
     object: pangenome_openness_trait
@@ -178,4 +180,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, RO:0002213×1).
   llm_assisted: true

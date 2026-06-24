@@ -48,6 +48,7 @@ causal_graphs:
     label: membrane fluidity
     node_type: QUALITY
     description: Fluidity of the cell membrane lipid bilayer.
+    grounding: METPO:1007505
   - node_id: unsaturated_fatty_acids
     label: unsaturated membrane fatty acids
     node_type: CHEMICAL
@@ -100,6 +101,7 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11071629
       notes: high hydrostatic pressure reduces membrane fluidity by compacting fatty
         acids
+    predicate_id: RO:0002212
   - subject: membrane_fluidity
     predicate: causes increase in
     object: unsaturated_fatty_acids
@@ -167,4 +169,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

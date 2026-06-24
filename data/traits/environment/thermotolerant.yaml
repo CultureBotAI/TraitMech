@@ -71,6 +71,7 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Biosynthesis of unsaturated fatty acids tuning membrane fluidity
       (homeoviscous adaptation).
+    grounding: GO:0006636
   - node_id: compatible_solute_accumulation
     label: trehalose compatible-solute accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -123,6 +124,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-024-02602-y
       notes: groEL, dnaKJ, grpE, clpB constitute the chaperone/disaggregase machinery
         of the heat-shock response.
+    predicate_id: RO:0002327
   - subject: elevated_temperature
     predicate: causes
     object: membrane_protein_folding_lps
@@ -132,6 +134,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Activated RpoE induces genes involved in folding of membrane proteins
         and biosynthesis of lipopolysaccharides under heat shock.
+    predicate_id: biolink:causes
   - subject: rpoE_envelope_sigma
     predicate: positively regulates
     object: membrane_protein_folding_lps
@@ -150,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1128/spectrum.01627-23
       notes: A sharp relationship between thermotolerance and fatty-acid metabolism;
         saturated/unsaturated FA balance modulates heat tolerance.
+    predicate_id: RO:0002326
   - subject: compatible_solute_accumulation
     predicate: positively regulates
     object: limited_thermostability
@@ -223,4 +227,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002327×1, biolink:causes×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:32Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0006636×1).
   llm_assisted: true

@@ -155,6 +155,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1012812
       notes: '"bridges the rotor and 16 torque-generating stator complexes in each
         flagellar motor"; stators are the torque-generating units.'
+    predicate_id: biolink:produces
   - subject: periplasmic_flagella
     predicate: contributes to
     object: wavy_cell_morphology
@@ -164,6 +165,7 @@ causal_graphs:
     - reference: DOI:10.3390/biom10040550
       notes: '"Another important role of the PF is to establish a wavy morphology,
         similar to a cytoskeleton"'
+    predicate_id: RO:0002326
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907078+00:00'
   curator: seed_from_metpo
@@ -206,4 +208,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:produces×1, RO:0002326×1).
   llm_assisted: true

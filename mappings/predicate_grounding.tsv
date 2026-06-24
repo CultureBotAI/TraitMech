@@ -91,3 +91,8 @@ imports	METPO:2000208	imports	skos:exactMatch	METPO	high	exact label match again
 exports	METPO:2000209	exports	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; antiporter -> exported ion
 accumulates	METPO:2000210	accumulates	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; transporter -> accumulated solute
 reduces	METPO:2000017	reduces	skos:exactMatch	METPO	high	exact label match against existing METPO ObjectProperty; redox sense (oxidase -> O2), paired with oxidizes (METPO:2000016)
+degrades	METPO:2000007	degrades	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 6 edges
+hydrolyzes	METPO:2000013	hydrolyzes	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 6 edges
+disproportionates	METPO:2000200	disproportionates	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 2 edges
+does not produce	METPO:2000222	does not produce	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 1 edges
+transports	METPO:2000207	transports	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 1 edges

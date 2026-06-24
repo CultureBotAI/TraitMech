@@ -108,6 +108,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSystems.00720-23
       notes: '"electrons are initially extracted from extracellular Fe(II) by the
         outer membrane cytochrome c Cyc2"; Cyc2 also validated in neutrophiles.'
+    predicate_id: METPO:2000016
   - subject: cbb3_oxidase
     predicate: supports growth in
     object: microaerobic_conditions
@@ -146,6 +147,7 @@ causal_graphs:
       notes: '"MHCs efficiently conduct electrons across longer distances and function
         across a wide range of redox potentials ... which can expand the range of
         usable iron substrates".'
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -164,4 +166,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000016×1, RO:0002327×1).
   llm_assisted: true

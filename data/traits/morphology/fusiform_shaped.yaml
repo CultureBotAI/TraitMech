@@ -48,6 +48,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog that orients peptidoglycan synthesis to maintain
       cell shape.
+    grounding: UniProtKB:A0A1B1UYY2
   - node_id: lateral_pg_synthesis
     label: lateral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -132,6 +133,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12964-025-02373-y
       notes: RodZ modulates geometric localization of MreB and is required for proper
         MreB cytoskeleton assembly.
+    predicate_id: RO:0002211
   - subject: rodz
     predicate: scaffolds
     object: elongasome
@@ -149,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-020-0366-3
       notes: MreC induces a structural change in PBP2, promoting PBP2 TPase and RodA
         GTase activity.
+    predicate_id: RO:0002213
   - subject: roda
     predicate: required for
     object: lateral_pg_synthesis
@@ -205,4 +208,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002211×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1B1UYY2×1).
   llm_assisted: true

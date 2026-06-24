@@ -138,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: Formate dehydrogenase (FDH) reduces CO2 to formate; canonical bacterial
         WLP step.
+    predicate_id: METPO:2000017
   - subject: formate_dehydrogenase
     predicate: produces
     object: formate
@@ -145,6 +146,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: Formate dehydrogenase (FDH) reduces CO2 to formate.
+    predicate_id: METPO:2000202
   - subject: formyl_thf_synthetase
     predicate: requires
     object: atp
@@ -170,6 +172,7 @@ causal_graphs:
     - reference: DOI:10.3389/fbioe.2024.1395540
       notes: ACS combines CO, methyl-CoFeSP and CoA into acetyl-CoA; central terminal
         step of WLP.
+    predicate_id: METPO:2000202
   - subject: tetrahydrofolate
     predicate: functions as C1 carrier in
     object: methyl_branch
@@ -212,4 +215,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 9 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×2, METPO:2000017×1).
   llm_assisted: true

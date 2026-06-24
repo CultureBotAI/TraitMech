@@ -78,6 +78,7 @@ causal_graphs:
     label: short-chain fatty acids
     node_type: CHEMICAL
     description: Fermentation end products such as acetate, propionate, and succinate.
+    grounding: CHEBI:26666
   - node_id: mannitol_pts
     label: PEP-dependent phosphotransferase system (mannitol PTS)
     node_type: GENE_OR_PROTEIN
@@ -186,6 +187,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.00992-24
       notes: harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic
         core of chemoheterotrophic catabolism.
+    predicate_id: RO:0002326
   - subject: fermentation
     predicate: generates
     object: short_chain_fatty_acids
@@ -195,6 +197,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2024.05.011
       notes: subsequent fermentation to short-chain fatty acids (acetate, succinate,
         propionate); broadly useful fermentation output edge.
+    predicate_id: biolink:produces
   - subject: mannitol_pts
     predicate: imports and phosphorylates
     object: mannitol
@@ -269,4 +272,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:26666×1).
   llm_assisted: true

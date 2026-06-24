@@ -75,6 +75,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Antibiotic that inhibits class A penicillin-binding proteins (PG
       glycosyltransferases).
+    grounding: CHEBI:28908
   - node_id: class_a_pbps
     label: class A penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
@@ -169,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-41082-3
       notes: Moenomycin inhibits a family of PG synthases known as Class-A penicillin-binding
         proteins.
+    predicate_id: RO:0002212
   - subject: rodZ
     predicate: causally upstream of, negative effect
     object: spherical_morphology
@@ -244,4 +246,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:28908×1).
   llm_assisted: true

@@ -138,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.3389/fcimb.2023.1205488
       notes: sidewall peptidoglycan synthesis necessary for the lengthening of the
         cell prior to division.
+    predicate_id: RO:0002326
   - subject: elongasome
     predicate: mediates
     object: growth_rate
@@ -168,6 +169,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-023-00942-x
       notes: inactivation of essential divisome proteins blocks division, altering
         cell length; septum synthesis drives division constriction.
+    predicate_id: RO:0002326
   - subject: min_nucleoid_occlusion
     predicate: regulates
     object: division_site_placement
@@ -177,6 +179,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-023-00942-x
       notes: the Min system and nucleoid occlusion act as localized negative regulators
         of FtsZ polymerization and thus determine division site placement.
+    predicate_id: RO:0002211
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918489+00:00'
   curator: seed_from_metpo
@@ -218,4 +221,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002326×2, RO:0002211×1).
   llm_assisted: true

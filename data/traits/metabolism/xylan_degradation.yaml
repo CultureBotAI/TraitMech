@@ -114,6 +114,7 @@ causal_graphs:
     - reference: DOI:10.1186/s13068-025-02639-0
       notes: 'Pentari et al. 2025: CE15 esterases led to up to three-times higher
         release of aldouronic acids by GH30 glucuronoxylanase.'
+    predicate_id: METPO:2000202
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -138,4 +139,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 3 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1).
   llm_assisted: true

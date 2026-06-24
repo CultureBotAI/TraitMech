@@ -98,6 +98,7 @@ causal_graphs:
     label: spore coat
     node_type: CELLULAR_LOCALIZATION
     description: Multilayered spore coat anchored to the outer forespore membrane.
+    grounding: GO:0031160
   edges:
   - subject: forespore_engulfment
     predicate: establishes
@@ -237,4 +238,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (12 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:34Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0031160×1).
   llm_assisted: true

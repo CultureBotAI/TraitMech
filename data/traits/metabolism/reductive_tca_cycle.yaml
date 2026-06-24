@@ -73,6 +73,7 @@ causal_graphs:
     node_type: CHEMICAL
     description: Low-potential [4Fe-4S] electron carrier serving as electron donor
       for PFOR and OGOR.
+    grounding: CHEBI:17513
   edges:
   - subject: carbon_dioxide
     predicate: fixed by
@@ -101,6 +102,7 @@ causal_graphs:
     - reference: DOI:10.1101/2022.10.25.513756
       notes: Citrate cleavage into oxaloacetate and acetyl-CoA can be performed by
         ATP-citrate lyase (ACL).
+    predicate_id: RO:0002327
   - subject: citryl_coa_synthetase_lyase
     predicate: alternative to
     object: atp_citrate_lyase
@@ -119,6 +121,7 @@ causal_graphs:
     - reference: DOI:10.3390/life13030627
       notes: Key enzymes of this pathway are pyruvate:ferredoxin oxidoreductase (PFOR)
         and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).
+    predicate_id: biolink:part_of
   - subject: ogor
     predicate: part of
     object: rtca_trait
@@ -128,6 +131,7 @@ causal_graphs:
     - reference: DOI:10.3390/life13030627
       notes: Key enzymes of this pathway are PFOR and 2-oxoglutarate:ferredoxin oxidoreductase
         (OGOR).
+    predicate_id: biolink:part_of
   - subject: reduced_ferredoxin
     predicate: electron donor for
     object: pfor
@@ -164,4 +168,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:part_of×2, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:33Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:17513×1).
   llm_assisted: true

@@ -64,6 +64,7 @@ causal_graphs:
     label: hydrogen peroxide
     node_type: CHEMICAL
     description: Reactive oxygen species; substrate for Fenton chemistry.
+    grounding: CHEBI:16240
   - node_id: ferrous_iron
     label: ferrous iron (Fe(II))
     node_type: CHEMICAL
@@ -72,6 +73,7 @@ causal_graphs:
     label: hydroxyl radical
     node_type: CHEMICAL
     description: Highly damaging ROS produced via Fenton chemistry.
+    grounding: CHEBI:29191
   - node_id: dna_damage
     label: DNA damage
     node_type: BIOLOGICAL_PROCESS
@@ -135,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-024-01909-7
       notes: As a consequence of oxygenation, reactive oxygen species like superoxide,
         peroxides, and hydroxyl radicals are produced.
+    predicate_id: biolink:causes
   - subject: oxygen_exposure
     predicate: causes
     object: oxidative_damage_biomolecules
@@ -143,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40168-024-01909-7
       notes: ROS cause oxidative stress due to damage to biomolecules like proteins
         and nucleic acids.
+    predicate_id: biolink:causes
   - subject: hydrogen_peroxide
     predicate: causes
     object: hydroxyl_radical
@@ -150,6 +154,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       notes: Fe(II)+H2O2 produces hydroxyl radicals.
+    predicate_id: biolink:causes
   - subject: ferrous_iron
     predicate: causes
     object: hydroxyl_radical
@@ -157,6 +162,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       notes: Fe(II)+H2O2 produces hydroxyl radicals.
+    predicate_id: biolink:causes
   - subject: hydroxyl_radical
     predicate: causes
     object: dna_damage
@@ -164,6 +170,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41579-021-00583-y
       notes: hydroxyl radicals create irreparable lesions and block replication.
+    predicate_id: biolink:causes
   - subject: molecular_oxygen
     predicate: inactivates
     object: pyruvate_formate_lyase
@@ -224,4 +231,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×5).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:16240×1, CHEBI:29191×1).
   llm_assisted: true

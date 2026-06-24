@@ -71,6 +71,7 @@ causal_graphs:
     node_type: QUALITY
     description: Physical fluidity state of the lipid bilayer, maintained across temperatures
       by homeoviscous adaptation.
+    grounding: METPO:1007505
   - node_id: growth_at_low_temperature
     label: growth at low temperature
     node_type: TRAIT
@@ -134,6 +135,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Membrane-based cold sensing occurs via modification of the liquid-crystalline
         membrane state, activating two-component signalling.
+    predicate_id: RO:0002213
   - subject: fatty_acid_desaturase_activity
     predicate: increases
     object: fatty_acid_unsaturation
@@ -142,6 +144,7 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: A two-component sensor triggers transcriptional activation of desaturases
         that introduce double bonds into membrane fatty acids.
+    predicate_id: RO:0002213
   - subject: fatty_acid_unsaturation
     predicate: increases
     object: membrane_fluidity
@@ -149,6 +152,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.37256/amtt.5220244537
       notes: Decreasing lipid saturation maintains optimal membrane fluidity.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity
     predicate: supports
     object: growth_at_low_temperature
@@ -194,4 +198,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (METPO:1007505×1).
   llm_assisted: true

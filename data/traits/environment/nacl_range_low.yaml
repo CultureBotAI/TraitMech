@@ -68,6 +68,7 @@ causal_graphs:
     label: cyclic di-AMP
     node_type: CHEMICAL
     description: Second messenger that regulates potassium and osmolyte transport.
+    grounding: CHEBI:71578
   - node_id: opu_solute_importers
     label: OpuA/OpuC compatible-solute importers
     node_type: GENE_OR_PROTEIN
@@ -81,6 +82,7 @@ causal_graphs:
     label: glycine betaine biosynthesis
     node_type: BIOLOGICAL_PROCESS
     description: Synthesis of the compatible solute glycine betaine.
+    grounding: GO:0031456
   edges:
   - subject: limited_high_salt_tolerance
     predicate: produces
@@ -108,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsml/uqad020
       notes: Hyperosmotic upshift elicits rapid K+ import as an emergency response;
         general bacterial osmotic-stress edge.
+    predicate_id: biolink:causes
   - subject: hyperosmotic_stress
     predicate: induces
     object: compatible_solute_accumulation
@@ -133,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00181-23
       notes: c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates
         their transport activity.
+    predicate_id: RO:0002212
   - subject: choline_uptake
     predicate: enables
     object: glycine_betaine_synthesis
@@ -142,6 +146,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.ado6229
       notes: BetT mediates uptake of external choline used to synthesize glycine betaine,
         a key compatible solute in hyperosmotic environments.
+    predicate_id: RO:0002327
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835809+00:00'
   curator: seed_from_metpo
@@ -165,4 +170,16 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:10Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (biolink:causes×1, RO:0002212×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-24T17:23:31Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (CHEBI:71578×1, GO:0031456×1).
   llm_assisted: true

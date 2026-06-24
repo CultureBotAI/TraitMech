@@ -136,6 +136,7 @@ causal_graphs:
     - reference: DOI:10.1093/pnasnexus/pgad349
       notes: Endoflagella-driven distortion of the cell body underlies spirochete
         shape.
+    predicate_id: METPO:2000202
   - subject: flhE
     predicate: prevents
     object: ectopic_periplasmic_filament_assembly
@@ -144,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-50278-0
       notes: FlhE is a periplasmic, Sec-translocated protein that prevents ectopic
         assembly of flagellar filaments in the periplasm.
+    predicate_id: RO:0002212
   - subject: ectopic_periplasmic_filament_assembly
     predicate: mislocalizes
     object: divisome_elongasome_localization
@@ -171,6 +173,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-024-54806-w
       notes: FlgV localizes to the flagellar basal body and altering FlgV levels profoundly
         impacts filament assembly
+    predicate_id: RO:0002211
   - subject: flgV
     predicate: perturbs
     object: cell_morphology_division
@@ -216,4 +219,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-24T17:21:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (METPO:2000202×1, RO:0002212×1, RO:0002211×1).
   llm_assisted: true
