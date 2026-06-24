@@ -33,3 +33,6 @@ src/traitmech/schema/traitmech_dataclasses.py
 # `just robot-validate-proposal <cohort>`; merged.owl/reasoned.owl are
 # ~500 KB each, dominated by re-serialized metpo.owl).
 reports/robot/
+
+# Edison deep-research reports — large, regenerable via scripts/run_trait_graph_audit.py (needs EDISON_API_KEY)
+research/
