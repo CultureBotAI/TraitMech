@@ -50,6 +50,41 @@ causal_graphs:
     label: radiating projections
     node_type: BIOLOGICAL_PROCESS
     description: Multiple projecting arms emerging from a central cell body.
+  - node_id: baca_lmdc_module
+    label: BacA-LmdC morphogenesis module
+    node_type: GENE_OR_PROTEIN
+    description: Conserved bactofilin (BacA) and M23 endopeptidase (LmdC) functional
+      module.
+  - node_id: local_pg_remodeling
+    label: local peptidoglycan remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Localized change in the mode of cell-wall biosynthesis and remodeling.
+  - node_id: cell_shape_determination
+    label: cell shape determination
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of cell shape in morphologically complex bacteria.
+  - node_id: elongasome_restriction
+    label: restriction of elongasome movement
+    node_type: BIOLOGICAL_PROCESS
+    description: Bactofilin polymers restrict movement of elongasome complexes.
+  - node_id: zonal_pg_biosynthesis
+    label: peptidoglycan biosynthesis confined to growth zones
+    node_type: BIOLOGICAL_PROCESS
+    description: Peptidoglycan biosynthesis spatially confined to discrete growth
+      zones.
+  - node_id: bactofilins
+    label: bactofilins
+    node_type: GENE_OR_PROTEIN
+    description: Bactofilin cytoskeletal scaffold proteins.
+  - node_id: pbpc_prosthecate_pole
+    label: PbpC localization at prosthecate pole
+    node_type: CELLULAR_LOCALIZATION
+    description: Bifunctional penicillin-binding protein PbpC localized to the prosthecate
+      pole.
+  - node_id: spmx
+    label: SpmX
+    node_type: GENE_OR_PROTEIN
+    description: Developmental regulator co-opted as a morphogen to position prosthecae.
   edges:
   - subject: multi_site_polar_pg
     predicate: regulates
@@ -78,6 +113,57 @@ causal_graphs:
       snippet: prosthecate bacteria
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: baca_lmdc_module
+    predicate: promotes
+    object: local_pg_remodeling
+    description: The bactofilin-M23 peptidase module promotes local changes in cell-wall
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577.2
+      notes: Bactofilins and M23 peptidases form a conserved functional module that
+        promotes local changes in the mode of cell wall biosynthesis.
+  - subject: local_pg_remodeling
+    predicate: regulates
+    object: cell_shape_determination
+    description: Local peptidoglycan remodeling drives cell shape determination.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577.2
+      notes: Thereby driving cell shape determination in morphologically complex bacteria.
+  - subject: elongasome_restriction
+    predicate: regulates
+    object: zonal_pg_biosynthesis
+    description: Restriction of elongasome movement confines peptidoglycan biosynthesis
+      to specific growth zones.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577.2
+      notes: Bactofilin polymers act as a barrier restricting elongasome movement,
+        confining PG biosynthesis to specific growth zones.
+  - subject: bactofilins
+    predicate: localizes
+    object: pbpc_prosthecate_pole
+    description: Bactofilins localize the bifunctional PBP PbpC to the prosthecate
+      pole.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2017.09.012
+      notes: In C. crescentus bactofilins localize the bifunctional PBP PbpC to the
+        prosthecate pole; conserved prostheca mechanism.
+  - subject: pbpc_prosthecate_pole
+    predicate: promotes
+    object: prostheca_outgrowth
+    description: PbpC localization at the prosthecate pole promotes prostheca synthesis.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2017.09.012
+      notes: Deletion of PbpC reduces prostheca synthesis, implicating its polar localization
+        in prostheca outgrowth.
+  - subject: spmx
+    predicate: regulates
+    object: prostheca_outgrowth
+    description: SpmX is co-opted as a morphogen to position prosthecae via zonal
+      peptidoglycan remodeling.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2017.09.012
+      notes: SpmX co-opted as a morphogen to position prosthecae via zonal peptidoglycan
+        remodeling.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.895581+00:00'
   curator: seed_from_metpo
@@ -113,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

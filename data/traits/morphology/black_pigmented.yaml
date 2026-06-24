@@ -51,6 +51,59 @@ causal_graphs:
     label: visible black color
     node_type: MOLECULAR_FUNCTION
     description: Observed black or very dark colony or cell color.
+  - node_id: dopaquinone
+    label: dopaquinone/dihydroxyindole intermediates
+    node_type: CHEMICAL
+    description: Reactive quinone and dihydroxyindole intermediates that polymerize
+      into eumelanin.
+  - node_id: dhn_precursor
+    label: DHN (1,8-dihydroxynaphthalene)
+    node_type: CHEMICAL
+    description: Naphthalene-derived precursor polymerized into DHN-melanin.
+  - node_id: polyketide_synthase
+    label: polyketide synthase (PKS)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme synthesizing tetrahydroxynaphthalene precursor of the DHN-melanin
+      pathway.
+  - node_id: dhn_melanin
+    label: DHN-melanin (allomelanin)
+    node_type: CHEMICAL
+    description: Dark melanin polymer formed from DHN via laccase-catalyzed polymerization.
+  - node_id: tyrosinase
+    label: tyrosinase
+    node_type: GENE_OR_PROTEIN
+    description: Copper-dependent oxidase catalyzing hydroxylation and oxidation steps
+      of the DOPA-melanin pathway.
+  - node_id: hydroxyphenylpyruvate
+    label: 4-hydroxyphenylpyruvate
+    node_type: CHEMICAL
+    description: Tyrosine-catabolism intermediate, substrate of HppD.
+  - node_id: copper_ion
+    label: copper ion
+    node_type: CHEMICAL
+    description: Copper cofactor required for catalytic activity of tyrosinase.
+  - node_id: l_tyrosine
+    label: L-tyrosine
+    node_type: CHEMICAL
+    description: Aromatic amino acid precursor for DOPA-melanin biosynthesis.
+  - node_id: dopa_melanin
+    label: DOPA-melanin (eumelanin)
+    node_type: CHEMICAL
+    description: Black-to-brown eumelanin polymer formed from DOPA-derived intermediates.
+  - node_id: hppd
+    label: HppD (4-hydroxyphenylpyruvate dioxygenase)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisic acid in
+      the pyomelanin route.
+  - node_id: homogentisic_acid
+    label: homogentisic acid (HGA)
+    node_type: CHEMICAL
+    description: Pyomelanin precursor that auto-oxidizes and polymerizes into pyomelanin.
+  - node_id: hmga
+    label: HmgA (homogentisate 1,2-dioxygenase)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting HGA to maleylacetoacetate; loss leads to HGA accumulation
+      and pyomelanin.
   edges:
   - subject: phenolic_precursors
     predicate: feed into
@@ -98,6 +151,62 @@ causal_graphs:
       snippet: black/brown color to the cells
       notes: Supports the trait-level assignment.
     predicate_id: METPO:2007400
+  - subject: tyrosinase
+    predicate: catalyzes conversion of
+    object: l_tyrosine
+    description: Tyrosinase hydroxylates L-tyrosine to L-DOPA, initiating the DOPA-melanin
+      pathway.
+    evidence:
+    - reference: DOI:10.3390/ijms25053013
+      notes: Tyrosinase first catalyzes the hydroxylation of L-tyrosine to L-DOPA.
+  - subject: dopaquinone
+    predicate: polymerizes into
+    object: dopa_melanin
+    description: Dopaquinone/dihydroxyindole intermediates polymerize into DOPA-melanin
+      (eumelanin).
+    evidence:
+    - reference: DOI:10.3390/jof9090891
+      notes: Dopaquinone oxidized to dopachrome then dihydroxy-indoles which polymerize
+        to form DOPA-melanins.
+  - subject: copper_ion
+    predicate: required cofactor for
+    object: tyrosinase
+    description: Copper ions are required cofactors for tyrosinase catalytic activity.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12071352
+      notes: Tyrosinases are copper-dependent enzymes.
+  - subject: polyketide_synthase
+    predicate: synthesizes precursor for
+    object: dhn_precursor
+    description: Polyketide synthase forms tetrahydroxynaphthalene leading to DHN,
+      precursor of DHN-melanin.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12071352
+      notes: Polyketide synthase forms 1,3,6,8-tetrahydroxynaphthalene; polymerization
+        of DHN leads to melanin.
+  - subject: dhn_precursor
+    predicate: polymerizes into
+    object: dhn_melanin
+    description: DHN polymerizes into DHN-melanin (allomelanin), a dark pigment.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12071352
+      notes: Polymerization of DHN leads to the formation of melanin.
+  - subject: hppd
+    predicate: converts
+    object: hydroxyphenylpyruvate
+    description: HppD converts 4-hydroxyphenylpyruvate to homogentisic acid in the
+      pyomelanin pathway.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: hppD codes for a protein responsible for conversion of 4-hydroxyphenylpyruvate
+        to HGA.
+  - subject: hmga
+    predicate: converts
+    object: homogentisic_acid
+    description: HmgA (homogentisate 1,2-dioxygenase) converts HGA to maleylacetoacetate.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: Homogentisate 1,2-dioxygenase encoded by hmgA converts HGA to maleylacetoacetate.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.942877+00:00'
   curator: seed_from_metpo
@@ -133,4 +242,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042438×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

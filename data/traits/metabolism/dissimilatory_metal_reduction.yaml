@@ -1,8 +1,8 @@
 identifier: traitmech:000039
 label: dissimilatory metal reduction
-definition: An anaerobic respiratory metabolism in which an organism conserves
-  energy for growth by coupling the oxidation of organic matter or hydrogen to the
-  reduction of a metal (e.g. Fe(III), Mn(IV)) as a terminal electron acceptor.
+definition: An anaerobic respiratory metabolism in which an organism conserves energy
+  for growth by coupling the oxidation of organic matter or hydrogen to the reduction
+  of a metal (e.g. Fe(III), Mn(IV)) as a terminal electron acceptor.
 definition_source: DOI:10.1128/mr.55.2.259-287.1991
 trait_category: METABOLISM
 term_kind: CLASS
@@ -16,20 +16,19 @@ synonyms:
 evidence:
 - reference: DOI:10.1128/mr.55.2.259-287.1991
   snippet: The oxidation of organic matter coupled to the reduction of Fe(III) or
-    Mn(IV) is one of the most important biogeochemical reactions in aquatic
-    sediments, soils, and groundwater
-  notes: Lovley review establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction as
-    energy-conserving anaerobic respiration; parent of the metal-specific reduction
+    Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments,
+    soils, and groundwater
+  notes: Lovley review establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction
+    as energy-conserving anaerobic respiration; parent of the metal-specific reduction
     sub-variants.
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     metals as terminal electron acceptors in anaerobic respiration.
 causal_graphs:
 - graph_id: metal_reduction_anaerobic_respiration
-  title: Dissimilatory metal reduction couples organic oxidation to metal
-    respiration
-  description: Evidence-backed causal sketch linking oxidation of organic matter
-    or hydrogen to reduction of metal terminal electron acceptors.
+  title: Dissimilatory metal reduction couples organic oxidation to metal respiration
+  description: Evidence-backed causal sketch linking oxidation of organic matter or
+    hydrogen to reduction of metal terminal electron acceptors.
   nodes:
   - node_id: metal_reduction_trait
     label: dissimilatory metal reduction
@@ -46,12 +45,42 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009061
     description: Energy-conserving respiration with non-O2 acceptor.
+  - node_id: organic_matter_oxidation
+    label: organic compound oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of organic compounds providing electrons for metal reduction.
+  - node_id: fe3_reduction
+    label: Fe(III) reduction
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of ferric iron to ferrous iron.
+  - node_id: mtrcab_complex
+    label: MtrCAB outer-membrane complex
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane porin-cytochrome complex forming an electron-transfer
+      conduit.
+  - node_id: extracellular_acceptor
+    label: extracellular electron acceptor
+    node_type: CHEMICAL
+    description: Insoluble or extracellular acceptor receiving respiratory electrons.
+  - node_id: flavin_shuttle
+    label: flavin electron shuttle
+    node_type: CHEMICAL
+    description: Redox-active flavin mediating electron transfer to distant substrates.
+  - node_id: insoluble_metal_substrate
+    label: oxidized insoluble metal
+    node_type: CHEMICAL
+    description: Oxidized insoluble/crystalline metal serving as respiratory substrate.
+  - node_id: anaerobic_subsurface_env
+    label: anaerobic subsurface environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Anaerobic subsurface where Fe(III) is present as insoluble/crystalline
+      forms.
   edges:
   - subject: metal_terminal_acceptor
     predicate: enables
     object: metal_reduction_trait
-    description: Metal-ion acceptors enable energy-conserving anaerobic
-      respiration on metals.
+    description: Metal-ion acceptors enable energy-conserving anaerobic respiration
+      on metals.
     evidence:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
       notes: Lovley establishes dissimilatory metal (Fe(III)/Mn(IV)) reduction as
@@ -63,20 +92,74 @@ causal_graphs:
     description: Metal reduction is a class of anaerobic respiration.
     evidence:
     - reference: PMID:7826009
-      notes: Nealson & Saffarini place iron and manganese as terminal electron
-        acceptors within anaerobic respiration.
+      notes: Nealson & Saffarini place iron and manganese as terminal electron acceptors
+        within anaerobic respiration.
     predicate_id: biolink:participates_in
+  - subject: organic_matter_oxidation
+    predicate: donates electrons to
+    object: fe3_reduction
+    description: Oxidation of organic compounds donates electrons to Fe(III) reduction
+      in metal-reducing bacteria.
+    evidence:
+    - reference: DOI:10.1007/s11783-019-1173-9
+      notes: FeRB transfers electrons to Fe(III), Fe(III) is reduced to Fe(II), and
+        organic compounds are mineralized (Jiang et al., 2019); general respiratory
+        coupling.
+  - subject: mtrcab_complex
+    predicate: transfers electrons to
+    object: extracellular_acceptor
+    description: The MtrCAB outer-membrane complex creates a pathway transferring
+      electrons to an extracellular acceptor.
+    evidence:
+    - reference: DOI:10.1128/aem.00044-24
+      notes: The outer membrane complex MtrCAB creates a pathway that transfers electrons
+        to an extracellular acceptor (Hsu et al., 2024); generalized EET conduit role.
+  - subject: flavin_shuttle
+    predicate: facilitates electron transfer to
+    object: extracellular_acceptor
+    description: Flavin shuttles facilitate electron transfer to substrates distant
+      from the cell surface.
+    evidence:
+    - reference: DOI:10.3390/fermentation11070381
+      notes: Redox-active small molecules (flavins) facilitate electron transfer to
+        substrates distant from the cell surface (Soares et al., 2025); mediated EET
+        especially where metal oxides are spatially inaccessible.
+  - subject: insoluble_metal_substrate
+    predicate: serves as respiratory substrate for
+    object: metal_reduction_trait
+    description: Oxidized insoluble metals serve as an abundant respiratory substrate
+      for metal reduction.
+    evidence:
+    - reference: DOI:10.1128/aem.00044-24
+      notes: Oxidized, insoluble metals are an abundant electron acceptor that microbes
+        could utilize as a respiratory substrate (Hsu et al., 2024); trait-defining.
+  - subject: anaerobic_subsurface_env
+    predicate: provides condition for
+    object: fe3_reduction
+    description: Fe(III) reduction occurs under anaerobic subsurface conditions where
+      Fe(III) is insoluble/crystalline.
+    evidence:
+    - reference: DOI:10.1007/s11783-019-1173-9
+      notes: Fe(III) has solubility ~10^-9 M at neutral pH and is generally present
+        as insoluble or crystalline forms under anaerobic subsurface environments
+        (Jiang et al., 2019); environmental/chemical constraint.
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Minted intermediate axis class (dissimilatory metal reduction) under
-    anaerobic respiration (METPO:1000802) to parent dissimilatory iron reduction.
+  changes: Minted intermediate axis class (dissimilatory metal reduction) under anaerobic
+    respiration (METPO:1000802) to parent dissimilatory iron reduction.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (metal-acceptor anaerobic respiration)
-    with METPO/GO node groundings and RO/biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+    with METPO/GO node groundings and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000086
 label: chemotaxis
-definition: A behavioral physiology in which cells bias their movement toward
-  attractants or away from repellents by modulating flagellar motor switching in
-  response to chemical gradients.
+definition: A behavioral physiology in which cells bias their movement toward attractants
+  or away from repellents by modulating flagellar motor switching in response to chemical
+  gradients.
 definition_source: DOI:10.1038/nrm1524
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -40,6 +40,46 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006935
     description: Signal transduction biasing motor switching.
+  - node_id: chemoreceptor_mcp
+    label: chemoreceptor (MCP)
+    node_type: GENE_OR_PROTEIN
+    description: Methyl-accepting chemotaxis protein that binds attractant/repellent
+      ligands.
+  - node_id: chea_kinase
+    label: CheA histidine kinase
+    node_type: GENE_OR_PROTEIN
+    description: Histidine autokinase whose activity is modulated by chemoreceptors.
+  - node_id: chea_autophosphorylation
+    label: CheA autophosphorylation
+    node_type: MOLECULAR_FUNCTION
+    description: Autophosphorylation activity of the CheA histidine kinase.
+  - node_id: chey
+    label: CheY response regulator
+    node_type: GENE_OR_PROTEIN
+    description: Response regulator that, when phosphorylated, controls flagellar
+      motor switching.
+  - node_id: cheb
+    label: CheB methylesterase
+    node_type: GENE_OR_PROTEIN
+    description: Phospho-regulated methylesterase that demethylates chemoreceptors
+      during adaptation.
+  - node_id: cher
+    label: CheR methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Methyltransferase that methylates chemoreceptors during adaptation.
+  - node_id: chez
+    label: CheZ phosphatase
+    node_type: GENE_OR_PROTEIN
+    description: Phosphatase that dephosphorylates CheY-P to reset signaling.
+  - node_id: chew
+    label: CheW coupling protein
+    node_type: GENE_OR_PROTEIN
+    description: Adaptor/scaffold coupling CheA to chemoreceptors in the core signaling
+      unit.
+  - node_id: cw_flagellar_rotation
+    label: clockwise flagellar rotation
+    node_type: BIOLOGICAL_PROCESS
+    description: Clockwise flagellar motor rotation that promotes tumbling.
   edges:
   - subject: chemical_gradient
     predicate: causes
@@ -57,6 +97,77 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2505
       notes: Porter et al. review chemotaxis signal processing.
     predicate_id: RO:0002327
+  - subject: chemoreceptor_mcp
+    predicate: modulates
+    object: chea_autophosphorylation
+    description: Effector binding to chemoreceptors modulates CheA autophosphorylation
+      activity.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: Upon effector binding to the receptor, the autophosphorylation activity
+        of CheA is modulated by chemoreceptors.
+  - subject: chea_kinase
+    predicate: phosphorylates
+    object: chey
+    description: Phosphorylated CheA transfers phosphoryl groups to the response regulator
+      CheY.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: When CheA is phosphorylated, it can activate its response regulators
+        CheB and CheY via phosphoryl transfer.
+  - subject: chea_kinase
+    predicate: phosphorylates
+    object: cheb
+    description: Phosphorylated CheA transfers phosphoryl groups to the methylesterase
+      CheB.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: When CheA is phosphorylated, it can activate its response regulators
+        CheB and CheY via phosphoryl transfer.
+  - subject: chey
+    predicate: induces
+    object: cw_flagellar_rotation
+    description: Phosphorylated CheY interacts with the flagellar motor to induce
+      clockwise rotation.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: CheY-P interacts with the flagella to induce clockwise rotation.
+  - subject: chez
+    predicate: dephosphorylates
+    object: chey
+    description: CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling
+      pool.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of
+        CheY is available.
+  - subject: cher
+    predicate: methylates
+    object: chemoreceptor_mcp
+    description: CheR methylates chemoreceptors as part of the reversible adaptation
+      system.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: CheB, along with CheR, constitutes an adaptation system that reversibly
+        methylates receptors.
+  - subject: cheb
+    predicate: demethylates
+    object: chemoreceptor_mcp
+    description: CheB demethylates chemoreceptors as part of the reversible adaptation
+      system.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: CheB, along with CheR, constitutes an adaptation system that reversibly
+        methylates/demethylates receptors.
+  - subject: chew
+    predicate: scaffolds
+    object: chea_kinase
+    description: CheW couples and scaffolds CheA with chemoreceptors in the core signaling
+      unit baseplate.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032421-110850
+      notes: The coupling protein CheW secures CheA; the baseplate consists of the
+        chemoreceptor PIR, CheA, and CheW.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -69,4 +180,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (gradient-guided chemotaxis) with GO
     node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

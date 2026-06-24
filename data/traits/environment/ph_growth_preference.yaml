@@ -47,6 +47,35 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of intracellular pH within a range compatible with growth.
     grounding: GO:0051453
+  - node_id: f1f0_atpase
+    label: proton-translocating F1F0-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: F-type ATP synthase/ATPase that translocates protons across the membrane,
+      contributing to pH homeostasis.
+  - node_id: amino_acid_decarboxylase_systems
+    label: amino-acid decarboxylase systems
+    node_type: PATHWAY
+    description: Inducible decarboxylase systems (e.g. GAD, arginine/agmatine) that
+      consume cytoplasmic protons.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Decarboxylation of amino acids that consumes protons and raises cytoplasmic
+      alkalinity.
+  - node_id: na_h_antiport
+    label: Na+/H+ antiport
+    node_type: MOLECULAR_FUNCTION
+    description: Sodium/proton antiporter activity (e.g. Mrp system) coupling Na+
+      efflux to H+ import.
+  - node_id: proton_consuming_reaction_genes
+    label: proton-consuming reaction genes
+    node_type: GENE_OR_PROTEIN
+    description: Gene families for proton-consuming reactions (decarboxylases, deaminases).
+  - node_id: na_h_antiporter_genes
+    label: Na+/H+ antiporter genes
+    node_type: GENE_OR_PROTEIN
+    description: Na+/H+ antiporter gene families (e.g. Mrp/Mnh/Nha) associated with
+      pH preference.
   edges:
   - subject: environmental_ph
     predicate: regulates
@@ -98,6 +127,67 @@ causal_graphs:
       snippet: robust mechanisms for cytoplasmic pH homeostasis
       notes: Supports cytoplasmic pH homeostasis as central to growth under pH stress.
     predicate_id: RO:0002327
+  - subject: f1f0_atpase
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: The proton-translocating F1F0-ATPase mediates pH homeostasis supporting
+      growth under low pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad062
+      notes: pH homeostasis mediated by the proton-translocating F1F0-ATPase; general
+        across taxa.
+  - subject: acidic_external_ph
+    predicate: induces
+    object: amino_acid_decarboxylase_systems
+    description: Low external pH induces amino-acid decarboxylase systems that consume
+      protons.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad062
+      notes: amino-acid decarboxylase systems (GAD, agmatine/arginine decarboxylation)
+        that consume protons and raise cytoplasmic alkalinity.
+  - subject: amino_acid_decarboxylase_systems
+    predicate: enables
+    object: amino_acid_decarboxylation
+    description: Decarboxylase systems carry out amino-acid decarboxylation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad062
+      notes: amino-acid decarboxylase systems that consume protons and raise cytoplasmic
+        alkalinity.
+  - subject: amino_acid_decarboxylation
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Amino-acid decarboxylation consumes protons and raises cytoplasmic
+      alkalinity, aiding pH homeostasis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad062
+      notes: consume protons and raise cytoplasmic alkalinity.
+  - subject: na_h_antiport
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Na+/H+ antiport (notably the Mrp system) is the major mechanism for
+      alkaline pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Na+/H+ antiporters (notably the multicomponent Mrp system) are the major
+        mechanism for alkaliphile pH homeostasis.
+  - subject: proton_consuming_reaction_genes
+    predicate: associated with
+    object: acidic_external_ph
+    description: Genes for proton-consuming reactions (decarboxylases/deaminases)
+      are consistently associated with lower pH preference.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adf8998
+      notes: proton-consuming reactions (decarboxylases, deaminases) consistently
+        associated with pH preference across environments.
+  - subject: na_h_antiporter_genes
+    predicate: associated with
+    object: alkaline_external_ph
+    description: Na+/H+ antiporter genes (PhaGF/MnhG/MrpF/YufB) are associated with
+      higher pH preference.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adf8998
+      notes: Na+/H+ antiporters PhaGF, MnhG, MrpF, YufB associated with higher pH
+        preference.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936639+00:00'
   curator: seed_from_metpo
@@ -157,4 +247,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 2 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

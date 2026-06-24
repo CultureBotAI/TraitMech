@@ -107,6 +107,159 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>sulfide:quinone oxidoreductase (SQR)</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>hydrogen sulfide</strong>
+            
+            <p>SQR oxidizes sulfide to sulfane sulfur (S0/polysulfide).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>sulfide:quinone oxidoreductase (SQR)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>sulfane sulfur</strong>
+            
+            <p>SQR produces sulfane sulfur/polysulfide from sulfide.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>persulfide dioxygenase (PDO)</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>glutathione persulfide (GSSH)</strong>
+            
+            <p>PDO oxidizes glutathione persulfide (GSSH).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">PDO oxidizes glutathione persulfide (GSSH); O2-dependent.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>persulfide dioxygenase (PDO)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>sulfite</strong>
+            
+            <p>Persulfide dioxygenase produces sulfite (GSSH + O2 + H2O -&gt; GSH + SO3(2-)).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">GSSH + O2 + H2O -&gt; GSH + SO3(2-) + 2H+; oxygen-dependent.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>sulfite</strong>
+            <span class="edge-predicate">reacts to form</span>
+            <strong>thiosulfate</strong>
+            
+            <p>Sulfite reacts with sulfane sulfur to form thiosulfate (non-enzymatic).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">The generated sulfite can react with sulfane sulfur to form thiosulfate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>Sox enzyme system</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>thiosulfate</strong>
+            
+            <p>Thiosulfate is oxidized to sulfate via the Sox system.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">Thiosulfate is then oxidized to sulfate via the Sox-system.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>thiosulfate dehydrogenase (TsdA)</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>thiosulfate</strong>
+            
+            <p>TsdA oxidizes thiosulfate to tetrathionate (S2O32- to S4O62-).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1426584</code>
+                
+                <span class="meta">tsdA (S2O32- to S4O62-).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>thiosulfate dehydrogenase (TsdA)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>tetrathionate</strong>
+            
+            <p>TsdA produces tetrathionate from thiosulfate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1426584</code>
+                
+                <span class="meta">tsdA (S2O32- to S4O62-).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>tetrathionate hydrolase (TetH)</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>tetrathionate</strong>
+            
+            <p>TetH disproportionates/hydrolyzes tetrathionate to S0, thiosulfate and sulfate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1426584</code>
+                
+                <span class="meta">Tetrathionate generated by tsdA can be disproportionated by tetH to yield S0, thiosulfate and sulfate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -244,6 +397,12 @@
           <time>2026-06-08T12:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (Sox-mediated sulfur oxidation to sulfate) with CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 9 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -603,7 +762,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking sulfur-oxidizing enzyme systems to oxidation of reduced sulfur compounds to sulfate.", "edges": [{"description": "The Sox system enables lithotrophic sulfur oxidation.", "evidence": [{"notes": "Friedrich et al. describe the Sox system as a common sulfur-oxidation mechanism.", "reference": "DOI:10.1128/AEM.67.7.2873-2882.2001"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "sox_system", "target": "sulfur_oxidation_trait"}, {"description": "Sulfur oxidizers oxidize reduced sulfur compounds such as sulfide.", "evidence": [{"notes": "Ghosh \u0026 Dam review lithotrophic oxidation of reduced inorganic sulfur.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "sulfur_oxidation_trait", "target": "hydrogen_sulfide"}, {"description": "Complete sulfur oxidation produces sulfate.", "evidence": [{"notes": "Supports sulfate as the oxidized end product.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "sulfur_oxidation_trait", "target": "sulfate"}], "evidence_rows": [{"description": "The Sox system enables lithotrophic sulfur oxidation.", "edge_id": "edge-1", "evidence": [{"notes": "Friedrich et al. describe the Sox system as a common sulfur-oxidation mechanism.", "reference": "DOI:10.1128/AEM.67.7.2873-2882.2001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Sox enzyme system", "target": "sulfur oxidation"}, {"description": "Sulfur oxidizers oxidize reduced sulfur compounds such as sulfide.", "edge_id": "edge-2", "evidence": [{"notes": "Ghosh \u0026 Dam review lithotrophic oxidation of reduced inorganic sulfur.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "sulfur oxidation", "target": "hydrogen sulfide"}, {"description": "Complete sulfur oxidation produces sulfate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfate as the oxidized end product.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "sulfur oxidation", "target": "sulfate"}], "graph_id": "sulfur_oxidation_sox", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Reduced inorganic sulfur substrate.", "grounding": "CHEBI:16136", "id": "hydrogen_sulfide", "is_orphan": false, "label": "hydrogen sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfur-oxidizing multienzyme system.", "grounding": null, "id": "sox_system", "is_orphan": false, "label": "Sox enzyme system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur end product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to oxidize reduced inorganic sulfur to sulfate.", "grounding": "traitmech:000106", "id": "sulfur_oxidation_trait", "is_orphan": false, "label": "sulfur oxidation", "node_type": "TRAIT", "xrefs": []}], "title": "Lithotrophic sulfur oxidation to sulfate"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking sulfur-oxidizing enzyme systems to oxidation of reduced sulfur compounds to sulfate.", "edges": [{"description": "The Sox system enables lithotrophic sulfur oxidation.", "evidence": [{"notes": "Friedrich et al. describe the Sox system as a common sulfur-oxidation mechanism.", "reference": "DOI:10.1128/AEM.67.7.2873-2882.2001"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "sox_system", "target": "sulfur_oxidation_trait"}, {"description": "Sulfur oxidizers oxidize reduced sulfur compounds such as sulfide.", "evidence": [{"notes": "Ghosh \u0026 Dam review lithotrophic oxidation of reduced inorganic sulfur.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "sulfur_oxidation_trait", "target": "hydrogen_sulfide"}, {"description": "Complete sulfur oxidation produces sulfate.", "evidence": [{"notes": "Supports sulfate as the oxidized end product.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "sulfur_oxidation_trait", "target": "sulfate"}, {"description": "SQR oxidizes sulfide to sulfane sulfur (S0/polysulfide).", "evidence": [{"notes": "SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "sqr_enzyme", "target": "hydrogen_sulfide"}, {"description": "SQR produces sulfane sulfur/polysulfide from sulfide.", "evidence": [{"notes": "SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "sqr_enzyme", "target": "sulfane_sulfur"}, {"description": "PDO oxidizes glutathione persulfide (GSSH).", "evidence": [{"notes": "PDO oxidizes glutathione persulfide (GSSH); O2-dependent.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "pdo_enzyme", "target": "glutathione_persulfide"}, {"description": "Persulfide dioxygenase produces sulfite (GSSH + O2 + H2O -\u003e GSH + SO3(2-)).", "evidence": [{"notes": "GSSH + O2 + H2O -\u003e GSH + SO3(2-) + 2H+; oxygen-dependent.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "pdo_enzyme", "target": "sulfite"}, {"description": "Sulfite reacts with sulfane sulfur to form thiosulfate (non-enzymatic).", "evidence": [{"notes": "The generated sulfite can react with sulfane sulfur to form thiosulfate.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-8", "is_orphan": false, "predicate": "reacts to form", "predicate_id": null, "source": "sulfite", "target": "thiosulfate"}, {"description": "Thiosulfate is oxidized to sulfate via the Sox system.", "evidence": [{"notes": "Thiosulfate is then oxidized to sulfate via the Sox-system.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-9", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "sox_system", "target": "thiosulfate"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate (S2O32- to S4O62-).", "evidence": [{"notes": "tsdA (S2O32- to S4O62-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-10", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "tsda_enzyme", "target": "thiosulfate"}, {"description": "TsdA produces tetrathionate from thiosulfate.", "evidence": [{"notes": "tsdA (S2O32- to S4O62-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-11", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "tsda_enzyme", "target": "tetrathionate"}, {"description": "TetH disproportionates/hydrolyzes tetrathionate to S0, thiosulfate and sulfate.", "evidence": [{"notes": "Tetrathionate generated by tsdA can be disproportionated by tetH to yield S0, thiosulfate and sulfate.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "id": "edge-12", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "teth_enzyme", "target": "tetrathionate"}], "evidence_rows": [{"description": "The Sox system enables lithotrophic sulfur oxidation.", "edge_id": "edge-1", "evidence": [{"notes": "Friedrich et al. describe the Sox system as a common sulfur-oxidation mechanism.", "reference": "DOI:10.1128/AEM.67.7.2873-2882.2001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Sox enzyme system", "target": "sulfur oxidation"}, {"description": "Sulfur oxidizers oxidize reduced sulfur compounds such as sulfide.", "edge_id": "edge-2", "evidence": [{"notes": "Ghosh \u0026 Dam review lithotrophic oxidation of reduced inorganic sulfur.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "sulfur oxidation", "target": "hydrogen sulfide"}, {"description": "Complete sulfur oxidation produces sulfate.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfate as the oxidized end product.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "sulfur oxidation", "target": "sulfate"}, {"description": "SQR oxidizes sulfide to sulfane sulfur (S0/polysulfide).", "edge_id": "edge-4", "evidence": [{"notes": "SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "oxidizes", "predicate_id": null, "source": "sulfide:quinone oxidoreductase (SQR)", "target": "hydrogen sulfide"}, {"description": "SQR produces sulfane sulfur/polysulfide from sulfide.", "edge_id": "edge-5", "evidence": [{"notes": "SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "produces", "predicate_id": null, "source": "sulfide:quinone oxidoreductase (SQR)", "target": "sulfane sulfur"}, {"description": "PDO oxidizes glutathione persulfide (GSSH).", "edge_id": "edge-6", "evidence": [{"notes": "PDO oxidizes glutathione persulfide (GSSH); O2-dependent.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "oxidizes", "predicate_id": null, "source": "persulfide dioxygenase (PDO)", "target": "glutathione persulfide (GSSH)"}, {"description": "Persulfide dioxygenase produces sulfite (GSSH + O2 + H2O -\u003e GSH + SO3(2-)).", "edge_id": "edge-7", "evidence": [{"notes": "GSSH + O2 + H2O -\u003e GSH + SO3(2-) + 2H+; oxygen-dependent.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "produces", "predicate_id": null, "source": "persulfide dioxygenase (PDO)", "target": "sulfite"}, {"description": "Sulfite reacts with sulfane sulfur to form thiosulfate (non-enzymatic).", "edge_id": "edge-8", "evidence": [{"notes": "The generated sulfite can react with sulfane sulfur to form thiosulfate.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "reacts to form", "predicate_id": null, "source": "sulfite", "target": "thiosulfate"}, {"description": "Thiosulfate is oxidized to sulfate via the Sox system.", "edge_id": "edge-9", "evidence": [{"notes": "Thiosulfate is then oxidized to sulfate via the Sox-system.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "oxidizes", "predicate_id": null, "source": "Sox enzyme system", "target": "thiosulfate"}, {"description": "TsdA oxidizes thiosulfate to tetrathionate (S2O32- to S4O62-).", "edge_id": "edge-10", "evidence": [{"notes": "tsdA (S2O32- to S4O62-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "oxidizes", "predicate_id": null, "source": "thiosulfate dehydrogenase (TsdA)", "target": "thiosulfate"}, {"description": "TsdA produces tetrathionate from thiosulfate.", "edge_id": "edge-11", "evidence": [{"notes": "tsdA (S2O32- to S4O62-).", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "produces", "predicate_id": null, "source": "thiosulfate dehydrogenase (TsdA)", "target": "tetrathionate"}, {"description": "TetH disproportionates/hydrolyzes tetrathionate to S0, thiosulfate and sulfate.", "edge_id": "edge-12", "evidence": [{"notes": "Tetrathionate generated by tsdA can be disproportionated by tetH to yield S0, thiosulfate and sulfate.", "reference": "DOI:10.3389/fmicb.2024.1426584"}], "predicate": "oxidizes", "predicate_id": null, "source": "tetrathionate hydrolase (TetH)", "target": "tetrathionate"}], "graph_id": "sulfur_oxidation_sox", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Persulfide substrate of persulfide dioxygenase.", "grounding": null, "id": "glutathione_persulfide", "is_orphan": false, "label": "glutathione persulfide (GSSH)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic sulfur substrate.", "grounding": "CHEBI:16136", "id": "hydrogen_sulfide", "is_orphan": false, "label": "hydrogen sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxidizes glutathione persulfide to sulfite using O2.", "grounding": null, "id": "pdo_enzyme", "is_orphan": false, "label": "persulfide dioxygenase (PDO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Sulfur-oxidizing multienzyme system.", "grounding": null, "id": "sox_system", "is_orphan": false, "label": "Sox enzyme system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane flavoprotein oxidizing sulfide to sulfane sulfur/polysulfide.", "grounding": null, "id": "sqr_enzyme", "is_orphan": false, "label": "sulfide:quinone oxidoreductase (SQR)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Sulfane sulfur / S0 / polysulfide intermediate.", "grounding": "CHEBI:15037", "id": "sulfane_sulfur", "is_orphan": false, "label": "sulfane sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur end product.", "grounding": "CHEBI:16189", "id": "sulfate", "is_orphan": false, "label": "sulfate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Sulfite intermediate in sulfur oxidation.", "grounding": "CHEBI:16526", "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to oxidize reduced inorganic sulfur to sulfate.", "grounding": "traitmech:000106", "id": "sulfur_oxidation_trait", "is_orphan": false, "label": "sulfur oxidation", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Hydrolyzes/disproportionates tetrathionate to S0, thiosulfate and sulfate.", "grounding": null, "id": "teth_enzyme", "is_orphan": false, "label": "tetrathionate hydrolase (TetH)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Tetrathionate intermediate in the S4 intermediate pathway.", "grounding": "CHEBI:30926", "id": "tetrathionate", "is_orphan": false, "label": "tetrathionate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Thiosulfate intermediate substrate of the Sox system.", "grounding": "CHEBI:30087", "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxidizes thiosulfate to tetrathionate.", "grounding": null, "id": "tsda_enzyme", "is_orphan": false, "label": "thiosulfate dehydrogenase (TsdA)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Lithotrophic sulfur oxidation to sulfate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,7 +773,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

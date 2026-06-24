@@ -158,6 +158,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-7">
+            <strong>fatty acid desaturase</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>unsaturated membrane fatty acids</strong>
+            
+            <p>Desaturase expression increases double bonds in membrane fatty acids (homeoviscous adaptation).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Activation of des (desaturase) transcription increases double bonds in membrane fatty acids; generic UFA-biosynthesis module.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>unsaturated membrane fatty acids</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Increased unsaturated membrane fatty acids restore/raise membrane fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Increasing double bonds in membrane fatty acids restores membrane fluidity; core homeoviscous-adaptation edge broadly curatable across microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>high temperature</strong>
+            <span class="edge-predicate">melts</span>
+            <strong>RNA thermometer</strong>
+            
+            <p>Elevated temperature melts RNA thermometer hairpins, relieving translational repression.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">RNA thermometers (ROSE/FourU) control translation by occluding Shine-Dalgarno/start codons and melt with temperature; bacterial heat-sensing mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>RNA thermometer</strong>
+            <span class="edge-predicate">permits translation of</span>
+            <strong>heat-shock gene translation</strong>
+            
+            <p>RNA thermometer melting permits translation of heat-shock genes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Post-transcriptional RNA thermometers in 5-UTRs mediate rapid temperature-dependent control of translation; strong generic edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>low temperature</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>cold-shock RNA chaperone activity</strong>
+            
+            <p>Cold shock induces CspA-mediated RNA chaperone activity that maintains translatable RNA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Cold shock induces cold-shock proteins (CspA) that help maintain single-stranded RNA for translation at low temperature.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>temperature downshift</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>fatty acid desaturase</strong>
+            
+            <p>Cold downshift induces fatty-acid desaturase activity to maintain membrane fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/sj.jim.2900572</code>
+                
+                <span class="meta">Connecting edge wiring the enrichment node into the graph.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -374,6 +476,18 @@
           <time>2026-06-15T07:19:08Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label fix; verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>FIX_ORPHAN_NODE</strong> · claude
+          <p class="changes">Connected orphaned node &#39;fatty_acid_desaturase&#39; via temperature_downshift -[induces]-&gt; fatty_acid_desaturase.</p>
         </li>
         
       </ol>
@@ -733,7 +847,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental temperature to membrane fluidity, protein stability, and growth-rate phenotypes.", "edges": [{"description": "Microbial growth rate varies with growth temperature.", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental_temperature", "target": "growth_rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high_temperature", "target": "protein_stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_temperature", "target": "membrane_fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane_fluidity", "target": "temperature_preference_trait"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein_stability", "target": "temperature_preference_trait"}], "evidence_rows": [{"description": "Microbial growth rate varies with growth temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental temperature", "target": "microbial growth rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "edge_id": "edge-2", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "target": "membrane fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high temperature", "target": "protein stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "edge_id": "edge-4", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high temperature", "target": "membrane fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane fluidity", "target": "temperature preference"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "edge_id": "edge-6", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein stability", "target": "temperature preference"}], "graph_id": "temperature_preference_growth_physiology", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Growth temperature experienced by the organism.", "grounding": null, "id": "environmental_temperature", "is_orphan": false, "label": "environmental temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Rate of population growth under a given temperature regime.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "microbial growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Hot growth condition that challenges protein and membrane stability.", "grounding": "PATO:0001305", "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition that reduces molecular motion and membrane fluidity.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane affecting transport and cell function.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#cffafe", "description": "Capacity of proteins to retain folded, functional conformations.", "grounding": null, "id": "protein_stability", "is_orphan": false, "label": "protein stability", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Growth phenotype characterized by preferred environmental temperature.", "grounding": "METPO:1000613", "id": "temperature_preference_trait", "is_orphan": false, "label": "temperature preference", "node_type": "TRAIT", "xrefs": []}], "title": "Environmental temperature control of growth preference"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental temperature to membrane fluidity, protein stability, and growth-rate phenotypes.", "edges": [{"description": "Microbial growth rate varies with growth temperature.", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental_temperature", "target": "growth_rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-2", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-3", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high_temperature", "target": "protein_stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_temperature", "target": "membrane_fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane_fluidity", "target": "temperature_preference_trait"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein_stability", "target": "temperature_preference_trait"}, {"description": "Desaturase expression increases double bonds in membrane fatty acids (homeoviscous adaptation).", "evidence": [{"notes": "Activation of des (desaturase) transcription increases double bonds in membrane fatty acids; generic UFA-biosynthesis module.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "fatty_acid_desaturase", "target": "unsaturated_membrane_fatty_acids"}, {"description": "Increased unsaturated membrane fatty acids restore/raise membrane fluidity.", "evidence": [{"notes": "Increasing double bonds in membrane fatty acids restores membrane fluidity; core homeoviscous-adaptation edge broadly curatable across microbes.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "unsaturated_membrane_fatty_acids", "target": "membrane_fluidity"}, {"description": "Elevated temperature melts RNA thermometer hairpins, relieving translational repression.", "evidence": [{"notes": "RNA thermometers (ROSE/FourU) control translation by occluding Shine-Dalgarno/start codons and melt with temperature; bacterial heat-sensing mechanism.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-9", "is_orphan": false, "predicate": "melts", "predicate_id": null, "source": "high_temperature", "target": "rna_thermometer"}, {"description": "RNA thermometer melting permits translation of heat-shock genes.", "evidence": [{"notes": "Post-transcriptional RNA thermometers in 5-UTRs mediate rapid temperature-dependent control of translation; strong generic edge.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-10", "is_orphan": false, "predicate": "permits translation of", "predicate_id": null, "source": "rna_thermometer", "target": "heat_shock_gene_translation"}, {"description": "Cold shock induces CspA-mediated RNA chaperone activity that maintains translatable RNA.", "evidence": [{"notes": "Cold shock induces cold-shock proteins (CspA) that help maintain single-stranded RNA for translation at low temperature.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-11", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "low_temperature", "target": "cold_shock_rna_chaperone_activity"}, {"description": "Cold downshift induces fatty-acid desaturase activity to maintain membrane fluidity.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1038/sj.jim.2900572"}], "id": "edge-12", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "temperature_downshift", "target": "fatty_acid_desaturase"}], "evidence_rows": [{"description": "Microbial growth rate varies with growth temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Study analyzes temperature dependence of microbial growth rates across psychrotrophs, mesophiles, and thermophiles.", "reference": "DOI:10.1038/sj.jim.2900572", "snippet": "growth rate vs temperature"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "environmental temperature", "target": "microbial growth rate"}, {"description": "Cold temperature reduces membrane fluidity and transport efficiency.", "edge_id": "edge-2", "evidence": [{"notes": "Review identifies membrane fluidity loss as a core cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "target": "membrane fluidity"}, {"description": "Elevated temperature challenges protein folding and functional stability.", "edge_id": "edge-3", "evidence": [{"notes": "Review supports thermostable enzymes as a high-temperature adaptation.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "high temperature", "target": "protein stability"}, {"description": "High temperature increases membrane permeability and fluidity, creating a limit on growth.", "edge_id": "edge-4", "evidence": [{"notes": "Review links increased membrane permeability to upper temperature growth limits.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high temperature", "target": "membrane fluidity"}, {"description": "Temperature preference reflects the range in which membrane function remains compatible with growth.", "edge_id": "edge-5", "evidence": [{"notes": "Review supports membrane fluidity adaptation as a temperature-sensing and response mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "optimizes the performance of cellular physiological processes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "membrane fluidity", "target": "temperature preference"}, {"description": "Growth at preferred temperatures requires proteins to remain active and stable.", "edge_id": "edge-6", "evidence": [{"notes": "Supports protein stability as a determinant of high-temperature growth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "molecular mechanisms involved in protein thermostabilization"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "protein stability", "target": "temperature preference"}, {"description": "Desaturase expression increases double bonds in membrane fatty acids (homeoviscous adaptation).", "edge_id": "edge-7", "evidence": [{"notes": "Activation of des (desaturase) transcription increases double bonds in membrane fatty acids; generic UFA-biosynthesis module.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": null, "source": "fatty acid desaturase", "target": "unsaturated membrane fatty acids"}, {"description": "Increased unsaturated membrane fatty acids restore/raise membrane fluidity.", "edge_id": "edge-8", "evidence": [{"notes": "Increasing double bonds in membrane fatty acids restores membrane fluidity; core homeoviscous-adaptation edge broadly curatable across microbes.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": null, "source": "unsaturated membrane fatty acids", "target": "membrane fluidity"}, {"description": "Elevated temperature melts RNA thermometer hairpins, relieving translational repression.", "edge_id": "edge-9", "evidence": [{"notes": "RNA thermometers (ROSE/FourU) control translation by occluding Shine-Dalgarno/start codons and melt with temperature; bacterial heat-sensing mechanism.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "melts", "predicate_id": null, "source": "high temperature", "target": "RNA thermometer"}, {"description": "RNA thermometer melting permits translation of heat-shock genes.", "edge_id": "edge-10", "evidence": [{"notes": "Post-transcriptional RNA thermometers in 5-UTRs mediate rapid temperature-dependent control of translation; strong generic edge.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "permits translation of", "predicate_id": null, "source": "RNA thermometer", "target": "heat-shock gene translation"}, {"description": "Cold shock induces CspA-mediated RNA chaperone activity that maintains translatable RNA.", "edge_id": "edge-11", "evidence": [{"notes": "Cold shock induces cold-shock proteins (CspA) that help maintain single-stranded RNA for translation at low temperature.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "induces", "predicate_id": null, "source": "low temperature", "target": "cold-shock RNA chaperone activity"}, {"description": "Cold downshift induces fatty-acid desaturase activity to maintain membrane fluidity.", "edge_id": "edge-12", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1038/sj.jim.2900572"}], "predicate": "induces", "predicate_id": null, "source": "temperature downshift", "target": "fatty acid desaturase"}], "graph_id": "temperature_preference_growth_physiology", "issues": [], "nodes": [{"color": "#cffafe", "description": "CspA-type RNA chaperone activity that maintains single-stranded RNA to support translation at low temperature.", "grounding": null, "id": "cold_shock_rna_chaperone_activity", "is_orphan": false, "label": "cold-shock RNA chaperone activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dcfce7", "description": "Growth temperature experienced by the organism.", "grounding": null, "id": "environmental_temperature", "is_orphan": false, "label": "environmental temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Desaturase enzyme (e.g., Des) that introduces double bonds into membrane fatty acids.", "grounding": null, "id": "fatty_acid_desaturase", "is_orphan": false, "label": "fatty acid desaturase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Rate of population growth under a given temperature regime.", "grounding": null, "id": "growth_rate", "is_orphan": false, "label": "microbial growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Translation of heat-shock response genes permitted upon RNA thermometer melting at elevated temperature.", "grounding": null, "id": "heat_shock_gene_translation", "is_orphan": false, "label": "heat-shock gene translation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Hot growth condition that challenges protein and membrane stability.", "grounding": "PATO:0001305", "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition that reduces molecular motion and membrane fluidity.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane affecting transport and cell function.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#cffafe", "description": "Capacity of proteins to retain folded, functional conformations.", "grounding": null, "id": "protein_stability", "is_orphan": false, "label": "protein stability", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#f3e8ff", "description": "Temperature-responsive RNA structure (ROSE/FourU) in 5-UTRs that gates translation by melting with temperature.", "grounding": null, "id": "rna_thermometer", "is_orphan": false, "label": "RNA thermometer", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "A decrease in environmental growth temperature (cold shift).", "grounding": null, "id": "temperature_downshift", "is_orphan": false, "label": "temperature downshift", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Growth phenotype characterized by preferred environmental temperature.", "grounding": "METPO:1000613", "id": "temperature_preference_trait", "is_orphan": false, "label": "temperature preference", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane fatty acids bearing double bonds; raise membrane fluidity (homeoviscous adaptation).", "grounding": null, "id": "unsaturated_membrane_fatty_acids", "is_orphan": false, "label": "unsaturated membrane fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Environmental temperature control of growth preference"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -744,7 +858,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

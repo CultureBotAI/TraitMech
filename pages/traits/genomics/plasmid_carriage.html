@@ -90,6 +90,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>toxin-antitoxin system</strong>
+            <span class="edge-predicate">stabilizes</span>
+            <strong>plasmid vertical inheritance</strong>
+            
+            <p>Toxin-antitoxin systems increase vertical stability of their replicons.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/nar/gkae018</code>
+                
+                <span class="meta">TA systems are small selfish genetic modules that increase vertical stability of their replicons.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>plasmid-encoded methylase</strong>
+            <span class="edge-predicate">protects against</span>
+            <strong>restriction of incoming plasmid DNA</strong>
+            
+            <p>Plasmid-encoded methylases protect plasmid DNA from host restriction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/nar/gkae896</code>
+                
+                <span class="meta">plasmid-encoded methylases that protect plasmids from restriction.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>plasmid-encoded anti-restriction genes</strong>
+            <span class="edge-predicate">protects against</span>
+            <strong>restriction of incoming plasmid DNA</strong>
+            
+            <p>Plasmid-encoded anti-restriction genes counter multiple RM system types.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/nar/gkae896</code>
+                
+                <span class="meta">plasmid-encoded anti-restriction genes that protect against multiple RM types.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>antibiotic selective pressure</strong>
+            <span class="edge-predicate">promotes retention of</span>
+            <strong>plasmid carriage</strong>
+            
+            <p>Without selection plasmids tend to be lost; antibiotic pressure promotes retention.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1080/22221751.2024.2352432</code>
+                
+                <span class="meta">without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>plasmid carriage</strong>
+            <span class="edge-predicate">imposes</span>
+            <strong>plasmid fitness cost</strong>
+            
+            <p>Plasmid carriage imposes a fitness cost from additional material and energy consumption.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1080/22221751.2024.2352432</code>
+                
+                <span class="meta">Plasmid carriage imposes fitness costs (additional material and energy consumption).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>compensatory mutation</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>plasmid fitness cost</strong>
+            
+            <p>Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/ece3.70121</code>
+                
+                <span class="meta">Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -227,6 +329,12 @@
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (plasmid conjugation / HGT) with GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +694,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking plasmid possession to conjugation and accessory-function delivery.", "edges": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid_carriage_trait", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid_carriage_trait", "target": "accessory_function"}], "evidence_rows": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid carriage", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid carriage", "target": "accessory function"}], "graph_id": "plasmid_conjugation_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Plasmid-encoded resistance, virulence, or metabolic capability.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of genetic material via direct contact.", "grounding": "GO:0000746", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of extrachromosomal plasmid replicons.", "grounding": "traitmech:000090", "id": "plasmid_carriage_trait", "is_orphan": false, "label": "plasmid carriage", "node_type": "TRAIT", "xrefs": []}], "title": "Plasmid carriage drives conjugative horizontal gene transfer"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking plasmid possession to conjugation and accessory-function delivery.", "edges": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid_carriage_trait", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid_carriage_trait", "target": "accessory_function"}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "id": "edge-3", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "ta_system", "target": "plasmid_vertical_inheritance"}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-4", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "plasmid_methylase", "target": "restriction_of_plasmid_dna"}, {"description": "Plasmid-encoded anti-restriction genes counter multiple RM system types.", "evidence": [{"notes": "plasmid-encoded anti-restriction genes that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-5", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "anti_restriction_genes", "target": "restriction_of_plasmid_dna"}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic_selective_pressure", "target": "plasmid_carriage_trait"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-7", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "plasmid_carriage_trait", "target": "fitness_cost"}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "compensatory_mutation", "target": "fitness_cost"}], "evidence_rows": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid carriage", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid carriage", "target": "accessory function"}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "edge_id": "edge-3", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "predicate": "stabilizes", "predicate_id": null, "source": "toxin-antitoxin system", "target": "plasmid vertical inheritance"}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "edge_id": "edge-4", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded methylase", "target": "restriction of incoming plasmid DNA"}, {"description": "Plasmid-encoded anti-restriction genes counter multiple RM system types.", "edge_id": "edge-5", "evidence": [{"notes": "plasmid-encoded anti-restriction genes that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded anti-restriction genes", "target": "restriction of incoming plasmid DNA"}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "edge_id": "edge-6", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic selective pressure", "target": "plasmid carriage"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "edge_id": "edge-7", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "imposes", "predicate_id": null, "source": "plasmid carriage", "target": "plasmid fitness cost"}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "edge_id": "edge-8", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "predicate": "reduces", "predicate_id": null, "source": "compensatory mutation", "target": "plasmid fitness cost"}], "graph_id": "plasmid_conjugation_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Plasmid-encoded resistance, virulence, or metabolic capability.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid genes inhibiting host restriction-modification defence.", "grounding": null, "id": "anti_restriction_genes", "is_orphan": false, "label": "plasmid-encoded anti-restriction genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Antibiotic exposure selecting for retention of resistance plasmids.", "grounding": null, "id": "antibiotic_selective_pressure", "is_orphan": false, "label": "antibiotic selective pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Chromosomal or plasmid mutation that ameliorates plasmid-imposed fitness cost.", "grounding": null, "id": "compensatory_mutation", "is_orphan": false, "label": "compensatory mutation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of genetic material via direct contact.", "grounding": "GO:0000746", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced host fitness from additional material and energy consumption of plasmid carriage.", "grounding": null, "id": "fitness_cost", "is_orphan": false, "label": "plasmid fitness cost", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of extrachromosomal plasmid replicons.", "grounding": "traitmech:000090", "id": "plasmid_carriage_trait", "is_orphan": false, "label": "plasmid carriage", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Plasmid-borne methyltransferase shielding plasmid DNA from restriction.", "grounding": null, "id": "plasmid_methylase", "is_orphan": false, "label": "plasmid-encoded methylase", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#ecfccb", "description": "Stable transmission of a plasmid to daughter cells across generations.", "grounding": null, "id": "plasmid_vertical_inheritance", "is_orphan": false, "label": "plasmid vertical inheritance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of unmethylated incoming plasmid DNA by restriction-modification systems.", "grounding": null, "id": "restriction_of_plasmid_dna", "is_orphan": false, "label": "restriction of incoming plasmid DNA", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Selfish genetic module mediating plasmid addiction / post-segregational killing.", "grounding": null, "id": "ta_system", "is_orphan": false, "label": "toxin-antitoxin system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Plasmid carriage drives conjugative horizontal gene transfer"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +705,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -51,6 +51,45 @@ causal_graphs:
     label: visible orange color
     node_type: MOLECULAR_FUNCTION
     description: Observed orange colony or cell color.
+  - node_id: crt_y_lycopene_cyclase
+    label: lycopene beta-cyclase (CrtY)
+    node_type: GENE_OR_PROTEIN
+    description: Lycopene cyclase converting lycopene toward beta-carotene in bacteria.
+  - node_id: lycopene
+    label: lycopene
+    node_type: CHEMICAL
+    description: Red carotenoid intermediate upstream of cyclization.
+  - node_id: beta_carotene
+    label: beta-carotene
+    node_type: CHEMICAL
+    description: Common orange carotenoid end product or branch intermediate in many
+      microbes.
+  - node_id: crt_z_hydroxylase
+    label: beta-carotene hydroxylase (CrtZ)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting beta-carotene to zeaxanthin.
+  - node_id: zeaxanthin
+    label: zeaxanthin
+    node_type: CHEMICAL
+    description: Oxygenated carotenoid contributing yellow-orange coloration.
+  - node_id: crt_w_ketolase
+    label: carotenoid ketolase (CrtW)
+    node_type: GENE_OR_PROTEIN
+    description: Ketolase producing orange/red ketocarotenoids such as canthaxanthin
+      and astaxanthin.
+  - node_id: ketocarotenoid_biosynthesis
+    label: ketocarotenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathway branch producing orange-to-red ketocarotenoids.
+  - node_id: carotenoid_accumulation
+    label: carotenoid accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: High-level mechanistic basis for many orange microbial phenotypes
+      across bacteria, archaea, and yeasts.
+  - node_id: oxidative_stress
+    label: oxidative stress / reactive oxygen species
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxidative stressor (ROS) against which carotenoids confer protection.
   edges:
   - subject: crt_enzymes
     predicate: catalyzes
@@ -98,6 +137,65 @@ causal_graphs:
       snippet: orange ... pigmentation in bacteria
       notes: Supports the trait-level color assignment.
     predicate_id: METPO:2007400
+  - subject: crt_y_lycopene_cyclase
+    predicate: converts
+    object: lycopene
+    description: CrtY lycopene beta-cyclase acts on lycopene as substrate.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: lycopene is converted to beta-carotene by ring-forming lycopene cyclases;
+        in bacteria the enzyme is crtY. Broad microbial applicability.
+  - subject: lycopene
+    predicate: is converted to
+    object: beta_carotene
+    description: Lycopene cyclization yields orange beta-carotene.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: lycopene is converted to beta-carotene by ring-forming lycopene cyclases
+        (crtY). Broad microbial applicability.
+  - subject: crt_z_hydroxylase
+    predicate: converts
+    object: beta_carotene
+    description: CrtZ beta-carotene hydroxylase acts on beta-carotene.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: conversion of beta-carotene to zeaxanthin by crtZ. Strong general edge
+        supporting orange/yellow branches.
+  - subject: beta_carotene
+    predicate: is converted to
+    object: zeaxanthin
+    description: Hydroxylation of beta-carotene yields zeaxanthin.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: crtZ encodes a beta-carotene hydroxylase converting beta-carotene to
+        zeaxanthin. Strong general edge.
+  - subject: crt_w_ketolase
+    predicate: contributes to
+    object: ketocarotenoid_biosynthesis
+    description: CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin)
+      formation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: ketolation by ketolases such as crtW yields ketocarotenoids (canthaxanthin/astaxanthin).
+        Strong for the ketocarotenoid branch; orange-to-red hue.
+  - subject: carotenoid_accumulation
+    predicate: protects against
+    object: oxidative_stress
+    description: Accumulated carotenoids act as antioxidants neutralizing reactive
+      oxygen species.
+    evidence:
+    - reference: DOI:10.7759/cureus.59892
+      notes: acts as an antioxidant protecting against hydrogen peroxide and hydroxyl
+        radicals. Strong, broad functional edge across taxa.
+  - subject: orange_pigmented_trait
+    predicate: has material basis in
+    object: carotenoid_accumulation
+    description: The orange-pigmented phenotype is materially based on carotenoid
+      accumulation.
+    evidence:
+    - reference: DOI:10.7759/cureus.59892
+      notes: orange carotenoid; golden yellow-orange pigment. High-level edge suitable
+        for TraitMech root graph across diverse taxa.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945311+00:00'
   curator: seed_from_metpo
@@ -139,4 +237,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:71690×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

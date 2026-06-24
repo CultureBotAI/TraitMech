@@ -1,7 +1,7 @@
 identifier: traitmech:000105
 label: dissimilatory sulfate reduction
-definition: An anaerobic respiratory metabolism in which an organism uses sulfate as
-  the terminal electron acceptor, reducing it to hydrogen sulfide while oxidizing
+definition: An anaerobic respiratory metabolism in which an organism uses sulfate
+  as the terminal electron acceptor, reducing it to hydrogen sulfide while oxidizing
   organic matter or hydrogen for energy.
 definition_source: DOI:10.1038/nrmicro1892
 trait_category: METABOLISM
@@ -45,6 +45,39 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009061
     description: Energy-conserving respiration with non-O2 acceptor.
+  - node_id: sat_enzyme
+    label: ATP sulfurylase (Sat)
+    node_type: GENE_OR_PROTEIN
+    description: Sulfate adenylyltransferase that activates sulfate to APS.
+  - node_id: aps
+    label: adenosine-5′-phosphosulfate (APS)
+    node_type: CHEMICAL
+    description: Activated sulfate intermediate reduced to sulfite.
+  - node_id: sulfite
+    label: sulfite
+    node_type: CHEMICAL
+    description: Intermediate produced from APS, substrate of the Dsr cascade.
+  - node_id: aprab_complex
+    label: APS reductase AprAB
+    node_type: GENE_OR_PROTEIN
+    description: Reduces APS to sulfite.
+  - node_id: dsrab_dsrc
+    label: DsrAB with DsrC
+    node_type: GENE_OR_PROTEIN
+    description: Dissimilatory sulfite reductase DsrAB acting with DsrC protein.
+  - node_id: dsrc_trisulfide
+    label: DsrC-trisulfide
+    node_type: CHEMICAL
+    description: Protein-bound trisulfide intermediate from sulfite reduction.
+  - node_id: dsrmkjop_complex
+    label: DsrMK(JOP) membrane complex
+    node_type: GENE_OR_PROTEIN
+    description: Reduces DsrC-trisulfide to sulfide, recycling DsrC and conserving
+      energy.
+  - node_id: srm
+    label: sulfate/sulfite-reducing microorganisms
+    node_type: STATE
+    description: Microorganisms capable of dissimilatory sulfate/sulfite reduction.
   edges:
   - subject: sulfate
     predicate: oxidized to
@@ -61,9 +94,73 @@ causal_graphs:
     description: Sulfate respiration is a major form of anaerobic respiration.
     evidence:
     - reference: DOI:10.3389/fmicb.2011.00081
-      notes: Plugge et al. review the metabolic flexibility of sulfate-reducing
-        bacteria within anaerobic respiration.
+      notes: Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria
+        within anaerobic respiration.
     predicate_id: biolink:participates_in
+  - subject: sulfate
+    predicate: activated by
+    object: sat_enzyme
+    description: Sulfate is activated by ATP sulfurylase (Sat).
+    evidence:
+    - reference: DOI:10.3390/antiox12030767
+      notes: Sulfate is taken up and activated by the enzyme ATP sulfurylase (Sat)
+        to form APS.
+  - subject: sat_enzyme
+    predicate: produces
+    object: aps
+    description: Sat activates sulfate to form APS.
+    evidence:
+    - reference: DOI:10.3390/antiox12030767
+      notes: Activated by ATP sulfurylase (Sat) to form adenosine-5′-phosphosulfate
+        (APS).
+  - subject: aprab_complex
+    predicate: reduces
+    object: aps
+    description: APS reductase AprAB reduces APS to sulfite.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01477-y
+      notes: The APS reductase AprAB reduces APS to sulfite, serving as substrate
+        of the Dsr cascade.
+  - subject: aprab_complex
+    predicate: produces
+    object: sulfite
+    description: AprAB reduction of APS yields sulfite.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01477-y
+      notes: APS is reduced to sulfite serving as substrate of the Dsr cascade.
+  - subject: dsrab_dsrc
+    predicate: produces
+    object: dsrc_trisulfide
+    description: DsrAB produces a DsrC-trisulfide from sulfite and DsrC.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01477-y
+      notes: DsrAB produces a DsrC-trisulfide from sulfite and the DsrC protein.
+  - subject: dsrmkjop_complex
+    predicate: reduces
+    object: dsrc_trisulfide
+    description: DsrMK(JOP) reduces the DsrC-trisulfide, recycling DsrC and releasing
+      sulfide with energy conservation.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01477-y
+      notes: DsrC-trisulfide is reduced by the DsrMK(JOP) membrane complex recycling
+        DsrC and releasing sulfide while coupling to energy conservation.
+  - subject: dsrmkjop_complex
+    predicate: produces
+    object: sulfide
+    description: Terminal reduction of the DsrC-trisulfide releases sulfide.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01477-y
+      notes: DsrMK(JOP) reduction releases sulfide while coupling this reduction to
+        energy conservation.
+  - subject: dsrab_dsrc
+    predicate: marker for
+    object: srm
+    description: The dissimilatory sulfite reductase encoded by dsrAB is a hallmark
+      of sulfate/sulfite-reducing microorganisms.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad058
+      notes: A hallmark of SRM is the dissimilatory sulfite reductase encoded by the
+        genes dsrAB.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -75,6 +172,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (sulfate → sulfide respiration) with
-    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

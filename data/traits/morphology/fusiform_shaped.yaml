@@ -43,6 +43,50 @@ causal_graphs:
     label: tapered geometry
     node_type: BIOLOGICAL_PROCESS
     description: Cell-body geometry that narrows toward both poles.
+  - node_id: mreb
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial actin homolog that orients peptidoglycan synthesis to maintain
+      cell shape.
+  - node_id: lateral_pg_synthesis
+    label: lateral peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Sidewall PG incorporation that sustains elongated cell geometry.
+  - node_id: rodz
+    label: RodZ
+    node_type: GENE_OR_PROTEIN
+    description: MreB-associated shape protein modulating MreB localization and elongasome
+      assembly.
+  - node_id: mreb_localization
+    label: MreB polymer localization/assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Geometric localization and assembly of the MreB actin cytoskeleton.
+  - node_id: elongasome
+    label: elongasome complex
+    node_type: CELLULAR_LOCALIZATION
+    description: Lateral wall-growth machinery containing MreB, RodA, PBP2, RodZ,
+      MreC, MreD.
+  - node_id: mrec
+    label: MreC
+    node_type: GENE_OR_PROTEIN
+    description: Elongasome component that activates PBP2 and RodA synthesis functions.
+  - node_id: pbp2
+    label: PBP2
+    node_type: GENE_OR_PROTEIN
+    description: Class B PBP in the elongasome coupled to RodA for rod-like wall growth.
+  - node_id: roda
+    label: RodA
+    node_type: GENE_OR_PROTEIN
+    description: SEDS glycosyltransferase mediating lateral PG incorporation with
+      PBP2.
+  - node_id: ftsw
+    label: FtsW
+    node_type: GENE_OR_PROTEIN
+    description: SEDS divisome polymerase for septal PG incorporation.
+  - node_id: septal_pg_incorporation
+    label: septal peptidoglycan incorporation
+    node_type: BIOLOGICAL_PROCESS
+    description: Division-site PG synthesis relevant to end-shaping and growth partitioning.
   edges:
   - subject: graded_polar_pg
     predicate: produces
@@ -71,6 +115,55 @@ causal_graphs:
       snippet: Fusobacterium nucleatum
       notes: Supports fusiform morphology as the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: mreb
+    predicate: guides
+    object: lateral_pg_synthesis
+    description: MreB filaments orient lateral PG synthesis to maintain rod-like cell
+      shape.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: MreB orients peptidoglycan synthesis to generate or maintain a smooth
+        cylindrical rod shape.
+  - subject: rodz
+    predicate: regulates
+    object: mreb_localization
+    description: RodZ modulates geometric localization and assembly of MreB.
+    evidence:
+    - reference: DOI:10.1186/s12964-025-02373-y
+      notes: RodZ modulates geometric localization of MreB and is required for proper
+        MreB cytoskeleton assembly.
+  - subject: rodz
+    predicate: scaffolds
+    object: elongasome
+    description: RodZ provides a scaffold for the elongasome via MreB, RodA, PBP2,
+      PBP1A/1B.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: RodZ interacts with MreB, RodA, PBP2 and PBP1A/1B, providing a scaffold
+        for the elongasome.
+  - subject: mrec
+    predicate: activates
+    object: pbp2
+    description: MreC induces a structural change in PBP2 promoting its TPase activity.
+    evidence:
+    - reference: DOI:10.1038/s41579-020-0366-3
+      notes: MreC induces a structural change in PBP2, promoting PBP2 TPase and RodA
+        GTase activity.
+  - subject: roda
+    predicate: required for
+    object: lateral_pg_synthesis
+    description: SEDS protein RodA with cognate bPBP mediates lateral PG incorporation.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2021.01.011
+      notes: SEDS proteins RodA/FtsW with cognate bPBPs mediate lateral versus septal
+        PG incorporation.
+  - subject: ftsw
+    predicate: required for
+    object: septal_pg_incorporation
+    description: FtsW with cognate bPBP mediates septal PG incorporation.
+    evidence:
+    - reference: DOI:10.1016/j.mib.2021.01.011
+      notes: FtsW with cognate bPBP mediates septal PG incorporation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898157+00:00'
   curator: seed_from_metpo
@@ -106,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

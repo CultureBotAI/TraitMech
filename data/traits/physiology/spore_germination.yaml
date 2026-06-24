@@ -15,11 +15,11 @@ synonyms:
   source: DOI:10.1016/j.mib.2003.10.001
 evidence:
 - reference: DOI:10.1016/j.mib.2003.10.001
-  notes: Setlow reviews spore germination, in which nutrient germinants trigger
-    dipicolinic-acid release and core rehydration to resume growth.
+  notes: Setlow reviews spore germination, in which nutrient germinants trigger dipicolinic-acid
+    release and core rehydration to resume growth.
 - reference: DOI:10.1038/nrmicro2504
-  notes: Lennon & Jones frame germination as resuscitation from the dormant
-    seed-bank state.
+  notes: Lennon & Jones frame germination as resuscitation from the dormant seed-bank
+    state.
 causal_graphs:
 - graph_id: spore_germination_germinant_trigger
   title: Germinant-triggered spore germination
@@ -40,6 +40,21 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009847
     description: Dipicolinic-acid release and core rehydration.
+  - node_id: cadpa_release
+    label: CaDPA release from spore core
+    node_type: BIOLOGICAL_PROCESS
+    description: SpoVA-mediated efflux of calcium dipicolinate (CaDPA) from the dormant
+      spore core during germination.
+  - node_id: cortex_hydrolysis
+    label: cortex peptidoglycan hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+    description: Degradation of the spore cortex peptidoglycan by germination-specific
+      lytic enzymes.
+  - node_id: core_rehydration_outgrowth
+    label: core rehydration and outgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Full expansion and rehydration of the spore core enabling resumption
+      of metabolism and initiation of outgrowth.
   edges:
   - subject: germinant
     predicate: causes
@@ -57,6 +72,43 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2504
       notes: Lennon & Jones frame germination as resuscitation from dormancy.
     predicate_id: RO:0002327
+  - subject: spore_germination_process
+    predicate: causes
+    object: cadpa_release
+    description: The germination process drives SpoVA-mediated release of calcium
+      dipicolinate from the spore core.
+    evidence:
+    - reference: DOI:10.1126/science.adg9829
+      notes: Ion release during germination drives expulsion of dipicolinic acid (CaDPA)
+        through the SpoVA transport complex.
+  - subject: cadpa_release
+    predicate: activates
+    object: cortex_hydrolysis
+    description: Released CaDPA acts as a signal activating germination-specific cortex-lytic
+      enzymes to begin cortex degradation.
+    evidence:
+    - reference: DOI:10.1128/mbio.02220-23
+      notes: Ca-DPA release acts as a signal for a germination-specific cortex-lytic
+        enzyme to begin cortex degradation.
+  - subject: cortex_hydrolysis
+    predicate: causes
+    object: core_rehydration_outgrowth
+    description: Once the cortex is hydrolyzed, the core can fully expand and rehydrate,
+      enabling outgrowth.
+    evidence:
+    - reference: DOI:10.1128/mbio.02220-23
+      notes: Once the cortex is hydrolyzed, the core can fully expand and rehydrate,
+        allowing full metabolic capabilities and initiation of outgrowth; broadly
+        supported across endospore formers.
+  - subject: core_rehydration_outgrowth
+    predicate: enables
+    object: spore_germination_trait
+    description: Core rehydration and outgrowth complete realization of the spore-germination
+      trait.
+    evidence:
+    - reference: DOI:10.1128/mbio.02220-23
+      notes: Core rehydration following cortex hydrolysis allows full metabolic capabilities
+        and initiation of outgrowth, completing germination.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -69,6 +121,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (germinant-triggered germination) with
-    GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report, extending the downstream germination cascade (CaDPA release -> cortex
+    hydrolysis -> core rehydration/outgrowth -> trait).
   llm_assisted: true

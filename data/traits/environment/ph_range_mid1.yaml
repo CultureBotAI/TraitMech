@@ -47,6 +47,33 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Minimal proton-extrusion and buffering activity needed to maintain
       near-neutral cytoplasmic pH at near-neutral external pH.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient (PMF) across the cytoplasmic membrane.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of near-neutral cytoplasmic pH (~7) across the external
+      pH range.
+  - node_id: cation_proton_antiporters
+    label: cation/proton antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Membrane antiporters (e.g. Na+/H+) whose repertoire sets external-pH
+      boundaries for maintaining cytoplasmic pH ~7.
+  - node_id: acid_challenge
+    label: acid challenge
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Exposure to acidic external pH below the neutrophilic optimum.
+  - node_id: respiratory_proton_pumping
+    label: respiratory proton-pumping complexes
+    node_type: GENE_OR_PROTEIN
+    description: Respiratory chain complexes that extrude protons, upregulated under
+      acid challenge.
+  - node_id: alkaline_challenge
+    label: alkaline challenge
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Exposure to alkaline external pH above the neutrophilic optimum.
   edges:
   - subject: baseline_ph_homeostasis
     predicate: enables
@@ -66,6 +93,58 @@ causal_graphs:
       snippet: external pH
       notes: Supports the pH 6–7 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: proton_motive_force
+    predicate: enables
+    object: cytoplasmic_ph_homeostasis
+    description: PMF (membrane potential) is required to maintain cytoplasmic pH homeostasis.
+    evidence:
+    - reference: DOI:10.1103/PRXLife.2.043015
+      notes: 'Terradot et al. 2024: decreasing the PMF''s strength impairs the cells''
+        ability to maintain pH.'
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: ph_range_mid1_trait
+    description: Maintaining near-neutral cytoplasmic pH supports the neutrophilic
+      pH 6-7 growth range.
+    evidence:
+    - reference: DOI:10.1103/PRXLife.2.043015
+      notes: Cytoplasmic pH held near neutral underlies the neutralophile growth range.
+  - subject: cation_proton_antiporters
+    predicate: determines
+    object: cytoplasmic_ph_homeostasis
+    description: Transporter repertoire (ClcA/NhaB/NhaA-like antiporters) sets the
+      external-pH boundaries over which cytoplasmic pH ~7 is maintained.
+    evidence:
+    - reference: DOI:10.1103/PRXLife.2.043015
+      notes: 'Terradot et al. 2024: ClcA-like ~pHe 2-5, NhaB-like ~5-9, NhaA-like
+        ~9-12 maintain pHi ~7.'
+  - subject: acid_challenge
+    predicate: positively regulates
+    object: respiratory_proton_pumping
+    description: Under acid challenge cells upregulate proton-pumping respiratory
+      complexes (and downregulate ATP synthase) to support pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: 'Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping
+        respiratory complexes and down-regulates ATP synthase.'
+  - subject: respiratory_proton_pumping
+    predicate: enables
+    object: baseline_ph_homeostasis
+    description: Proton-pumping respiratory activity contributes to baseline pH homeostasis
+      on the acidic side of the range.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: 'Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance
+        under acid challenge.'
+  - subject: alkaline_challenge
+    predicate: positively regulates
+    object: cation_proton_antiporters
+    description: Under alkaline challenge cells activate cation/proton antiporters
+      and F1Fo-ATP synthase proton-capture to support pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: 'Krulwich et al. 2011: under alkaline stress cells activate inward proton
+        transport via cation/proton antiporters and increase ATP synthase expression.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.830444+00:00'
   curator: seed_from_metpo
@@ -83,4 +162,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

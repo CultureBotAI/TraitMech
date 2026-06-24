@@ -107,6 +107,74 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>decreased temperature</strong>
+            <span class="edge-predicate">rigidifies</span>
+            <strong>membrane bilayer</strong>
+            
+            <p>Cooler conditions rigidify and thicken the membrane bilayer, triggering fluidity-restoring responses.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Core homeoviscous trigger: &#34;upon temperature decrease the membrane rigidifies and thickens.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>homeoviscous adaptation</strong>
+            <span class="edge-predicate">restores</span>
+            <strong>liquid-crystalline membrane state</strong>
+            
+            <p>Homeoviscous adaptation restores the fluid, liquid-crystalline membrane state across mesophilic temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">General process-level support: &#34;These changes are often referred to as homeoviscous adaptation.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>monounsaturated fatty acid incorporation</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Incorporation of cis-monounsaturated fatty acids increases membrane fluidity at lower temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">&#34;The most common adaptation is the incorporation of monounsaturated fatty acids (MUFA), preferably cis-unsaturated ones.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>molecular chaperone network</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>proteostasis</strong>
+            
+            <p>The chaperone network prevents and resolves aggregates, maintaining proteostasis during temperature shifts.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">General proteostasis module: &#34;DnaK-DnaJ, GroEL-GroES, HtpG, ClpB&#34; prevent/resolve aggregates.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -252,6 +320,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -611,7 +685,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking upper-mesophile membrane and enzyme adaptation to a temperature optimum between 30 and 34 \u00b0C.", "edges": [{"description": "Upper-mesophilic environments engage upper-mesophile adaptation.", "evidence": [{"notes": "Supports homoviscous adaptation at upper-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "upper_mesophilic_environment", "target": "upper_mesophile_adaptation"}, {"description": "Upper-mesophile adaptation yields a 30\u201334 \u00b0C optimum.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as the upper-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "upper_mesophile_adaptation", "target": "temperature_optimum_mid3_trait"}, {"description": "Temperature optimum mid3 is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_mid3_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Upper-mesophilic environments engage upper-mesophile adaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous adaptation at upper-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "engages", "predicate_id": null, "source": "upper-mesophilic environment", "target": "upper-mesophile adaptation"}, {"description": "Upper-mesophile adaptation yields a 30\u201334 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as the upper-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "upper-mesophile adaptation", "target": "temperature optimum mid3"}, {"description": "Temperature optimum mid3 is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum mid3", "target": "temperature optimum"}], "graph_id": "temperature_optimum_mid3_upper_mesophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum approximately 30\u201334 \u00b0C.", "grounding": "METPO:1000445", "id": "temperature_optimum_mid3_trait", "is_orphan": false, "label": "temperature optimum mid3", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane lipid composition and enzyme repertoire tuned for ambient temperatures near common animal host body temperatures.", "grounding": null, "id": "upper_mesophile_adaptation", "is_orphan": false, "label": "upper-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature in the 30\u201334 \u00b0C range.", "grounding": null, "id": "upper_mesophilic_environment", "is_orphan": false, "label": "upper-mesophilic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Temperature-optimum-mid3 upper-mesophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking upper-mesophile membrane and enzyme adaptation to a temperature optimum between 30 and 34 \u00b0C.", "edges": [{"description": "Upper-mesophilic environments engage upper-mesophile adaptation.", "evidence": [{"notes": "Supports homoviscous adaptation at upper-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "upper_mesophilic_environment", "target": "upper_mesophile_adaptation"}, {"description": "Upper-mesophile adaptation yields a 30\u201334 \u00b0C optimum.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as the upper-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "upper_mesophile_adaptation", "target": "temperature_optimum_mid3_trait"}, {"description": "Temperature optimum mid3 is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_mid3_trait", "target": "temperature_optimum"}, {"description": "Cooler conditions rigidify and thicken the membrane bilayer, triggering fluidity-restoring responses.", "evidence": [{"notes": "Core homeoviscous trigger: \"upon temperature decrease the membrane rigidifies and thickens.\"", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-4", "is_orphan": false, "predicate": "rigidifies", "predicate_id": null, "source": "decreased_temperature", "target": "membrane_bilayer"}, {"description": "Homeoviscous adaptation restores the fluid, liquid-crystalline membrane state across mesophilic temperatures.", "evidence": [{"notes": "General process-level support: \"These changes are often referred to as homeoviscous adaptation.\"", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-5", "is_orphan": false, "predicate": "restores", "predicate_id": null, "source": "homeoviscous_adaptation", "target": "liquid_crystalline_membrane_state"}, {"description": "Incorporation of cis-monounsaturated fatty acids increases membrane fluidity at lower temperatures.", "evidence": [{"notes": "\"The most common adaptation is the incorporation of monounsaturated fatty acids (MUFA), preferably cis-unsaturated ones.\"", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "mufa_incorporation", "target": "membrane_fluidity"}, {"description": "The chaperone network prevents and resolves aggregates, maintaining proteostasis during temperature shifts.", "evidence": [{"notes": "General proteostasis module: \"DnaK-DnaJ, GroEL-GroES, HtpG, ClpB\" prevent/resolve aggregates.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-7", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "chaperone_network", "target": "proteostasis"}], "evidence_rows": [{"description": "Upper-mesophilic environments engage upper-mesophile adaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous adaptation at upper-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "engages", "predicate_id": null, "source": "upper-mesophilic environment", "target": "upper-mesophile adaptation"}, {"description": "Upper-mesophile adaptation yields a 30\u201334 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as the upper-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "upper-mesophile adaptation", "target": "temperature optimum mid3"}, {"description": "Temperature optimum mid3 is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum mid3", "target": "temperature optimum"}, {"description": "Cooler conditions rigidify and thicken the membrane bilayer, triggering fluidity-restoring responses.", "edge_id": "edge-4", "evidence": [{"notes": "Core homeoviscous trigger: \"upon temperature decrease the membrane rigidifies and thickens.\"", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "rigidifies", "predicate_id": null, "source": "decreased temperature", "target": "membrane bilayer"}, {"description": "Homeoviscous adaptation restores the fluid, liquid-crystalline membrane state across mesophilic temperatures.", "edge_id": "edge-5", "evidence": [{"notes": "General process-level support: \"These changes are often referred to as homeoviscous adaptation.\"", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "restores", "predicate_id": null, "source": "homeoviscous adaptation", "target": "liquid-crystalline membrane state"}, {"description": "Incorporation of cis-monounsaturated fatty acids increases membrane fluidity at lower temperatures.", "edge_id": "edge-6", "evidence": [{"notes": "\"The most common adaptation is the incorporation of monounsaturated fatty acids (MUFA), preferably cis-unsaturated ones.\"", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "increases", "predicate_id": null, "source": "monounsaturated fatty acid incorporation", "target": "membrane fluidity"}, {"description": "The chaperone network prevents and resolves aggregates, maintaining proteostasis during temperature shifts.", "edge_id": "edge-7", "evidence": [{"notes": "General proteostasis module: \"DnaK-DnaJ, GroEL-GroES, HtpG, ClpB\" prevent/resolve aggregates.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "maintains", "predicate_id": null, "source": "molecular chaperone network", "target": "proteostasis"}], "graph_id": "temperature_optimum_mid3_upper_mesophile", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "DnaK/DnaJ, GroEL/GroES, ClpB, HtpG chaperone system.", "grounding": null, "id": "chaperone_network", "is_orphan": false, "label": "molecular chaperone network", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "A drop in ambient temperature toward the lower mesophilic range.", "grounding": null, "id": "decreased_temperature", "is_orphan": false, "label": "decreased temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Lipid remodeling that maintains membrane fluidity across temperatures.", "grounding": null, "id": "homeoviscous_adaptation", "is_orphan": false, "label": "homeoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Fluid, functional physical state of the membrane bilayer supporting growth.", "grounding": null, "id": "liquid_crystalline_membrane_state", "is_orphan": false, "label": "liquid-crystalline membrane state", "node_type": "STATE", "xrefs": []}, {"color": "#ede9fe", "description": "The lipid bilayer of the cell membrane whose physical state depends on temperature.", "grounding": null, "id": "membrane_bilayer", "is_orphan": false, "label": "membrane bilayer", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3f4f6", "description": "Degree of fluidity/disorder of the membrane lipid bilayer.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Incorporation of cis-monounsaturated fatty acids into membrane lipids.", "grounding": null, "id": "mufa_incorporation", "is_orphan": false, "label": "monounsaturated fatty acid incorporation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of protein folding homeostasis during temperature shifts.", "grounding": null, "id": "proteostasis", "is_orphan": false, "label": "proteostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum approximately 30\u201334 \u00b0C.", "grounding": "METPO:1000445", "id": "temperature_optimum_mid3_trait", "is_orphan": false, "label": "temperature optimum mid3", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane lipid composition and enzyme repertoire tuned for ambient temperatures near common animal host body temperatures.", "grounding": null, "id": "upper_mesophile_adaptation", "is_orphan": false, "label": "upper-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature in the 30\u201334 \u00b0C range.", "grounding": null, "id": "upper_mesophilic_environment", "is_orphan": false, "label": "upper-mesophilic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Temperature-optimum-mid3 upper-mesophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -622,7 +696,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

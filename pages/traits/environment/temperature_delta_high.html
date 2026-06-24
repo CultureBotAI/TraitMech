@@ -90,6 +90,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>decreased growth temperature</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>unsaturated fatty acid biosynthesis</strong>
+            
+            <p>Lower growth temperature increases incorporation of unsaturated fatty acids (homoviscous adaptation).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Bacteria remodel membrane fluidity via proportionally more unsaturated fatty acids as growth temperature decreases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>homoviscous adaptation</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>membrane fluidity homeostasis</strong>
+            
+            <p>Homoviscous adaptation maintains membrane fluidity/permeability homeostasis across thermal shifts.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Homoviscous adaptation disrupts lipid bilayer order and optimizes cellular processes at the new temperature.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>decreased membrane fluidity</strong>
+            <span class="edge-predicate">upregulates</span>
+            <strong>unsaturated fatty acid biosynthesis</strong>
+            
+            <p>Reduced membrane fluidity is sensed and upregulates unsaturated fatty acid biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Microbes sense decreased membrane fluidity and initiate responses that upregulate unsaturated fatty acid biosynthesis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>lipid desaturase activity</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Lipid desaturases introduce cis double bonds (~30 deg kink) creating packing defects that increase fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/cells12101353</code>
+                
+                <span class="meta">Organisms maintain membrane fluidity by activating lipid desaturases that introduce cis double bonds to increase packing defects and fluidity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>cis-trans isomerase activity</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane viscosity at higher temperature</strong>
+            
+            <p>Cis-trans isomerization of existing UFAs yields trans-UFAs resembling SFAs, raising membrane viscosity during warming.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/cells12101353</code>
+                
+                <span class="meta">Cis-trans isomerase converts UFAs; trans-UFAs resemble SFAs and raise membrane viscosity, compensating at higher temperature.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>increased short-/branched-/unsaturated fatty acids</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Shifts in acyl chain length/branching and unsaturation jointly increase membrane fluidity at lower temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/cells12101353</code>
+                
+                <span class="meta">Membrane composition adjustments (SCFA, BCFA, unsaturation, lysophospholipids) can increase membrane fluidity at lower temperatures.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>hyperthermophilic enzyme thermostability</strong>
+            <span class="edge-predicate">resists</span>
+            <strong>irreversible inactivation at high temperatures</strong>
+            
+            <p>Intrinsic enzyme thermostability resists irreversible inactivation, extending upper growth limits.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.65.1.1-43.2001</code>
+                
+                <span class="meta">Enzymes from hyperthermophiles are typically thermostable, i.e., resistant to irreversible inactivation at high temperatures.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +352,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (12 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +717,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking maximal thermal-adaptation flexibility to a temperature growth breadth above 30 \u00b0C.", "edges": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal_thermal_adaptation", "target": "temperature_delta_high_trait"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_high_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal thermal-adaptation flexibility", "target": "temperature delta high"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta high", "target": "temperature delta"}], "graph_id": "temperature_delta_high_eurythermal", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Combined membrane remodeling and protein-thermostability capacity supporting growth across an extreme temperature span.", "grounding": null, "id": "maximal_thermal_adaptation", "is_orphan": false, "label": "maximal thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth above ~30 \u00b0C.", "grounding": "METPO:1000487", "id": "temperature_delta_high_trait", "is_orphan": false, "label": "temperature delta high", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-high eurythermal breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking maximal thermal-adaptation flexibility to a temperature growth breadth above 30 \u00b0C.", "edges": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal_thermal_adaptation", "target": "temperature_delta_high_trait"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_high_trait", "target": "temperature_delta"}, {"description": "Lower growth temperature increases incorporation of unsaturated fatty acids (homoviscous adaptation).", "evidence": [{"notes": "Bacteria remodel membrane fluidity via proportionally more unsaturated fatty acids as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "decreased_growth_temperature", "target": "unsaturated_fatty_acid_biosynthesis"}, {"description": "Homoviscous adaptation maintains membrane fluidity/permeability homeostasis across thermal shifts.", "evidence": [{"notes": "Homoviscous adaptation disrupts lipid bilayer order and optimizes cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-4", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "homoviscous_adaptation", "target": "membrane_fluidity_homeostasis"}, {"description": "Reduced membrane fluidity is sensed and upregulates unsaturated fatty acid biosynthesis.", "evidence": [{"notes": "Microbes sense decreased membrane fluidity and initiate responses that upregulate unsaturated fatty acid biosynthesis.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-5", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "decreased_membrane_fluidity", "target": "unsaturated_fatty_acid_biosynthesis"}, {"description": "Lipid desaturases introduce cis double bonds (~30 deg kink) creating packing defects that increase fluidity.", "evidence": [{"notes": "Organisms maintain membrane fluidity by activating lipid desaturases that introduce cis double bonds to increase packing defects and fluidity.", "reference": "DOI:10.3390/cells12101353"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "lipid_desaturase_activity", "target": "membrane_fluidity"}, {"description": "Cis-trans isomerization of existing UFAs yields trans-UFAs resembling SFAs, raising membrane viscosity during warming.", "evidence": [{"notes": "Cis-trans isomerase converts UFAs; trans-UFAs resemble SFAs and raise membrane viscosity, compensating at higher temperature.", "reference": "DOI:10.3390/cells12101353"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "cis_trans_isomerase_activity", "target": "membrane_viscosity_high_temperature"}, {"description": "Shifts in acyl chain length/branching and unsaturation jointly increase membrane fluidity at lower temperatures.", "evidence": [{"notes": "Membrane composition adjustments (SCFA, BCFA, unsaturation, lysophospholipids) can increase membrane fluidity at lower temperatures.", "reference": "DOI:10.3390/cells12101353"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "increased_fatty_acid_diversity", "target": "membrane_fluidity"}, {"description": "Intrinsic enzyme thermostability resists irreversible inactivation, extending upper growth limits.", "evidence": [{"notes": "Enzymes from hyperthermophiles are typically thermostable, i.e., resistant to irreversible inactivation at high temperatures.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001"}], "id": "edge-9", "is_orphan": false, "predicate": "resists", "predicate_id": null, "source": "thermostable_enzyme", "target": "irreversible_protein_inactivation"}], "evidence_rows": [{"description": "Maximal thermal-adaptation flexibility yields an extreme temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports maximal thermal-adaptation as the basis of extreme eurythermal breadth.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "maximal thermal-adaptation flexibility", "target": "temperature delta high"}, {"description": "Temperature delta high is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e30 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta high", "target": "temperature delta"}, {"description": "Lower growth temperature increases incorporation of unsaturated fatty acids (homoviscous adaptation).", "edge_id": "edge-3", "evidence": [{"notes": "Bacteria remodel membrane fluidity via proportionally more unsaturated fatty acids as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": null, "source": "decreased growth temperature", "target": "unsaturated fatty acid biosynthesis"}, {"description": "Homoviscous adaptation maintains membrane fluidity/permeability homeostasis across thermal shifts.", "edge_id": "edge-4", "evidence": [{"notes": "Homoviscous adaptation disrupts lipid bilayer order and optimizes cellular processes at the new temperature.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "maintains", "predicate_id": null, "source": "homoviscous adaptation", "target": "membrane fluidity homeostasis"}, {"description": "Reduced membrane fluidity is sensed and upregulates unsaturated fatty acid biosynthesis.", "edge_id": "edge-5", "evidence": [{"notes": "Microbes sense decreased membrane fluidity and initiate responses that upregulate unsaturated fatty acid biosynthesis.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "upregulates", "predicate_id": null, "source": "decreased membrane fluidity", "target": "unsaturated fatty acid biosynthesis"}, {"description": "Lipid desaturases introduce cis double bonds (~30 deg kink) creating packing defects that increase fluidity.", "edge_id": "edge-6", "evidence": [{"notes": "Organisms maintain membrane fluidity by activating lipid desaturases that introduce cis double bonds to increase packing defects and fluidity.", "reference": "DOI:10.3390/cells12101353"}], "predicate": "increases", "predicate_id": null, "source": "lipid desaturase activity", "target": "membrane fluidity"}, {"description": "Cis-trans isomerization of existing UFAs yields trans-UFAs resembling SFAs, raising membrane viscosity during warming.", "edge_id": "edge-7", "evidence": [{"notes": "Cis-trans isomerase converts UFAs; trans-UFAs resemble SFAs and raise membrane viscosity, compensating at higher temperature.", "reference": "DOI:10.3390/cells12101353"}], "predicate": "increases", "predicate_id": null, "source": "cis-trans isomerase activity", "target": "membrane viscosity at higher temperature"}, {"description": "Shifts in acyl chain length/branching and unsaturation jointly increase membrane fluidity at lower temperatures.", "edge_id": "edge-8", "evidence": [{"notes": "Membrane composition adjustments (SCFA, BCFA, unsaturation, lysophospholipids) can increase membrane fluidity at lower temperatures.", "reference": "DOI:10.3390/cells12101353"}], "predicate": "increases", "predicate_id": null, "source": "increased short-/branched-/unsaturated fatty acids", "target": "membrane fluidity"}, {"description": "Intrinsic enzyme thermostability resists irreversible inactivation, extending upper growth limits.", "edge_id": "edge-9", "evidence": [{"notes": "Enzymes from hyperthermophiles are typically thermostable, i.e., resistant to irreversible inactivation at high temperatures.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001"}], "predicate": "resists", "predicate_id": null, "source": "hyperthermophilic enzyme thermostability", "target": "irreversible inactivation at high temperatures"}], "graph_id": "temperature_delta_high_eurythermal", "issues": [], "nodes": [{"color": "#cffafe", "description": "Isomerization of existing unsaturated fatty acids to trans configuration.", "grounding": null, "id": "cis_trans_isomerase_activity", "is_orphan": false, "label": "cis-trans isomerase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dcfce7", "description": "A decrease in ambient growth temperature.", "grounding": null, "id": "decreased_growth_temperature", "is_orphan": false, "label": "decreased growth temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced membrane fluidity sensed as a signal upon cooling.", "grounding": null, "id": "decreased_membrane_fluidity", "is_orphan": false, "label": "decreased membrane fluidity", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Temperature-driven remodeling of membrane lipid composition to maintain bilayer order.", "grounding": null, "id": "homoviscous_adaptation", "is_orphan": false, "label": "homoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Shifts toward short-chain, branched-chain and unsaturated fatty acids in the membrane.", "grounding": null, "id": "increased_fatty_acid_diversity", "is_orphan": false, "label": "increased short-/branched-/unsaturated fatty acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Irreversible loss of protein activity at high temperatures.", "grounding": null, "id": "irreversible_protein_inactivation", "is_orphan": false, "label": "irreversible inactivation at high temperatures", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Desaturase activity introducing cis double bonds into fatty acids.", "grounding": null, "id": "lipid_desaturase_activity", "is_orphan": false, "label": "lipid desaturase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#ecfccb", "description": "Combined membrane remodeling and protein-thermostability capacity supporting growth across an extreme temperature span.", "grounding": null, "id": "maximal_thermal_adaptation", "is_orphan": false, "label": "maximal thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the membrane lipid bilayer.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Maintenance of membrane fluidity and permeability across thermal shifts.", "grounding": null, "id": "membrane_fluidity_homeostasis", "is_orphan": false, "label": "membrane fluidity homeostasis", "node_type": "STATE", "xrefs": []}, {"color": "#f3f4f6", "description": "Increased membrane viscosity to counter excess fluidity during warming.", "grounding": null, "id": "membrane_viscosity_high_temperature", "is_orphan": false, "label": "membrane viscosity at higher temperature", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth above ~30 \u00b0C.", "grounding": "METPO:1000487", "id": "temperature_delta_high_trait", "is_orphan": false, "label": "temperature delta high", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Intrinsic thermostability of enzymes from hyperthermophiles.", "grounding": null, "id": "thermostable_enzyme", "is_orphan": false, "label": "hyperthermophilic enzyme thermostability", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis of unsaturated fatty acids for membrane remodeling.", "grounding": null, "id": "unsaturated_fatty_acid_biosynthesis", "is_orphan": false, "label": "unsaturated fatty acid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-delta-high eurythermal breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +728,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

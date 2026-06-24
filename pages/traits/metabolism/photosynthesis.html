@@ -90,6 +90,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>light energy</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>light harvesting / excitation transfer</strong>
+            
+            <p>Light energy drives pigment absorption and excitation transfer to reaction-center antennae.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14519</code>
+                
+                <span class="meta">Chlorophyll/antenna pigments absorb and transfer light energy to the photosystems (light harvesting).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>light harvesting / excitation transfer</strong>
+            <span class="edge-predicate">initiates</span>
+            <strong>reaction-center charge separation</strong>
+            
+            <p>Transferred excitation energy drives primary charge separation at the reaction-center special pair.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14030311</code>
+                
+                <span class="meta">Light-driven charge separation in reaction-center photosystems initiates downstream electron flow (generic to Type I/II RCs).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>reaction-center charge separation</strong>
+            <span class="edge-predicate">powers</span>
+            <strong>photosynthetic electron transport</strong>
+            
+            <p>Reaction-center charge separation drives photosynthetic electron transport (linear or cyclic).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14030311</code>
+                
+                <span class="meta">Light-driven charge separation powers electron transfer pathways; generalization for reaction-center photosystems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>photosynthetic electron transport</strong>
+            <span class="edge-predicate">generates</span>
+            <strong>transmembrane electrochemical proton gradient</strong>
+            
+            <p>Photosynthetic electron transport establishes a transmembrane electrochemical proton gradient.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14030311</code>
+                
+                <span class="meta">Electron transfer creates a transmembrane electrochemical proton gradient (energy-conservation edge).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>transmembrane electrochemical proton gradient</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>ATP synthesis</strong>
+            
+            <p>The proton motive force is used to drive chemiosmotic ATP synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14030311</code>
+                
+                <span class="meta">The electrochemical proton gradient drives ATP synthesis; canonical bioenergetic edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>photosynthesis</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>reducing power (NAD(P)H)</strong>
+            
+            <p>Light-dependent reactions generate ATP and NAD(P)H reducing power.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.5287/ora-8jgz2nrvd</code>
+                
+                <span class="meta">Light-dependent reactions generate ATP and NAD(P)H; broad linkage across chlorophyll-based photosynthetic systems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>reducing power (NAD(P)H)</strong>
+            <span class="edge-predicate">used in</span>
+            <strong>carbon fixation</strong>
+            
+            <p>NADPH reducing power supplies electrons for autotrophic CO2 fixation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14519</code>
+                
+                <span class="meta">NADPH from the light reactions is used in biosynthesis, including carbon fixation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -229,6 +348,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (reaction-center photosynthesis / CO2 fixation) with GO node groundings and RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -588,7 +713,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking chlorophyll-based reaction centers to electron flow that powers CO2 fixation.", "edges": [{"description": "Reaction-center photochemistry underlies the photosynthetic trait.", "evidence": [{"notes": "Bryant \u0026 Frigaard treat reaction-center photosynthesis as encompassing both oxygenic and anoxygenic forms.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthesis_process", "target": "photosynthesis_trait"}, {"description": "Photosynthetic electron flow powers autotrophic CO2 fixation.", "evidence": [{"notes": "Fischer et al. frame reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosynthesis_trait", "target": "carbon_fixation"}], "evidence_rows": [{"description": "Reaction-center photochemistry underlies the photosynthetic trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard treat reaction-center photosynthesis as encompassing both oxygenic and anoxygenic forms.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthesis", "target": "photosynthesis"}, {"description": "Photosynthetic electron flow powers autotrophic CO2 fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. frame reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosynthesis", "target": "carbon fixation"}], "graph_id": "photosynthesis_chlorophyll_reaction_center", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Assimilation of inorganic CO2 into organic carbon.", "grounding": "GO:0015977", "id": "carbon_fixation", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of light energy to chemical energy via reaction centers.", "grounding": "GO:0015979", "id": "photosynthesis_process", "is_orphan": false, "label": "photosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Chlorophyll/bacteriochlorophyll-based reaction-center metabolism.", "grounding": "traitmech:000038", "id": "photosynthesis_trait", "is_orphan": false, "label": "photosynthesis", "node_type": "TRAIT", "xrefs": []}], "title": "Chlorophyll-based photosynthesis drives electron flow and CO2 fixation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking chlorophyll-based reaction centers to electron flow that powers CO2 fixation.", "edges": [{"description": "Reaction-center photochemistry underlies the photosynthetic trait.", "evidence": [{"notes": "Bryant \u0026 Frigaard treat reaction-center photosynthesis as encompassing both oxygenic and anoxygenic forms.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthesis_process", "target": "photosynthesis_trait"}, {"description": "Photosynthetic electron flow powers autotrophic CO2 fixation.", "evidence": [{"notes": "Fischer et al. frame reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosynthesis_trait", "target": "carbon_fixation"}, {"description": "Light energy drives pigment absorption and excitation transfer to reaction-center antennae.", "evidence": [{"notes": "Chlorophyll/antenna pigments absorb and transfer light energy to the photosystems (light harvesting).", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "light_energy", "target": "light_harvesting"}, {"description": "Transferred excitation energy drives primary charge separation at the reaction-center special pair.", "evidence": [{"notes": "Light-driven charge separation in reaction-center photosystems initiates downstream electron flow (generic to Type I/II RCs).", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-4", "is_orphan": false, "predicate": "initiates", "predicate_id": null, "source": "light_harvesting", "target": "charge_separation"}, {"description": "Reaction-center charge separation drives photosynthetic electron transport (linear or cyclic).", "evidence": [{"notes": "Light-driven charge separation powers electron transfer pathways; generalization for reaction-center photosystems.", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-5", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "charge_separation", "target": "electron_transport"}, {"description": "Photosynthetic electron transport establishes a transmembrane electrochemical proton gradient.", "evidence": [{"notes": "Electron transfer creates a transmembrane electrochemical proton gradient (energy-conservation edge).", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-6", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "electron_transport", "target": "proton_gradient"}, {"description": "The proton motive force is used to drive chemiosmotic ATP synthesis.", "evidence": [{"notes": "The electrochemical proton gradient drives ATP synthesis; canonical bioenergetic edge.", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-7", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_gradient", "target": "atp_synthesis"}, {"description": "Light-dependent reactions generate ATP and NAD(P)H reducing power.", "evidence": [{"notes": "Light-dependent reactions generate ATP and NAD(P)H; broad linkage across chlorophyll-based photosynthetic systems.", "reference": "DOI:10.5287/ora-8jgz2nrvd"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "photosynthesis_process", "target": "reducing_power"}, {"description": "NADPH reducing power supplies electrons for autotrophic CO2 fixation.", "evidence": [{"notes": "NADPH from the light reactions is used in biosynthesis, including carbon fixation.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-9", "is_orphan": false, "predicate": "used in", "predicate_id": null, "source": "reducing_power", "target": "carbon_fixation"}], "evidence_rows": [{"description": "Reaction-center photochemistry underlies the photosynthetic trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard treat reaction-center photosynthesis as encompassing both oxygenic and anoxygenic forms.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthesis", "target": "photosynthesis"}, {"description": "Photosynthetic electron flow powers autotrophic CO2 fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. frame reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosynthesis", "target": "carbon fixation"}, {"description": "Light energy drives pigment absorption and excitation transfer to reaction-center antennae.", "edge_id": "edge-3", "evidence": [{"notes": "Chlorophyll/antenna pigments absorb and transfer light energy to the photosystems (light harvesting).", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "enables", "predicate_id": null, "source": "light energy", "target": "light harvesting / excitation transfer"}, {"description": "Transferred excitation energy drives primary charge separation at the reaction-center special pair.", "edge_id": "edge-4", "evidence": [{"notes": "Light-driven charge separation in reaction-center photosystems initiates downstream electron flow (generic to Type I/II RCs).", "reference": "DOI:10.3390/biom14030311"}], "predicate": "initiates", "predicate_id": null, "source": "light harvesting / excitation transfer", "target": "reaction-center charge separation"}, {"description": "Reaction-center charge separation drives photosynthetic electron transport (linear or cyclic).", "edge_id": "edge-5", "evidence": [{"notes": "Light-driven charge separation powers electron transfer pathways; generalization for reaction-center photosystems.", "reference": "DOI:10.3390/biom14030311"}], "predicate": "powers", "predicate_id": null, "source": "reaction-center charge separation", "target": "photosynthetic electron transport"}, {"description": "Photosynthetic electron transport establishes a transmembrane electrochemical proton gradient.", "edge_id": "edge-6", "evidence": [{"notes": "Electron transfer creates a transmembrane electrochemical proton gradient (energy-conservation edge).", "reference": "DOI:10.3390/biom14030311"}], "predicate": "generates", "predicate_id": null, "source": "photosynthetic electron transport", "target": "transmembrane electrochemical proton gradient"}, {"description": "The proton motive force is used to drive chemiosmotic ATP synthesis.", "edge_id": "edge-7", "evidence": [{"notes": "The electrochemical proton gradient drives ATP synthesis; canonical bioenergetic edge.", "reference": "DOI:10.3390/biom14030311"}], "predicate": "drives", "predicate_id": null, "source": "transmembrane electrochemical proton gradient", "target": "ATP synthesis"}, {"description": "Light-dependent reactions generate ATP and NAD(P)H reducing power.", "edge_id": "edge-8", "evidence": [{"notes": "Light-dependent reactions generate ATP and NAD(P)H; broad linkage across chlorophyll-based photosynthetic systems.", "reference": "DOI:10.5287/ora-8jgz2nrvd"}], "predicate": "produces", "predicate_id": null, "source": "photosynthesis", "target": "reducing power (NAD(P)H)"}, {"description": "NADPH reducing power supplies electrons for autotrophic CO2 fixation.", "edge_id": "edge-9", "evidence": [{"notes": "NADPH from the light reactions is used in biosynthesis, including carbon fixation.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "used in", "predicate_id": null, "source": "reducing power (NAD(P)H)", "target": "carbon fixation"}], "graph_id": "photosynthesis_chlorophyll_reaction_center", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Chemiosmotic ATP generation coupled to the proton motive force.", "grounding": null, "id": "atp_synthesis", "is_orphan": false, "label": "ATP synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Assimilation of inorganic CO2 into organic carbon.", "grounding": "GO:0015977", "id": "carbon_fixation", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Light-driven primary charge separation in chlorophyll/bacteriochlorophyll reaction centers.", "grounding": null, "id": "charge_separation", "is_orphan": false, "label": "reaction-center charge separation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Light-driven electron flow through the photosynthetic electron transport chain (linear or cyclic).", "grounding": null, "id": "electron_transport", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Photon energy absorbed and channeled by photosynthetic pigments.", "grounding": null, "id": "light_energy", "is_orphan": false, "label": "light energy", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Absorption and transfer of excitation energy by antenna pigments to reaction centers.", "grounding": null, "id": "light_harvesting", "is_orphan": false, "label": "light harvesting / excitation transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of light energy to chemical energy via reaction centers.", "grounding": "GO:0015979", "id": "photosynthesis_process", "is_orphan": false, "label": "photosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Chlorophyll/bacteriochlorophyll-based reaction-center metabolism.", "grounding": "traitmech:000038", "id": "photosynthesis_trait", "is_orphan": false, "label": "photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Proton motive force generated across the membrane by photosynthetic electron transport.", "grounding": null, "id": "proton_gradient", "is_orphan": false, "label": "transmembrane electrochemical proton gradient", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "NADPH/NAD(P)H reducing equivalents produced by the light reactions.", "grounding": null, "id": "reducing_power", "is_orphan": false, "label": "reducing power (NAD(P)H)", "node_type": "CHEMICAL", "xrefs": []}], "title": "Chlorophyll-based photosynthesis drives electron flow and CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -599,7 +724,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

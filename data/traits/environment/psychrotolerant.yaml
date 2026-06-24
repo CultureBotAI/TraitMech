@@ -48,6 +48,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cold-shock-protein induction supporting transient low-temperature
       acclimation.
+  - node_id: membrane_rigidification
+    label: membrane rigidification and thickening
+    node_type: QUALITY
+    description: Cold-induced increase in membrane order and bilayer thickness approaching
+      a gel-phase transition.
+  - node_id: unsaturated_hopanoids
+    label: unsaturated hopanoids
+    node_type: CHEMICAL
+    description: Hopanoid lipids whose unsaturation rises at low temperature, aiding
+      membrane homeostasis.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of compatible solutes that stabilize proteins and membranes
+      under cold stress.
+  - node_id: protein_membrane_stability
+    label: protein and membrane stability under cold stress
+    node_type: QUALITY
+    description: Maintained integrity of proteins and membranes during low-temperature
+      stress.
+  - node_id: extracellular_polymeric_substances
+    label: extracellular polymeric substances (EPS)
+    node_type: CHEMICAL
+    description: Secreted polymeric matrix surrounding cells that acts as a cryoprotectant.
+  - node_id: freeze_thaw_cryoprotection
+    label: cryoprotection against freeze-thaw cycles
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection of cells from damage during freeze-thaw cycling.
+  - node_id: growth_at_4c
+    label: growth at 4 degrees C
+    node_type: CAPACITY
+    description: Ability to grow at refrigeration-range low temperature (4 C).
   edges:
   - subject: low_temperature
     predicate: decreases
@@ -90,6 +122,51 @@ causal_graphs:
       snippet: Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium
       notes: Supports the trait endpoint in a representative organism.
     predicate_id: METPO:2007400
+  - subject: low_temperature
+    predicate: causes
+    object: membrane_rigidification
+    description: A low-temperature shift causes membrane rigidification and thickening
+      toward a gel-phase transition.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Cold shock causes membrane rigidification and concomitant thickening,
+        potentially culminating in a gel-phase transition.
+  - subject: low_temperature
+    predicate: increases
+    object: unsaturated_hopanoids
+    description: Decreasing growth temperature increases the unsaturated hopanoid
+      fraction as a compositional cold adaptation.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: As the growth temperature decreased from 20 to 4 C, the total percent
+        of unsaturated hopanoids increased from 27 to 49%.
+  - subject: compatible_solute_accumulation
+    predicate: protects
+    object: protein_membrane_stability
+    description: Compatible solute accumulation stabilizes proteins and membranes
+      during low-temperature stress.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Compatible solutes depress freezing point, stabilize proteins and membranes,
+        scavenge radicals, and act as cryoprotectants.
+  - subject: extracellular_polymeric_substances
+    predicate: provides
+    object: freeze_thaw_cryoprotection
+    description: EPS surrounding cells provide cryoprotection against freeze-thaw
+      cycles.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: EPS surrounding cells play a critical role in cold adaptation by providing
+        protection against freeze-thaw cycles and acting as cryoprotectants.
+  - subject: psychrotolerant_trait
+    predicate: has capability
+    object: growth_at_4c
+    description: The psychrotolerant trait entails the capacity to grow at low temperatures
+      such as 4 C while retaining higher optimal temperatures.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Psychrotolerant/psychrotroph microbes can grow at 4 C and have optimal
+        growth temperatures above 20 C.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.859611+00:00'
   curator: seed_from_metpo
@@ -172,4 +249,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -64,6 +64,25 @@ causal_graphs:
     label: slow growth
     node_type: BIOLOGICAL_PROCESS
     description: Low maximum growth response in chronic nutrient limitation.
+  - node_id: high_affinity_sbp
+    label: high-affinity solute-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: Solute-binding proteins with picomolar-nanomolar affinity feeding
+      ABC/TRAP/TTT transporters.
+  - node_id: substrate_uptake_low_conc
+    label: substrate uptake at low concentration
+    node_type: BIOLOGICAL_PROCESS
+    description: Uptake of dissolved substrates at picomolar-nanomolar environmental
+      concentrations.
+  - node_id: reduced_metabolic_redundancy
+    label: reduced metabolic redundancy
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of non-essential genes and metabolic redundancy under streamlining.
+  - node_id: small_cell_volume
+    label: small cell volume
+    node_type: QUALITY
+    description: Very small cell volume (~0.1 um3) characteristic of oligotrophic
+      cells.
   edges:
   - subject: low_nutrient_environment
     predicate: selects for
@@ -119,6 +138,50 @@ causal_graphs:
       snippet: molecular mechanisms of adaptation
       notes: Supports genomic mechanisms underlying oligotrophic adaptation.
     predicate_id: RO:0002327
+  - subject: low_nutrient_environment
+    predicate: selects for
+    object: streamlined_genome
+    description: Low nutrient availability is a strong selective force driving genome
+      streamlining and low GC content.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-36988-x
+      notes: Nutrient limitation is considered a strong selective force causing genome
+        streamlining in the warm oligotrophic epipelagic ocean (Ngugi et al. 2023).
+  - subject: low_nutrient_environment
+    predicate: favors
+    object: high_affinity_sbp
+    description: Oligotrophic conditions favor reliance on extremely high-affinity
+      solute-binding proteins.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07924-w
+      notes: Marine bacteria rely heavily on solute-binding proteins with extremely
+        high (picomolar-low nanomolar) binding affinity (Clifton et al. 2024).
+  - subject: high_affinity_sbp
+    predicate: increases
+    object: substrate_uptake_low_conc
+    description: High-affinity SBPs increase substrate uptake at picomolar-nanomolar
+      concentrations matching ambient levels.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07924-w
+      notes: SBP affinities match observed environmental substrate concentrations
+        (picomolar-low nanomolar), enabling uptake at ambient levels (Clifton et al.
+        2024).
+  - subject: streamlined_genome
+    predicate: reduces
+    object: reduced_metabolic_redundancy
+    description: Genome streamlining removes non-essential genes and metabolic redundancy.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07924-w
+      notes: Oligotrophic adaptation includes extreme genome streamlining with removal
+        of non-essential genes (Clifton et al. 2024).
+  - subject: oligotrophic_trait
+    predicate: associated with
+    object: small_cell_volume
+    description: Oligotrophs have very small cell volumes (~0.1 um3) as a recurrent
+      hallmark.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-48591-9
+      notes: Oligotrophs have very small cell volumes (~0.1 um3) (Zhu & Dai 2024).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.878135+00:00'
   curator: seed_from_metpo
@@ -154,4 +217,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

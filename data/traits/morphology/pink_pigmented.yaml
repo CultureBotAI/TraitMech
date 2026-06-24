@@ -48,6 +48,24 @@ causal_graphs:
     label: visible pink color
     node_type: MOLECULAR_FUNCTION
     description: Observed pink colony or cell color.
+  - node_id: lycopene
+    label: lycopene
+    node_type: CHEMICAL
+    description: Central acyclic carotenoid precursor of colored downstream carotenoids.
+  - node_id: photosynthesis_gene_cluster
+    label: photosynthesis gene cluster
+    node_type: GENE_OR_PROTEIN
+    description: Genomic module that co-localizes crt carotenoid genes with photosynthesis
+      genes in phototrophs.
+  - node_id: oxygen
+    label: oxygen
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environmental oxygen level regulating carotenoid biosynthetic gene
+      expression.
+  - node_id: crt_operon
+    label: crtI-crtB operon
+    node_type: GENE_OR_PROTEIN
+    description: Carotenoid biosynthetic operon encoding phytoene synthase and desaturase.
   edges:
   - subject: isoprenoid_precursors
     predicate: feed into
@@ -94,6 +112,60 @@ causal_graphs:
       snippet: pink ... pigmentation in bacteria
       notes: Supports trait-level pink pigmentation from bacterial carotenoids.
     predicate_id: METPO:2007400
+  - subject: lycopene
+    predicate: precursor of
+    object: pink_carotenoids
+    description: Lycopene is the central precursor converted into colored downstream
+      carotenoid pigments.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: 'Sandmann review: lycopene is the central carotenoid intermediate from
+        which colored carotenoid pigments are formed via crt pathway reactions.'
+  - subject: carotenoid_biosynthesis
+    predicate: feeds from
+    object: lycopene
+    description: Carotenoid biosynthesis proceeds through lycopene toward colored
+      carotenoid products.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: crtI/phytoene desaturase generates lycopene as a committed colored-carotenoid
+        intermediate in the biosynthetic pathway.
+  - subject: crt_enzymes
+    predicate: part of
+    object: photosynthesis_gene_cluster
+    description: crt carotenoid genes are part of photosynthesis gene clusters in
+      phototrophic bacteria.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: '"the genes of the carotenoid pathways are part of photosynthesis gene
+        clusters" (Sandmann 2023).'
+  - subject: photosynthesis_gene_cluster
+    predicate: contributes to
+    object: visible_pink_color
+    description: Carotenoid genes embedded in photosynthesis gene clusters contribute
+      to visible pigmentation.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: '"The pigmentation of purple bacteria is caused by a combination of bacteriochlorophylls
+        and carotenoids" with crt genes in PGCs.'
+  - subject: oxygen
+    predicate: upregulates
+    object: crt_operon
+    description: Oxygen availability upregulates the carotenoid biosynthetic operon,
+      an environmental regulator of pigment output.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: '"oxygen up-regulates the crtI-crtB operon" (Sandmann 2023), making oxygen
+        a causal environmental regulator of pigmentation.'
+  - subject: crt_operon
+    predicate: catalyzes
+    object: carotenoid_biosynthesis
+    description: The crtI-crtB operon encodes enzymes carrying out carotenoid biosynthetic
+      reactions.
+    evidence:
+    - reference: DOI:10.3390/biology12101346
+      notes: crtB (phytoene synthase) and crtI (phytoene desaturase) catalyze committed
+        steps producing colored carotenoids.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.945783+00:00'
   curator: seed_from_metpo
@@ -129,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0016117×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

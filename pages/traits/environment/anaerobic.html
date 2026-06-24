@@ -124,6 +124,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>antioxidant enzymes (Sod/Cat/peroxidases)</strong>
+            <span class="edge-predicate">detoxifies</span>
+            <strong>reactive oxygen species</strong>
+            
+            <p>Superoxide dismutase, catalase, and peroxidases remove ROS in anaerobes exposed to oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s43705-023-00251-7</code>
+                
+                <span class="meta">organisms use anti-oxidative enzymes - superoxide dismutase (Sod), catalase (Cat), and peroxidases - to detoxify ROS.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>antioxidant enzymes (Sod/Cat/peroxidases)</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>ROS detoxification</strong>
+            
+            <p>Antioxidant enzyme activity carries out the detoxification of reactive oxygen species.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s43705-023-00251-7</code>
+                
+                <span class="meta">Anti-oxidative enzymes (Sod/Cat/peroxidases) detoxify ROS, mediating ROS detoxification.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ROS detoxification</strong>
+            <span class="edge-predicate">protects against</span>
+            <strong>reactive oxygen species</strong>
+            
+            <p>ROS detoxification limits oxidative damage from oxygen-derived oxidants in anaerobes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s43705-023-00251-7</code>
+                
+                <span class="meta">Detoxification system removes ROS produced when O2 is reduced, a broad protective mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>respiratory reductases</strong>
+            <span class="edge-predicate">enables utilization of</span>
+            <strong>alternative anaerobic electron acceptors</strong>
+            
+            <p>Respiratory reductases let microbes use non-O2 molecules as energy-generating electron acceptors.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01560-2</code>
+                
+                <span class="meta">Respiratory reductases enable microbes to utilize molecules present in anaerobic ecosystems as energy-generating respiratory electron acceptors.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>alternative anaerobic electron acceptors</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>anaerobic respiration</strong>
+            
+            <p>Availability of non-O2 electron acceptors supports anaerobic respiration in low-oxygen niches.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01560-2</code>
+                
+                <span class="meta">Molecules in anaerobic ecosystems serve as respiratory electron acceptors for anaerobic respiration.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>anaerobic respiration</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>anaerobic</strong>
+            
+            <p>Use of alternative terminal electron acceptors supports growth without molecular oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01560-2</code>
+                
+                <span class="meta">Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic respiration, enabling growth without O2.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -293,6 +395,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -652,7 +760,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking anaerobic growth to absence of molecular oxygen and oxygen-derived stress.", "edges": [{"description": "Anaerobic growth is favored in low-oxygen environments.", "evidence": [{"notes": "Review links anaerobe ecology to hypoxic environments.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic environments in which these organisms dwell"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic_condition", "target": "anaerobic_trait"}, {"description": "Oxygen exposure can block growth of anaerobic organisms.", "evidence": [{"notes": "Supports oxygen as an inhibitory factor for anaerobic growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-2", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "anaerobic_trait"}, {"description": "Oxygen exposure can lead to ROS-mediated stress in anaerobes.", "evidence": [{"notes": "Review describes oxygen and ROS as linked stressors for anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "generates stress via", "predicate_id": null, "source": "molecular_oxygen", "target": "reactive_oxygen_species"}, {"description": "ROS can disrupt oxygen-sensitive radical or metal-center catalysis used in anaerobic metabolism.", "evidence": [{"notes": "Supports ROS-sensitive catalytic sites as mechanistic vulnerability.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "vulnerable to direct poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "oxygen_sensitive_catalytic_sites"}], "evidence_rows": [{"description": "Anaerobic growth is favored in low-oxygen environments.", "edge_id": "edge-1", "evidence": [{"notes": "Review links anaerobe ecology to hypoxic environments.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic environments in which these organisms dwell"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic or hypoxic condition", "target": "anaerobic"}, {"description": "Oxygen exposure can block growth of anaerobic organisms.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as an inhibitory factor for anaerobic growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "target": "anaerobic"}, {"description": "Oxygen exposure can lead to ROS-mediated stress in anaerobes.", "edge_id": "edge-3", "evidence": [{"notes": "Review describes oxygen and ROS as linked stressors for anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "predicate": "generates stress via", "predicate_id": null, "source": "molecular oxygen", "target": "reactive oxygen species"}, {"description": "ROS can disrupt oxygen-sensitive radical or metal-center catalysis used in anaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ROS-sensitive catalytic sites as mechanistic vulnerability.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "vulnerable to direct poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "target": "oxygen-sensitive catalytic sites"}], "graph_id": "anaerobic_trait_oxygen_exclusion", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Growth occurs without molecular oxygen.", "grounding": "METPO:1000603", "id": "anaerobic_trait", "is_orphan": false, "label": "anaerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen environment that permits anaerobic growth.", "grounding": null, "id": "anoxic_condition", "is_orphan": false, "label": "anoxic or hypoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen whose presence can block anaerobic growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Radical chemistry and low-potential metal centers vulnerable to oxygen or ROS.", "grounding": null, "id": "oxygen_sensitive_catalytic_sites", "is_orphan": false, "label": "oxygen-sensitive catalytic sites", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants such as superoxide and hydrogen peroxide.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "xrefs": []}], "title": "Anaerobic growth oxygen-exclusion mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking anaerobic growth to absence of molecular oxygen and oxygen-derived stress.", "edges": [{"description": "Anaerobic growth is favored in low-oxygen environments.", "evidence": [{"notes": "Review links anaerobe ecology to hypoxic environments.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic environments in which these organisms dwell"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic_condition", "target": "anaerobic_trait"}, {"description": "Oxygen exposure can block growth of anaerobic organisms.", "evidence": [{"notes": "Supports oxygen as an inhibitory factor for anaerobic growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-2", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "anaerobic_trait"}, {"description": "Oxygen exposure can lead to ROS-mediated stress in anaerobes.", "evidence": [{"notes": "Review describes oxygen and ROS as linked stressors for anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "generates stress via", "predicate_id": null, "source": "molecular_oxygen", "target": "reactive_oxygen_species"}, {"description": "ROS can disrupt oxygen-sensitive radical or metal-center catalysis used in anaerobic metabolism.", "evidence": [{"notes": "Supports ROS-sensitive catalytic sites as mechanistic vulnerability.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "vulnerable to direct poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "oxygen_sensitive_catalytic_sites"}, {"description": "Superoxide dismutase, catalase, and peroxidases remove ROS in anaerobes exposed to oxygen.", "evidence": [{"notes": "organisms use anti-oxidative enzymes - superoxide dismutase (Sod), catalase (Cat), and peroxidases - to detoxify ROS.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "id": "edge-5", "is_orphan": false, "predicate": "detoxifies", "predicate_id": null, "source": "antioxidant_enzymes", "target": "reactive_oxygen_species"}, {"description": "Antioxidant enzyme activity carries out the detoxification of reactive oxygen species.", "evidence": [{"notes": "Anti-oxidative enzymes (Sod/Cat/peroxidases) detoxify ROS, mediating ROS detoxification.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "antioxidant_enzymes", "target": "ros_detoxification"}, {"description": "ROS detoxification limits oxidative damage from oxygen-derived oxidants in anaerobes.", "evidence": [{"notes": "Detoxification system removes ROS produced when O2 is reduced, a broad protective mechanism.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "id": "edge-7", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "ros_detoxification", "target": "reactive_oxygen_species"}, {"description": "Respiratory reductases let microbes use non-O2 molecules as energy-generating electron acceptors.", "evidence": [{"notes": "Respiratory reductases enable microbes to utilize molecules present in anaerobic ecosystems as energy-generating respiratory electron acceptors.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "id": "edge-8", "is_orphan": false, "predicate": "enables utilization of", "predicate_id": null, "source": "respiratory_reductases", "target": "alternative_electron_acceptors"}, {"description": "Availability of non-O2 electron acceptors supports anaerobic respiration in low-oxygen niches.", "evidence": [{"notes": "Molecules in anaerobic ecosystems serve as respiratory electron acceptors for anaerobic respiration.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "alternative_electron_acceptors", "target": "anaerobic_respiration"}, {"description": "Use of alternative terminal electron acceptors supports growth without molecular oxygen.", "evidence": [{"notes": "Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic respiration, enabling growth without O2.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "anaerobic_respiration", "target": "anaerobic_trait"}], "evidence_rows": [{"description": "Anaerobic growth is favored in low-oxygen environments.", "edge_id": "edge-1", "evidence": [{"notes": "Review links anaerobe ecology to hypoxic environments.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic environments in which these organisms dwell"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic or hypoxic condition", "target": "anaerobic"}, {"description": "Oxygen exposure can block growth of anaerobic organisms.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as an inhibitory factor for anaerobic growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "target": "anaerobic"}, {"description": "Oxygen exposure can lead to ROS-mediated stress in anaerobes.", "edge_id": "edge-3", "evidence": [{"notes": "Review describes oxygen and ROS as linked stressors for anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "predicate": "generates stress via", "predicate_id": null, "source": "molecular oxygen", "target": "reactive oxygen species"}, {"description": "ROS can disrupt oxygen-sensitive radical or metal-center catalysis used in anaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ROS-sensitive catalytic sites as mechanistic vulnerability.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "vulnerable to direct poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "target": "oxygen-sensitive catalytic sites"}, {"description": "Superoxide dismutase, catalase, and peroxidases remove ROS in anaerobes exposed to oxygen.", "edge_id": "edge-5", "evidence": [{"notes": "organisms use anti-oxidative enzymes - superoxide dismutase (Sod), catalase (Cat), and peroxidases - to detoxify ROS.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "predicate": "detoxifies", "predicate_id": null, "source": "antioxidant enzymes (Sod/Cat/peroxidases)", "target": "reactive oxygen species"}, {"description": "Antioxidant enzyme activity carries out the detoxification of reactive oxygen species.", "edge_id": "edge-6", "evidence": [{"notes": "Anti-oxidative enzymes (Sod/Cat/peroxidases) detoxify ROS, mediating ROS detoxification.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "predicate": "enables", "predicate_id": null, "source": "antioxidant enzymes (Sod/Cat/peroxidases)", "target": "ROS detoxification"}, {"description": "ROS detoxification limits oxidative damage from oxygen-derived oxidants in anaerobes.", "edge_id": "edge-7", "evidence": [{"notes": "Detoxification system removes ROS produced when O2 is reduced, a broad protective mechanism.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "predicate": "protects against", "predicate_id": null, "source": "ROS detoxification", "target": "reactive oxygen species"}, {"description": "Respiratory reductases let microbes use non-O2 molecules as energy-generating electron acceptors.", "edge_id": "edge-8", "evidence": [{"notes": "Respiratory reductases enable microbes to utilize molecules present in anaerobic ecosystems as energy-generating respiratory electron acceptors.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "predicate": "enables utilization of", "predicate_id": null, "source": "respiratory reductases", "target": "alternative anaerobic electron acceptors"}, {"description": "Availability of non-O2 electron acceptors supports anaerobic respiration in low-oxygen niches.", "edge_id": "edge-9", "evidence": [{"notes": "Molecules in anaerobic ecosystems serve as respiratory electron acceptors for anaerobic respiration.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "predicate": "enables", "predicate_id": null, "source": "alternative anaerobic electron acceptors", "target": "anaerobic respiration"}, {"description": "Use of alternative terminal electron acceptors supports growth without molecular oxygen.", "edge_id": "edge-10", "evidence": [{"notes": "Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic respiration, enabling growth without O2.", "reference": "DOI:10.1038/s41564-023-01560-2"}], "predicate": "enables", "predicate_id": null, "source": "anaerobic respiration", "target": "anaerobic"}], "graph_id": "anaerobic_trait_oxygen_exclusion", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Non-O2 molecules present in anaerobic ecosystems used as terminal electron acceptors.", "grounding": null, "id": "alternative_electron_acceptors", "is_orphan": false, "label": "alternative anaerobic electron acceptors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Energy generation using terminal electron acceptors other than molecular oxygen.", "grounding": null, "id": "anaerobic_respiration", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth occurs without molecular oxygen.", "grounding": "METPO:1000603", "id": "anaerobic_trait", "is_orphan": false, "label": "anaerobic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen environment that permits anaerobic growth.", "grounding": null, "id": "anoxic_condition", "is_orphan": false, "label": "anoxic or hypoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Superoxide dismutase, catalase, and peroxidases that detoxify reactive oxygen species.", "grounding": null, "id": "antioxidant_enzymes", "is_orphan": false, "label": "antioxidant enzymes (Sod/Cat/peroxidases)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen whose presence can block anaerobic growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Radical chemistry and low-potential metal centers vulnerable to oxygen or ROS.", "grounding": null, "id": "oxygen_sensitive_catalytic_sites", "is_orphan": false, "label": "oxygen-sensitive catalytic sites", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants such as superoxide and hydrogen peroxide.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal reductases that allow use of non-oxygen molecules as respiratory electron acceptors.", "grounding": null, "id": "respiratory_reductases", "is_orphan": false, "label": "respiratory reductases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic removal of reactive oxygen species to limit oxidative damage.", "grounding": null, "id": "ros_detoxification", "is_orphan": false, "label": "ROS detoxification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Anaerobic growth oxygen-exclusion mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -663,7 +771,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

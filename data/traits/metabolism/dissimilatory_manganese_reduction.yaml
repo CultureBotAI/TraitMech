@@ -40,6 +40,22 @@ causal_graphs:
     node_type: CHEMICAL
     description: Soluble Mn(II) released after reduction.
     grounding: CHEBI:29035
+  - node_id: organic_matter
+    label: organic matter
+    node_type: CHEMICAL
+    description: Organic carbon electron donor oxidized during Mn(IV) respiration.
+  - node_id: hydrogen
+    label: dihydrogen
+    node_type: CHEMICAL
+    description: H2 used as electron donor for dissimilatory manganese reduction.
+  - node_id: anoxia
+    label: anoxic conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Absence of oxygen permitting anaerobic Mn(IV) respiration.
+  - node_id: methane_oxidation
+    label: anaerobic methane oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Anaerobic oxidation of methane (AOM) coupled to metal-oxide reduction.
   edges:
   - subject: mn_iv_oxide
     predicate: oxidized to
@@ -59,6 +75,38 @@ causal_graphs:
       notes: Nealson & Saffarini place Mn(IV) as a terminal electron acceptor in anaerobic
         respiration.
     predicate_id: RO:0002327
+  - subject: organic_matter
+    predicate: is oxidized coupled to
+    object: dmr_trait
+    description: Oxidation of organic matter is coupled to Mn(IV) reduction.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: 'Lovley: oxidation of organic matter coupled to reduction of Fe(III)
+        or Mn(IV); fatty acids and aromatics fully oxidized with Mn(IV) as sole acceptor.'
+  - subject: hydrogen
+    predicate: donates electrons to
+    object: dmr_trait
+    description: H2 serves as electron donor for dissimilatory manganese reduction.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: 'Lovley: organisms with Mn(IV) as sole electron acceptor can completely
+        oxidize hydrogen.'
+  - subject: anoxia
+    predicate: enables
+    object: dmr_trait
+    description: Anoxic conditions enable anaerobic Mn(IV) respiration.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Lovley frames Mn(IV) reduction as anaerobic respiration in aquatic sediments,
+        soils, and groundwater under anaerobic conditions.
+  - subject: methane_oxidation
+    predicate: is coupled to
+    object: dmr_trait
+    description: Anaerobic methane oxidation can be coupled to Mn reduction (Fe-Mn-AOM).
+    evidence:
+    - reference: DOI:10.5194/egusphere-2024-1829
+      notes: 'Sivan: AOM coupled with Fe-Mn reduction (Fe-Mn-AOM) is a globally important
+        biogeochemical process with MnO2-coupled AOM reactions.'
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -78,4 +126,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:29035×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

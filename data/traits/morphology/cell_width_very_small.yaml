@@ -42,6 +42,37 @@ causal_graphs:
     label: oligotrophic environment
     node_type: ENVIRONMENTAL_FACTOR
     description: Persistent low-nutrient setting that favors miniaturized cells.
+  - node_id: high_surface_to_volume_ratio
+    label: high surface-to-volume ratio
+    node_type: QUALITY
+    description: Elevated cell surface area relative to volume, characteristic of
+      small/narrow cells.
+  - node_id: nutrient_uptake_efficiency
+    label: nutrient uptake efficiency
+    node_type: CAPACITY
+    description: Efficiency of nutrient acquisition from the environment.
+  - node_id: small_cell_bacteria
+    label: small-cell bacteria
+    node_type: STATE
+    description: Bacteria with very small cell size, including narrow widths.
+  - node_id: oligotrophic_waters
+    label: oligotrophic waters
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-nutrient aquatic environments with low organic matter concentrations.
+  - node_id: reduced_genome_size
+    label: reduced genome size
+    node_type: QUALITY
+    description: Streamlined small genome characteristic of oligotrophic lineages.
+  - node_id: rod_complex
+    label: Rod complex
+    node_type: GENE_OR_PROTEIN
+    description: Elongasome directing organized circumferential peptidoglycan insertion
+      that constrains cell width.
+  - node_id: apbp_proteins
+    label: class A penicillin-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: aPBPs mediating isotropic peptidoglycan insertion that enlarges the
+      cell cylinder.
   edges:
   - subject: oligotrophic_environment
     predicate: regulates
@@ -71,6 +102,51 @@ causal_graphs:
       notes: Supports very narrow width as a value within the regulated cell-width
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: high_surface_to_volume_ratio
+    predicate: increases
+    object: nutrient_uptake_efficiency
+    description: High surface-to-volume ratio of narrow cells improves nutrient uptake
+      efficiency.
+    evidence:
+    - reference: DOI:10.31951/2658-3518-2024-a-4-795
+      notes: Thanks to their high surface-to-volume ratio, small-cell bacteria absorb
+        nutrients most efficiently.
+  - subject: small_cell_bacteria
+    predicate: adapted to
+    object: oligotrophic_waters
+    description: Small-cell bacteria with very narrow widths are adapted to oligotrophic
+      waters.
+    evidence:
+    - reference: DOI:10.31951/2658-3518-2024-a-4-795
+      notes: Especially important in oligotrophic water bodies with low organic matter
+        concentrations.
+  - subject: reduced_genome_size
+    predicate: associated with
+    object: streamlining_selection
+    description: Reduced genome size is associated with streamlining in oligotrophic
+      lineages.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00124-22
+      notes: Many microbial cell lineages in nature share with oligotrophs the property
+        of reduced genome size.
+  - subject: rod_complex
+    predicate: decreases
+    object: cell_width_trait
+    description: Rod-complex-mediated organized circumferential PG insertion reduces
+      cell width (rod-shaped bacteria).
+    evidence:
+    - reference: DOI:10.1128/msystems.01017-21
+      notes: Rod complex-mediated organized circumferential insertion of PG strands
+        reduces cell diameter; may generalize to rod-shaped bacteria.
+  - subject: apbp_proteins
+    predicate: increases
+    object: cell_width_trait
+    description: aPBP-mediated isotropic PG insertion enlarges the cell cylinder,
+      increasing width.
+    evidence:
+    - reference: DOI:10.1128/msystems.01017-21
+      notes: aPBP-mediated isotropic insertion enlarges the cell cylinder; defines
+        opposite regulation of width.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921226+00:00'
   curator: seed_from_metpo
@@ -100,4 +176,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

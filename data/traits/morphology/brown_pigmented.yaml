@@ -52,6 +52,26 @@ causal_graphs:
     label: visible brown color
     node_type: MOLECULAR_FUNCTION
     description: Observed brown colony or medium color.
+  - node_id: four_hydroxyphenylpyruvate
+    label: 4-hydroxyphenylpyruvate
+    node_type: CHEMICAL
+    description: Tyrosine catabolism intermediate converted to homogentisic acid by
+      HppD.
+  - node_id: hmgA
+    label: homogentisate 1,2-dioxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme (HmgA) that degrades homogentisic acid to maleylacetoacetate,
+      diverting flux away from pyomelanin.
+  - node_id: maleylacetoacetate
+    label: maleylacetoacetate
+    node_type: CHEMICAL
+    description: Product of homogentisic acid ring cleavage by HmgA in the tyrosine
+      catabolism pathway.
+  - node_id: benzoquinoneacetic_acid
+    label: benzoquinoneacetic acid
+    node_type: CHEMICAL
+    description: Auto-oxidation product of homogentisic acid that self-polymerizes
+      into pyomelanin.
   edges:
   - subject: tyrosine_catabolism
     predicate: produces
@@ -98,6 +118,47 @@ causal_graphs:
       notes: Supports brown microbial cell color as a melanin-related pigmentation
         phenotype.
     predicate_id: METPO:2007400
+  - subject: tyrosine_catabolism
+    predicate: produces
+    object: four_hydroxyphenylpyruvate
+    description: Tyrosine catabolism produces 4-hydroxyphenylpyruvate as an intermediate.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01517-5
+      notes: Tyrosine aminotransferases convert L-tyrosine into 4-hydroxyphenylpyruvate;
+        biochemically generalizable precursor step.
+  - subject: four_hydroxyphenylpyruvate
+    predicate: converted to
+    object: homogentisic_acid
+    description: HppD converts 4-hydroxyphenylpyruvate to homogentisic acid.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: hppD codes for a protein responsible for conversion of 4-hydroxyphenylpyruvate
+        to HGA.
+  - subject: hmgA
+    predicate: converts
+    object: maleylacetoacetate
+    description: HmgA converts homogentisic acid to maleylacetoacetate, the degradative
+      branch.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: Homogentisate 1,2-dioxygenase (hmgA) converts HGA to maleylacetoacetate;
+        core negative branch away from pigment formation.
+  - subject: homogentisic_acid
+    predicate: auto-oxidizes to
+    object: benzoquinoneacetic_acid
+    description: Excreted homogentisic acid spontaneously auto-oxidizes to benzoquinoneacetic
+      acid.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: HGA is excreted and spontaneously auto-oxidizes to form benzoquinoneacetic
+        acid.
+  - subject: benzoquinoneacetic_acid
+    predicate: polymerizes to
+    object: pyomelanin
+    description: Benzoquinoneacetic acid self-polymerizes to produce pyomelanin.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: Auto-oxidation followed by self-polymerization to produce pyomelanin.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.943677+00:00'
   curator: seed_from_metpo
@@ -145,4 +206,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006572×1, CHEBI:44747×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

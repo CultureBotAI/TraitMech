@@ -66,6 +66,40 @@ causal_graphs:
     label: proton-coupled ATP synthase
     node_type: GENE_OR_PROTEIN
     description: ATP synthase that remains proton-coupled in respiratory alkaliphiles.
+  - node_id: trkah_transport_system
+    label: TrkAH K+ uptake system
+    node_type: GENE_OR_PROTEIN
+    description: Potassium uptake system contributing to pH homeostasis and membrane
+      potential adjustment.
+  - node_id: cation_proton_antiporter
+    label: monovalent cation/proton antiporters
+    node_type: GENE_OR_PROTEIN
+    description: CPA/Mrp and Nha family antiporters regulating H+ influx and Na+ efflux
+      under stress.
+  - node_id: secondary_cell_wall_polymers
+    label: secondary cell wall polymers / S-layer
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell-surface polymers and S-layer proteins developed by alkaliphilic
+      microbes.
+  - node_id: net_negative_surface_charge
+    label: net negative surface charge
+    node_type: QUALITY
+    description: Increased negative charge on cellular surfaces that attracts external
+      protons.
+  - node_id: anionic_membrane_phospholipids
+    label: anionic membrane phospholipids (PG/PC/CL)
+    node_type: CHEMICAL
+    description: Phosphatidylglycerol, phosphatidylcholine, and cardiolipin enriched
+      under high pH.
+  - node_id: acetate_anion
+    label: acetate anion
+    node_type: CHEMICAL
+    description: Dissociated form of acetic acid favored at high pH.
+  - node_id: acetate_transmembrane_diffusion
+    label: transmembrane diffusion of acetate
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive diffusion of protonated acetic acid across the membrane,
+      prevented at high pH.
   edges:
   - subject: alkaline_external_ph
     predicate: is required for
@@ -124,6 +158,68 @@ causal_graphs:
       snippet: pH homeostasis ... appears to set the upper pH limit for growth
       notes: Supports pH homeostasis as growth-limiting for alkaliphilic Bacillus.
     predicate_id: RO:0002327
+  - subject: trkah_transport_system
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: TrkAH K+ uptake supports cytoplasmic pH homeostasis under alkaline
+      conditions.
+    evidence:
+    - reference: DOI:10.1128/AEM.00145-24
+      notes: The TrkAH transport system is responsible for the uptake of K+ ... and
+        maintaining pH homeostasis.
+  - subject: cation_proton_antiporter
+    predicate: is required for
+    object: obligately_alkaphilic_trait
+    description: Monovalent cation/proton antiporters are essential for growth of
+      alkaliphilic bacteria under stress.
+    evidence:
+    - reference: DOI:10.1128/AEM.00145-24
+      notes: Monovalent cation/proton antiporters ... are essential for the growth
+        of various halophilic and alkaliphilic bacteria under stress conditions.
+  - subject: secondary_cell_wall_polymers
+    predicate: increases
+    object: net_negative_surface_charge
+    description: Secondary cell wall polymers and S-layer proteins enhance net negative
+      surface charge.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034164
+      notes: the second cell wall polymers (SCWPs), such as S-layer protein ... enhance
+        net negative charges on cellular surfaces.
+  - subject: net_negative_surface_charge
+    predicate: increases attraction to
+    object: proton
+    description: Net negative surface charge increases attraction of external protons
+      toward the cell surface.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034164
+      notes: net negative charges on cellular surfaces that increase attraction to
+        external protons.
+  - subject: alkaline_external_ph
+    predicate: increases abundance of
+    object: anionic_membrane_phospholipids
+    description: High external pH increases relative abundance of PG, PC, and cardiolipin
+      (membrane remodeling).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034164
+      notes: It increased the relative abundance of phosphatidylglycerol (PG), phosphatidylcholine
+        (PC), and cardiolipin (CL) in response to high pH.
+  - subject: alkaline_external_ph
+    predicate: causes
+    object: acetate_anion
+    description: Alkaline conditions (>pH 9) favor dissociation of acetic acid to
+      the acetate anion.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1233691
+      notes: High pH favors the dissociation of acetic acid to its anion (CH3COO-),
+        preventing transmembrane diffusion.
+  - subject: acetate_anion
+    predicate: prevents
+    object: acetate_transmembrane_diffusion
+    description: Acetate anion at high pH cannot diffuse passively across the membrane.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1233691
+      notes: High pH favors the dissociation of acetic acid to its anion (CH3COO-),
+        preventing transmembrane diffusion.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.938910+00:00'
   curator: seed_from_metpo
@@ -196,4 +292,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000209×1, METPO:2000210×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

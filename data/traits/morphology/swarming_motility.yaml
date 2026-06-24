@@ -15,17 +15,17 @@ synonyms:
   source: DOI:10.1038/nrmicro2405
 evidence:
 - reference: DOI:10.1038/nrmicro2405
-  notes: Kearns, "A field guide to bacterial swarming motility", defines swarming via
-    increased flagella per cell, surfactant secretion, and movement in multicellular
+  notes: Kearns, "A field guide to bacterial swarming motility", defines swarming
+    via increased flagella per cell, surfactant secretion, and movement in multicellular
     groups.
 - reference: DOI:10.1146/annurev.micro.57.030502.091014
-  notes: Harshey, "Bacterial motility on a surface", places swarming among the
-    surface-motility modes of bacteria.
+  notes: Harshey, "Bacterial motility on a surface", places swarming among the surface-motility
+    modes of bacteria.
 causal_graphs:
 - graph_id: swarming_hyperflagellation_surfactant
   title: Swarming motility via hyperflagellation and surfactant secretion
-  description: Evidence-backed causal sketch linking flagellar hyperflagellation
-    and wetting-surfactant secretion to multicellular surface swarming.
+  description: Evidence-backed causal sketch linking flagellar hyperflagellation and
+    wetting-surfactant secretion to multicellular surface swarming.
   nodes:
   - node_id: swarming_trait
     label: swarming motility
@@ -36,8 +36,8 @@ causal_graphs:
     label: bacterial-type flagellum
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0009288
-    description: Helical proteinaceous locomotory organelle (hyperflagellation
-      under swarming).
+    description: Helical proteinaceous locomotory organelle (hyperflagellation under
+      swarming).
   - node_id: surfactant
     label: wetting surfactant
     node_type: CHEMICAL
@@ -47,6 +47,15 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0071973
     description: Swimming/swarming motility driven by flagellar rotation.
+  - node_id: quorum_sensing
+    label: quorum sensing
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-density signaling that regulates production of swarming-associated
+      wetting surfactants.
+  - node_id: swarm_expansion
+    label: swarm expansion
+    node_type: BIOLOGICAL_PROCESS
+    description: Outward dendritic spreading of a multicellular swarm across a surface.
   edges:
   - subject: bacterial_flagellum
     predicate: enables
@@ -59,12 +68,10 @@ causal_graphs:
   - subject: surfactant
     predicate: enables
     object: swarming_trait
-    description: Secreted wetting surfactant supports multicellular surface
-      spreading.
+    description: Secreted wetting surfactant supports multicellular surface spreading.
     evidence:
     - reference: DOI:10.1038/nrmicro2405
-      notes: Kearns defines swarming via surfactant secretion accompanying
-        hyperflagellation.
+      notes: Kearns defines swarming via surfactant secretion accompanying hyperflagellation.
     predicate_id: RO:0002327
   - subject: swarming_trait
     predicate: participates in
@@ -72,20 +79,52 @@ causal_graphs:
     description: Swarming is a flagella-driven surface-motility mode.
     evidence:
     - reference: DOI:10.1146/annurev.micro.57.030502.091014
-      notes: Harshey places swarming among the surface-motility modes of
-        bacteria.
+      notes: Harshey places swarming among the surface-motility modes of bacteria.
     predicate_id: biolink:participates_in
+  - subject: quorum_sensing
+    predicate: positively regulates
+    object: surfactant
+    description: Quorum sensing controls production of wetting surfactants (HAAs/rhamnolipids)
+      required for swarm development.
+    evidence:
+    - reference: DOI:10.1063/5.0128140
+      notes: 'Bru et al. 2023 review: QS regulates HAA and rhamnolipid production
+        needed for swarm development.'
+  - subject: surfactant
+    predicate: positively regulates
+    object: swarm_expansion
+    description: Secreted wetting surfactants are required for normal swarm expansion
+      and tendril formation; surfactant-deficient mutants fail to expand.
+    evidence:
+    - reference: DOI:10.1063/5.0128140
+      notes: 'Bru et al. 2023: mutants defective in rhamnolipid production are deficient
+        in swarm expansion and fail to form tendrils.'
+  - subject: bacterial_flagellum
+    predicate: positively regulates
+    object: swarm_expansion
+    description: Flagellar activity, alongside surfactant production, is essential
+      for dendritic swarm expansion.
+    evidence:
+    - reference: DOI:10.1063/5.0128140
+      notes: 'Bru et al. 2023: two activities are essential for forming dendritic
+        swarms - surfactant production and flagellar activity.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY/motility trait (swarming motility) under the
-    existing motile class (METPO:1000702).
+  changes: Proposed candidate MORPHOLOGY/motility trait (swarming motility) under
+    the existing motile class (METPO:1000702).
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (hyperflagellation + surfactant
-    swarming) with GO node groundings and RO/biolink predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (hyperflagellation + surfactant swarming)
+    with GO node groundings and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (2 new nodes) from the deep-research
+    report.
   llm_assisted: true

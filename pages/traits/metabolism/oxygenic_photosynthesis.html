@@ -90,6 +90,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>photosystem II</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>water</strong>
+            
+            <p>PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s11120-022-00991-y</code>
+                
+                <span class="meta">Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>photosystem II</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>plastoquinone/plastoquinol pool</strong>
+            
+            <p>Electrons extracted from water reduce plastoquinone (PQ -&gt; PQH2).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s11120-022-00991-y</code>
+                
+                <span class="meta">Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -&gt; PQH2).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>plastoquinone/plastoquinol pool</strong>
+            <span class="edge-predicate">donates electrons to</span>
+            <strong>cytochrome b6f complex</strong>
+            
+            <p>Plastoquinol diffuses to reduce the cytochrome b6f complex.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/plants13152103</code>
+                
+                <span class="meta">Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cytochrome b6f complex</strong>
+            <span class="edge-predicate">transfers electrons to</span>
+            <strong>photosystem I</strong>
+            
+            <p>Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/plants13152103</code>
+                
+                <span class="meta">Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>photosystem I</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>ferredoxin</strong>
+            
+            <p>PSI oxidizes plastocyanin and reduces ferredoxin.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14519</code>
+                
+                <span class="meta">Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>ferredoxin-NADP+ reductase</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>NADPH</strong>
+            
+            <p>Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14519</code>
+                
+                <span class="meta">Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>photosynthetic electron transport</strong>
+            <span class="edge-predicate">generates</span>
+            <strong>proton motive force</strong>
+            
+            <p>Linear electron transport generates the transthylakoid proton motive force.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/plants13152103</code>
+                
+                <span class="meta">Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>ATP</strong>
+            
+            <p>The proton motive force drives ATP synthesis by ATP synthase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s11120-022-00991-y</code>
+                
+                <span class="meta">Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -218,6 +354,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (water-splitting / O2 evolution) with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -577,7 +719,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking two linked photosystems and water oxidation to CO2 fixation and oxygen evolution.", "edges": [{"description": "Water is the electron donor; its oxidation releases O2.", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_etc", "target": "oxygenic_photosynthesis_trait"}], "evidence_rows": [{"description": "Water is the electron donor; its oxidation releases O2.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "target": "oxygenic photosynthesis"}], "graph_id": "oxygenic_photosynthesis_water_splitting", "issues": [], "nodes": [{"color": "#fef3c7", "description": "O2 released by water oxidation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven CO2 fixation that oxidizes water and evolves O2.", "grounding": "traitmech:000034", "id": "oxygenic_photosynthesis_trait", "is_orphan": false, "label": "oxygenic photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Linked-photosystem electron transport powering CO2 fixation.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "xrefs": []}], "title": "Oxygenic photosynthesis splits water and releases O2"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking two linked photosystems and water oxidation to CO2 fixation and oxygen evolution.", "edges": [{"description": "Water is the electron donor; its oxidation releases O2.", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_etc", "target": "oxygenic_photosynthesis_trait"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "photosystem_ii", "target": "water"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-4", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "photosystem_ii", "target": "plastoquinone_pool"}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-5", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": null, "source": "plastoquinone_pool", "target": "cytochrome_b6f"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-6", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": null, "source": "cytochrome_b6f", "target": "photosystem_i"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-7", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "photosystem_i", "target": "ferredoxin"}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "fnr", "target": "nadph"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-9", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "photosynthetic_etc", "target": "proton_motive_force"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-10", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}], "evidence_rows": [{"description": "Water is the electron donor; its oxidation releases O2.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "target": "oxygenic photosynthesis"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "oxidizes", "predicate_id": null, "source": "photosystem II", "target": "water"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "edge_id": "edge-4", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "reduces", "predicate_id": null, "source": "photosystem II", "target": "plastoquinone/plastoquinol pool"}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "edge_id": "edge-5", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "donates electrons to", "predicate_id": null, "source": "plastoquinone/plastoquinol pool", "target": "cytochrome b6f complex"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "edge_id": "edge-6", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "transfers electrons to", "predicate_id": null, "source": "cytochrome b6f complex", "target": "photosystem I"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "edge_id": "edge-7", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": null, "source": "photosystem I", "target": "ferredoxin"}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "edge_id": "edge-8", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": null, "source": "ferredoxin-NADP+ reductase", "target": "NADPH"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "edge_id": "edge-9", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "generates", "predicate_id": null, "source": "photosynthetic electron transport", "target": "proton motive force"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "edge_id": "edge-10", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "target": "ATP"}], "graph_id": "oxygenic_photosynthesis_water_splitting", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy currency synthesized by ATP synthase driven by the pmf.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Electron transfer complex linking PSII/plastoquinol to PSI.", "grounding": null, "id": "cytochrome_b6f", "is_orphan": false, "label": "cytochrome b6f complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Iron-sulfur electron carrier reduced by PSI.", "grounding": null, "id": "ferredoxin", "is_orphan": false, "label": "ferredoxin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme reducing NADP+ to NADPH using ferredoxin-derived electrons.", "grounding": null, "id": "fnr", "is_orphan": false, "label": "ferredoxin-NADP+ reductase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "O2 released by water oxidation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reducing equivalent generated by the light reactions.", "grounding": null, "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven CO2 fixation that oxidizes water and evolves O2.", "grounding": "traitmech:000034", "id": "oxygenic_photosynthesis_trait", "is_orphan": false, "label": "oxygenic photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Linked-photosystem electron transport powering CO2 fixation.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that oxidizes plastocyanin/cyt c6 and reduces ferredoxin.", "grounding": null, "id": "photosystem_i", "is_orphan": false, "label": "photosystem I", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that catalyzes light-driven water oxidation.", "grounding": null, "id": "photosystem_ii", "is_orphan": false, "label": "photosystem II", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Mobile quinone electron carrier reduced by PSII (PQ -\u003e PQH2).", "grounding": null, "id": "plastoquinone_pool", "is_orphan": false, "label": "plastoquinone/plastoquinol pool", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Transthylakoid proton motive force generated by linear electron transport.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "xrefs": []}], "title": "Oxygenic photosynthesis splits water and releases O2"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -588,7 +730,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -55,6 +55,26 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0030001
     description: Transport of metal cations across the cytoplasmic membrane.
+  - node_id: arsenate
+    label: arsenate As(V)
+    node_type: CHEMICAL
+    description: Oxidized arsenic oxyanion taken up by phosphate transporters.
+  - node_id: arsenite
+    label: arsenite As(III)
+    node_type: CHEMICAL
+    description: Reduced arsenic species substrate for arsenite efflux pumps.
+  - node_id: arsc_reductase
+    label: ArsC arsenate reductase
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic reductase converting arsenate to arsenite prior to extrusion.
+  - node_id: ars_operon
+    label: ars operon
+    node_type: GENE_OR_PROTEIN
+    description: arsC reductase plus arsB/acr3 arsenite efflux determinant cluster.
+  - node_id: arsenic_tolerance
+    label: arsenic tolerance
+    node_type: STATE
+    description: Detoxification-mediated tolerance of arsenic oxyanions.
   edges:
   - subject: heavy_metal_ion
     predicate: challenges
@@ -85,6 +105,49 @@ causal_graphs:
     - reference: PMID:12829273
       notes: Nies frames efflux-based export as the basis of broad heavy-metal tolerance.
     predicate_id: RO:0002327
+  - subject: arsc_reductase
+    predicate: converts
+    object: arsenate
+    description: ArsC arsenate reductase reduces As(V) to As(III) as the first detoxification
+      step.
+    evidence:
+    - reference: DOI:10.52700/jmmg.v5i1.155
+      notes: 'Review: "ArsC converting As(V) to As(III) followed by extrusion"; general
+        across bacteria.'
+  - subject: arsenate
+    predicate: is converted to
+    object: arsenite
+    description: Arsenate is reduced to arsenite, the species handled by efflux pumps.
+    evidence:
+    - reference: DOI:10.52700/jmmg.v5i1.155
+      notes: 'Review: ArsC converts As(V) to As(III) followed by extrusion.'
+  - subject: ars_operon
+    predicate: enables
+    object: arsenic_tolerance
+    description: The arsC + arsB/acr3 ars operon mediates arsenate reduction and arsenite
+      extrusion conferring arsenic tolerance.
+    evidence:
+    - reference: DOI:10.7717/peerj.18383
+      notes: '"a cooperative mechanism involving detoxification through arsenate reduction"
+        via arsC/arsA/arsB/acr3 genes across mixed soil taxa.'
+  - subject: arsenic_tolerance
+    predicate: is a
+    object: metal_tolerant_trait
+    description: Arsenic (metalloid) tolerance is a component of the broad metal-tolerant
+      phenotype.
+    evidence:
+    - reference: DOI:10.52700/jmmg.v5i1.155
+      notes: Arsenic detoxification (reduction + efflux) is part of generic bacterial
+        heavy-metal/metalloid resistance.
+  - subject: efflux_pump
+    predicate: mediates
+    object: metal_tolerant_trait
+    description: P-type ATPase, CDF, and RND efflux transporters mediate heavy-metal
+      resistance in most bacteria.
+    evidence:
+    - reference: DOI:10.52700/jmmg.v5i1.155
+      notes: '"resistance in most bacteria is mediated by P-type ATPase efflux, diffusion
+        facilitator transporters of cations and RND" - generic review.'
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -105,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A067YD12×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

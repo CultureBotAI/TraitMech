@@ -61,6 +61,31 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of internal pH below highly alkaline external pH.
     grounding: GO:0051453
+  - node_id: mrp_antiporter_complex
+    label: Mrp Na+/H+ antiporter complex
+    node_type: GENE_OR_PROTEIN
+    description: Multisubunit cation/proton antiporter complex with an indispensable
+      role in alkaliphile high-pH homeostasis.
+  - node_id: atp_synthase_c_subunit_motifs
+    label: ATP synthase c-subunit alkaline-adaptive motifs
+    node_type: GENE_OR_PROTEIN
+    description: c-subunit motifs that alter rotor shape and promote tight proton
+      binding in the ion site at high pH.
+  - node_id: atp_synthase_proton_binding
+    label: ATP synthase proton binding efficiency at high pH
+    node_type: MOLECULAR_FUNCTION
+    description: Tight proton binding in the ATP synthase ion site enabling efficient
+      operation under alkaline conditions.
+  - node_id: acidic_cell_envelope_polymers
+    label: acidic secondary cell-wall and S-layer polymers
+    node_type: CELLULAR_LOCALIZATION
+    description: Acidic secondary cell walls and S-layer proteins on the cell surface
+      of alkaliphiles.
+  - node_id: surface_proton_retention
+    label: proton retention at cell surface
+    node_type: BIOLOGICAL_PROCESS
+    description: Attraction and retention of protons at the cell surface, buffering
+      the cytoplasmic membrane against high external pH.
   edges:
   - subject: alkaline_external_ph
     predicate: selects for
@@ -109,6 +134,50 @@ causal_graphs:
       snippet: pH sensing and homeostasis
       notes: Supports homeostasis as the enabling process for alkaline growth.
     predicate_id: RO:0002327
+  - subject: mrp_antiporter_complex
+    predicate: enables
+    object: cytoplasmic_ph_homeostasis
+    description: Mrp Na+/H+ antiporter complex enables pH homeostasis and is indispensable
+      at high pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Na+/H+ antiporter-dependent pH homeostasis; Mrp plays an indispensible
+        role at high pH.
+  - subject: atp_synthase_c_subunit_motifs
+    predicate: increases
+    object: atp_synthase_proton_binding
+    description: Alkaline-adaptive c-subunit motifs increase tight proton binding
+      in the ATP synthase ion site at high pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Two c-subunit motifs that alter rotor shape and promote tight proton
+        binding in the ion site.
+  - subject: atp_synthase_proton_binding
+    predicate: enables
+    object: cytoplasmic_ph_homeostasis
+    description: Efficient ATP synthase proton binding contributes to bioenergetics
+      and pH homeostasis under alkaline conditions.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: ATP synthase adaptation supports proton-coupled bioenergetics at high
+        external pH.
+  - subject: acidic_cell_envelope_polymers
+    predicate: enables
+    object: surface_proton_retention
+    description: Acidic cell-wall and S-layer polymers attract and retain protons
+      at the cell surface.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.842785
+      notes: Acidic secondary cell walls and S-layer proteins attract H+.
+  - subject: surface_proton_retention
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Surface proton retention buffers the membrane and supports cytoplasmic
+      pH homeostasis at high external pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.842785
+      notes: Surface proton retention helps maintain a proton-rich microenvironment
+        near the membrane.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937702+00:00'
   curator: seed_from_metpo
@@ -168,4 +237,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000208×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -50,6 +50,31 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000303
     description: Breadth of the growth-supporting ambient-temperature range.
+  - node_id: membrane_fluidity
+    label: membrane fluidity/stability
+    node_type: QUALITY
+    description: Physical state of the lipid bilayer (fluidity, packing, integrity)
+      that must be maintained for growth.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation of membrane lipid composition to keep fluidity within
+      a functional window under stress.
+  - node_id: compatible_solutes
+    label: compatible solutes / osmolytes
+    node_type: CHEMICAL
+    description: Small organic molecules that stabilize proteins and membranes and
+      restore osmotic balance.
+  - node_id: fatty_acid_ratio
+    label: saturated:unsaturated fatty-acid ratio
+    node_type: QUALITY
+    description: Relative abundance of saturated versus unsaturated fatty acids that
+      tunes membrane stability across temperatures.
+  - node_id: core_metabolism
+    label: core central metabolism
+    node_type: BIOLOGICAL_PROCESS
+    description: Central metabolic network whose key metabolite levels are buffered
+      across a wide temperature range.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -90,6 +115,53 @@ causal_graphs:
       notes: Supports temperature delta as a delta phenotype defined over the ambient-temperature
         axis.
     predicate_id: rdfs:subClassOf
+  - subject: homeoviscous_adaptation
+    predicate: maintains
+    object: membrane_fluidity
+    description: Homeoviscous adaptation regulates lipid composition to maintain membrane
+      fluidity/structure under temperature, salinity, and pH stress.
+    evidence:
+    - reference: DOI:10.1039/d4cc03114h
+      notes: Key strategies include homeoviscous adaptation (HVA), involving the regulation
+        of lipid composition; linked to tolerance of temperature, salinity, and pH
+        extremes.
+  - subject: membrane_fluidity
+    predicate: enables
+    object: delta_phenotype_trait
+    description: Maintaining membrane fluidity/integrity across conditions widens
+      the growth-supporting range whose span defines the delta phenotype.
+    evidence:
+    - reference: DOI:10.1039/d4cc03114h
+      notes: HVA framed as a universal paradigm of membrane adaptation spanning diverse
+        extremophiles and stressors, supporting breadth of growth-supporting conditions.
+  - subject: compatible_solutes
+    predicate: stabilizes
+    object: membrane_fluidity
+    description: Compatible solutes stabilize proteins and membranes and restore osmotic
+      balance, broadening tolerance across temperature and osmotic conditions.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Compatible solutes depress the freezing point, stabilize proteins and
+        membranes, restore osmotic balance; broad cold + osmotic support, not species-specific.
+  - subject: fatty_acid_ratio
+    predicate: modulates
+    object: membrane_fluidity
+    description: Alteration of the saturated:unsaturated fatty-acid ratio modulates
+      membrane stability across temperatures.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Membrane stability is modulated by alteration of the ratio of saturated
+        and unsaturated fatty acids; maintenance across temperature shifts.
+  - subject: core_metabolism
+    predicate: maintained across
+    object: temperature_delta
+    description: Regulatory-metabolic cross talk buffers core central metabolism across
+      a wide temperature range, supporting a broad temperature delta.
+    evidence:
+    - reference: DOI:10.1128/msystems.01124-22
+      notes: Different growth temperatures induce broad transcriptional changes, yet
+        most key central metabolites show overlapping trends via intense regulatory-metabolic
+        cross talk; maintenance across 0 and 15C.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847283+00:00'
   curator: seed_from_metpo
@@ -113,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

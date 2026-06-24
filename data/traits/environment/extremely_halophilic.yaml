@@ -47,6 +47,30 @@ causal_graphs:
     label: acidic halophilic proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins enriched in acidic residues and adapted to high ionic strength.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular response to high external solute/osmotic pressure.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Membrane transporter mediating sodium exclusion in exchange for protons.
+  - node_id: sodium_efflux
+    label: sodium efflux
+    node_type: BIOLOGICAL_PROCESS
+    description: Active export of Na+ to maintain low cytoplasmic sodium.
+  - node_id: protein_solubility_high_salt
+    label: protein solubility and function in high salt
+    node_type: QUALITY
+    description: Maintenance of protein solubility and activity in hypersaline cytoplasm.
+  - node_id: s_layer_n_glycosylation
+    label: S-layer glycoprotein N-glycosylation
+    node_type: BIOLOGICAL_PROCESS
+    description: N-linked glycosylation of the S-layer glycoprotein in haloarchaea.
+  - node_id: s_layer_stability
+    label: S-layer stability
+    node_type: QUALITY
+    description: Structural stability of the haloarchaeal S-layer cell envelope.
   edges:
   - subject: hypersaline_brine
     predicate: selects for
@@ -97,6 +121,54 @@ causal_graphs:
       snippet: promote function in low water activity conditions
       notes: Supports functional coupling between high-salt cytoplasm and salt-adapted
         proteins.
+  - subject: hypersaline_brine
+    predicate: causes
+    object: osmotic_stress
+    description: High external NaCl imposes osmotic stress on the cell.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: NaCl shock induced osmotic stress; environmental-to-stress edge broadly
+        applicable.
+  - subject: osmotic_stress
+    predicate: induces
+    object: potassium_ion
+    description: Osmotic stress triggers rapid intracellular K+ uptake/accumulation.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: Many microbes rapidly uptake K+ as an emergency osmoadaptation response.
+  - subject: na_h_antiporter
+    predicate: mediates
+    object: sodium_efflux
+    description: Na+/H+ antiporters drive sodium exclusion from the cytoplasm.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Sodium exclusion is mediated largely by Na+/H+ antiporters (general haloarchaeal
+        review).
+  - subject: acidic_halophilic_proteins
+    predicate: supports
+    object: protein_solubility_high_salt
+    description: Surface acidic residues maintain protein solubility and function
+      at high ionic strength.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Halophilic proteins have increased surface acidic residues maintaining
+        solubility and function in high salt.
+  - subject: s_layer_n_glycosylation
+    predicate: supports
+    object: s_layer_stability
+    description: N-glycosylation stabilizes the haloarchaeal S-layer.
+    evidence:
+    - reference: DOI:10.3390/v15071469
+      notes: N-glycosylation supports protein folding/stability and specifically stabilizes
+        the S-layer.
+  - subject: hypersaline_brine
+    predicate: changes
+    object: s_layer_n_glycosylation
+    description: External salinity alters S-layer glycoprotein N-glycosylation pathways.
+    evidence:
+    - reference: DOI:10.3390/v15071469
+      notes: Growth at different salt concentrations alters S-layer glycoprotein N-glycosylation;
+        two distinct pathways process it upon salinity changes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.865176+00:00'
   curator: seed_from_metpo
@@ -137,4 +209,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

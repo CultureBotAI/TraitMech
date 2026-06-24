@@ -1,8 +1,8 @@
 identifier: traitmech:000007
 label: radiotolerant
-definition: An environmental tolerance in which an organism survives doses of
-  ionizing and/or ultraviolet radiation that are lethal to most microorganisms,
-  typically via efficient DNA repair and oxidative-damage protection.
+definition: An environmental tolerance in which an organism survives doses of ionizing
+  and/or ultraviolet radiation that are lethal to most microorganisms, typically via
+  efficient DNA repair and oxidative-damage protection.
 definition_source: DOI:10.1101/cshperspect.a012765
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -17,28 +17,27 @@ evidence:
 - reference: DOI:10.1101/cshperspect.a012765
   snippet: A strong correlation has been shown between intracellular Mn/Fe concentration
     ratios and bacterial resistance to radiation
-  notes: Review of extreme radiation resistance supports manganese-antioxidant
-    protection of the proteome as a core radiotolerance mechanism in Deinococcus
-    radiodurans, "a champion of extreme radiation resistance".
+  notes: Review of extreme radiation resistance supports manganese-antioxidant protection
+    of the proteome as a core radiotolerance mechanism in Deinococcus radiodurans,
+    "a champion of extreme radiation resistance".
 - reference: DOI:10.3390/genes14091803
   snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is a
-    remarkable example of such an organism, showcasing an impressive resistance to a
-    wide array of stressors, including ionizing radiation, desiccation, UV radiation,
+    remarkable example of such an organism, showcasing an impressive resistance to
+    a wide array of stressors, including ionizing radiation, desiccation, UV radiation,
     and oxidizing agents
   notes: 'Organism example: Deinococcus radiodurans tolerates ionizing radiation,
     UV radiation, and desiccation.'
 causal_graphs:
 - graph_id: radiotolerance_repair_antioxidant
   title: Radiotolerance via DNA repair and Mn-antioxidant proteome protection
-  description: Evidence-backed causal sketch linking efficient DNA-damage repair
-    and manganese-antioxidant protection to survival of lethal radiation doses.
+  description: Evidence-backed causal sketch linking efficient DNA-damage repair and
+    manganese-antioxidant protection to survival of lethal radiation doses.
   nodes:
   - node_id: radiotolerant_trait
     label: radiotolerant
     node_type: TRAIT
     grounding: traitmech:000007
-    description: Survival of ionizing and/or UV radiation doses lethal to most
-      microbes.
+    description: Survival of ionizing and/or UV radiation doses lethal to most microbes.
   - node_id: radiation_exposure
     label: ionizing or UV radiation exposure
     node_type: ENVIRONMENTAL_FACTOR
@@ -47,28 +46,58 @@ causal_graphs:
     label: DNA repair
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006281
-    description: Repair of radiation-induced DNA lesions (double-strand breaks,
-      adducts, dimers).
+    description: Repair of radiation-induced DNA lesions (double-strand breaks, adducts,
+      dimers).
   - node_id: mn_antioxidant_protection
     label: manganese-antioxidant proteome protection
     node_type: BIOLOGICAL_PROCESS
     description: Mn-driven protection of repair proteins from oxidative damage.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species (ROS)
+    node_type: CHEMICAL
+    description: Reactive oxygen species generated as an aftermath of irradiation
+      that damage DNA and proteins.
+  - node_id: mn2_ion
+    label: manganese(II) ion
+    node_type: CHEMICAL
+    description: Intracellular Mn2+ that acts as an antioxidant scavenging ROS.
+  - node_id: fe2_ion
+    label: iron(II) ion
+    node_type: CHEMICAL
+    description: Intracellular Fe2+ that propagates ROS through Fenton chemistry.
+  - node_id: reca_protein
+    label: RecA recombinase
+    node_type: GENE_OR_PROTEIN
+    description: RecA recombinase central to homologous-recombination repair of radiation-induced
+      double-strand breaks.
+  - node_id: homologous_recombination
+    label: homologous recombination
+    node_type: BIOLOGICAL_PROCESS
+    description: Homologous recombination repair of DNA double-strand breaks.
+  - node_id: ner_uvrabc
+    label: nucleotide excision repair (UvrABC)
+    node_type: BIOLOGICAL_PROCESS
+    description: UvrABC excinuclease-mediated nucleotide excision repair of UV-induced
+      helix-distorting lesions.
+  - node_id: carotenoid_pigments
+    label: carotenoid pigments
+    node_type: CHEMICAL
+    description: Carotenoid pigments (e.g. deinoxanthin) that scavenge ROS as non-enzymatic
+      antioxidants.
   edges:
   - subject: radiation_exposure
     predicate: challenges
     object: radiotolerant_trait
-    description: Radiation exposure is the environmental challenge the trait
-      counters.
+    description: Radiation exposure is the environmental challenge the trait counters.
     evidence:
     - reference: DOI:10.3390/genes14091803
-      notes: Deinococcus radiodurans is the reference organism for surviving
-        ionizing radiation, UV, desiccation, and oxidizing agents.
+      notes: Deinococcus radiodurans is the reference organism for surviving ionizing
+        radiation, UV, desiccation, and oxidizing agents.
     predicate_id: METPO:2007406
   - subject: dna_damage_repair
     predicate: enables
     object: radiotolerant_trait
-    description: Efficient repair of radiation-induced DNA lesions enables
-      survival.
+    description: Efficient repair of radiation-induced DNA lesions enables survival.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
       notes: Review of extreme radiation resistance highlights efficient DNA repair
@@ -77,13 +106,78 @@ causal_graphs:
   - subject: mn_antioxidant_protection
     predicate: enables
     object: radiotolerant_trait
-    description: Mn-antioxidant protection of the proteome preserves repair
-      capacity under irradiation.
+    description: Mn-antioxidant protection of the proteome preserves repair capacity
+      under irradiation.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
-      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation
-        resistance.
+      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.
     predicate_id: RO:0002327
+  - subject: radiation_exposure
+    predicate: causes
+    object: reactive_oxygen_species
+    description: Ionizing/UV radiation produces reactive oxygen species.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0304810
+      notes: Another aftermath of irradiation is the production of reactive oxygen
+        species (ROS); general mechanism across microbes.
+  - subject: mn2_ion
+    predicate: acts as antioxidant against
+    object: reactive_oxygen_species
+    description: Mn2+ acts as an antioxidant that scavenges ROS.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03838-23
+      notes: Manganese is an antioxidant, acting as a sponge of ROS; general bacterial
+        mechanism.
+  - subject: fe2_ion
+    predicate: promotes
+    object: reactive_oxygen_species
+    description: Fe2+ furthers the spread of ROS through Fenton chemistry.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03838-23
+      notes: Iron furthers the spread of ROS through Fenton chemistry; mechanistic
+        basis of Mn/Fe ratio association with tolerance.
+  - subject: mn2_ion
+    predicate: part of
+    object: mn_antioxidant_protection
+    description: Mn2+ antioxidant activity is part of the Mn-antioxidant proteome
+      protection process.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03838-23
+      notes: Intracellular Mn/Fe ratio is the best-understood predictor of IR tolerance;
+        Mn acts as a ROS sponge protecting the proteome.
+  - subject: reca_protein
+    predicate: mediates
+    object: homologous_recombination
+    description: RecA mediates homologous recombination repair of double-strand breaks.
+    evidence:
+    - reference: DOI:10.3390/su17177864
+      notes: HR is central for double-strand break repair, with RecA abundant and
+        RecA expression increasing eightfold after 15 kGy.
+  - subject: homologous_recombination
+    predicate: part of
+    object: dna_damage_repair
+    description: Homologous recombination is a component of radiation-induced DNA
+      repair.
+    evidence:
+    - reference: DOI:10.3390/su17177864
+      notes: HR is central for double-strand break repair of radiation-induced lesions.
+  - subject: ner_uvrabc
+    predicate: part of
+    object: dna_damage_repair
+    description: UvrABC nucleotide excision repair repairs UV-induced helix-distorting
+      lesions.
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      notes: UvrA is the initial damage sensor in NER, recruiting UvrB and, with UvrC,
+        performing dual-incision to remove UV-induced damaged DNA.
+  - subject: carotenoid_pigments
+    predicate: scavenges
+    object: reactive_oxygen_species
+    description: Carotenoid pigments scavenge ROS as non-enzymatic antioxidants.
+    evidence:
+    - reference: DOI:10.3390/su17177864
+      notes: The carotenoid deinoxanthin scavenges ROS quantitatively (removed up
+        to 69.7% H2O2 and quenched singlet oxygen up to 99%).
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -95,7 +189,13 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (radiotolerance via DNA repair +
-    Mn-antioxidant) with GO node grounding and RO/METPO predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (radiotolerance via DNA repair + Mn-antioxidant)
+    with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

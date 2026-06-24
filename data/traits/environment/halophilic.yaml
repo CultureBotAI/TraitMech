@@ -48,6 +48,45 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular inorganic ion accumulation for osmotic balance.
     grounding: METPO:1007720
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Membrane antiporter that exports sodium from the cytoplasm in exchange
+      for protons.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    description: Na+ cation that must be excluded from the cytoplasm.
+  - node_id: k_uniport
+    label: K+ uniport system
+    node_type: GENE_OR_PROTEIN
+    description: Uniport transport system that imports potassium into the cell.
+  - node_id: potassium_ion
+    label: potassium ion
+    node_type: CHEMICAL
+    description: K+ cation accumulated intracellularly during salt-in osmoadaptation.
+  - node_id: acidified_proteome
+    label: acidified proteome
+    node_type: STATE
+    description: Proteome enriched in acidic residues, characteristic of salt-in adapted
+      organisms.
+  - node_id: oxidative_stress
+    label: oxidative stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Reactive-oxygen-mediated cellular stress induced by NaCl shock.
+  - node_id: ectABC_operon
+    label: ectABC operon
+    node_type: GENE_OR_PROTEIN
+    description: Evolutionarily conserved operon encoding the ectoine biosynthesis
+      pathway.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Compatible solute synthesized de novo from L-aspartic acid.
+  - node_id: l_aspartic_acid
+    label: L-aspartic acid
+    node_type: CHEMICAL
+    description: Precursor metabolite for de novo ectoine biosynthesis.
   edges:
   - subject: high_salt_environment
     predicate: selects for
@@ -98,6 +137,59 @@ causal_graphs:
       notes: Halomonas elongata study supports compatible solutes as a mechanism enabling
         halophilic growth.
     predicate_id: RO:0002326
+  - subject: na_h_antiporter
+    predicate: expels
+    object: sodium_ion
+    description: Sodium is excluded from the cytoplasm with the help of an Na+/H+
+      antiporter.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: sodium is excluded from the cytoplasm with the help of an Na+/H+ antiporter
+  - subject: k_uniport
+    predicate: imports
+    object: potassium_ion
+    description: Potassium enters the cell through a uniport system during salt-in
+      osmoadaptation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Potassium enters the cell through a uniport system
+  - subject: salt_in_strategy
+    predicate: associated with
+    object: acidified_proteome
+    description: Organisms employing the salt-in strategy exhibit an acidified proteome.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: microorganisms employing this strategy exhibit an acidified proteome
+  - subject: sodium_chloride
+    predicate: induces
+    object: oxidative_stress
+    description: NaCl shock induces oxidative stress in addition to osmotic stress.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: NaCl shock induced two major stresses, namely osmotic stress and oxidative
+        stress
+  - subject: ectABC_operon
+    predicate: biosynthesizes
+    object: ectoine
+    description: The conserved ectABC operon performs de novo biosynthesis of ectoine.
+    evidence:
+    - reference: DOI:10.1128/aem.00479-23
+      notes: Biosynthesis of ectoine is de novo from L-aspartic acid, performed by
+        the conserved operon ectABC
+  - subject: l_aspartic_acid
+    predicate: is precursor of
+    object: ectoine
+    description: Ectoine is biosynthesized de novo from L-aspartic acid.
+    evidence:
+    - reference: DOI:10.1128/aem.00479-23
+      notes: Biosynthesis of ectoine is de novo from L-aspartic acid
+  - subject: ectoine
+    predicate: is a
+    object: compatible_solutes
+    description: Ectoine is a major organic compatible solute used in osmoadaptation.
+    evidence:
+    - reference: DOI:10.1128/aem.00479-23
+      notes: Ectoine is a canonical compatible solute synthesized via the ectABC operon.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860938+00:00'
   curator: seed_from_metpo
@@ -161,4 +253,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

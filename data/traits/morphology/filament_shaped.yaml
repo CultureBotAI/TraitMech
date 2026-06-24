@@ -57,6 +57,38 @@ causal_graphs:
     label: hyphal tip extension
     node_type: BIOLOGICAL_PROCESS
     description: Extension of filamentous hyphae by polar growth.
+  - node_id: dna_damage_sos_response
+    label: RecA/LexA SOS response
+    node_type: BIOLOGICAL_PROCESS
+    description: DNA-damage-triggered RecA/LexA SOS regulon inducing division-inhibitor
+      expression.
+  - node_id: sula
+    label: SulA
+    node_type: GENE_OR_PROTEIN
+    description: SOS-induced cell-division inhibitor that blocks FtsZ polymerization.
+  - node_id: ftsz_polymerization
+    label: FtsZ polymerization
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the FtsZ ring required for septation and cell division.
+  - node_id: apical_growth
+    label: polar hyphal growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Tip-localized polar growth of filamentous hyphae mediated by DivIVA/polarisome.
+  - node_id: hyphal_branch_emergence
+    label: hyphal branch emergence
+    node_type: BIOLOGICAL_PROCESS
+    description: Emergence of new branches via splitting of polarisomes at hyphal
+      tips.
+  - node_id: cgla
+    label: CglA
+    node_type: GENE_OR_PROTEIN
+    description: LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to
+      the cell wall.
+  - node_id: cell_wall_glycopolymer_attachment
+    label: cell-wall glycopolymer attachment
+    node_type: BIOLOGICAL_PROCESS
+    description: Ligation of glycopolymers onto peptidoglycan maintaining hyphal cell
+      shape.
   edges:
   - subject: divIVA
     predicate: localizes to
@@ -104,6 +136,66 @@ causal_graphs:
       snippet: Streptomyces hyphae
       notes: Supports filamentous hyphal morphology as the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: dna_damage_sos_response
+    predicate: induces
+    object: sula
+    description: DNA damage activates the RecA/LexA SOS response, inducing the division
+      inhibitor SulA.
+    evidence:
+    - reference: DOI:10.1002/advs.202203260
+      notes: DNA damage activates the RecA/LexA SOS response, leading to expression
+        of sulA.
+  - subject: sula
+    predicate: inhibits
+    object: ftsz_polymerization
+    description: SulA blocks FtsZ polymerization, preventing Z-ring assembly and septation.
+    evidence:
+    - reference: DOI:10.1002/advs.202203260
+      notes: A cell division inhibitor, sulA, blocks FtsZ / SulA interferes with FtsZ
+        polymerization.
+  - subject: ftsz_polymerization
+    predicate: regulates
+    object: filament_shaped_trait
+    description: Inhibited FtsZ polymerization blocks septation, causing non-septate
+      filamentation.
+    evidence:
+    - reference: DOI:10.1002/advs.202203260
+      notes: FtsZ inhibition / blocked septation contributes to non-septate cellular
+        filamentation.
+  - subject: apical_polarisome
+    predicate: enables
+    object: apical_growth
+    description: The DivIVA/polarisome assembly mediates polar growth at hyphal tips.
+    evidence:
+    - reference: DOI:10.1128/jb.00153-23
+      notes: Hyphal growth occurs at the tips of the filamentous cells; this polar
+        growth is mediated by DivIVA.
+  - subject: apical_polarisome
+    predicate: promotes
+    object: hyphal_branch_emergence
+    description: Splitting of polarisomes at tips produces daughter polarisomes that
+      coordinate new branch emergence.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: DivIVA forms discrete foci at growing tips; splitting of polarisomes
+        produces daughter polarisomes coordinating emergence of new branches.
+  - subject: cgla
+    predicate: enables
+    object: cell_wall_glycopolymer_attachment
+    description: CglA is the glycopolymer ligase mediating attachment of glycopolymers
+      to the cell wall.
+    evidence:
+    - reference: DOI:10.1128/mbio.01492-24
+      notes: Identified the LCP-LytR_C domain protein CglA as a key glycopolymer ligase.
+  - subject: cell_wall_glycopolymer_attachment
+    predicate: regulates
+    object: filament_shaped_trait
+    description: Reduced glycopolymer attachment results in enlarged vegetative hyphae
+      and loss of hyphal cell shape.
+    evidence:
+    - reference: DOI:10.1128/mbio.01492-24
+      notes: Reduced amount of glycopolymers in the cglA mutant results in enlarged
+        vegetative hyphae.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.889558+00:00'
   curator: seed_from_metpo
@@ -157,4 +249,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

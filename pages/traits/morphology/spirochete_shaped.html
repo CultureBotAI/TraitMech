@@ -124,6 +124,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>periplasmic flagella</strong>
+            <span class="edge-predicate">distort and push</span>
+            <strong>cell body deformation</strong>
+            
+            <p>Periplasmic flagella enclosed in the periplasm distort and push the cell body by flagellar motor action.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/pnasnexus/pgad349</code>
+                
+                <span class="meta">spirochete flagella are enclosed in the periplasmic space and the filaments distort and push the cell body by action of the flagellar motors</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cell body deformation</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>spirochete shaped</strong>
+            
+            <p>Flagella-driven cell body deformation produces the helical or flat-wave spirochete morphology.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/pnasnexus/pgad349</code>
+                
+                <span class="meta">Endoflagella-driven distortion of the cell body underlies spirochete shape.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>FlhE</strong>
+            <span class="edge-predicate">prevents</span>
+            <strong>ectopic periplasmic filament assembly</strong>
+            
+            <p>FlhE prevents ectopic assembly of flagellar filaments in the periplasm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-50278-0</code>
+                
+                <span class="meta">FlhE is a periplasmic, Sec-translocated protein that prevents ectopic assembly of flagellar filaments in the periplasm.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>ectopic periplasmic filament assembly</strong>
+            <span class="edge-predicate">mislocalizes</span>
+            <strong>divisome and elongasome localization</strong>
+            
+            <p>Ectopic periplasmic filament assembly mislocalizes divisome and elongasome complexes required for peptidoglycan synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-50278-0</code>
+                
+                <span class="meta">periplasmic filament assembly causally mis-localizes divisome and elongasome complexes required for peptidoglycan synthesis</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>divisome and elongasome localization</strong>
+            <span class="edge-predicate">alters</span>
+            <strong>spirochete shaped</strong>
+            
+            <p>Mislocalized divisome/elongasome alters cell curvature and rod morphology, coupling periplasmic filaments to envelope shape.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-50278-0</code>
+                
+                <span class="meta">producing altered cell curvature/loss of rod morphology and infrequent cell lysis</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>FlgV</strong>
+            <span class="edge-predicate">modulates</span>
+            <strong>periplasmic flagella</strong>
+            
+            <p>FlgV localizes to the flagellar basal body and modulates periplasmic flagellar filament assembly.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-54806-w</code>
+                
+                <span class="meta">FlgV localizes to the flagellar basal body and altering FlgV levels profoundly impacts filament assembly</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>FlgV</strong>
+            <span class="edge-predicate">perturbs</span>
+            <strong>cell division and morphology</strong>
+            
+            <p>Reduced or aberrant FlgV levels perturb cell division and cell morphology in spirochetes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-54806-w</code>
+                
+                <span class="meta">ΔflgV mutants exhibit defects in cell division and motility, including conjoined spirochetes; overproduction leads to cell elongation</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -279,6 +398,12 @@
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1, biolink:interacts_with×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -638,7 +763,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking spirochete morphology to the cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or helical cell-body deformation.", "edges": [{"description": "FlaB is required for periplasmic flagellar filaments.", "evidence": [{"notes": "Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia burgdorferi.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "gene encoding the major periplasmic flagellar filament protein FlaB"}], "id": "edge-1", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "flaB", "target": "periplasmic_flagella"}, {"description": "Periplasmic flagella interact with the cell cylinder to deform the spirochete body.", "evidence": [{"notes": "Supports a physical interaction between flagella and cell cylinder.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "complex interaction between the cell cylinder and the internal periplasmic flagella"}], "id": "edge-2", "is_orphan": false, "predicate": "interact with", "predicate_id": "biolink:interacts_with", "source": "periplasmic_flagella", "target": "cell_cylinder"}, {"description": "Periplasmic flagella provide a skeletal function that confers flat-wave morphology.", "evidence": [{"notes": "Supports periplasmic flagella as morphology-shaping structures.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "have a skeletal function"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": null, "source": "periplasmic_flagella", "target": "flat_wave_morphology"}, {"description": "Flat-wave or helical deformation produces spirochete morphology.", "evidence": [{"notes": "Supports spirochete-shape classes and their dependence on internal flagella-cell-body geometry.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "cell morphology is either a helix, a flat wave, or an irregularly shaped helix"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "flat_wave_morphology", "target": "spirochete_shaped_trait"}], "evidence_rows": [{"description": "FlaB is required for periplasmic flagellar filaments.", "edge_id": "edge-1", "evidence": [{"notes": "Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia burgdorferi.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "gene encoding the major periplasmic flagellar filament protein FlaB"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "FlaB", "target": "periplasmic flagella"}, {"description": "Periplasmic flagella interact with the cell cylinder to deform the spirochete body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a physical interaction between flagella and cell cylinder.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "complex interaction between the cell cylinder and the internal periplasmic flagella"}], "predicate": "interact with", "predicate_id": "biolink:interacts_with", "source": "periplasmic flagella", "target": "cell cylinder"}, {"description": "Periplasmic flagella provide a skeletal function that confers flat-wave morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports periplasmic flagella as morphology-shaping structures.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "have a skeletal function"}], "predicate": "confers", "predicate_id": null, "source": "periplasmic flagella", "target": "flat-wave morphology"}, {"description": "Flat-wave or helical deformation produces spirochete morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports spirochete-shape classes and their dependence on internal flagella-cell-body geometry.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "cell morphology is either a helix, a flat wave, or an irregularly shaped helix"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "flat-wave morphology", "target": "spirochete shaped"}], "graph_id": "spirochete_shaped_periplasmic_flagella", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Rod-like cell body within the outer membrane sheath.", "grounding": null, "id": "cell_cylinder", "is_orphan": false, "label": "cell cylinder", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Major periplasmic flagellar filament protein in Borrelia.", "grounding": "UniProtKB:A8WEP6", "id": "flaB", "is_orphan": false, "label": "FlaB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Wave-like deformation of the spirochete cell body.", "grounding": null, "id": "flat_wave_morphology", "is_orphan": false, "label": "flat-wave morphology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Internal flagella located in the periplasmic space.", "grounding": null, "id": "periplasmic_flagella", "is_orphan": false, "label": "periplasmic flagella", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated helical or flat-wave spirochete morphology.", "grounding": "METPO:1000693", "id": "spirochete_shaped_trait", "is_orphan": false, "label": "spirochete shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Spirochete-shape periplasmic flagella mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking spirochete morphology to the cell cylinder, periplasmic flagella, FlaB filament protein, and flat-wave or helical cell-body deformation.", "edges": [{"description": "FlaB is required for periplasmic flagellar filaments.", "evidence": [{"notes": "Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia burgdorferi.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "gene encoding the major periplasmic flagellar filament protein FlaB"}], "id": "edge-1", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "flaB", "target": "periplasmic_flagella"}, {"description": "Periplasmic flagella interact with the cell cylinder to deform the spirochete body.", "evidence": [{"notes": "Supports a physical interaction between flagella and cell cylinder.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "complex interaction between the cell cylinder and the internal periplasmic flagella"}], "id": "edge-2", "is_orphan": false, "predicate": "interact with", "predicate_id": "biolink:interacts_with", "source": "periplasmic_flagella", "target": "cell_cylinder"}, {"description": "Periplasmic flagella provide a skeletal function that confers flat-wave morphology.", "evidence": [{"notes": "Supports periplasmic flagella as morphology-shaping structures.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "have a skeletal function"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": null, "source": "periplasmic_flagella", "target": "flat_wave_morphology"}, {"description": "Flat-wave or helical deformation produces spirochete morphology.", "evidence": [{"notes": "Supports spirochete-shape classes and their dependence on internal flagella-cell-body geometry.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "cell morphology is either a helix, a flat wave, or an irregularly shaped helix"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "flat_wave_morphology", "target": "spirochete_shaped_trait"}, {"description": "Periplasmic flagella enclosed in the periplasm distort and push the cell body by flagellar motor action.", "evidence": [{"notes": "spirochete flagella are enclosed in the periplasmic space and the filaments distort and push the cell body by action of the flagellar motors", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "id": "edge-5", "is_orphan": false, "predicate": "distort and push", "predicate_id": null, "source": "periplasmic_flagella", "target": "cell_body_deformation"}, {"description": "Flagella-driven cell body deformation produces the helical or flat-wave spirochete morphology.", "evidence": [{"notes": "Endoflagella-driven distortion of the cell body underlies spirochete shape.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "cell_body_deformation", "target": "spirochete_shaped_trait"}, {"description": "FlhE prevents ectopic assembly of flagellar filaments in the periplasm.", "evidence": [{"notes": "FlhE is a periplasmic, Sec-translocated protein that prevents ectopic assembly of flagellar filaments in the periplasm.", "reference": "DOI:10.1038/s41467-024-50278-0"}], "id": "edge-7", "is_orphan": false, "predicate": "prevents", "predicate_id": null, "source": "flhE", "target": "ectopic_periplasmic_filament_assembly"}, {"description": "Ectopic periplasmic filament assembly mislocalizes divisome and elongasome complexes required for peptidoglycan synthesis.", "evidence": [{"notes": "periplasmic filament assembly causally mis-localizes divisome and elongasome complexes required for peptidoglycan synthesis", "reference": "DOI:10.1038/s41467-024-50278-0"}], "id": "edge-8", "is_orphan": false, "predicate": "mislocalizes", "predicate_id": null, "source": "ectopic_periplasmic_filament_assembly", "target": "divisome_elongasome_localization"}, {"description": "Mislocalized divisome/elongasome alters cell curvature and rod morphology, coupling periplasmic filaments to envelope shape.", "evidence": [{"notes": "producing altered cell curvature/loss of rod morphology and infrequent cell lysis", "reference": "DOI:10.1038/s41467-024-50278-0"}], "id": "edge-9", "is_orphan": false, "predicate": "alters", "predicate_id": null, "source": "divisome_elongasome_localization", "target": "spirochete_shaped_trait"}, {"description": "FlgV localizes to the flagellar basal body and modulates periplasmic flagellar filament assembly.", "evidence": [{"notes": "FlgV localizes to the flagellar basal body and altering FlgV levels profoundly impacts filament assembly", "reference": "DOI:10.1038/s41467-024-54806-w"}], "id": "edge-10", "is_orphan": false, "predicate": "modulates", "predicate_id": null, "source": "flgV", "target": "periplasmic_flagella"}, {"description": "Reduced or aberrant FlgV levels perturb cell division and cell morphology in spirochetes.", "evidence": [{"notes": "\u0394flgV mutants exhibit defects in cell division and motility, including conjoined spirochetes; overproduction leads to cell elongation", "reference": "DOI:10.1038/s41467-024-54806-w"}], "id": "edge-11", "is_orphan": false, "predicate": "perturbs", "predicate_id": null, "source": "flgV", "target": "cell_morphology_division"}], "evidence_rows": [{"description": "FlaB is required for periplasmic flagellar filaments.", "edge_id": "edge-1", "evidence": [{"notes": "Targeted mutagenesis of flaB removed periplasmic flagella in Borrelia burgdorferi.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "gene encoding the major periplasmic flagellar filament protein FlaB"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "FlaB", "target": "periplasmic flagella"}, {"description": "Periplasmic flagella interact with the cell cylinder to deform the spirochete body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a physical interaction between flagella and cell cylinder.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "complex interaction between the cell cylinder and the internal periplasmic flagella"}], "predicate": "interact with", "predicate_id": "biolink:interacts_with", "source": "periplasmic flagella", "target": "cell cylinder"}, {"description": "Periplasmic flagella provide a skeletal function that confers flat-wave morphology.", "edge_id": "edge-3", "evidence": [{"notes": "Supports periplasmic flagella as morphology-shaping structures.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "have a skeletal function"}], "predicate": "confers", "predicate_id": null, "source": "periplasmic flagella", "target": "flat-wave morphology"}, {"description": "Flat-wave or helical deformation produces spirochete morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports spirochete-shape classes and their dependence on internal flagella-cell-body geometry.", "reference": "DOI:10.1073/pnas.200221797", "snippet": "cell morphology is either a helix, a flat wave, or an irregularly shaped helix"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "flat-wave morphology", "target": "spirochete shaped"}, {"description": "Periplasmic flagella enclosed in the periplasm distort and push the cell body by flagellar motor action.", "edge_id": "edge-5", "evidence": [{"notes": "spirochete flagella are enclosed in the periplasmic space and the filaments distort and push the cell body by action of the flagellar motors", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "predicate": "distort and push", "predicate_id": null, "source": "periplasmic flagella", "target": "cell body deformation"}, {"description": "Flagella-driven cell body deformation produces the helical or flat-wave spirochete morphology.", "edge_id": "edge-6", "evidence": [{"notes": "Endoflagella-driven distortion of the cell body underlies spirochete shape.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "predicate": "produces", "predicate_id": null, "source": "cell body deformation", "target": "spirochete shaped"}, {"description": "FlhE prevents ectopic assembly of flagellar filaments in the periplasm.", "edge_id": "edge-7", "evidence": [{"notes": "FlhE is a periplasmic, Sec-translocated protein that prevents ectopic assembly of flagellar filaments in the periplasm.", "reference": "DOI:10.1038/s41467-024-50278-0"}], "predicate": "prevents", "predicate_id": null, "source": "FlhE", "target": "ectopic periplasmic filament assembly"}, {"description": "Ectopic periplasmic filament assembly mislocalizes divisome and elongasome complexes required for peptidoglycan synthesis.", "edge_id": "edge-8", "evidence": [{"notes": "periplasmic filament assembly causally mis-localizes divisome and elongasome complexes required for peptidoglycan synthesis", "reference": "DOI:10.1038/s41467-024-50278-0"}], "predicate": "mislocalizes", "predicate_id": null, "source": "ectopic periplasmic filament assembly", "target": "divisome and elongasome localization"}, {"description": "Mislocalized divisome/elongasome alters cell curvature and rod morphology, coupling periplasmic filaments to envelope shape.", "edge_id": "edge-9", "evidence": [{"notes": "producing altered cell curvature/loss of rod morphology and infrequent cell lysis", "reference": "DOI:10.1038/s41467-024-50278-0"}], "predicate": "alters", "predicate_id": null, "source": "divisome and elongasome localization", "target": "spirochete shaped"}, {"description": "FlgV localizes to the flagellar basal body and modulates periplasmic flagellar filament assembly.", "edge_id": "edge-10", "evidence": [{"notes": "FlgV localizes to the flagellar basal body and altering FlgV levels profoundly impacts filament assembly", "reference": "DOI:10.1038/s41467-024-54806-w"}], "predicate": "modulates", "predicate_id": null, "source": "FlgV", "target": "periplasmic flagella"}, {"description": "Reduced or aberrant FlgV levels perturb cell division and cell morphology in spirochetes.", "edge_id": "edge-11", "evidence": [{"notes": "\u0394flgV mutants exhibit defects in cell division and motility, including conjoined spirochetes; overproduction leads to cell elongation", "reference": "DOI:10.1038/s41467-024-54806-w"}], "predicate": "perturbs", "predicate_id": null, "source": "FlgV", "target": "cell division and morphology"}], "graph_id": "spirochete_shaped_periplasmic_flagella", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Distortion and pushing of the spirochete cell body by periplasmic flagellar motor action.", "grounding": null, "id": "cell_body_deformation", "is_orphan": false, "label": "cell body deformation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Rod-like cell body within the outer membrane sheath.", "grounding": null, "id": "cell_cylinder", "is_orphan": false, "label": "cell cylinder", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-division and whole-cell shape processes in spirochetes.", "grounding": null, "id": "cell_morphology_division", "is_orphan": false, "label": "cell division and morphology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Localization of cell-division and elongation complexes required for peptidoglycan synthesis.", "grounding": null, "id": "divisome_elongasome_localization", "is_orphan": false, "label": "divisome and elongasome localization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Aberrant assembly of flagellar filaments in the periplasm.", "grounding": null, "id": "ectopic_periplasmic_filament_assembly", "is_orphan": false, "label": "ectopic periplasmic filament assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Major periplasmic flagellar filament protein in Borrelia.", "grounding": "UniProtKB:A8WEP6", "id": "flaB", "is_orphan": false, "label": "FlaB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Wave-like deformation of the spirochete cell body.", "grounding": null, "id": "flat_wave_morphology", "is_orphan": false, "label": "flat-wave morphology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Broadly conserved basal-body protein that modulates periplasmic flagellar filament assembly.", "grounding": null, "id": "flgV", "is_orphan": false, "label": "FlgV", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic Sec-translocated protein preventing ectopic flagellar filament assembly in the periplasm.", "grounding": null, "id": "flhE", "is_orphan": false, "label": "FlhE", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fce7f3", "description": "Internal flagella located in the periplasmic space.", "grounding": null, "id": "periplasmic_flagella", "is_orphan": false, "label": "periplasmic flagella", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated helical or flat-wave spirochete morphology.", "grounding": "METPO:1000693", "id": "spirochete_shaped_trait", "is_orphan": false, "label": "spirochete shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Spirochete-shape periplasmic flagella mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -649,7 +774,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

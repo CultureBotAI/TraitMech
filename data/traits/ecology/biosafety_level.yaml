@@ -71,6 +71,40 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1001106
     description: Proposed enhanced classification beyond BSL-4.
+  - node_id: risk_assessment
+    label: hazard identification and risk assessment
+    node_type: BIOLOGICAL_PROCESS
+    description: Cyclical biorisk process of gathering information, evaluating risks,
+      and selecting control measures.
+  - node_id: risk_group_classification
+    label: risk group classification (RG1-RG4)
+    node_type: QUALITY
+    description: Classification of biological agents into risk groups RG1-RG4 based
+      on hazard.
+  - node_id: aerosol_transmission
+    label: aerosol/inhalation transmission route
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity of an agent to be transmitted via inhalation or aerosol.
+  - node_id: bsl3_containment
+    label: BSL-3 containment requirement
+    node_type: EXPERIMENTAL_FACTOR
+    description: Controlled-access containment for agents causing serious or lethal
+      disease via inhalation.
+  - node_id: lack_of_countermeasures
+    label: lack of effective treatment or vaccine
+    node_type: QUALITY
+    description: Absence of available vaccines or therapeutics for a dangerous, life-threatening
+      agent.
+  - node_id: bsl4_containment
+    label: BSL-4 containment requirement
+    node_type: EXPERIMENTAL_FACTOR
+    description: Maximum containment for highly dangerous agents often lacking vaccines
+      or treatments.
+  - node_id: infectious_dose
+    label: infectious dose
+    node_type: QUALITY
+    description: Dose of agent required to cause infection; a practical criterion
+      in biorisk assessment.
   edges:
   - subject: pathogen_hazard_properties
     predicate: causes
@@ -143,6 +177,59 @@ causal_graphs:
       notes: Supports host-cell pathogen interactions, generalised to hypothetical
         post-BSL-4 hazards, as motivating the proposed BSL-5 tier.
     predicate_id: rdfs:subClassOf
+  - subject: risk_assessment
+    predicate: guides selection of
+    object: containment_requirements
+    description: Hazard identification and risk assessment guide selection of containment/control
+      measures.
+    evidence:
+    - reference: DOI:10.1016/j.jobb.2021.09.002
+      notes: WHO LBM4 cyclical process of evaluating risks and selecting and implementing
+        control measures.
+  - subject: risk_group_classification
+    predicate: informs
+    object: biosafety_level_trait
+    description: Risk group classification (RG1-RG4) maps to / informs the biosafety
+      containment level.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: BSL categories are progressive containment categories linked to risk
+        group/hazard classification.
+  - subject: aerosol_transmission
+    predicate: increases requirement for
+    object: bsl3_containment
+    description: Inhalation/aerosol transmissibility increases the requirement for
+      BSL-3 containment.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: BSL-3 is for agents that may cause serious or lethal diseases through
+        inhalation.
+  - subject: lack_of_countermeasures
+    predicate: supports classification at
+    object: bsl4_containment
+    description: Absence of effective treatment or vaccine supports classification
+      at BSL-4.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: BSL-4 covers highly dangerous, life-threatening agents often lacking
+        vaccines or treatments.
+  - subject: aerosol_transmission
+    predicate: is input to
+    object: risk_assessment
+    description: Route of inoculation / modes of transmission is a practical input
+      to biorisk assessment.
+    evidence:
+    - reference: DOI:10.1089/apb.2022.0040
+      notes: BRM focused on route of inoculation/modes of transmission as a practical
+        criterion in biorisk assessment.
+  - subject: infectious_dose
+    predicate: is input to
+    object: risk_assessment
+    description: Infectious dose is a practical criterion used in biosafety risk assessment.
+    evidence:
+    - reference: DOI:10.1089/apb.2022.0040
+      notes: BRM identified infectious dose among the practical criteria used in biosafety
+        risk assessment.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.931935+00:00'
   curator: seed_from_metpo
@@ -173,4 +260,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

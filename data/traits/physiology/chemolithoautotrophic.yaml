@@ -72,6 +72,26 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cellular material generated from fixed carbon.
     grounding: METPO:1007501
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, the carboxylating
+      enzyme of the CBB cycle.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme interconverting CO2 and bicarbonate to facilitate dissolved
+      inorganic carbon fixation.
+  - node_id: dic_transporter
+    label: dissolved inorganic carbon transporter
+    node_type: GENE_OR_PROTEIN
+    description: Membrane transporter that increases intracellular availability of
+      dissolved inorganic carbon.
+  - node_id: dissolved_inorganic_carbon
+    label: dissolved inorganic carbon
+    node_type: CHEMICAL
+    description: Pool of CO2 and bicarbonate supplied to autotrophic carbon-fixation
+      pathways.
   edges:
   - subject: chemolithoautotrophic_trait
     predicate: uses electron donor
@@ -156,6 +176,49 @@ causal_graphs:
       snippet: physiology ... of chemoautotrophic bacteria
       notes: Review scope supports chemoautotrophic growth from fixed carbon.
     predicate_id: METPO:2000202
+  - subject: rubisco
+    predicate: catalyzes
+    object: co2_fixation_pathway
+    description: RuBisCO catalyzes the carboxylation step of the Calvin-Benson-Bassham
+      CO2 fixation cycle.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: Ribulose 1,5-bisphosphate carboxylase/oxygenase (RuBisCO) drives CBB-cycle
+        CO2 fixation.
+  - subject: carbonic_anhydrase
+    predicate: facilitates supply of
+    object: dissolved_inorganic_carbon
+    description: Carbonic anhydrase interconverts CO2 and bicarbonate to facilitate
+      dissolved inorganic carbon fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: carbonic anhydrase enzymes (CA) to facilitate DIC fixation.
+  - subject: dic_transporter
+    predicate: increases availability of
+    object: dissolved_inorganic_carbon
+    description: DIC transporters bridge environmental inorganic carbon supply to
+      autotrophic pathway demand.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: DIC transporters bridge supply from the environment to demand by the
+        autotrophic pathway.
+  - subject: dissolved_inorganic_carbon
+    predicate: supplies substrate to
+    object: co2_fixation_pathway
+    description: Dissolved inorganic carbon supplies the CO2/bicarbonate substrate
+      for autotrophic fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: DIC supply bridged to demand by the autotrophic pathway.
+  - subject: proton_motive_force
+    predicate: drives reverse electron transport for
+    object: reducing_power
+    description: PMF can reverse the electron transport chain to regenerate NADH/NADPH
+      reducing power for fixation.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-43524-4
+      notes: The proton motive force drives ATP synthesis and can reverse the electron
+        transport chain to regenerate NADH/NADPH.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.870482+00:00'
   curator: seed_from_metpo
@@ -228,4 +291,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -41,6 +41,31 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Modest mutation-bias balance between AT- and GC-favoring pressures
       yielding mid-range GC composition.
+  - node_id: dna_repair_defect
+    label: DNA repair defect
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss/impairment of DNA repair pathways (MMR, BER, HR) altering mutation
+      accumulation.
+  - node_id: mutational_spectrum
+    label: mutational spectrum
+    node_type: BIOLOGICAL_PROCESS
+    description: Distribution of mutation types (substitution classes) characterizing
+      a genome.
+  - node_id: cytosine_deamination
+    label: cytosine deamination / C>T bias
+    node_type: BIOLOGICAL_PROCESS
+    description: Spontaneous cytosine deamination driving C>T transitions, the most
+      common mutation type.
+  - node_id: at_enriching_spectrum
+    label: AT-enriching mutation spectrum
+    node_type: BIOLOGICAL_PROCESS
+    description: Mutation spectrum biased toward AT-increasing substitutions (C>A/T
+      enriched, C>G depleted).
+  - node_id: repair_enzyme_bias
+    label: DNA replication/repair enzyme bias
+    node_type: BIOLOGICAL_PROCESS
+    description: Nucleotide biases of DNA replication and repair enzymes contributing
+      to genome base composition.
   edges:
   - subject: moderate_mutation_bias
     predicate: produces
@@ -60,6 +85,42 @@ causal_graphs:
       snippet: GC content
       notes: Supports the 42.65–57.0% bin as a value within the GC-content distribution.
     predicate_id: rdfs:subClassOf
+  - subject: dna_repair_defect
+    predicate: causes
+    object: mutational_spectrum
+    description: Defects in DNA repair genes (MMR, BER, HR) create distinctive bacterial
+      mutational signatures.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-42916-w
+      notes: Defects in DNA repair create distinctive mutational signatures attributable
+        to MMR, BER, or HR genes.
+  - subject: cytosine_deamination
+    predicate: shifts toward
+    object: at_enriching_spectrum
+    description: Cytosine deamination / C>T transition bias shifts the spectrum toward
+      AT-enriching substitutions.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-42916-w
+      notes: C>T was the most common mutation type in 69 of 84 SBS spectra, potentially
+        due to cytosine deamination.
+  - subject: at_enriching_spectrum
+    predicate: associated with
+    object: gc_low_trait
+    description: A spectrum enriched for C>A/T and depleted for C>G is associated
+      with lower genomic G+C content.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-42916-w
+      notes: Genomic G+C content negatively correlates with C>A/T proportion and positively
+        with C>G mutations.
+  - subject: repair_enzyme_bias
+    predicate: shapes
+    object: gc_content
+    description: Biases of DNA replication/repair enzymes and inter-nucleotide mutation
+      rates shape genomic GC percent.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1412318
+      notes: Genome GC% depends in part on mutation rates between nucleotides; replication/repair
+        enzymes present biases.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
@@ -78,4 +139,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

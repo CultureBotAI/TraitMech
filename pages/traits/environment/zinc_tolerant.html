@@ -107,6 +107,159 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>ZntA P-type ATPase</strong>
+            <span class="edge-predicate">exports</span>
+            <strong>zinc(2+) ion</strong>
+            
+            <p>ZntA PIB2-type ATPase effluxes cytoplasmic Zn(2+).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">Efflux of zinc ions is mediated by the PIB2-type ATPase, ZntA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>ZntA P-type ATPase</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>zinc tolerant</strong>
+            
+            <p>ZntA-mediated efflux is causal for zinc resistance.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">Deletion of PIB2 ATPases sharply lowers IC50 (to 7.7 uM), showing their causal role in resistance.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>zinc(2+) ion</strong>
+            <span class="edge-predicate">upregulates</span>
+            <strong>zntA transcription</strong>
+            
+            <p>Elevated zinc induces transcription of the zntA efflux gene.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00299-24</code>
+                
+                <span class="meta">At external zinc concentrations above 200 nM expression of the zntA gene is upregulated.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ZntR MerR-family regulator</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>zntA transcription</strong>
+            
+            <p>ZntR is essential for zinc-responsive zntA expression.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00299-24</code>
+                
+                <span class="meta">ZntR was essential for zntA expression.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>zntA transcription</strong>
+            <span class="edge-predicate">results in</span>
+            <strong>czc cation-efflux system</strong>
+            
+            <p>zntA transcription yields the ZntA efflux machinery.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00299-24</code>
+                
+                <span class="meta">Increased zntA expression provides ZntA exporter under zinc excess.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>CzcCBA RND efflux complex</strong>
+            <span class="edge-predicate">exports</span>
+            <strong>zinc(2+) ion</strong>
+            
+            <p>CzcCBA RND pump exports Zn(2+) from the periplasm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">The plasmid-encoded RND transenvelope pump CzcCBA exports Co(II), Zn(II), and Cd(II).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>polyphosphate</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>zinc ion buffering</strong>
+            
+            <p>Polyphosphate buffers cytoplasmic zinc, shaping flow equilibrium.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">Metal-binding cytoplasmic components polyphosphate and glutathione influenced the flow equilibrium.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>glutathione</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>zinc ion buffering</strong>
+            
+            <p>Glutathione buffers cytoplasmic zinc, shaping flow equilibrium.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">Polyphosphate and glutathione influenced the flow equilibrium.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>zinc ion buffering</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>zinc(2+) ion</strong>
+            
+            <p>Buffering lowers free cytoplasmic zinc.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00080-24</code>
+                
+                <span class="meta">Cytoplasmic buffering components influence the zinc flow equilibrium.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -241,6 +394,12 @@
           <time>2026-06-14T06:38:14Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:B0VPE1×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 9 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -600,7 +759,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic zinc detoxification.", "edges": [{"description": "Cytoplasmic zinc excess is the challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Zn(2+) to a MIC of 20 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "zinc_ion", "target": "zinc_tolerant_trait"}, {"description": "CzcP exports zinc together with cadmium and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "zinc_export"}, {"description": "Czc-mediated export depletes the cytoplasmic zinc pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers zinc resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zinc_export", "target": "zinc_ion"}], "evidence_rows": [{"description": "Cytoplasmic zinc excess is the challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Zn(2+) to a MIC of 20 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "zinc(2+) ion", "target": "zinc tolerant"}, {"description": "CzcP exports zinc together with cadmium and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "target": "zinc ion transmembrane transport"}, {"description": "Czc-mediated export depletes the cytoplasmic zinc pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers zinc resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zinc ion transmembrane transport", "target": "zinc(2+) ion"}], "graph_id": "zinc_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Zn, Cd, and Co cations.", "grounding": "UniProtKB:B0VPE1", "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Active export of Zn(2+) across the cytoplasmic membrane.", "grounding": "GO:0006829", "id": "zinc_export", "is_orphan": false, "label": "zinc ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Cytoplasmic Zn(2+) excess threatening protein mismetallation.", "grounding": "CHEBI:29105", "id": "zinc_ion", "is_orphan": false, "label": "zinc(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Zn(2+) concentrations.", "grounding": "traitmech:000014", "id": "zinc_tolerant_trait", "is_orphan": false, "label": "zinc tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Zinc tolerance via czc cation-efflux system"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic zinc detoxification.", "edges": [{"description": "Cytoplasmic zinc excess is the challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Zn(2+) to a MIC of 20 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "zinc_ion", "target": "zinc_tolerant_trait"}, {"description": "CzcP exports zinc together with cadmium and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "zinc_export"}, {"description": "Czc-mediated export depletes the cytoplasmic zinc pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers zinc resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zinc_export", "target": "zinc_ion"}, {"description": "ZntA PIB2-type ATPase effluxes cytoplasmic Zn(2+).", "evidence": [{"notes": "Efflux of zinc ions is mediated by the PIB2-type ATPase, ZntA.", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-4", "is_orphan": false, "predicate": "exports", "predicate_id": null, "source": "znta_atpase", "target": "zinc_ion"}, {"description": "ZntA-mediated efflux is causal for zinc resistance.", "evidence": [{"notes": "Deletion of PIB2 ATPases sharply lowers IC50 (to 7.7 uM), showing their causal role in resistance.", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-5", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "znta_atpase", "target": "zinc_tolerant_trait"}, {"description": "Elevated zinc induces transcription of the zntA efflux gene.", "evidence": [{"notes": "At external zinc concentrations above 200 nM expression of the zntA gene is upregulated.", "reference": "DOI:10.1128/jb.00299-24"}], "id": "edge-6", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "zinc_ion", "target": "znta_expression"}, {"description": "ZntR is essential for zinc-responsive zntA expression.", "evidence": [{"notes": "ZntR was essential for zntA expression.", "reference": "DOI:10.1128/jb.00299-24"}], "id": "edge-7", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "zntr_regulator", "target": "znta_expression"}, {"description": "zntA transcription yields the ZntA efflux machinery.", "evidence": [{"notes": "Increased zntA expression provides ZntA exporter under zinc excess.", "reference": "DOI:10.1128/jb.00299-24"}], "id": "edge-8", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "znta_expression", "target": "czc_efflux_system"}, {"description": "CzcCBA RND pump exports Zn(2+) from the periplasm.", "evidence": [{"notes": "The plasmid-encoded RND transenvelope pump CzcCBA exports Co(II), Zn(II), and Cd(II).", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-9", "is_orphan": false, "predicate": "exports", "predicate_id": null, "source": "czccba_complex", "target": "zinc_ion"}, {"description": "Polyphosphate buffers cytoplasmic zinc, shaping flow equilibrium.", "evidence": [{"notes": "Metal-binding cytoplasmic components polyphosphate and glutathione influenced the flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "polyphosphate", "target": "zinc_buffering"}, {"description": "Glutathione buffers cytoplasmic zinc, shaping flow equilibrium.", "evidence": [{"notes": "Polyphosphate and glutathione influenced the flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "glutathione", "target": "zinc_buffering"}, {"description": "Buffering lowers free cytoplasmic zinc.", "evidence": [{"notes": "Cytoplasmic buffering components influence the zinc flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "id": "edge-12", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "zinc_buffering", "target": "zinc_ion"}], "evidence_rows": [{"description": "Cytoplasmic zinc excess is the challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Zn(2+) to a MIC of 20 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "zinc(2+) ion", "target": "zinc tolerant"}, {"description": "CzcP exports zinc together with cadmium and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "target": "zinc ion transmembrane transport"}, {"description": "Czc-mediated export depletes the cytoplasmic zinc pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers zinc resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zinc ion transmembrane transport", "target": "zinc(2+) ion"}, {"description": "ZntA PIB2-type ATPase effluxes cytoplasmic Zn(2+).", "edge_id": "edge-4", "evidence": [{"notes": "Efflux of zinc ions is mediated by the PIB2-type ATPase, ZntA.", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "exports", "predicate_id": null, "source": "ZntA P-type ATPase", "target": "zinc(2+) ion"}, {"description": "ZntA-mediated efflux is causal for zinc resistance.", "edge_id": "edge-5", "evidence": [{"notes": "Deletion of PIB2 ATPases sharply lowers IC50 (to 7.7 uM), showing their causal role in resistance.", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "promotes", "predicate_id": null, "source": "ZntA P-type ATPase", "target": "zinc tolerant"}, {"description": "Elevated zinc induces transcription of the zntA efflux gene.", "edge_id": "edge-6", "evidence": [{"notes": "At external zinc concentrations above 200 nM expression of the zntA gene is upregulated.", "reference": "DOI:10.1128/jb.00299-24"}], "predicate": "upregulates", "predicate_id": null, "source": "zinc(2+) ion", "target": "zntA transcription"}, {"description": "ZntR is essential for zinc-responsive zntA expression.", "edge_id": "edge-7", "evidence": [{"notes": "ZntR was essential for zntA expression.", "reference": "DOI:10.1128/jb.00299-24"}], "predicate": "required for", "predicate_id": null, "source": "ZntR MerR-family regulator", "target": "zntA transcription"}, {"description": "zntA transcription yields the ZntA efflux machinery.", "edge_id": "edge-8", "evidence": [{"notes": "Increased zntA expression provides ZntA exporter under zinc excess.", "reference": "DOI:10.1128/jb.00299-24"}], "predicate": "results in", "predicate_id": null, "source": "zntA transcription", "target": "czc cation-efflux system"}, {"description": "CzcCBA RND pump exports Zn(2+) from the periplasm.", "edge_id": "edge-9", "evidence": [{"notes": "The plasmid-encoded RND transenvelope pump CzcCBA exports Co(II), Zn(II), and Cd(II).", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "exports", "predicate_id": null, "source": "CzcCBA RND efflux complex", "target": "zinc(2+) ion"}, {"description": "Polyphosphate buffers cytoplasmic zinc, shaping flow equilibrium.", "edge_id": "edge-10", "evidence": [{"notes": "Metal-binding cytoplasmic components polyphosphate and glutathione influenced the flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "contributes to", "predicate_id": null, "source": "polyphosphate", "target": "zinc ion buffering"}, {"description": "Glutathione buffers cytoplasmic zinc, shaping flow equilibrium.", "edge_id": "edge-11", "evidence": [{"notes": "Polyphosphate and glutathione influenced the flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "contributes to", "predicate_id": null, "source": "glutathione", "target": "zinc ion buffering"}, {"description": "Buffering lowers free cytoplasmic zinc.", "edge_id": "edge-12", "evidence": [{"notes": "Cytoplasmic buffering components influence the zinc flow equilibrium.", "reference": "DOI:10.1128/jb.00080-24"}], "predicate": "mitigates", "predicate_id": null, "source": "zinc ion buffering", "target": "zinc(2+) ion"}], "graph_id": "zinc_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Zn, Cd, and Co cations.", "grounding": "UniProtKB:B0VPE1", "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "RND transenvelope pump exporting zinc from the periplasm.", "grounding": null, "id": "czccba_complex", "is_orphan": false, "label": "CzcCBA RND efflux complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Cytoplasmic thiol buffering intracellular zinc.", "grounding": "CHEBI:16856", "id": "glutathione", "is_orphan": false, "label": "glutathione", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Cytoplasmic metal-binding polymer buffering zinc.", "grounding": null, "id": "polyphosphate", "is_orphan": false, "label": "polyphosphate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular sequestration maintaining zinc flow equilibrium.", "grounding": null, "id": "zinc_buffering", "is_orphan": false, "label": "zinc ion buffering", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Active export of Zn(2+) across the cytoplasmic membrane.", "grounding": "GO:0006829", "id": "zinc_export", "is_orphan": false, "label": "zinc ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Cytoplasmic Zn(2+) excess threatening protein mismetallation.", "grounding": "CHEBI:29105", "id": "zinc_ion", "is_orphan": false, "label": "zinc(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Zn(2+) concentrations.", "grounding": "traitmech:000014", "id": "zinc_tolerant_trait", "is_orphan": false, "label": "zinc tolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "PIB2-type P-type ATPase mediating cytoplasmic zinc efflux.", "grounding": null, "id": "znta_atpase", "is_orphan": false, "label": "ZntA P-type ATPase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the zntA zinc-efflux ATPase gene.", "grounding": null, "id": "znta_expression", "is_orphan": false, "label": "zntA transcription", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "MerR-family zinc-responsive transcriptional activator of zntA.", "grounding": null, "id": "zntr_regulator", "is_orphan": false, "label": "ZntR MerR-family regulator", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Zinc tolerance via czc cation-efflux system"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -611,7 +770,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

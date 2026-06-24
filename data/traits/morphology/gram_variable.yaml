@@ -48,6 +48,25 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Co-existence of gram-positive and gram-negative-staining cells in
       the same culture.
+  - node_id: thin_peptidoglycan_layer
+    label: thin peptidoglycan layer
+    node_type: CELLULAR_LOCALIZATION
+    description: A reduced-thickness peptidoglycan sacculus, as in some monoderm bacteria.
+  - node_id: cv_iodide_complex_retention
+    label: CV-iodide complex retention
+    node_type: BIOLOGICAL_PROCESS
+    description: Trapping of the crystal-violet-iodide complex within the peptidoglycan
+      layer during gram staining.
+  - node_id: gram_negative_staining
+    label: gram-negative staining
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of crystal violet and counterstain uptake giving a gram-negative
+      appearance.
+  - node_id: cell_wall_deficient_forms
+    label: cell wall-deficient forms
+    node_type: STATE
+    description: Stress-induced bacterial cells with reduced or absent cell wall (e.g.,
+      L-forms, CWD coccoid forms).
   edges:
   - subject: culture_aging
     predicate: regulates
@@ -89,6 +108,41 @@ causal_graphs:
       notes: Supports the Gram-variable phenotype as the trait endpoint of heterogeneous
         staining.
     predicate_id: METPO:2007400
+  - subject: thin_peptidoglycan_layer
+    predicate: results in
+    object: gram_negative_staining
+    description: A thin peptidoglycan layer can yield a gram-negative staining result
+      even in monoderm bacteria.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00732-24
+      notes: certain bacteria can stain Gram-negative despite having a monoderm cell
+        wall structure
+  - subject: thin_peptidoglycan_layer
+    predicate: reduces
+    object: cv_iodide_complex_retention
+    description: A thin peptidoglycan layer reduces retention of the crystal-violet-iodide
+      complex, the core staining-chemistry determinant.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00732-24
+      notes: to retain the CV-iodide complex, resulting in the loss of the CV
+  - subject: cv_iodide_complex_retention
+    predicate: regulates
+    object: crystal_violet_retention_loss
+    description: Reduced CV-iodide complex retention drives loss of crystal-violet
+      retention.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00732-24
+      notes: Reduced CV-iodide complex retention underlies the loss of crystal violet
+        during decolorization.
+  - subject: cell_wall_deficient_forms
+    predicate: produces
+    object: mixed_staining
+    description: Stress-induced cell wall-deficient forms can produce mixed gram reactions
+      within a single culture.
+    evidence:
+    - reference: DOI:10.1101/2023.11.16.566987
+      notes: mechanisms that can produce cell-wall alterations or loss that would
+        lead to mixed Gram reactions in a single culture
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo
@@ -130,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -40,6 +40,26 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Recombination-associated process strongly favoring GC alleles that
       elevates genome-wide GC content into the high range.
+  - node_id: nhej_pathway
+    label: NHEJ pathway (Ku, LigD)
+    node_type: PATHWAY
+    description: Non-homologous end joining double-strand-break repair pathway (Ku,
+      LigD); KEGG ko03450.
+  - node_id: high_dsb_rate
+    label: high double-strand break rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Elevated rate of DNA double-strand break formation that may select
+      for increased GC content.
+  - node_id: drr_system_composition
+    label: DNA replication and repair (DRR) system composition
+    node_type: PATHWAY
+    description: Composition of DRR pathways (BER/NER/MMR/HR/NHEJ/TLS) whose KEGG-ortholog
+      profile correlates with genomic GC.
+  - node_id: nhej_end_joining_efficiency
+    label: NHEJ end-joining efficiency
+    node_type: MOLECULAR_FUNCTION
+    description: Efficiency of NHEJ end-joining via stabilized short overhang / microhomology
+      pairing.
   edges:
   - subject: strong_gbgc
     predicate: produces
@@ -59,6 +79,42 @@ causal_graphs:
       snippet: GC content
       notes: Supports the >66.3% bin as a value within the GC-content distribution.
     predicate_id: rdfs:subClassOf
+  - subject: nhej_pathway
+    predicate: positively correlated with
+    object: gc_mid1_trait
+    description: Ku/NHEJ presence is strongly associated with elevated genomic GC
+      content.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008493
+      notes: Strong association between Ku presence and elevated GC content; Pearson
+        r=0.54 (p<2.2e-16). Correlational across prokaryotes.
+  - subject: high_dsb_rate
+    predicate: selects for
+    object: gc_mid1_trait
+    description: Higher DSB formation rate selects for increased GC content relative
+      to genomic background.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008493
+      notes: Sites with higher DSB rates are under selection for increased GC content;
+        proposed unifying driver of GC content across prokaryotes.
+  - subject: drr_system_composition
+    predicate: strongly correlated with
+    object: gc_mid1_trait
+    description: DRR-system KEGG-ortholog composition explains a large fraction of
+      genomic GC variance.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      notes: Linear model using 217 DRR-related KEGG orthologs explains up to 88%
+        of variance in genomic GC (multiple correlation 0.94).
+  - subject: gc_mid1_trait
+    predicate: may increase
+    object: nhej_end_joining_efficiency
+    description: High GC may increase NHEJ repair efficiency by stabilizing short
+      overhangs/microhomologies via extra hydrogen bonds.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1008493
+      notes: High GC via increased hydrogen bonds may stabilize short overhang/microhomology
+        pairing and increase NHEJ efficiency.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817373+00:00'
   curator: seed_from_metpo
@@ -77,4 +133,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

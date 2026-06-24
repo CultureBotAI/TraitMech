@@ -55,6 +55,43 @@ causal_graphs:
     label: resistant endospore
     node_type: ORGANELLE
     description: Dormant stress-resistant spore produced by endospore-forming bacteria.
+  - node_id: spoIID
+    label: SpoIID
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for forespore engulfment.
+  - node_id: spoIIM
+    label: SpoIIM
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for forespore engulfment.
+  - node_id: spoIIP
+    label: SpoIIP
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for forespore engulfment.
+  - node_id: forespore_engulfment
+    label: forespore engulfment
+    node_type: BIOLOGICAL_PROCESS
+    description: Engulfment of the forespore by the mother-cell membrane during sporulation.
+  - node_id: cortex_synthesis
+    label: cortex synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of spore cortex peptidoglycan in the intermembrane space.
+  - node_id: coat_assembly
+    label: spore coat assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the multilayered proteinaceous spore coat.
+  - node_id: spore_core_dormancy
+    label: spore core protection and dormancy
+    node_type: STATE
+    description: Spore core protection, dehydration, and dormancy state.
+  - node_id: spo0a_phosphorylated
+    label: phosphorylated Spo0A (Spo0A~P)
+    node_type: GENE_OR_PROTEIN
+    description: Active phosphorylated master regulator of sporulation initiation.
+  - node_id: spo0e_phosphatases
+    label: Spo0E-family phosphatases
+    node_type: GENE_OR_PROTEIN
+    description: Spo0A-specific phosphatases providing negative control of sporulation
+      initiation.
   edges:
   - subject: forespore
     predicate: develops into
@@ -100,6 +137,51 @@ causal_graphs:
       snippet: production of a highly resistant dormant cell type known as the spore
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: spoIID
+    predicate: required for
+    object: forespore_engulfment
+    description: SpoIID is required for forespore engulfment.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: Genes spoIID, spoIIM, spoIIP are required for engulfment.
+  - subject: spoIIM
+    predicate: required for
+    object: forespore_engulfment
+    description: SpoIIM is required for forespore engulfment.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: Genes spoIID, spoIIM, spoIIP are required for engulfment.
+  - subject: spoIIP
+    predicate: required for
+    object: forespore_engulfment
+    description: SpoIIP is required for forespore engulfment.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: Genes spoIID, spoIIM, spoIIP are required for engulfment.
+  - subject: cortex_synthesis
+    predicate: contributes to
+    object: resistant_endospore
+    description: Cortex synthesis after engulfment contributes to mature spore formation.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: Cortex synthesis within the intermembrane space and coat assembly follow
+        engulfment.
+  - subject: coat_assembly
+    predicate: contributes to
+    object: spore_core_dormancy
+    description: Spore coat assembly contributes to core protection, dehydration,
+      and dormancy.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: Coat proteins influence core protection, spore-core dehydration and dormancy.
+  - subject: spo0e_phosphatases
+    predicate: negatively regulates
+    object: spo0a_phosphorylated
+    description: Spo0E-family phosphatases dephosphorylate and inhibit Spo0A~P.
+    evidence:
+    - reference: DOI:10.3390/microbiolres14020035
+      notes: A second negative control is provided by Spo0E-family Spo0A-specific
+        phosphatases.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917323+00:00'
   curator: seed_from_metpo
@@ -141,4 +223,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042763×1, CHEBI:46837×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

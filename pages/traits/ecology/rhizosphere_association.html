@@ -90,6 +90,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>methyl-accepting chemotaxis protein (MCP)</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>bacterial chemotaxis</strong>
+            
+            <p>MCP chemoreceptors sense diverse root exudates to drive chemotaxis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fpls.2024.1491495</code>
+                
+                <span class="meta">Bacteria use transmembrane chemoreceptors (MCPs) to sense diverse root exudates.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>CheA/CheW/CheY chemotaxis signaling</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>flagellum-dependent cell motility</strong>
+            
+            <p>Phosphorylated CheY interacts with motility proteins to mediate movement.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fpls.2024.1491495</code>
+                
+                <span class="meta">Phosphorylated CheY interacts with motility proteins, mediating bacterial movement.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>bacterial chemotaxis</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>root colonization</strong>
+            
+            <p>Chemotaxis is the first step in root colonization by motile bacteria.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biology13020095</code>
+                
+                <span class="meta">Chemotaxis is the first step in the root colonization by motile bacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>flagellum-dependent cell motility</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>rhizosphere association</strong>
+            
+            <p>Flagellar motility is required for efficient root colonization / rhizosphere association.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad066</code>
+                
+                <span class="meta">Disruption of chemotaxis or flagellin synthesis led to a 100-fold decrease in root colonization efficiency.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>root exudates</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>biofilm formation</strong>
+            
+            <p>Root exudates serve as carbon sources prerequisite for biofilm formation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fpls.2024.1491495</code>
+                
+                <span class="meta">Root exudates serve as carbon sources that are prerequisites for biofilm formation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>biofilm formation</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>rhizosphere association</strong>
+            
+            <p>Biofilms provide nutrient-rich microenvironments and protection supporting rhizosphere persistence.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biology13020095</code>
+                
+                <span class="meta">Biofilms provide nutrient-rich microenvironments and protection.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -227,6 +329,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (rhizosphere / root exudate habitat) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +694,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking root exudates to the high-activity rhizosphere community.", "edges": [{"description": "Root exudates create a distinct, C-enriched soil microhabitat.", "evidence": [{"notes": "Philippot et al. define the rhizosphere as a root-influenced soil zone shaped by exudates.", "reference": "DOI:10.1038/nrmicro3109"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "root_exudates", "target": "rhizosphere_habitat"}, {"description": "The rhizosphere habitat supports the rhizosphere-associated lifestyle.", "evidence": [{"notes": "Fierer documents the rhizosphere as a high-activity subset of the broader soil microbiome.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rhizosphere_habitat", "target": "rhizosphere_trait"}], "evidence_rows": [{"description": "Root exudates create a distinct, C-enriched soil microhabitat.", "edge_id": "edge-1", "evidence": [{"notes": "Philippot et al. define the rhizosphere as a root-influenced soil zone shaped by exudates.", "reference": "DOI:10.1038/nrmicro3109"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "root exudates", "target": "rhizosphere habitat"}, {"description": "The rhizosphere habitat supports the rhizosphere-associated lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents the rhizosphere as a high-activity subset of the broader soil microbiome.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "rhizosphere habitat", "target": "rhizosphere association"}], "graph_id": "rhizosphere_root_exudate", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Root-influenced soil zone with elevated microbial activity.", "grounding": null, "id": "rhizosphere_habitat", "is_orphan": false, "label": "rhizosphere habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Persistent residence in the root-influenced soil zone.", "grounding": "traitmech:000051", "id": "rhizosphere_trait", "is_orphan": false, "label": "rhizosphere association", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Plant-derived carbon compounds released from roots into surrounding soil.", "grounding": null, "id": "root_exudates", "is_orphan": false, "label": "root exudates", "node_type": "CHEMICAL", "xrefs": []}], "title": "Root exudates structure the rhizosphere microbial habitat"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking root exudates to the high-activity rhizosphere community.", "edges": [{"description": "Root exudates create a distinct, C-enriched soil microhabitat.", "evidence": [{"notes": "Philippot et al. define the rhizosphere as a root-influenced soil zone shaped by exudates.", "reference": "DOI:10.1038/nrmicro3109"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "root_exudates", "target": "rhizosphere_habitat"}, {"description": "The rhizosphere habitat supports the rhizosphere-associated lifestyle.", "evidence": [{"notes": "Fierer documents the rhizosphere as a high-activity subset of the broader soil microbiome.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rhizosphere_habitat", "target": "rhizosphere_trait"}, {"description": "MCP chemoreceptors sense diverse root exudates to drive chemotaxis.", "evidence": [{"notes": "Bacteria use transmembrane chemoreceptors (MCPs) to sense diverse root exudates.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "mcp_chemoreceptor", "target": "bacterial_chemotaxis"}, {"description": "Phosphorylated CheY interacts with motility proteins to mediate movement.", "evidence": [{"notes": "Phosphorylated CheY interacts with motility proteins, mediating bacterial movement.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "che_signaling", "target": "flagellar_motility"}, {"description": "Chemotaxis is the first step in root colonization by motile bacteria.", "evidence": [{"notes": "Chemotaxis is the first step in the root colonization by motile bacteria.", "reference": "DOI:10.3390/biology13020095"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "bacterial_chemotaxis", "target": "root_colonization"}, {"description": "Flagellar motility is required for efficient root colonization / rhizosphere association.", "evidence": [{"notes": "Disruption of chemotaxis or flagellin synthesis led to a 100-fold decrease in root colonization efficiency.", "reference": "DOI:10.1093/femsre/fuad066"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "flagellar_motility", "target": "rhizosphere_trait"}, {"description": "Root exudates serve as carbon sources prerequisite for biofilm formation.", "evidence": [{"notes": "Root exudates serve as carbon sources that are prerequisites for biofilm formation.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "id": "edge-7", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "root_exudates", "target": "biofilm_formation"}, {"description": "Biofilms provide nutrient-rich microenvironments and protection supporting rhizosphere persistence.", "evidence": [{"notes": "Biofilms provide nutrient-rich microenvironments and protection.", "reference": "DOI:10.3390/biology13020095"}], "id": "edge-8", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "biofilm_formation", "target": "rhizosphere_trait"}], "evidence_rows": [{"description": "Root exudates create a distinct, C-enriched soil microhabitat.", "edge_id": "edge-1", "evidence": [{"notes": "Philippot et al. define the rhizosphere as a root-influenced soil zone shaped by exudates.", "reference": "DOI:10.1038/nrmicro3109"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "root exudates", "target": "rhizosphere habitat"}, {"description": "The rhizosphere habitat supports the rhizosphere-associated lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents the rhizosphere as a high-activity subset of the broader soil microbiome.", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "rhizosphere habitat", "target": "rhizosphere association"}, {"description": "MCP chemoreceptors sense diverse root exudates to drive chemotaxis.", "edge_id": "edge-3", "evidence": [{"notes": "Bacteria use transmembrane chemoreceptors (MCPs) to sense diverse root exudates.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "predicate": "positively regulates", "predicate_id": null, "source": "methyl-accepting chemotaxis protein (MCP)", "target": "bacterial chemotaxis"}, {"description": "Phosphorylated CheY interacts with motility proteins to mediate movement.", "edge_id": "edge-4", "evidence": [{"notes": "Phosphorylated CheY interacts with motility proteins, mediating bacterial movement.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "predicate": "positively regulates", "predicate_id": null, "source": "CheA/CheW/CheY chemotaxis signaling", "target": "flagellum-dependent cell motility"}, {"description": "Chemotaxis is the first step in root colonization by motile bacteria.", "edge_id": "edge-5", "evidence": [{"notes": "Chemotaxis is the first step in the root colonization by motile bacteria.", "reference": "DOI:10.3390/biology13020095"}], "predicate": "enables", "predicate_id": null, "source": "bacterial chemotaxis", "target": "root colonization"}, {"description": "Flagellar motility is required for efficient root colonization / rhizosphere association.", "edge_id": "edge-6", "evidence": [{"notes": "Disruption of chemotaxis or flagellin synthesis led to a 100-fold decrease in root colonization efficiency.", "reference": "DOI:10.1093/femsre/fuad066"}], "predicate": "positively regulates", "predicate_id": null, "source": "flagellum-dependent cell motility", "target": "rhizosphere association"}, {"description": "Root exudates serve as carbon sources prerequisite for biofilm formation.", "edge_id": "edge-7", "evidence": [{"notes": "Root exudates serve as carbon sources that are prerequisites for biofilm formation.", "reference": "DOI:10.3389/fpls.2024.1491495"}], "predicate": "positively regulates", "predicate_id": null, "source": "root exudates", "target": "biofilm formation"}, {"description": "Biofilms provide nutrient-rich microenvironments and protection supporting rhizosphere persistence.", "edge_id": "edge-8", "evidence": [{"notes": "Biofilms provide nutrient-rich microenvironments and protection.", "reference": "DOI:10.3390/biology13020095"}], "predicate": "positively regulates", "predicate_id": null, "source": "biofilm formation", "target": "rhizosphere association"}], "graph_id": "rhizosphere_root_exudate", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Directed bacterial movement along chemical gradients of root exudate compounds.", "grounding": null, "id": "bacterial_chemotaxis", "is_orphan": false, "label": "bacterial chemotaxis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Aggregation of cells into structured, matrix-enclosed communities on root surfaces.", "grounding": null, "id": "biofilm_formation", "is_orphan": false, "label": "biofilm formation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical two-component chemotaxis phosphorelay coupling chemoreception to flagellar motility.", "grounding": null, "id": "che_signaling", "is_orphan": false, "label": "CheA/CheW/CheY chemotaxis signaling", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Flagella-driven swimming motility that propels cells toward roots.", "grounding": null, "id": "flagellar_motility", "is_orphan": false, "label": "flagellum-dependent cell motility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Transmembrane chemoreceptor that senses root exudate compounds and initiates chemotactic signaling.", "grounding": null, "id": "mcp_chemoreceptor", "is_orphan": false, "label": "methyl-accepting chemotaxis protein (MCP)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Root-influenced soil zone with elevated microbial activity.", "grounding": null, "id": "rhizosphere_habitat", "is_orphan": false, "label": "rhizosphere habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Persistent residence in the root-influenced soil zone.", "grounding": "traitmech:000051", "id": "rhizosphere_trait", "is_orphan": false, "label": "rhizosphere association", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of bacteria on and around plant roots.", "grounding": null, "id": "root_colonization", "is_orphan": false, "label": "root colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Plant-derived carbon compounds released from roots into surrounding soil.", "grounding": null, "id": "root_exudates", "is_orphan": false, "label": "root exudates", "node_type": "CHEMICAL", "xrefs": []}], "title": "Root exudates structure the rhizosphere microbial habitat"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +705,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

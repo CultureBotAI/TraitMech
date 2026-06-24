@@ -68,6 +68,39 @@ causal_graphs:
     label: cellular biomass
     node_type: BIOLOGICAL_PROCESS
     description: Cellular material produced from fixed carbon.
+  - node_id: carboxysome
+    label: carboxysome
+    node_type: ORGANELLE
+    description: Bacterial microcompartment that encapsulates RuBisCO and carbonic
+      anhydrase to concentrate CO2.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting bicarbonate to CO2 inside the carboxysome to feed
+      RuBisCO.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: Dissolved inorganic carbon species imported and converted to CO2
+      for fixation.
+  - node_id: dic_transporter
+    label: dissolved inorganic carbon transporter
+    node_type: GENE_OR_PROTEIN
+    description: CO2/HCO3- transporters that supply inorganic carbon to the carbon-concentrating
+      mechanism.
+  - node_id: carbon_concentrating_mechanism
+    label: carbon-concentrating mechanism
+    node_type: BIOLOGICAL_PROCESS
+    description: System of DIC transporters and carboxysomes that elevates CO2 around
+      RuBisCO.
+  - node_id: inorganic_carbon_assimilation
+    label: inorganic carbon assimilation
+    node_type: BIOLOGICAL_PROCESS
+    description: Incorporation of inorganic carbon into cellular metabolites.
+  - node_id: hp_hb_cycle
+    label: 3-hydroxypropionate/4-hydroxybutyrate cycle
+    node_type: PATHWAY
+    description: Energy-efficient aerobic autotrophic CO2-fixation pathway.
   edges:
   - subject: chemoautotrophic_trait
     predicate: uses energy substrate
@@ -150,6 +183,72 @@ causal_graphs:
       snippet: physiology, ecology, and molecular biology
       notes: Review scope supports chemoautotrophic bacterial growth from fixed carbon.
     predicate_id: METPO:2000202
+  - subject: carboxysome
+    predicate: encapsulates
+    object: rubisco
+    description: Carboxysomes encapsulate RuBisCO and carbonic anhydrase within a
+      protein shell.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a
+        protein shell.
+  - subject: carboxysome
+    predicate: encapsulates
+    object: carbonic_anhydrase
+    description: Carboxysomes encapsulate carbonic anhydrase alongside RuBisCO.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a
+        protein shell.
+  - subject: carbonic_anhydrase
+    predicate: produces
+    object: carbon_dioxide
+    description: Carbonic anhydrase converts bicarbonate to CO2 inside the carboxysome
+      for RuBisCO.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.
+  - subject: carbonic_anhydrase
+    predicate: uses substrate
+    object: bicarbonate
+    description: Carbonic anhydrase uses bicarbonate as substrate to generate CO2.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.
+  - subject: dic_transporter
+    predicate: enables
+    object: carbon_concentrating_mechanism
+    description: DIC (CO2/HCO3-) transporters supply substrate for the carbon-concentrating
+      mechanism.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: CCMs consist of CO2 and HCO3- transporters and carboxysomes.
+  - subject: carbon_concentrating_mechanism
+    predicate: enables
+    object: calvin_benson_cycle
+    description: The carbon-concentrating mechanism elevates CO2 around RuBisCO to
+      support Calvin-Benson fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.01075-24
+      notes: CCMs consisting of transporters and carboxysomes concentrate CO2 for
+        RubisCO-mediated fixation.
+  - subject: calvin_benson_cycle
+    predicate: enables
+    object: inorganic_carbon_assimilation
+    description: The Calvin-Benson-Bassham cycle drives inorganic carbon assimilation
+      in chemolithoautotrophs.
+    evidence:
+    - reference: DOI:10.1101/2024.08.01.606197
+      notes: The CBB cycle accounts for >99% of global autotrophy and is used in chemolithoautotrophs.
+  - subject: carbon_dioxide
+    predicate: fixed by
+    object: hp_hb_cycle
+    description: The 3HP/4HB cycle is an energy-efficient aerobic CO2-fixation pathway
+      used by chemoautotrophs.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-06432-x
+      notes: Currently considered the most energy-efficient aerobic carbon fixation
+        pathway.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869416+00:00'
   curator: seed_from_metpo
@@ -209,4 +308,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16474×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

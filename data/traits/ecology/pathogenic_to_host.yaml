@@ -53,6 +53,48 @@ causal_graphs:
     label: host damage
     node_type: BIOLOGICAL_PROCESS
     description: Tissue, cell, or systemic damage produced in the host.
+  - node_id: quorum_sensing_autoinducers
+    label: quorum sensing autoinducers
+    node_type: CHEMICAL
+    description: Hormone-like signaling molecules that accumulate with cell density
+      and trigger sensor proteins.
+  - node_id: virulence_gene_expression
+    label: virulence gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Global up-regulation of virulence-factor genes in response to regulatory
+      signals.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation and maturation of structured surface-attached microbial
+      communities.
+  - node_id: persistent_infection
+    label: persistent infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Chronic/persistent infection of the host enabled by biofilm communities.
+  - node_id: biofilm_matrix
+    label: biofilm extracellular matrix
+    node_type: CELLULAR_LOCALIZATION
+    description: Extracellular polymeric matrix (EPS) enclosing biofilm cells.
+  - node_id: antibiotic_tolerance
+    label: antibiotic tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced susceptibility of biofilm cells to antimicrobials due to
+      limited penetration.
+  - node_id: immune_evasion
+    label: host immune evasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Avoidance or subversion of host immune defenses (e.g., phagocytosis,
+      immune clearance).
+  - node_id: capsule
+    label: polysaccharide capsule
+    node_type: CELLULAR_LOCALIZATION
+    description: Antiphagocytic polysaccharide surface capsule.
+  - node_id: horizontal_gene_transfer
+    label: horizontal gene transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Acquisition and recombination of mobile genetic elements driving
+      host adaptation.
   edges:
   - subject: virulence_factors
     predicate: enables
@@ -91,6 +133,73 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: quorum_sensing_autoinducers
+    predicate: activates
+    object: virulence_gene_expression
+    description: Quorum-sensing autoinducers trigger sensor proteins that drive global
+      virulence gene expression.
+    evidence:
+    - reference: DOI:10.3390/ijms25052655
+      notes: Autoinducers are hormone-like molecules triggering sensor proteins to
+        mediate changes in global gene expression; QS controls virulence factor production.
+  - subject: quorum_sensing_autoinducers
+    predicate: promotes
+    object: biofilm_formation
+    description: Quorum sensing is crucial for biofilm formation and maintenance.
+    evidence:
+    - reference: DOI:10.1016/j.tcsw.2024.100133
+      notes: QS is crucial for biofilm formation and maintenance.
+  - subject: biofilm_formation
+    predicate: enables
+    object: persistent_infection
+    description: Biofilm communities enable chronic/persistent infection of the host.
+    evidence:
+    - reference: DOI:10.1016/j.tcsw.2024.100133
+      notes: QS-driven biofilm formation and maintenance underlies persistent infection.
+  - subject: biofilm_matrix
+    predicate: enables
+    object: antibiotic_tolerance
+    description: The biofilm EPS matrix limits antimicrobial penetration and protects
+      deeper-layer cells, increasing tolerance.
+    evidence:
+    - reference: DOI:10.3390/bacteria3030008
+      notes: EPS matrix protects deeper-layer cells from antimicrobials; biofilm bacteria
+        increase resistance about 1000 fold (DOI:10.3390/ijms25052655).
+  - subject: biofilm_formation
+    predicate: enables
+    object: immune_evasion
+    description: Biofilms help bacteria evade the host immune response, supporting
+      chronic infection.
+    evidence:
+    - reference: DOI:10.3390/antibiotics13070619
+      notes: Biofilms help bacteria evade the immune response.
+  - subject: capsule
+    predicate: enables
+    object: immune_evasion
+    description: An antiphagocytic polysaccharide capsule resists phagocytosis, aiding
+      immune evasion.
+    evidence:
+    - reference: DOI:10.58532/nbennurmmch1
+      notes: An antiphagocytic capsule aids immune evasion; polysaccharide capsule
+        resists phagocytosis to increase virulence.
+  - subject: immune_evasion
+    predicate: enables
+    object: host_colonization
+    description: Evasion of host immune defenses permits sustained microbial growth
+      within host tissues.
+    evidence:
+    - reference: DOI:10.58532/nbennurmmch1
+      notes: Immune evasion via antiphagocytic capsule supports establishment within
+        the host.
+  - subject: horizontal_gene_transfer
+    predicate: contributes to
+    object: virulence_factors
+    description: Horizontal gene transfer, recombination, and gene gain/loss drive
+      acquisition of virulence-associated host-adaptation traits.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Horizontal gene transfer, gene acquisition and deletion, and genome rearrangements
+        are major drivers of host adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948130+00:00'
   curator: seed_from_metpo
@@ -114,4 +223,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

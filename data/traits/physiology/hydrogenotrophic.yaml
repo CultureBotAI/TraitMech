@@ -65,6 +65,31 @@ causal_graphs:
     label: cellular carbon
     node_type: BIOLOGICAL_PROCESS
     description: Reduced cell material produced from CO2.
+  - node_id: oxygen
+    label: oxygen
+    node_type: CHEMICAL
+    description: Terminal electron acceptor that can be reduced when coupled to H2
+      oxidation.
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    description: Inorganic electron acceptor reducible by H2 oxidation in anaerobic
+      respiration.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    description: Inorganic electron acceptor reducible by H2 oxidation in anaerobic
+      respiration.
+  - node_id: h2_oxidation
+    label: H2 oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Hydrogenase-catalyzed oxidation of molecular hydrogen to protons
+      and electrons.
+  - node_id: o2_sensitivity
+    label: oxygen sensitivity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Differential O2 sensitivity that constrains which hydrogenase classes
+      are usable.
   edges:
   - subject: hydrogenotrophic_trait
     predicate: uses electron donor
@@ -131,6 +156,68 @@ causal_graphs:
       snippet: CO2 ... into cellular carbon
       notes: Supports the carbon-assimilation output.
     predicate_id: METPO:2000202
+  - subject: h2_oxidation
+    predicate: generates
+    object: proton_motive_force
+    description: Splitting H2 yields electrons and protons that can generate a proton
+      gradient.
+    evidence:
+    - reference: DOI:10.2138/gselements.16.1.39
+      notes: Splitting H2 yields electrons and protons that can generate proton gradients
+        and ATP; general mechanistic process-level edge.
+  - subject: h2_oxidation
+    predicate: coupled to reduction of
+    object: carbon_dioxide
+    description: Hydrogen uptake can be coupled to reduction of CO2 in hydrogenotrophy.
+    evidence:
+    - reference: DOI:10.3390/microorganisms7020053
+      notes: The hydrogenase reaction is involved in coupling hydrogen uptake to the
+        reduction of electron acceptors (e.g., nitrate, sulfate, and carbon dioxide).
+  - subject: h2_oxidation
+    predicate: coupled to reduction of
+    object: oxygen
+    description: H2 oxidation can be coupled to reduction of O2 (aerobic hydrogen
+      oxidation).
+    evidence:
+    - reference: DOI:10.2138/gselements.16.1.39
+      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
+        nitrate, ferric iron and O2; high-confidence generic edge.
+  - subject: h2_oxidation
+    predicate: coupled to reduction of
+    object: nitrate
+    description: H2 oxidation can be coupled to reduction of nitrate in anaerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.2138/gselements.16.1.39
+      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
+        nitrate, ferric iron and O2; generic respiratory coupling edge.
+  - subject: h2_oxidation
+    predicate: coupled to reduction of
+    object: sulfate
+    description: H2 oxidation can be coupled to reduction of sulfate in anaerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.2138/gselements.16.1.39
+      notes: Hydrogen oxidation can be coupled to reduction of CO2/HCO3-, sulfate,
+        nitrate, ferric iron and O2; generic respiratory coupling edge.
+  - subject: h2_oxidation
+    predicate: can support
+    object: autotrophic_co2_fixation
+    description: Coupling H2 oxidation to carbon fixation enables hydrogenotrophic
+      chemosynthesis.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14300
+      notes: By coupling hydrogen oxidation to carbon fixation, hydrogenotrophic chemosynthesis
+        is a viable energy generation strategy; trait-level edge.
+  - subject: o2_sensitivity
+    predicate: constrains
+    object: hydrogenase
+    description: Differential O2 sensitivity across hydrogenase classes constrains
+      their distribution and use.
+    evidence:
+    - reference: DOI:10.2138/gselements.16.1.39
+      notes: Hydrogenase classes show different sensitivity to O2 and diverse H2 affinities;
+        broad environmental constraint across classes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.874373+00:00'
   curator: seed_from_metpo
@@ -190,4 +277,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -79,6 +79,43 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material formed from organic carbon.
     grounding: METPO:1007501
+  - node_id: microaerobic_conditions
+    label: microaerobic conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-oxygen conditions that permit biological Fe(II) oxidation by
+      limiting abiotic Fe(II) oxidation.
+  - node_id: ferrous_iron_oxidation
+    label: Fe(II) oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of ferrous iron serving as the energy-yielding lithotrophic
+      process.
+  - node_id: sulfide
+    label: sulfide
+    node_type: CHEMICAL
+    description: Reduced inorganic sulfur electron donor oxidized for lithotrophic
+      energy.
+  - node_id: sqr
+    label: sulfide:quinone oxidoreductase (SQR)
+    node_type: GENE_OR_PROTEIN
+    description: Key enzyme catalyzing oxidation/detoxification of sulfide in lithotrophic
+      sulfur oxidizers.
+  - node_id: thiosulfate
+    label: thiosulfate
+    node_type: CHEMICAL
+    description: Inorganic sulfur electron donor oxidized via the Sox system.
+  - node_id: sox_system
+    label: periplasmic Sox system
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic sox gene cluster encoding thiosulfate oxidation.
+  - node_id: conductive_pili_cytochromes
+    label: conductive pili and c-type cytochromes
+    node_type: GENE_OR_PROTEIN
+    description: Surface structures mediating extracellular/direct interspecies electron
+      transfer.
+  - node_id: diet
+    label: direct interspecies electron transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-to-cell electron conduction via conductive pili and c-type cytochromes.
   edges:
   - subject: lithoheterotrophic_trait
     predicate: uses electron donor
@@ -162,6 +199,72 @@ causal_graphs:
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of compounds into biomass.
     predicate_id: biolink:part_of
+  - subject: microaerobic_conditions
+    predicate: supports
+    object: ferrous_iron_oxidation
+    description: Microaerobic conditions support Fe(II)-oxidizing growth by limiting
+      abiotic Fe(II) oxidation.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-81412-3
+      notes: requiring microaerobic conditions because atmospheric O2 abiotically
+        oxidizes Fe(II)
+  - subject: ferrous_iron
+    predicate: oxidized in
+    object: ferrous_iron_oxidation
+    description: Ferrous iron is the substrate oxidized in the energy-yielding Fe(II)
+      oxidation process.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-81412-3
+      notes: the oxidation of Fe(II) coupled to the reduction of oxygen
+  - subject: ferrous_iron_oxidation
+    predicate: feeds electrons into
+    object: respiratory_chain
+    description: Fe(II) oxidation provides electrons for respiratory energy conservation.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-81412-3
+      notes: Fe(II) oxidation provides energy while organic carbon serves primarily
+        as the carbon source
+  - subject: sulfide
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Sulfide is an inorganic electron donor for lithotrophic sulfur oxidation.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56588-1
+      notes: sulfide oxidation as lithotrophic energy metabolism in nitrate-reducing
+        chemolithotrophs/heterotrophs
+  - subject: sqr
+    predicate: oxidizes
+    object: sulfide
+    description: SQR catalyzes oxidation/detoxification of sulfide as a sulfide-oxidation
+      module.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56588-1
+      notes: a key enzyme that can catalyze sulfide detoxification in nitrate-reducing
+        chemolithoautotrophs
+  - subject: thiosulfate
+    predicate: example of
+    object: inorganic_electron_donor
+    description: Thiosulfate is an inorganic sulfur electron donor for lithotrophic
+      oxidation.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56588-1
+      notes: periplasmic sox gene clusters encoding for thiosulfate oxidation
+  - subject: sox_system
+    predicate: oxidizes
+    object: thiosulfate
+    description: The periplasmic Sox system encodes oxidation of thiosulfate.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56588-1
+      notes: periplasmic sox gene clusters encoding for thiosulfate oxidation
+  - subject: conductive_pili_cytochromes
+    predicate: enables
+    object: diet
+    description: Conductive pili and outer-surface c-type cytochromes enable direct
+      interspecies electron transfer.
+    evidence:
+    - reference: DOI:10.3390/life14050591
+      notes: direct interspecies electron transfer (DIET) via conductive pili and
+        outer-surface c-type cytochromes
 curation_history:
 - timestamp: '2026-05-05T01:35:46.875356+00:00'
   curator: seed_from_metpo
@@ -215,4 +318,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

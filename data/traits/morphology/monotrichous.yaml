@@ -10,16 +10,16 @@ parent_traits:
 - traitmech:000056
 evidence:
 - reference: DOI:10.1093/femsre/fuv034
-  notes: Schuhmacher et al. describe single-flagellum (monotrichous, polar)
-    flagellation as one regular flagellation pattern.
+  notes: Schuhmacher et al. describe single-flagellum (monotrichous, polar) flagellation
+    as one regular flagellation pattern.
 - reference: DOI:10.3390/biom9070279
-  notes: Flagellum review supports a single helical flagellar filament as a
-    locomotory organelle.
+  notes: Flagellum review supports a single helical flagellar filament as a locomotory
+    organelle.
 causal_graphs:
 - graph_id: monotrichous_single_polar_flagellum
   title: Monotrichous flagellation — single polar flagellum
-  description: Evidence-backed causal sketch linking a single polar bacterial
-    flagellum to monotrichous flagellation.
+  description: Evidence-backed causal sketch linking a single polar bacterial flagellum
+    to monotrichous flagellation.
   nodes:
   - node_id: monotrichous_trait
     label: monotrichous
@@ -35,6 +35,39 @@ causal_graphs:
     label: polar single-flagellum placement
     node_type: QUALITY
     description: Single flagellum positioned at one cell pole.
+  - node_id: flhf_gtpase
+    label: FlhF
+    node_type: GENE_OR_PROTEIN
+    description: SRP-type GTPase that targets and anchors flagellar assembly to the
+      cell pole.
+  - node_id: flhg_atpase
+    label: FlhG
+    node_type: GENE_OR_PROTEIN
+    description: MinD/ParA-family ATPase that regulates flagellum number and modulates
+      FlhF.
+  - node_id: polar_flagellum_localization
+    label: polar localization of flagellum
+    node_type: BIOLOGICAL_PROCESS
+    description: Targeting and confinement of flagellar assembly to one cell pole.
+  - node_id: flagellum_number
+    label: flagellum number per cell
+    node_type: QUALITY
+    description: The count of flagella per cell.
+  - node_id: flig_protein
+    label: FliG
+    node_type: GENE_OR_PROTEIN
+    description: C-ring switch protein that bridges the MS-ring to motor and chemotaxis
+      components.
+  - node_id: flif_msring
+    label: FliF MS-ring protein
+    node_type: GENE_OR_PROTEIN
+    description: MS-ring protein forming the membrane-embedded base of the flagellar
+      basal body.
+  - node_id: flim_flin
+    label: FliM/FliN C-ring partners
+    node_type: GENE_OR_PROTEIN
+    description: C-ring switch-complex proteins that interact with FliG in the cytoplasmic
+      ring.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -42,8 +75,7 @@ causal_graphs:
     description: A single polar flagellum defines the monotrichous arrangement.
     evidence:
     - reference: DOI:10.1093/femsre/fuv034
-      notes: Schuhmacher et al. describe single-flagellum (monotrichous) polar
-        flagellation.
+      notes: Schuhmacher et al. describe single-flagellum (monotrichous) polar flagellation.
     predicate_id: METPO:2007500
   - subject: monotrichous_trait
     predicate: associated with
@@ -51,20 +83,80 @@ causal_graphs:
     description: The monotrichous pattern places one flagellum at one pole.
     evidence:
     - reference: DOI:10.3390/biom9070279
-      notes: Flagellum review supports a single helical flagellar filament as a
-        locomotory organelle.
+      notes: Flagellum review supports a single helical flagellar filament as a locomotory
+        organelle.
     predicate_id: biolink:associated_with
+  - subject: flhf_gtpase
+    predicate: promotes localization of
+    object: polar_flagellum_localization
+    description: FlhF promotes targeting of flagella to the cell pole; deleting flhF
+      causes mislocalization to nonpolar sites.
+    evidence:
+    - reference: DOI:10.1128/jb.00110-23
+      notes: FlhF and FlhG control the location and number of flagella in many polar-flagellated
+        bacteria; deleting flhF caused hypoflagellation and mislocalization of flagella
+        to nonpolar sites.
+  - subject: flhg_atpase
+    predicate: regulates number of
+    object: flagellum_number
+    description: FlhG regulates the number of flagella per cell; its loss in single-flagellum
+      bacteria often causes hyperflagellation.
+    evidence:
+    - reference: DOI:10.1128/jb.00110-23
+      notes: FlhF and FlhG control the location and number of flagella respectively;
+        deleting flhG in bacteria with a single polar flagellum often results in hyperflagellation.
+  - subject: flhf_gtpase
+    predicate: binds
+    object: flig_protein
+    description: The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: The FlhF B-domain contains an N-terminal FliG Interaction Domain (FID);
+        the N-terminal ~60 aa of the B-domain are necessary and sufficient for FliG
+        binding.
+  - subject: flig_protein
+    predicate: recruits
+    object: flif_msring
+    description: FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG
+      complex to the pole.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhF-bound FliG then engages the MS-ring protein FliF, effectively recruiting
+        a FliF-FliG complex to the pole.
+  - subject: flhf_gtpase
+    predicate: hinders interaction of
+    object: flim_flin
+    description: FlhF-bound FliG can still engage FliF but is prevented from interacting
+      with C-ring partners FliM/FliN.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhF-bound FliG can still engage the cytoplasmic domain of FliF but is
+        prevented from interacting with C-ring partners FliM/FliN.
+  - subject: flhg_atpase
+    predicate: stimulates GTPase activity of
+    object: flhf_gtpase
+    description: FlhG stimulates FlhF GTPase activity, modulating FlhF control over
+      FliG interactions.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhG's modulation of FlhF controls FliG's interaction with FliM/FliN;
+        FlhG stimulates FlhF GTPase activity.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (monotrichous flagellation);
-    sub-variant of flagellar arrangement.
+  changes: Proposed candidate MORPHOLOGY trait (monotrichous flagellation); sub-variant
+    of flagellar arrangement.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (single polar flagellum) with GO node
-    grounding and METPO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    grounding and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

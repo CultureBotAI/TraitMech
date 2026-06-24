@@ -55,6 +55,40 @@ causal_graphs:
     label: membrane lipid composition
     node_type: CELLULAR_LOCALIZATION
     description: Membrane lipid features supporting stability at very high temperature.
+  - node_id: cdpg
+    label: cyclic 2,3-diphosphoglycerate (cDPG)
+    node_type: CHEMICAL
+    description: Extremolyte/compatible solute found in hyperthermophilic archaea
+      that confers thermoprotection.
+  - node_id: archaeal_proteins
+    label: archaeal proteins
+    node_type: GENE_OR_PROTEIN
+    description: Cellular proteins whose thermostability is enhanced by protective
+      solutes.
+  - node_id: dna_oxidative_damage
+    label: DNA oxidative damage by hydroxyl radicals
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidative damage to DNA caused by hydroxyl radicals under high-temperature
+      stress.
+  - node_id: gmgt_lipids
+    label: glycerol monoalkyl glycerol tetraether (GMGT) lipids
+    node_type: CHEMICAL
+    description: Cross-linked tetraether membrane lipids whose abundance increases
+      at high growth temperature.
+  - node_id: gms_synthase
+    label: Gms (GMGT synthase)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme required to form the bridging cross-link of GMGT lipids.
+  - node_id: membrane_rigidity
+    label: membrane rigidity at high temperature
+    node_type: QUALITY
+    description: Increased rigidity/reduced fluidity of the membrane supporting stability
+      at high temperature.
+  - node_id: macrocyclic_archaeol
+    label: macrocyclic archaeol
+    node_type: CHEMICAL
+    description: Macrocyclized archaeal membrane lipid that increases membrane stability
+      and rigidity.
   edges:
   - subject: very_high_temperature
     predicate: selects for
@@ -104,6 +138,53 @@ causal_graphs:
       snippet: changes in the membrane lipid composition
       notes: Supports membrane lipid changes as high-temperature adaptation.
     predicate_id: RO:0002327
+  - subject: cdpg
+    predicate: increases thermostability of
+    object: archaeal_proteins
+    description: cDPG increases the thermostability of archaeal proteins.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1267570
+      notes: Its presence increases the thermostability of archaeal proteins.
+  - subject: cdpg
+    predicate: protects against
+    object: dna_oxidative_damage
+    description: cDPG protects DNA against oxidative damage caused by hydroxyl radicals.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1267570
+      notes: Protects the DNA against oxidative damage caused by hydroxyl radicals.
+  - subject: very_high_temperature
+    predicate: increases production of
+    object: gmgt_lipids
+    description: Elevated growth temperature increases production of GMGT membrane
+      lipids.
+    evidence:
+    - reference: DOI:10.1073/pnas.2318761121
+      notes: GMGT production and methylation increases with elevated temperatures
+        (broad conclusion across three cultured archaea).
+  - subject: gms_synthase
+    predicate: required for
+    object: gmgt_lipids
+    description: Gms is required to form the bridging cross-link of a GMGT.
+    evidence:
+    - reference: DOI:10.1073/pnas.2318761121
+      notes: Gms, that is required to form the bridging cross-link of a GMGT.
+  - subject: gmgt_lipids
+    predicate: contributes to
+    object: membrane_rigidity
+    description: GMGTs contribute to increased membrane rigidity at high temperature.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49650-x
+      notes: GMGTs are thought to contribute to increased membrane rigidity at high
+        temperature.
+  - subject: macrocyclic_archaeol
+    predicate: increases
+    object: membrane_rigidity
+    description: Macrocyclic archaeol increases membrane stability and rigidity, reducing
+      membrane fluidity.
+    evidence:
+    - reference: DOI:10.1128/msystems.01159-22
+      notes: Could increase overall membrane stability and rigidity and reduce membrane
+        fluidity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858819+00:00'
   curator: seed_from_metpo
@@ -168,4 +249,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

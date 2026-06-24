@@ -47,6 +47,55 @@ causal_graphs:
     label: salinity-adaptation genes
     node_type: GENE_OR_PROTEIN
     description: Gene repertoires associated with adaptation along salinity gradients.
+  - node_id: c_di_amp
+    label: cyclic di-AMP
+    node_type: CHEMICAL
+    description: Second messenger nucleotide that regulates osmolyte and K+ transport
+      in bacteria.
+  - node_id: k_import_systems
+    label: K+ import systems
+    node_type: GENE_OR_PROTEIN
+    description: Potassium uptake transporters (Trk/Ktr/Kup/Kdp-type) mediating salt-in
+      osmoadaptation.
+  - node_id: opua_importer
+    label: compatible-solute importer OpuA
+    node_type: GENE_OR_PROTEIN
+    description: ABC-type transporter importing compatible solutes such as glycine
+      betaine.
+  - node_id: low_c_di_amp_state
+    label: low c-di-AMP state
+    node_type: STATE
+    description: Cellular condition of reduced c-di-AMP, derepressing osmolyte and
+      K+ uptake.
+  - node_id: k_solute_uptake
+    label: K+ and compatible-solute uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Combined import of potassium and compatible solutes for osmotic adjustment.
+  - node_id: osmotic_upshift
+    label: osmotic upshift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Increase in external osmolarity, e.g. a rise in environmental salinity.
+  - node_id: rapid_k_import
+    label: rapid K+ import
+    node_type: BIOLOGICAL_PROCESS
+    description: Fast potassium influx mounted as an early osmoadaptation response.
+  - node_id: compatible_solute_accumulation
+    label: compatible-solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular buildup of compatible solutes (proline, ectoine, trehalose).
+  - node_id: salt_out_osmoadaptation
+    label: salt-out osmoadaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Long-term osmoadaptation via synthesis/import of compatible solutes.
+  - node_id: aquaporin_water_channel
+    label: aquaporin water-channel activity
+    node_type: MOLECULAR_FUNCTION
+    description: Channel activity (COG0580 / GO:0015250) enabling facilitated water
+      diffusion.
+  - node_id: facilitated_water_diffusion
+    label: facilitated water diffusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive water movement across the membrane through aquaporin channels.
   edges:
   - subject: narrow_salinity_range
     predicate: defines
@@ -97,6 +146,58 @@ causal_graphs:
       snippet: Organisms thriving within a narrow range of salinity
       notes: Supports the ecological interpretation that large salinity excursions
         exceed stenohaline niche breadth.
+  - subject: c_di_amp
+    predicate: inhibits
+    object: k_import_systems
+    description: c-di-AMP binds RCK-type gating subunits to inhibit potassium influx.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: c-di-AMP binds RCK-type gating subunits inhibiting potassium influx;
+        broad regulatory principle across c-di-AMP bacteria.
+  - subject: c_di_amp
+    predicate: inhibits
+    object: opua_importer
+    description: c-di-AMP binds CBS-containing compatible-solute importers and negatively
+      regulates their transport.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Binds CBS-containing compatible-solute importers (OpuA, OpuC, OpuD) and
+        negatively regulates transport; general osmoadaptation regulation.
+  - subject: low_c_di_amp_state
+    predicate: increases
+    object: k_solute_uptake
+    description: Low c-di-AMP increases uptake of K+ and compatible solutes.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Low c-di-AMP mutants show increased uptake of K+ and compatible solutes;
+        broad bacterial principle.
+  - subject: osmotic_upshift
+    predicate: triggers
+    object: rapid_k_import
+    description: Osmotic upshift triggers rapid K+ import as an early osmoadaptation
+      response.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Many bacteria mount a rapid K+ import upon osmotic upshift; canonical
+        osmoadaptation edge, not specific to stenohaline microbes.
+  - subject: compatible_solute_accumulation
+    predicate: supports
+    object: salt_out_osmoadaptation
+    description: Accumulation of compatible solutes supports the salt-out osmoadaptation
+      strategy.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Longer-term strategy is salt-out via synthesis/import of compatible solutes
+        (proline, ectoine, trehalose); general mechanistic edge.
+  - subject: aquaporin_water_channel
+    predicate: enables
+    object: facilitated_water_diffusion
+    description: Aquaporin water-channel activity enables facilitated diffusion of
+      water.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      notes: COG0580 linked to GO:0015250 and described as enabling facilitated diffusion
+        of water; functional edge.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864123+00:00'
   curator: seed_from_metpo
@@ -151,4 +252,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

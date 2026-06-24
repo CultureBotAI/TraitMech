@@ -54,6 +54,42 @@ causal_graphs:
     label: cellular energy conservation
     node_type: BIOLOGICAL_PROCESS
     description: Bioenergetic output of respiratory electron transport.
+  - node_id: oxygen_limitation
+    label: oxygen limitation / anoxic transition
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Onset of low-oxygen / anoxic conditions that triggers expression
+      and activity of anaerobic respiratory reductases.
+  - node_id: denitrification_reductases
+    label: denitrification reductases
+    node_type: GENE_OR_PROTEIN
+    description: Respiratory reductases (e.g., Nar, Nos) that catalyze stepwise reduction
+      of nitrogen oxides during denitrification.
+  - node_id: nitrate_reductase
+    label: respiratory nitrate reductase (NarGHI)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound respiratory nitrate reductase complex that reduces
+      nitrate to nitrite.
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    description: Oxidized nitrogen oxyanion reduced to nitrite during nitrate respiration.
+  - node_id: nitrite
+    label: nitrite
+    node_type: CHEMICAL
+    description: Reduced product of nitrate reduction and substrate for subsequent
+      denitrification or DNRA.
+  - node_id: nitrous_oxide_reductase
+    label: nitrous oxide reductase (NosZ)
+    node_type: GENE_OR_PROTEIN
+    description: Terminal reductase of denitrification reducing nitrous oxide to dinitrogen.
+  - node_id: nitrous_oxide
+    label: nitrous oxide
+    node_type: CHEMICAL
+    description: Denitrification intermediate reduced to dinitrogen by NosZ.
+  - node_id: dinitrogen
+    label: dinitrogen
+    node_type: CHEMICAL
+    description: Gaseous end product of complete denitrification.
   edges:
   - subject: denitrification
     predicate: occurs in
@@ -96,6 +132,46 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.61.4.533-616.1997
       snippet: terminal electron acceptors for cellular bioenergetics
       notes: Supports denitrification as non-oxygen respiratory bioenergetics.
+  - subject: oxygen_limitation
+    predicate: increases activity of
+    object: denitrification_reductases
+    description: Onset of anoxia drives early transcription and activity of denitrification
+      reductases.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51688-w
+      notes: early transcription of NAR (and sometimes NOS) at the cusp of anoxia;
+        environmental driver activating denitrification reductases.
+  - subject: nitrate_reductase
+    predicate: catalyzes reduction of
+    object: nitrate
+    description: Respiratory nitrate reductase NarGHI catalyzes the reduction of nitrate
+      to nitrite.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction
+        to nitrite, the canonical first step of nitrate respiration.
+  - subject: nitrate_reductase
+    predicate: produces
+    object: nitrite
+    description: Reduction of nitrate by NarGHI yields nitrite.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: NarGHI nitrate reductase produces nitrite from nitrate.
+  - subject: nitrous_oxide_reductase
+    predicate: reduces
+    object: nitrous_oxide
+    description: NosZ reduces nitrous oxide to dinitrogen, the terminal step of complete
+      denitrification.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: NosZ reduces N2O to N2; canonical terminal denitrification step.
+  - subject: nitrous_oxide_reductase
+    predicate: produces
+    object: dinitrogen
+    description: NosZ-catalyzed reduction of nitrous oxide produces dinitrogen.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912036+00:00'
   curator: seed_from_metpo
@@ -131,4 +207,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:35196×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

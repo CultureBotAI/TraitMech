@@ -18,16 +18,16 @@ synonyms:
   source: DOI:10.1146/annurev.biochem.77.083007.093039
 evidence:
 - reference: DOI:10.1146/annurev.biochem.77.083007.093039
-  notes: Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated as
-    granules, as a phosphate/energy reserve essential for growth and survival.
+  notes: Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated
+    as granules, as a phosphate/energy reserve essential for growth and survival.
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include polyphosphate bodies among bacterial intracellular
     inclusions.
 causal_graphs:
 - graph_id: polyphosphate_granule_storage
   title: Polyphosphate granules store phosphate and energy as inorganic polyP
-  description: Evidence-backed causal sketch linking inorganic polyphosphate
-    accumulation to volutin/metachromatic granules supporting growth and survival.
+  description: Evidence-backed causal sketch linking inorganic polyphosphate accumulation
+    to volutin/metachromatic granules supporting growth and survival.
   nodes:
   - node_id: polyp_granule_trait
     label: polyphosphate granule
@@ -42,6 +42,22 @@ causal_graphs:
     label: phosphate / energy reserve
     node_type: QUALITY
     description: Reservoir of phosphate and high-energy phosphoanhydride bonds.
+  - node_id: ppk
+    label: polyphosphate kinase (PPK)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that synthesizes inorganic polyphosphate from ATP.
+  - node_id: ppx
+    label: exopolyphosphatase (PPX)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that degrades inorganic polyphosphate.
+  - node_id: divalent_cations
+    label: divalent cations
+    node_type: CHEMICAL
+    description: Divalent metal cations (Ca2+, Mg2+, Fe2+/Fe3+, Zn2+) bound by polyP.
+  - node_id: stress_survival
+    label: stress survival / stress response
+    node_type: BIOLOGICAL_PROCESS
+    description: Survival during stationary phase, nutrient starvation, and stress.
   edges:
   - subject: inorganic_polyphosphate
     predicate: located in
@@ -49,29 +65,67 @@ causal_graphs:
     description: Inorganic polyphosphate accumulates as granules in the cytoplasm.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.77.083007.093039
-      notes: Rao, Gómez-García & Kornberg review polyphosphate accumulation as
-        granules.
+      notes: Rao, Gómez-García & Kornberg review polyphosphate accumulation as granules.
     predicate_id: biolink:located_in
   - subject: polyp_granule_trait
     predicate: contributes to
     object: phosphate_energy_reserve
-    description: PolyP granules supply phosphate and energy for growth and
-      survival.
+    description: PolyP granules supply phosphate and energy for growth and survival.
     evidence:
     - reference: DOI:10.1038/s41579-020-0413-0
-      notes: Greening & Lithgow include polyphosphate bodies among bacterial
-        intracellular inclusions.
+      notes: Greening & Lithgow include polyphosphate bodies among bacterial intracellular
+        inclusions.
     predicate_id: RO:0002326
+  - subject: ppk
+    predicate: synthesizes
+    object: inorganic_polyphosphate
+    description: Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002558
+      notes: Polyphosphate is synthesized by polyphosphate kinase (PPK), which rapidly
+        synthesizes polyP using ATP as a co-substrate.
+  - subject: ppx
+    predicate: degrades
+    object: inorganic_polyphosphate
+    description: Exopolyphosphatase (PPX) degrades inorganic polyphosphate.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002558
+      notes: Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism
+        edge.
+  - subject: inorganic_polyphosphate
+    predicate: binds
+    object: divalent_cations
+    description: PolyP chelates/binds divalent cations, affecting polyP biophysics
+      and granule composition.
+    evidence:
+    - reference: DOI:10.3390/biom14080937
+      notes: PolyP granules contain associated cations; polyP can bind iron and inhibit
+        Fenton chemistry. Strong general biochemical edge.
+  - subject: inorganic_polyphosphate
+    predicate: promotes
+    object: stress_survival
+    description: PolyP accumulation promotes survival in stationary phase and nutrient
+      starvation.
+    evidence:
+    - reference: DOI:10.3390/biom14080937
+      notes: PolyP serves as phosphate/energy storage and supports survival in stationary
+        phase and nutrient starvation; ppk mutants show stress sensitivity.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (polyphosphate/volutin granule);
-    storage sub-variant of intracellular inclusion.
+  changes: Proposed candidate MORPHOLOGY trait (polyphosphate/volutin granule); storage
+    sub-variant of intracellular inclusion.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (polyP granule phosphate/energy
-    reserve) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (polyP granule phosphate/energy reserve)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -64,6 +64,36 @@ causal_graphs:
     label: reverse sulfate reduction pathway
     node_type: PATHWAY
     description: Enzymatic route proposed for some sulfur disproportionators.
+  - node_id: tetrathionate
+    label: tetrathionate
+    node_type: CHEMICAL
+    description: S4-intermediate (S4O6 2-) produced from thiosulfate oxidation in
+      the S4I pathway.
+  - node_id: sulfite
+    label: sulfite
+    node_type: CHEMICAL
+    description: Sulfur oxyanion product of elemental sulfur disproportionation by
+      SOR.
+  - node_id: tsda_thiosulfate_dehydrogenase
+    label: TsdA thiosulfate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidizing thiosulfate to tetrathionate, entry step of the
+      S4 intermediate pathway.
+  - node_id: teth_tetrathionate_hydrolase
+    label: TetH tetrathionate hydrolase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that hydrolyzes/disproportionates tetrathionate to elemental
+      sulfur, thiosulfate, and sulfate.
+  - node_id: sor_sulfur_oxygenase_reductase
+    label: SOR sulfur oxygenase reductase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme catalyzing O2-dependent disproportionation of elemental sulfur
+      into sulfite and sulfide.
+  - node_id: iron_sulfide_mineral
+    label: iron-sulfide mineral formation
+    node_type: CHEMICAL
+    description: Fe-sulfide mineral (e.g., FeSx) formed when produced sulfide is scavenged,
+      removing inhibitory sulfide.
   edges:
   - subject: disproportionation_trait
     predicate: occurs in
@@ -129,6 +159,73 @@ causal_graphs:
       snippet: reverse the sulfate reduction pathway
       notes: Supports the proposed pathway mechanism for some isolates.
     predicate_id: biolink:participates_in
+  - subject: thiosulfate
+    predicate: produces
+    object: sulfate
+    description: Thiosulfate disproportionation yields sulfate as the oxidized product.
+    evidence:
+    - reference: DOI:10.1128/msystems.00954-22
+      notes: Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O
+        -> SO4(2-) + HS- + H+.
+  - subject: thiosulfate
+    predicate: produces
+    object: sulfide
+    description: Thiosulfate disproportionation yields sulfide as the reduced product.
+    evidence:
+    - reference: DOI:10.1128/msystems.00954-22
+      notes: Thiosulfate disproportionation follows the stoichiometry S2O3(2-) + H2O
+        -> SO4(2-) + HS- + H+.
+  - subject: tsda_thiosulfate_dehydrogenase
+    predicate: catalyzes oxidation of
+    object: thiosulfate
+    description: TsdA oxidizes thiosulfate to tetrathionate, the entry step of the
+      S4 intermediate pathway.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: tsdA (and doxDA) catalyze conversion of thiosulfate (S2O3 2-) to tetrathionate
+        (S4O6 2-).
+  - subject: tsda_thiosulfate_dehydrogenase
+    predicate: produces
+    object: tetrathionate
+    description: Product of TsdA-catalyzed thiosulfate oxidation is tetrathionate.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: tsdA catalyzes conversion of thiosulfate to tetrathionate (S4O6 2-).
+  - subject: teth_tetrathionate_hydrolase
+    predicate: disproportionates
+    object: tetrathionate
+    description: TetH hydrolyzes/disproportionates tetrathionate into elemental sulfur,
+      thiosulfate, and sulfate.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: Tetrathionate can be subsequently disproportionated via tetH to form
+        S0, S2O3 2-, and SO4 2-.
+  - subject: sor_sulfur_oxygenase_reductase
+    predicate: disproportionates
+    object: elemental_sulfur
+    description: SOR catalyzes disproportionation of elemental sulfur, releasing sulfite
+      and sulfide.
+    evidence:
+    - reference: DOI:10.1007/978-3-031-54306-7_15
+      notes: The SOR catalyzes an O2-dependent S0 disproportionation releasing SO3
+        2- and HS-.
+  - subject: sor_sulfur_oxygenase_reductase
+    predicate: produces
+    object: sulfite
+    description: Sulfite is the oxidized product of SOR-catalyzed elemental sulfur
+      disproportionation.
+    evidence:
+    - reference: DOI:10.1007/978-3-031-54306-7_15
+      notes: SOR catalyzes an O2-dependent S0 disproportionation releasing SO3 2-
+        and HS-.
+  - subject: iron_sulfide_mineral
+    predicate: scavenges
+    object: sulfide
+    description: Formation of Fe-sulfide minerals scavenges produced sulfide, relieving
+      product inhibition of sulfur disproportionation.
+    evidence:
+    - reference: DOI:10.1128/msystems.00954-22
+      notes: Ferrihydrite scavenges produced sulfide as Fe-sulfide.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.914112+00:00'
   curator: seed_from_metpo
@@ -201,4 +298,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 2 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

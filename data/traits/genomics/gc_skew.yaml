@@ -18,21 +18,19 @@ evidence:
   notes: Lobry first described asymmetric substitution patterns between the two DNA
     strands of bacteria, the basis of GC skew that marks replication boundaries.
 - reference: DOI:10.1016/S0378-1119(99)00297-8
-  notes: Frank & Lobry review the mutational and selective mechanisms underlying
-    strand compositional asymmetry.
+  notes: Frank & Lobry review the mutational and selective mechanisms underlying strand
+    compositional asymmetry.
 causal_graphs:
 - graph_id: gc_skew_replication_strand_asymmetry
   title: GC skew arises from replication-strand mutational asymmetry
-  description: Evidence-backed causal sketch linking DNA replication to
-    leading-versus-lagging strand compositional asymmetry that marks the
-    replication origin and terminus.
+  description: Evidence-backed causal sketch linking DNA replication to leading-versus-lagging
+    strand compositional asymmetry that marks the replication origin and terminus.
   nodes:
   - node_id: gc_skew_trait
     label: GC skew
     node_type: TRAIT
     grounding: traitmech:000097
-    description: Strand asymmetry in guanine versus cytosine content along the
-      replichores.
+    description: Strand asymmetry in guanine versus cytosine content along the replichores.
   - node_id: dna_replication
     label: DNA replication
     node_type: BIOLOGICAL_PROCESS
@@ -42,16 +40,43 @@ causal_graphs:
     label: replication origin / terminus
     node_type: QUALITY
     description: Genomic position where leading/lagging strand identity switches.
+  - node_id: lagging_strand_ssdna
+    label: lagging-strand single-stranded DNA exposure
+    node_type: STATE
+    description: Transient ssDNA exposure of the lagging strand during replication.
+  - node_id: cytosine_deamination
+    label: cytosine deamination at replication forks
+    node_type: BIOLOGICAL_PROCESS
+    description: Cytosine-to-thymine conversion favored on transiently single-stranded
+      DNA at forks.
+  - node_id: gene_strand_bias
+    label: leading-strand gene density / gene strand bias
+    node_type: QUALITY
+    description: Biased distribution of genes toward the leading strand of replichores.
+  - node_id: translational_selection
+    label: translational selection and genetic code constraints
+    node_type: BIOLOGICAL_PROCESS
+    description: Codon usage and genetic-code constraints shaping asymmetric base
+      composition.
+  - node_id: third_codon_mutational_bias
+    label: third-codon-position mutational bias
+    node_type: QUALITY
+    description: Mutational bias detectable at the degenerate third codon position.
+  - node_id: strand_specific_repair
+    label: strand-specific DNA repair
+    node_type: BIOLOGICAL_PROCESS
+    description: MutSL-dependent mismatch repair and transcription-coupled NER acting
+      asymmetrically on strands.
   edges:
   - subject: dna_replication
     predicate: causes
     object: gc_skew_trait
-    description: Asymmetric mutation between leading and lagging strands during
-      replication produces strand-specific G/C bias.
+    description: Asymmetric mutation between leading and lagging strands during replication
+      produces strand-specific G/C bias.
     evidence:
     - reference: DOI:10.1093/oxfordjournals.molbev.a025626
-      notes: Lobry first described replication-linked asymmetric substitution
-        patterns between the two DNA strands.
+      notes: Lobry first described replication-linked asymmetric substitution patterns
+        between the two DNA strands.
     predicate_id: biolink:causes
   - subject: gc_skew_trait
     predicate: associated with
@@ -59,20 +84,80 @@ causal_graphs:
     description: GC skew inversions mark the replication origin and terminus.
     evidence:
     - reference: DOI:10.1016/S0378-1119(99)00297-8
-      notes: Frank & Lobry review strand-asymmetry signatures used to locate
-        replication boundaries.
+      notes: Frank & Lobry review strand-asymmetry signatures used to locate replication
+        boundaries.
     predicate_id: biolink:associated_with
+  - subject: lagging_strand_ssdna
+    predicate: increases
+    object: cytosine_deamination
+    description: Single-stranded exposure of the lagging strand increases cytosine
+      deamination.
+    evidence:
+    - reference: DOI:10.1101/2023.11.15.567178
+      notes: Lagging strand exposed as ssDNA, increasing cytosine-to-thymine mutations
+        and thus contributing to GC skew.
+  - subject: cytosine_deamination
+    predicate: contributes to
+    object: gc_skew_trait
+    description: Cytosine deamination at the replication fork generates strand-specific
+      G/C bias.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2026.1727296
+      notes: Cytosine deamination at the replication fork is explicitly implicated
+        in generating GC skew.
+  - subject: gene_strand_bias
+    predicate: contributes to
+    object: gc_skew_trait
+    description: Biased gene density on leading versus lagging strands contributes
+      to skew.
+    evidence:
+    - reference: DOI:10.1101/2023.11.15.567178
+      notes: Biased gene density on leading vs lagging strands is highlighted as a
+        major contributor to skew.
+  - subject: translational_selection
+    predicate: contributes to
+    object: gc_skew_trait
+    description: Translational selection and genetic-code constraints shape asymmetric
+      G/C distributions.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2026.1727296
+      notes: Translational selection and the nature of the genetic code are universal
+        determinants of asymmetric G/C distributions.
+  - subject: third_codon_mutational_bias
+    predicate: contributes to
+    object: gc_skew_trait
+    description: Mutational bias at the degenerate third codon position contributes
+      to strand compositional asymmetry.
+    evidence:
+    - reference: DOI:10.1007/pl00006428
+      notes: Third-position skews probably reflect mutational biases, separating mutational
+        from protein-coding constraints.
+  - subject: strand_specific_repair
+    predicate: contributes to
+    object: gc_skew_trait
+    description: Strand-specific MMR and transcription-coupled NER contribute to strand
+      compositional asymmetry.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2026.1727296
+      notes: Strand-specific DNA repair pathways (MutSL-dependent MMR, transcription-coupled
+        NER) contribute to asymmetry.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate GENOMICS trait (GC skew) from literature research;
-    distinct from the existing GC-content composition bins.
+  changes: Proposed candidate GENOMICS trait (GC skew) from literature research; distinct
+    from the existing GC-content composition bins.
   llm_assisted: true
 - timestamp: '2026-06-08T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (GC skew / replication strand
-    asymmetry) with GO node grounding and biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (GC skew / replication strand asymmetry)
+    with GO node grounding and biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

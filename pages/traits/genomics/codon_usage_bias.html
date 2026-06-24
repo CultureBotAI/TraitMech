@@ -90,6 +90,80 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>gene expression level</strong>
+            <span class="edge-predicate">strengthens selection for</span>
+            <strong>codon usage bias</strong>
+            
+            <p>Selection on synonymous codons scales with protein production; highly expressed genes show stronger codon preferences.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev.genet.42.110807.091442</code>
+                
+                <span class="meta">Hershberg &amp; Petrov: codon bias correlates most strongly with gene expression level.</span>
+              </li>
+              
+              <li>
+                <code>DOI:10.32942/x2802v</code>
+                
+                <span class="meta">Cope et al.: codon-specific selection scales with per-gene protein production rate (ROC-SEMPPR).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>tRNA abundance</strong>
+            <span class="edge-predicate">influences</span>
+            <strong>codon usage bias</strong>
+            
+            <p>Synonymous codons decoded by more abundant tRNAs tend to be more adapted and often preferred.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrg2899</code>
+                
+                <span class="meta">Plotkin &amp; Kudla define tAI from relative tRNA gene copy numbers; the more abundant the decoding tRNA, the more adapted the codon.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>5&#39; mRNA secondary structure</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>translation initiation</strong>
+            
+            <p>Start-region RNA folding can limit ribosome access and dominate expression effects of synonymous codons.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrg2899</code>
+                
+                <span class="meta">Plotkin &amp; Kudla: 5&#39; structure generally disadvantageous; GFP expression in E. coli strongly inhibited when 5&#39; folding energy below ~-10 kcal/mol (RBS/SD/start-codon occlusion).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>translation initiation</strong>
+            <span class="edge-predicate">part of</span>
+            <strong>translation</strong>
+            
+            <p>Initiation is the first stage of translation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrg2899</code>
+                
+                <span class="meta">Plotkin &amp; Kudla discuss translation initiation as a major mechanism linking 5&#39; sequence features to expression.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -227,6 +301,12 @@
           <time>2026-06-08T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (codon bias / translation efficiency) with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking biased synonymous-codon usage to translation rates and gene expression level.", "edges": [{"description": "Biased codon usage tunes elongation rate via tRNA availability.", "evidence": [{"notes": "Plotkin \u0026 Kudla review how synonymous codon bias modulates translation.", "reference": "DOI:10.1038/nrg2899"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "codon_bias_trait", "target": "translation"}, {"description": "Codon bias is strongest in highly expressed genes.", "evidence": [{"notes": "Hershberg \u0026 Petrov review translational selection on codon bias correlating with expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "codon_bias_trait", "target": "gene_expression_level"}], "evidence_rows": [{"description": "Biased codon usage tunes elongation rate via tRNA availability.", "edge_id": "edge-1", "evidence": [{"notes": "Plotkin \u0026 Kudla review how synonymous codon bias modulates translation.", "reference": "DOI:10.1038/nrg2899"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "codon usage bias", "target": "translation"}, {"description": "Codon bias is strongest in highly expressed genes.", "edge_id": "edge-2", "evidence": [{"notes": "Hershberg \u0026 Petrov review translational selection on codon bias correlating with expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "codon usage bias", "target": "gene expression level"}], "graph_id": "codon_bias_translation_efficiency", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Non-uniform use of synonymous codons across a genome.", "grounding": "traitmech:000096", "id": "codon_bias_trait", "is_orphan": false, "label": "codon usage bias", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Steady-state protein output per gene.", "grounding": null, "id": "gene_expression_level", "is_orphan": false, "label": "gene expression level", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Ribosome-mediated decoding of mRNA into protein.", "grounding": "GO:0006412", "id": "translation", "is_orphan": false, "label": "translation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Codon usage bias shapes translation efficiency and gene expression"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking biased synonymous-codon usage to translation rates and gene expression level.", "edges": [{"description": "Biased codon usage tunes elongation rate via tRNA availability.", "evidence": [{"notes": "Plotkin \u0026 Kudla review how synonymous codon bias modulates translation.", "reference": "DOI:10.1038/nrg2899"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "codon_bias_trait", "target": "translation"}, {"description": "Codon bias is strongest in highly expressed genes.", "evidence": [{"notes": "Hershberg \u0026 Petrov review translational selection on codon bias correlating with expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "codon_bias_trait", "target": "gene_expression_level"}, {"description": "Selection on synonymous codons scales with protein production; highly expressed genes show stronger codon preferences.", "evidence": [{"notes": "Hershberg \u0026 Petrov: codon bias correlates most strongly with gene expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}, {"notes": "Cope et al.: codon-specific selection scales with per-gene protein production rate (ROC-SEMPPR).", "reference": "DOI:10.32942/x2802v"}], "id": "edge-3", "is_orphan": false, "predicate": "strengthens selection for", "predicate_id": null, "source": "gene_expression_level", "target": "codon_bias_trait"}, {"description": "Synonymous codons decoded by more abundant tRNAs tend to be more adapted and often preferred.", "evidence": [{"notes": "Plotkin \u0026 Kudla define tAI from relative tRNA gene copy numbers; the more abundant the decoding tRNA, the more adapted the codon.", "reference": "DOI:10.1038/nrg2899"}], "id": "edge-4", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "trna_abundance", "target": "codon_bias_trait"}, {"description": "Start-region RNA folding can limit ribosome access and dominate expression effects of synonymous codons.", "evidence": [{"notes": "Plotkin \u0026 Kudla: 5\u0027 structure generally disadvantageous; GFP expression in E. coli strongly inhibited when 5\u0027 folding energy below ~-10 kcal/mol (RBS/SD/start-codon occlusion).", "reference": "DOI:10.1038/nrg2899"}], "id": "edge-5", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "mrna_5prime_secondary_structure", "target": "translation_initiation"}, {"description": "Initiation is the first stage of translation.", "evidence": [{"notes": "Plotkin \u0026 Kudla discuss translation initiation as a major mechanism linking 5\u0027 sequence features to expression.", "reference": "DOI:10.1038/nrg2899"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "translation_initiation", "target": "translation"}], "evidence_rows": [{"description": "Biased codon usage tunes elongation rate via tRNA availability.", "edge_id": "edge-1", "evidence": [{"notes": "Plotkin \u0026 Kudla review how synonymous codon bias modulates translation.", "reference": "DOI:10.1038/nrg2899"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "codon usage bias", "target": "translation"}, {"description": "Codon bias is strongest in highly expressed genes.", "edge_id": "edge-2", "evidence": [{"notes": "Hershberg \u0026 Petrov review translational selection on codon bias correlating with expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "codon usage bias", "target": "gene expression level"}, {"description": "Selection on synonymous codons scales with protein production; highly expressed genes show stronger codon preferences.", "edge_id": "edge-3", "evidence": [{"notes": "Hershberg \u0026 Petrov: codon bias correlates most strongly with gene expression level.", "reference": "DOI:10.1146/annurev.genet.42.110807.091442"}, {"notes": "Cope et al.: codon-specific selection scales with per-gene protein production rate (ROC-SEMPPR).", "reference": "DOI:10.32942/x2802v"}], "predicate": "strengthens selection for", "predicate_id": null, "source": "gene expression level", "target": "codon usage bias"}, {"description": "Synonymous codons decoded by more abundant tRNAs tend to be more adapted and often preferred.", "edge_id": "edge-4", "evidence": [{"notes": "Plotkin \u0026 Kudla define tAI from relative tRNA gene copy numbers; the more abundant the decoding tRNA, the more adapted the codon.", "reference": "DOI:10.1038/nrg2899"}], "predicate": "influences", "predicate_id": null, "source": "tRNA abundance", "target": "codon usage bias"}, {"description": "Start-region RNA folding can limit ribosome access and dominate expression effects of synonymous codons.", "edge_id": "edge-5", "evidence": [{"notes": "Plotkin \u0026 Kudla: 5\u0027 structure generally disadvantageous; GFP expression in E. coli strongly inhibited when 5\u0027 folding energy below ~-10 kcal/mol (RBS/SD/start-codon occlusion).", "reference": "DOI:10.1038/nrg2899"}], "predicate": "inhibits", "predicate_id": null, "source": "5\u0027 mRNA secondary structure", "target": "translation initiation"}, {"description": "Initiation is the first stage of translation.", "edge_id": "edge-6", "evidence": [{"notes": "Plotkin \u0026 Kudla discuss translation initiation as a major mechanism linking 5\u0027 sequence features to expression.", "reference": "DOI:10.1038/nrg2899"}], "predicate": "part of", "predicate_id": null, "source": "translation initiation", "target": "translation"}], "graph_id": "codon_bias_translation_efficiency", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Non-uniform use of synonymous codons across a genome.", "grounding": "traitmech:000096", "id": "codon_bias_trait", "is_orphan": false, "label": "codon usage bias", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Steady-state protein output per gene.", "grounding": null, "id": "gene_expression_level", "is_orphan": false, "label": "gene expression level", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Strength of RNA folding near the translation start site.", "grounding": null, "id": "mrna_5prime_secondary_structure", "is_orphan": false, "label": "5\u0027 mRNA secondary structure", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Ribosome-mediated decoding of mRNA into protein.", "grounding": "GO:0006412", "id": "translation", "is_orphan": false, "label": "translation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Ribosome assembly and start-codon recognition that begins protein synthesis.", "grounding": null, "id": "translation_initiation", "is_orphan": false, "label": "translation initiation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Cellular pool / gene copy number of tRNAs available for decoding codons.", "grounding": null, "id": "trna_abundance", "is_orphan": false, "label": "tRNA abundance", "node_type": "QUALITY", "xrefs": []}], "title": "Codon usage bias shapes translation efficiency and gene expression"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +677,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

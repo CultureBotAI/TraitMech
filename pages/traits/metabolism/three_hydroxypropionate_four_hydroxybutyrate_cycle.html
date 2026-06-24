@@ -90,6 +90,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>acetyl-CoA</strong>
+            
+            <p>A complete cycle turn fixes two bicarbonate to produce one acetyl-CoA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40643-023-00705-9</code>
+                
+                <span class="meta">A complete 3HP/4HB cycle fixes two HCO3- to produce one acetyl-CoA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+            <span class="edge-predicate">forms intermediate</span>
+            <strong>succinyl-CoA</strong>
+            
+            <p>Carboxylation of acetyl-CoA/propionyl-CoA yields succinyl-CoA from two bicarbonate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40643-023-00705-9</code>
+                
+                <span class="meta">The pathway carboxylates acetyl-CoA/propionyl-CoA to form succinyl-CoA from two HCO3-.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>succinyl-CoA</strong>
+            <span class="edge-predicate">is reduced to</span>
+            <strong>4-hydroxybutyrate</strong>
+            
+            <p>Succinyl-CoA is reduced to 4-hydroxybutyrate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40643-023-00705-9</code>
+                
+                <span class="meta">Succinyl-CoA is reduced to 4-hydroxybutyrate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>4-hydroxybutyryl-CoA dehydratase</strong>
+            <span class="edge-predicate">dehydrates</span>
+            <strong>4-hydroxybutyryl-CoA</strong>
+            
+            <p>4-hydroxybutyryl-CoA is dehydrated to crotonyl-CoA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-024-06432-x</code>
+                
+                <span class="meta">The cycle dehydrates 4-hydroxybutyryl-CoA to crotonyl-CoA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>4-hydroxybutyryl-CoA dehydratase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>crotonyl-CoA</strong>
+            
+            <p>Dehydration of 4-hydroxybutyryl-CoA yields crotonyl-CoA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-024-06432-x</code>
+                
+                <span class="meta">The pathway diagram shows dehydration to crotonyl-CoA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>crotonyl-CoA</strong>
+            <span class="edge-predicate">regenerates</span>
+            <strong>acetyl-CoA</strong>
+            
+            <p>Crotonyl-CoA is processed/cleaved to regenerate acetyl-CoA for further cycle turns.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40643-023-00705-9</code>
+                
+                <span class="meta">The pathway finally cleaves to yield acetyl-CoA for further turns.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>NADPH</strong>
+            <span class="edge-predicate">is required by</span>
+            <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+            
+            <p>Reductive steps of the cycle consume NADPH (about four NADPH per turn).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40643-023-00705-9</code>
+                
+                <span class="meta">Five reactions in the cycle require oxidation of NADPH; full cycle consumes four NADPH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>acetyl-CoA/propionyl-CoA carboxylase</strong>
+            <span class="edge-predicate">mediates carboxylation in</span>
+            <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+            
+            <p>Acetyl-CoA/propionyl-CoA carboxylase is the primary carboxylase fixing inorganic carbon.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-024-06432-x</code>
+                
+                <span class="meta">The cycle fixes CO2 onto acetyl-CoA via an acetyl-CoA/propionyl-CoA carboxylase, the primary carboxylase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -227,6 +363,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (3HP/4HB Sulfolobales bicarbonate fixation) with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +728,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking bicarbonate fixation via 3-hydroxypropionate and 4-hydroxybutyrate intermediates in Sulfolobales.", "edges": [{"description": "Two molecules of bicarbonate are fixed per cycle turn.", "evidence": [{"notes": "Berg et al. describe the 3HP/4HB cycle in Sulfolobales.", "reference": "DOI:10.1126/science.1149976"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "bicarbonate", "target": "three_hp_four_hb_trait"}, {"description": "The 3HP/4HB cycle is among the six recognized autotrophic pathways.", "evidence": [{"notes": "Berg situates the 3HP/4HB cycle among recognized carbon-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "three_hp_four_hb_trait", "target": "carbon_fixation_process"}], "evidence_rows": [{"description": "Two molecules of bicarbonate are fixed per cycle turn.", "edge_id": "edge-1", "evidence": [{"notes": "Berg et al. describe the 3HP/4HB cycle in Sulfolobales.", "reference": "DOI:10.1126/science.1149976"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "hydrogencarbonate", "target": "3-hydroxypropionate/4-hydroxybutyrate cycle"}, {"description": "The 3HP/4HB cycle is among the six recognized autotrophic pathways.", "edge_id": "edge-2", "evidence": [{"notes": "Berg situates the 3HP/4HB cycle among recognized carbon-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "target": "carbon fixation"}], "graph_id": "three_hp_four_hb_sulfolobales", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Inorganic carbon substrate fixed by the cycle.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "hydrogencarbonate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic carbon into organic compounds.", "grounding": "GO:0015977", "id": "carbon_fixation_process", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Archaeal autotrophic carbon-fixation cycle.", "grounding": "traitmech:000024", "id": "three_hp_four_hb_trait", "is_orphan": false, "label": "3-hydroxypropionate/4-hydroxybutyrate cycle", "node_type": "TRAIT", "xrefs": []}], "title": "3HP/4HB cycle fixes bicarbonate in aerobic Crenarchaeota"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking bicarbonate fixation via 3-hydroxypropionate and 4-hydroxybutyrate intermediates in Sulfolobales.", "edges": [{"description": "Two molecules of bicarbonate are fixed per cycle turn.", "evidence": [{"notes": "Berg et al. describe the 3HP/4HB cycle in Sulfolobales.", "reference": "DOI:10.1126/science.1149976"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "bicarbonate", "target": "three_hp_four_hb_trait"}, {"description": "The 3HP/4HB cycle is among the six recognized autotrophic pathways.", "evidence": [{"notes": "Berg situates the 3HP/4HB cycle among recognized carbon-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "three_hp_four_hb_trait", "target": "carbon_fixation_process"}, {"description": "A complete cycle turn fixes two bicarbonate to produce one acetyl-CoA.", "evidence": [{"notes": "A complete 3HP/4HB cycle fixes two HCO3- to produce one acetyl-CoA.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "three_hp_four_hb_trait", "target": "acetyl_coa"}, {"description": "Carboxylation of acetyl-CoA/propionyl-CoA yields succinyl-CoA from two bicarbonate.", "evidence": [{"notes": "The pathway carboxylates acetyl-CoA/propionyl-CoA to form succinyl-CoA from two HCO3-.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-4", "is_orphan": false, "predicate": "forms intermediate", "predicate_id": null, "source": "three_hp_four_hb_trait", "target": "succinyl_coa"}, {"description": "Succinyl-CoA is reduced to 4-hydroxybutyrate.", "evidence": [{"notes": "Succinyl-CoA is reduced to 4-hydroxybutyrate.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-5", "is_orphan": false, "predicate": "is reduced to", "predicate_id": null, "source": "succinyl_coa", "target": "four_hydroxybutyrate"}, {"description": "4-hydroxybutyryl-CoA is dehydrated to crotonyl-CoA.", "evidence": [{"notes": "The cycle dehydrates 4-hydroxybutyryl-CoA to crotonyl-CoA.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "id": "edge-6", "is_orphan": false, "predicate": "dehydrates", "predicate_id": null, "source": "four_hydroxybutyryl_coa_dehydratase", "target": "four_hydroxybutyryl_coa"}, {"description": "Dehydration of 4-hydroxybutyryl-CoA yields crotonyl-CoA.", "evidence": [{"notes": "The pathway diagram shows dehydration to crotonyl-CoA.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "four_hydroxybutyryl_coa_dehydratase", "target": "crotonyl_coa"}, {"description": "Crotonyl-CoA is processed/cleaved to regenerate acetyl-CoA for further cycle turns.", "evidence": [{"notes": "The pathway finally cleaves to yield acetyl-CoA for further turns.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-8", "is_orphan": false, "predicate": "regenerates", "predicate_id": null, "source": "crotonyl_coa", "target": "acetyl_coa"}, {"description": "Reductive steps of the cycle consume NADPH (about four NADPH per turn).", "evidence": [{"notes": "Five reactions in the cycle require oxidation of NADPH; full cycle consumes four NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-9", "is_orphan": false, "predicate": "is required by", "predicate_id": null, "source": "nadph", "target": "three_hp_four_hb_trait"}, {"description": "Acetyl-CoA/propionyl-CoA carboxylase is the primary carboxylase fixing inorganic carbon.", "evidence": [{"notes": "The cycle fixes CO2 onto acetyl-CoA via an acetyl-CoA/propionyl-CoA carboxylase, the primary carboxylase.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "id": "edge-10", "is_orphan": false, "predicate": "mediates carboxylation in", "predicate_id": null, "source": "acetyl_propionyl_coa_carboxylase", "target": "three_hp_four_hb_trait"}], "evidence_rows": [{"description": "Two molecules of bicarbonate are fixed per cycle turn.", "edge_id": "edge-1", "evidence": [{"notes": "Berg et al. describe the 3HP/4HB cycle in Sulfolobales.", "reference": "DOI:10.1126/science.1149976"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "hydrogencarbonate", "target": "3-hydroxypropionate/4-hydroxybutyrate cycle"}, {"description": "The 3HP/4HB cycle is among the six recognized autotrophic pathways.", "edge_id": "edge-2", "evidence": [{"notes": "Berg situates the 3HP/4HB cycle among recognized carbon-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "target": "carbon fixation"}, {"description": "A complete cycle turn fixes two bicarbonate to produce one acetyl-CoA.", "edge_id": "edge-3", "evidence": [{"notes": "A complete 3HP/4HB cycle fixes two HCO3- to produce one acetyl-CoA.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "produces", "predicate_id": null, "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "target": "acetyl-CoA"}, {"description": "Carboxylation of acetyl-CoA/propionyl-CoA yields succinyl-CoA from two bicarbonate.", "edge_id": "edge-4", "evidence": [{"notes": "The pathway carboxylates acetyl-CoA/propionyl-CoA to form succinyl-CoA from two HCO3-.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "forms intermediate", "predicate_id": null, "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "target": "succinyl-CoA"}, {"description": "Succinyl-CoA is reduced to 4-hydroxybutyrate.", "edge_id": "edge-5", "evidence": [{"notes": "Succinyl-CoA is reduced to 4-hydroxybutyrate.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "is reduced to", "predicate_id": null, "source": "succinyl-CoA", "target": "4-hydroxybutyrate"}, {"description": "4-hydroxybutyryl-CoA is dehydrated to crotonyl-CoA.", "edge_id": "edge-6", "evidence": [{"notes": "The cycle dehydrates 4-hydroxybutyryl-CoA to crotonyl-CoA.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "predicate": "dehydrates", "predicate_id": null, "source": "4-hydroxybutyryl-CoA dehydratase", "target": "4-hydroxybutyryl-CoA"}, {"description": "Dehydration of 4-hydroxybutyryl-CoA yields crotonyl-CoA.", "edge_id": "edge-7", "evidence": [{"notes": "The pathway diagram shows dehydration to crotonyl-CoA.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "predicate": "produces", "predicate_id": null, "source": "4-hydroxybutyryl-CoA dehydratase", "target": "crotonyl-CoA"}, {"description": "Crotonyl-CoA is processed/cleaved to regenerate acetyl-CoA for further cycle turns.", "edge_id": "edge-8", "evidence": [{"notes": "The pathway finally cleaves to yield acetyl-CoA for further turns.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "regenerates", "predicate_id": null, "source": "crotonyl-CoA", "target": "acetyl-CoA"}, {"description": "Reductive steps of the cycle consume NADPH (about four NADPH per turn).", "edge_id": "edge-9", "evidence": [{"notes": "Five reactions in the cycle require oxidation of NADPH; full cycle consumes four NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "is required by", "predicate_id": null, "source": "NADPH", "target": "3-hydroxypropionate/4-hydroxybutyrate cycle"}, {"description": "Acetyl-CoA/propionyl-CoA carboxylase is the primary carboxylase fixing inorganic carbon.", "edge_id": "edge-10", "evidence": [{"notes": "The cycle fixes CO2 onto acetyl-CoA via an acetyl-CoA/propionyl-CoA carboxylase, the primary carboxylase.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "predicate": "mediates carboxylation in", "predicate_id": null, "source": "acetyl-CoA/propionyl-CoA carboxylase", "target": "3-hydroxypropionate/4-hydroxybutyrate cycle"}], "graph_id": "three_hp_four_hb_sulfolobales", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Central product/regenerated CoA-thioester of the cycle.", "grounding": null, "id": "acetyl_coa", "is_orphan": false, "label": "acetyl-CoA", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Primary carboxylase fixing inorganic carbon in the cycle.", "grounding": null, "id": "acetyl_propionyl_coa_carboxylase", "is_orphan": false, "label": "acetyl-CoA/propionyl-CoA carboxylase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon substrate fixed by the cycle.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "hydrogencarbonate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic carbon into organic compounds.", "grounding": "GO:0015977", "id": "carbon_fixation_process", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "CoA-thioester intermediate formed by 4-hydroxybutyryl-CoA dehydration.", "grounding": null, "id": "crotonyl_coa", "is_orphan": false, "label": "crotonyl-CoA", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Defining 4-hydroxybutyrate intermediate of the cycle.", "grounding": null, "id": "four_hydroxybutyrate", "is_orphan": false, "label": "4-hydroxybutyrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Activated CoA-thioester of 4-hydroxybutyrate.", "grounding": null, "id": "four_hydroxybutyryl_coa", "is_orphan": false, "label": "4-hydroxybutyryl-CoA", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.", "grounding": null, "id": "four_hydroxybutyryl_coa_dehydratase", "is_orphan": false, "label": "4-hydroxybutyryl-CoA dehydratase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reducing cofactor consumed by reductive steps of the cycle.", "grounding": null, "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Central CoA-thioester intermediate of the 3HP/4HB cycle.", "grounding": null, "id": "succinyl_coa", "is_orphan": false, "label": "succinyl-CoA", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Archaeal autotrophic carbon-fixation cycle.", "grounding": "traitmech:000024", "id": "three_hp_four_hb_trait", "is_orphan": false, "label": "3-hydroxypropionate/4-hydroxybutyrate cycle", "node_type": "TRAIT", "xrefs": []}], "title": "3HP/4HB cycle fixes bicarbonate in aerobic Crenarchaeota"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +739,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

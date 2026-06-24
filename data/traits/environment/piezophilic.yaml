@@ -1,8 +1,8 @@
 identifier: traitmech:000001
 label: piezophilic
 definition: An environmental growth preference in which an organism grows optimally
-  at hydrostatic pressures substantially above atmospheric pressure (0.1 MPa),
-  characteristic of deep-sea and deep-subsurface microorganisms.
+  at hydrostatic pressures substantially above atmospheric pressure (0.1 MPa), characteristic
+  of deep-sea and deep-subsurface microorganisms.
 definition_source: DOI:10.3389/fmolb.2022.1058381
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -31,8 +31,8 @@ causal_graphs:
 - graph_id: piezophilic_hhp_membrane_adaptation
   title: Piezophilic high-pressure preference via membrane lipid adaptation
   description: Evidence-backed causal sketch linking high hydrostatic pressure to
-    unsaturated / branched-chain fatty-acid membrane adaptation enabling optimal
-    high-pressure growth.
+    unsaturated / branched-chain fatty-acid membrane adaptation enabling optimal high-pressure
+    growth.
   nodes:
   - node_id: piezophilic_trait
     label: piezophilic
@@ -52,6 +52,24 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Lipid composition adjustment maintaining membrane fluidity under
       HHP.
+  - node_id: pfa_operon
+    label: pfa operon
+    node_type: GENE_OR_PROTEIN
+    description: Gene cluster encoding an omega-3 polyunsaturated fatty acid synthase.
+  - node_id: omega3_pufa
+    label: omega-3 polyunsaturated fatty acids
+    node_type: CHEMICAL
+    description: Omega-3 PUFAs (e.g. EPA C20:5, DHA C22:6) supporting membrane fluidity
+      under HHP.
+  - node_id: piezolytes
+    label: piezolytes (compatible solutes)
+    node_type: CHEMICAL
+    description: Compatible solutes such as glutamate, betaine, beta-hydroxybutyrate
+      and TMAO that confer pressure tolerance.
+  - node_id: pressure_tolerance
+    label: pressure tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular stabilization against high hydrostatic pressure.
   edges:
   - subject: high_hydrostatic_pressure
     predicate: selects for
@@ -65,12 +83,11 @@ causal_graphs:
   - subject: unsaturated_branched_fa
     predicate: enables
     object: membrane_adaptation
-    description: Unsaturated and branched-chain fatty acids maintain membrane
-      fluidity under HHP.
+    description: Unsaturated and branched-chain fatty acids maintain membrane fluidity
+      under HHP.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
-      notes: Piezophile adaptation involves unsaturated and branched-chain fatty
-        acids.
+      notes: Piezophile adaptation involves unsaturated and branched-chain fatty acids.
     predicate_id: RO:0002327
   - subject: membrane_adaptation
     predicate: enables
@@ -81,6 +98,67 @@ causal_graphs:
       notes: Colwellia marinimaniae MTCD1 grows optimally at 120 MPa, supported by
         HHP-adapted membranes.
     predicate_id: RO:0002327
+  - subject: high_hydrostatic_pressure
+    predicate: increases
+    object: unsaturated_branched_fa
+    description: HHP increases abundance of membrane unsaturated and branched-chain
+      fatty acids.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: The abundance of membrane lipids containing unsaturated and branched-chain
+        fatty acids rises with increasing HHP.
+  - subject: pfa_operon
+    predicate: enables
+    object: omega3_pufa
+    description: The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase
+      enabling PUFA production.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.
+  - subject: high_hydrostatic_pressure
+    predicate: increases
+    object: omega3_pufa
+    description: HHP increases polyunsaturated fatty acids C20:5 (EPA) and C22:6 (DHA)
+      across multiple piezophilic/piezotolerant taxa.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: HHP-driven increases in C20:5/C22:6 in Photobacterium profundum SS9,
+        Psychromonas, and Shewanella piezotolerans WP3.
+  - subject: omega3_pufa
+    predicate: enables
+    object: membrane_adaptation
+    description: Omega-3 PUFAs maintain membrane fluidity, contributing to lipid adaptation
+      under HHP.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Unsaturated/polyunsaturated fatty acids maintain membrane fluidity under
+        high pressure.
+  - subject: high_hydrostatic_pressure
+    predicate: induces accumulation of
+    object: piezolytes
+    description: HHP is associated with accumulation of compatible solutes (piezolytes)
+      such as glutamate, betaine and beta-hydroxybutyrate.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: Compatible solutes (piezolytes) detected include glutamate, betaine,
+        and beta-hydroxybutyrate; TMAO acts as a pressure-tolerance molecule.
+  - subject: piezolytes
+    predicate: enables
+    object: pressure_tolerance
+    description: Piezolytes stabilize cellular components, conferring tolerance to
+      high hydrostatic pressure.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: TMAO and other compatible solutes are highlighted as pressure-tolerance
+        molecules.
+  - subject: pressure_tolerance
+    predicate: contributes to
+    object: piezophilic_trait
+    description: Pressure tolerance via piezolytes contributes to optimal growth at
+      high pressure.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: Piezolytes support growth and survival under high hydrostatic pressure.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -92,6 +170,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (HHP membrane adaptation) with
-    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (HHP membrane adaptation) with RO/METPO
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

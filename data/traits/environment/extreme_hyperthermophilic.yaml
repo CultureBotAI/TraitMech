@@ -55,6 +55,35 @@ causal_graphs:
     label: hyperthermophile bioenergetics
     node_type: BIOLOGICAL_PROCESS
     description: Energy transduction tuned to function in very-high-temperature environments.
+  - node_id: reverse_gyrase
+    label: reverse gyrase
+    node_type: GENE_OR_PROTEIN
+    description: ATP-dependent topoisomerase that introduces positive supercoils into
+      DNA; characteristic of hyperthermophiles.
+  - node_id: dna_positive_supercoiling
+    label: DNA positive supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    description: Positive supercoiling of DNA topology that stabilizes the double
+      helix at high temperature.
+  - node_id: dna_thermal_denaturation
+    label: DNA thermal denaturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Heat-induced melting/denaturation of DNA, a threat to genome integrity
+      at very high temperature.
+  - node_id: thermally_damaged_dna
+    label: thermally damaged DNA
+    node_type: CHEMICAL
+    description: Nicked or thermally damaged DNA subject to heat-driven strand breakage.
+  - node_id: grs_cyclization_enzymes
+    label: GrsA/GrsB GDGT cyclization enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes that introduce ring cyclizations into GDGT tetraether lipids,
+      increasing membrane packing.
+  - node_id: membrane_integrity_high_temp
+    label: membrane integrity at high temperature
+    node_type: STATE
+    description: Maintained structural integrity of the cell membrane under membrane-destabilizing
+      heat.
   edges:
   - subject: very_high_temperature
     predicate: selects for
@@ -97,6 +126,50 @@ causal_graphs:
       notes: Supports temperature-adapted energy transduction as the basis of thermophile
         and hyperthermophile growth.
     predicate_id: RO:0002327
+  - subject: reverse_gyrase
+    predicate: introduces positive supercoils into
+    object: dna_positive_supercoiling
+    description: Reverse gyrase introduces positive supercoils into DNA in hyperthermophiles.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: reverse gyrase... introduces positive supercoils into DNA (review-supported
+        mechanistic edge).
+  - subject: dna_positive_supercoiling
+    predicate: decreases risk of
+    object: dna_thermal_denaturation
+    description: Positive DNA supercoiling decreases the risk of thermal denaturation
+      of DNA.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: reverse gyrase prevents the thermal denaturation of DNA by introducing
+        positive DNA supercoiling (widely accepted in review literature).
+  - subject: reverse_gyrase
+    predicate: protects
+    object: thermally_damaged_dna
+    description: Reverse gyrase has heat-protective DNA chaperone activity that reduces
+      thermal DNA damage, independent of supercoiling.
+    evidence:
+    - reference: DOI:10.1093/nar/gkh683
+      notes: Reverse gyrase has heat-protective DNA chaperone activity, reducing double-stranded
+        DNA breakage ~8-fold at 90 C (strong experimental support).
+  - subject: tetraether_lipids
+    predicate: maintains
+    object: membrane_integrity_high_temp
+    description: Archaeal ether/tetraether lipids maintain membrane integrity at high
+      temperature.
+    evidence:
+    - reference: DOI:10.1186/2046-0481-57-6-348
+      notes: archaeal membranes contain tetraethers and diethers, enabling cells to
+        withstand membrane-destroying temperatures (broad classic mechanism).
+  - subject: grs_cyclization_enzymes
+    predicate: increases
+    object: membrane_integrity_high_temp
+    description: GrsA/GrsB cyclization of GDGTs increases membrane packing and stability
+      at high temperature.
+    evidence:
+    - reference: DOI:10.1007/s00792-023-01330-2
+      notes: cyclized GDGTs (introduced by GrsA/GrsB) increase membrane packing and
+        stability (strong mechanistic membrane edge).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909279+00:00'
   curator: seed_from_metpo
@@ -155,4 +228,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

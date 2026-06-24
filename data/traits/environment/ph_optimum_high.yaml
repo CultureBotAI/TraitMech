@@ -62,6 +62,52 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of a less alkaline cytoplasm than the external environment
       by proton re-import.
+  - node_id: cpa_nha_antiporters
+    label: CPA/Nha family Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Monovalent cation/proton antiporter family exporting Na+ and importing
+      H+.
+  - node_id: intracellular_na
+    label: intracellular Na+ concentration
+    node_type: CHEMICAL
+    description: Cytoplasmic sodium ion concentration.
+  - node_id: trkah_k_uptake
+    label: TrkAH K+ uptake system
+    node_type: GENE_OR_PROTEIN
+    description: Potassium uptake transport system aiding membrane potential and pH
+      homeostasis.
+  - node_id: rnf_complex
+    label: Rnf complex
+    node_type: GENE_OR_PROTEIN
+    description: Ferredoxin:NAD oxidoreductase that pumps Na+ to build a transmembrane
+      Na+ gradient.
+  - node_id: transmembrane_na_gradient
+    label: transmembrane Na+ gradient
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical sodium ion gradient across the membrane.
+  - node_id: terminal_oxidases
+    label: branched respiratory chain terminal oxidases
+    node_type: GENE_OR_PROTEIN
+    description: Terminal oxidases (aa3/ba3/bb3) that pump protons with differing
+      efficiencies.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient powering bioenergetics.
+  - node_id: acidic_membrane_polymers
+    label: acidic plasma membrane polymers
+    node_type: CHEMICAL
+    description: Acidic cell-envelope polymers (teichuronopeptide, peptidoglycan,
+      teichuronic acid).
+  - node_id: organic_acid_secretion
+    label: organic acid secretion
+    node_type: BIOLOGICAL_PROCESS
+    description: Secretion of metabolic organic acids that helps counter alkaline
+      stress.
+  - node_id: ph_balance
+    label: pH balance
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cytoplasmic pH balance under alkaline stress.
   edges:
   - subject: alkaline_external_ph
     predicate: selects for
@@ -102,6 +148,60 @@ causal_graphs:
       snippet: cytoplasmic pH
       notes: Supports an alkaline optimum as a value within the pH-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: cpa_nha_antiporters
+    predicate: decreases
+    object: intracellular_na
+    description: CPA/Nha family Na+/H+ antiporters export Na+, lowering intracellular
+      Na+ as part of pH homeostasis.
+    evidence:
+    - reference: DOI:10.1128/AEM.00145-24
+      notes: Monovalent cation/proton antiporters import H+ and efflux Na+; Na+/H+
+        antiporters effectively decrease the intracellular Na+ concentration.
+  - subject: trkah_k_uptake
+    predicate: maintains
+    object: alkaliphile_homeostasis
+    description: TrkAH K+ uptake supports membrane potential adjustment and cytoplasmic
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1128/AEM.00145-24
+      notes: TrkAH transport system takes up K+ and maintains pH homeostasis, adjusting
+        membrane potential.
+  - subject: rnf_complex
+    predicate: generates
+    object: transmembrane_na_gradient
+    description: Rnf complex expels sodium ions to establish a transmembrane Na+ gradient
+      usable for bioenergetics at high pH.
+    evidence:
+    - reference: DOI:10.1515/hsz-2015-0137
+      notes: Rnf transfers electrons from reduced ferredoxin to NAD and uses the redox
+        difference to expel sodium, establishing a transmembrane sodium gradient.
+  - subject: terminal_oxidases
+    predicate: produces
+    object: proton_motive_force
+    description: Branched respiratory chain terminal oxidases pump protons (with varying
+      efficiencies) to sustain proton motive force at high pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1468929
+      notes: Cyt. aa3 pumps protons at 0.7 H+/electron; ba3 and bb3 pump at 0.5 H+/electron,
+        supporting usable PMF at high pH.
+  - subject: acidic_membrane_polymers
+    predicate: enhances
+    object: proton_motive_force
+    description: Acidic plasma-membrane polymers aid proton retention and enhance
+      proton motive force generation at high external pH.
+    evidence:
+    - reference: DOI:10.3390/min14090861
+      notes: Alkaliphilic Bacillus enhances proton motive force generation by synthesis
+        of acidic plasma membrane (teichuronopeptide, peptidoglycan, teichuronic acid).
+  - subject: organic_acid_secretion
+    predicate: regulates
+    object: ph_balance
+    description: Secretion of organic acids by alkaliphiles permits cytoplasmic pH
+      balance against alkaline stress.
+    evidence:
+    - reference: DOI:10.3390/min14090861
+      notes: Secretion of organic acids by alkaliphilic microbes is a crucial metabolic
+        activity that permits pH balance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.828378+00:00'
   curator: seed_from_metpo
@@ -150,4 +250,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

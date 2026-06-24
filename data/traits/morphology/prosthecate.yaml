@@ -1,8 +1,8 @@
 identifier: traitmech:000065
 label: prosthecate
-definition: A morphology trait in which the cell bears one or more prosthecae —
-  tubular extensions of the cell envelope (stalks) — that increase nutrient-uptake
-  surface area or mediate attachment, as in Caulobacter.
+definition: A morphology trait in which the cell bears one or more prosthecae — tubular
+  extensions of the cell envelope (stalks) — that increase nutrient-uptake surface
+  area or mediate attachment, as in Caulobacter.
 definition_source: DOI:10.1111/j.1365-2958.2007.05633.x
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -33,8 +33,7 @@ causal_graphs:
     label: prosthecate
     node_type: TRAIT
     grounding: traitmech:000065
-    description: Possession of one or more cell-envelope-extension stalks
-      (prosthecae).
+    description: Possession of one or more cell-envelope-extension stalks (prosthecae).
   - node_id: stalk_extension
     label: stalk extension
     node_type: BIOLOGICAL_PROCESS
@@ -43,12 +42,40 @@ causal_graphs:
     label: nutrient-uptake surface area
     node_type: QUALITY
     description: Effective transport surface available for nutrient uptake.
+  - node_id: mreb
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial actin homolog cytoskeletal protein.
+  - node_id: roda
+    label: RodA
+    node_type: GENE_OR_PROTEIN
+    description: SEDS family cell-wall synthesis protein.
+  - node_id: bactofilins
+    label: bactofilins
+    node_type: GENE_OR_PROTEIN
+    description: Cytoskeletal proteins that localize to zones of active cell wall
+      growth.
+  - node_id: cell_wall_growth_zone
+    label: zone of active cell wall growth
+    node_type: CELLULAR_LOCALIZATION
+    description: Subcellular site of active peptidoglycan synthesis.
+  - node_id: stalk_crossbands
+    label: stalk crossbands
+    node_type: CELLULAR_LOCALIZATION
+    description: Periodic protein bands traversing the stalk lumen.
+  - node_id: stpabcd_complex
+    label: StpABCD complex
+    node_type: GENE_OR_PROTEIN
+    description: Four-protein complex (StpA, StpB, StpC, StpD) forming stalk crossbands.
+  - node_id: stalk_diffusion
+    label: diffusion along stalk
+    node_type: BIOLOGICAL_PROCESS
+    description: Molecular diffusion along the length of the stalk lumen.
   edges:
   - subject: stalk_extension
     predicate: enables
     object: prosthecate_trait
-    description: Regulated stalk-extension elongation realizes the prosthecate
-      phenotype.
+    description: Regulated stalk-extension elongation realizes the prosthecate phenotype.
     evidence:
     - reference: DOI:10.1128/MMBR.00040-09
       notes: Curtis & Brun review the Caulobacter stalk as a regulated developmental
@@ -57,13 +84,63 @@ causal_graphs:
   - subject: prosthecate_trait
     predicate: contributes to
     object: uptake_surface_area
-    description: Stalks expand nutrient-uptake surface area, aiding oligotrophic
-      growth.
+    description: Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.
     evidence:
     - reference: DOI:10.1111/j.1365-2958.2007.05633.x
-      notes: Wagner & Brun describe the Caulobacter stalk as a cell-envelope
-        extension increasing nutrient-uptake surface area.
+      notes: Wagner & Brun describe the Caulobacter stalk as a cell-envelope extension
+        increasing nutrient-uptake surface area.
     predicate_id: RO:0002326
+  - subject: mreb
+    predicate: is required for
+    object: stalk_extension
+    description: MreB is necessary for stalk formation; depletion causes a stalk elongation
+      defect.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: 'Barrows & Goley: MreB and RodA are necessary for stalk formation, as
+        depletion of either protein results in a stalk elongation defect.'
+  - subject: roda
+    predicate: is required for
+    object: stalk_extension
+    description: RodA is necessary for stalk formation; depletion causes a stalk elongation
+      defect.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: 'Barrows & Goley: depletion of either protein (MreB or RodA) results
+        in a stalk elongation defect.'
+  - subject: bactofilins
+    predicate: localizes to
+    object: cell_wall_growth_zone
+    description: Many bactofilins localize to zones of active cell wall growth, supporting
+      stalk biogenesis.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010788
+      notes: 'Richter et al.: many bactofilins localize to zones of active cell wall
+        growth.'
+  - subject: stpabcd_complex
+    predicate: composes
+    object: stalk_crossbands
+    description: The four-protein StpABCD complex composes the stalk crossbands.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: 'Barrows & Goley: crossbands are composed of a complex of four proteins,
+        StpABCD.'
+  - subject: stalk_crossbands
+    predicate: limits
+    object: stalk_diffusion
+    description: Crossbands limit diffusion along the length of the stalk, compartmentalizing
+      it.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: 'Barrows & Goley: crossbands that limit diffusion along the length of
+        the stalk.'
+  - subject: prosthecate_trait
+    predicate: facilitates
+    object: uptake_surface_area
+    description: Prosthecae/stalks facilitate nutrient uptake.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010788
+      notes: 'Richter et al.: prosthecae/stalks facilitate nutrient uptake.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -74,6 +151,12 @@ curation_history:
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (stalk extension / nutrient-uptake
-    surface) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (stalk extension / nutrient-uptake surface)
+    with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

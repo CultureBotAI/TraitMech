@@ -81,6 +81,46 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cellular material produced from fixed inorganic carbon.
     grounding: METPO:1007501
+  - node_id: environmental_ph
+    label: environmental pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient pH that controls the speciation of dissolved inorganic carbon.
+  - node_id: dissolved_inorganic_carbon
+    label: dissolved inorganic carbon
+    node_type: CHEMICAL
+    description: Pool of CO2, bicarbonate, and carbonate available to autotrophs.
+  - node_id: carbon_concentrating_mechanism
+    label: carbon-concentrating mechanism
+    node_type: BIOLOGICAL_PROCESS
+    description: System that elevates intracellular CO2 around RuBisCO to favor carboxylation.
+  - node_id: carboxysome
+    label: carboxysome
+    node_type: ORGANELLE
+    description: Protein-shell microcompartment encapsulating RuBisCO and carbonic
+      anhydrase.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme interconverting bicarbonate and CO2, supplying CO2 to RuBisCO.
+  - node_id: wood_ljungdahl_pathway
+    label: Wood-Ljungdahl pathway
+    node_type: PATHWAY
+    description: Reductive acetyl-CoA pathway fixing two CO2 into acetyl-CoA.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    grounding: CHEBI:15351
+    description: Central metabolite product of Wood-Ljungdahl CO2 fixation.
+  - node_id: codh_acs
+    label: CO dehydrogenase/acetyl-CoA synthase (CODH/ACS)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme complex catalyzing the terminal acetyl-CoA-forming step of
+      the Wood-Ljungdahl pathway.
+  - node_id: molecular_hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    grounding: CHEBI:18276
+    description: Electron donor supplying reducing equivalents for CO2 reduction.
   edges:
   - subject: autotrophic_trait
     predicate: uses carbon source
@@ -154,6 +194,81 @@ causal_graphs:
       snippet: microbial autotrophic production
       notes: Supports production of biomass and products from autotrophic CO2 fixation.
     predicate_id: biolink:part_of
+  - subject: environmental_ph
+    predicate: determines speciation of
+    object: dissolved_inorganic_carbon
+    description: pH sets the relative abundance of CO2, bicarbonate, and carbonate
+      available for fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: CO2 predominates below ~pH 6.4, HCO3- at circumneutral pH, and CO32-
+        above ~pH 10.3; DIC form availability constrains the fixation route.
+  - subject: carbon_concentrating_mechanism
+    predicate: supplies substrate to
+    object: co2_fixation_pathway
+    description: CCMs elevate intracellular CO2 to enhance autotrophic carbon fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: Transporters and CO2-active systems generate elevated intracellular HCO3-
+        delivered for carboxysomal CO2 fixation.
+  - subject: carboxysome
+    predicate: contains
+    object: rubisco
+    description: Carboxysomes encapsulate RuBisCO to concentrate CO2 around the carboxylating
+      enzyme.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: Carboxysomes are protein shell encapsulated ribulose-1,5-bisphosphate
+        carboxylase/oxygenase (RuBisCO).
+  - subject: carboxysome
+    predicate: contains
+    object: carbonic_anhydrase
+    description: Carboxysomes house carbonic anhydrase alongside RuBisCO.
+    evidence:
+    - reference: DOI:10.1128/aem.01075-24
+      notes: 'Carboxysomes contain two key enzymes: carbonic anhydrase and RuBisCO.'
+  - subject: carbonic_anhydrase
+    predicate: converts
+    object: carbon_dioxide
+    description: Carbonic anhydrase converts bicarbonate to CO2 for RuBisCO fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01075-24
+      notes: When cytoplasmic HCO3- enters carboxysomes, CA converts it to CO2, which
+        is fixed by RuBisCO.
+  - subject: wood_ljungdahl_pathway
+    predicate: example of
+    object: co2_fixation_pathway
+    description: The Wood-Ljungdahl pathway is an autotrophic CO2-fixation pathway
+      producing acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1039/D4CB00099D
+      notes: Two CO2 molecules are fixed to acetyl-CoA via the WLP, requiring one
+        ATP and eight electrons.
+  - subject: wood_ljungdahl_pathway
+    predicate: produces
+    object: acetyl_coa
+    description: The Wood-Ljungdahl pathway yields acetyl-CoA from fixed CO2.
+    evidence:
+    - reference: DOI:10.1039/D4CB00099D
+      notes: Two CO2 molecules to acetyl-CoA via the WLP.
+  - subject: codh_acs
+    predicate: catalyzes
+    object: wood_ljungdahl_pathway
+    description: CODH/ACS catalyzes the terminal acetyl-CoA-forming step of the Wood-Ljungdahl
+      pathway.
+    evidence:
+    - reference: DOI:10.1039/D4CB00099D
+      notes: CO dehydrogenase/acetyl-CoA synthase (CODH/ACS) produces acetyl-CoA in
+        the WLP.
+  - subject: molecular_hydrogen
+    predicate: provides reductant for
+    object: wood_ljungdahl_pathway
+    description: H2 supplies reducing equivalents driving CO2 reduction in the Wood-Ljungdahl
+      pathway.
+    evidence:
+    - reference: DOI:10.1039/D4CB00099D
+      notes: H2 or CO must be utilized as an energy source to provide reducing equivalents
+        for full CO2 reduction.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.867544+00:00'
   curator: seed_from_metpo
@@ -242,4 +357,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

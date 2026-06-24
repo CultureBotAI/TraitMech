@@ -50,6 +50,48 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16526
     description: Substrate fixed by RuBisCO.
+  - node_id: rubp
+    label: ribulose-1,5-bisphosphate
+    node_type: CHEMICAL
+    description: CO2 acceptor substrate carboxylated by RuBisCO in the CBB cycle.
+  - node_id: three_pga
+    label: 3-phospho-D-glycerate
+    node_type: CHEMICAL
+    description: Product of RuBisCO carboxylation of RuBP; first stable CBB intermediate.
+  - node_id: carboxysome
+    label: carboxysome
+    node_type: ORGANELLE
+    description: Bacterial microcompartment that encapsulates RuBisCO and carbonic
+      anhydrase as part of the CO2-concentrating mechanism.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: HCO3-, inorganic carbon species converted to CO2 by carbonic anhydrase
+      near RuBisCO.
+  - node_id: carboxysomal_ca
+    label: carboxysomal carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Carbonic anhydrase within the carboxysome that converts HCO3- to
+      CO2 to supply RuBisCO.
+  - node_id: cbbr
+    label: CbbR transcriptional regulator
+    node_type: GENE_OR_PROTEIN
+    description: LysR-type master transcriptional activator of bacterial cbb CO2-fixation
+      operons.
+  - node_id: cbb_operon
+    label: cbb operon
+    node_type: GENE_OR_PROTEIN
+    description: Operon encoding CBB-cycle CO2-fixation enzymes.
+  - node_id: cytoplasmic_ca
+    label: cytoplasmic carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Non-vectorial cytosolic carbonic anhydrase whose activity can dissipate
+      the CO2-concentrating mechanism.
+  - node_id: co2_leakage
+    label: CO2 leakage
+    node_type: BIOLOGICAL_PROCESS
+    description: Dissipation of concentrated CO2 from the CCM, reducing carbon-fixation
+      efficiency.
   edges:
   - subject: rubisco
     predicate: enables
@@ -76,6 +118,77 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       notes: Berg identifies the CBB cycle as a CO2-fixing pathway.
     predicate_id: METPO:2007404
+  - subject: rubisco
+    predicate: converts
+    object: three_pga
+    description: RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with
+      CO2 to yield 3-phosphoglycerate.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: 'Kurkela 2024: "RubisCo... catalyses the first CBB reaction (RuBP + CO2
+        -> 3-PGA)."'
+  - subject: rubp
+    predicate: substrate of
+    object: rubisco
+    description: RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: 'Kurkela 2024: RuBP + CO2 -> 3-PGA is the first CBB reaction catalysed
+        by RubisCo.'
+  - subject: carboxysome
+    predicate: contains
+    object: rubisco
+    description: Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating
+      mechanism.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: 'Kurkela 2024: "carboxysomes that encapsulate RuBisCo and carbonic anhydrase."'
+  - subject: carboxysome
+    predicate: concentrates
+    object: carbon_dioxide
+    description: Carboxysomes concentrate CO2 near RuBisCO, bridging environmental
+      DIC supply to enzymatic demand.
+    evidence:
+    - reference: DOI:10.1128/AEM.01557-23
+      notes: 'Scott 2024: "carboxysomes... concentrate CO2 near Rubisco to bridge
+        environmental DIC supply to enzymatic demand."'
+  - subject: carboxysomal_ca
+    predicate: converts
+    object: carbon_dioxide
+    description: Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate
+      luminal CO2 and promote RuBisCO fixation.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adk7283
+      notes: 'Pulsford 2024: within carboxysomes, CA converts HCO3- to CO2 to elevate
+        luminal CO2 and promote Rubisco-catalyzed CO2 fixation.'
+  - subject: bicarbonate
+    predicate: substrate of
+    object: carboxysomal_ca
+    description: Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply
+      CO2 to RuBisCO.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adk7283
+      notes: 'Pulsford 2024: carboxysomal CA converts HCO3- to CO2 to promote Rubisco-catalyzed
+        CO2 fixation.'
+  - subject: cbbr
+    predicate: activates transcription of
+    object: cbb_operon
+    description: CbbR is the master transcriptional activator that elevates expression
+      of bacterial cbb CO2-fixation operons.
+    evidence:
+    - reference: DOI:10.1128/JB.00442-15
+      notes: 'Dangel 2015: "CbbR, the Master Regulator for Microbial Carbon Dioxide
+        Fixation"; elevates expression of the cbb CO2 fixation operons. Broad evidence
+        across bacteria.'
+  - subject: cytoplasmic_ca
+    predicate: can cause
+    object: co2_leakage
+    description: Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate
+      the CCM by causing CO2 leakage.
+    evidence:
+    - reference: DOI:10.1128/AEM.01557-23
+      notes: 'Scott 2024: "cytosolic (non-vectoral) CA activity can dissipate the
+        CCM by causing CO2 leakage."'
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -94,4 +207,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A075WF79×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

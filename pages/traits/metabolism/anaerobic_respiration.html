@@ -141,6 +141,91 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>oxygen limitation / anoxic transition</strong>
+            <span class="edge-predicate">increases activity of</span>
+            <strong>denitrification reductases</strong>
+            
+            <p>Onset of anoxia drives early transcription and activity of denitrification reductases.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-51688-w</code>
+                
+                <span class="meta">early transcription of NAR (and sometimes NOS) at the cusp of anoxia; environmental driver activating denitrification reductases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>respiratory nitrate reductase (NarGHI)</strong>
+            <span class="edge-predicate">catalyzes reduction of</span>
+            <strong>nitrate</strong>
+            
+            <p>Respiratory nitrate reductase NarGHI catalyzes the reduction of nitrate to nitrite.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/msystems.00967-23</code>
+                
+                <span class="meta">the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction to nitrite, the canonical first step of nitrate respiration.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>respiratory nitrate reductase (NarGHI)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>nitrite</strong>
+            
+            <p>Reduction of nitrate by NarGHI yields nitrite.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/msystems.00967-23</code>
+                
+                <span class="meta">NarGHI nitrate reductase produces nitrite from nitrate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>nitrous oxide reductase (NosZ)</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>nitrous oxide</strong>
+            
+            <p>NosZ reduces nitrous oxide to dinitrogen, the terminal step of complete denitrification.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/msystems.00967-23</code>
+                
+                <span class="meta">NosZ reduces N2O to N2; canonical terminal denitrification step.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>nitrous oxide reductase (NosZ)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>dinitrogen</strong>
+            
+            <p>NosZ-catalyzed reduction of nitrous oxide produces dinitrogen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/msystems.00967-23</code>
+                
+                <span class="meta">NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -321,6 +406,12 @@
           <time>2026-06-14T05:51:45Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:35196×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -680,7 +771,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch using denitrification as a representative anaerobic respiratory process.", "edges": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "low_oxygen_condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "id": "edge-2", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "nitrogen_oxides", "target": "terminal_electron_acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "id": "edge-3", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen_oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "energy_conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "id": "edge-5", "is_orphan": false, "predicate": "exemplified by", "predicate_id": null, "source": "anaerobic_respiration_trait", "target": "denitrification"}], "evidence_rows": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "anaerobic or microaerophilic condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "predicate": "acts as", "predicate_id": null, "source": "nitrogen oxides", "target": "terminal electron acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "cellular energy conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "edge_id": "edge-5", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "predicate": "exemplified by", "predicate_id": null, "source": "Anaerobic respiration", "target": "denitrification"}], "graph_id": "anaerobic_respiration_denitrification", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Respiration using terminal electron acceptors other than oxygen.", "grounding": "METPO:1000802", "id": "anaerobic_respiration_trait", "is_orphan": false, "label": "Anaerobic respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory reduction of nitrogen oxides.", "grounding": "GO:0019330", "id": "denitrification", "is_orphan": false, "label": "denitrification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Bioenergetic output of respiratory electron transport.", "grounding": null, "id": "energy_conservation", "is_orphan": false, "label": "cellular energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen condition permissive for denitrifying respiration.", "grounding": null, "id": "low_oxygen_condition", "is_orphan": false, "label": "anaerobic or microaerophilic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Non-oxygen terminal electron acceptors used in denitrification.", "grounding": "CHEBI:35196", "id": "nitrogen_oxides", "is_orphan": false, "label": "nitrogen oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Electron-accepting role in respiratory bioenergetics.", "grounding": "METPO:1007504", "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Anaerobic respiration with nitrogen oxide acceptors"}];
+  var graphs = [{"description": "Evidence-backed causal sketch using denitrification as a representative anaerobic respiratory process.", "edges": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "low_oxygen_condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "id": "edge-2", "is_orphan": false, "predicate": "acts as", "predicate_id": null, "source": "nitrogen_oxides", "target": "terminal_electron_acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "id": "edge-3", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen_oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "id": "edge-4", "is_orphan": false, "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "energy_conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "id": "edge-5", "is_orphan": false, "predicate": "exemplified by", "predicate_id": null, "source": "anaerobic_respiration_trait", "target": "denitrification"}, {"description": "Onset of anoxia drives early transcription and activity of denitrification reductases.", "evidence": [{"notes": "early transcription of NAR (and sometimes NOS) at the cusp of anoxia; environmental driver activating denitrification reductases.", "reference": "DOI:10.1038/s41467-024-51688-w"}], "id": "edge-6", "is_orphan": false, "predicate": "increases activity of", "predicate_id": null, "source": "oxygen_limitation", "target": "denitrification_reductases"}, {"description": "Respiratory nitrate reductase NarGHI catalyzes the reduction of nitrate to nitrite.", "evidence": [{"notes": "the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction to nitrite, the canonical first step of nitrate respiration.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-7", "is_orphan": false, "predicate": "catalyzes reduction of", "predicate_id": null, "source": "nitrate_reductase", "target": "nitrate"}, {"description": "Reduction of nitrate by NarGHI yields nitrite.", "evidence": [{"notes": "NarGHI nitrate reductase produces nitrite from nitrate.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "nitrate_reductase", "target": "nitrite"}, {"description": "NosZ reduces nitrous oxide to dinitrogen, the terminal step of complete denitrification.", "evidence": [{"notes": "NosZ reduces N2O to N2; canonical terminal denitrification step.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-9", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "nitrous_oxide_reductase", "target": "nitrous_oxide"}, {"description": "NosZ-catalyzed reduction of nitrous oxide produces dinitrogen.", "evidence": [{"notes": "NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.", "reference": "DOI:10.1128/msystems.00967-23"}], "id": "edge-10", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "nitrous_oxide_reductase", "target": "dinitrogen"}], "evidence_rows": [{"description": "Denitrification can occur under anaerobic and microaerophilic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports low-oxygen context for denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "under anaerobic, microaerophilic, and occasionally aerobic conditions"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "denitrification", "target": "anaerobic or microaerophilic condition"}, {"description": "Nitrogen oxides serve as terminal electron acceptors.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the terminal electron acceptor role.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "N oxides as terminal electron acceptors"}], "predicate": "acts as", "predicate_id": null, "source": "nitrogen oxides", "target": "terminal electron acceptor"}, {"description": "Denitrification uses nitrogen oxides in respiratory bioenergetics.", "edge_id": "edge-3", "evidence": [{"notes": "Supports nitrogen oxides as denitrification substrates.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "making use of N oxides"}], "predicate": "uses", "predicate_id": null, "source": "denitrification", "target": "nitrogen oxides"}, {"description": "Denitrification is a respiratory route for energy conservation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports energy conservation via denitrification.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "distinct means of energy conservation"}], "predicate": "conserves", "predicate_id": null, "source": "denitrification", "target": "cellular energy conservation"}, {"description": "Denitrification is a representative anaerobic respiratory process.", "edge_id": "edge-5", "evidence": [{"notes": "Supports denitrification as non-oxygen respiratory bioenergetics.", "reference": "DOI:10.1128/mmbr.61.4.533-616.1997", "snippet": "terminal electron acceptors for cellular bioenergetics"}], "predicate": "exemplified by", "predicate_id": null, "source": "Anaerobic respiration", "target": "denitrification"}, {"description": "Onset of anoxia drives early transcription and activity of denitrification reductases.", "edge_id": "edge-6", "evidence": [{"notes": "early transcription of NAR (and sometimes NOS) at the cusp of anoxia; environmental driver activating denitrification reductases.", "reference": "DOI:10.1038/s41467-024-51688-w"}], "predicate": "increases activity of", "predicate_id": null, "source": "oxygen limitation / anoxic transition", "target": "denitrification reductases"}, {"description": "Respiratory nitrate reductase NarGHI catalyzes the reduction of nitrate to nitrite.", "edge_id": "edge-7", "evidence": [{"notes": "the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction to nitrite, the canonical first step of nitrate respiration.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "catalyzes reduction of", "predicate_id": null, "source": "respiratory nitrate reductase (NarGHI)", "target": "nitrate"}, {"description": "Reduction of nitrate by NarGHI yields nitrite.", "edge_id": "edge-8", "evidence": [{"notes": "NarGHI nitrate reductase produces nitrite from nitrate.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "produces", "predicate_id": null, "source": "respiratory nitrate reductase (NarGHI)", "target": "nitrite"}, {"description": "NosZ reduces nitrous oxide to dinitrogen, the terminal step of complete denitrification.", "edge_id": "edge-9", "evidence": [{"notes": "NosZ reduces N2O to N2; canonical terminal denitrification step.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "reduces", "predicate_id": null, "source": "nitrous oxide reductase (NosZ)", "target": "nitrous oxide"}, {"description": "NosZ-catalyzed reduction of nitrous oxide produces dinitrogen.", "edge_id": "edge-10", "evidence": [{"notes": "NosZ reduces N2O to N2; produces dinitrogen as denitrification end product.", "reference": "DOI:10.1128/msystems.00967-23"}], "predicate": "produces", "predicate_id": null, "source": "nitrous oxide reductase (NosZ)", "target": "dinitrogen"}], "graph_id": "anaerobic_respiration_denitrification", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Respiration using terminal electron acceptors other than oxygen.", "grounding": "METPO:1000802", "id": "anaerobic_respiration_trait", "is_orphan": false, "label": "Anaerobic respiration", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory reduction of nitrogen oxides.", "grounding": "GO:0019330", "id": "denitrification", "is_orphan": false, "label": "denitrification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory reductases (e.g., Nar, Nos) that catalyze stepwise reduction of nitrogen oxides during denitrification.", "grounding": null, "id": "denitrification_reductases", "is_orphan": false, "label": "denitrification reductases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Gaseous end product of complete denitrification.", "grounding": null, "id": "dinitrogen", "is_orphan": false, "label": "dinitrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Bioenergetic output of respiratory electron transport.", "grounding": null, "id": "energy_conservation", "is_orphan": false, "label": "cellular energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen condition permissive for denitrifying respiration.", "grounding": null, "id": "low_oxygen_condition", "is_orphan": false, "label": "anaerobic or microaerophilic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized nitrogen oxyanion reduced to nitrite during nitrate respiration.", "grounding": null, "id": "nitrate", "is_orphan": false, "label": "nitrate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound respiratory nitrate reductase complex that reduces nitrate to nitrite.", "grounding": null, "id": "nitrate_reductase", "is_orphan": false, "label": "respiratory nitrate reductase (NarGHI)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced product of nitrate reduction and substrate for subsequent denitrification or DNRA.", "grounding": null, "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Non-oxygen terminal electron acceptors used in denitrification.", "grounding": "CHEBI:35196", "id": "nitrogen_oxides", "is_orphan": false, "label": "nitrogen oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Denitrification intermediate reduced to dinitrogen by NosZ.", "grounding": null, "id": "nitrous_oxide", "is_orphan": false, "label": "nitrous oxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal reductase of denitrification reducing nitrous oxide to dinitrogen.", "grounding": null, "id": "nitrous_oxide_reductase", "is_orphan": false, "label": "nitrous oxide reductase (NosZ)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Onset of low-oxygen / anoxic conditions that triggers expression and activity of anaerobic respiratory reductases.", "grounding": null, "id": "oxygen_limitation", "is_orphan": false, "label": "oxygen limitation / anoxic transition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#cffafe", "description": "Electron-accepting role in respiratory bioenergetics.", "grounding": "METPO:1007504", "id": "terminal_electron_acceptor", "is_orphan": false, "label": "terminal electron acceptor", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Anaerobic respiration with nitrogen oxide acceptors"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -691,7 +782,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -124,6 +124,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>septal peptidoglycan hydrolase</strong>
+            <span class="edge-predicate">mediates</span>
+            <strong>septum cleavage</strong>
+            
+            <p>A dedicated peptidoglycan hydrolase mediates septum cleavage between daughter cells.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-023-04808-z</code>
+                
+                <span class="meta">Minimisation of cell chain size relies on a peptidoglycan hydrolase dedicated to septum cleavage (conserved separation-autolysin mechanism).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>septum cleavage</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>daughter cell separation</strong>
+            
+            <p>Cleavage of the septal cross-wall enables resolution of daughter cells, favoring diplococci/short chains over long chains.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-023-04808-z</code>
+                
+                <span class="meta">Septum cleavage is the proximate process producing paired cells rather than long chains.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>septal localization of separation hydrolase</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>daughter cell separation</strong>
+            
+            <p>Restricting the separation autolysin to the septum enables correct daughter-cell separation geometry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-023-04808-z</code>
+                
+                <span class="meta">Restricted septal localization of the autolysin confines its lethal activity to its site of action, enabling separation; mislocalization yields chaining.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>wall teichoic acid</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>septal localization of separation hydrolase</strong>
+            
+            <p>Wall teichoic acid serves as a recognition determinant that promotes septal localization/binding of the separation hydrolase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.celrep.2023.112756</code>
+                
+                <span class="meta">Separation-hydrolase binding is reduced in WTA-deficient cells but preserved in LTA-deficient cells; WTA acts as an envelope-polymer address for the autolysin.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>LytR/LCP teichoic acid ligase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>wall teichoic acid</strong>
+            
+            <p>LytR/LCP-family ligase mediates the final step of wall teichoic acid formation and anchoring to peptidoglycan.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pbio.3001990</code>
+                
+                <span class="meta">LytR is the major enzyme mediating the final step in WTA formation, anchoring the TA precursor to PGN.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>daughter cell separation</strong>
+            <span class="edge-predicate">incomplete separation yields</span>
+            <strong>daughter-cell pair</strong>
+            
+            <p>Incomplete daughter-cell separation retains attached cell pairs.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-023-04808-z</code>
+                
+                <span class="meta">Loss of septum-cleaving hydrolase activity shifts cells from separated/paired toward long chains; regulated separation yields paired cells.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -273,6 +375,12 @@
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -632,7 +740,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking diplococcus morphology to septal peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell separation, and retention of daughter-cell pairs.", "edges": [{"description": "Septal wall synthesis forms the cross-wall between daughter cells.", "evidence": [{"notes": "Supports septal PG assembly during ovococcal division.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan assembly during the cell cycle"}], "id": "edge-1", "is_orphan": false, "predicate": "forms", "predicate_id": "biolink:produces", "source": "septal_peptidoglycan_synthesis", "target": "septal_cross_wall"}, {"description": "Cell separation requires splitting the septal cross-wall.", "evidence": [{"notes": "Supports PcsB-associated peptidoglycan hydrolase function in cell separation.", "reference": "DOI:10.1038/ncomms4842", "snippet": "splitting of the septal cross wall"}], "id": "edge-2", "is_orphan": false, "predicate": "splits", "predicate_id": null, "source": "pcsB_hydrolase_system", "target": "septal_cross_wall"}, {"description": "Incomplete or regulated separation of septal cross-wall material yields attached cell pairs.", "evidence": [{"notes": "Supports the relationship between pneumococcal separation state and diplococcus occurrence.", "reference": "DOI:10.1128/JB.183.10.3108-3116.2001", "snippet": "short chains with few or no free diplococci"}], "id": "edge-3", "is_orphan": false, "predicate": "incomplete separation yields", "predicate_id": null, "source": "septal_cross_wall", "target": "daughter_cell_pair"}, {"description": "Attached daughter-cell pairs manifest the diplococcus-shaped trait.", "evidence": [{"notes": "Supports paired morphology as an outcome of daughter-cell separation dynamics.", "reference": "DOI:10.1038/ncomms4842", "snippet": "daughter cells during bacterial cell division"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "daughter_cell_pair", "target": "diplococcus_shaped_trait"}], "evidence_rows": [{"description": "Septal wall synthesis forms the cross-wall between daughter cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports septal PG assembly during ovococcal division.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan assembly during the cell cycle"}], "predicate": "forms", "predicate_id": "biolink:produces", "source": "septal peptidoglycan synthesis", "target": "septal cross wall"}, {"description": "Cell separation requires splitting the septal cross-wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PcsB-associated peptidoglycan hydrolase function in cell separation.", "reference": "DOI:10.1038/ncomms4842", "snippet": "splitting of the septal cross wall"}], "predicate": "splits", "predicate_id": null, "source": "PcsB hydrolase system", "target": "septal cross wall"}, {"description": "Incomplete or regulated separation of septal cross-wall material yields attached cell pairs.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the relationship between pneumococcal separation state and diplococcus occurrence.", "reference": "DOI:10.1128/JB.183.10.3108-3116.2001", "snippet": "short chains with few or no free diplococci"}], "predicate": "incomplete separation yields", "predicate_id": null, "source": "septal cross wall", "target": "daughter-cell pair"}, {"description": "Attached daughter-cell pairs manifest the diplococcus-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports paired morphology as an outcome of daughter-cell separation dynamics.", "reference": "DOI:10.1038/ncomms4842", "snippet": "daughter cells during bacterial cell division"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "daughter-cell pair", "target": "diplococcus shaped"}], "graph_id": "diplococcus_shaped_septal_separation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Two cells remaining attached after division.", "grounding": null, "id": "daughter_cell_pair", "is_orphan": false, "label": "daughter-cell pair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pair-forming spherical bacterial morphology.", "grounding": "METPO:1000671", "id": "diplococcus_shaped_trait", "is_orphan": false, "label": "diplococcus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Pneumococcal cell-separation factor involved in cross-wall splitting.", "grounding": null, "id": "pcsB_hydrolase_system", "is_orphan": false, "label": "PcsB hydrolase system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Peptidoglycan wall separating daughter cells.", "grounding": null, "id": "septal_cross_wall", "is_orphan": false, "label": "septal cross wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Division-associated wall synthesis at the septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Diplococcus paired-cell separation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking diplococcus morphology to septal peptidoglycan synthesis, peptidoglycan hydrolase-mediated cell separation, and retention of daughter-cell pairs.", "edges": [{"description": "Septal wall synthesis forms the cross-wall between daughter cells.", "evidence": [{"notes": "Supports septal PG assembly during ovococcal division.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan assembly during the cell cycle"}], "id": "edge-1", "is_orphan": false, "predicate": "forms", "predicate_id": "biolink:produces", "source": "septal_peptidoglycan_synthesis", "target": "septal_cross_wall"}, {"description": "Cell separation requires splitting the septal cross-wall.", "evidence": [{"notes": "Supports PcsB-associated peptidoglycan hydrolase function in cell separation.", "reference": "DOI:10.1038/ncomms4842", "snippet": "splitting of the septal cross wall"}], "id": "edge-2", "is_orphan": false, "predicate": "splits", "predicate_id": null, "source": "pcsB_hydrolase_system", "target": "septal_cross_wall"}, {"description": "Incomplete or regulated separation of septal cross-wall material yields attached cell pairs.", "evidence": [{"notes": "Supports the relationship between pneumococcal separation state and diplococcus occurrence.", "reference": "DOI:10.1128/JB.183.10.3108-3116.2001", "snippet": "short chains with few or no free diplococci"}], "id": "edge-3", "is_orphan": false, "predicate": "incomplete separation yields", "predicate_id": null, "source": "septal_cross_wall", "target": "daughter_cell_pair"}, {"description": "Attached daughter-cell pairs manifest the diplococcus-shaped trait.", "evidence": [{"notes": "Supports paired morphology as an outcome of daughter-cell separation dynamics.", "reference": "DOI:10.1038/ncomms4842", "snippet": "daughter cells during bacterial cell division"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "daughter_cell_pair", "target": "diplococcus_shaped_trait"}, {"description": "A dedicated peptidoglycan hydrolase mediates septum cleavage between daughter cells.", "evidence": [{"notes": "Minimisation of cell chain size relies on a peptidoglycan hydrolase dedicated to septum cleavage (conserved separation-autolysin mechanism).", "reference": "DOI:10.1038/s42003-023-04808-z"}], "id": "edge-5", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "separation_pg_hydrolase", "target": "septum_cleavage"}, {"description": "Cleavage of the septal cross-wall enables resolution of daughter cells, favoring diplococci/short chains over long chains.", "evidence": [{"notes": "Septum cleavage is the proximate process producing paired cells rather than long chains.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "septum_cleavage", "target": "daughter_cell_separation"}, {"description": "Restricting the separation autolysin to the septum enables correct daughter-cell separation geometry.", "evidence": [{"notes": "Restricted septal localization of the autolysin confines its lethal activity to its site of action, enabling separation; mislocalization yields chaining.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "hydrolase_septal_localization", "target": "daughter_cell_separation"}, {"description": "Wall teichoic acid serves as a recognition determinant that promotes septal localization/binding of the separation hydrolase.", "evidence": [{"notes": "Separation-hydrolase binding is reduced in WTA-deficient cells but preserved in LTA-deficient cells; WTA acts as an envelope-polymer address for the autolysin.", "reference": "DOI:10.1016/j.celrep.2023.112756"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "wall_teichoic_acid", "target": "hydrolase_septal_localization"}, {"description": "LytR/LCP-family ligase mediates the final step of wall teichoic acid formation and anchoring to peptidoglycan.", "evidence": [{"notes": "LytR is the major enzyme mediating the final step in WTA formation, anchoring the TA precursor to PGN.", "reference": "DOI:10.1371/journal.pbio.3001990"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "lytr_lcp_enzyme", "target": "wall_teichoic_acid"}, {"description": "Incomplete daughter-cell separation retains attached cell pairs.", "evidence": [{"notes": "Loss of septum-cleaving hydrolase activity shifts cells from separated/paired toward long chains; regulated separation yields paired cells.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "id": "edge-10", "is_orphan": false, "predicate": "incomplete separation yields", "predicate_id": null, "source": "daughter_cell_separation", "target": "daughter_cell_pair"}], "evidence_rows": [{"description": "Septal wall synthesis forms the cross-wall between daughter cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports septal PG assembly during ovococcal division.", "reference": "DOI:10.1016/j.cub.2021.04.041", "snippet": "peptidoglycan assembly during the cell cycle"}], "predicate": "forms", "predicate_id": "biolink:produces", "source": "septal peptidoglycan synthesis", "target": "septal cross wall"}, {"description": "Cell separation requires splitting the septal cross-wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PcsB-associated peptidoglycan hydrolase function in cell separation.", "reference": "DOI:10.1038/ncomms4842", "snippet": "splitting of the septal cross wall"}], "predicate": "splits", "predicate_id": null, "source": "PcsB hydrolase system", "target": "septal cross wall"}, {"description": "Incomplete or regulated separation of septal cross-wall material yields attached cell pairs.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the relationship between pneumococcal separation state and diplococcus occurrence.", "reference": "DOI:10.1128/JB.183.10.3108-3116.2001", "snippet": "short chains with few or no free diplococci"}], "predicate": "incomplete separation yields", "predicate_id": null, "source": "septal cross wall", "target": "daughter-cell pair"}, {"description": "Attached daughter-cell pairs manifest the diplococcus-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports paired morphology as an outcome of daughter-cell separation dynamics.", "reference": "DOI:10.1038/ncomms4842", "snippet": "daughter cells during bacterial cell division"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "daughter-cell pair", "target": "diplococcus shaped"}, {"description": "A dedicated peptidoglycan hydrolase mediates septum cleavage between daughter cells.", "edge_id": "edge-5", "evidence": [{"notes": "Minimisation of cell chain size relies on a peptidoglycan hydrolase dedicated to septum cleavage (conserved separation-autolysin mechanism).", "reference": "DOI:10.1038/s42003-023-04808-z"}], "predicate": "mediates", "predicate_id": null, "source": "septal peptidoglycan hydrolase", "target": "septum cleavage"}, {"description": "Cleavage of the septal cross-wall enables resolution of daughter cells, favoring diplococci/short chains over long chains.", "edge_id": "edge-6", "evidence": [{"notes": "Septum cleavage is the proximate process producing paired cells rather than long chains.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "predicate": "enables", "predicate_id": null, "source": "septum cleavage", "target": "daughter cell separation"}, {"description": "Restricting the separation autolysin to the septum enables correct daughter-cell separation geometry.", "edge_id": "edge-7", "evidence": [{"notes": "Restricted septal localization of the autolysin confines its lethal activity to its site of action, enabling separation; mislocalization yields chaining.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "predicate": "enables", "predicate_id": null, "source": "septal localization of separation hydrolase", "target": "daughter cell separation"}, {"description": "Wall teichoic acid serves as a recognition determinant that promotes septal localization/binding of the separation hydrolase.", "edge_id": "edge-8", "evidence": [{"notes": "Separation-hydrolase binding is reduced in WTA-deficient cells but preserved in LTA-deficient cells; WTA acts as an envelope-polymer address for the autolysin.", "reference": "DOI:10.1016/j.celrep.2023.112756"}], "predicate": "promotes", "predicate_id": null, "source": "wall teichoic acid", "target": "septal localization of separation hydrolase"}, {"description": "LytR/LCP-family ligase mediates the final step of wall teichoic acid formation and anchoring to peptidoglycan.", "edge_id": "edge-9", "evidence": [{"notes": "LytR is the major enzyme mediating the final step in WTA formation, anchoring the TA precursor to PGN.", "reference": "DOI:10.1371/journal.pbio.3001990"}], "predicate": "produces", "predicate_id": null, "source": "LytR/LCP teichoic acid ligase", "target": "wall teichoic acid"}, {"description": "Incomplete daughter-cell separation retains attached cell pairs.", "edge_id": "edge-10", "evidence": [{"notes": "Loss of septum-cleaving hydrolase activity shifts cells from separated/paired toward long chains; regulated separation yields paired cells.", "reference": "DOI:10.1038/s42003-023-04808-z"}], "predicate": "incomplete separation yields", "predicate_id": null, "source": "daughter cell separation", "target": "daughter-cell pair"}], "graph_id": "diplococcus_shaped_septal_separation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Two cells remaining attached after division.", "grounding": null, "id": "daughter_cell_pair", "is_orphan": false, "label": "daughter-cell pair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Resolution of two daughter cells after division; incomplete separation retains paired cells.", "grounding": null, "id": "daughter_cell_separation", "is_orphan": false, "label": "daughter cell separation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pair-forming spherical bacterial morphology.", "grounding": "METPO:1000671", "id": "diplococcus_shaped_trait", "is_orphan": false, "label": "diplococcus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Restricted targeting of the cell-separation autolysin to the division septum.", "grounding": null, "id": "hydrolase_septal_localization", "is_orphan": false, "label": "septal localization of separation hydrolase", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "LCP-family enzyme that anchors wall teichoic acid precursor to peptidoglycan.", "grounding": null, "id": "lytr_lcp_enzyme", "is_orphan": false, "label": "LytR/LCP teichoic acid ligase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Pneumococcal cell-separation factor involved in cross-wall splitting.", "grounding": null, "id": "pcsB_hydrolase_system", "is_orphan": false, "label": "PcsB hydrolase system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-separation peptidoglycan hydrolase/autolysin dedicated to cleaving the septal cross-wall (e.g., LytB, AtlA, AmiC).", "grounding": null, "id": "separation_pg_hydrolase", "is_orphan": false, "label": "septal peptidoglycan hydrolase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Peptidoglycan wall separating daughter cells.", "grounding": null, "id": "septal_cross_wall", "is_orphan": false, "label": "septal cross wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Division-associated wall synthesis at the septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic cleavage of septal peptidoglycan that resolves daughter cells.", "grounding": null, "id": "septum_cleavage", "is_orphan": false, "label": "septum cleavage", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Cell-wall teichoic acid polymer anchored to peptidoglycan; serves as recognition determinant for separation hydrolases.", "grounding": null, "id": "wall_teichoic_acid", "is_orphan": false, "label": "wall teichoic acid", "node_type": "CHEMICAL", "xrefs": []}], "title": "Diplococcus paired-cell separation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -643,7 +751,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -51,6 +51,36 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16134
     description: Fixed-nitrogen product.
+  - node_id: ferredoxin_flavodoxin
+    label: ferredoxin/flavodoxin
+    node_type: GENE_OR_PROTEIN
+    description: Low-potential electron carriers that donate electrons to the nitrogenase
+      Fe-protein (NifH).
+  - node_id: nifh_fe_protein
+    label: NifH (Fe-protein)
+    node_type: GENE_OR_PROTEIN
+    description: Nitrogenase iron protein; ATP-dependent electron donor to the MoFe
+      protein.
+  - node_id: p_cluster
+    label: P-cluster
+    node_type: GENE_OR_PROTEIN
+    description: '[8Fe-7S] metallocluster in NifDK that relays electrons to the FeMo-cofactor.'
+  - node_id: femo_cofactor
+    label: FeMo-cofactor (M-cluster)
+    node_type: GENE_OR_PROTEIN
+    description: '[7Fe-9S-Mo-C-homocitrate] active-site cofactor that binds and reduces
+      N2.'
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    grounding: CHEBI:30616
+    description: Mg-ATP hydrolyzed by NifH to drive electron transfer to the MoFe
+      protein.
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    grounding: CHEBI:15379
+    description: O2, which irreversibly inactivates oxygen-sensitive nitrogenase.
   edges:
   - subject: nitrogenase
     predicate: enables
@@ -86,6 +116,57 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro954
       notes: Supports nitrogenase as required for the trait.
     predicate_id: RO:0002502
+  - subject: ferredoxin_flavodoxin
+    predicate: transfers electron to
+    object: nifh_fe_protein
+    description: Reduced ferredoxin/flavodoxin donate electrons to the [4Fe-4S] cluster
+      of the NifH homodimer.
+    evidence:
+    - reference: DOI:10.1128/aem.00378-23
+      notes: Reduced electron carriers donate electrons to the [4Fe-4S] cluster at
+        the interface of the NifH homodimer; core Mo-nitrogenase mechanism.
+  - subject: nifh_fe_protein
+    predicate: transfers electron to
+    object: p_cluster
+    description: The Fe-protein accepts electrons from Fd/Fld and reduces the P-cluster
+      in the MoFe protein in an ATP-dependent step.
+    evidence:
+    - reference: DOI:10.1128/aem.00378-23
+      notes: The Fe-protein FeS cluster accepts electrons from Fd or Fld and reduces
+        the P-cluster in the MoFe protein in an ATP-dependent electron transfer.
+  - subject: p_cluster
+    predicate: transfers electron to
+    object: femo_cofactor
+    description: The P-cluster relays electrons to the FeMo-cofactor for N2 reduction.
+    evidence:
+    - reference: DOI:10.1128/aem.00378-23
+      notes: The P-cluster delivers electrons to the MoFe cofactor allowing electrons
+        to be loaded for the reduction of N2; core electron relay.
+  - subject: femo_cofactor
+    predicate: enables
+    object: nitrogen_fixation_process
+    description: The FeMo-cofactor binds and reduces N2 to ammonia.
+    evidence:
+    - reference: DOI:10.34133/bdr.0005
+      notes: FeMo-co binds and reduces N2 to form NH3 and H2 in the canonical Mo-dependent
+        nitrogenase.
+  - subject: nifh_fe_protein
+    predicate: requires
+    object: atp
+    description: NifH hydrolyzes Mg-ATP during each electron transfer to the MoFe
+      protein.
+    evidence:
+    - reference: DOI:10.34133/bdr.0005
+      notes: NifH transiently binds and dissociates from NifDK, hydrolyzing 2 Mg-ATP
+        per electron transfer; supports per-electron ATP cost.
+  - subject: oxygen
+    predicate: inhibits
+    object: nitrogenase
+    description: Molecular oxygen inactivates the oxygen-sensitive nitrogenase complex.
+    evidence:
+    - reference: DOI:10.1128/aem.00378-23
+      notes: Nitrogenase is an O2-sensitive enzyme; broad, well-supported claim across
+        diazotrophs.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -105,4 +186,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A089HR75×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

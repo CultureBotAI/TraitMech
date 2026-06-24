@@ -54,6 +54,31 @@ causal_graphs:
     description: Signal transduction that changes motility direction in response to
       environmental cues.
     grounding: GO:0006935
+  - node_id: twitching_motility
+    label: twitching motility
+    node_type: TRAIT
+    description: Form of bacterial surface translocation powered by type IV pili.
+  - node_id: pilb_extension_atpase
+    label: PilB extension ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Homohexameric ATPase that drives type IV pilus extension.
+  - node_id: pilt_retraction_atpase
+    label: PilT retraction ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Antagonistic ATPase that drives type IV pilus retraction.
+  - node_id: t4p_retraction
+    label: type IV pilus retraction
+    node_type: BIOLOGICAL_PROCESS
+    description: Retraction of type IV pili that generates pulling forces.
+  - node_id: c_di_gmp
+    label: cyclic di-GMP
+    node_type: CHEMICAL
+    description: Second messenger that inversely regulates motility and biofilm formation.
+  - node_id: archaellum
+    label: archaellum
+    node_type: GENE_OR_PROTEIN
+    description: Archaeal rotary propulsion filament, the analogue of the bacterial
+      flagellum.
   edges:
   - subject: flagellar_motor
     predicate: enables
@@ -103,6 +128,53 @@ causal_graphs:
       snippet: chemotactic signaling pathways regulate the direction
       notes: Supports chemotaxis control of flagella-driven motility.
     predicate_id: RO:0002211
+  - subject: type_iv_pilus
+    predicate: drives
+    object: twitching_motility
+    description: Type IV pili power twitching, a form of bacterial surface translocation.
+    evidence:
+    - reference: DOI:10.1128/msphere.00390-24
+      notes: Twitching motility is a form of bacterial surface translocation powered
+        by the type IV pilus (T4P).
+  - subject: pilb_extension_atpase
+    predicate: drives extension of
+    object: type_iv_pilus
+    description: PilB ATPase drives extension of the type IV pilus.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      notes: PilB is the homohexameric extension ATPase of the type IV pilus.
+  - subject: pilt_retraction_atpase
+    predicate: drives retraction of
+    object: type_iv_pilus
+    description: PilT ATPase drives retraction of the type IV pilus.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      notes: Retraction is carried out by the antagonistic ATPase PilT.
+  - subject: t4p_retraction
+    predicate: generates
+    object: twitching_motility
+    description: Type IV pilus retraction generates the pulling forces underlying
+      twitching motility.
+    evidence:
+    - reference: DOI:10.1128/jb.00442-23
+      notes: T4P retraction generates the pulling forces underlying twitching motility.
+  - subject: c_di_gmp
+    predicate: inhibits
+    object: motility_trait
+    description: Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this
+      inhibition.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-07392-y
+      notes: Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP
+        -> motility edge).
+  - subject: archaellum
+    predicate: enables
+    object: motility_trait
+    description: The archaellum enables swimming motility in archaea, analogous to
+      the bacterial flagellum.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50277-1
+      notes: The archaellum enables cell motility in archaea.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.904440+00:00'
   curator: seed_from_metpo
@@ -150,4 +222,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

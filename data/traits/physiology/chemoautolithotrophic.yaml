@@ -76,6 +76,14 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material produced from fixed carbon.
     grounding: METPO:1007501
+  - node_id: inorganic_compound_oxidation
+    label: oxidation of reduced inorganic compounds
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of reduced inorganic compounds that yields metabolic energy.
+  - node_id: chemoorganoheterotrophy
+    label: chemo-organoheterotrophy
+    node_type: TRAIT
+    description: Trophic type using organic compounds as energy and carbon source.
   edges:
   - subject: chemoautolithotrophic_trait
     predicate: uses electron donor
@@ -150,6 +158,41 @@ causal_graphs:
       snippet: microbial autotrophic production
       notes: Supports biomass production from autotrophic CO2 fixation.
     predicate_id: METPO:2000202
+  - subject: chemoautolithotrophic_trait
+    predicate: requires
+    object: co2_fixation_pathway
+    description: Chemoautolithotrophy requires CO2 fixation to convert inorganic carbon
+      into organic carbon.
+    evidence:
+    - reference: DOI:10.1186/s40168-023-01712-w
+      notes: Chemolithoautotrophs convert CO2 to organic carbon (Deng et al. 2023).
+  - subject: chemoautolithotrophic_trait
+    predicate: requires
+    object: inorganic_compound_oxidation
+    description: Chemoautolithotrophy requires oxidation of reduced inorganic compounds
+      for energy.
+    evidence:
+    - reference: DOI:10.1186/s40168-023-01712-w
+      notes: Using the energy produced by oxidizing reduced inorganic compounds (Deng
+        et al. 2023).
+  - subject: inorganic_compound_oxidation
+    predicate: feeds electrons into
+    object: respiratory_chain
+    description: Oxidation of reduced inorganic compounds donates electrons to the
+      respiratory chain.
+    evidence:
+    - reference: DOI:10.1186/s40168-023-01712-w
+      notes: Energy produced by oxidizing reduced inorganic compounds is conserved
+        via electron transport (Deng et al. 2023).
+  - subject: chemoautolithotrophic_trait
+    predicate: distinct from
+    object: chemoorganoheterotrophy
+    description: Chemolithoautotrophy (inorganic energy, CO2 carbon) is metabolically
+      distinct from chemo-organoheterotrophy (organic energy and carbon).
+    evidence:
+    - reference: DOI:10.3390/molecules29102293
+      notes: Chemolithoautotrophy oxidizes inorganic compounds versus chemo-organoheterotrophs
+        using glucose (Fukala & Kucera 2024).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.868850+00:00'
   curator: seed_from_metpo
@@ -203,4 +246,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0015977×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (2 new nodes) from the deep-research
+    report.
   llm_assisted: true

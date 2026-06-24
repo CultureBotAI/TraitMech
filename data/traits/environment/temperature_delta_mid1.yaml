@@ -39,6 +39,46 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mid-range capacity to remodel membrane lipids and enzymes across
       temperature shifts of ~10–20 °C.
+  - node_id: temperature_decrease
+    label: decrease in ambient temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A drop in ambient growth temperature, the proximal cue for cold membrane
+      adaptation.
+  - node_id: membrane_unsaturated_fatty_acids
+    label: membrane unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Cis-unsaturated acyl chains in membrane phospholipids whose abundance
+      sets membrane fluidity.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluid state of the lipid bilayer that must be maintained
+      across temperature shifts.
+  - node_id: ufa_biosynthesis
+    label: cis-unsaturated fatty acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of cis-unsaturated fatty acids that remodel membrane lipids
+      during cooling.
+  - node_id: membrane_physical_state_change
+    label: membrane physical-state change
+    node_type: BIOLOGICAL_PROCESS
+    description: Cold-induced change in the liquid-crystalline state of the membrane
+      acting as a sensor event.
+  - node_id: two_component_cold_signaling
+    label: two-component cold signaling
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-component signal transduction triggering the cold-adaptation
+      transcriptional response.
+  - node_id: thermal_niche_breadth
+    label: thermal niche / temperature breadth
+    node_type: QUALITY
+    description: Thermal tolerance niche operationally bounded by growth-supporting
+      Tmin and Tmax.
+  - node_id: tmin_tmax
+    label: Tmin and Tmax growth boundaries
+    node_type: QUALITY
+    description: Minimum and maximum growth-supporting temperatures that flank the
+      thermal niche.
   edges:
   - subject: moderate_thermal_adaptation
     predicate: produces
@@ -62,6 +102,69 @@ causal_graphs:
       notes: Supports the 10–20 °C breadth as a value within the temperature-delta
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: temperature_decrease
+    predicate: increases
+    object: ufa_biosynthesis
+    description: Colder temperature shifts fatty-acid synthesis toward cis-unsaturated
+      products to preserve membrane function.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: 'Ramon 2023 review: increased unsaturation (especially cis-MUFA) on temperature
+        decrease; broad review support.'
+  - subject: ufa_biosynthesis
+    predicate: increases
+    object: membrane_unsaturated_fatty_acids
+    description: Cis-unsaturated fatty acid biosynthesis raises the unsaturated acyl-chain
+      content of membrane lipids.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: 'Ramon 2023: microbes increase cis-unsaturation to remodel membranes,
+        a general cold-adaptation output.'
+  - subject: membrane_unsaturated_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: More unsaturated acyl chains counteract cold-induced rigidification
+      and restore membrane fluidity.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: 'Sidarta 2024: desaturation fluidizes membranes; central homeoviscous-adaptation
+        edge, generalizable.'
+  - subject: membrane_physical_state_change
+    predicate: activates
+    object: two_component_cold_signaling
+    description: Cold-induced changes in the membrane liquid-crystalline state act
+      as the upstream sensor activating two-component cold signaling.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: 'Ramon 2023: cold sensing via changes in liquid-crystalline state of
+        membranes that activate two-component signalling.'
+  - subject: membrane_fluidity
+    predicate: enables
+    object: moderate_thermal_adaptation
+    description: Maintained membrane fluidity across temperature shifts underlies
+      the moderate thermal-adaptation flexibility that supports the breadth.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: 'Sidarta 2024: homeoviscous adaptation restores fluidity, the membrane-target
+        of thermal adaptation.'
+  - subject: tmin_tmax
+    predicate: defines
+    object: thermal_niche_breadth
+    description: Growth-supporting minimum and maximum temperatures flank the thermal
+      function and mark the thermal niche/breadth.
+    evidence:
+    - reference: DOI:10.3390/pr8010121
+      notes: 'Noll 2020: Tmin and Tmax for growth flank the function and mark the
+        thermal tolerance/niche of an organism.'
+  - subject: thermal_niche_breadth
+    predicate: is a
+    object: temperature_delta
+    description: The Tmin/Tmax-bounded thermal niche is the breadth quantity captured
+      by the temperature-delta phenotype.
+    evidence:
+    - reference: DOI:10.3390/pr8010121
+      notes: 'Noll 2020: thermal breadth treated as a cardinal-temperature bounded
+        niche property.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844372+00:00'
   curator: seed_from_metpo
@@ -79,4 +182,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -48,6 +48,42 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000303
     description: Breadth (max − min) of the growth-supporting temperature range.
+  - node_id: membrane_cooling_rigidification
+    label: membrane rigidification during cooling
+    node_type: BIOLOGICAL_PROCESS
+    description: Cooling-induced ordering of the membrane lipid bilayer toward a gel-like
+      state.
+  - node_id: desk_desr_signaling
+    label: DesK/DesR two-component signaling
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-component signal transduction that senses membrane state and
+      triggers lipid remodeling.
+  - node_id: fatty_acid_desaturase_activity
+    label: fatty acid desaturase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic introduction of double bonds into membrane fatty acids.
+  - node_id: fatty_acid_unsaturation
+    label: fatty acid unsaturation
+    node_type: QUALITY
+    description: Degree of double-bond content in membrane fatty acyl chains.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity state of the lipid bilayer, maintained across temperatures
+      by homeoviscous adaptation.
+  - node_id: growth_at_low_temperature
+    label: growth at low temperature
+    node_type: TRAIT
+    description: Capacity to grow near the low-temperature boundary of the thermal
+      range.
+  - node_id: cold_adapted_enzymes
+    label: cold-adapted enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Proteins with structural adaptations conferring activity at low temperature.
+  - node_id: high_catalytic_efficiency_low_temp
+    label: high catalytic efficiency at low temperature
+    node_type: MOLECULAR_FUNCTION
+    description: Elevated catalytic turnover of enzymes operating at low temperature.
   edges:
   - subject: ambient_temperature_axis
     predicate: defines
@@ -89,6 +125,46 @@ causal_graphs:
       notes: Supports temperature delta as a derived breadth descriptor over the temperature
         axis.
     predicate_id: rdfs:subClassOf
+  - subject: membrane_cooling_rigidification
+    predicate: activates
+    object: desk_desr_signaling
+    description: Membrane rigidification during cooling activates two-component cold-sensing
+      signaling.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Membrane-based cold sensing occurs via modification of the liquid-crystalline
+        membrane state, activating two-component signalling.
+  - subject: fatty_acid_desaturase_activity
+    predicate: increases
+    object: fatty_acid_unsaturation
+    description: Desaturase activity raises the unsaturation of membrane fatty acids.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: A two-component sensor triggers transcriptional activation of desaturases
+        that introduce double bonds into membrane fatty acids.
+  - subject: fatty_acid_unsaturation
+    predicate: increases
+    object: membrane_fluidity
+    description: Increased fatty acid unsaturation raises membrane fluidity.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Decreasing lipid saturation maintains optimal membrane fluidity.
+  - subject: membrane_fluidity
+    predicate: supports
+    object: growth_at_low_temperature
+    description: Maintained membrane fluidity supports growth near the low-temperature
+      boundary.
+    evidence:
+    - reference: DOI:10.1039/d4cc03114h
+      notes: Lipidome remodeling prevents a lethal fluid-to-gel phase transition at
+        low temperature; generic process to phenotype edge.
+  - subject: cold_adapted_enzymes
+    predicate: enable
+    object: high_catalytic_efficiency_low_temp
+    description: Cold-adapted enzymes enable high catalytic efficiency at low temperature.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Cold-adapted proteins yield high catalytic efficiency; broad, not gene-specific.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846837+00:00'
   curator: seed_from_metpo
@@ -112,4 +188,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

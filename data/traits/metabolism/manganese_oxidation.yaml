@@ -40,6 +40,25 @@ causal_graphs:
     label: Mn(III/IV) oxides
     node_type: CHEMICAL
     description: Insoluble bacterially-produced manganese oxides.
+  - node_id: molecular_oxygen
+    label: molecular oxygen (O2)
+    node_type: CHEMICAL
+    description: O2 used directly as the terminal oxidant by multicopper-oxidase Mn(II)-oxidizing
+      systems.
+  - node_id: mn_iii_oh_mn_iii_intermediate
+    label: Mn(III)(OH)Mn(III) intermediate
+    node_type: CHEMICAL
+    description: Binuclear Mn(III) intermediate formed during cooperative two-electron
+      Mn(II) oxidation.
+  - node_id: mn_iv_o_mn_iv_intermediate
+    label: Mn(IV)(O)Mn(IV) intermediate
+    node_type: CHEMICAL
+    description: Binuclear Mn(IV) species formed by disproportionation of Mn(III)(OH)Mn(III),
+      en route to MnO2.
+  - node_id: mno2_nanoparticles
+    label: MnO2 nanoparticles
+    node_type: CHEMICAL
+    description: Insoluble MnO2 nanoparticles released as the final biomineral product.
   edges:
   - subject: multicopper_oxidase
     predicate: enables
@@ -59,6 +78,47 @@ causal_graphs:
       notes: Tebo et al. characterize the formation and properties of bacterially
         produced Mn(III/IV) oxides.
     predicate_id: METPO:2000202
+  - subject: molecular_oxygen
+    predicate: enables
+    object: manganese_oxidation_trait
+    description: O2 serves as the direct oxidant enabling multicopper-oxidase-mediated
+      Mn(II) oxidation.
+    evidence:
+    - reference: DOI:10.1021/jacs.3c06537
+      notes: Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes
+        for Mn(II) oxidation.
+  - subject: manganese_oxidation_trait
+    predicate: produces
+    object: mn_iii_oh_mn_iii_intermediate
+    description: A cooperative two-electron oxidation step produces a Mn(III)(OH)Mn(III)
+      intermediate.
+    evidence:
+    - reference: DOI:10.1021/jacs.3c06537
+      notes: 'Cryo-EM mechanistic model: a cooperative two-electron step producing
+        a Mn(III)(OH)Mn(III) intermediate.'
+  - subject: mn_iii_oh_mn_iii_intermediate
+    predicate: disproportionates to form
+    object: mn_iv_o_mn_iv_intermediate
+    description: Two Mn(III)(OH)Mn(III) species disproportionate to form Mn(IV)(O)Mn(IV).
+    evidence:
+    - reference: DOI:10.1021/jacs.3c06537
+      notes: Disproportionation of two Mn(III)(OH)Mn(III) species to form Mn(IV)(O)Mn(IV).
+  - subject: mn_iv_o_mn_iv_intermediate
+    predicate: condenses into
+    object: mno2_nanoparticles
+    description: Mn(IV)(O)Mn(IV) condenses en route to MnO2 nanoparticle release.
+    evidence:
+    - reference: DOI:10.1021/jacs.3c06537
+      notes: Mn(IV)(O)Mn(IV) is en route to MnO2, with release of MnO2 nanoparticles.
+  - subject: mno2_nanoparticles
+    predicate: is a
+    object: mn_oxides
+    description: MnO2 nanoparticles are a form of the insoluble biogenic Mn(III/IV)
+      oxide product.
+    evidence:
+    - reference: DOI:10.1021/jacs.3c06537
+      notes: MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product
+        of the oxidation cascade.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -77,4 +137,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A059ZYC2×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

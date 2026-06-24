@@ -41,6 +41,47 @@ causal_graphs:
     label: growth-rate size law
     node_type: BIOLOGICAL_PROCESS
     description: Empirical scaling of average cell size with growth rate.
+  - node_id: rod_complex
+    label: Rod complex (elongasome)
+    node_type: PATHWAY
+    description: Elongasome machinery (MreB/MreC/MreD/RodA/PBP2) directing lateral
+      peptidoglycan synthesis.
+  - node_id: rodA_pbp2_complex
+    label: RodA-PBP2 complex
+    node_type: GENE_OR_PROTEIN
+    description: SEDS glycosyltransferase RodA paired with transpeptidase PBP2, the
+      core PG-synthesizing pair of the elongasome.
+  - node_id: pg_insertion_elongation
+    label: peptidoglycan insertion during elongation
+    node_type: BIOLOGICAL_PROCESS
+    description: Insertion of new peptidoglycan along the cell cylinder driving elongation.
+  - node_id: mreC_mreD_balance
+    label: MreC/MreD balance
+    node_type: GENE_OR_PROTEIN
+    description: Relative levels of MreC and MreD that tune elongasome transpeptidase
+      activity.
+  - node_id: pbp2_activity
+    label: PBP2 transpeptidase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Essential elongation transpeptidase activity of penicillin-binding
+      protein 2.
+  - node_id: pg_density
+    label: peptidoglycan density / mechanical strength
+    node_type: QUALITY
+    description: Density and mechanical integrity of the peptidoglycan sacculus.
+  - node_id: rod_shape
+    label: rod shape
+    node_type: TRAIT
+    description: Elongated cylindrical (rod) cell morphology.
+  - node_id: membrane_synthesis
+    label: membrane synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of membrane lipids (fatty acid/phospholipid synthesis).
+  - node_id: envelope_balance_state
+    label: PG-membrane envelope balance
+    node_type: STATE
+    description: Balanced synthesis of peptidoglycan cell wall and cell membrane required
+      for normal growth and shape.
   edges:
   - subject: moderate_growth_rate
     predicate: feeds into
@@ -68,6 +109,53 @@ causal_graphs:
       snippet: cell size is tightly controlled
       notes: Supports medium length as a value within the regulated cell-length distribution.
     predicate_id: rdfs:subClassOf
+  - subject: rodA_pbp2_complex
+    predicate: enables
+    object: pg_insertion_elongation
+    description: RodA glycosyltransferase and PBP2 transpeptidase together enable
+      peptidoglycan insertion that drives elongation.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: RodA is a glycosyltransferase and PBP2 a transpeptidase required for
+        cell elongation; Rod-complex rotation supports even PG insertion along the
+        cylinder (broadly curatable general rod-bacterium mechanism).
+  - subject: mreC_mreD_balance
+    predicate: modulates
+    object: pbp2_activity
+    description: The balance between MreC and MreD modulates PBP2, the essential elongation
+      transpeptidase.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: '"the balance between MreC and MreD modulates PBP2 activity" - mechanistic
+        edge for elongation control.'
+  - subject: rod_complex
+    predicate: increases
+    object: pg_density
+    description: An intact Rod complex builds dense peptidoglycan; loss yields PG
+      with large holes and reduced mechanical strength.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: '"The Rod complex may be a determinant not only for the whole shape of
+        peptidoglycan but also for its highly dense structure."'
+  - subject: pg_density
+    predicate: maintains
+    object: rod_shape
+    description: Dense peptidoglycan produced by the elongation machinery maintains
+      rod shape, the morphology context for medium cell length.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: '"PG determines bacterial cell shape" - elongation machinery and dense
+        PG determine whole-cell rod shape.'
+  - subject: membrane_synthesis
+    predicate: balances with PG synthesis to maintain
+    object: envelope_balance_state
+    description: Balanced membrane and peptidoglycan synthesis is critical; reducing
+      membrane synthesis restores balance when PG capacity is limited.
+    evidence:
+    - reference: DOI:10.1128/mbio.00475-23
+      notes: '"Balanced synthesis of the peptidoglycan cell wall and the cell membrane
+        is critical" - broader envelope-balance mechanism affecting elongation and
+        shape.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.920338+00:00'
   curator: seed_from_metpo
@@ -85,4 +173,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

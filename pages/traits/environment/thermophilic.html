@@ -141,6 +141,91 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>reverse gyrase</strong>
+            <span class="edge-predicate">introduces</span>
+            <strong>positive DNA supercoiling</strong>
+            
+            <p>Reverse gyrase introduces positive supercoils into thermophile DNA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1264/jsme2.me23087</code>
+                
+                <span class="meta">Takemata 2024: &#34;reverse gyrase introduces positive supercoils&#34; (broadly accepted in thermophile genomics).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>positive DNA supercoiling</strong>
+            <span class="edge-predicate">limits</span>
+            <strong>DNA melting</strong>
+            
+            <p>Positive DNA supercoiling limits thermal DNA melting, protecting genome integrity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1264/jsme2.me23087</code>
+                
+                <span class="meta">Takemata 2024: &#34;maintain the genome integrity of thermophiles by limiting DNA melting&#34;; mechanism generalized across thermophiles.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>reverse gyrase</strong>
+            <span class="edge-predicate">mediates</span>
+            <strong>genome integrity maintenance</strong>
+            
+            <p>Reverse gyrase mediates DNA repair and genome-integrity maintenance in thermophiles.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1264/jsme2.me23087</code>
+                
+                <span class="meta">Takemata 2024: &#34;maintain the genome integrity of thermophiles by ... mediating DNA repair&#34;.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>group II chaperonin (thermosome)</strong>
+            <span class="edge-predicate">refolds</span>
+            <strong>denatured proteins</strong>
+            
+            <p>The group II chaperonin (thermosome) refolds denatured proteins in an ATP-dependent manner.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.03593-22</code>
+                
+                <span class="meta">Baes 2023: &#34;thermosome, which refolds proteins in an ATP-dependent manner&#34;.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>tetraether lipid cyclopentane ring number</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane rigidity</strong>
+            
+            <p>Increased cyclopentane ring number in tetraether lipids increases membrane condensation and rigidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/frbis.2023.1338019</code>
+                
+                <span class="meta">Chong 2024: &#34;cyclopentane ring cyclization ... increase membrane condensation, packing tightness, rigidity&#34;.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -317,6 +402,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -676,7 +767,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking thermophily to elevated temperature, membrane lipid adaptation, thermostable proteins, and energy transduction constraints.", "edges": [{"description": "High-temperature environments select for thermophilic growth capacity.", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_temperature", "target": "thermophilic_trait"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_temperature", "target": "membrane_proton_permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "id": "edge-3", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane_lipid_composition", "target": "membrane_proton_permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable_proteins", "target": "thermophilic_trait"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy_transducing_enzymes", "target": "thermophilic_trait"}], "evidence_rows": [{"description": "High-temperature environments select for thermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high temperature", "target": "thermophilic"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high temperature", "target": "membrane proton permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane lipid composition", "target": "membrane proton permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable proteins", "target": "thermophilic"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy-transducing enzymes", "target": "thermophilic"}], "graph_id": "thermophilic_heat_adaptation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzymes involved in membrane bioenergetics at elevated temperature.", "grounding": null, "id": "energy_transducing_enzymes", "is_orphan": false, "label": "energy-transducing enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Elevated-temperature growth condition.", "grounding": "PATO:0001305", "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features altered during high-temperature adaptation.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Proton leakiness of the cytoplasmic membrane at elevated temperature.", "grounding": null, "id": "membrane_proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at elevated temperatures.", "grounding": "METPO:1000616", "id": "thermophilic_trait", "is_orphan": false, "label": "thermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with increased resistance to thermal denaturation.", "grounding": null, "id": "thermostable_proteins", "is_orphan": false, "label": "thermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Thermophilic heat-adaptation mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking thermophily to elevated temperature, membrane lipid adaptation, thermostable proteins, and energy transduction constraints.", "edges": [{"description": "High-temperature environments select for thermophilic growth capacity.", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_temperature", "target": "thermophilic_trait"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_temperature", "target": "membrane_proton_permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "id": "edge-3", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane_lipid_composition", "target": "membrane_proton_permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable_proteins", "target": "thermophilic_trait"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy_transducing_enzymes", "target": "thermophilic_trait"}, {"description": "Reverse gyrase introduces positive supercoils into thermophile DNA.", "evidence": [{"notes": "Takemata 2024: \"reverse gyrase introduces positive supercoils\" (broadly accepted in thermophile genomics).", "reference": "DOI:10.1264/jsme2.me23087"}], "id": "edge-6", "is_orphan": false, "predicate": "introduces", "predicate_id": null, "source": "reverse_gyrase", "target": "positive_dna_supercoiling"}, {"description": "Positive DNA supercoiling limits thermal DNA melting, protecting genome integrity.", "evidence": [{"notes": "Takemata 2024: \"maintain the genome integrity of thermophiles by limiting DNA melting\"; mechanism generalized across thermophiles.", "reference": "DOI:10.1264/jsme2.me23087"}], "id": "edge-7", "is_orphan": false, "predicate": "limits", "predicate_id": null, "source": "positive_dna_supercoiling", "target": "dna_melting"}, {"description": "Reverse gyrase mediates DNA repair and genome-integrity maintenance in thermophiles.", "evidence": [{"notes": "Takemata 2024: \"maintain the genome integrity of thermophiles by ... mediating DNA repair\".", "reference": "DOI:10.1264/jsme2.me23087"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "reverse_gyrase", "target": "genome_integrity"}, {"description": "The group II chaperonin (thermosome) refolds denatured proteins in an ATP-dependent manner.", "evidence": [{"notes": "Baes 2023: \"thermosome, which refolds proteins in an ATP-dependent manner\".", "reference": "DOI:10.1128/mbio.03593-22"}], "id": "edge-9", "is_orphan": false, "predicate": "refolds", "predicate_id": null, "source": "group_ii_chaperonin", "target": "denatured_proteins"}, {"description": "Increased cyclopentane ring number in tetraether lipids increases membrane condensation and rigidity.", "evidence": [{"notes": "Chong 2024: \"cyclopentane ring cyclization ... increase membrane condensation, packing tightness, rigidity\".", "reference": "DOI:10.3389/frbis.2023.1338019"}], "id": "edge-10", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "cyclopentane_ring_number", "target": "membrane_rigidity"}], "evidence_rows": [{"description": "High-temperature environments select for thermophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports thermophile adaptation to high-temperature environments.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high temperature", "target": "thermophilic"}, {"description": "Elevated temperature increases proton permeability of the cytoplasmic membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports membrane proton permeability as a high-temperature growth constraint.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "proton permeability ... increase with the temperature"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high temperature", "target": "membrane proton permeability"}, {"description": "Lipid composition changes can reduce high-temperature membrane leakiness.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipid composition as an adaptation to membrane permeability.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "changing the lipid composition"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "membrane lipid composition", "target": "membrane proton permeability"}, {"description": "Thermostable proteins retain function during elevated-temperature growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports thermostability as a high-temperature enzyme feature.", "reference": "DOI:10.1128/MMBR.65.1.1-43.2001", "snippet": "resistant to irreversible inactivation at high temperatures"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "thermostable proteins", "target": "thermophilic"}, {"description": "Adapted energy-transducing enzymes support growth at elevated temperature.", "edge_id": "edge-5", "evidence": [{"notes": "Review cites higher turnover rates and coupling-ion changes in high-temperature adaptation.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "energy transducing enzymes"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "energy-transducing enzymes", "target": "thermophilic"}, {"description": "Reverse gyrase introduces positive supercoils into thermophile DNA.", "edge_id": "edge-6", "evidence": [{"notes": "Takemata 2024: \"reverse gyrase introduces positive supercoils\" (broadly accepted in thermophile genomics).", "reference": "DOI:10.1264/jsme2.me23087"}], "predicate": "introduces", "predicate_id": null, "source": "reverse gyrase", "target": "positive DNA supercoiling"}, {"description": "Positive DNA supercoiling limits thermal DNA melting, protecting genome integrity.", "edge_id": "edge-7", "evidence": [{"notes": "Takemata 2024: \"maintain the genome integrity of thermophiles by limiting DNA melting\"; mechanism generalized across thermophiles.", "reference": "DOI:10.1264/jsme2.me23087"}], "predicate": "limits", "predicate_id": null, "source": "positive DNA supercoiling", "target": "DNA melting"}, {"description": "Reverse gyrase mediates DNA repair and genome-integrity maintenance in thermophiles.", "edge_id": "edge-8", "evidence": [{"notes": "Takemata 2024: \"maintain the genome integrity of thermophiles by ... mediating DNA repair\".", "reference": "DOI:10.1264/jsme2.me23087"}], "predicate": "mediates", "predicate_id": null, "source": "reverse gyrase", "target": "genome integrity maintenance"}, {"description": "The group II chaperonin (thermosome) refolds denatured proteins in an ATP-dependent manner.", "edge_id": "edge-9", "evidence": [{"notes": "Baes 2023: \"thermosome, which refolds proteins in an ATP-dependent manner\".", "reference": "DOI:10.1128/mbio.03593-22"}], "predicate": "refolds", "predicate_id": null, "source": "group II chaperonin (thermosome)", "target": "denatured proteins"}, {"description": "Increased cyclopentane ring number in tetraether lipids increases membrane condensation and rigidity.", "edge_id": "edge-10", "evidence": [{"notes": "Chong 2024: \"cyclopentane ring cyclization ... increase membrane condensation, packing tightness, rigidity\".", "reference": "DOI:10.3389/frbis.2023.1338019"}], "predicate": "increases", "predicate_id": null, "source": "tetraether lipid cyclopentane ring number", "target": "membrane rigidity"}], "graph_id": "thermophilic_heat_adaptation", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Number of cyclopentane rings in archaeal tetraether membrane lipids.", "grounding": null, "id": "cyclopentane_ring_number", "is_orphan": false, "label": "tetraether lipid cyclopentane ring number", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins unfolded or denatured during thermal stress.", "grounding": null, "id": "denatured_proteins", "is_orphan": false, "label": "denatured proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Thermal denaturation/strand separation of DNA at elevated temperature.", "grounding": null, "id": "dna_melting", "is_orphan": false, "label": "DNA melting", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes involved in membrane bioenergetics at elevated temperature.", "grounding": null, "id": "energy_transducing_enzymes", "is_orphan": false, "label": "energy-transducing enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of genome integrity including DNA repair under thermal stress.", "grounding": null, "id": "genome_integrity", "is_orphan": false, "label": "genome integrity maintenance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "HSP60-type group II chaperonin that refolds denatured proteins in an ATP-dependent manner.", "grounding": null, "id": "group_ii_chaperonin", "is_orphan": false, "label": "group II chaperonin (thermosome)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Elevated-temperature growth condition.", "grounding": "PATO:0001305", "id": "high_temperature", "is_orphan": false, "label": "high temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane lipid features altered during high-temperature adaptation.", "grounding": null, "id": "membrane_lipid_composition", "is_orphan": false, "label": "membrane lipid composition", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Proton leakiness of the cytoplasmic membrane at elevated temperature.", "grounding": null, "id": "membrane_proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Membrane condensation, packing tightness, and rigidity.", "grounding": null, "id": "membrane_rigidity", "is_orphan": false, "label": "membrane rigidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Introduction of positive supercoils into genomic DNA.", "grounding": null, "id": "positive_dna_supercoiling", "is_orphan": false, "label": "positive DNA supercoiling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "ATP-dependent topoisomerase that introduces positive DNA supercoils, characteristic of thermophiles.", "grounding": null, "id": "reverse_gyrase", "is_orphan": false, "label": "reverse gyrase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth is favored at elevated temperatures.", "grounding": "METPO:1000616", "id": "thermophilic_trait", "is_orphan": false, "label": "thermophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Proteins with increased resistance to thermal denaturation.", "grounding": null, "id": "thermostable_proteins", "is_orphan": false, "label": "thermostable proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Thermophilic heat-adaptation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -687,7 +778,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

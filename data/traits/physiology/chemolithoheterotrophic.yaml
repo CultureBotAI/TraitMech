@@ -78,6 +78,33 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material formed from organic carbon.
     grounding: METPO:1007501
+  - node_id: sox_pathway
+    label: Sox sulfur-oxidation pathway
+    node_type: PATHWAY
+    description: soxCDYZAXB gene cluster mediating complete oxidation of thiosulfate
+      to sulfate.
+  - node_id: thiosulfate
+    label: thiosulfate
+    node_type: CHEMICAL
+    description: Reduced inorganic sulfur electron donor oxidized to sulfate.
+  - node_id: sulfate
+    label: sulfate
+    node_type: CHEMICAL
+    description: Fully oxidized sulfur end product of sulfur-compound oxidation.
+  - node_id: branched_thiosulfate_oxidation
+    label: branched thiosulfate oxidation pathway
+    node_type: PATHWAY
+    description: Truncated Sox plus reverse Dsr/Apr/Sat oxidizing thiosulfate via
+      an elemental sulfur intermediate.
+  - node_id: elemental_sulfur
+    label: elemental sulfur
+    node_type: CHEMICAL
+    description: S0 intermediate of branched sulfur-compound oxidation.
+  - node_id: organic_carbon_importer
+    label: organic carbon import system
+    node_type: GENE_OR_PROTEIN
+    description: Amino acid and carboxylic acid import systems mediating organic carbon
+      uptake.
   edges:
   - subject: chemolithoheterotrophic_trait
     predicate: uses electron donor
@@ -161,6 +188,42 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of organic compounds into biomass.
+  - subject: sox_pathway
+    predicate: enables
+    object: sulfate
+    description: The conserved soxCDYZAXB gene cluster enables complete oxidation
+      of thiosulfate to sulfate without free intermediates.
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01163-x
+      notes: Gene clusters of the conserved soxCDYZAXB gene order facilitate the complete
+        oxidation of thiosulfate to sulfate, without free intermediates.
+  - subject: thiosulfate
+    predicate: oxidized by
+    object: sox_pathway
+    description: Thiosulfate, a reduced inorganic sulfur donor, is oxidized by the
+      Sox pathway.
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01163-x
+      notes: Sox system mediates complete oxidation of thiosulfate to sulfate.
+  - subject: branched_thiosulfate_oxidation
+    predicate: produces intermediate
+    object: elemental_sulfur
+    description: Truncated soxXYZAB with reverse Dsr/Apr/Sat oxidizes thiosulfate
+      via an elemental sulfur intermediate.
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01163-x
+      notes: Branched thiosulfate oxidation pathway in which Dsr operating in reverse
+        oxidizes sulfane-derived sulfur to sulfite, with elemental sulfur as intermediate.
+  - subject: organic_carbon_importer
+    predicate: supports
+    object: nutrient_uptake
+    description: Amino acid and carboxylic acid import systems support organic carbon
+      uptake in heterotrophs and mixotrophs.
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01163-x
+      notes: Import systems for amino acids and carboxylic acids were overly abundant
+        in mixotrophs and heterotrophs, supporting the organic-carbon dependency of
+        the trait.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.870986+00:00'
   curator: seed_from_metpo
@@ -226,4 +289,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

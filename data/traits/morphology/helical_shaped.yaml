@@ -46,6 +46,30 @@ causal_graphs:
     label: helical curvature and twist
     node_type: BIOLOGICAL_PROCESS
     description: Cell-wall geometry that produces a helical cell body.
+  - node_id: pg_dl_carboxypeptidase_activity
+    label: peptidoglycan DL-carboxypeptidase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic cleavage of monomeric tripeptides to dipeptides in the
+      peptidoglycan stem.
+  - node_id: pg_stem_peptide_trimming
+    label: peptidoglycan stem peptide trimming
+    node_type: BIOLOGICAL_PROCESS
+    description: Conversion of monomeric tripeptides to dipeptides, altering peptidoglycan
+      stem composition.
+  - node_id: pg_modifying_enzyme_loss
+    label: loss of peptidoglycan-modifying enzyme
+    node_type: STATE
+    description: Absence or inactivation of a peptidoglycan-remodeling enzyme required
+      for helical shape.
+  - node_id: rod_shaped_morphology
+    label: rod-shaped morphology
+    node_type: QUALITY
+    description: Straight rod cell shape resulting from loss of helical curvature.
+  - node_id: pg_crosslink_hydrolysis
+    label: localized peptidoglycan crosslink hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+    description: Localized hydrolysis/relaxation of peptidoglycan crosslinks generating
+      helical geometry.
   edges:
   - subject: csd_shape_proteins
     predicate: promotes
@@ -86,6 +110,49 @@ causal_graphs:
       snippet: helical cell curvature and twist
       notes: Supports the morphology endpoint of the graph.
     predicate_id: METPO:2000202
+  - subject: pg_dl_carboxypeptidase_activity
+    predicate: causes
+    object: pg_stem_peptide_trimming
+    description: DL-carboxypeptidase activity trims monomeric tripeptides to dipeptides
+      in the peptidoglycan stem.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002602
+      notes: Pgp1 is a novel peptidoglycan DL-carboxypeptidase cleaving monomeric
+        tripeptides to dipeptides.
+  - subject: pg_stem_peptide_trimming
+    predicate: promotes
+    object: helical_shaped_trait
+    description: Peptidoglycan stem peptide trimming supports generation of the helical
+      cell shape.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002602
+      notes: Pgp1 DL-carboxypeptidase activity on peptidoglycan stem peptides is required
+        for helical cell shape.
+  - subject: pg_modifying_enzyme_loss
+    predicate: causes
+    object: rod_shaped_morphology
+    description: Loss of a peptidoglycan-modifying enzyme produces a straight rod-shaped
+      morphology.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002602
+      notes: Deletion of pgp1 resulted in a striking, rod-shaped morphology.
+  - subject: rod_shaped_morphology
+    predicate: negatively regulates
+    object: helical_shaped_trait
+    description: Rod-shaped morphology represents loss of the helical-shaped trait.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002602
+      notes: pgp1 deletion converts helical cells to rod-shaped cells, i.e., loss
+        of helical shape.
+  - subject: pg_crosslink_hydrolysis
+    predicate: enables
+    object: helical_curvature_twist
+    description: Localized peptidoglycan crosslink hydrolysis generates the curvature
+      and twist underlying helical shape.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2010.03.046
+      notes: Coordinated action of multiple proteins relaxes peptidoglycan crosslinking,
+        enabling helical cell curvature and twist.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890639+00:00'
   curator: seed_from_metpo
@@ -115,4 +182,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

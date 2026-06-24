@@ -46,6 +46,35 @@ causal_graphs:
     label: daughter-cell pair
     node_type: BIOLOGICAL_PROCESS
     description: Two cells remaining attached after division.
+  - node_id: separation_pg_hydrolase
+    label: septal peptidoglycan hydrolase
+    node_type: GENE_OR_PROTEIN
+    description: Cell-separation peptidoglycan hydrolase/autolysin dedicated to cleaving
+      the septal cross-wall (e.g., LytB, AtlA, AmiC).
+  - node_id: septum_cleavage
+    label: septum cleavage
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic cleavage of septal peptidoglycan that resolves daughter
+      cells.
+  - node_id: hydrolase_septal_localization
+    label: septal localization of separation hydrolase
+    node_type: CELLULAR_LOCALIZATION
+    description: Restricted targeting of the cell-separation autolysin to the division
+      septum.
+  - node_id: wall_teichoic_acid
+    label: wall teichoic acid
+    node_type: CHEMICAL
+    description: Cell-wall teichoic acid polymer anchored to peptidoglycan; serves
+      as recognition determinant for separation hydrolases.
+  - node_id: lytr_lcp_enzyme
+    label: LytR/LCP teichoic acid ligase
+    node_type: GENE_OR_PROTEIN
+    description: LCP-family enzyme that anchors wall teichoic acid precursor to peptidoglycan.
+  - node_id: daughter_cell_separation
+    label: daughter cell separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Resolution of two daughter cells after division; incomplete separation
+      retains paired cells.
   edges:
   - subject: septal_peptidoglycan_synthesis
     predicate: forms
@@ -84,6 +113,59 @@ causal_graphs:
       notes: Supports paired morphology as an outcome of daughter-cell separation
         dynamics.
     predicate_id: METPO:2007400
+  - subject: separation_pg_hydrolase
+    predicate: mediates
+    object: septum_cleavage
+    description: A dedicated peptidoglycan hydrolase mediates septum cleavage between
+      daughter cells.
+    evidence:
+    - reference: DOI:10.1038/s42003-023-04808-z
+      notes: Minimisation of cell chain size relies on a peptidoglycan hydrolase dedicated
+        to septum cleavage (conserved separation-autolysin mechanism).
+  - subject: septum_cleavage
+    predicate: enables
+    object: daughter_cell_separation
+    description: Cleavage of the septal cross-wall enables resolution of daughter
+      cells, favoring diplococci/short chains over long chains.
+    evidence:
+    - reference: DOI:10.1038/s42003-023-04808-z
+      notes: Septum cleavage is the proximate process producing paired cells rather
+        than long chains.
+  - subject: hydrolase_septal_localization
+    predicate: enables
+    object: daughter_cell_separation
+    description: Restricting the separation autolysin to the septum enables correct
+      daughter-cell separation geometry.
+    evidence:
+    - reference: DOI:10.1038/s42003-023-04808-z
+      notes: Restricted septal localization of the autolysin confines its lethal activity
+        to its site of action, enabling separation; mislocalization yields chaining.
+  - subject: wall_teichoic_acid
+    predicate: promotes
+    object: hydrolase_septal_localization
+    description: Wall teichoic acid serves as a recognition determinant that promotes
+      septal localization/binding of the separation hydrolase.
+    evidence:
+    - reference: DOI:10.1016/j.celrep.2023.112756
+      notes: Separation-hydrolase binding is reduced in WTA-deficient cells but preserved
+        in LTA-deficient cells; WTA acts as an envelope-polymer address for the autolysin.
+  - subject: lytr_lcp_enzyme
+    predicate: produces
+    object: wall_teichoic_acid
+    description: LytR/LCP-family ligase mediates the final step of wall teichoic acid
+      formation and anchoring to peptidoglycan.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3001990
+      notes: LytR is the major enzyme mediating the final step in WTA formation, anchoring
+        the TA precursor to PGN.
+  - subject: daughter_cell_separation
+    predicate: incomplete separation yields
+    object: daughter_cell_pair
+    description: Incomplete daughter-cell separation retains attached cell pairs.
+    evidence:
+    - reference: DOI:10.1038/s42003-023-04808-z
+      notes: Loss of septum-cleaving hydrolase activity shifts cells from separated/paired
+        toward long chains; regulated separation yields paired cells.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887641+00:00'
   curator: seed_from_metpo
@@ -107,4 +189,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

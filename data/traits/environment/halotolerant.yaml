@@ -49,6 +49,33 @@ causal_graphs:
     label: stress protection
     node_type: BIOLOGICAL_PROCESS
     description: Protective cellular response to saline conditions.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular buildup of organic osmolytes in response to osmotic
+      stress.
+  - node_id: salt_out_strategy
+    label: salt-out strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation strategy keeping cytoplasmic salt low while accumulating
+      compatible solutes.
+  - node_id: ectABC_operon
+    label: ectABC operon
+    node_type: GENE_OR_PROTEIN
+    description: Gene cluster encoding ectoine biosynthesis from aspartate.
+  - node_id: ectoine_biosynthesis
+    label: ectoine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: De novo synthesis of the compatible solute ectoine.
+  - node_id: betA_betB
+    label: betA/betB
+    node_type: GENE_OR_PROTEIN
+    description: Choline oxidation enzymes producing glycine betaine.
+  - node_id: glycine_betaine_biosynthesis
+    label: glycine betaine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of the compatible solute glycine betaine from environmental
+      choline.
   edges:
   - subject: high_salt_exposure
     predicate: tolerated by
@@ -106,6 +133,56 @@ causal_graphs:
       snippet: allows microorganisms to cope with high salinities
       notes: Supports osmoadaptation as a mechanism for growth under salt stress.
     predicate_id: RO:0002327
+  - subject: osmotic_stress
+    predicate: increases
+    object: compatible_solute_accumulation
+    description: Osmotic stress drives accumulation of compatible solutes.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: Compatible solutes are accumulated in response to osmotic stress; broad
+        mechanistic claim across marine bacteria.
+  - subject: salt_out_strategy
+    predicate: relies on
+    object: compatible_solute_accumulation
+    description: The salt-out osmoadaptation strategy relies on accumulation or de
+      novo synthesis of compatible solutes.
+    evidence:
+    - reference: DOI:10.1038/s41598-024-63581-z
+      notes: '''salt-out''/''low-salt-high-compatible-solute-in-cytoplasm'' strategy
+        relies on accumulation or de-novo synthesis of organic compatible solutes;
+        directly supports halotolerant scope.'
+  - subject: ectABC_operon
+    predicate: enables
+    object: ectoine_biosynthesis
+    description: The ectABC operon synthesizes ectoine de novo from aspartic acid.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: Ectoine is synthesized de novo from aspartic acid via the ectABC operon;
+        general bacterial mechanism.
+  - subject: betA_betB
+    predicate: enables
+    object: glycine_betaine_biosynthesis
+    description: betA and betB produce glycine betaine from environmental choline.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: Glycine betaine is produced from environmental choline via betA and betB;
+        canonical pathway edge, broadly applicable.
+  - subject: ectoine_biosynthesis
+    predicate: produces
+    object: compatible_solutes
+    description: Ectoine biosynthesis yields a compatible solute supporting salt tolerance.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: Ectoine is a compatible solute synthesized de novo via the ectABC operon.
+  - subject: glycine_betaine_biosynthesis
+    predicate: produces
+    object: compatible_solutes
+    description: Glycine betaine biosynthesis yields a compatible solute supporting
+      salt tolerance.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: Glycine betaine is produced from environmental choline and acts as a
+        compatible solute.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861954+00:00'
   curator: seed_from_metpo
@@ -169,4 +246,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

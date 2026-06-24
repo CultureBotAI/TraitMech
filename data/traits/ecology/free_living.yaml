@@ -18,8 +18,8 @@ evidence:
 causal_graphs:
 - graph_id: free_living_environmental_habitat
   title: Free-living lifestyle is independent of host association
-  description: Evidence-backed causal sketch linking environmental habitat
-    occupancy to a host-independent free-living lifestyle.
+  description: Evidence-backed causal sketch linking environmental habitat occupancy
+    to a host-independent free-living lifestyle.
   nodes:
   - node_id: free_living_trait
     label: free-living
@@ -34,16 +34,44 @@ causal_graphs:
     label: biogeographic community structure
     node_type: QUALITY
     description: Patterned distribution of free-living taxa across environments.
+  - node_id: complete_metabolic_capacity
+    label: complete metabolic capacity for carbon/nitrogen/sulfur/cofactors
+    node_type: CAPACITY
+    description: Self-sufficient biosynthetic pathways for core nutrients and cofactors,
+      not dependent on a host.
+  - node_id: osmotic_stress_tolerance
+    label: osmotic stress tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular response maintaining viability under osmotic/salinity stress
+      in fluctuating environments.
+  - node_id: ectoine_biosynthesis
+    label: ectoine biosynthetic pathway
+    node_type: PATHWAY
+    description: Biosynthesis of the compatible solute ectoine for osmoadaptation.
+  - node_id: glycine_betaine_system
+    label: glycine betaine transport/biosynthesis
+    node_type: PATHWAY
+    description: betA/betB/betI and Opu/ProV/ProX systems producing/importing the
+      osmoprotectant glycine betaine.
+  - node_id: trehalose_biosynthesis
+    label: trehalose biosynthesis/transport
+    node_type: PATHWAY
+    description: Synthesis and transport of the compatible solute trehalose for stress
+      protection.
+  - node_id: environmental_stress_tolerance
+    label: stress tolerance in fluctuating environments
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular persistence under variable environmental stress conditions.
   edges:
   - subject: environmental_habitat
     predicate: enables
     object: free_living_trait
-    description: Persistent occupancy of environmental habitats realizes the
-      free-living lifestyle.
+    description: Persistent occupancy of environmental habitats realizes the free-living
+      lifestyle.
     evidence:
     - reference: DOI:10.1038/nrmicro1341
-      notes: Martiny et al. document biogeographic patterning of free-living
-        microbial taxa.
+      notes: Martiny et al. document biogeographic patterning of free-living microbial
+        taxa.
     predicate_id: RO:0002327
   - subject: free_living_trait
     predicate: associated with
@@ -54,6 +82,56 @@ causal_graphs:
       notes: Poole et al. describe the free-living soil phase of rhizobia distinct
         from their host-associated phase.
     predicate_id: biolink:associated_with
+  - subject: complete_metabolic_capacity
+    predicate: required for
+    object: free_living_trait
+    description: Self-sufficient metabolic pathways for carbon, nitrogen, sulfur and
+      cofactors are required for a host-independent free-living life strategy.
+    evidence:
+    - reference: DOI:10.1186/s12915-024-02013-w
+      notes: Reversion to free-living is rare because parasites often lose metabolic
+        pathways essential to a free-living life strategy.
+    - reference: DOI:10.1128/aem.01900-23
+      notes: Symbiotic Fluviibacter showed reduced metabolic capacities and host dependence
+        for carbon, organic nitrogen, sulfur, and cofactors.
+  - subject: ectoine_biosynthesis
+    predicate: enables
+    object: osmotic_stress_tolerance
+    description: Ectoine synthesis provides compatible solutes that confer osmotic
+      stress tolerance during environmental persistence.
+    evidence:
+    - reference: DOI:10.48550/arxiv.2302.00582
+      notes: Crossing salinity barriers requires osmotic-stress mechanisms; marine
+        adaptation includes components involved in ectoine synthesis.
+    - reference: DOI:10.1371/journal.pone.0287947
+      notes: Paracoccus carried the ectoine cluster in all strains.
+  - subject: glycine_betaine_system
+    predicate: enables
+    object: osmotic_stress_tolerance
+    description: Glycine betaine transport/biosynthesis confers osmoprotection under
+      environmental stress.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0287947
+      notes: betA-betB, betI operon and multiple glycine-betaine transporters link
+        these systems to persistence under environmental stress.
+  - subject: trehalose_biosynthesis
+    predicate: enables
+    object: environmental_stress_tolerance
+    description: Trehalose synthesis/transport provides compatible-solute protection
+      under fluctuating environmental conditions.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0287947
+      notes: Trehalose synthesis/transport widely encoded; compatible-solute systems
+        discussed as persistence traits, lost in some host-associated lineages.
+  - subject: osmotic_stress_tolerance
+    predicate: promotes
+    object: free_living_trait
+    description: Osmoadaptation supports persistence in unstable/saline environments
+      characteristic of the free-living lifestyle.
+    evidence:
+    - reference: DOI:10.48550/arxiv.2302.00582
+      notes: Ectoine-related osmoadaptation is highlighted as part of adaptation to
+        unstable or saline environmental conditions in free-living lineages.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -66,4 +144,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (free-living / environmental habitat)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

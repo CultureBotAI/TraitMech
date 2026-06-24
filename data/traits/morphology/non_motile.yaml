@@ -47,6 +47,31 @@ causal_graphs:
     label: no propulsion
     node_type: BIOLOGICAL_PROCESS
     description: Inability to generate self-motive force.
+  - node_id: flagellum_biogenesis_disruption
+    label: disrupted flagellum biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss-of-function mutations affecting assembly of a functional flagellum.
+  - node_id: c_di_gmp_high
+    label: high intracellular cyclic di-GMP
+    node_type: CHEMICAL
+    description: Elevated second-messenger c-di-GMP that signals a sessile lifestyle.
+  - node_id: flagellar_gene_repression
+    label: repression of flagellar gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Downregulation of flagellar structural and regulatory genes.
+  - node_id: flhdc_master_operon
+    label: flhDC flagellar master operon
+    node_type: GENE_OR_PROTEIN
+    description: Master regulatory operon controlling the flagellar transcriptional
+      hierarchy.
+  - node_id: wspr_dgc
+    label: WspR diguanylate cyclase
+    node_type: GENE_OR_PROTEIN
+    description: Diguanylate cyclase that synthesizes c-di-GMP when activated.
+  - node_id: reduced_motility_state
+    label: reduced or absent motility
+    node_type: STATE
+    description: Diminished flagellar motility that can manifest as a non-motile phenotype.
   edges:
   - subject: absent_flagellum
     predicate: prevents
@@ -77,6 +102,55 @@ causal_graphs:
       snippet: They are Gram-negative, non-motile rods
       notes: Supports the trait endpoint in a representative organism.
     predicate_id: METPO:2007400
+  - subject: flagellum_biogenesis_disruption
+    predicate: prevents
+    object: no_propulsion
+    description: Disrupted flagellum biogenesis yields a non-functional flagellum
+      and loss of propulsion.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03387-1
+      notes: flagellum biogenesis was affected in mutants and lack of functional flagellum
+        confirmed in motility assays.
+  - subject: wspr_dgc
+    predicate: increases amount of
+    object: c_di_gmp_high
+    description: WspR diguanylate cyclase produces c-di-GMP when phosphorylated, raising
+      intracellular levels.
+    evidence:
+    - reference: DOI:10.1128/aem.01548-23
+      notes: WspR produces c-di-GMP when phosphorylated; high c-di-GMP represses motility.
+  - subject: c_di_gmp_high
+    predicate: causes
+    object: flagellar_gene_repression
+    description: High c-di-GMP causes FleQ to cease activating flagellar genes, repressing
+      flagellar gene expression.
+    evidence:
+    - reference: DOI:10.1128/jb.00365-23
+      notes: At high c-di-GMP, FleQ ceases to activate flagellar genes.
+  - subject: flhdc_master_operon
+    predicate: positively regulates
+    object: flagellar_gene_repression
+    description: Repression of the flhDC master operon decreases flagellar gene expression;
+      included as the master-regulator control point.
+    evidence:
+    - reference: DOI:10.3390/foods13223709
+      notes: OmpR binds the flhDC operon promoter and represses transcription, decreasing
+        flagellar gene expression and motility.
+  - subject: flagellar_gene_repression
+    predicate: causes
+    object: reduced_motility_state
+    description: Repression of flagellar genes leads to reduced or absent motility.
+    evidence:
+    - reference: DOI:10.1128/jb.00365-23
+      notes: Loss of flagellar gene activation lowers motility, which can manifest
+        as a non-motile state.
+  - subject: reduced_motility_state
+    predicate: manifests as
+    object: non_motile_trait
+    description: Sufficiently reduced/absent motility manifests the non-motile trait.
+    evidence:
+    - reference: DOI:10.1128/aem.01548-23
+      notes: Elevated c-di-GMP regulatory output yields a non-motile mutant phenotype.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.905968+00:00'
   curator: seed_from_metpo
@@ -111,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

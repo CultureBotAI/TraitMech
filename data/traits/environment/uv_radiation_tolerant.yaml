@@ -50,6 +50,33 @@ causal_graphs:
     label: photoreactivation
     node_type: BIOLOGICAL_PROCESS
     description: Photolyase-mediated reversal of pyrimidine dimers.
+  - node_id: cyclobutane_pyrimidine_dimer
+    label: cyclobutane pyrimidine dimer
+    node_type: CHEMICAL
+    description: Major UV-induced DNA photoproduct (CPD) joining adjacent pyrimidines.
+  - node_id: pyrimidine_6_4_photoproduct
+    label: pyrimidine (6-4) pyrimidone photoproduct
+    node_type: CHEMICAL
+    description: Second principal UV-induced DNA lesion (6-4PP).
+  - node_id: cpd_photolyase
+    label: CPD photolyase
+    node_type: GENE_OR_PROTEIN
+    description: Light-driven enzyme that directly reverses cyclobutane pyrimidine
+      dimers.
+  - node_id: catalase
+    label: catalase
+    node_type: GENE_OR_PROTEIN
+    description: Antioxidant enzyme detoxifying reactive oxygen species generated
+      by UV.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    description: ROS produced under UV exposure causing oxidative damage.
+  - node_id: mycosporine_like_amino_acids
+    label: mycosporine-like amino acids
+    node_type: CHEMICAL
+    description: UV-screening metabolites that absorb UV-A/UV-B and dissipate it as
+      heat.
   edges:
   - subject: uv_radiation
     predicate: challenges
@@ -77,6 +104,58 @@ causal_graphs:
       notes: D. radiodurans is the reference organism for extreme UV and ionizing
         radiation resistance.
     predicate_id: RO:0002327
+  - subject: uv_radiation
+    predicate: causes
+    object: cyclobutane_pyrimidine_dimer
+    description: UV exposure produces cyclobutane pyrimidine dimers, the majority
+      DNA lesion.
+    evidence:
+    - reference: DOI:10.3390/life14070822
+      notes: 'UV produces two primary pyrimidine photoproducts: CPDs (majority lesion)
+        and 6-4PPs; central trait-defining lesion, general across taxa.'
+  - subject: uv_radiation
+    predicate: causes
+    object: pyrimidine_6_4_photoproduct
+    description: UV exposure produces pyrimidine (6-4) pyrimidone photoproducts.
+    evidence:
+    - reference: DOI:10.3390/life14070822
+      notes: Principal UV lesions include CPDs and pyrimidine (6-4) pyrimidone photoproducts;
+        strong and general.
+  - subject: cpd_photolyase
+    predicate: repairs
+    object: cyclobutane_pyrimidine_dimer
+    description: CPD photolyase directly reverses cyclobutane pyrimidine dimers via
+      light-driven electron transfer.
+    evidence:
+    - reference: DOI:10.3390/ijms241512381
+      notes: Photolyases directly reverse UV photoproducts; CPD photolyase uses light-driven
+        electron transfer to monomerize CPD dimers; canonical general edge.
+  - subject: catalase
+    predicate: detoxifies
+    object: reactive_oxygen_species
+    description: Catalase scavenges UV-induced reactive oxygen species, preventing
+      oxidative damage.
+    evidence:
+    - reference: DOI:10.3390/microorganisms13040756
+      notes: Genomic analyses implicate catalases in UV resistance; ROS-scavengers/catalases
+        detoxify ROS and prevent oxidative damage; general antioxidant edge.
+  - subject: mycosporine_like_amino_acids
+    predicate: absorbs
+    object: uv_radiation
+    description: MAAs absorb UV-A/UV-B (~309-362 nm) and release it as harmless heat,
+      screening UV.
+    evidence:
+    - reference: DOI:10.3390/ijms241512381
+      notes: MAAs absorb ~309-362 nm with high extinction coefficients and release
+        absorbed UV as harmless heat; strong, general for cyanobacteria/algae.
+  - subject: mycosporine_like_amino_acids
+    predicate: quenches
+    object: reactive_oxygen_species
+    description: MAAs act as antioxidants that quench UV-induced reactive oxygen species.
+    evidence:
+    - reference: DOI:10.3390/ijms241512381
+      notes: MAAs act as antioxidants/free-radical scavengers and quench ROS induced
+        by PAR, UV-A, and UV-B; strong, mechanism/class-level.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -95,4 +174,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:21001216×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

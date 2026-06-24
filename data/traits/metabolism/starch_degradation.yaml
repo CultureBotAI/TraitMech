@@ -40,6 +40,19 @@ causal_graphs:
     node_type: CHEMICAL
     description: Monomeric sugar released from starch hydrolysis.
     grounding: CHEBI:17234
+  - node_id: starch
+    label: starch (amylose/amylopectin)
+    node_type: CHEMICAL
+    description: Alpha-glucan polysaccharide substrate of amylolytic degradation.
+  - node_id: maltooligosaccharides
+    label: maltooligosaccharides
+    node_type: CHEMICAL
+    description: Short alpha-1,4-linked glucose oligomers released by endo-amylase
+      cleavage of starch.
+  - node_id: alpha_glucosidase
+    label: alpha-glucosidase / glucoamylase
+    node_type: GENE_OR_PROTEIN
+    description: Exo-acting glycoside hydrolase that releases glucose from maltooligosaccharides.
   edges:
   - subject: amylase
     predicate: enables
@@ -59,6 +72,40 @@ causal_graphs:
       notes: CAZy review classifies glycoside hydrolases (including amylases) used
         to degrade starch and other polysaccharides.
     predicate_id: METPO:2000202
+  - subject: starch
+    predicate: is hydrolyzed to
+    object: maltooligosaccharides
+    description: Endo-amylolytic cleavage of starch yields maltooligosaccharides as
+      the core trait-level intermediate.
+    evidence:
+    - reference: DOI:10.1007/s00018-023-04812-w
+      notes: Reports hydrolysis of starch into maltooligosaccharides; flagged as broad
+        trait-level core edge across taxa.
+  - subject: amylase
+    predicate: hydrolyzes
+    object: maltooligosaccharides
+    description: Alpha-amylase endo-cleaves starch alpha-1,4 bonds to generate maltooligosaccharides.
+    evidence:
+    - reference: DOI:10.1007/s00018-023-04812-w
+      notes: An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic
+        alpha-amylase (EC 3.2.1.1) chemistry.
+  - subject: alpha_glucosidase
+    predicate: degrades
+    object: maltooligosaccharides
+    description: Alpha-glucosidase/glucoamylase exo-acts on maltooligosaccharides
+      to release glucose.
+    evidence:
+    - reference: DOI:10.1128/mbio.01506-24
+      notes: Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose;
+        generic terminal exo-hydrolysis step.
+  - subject: alpha_glucosidase
+    predicate: produces
+    object: glucose
+    description: Exo-amylolytic release of glucose monomers from maltooligosaccharides.
+    evidence:
+    - reference: DOI:10.1128/mbio.01506-24
+      notes: Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose,
+        the terminal assimilable sugar.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -77,4 +124,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17234×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

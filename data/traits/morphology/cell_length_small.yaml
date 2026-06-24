@@ -42,6 +42,50 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Routine laboratory growth conditions producing typical bacterial
       cell sizes.
+  - node_id: ftsz_abundance
+    label: FtsZ abundance
+    node_type: GENE_OR_PROTEIN
+    description: Cellular level of the tubulin-like division protein FtsZ.
+  - node_id: division_timing
+    label: cell division timing
+    node_type: BIOLOGICAL_PROCESS
+    description: Timing/onset of septal constriction and cell division.
+  - node_id: ftsz_ring_formation
+    label: FtsZ ring formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the cytokinetic Z ring at the division site.
+  - node_id: ftsn
+    label: FtsN
+    node_type: GENE_OR_PROTEIN
+    description: Divisome protein that allosterically activates septal PG synthesis.
+  - node_id: ftswi_complex
+    label: FtsWI septal PG synthase complex
+    node_type: GENE_OR_PROTEIN
+    description: FtsWI (within FtsQLBWI) septal peptidoglycan synthase complex.
+  - node_id: septal_pg_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of septal peptidoglycan during cytokinesis.
+  - node_id: zring_condensation
+    label: Z-ring condensation and stability
+    node_type: BIOLOGICAL_PROCESS
+    description: Condensation and stabilization of the FtsZ ring.
+  - node_id: ftsz_protoring
+    label: FtsZ proto-ring (with FtsA/ZipA)
+    node_type: GENE_OR_PROTEIN
+    description: FtsZ proto-ring tethered by FtsA/ZipA initiating divisome assembly.
+  - node_id: divisome_assembly
+    label: divisome assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the division machinery and septal synthesis.
+  - node_id: min_nucleoid_occlusion
+    label: Min system and nucleoid occlusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial regulators positioning FtsZ at midcell.
+  - node_id: ftsz_midcell_positioning
+    label: FtsZ positioning at midcell
+    node_type: BIOLOGICAL_PROCESS
+    description: Correct placement of FtsZ at the cell midpoint for symmetric division.
   edges:
   - subject: standard_growth_conditions
     predicate: enables
@@ -71,6 +115,56 @@ causal_graphs:
       snippet: cell size is tightly controlled
       notes: Supports small length as a value within the regulated cell-length distribution.
     predicate_id: rdfs:subClassOf
+  - subject: ftsz_abundance
+    predicate: rate_limiting_for
+    object: division_timing
+    description: FtsZ levels are a rate-limiting factor for division timing; higher
+      FtsZ promotes earlier division.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54242-w
+      notes: FtsZ numbers are identified as one of the rate-limiting factors for cell
+        divisions.
+  - subject: ftsz_ring_formation
+    predicate: modulates
+    object: cell_length_trait
+    description: Delayed FtsZ ring formation delays division until the cell reaches
+      a larger size, increasing cell length.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-41487-0
+      notes: Delay cell division until the cell reaches a larger size.
+  - subject: ftsn
+    predicate: activates
+    object: ftswi_complex
+    description: FtsN allosterically activates the FtsWI septal PG synthase complex.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-52217-5
+      notes: Activation of the sPG synthase (FtsWI within the FtsQLBWI complex) depends
+        on FtsN.
+  - subject: septal_pg_synthesis
+    predicate: promotes
+    object: zring_condensation
+    description: Septal peptidoglycan synthesis feeds back to promote Z-ring condensation
+      and stability.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-52217-5
+      notes: Septal cell wall synthesis feeds back to promote Z ring condensation
+        and stability.
+  - subject: ftsz_protoring
+    predicate: organizes
+    object: divisome_assembly
+    description: The FtsZ proto-ring with FtsA/ZipA organizes divisome assembly and
+      is required for localization of other divisome proteins.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00942-x
+      notes: FtsZ is required for localization of all other divisome proteins.
+  - subject: min_nucleoid_occlusion
+    predicate: positions
+    object: ftsz_midcell_positioning
+    description: Min system and nucleoid occlusion position FtsZ at midcell for proper
+      division-site placement.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-07279-y
+      notes: For positioning FtsZ at mid cell division sites.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.919890+00:00'
   curator: seed_from_metpo
@@ -100,4 +194,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

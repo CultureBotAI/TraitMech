@@ -38,6 +38,47 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Strong osmolyte-remodeling capacity supporting growth across a broad
       salinity span.
+  - node_id: cyclic_di_amp
+    label: cyclic di-AMP
+    node_type: CHEMICAL
+    description: Second-messenger nucleotide acting as a master regulator of osmotic
+      balance.
+  - node_id: potassium_uptake_systems
+    label: potassium uptake systems
+    node_type: GENE_OR_PROTEIN
+    description: K+ import transporters (KupA/KupB, KimA, Kdp).
+  - node_id: cell_volume_regulation
+    label: cell volume regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation of cellular volume during osmotic stress.
+  - node_id: osmolality
+    label: osmolality
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External solute concentration / osmotic pressure.
+  - node_id: kdpfabc_complex
+    label: KdpFABC complex
+    node_type: GENE_OR_PROTEIN
+    description: High-affinity potassium uptake P-type ATPase complex.
+  - node_id: compatible_solute_transport
+    label: compatible-solute accumulation/transport
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis and uptake of compatible solutes/osmolytes.
+  - node_id: osmoprotection
+    label: osmoprotection
+    node_type: BIOLOGICAL_PROCESS
+    description: Response to osmotic stress conferring protection.
+  - node_id: eps_matrix
+    label: exopolysaccharide matrix
+    node_type: CELLULAR_LOCALIZATION
+    description: Extracellular polymeric substance matrix surrounding cells.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    description: Na+ cation.
+  - node_id: water_retention
+    label: water retention / reduced pericellular Na+ toxicity
+    node_type: BIOLOGICAL_PROCESS
+    description: Retention of water and lowering of effective pericellular Na+.
   edges:
   - subject: robust_osmoadaptive_flexibility
     predicate: produces
@@ -57,6 +98,51 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the 3–8% breadth as a value within the NaCl-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: cyclic_di_amp
+    predicate: inhibits
+    object: potassium_uptake_systems
+    description: c-di-AMP binding to transporters/riboswitches inhibits K+ import.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Binding of c-di-AMP to transporters and riboswitches inhibits potassium
+        import (KupA/KupB, KimA, kdp operon).
+  - subject: cyclic_di_amp
+    predicate: modulates
+    object: cell_volume_regulation
+    description: c-di-AMP signaling acts as a master regulator of cell volume.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Review argues cyclic di-AMP is a master regulator of cell volume.
+  - subject: osmolality
+    predicate: upregulates
+    object: kdpfabc_complex
+    description: Elevated osmolality upregulates kdpFABC expression.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Osmolality upregulates kdpFABC expression (review-level, broadly useful).
+  - subject: compatible_solute_transport
+    predicate: causes
+    object: osmoprotection
+    description: Accumulation/transport of compatible solutes confers osmoprotection.
+    evidence:
+    - reference: DOI:10.1111/mec.16316
+      notes: Compatible-solute biosynthesis/uptake and transporter genes -> osmotic
+        protection.
+  - subject: eps_matrix
+    predicate: binds
+    object: sodium_ion
+    description: The EPS matrix binds Na+ cations.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuaf020
+      notes: The EPS matrix binds cations such as Na+ ions.
+  - subject: eps_matrix
+    predicate: promotes
+    object: water_retention
+    description: EPS matrix promotes water retention and reduces pericellular Na+
+      toxicity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuaf020
+      notes: Lowering effective pericellular Na+ and retaining water.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842087+00:00'
   curator: seed_from_metpo
@@ -74,4 +160,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

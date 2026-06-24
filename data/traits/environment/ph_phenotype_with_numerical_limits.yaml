@@ -48,6 +48,47 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000232
     description: Breadth (max − min) of the growth-supporting external pH range.
+  - node_id: proton_motive_force
+    label: proton motive force across cell envelope
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient across the cell envelope linking
+      external pH to bioenergetics.
+  - node_id: f0f1_atpase
+    label: F0F1-ATPase / ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane ATP synthase coupling proton motive force to ATP synthesis.
+  - node_id: atp_synthesis_from_pmf
+    label: ATP synthesis from proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of ATP driven by the transmembrane proton gradient.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Cation/proton antiport activity regulating internal pH and PMF.
+  - node_id: k_h_antiporter
+    label: K+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Potassium/proton antiport activity regulating internal pH and PMF.
+  - node_id: internal_ph_pmf
+    label: internal pH / proton motive force
+    node_type: STATE
+    description: Regulated cytoplasmic pH and proton motive force homeostatic set-point.
+  - node_id: aa_decarboxylase_antiporter
+    label: amino-acid decarboxylase + antiporter systems
+    node_type: PATHWAY
+    description: Decarboxylation-antiport cycles that consume cytoplasmic protons.
+  - node_id: intracellular_proton
+    label: intracellular H+
+    node_type: CHEMICAL
+    description: Cytoplasmic protons whose concentration sets internal pH.
+  - node_id: phosphate_buffering
+    label: cytoplasmic buffering by phosphate pools
+    node_type: BIOLOGICAL_PROCESS
+    description: Buffering of cytoplasmic protons by intracellular phosphate pools.
+  - node_id: internal_ph
+    label: internal pH
+    node_type: STATE
+    description: Cytoplasmic pH maintained by homeostatic mechanisms.
   edges:
   - subject: external_ph_axis
     predicate: defines
@@ -89,6 +130,57 @@ causal_graphs:
       notes: Supports pH delta (range breadth) as a derived numerical descriptor reflecting
         pH-homeostasis flexibility.
     predicate_id: rdfs:subClassOf
+  - subject: external_ph_axis
+    predicate: determines
+    object: proton_motive_force
+    description: External pH determines the proton motive force across the cell envelope.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Neutralophilic bacteria maintain a relatively constant proton motive
+        force across external pH ~5-8.
+  - subject: f0f1_atpase
+    predicate: enables
+    object: atp_synthesis_from_pmf
+    description: F0F1-ATPase couples the proton motive force to ATP synthesis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: F0F1-ATP synthase typically uses 3-5 protons per ATP, linking PMF to
+        ATP synthesis and pH homeostasis.
+  - subject: na_h_antiporter
+    predicate: regulates
+    object: internal_ph_pmf
+    description: Na+/H+ antiporter activity regulates internal pH and PMF.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
+        (general bacteria).
+  - subject: k_h_antiporter
+    predicate: regulates
+    object: internal_ph_pmf
+    description: K+/H+ antiporter activity regulates internal pH and PMF.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Main regulators of internal pH/PMF include Na+/H+ and K+/H+ antiporters
+        (general bacteria).
+  - subject: aa_decarboxylase_antiporter
+    predicate: consumes
+    object: intracellular_proton
+    description: Amino-acid decarboxylase plus antiporter systems consume intracellular
+      protons, raising internal pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Decarboxylation reaction consumes a proton, raising internal pH; the
+        equivalent of 1 proton is pumped per molecule decarboxylated. Broad across
+        amino-acid decarboxylase systems.
+  - subject: phosphate_buffering
+    predicate: stabilizes
+    object: internal_ph
+    description: Cytoplasmic phosphate pools buffer protons and stabilize internal
+      pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Cytoplasmic buffering is important; L. lactis has ~100 mM organic/inorganic
+        phosphates (general bacteria).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845918+00:00'
   curator: seed_from_metpo
@@ -112,4 +204,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

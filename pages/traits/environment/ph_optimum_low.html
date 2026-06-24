@@ -107,6 +107,80 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>low external pH</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>large transmembrane pH gradient</strong>
+            
+            <p>Acidic external pH forces acidophiles to sustain a large transmembrane pH gradient.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">cytoplasmic pH ~6.0 while growing at external pH &lt;3; broad physiological input edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>inside-positive membrane potential</strong>
+            <span class="edge-predicate">counteracts</span>
+            <strong>proton influx</strong>
+            
+            <p>A reversed inside-positive membrane potential electrostatically opposes proton entry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">sustain a large delta pH with a reversed inside-positive membrane potential; hallmark of extreme acidophiles.</span>
+              </li>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">inside positive membrane potential creates an electrochemical barrier to proton influx.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>proton-pumping respiratory complexes</strong>
+            <span class="edge-predicate">removes</span>
+            <strong>cytoplasmic proton load</strong>
+            
+            <p>Proton-pumping respiratory complexes actively extrude protons to lower cytoplasmic proton load.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">increased expression of proton-pumping respiratory chain complexes; broad mechanism, specific complexes vary by lineage.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>rigid proton-impermeable membrane</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>passive proton permeability</strong>
+            
+            <p>A rigid proton-impermeable membrane reduces passive proton leak and the energetic burden of pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">rigid and impermeable membrane that is highly resistant to the influx of protons; high-level trait edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -278,6 +352,12 @@
           <time>2026-06-15T07:21:43Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2; verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -637,7 +717,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking proton-exclusion physiology at acidic external pH to a pH-optimum at or below 6 (acidophile / extreme acidophile).", "edges": [{"description": "Acidic environments select for proton-exclusion physiology.", "evidence": [{"notes": "Supports envelope-based proton barriers as the selected acidophile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "acidophile_proton_exclusion"}, {"description": "Acidophile proton-exclusion physiology yields an acidic pH-optimum setpoint.", "evidence": [{"notes": "Supports growth at strongly acidic pH as the acidophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "acidophile_proton_exclusion", "target": "ph_optimum_low_trait"}, {"description": "pH optimum low is a quantitative bin of the pH-optimum phenotype.", "evidence": [{"notes": "Supports an acidic optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum_low_trait", "target": "ph_optimum"}], "evidence_rows": [{"description": "Acidic environments select for proton-exclusion physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports envelope-based proton barriers as the selected acidophile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "target": "acidophile proton-exclusion physiology"}, {"description": "Acidophile proton-exclusion physiology yields an acidic pH-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports growth at strongly acidic pH as the acidophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "acidophile proton-exclusion physiology", "target": "pH optimum low"}, {"description": "pH optimum low is a quantitative bin of the pH-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports an acidic optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum low", "target": "pH optimum"}], "graph_id": "ph_optimum_low_acidophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH \u2264 ~6, typical of acidic mine drainage and acidic soils.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Low-permeability membranes and reversed membrane potential that exclude protons in acidophiles.", "grounding": null, "id": "acidophile_proton_exclusion", "is_orphan": false, "label": "acidophile proton-exclusion physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH optimum at or below ~6.", "grounding": "METPO:1000455", "id": "ph_optimum_low_trait", "is_orphan": false, "label": "pH optimum low", "node_type": "TRAIT", "xrefs": []}], "title": "pH-optimum-low acidophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking proton-exclusion physiology at acidic external pH to a pH-optimum at or below 6 (acidophile / extreme acidophile).", "edges": [{"description": "Acidic environments select for proton-exclusion physiology.", "evidence": [{"notes": "Supports envelope-based proton barriers as the selected acidophile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "acidophile_proton_exclusion"}, {"description": "Acidophile proton-exclusion physiology yields an acidic pH-optimum setpoint.", "evidence": [{"notes": "Supports growth at strongly acidic pH as the acidophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "acidophile_proton_exclusion", "target": "ph_optimum_low_trait"}, {"description": "pH optimum low is a quantitative bin of the pH-optimum phenotype.", "evidence": [{"notes": "Supports an acidic optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum_low_trait", "target": "ph_optimum"}, {"description": "Acidic external pH forces acidophiles to sustain a large transmembrane pH gradient.", "evidence": [{"notes": "cytoplasmic pH ~6.0 while growing at external pH \u003c3; broad physiological input edge.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "low_external_ph", "target": "transmembrane_ph_gradient"}, {"description": "A reversed inside-positive membrane potential electrostatically opposes proton entry.", "evidence": [{"notes": "sustain a large delta pH with a reversed inside-positive membrane potential; hallmark of extreme acidophiles.", "reference": "DOI:10.1038/nrmicro2549"}, {"notes": "inside positive membrane potential creates an electrochemical barrier to proton influx.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-5", "is_orphan": false, "predicate": "counteracts", "predicate_id": null, "source": "inside_positive_membrane_potential", "target": "proton_influx"}, {"description": "Proton-pumping respiratory complexes actively extrude protons to lower cytoplasmic proton load.", "evidence": [{"notes": "increased expression of proton-pumping respiratory chain complexes; broad mechanism, specific complexes vary by lineage.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "removes", "predicate_id": null, "source": "proton_pumping_respiratory_complexes", "target": "cytoplasmic_proton_load"}, {"description": "A rigid proton-impermeable membrane reduces passive proton leak and the energetic burden of pH homeostasis.", "evidence": [{"notes": "rigid and impermeable membrane that is highly resistant to the influx of protons; high-level trait edge.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "proton_impermeable_membrane", "target": "passive_proton_permeability"}], "evidence_rows": [{"description": "Acidic environments select for proton-exclusion physiology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports envelope-based proton barriers as the selected acidophile mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "target": "acidophile proton-exclusion physiology"}, {"description": "Acidophile proton-exclusion physiology yields an acidic pH-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports growth at strongly acidic pH as the acidophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "growing at pH 1.0-3.0"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "acidophile proton-exclusion physiology", "target": "pH optimum low"}, {"description": "pH optimum low is a quantitative bin of the pH-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports an acidic optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum low", "target": "pH optimum"}, {"description": "Acidic external pH forces acidophiles to sustain a large transmembrane pH gradient.", "edge_id": "edge-4", "evidence": [{"notes": "cytoplasmic pH ~6.0 while growing at external pH \u003c3; broad physiological input edge.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "drives", "predicate_id": null, "source": "low external pH", "target": "large transmembrane pH gradient"}, {"description": "A reversed inside-positive membrane potential electrostatically opposes proton entry.", "edge_id": "edge-5", "evidence": [{"notes": "sustain a large delta pH with a reversed inside-positive membrane potential; hallmark of extreme acidophiles.", "reference": "DOI:10.1038/nrmicro2549"}, {"notes": "inside positive membrane potential creates an electrochemical barrier to proton influx.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "counteracts", "predicate_id": null, "source": "inside-positive membrane potential", "target": "proton influx"}, {"description": "Proton-pumping respiratory complexes actively extrude protons to lower cytoplasmic proton load.", "edge_id": "edge-6", "evidence": [{"notes": "increased expression of proton-pumping respiratory chain complexes; broad mechanism, specific complexes vary by lineage.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "removes", "predicate_id": null, "source": "proton-pumping respiratory complexes", "target": "cytoplasmic proton load"}, {"description": "A rigid proton-impermeable membrane reduces passive proton leak and the energetic burden of pH homeostasis.", "edge_id": "edge-7", "evidence": [{"notes": "rigid and impermeable membrane that is highly resistant to the influx of protons; high-level trait edge.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "decreases", "predicate_id": null, "source": "rigid proton-impermeable membrane", "target": "passive proton permeability"}], "graph_id": "ph_optimum_low_acidophile_setpoint", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH \u2264 ~6, typical of acidic mine drainage and acidic soils.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Low-permeability membranes and reversed membrane potential that exclude protons in acidophiles.", "grounding": null, "id": "acidophile_proton_exclusion", "is_orphan": false, "label": "acidophile proton-exclusion physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Concentration of protons in the cytoplasm threatening near-neutral intracellular pH.", "grounding": null, "id": "cytoplasmic_proton_load", "is_orphan": false, "label": "cytoplasmic proton load", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Reversed (inside-positive) membrane potential creating an electrochemical barrier to proton influx.", "grounding": null, "id": "inside_positive_membrane_potential", "is_orphan": false, "label": "inside-positive membrane potential", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Acidic medium external pH below ~3 imposing a steep proton gradient.", "grounding": null, "id": "low_external_ph", "is_orphan": false, "label": "low external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Rate of passive proton leakage across the cell membrane.", "grounding": null, "id": "passive_proton_permeability", "is_orphan": false, "label": "passive proton permeability", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH optimum at or below ~6.", "grounding": "METPO:1000455", "id": "ph_optimum_low_trait", "is_orphan": false, "label": "pH optimum low", "node_type": "TRAIT", "xrefs": []}, {"color": "#ede9fe", "description": "Rigid membrane highly resistant to proton influx, reducing passive proton permeability.", "grounding": null, "id": "proton_impermeable_membrane", "is_orphan": false, "label": "rigid proton-impermeable membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Passive entry of protons into the cytoplasm down the pH gradient.", "grounding": null, "id": "proton_influx", "is_orphan": false, "label": "proton influx", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory chain complexes (I, III, IV) that actively extrude cytoplasmic protons.", "grounding": null, "id": "proton_pumping_respiratory_complexes", "is_orphan": false, "label": "proton-pumping respiratory complexes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Steep outside-to-inside proton (delta pH) gradient maintained by acidophiles.", "grounding": null, "id": "transmembrane_ph_gradient", "is_orphan": false, "label": "large transmembrane pH gradient", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-optimum-low acidophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -648,7 +728,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

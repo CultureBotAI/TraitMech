@@ -18,14 +18,13 @@ evidence:
   notes: Soppa reviews polyploidy in archaea and bacteria and its links to desiccation
     resistance, giant cell size, and long-term survival.
 - reference: DOI:10.1073/pnas.0707522105
-  notes: Mendell et al. document extreme polyploidy (tens of thousands of genome
-    copies) in the large bacterium Epulopiscium.
+  notes: Mendell et al. document extreme polyploidy (tens of thousands of genome copies)
+    in the large bacterium Epulopiscium.
 causal_graphs:
 - graph_id: ploidy_repair_survival
   title: Polyploidy supports DNA repair and long-term survival
-  description: Evidence-backed causal sketch linking multiple genome copies to
-    homologous-recombination repair templates and survival under desiccation and
-    starvation.
+  description: Evidence-backed causal sketch linking multiple genome copies to homologous-recombination
+    repair templates and survival under desiccation and starvation.
   nodes:
   - node_id: ploidy_trait
     label: ploidy
@@ -36,12 +35,36 @@ causal_graphs:
     label: recombinational repair of damaged DNA
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0000725
-    description: Homologous recombination using sister chromosome as repair
-      template.
+    description: Homologous recombination using sister chromosome as repair template.
   - node_id: long_term_survival
     label: long-term survival
     node_type: QUALITY
     description: Persistence under desiccation, starvation, and damage.
+  - node_id: phosphate_starvation
+    label: phosphate starvation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Absence or limitation of environmental phosphate.
+  - node_id: genome_copy_number
+    label: genome copy number per cell
+    node_type: QUALITY
+    description: Number of chromosomal genome copies maintained per cell.
+  - node_id: dna_phosphate_storage
+    label: genomic DNA as phosphate storage polymer
+    node_type: MOLECULAR_FUNCTION
+    description: Use of genomic DNA copies as an intracellular phosphate reservoir.
+  - node_id: growth_without_phosphate
+    label: growth in absence of environmental phosphate
+    node_type: CAPACITY
+    description: Ability to grow when external phosphate is unavailable.
+  - node_id: segregational_drift
+    label: segregational drift
+    node_type: BIOLOGICAL_PROCESS
+    description: Stochastic segregation of alleles on polyploid replicons during cell
+      division.
+  - node_id: beneficial_allele_loss
+    label: loss of beneficial resistance alleles
+    node_type: BIOLOGICAL_PROCESS
+    description: Stochastic loss of beneficial alleles carried on multicopy replicons.
   edges:
   - subject: ploidy_trait
     predicate: enables
@@ -50,8 +73,7 @@ causal_graphs:
       of DNA damage.
     evidence:
     - reference: DOI:10.1159/000368855
-      notes: Soppa reviews polyploidy supporting damage tolerance via redundant
-        chromosomes.
+      notes: Soppa reviews polyploidy supporting damage tolerance via redundant chromosomes.
     predicate_id: RO:0002327
   - subject: ploidy_trait
     predicate: contributes to
@@ -63,6 +85,51 @@ causal_graphs:
       notes: Mendell et al. document extreme polyploidy in Epulopiscium supporting
         giant cell size.
     predicate_id: RO:0002326
+  - subject: phosphate_starvation
+    predicate: decreases
+    object: genome_copy_number
+    description: Polyploid prokaryotes reduce chromosomal copy number under phosphate
+      starvation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11092267
+      notes: All five characterized polyploid prokaryotic species grow without environmental
+        phosphate by reducing genome copy numbers.
+  - subject: genome_copy_number
+    predicate: enables
+    object: growth_without_phosphate
+    description: Consuming extra genome copies as a phosphate source enables growth
+      in the absence of external phosphate; monoploid E. coli cannot.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11092267
+      notes: Multiple polyploid prokaryotes grow without external phosphate by reducing
+        intracellular genome copy number; monoploid E. coli showed no growth without
+        phosphate.
+  - subject: genome_copy_number
+    predicate: has function
+    object: dna_phosphate_storage
+    description: Genomic DNA copies act as a phosphate storage polymer that can be
+      consumed under starvation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11092267
+      notes: Genomic DNA acts as a phosphate storage polymer in polyploid prokaryotes.
+  - subject: ploidy_trait
+    predicate: increases
+    object: segregational_drift
+    description: Higher ploidy increases stochastic segregation of alleles on polyploid
+      replicons during division.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010829
+      notes: Alleles on polyploid replicons segregate stochastically during cell division,
+        termed segregational drift; shown with experiments and modeling.
+  - subject: segregational_drift
+    predicate: causes
+    object: beneficial_allele_loss
+    description: Segregational drift drives frequent loss of beneficial resistance
+      alleles on multicopy replicons.
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010829
+      notes: Resistance alleles in polyploid elements are lost frequently versus monoploid
+        elements due to segregational drift.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -75,4 +142,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (ploidy / repair / survival) with GO
     node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

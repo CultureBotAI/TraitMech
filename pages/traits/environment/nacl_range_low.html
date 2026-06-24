@@ -90,6 +90,91 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>NaCl concentration</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>hyperosmotic stress</strong>
+            
+            <p>Increased external NaCl concentration causes hyperosmotic stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsml/uqad020</code>
+                
+                <span class="meta">Hyperosmotic upshift elicits rapid K+ import as an emergency response; general bacterial osmotic-stress edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>hyperosmotic stress</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>compatible solute accumulation</strong>
+            
+            <p>Hyperosmotic stress induces accumulation of compatible solutes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsml/uqad020</code>
+                
+                <span class="meta">After K+ import, cells synthesize or import compatible solutes and export K+ to reduce cytoplasmic ionic strength.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>hypoosmotic shock</strong>
+            <span class="edge-predicate">opens</span>
+            <strong>mechanosensitive channels MscL/MscS</strong>
+            
+            <p>Hypoosmotic shock opens mechanosensitive channels MscL/MscS to prevent rupture.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsml/uqad020</code>
+                
+                <span class="meta">Hypoosmotic shock triggers transient opening of mechanosensitive channels (MscL/MscS) to prevent turgor-driven cell rupture; broad across bacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>OpuA/OpuC compatible-solute importers</strong>
+            
+            <p>c-di-AMP binds and inhibits OpuA/OpuC compatible-solute importers.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00181-23</code>
+                
+                <span class="meta">c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates their transport activity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>choline uptake</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>glycine betaine biosynthesis</strong>
+            
+            <p>Choline uptake enables synthesis of glycine betaine, a key compatible solute.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1126/sciadv.ado6229</code>
+                
+                <span class="meta">BetT mediates uptake of external choline used to synthesize glycine betaine, a key compatible solute in hyperosmotic environments.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -237,6 +322,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -596,7 +687,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking limited high-salt tolerance to a growth-supporting NaCl range capped at ~1% (w/v).", "edges": [{"description": "Limited tolerance to elevated NaCl caps growth at low salt.", "evidence": [{"notes": "Supports limited high-salt tolerance as the basis of a low NaCl range.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited_high_salt_tolerance", "target": "nacl_range_low_trait"}, {"description": "NaCl range low is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports low NaCl range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range_low_trait", "target": "nacl_range"}], "evidence_rows": [{"description": "Limited tolerance to elevated NaCl caps growth at low salt.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited high-salt tolerance as the basis of a low NaCl range.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited high-salt tolerance", "target": "NaCl range low"}, {"description": "NaCl range low is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low NaCl range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range low", "target": "NaCl range"}], "graph_id": "nacl_range_low_non_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced capacity to maintain osmotic balance above ~1% NaCl.", "grounding": null, "id": "limited_high_salt_tolerance", "is_orphan": false, "label": "limited high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range with upper bound \u2264 ~1% w/v.", "grounding": "METPO:1000469", "id": "nacl_range_low_trait", "is_orphan": false, "label": "NaCl range low", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-range-low non-halophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking limited high-salt tolerance to a growth-supporting NaCl range capped at ~1% (w/v).", "edges": [{"description": "Limited tolerance to elevated NaCl caps growth at low salt.", "evidence": [{"notes": "Supports limited high-salt tolerance as the basis of a low NaCl range.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited_high_salt_tolerance", "target": "nacl_range_low_trait"}, {"description": "NaCl range low is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports low NaCl range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range_low_trait", "target": "nacl_range"}, {"description": "Increased external NaCl concentration causes hyperosmotic stress.", "evidence": [{"notes": "Hyperosmotic upshift elicits rapid K+ import as an emergency response; general bacterial osmotic-stress edge.", "reference": "DOI:10.1093/femsml/uqad020"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "nacl_concentration", "target": "hyperosmotic_stress"}, {"description": "Hyperosmotic stress induces accumulation of compatible solutes.", "evidence": [{"notes": "After K+ import, cells synthesize or import compatible solutes and export K+ to reduce cytoplasmic ionic strength.", "reference": "DOI:10.1093/femsml/uqad020"}], "id": "edge-4", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "hyperosmotic_stress", "target": "compatible_solute_accumulation"}, {"description": "Hypoosmotic shock opens mechanosensitive channels MscL/MscS to prevent rupture.", "evidence": [{"notes": "Hypoosmotic shock triggers transient opening of mechanosensitive channels (MscL/MscS) to prevent turgor-driven cell rupture; broad across bacteria.", "reference": "DOI:10.1093/femsml/uqad020"}], "id": "edge-5", "is_orphan": false, "predicate": "opens", "predicate_id": null, "source": "hypoosmotic_shock", "target": "mechanosensitive_channels"}, {"description": "c-di-AMP binds and inhibits OpuA/OpuC compatible-solute importers.", "evidence": [{"notes": "c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates their transport activity.", "reference": "DOI:10.1128/mmbr.00181-23"}], "id": "edge-6", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "c_di_amp", "target": "opu_solute_importers"}, {"description": "Choline uptake enables synthesis of glycine betaine, a key compatible solute.", "evidence": [{"notes": "BetT mediates uptake of external choline used to synthesize glycine betaine, a key compatible solute in hyperosmotic environments.", "reference": "DOI:10.1126/sciadv.ado6229"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "choline_uptake", "target": "glycine_betaine_synthesis"}], "evidence_rows": [{"description": "Limited tolerance to elevated NaCl caps growth at low salt.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited high-salt tolerance as the basis of a low NaCl range.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited high-salt tolerance", "target": "NaCl range low"}, {"description": "NaCl range low is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports low NaCl range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range low", "target": "NaCl range"}, {"description": "Increased external NaCl concentration causes hyperosmotic stress.", "edge_id": "edge-3", "evidence": [{"notes": "Hyperosmotic upshift elicits rapid K+ import as an emergency response; general bacterial osmotic-stress edge.", "reference": "DOI:10.1093/femsml/uqad020"}], "predicate": "causes", "predicate_id": null, "source": "NaCl concentration", "target": "hyperosmotic stress"}, {"description": "Hyperosmotic stress induces accumulation of compatible solutes.", "edge_id": "edge-4", "evidence": [{"notes": "After K+ import, cells synthesize or import compatible solutes and export K+ to reduce cytoplasmic ionic strength.", "reference": "DOI:10.1093/femsml/uqad020"}], "predicate": "induces", "predicate_id": null, "source": "hyperosmotic stress", "target": "compatible solute accumulation"}, {"description": "Hypoosmotic shock opens mechanosensitive channels MscL/MscS to prevent rupture.", "edge_id": "edge-5", "evidence": [{"notes": "Hypoosmotic shock triggers transient opening of mechanosensitive channels (MscL/MscS) to prevent turgor-driven cell rupture; broad across bacteria.", "reference": "DOI:10.1093/femsml/uqad020"}], "predicate": "opens", "predicate_id": null, "source": "hypoosmotic shock", "target": "mechanosensitive channels MscL/MscS"}, {"description": "c-di-AMP binds and inhibits OpuA/OpuC compatible-solute importers.", "edge_id": "edge-6", "evidence": [{"notes": "c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates their transport activity.", "reference": "DOI:10.1128/mmbr.00181-23"}], "predicate": "inhibits", "predicate_id": null, "source": "cyclic di-AMP", "target": "OpuA/OpuC compatible-solute importers"}, {"description": "Choline uptake enables synthesis of glycine betaine, a key compatible solute.", "edge_id": "edge-7", "evidence": [{"notes": "BetT mediates uptake of external choline used to synthesize glycine betaine, a key compatible solute in hyperosmotic environments.", "reference": "DOI:10.1126/sciadv.ado6229"}], "predicate": "enables", "predicate_id": null, "source": "choline uptake", "target": "glycine betaine biosynthesis"}], "graph_id": "nacl_range_low_non_halophile", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Second messenger that regulates potassium and osmolyte transport.", "grounding": null, "id": "c_di_amp", "is_orphan": false, "label": "cyclic di-AMP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Import of external choline used as a glycine betaine precursor.", "grounding": null, "id": "choline_uptake", "is_orphan": false, "label": "choline uptake", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis or import of neutral osmolytes to balance cytoplasmic osmolarity.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of the compatible solute glycine betaine.", "grounding": null, "id": "glycine_betaine_synthesis", "is_orphan": false, "label": "glycine betaine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stress from elevated external osmolarity (osmotic upshift).", "grounding": null, "id": "hyperosmotic_stress", "is_orphan": false, "label": "hyperosmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Rapid drop in external osmolarity causing turgor increase.", "grounding": null, "id": "hypoosmotic_shock", "is_orphan": false, "label": "hypoosmotic shock", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced capacity to maintain osmotic balance above ~1% NaCl.", "grounding": null, "id": "limited_high_salt_tolerance", "is_orphan": false, "label": "limited high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Tension-gated channels (MscL/MscS) that vent solutes to prevent lysis.", "grounding": null, "id": "mechanosensitive_channels", "is_orphan": false, "label": "mechanosensitive channels MscL/MscS", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "External sodium chloride concentration in the environment.", "grounding": null, "id": "nacl_concentration", "is_orphan": false, "label": "NaCl concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range with upper bound \u2264 ~1% w/v.", "grounding": "METPO:1000469", "id": "nacl_range_low_trait", "is_orphan": false, "label": "NaCl range low", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "ABC-type transporters that import compatible solutes like glycine betaine.", "grounding": null, "id": "opu_solute_importers", "is_orphan": false, "label": "OpuA/OpuC compatible-solute importers", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "NaCl-range-low non-halophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -607,7 +698,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

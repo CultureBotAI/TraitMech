@@ -1,8 +1,8 @@
 identifier: traitmech:000046
 label: opportunistic pathogen
-definition: A host-association lifestyle in which a normally commensal or
-  environmental microorganism causes disease only when host defenses are compromised
-  or it reaches a normally sterile site.
+definition: A host-association lifestyle in which a normally commensal or environmental
+  microorganism causes disease only when host defenses are compromised or it reaches
+  a normally sterile site.
 definition_source: DOI:10.1016/j.tim.2012.04.005
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,9 +15,8 @@ synonyms:
   source: DOI:10.1016/j.tim.2012.04.005
 evidence:
 - reference: DOI:10.1016/j.tim.2012.04.005
-  notes: Brown, Cornforth & Mideo, "Evolution of virulence in opportunistic
-    pathogens", support context-dependent virulence maintained by advantages outside
-    the host.
+  notes: Brown, Cornforth & Mideo, "Evolution of virulence in opportunistic pathogens",
+    support context-dependent virulence maintained by advantages outside the host.
 - reference: DOI:10.1038/s41579-021-00550-7
   notes: Drew et al. support facultative shifts toward parasitism/pathogenicity along
     the parasite-mutualist continuum, the basis of opportunistic disease.
@@ -31,8 +30,8 @@ causal_graphs:
     label: opportunistic pathogen
     node_type: TRAIT
     grounding: traitmech:000046
-    description: Disease causation only under compromised host defenses or
-      sterile-site translocation.
+    description: Disease causation only under compromised host defenses or sterile-site
+      translocation.
   - node_id: compromised_host_defense
     label: compromised host defense
     node_type: ENVIRONMENTAL_FACTOR
@@ -40,39 +39,136 @@ causal_graphs:
   - node_id: opportunistic_infection
     label: opportunistic infection
     node_type: BIOLOGICAL_PROCESS
-    description: Disease arising from a normally commensal or environmental
-      microbe in a permissive host context.
+    description: Disease arising from a normally commensal or environmental microbe
+      in a permissive host context.
+  - node_id: barrier_breach
+    label: epithelial barrier breach / sterile site access
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Disruption of epithelial barriers exposing normally sterile tissue
+      to microbes.
+  - node_id: antibiotic_exposure
+    label: antibiotic exposure
+    node_type: CHEMICAL
+    description: Prior or concurrent antimicrobial treatment.
+  - node_id: microbiota_dysbiosis
+    label: microbiota dysbiosis
+    node_type: STATE
+    description: Disrupted microbial community composition permitting opportunist
+      expansion.
+  - node_id: opportunist_colonization
+    label: opportunist colonization / overgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Increased colonization or overgrowth by opportunistic microbes.
+  - node_id: host_colonization
+    label: host colonization without disease
+    node_type: BIOLOGICAL_PROCESS
+    description: Microbial colonization of a host site that may or may not progress
+      to infection.
+  - node_id: nutritional_immunity
+    label: nutritional immunity / iron limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Host-imposed restriction of nutrient metals such as iron.
+  - node_id: high_affinity_iron_acquisition
+    label: high-affinity iron acquisition
+    node_type: BIOLOGICAL_PROCESS
+    description: Induction of high-affinity iron transport and siderophore production
+      under iron limitation.
   edges:
   - subject: compromised_host_defense
     predicate: causes
     object: opportunistic_infection
-    description: Breached or weakened host defenses enable a normally innocuous
-      microbe to cause disease.
+    description: Breached or weakened host defenses enable a normally innocuous microbe
+      to cause disease.
     evidence:
     - reference: DOI:10.1016/j.tim.2012.04.005
-      notes: Brown et al. support context-dependent virulence in opportunistic
-        pathogens.
+      notes: Brown et al. support context-dependent virulence in opportunistic pathogens.
     predicate_id: biolink:causes
   - subject: opportunistic_infection
     predicate: enables
     object: opportunistic_pathogen_trait
-    description: Context-dependent infection realizes the opportunistic-pathogen
-      lifestyle.
+    description: Context-dependent infection realizes the opportunistic-pathogen lifestyle.
     evidence:
     - reference: DOI:10.1038/s41579-021-00550-7
       notes: Drew et al. support facultative shifts toward pathogenicity along the
         parasite-mutualist continuum.
     predicate_id: RO:0002327
+  - subject: barrier_breach
+    predicate: enables
+    object: opportunistic_infection
+    description: Barrier breach exposes sterile tissue, enabling infection by normally
+      innocuous microbes.
+    evidence:
+    - reference: DOI:10.1038/s41579-024-01035-z
+      notes: 'Uberoi et al.: barrier breach exposes sterile tissue to microbes (generalizable
+        ecological/clinical edge).'
+  - subject: antibiotic_exposure
+    predicate: promotes
+    object: microbiota_dysbiosis
+    description: Antimicrobial exposure disrupts the resident microbiota, producing
+      dysbiosis.
+    evidence:
+    - reference: DOI:10.1007/s40588-023-00190-w
+      notes: 'Jacobsen: antibiotic exposure is a common risk factor driving overgrowth
+        of opportunists; curated as exposure to dysbiosis.'
+  - subject: microbiota_dysbiosis
+    predicate: increases
+    object: opportunist_colonization
+    description: Dysbiosis increases colonization/overgrowth by opportunistic microbes.
+    evidence:
+    - reference: DOI:10.1007/s40588-023-00190-w
+      notes: 'Jacobsen: defects/dysbiosis permit expansion of normally controlled
+        opportunists (high-level ecological edge).'
+  - subject: opportunist_colonization
+    predicate: enables
+    object: opportunistic_infection
+    description: Expanded opportunist colonization provides the population reservoir
+      from which infection can arise.
+    evidence:
+    - reference: DOI:10.1007/s40588-023-00190-w
+      notes: 'Jacobsen: colonization is a risk factor preceding opportunistic disease.'
+  - subject: host_colonization
+    predicate: progresses to under host susceptibility
+    object: opportunistic_infection
+    description: Most colonization is benign; only some progresses to infection under
+      permissive host conditions, capturing context-dependence.
+    evidence:
+    - reference: DOI:10.1038/s41579-024-01035-z
+      notes: 'Uberoi: nearly all wounds are colonized but only some progress to infection;
+        opportunism is context-dependent, not equivalent to colonization.'
+  - subject: nutritional_immunity
+    predicate: promotes
+    object: high_affinity_iron_acquisition
+    description: Host iron limitation induces high-affinity iron transport and siderophore
+      production, a general opportunist adaptation in-host.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14241
+      notes: 'Sanchez-Jimenez: under iron limitation, high-affinity iron transport
+        systems are promoted (general iron-acquisition biology).'
+  - subject: high_affinity_iron_acquisition
+    predicate: contributes to
+    object: opportunistic_infection
+    description: Iron acquisition under host-imposed restriction supports opportunist
+      fitness during infection.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14241
+      notes: 'Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence
+        determinant of opportunists.'
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ECOLOGY trait (opportunistic pathogen); sub-variant of
-    the existing pathogenic_to_host class (METPO:1004000).
+  changes: Proposed candidate ECOLOGY trait (opportunistic pathogen); sub-variant
+    of the existing pathogenic_to_host class (METPO:1004000).
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (opportunistic / context-dependent
-    virulence) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (opportunistic / context-dependent virulence)
+    with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

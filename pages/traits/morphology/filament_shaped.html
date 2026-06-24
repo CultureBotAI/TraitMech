@@ -141,6 +141,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>RecA/LexA SOS response</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>SulA</strong>
+            
+            <p>DNA damage activates the RecA/LexA SOS response, inducing the division inhibitor SulA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/advs.202203260</code>
+                
+                <span class="meta">DNA damage activates the RecA/LexA SOS response, leading to expression of sulA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>SulA</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>FtsZ polymerization</strong>
+            
+            <p>SulA blocks FtsZ polymerization, preventing Z-ring assembly and septation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/advs.202203260</code>
+                
+                <span class="meta">A cell division inhibitor, sulA, blocks FtsZ / SulA interferes with FtsZ polymerization.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>FtsZ polymerization</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>filament shaped</strong>
+            
+            <p>Inhibited FtsZ polymerization blocks septation, causing non-septate filamentation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1002/advs.202203260</code>
+                
+                <span class="meta">FtsZ inhibition / blocked septation contributes to non-septate cellular filamentation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>apical polarisome</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>polar hyphal growth</strong>
+            
+            <p>The DivIVA/polarisome assembly mediates polar growth at hyphal tips.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/jb.00153-23</code>
+                
+                <span class="meta">Hyphal growth occurs at the tips of the filamentous cells; this polar growth is mediated by DivIVA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>apical polarisome</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>hyphal branch emergence</strong>
+            
+            <p>Splitting of polarisomes at tips produces daughter polarisomes that coordinate new branch emergence.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsml/uqad020</code>
+                
+                <span class="meta">DivIVA forms discrete foci at growing tips; splitting of polarisomes produces daughter polarisomes coordinating emergence of new branches.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>CglA</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cell-wall glycopolymer attachment</strong>
+            
+            <p>CglA is the glycopolymer ligase mediating attachment of glycopolymers to the cell wall.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.01492-24</code>
+                
+                <span class="meta">Identified the LCP-LytR_C domain protein CglA as a key glycopolymer ligase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>cell-wall glycopolymer attachment</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>filament shaped</strong>
+            
+            <p>Reduced glycopolymer attachment results in enlarged vegetative hyphae and loss of hyphal cell shape.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.01492-24</code>
+                
+                <span class="meta">Reduced amount of glycopolymers in the cglA mutant results in enlarged vegetative hyphae.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -324,6 +443,12 @@
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -683,7 +808,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.", "edges": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "divIVA", "target": "apical_polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "scy", "target": "apical_polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "id": "edge-3", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "apical_polarisome", "target": "apical_peptidoglycan_synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical_peptidoglycan_synthesis", "target": "hyphal_tip_extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal_tip_extension", "target": "filament_shaped_trait"}], "evidence_rows": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "DivIVA", "target": "apical polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Scy", "target": "apical polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "edge_id": "edge-3", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "predicate": "recruits", "predicate_id": null, "source": "apical polarisome", "target": "apical peptidoglycan synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "edge_id": "edge-4", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical peptidoglycan synthesis", "target": "hyphal tip extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal tip extension", "target": "filament shaped"}], "graph_id": "filament_shaped_streptomyces_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-wall synthesis localized at the hyphal tip.", "grounding": null, "id": "apical_peptidoglycan_synthesis", "is_orphan": false, "label": "apical peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Hyphal-tip organizing center for polar growth.", "grounding": null, "id": "apical_polarisome", "is_orphan": false, "label": "apical polarisome", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Polarity determinant for Streptomyces apical growth.", "grounding": "UniProtKB:Q1IYG2", "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated filamentous bacterial morphology.", "grounding": "METPO:1000674", "id": "filament_shaped_trait", "is_orphan": false, "label": "filament shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Extension of filamentous hyphae by polar growth.", "grounding": null, "id": "hyphal_tip_extension", "is_orphan": false, "label": "hyphal tip extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Streptomyces cytoskeletal element associated with the polarisome.", "grounding": "UniProtKB:A0A191V3Q4", "id": "scy", "is_orphan": false, "label": "Scy", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Filament-shape Streptomyces polar growth mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking filamentous morphology to DivIVA/Scy polarisomes, apical peptidoglycan synthesis, and hyphal tip extension.", "edges": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "id": "edge-1", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "divIVA", "target": "apical_polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "scy", "target": "apical_polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "id": "edge-3", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "apical_polarisome", "target": "apical_peptidoglycan_synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical_peptidoglycan_synthesis", "target": "hyphal_tip_extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal_tip_extension", "target": "filament_shaped_trait"}, {"description": "DNA damage activates the RecA/LexA SOS response, inducing the division inhibitor SulA.", "evidence": [{"notes": "DNA damage activates the RecA/LexA SOS response, leading to expression of sulA.", "reference": "DOI:10.1002/advs.202203260"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "dna_damage_sos_response", "target": "sula"}, {"description": "SulA blocks FtsZ polymerization, preventing Z-ring assembly and septation.", "evidence": [{"notes": "A cell division inhibitor, sulA, blocks FtsZ / SulA interferes with FtsZ polymerization.", "reference": "DOI:10.1002/advs.202203260"}], "id": "edge-7", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "sula", "target": "ftsz_polymerization"}, {"description": "Inhibited FtsZ polymerization blocks septation, causing non-septate filamentation.", "evidence": [{"notes": "FtsZ inhibition / blocked septation contributes to non-septate cellular filamentation.", "reference": "DOI:10.1002/advs.202203260"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "ftsz_polymerization", "target": "filament_shaped_trait"}, {"description": "The DivIVA/polarisome assembly mediates polar growth at hyphal tips.", "evidence": [{"notes": "Hyphal growth occurs at the tips of the filamentous cells; this polar growth is mediated by DivIVA.", "reference": "DOI:10.1128/jb.00153-23"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "apical_polarisome", "target": "apical_growth"}, {"description": "Splitting of polarisomes at tips produces daughter polarisomes that coordinate new branch emergence.", "evidence": [{"notes": "DivIVA forms discrete foci at growing tips; splitting of polarisomes produces daughter polarisomes coordinating emergence of new branches.", "reference": "DOI:10.1093/femsml/uqad020"}], "id": "edge-10", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "apical_polarisome", "target": "hyphal_branch_emergence"}, {"description": "CglA is the glycopolymer ligase mediating attachment of glycopolymers to the cell wall.", "evidence": [{"notes": "Identified the LCP-LytR_C domain protein CglA as a key glycopolymer ligase.", "reference": "DOI:10.1128/mbio.01492-24"}], "id": "edge-11", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cgla", "target": "cell_wall_glycopolymer_attachment"}, {"description": "Reduced glycopolymer attachment results in enlarged vegetative hyphae and loss of hyphal cell shape.", "evidence": [{"notes": "Reduced amount of glycopolymers in the cglA mutant results in enlarged vegetative hyphae.", "reference": "DOI:10.1128/mbio.01492-24"}], "id": "edge-12", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "cell_wall_glycopolymer_attachment", "target": "filament_shaped_trait"}], "evidence_rows": [{"description": "DivIVA localizes at hyphal tips as part of the polar growth machinery.", "edge_id": "edge-1", "evidence": [{"notes": "Supports DivIVA as a polarity determinant in Streptomyces.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "polarity determinant DivIVA"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "DivIVA", "target": "apical polarisome"}, {"description": "Scy is a component of the tip-organizing center controlling polar growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Scy/DivIVA assemblies in Streptomyces polarized growth.", "reference": "DOI:10.1371/journal.pgen.1002423", "snippet": "tip organizing center"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Scy", "target": "apical polarisome"}, {"description": "The apical polarisome recruits cell-wall synthesis machinery to hyphal tips.", "edge_id": "edge-3", "evidence": [{"notes": "Supports polarisome-directed apical growth and cell-wall assembly.", "reference": "DOI:10.1016/j.mib.2012.10.012", "snippet": "polarisome-like complex involving the essential polarity protein DivIVA"}], "predicate": "recruits", "predicate_id": null, "source": "apical polarisome", "target": "apical peptidoglycan synthesis"}, {"description": "Localized wall synthesis at the tip drives filament extension.", "edge_id": "edge-4", "evidence": [{"notes": "Supports DivIVA-recruited PG synthesis at hyphal poles.", "reference": "DOI:10.1038/s41564-025-02080-x", "snippet": "DivIVA drives growth at the hyphal poles"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "apical peptidoglycan synthesis", "target": "hyphal tip extension"}, {"description": "Hyphal tip extension manifests filamentous morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports filamentous hyphal morphology as the trait endpoint.", "reference": "DOI:10.1016/j.mib.2010.10.002", "snippet": "Streptomyces hyphae"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "hyphal tip extension", "target": "filament shaped"}, {"description": "DNA damage activates the RecA/LexA SOS response, inducing the division inhibitor SulA.", "edge_id": "edge-6", "evidence": [{"notes": "DNA damage activates the RecA/LexA SOS response, leading to expression of sulA.", "reference": "DOI:10.1002/advs.202203260"}], "predicate": "induces", "predicate_id": null, "source": "RecA/LexA SOS response", "target": "SulA"}, {"description": "SulA blocks FtsZ polymerization, preventing Z-ring assembly and septation.", "edge_id": "edge-7", "evidence": [{"notes": "A cell division inhibitor, sulA, blocks FtsZ / SulA interferes with FtsZ polymerization.", "reference": "DOI:10.1002/advs.202203260"}], "predicate": "inhibits", "predicate_id": null, "source": "SulA", "target": "FtsZ polymerization"}, {"description": "Inhibited FtsZ polymerization blocks septation, causing non-septate filamentation.", "edge_id": "edge-8", "evidence": [{"notes": "FtsZ inhibition / blocked septation contributes to non-septate cellular filamentation.", "reference": "DOI:10.1002/advs.202203260"}], "predicate": "regulates", "predicate_id": null, "source": "FtsZ polymerization", "target": "filament shaped"}, {"description": "The DivIVA/polarisome assembly mediates polar growth at hyphal tips.", "edge_id": "edge-9", "evidence": [{"notes": "Hyphal growth occurs at the tips of the filamentous cells; this polar growth is mediated by DivIVA.", "reference": "DOI:10.1128/jb.00153-23"}], "predicate": "enables", "predicate_id": null, "source": "apical polarisome", "target": "polar hyphal growth"}, {"description": "Splitting of polarisomes at tips produces daughter polarisomes that coordinate new branch emergence.", "edge_id": "edge-10", "evidence": [{"notes": "DivIVA forms discrete foci at growing tips; splitting of polarisomes produces daughter polarisomes coordinating emergence of new branches.", "reference": "DOI:10.1093/femsml/uqad020"}], "predicate": "promotes", "predicate_id": null, "source": "apical polarisome", "target": "hyphal branch emergence"}, {"description": "CglA is the glycopolymer ligase mediating attachment of glycopolymers to the cell wall.", "edge_id": "edge-11", "evidence": [{"notes": "Identified the LCP-LytR_C domain protein CglA as a key glycopolymer ligase.", "reference": "DOI:10.1128/mbio.01492-24"}], "predicate": "enables", "predicate_id": null, "source": "CglA", "target": "cell-wall glycopolymer attachment"}, {"description": "Reduced glycopolymer attachment results in enlarged vegetative hyphae and loss of hyphal cell shape.", "edge_id": "edge-12", "evidence": [{"notes": "Reduced amount of glycopolymers in the cglA mutant results in enlarged vegetative hyphae.", "reference": "DOI:10.1128/mbio.01492-24"}], "predicate": "regulates", "predicate_id": null, "source": "cell-wall glycopolymer attachment", "target": "filament shaped"}], "graph_id": "filament_shaped_streptomyces_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Tip-localized polar growth of filamentous hyphae mediated by DivIVA/polarisome.", "grounding": null, "id": "apical_growth", "is_orphan": false, "label": "polar hyphal growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis localized at the hyphal tip.", "grounding": null, "id": "apical_peptidoglycan_synthesis", "is_orphan": false, "label": "apical peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Hyphal-tip organizing center for polar growth.", "grounding": null, "id": "apical_polarisome", "is_orphan": false, "label": "apical polarisome", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Ligation of glycopolymers onto peptidoglycan maintaining hyphal cell shape.", "grounding": null, "id": "cell_wall_glycopolymer_attachment", "is_orphan": false, "label": "cell-wall glycopolymer attachment", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to the cell wall.", "grounding": null, "id": "cgla", "is_orphan": false, "label": "CglA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Polarity determinant for Streptomyces apical growth.", "grounding": "UniProtKB:Q1IYG2", "id": "divIVA", "is_orphan": false, "label": "DivIVA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "DNA-damage-triggered RecA/LexA SOS regulon inducing division-inhibitor expression.", "grounding": null, "id": "dna_damage_sos_response", "is_orphan": false, "label": "RecA/LexA SOS response", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Elongated filamentous bacterial morphology.", "grounding": "METPO:1000674", "id": "filament_shaped_trait", "is_orphan": false, "label": "filament shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of the FtsZ ring required for septation and cell division.", "grounding": null, "id": "ftsz_polymerization", "is_orphan": false, "label": "FtsZ polymerization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Emergence of new branches via splitting of polarisomes at hyphal tips.", "grounding": null, "id": "hyphal_branch_emergence", "is_orphan": false, "label": "hyphal branch emergence", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Extension of filamentous hyphae by polar growth.", "grounding": null, "id": "hyphal_tip_extension", "is_orphan": false, "label": "hyphal tip extension", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Streptomyces cytoskeletal element associated with the polarisome.", "grounding": "UniProtKB:A0A191V3Q4", "id": "scy", "is_orphan": false, "label": "Scy", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "SOS-induced cell-division inhibitor that blocks FtsZ polymerization.", "grounding": null, "id": "sula", "is_orphan": false, "label": "SulA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Filament-shape Streptomyces polar growth mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -694,7 +819,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

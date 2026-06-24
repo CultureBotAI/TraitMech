@@ -57,6 +57,37 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000654
     description: Adaptation favoring efficient growth in nutrient-poor conditions.
+  - node_id: nutrient_limitation
+    label: chronic nutrient limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Persistently low nutrient availability imposing selection for efficient
+      resource use.
+  - node_id: genome_streamlining
+    label: genome streamlining
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection-driven reduction of cell and genome size and regulatory
+      complexity under nutrient limitation.
+  - node_id: chemotaxis_motility_genes
+    label: chemotaxis and motility genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes encoding chemotaxis and motility functions.
+  - node_id: motility_signaling_genes
+    label: motility and signal-transduction genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes for motility and signal transduction enabling resource tracking.
+  - node_id: rrn_copy_number
+    label: rrn operon copy number
+    node_type: QUALITY
+    description: Number of ribosomal RNA operons in a genome, a proxy for growth potential.
+  - node_id: maximum_growth_potential
+    label: maximum growth potential
+    node_type: CAPACITY
+    description: Maximum potential growth rate of an organism or community.
+  - node_id: carbohydrate_acquisition_genes
+    label: carbohydrate acquisition gene abundance
+    node_type: GENE_OR_PROTEIN
+    description: Relative abundance of genes for carbohydrate metabolism and resource
+      acquisition.
   edges:
   - subject: ambient_nutrient_concentration
     predicate: causes
@@ -117,6 +148,53 @@ causal_graphs:
       snippet: oligotrophic
       notes: Supports oligotrophy as a recognized nutrient-adaptation phenotype.
     predicate_id: rdfs:subClassOf
+  - subject: nutrient_limitation
+    predicate: selects for
+    object: genome_streamlining
+    description: Chronic nutrient limitation selects for streamlined small cells and
+      genomes.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      notes: Streamlining theory attributes small cells and genomes to selection for
+        efficient use of nutrients where nutrients limit; broad across oligotrophic
+        microbes.
+  - subject: oligotrophic_phenotype
+    predicate: negatively regulates
+    object: chemotaxis_motility_genes
+    description: Oligotrophic adaptation is associated with under-representation of
+      chemotaxis and motility genes.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae081
+      notes: Oligotroph genomes had energy-intensive functions like chemotaxis and
+        motility under-represented.
+  - subject: copiotrophic_phenotype
+    predicate: positively regulates
+    object: motility_signaling_genes
+    description: Copiotrophic strategy is enriched in genes for motility and signal
+      transduction.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      notes: Copiotrophs are enriched in genes for motility and sensing and signal
+        transduction.
+  - subject: rrn_copy_number
+    predicate: positively correlates with
+    object: maximum_growth_potential
+    description: Higher rrn operon copy number associates with higher maximum growth
+      potential.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01465-0
+      notes: Secondary life-history dimension correlated with ribosomal gene copy
+        number; positive correlation between potential growth and rrn copy number.
+  - subject: maximum_growth_potential
+    predicate: negatively correlates with
+    object: carbohydrate_acquisition_genes
+    description: Maximum growth potential trades off with abundance of carbohydrate
+      acquisition genes.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50382-1
+      notes: Growth potential was negatively correlated with relative abundances of
+        carbohydrate metabolism genes; apparent tradeoff between growth potential
+        and resource acquisition.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909957+00:00'
   curator: seed_from_metpo
@@ -158,4 +236,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009594×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

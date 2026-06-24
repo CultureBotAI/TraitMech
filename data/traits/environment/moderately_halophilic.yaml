@@ -47,6 +47,32 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:17750
     description: Compatible solute transported or accumulated for osmoprotection.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular buildup of organic osmolytes for osmoadaptation.
+  - node_id: hydroxyectoine
+    label: hydroxyectoine
+    node_type: CHEMICAL
+    description: Hydroxylated derivative of ectoine acting as a compatible solute.
+  - node_id: ectd
+    label: EctD (ectoine hydroxylase)
+    node_type: GENE_OR_PROTEIN
+    description: Ectoine hydroxylase converting ectoine to hydroxyectoine.
+  - node_id: bcct_transporters
+    label: BCCT transporters
+    node_type: GENE_OR_PROTEIN
+    description: Betaine/carnitine/choline transporter family importing compatible
+      solutes.
+  - node_id: teaabc_transporter
+    label: TeaABC TRAP transporter
+    node_type: GENE_OR_PROTEIN
+    description: TRAP transporter importing ectoine and hydroxyectoine.
+  - node_id: salt_out_strategy
+    label: salt-out (compatible-solute) strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation strategy relying on accumulation of small organic
+      solutes.
   edges:
   - subject: elevated_nacl
     predicate: causes
@@ -97,6 +123,55 @@ causal_graphs:
       notes: Review identifies moderate halophiles as models for bacterial osmotic
         adaptation.
     predicate_id: METPO:2007401
+  - subject: osmotic_stress
+    predicate: induces
+    object: compatible_solute_accumulation
+    description: Osmotic stress under elevated NaCl induces accumulation of organic
+      compatible solutes.
+    evidence:
+    - reference: DOI:10.1128/mmbr.62.2.504-544.1998
+      notes: 'Ventosa et al. 1998: organic compatible solutes (glycine betaine, ectoine,
+        hydroxyectoine, amino acids) predominate in moderate halophiles.'
+  - subject: ectd
+    predicate: converts
+    object: hydroxyectoine
+    description: Ectoine hydroxylase EctD converts ectoine to hydroxyectoine, a generic
+      ectoine-pathway step across halophiles.
+    evidence:
+    - reference: DOI:10.1186/s12934-021-01567-6
+      notes: 'Liu et al. 2021: EctD is the ectoine hydroxylase converting ectoine
+        to hydroxyectoine.'
+  - subject: bcct_transporters
+    predicate: imports
+    object: glycine_betaine
+    description: BCCT-family carriers (BetT, BetP, OpuD) import compatible solutes
+      such as glycine betaine.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: 'Lichty 2024: BCCT carriers (e.g., BetT, BetP, OpuD) import osmoprotectants.'
+  - subject: teaabc_transporter
+    predicate: imports
+    object: hydroxyectoine
+    description: TeaABC TRAP transporter imports ectoine and hydroxyectoine for osmoadaptation.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: 'Lichty 2024: TRAP systems (e.g., TeaABC) import ectoine and 5-hydroxyectoine.'
+  - subject: teaabc_transporter
+    predicate: imports
+    object: ectoine
+    description: TeaABC TRAP transporter imports ectoine for osmoadaptation.
+    evidence:
+    - reference: DOI:10.58088/07hg-r941
+      notes: 'Lichty 2024: TRAP systems (e.g., TeaABC) import ectoine and 5-hydroxyectoine.'
+  - subject: salt_out_strategy
+    predicate: predominates in
+    object: moderately_halophilic_trait
+    description: The salt-out / compatible-solute strategy predominates among moderate
+      halophiles.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      notes: 'Ionescu et al. 2024: ''salt-out'' is more common among moderate halophiles
+        and relies on accumulation of small organic compounds.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.862444+00:00'
   curator: seed_from_metpo
@@ -143,4 +218,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

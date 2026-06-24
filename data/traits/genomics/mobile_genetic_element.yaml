@@ -41,6 +41,69 @@ causal_graphs:
     label: genome plasticity
     node_type: QUALITY
     description: Capacity of a genome for rearrangement and gene gain/loss.
+  - node_id: relaxase
+    label: relaxase
+    node_type: GENE_OR_PROTEIN
+    description: Conjugation enzyme that nicks and unwinds DNA at oriT and covalently
+      attaches to the 5-prime end.
+  - node_id: orit
+    label: origin of transfer (oriT)
+    node_type: CELLULAR_LOCALIZATION
+    description: DNA site where the relaxase nicks to initiate rolling-circle conjugative
+      transfer.
+  - node_id: coupling_protein
+    label: type IV coupling protein
+    node_type: GENE_OR_PROTEIN
+    description: VirD4/TraD-like ATPase that recruits the relaxase-DNA substrate to
+      the T4SS.
+  - node_id: t4ss
+    label: type IV secretion system
+    node_type: GENE_OR_PROTEIN
+    description: VirB4/VirD4-containing macromolecular machine that mediates conjugative
+      DNA transfer.
+  - node_id: conjugative_dna_transfer
+    label: conjugative DNA transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-to-cell transfer of single-stranded DNA through the mating apparatus.
+  - node_id: integrase_excisionase
+    label: integrase and excisionase
+    node_type: GENE_OR_PROTEIN
+    description: Recombinase plus recombination directionality factor that mediate
+      ICE/IME excision.
+  - node_id: ice_excision
+    label: ICE excision and circularization
+    node_type: BIOLOGICAL_PROCESS
+    description: Excision of an integrated conjugative element to form a circular
+      dsDNA transfer intermediate.
+  - node_id: integron_integrase
+    label: integron integrase (IntI)
+    node_type: GENE_OR_PROTEIN
+    description: Site-specific recombinase that captures and excises gene cassettes
+      at attI/attC sites.
+  - node_id: cassette_recombination
+    label: attI/attC cassette recombination
+    node_type: BIOLOGICAL_PROCESS
+    description: Site-specific recombination inserting or excising integron gene cassettes.
+  - node_id: transposition
+    label: transposition
+    node_type: BIOLOGICAL_PROCESS
+    description: Movement of insertion sequences and transposons within or between
+      replicons.
+  - node_id: transduction
+    label: transduction of host DNA
+    node_type: BIOLOGICAL_PROCESS
+    description: Phage-mediated packaging and transfer of host DNA during prophage
+      induction or lytic infection.
+  - node_id: antibiotic_selection
+    label: antibiotic selective pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Selective pressure from antibiotics that enriches resistance gene
+      cargo on mobile elements.
+  - node_id: amr_cargo
+    label: antimicrobial resistance gene cargo
+    node_type: QUALITY
+    description: Accumulation of antimicrobial resistance genes carried on self-transmissible
+      ICEs and genomic islands.
   edges:
   - subject: mge_trait
     predicate: enables
@@ -58,6 +121,102 @@ causal_graphs:
     - reference: DOI:10.1111/1574-6976.12067
       notes: Siguier et al. review insertion-sequence-driven genome plasticity.
     predicate_id: RO:0002326
+  - subject: relaxase
+    predicate: nicks/unwinds at
+    object: orit
+    description: Relaxase nicks and unwinds DNA at oriT, covalently attaching to the
+      5-prime end to initiate transfer.
+    evidence:
+    - reference: DOI:10.1128/AEM.01360-24
+      notes: nicking/unwinding by a relaxase at oriT, covalent attachment of relaxase
+        to the 5-prime end.
+  - subject: coupling_protein
+    predicate: recruits substrate to
+    object: t4ss
+    description: The cognate coupling protein recruits the relaxase-DNA substrate
+      to the secretion apparatus.
+    evidence:
+    - reference: DOI:10.1093/nar/gkac1079
+      notes: the secretion apparatus by the cognate coupling protein TraD; type IV
+        coupling proteins (T4CPs).
+  - subject: t4ss
+    predicate: mediates
+    object: conjugative_dna_transfer
+    description: VirB4/VirD4-containing T4SS mediates conjugative DNA transfer between
+      donor and recipient.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad024
+      notes: VirB4 and VirD4 ATPases of the Type IV secretion system (T4SS) mediate
+        conjugative transfer.
+  - subject: conjugative_dna_transfer
+    predicate: enables
+    object: horizontal_gene_transfer
+    description: Conjugative DNA transfer is a major route of MGE-mediated horizontal
+      gene transfer.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14408
+      notes: transfer of a single-stranded DNA molecule, followed by integration into
+        the recipient chromosome.
+  - subject: integrase_excisionase
+    predicate: enables
+    object: ice_excision
+    description: Integrase and excisionase mediate ICE excision and circular dsDNA
+      intermediate formation.
+    evidence:
+    - reference: DOI:10.1128/AEM.01360-24
+      notes: excision mediated by an integrase (recombinase) and an excisionase, formation
+        of a circular dsDNA intermediate.
+  - subject: ice_excision
+    predicate: enables
+    object: conjugative_dna_transfer
+    description: Excision and circularization produce the transferable form required
+      for conjugative transfer.
+    evidence:
+    - reference: DOI:10.1128/AEM.01360-24
+      notes: Circular dsDNA intermediate is the transferable form prior to conjugation.
+  - subject: integron_integrase
+    predicate: catalyzes
+    object: cassette_recombination
+    description: Integron integrase catalyzes site-specific recombination at attI/attC
+      to capture or excise cassettes.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14408
+      notes: IntI recognises attI/attC and catalyses site-specific recombination inserting
+        cassettes.
+  - subject: mge_trait
+    predicate: enables
+    object: transposition
+    description: Insertion sequences and transposons excise and move within or between
+      regions of the genome.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032521-022006
+      notes: transposons and insertion sequences excise and move or transpose between
+        regions of the genome.
+  - subject: transposition
+    predicate: contributes to
+    object: genome_plasticity
+    description: Transposition drives genome rearrangement and gene gain/loss.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032521-022006
+      notes: IS/transposon mobility reshapes replicons, contributing to genome plasticity.
+  - subject: transduction
+    predicate: contributes to
+    object: horizontal_gene_transfer
+    description: Prophage induction and lytic infection package and transduce host
+      DNA, a route of HGT.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae489
+      notes: host DNA packaged and transduced during both prophage induction and lytic
+        infection.
+  - subject: antibiotic_selection
+    predicate: enriches
+    object: amr_cargo
+    description: Antibiotic selective pressure enriches AMR genes on self-transmissible
+      ICEs and genomic islands.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      notes: antibiotic selective pressure tied to the accumulation and spread of
+        resistance on self-transmissible ICEs.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -76,4 +235,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 11 evidence-backed generic edges (13 new nodes) from the deep-research
+    report.
   llm_assisted: true

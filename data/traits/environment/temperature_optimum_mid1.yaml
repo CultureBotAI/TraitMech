@@ -45,6 +45,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Membrane lipid composition and enzyme repertoire tuned for moderate
       ambient temperatures.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Membrane fatty acids containing one or more double bonds.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluid state of the cell membrane lipid bilayer.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Membrane lipid remodeling that maintains constant fluidity across
+      temperatures.
+  - node_id: low_melting_lipids
+    label: low-melting membrane lipids
+    node_type: CHEMICAL
+    description: MUFAs, PUFAs, branched and short-chain fatty acids with low melting
+      temperatures.
+  - node_id: branched_chain_amino_acids
+    label: branched-chain amino acids
+    node_type: CHEMICAL
+    description: Valine, leucine and isoleucine.
+  - node_id: branched_chain_fatty_acids
+    label: branched-chain fatty acids
+    node_type: CHEMICAL
+    description: Iso/anteiso branched membrane fatty acids derived from BCAA precursors.
   edges:
   - subject: lower_mesophilic_environment
     predicate: engages
@@ -74,6 +100,57 @@ causal_graphs:
       notes: Supports the 22–27 °C optimum as a value within the temperature-optimum
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: mesophile_adaptation
+    predicate: increases abundance of
+    object: unsaturated_fatty_acids
+    description: Mesophile membrane adaptation increases unsaturated fatty acid content.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: The Des desaturase inserts double bonds in membrane fatty acids, fluidizing
+        the membrane.
+  - subject: unsaturated_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Unsaturated fatty acids fluidize the membrane.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Inserting double bonds into membrane fatty acids fluidizes the membrane
+        and reverses the cold signal.
+  - subject: membrane_fluidity
+    predicate: is sensed as input to
+    object: homeoviscous_adaptation
+    description: Membrane physical state/fluidity is the sensed input driving homeoviscous
+      adaptation.
+    evidence:
+    - reference: DOI:10.1039/d4cc03114h
+      notes: HVA, a universal paradigm; initial step involves membrane stress sensing
+        with membrane fluidity as a proposed sensed parameter.
+  - subject: homeoviscous_adaptation
+    predicate: remodels toward increased
+    object: low_melting_lipids
+    description: Homeoviscous adaptation increases low-melting membrane lipids.
+    evidence:
+    - reference: DOI:10.1039/d4cc03114h
+      notes: 'Adaptive changes include increasing low-melting lipids: MUFAs, PUFAs,
+        branched and short-chain fatty acids.'
+  - subject: branched_chain_amino_acids
+    predicate: serve as precursors for
+    object: branched_chain_fatty_acids
+    description: BCAAs are biosynthetic precursors of iso/anteiso branched membrane
+      fatty acids.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Branched (iso/anteiso) FAs derive from branched-chain amino acid precursors
+        (valine, leucine, isoleucine).
+  - subject: branched_chain_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Branched-chain (anteiso) fatty acids fluidize the membrane during
+      cold adaptation.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Membrane fluidization via chain branching is a predominant longer-term
+        cold adaptation mechanism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.819857+00:00'
   curator: seed_from_metpo
@@ -91,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -42,6 +42,54 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Combined proton-extrusion and Na+/H+ antiport flexibility supporting
       growth across an extreme pH span.
+  - node_id: na_h_antiporters
+    label: Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Sodium:proton antiporters, core regulators of cytoplasmic pH across
+      changing external pH.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of near-neutral internal pH despite external pH variation.
+  - node_id: respiratory_proton_pumps
+    label: respiratory proton-pumping enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Electron-transport-chain proton pumps that control proton flux during
+      pH stress.
+  - node_id: f0f1_atpase
+    label: F0F1-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-translocating ATP synthase contributing to proton extrusion/uptake
+      in pH homeostasis.
+  - node_id: metabolite_decarboxylation
+    label: metabolite decarboxylation pathways
+    node_type: PATHWAY
+    description: Proton-consuming decarboxylation pathways that reduce intracellular
+      acidification.
+  - node_id: cytoplasmic_buffering_capacity
+    label: cytoplasmic buffering capacity
+    node_type: CAPACITY
+    description: Intracellular buffering that limits pH swings in the bacterial cytoplasm.
+  - node_id: near_neutral_cytoplasmic_ph
+    label: near-neutral cytoplasmic pH
+    node_type: QUALITY
+    description: Internal pH maintained near 7.5 while external pH varies.
+  - node_id: growth_external_ph_5_5_9
+    label: growth across external pH 5.5-9.0
+    node_type: STATE
+    description: Growth supported across the neutralophile external pH range ~5.5-9.0.
+  - node_id: constant_pmf
+    label: constant proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Relatively constant PMF maintained across external pH changes.
+  - node_id: membrane_lipid_porin_changes
+    label: membrane lipid/porin composition changes
+    node_type: BIOLOGICAL_PROCESS
+    description: Structural changes in membrane lipids and porins during pH stress.
+  - node_id: inward_proton_leakage
+    label: inward proton leakage
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive inward flux of protons that acidifies the cytoplasm.
   edges:
   - subject: maximal_ph_homeostasis
     predicate: produces
@@ -62,6 +110,72 @@ causal_graphs:
       snippet: pH homeostasis
       notes: Supports the 5–9 unit breadth as a value within the pH-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: na_h_antiporters
+    predicate: contributes to
+    object: ph_delta_high_trait
+    description: Na+/H+ antiport is a core regulator of cytoplasmic pH across changing
+      external pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters.
+  - subject: respiratory_proton_pumps
+    predicate: helps maintain
+    object: cytoplasmic_ph_homeostasis
+    description: Electron-transport proton pumps counteract pH stress by controlling
+      proton flux.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Proton-pumping enzymes (electron transport components) are major homeostasis
+        regulators.
+  - subject: f0f1_atpase
+    predicate: contributes to
+    object: ph_delta_high_trait
+    description: F0F1-ATPase participates in pH homeostasis via proton extrusion or
+      uptake.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: F0F1-ATPase is named among key regulators of bacterial pH homeostasis.
+  - subject: metabolite_decarboxylation
+    predicate: contributes to
+    object: ph_delta_high_trait
+    description: Proton-consuming decarboxylation pathways support broad pH tolerance.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Metabolite decarboxylation pathways are key regulators of pH homeostasis.
+  - subject: cytoplasmic_buffering_capacity
+    predicate: stabilizes
+    object: cytoplasmic_ph_homeostasis
+    description: High buffering capacity limits pH swings, enabling broader pH tolerance.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Internal pH kept ~7.0-7.5 as buffers absorb fluctuations.
+  - subject: near_neutral_cytoplasmic_ph
+    predicate: enables
+    object: growth_external_ph_5_5_9
+    description: Neutralophiles maintain narrow internal pH while growing over a broad
+      external range.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Neutralophiles grow at external pH ~5.5-9.0 while maintaining cytoplasmic
+        pH ~7.5-7.7.
+  - subject: constant_pmf
+    predicate: supports
+    object: ph_delta_high_trait
+    description: A relatively constant PMF across external pH is a hallmark of broad
+      pH tolerance.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: PMF of neutralophilic bacteria kept relatively constant over pH 5 to
+        8.
+  - subject: membrane_lipid_porin_changes
+    predicate: reduces
+    object: inward_proton_leakage
+    description: Membrane/porin composition changes lower proton leak during acid
+      stress.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Membrane lipid and porin composition changes minimize inward proton leakage
+        during acid stress.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.840309+00:00'
   curator: seed_from_metpo
@@ -79,4 +193,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

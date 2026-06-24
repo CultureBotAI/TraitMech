@@ -50,6 +50,25 @@ causal_graphs:
     label: cell-body curvature
     node_type: BIOLOGICAL_PROCESS
     description: Curving of the bacterial cell body.
+  - node_id: mreb_cytoskeletal_guidance
+    label: MreB cytoskeletal guidance
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like protein MreB that localizes to curvature regions and directs
+      localized cell-wall synthesis.
+  - node_id: zonal_peptidoglycan_remodeling
+    label: spatially constrained (zonal) peptidoglycan remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatially constrained ("zonal") cell-wall growth and remodeling through
+      which shape determinants act.
+  - node_id: motility_in_viscous_environments
+    label: motility in viscous environments
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell motility, especially efficient swimming through viscous solutions.
+  - node_id: surface_colonization_motility_virulence
+    label: surface colonization, motility and virulence
+    node_type: BIOLOGICAL_PROCESS
+    description: Fitness-relevant processes (surface colonization, motility in viscous
+      environments, virulence) promoted by curved/helical shape.
   edges:
   - subject: curvature_scaffold
     predicate: localizes to
@@ -90,6 +109,42 @@ causal_graphs:
       snippet: vibrioid (curved) morphology
       notes: Supports curved morphology as a recognized bacterial cell-shape class.
     predicate_id: METPO:2000202
+  - subject: mreb_cytoskeletal_guidance
+    predicate: directs
+    object: peptidoglycan_growth_pattern
+    description: MreB localizes to specific curvature regions and directs localized
+      cell-wall synthesis, supporting scaffold-guided PG remodeling.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.01264
+      notes: the actin-like protein MreB localizes to specific curvature regions and
+        directs localized cell-wall synthesis (broad mechanistic class).
+  - subject: peptidoglycan_growth_pattern
+    predicate: occurs via
+    object: zonal_peptidoglycan_remodeling
+    description: Because PG synthesis is constrained in space, all cell-wall growth
+      and remodeling is "zonal", the route through which shape determinants act.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      notes: Because PG synthesis is constrained in space, all cell wall growth and
+        remodeling can be described as "zonal" growth.
+  - subject: curved_shaped_trait
+    predicate: optimized for
+    object: motility_in_viscous_environments
+    description: Curved/helical morphology appears optimized for motility, especially
+      in viscous solutions (broad expert synthesis).
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      notes: helical and curved cells appear to be optimized for motility, especially
+        in viscous solutions.
+  - subject: curved_shaped_trait
+    predicate: promotes
+    object: surface_colonization_motility_virulence
+    description: Curved and helical shapes are widespread among bacteria, promoting
+      surface colonization, motility in viscous environments and virulence.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51790-z
+      notes: curved and helical cell shapes ... are widespread among bacteria, promoting
+        surface colonization, motility in viscous environments, and virulence.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.887107+00:00'
   curator: seed_from_metpo
@@ -113,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:located_in×1, biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

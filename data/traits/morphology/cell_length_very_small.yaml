@@ -42,6 +42,29 @@ causal_graphs:
     label: oligotrophic environment
     node_type: ENVIRONMENTAL_FACTOR
     description: Persistent low-nutrient setting that favors miniaturized cells.
+  - node_id: genome_streamlining
+    label: genome streamlining
+    node_type: BIOLOGICAL_PROCESS
+    description: Adaptive reduction of genome size and cellular material, characterized
+      by small cells (~1 um) and small genomes.
+  - node_id: carbon_limitation
+    label: carbon limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low carbon availability, an ecological driver associated with streamlining.
+  - node_id: nitrogen_limitation
+    label: nitrogen limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low nitrogen availability, an ecological driver associated with streamlining.
+  - node_id: reduced_transcriptional_regulation
+    label: reduced transcriptional regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of transcriptional regulatory machinery in oligotrophic
+      microorganisms.
+  - node_id: nutrient_poor_environment
+    label: nutrient-poor environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environment with low nutrient availability favoring low-regulation,
+      streamlined strategies.
   edges:
   - subject: oligotrophic_environment
     predicate: regulates
@@ -71,6 +94,45 @@ causal_graphs:
       notes: Supports very small cell length as a value within the regulated cell-length
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: oligotrophic_environment
+    predicate: selects for
+    object: genome_streamlining
+    description: Oligotrophic environments select for genome streamlining.
+    evidence:
+    - reference: DOI:10.1128/mSphereDirect.00011-19
+      notes: Genome streamlining is characterized by small cells (~1 um), small genomes
+        (~1-2 Mbp), and is strongly associated with carbon and nitrogen limitation.
+  - subject: carbon_limitation
+    predicate: associated with
+    object: genome_streamlining
+    description: Carbon limitation is associated with genome streamlining.
+    evidence:
+    - reference: DOI:10.1128/mSphereDirect.00011-19
+      notes: Streamlining is strongly associated with carbon and nitrogen limitation.
+  - subject: nitrogen_limitation
+    predicate: associated with
+    object: genome_streamlining
+    description: Nitrogen limitation is associated with genome streamlining.
+    evidence:
+    - reference: DOI:10.1128/mSphereDirect.00011-19
+      notes: Streamlining is strongly associated with carbon and nitrogen limitation.
+  - subject: genome_streamlining
+    predicate: contributes to
+    object: cell_length_very_small_trait
+    description: Genome streamlining contributes to very small cell size.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-48591-9
+      notes: Prominent oligotrophic taxa (SAR11, Prochlorococcus) have streamlined
+        genomes (~1.5 Mb) and extremely small cell volumes (~0.1 um3).
+  - subject: reduced_transcriptional_regulation
+    predicate: enhances fitness in
+    object: nutrient_poor_environment
+    description: Reduced transcriptional regulation enhances fitness in nutrient-poor
+      environments, a companion of streamlining.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00124-22
+      notes: A reduction of transcriptional regulation in aquatic oligotrophic microorganisms
+        enhances fitness in nutrient-poor environments.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.919417+00:00'
   curator: seed_from_metpo
@@ -100,4 +162,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

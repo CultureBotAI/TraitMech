@@ -46,6 +46,45 @@ causal_graphs:
     label: no endospore formation
     node_type: BIOLOGICAL_PROCESS
     description: Failure to produce a dormant, resistant endospore.
+  - node_id: absent_spo0a_gene
+    label: absence of spo0A gene
+    node_type: GENE_OR_PROTEIN
+    description: Lack of the spo0A master regulator gene; an excellent predictor of
+      inability to sporulate.
+  - node_id: loss_sporulation_genes
+    label: loss of sporulation genes
+    node_type: BIOLOGICAL_PROCESS
+    description: Inactivation or loss of a considerable fraction of core sporulation
+      genes.
+  - node_id: low_spo0a_activity
+    label: low or absent Spo0A activity
+    node_type: MOLECULAR_FUNCTION
+    description: Reduced or absent activity of the Spo0A master regulator of endospore
+      formation.
+  - node_id: loss_sporulation_capacity
+    label: loss of sporulation capacity
+    node_type: CAPACITY
+    description: Loss of the capacity to undergo sporulation.
+  - node_id: rap_phosphatases
+    label: Rap phosphatases
+    node_type: GENE_OR_PROTEIN
+    description: Rap family phosphatases that dephosphorylate Spo0F in the sporulation
+      phosphorelay.
+  - node_id: spo0f_dephosphorylation
+    label: dephosphorylation of Spo0F
+    node_type: BIOLOGICAL_PROCESS
+    description: Dephosphorylation of Spo0F reducing phosphate flow to Spo0A in the
+      phosphorelay.
+  - node_id: phosphorelay_disruption
+    label: Spo0A phosphorelay disruption
+    node_type: BIOLOGICAL_PROCESS
+    description: Disruption of the KinA/KinB -> Spo0F -> Spo0B -> Spo0A phosphorelay
+      that initiates sporulation.
+  - node_id: no_sporulation_entry
+    label: no entry into sporulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Failure to enter the sporulation developmental program (arrest at
+      stages 0/I).
   edges:
   - subject: absent_spo0a_cascade
     predicate: prevents
@@ -75,6 +114,72 @@ causal_graphs:
       snippet: S. aureus does not form spores
       notes: Supports the trait endpoint in a representative organism.
     predicate_id: METPO:2007400
+  - subject: absent_spo0a_gene
+    predicate: predicts
+    object: non_spore_forming_trait
+    description: Absence of spo0A is an excellent predictor of inability to sporulate.
+    evidence:
+    - reference: DOI:10.1128/jb.00079-22
+      notes: 'Comparative genomics of 180 genomes: spo0A present in all 76 sporeformers;
+        its absence predicts non-sporulation.'
+  - subject: loss_sporulation_genes
+    predicate: causes
+    object: non_spore_forming_trait
+    description: Loss of a considerable fraction of sporulation genes yields an asporogenic
+      phenotype.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.16145
+      notes: Asporogenic phenotypes can result from inactivation or loss of a considerable
+        fraction of sporulation genes (generic edge).
+  - subject: low_spo0a_activity
+    predicate: causes
+    object: loss_sporulation_capacity
+    description: Low or absent Spo0A activity abolishes sporulation capacity.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.630573
+      notes: Spo0A is the master regulator of endospore formation; elevated Spo0A~P
+        is required to trigger sporulation.
+  - subject: loss_sporulation_capacity
+    predicate: manifests as
+    object: non_spore_forming_trait
+    description: Loss of sporulation capacity manifests the non-spore-forming phenotype.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.630573
+      notes: Failure to produce/activate Spo0A prevents sporulation, yielding the
+        non-spore-forming trait.
+  - subject: rap_phosphatases
+    predicate: dephosphorylates
+    object: spo0f_dephosphorylation
+    description: Rap phosphatases directly dephosphorylate Spo0F.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00594-6
+      notes: Rap phosphatases directly dephosphorylate Spo0F (generic to Bacillus
+        phosphorelay logic).
+  - subject: spo0f_dephosphorylation
+    predicate: decreases activation of
+    object: low_spo0a_activity
+    description: Dephosphorylation of Spo0F reduces phosphate flow to Spo0A, decreasing
+      its activation.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00594-6
+      notes: Reduced phosphate flow to Spo0A in the sporulation phosphorelay (corroborated
+        by DOI:10.3390/microorganisms11081928).
+  - subject: phosphorelay_disruption
+    predicate: prevents
+    object: no_sporulation_entry
+    description: Disruption of the KinA/KinB -> Spo0F -> Spo0B -> Spo0A phosphorelay
+      arrests entry into sporulation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11081928
+      notes: The phosphorelay signals the start of sporulation; mutants arrest at
+        stages 0/I when initiation fails.
+  - subject: no_sporulation_entry
+    predicate: manifests as
+    object: non_spore_forming_trait
+    description: Failure to enter sporulation manifests the non-spore-forming phenotype.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11081928
+      notes: Arrest at sporulation initiation produces the non-spore-forming endpoint.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917903+00:00'
   curator: seed_from_metpo
@@ -103,4 +208,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

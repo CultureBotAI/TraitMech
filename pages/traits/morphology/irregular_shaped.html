@@ -107,6 +107,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>loss of MreB function</strong>
+            <span class="edge-predicate">disrupts</span>
+            <strong>MreB cytoskeletal function</strong>
+            
+            <p>Inhibition or depletion of MreB removes curvature sensing and localized cell-wall insertion control.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2024.11.22.624946</code>
+                
+                <span class="meta">MreB filaments sense curvature and direct localized cell-wall insertion; A22 inhibition of MreB polymerization alters width and causes rounding/loss of rod shape.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>loss of MreB function</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>irregular shaped</strong>
+            
+            <p>Loss of MreB-mediated localized PG insertion removes rod-shape maintenance, yielding rounding and heterogeneous morphologies.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2024.11.22.624946</code>
+                
+                <span class="meta">Inhibition of MreB polymerization causes rounding/loss of rod shape across model bacteria; a broadly conserved shape-maintenance module.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>peptidoglycan synthase-hydrolase imbalance</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>reduced cell-wall patterning</strong>
+            
+            <p>Loss of coordination between peptidoglycan synthases and hydrolases degrades spatial control of wall synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-41082-3</code>
+                
+                <span class="meta">Coordinated peptidoglycan synthases and hydrolases stabilize the bacterial cell wall; uncoupling them (e.g. excess hydrolase activity) accelerates loss of regular shape as a general loss-of-patterning mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>perturbation of polar growth determinants</strong>
+            <span class="edge-predicate">disrupts</span>
+            <strong>polarized growth organization</strong>
+            
+            <p>Disruption of apical polar growth determinants disorganizes the tip-organizing center and wall-synthesis focusing.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.21203/rs.3.rs-3811693/v1</code>
+                
+                <span class="meta">Apical determinants stabilize the tip-organizing center; their perturbation is associated with abnormal branching and mispatterned wall synthesis in filamentous bacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>perturbation of polar growth determinants</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>variable cell geometry</strong>
+            
+            <p>Mispatterned apical wall synthesis from disrupted polar growth produces irregular, branched/bulged geometry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.21203/rs.3.rs-3811693/v1</code>
+                
+                <span class="meta">Partial depletion of the polar scaffold DivIVA causes hyphal bulging and irregular branching, an irregular-shape outcome of disorganized polar growth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>wall-less (L-form) state</strong>
+            <span class="edge-predicate">manifests as</span>
+            <strong>irregular shaped</strong>
+            
+            <p>Absence of a cylindrical wall removes canonical shape constraints, yielding irregular, amoeboid morphology.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-024-07279-y</code>
+                
+                <span class="meta">Wall-less L-form cells have heterogeneous, amoeboid morphology; loss of the rigid wall removes shape constraints, a general consequence of wall absence.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -256,6 +358,12 @@
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -615,7 +723,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking reduced or stochastic cell-wall patterning to inconsistent, irregular cell geometry.", "edges": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced_wall_patterning", "target": "stochastic_growth"}, {"description": "Stochastic growth produces variable cell geometry.", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic_growth", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "irregular_shaped_trait"}], "evidence_rows": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "edge_id": "edge-1", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced cell-wall patterning", "target": "stochastic growth"}, {"description": "Stochastic growth produces variable cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic growth", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "target": "irregular shaped"}], "graph_id": "irregular_shaped_loss_of_patterning", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Inconsistent cell geometry across a population.", "grounding": "METPO:1000691", "id": "irregular_shaped_trait", "is_orphan": false, "label": "irregular shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Diminished spatial control of peptidoglycan synthesis.", "grounding": null, "id": "reduced_wall_patterning", "is_orphan": false, "label": "reduced cell-wall patterning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-by-cell variation in growth-zone placement and extent.", "grounding": null, "id": "stochastic_growth", "is_orphan": false, "label": "stochastic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Irregular-shape loss of wall patterning"}];
+  var graphs = [{"description": "DOI-backed graph linking reduced or stochastic cell-wall patterning to inconsistent, irregular cell geometry.", "edges": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced_wall_patterning", "target": "stochastic_growth"}, {"description": "Stochastic growth produces variable cell geometry.", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic_growth", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "irregular_shaped_trait"}, {"description": "Inhibition or depletion of MreB removes curvature sensing and localized cell-wall insertion control.", "evidence": [{"notes": "MreB filaments sense curvature and direct localized cell-wall insertion; A22 inhibition of MreB polymerization alters width and causes rounding/loss of rod shape.", "reference": "DOI:10.1101/2024.11.22.624946"}], "id": "edge-4", "is_orphan": false, "predicate": "disrupts", "predicate_id": null, "source": "mreb_loss", "target": "mreb_cytoskeleton_function"}, {"description": "Loss of MreB-mediated localized PG insertion removes rod-shape maintenance, yielding rounding and heterogeneous morphologies.", "evidence": [{"notes": "Inhibition of MreB polymerization causes rounding/loss of rod shape across model bacteria; a broadly conserved shape-maintenance module.", "reference": "DOI:10.1101/2024.11.22.624946"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "mreb_loss", "target": "irregular_shaped_trait"}, {"description": "Loss of coordination between peptidoglycan synthases and hydrolases degrades spatial control of wall synthesis.", "evidence": [{"notes": "Coordinated peptidoglycan synthases and hydrolases stabilize the bacterial cell wall; uncoupling them (e.g. excess hydrolase activity) accelerates loss of regular shape as a general loss-of-patterning mechanism.", "reference": "DOI:10.1038/s41467-023-41082-3"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "synthase_hydrolase_imbalance", "target": "reduced_wall_patterning"}, {"description": "Disruption of apical polar growth determinants disorganizes the tip-organizing center and wall-synthesis focusing.", "evidence": [{"notes": "Apical determinants stabilize the tip-organizing center; their perturbation is associated with abnormal branching and mispatterned wall synthesis in filamentous bacteria.", "reference": "DOI:10.21203/rs.3.rs-3811693/v1"}], "id": "edge-7", "is_orphan": false, "predicate": "disrupts", "predicate_id": null, "source": "polar_growth_perturbation", "target": "polar_growth_organization"}, {"description": "Mispatterned apical wall synthesis from disrupted polar growth produces irregular, branched/bulged geometry.", "evidence": [{"notes": "Partial depletion of the polar scaffold DivIVA causes hyphal bulging and irregular branching, an irregular-shape outcome of disorganized polar growth.", "reference": "DOI:10.21203/rs.3.rs-3811693/v1"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "polar_growth_perturbation", "target": "variable_geometry"}, {"description": "Absence of a cylindrical wall removes canonical shape constraints, yielding irregular, amoeboid morphology.", "evidence": [{"notes": "Wall-less L-form cells have heterogeneous, amoeboid morphology; loss of the rigid wall removes shape constraints, a general consequence of wall absence.", "reference": "DOI:10.1038/s42003-024-07279-y"}], "id": "edge-9", "is_orphan": false, "predicate": "manifests as", "predicate_id": null, "source": "wall_less_state", "target": "irregular_shaped_trait"}], "evidence_rows": [{"description": "Reduced patterning permits stochastic growth-zone placement.", "edge_id": "edge-1", "evidence": [{"notes": "Supports patterning loss as a driver of inconsistent shapes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced cell-wall patterning", "target": "stochastic growth"}, {"description": "Stochastic growth produces variable cell geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports irregular coryneform-like morphology arising from polar/apical growth without strong lateral patterning.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "coryneform morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "stochastic growth", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests the irregular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "target": "irregular shaped"}, {"description": "Inhibition or depletion of MreB removes curvature sensing and localized cell-wall insertion control.", "edge_id": "edge-4", "evidence": [{"notes": "MreB filaments sense curvature and direct localized cell-wall insertion; A22 inhibition of MreB polymerization alters width and causes rounding/loss of rod shape.", "reference": "DOI:10.1101/2024.11.22.624946"}], "predicate": "disrupts", "predicate_id": null, "source": "loss of MreB function", "target": "MreB cytoskeletal function"}, {"description": "Loss of MreB-mediated localized PG insertion removes rod-shape maintenance, yielding rounding and heterogeneous morphologies.", "edge_id": "edge-5", "evidence": [{"notes": "Inhibition of MreB polymerization causes rounding/loss of rod shape across model bacteria; a broadly conserved shape-maintenance module.", "reference": "DOI:10.1101/2024.11.22.624946"}], "predicate": "causes", "predicate_id": null, "source": "loss of MreB function", "target": "irregular shaped"}, {"description": "Loss of coordination between peptidoglycan synthases and hydrolases degrades spatial control of wall synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Coordinated peptidoglycan synthases and hydrolases stabilize the bacterial cell wall; uncoupling them (e.g. excess hydrolase activity) accelerates loss of regular shape as a general loss-of-patterning mechanism.", "reference": "DOI:10.1038/s41467-023-41082-3"}], "predicate": "contributes to", "predicate_id": null, "source": "peptidoglycan synthase-hydrolase imbalance", "target": "reduced cell-wall patterning"}, {"description": "Disruption of apical polar growth determinants disorganizes the tip-organizing center and wall-synthesis focusing.", "edge_id": "edge-7", "evidence": [{"notes": "Apical determinants stabilize the tip-organizing center; their perturbation is associated with abnormal branching and mispatterned wall synthesis in filamentous bacteria.", "reference": "DOI:10.21203/rs.3.rs-3811693/v1"}], "predicate": "disrupts", "predicate_id": null, "source": "perturbation of polar growth determinants", "target": "polarized growth organization"}, {"description": "Mispatterned apical wall synthesis from disrupted polar growth produces irregular, branched/bulged geometry.", "edge_id": "edge-8", "evidence": [{"notes": "Partial depletion of the polar scaffold DivIVA causes hyphal bulging and irregular branching, an irregular-shape outcome of disorganized polar growth.", "reference": "DOI:10.21203/rs.3.rs-3811693/v1"}], "predicate": "produces", "predicate_id": null, "source": "perturbation of polar growth determinants", "target": "variable cell geometry"}, {"description": "Absence of a cylindrical wall removes canonical shape constraints, yielding irregular, amoeboid morphology.", "edge_id": "edge-9", "evidence": [{"notes": "Wall-less L-form cells have heterogeneous, amoeboid morphology; loss of the rigid wall removes shape constraints, a general consequence of wall absence.", "reference": "DOI:10.1038/s42003-024-07279-y"}], "predicate": "manifests as", "predicate_id": null, "source": "wall-less (L-form) state", "target": "irregular shaped"}], "graph_id": "irregular_shaped_loss_of_patterning", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Inconsistent cell geometry across a population.", "grounding": "METPO:1000691", "id": "irregular_shaped_trait", "is_orphan": false, "label": "irregular shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-mediated curvature sensing and spatial direction of lateral peptidoglycan insertion that maintains regular cell shape.", "grounding": null, "id": "mreb_cytoskeleton_function", "is_orphan": false, "label": "MreB cytoskeletal function", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition or depletion of MreB cytoskeletal activity removing localized wall-insertion control.", "grounding": null, "id": "mreb_loss", "is_orphan": false, "label": "loss of MreB function", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Apical tip-organizing machinery that focuses cell-wall synthesis for ordered polar growth.", "grounding": null, "id": "polar_growth_organization", "is_orphan": false, "label": "polarized growth organization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Disruption of apical polar growth determinants leading to mispatterned wall synthesis.", "grounding": null, "id": "polar_growth_perturbation", "is_orphan": false, "label": "perturbation of polar growth determinants", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Diminished spatial control of peptidoglycan synthesis.", "grounding": null, "id": "reduced_wall_patterning", "is_orphan": false, "label": "reduced cell-wall patterning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-by-cell variation in growth-zone placement and extent.", "grounding": null, "id": "stochastic_growth", "is_orphan": false, "label": "stochastic growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Disrupted coordination between peptidoglycan synthases and hydrolases destabilizing the cell wall.", "grounding": null, "id": "synthase_hydrolase_imbalance", "is_orphan": false, "label": "peptidoglycan synthase-hydrolase imbalance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Absence of a rigid peptidoglycan wall removing canonical cell-shape constraints.", "grounding": null, "id": "wall_less_state", "is_orphan": false, "label": "wall-less (L-form) state", "node_type": "STATE", "xrefs": []}], "title": "Irregular-shape loss of wall patterning"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -626,7 +734,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

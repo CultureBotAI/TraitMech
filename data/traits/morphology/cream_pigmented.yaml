@@ -45,6 +45,20 @@ causal_graphs:
     label: pale cream coloration
     node_type: BIOLOGICAL_PROCESS
     description: Optical phenotype of off-white pigmented colonies.
+  - node_id: carotenoid_biosynthesis_genes
+    label: carotenoid biosynthesis genes (crt locus)
+    node_type: GENE_OR_PROTEIN
+    description: Core carotenoid-pathway enzymes (e.g. crtE/crtB/crtI-type) required
+      for synthesis of colored carotenoids.
+  - node_id: carotenoid_gene_disruption
+    label: carotenoid biosynthesis gene disruption
+    node_type: EXPERIMENTAL_FACTOR
+    description: Loss-of-function or repression of core carotenoid-pathway genes.
+  - node_id: isoprenoid_precursor_supply
+    label: isoprenoid (MEP-pathway) precursor supply
+    node_type: BIOLOGICAL_PROCESS
+    description: Supply of isoprenoid precursors (IPP/DMAPP/GGPP) via the MEP pathway
+      feeding carotenoid biosynthesis.
   edges:
   - subject: low_carotenoid_biosynthesis
     predicate: produces
@@ -74,6 +88,35 @@ causal_graphs:
       snippet: bacterial carotenoid pigments
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: carotenoid_biosynthesis_genes
+    predicate: enables
+    object: low_carotenoid_biosynthesis
+    description: Core crt-locus enzymes are required for carotenoid biosynthesis;
+      their activity sets pathway flux.
+    evidence:
+    - reference: DOI:10.3390/pathogens12010086
+      notes: Insertions mapped to crtE, crtI, crtB, crtYc, crtYd involved in synthesis
+        of beta-carotene; disrupted mutants retained an off-white appearance.
+  - subject: carotenoid_gene_disruption
+    predicate: decreases
+    object: low_carotenoid_biosynthesis
+    description: Disruption or repression of core carotenoid-biosynthesis genes lowers
+      carotenoid synthesis, leaving colonies pale/off-white.
+    evidence:
+    - reference: DOI:10.3390/pathogens12010086
+      notes: '"Most of these mutants failed to develop pigmentation upon light treatment
+        and retained an off-white appearance" with insertions in crt-pathway genes
+        (broad but not universal across taxa).'
+  - subject: isoprenoid_precursor_supply
+    predicate: enables
+    object: low_carotenoid_biosynthesis
+    description: MEP-pathway isoprenoid precursor supply feeds carotenoid biosynthesis;
+      reduced precursor supply lowers downstream carotenoid output.
+    evidence:
+    - reference: DOI:10.3390/microorganisms9040670
+      notes: Repression of the MEP-pathway gene ispG significantly lowered cellular
+        carotenoid content; repression of MEP/carotenogenesis genes was expected to
+        reduce pigmentation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944295+00:00'
   curator: seed_from_metpo
@@ -103,4 +146,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -65,6 +65,25 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30089
     description: Product of the acetate kinase SLP reaction.
+  - node_id: anaerobiosis
+    label: anaerobiosis / low oxygen
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Absence of oxygen enabling anaerobic catabolism such as fermentation.
+  - node_id: fermentation
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    description: Anaerobic catabolism in which ATP is produced by substrate-level
+      phosphorylation.
+  - node_id: acka_pta_pathway
+    label: AckA-Pta pathway
+    node_type: PATHWAY
+    description: Phosphotransacetylase/acetate kinase reaction set that produces ATP
+      via SLP.
+  - node_id: carbamate_kinase_arginine_deiminase
+    label: carbamate kinase (arginine deiminase pathway)
+    node_type: GENE_OR_PROTEIN
+    description: Carbamate kinase of the arginine deiminase pathway that generates
+      ATP by SLP.
   edges:
   - subject: substrate_level_phosphorylation_trait
     predicate: occurs in
@@ -121,6 +140,40 @@ causal_graphs:
       notes: Review lists acetyl-phosphate to acetate among SLP energy-conserving
         reactions.
     predicate_id: METPO:2000202
+  - subject: anaerobiosis
+    predicate: enables
+    object: fermentation
+    description: Absence of oxygen enables fermentative metabolism.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      notes: Fermentation is a type of metabolism carried out by organisms in environments
+        without oxygen.
+  - subject: fermentation
+    predicate: produces ATP via
+    object: substrate_level_phosphorylation_trait
+    description: In fermentation, ATP is produced by substrate-level phosphorylation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      notes: ATP is produced by substrate-level phosphorylation; strong definitional
+        edge.
+  - subject: acka_pta_pathway
+    predicate: allows ATP production via
+    object: substrate_level_phosphorylation_trait
+    description: The AckA-Pta reaction set allows ATP production via substrate-level
+      phosphorylation.
+    evidence:
+    - reference: DOI:10.1042/ETLS20220092
+      notes: AckA-Pta, a set of reactions that allows ATP production via substrate-level
+        phosphorylation.
+  - subject: carbamate_kinase_arginine_deiminase
+    predicate: generates ATP via
+    object: substrate_level_phosphorylation_trait
+    description: Carbamate kinase in the arginine deiminase pathway is an additional
+      SLP route for ATP production.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: The carbamate kinase reaction has been reported to be effective for ATP
+        production in several acetogens.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.913184+00:00'
   curator: seed_from_metpo
@@ -162,4 +215,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16761×1, CHEBI:15350×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000016
 label: mercury tolerant
 definition: A metal tolerance in which an organism grows in the presence of toxic
-  inorganic or organic mercury compounds, typically via the mer operon, whose
-  mercuric reductase (MerA) reduces reactive Hg(II) to volatile Hg(0).
+  inorganic or organic mercury compounds, typically via the mer operon, whose mercuric
+  reductase (MerA) reduces reactive Hg(II) to volatile Hg(0).
 definition_source: DOI:10.1016/S0168-6445(03)00046-9
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -17,13 +17,12 @@ evidence:
 - reference: DOI:10.1016/S0168-6445(03)00046-9
   snippet: Bacterial resistance to inorganic and organic mercury compounds (HgR) is
     one of the most widely observed phenotypes in eubacteria
-  notes: Review supports mercury resistance as a widespread bacterial phenotype
-    mediated by MerA, "that reduces reactive ionic Hg(II) to volatile, relatively
-    inert, monoatomic Hg(0) vapor".
+  notes: Review supports mercury resistance as a widespread bacterial phenotype mediated
+    by MerA, "that reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic
+    Hg(0) vapor".
 - reference: PMID:12829273
-  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell
-    division superfamily, P-type ATPases, cation diffusion facilitator and chromate
-    proteins
+  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell division
+    superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins
   notes: Heavy-metal resistance review situates mercury detoxification within the
     broader prokaryotic metal-resistance machinery.
 causal_graphs:
@@ -50,6 +49,28 @@ causal_graphs:
     label: mercury(II) reduction
     node_type: BIOLOGICAL_PROCESS
     description: Enzymatic reduction of Hg(II) to volatile elemental Hg(0).
+  - node_id: mercury_zero
+    label: mercury(0)
+    node_type: CHEMICAL
+    description: Volatile, relatively inert elemental mercury Hg(0).
+  - node_id: merb_lyase
+    label: MerB (organomercurial lyase)
+    node_type: GENE_OR_PROTEIN
+    description: Organomercury lyase cleaving C-Hg bonds of organomercurials to release
+      Hg(II).
+  - node_id: organomercurial
+    label: organomercurial compound
+    node_type: CHEMICAL
+    description: Organic mercury compounds such as methylmercury.
+  - node_id: merr_sensor
+    label: MerR (Hg-responsive regulator)
+    node_type: GENE_OR_PROTEIN
+    description: Mercury-responsive transcription factor controlling mer operon induction.
+  - node_id: mer_transcription
+    label: mer operon transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcriptional activation of mer detoxification genes from the Pmer
+      promoter.
   edges:
   - subject: mercury_ii_ion
     predicate: challenges
@@ -57,8 +78,8 @@ causal_graphs:
     description: Reactive Hg(II) is the toxic challenge the trait counters.
     evidence:
     - reference: PMID:12829273
-      notes: Mercury detoxification sits within the broader prokaryotic
-        metal-resistance machinery.
+      notes: Mercury detoxification sits within the broader prokaryotic metal-resistance
+        machinery.
     predicate_id: METPO:2007406
   - subject: mer_operon
     predicate: enables
@@ -66,8 +87,8 @@ causal_graphs:
     description: MerA reduces Hg(II) to volatile, inert Hg(0) vapour.
     evidence:
     - reference: DOI:10.1016/S0168-6445(03)00046-9
-      notes: MerA reduces reactive ionic Hg(II) to volatile, relatively inert,
-        monoatomic Hg(0) vapor.
+      notes: MerA reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic
+        Hg(0) vapor.
     predicate_id: RO:0002327
   - subject: mercury_reduction
     predicate: mitigates
@@ -77,6 +98,46 @@ causal_graphs:
     - reference: DOI:10.1016/S0168-6445(03)00046-9
       notes: Mercury reduction is the basis of mer-mediated resistance.
     predicate_id: METPO:2007407
+  - subject: mer_operon
+    predicate: produces
+    object: mercury_zero
+    description: MerA reduction of Hg(II) yields volatile elemental Hg(0).
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03391-5
+      notes: MerA reduces Hg2+ to volatile Hg0, relieving intracellular Hg(II) toxicity.
+  - subject: merb_lyase
+    predicate: cleaves
+    object: organomercurial
+    description: MerB lyase cleaves C-Hg bonds of organomercurials to release Hg(II)
+      for MerA reduction.
+    evidence:
+    - reference: DOI:10.21203/rs.3.rs-3854515/v1
+      notes: MerB is an organomercury lyase that cleaves methylmercury to Hg2+ and
+        methane.
+  - subject: merb_lyase
+    predicate: produces
+    object: mercury_ii_ion
+    description: Organomercurial cleavage yields Hg(II), the substrate for MerA reduction.
+    evidence:
+    - reference: DOI:10.21203/rs.3.rs-3854515/v1
+      notes: C-Hg bond cleavage produces Hg(II) for subsequent MerA reduction.
+  - subject: merr_sensor
+    predicate: senses
+    object: mercury_ii_ion
+    description: MerR senses Hg(II), acting as a mercury-responsive transcriptional
+      regulator.
+    evidence:
+    - reference: DOI:10.21203/rs.3.rs-3854515/v1
+      notes: MerR functions as a repressor/activator responsive to Hg2+.
+  - subject: merr_sensor
+    predicate: activates
+    object: mer_transcription
+    description: Hg(II)-bound MerR activates transcription of the mer detoxification
+      genes from Pmer.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2023.1178680
+      notes: MerR-mediated activation of Pmer drives mer operon transcription when
+        Hg(II) is present.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -87,7 +148,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (mer-operon Hg(II) reduction) with
-    CHEBI node grounding and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (mer-operon Hg(II) reduction) with CHEBI
+    node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

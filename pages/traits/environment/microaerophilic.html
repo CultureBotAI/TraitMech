@@ -124,6 +124,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>cytochrome cbb3 oxidase</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>respiration under low oxygen</strong>
+            
+            <p>cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria and enable respiration under low O2.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms24076428</code>
+                
+                <span class="meta">cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cytochrome bd ubiquinol oxidase</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>respiration under low oxygen</strong>
+            
+            <p>Cytochrome bd quinol oxidases are widespread in low-oxygen-adapted organisms and enable respiration under low O2.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms24076428</code>
+                
+                <span class="meta">bd-type quinol oxidases are widespread in bacteria and archaea that live under low-oxygen conditions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>branched respiratory chain</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>adaptation to fluctuating oxygen</strong>
+            
+            <p>Branched respiratory chains enable microbes to adapt to fluctuating oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1468929</code>
+                
+                <span class="meta">Branched respiratory chains enable microbes to adapt to fluctuating oxygen.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>catalase (KatA)</strong>
+            <span class="edge-predicate">detoxifies</span>
+            <strong>hydrogen peroxide</strong>
+            
+            <p>Catalase prevents hydrogen peroxide accumulation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/pathogens13100842</code>
+                
+                <span class="meta">katA encodes catalase that prevents H2O2 accumulation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>superoxide dismutase (SodB)</strong>
+            <span class="edge-predicate">protects against</span>
+            <strong>reactive oxygen species</strong>
+            
+            <p>Superoxide dismutase protects against reactive oxygen species.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/pathogens13100842</code>
+                
+                <span class="meta">sodB encodes superoxide dismutase (SOD); it protects against ROS.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>alkyl hydroperoxide reductase (AhpC)</strong>
+            <span class="edge-predicate">scavenges</span>
+            <strong>hydrogen peroxide</strong>
+            
+            <p>AhpC is the predominant hydrogen peroxide scavenger at low oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12866-024-03201-y</code>
+                
+                <span class="meta">AhpC is considered the predominant H2O2 scavenger at low oxygen.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -305,6 +407,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -664,7 +772,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking microaerophily to microoxic environments and high-affinity terminal oxidases.", "edges": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic_environment", "target": "microaerophilic_trait"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "enables use of", "predicate_id": null, "source": "high_affinity_terminal_oxidase", "target": "molecular_oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high_affinity_terminal_oxidase", "target": "microaerophilic_trait"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "id": "edge-4", "is_orphan": false, "predicate": "has function", "predicate_id": "RO:0000085", "source": "cbb3_oxidase", "target": "high_affinity_terminal_oxidase"}], "evidence_rows": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic environment", "target": "microaerophilic"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "predicate": "enables use of", "predicate_id": null, "source": "high-affinity terminal oxidase", "target": "molecular oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high-affinity terminal oxidase", "target": "microaerophilic"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "predicate": "has function", "predicate_id": "RO:0000085", "source": "cytochrome cbb3 oxidase", "target": "high-affinity terminal oxidase"}], "graph_id": "microaerophile_low_oxygen_respiration", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "High-affinity cytochrome oxidase associated with microaerobic metabolism.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cytochrome cbb3 oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory oxidase enabling oxygen use at low concentration.", "grounding": null, "id": "high_affinity_terminal_oxidase", "is_orphan": false, "label": "high-affinity terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires oxygen below atmospheric concentration.", "grounding": "METPO:1000604", "id": "microaerophilic_trait", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen zone that supports microaerobic respiration.", "grounding": null, "id": "microoxic_environment", "is_orphan": false, "label": "microoxic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen present at low concentration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Microaerophilic low-oxygen respiration mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking microaerophily to microoxic environments and high-affinity terminal oxidases.", "edges": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic_environment", "target": "microaerophilic_trait"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "enables use of", "predicate_id": null, "source": "high_affinity_terminal_oxidase", "target": "molecular_oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high_affinity_terminal_oxidase", "target": "microaerophilic_trait"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "id": "edge-4", "is_orphan": false, "predicate": "has function", "predicate_id": "RO:0000085", "source": "cbb3_oxidase", "target": "high_affinity_terminal_oxidase"}, {"description": "cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria and enable respiration under low O2.", "evidence": [{"notes": "cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria.", "reference": "DOI:10.3390/ijms24076428"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cbb3_oxidase", "target": "low_oxygen_respiration"}, {"description": "Cytochrome bd quinol oxidases are widespread in low-oxygen-adapted organisms and enable respiration under low O2.", "evidence": [{"notes": "bd-type quinol oxidases are widespread in bacteria and archaea that live under low-oxygen conditions.", "reference": "DOI:10.3390/ijms24076428"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cytochrome_bd_oxidase", "target": "low_oxygen_respiration"}, {"description": "Branched respiratory chains enable microbes to adapt to fluctuating oxygen.", "evidence": [{"notes": "Branched respiratory chains enable microbes to adapt to fluctuating oxygen.", "reference": "DOI:10.3389/fmicb.2024.1468929"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "branched_respiratory_chain", "target": "oxygen_adaptation"}, {"description": "Catalase prevents hydrogen peroxide accumulation.", "evidence": [{"notes": "katA encodes catalase that prevents H2O2 accumulation.", "reference": "DOI:10.3390/pathogens13100842"}], "id": "edge-8", "is_orphan": false, "predicate": "detoxifies", "predicate_id": null, "source": "catalase_kata", "target": "hydrogen_peroxide"}, {"description": "Superoxide dismutase protects against reactive oxygen species.", "evidence": [{"notes": "sodB encodes superoxide dismutase (SOD); it protects against ROS.", "reference": "DOI:10.3390/pathogens13100842"}], "id": "edge-9", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "superoxide_dismutase_sodb", "target": "reactive_oxygen_species"}, {"description": "AhpC is the predominant hydrogen peroxide scavenger at low oxygen.", "evidence": [{"notes": "AhpC is considered the predominant H2O2 scavenger at low oxygen.", "reference": "DOI:10.1186/s12866-024-03201-y"}], "id": "edge-10", "is_orphan": false, "predicate": "scavenges", "predicate_id": null, "source": "ahpc", "target": "hydrogen_peroxide"}], "evidence_rows": [{"description": "Microaerophiles grow optimally in microoxic conditions.", "edge_id": "edge-1", "evidence": [{"notes": "Nature Reviews Microbiology analysis defines the microoxic context.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "microaerophiles grow optimally under microoxic conditions"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "microoxic environment", "target": "microaerophilic"}, {"description": "High-affinity terminal oxidases enable respiration at scarce oxygen concentrations.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the low-oxygen respiratory role of high-affinity oxidases.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "harvest O2 present at low, even nanomolar, concentrations"}], "predicate": "enables use of", "predicate_id": null, "source": "high-affinity terminal oxidase", "target": "molecular oxygen"}, {"description": "High-affinity terminal oxidases are mechanistic contributors to microaerophilic growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports terminal oxidases as causal entities for low-oxygen growth.", "reference": "DOI:10.1038/nrmicro2970", "snippet": "provide microaerobes with access to scarce supplies of O2"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "high-affinity terminal oxidase", "target": "microaerophilic"}, {"description": "The cbb3 oxidase is an example high-affinity oxidase for microaerobic metabolism.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cbb3 oxidase as a high-affinity oxygen-reducing enzyme.", "reference": "DOI:10.1042/BST0300653", "snippet": "characterized by its high oxygen affinity"}], "predicate": "has function", "predicate_id": "RO:0000085", "source": "cytochrome cbb3 oxidase", "target": "high-affinity terminal oxidase"}, {"description": "cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria and enable respiration under low O2.", "edge_id": "edge-5", "evidence": [{"notes": "cbb3-type cytochrome c oxidases are common in microaerophilic Proteobacteria.", "reference": "DOI:10.3390/ijms24076428"}], "predicate": "enables", "predicate_id": null, "source": "cytochrome cbb3 oxidase", "target": "respiration under low oxygen"}, {"description": "Cytochrome bd quinol oxidases are widespread in low-oxygen-adapted organisms and enable respiration under low O2.", "edge_id": "edge-6", "evidence": [{"notes": "bd-type quinol oxidases are widespread in bacteria and archaea that live under low-oxygen conditions.", "reference": "DOI:10.3390/ijms24076428"}], "predicate": "enables", "predicate_id": null, "source": "cytochrome bd ubiquinol oxidase", "target": "respiration under low oxygen"}, {"description": "Branched respiratory chains enable microbes to adapt to fluctuating oxygen.", "edge_id": "edge-7", "evidence": [{"notes": "Branched respiratory chains enable microbes to adapt to fluctuating oxygen.", "reference": "DOI:10.3389/fmicb.2024.1468929"}], "predicate": "enables", "predicate_id": null, "source": "branched respiratory chain", "target": "adaptation to fluctuating oxygen"}, {"description": "Catalase prevents hydrogen peroxide accumulation.", "edge_id": "edge-8", "evidence": [{"notes": "katA encodes catalase that prevents H2O2 accumulation.", "reference": "DOI:10.3390/pathogens13100842"}], "predicate": "detoxifies", "predicate_id": null, "source": "catalase (KatA)", "target": "hydrogen peroxide"}, {"description": "Superoxide dismutase protects against reactive oxygen species.", "edge_id": "edge-9", "evidence": [{"notes": "sodB encodes superoxide dismutase (SOD); it protects against ROS.", "reference": "DOI:10.3390/pathogens13100842"}], "predicate": "protects against", "predicate_id": null, "source": "superoxide dismutase (SodB)", "target": "reactive oxygen species"}, {"description": "AhpC is the predominant hydrogen peroxide scavenger at low oxygen.", "edge_id": "edge-10", "evidence": [{"notes": "AhpC is considered the predominant H2O2 scavenger at low oxygen.", "reference": "DOI:10.1186/s12866-024-03201-y"}], "predicate": "scavenges", "predicate_id": null, "source": "alkyl hydroperoxide reductase (AhpC)", "target": "hydrogen peroxide"}], "graph_id": "microaerophile_low_oxygen_respiration", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Predominant H2O2 scavenger at low oxygen.", "grounding": null, "id": "ahpc", "is_orphan": false, "label": "alkyl hydroperoxide reductase (AhpC)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "Respiratory chain with multiple terminal oxidase branches.", "grounding": null, "id": "branched_respiratory_chain", "is_orphan": false, "label": "branched respiratory chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that detoxifies hydrogen peroxide.", "grounding": null, "id": "catalase_kata", "is_orphan": false, "label": "catalase (KatA)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "High-affinity cytochrome oxidase associated with microaerobic metabolism.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cytochrome cbb3 oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "High-affinity quinol oxidase widespread in low-oxygen-adapted bacteria.", "grounding": null, "id": "cytochrome_bd_oxidase", "is_orphan": false, "label": "cytochrome bd ubiquinol oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory oxidase enabling oxygen use at low concentration.", "grounding": null, "id": "high_affinity_terminal_oxidase", "is_orphan": false, "label": "high-affinity terminal oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species byproduct.", "grounding": null, "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Aerobic respiratory electron transport carried out at low O2 concentrations.", "grounding": null, "id": "low_oxygen_respiration", "is_orphan": false, "label": "respiration under low oxygen", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires oxygen below atmospheric concentration.", "grounding": "METPO:1000604", "id": "microaerophilic_trait", "is_orphan": false, "label": "microaerophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen zone that supports microaerobic respiration.", "grounding": null, "id": "microoxic_environment", "is_orphan": false, "label": "microoxic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen present at low concentration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Physiological adjustment to changing environmental O2 levels.", "grounding": null, "id": "oxygen_adaptation", "is_orphan": false, "label": "adaptation to fluctuating oxygen", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "ROS generated by oxygen exposure.", "grounding": null, "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme protecting against reactive oxygen species.", "grounding": null, "id": "superoxide_dismutase_sodb", "is_orphan": false, "label": "superoxide dismutase (SodB)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Microaerophilic low-oxygen respiration mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -675,7 +783,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

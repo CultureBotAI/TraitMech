@@ -40,6 +40,39 @@ causal_graphs:
     label: accessory gene pool
     node_type: QUALITY
     description: Strain-variable genes outside the species core.
+  - node_id: plasmid
+    label: plasmid
+    node_type: GENE_OR_PROTEIN
+    description: Mobile genetic element acting as a vehicle for accessory genes.
+  - node_id: prophage
+    label: prophage
+    node_type: GENE_OR_PROTEIN
+    description: Integrated bacteriophage genome contributing to gene flux.
+  - node_id: gene_gain_loss_dynamics
+    label: gene gain and loss dynamics
+    node_type: BIOLOGICAL_PROCESS
+    description: Ongoing acquisition and loss of genes across sampled lineages.
+  - node_id: core_gene_fraction
+    label: core gene fraction
+    node_type: QUALITY
+    description: Proportion of genes conserved across all genomes in the species.
+  - node_id: rare_gene_fraction
+    label: rare gene fraction
+    node_type: QUALITY
+    description: Proportion of genes present in only a few genomes.
+  - node_id: sampling_bias
+    label: sampling bias
+    node_type: EXPERIMENTAL_FACTOR
+    description: Bias in which genomes are sampled, distorting openness estimates.
+  - node_id: annotation_error
+    label: annotation error
+    node_type: EXPERIMENTAL_FACTOR
+    description: Misannotation of genes that distorts presence/absence calls.
+  - node_id: apparent_pangenome_openness
+    label: apparent pangenome openness
+    node_type: QUALITY
+    description: Estimated openness that may reflect artifacts rather than true HGT
+      dynamics.
   edges:
   - subject: horizontal_gene_transfer
     predicate: causes
@@ -59,6 +92,68 @@ causal_graphs:
       notes: McInerney et al. review the ecological and population drivers of pangenome
         openness.
     predicate_id: biolink:associated_with
+  - subject: plasmid
+    predicate: enables
+    object: horizontal_gene_transfer
+    description: Plasmids are mobile vehicles for accessory genes, increasing opportunity
+      for gene acquisition.
+    evidence:
+    - reference: DOI:10.1099/mgen.0.001021
+      notes: Gene gain and loss mediated by mobile genetic elements including plasmids.
+  - subject: prophage
+    predicate: promotes
+    object: pangenome_openness_trait
+    description: Prophage-associated gene flux contributes to recent gain/loss and
+      accessory genome expansion.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12050986
+      notes: Prophages, integrases, and transfer/mobile elements identified as main
+        drivers of pangenome openness.
+  - subject: gene_gain_loss_dynamics
+    predicate: shapes
+    object: pangenome_openness_trait
+    description: Open/closed behavior reflects balance of ongoing gene gain versus
+      loss across sampled lineages.
+    evidence:
+    - reference: DOI:10.1101/2022.04.23.489244
+      notes: HGT and resultant gene gain and loss dynamics are central drivers of
+        pangenome composition.
+  - subject: core_gene_fraction
+    predicate: negatively associated with
+    object: pangenome_openness_trait
+    description: A larger conserved core leaves less flexible accessory fraction;
+      empirically anticorrelated with openness.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12050986
+      notes: Strong inverse correlation between core gene percentage and openness
+        coefficient (corr = -0.910).
+  - subject: rare_gene_fraction
+    predicate: positively associated with
+    object: pangenome_openness_trait
+    description: A higher proportion of rare genes indicates continued acquisition
+      and non-saturation of the pangenome.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12050986
+      notes: Positive correlation between rare gene percentage and openness coefficient
+        (corr = 0.742).
+  - subject: sampling_bias
+    predicate: biases estimate of
+    object: apparent_pangenome_openness
+    description: Apparent openness can reflect which genomes were sampled rather than
+      true HGT dynamics.
+    evidence:
+    - reference: DOI:10.1101/2022.04.23.489244
+      notes: Gene accumulation curves can be misleading because they may reflect sampling
+        temporal/diversity bias.
+  - subject: annotation_error
+    predicate: biases estimate of
+    object: apparent_pangenome_openness
+    description: Misannotation inflates or deflates presence/absence calls and can
+      misclassify open/closed status.
+    evidence:
+    - reference: DOI:10.1101/2022.04.23.489244
+      notes: Higher rates of annotation error can lead to incorrect estimates of whether
+        a pangenome is open or closed.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -77,4 +172,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

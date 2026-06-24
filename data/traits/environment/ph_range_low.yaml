@@ -50,6 +50,50 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Proton extrusion and envelope barriers maintaining cytoplasmic pH
       against a moderately acidic external pH.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane electrochemical proton gradient maintained by H+ extrusion.
+  - node_id: atp_synthase_atp_formation
+    label: ATP synthase-mediated ATP formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Phosphorylation of ADP to ATP driven by the proton motive force.
+  - node_id: cyclopropane_fatty_acids
+    label: cyclopropane fatty acids
+    node_type: CHEMICAL
+    description: Cyclopropane-fatty-acyl phospholipids produced by Cfa synthase that
+      modify the membrane.
+  - node_id: membrane_proton_permeability
+    label: membrane proton permeability
+    node_type: QUALITY
+    description: Permeability of the cell membrane to protons.
+  - node_id: undissociated_weak_acids
+    label: undissociated weak organic acids
+    node_type: CHEMICAL
+    description: Protonated, membrane-permeant form of weak organic acids prevalent
+      at low external pH.
+  - node_id: weak_acid_influx
+    label: weak organic acid influx into cell
+    node_type: BIOLOGICAL_PROCESS
+    description: Diffusion of undissociated weak organic acids across the membrane
+      at low external pH.
+  - node_id: weak_acid_dissociation
+    label: intracellular dissociation of weak organic acids
+    node_type: BIOLOGICAL_PROCESS
+    description: Dissociation of weak acids in the near-neutral cytoplasm, releasing
+      protons.
+  - node_id: internal_ph
+    label: internal (cytoplasmic) pH
+    node_type: QUALITY
+    description: pH of the cytoplasm.
+  - node_id: h_atpase
+    label: H+-ATPase proton efflux pump
+    node_type: GENE_OR_PROTEIN
+    description: ATP-driven proton-exporting ATPase (e.g. P-type H+-ATPase).
+  - node_id: cytoplasmic_protons
+    label: cytoplasmic protons
+    node_type: CHEMICAL
+    description: Protons (hydrons) within the cytoplasm.
   edges:
   - subject: acidophile_homeostasis
     predicate: enables
@@ -70,6 +114,62 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports the pH 4–6 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthase_atp_formation
+    description: The proton motive force drives ATP synthase phosphorylation of ADP
+      to ATP.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: '"That proton potential then drives the phosphorylation of ADP and the
+        formation of ATP by the ATP synthase"; general bioenergetic edge relevant
+        to low-pH growth.'
+  - subject: cyclopropane_fatty_acids
+    predicate: decreases
+    object: membrane_proton_permeability
+    description: Cyclopropane fatty acid membrane modification decreases proton permeability.
+    evidence:
+    - reference: DOI:10.4014/jmb.2303.03009
+      notes: '"decreasing membrane proton permeability prevents the accumulation of
+        intracellular protons" after conversion to cyclopropane fatty acids; generalizable
+        membrane adaptation.'
+  - subject: undissociated_weak_acids
+    predicate: undergoes
+    object: weak_acid_influx
+    description: At low external pH weak organic acids are undissociated and diffuse
+      into the cell.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: '"organic acids... occur in their undissociated form and can diffuse
+        into the cell"; boundary condition distinguishing low-pH growth from weak-acid
+        inhibition.'
+  - subject: weak_acid_dissociation
+    predicate: lowers
+    object: internal_ph
+    description: Intracellular dissociation of weak organic acids releases protons
+      and lowers cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: '"the higher pH of the cytoplasm will lead to dissociation of the acid,
+        thus releasing protons and lowering the internal pH"; strong causal edge.'
+  - subject: h_atpase
+    predicate: exports
+    object: cytoplasmic_protons
+    description: H+-ATPases actively export protons from the cytoplasm using ATP.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Acidophile genomes encode "a P-type ATPase proton efflux pump"; active
+        ATP-driven proton export underlies cytoplasmic pH homeostasis.
+  - subject: h_atpase
+    predicate: contributes to
+    object: acidophile_homeostasis
+    description: ATP-driven proton export by H+-ATPases contributes to acidophile
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12030625
+      notes: '"acid stress tolerance... facilitated by an active export of protons
+        via the expenditure of ATP... carried out by H+-ATPases"; broad principle
+        of homeostasis.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.829744+00:00'
   curator: seed_from_metpo
@@ -87,4 +187,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

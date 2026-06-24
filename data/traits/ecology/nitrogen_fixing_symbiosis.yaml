@@ -1,8 +1,8 @@
 identifier: traitmech:000044
 label: nitrogen-fixing symbiosis
-definition: A mutualistic symbiosis in which a diazotrophic bacterium fixes
-  atmospheric N2 for a host plant — classically rhizobia in legume root nodules —
-  in exchange for photosynthate.
+definition: A mutualistic symbiosis in which a diazotrophic bacterium fixes atmospheric
+  N2 for a host plant — classically rhizobia in legume root nodules — in exchange
+  for photosynthate.
 definition_source: DOI:10.1038/nrmicro.2017.171
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -26,8 +26,8 @@ evidence:
 causal_graphs:
 - graph_id: rhizobia_legume_n2_fixation
   title: Rhizobia–legume root-nodule N2-fixing mutualism
-  description: Evidence-backed causal sketch linking symbiotic signalling and
-    root-nodule colonization to N2 fixation in exchange for plant photosynthate.
+  description: Evidence-backed causal sketch linking symbiotic signalling and root-nodule
+    colonization to N2 fixation in exchange for plant photosynthate.
   nodes:
   - node_id: n2_fix_symbiosis_trait
     label: nitrogen-fixing symbiosis
@@ -37,13 +37,45 @@ causal_graphs:
   - node_id: symbiotic_signalling
     label: nodulation signalling
     node_type: BIOLOGICAL_PROCESS
-    description: Nod-factor signalling establishing the rhizobium-legume
-      partnership.
+    description: Nod-factor signalling establishing the rhizobium-legume partnership.
   - node_id: nitrogen_fixation
     label: nitrogen fixation
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009399
     description: Reduction of atmospheric N2 to ammonia by nitrogenase.
+  - node_id: flavonoids
+    label: flavonoids
+    node_type: CHEMICAL
+    description: Host-root exudate signalling compounds secreted by legumes.
+  - node_id: nod_factor
+    label: Nod factor (lipochitooligosaccharide)
+    node_type: CHEMICAL
+    description: Rhizobial lipochitooligosaccharide signal triggering symbiosis.
+  - node_id: leghemoglobin
+    label: leghemoglobin
+    node_type: GENE_OR_PROTEIN
+    description: Nodule oxygen-binding protein buffering O2 around bacteroids.
+  - node_id: nodule_oxygen_diffusion_barrier
+    label: nodule oxygen diffusion barrier
+    node_type: CELLULAR_LOCALIZATION
+    description: Tightly packed cortical cell layer limiting O2 flux into the nodule
+      interior.
+  - node_id: microaerobic_environment
+    label: microaerobic environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-oxygen condition inside the nodule required for nitrogenase.
+  - node_id: nitrogenase_complex
+    label: nitrogenase complex
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial enzyme complex catalyzing reduction of N2 to NH3.
+  - node_id: organic_acids
+    label: organic acids
+    node_type: CHEMICAL
+    description: Reductant/carbon source the plant transfers to intracellular bacteroids.
+  - node_id: iron_availability
+    label: iron availability
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Availability of iron, a cofactor for nitrogenase and leghemoglobin.
   edges:
   - subject: symbiotic_signalling
     predicate: enables
@@ -52,8 +84,8 @@ causal_graphs:
       the symbiosis.
     evidence:
     - reference: DOI:10.1038/nrmicro2990
-      notes: Oldroyd reviews symbiotic signalling establishing nitrogen-fixing
-        plant-microbe associations.
+      notes: Oldroyd reviews symbiotic signalling establishing nitrogen-fixing plant-microbe
+        associations.
     predicate_id: RO:0002327
   - subject: n2_fix_symbiosis_trait
     predicate: enables
@@ -61,9 +93,73 @@ causal_graphs:
     description: The symbiosis houses bacteroids that fix N2 inside root nodules.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.171
-      notes: Poole et al. describe the free-living-to-endosymbiont transition of
-        rhizobia forming N2-fixing legume root nodules.
+      notes: Poole et al. describe the free-living-to-endosymbiont transition of rhizobia
+        forming N2-fixing legume root nodules.
     predicate_id: RO:0002327
+  - subject: flavonoids
+    predicate: induces production of
+    object: nod_factor
+    description: Legume flavonoid exudates induce rhizobia to produce Nod factors.
+    evidence:
+    - reference: DOI:10.3389/fpls.2023.1284720
+      notes: Legumes secrete flavonoids that induce rhizobia to produce Nod factors.
+  - subject: nod_factor
+    predicate: enables
+    object: symbiotic_signalling
+    description: Perceived Nod factors initiate the nodulation signalling cascade.
+    evidence:
+    - reference: DOI:10.3389/fpls.2023.1284720
+      notes: Nod factors are perceived by Nod-factor receptors, triggering symbiotic
+        signalling.
+  - subject: leghemoglobin
+    predicate: buffers
+    object: microaerobic_environment
+    description: Leghemoglobin buffers oxygen concentration within nodules.
+    evidence:
+    - reference: DOI:10.3389/fpls.2023.1284720
+      notes: Leghemoglobins buffer the oxygen concentration within the nodules.
+  - subject: nodule_oxygen_diffusion_barrier
+    predicate: maintains
+    object: microaerobic_environment
+    description: A tightly packed cortical diffusion barrier limits oxygen flux into
+      the nodule interior.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01762-2
+      notes: A diffusion barrier of tightly packed cells limits oxygen flux; the multilayered
+        cortex functions as an adaptable oxygen diffusion barrier.
+  - subject: microaerobic_environment
+    predicate: enables
+    object: nitrogen_fixation
+    description: A low-oxygen environment is required for proper nitrogenase activity.
+    evidence:
+    - reference: DOI:10.3389/fpls.2023.1284720
+      notes: Symbiotic nitrogen fixation requires a low-oxygen environment for proper
+        activity of nitrogenase.
+  - subject: nitrogenase_complex
+    predicate: enables
+    object: nitrogen_fixation
+    description: The nitrogenase complex reduces N2 to NH3 (16 ATP per N2).
+    evidence:
+    - reference: DOI:10.1017/S1062798724000309
+      notes: The nitrogenase reaction consumes 16 ATP in the reduction of N2 to NH3.
+  - subject: organic_acids
+    predicate: enables
+    object: nitrogen_fixation
+    description: The plant supplies organic acids as reductant to intracellular bacteroids
+      fueling fixation.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01762-2
+      notes: The plant transfers reductant, typically organic acids, from plant cells
+        to intracellular rhizobia.
+  - subject: iron_availability
+    predicate: is required for
+    object: nitrogenase_complex
+    description: Iron is an essential cofactor for nitrogenase assembly and leghemoglobin
+      function.
+    evidence:
+    - reference: DOI:10.1093/pcp/pcae128
+      notes: Fe is essential as a cofactor for leghemoglobin and for assembling the
+        nitrogenase complex.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -76,4 +172,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (rhizobia-legume N2 fixation) with GO
     node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

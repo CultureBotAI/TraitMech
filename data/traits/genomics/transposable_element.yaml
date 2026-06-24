@@ -1,7 +1,7 @@
 identifier: traitmech:000092
 label: transposable element
-definition: A genomics trait describing possession of transposable elements — such as
-  insertion sequences and transposons — that move within the genome and drive genome
+definition: A genomics trait describing possession of transposable elements — such
+  as insertion sequences and transposons — that move within the genome and drive genome
   rearrangement, gene inactivation, and plasticity.
 definition_source: DOI:10.1111/1574-6976.12067
 trait_category: GENOMICS
@@ -26,8 +26,8 @@ evidence:
 causal_graphs:
 - graph_id: te_transposition_rearrangement
   title: Transposable elements drive DNA transposition and genome rearrangement
-  description: Evidence-backed causal sketch linking TE possession to DNA
-    transposition activity and resulting genome rearrangement and plasticity.
+  description: Evidence-backed causal sketch linking TE possession to DNA transposition
+    activity and resulting genome rearrangement and plasticity.
   nodes:
   - node_id: te_trait
     label: transposable element
@@ -43,6 +43,27 @@ causal_graphs:
     label: genome rearrangement
     node_type: QUALITY
     description: Insertions, deletions, and inversions of chromosomal segments.
+  - node_id: transposase
+    label: transposase
+    node_type: GENE_OR_PROTEIN
+    description: DDE-family enzyme encoded by the element that catalyzes its movement.
+  - node_id: te_insertion
+    label: transposable element insertion
+    node_type: BIOLOGICAL_PROCESS
+    description: Integration of a transposable element at a target genomic site.
+  - node_id: target_site_duplication
+    label: target site duplication
+    node_type: QUALITY
+    description: Short direct repeats flanking the element created upon insertion.
+  - node_id: gene_disruption
+    label: gene disruption
+    node_type: BIOLOGICAL_PROCESS
+    description: Inactivation of a gene by insertion of a transposable element into
+      it.
+  - node_id: homologous_recombination_is
+    label: homologous recombination between IS copies
+    node_type: BIOLOGICAL_PROCESS
+    description: Recombination between identical IS copies at distinct loci.
   edges:
   - subject: te_trait
     predicate: enables
@@ -50,8 +71,7 @@ causal_graphs:
     description: TEs encode transposases that catalyze transposition.
     evidence:
     - reference: DOI:10.1111/1574-6976.12067
-      notes: Siguier et al. review insertion-sequence transposase machinery and
-        activity.
+      notes: Siguier et al. review insertion-sequence transposase machinery and activity.
     predicate_id: RO:0002327
   - subject: dna_transposition
     predicate: causes
@@ -61,6 +81,45 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1235
       notes: Frost et al. cite transposons among MGEs driving genome evolution.
     predicate_id: biolink:causes
+  - subject: te_trait
+    predicate: has participant
+    object: transposase
+    description: The defining effector of a TE is a transposase required for movement.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00119-22
+      notes: IS element encodes a single ORF, a DDE-family transposase required for
+        movement (Harmer & Hall 2024).
+  - subject: transposase
+    predicate: enables
+    object: dna_transposition
+    description: Transposase activity is causal for element movement/transposition.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00119-22
+      notes: tnp26 encodes a transposase required for movement (Harmer & Hall 2024).
+  - subject: te_insertion
+    predicate: causes
+    object: target_site_duplication
+    description: Element insertion typically generates short flanking target site
+      duplications.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39964-7
+      notes: Insertion sequences typically create target site duplications (TSDs)
+        upon insertion (Sheng et al. 2023).
+  - subject: te_insertion
+    predicate: causes
+    object: gene_disruption
+    description: Insertion into a coding region disrupts gene function.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39964-7
+      notes: Element movement causes gene disruption (Sheng et al. 2023).
+  - subject: homologous_recombination_is
+    predicate: causes
+    object: genome_rearrangement
+    description: Recombination between identical IS copies produces genome rearrangements.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39964-7
+      notes: Homologous recombination between identical IS copies can produce genome
+        rearrangements (Sheng et al. 2023).
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -74,4 +133,10 @@ curation_history:
   changes: Added evidence-backed causal graph (transposition / genome rearrangement)
     with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
     to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

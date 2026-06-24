@@ -48,6 +48,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Compatible-solute accumulation and ion homeostasis tuned for seawater-range
       NaCl.
+  - node_id: slight_halophile_physiology
+    label: slight halophile / halotolerant physiology
+    node_type: STATE
+    description: Physiology of microbes with best growth at ~1-3% NaCl.
+  - node_id: salt_in_strategy
+    label: salt-in osmoregulation strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of inorganic ions (notably K+) and exclusion of Na+
+      to balance external salinity.
+  - node_id: compatible_solute_strategy
+    label: compatible-solute osmoregulation strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis or uptake of small organic osmolytes (salt-out strategy)
+      to offset osmotic stress.
+  - node_id: elevated_nacl
+    label: elevated external NaCl
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Increased external NaCl concentration imposing osmotic stress.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Compatible solute (CHEBI:17750) accumulated under osmotic stress.
+  - node_id: l_proline
+    label: L-proline
+    node_type: CHEMICAL
+    description: Compatible solute (CHEBI:17203) accumulated under osmotic stress.
   edges:
   - subject: seawater_nacl
     predicate: engages
@@ -75,6 +101,50 @@ causal_graphs:
       snippet: optimal NaCl
       notes: Supports the 1–3% optimum as a value within the NaCl-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: nacl_optimum_mid1_trait
+    predicate: defines
+    object: slight_halophile_physiology
+    description: A 1-3% (w/v) NaCl optimum defines slight-halophile/halotolerant physiology.
+    evidence:
+    - reference: DOI:10.3390/biotech14020049
+      notes: '"slight halophiles (0.2-0.5 M or 1-3% NaCl)" - supports trait scope/boundary.'
+  - subject: slight_halophile_physiology
+    predicate: associated with
+    object: salt_in_strategy
+    description: Slight-halophile physiology is broadly associated with the salt-in
+      (K+ accumulation) strategy.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      notes: '"The salt-in strategy involves maintaining a high intracellular concentration
+        of inorganic salts, mainly potassium" - general mechanism across halotolerant/halophilic
+        microbes.'
+  - subject: slight_halophile_physiology
+    predicate: associated with
+    object: compatible_solute_strategy
+    description: Slight-halophile physiology is broadly associated with the compatible-solute
+      (salt-out) strategy.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      notes: '"The salt-out strategy relies on biosynthesis or uptake of compatible
+        solutes" - general osmoadaptation mechanism.'
+  - subject: elevated_nacl
+    predicate: induces accumulation of
+    object: glycine_betaine
+    description: Rising external NaCl increases intracellular glycine betaine.
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      notes: '"The intracellular content of compatible solutes, including glycine
+        betaine, glutamate, and proline, increases with rising salinity levels" -
+        directional relationship is broadly applicable.'
+  - subject: elevated_nacl
+    predicate: induces accumulation of
+    object: l_proline
+    description: Rising external NaCl increases intracellular L-proline.
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      notes: '"The intracellular content of compatible solutes, including glycine
+        betaine, glutamate, and proline, increases with rising salinity levels" -
+        proline is a general osmolyte.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.834129+00:00'
   curator: seed_from_metpo
@@ -92,4 +162,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

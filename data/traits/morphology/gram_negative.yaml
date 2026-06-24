@@ -64,6 +64,54 @@ causal_graphs:
     label: counterstain
     node_type: CHEMICAL
     description: Safranin or similar stain producing pink/red appearance.
+  - node_id: outer_membrane_outer_leaflet
+    label: outer membrane outer leaflet
+    node_type: CELLULAR_LOCALIZATION
+    description: Outer leaflet of the Gram-negative outer membrane, occupied by LPS.
+  - node_id: divalent_cations
+    label: divalent cations (Mg2+/Ca2+)
+    node_type: CHEMICAL
+    description: Magnesium and calcium ions that bridge and stabilize LPS packing
+      in the OM.
+  - node_id: outer_membrane_barrier_function
+    label: outer membrane barrier function
+    node_type: MOLECULAR_FUNCTION
+    description: Low-permeability barrier property of the Gram-negative outer membrane.
+  - node_id: lpt_pathway
+    label: Lpt pathway
+    node_type: PATHWAY
+    description: Trans-envelope ATP-driven machinery transporting LPS from the inner
+      to outer membrane.
+  - node_id: bam_complex
+    label: BAM complex
+    node_type: GENE_OR_PROTEIN
+    description: Beta-barrel assembly machinery (BamA-E) that folds and inserts OMPs
+      into the outer membrane.
+  - node_id: beta_barrel_omps
+    label: beta-barrel outer membrane proteins
+    node_type: GENE_OR_PROTEIN
+    description: Beta-barrel outer membrane proteins folded and inserted by the BAM
+      complex.
+  - node_id: mla_pathway
+    label: Mla pathway
+    node_type: PATHWAY
+    description: Retrograde phospholipid transport system maintaining outer membrane
+      lipid asymmetry.
+  - node_id: outer_membrane_lipid_asymmetry
+    label: outer membrane lipid asymmetry
+    node_type: QUALITY
+    description: Asymmetric lipid distribution (LPS outer / phospholipid inner) of
+      the OM.
+  - node_id: tol_pal_system
+    label: Tol-Pal system
+    node_type: GENE_OR_PROTEIN
+    description: Envelope-spanning complex safeguarding connectivity of the Gram-negative
+      cell envelope.
+  - node_id: cell_envelope_connectivity
+    label: cell envelope connectivity
+    node_type: QUALITY
+    description: Maintained connectivity between outer membrane, peptidoglycan, and
+      inner membrane.
   edges:
   - subject: outer_membrane
     predicate: defines
@@ -114,6 +162,64 @@ causal_graphs:
       notes: Supports Gram stain procedure context; counterstain appearance follows
         dye-complex loss.
     predicate_id: METPO:2000202
+  - subject: lipopolysaccharide
+    predicate: occupies
+    object: outer_membrane_outer_leaflet
+    description: LPS occupies the outer leaflet of the Gram-negative outer membrane
+      (OM asymmetry).
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032521-014507
+      notes: LPS occupies the outer leaflet while phospholipids occupy the inner leaflet.
+  - subject: divalent_cations
+    predicate: stabilizes
+    object: lipopolysaccharide
+    description: Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer
+      leaflet.
+    evidence:
+    - reference: DOI:10.3390/pathogens13100889
+      notes: Divalent cations (Mg2+/Ca2+) stabilize LPS packing.
+  - subject: lipopolysaccharide
+    predicate: contributes to
+    object: outer_membrane_barrier_function
+    description: Tight LPS packing with OM proteins creates the impermeable OM barrier.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-032521-014507
+      notes: The tight packing of LPS and OM proteins creates an impermeable barrier.
+  - subject: lpt_pathway
+    predicate: transports
+    object: lipopolysaccharide
+    description: The Lpt machinery transports LPS across the periplasm for insertion
+      into the OM.
+    evidence:
+    - reference: DOI:10.1007/s12275-024-00137-w
+      notes: LPS transported to the OM by the ATP-driven Lpt machinery; moves LPS
+        across periplasm for OM insertion.
+  - subject: bam_complex
+    predicate: inserts
+    object: beta_barrel_omps
+    description: The BAM complex folds and inserts beta-barrel OMPs into the outer
+      membrane.
+    evidence:
+    - reference: DOI:10.3390/pathogens13100889
+      notes: The Bam complex (BamA-E) folds uOMPs into beta-barrels.
+  - subject: mla_pathway
+    predicate: maintains
+    object: outer_membrane_lipid_asymmetry
+    description: The Mla pathway counteracts phospholipid flipping to maintain OM
+      lipid asymmetry.
+    evidence:
+    - reference: DOI:10.3390/pathogens13100889
+      notes: Mla system performs retrograde transport to counteract PL flipping to
+        the outer leaflet.
+  - subject: tol_pal_system
+    predicate: safeguards
+    object: cell_envelope_connectivity
+    description: Tol-Pal safeguards connectivity between the three layers of the Gram-negative
+      envelope.
+    evidence:
+    - reference: DOI:10.1038/s44259-024-00065-0
+      notes: Tol-Pal safeguards connectivity between the three layers of the Gram-negative
+        cell envelope.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903067+00:00'
   curator: seed_from_metpo
@@ -161,4 +267,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16412×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -47,6 +47,22 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000060
     description: Non-environmental TraitMech child class under biological process.
+  - node_id: cellular_component
+    label: cellular component
+    node_type: CELLULAR_LOCALIZATION
+    description: GO cellular component where a molecular activity occurs.
+  - node_id: chemical_input
+    label: chemical input entity
+    node_type: CHEMICAL
+    description: Chemical entity consumed as input of a molecular activity.
+  - node_id: chemical_output
+    label: chemical output entity
+    node_type: CHEMICAL
+    description: Chemical entity produced as output of a molecular activity.
+  - node_id: molecular_function_downstream
+    label: downstream molecular function
+    node_type: MOLECULAR_FUNCTION
+    description: A molecular function causally downstream of another in a GO-CAM model.
   edges:
   - subject: gene_product
     predicate: carries out
@@ -76,6 +92,53 @@ causal_graphs:
       snippet: child term is a subtype of the parent term
       notes: Supports parent-child is-a interpretation for GO-style process hierarchies.
     predicate_id: rdfs:subClassOf
+  - subject: molecular_function
+    predicate: part of
+    object: biological_process_trait
+    description: GO Molecular Functions are linked to Biological Processes by mereological
+      part_of relations.
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: a GO Molecular Function and a GO Biological Process (BP) are linked by
+        mereological (part_of) relations
+  - subject: molecular_function
+    predicate: enabled by
+    object: gene_product
+    description: A molecular function activity is enabled by a gene product (RO:0002333).
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: Essential GO-CAM mechanistic edge; figure example "glucokinase activity
+        enabled by Hxk1".
+  - subject: molecular_function
+    predicate: occurs in
+    object: cellular_component
+    description: A molecular activity occurs in a cellular component (BFO:0000066).
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: Occurs in [BFO:0000066]; example "glucokinase activity occurs in cytosol".
+  - subject: molecular_function
+    predicate: has input
+    object: chemical_input
+    description: A molecular activity has a chemical entity as input (RO:0002233).
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: Has input [RO:0002233]
+  - subject: molecular_function
+    predicate: has output
+    object: chemical_output
+    description: A molecular activity has a chemical entity as output (RO:0002234).
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: Has output [RO:0002234]
+  - subject: molecular_function
+    predicate: causally upstream of or within
+    object: molecular_function_downstream
+    description: GO-CAMs causally link molecular functions into structured models
+      of biological processes (RO:0002418).
+    evidence:
+    - reference: DOI:10.1186/s40708-023-00208-5
+      notes: GO-CAMs arrange GO annotations into structured models of biological processes
+        by causally linking GO Molecular Functions
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866352+00:00'
   curator: seed_from_metpo
@@ -100,4 +163,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

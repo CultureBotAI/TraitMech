@@ -90,6 +90,91 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>external pH stress</strong>
+            <span class="edge-predicate">alters</span>
+            <strong>PMF partitioning (delta-pH / delta-psi)</strong>
+            
+            <p>External pH stress alters partitioning of the proton motive force between delta-pH and delta-psi.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">The two PMF components, delta-psi and delta-pH, are adjustable according to pH demand and can even reverse orientation under strong pH stress; broad foundational pH-homeostasis edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>constitutive pH-homeostasis machinery expression</strong>
+            <span class="edge-predicate">imposes energetic cost on</span>
+            <strong>energetic cost on growth near neutral pH</strong>
+            
+            <p>Constitutive expression of pH-homeostatic machinery imposes an energetic cost impairing growth near neutral pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Extremophiles often express major pH homeostatic mechanisms constitutively; this preparedness imposes an energetic cost and can impair growth at near-neutral pH (inferred breadth-constraint mechanism).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>Na+/H+ antiporter activity</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>alkaline pH homeostasis</strong>
+            
+            <p>Na+/H+ antiporter activity enables alkaline pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Na+/H+ antiport (notably the hetero-oligomeric Mrp system) is a major, causally important strategy for alkaline pH homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>F1Fo-ATPase hydrolytic proton pumping</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>acid stress survival</strong>
+            
+            <p>Hydrolytic F1Fo-ATPase proton pumping promotes acid stress survival.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Hydrolytic F1Fo-ATPase activity can be increased for ATP-dependent H+ extrusion under acid stress; strong acid-side homeostasis mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>glutamate decarboxylase GadB + GABA/glutamate antiporter</strong>
+            <span class="edge-predicate">consumes</span>
+            <strong>cytoplasmic proton consumption</strong>
+            
+            <p>Glutamate decarboxylase GadB coupled with a GABA/glutamate antiporter consumes cytoplasmic protons.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Amino acid decarboxylases like GadB with its antiporter coupling; canonical acid-resistance mechanism consuming cytoplasmic protons.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +318,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +683,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking very limited pH-homeostasis flexibility to a pH growth breadth of at most ~1 pH unit.", "edges": [{"description": "Very limited pH-homeostasis flexibility yields a narrow pH-delta breadth.", "evidence": [{"notes": "Supports very limited pH-homeostasis flexibility as the basis of stenotopic breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very_limited_ph_homeostasis", "target": "ph_delta_very_low_trait"}, {"description": "pH delta very low is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports a very narrow breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta_very_low_trait", "target": "ph_delta"}], "evidence_rows": [{"description": "Very limited pH-homeostasis flexibility yields a narrow pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited pH-homeostasis flexibility as the basis of stenotopic breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very limited pH-homeostasis flexibility", "target": "pH delta very low"}, {"description": "pH delta very low is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a very narrow breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta very low", "target": "pH delta"}], "graph_id": "ph_delta_very_low_stenotopic", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth \u2264 ~1 pH unit.", "grounding": "METPO:1000473", "id": "ph_delta_very_low_trait", "is_orphan": false, "label": "pH delta very low", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel proton extrusion and envelope buffering across changes in external pH.", "grounding": null, "id": "very_limited_ph_homeostasis", "is_orphan": false, "label": "very limited pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-delta-very-low stenotopic breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking very limited pH-homeostasis flexibility to a pH growth breadth of at most ~1 pH unit.", "edges": [{"description": "Very limited pH-homeostasis flexibility yields a narrow pH-delta breadth.", "evidence": [{"notes": "Supports very limited pH-homeostasis flexibility as the basis of stenotopic breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very_limited_ph_homeostasis", "target": "ph_delta_very_low_trait"}, {"description": "pH delta very low is a quantitative bin of the pH-delta phenotype.", "evidence": [{"notes": "Supports a very narrow breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta_very_low_trait", "target": "ph_delta"}, {"description": "External pH stress alters partitioning of the proton motive force between delta-pH and delta-psi.", "evidence": [{"notes": "The two PMF components, delta-psi and delta-pH, are adjustable according to pH demand and can even reverse orientation under strong pH stress; broad foundational pH-homeostasis edge.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-3", "is_orphan": false, "predicate": "alters", "predicate_id": null, "source": "external_ph_stress", "target": "pmf_partitioning"}, {"description": "Constitutive expression of pH-homeostatic machinery imposes an energetic cost impairing growth near neutral pH.", "evidence": [{"notes": "Extremophiles often express major pH homeostatic mechanisms constitutively; this preparedness imposes an energetic cost and can impair growth at near-neutral pH (inferred breadth-constraint mechanism).", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-4", "is_orphan": false, "predicate": "imposes energetic cost on", "predicate_id": null, "source": "constitutive_ph_homeostasis_expression", "target": "energetic_cost"}, {"description": "Na+/H+ antiporter activity enables alkaline pH homeostasis.", "evidence": [{"notes": "Na+/H+ antiport (notably the hetero-oligomeric Mrp system) is a major, causally important strategy for alkaline pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "na_h_antiporter_activity", "target": "alkaline_ph_homeostasis"}, {"description": "Hydrolytic F1Fo-ATPase proton pumping promotes acid stress survival.", "evidence": [{"notes": "Hydrolytic F1Fo-ATPase activity can be increased for ATP-dependent H+ extrusion under acid stress; strong acid-side homeostasis mechanism.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "f1fo_atpase_proton_pumping", "target": "acid_stress_survival"}, {"description": "Glutamate decarboxylase GadB coupled with a GABA/glutamate antiporter consumes cytoplasmic protons.", "evidence": [{"notes": "Amino acid decarboxylases like GadB with its antiporter coupling; canonical acid-resistance mechanism consuming cytoplasmic protons.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "consumes", "predicate_id": null, "source": "glutamate_decarboxylase_system", "target": "cytoplasmic_proton_consumption"}], "evidence_rows": [{"description": "Very limited pH-homeostasis flexibility yields a narrow pH-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited pH-homeostasis flexibility as the basis of stenotopic breadth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very limited pH-homeostasis flexibility", "target": "pH delta very low"}, {"description": "pH delta very low is a quantitative bin of the pH-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a very narrow breadth as a value within the pH-delta distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta very low", "target": "pH delta"}, {"description": "External pH stress alters partitioning of the proton motive force between delta-pH and delta-psi.", "edge_id": "edge-3", "evidence": [{"notes": "The two PMF components, delta-psi and delta-pH, are adjustable according to pH demand and can even reverse orientation under strong pH stress; broad foundational pH-homeostasis edge.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "alters", "predicate_id": null, "source": "external pH stress", "target": "PMF partitioning (delta-pH / delta-psi)"}, {"description": "Constitutive expression of pH-homeostatic machinery imposes an energetic cost impairing growth near neutral pH.", "edge_id": "edge-4", "evidence": [{"notes": "Extremophiles often express major pH homeostatic mechanisms constitutively; this preparedness imposes an energetic cost and can impair growth at near-neutral pH (inferred breadth-constraint mechanism).", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "imposes energetic cost on", "predicate_id": null, "source": "constitutive pH-homeostasis machinery expression", "target": "energetic cost on growth near neutral pH"}, {"description": "Na+/H+ antiporter activity enables alkaline pH homeostasis.", "edge_id": "edge-5", "evidence": [{"notes": "Na+/H+ antiport (notably the hetero-oligomeric Mrp system) is a major, causally important strategy for alkaline pH homeostasis.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": null, "source": "Na+/H+ antiporter activity", "target": "alkaline pH homeostasis"}, {"description": "Hydrolytic F1Fo-ATPase proton pumping promotes acid stress survival.", "edge_id": "edge-6", "evidence": [{"notes": "Hydrolytic F1Fo-ATPase activity can be increased for ATP-dependent H+ extrusion under acid stress; strong acid-side homeostasis mechanism.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "promotes", "predicate_id": null, "source": "F1Fo-ATPase hydrolytic proton pumping", "target": "acid stress survival"}, {"description": "Glutamate decarboxylase GadB coupled with a GABA/glutamate antiporter consumes cytoplasmic protons.", "edge_id": "edge-7", "evidence": [{"notes": "Amino acid decarboxylases like GadB with its antiporter coupling; canonical acid-resistance mechanism consuming cytoplasmic protons.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "consumes", "predicate_id": null, "source": "glutamate decarboxylase GadB + GABA/glutamate antiporter", "target": "cytoplasmic proton consumption"}], "graph_id": "ph_delta_very_low_stenotopic", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Survival of the cell under low external pH (acid) stress.", "grounding": null, "id": "acid_stress_survival", "is_orphan": false, "label": "acid stress survival", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of cytoplasmic pH under alkaline external conditions.", "grounding": null, "id": "alkaline_ph_homeostasis", "is_orphan": false, "label": "alkaline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Constitutive expression of pH-homeostatic machinery typical of pH extremophiles.", "grounding": null, "id": "constitutive_ph_homeostasis_expression", "is_orphan": false, "label": "constitutive pH-homeostasis machinery expression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Consumption of cytoplasmic protons buffering internal acidification.", "grounding": null, "id": "cytoplasmic_proton_consumption", "is_orphan": false, "label": "cytoplasmic proton consumption", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Energetic/proteomic cost that impairs growth at near-neutral pH.", "grounding": null, "id": "energetic_cost", "is_orphan": false, "label": "energetic cost on growth near neutral pH", "node_type": "STATE", "xrefs": []}, {"color": "#dcfce7", "description": "Deviation of external pH from the cytoplasmic optimum imposing stress on the cell.", "grounding": null, "id": "external_ph_stress", "is_orphan": false, "label": "external pH stress", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#cffafe", "description": "ATP-dependent hydrolytic proton extrusion by the F1Fo-ATPase under acid stress.", "grounding": null, "id": "f1fo_atpase_proton_pumping", "is_orphan": false, "label": "F1Fo-ATPase hydrolytic proton pumping", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#e0e7ff", "description": "Decarboxylase/antiporter acid-resistance module that consumes cytoplasmic protons.", "grounding": null, "id": "glutamate_decarboxylase_system", "is_orphan": false, "label": "glutamate decarboxylase GadB + GABA/glutamate antiporter", "node_type": "PATHWAY", "xrefs": []}, {"color": "#cffafe", "description": "Sodium:proton antiporter activity contributing to pH homeostasis.", "grounding": null, "id": "na_h_antiporter_activity", "is_orphan": false, "label": "Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting breadth \u2264 ~1 pH unit.", "grounding": "METPO:1000473", "id": "ph_delta_very_low_trait", "is_orphan": false, "label": "pH delta very low", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Adjustable partitioning of the proton motive force between the transmembrane pH gradient and membrane potential.", "grounding": null, "id": "pmf_partitioning", "is_orphan": false, "label": "PMF partitioning (delta-pH / delta-psi)", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel proton extrusion and envelope buffering across changes in external pH.", "grounding": null, "id": "very_limited_ph_homeostasis", "is_orphan": false, "label": "very limited pH-homeostasis flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-delta-very-low stenotopic breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +694,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -124,6 +124,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>type IV secretion system</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>host cell manipulation</strong>
+            
+            <p>Type IV secretion systems translocate protein effectors and toxins that manipulate host cells during infection.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-023-00974-3</code>
+                
+                <span class="meta">T4SSs function as protein effector translocators delivering effectors or toxins; viable targets to thwart infection by pathogens.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>host cell manipulation</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>human disease</strong>
+            
+            <p>Effector-driven host cell manipulation supports establishment of human infection and disease.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-023-00974-3</code>
+                
+                <span class="meta">Effector translocation enables host cell manipulation and infection by pathogens.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>horizontal gene transfer</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>acquisition of virulence/host-adaptation genes</strong>
+            
+            <p>HGT via plasmids, transduction, transposons, and IS elements enables acquisition of virulence and host-adaptation genes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae019</code>
+                
+                <span class="meta">HGT via conjugation, transduction, transposons, IS elements can be associated with gain of genes facilitating host tropism and virulence factors.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>acquisition of virulence/host-adaptation genes</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>human-adapted virulence factors</strong>
+            
+            <p>Acquired genes contribute the human-adapted virulence factor repertoire underlying human pathogenicity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae019</code>
+                
+                <span class="meta">Gene acquisition facilitates changes in host species tropism, including virulence factors enabling human-pathogenic lineages.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>within-host genetic diversification</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>within-host adaptation and chronic infection</strong>
+            
+            <p>Hypermutation, structural variation, and MGE/phage insertions generate diversity driving within-host adaptation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-pathmechdis-051122-111408</code>
+                
+                <span class="meta">Secondary mechanisms including hypermutation, structural variation, and MGE/phage insertions can increase pathogenicity and facilitate long-term persistence.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>within-host adaptation and chronic infection</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>human disease</strong>
+            
+            <p>Within-host adaptation increases pathogenicity and supports chronic human infection.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-pathmechdis-051122-111408</code>
+                
+                <span class="meta">Within-host evolution can increase pathogenicity and facilitate long-term persistence in the host.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>biofilm formation</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>treatment resistance and persistence</strong>
+            
+            <p>Biofilm formation makes bacteria resistant to treatment and supports persistence.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1370818</code>
+                
+                <span class="meta">Bacteria can form biofilms, making them resistant to treatment.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>treatment resistance and persistence</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>human disease</strong>
+            
+            <p>Treatment resistance and persistence exacerbate the severity and duration of human infection.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1370818</code>
+                
+                <span class="meta">Biofilm-associated resistance to treatment contributes to infection severity and persistence.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -282,6 +418,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -641,7 +783,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking human-adapted virulence factors, body-temperature and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.", "edges": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_virulence_factors", "target": "human_tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_tropism", "target": "human_disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_immune_evasion", "target": "human_disease"}, {"description": "Human disease manifests the human-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human_disease", "target": "human_pathogen_trait"}], "evidence_rows": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human-adapted virulence factors", "target": "human tissue tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human tissue tropism", "target": "human disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human immune evasion", "target": "human disease"}, {"description": "Human disease manifests the human-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human disease", "target": "human pathogen"}], "graph_id": "human_pathogen_anthropoid_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Pathology produced in a human host.", "grounding": null, "id": "human_disease", "is_orphan": false, "label": "human disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading human innate and adaptive immunity.", "grounding": null, "id": "human_immune_evasion", "is_orphan": false, "label": "human immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of Homo sapiens.", "grounding": "METPO:1004004", "id": "human_pathogen_trait", "is_orphan": false, "label": "human pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Preferential adhesion and growth in human-specific tissues at body-core temperatures.", "grounding": null, "id": "human_tropism", "is_orphan": false, "label": "human tissue tropism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to human-cell receptors and biology.", "grounding": null, "id": "human_virulence_factors", "is_orphan": false, "label": "human-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Human-pathogen Homo sapiens host adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking human-adapted virulence factors, body-temperature and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.", "edges": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_virulence_factors", "target": "human_tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_tropism", "target": "human_disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "human_immune_evasion", "target": "human_disease"}, {"description": "Human disease manifests the human-pathogen trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human_disease", "target": "human_pathogen_trait"}, {"description": "Type IV secretion systems translocate protein effectors and toxins that manipulate host cells during infection.", "evidence": [{"notes": "T4SSs function as protein effector translocators delivering effectors or toxins; viable targets to thwart infection by pathogens.", "reference": "DOI:10.1038/s41579-023-00974-3"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "type_iv_secretion_system", "target": "host_cell_manipulation"}, {"description": "Effector-driven host cell manipulation supports establishment of human infection and disease.", "evidence": [{"notes": "Effector translocation enables host cell manipulation and infection by pathogens.", "reference": "DOI:10.1038/s41579-023-00974-3"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "host_cell_manipulation", "target": "human_disease"}, {"description": "HGT via plasmids, transduction, transposons, and IS elements enables acquisition of virulence and host-adaptation genes.", "evidence": [{"notes": "HGT via conjugation, transduction, transposons, IS elements can be associated with gain of genes facilitating host tropism and virulence factors.", "reference": "DOI:10.1093/femsre/fuae019"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "horizontal_gene_transfer", "target": "virulence_gene_acquisition"}, {"description": "Acquired genes contribute the human-adapted virulence factor repertoire underlying human pathogenicity.", "evidence": [{"notes": "Gene acquisition facilitates changes in host species tropism, including virulence factors enabling human-pathogenic lineages.", "reference": "DOI:10.1093/femsre/fuae019"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "virulence_gene_acquisition", "target": "human_virulence_factors"}, {"description": "Hypermutation, structural variation, and MGE/phage insertions generate diversity driving within-host adaptation.", "evidence": [{"notes": "Secondary mechanisms including hypermutation, structural variation, and MGE/phage insertions can increase pathogenicity and facilitate long-term persistence.", "reference": "DOI:10.1146/annurev-pathmechdis-051122-111408"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "within_host_genetic_diversification", "target": "within_host_adaptation"}, {"description": "Within-host adaptation increases pathogenicity and supports chronic human infection.", "evidence": [{"notes": "Within-host evolution can increase pathogenicity and facilitate long-term persistence in the host.", "reference": "DOI:10.1146/annurev-pathmechdis-051122-111408"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "within_host_adaptation", "target": "human_disease"}, {"description": "Biofilm formation makes bacteria resistant to treatment and supports persistence.", "evidence": [{"notes": "Bacteria can form biofilms, making them resistant to treatment.", "reference": "DOI:10.3389/fmicb.2024.1370818"}], "id": "edge-11", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "biofilm_formation", "target": "treatment_resistance_persistence"}, {"description": "Treatment resistance and persistence exacerbate the severity and duration of human infection.", "evidence": [{"notes": "Biofilm-associated resistance to treatment contributes to infection severity and persistence.", "reference": "DOI:10.3389/fmicb.2024.1370818"}], "id": "edge-12", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "treatment_resistance_persistence", "target": "human_disease"}], "evidence_rows": [{"description": "Human-adapted virulence factors enable preferential adhesion and growth in human tissues.", "edge_id": "edge-1", "evidence": [{"notes": "Supports virulence factors as enablers of human tissue tropism.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human-adapted virulence factors", "target": "human tissue tropism"}, {"description": "Tissue tropism supports establishment of human disease at specific anatomical sites.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tissue tropism as a determinant of human-disease pattern.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human tissue tropism", "target": "human disease"}, {"description": "Evasion of human immunity supports sustained infection and disease.", "edge_id": "edge-3", "evidence": [{"notes": "Supports secretion-system-delivered effectors in human immune evasion.", "reference": "DOI:10.1038/nrmicro1592", "snippet": "secretion systems"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "human immune evasion", "target": "human disease"}, {"description": "Human disease manifests the human-pathogen trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "human disease", "target": "human pathogen"}, {"description": "Type IV secretion systems translocate protein effectors and toxins that manipulate host cells during infection.", "edge_id": "edge-5", "evidence": [{"notes": "T4SSs function as protein effector translocators delivering effectors or toxins; viable targets to thwart infection by pathogens.", "reference": "DOI:10.1038/s41579-023-00974-3"}], "predicate": "enables", "predicate_id": null, "source": "type IV secretion system", "target": "host cell manipulation"}, {"description": "Effector-driven host cell manipulation supports establishment of human infection and disease.", "edge_id": "edge-6", "evidence": [{"notes": "Effector translocation enables host cell manipulation and infection by pathogens.", "reference": "DOI:10.1038/s41579-023-00974-3"}], "predicate": "enables", "predicate_id": null, "source": "host cell manipulation", "target": "human disease"}, {"description": "HGT via plasmids, transduction, transposons, and IS elements enables acquisition of virulence and host-adaptation genes.", "edge_id": "edge-7", "evidence": [{"notes": "HGT via conjugation, transduction, transposons, IS elements can be associated with gain of genes facilitating host tropism and virulence factors.", "reference": "DOI:10.1093/femsre/fuae019"}], "predicate": "enables", "predicate_id": null, "source": "horizontal gene transfer", "target": "acquisition of virulence/host-adaptation genes"}, {"description": "Acquired genes contribute the human-adapted virulence factor repertoire underlying human pathogenicity.", "edge_id": "edge-8", "evidence": [{"notes": "Gene acquisition facilitates changes in host species tropism, including virulence factors enabling human-pathogenic lineages.", "reference": "DOI:10.1093/femsre/fuae019"}], "predicate": "enables", "predicate_id": null, "source": "acquisition of virulence/host-adaptation genes", "target": "human-adapted virulence factors"}, {"description": "Hypermutation, structural variation, and MGE/phage insertions generate diversity driving within-host adaptation.", "edge_id": "edge-9", "evidence": [{"notes": "Secondary mechanisms including hypermutation, structural variation, and MGE/phage insertions can increase pathogenicity and facilitate long-term persistence.", "reference": "DOI:10.1146/annurev-pathmechdis-051122-111408"}], "predicate": "enables", "predicate_id": null, "source": "within-host genetic diversification", "target": "within-host adaptation and chronic infection"}, {"description": "Within-host adaptation increases pathogenicity and supports chronic human infection.", "edge_id": "edge-10", "evidence": [{"notes": "Within-host evolution can increase pathogenicity and facilitate long-term persistence in the host.", "reference": "DOI:10.1146/annurev-pathmechdis-051122-111408"}], "predicate": "enables", "predicate_id": null, "source": "within-host adaptation and chronic infection", "target": "human disease"}, {"description": "Biofilm formation makes bacteria resistant to treatment and supports persistence.", "edge_id": "edge-11", "evidence": [{"notes": "Bacteria can form biofilms, making them resistant to treatment.", "reference": "DOI:10.3389/fmicb.2024.1370818"}], "predicate": "enables", "predicate_id": null, "source": "biofilm formation", "target": "treatment resistance and persistence"}, {"description": "Treatment resistance and persistence exacerbate the severity and duration of human infection.", "edge_id": "edge-12", "evidence": [{"notes": "Biofilm-associated resistance to treatment contributes to infection severity and persistence.", "reference": "DOI:10.3389/fmicb.2024.1370818"}], "predicate": "enables", "predicate_id": null, "source": "treatment resistance and persistence", "target": "human disease"}], "graph_id": "human_pathogen_anthropoid_adaptation", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Surface-attached communities increasing treatment resistance and persistence.", "grounding": null, "id": "biofilm_formation", "is_orphan": false, "label": "biofilm formation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Acquisition of genes via plasmids, transduction, transposons, and IS elements.", "grounding": null, "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Effector-driven subversion of host-cell processes promoting infection.", "grounding": null, "id": "host_cell_manipulation", "is_orphan": false, "label": "host cell manipulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Pathology produced in a human host.", "grounding": null, "id": "human_disease", "is_orphan": false, "label": "human disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Strategies evading human innate and adaptive immunity.", "grounding": null, "id": "human_immune_evasion", "is_orphan": false, "label": "human immune evasion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Pathogen of Homo sapiens.", "grounding": "METPO:1004004", "id": "human_pathogen_trait", "is_orphan": false, "label": "human pathogen", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Preferential adhesion and growth in human-specific tissues at body-core temperatures.", "grounding": null, "id": "human_tropism", "is_orphan": false, "label": "human tissue tropism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Virulence factors tuned to human-cell receptors and biology.", "grounding": null, "id": "human_virulence_factors", "is_orphan": false, "label": "human-adapted virulence factors", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Tolerance to antimicrobial treatment and persistent infection.", "grounding": null, "id": "treatment_resistance_persistence", "is_orphan": false, "label": "treatment resistance and persistence", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Multiprotein machine translocating protein effectors and toxins into host cells.", "grounding": null, "id": "type_iv_secretion_system", "is_orphan": false, "label": "type IV secretion system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Gain of one or more genes facilitating virulence and host-species tropism.", "grounding": null, "id": "virulence_gene_acquisition", "is_orphan": false, "label": "acquisition of virulence/host-adaptation genes", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Adaptation to the host enabling increased pathogenicity and long-term persistence.", "grounding": null, "id": "within_host_adaptation", "is_orphan": false, "label": "within-host adaptation and chronic infection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Hypermutation, structural variation, and MGE/phage insertions generating diversity.", "grounding": null, "id": "within_host_genetic_diversification", "is_orphan": false, "label": "within-host genetic diversification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Human-pathogen Homo sapiens host adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -652,7 +794,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

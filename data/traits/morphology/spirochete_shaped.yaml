@@ -48,6 +48,34 @@ causal_graphs:
     label: flat-wave morphology
     node_type: BIOLOGICAL_PROCESS
     description: Wave-like deformation of the spirochete cell body.
+  - node_id: cell_body_deformation
+    label: cell body deformation
+    node_type: BIOLOGICAL_PROCESS
+    description: Distortion and pushing of the spirochete cell body by periplasmic
+      flagellar motor action.
+  - node_id: flhE
+    label: FlhE
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic Sec-translocated protein preventing ectopic flagellar
+      filament assembly in the periplasm.
+  - node_id: ectopic_periplasmic_filament_assembly
+    label: ectopic periplasmic filament assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Aberrant assembly of flagellar filaments in the periplasm.
+  - node_id: divisome_elongasome_localization
+    label: divisome and elongasome localization
+    node_type: BIOLOGICAL_PROCESS
+    description: Localization of cell-division and elongation complexes required for
+      peptidoglycan synthesis.
+  - node_id: flgV
+    label: FlgV
+    node_type: GENE_OR_PROTEIN
+    description: Broadly conserved basal-body protein that modulates periplasmic flagellar
+      filament assembly.
+  - node_id: cell_morphology_division
+    label: cell division and morphology
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-division and whole-cell shape processes in spirochetes.
   edges:
   - subject: flaB
     predicate: builds
@@ -90,6 +118,68 @@ causal_graphs:
       notes: Supports spirochete-shape classes and their dependence on internal flagella-cell-body
         geometry.
     predicate_id: METPO:2000202
+  - subject: periplasmic_flagella
+    predicate: distort and push
+    object: cell_body_deformation
+    description: Periplasmic flagella enclosed in the periplasm distort and push the
+      cell body by flagellar motor action.
+    evidence:
+    - reference: DOI:10.1093/pnasnexus/pgad349
+      notes: spirochete flagella are enclosed in the periplasmic space and the filaments
+        distort and push the cell body by action of the flagellar motors
+  - subject: cell_body_deformation
+    predicate: produces
+    object: spirochete_shaped_trait
+    description: Flagella-driven cell body deformation produces the helical or flat-wave
+      spirochete morphology.
+    evidence:
+    - reference: DOI:10.1093/pnasnexus/pgad349
+      notes: Endoflagella-driven distortion of the cell body underlies spirochete
+        shape.
+  - subject: flhE
+    predicate: prevents
+    object: ectopic_periplasmic_filament_assembly
+    description: FlhE prevents ectopic assembly of flagellar filaments in the periplasm.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50278-0
+      notes: FlhE is a periplasmic, Sec-translocated protein that prevents ectopic
+        assembly of flagellar filaments in the periplasm.
+  - subject: ectopic_periplasmic_filament_assembly
+    predicate: mislocalizes
+    object: divisome_elongasome_localization
+    description: Ectopic periplasmic filament assembly mislocalizes divisome and elongasome
+      complexes required for peptidoglycan synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50278-0
+      notes: periplasmic filament assembly causally mis-localizes divisome and elongasome
+        complexes required for peptidoglycan synthesis
+  - subject: divisome_elongasome_localization
+    predicate: alters
+    object: spirochete_shaped_trait
+    description: Mislocalized divisome/elongasome alters cell curvature and rod morphology,
+      coupling periplasmic filaments to envelope shape.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50278-0
+      notes: producing altered cell curvature/loss of rod morphology and infrequent
+        cell lysis
+  - subject: flgV
+    predicate: modulates
+    object: periplasmic_flagella
+    description: FlgV localizes to the flagellar basal body and modulates periplasmic
+      flagellar filament assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54806-w
+      notes: FlgV localizes to the flagellar basal body and altering FlgV levels profoundly
+        impacts filament assembly
+  - subject: flgV
+    predicate: perturbs
+    object: cell_morphology_division
+    description: Reduced or aberrant FlgV levels perturb cell division and cell morphology
+      in spirochetes.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54806-w
+      notes: ΔflgV mutants exhibit defects in cell division and motility, including
+        conjoined spirochetes; overproduction leads to cell elongation
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899870+00:00'
   curator: seed_from_metpo
@@ -120,4 +210,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1, biolink:interacts_with×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -43,6 +43,43 @@ causal_graphs:
     grounding: GO:0043107
     description: Polymerization and disassembly cycles driving pilus extension and
       retraction.
+  - node_id: pilb_extension_atpase
+    label: PilB extension ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic motor ATPase that powers type IV pilus filament extension.
+  - node_id: pilt_retraction_atpase
+    label: PilT retraction ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic motor ATPase that powers type IV pilus retraction.
+  - node_id: pilus_extension
+    label: type IV pilus extension
+    node_type: BIOLOGICAL_PROCESS
+    description: Polymerization of pilin subunits extending the pilus filament.
+  - node_id: pilus_retraction
+    label: type IV pilus retraction
+    node_type: BIOLOGICAL_PROCESS
+    description: Depolymerization of pilin subunits retracting the pilus and pulling
+      the cell.
+  - node_id: pilq_secretin
+    label: PilQ secretin
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane secretin channel through which the pilus filament
+      is exposed to the cell surface.
+  - node_id: pilus_filament_surface_exposure
+    label: type IV pilus surface exposure
+    node_type: BIOLOGICAL_PROCESS
+    description: Exposure of the assembled pilus filament beyond the cell envelope
+      to the external surface.
+  - node_id: pilmnop_alignment_complex
+    label: PilM/N/O/P alignment complex
+    node_type: CELLULAR_LOCALIZATION
+    description: Inner-membrane/periplasmic alignment subcomplex of the type IV pilus
+      machine.
+  - node_id: t4p_machine
+    label: type IV pilus machine
+    node_type: CELLULAR_LOCALIZATION
+    description: Multiprotein nanomachine assembling, extending and retracting the
+      type IV pilus.
   edges:
   - subject: type_iv_pilus
     predicate: enables
@@ -60,6 +97,49 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.micro.57.030502.091014
       notes: Harshey treats twitching as a distinct surface-translocation strategy.
     predicate_id: RO:0002327
+  - subject: pilb_extension_atpase
+    predicate: drives
+    object: pilus_extension
+    description: PilB ATPase powers extension of the type IV pilus filament.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      notes: 'Roberge & Burrows 2024: "Extension is driven by PilB bound to PilC";
+        T4P undergo cycles of extension/retraction powered by cytoplasmic motor ATPases.'
+  - subject: pilt_retraction_atpase
+    predicate: drives
+    object: pilus_retraction
+    description: PilT ATPase powers retraction of the type IV pilus filament.
+    evidence:
+    - reference: DOI:10.1128/jb.00359-24
+      notes: 'Roberge & Burrows 2024: "Retraction is driven by PilT, which engages
+        with PilC within the same cytoplasmic socket."'
+  - subject: pilus_retraction
+    predicate: enables
+    object: twitching_trait
+    description: Pilus retraction pulls the cell across the surface, producing twitching
+      translocation.
+    evidence:
+    - reference: DOI:10.1128/jb.00442-23
+      notes: 'Geiger et al. 2024: twitching is movement that pulls the cell across
+        a surface through cooperative binding, pulling, and unbinding.'
+  - subject: pilq_secretin
+    predicate: enables surface exposure of
+    object: pilus_filament_surface_exposure
+    description: PilQ secretin is required for surface exposure of the assembled pilus
+      filament.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001311
+      notes: 'Pelicic 2023: pilQ pilT mutants assemble filaments trapped in the periplasm,
+        indicating PilQ is required for surface exposure.'
+  - subject: pilmnop_alignment_complex
+    predicate: part of
+    object: t4p_machine
+    description: The PilM/N/O/P alignment subcomplex is a structural part of the type
+      IV pilus machine.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53638-y
+      notes: 'Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting
+        of PilP, PilO, PilN, and PilM.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -78,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0044096×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

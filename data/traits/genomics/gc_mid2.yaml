@@ -39,6 +39,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Recombination-associated GC-favoring activity sufficient to elevate
       GC content into the mid-high range.
+  - node_id: homologous_recombination
+    label: homologous recombination
+    node_type: BIOLOGICAL_PROCESS
+    description: Template-directed exchange/repair pathway that drives GC-biased gene
+      conversion.
+  - node_id: mutation_bias_at
+    label: mutation bias toward AT
+    node_type: BIOLOGICAL_PROCESS
+    description: Universal excess of G/C->A/T mutations in bacteria opposing high
+      genomic GC.
+  - node_id: cytosine_deamination
+    label: cytosine deamination
+    node_type: BIOLOGICAL_PROCESS
+    description: Spontaneous/chemically promoted C->T transition source contributing
+      to AT enrichment.
+  - node_id: guanine_oxidation
+    label: guanine oxidation / 8-oxoG damage
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidative lesion process yielding G->T/C->A transversions and compositional
+      bias.
+  - node_id: dna_repair_efficiency
+    label: DNA repair efficiency
+    node_type: BIOLOGICAL_PROCESS
+    description: Efficiency/specificity of repair pathways affecting which mutational
+      biases are fixed.
+  - node_id: assembly_gc_bias
+    label: sequencing/assembly GC bias
+    node_type: EXPERIMENTAL_FACTOR
+    description: Technical bias where observed assembly GC shifts with true GC%, depth,
+      and error rate.
   edges:
   - subject: moderate_gbgc
     predicate: produces
@@ -59,6 +89,56 @@ causal_graphs:
       snippet: GC content
       notes: Supports the 57.0–66.3% bin as a value within the GC-content distribution.
     predicate_id: rdfs:subClassOf
+  - subject: homologous_recombination
+    predicate: positively influences
+    object: moderate_gbgc
+    description: Recombination increases fixation of AT->GC mutations via GC-biased
+      gene conversion.
+    evidence:
+    - reference: DOI:10.1101/011023
+      notes: 'gBGC: recombination tends to increase fixation of AT->GC mutations.'
+  - subject: mutation_bias_at
+    predicate: negatively influences
+    object: gc_mid2_trait
+    description: Universal AT-biased mutation opposes maintenance of mid-high genomic
+      GC.
+    evidence:
+    - reference: DOI:10.1101/011023
+      notes: Universal excess of G/C->A/T mutations; mutation universally biased towards
+        AT.
+  - subject: cytosine_deamination
+    predicate: positively influences
+    object: mutation_bias_at
+    description: Cytosine deamination (C->T) drives A+T enrichment.
+    evidence:
+    - reference: DOI:10.63635/mrj.v1i4.188
+      notes: Cytosine deamination (C->T) drives A+T enrichment.
+  - subject: guanine_oxidation
+    predicate: positively influences
+    object: mutation_bias_at
+    description: Guanine oxidation to 8-oxo-guanine (G->T) contributes to AT-biased
+      composition.
+    evidence:
+    - reference: DOI:10.63635/mrj.v1i4.188
+      notes: Guanine oxidation to 8-oxo-guanine (G->T).
+  - subject: dna_repair_efficiency
+    predicate: influences
+    object: gc_mid2_trait
+    description: Variation in repair efficiency affects fixation of changes and long-term
+      G+C content.
+    evidence:
+    - reference: DOI:10.63635/mrj.v1i4.188
+      notes: Variations in DNA repair efficiency influence fixation and thus long-term
+        G+C content.
+  - subject: assembly_gc_bias
+    predicate: can distort measurement of
+    object: gc_mid2_trait
+    description: Assembly conditions can bias observed GC% in a direction dependent
+      on true GC%.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09910-4
+      notes: In low-GC genomes factors inflate assembly GC; in high-GC genomes they
+        decrease it.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817814+00:00'
   curator: seed_from_metpo
@@ -76,4 +156,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

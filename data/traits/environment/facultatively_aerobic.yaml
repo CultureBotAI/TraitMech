@@ -52,6 +52,32 @@ causal_graphs:
     label: FNR-type oxygen-responsive regulation
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensing regulatory systems that tune respiratory metabolism.
+  - node_id: terminal_acceptor_availability
+    label: terminal electron acceptor availability
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Availability of a final electron acceptor (e.g. oxygen vs fumarate)
+      in the environment.
+  - node_id: terminal_branch_choice
+    label: terminal respiratory branch choice
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection of which terminal respiratory enzyme/branch is active.
+  - node_id: arcab_system
+    label: ArcAB two-component system
+    node_type: GENE_OR_PROTEIN
+    description: Redox-responsive two-component regulatory system controlling aerobic
+      respiration.
+  - node_id: anaerobic_metabolism_genes
+    label: anaerobic metabolism genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes encoding anaerobic metabolic functions activated under anoxia.
+  - node_id: aerobic_metabolism_genes
+    label: aerobic metabolism genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes encoding aerobic respiratory functions repressed under anoxia.
+  - node_id: cytochrome_bd_oxidase
+    label: cytochrome bd oxidase
+    node_type: GENE_OR_PROTEIN
+    description: High-affinity terminal oxidase that reduces oxygen at low O2 concentrations.
   edges:
   - subject: molecular_oxygen
     predicate: enables
@@ -91,6 +117,57 @@ causal_graphs:
     - reference: DOI:10.1089/ars.2011.4051
       snippet: adaptation of respiratory metabolism to changing environments
       notes: Supports regulatory switching between oxygen regimes.
+  - subject: terminal_acceptor_availability
+    predicate: determines
+    object: terminal_branch_choice
+    description: Which terminal respiratory enzyme is active depends on the available
+      final electron acceptor.
+    evidence:
+    - reference: DOI:10.1128/jb.00389-22
+      notes: 'which terminal enzyme is active depends on the availability of the final
+        electron acceptor: fumarate or oxygen.'
+  - subject: arcab_system
+    predicate: represses
+    object: aerobic_respiration
+    description: ArcAB two-component regulatory system represses aerobic respiration
+      under reducing conditions.
+    evidence:
+    - reference: DOI:10.1128/mbio.01448-23
+      notes: ArcAB, a two-component regulatory system that represses aerobic respiration;
+        conserved switch in Enterobacterales.
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: fnr_type_regulation
+    description: Oxygen directly inactivates FNR by oxidizing its iron-sulfur cluster,
+      a core oxygen-sensing mechanism.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad750
+      notes: oxygen directly inactivates Fnr by oxidizing that iron-sulfur cluster;
+        widely generalizable oxygen-sensing edge.
+  - subject: fnr_type_regulation
+    predicate: activates
+    object: anaerobic_metabolism_genes
+    description: When active under anoxia, FNR activates anaerobic metabolism genes.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad750
+      notes: when active, Fnr activates anaerobic metabolism genes and represses aerobic
+        genes.
+  - subject: fnr_type_regulation
+    predicate: represses
+    object: aerobic_metabolism_genes
+    description: Active FNR represses aerobic metabolism genes under anoxic conditions.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad750
+      notes: Fnr activates anaerobic metabolism genes and represses aerobic genes.
+  - subject: cytochrome_bd_oxidase
+    predicate: has high affinity for
+    object: molecular_oxygen
+    description: Cytochrome bd is a high-affinity terminal oxidase enabling oxygen
+      respiration at low O2.
+    evidence:
+    - reference: DOI:10.1128/aem.00378-23
+      notes: cytochrome bd supports high O2 consumption and high-affinity oxygen reduction
+        at the cell surface.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853277+00:00'
   curator: seed_from_metpo
@@ -118,4 +195,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

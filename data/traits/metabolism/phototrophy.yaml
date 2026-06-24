@@ -1,8 +1,8 @@
 identifier: traitmech:000037
 label: phototrophy
 definition: A metabolism in which an organism captures light as its energy source.
-  It encompasses chlorophyll-based photosynthesis (with photochemical reaction
-  centers) and retinal-based (rhodopsin) light-driven ion pumping.
+  It encompasses chlorophyll-based photosynthesis (with photochemical reaction centers)
+  and retinal-based (rhodopsin) light-driven ion pumping.
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
@@ -20,13 +20,13 @@ evidence:
     and rhodopsin-based mechanisms; parent of the photosynthesis and proteorhodopsin
     phototrophy sub-variants.
 - reference: DOI:10.1126/science.289.5486.1902
-  notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as a
-    light-energy capture mechanism distinct from chlorophyll-based photosynthesis.
+  notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as a light-energy
+    capture mechanism distinct from chlorophyll-based photosynthesis.
 causal_graphs:
 - graph_id: phototrophy_light_energy_capture
   title: Phototrophy captures light as cellular energy
-  description: Evidence-backed causal sketch linking light input to ATP/PMF
-    generation across chlorophyll- and retinal-based phototrophic mechanisms.
+  description: Evidence-backed causal sketch linking light input to ATP/PMF generation
+    across chlorophyll- and retinal-based phototrophic mechanisms.
   nodes:
   - node_id: phototrophy_trait
     label: phototrophy
@@ -43,6 +43,41 @@ causal_graphs:
     node_type: STATE
     grounding: METPO:1007500
     description: Bioenergetic gradient driving ATP synthesis.
+  - node_id: microbial_rhodopsin
+    label: microbial rhodopsin
+    node_type: GENE_OR_PROTEIN
+    description: Retinal-binding light-activated membrane protein driving the photocycle.
+  - node_id: rhodopsin_photocycle
+    label: rhodopsin photocycle
+    node_type: BIOLOGICAL_PROCESS
+    description: Light-driven cyclic conformational/photochemical cycle of microbial
+      rhodopsins.
+  - node_id: atp_synthesis
+    label: ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of ATP driven by the transmembrane proton gradient.
+  - node_id: photosystem_ii
+    label: photosystem II
+    node_type: GENE_OR_PROTEIN
+    description: Light-driven water-oxidizing complex initiating photosynthetic electron
+      transport.
+  - node_id: photosynthetic_electron_transport
+    label: photosynthetic electron transport chain
+    node_type: BIOLOGICAL_PROCESS
+    description: Electron flow from water through PSII, cytochrome b6f and PSI.
+  - node_id: nadph
+    label: NADPH
+    node_type: CHEMICAL
+    description: Reducing power produced by photosynthetic electron transport.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    description: Cellular energy currency produced from the photosynthetic proton
+      gradient.
+  - node_id: high_light
+    label: high light intensity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Excess photon flux causing photodamage.
   edges:
   - subject: light
     predicate: causes
@@ -50,8 +85,7 @@ causal_graphs:
     description: Light availability is the input the phototrophic trait realizes.
     evidence:
     - reference: DOI:10.1016/j.tim.2006.09.001
-      notes: Bryant & Frigaard frame phototrophy as the broad use of light for
-        energy.
+      notes: Bryant & Frigaard frame phototrophy as the broad use of light for energy.
     predicate_id: biolink:causes
   - subject: phototrophy_trait
     predicate: enables
@@ -63,18 +97,86 @@ causal_graphs:
       notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as
         a light-driven proton pump, complementing chlorophyll-based photosynthesis.
     predicate_id: RO:0002327
+  - subject: light
+    predicate: activates
+    object: rhodopsin_photocycle
+    description: Visible light activates the microbial rhodopsin photocycle across
+      taxa.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae175
+      notes: '"All rhodopsins are activated by visible light and return to their original
+        state through a photocycle"; broad rhodopsin mechanism, not limited to one
+        taxon.'
+  - subject: microbial_rhodopsin
+    predicate: enables
+    object: rhodopsin_photocycle
+    description: During the photocycle, microbial rhodopsins exhibit ion-transport
+      function.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae175
+      notes: '"During the photocycle, they exhibit their cognate protein functions
+        such as ion transport"; general mechanistic edge for rhodopsin phototrophy.'
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthesis
+    description: The proton gradient drives ATP synthesis, conserving light-derived
+      energy.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02177-23
+      notes: '"creating a proton gradient to drive the synthesis of ATP"; direct support
+        for rhodopsin-based energy conservation.'
+  - subject: photosystem_ii
+    predicate: supplies electrons to
+    object: photosynthetic_electron_transport
+    description: PSII water oxidation supplies electrons to the photosynthetic electron
+      transport chain.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: '"electrons from the photo-oxidation of water in PSII are transferred
+        through plastoquinone to cytochrome b6f"; canonical oxygenic phototrophy edge.'
+  - subject: photosynthetic_electron_transport
+    predicate: produces
+    object: nadph
+    description: Electron flow through cytochrome b6f and PSI reduces ferredoxin/NADP+
+      to NADPH.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: '"These electrons are eventually transferred to ferredoxin and NADP+
+        to form NADPH"; canonical oxygenic phototrophy edge.'
+  - subject: photosynthetic_electron_transport
+    predicate: produces
+    object: atp
+    description: Photosynthetic electron transfer establishes a proton gradient that
+      produces ATP.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: '"NADPH and ATP are produced from a proton gradient"; canonical oxygenic
+        phototrophy edge.'
+  - subject: high_light
+    predicate: damages
+    object: photosystem_ii
+    description: High light intensity and resulting free radicals damage PSII (photoinhibition).
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: '"High-energy photons and the generation of free radicals damage PSII";
+        strong environmental inhibitor edge.'
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
   changes: Minted intermediate axis class (phototrophy) to parent the photosynthesis
-    and proteorhodopsin-phototrophy traits, replacing their direct attachment to
-    METPO:1000060 (metabolism).
+    and proteorhodopsin-phototrophy traits, replacing their direct attachment to METPO:1000060
+    (metabolism).
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (phototrophy / light → PMF) with
-    PATO/METPO node groundings and RO/biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (phototrophy / light → PMF) with PATO/METPO
+    node groundings and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

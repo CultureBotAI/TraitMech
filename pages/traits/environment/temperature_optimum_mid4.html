@@ -107,6 +107,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>temperature downshift</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>unsaturated fatty acid proportion</strong>
+            
+            <p>Temperature downshift increases the proportion of unsaturated fatty acids (homeoviscous adaptation).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Bacteria perform homeoviscous adaptation by incorporating proportionally more unsaturated fatty acids as growth temperature decreases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>unsaturated fatty acid proportion</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>membrane fluidity homeostasis</strong>
+            
+            <p>Increased unsaturated fatty acids maintain membrane fluidity homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Disrupting bilayer order optimizes cellular processes at the new temperature; membrane fluidity homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>membrane fluidity homeostasis</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>unsaturated fatty acid biosynthesis response</strong>
+            
+            <p>Sensed decreases in membrane fluidity induce the unsaturated fatty acid biosynthesis response.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Microbes sense decreases in membrane fluidity and initiate responses that upregulate biosynthesis of unsaturated fatty acids.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>RNA thermometer hairpin</strong>
+            <span class="edge-predicate">occludes</span>
+            <strong>Shine-Dalgarno / AUG ribosome binding site</strong>
+            
+            <p>RNA thermometer hairpins occlude the Shine-Dalgarno/AUG region, repressing translation at low temperature.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">ROSE and FourU RNA thermometers form inhibitory hairpins that cover Shine-Dalgarno/AUG.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>temperature upshift / heat shock</strong>
+            <span class="edge-predicate">melts</span>
+            <strong>RNA thermometer hairpin</strong>
+            
+            <p>Temperature upshift / heat shock melts RNA thermometer structures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">RNA thermometers are stable at low temperatures but undergo conformational change (melting) at heat shock.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>RNA thermometer hairpin</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>ribosome binding and translation initiation</strong>
+            
+            <p>Melting of the RNA thermometer exposes the ribosome binding site and enables translation initiation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Melting releases translation inhibition, allowing ribosome binding and translation initiation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>DnaK chaperone</strong>
+            <span class="edge-predicate">negatively regulates</span>
+            <strong>RpoH (sigma-32) heat-shock sigma factor</strong>
+            
+            <p>DnaK binds and retains RpoH, negatively regulating the heat-shock sigma factor.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">DnaK binds and retains RpoH until heat-denatured proteins displace it.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>FtsH protease</strong>
+            <span class="edge-predicate">controls abundance of</span>
+            <strong>RpoH (sigma-32) heat-shock sigma factor</strong>
+            
+            <p>FtsH protease controls RpoH protein levels.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">ATP-dependent proteases FtsH and ClpXP control RpoH protein levels.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -252,6 +388,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -611,7 +753,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking warm-mesophile membrane and enzyme adaptation to a temperature optimum between 34 and 40 \u00b0C.", "edges": [{"description": "Warm host-associated environments engage warm-mesophile adaptation.", "evidence": [{"notes": "Supports homoviscous adaptation at warm-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "warm_environment", "target": "warm_mesophile_adaptation"}, {"description": "Warm-mesophile adaptation yields a 34\u201340 \u00b0C optimum.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as the warm-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "warm_mesophile_adaptation", "target": "temperature_optimum_mid4_trait"}, {"description": "Temperature optimum mid4 is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_mid4_trait", "target": "temperature_optimum"}], "evidence_rows": [{"description": "Warm host-associated environments engage warm-mesophile adaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous adaptation at warm-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "engages", "predicate_id": null, "source": "warm host-associated environment", "target": "warm-mesophile adaptation"}, {"description": "Warm-mesophile adaptation yields a 34\u201340 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as the warm-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "warm-mesophile adaptation", "target": "temperature optimum mid4"}, {"description": "Temperature optimum mid4 is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum mid4", "target": "temperature optimum"}], "graph_id": "temperature_optimum_mid4_warm_mesophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum approximately 34\u201340 \u00b0C.", "grounding": "METPO:1000446", "id": "temperature_optimum_mid4_trait", "is_orphan": false, "label": "temperature optimum mid4", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature in the 34\u201340 \u00b0C range, typical of many mammalian hosts.", "grounding": null, "id": "warm_environment", "is_orphan": false, "label": "warm host-associated environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane and enzyme repertoires tuned for warm host-body temperatures.", "grounding": null, "id": "warm_mesophile_adaptation", "is_orphan": false, "label": "warm-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-optimum-mid4 warm-mesophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking warm-mesophile membrane and enzyme adaptation to a temperature optimum between 34 and 40 \u00b0C.", "edges": [{"description": "Warm host-associated environments engage warm-mesophile adaptation.", "evidence": [{"notes": "Supports homoviscous adaptation at warm-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "engages", "predicate_id": null, "source": "warm_environment", "target": "warm_mesophile_adaptation"}, {"description": "Warm-mesophile adaptation yields a 34\u201340 \u00b0C optimum.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as the warm-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "warm_mesophile_adaptation", "target": "temperature_optimum_mid4_trait"}, {"description": "Temperature optimum mid4 is a quantitative bin of the temperature-optimum phenotype.", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_optimum_mid4_trait", "target": "temperature_optimum"}, {"description": "Temperature downshift increases the proportion of unsaturated fatty acids (homeoviscous adaptation).", "evidence": [{"notes": "Bacteria perform homeoviscous adaptation by incorporating proportionally more unsaturated fatty acids as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "temperature_downshift", "target": "unsaturated_fatty_acid_proportion"}, {"description": "Increased unsaturated fatty acids maintain membrane fluidity homeostasis.", "evidence": [{"notes": "Disrupting bilayer order optimizes cellular processes at the new temperature; membrane fluidity homeostasis.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-5", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "unsaturated_fatty_acid_proportion", "target": "membrane_fluidity_homeostasis"}, {"description": "Sensed decreases in membrane fluidity induce the unsaturated fatty acid biosynthesis response.", "evidence": [{"notes": "Microbes sense decreases in membrane fluidity and initiate responses that upregulate biosynthesis of unsaturated fatty acids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "membrane_fluidity_homeostasis", "target": "unsaturated_fa_biosynthesis_response"}, {"description": "RNA thermometer hairpins occlude the Shine-Dalgarno/AUG region, repressing translation at low temperature.", "evidence": [{"notes": "ROSE and FourU RNA thermometers form inhibitory hairpins that cover Shine-Dalgarno/AUG.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-7", "is_orphan": false, "predicate": "occludes", "predicate_id": null, "source": "rna_thermometer", "target": "shine_dalgarno_sequence"}, {"description": "Temperature upshift / heat shock melts RNA thermometer structures.", "evidence": [{"notes": "RNA thermometers are stable at low temperatures but undergo conformational change (melting) at heat shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-8", "is_orphan": false, "predicate": "melts", "predicate_id": null, "source": "temperature_upshift", "target": "rna_thermometer"}, {"description": "Melting of the RNA thermometer exposes the ribosome binding site and enables translation initiation.", "evidence": [{"notes": "Melting releases translation inhibition, allowing ribosome binding and translation initiation.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "rna_thermometer", "target": "translation_initiation"}, {"description": "DnaK binds and retains RpoH, negatively regulating the heat-shock sigma factor.", "evidence": [{"notes": "DnaK binds and retains RpoH until heat-denatured proteins displace it.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-10", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": null, "source": "dnak_chaperone", "target": "rpoh_sigma_factor"}, {"description": "FtsH protease controls RpoH protein levels.", "evidence": [{"notes": "ATP-dependent proteases FtsH and ClpXP control RpoH protein levels.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-11", "is_orphan": false, "predicate": "controls abundance of", "predicate_id": null, "source": "ftsh_protease", "target": "rpoh_sigma_factor"}], "evidence_rows": [{"description": "Warm host-associated environments engage warm-mesophile adaptation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous adaptation at warm-mesophilic temperatures.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "engages", "predicate_id": null, "source": "warm host-associated environment", "target": "warm-mesophile adaptation"}, {"description": "Warm-mesophile adaptation yields a 34\u201340 \u00b0C optimum.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as the warm-mesophile outcome.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "warm-mesophile adaptation", "target": "temperature optimum mid4"}, {"description": "Temperature optimum mid4 is a quantitative bin of the temperature-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 34\u201340 \u00b0C optimum as a value within the temperature-optimum distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature optimum mid4", "target": "temperature optimum"}, {"description": "Temperature downshift increases the proportion of unsaturated fatty acids (homeoviscous adaptation).", "edge_id": "edge-4", "evidence": [{"notes": "Bacteria perform homeoviscous adaptation by incorporating proportionally more unsaturated fatty acids as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": null, "source": "temperature downshift", "target": "unsaturated fatty acid proportion"}, {"description": "Increased unsaturated fatty acids maintain membrane fluidity homeostasis.", "edge_id": "edge-5", "evidence": [{"notes": "Disrupting bilayer order optimizes cellular processes at the new temperature; membrane fluidity homeostasis.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "maintains", "predicate_id": null, "source": "unsaturated fatty acid proportion", "target": "membrane fluidity homeostasis"}, {"description": "Sensed decreases in membrane fluidity induce the unsaturated fatty acid biosynthesis response.", "edge_id": "edge-6", "evidence": [{"notes": "Microbes sense decreases in membrane fluidity and initiate responses that upregulate biosynthesis of unsaturated fatty acids.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "induces", "predicate_id": null, "source": "membrane fluidity homeostasis", "target": "unsaturated fatty acid biosynthesis response"}, {"description": "RNA thermometer hairpins occlude the Shine-Dalgarno/AUG region, repressing translation at low temperature.", "edge_id": "edge-7", "evidence": [{"notes": "ROSE and FourU RNA thermometers form inhibitory hairpins that cover Shine-Dalgarno/AUG.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "occludes", "predicate_id": null, "source": "RNA thermometer hairpin", "target": "Shine-Dalgarno / AUG ribosome binding site"}, {"description": "Temperature upshift / heat shock melts RNA thermometer structures.", "edge_id": "edge-8", "evidence": [{"notes": "RNA thermometers are stable at low temperatures but undergo conformational change (melting) at heat shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "melts", "predicate_id": null, "source": "temperature upshift / heat shock", "target": "RNA thermometer hairpin"}, {"description": "Melting of the RNA thermometer exposes the ribosome binding site and enables translation initiation.", "edge_id": "edge-9", "evidence": [{"notes": "Melting releases translation inhibition, allowing ribosome binding and translation initiation.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "enables", "predicate_id": null, "source": "RNA thermometer hairpin", "target": "ribosome binding and translation initiation"}, {"description": "DnaK binds and retains RpoH, negatively regulating the heat-shock sigma factor.", "edge_id": "edge-10", "evidence": [{"notes": "DnaK binds and retains RpoH until heat-denatured proteins displace it.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "negatively regulates", "predicate_id": null, "source": "DnaK chaperone", "target": "RpoH (sigma-32) heat-shock sigma factor"}, {"description": "FtsH protease controls RpoH protein levels.", "edge_id": "edge-11", "evidence": [{"notes": "ATP-dependent proteases FtsH and ClpXP control RpoH protein levels.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "controls abundance of", "predicate_id": null, "source": "FtsH protease", "target": "RpoH (sigma-32) heat-shock sigma factor"}], "graph_id": "temperature_optimum_mid4_warm_mesophile", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Hsp70-family chaperone that binds and sequesters the heat-shock sigma factor RpoH.", "grounding": null, "id": "dnak_chaperone", "is_orphan": false, "label": "DnaK chaperone", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "ATP-dependent membrane protease that controls RpoH protein levels.", "grounding": null, "id": "ftsh_protease", "is_orphan": false, "label": "FtsH protease", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of optimal membrane fluidity (homeoviscous adaptation).", "grounding": null, "id": "membrane_fluidity_homeostasis", "is_orphan": false, "label": "membrane fluidity homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cis-regulatory mRNA hairpin (e.g. ROSE/FourU) controlling translation by temperature.", "grounding": null, "id": "rna_thermometer", "is_orphan": false, "label": "RNA thermometer hairpin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Alternative sigma factor directing the heat-shock response regulon.", "grounding": null, "id": "rpoh_sigma_factor", "is_orphan": false, "label": "RpoH (sigma-32) heat-shock sigma factor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Ribosome-binding region of mRNA required for translation initiation.", "grounding": null, "id": "shine_dalgarno_sequence", "is_orphan": false, "label": "Shine-Dalgarno / AUG ribosome binding site", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "A decrease in ambient growth temperature.", "grounding": null, "id": "temperature_downshift", "is_orphan": false, "label": "temperature downshift", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Ambient temperature supporting maximal growth.", "grounding": "METPO:1000304", "id": "temperature_optimum", "is_orphan": false, "label": "temperature optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature optimum approximately 34\u201340 \u00b0C.", "grounding": "METPO:1000446", "id": "temperature_optimum_mid4_trait", "is_orphan": false, "label": "temperature optimum mid4", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "An increase in ambient temperature, including heat shock.", "grounding": null, "id": "temperature_upshift", "is_orphan": false, "label": "temperature upshift / heat shock", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Binding of the ribosome to mRNA and initiation of translation.", "grounding": null, "id": "translation_initiation", "is_orphan": false, "label": "ribosome binding and translation initiation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Upregulation of unsaturated fatty acid biosynthesis upon sensed membrane rigidification.", "grounding": null, "id": "unsaturated_fa_biosynthesis_response", "is_orphan": false, "label": "unsaturated fatty acid biosynthesis response", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Proportion of unsaturated fatty acids in membrane phospholipids.", "grounding": null, "id": "unsaturated_fatty_acid_proportion", "is_orphan": false, "label": "unsaturated fatty acid proportion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Habitat ambient temperature in the 34\u201340 \u00b0C range, typical of many mammalian hosts.", "grounding": null, "id": "warm_environment", "is_orphan": false, "label": "warm host-associated environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Membrane and enzyme repertoires tuned for warm host-body temperatures.", "grounding": null, "id": "warm_mesophile_adaptation", "is_orphan": false, "label": "warm-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-optimum-mid4 warm-mesophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -622,7 +764,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

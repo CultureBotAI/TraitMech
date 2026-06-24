@@ -90,6 +90,74 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>unsaturated fatty acid content</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>membrane fluidity</strong>
+            <span class="edge-predicate">decreased by reduced unsaturated fatty acids</span>
+            <strong>unsaturated fatty acid content</strong>
+            
+            <p>Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/mmi.15323</code>
+                
+                <span class="meta">Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>cold shock</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>CspA cold-shock protein</strong>
+            
+            <p>Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>CsdA DEAD-box RNA helicase</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>translation under cold shock</strong>
+            
+            <p>CsdA binds ribosomes to maintain translation under cold shock.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">CsdA binds ribosomes to maintain translation under cold shock.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +301,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking very limited thermal-adaptation flexibility to a 1\u20135 \u00b0C temperature growth breadth.", "edges": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very_limited_thermal_adaptation", "target": "temperature_delta_very_low_trait"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_very_low_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very limited thermal-adaptation flexibility", "target": "temperature delta very low"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta very low", "target": "temperature delta"}], "graph_id": "temperature_delta_very_low_stenothermal", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 1\u20135 \u00b0C.", "grounding": "METPO:1000483", "id": "temperature_delta_very_low_trait", "is_orphan": false, "label": "temperature delta very low", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel membrane lipid composition and enzyme repertoire across temperature shifts.", "grounding": null, "id": "very_limited_thermal_adaptation", "is_orphan": false, "label": "very limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-delta-very-low stenothermal breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking very limited thermal-adaptation flexibility to a 1\u20135 \u00b0C temperature growth breadth.", "edges": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very_limited_thermal_adaptation", "target": "temperature_delta_very_low_trait"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_very_low_trait", "target": "temperature_delta"}, {"description": "Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.", "evidence": [{"notes": "Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "unsaturated_fatty_acid_content", "target": "membrane_fluidity"}, {"description": "Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.", "evidence": [{"notes": "Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.", "reference": "DOI:10.1111/mmi.15323"}], "id": "edge-4", "is_orphan": false, "predicate": "decreased by reduced unsaturated fatty acids", "predicate_id": null, "source": "membrane_fluidity", "target": "unsaturated_fatty_acid_content"}, {"description": "Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.", "evidence": [{"notes": "Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-5", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "cold_shock", "target": "cspa_protein"}, {"description": "CsdA binds ribosomes to maintain translation under cold shock.", "evidence": [{"notes": "CsdA binds ribosomes to maintain translation under cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-6", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "csda_helicase", "target": "translation_under_cold"}], "evidence_rows": [{"description": "Very limited thermal-adaptation flexibility yields a 1\u20135 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports very limited remodeling flexibility as the basis of stenothermal breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "very limited thermal-adaptation flexibility", "target": "temperature delta very low"}, {"description": "Temperature delta very low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20135 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta very low", "target": "temperature delta"}, {"description": "Higher unsaturated fatty acid proportion prevents excessive rigidification and maintains membrane fluidity at low temperature.", "edge_id": "edge-3", "evidence": [{"notes": "Proportionally more unsaturated fatty acids maintain membrane fluidity within an optimal range; broad across microbes.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "increases", "predicate_id": null, "source": "unsaturated fatty acid content", "target": "membrane fluidity"}, {"description": "Reduced unsaturated fatty acid content decreases membrane fluidity, a direct physical consequence linking composition to cold stress.", "edge_id": "edge-4", "evidence": [{"notes": "Decrease in membrane fluidity due to decrease in unsaturated fatty acid content.", "reference": "DOI:10.1111/mmi.15323"}], "predicate": "decreased by reduced unsaturated fatty acids", "predicate_id": null, "source": "membrane fluidity", "target": "unsaturated fatty acid content"}, {"description": "Cold shock induces CspA, an RNA chaperone counteracting low-temperature RNA secondary structure.", "edge_id": "edge-5", "evidence": [{"notes": "Cold-shock proteins (notably CspA) bind RNA to promote single-stranded states.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "induces", "predicate_id": null, "source": "cold shock", "target": "CspA cold-shock protein"}, {"description": "CsdA binds ribosomes to maintain translation under cold shock.", "edge_id": "edge-6", "evidence": [{"notes": "CsdA binds ribosomes to maintain translation under cold shock.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "maintains", "predicate_id": null, "source": "CsdA DEAD-box RNA helicase", "target": "translation under cold shock"}], "graph_id": "temperature_delta_very_low_stenothermal", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Abrupt decrease in ambient temperature.", "grounding": null, "id": "cold_shock", "is_orphan": false, "label": "cold shock", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "DEAD-box RNA helicase that assists ribosomes and RNA remodeling at low temperature.", "grounding": null, "id": "csda_helicase", "is_orphan": false, "label": "CsdA DEAD-box RNA helicase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "RNA chaperone induced upon cold shock that promotes single-stranded RNA states.", "grounding": null, "id": "cspa_protein", "is_orphan": false, "label": "CspA cold-shock protein", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity of the cell membrane, central to homeoviscous adaptation.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 1\u20135 \u00b0C.", "grounding": "METPO:1000483", "id": "temperature_delta_very_low_trait", "is_orphan": false, "label": "temperature delta very low", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of protein synthesis at low temperature.", "grounding": null, "id": "translation_under_cold", "is_orphan": false, "label": "translation under cold shock", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Proportion of unsaturated fatty acids in membrane phospholipids.", "grounding": null, "id": "unsaturated_fatty_acid_content", "is_orphan": false, "label": "unsaturated fatty acid content", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Narrow capacity to remodel membrane lipid composition and enzyme repertoire across temperature shifts.", "grounding": null, "id": "very_limited_thermal_adaptation", "is_orphan": false, "label": "very limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-delta-very-low stenothermal breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +677,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

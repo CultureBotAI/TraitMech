@@ -54,6 +54,39 @@ causal_graphs:
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins involved in cold shock and cold acclimation responses.
+  - node_id: two_component_system
+    label: two-component signaling system
+    node_type: BIOLOGICAL_PROCESS
+    description: Signal transduction module activated by membrane-state changes during
+      cold sensing.
+  - node_id: fatty_acid_desaturase
+    label: fatty acid desaturase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme introducing double bonds into membrane acyl chains, increasing
+      unsaturation in cold.
+  - node_id: exopolysaccharides
+    label: extracellular polymeric substances (EPS)
+    node_type: CHEMICAL
+    description: Secreted polysaccharide matrix acting as cryoprotectant.
+  - node_id: freeze_thaw_cycles
+    label: freeze-thaw cycles
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Repeated freezing and thawing damaging cells in cold environments.
+  - node_id: trehalose
+    label: trehalose
+    node_type: CHEMICAL
+    description: Compatible solute and cryoprotectant protecting cells against abiotic
+      stress including cold.
+  - node_id: rna_secondary_structure
+    label: RNA secondary structure
+    node_type: CHEMICAL
+    description: Stabilized RNA folds at low temperature that impede transcription
+      and translation.
+  - node_id: compatible_solutes
+    label: compatible osmolytes
+    node_type: CHEMICAL
+    description: Organic osmolytes (glycine betaine, trehalose, glycerol, sucrose,
+      mannitol) preventing cell shrinkage and water loss.
   edges:
   - subject: low_temperature
     predicate: is tolerated by
@@ -98,6 +131,61 @@ causal_graphs:
       snippet: Cold-shock proteins have also been described
       notes: Supports cold-shock proteins as cold-acclimation components.
     predicate_id: RO:0002326
+  - subject: low_temperature
+    predicate: induces
+    object: two_component_system
+    description: Cold sensing via membrane physical-state change activates a two-component
+      system.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: sensing the cold... leading to the activation of a two-component system
+        that transduce the signal
+  - subject: fatty_acid_desaturase
+    predicate: increases
+    object: unsaturated_fatty_acids
+    description: Desaturase acting on membrane acyl chains rapidly increases unsaturated
+      lipids (homeoviscous response).
+    evidence:
+    - reference: DOI:10.1016/B978-0-12-809633-8.02282-2
+      notes: the desaturase acting on the acyl chains of the membrane lipids comes
+        into play, thereby increasing the amount of unsaturated lipid
+  - subject: exopolysaccharides
+    predicate: protects against
+    object: freeze_thaw_cycles
+    description: EPS surrounding cells acts as cryoprotectant against freeze-thaw
+      damage.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: exopolysaccharides (EPS) surrounding bacterial cells... providing protection
+        against freeze-thaw cycles and acting as cryoprotectants
+  - subject: trehalose
+    predicate: contributes to
+    object: facultative_psychrophilic_trait
+    description: Trehalose protects bacteria against abiotic stress including low
+      temperature.
+    evidence:
+    - reference: DOI:10.1038/s41598-023-41323-x
+      notes: Trehalose... plays an important role in protecting bacteria against a
+        range of stresses
+  - subject: cold_shock_proteins
+    predicate: destabilizes
+    object: rna_secondary_structure
+    description: CSPs act as chaperones destabilizing RNA secondary structures to
+      maintain transcription/translation in cold.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: CSPs function as chaperones that destabilize those secondary structures
+        and maintain a single-stranded molecule
+  - subject: compatible_solutes
+    predicate: contributes to
+    object: facultative_psychrophilic_trait
+    description: Accumulation of compatible osmolytes prevents cell shrinkage and
+      water loss at sub-zero temperatures.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1197797
+      notes: Accumulation of compatible osmolytes (glycine betaine, trehalose, glycerol,
+        sucrose, mannitol etc.)... to prevent cell shrinkage and water loss during
+        sub-zero temperature
 curation_history:
 - timestamp: '2026-05-05T01:35:46.908340+00:00'
   curator: seed_from_metpo
@@ -164,4 +252,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

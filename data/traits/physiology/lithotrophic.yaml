@@ -65,6 +65,55 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy carrier produced from respiratory energy conservation.
+  - node_id: thiosulfate
+    label: thiosulfate
+    node_type: CHEMICAL
+    description: Reduced inorganic sulfur compound used as a lithotrophic electron
+      donor.
+  - node_id: sox_multienzyme_system
+    label: Sox multienzyme system
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic thiosulfate-oxidizing multienzyme complex (soxXA/soxYZ/soxB/soxCD).
+  - node_id: sulfite
+    label: sulfite
+    node_type: CHEMICAL
+    description: Inorganic sulfur intermediate oxidized to sulfate during sulfur lithotrophy.
+  - node_id: soeabc_sulfite_dehydrogenase
+    label: SoeABC sulfite dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound sulfite dehydrogenase oxidizing sulfite to sulfate.
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+    description: Inorganic nitrogen electron donor for ammonia-oxidizing lithotrophs.
+  - node_id: ammonia_monooxygenase
+    label: ammonia monooxygenase (AMO)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme catalyzing the first step of ammonia oxidation (EC 1.14.99.39).
+  - node_id: hydroxylamine
+    label: hydroxylamine
+    node_type: CHEMICAL
+    description: Intermediate of ammonia oxidation.
+  - node_id: hydroxylamine_oxidoreductase
+    label: hydroxylamine oxidoreductase (HAO)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidizing hydroxylamine during ammonia oxidation (EC 1.7.2.6).
+  - node_id: nitrite
+    label: nitrite
+    node_type: CHEMICAL
+    description: Inorganic nitrogen electron donor for nitrite-oxidizing lithotrophs.
+  - node_id: nitrite_oxidoreductase
+    label: nitrite oxidoreductase (NXR)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidizing nitrite to nitrate (EC 1.7.5.1).
+  - node_id: oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    description: Terminal electron acceptor for aerobic lithotrophic oxidation.
+  - node_id: sulfur_oxidation_process
+    label: sulfur oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of reduced sulfur compounds for energy conservation.
   edges:
   - subject: lithotrophic_trait
     predicate: uses electron donor
@@ -124,6 +173,54 @@ causal_graphs:
       snippet: gradient ... drives ATP synthesis
       notes: Supports ATP production from the respiratory ion gradient.
     predicate_id: biolink:produces
+  - subject: thiosulfate
+    predicate: oxidized by
+    object: sox_multienzyme_system
+    description: Thiosulfate is oxidized by the periplasmic Sox multienzyme system.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11061436
+      notes: 'Review: "The Sox multienzyme system... performs periplasmic thiosulfate
+        oxidation."'
+  - subject: sulfite
+    predicate: oxidized by
+    object: soeabc_sulfite_dehydrogenase
+    description: Sulfite is oxidized to sulfate by membrane-bound SoeABC sulfite dehydrogenase.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11061436
+      notes: 'Review: "Sulfite produced is oxidized to sulfate by membrane-bound SoeABC."'
+  - subject: ammonia
+    predicate: oxidized by
+    object: ammonia_monooxygenase
+    description: Ammonia is oxidized by ammonia monooxygenase (AMO) in ammonia-oxidizing
+      lithotrophs.
+    evidence:
+    - reference: DOI:10.1186/s40168-025-02290-9
+      notes: Key NH4+ oxidation enzymes including ammonia monooxygenase (AMO); canonical
+        enzyme role.
+  - subject: hydroxylamine
+    predicate: oxidized by
+    object: hydroxylamine_oxidoreductase
+    description: Hydroxylamine is oxidized by hydroxylamine oxidoreductase (HAO).
+    evidence:
+    - reference: DOI:10.1186/s40168-025-02290-9
+      notes: Key NH4+ oxidation enzymes including hydroxylamine oxidoreductase (HAO).
+  - subject: nitrite
+    predicate: oxidized by
+    object: nitrite_oxidoreductase
+    description: Nitrite is oxidized to nitrate by nitrite oxidoreductase (NXR).
+    evidence:
+    - reference: DOI:10.1128/mbio.00749-25
+      notes: Nitrite further oxidized to nitrate by a nitrite oxidoreductase gene
+        (nxr).
+  - subject: oxygen
+    predicate: serves as terminal acceptor for
+    object: sulfur_oxidation_process
+    description: Molecular oxygen serves as a terminal electron acceptor for aerobic
+      sulfur oxidation.
+    evidence:
+    - reference: DOI:10.1038/s41579-024-01104-3
+      notes: Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic
+        sulfur oxidation contexts.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.875909+00:00'
   curator: seed_from_metpo
@@ -177,4 +274,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

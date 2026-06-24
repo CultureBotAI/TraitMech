@@ -141,6 +141,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>phytoene synthase</strong>
+            <span class="edge-predicate">converts</span>
+            <strong>phytoene</strong>
+            
+            <p>Phytoene synthase condenses prenyl diphosphate (GFDP) to form phytoene.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">Through the catalytic action of phytoene synthase, GFDP undergoes condensation to form phytoene.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>phytoene</strong>
+            <span class="edge-predicate">is substrate for</span>
+            <strong>phytoene desaturase</strong>
+            
+            <p>Phytoene is dehydrogenated by phytoene desaturase en route to lycopene.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">Phytoene is further dehydrogenated by dehydrogenase to generate phytofluene, which is subsequently converted into lycopene.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>phytoene desaturase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>lycopene</strong>
+            
+            <p>Phytoene desaturase converts phytoene (via phytofluene) to lycopene.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">Phytoene is further dehydrogenated... which is subsequently converted into lycopene.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>lycopene cyclases</strong>
+            <span class="edge-predicate">converts</span>
+            <strong>cyclic carotenes</strong>
+            
+            <p>Lycopene cyclases cyclize lycopene into alpha-, epsilon-, and beta-carotene.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">The cyclization of lycopene... lead[s] to the formation of alpha-carotene, epsilon-carotene, and beta-carotene under the catalysis of various lycopene cyclases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>lycopene</strong>
+            <span class="edge-predicate">is substrate for</span>
+            <strong>lycopene cyclases</strong>
+            
+            <p>Lycopene is the substrate cyclized by lycopene cyclases.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">The cyclization of lycopene... under the catalysis of various lycopene cyclases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>cyclic carotenes</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>conjugated carotenoids</strong>
+            
+            <p>Cyclic carotenes are conjugated carotenoid pigments contributing to coloration.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29174235</code>
+                
+                <span class="meta">Cyclic carotenes (alpha-/epsilon-/beta-carotene) are conjugated carotenoid pigment products of the pathway.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -302,6 +404,12 @@
           <time>2026-05-24T04:41:04Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0016117×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -661,7 +769,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking bacterial carotenoid pigmentation to isoprenoid precursors, crt enzymes, conjugated carotenoids, and yellow-orange-red visible color.", "edges": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as a major step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "isoprenoid_precursors", "target": "carotenoid_biosynthesis"}, {"description": "Crt gene products catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces conjugated carotenoid pigments.", "evidence": [{"notes": "Supports bacterial carotenoid biosynthesis as the source of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "biosynthesis pathways of bacterial carotenoids"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid_biosynthesis", "target": "conjugated_carotenoids"}, {"description": "Conjugated carotenoids absorb visible light and produce yellow-orange-red pigmentation.", "evidence": [{"notes": "Supports carotenoids as color determinants for this pigment class.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "red, pink, orange, and yellow pigmentation in bacteria"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "conjugated_carotenoids", "target": "yellow_orange_red_color"}, {"description": "Yellow-orange-red visible color manifests carotenoid pigmentation.", "evidence": [{"notes": "Supports the trait-level mapping from carotenoid chemistry to pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "yellow_orange_red_color", "target": "carotenoid_pigmentation_trait"}], "evidence_rows": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "edge_id": "edge-1", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as a major step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "predicate": "feed into", "predicate_id": null, "source": "isoprenoid precursors", "target": "carotenoid biosynthesis"}, {"description": "Crt gene products catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis produces conjugated carotenoid pigments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports bacterial carotenoid biosynthesis as the source of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "biosynthesis pathways of bacterial carotenoids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid biosynthesis", "target": "conjugated carotenoids"}, {"description": "Conjugated carotenoids absorb visible light and produce yellow-orange-red pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoids as color determinants for this pigment class.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "red, pink, orange, and yellow pigmentation in bacteria"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "conjugated carotenoids", "target": "yellow-orange-red color"}, {"description": "Yellow-orange-red visible color manifests carotenoid pigmentation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level mapping from carotenoid chemistry to pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "yellow-orange-red color", "target": "carotenoid pigmentation"}], "graph_id": "carotenoid_pigmentation_crt_pathway", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation caused by carotenoid compounds.", "grounding": "METPO:1003031", "id": "carotenoid_pigmentation_trait", "is_orphan": false, "label": "carotenoid pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Colored carotenoid molecules with conjugated double bonds.", "grounding": null, "id": "conjugated_carotenoids", "is_orphan": false, "label": "conjugated carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes encoded by crt genes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Prenyl building blocks used in carotenoid biosynthesis.", "grounding": null, "id": "isoprenoid_precursors", "is_orphan": false, "label": "isoprenoid precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Visible colors associated with carotenoid absorption spectra.", "grounding": null, "id": "yellow_orange_red_color", "is_orphan": false, "label": "yellow-orange-red color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Carotenoid pigmentation crt-pathway mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking bacterial carotenoid pigmentation to isoprenoid precursors, crt enzymes, conjugated carotenoids, and yellow-orange-red visible color.", "edges": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as a major step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "feed into", "predicate_id": null, "source": "isoprenoid_precursors", "target": "carotenoid_biosynthesis"}, {"description": "Crt gene products catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-2", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces conjugated carotenoid pigments.", "evidence": [{"notes": "Supports bacterial carotenoid biosynthesis as the source of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "biosynthesis pathways of bacterial carotenoids"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid_biosynthesis", "target": "conjugated_carotenoids"}, {"description": "Conjugated carotenoids absorb visible light and produce yellow-orange-red pigmentation.", "evidence": [{"notes": "Supports carotenoids as color determinants for this pigment class.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "red, pink, orange, and yellow pigmentation in bacteria"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "conjugated_carotenoids", "target": "yellow_orange_red_color"}, {"description": "Yellow-orange-red visible color manifests carotenoid pigmentation.", "evidence": [{"notes": "Supports the trait-level mapping from carotenoid chemistry to pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "yellow_orange_red_color", "target": "carotenoid_pigmentation_trait"}, {"description": "Phytoene synthase condenses prenyl diphosphate (GFDP) to form phytoene.", "evidence": [{"notes": "Through the catalytic action of phytoene synthase, GFDP undergoes condensation to form phytoene.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-6", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "phytoene_synthase", "target": "phytoene"}, {"description": "Phytoene is dehydrogenated by phytoene desaturase en route to lycopene.", "evidence": [{"notes": "Phytoene is further dehydrogenated by dehydrogenase to generate phytofluene, which is subsequently converted into lycopene.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-7", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "phytoene", "target": "phytoene_desaturase"}, {"description": "Phytoene desaturase converts phytoene (via phytofluene) to lycopene.", "evidence": [{"notes": "Phytoene is further dehydrogenated... which is subsequently converted into lycopene.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "phytoene_desaturase", "target": "lycopene"}, {"description": "Lycopene cyclases cyclize lycopene into alpha-, epsilon-, and beta-carotene.", "evidence": [{"notes": "The cyclization of lycopene... lead[s] to the formation of alpha-carotene, epsilon-carotene, and beta-carotene under the catalysis of various lycopene cyclases.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-9", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "lycopene_cyclases", "target": "cyclic_carotenes"}, {"description": "Lycopene is the substrate cyclized by lycopene cyclases.", "evidence": [{"notes": "The cyclization of lycopene... under the catalysis of various lycopene cyclases.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-10", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "lycopene", "target": "lycopene_cyclases"}, {"description": "Cyclic carotenes are conjugated carotenoid pigments contributing to coloration.", "evidence": [{"notes": "Cyclic carotenes (alpha-/epsilon-/beta-carotene) are conjugated carotenoid pigment products of the pathway.", "reference": "DOI:10.3390/molecules29174235"}], "id": "edge-11", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "cyclic_carotenes", "target": "conjugated_carotenoids"}], "evidence_rows": [{"description": "Isoprenoid precursors provide substrate for carotenoid production.", "edge_id": "edge-1", "evidence": [{"notes": "Supports isoprenoid precursor biosynthesis as a major step in eubacterial carotenoid pathways.", "reference": "DOI:10.1016/j.gene.2004.11.038", "snippet": "isoprenoid precursor biosynthesis"}], "predicate": "feed into", "predicate_id": null, "source": "isoprenoid precursors", "target": "carotenoid biosynthesis"}, {"description": "Crt gene products catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Crt enzymes as pathway catalysts.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis produces conjugated carotenoid pigments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports bacterial carotenoid biosynthesis as the source of carotenoid pigments.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "biosynthesis pathways of bacterial carotenoids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "carotenoid biosynthesis", "target": "conjugated carotenoids"}, {"description": "Conjugated carotenoids absorb visible light and produce yellow-orange-red pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoids as color determinants for this pigment class.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "red, pink, orange, and yellow pigmentation in bacteria"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "conjugated carotenoids", "target": "yellow-orange-red color"}, {"description": "Yellow-orange-red visible color manifests carotenoid pigmentation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level mapping from carotenoid chemistry to pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for the red, pink, orange, and yellow pigmentation"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "yellow-orange-red color", "target": "carotenoid pigmentation"}, {"description": "Phytoene synthase condenses prenyl diphosphate (GFDP) to form phytoene.", "edge_id": "edge-6", "evidence": [{"notes": "Through the catalytic action of phytoene synthase, GFDP undergoes condensation to form phytoene.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "converts", "predicate_id": null, "source": "phytoene synthase", "target": "phytoene"}, {"description": "Phytoene is dehydrogenated by phytoene desaturase en route to lycopene.", "edge_id": "edge-7", "evidence": [{"notes": "Phytoene is further dehydrogenated by dehydrogenase to generate phytofluene, which is subsequently converted into lycopene.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "is substrate for", "predicate_id": null, "source": "phytoene", "target": "phytoene desaturase"}, {"description": "Phytoene desaturase converts phytoene (via phytofluene) to lycopene.", "edge_id": "edge-8", "evidence": [{"notes": "Phytoene is further dehydrogenated... which is subsequently converted into lycopene.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "produces", "predicate_id": null, "source": "phytoene desaturase", "target": "lycopene"}, {"description": "Lycopene cyclases cyclize lycopene into alpha-, epsilon-, and beta-carotene.", "edge_id": "edge-9", "evidence": [{"notes": "The cyclization of lycopene... lead[s] to the formation of alpha-carotene, epsilon-carotene, and beta-carotene under the catalysis of various lycopene cyclases.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "converts", "predicate_id": null, "source": "lycopene cyclases", "target": "cyclic carotenes"}, {"description": "Lycopene is the substrate cyclized by lycopene cyclases.", "edge_id": "edge-10", "evidence": [{"notes": "The cyclization of lycopene... under the catalysis of various lycopene cyclases.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "is substrate for", "predicate_id": null, "source": "lycopene", "target": "lycopene cyclases"}, {"description": "Cyclic carotenes are conjugated carotenoid pigments contributing to coloration.", "edge_id": "edge-11", "evidence": [{"notes": "Cyclic carotenes (alpha-/epsilon-/beta-carotene) are conjugated carotenoid pigment products of the pathway.", "reference": "DOI:10.3390/molecules29174235"}], "predicate": "is a", "predicate_id": null, "source": "cyclic carotenes", "target": "conjugated carotenoids"}], "graph_id": "carotenoid_pigmentation_crt_pathway", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation caused by carotenoid compounds.", "grounding": "METPO:1003031", "id": "carotenoid_pigmentation_trait", "is_orphan": false, "label": "carotenoid pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Colored carotenoid molecules with conjugated double bonds.", "grounding": null, "id": "conjugated_carotenoids", "is_orphan": false, "label": "conjugated carotenoids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes encoded by crt genes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "alpha-, epsilon-, and beta-carotene formed by lycopene cyclization.", "grounding": null, "id": "cyclic_carotenes", "is_orphan": false, "label": "cyclic carotenes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Prenyl building blocks used in carotenoid biosynthesis.", "grounding": null, "id": "isoprenoid_precursors", "is_orphan": false, "label": "isoprenoid precursors", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Red C40 carotenoid intermediate formed by desaturation.", "grounding": null, "id": "lycopene", "is_orphan": false, "label": "lycopene", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "CrtY-type enzymes cyclizing lycopene into cyclic carotenes.", "grounding": null, "id": "lycopene_cyclases", "is_orphan": false, "label": "lycopene cyclases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Colorless C40 carotenoid precursor.", "grounding": null, "id": "phytoene", "is_orphan": false, "label": "phytoene", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "CrtI-type enzyme desaturating phytoene toward lycopene.", "grounding": null, "id": "phytoene_desaturase", "is_orphan": false, "label": "phytoene desaturase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "CrtB-type enzyme condensing prenyl diphosphate to phytoene.", "grounding": null, "id": "phytoene_synthase", "is_orphan": false, "label": "phytoene synthase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Visible colors associated with carotenoid absorption spectra.", "grounding": null, "id": "yellow_orange_red_color", "is_orphan": false, "label": "yellow-orange-red color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Carotenoid pigmentation crt-pathway mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -672,7 +780,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

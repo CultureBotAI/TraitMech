@@ -90,6 +90,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>temperature decrease</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>membrane rigidification/thickening</strong>
+            
+            <p>Cooling reduces bilayer fluidity, inducing membrane rigidification and thickening.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Decreasing temperature induces membrane rigidification and thickening, producing a liquid-crystalline-to-gel phase transition.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>membrane unsaturated fatty acids</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>homeoviscous adaptation / restored fluidity</strong>
+            
+            <p>Increased membrane unsaturated fatty acids counter low-temperature rigidification and restore bilayer fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Bacteria perform homoviscous adaptation by increasing membrane unsaturated fatty acids as growth temperature decreases, thereby restoring bilayer fluidity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>homeoviscous adaptation / restored fluidity</strong>
+            <span class="edge-predicate">counteracts</span>
+            <strong>membrane rigidification/thickening</strong>
+            
+            <p>Homeoviscous adaptation restores fluidity, opposing cold-induced membrane rigidification.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-091313-103612</code>
+                
+                <span class="meta">Homeoviscous adaptation restores bilayer fluidity against rigidification as growth temperature decreases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>temperature decrease</strong>
+            <span class="edge-predicate">shifts</span>
+            <strong>iso-to-anteiso branched-chain fatty acid shift</strong>
+            
+            <p>Low-temperature acclimation drives iso-to-anteiso branched-chain fatty acid switching for membrane fluidization.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Predominant long-term adaptation to low temperatures occurs via fluidization of the membrane by chain branching, specifically iso-to-anteiso SFA switching.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>iso-to-anteiso branched-chain fatty acid shift</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>homeoviscous adaptation / restored fluidity</strong>
+            
+            <p>Branched-chain fatty acid remodeling fluidizes the membrane, supporting homeoviscous adaptation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Long-term low-temperature adaptation fluidizes the membrane via introduction of chain branching, a homeoviscous mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>limited thermal-adaptation flexibility</strong>
+            <span class="edge-predicate">limits</span>
+            <strong>homeoviscous adaptation / restored fluidity</strong>
+            
+            <p>Impaired acyl-chain remodeling capacity constrains homeoviscous adaptation flexibility, narrowing thermal breadth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2023.11.10.566608</code>
+                
+                <span class="meta">Impaired homeoviscous adaptation: unable to regulate the acyl chain profile to the same extent in response to temperature fluctuations.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +335,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +700,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking limited thermal-adaptation flexibility to a 5\u201310 \u00b0C temperature growth breadth.", "edges": [{"description": "Limited thermal-adaptation flexibility yields a 5\u201310 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports limited thermal-adaptation flexibility as the basis of narrow breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited_thermal_adaptation", "target": "temperature_delta_low_trait"}, {"description": "Temperature delta low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 5\u201310 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_low_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Limited thermal-adaptation flexibility yields a 5\u201310 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited thermal-adaptation flexibility as the basis of narrow breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited thermal-adaptation flexibility", "target": "temperature delta low"}, {"description": "Temperature delta low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 5\u201310 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta low", "target": "temperature delta"}], "graph_id": "temperature_delta_low_limited_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Modest capacity to remodel membrane lipids and enzymes across small temperature shifts.", "grounding": null, "id": "limited_thermal_adaptation", "is_orphan": false, "label": "limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 5\u201310 \u00b0C.", "grounding": "METPO:1000484", "id": "temperature_delta_low_trait", "is_orphan": false, "label": "temperature delta low", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-low limited-breadth thermal adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking limited thermal-adaptation flexibility to a 5\u201310 \u00b0C temperature growth breadth.", "edges": [{"description": "Limited thermal-adaptation flexibility yields a 5\u201310 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports limited thermal-adaptation flexibility as the basis of narrow breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited_thermal_adaptation", "target": "temperature_delta_low_trait"}, {"description": "Temperature delta low is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 5\u201310 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_low_trait", "target": "temperature_delta"}, {"description": "Cooling reduces bilayer fluidity, inducing membrane rigidification and thickening.", "evidence": [{"notes": "Decreasing temperature induces membrane rigidification and thickening, producing a liquid-crystalline-to-gel phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "temperature_decrease", "target": "membrane_rigidification"}, {"description": "Increased membrane unsaturated fatty acids counter low-temperature rigidification and restore bilayer fluidity.", "evidence": [{"notes": "Bacteria perform homoviscous adaptation by increasing membrane unsaturated fatty acids as growth temperature decreases, thereby restoring bilayer fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "homeoviscous_adaptation"}, {"description": "Homeoviscous adaptation restores fluidity, opposing cold-induced membrane rigidification.", "evidence": [{"notes": "Homeoviscous adaptation restores bilayer fluidity against rigidification as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "id": "edge-5", "is_orphan": false, "predicate": "counteracts", "predicate_id": null, "source": "homeoviscous_adaptation", "target": "membrane_rigidification"}, {"description": "Low-temperature acclimation drives iso-to-anteiso branched-chain fatty acid switching for membrane fluidization.", "evidence": [{"notes": "Predominant long-term adaptation to low temperatures occurs via fluidization of the membrane by chain branching, specifically iso-to-anteiso SFA switching.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "shifts", "predicate_id": null, "source": "temperature_decrease", "target": "anteiso_bcfa_shift"}, {"description": "Branched-chain fatty acid remodeling fluidizes the membrane, supporting homeoviscous adaptation.", "evidence": [{"notes": "Long-term low-temperature adaptation fluidizes the membrane via introduction of chain branching, a homeoviscous mechanism.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "anteiso_bcfa_shift", "target": "homeoviscous_adaptation"}, {"description": "Impaired acyl-chain remodeling capacity constrains homeoviscous adaptation flexibility, narrowing thermal breadth.", "evidence": [{"notes": "Impaired homeoviscous adaptation: unable to regulate the acyl chain profile to the same extent in response to temperature fluctuations.", "reference": "DOI:10.1101/2023.11.10.566608"}], "id": "edge-8", "is_orphan": false, "predicate": "limits", "predicate_id": null, "source": "limited_thermal_adaptation", "target": "homeoviscous_adaptation"}], "evidence_rows": [{"description": "Limited thermal-adaptation flexibility yields a 5\u201310 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports limited thermal-adaptation flexibility as the basis of narrow breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "limited thermal-adaptation flexibility", "target": "temperature delta low"}, {"description": "Temperature delta low is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 5\u201310 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta low", "target": "temperature delta"}, {"description": "Cooling reduces bilayer fluidity, inducing membrane rigidification and thickening.", "edge_id": "edge-3", "evidence": [{"notes": "Decreasing temperature induces membrane rigidification and thickening, producing a liquid-crystalline-to-gel phase transition.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "causes", "predicate_id": null, "source": "temperature decrease", "target": "membrane rigidification/thickening"}, {"description": "Increased membrane unsaturated fatty acids counter low-temperature rigidification and restore bilayer fluidity.", "edge_id": "edge-4", "evidence": [{"notes": "Bacteria perform homoviscous adaptation by increasing membrane unsaturated fatty acids as growth temperature decreases, thereby restoring bilayer fluidity.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "contributes to", "predicate_id": null, "source": "membrane unsaturated fatty acids", "target": "homeoviscous adaptation / restored fluidity"}, {"description": "Homeoviscous adaptation restores fluidity, opposing cold-induced membrane rigidification.", "edge_id": "edge-5", "evidence": [{"notes": "Homeoviscous adaptation restores bilayer fluidity against rigidification as growth temperature decreases.", "reference": "DOI:10.1146/annurev-micro-091313-103612"}], "predicate": "counteracts", "predicate_id": null, "source": "homeoviscous adaptation / restored fluidity", "target": "membrane rigidification/thickening"}, {"description": "Low-temperature acclimation drives iso-to-anteiso branched-chain fatty acid switching for membrane fluidization.", "edge_id": "edge-6", "evidence": [{"notes": "Predominant long-term adaptation to low temperatures occurs via fluidization of the membrane by chain branching, specifically iso-to-anteiso SFA switching.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "shifts", "predicate_id": null, "source": "temperature decrease", "target": "iso-to-anteiso branched-chain fatty acid shift"}, {"description": "Branched-chain fatty acid remodeling fluidizes the membrane, supporting homeoviscous adaptation.", "edge_id": "edge-7", "evidence": [{"notes": "Long-term low-temperature adaptation fluidizes the membrane via introduction of chain branching, a homeoviscous mechanism.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "contributes to", "predicate_id": null, "source": "iso-to-anteiso branched-chain fatty acid shift", "target": "homeoviscous adaptation / restored fluidity"}, {"description": "Impaired acyl-chain remodeling capacity constrains homeoviscous adaptation flexibility, narrowing thermal breadth.", "edge_id": "edge-8", "evidence": [{"notes": "Impaired homeoviscous adaptation: unable to regulate the acyl chain profile to the same extent in response to temperature fluctuations.", "reference": "DOI:10.1101/2023.11.10.566608"}], "predicate": "limits", "predicate_id": null, "source": "limited thermal-adaptation flexibility", "target": "homeoviscous adaptation / restored fluidity"}], "graph_id": "temperature_delta_low_limited_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Long-term membrane fluidization via iso-to-anteiso branched-chain fatty acid switching.", "grounding": null, "id": "anteiso_bcfa_shift", "is_orphan": false, "label": "iso-to-anteiso branched-chain fatty acid shift", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Lipid remodeling that maintains membrane fluidity across temperature, restoring bilayer fluidity.", "grounding": null, "id": "homeoviscous_adaptation", "is_orphan": false, "label": "homeoviscous adaptation / restored fluidity", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Modest capacity to remodel membrane lipids and enzymes across small temperature shifts.", "grounding": null, "id": "limited_thermal_adaptation", "is_orphan": false, "label": "limited thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bilayer fluidity and increased thickness on cooling, with liquid-crystalline-to-gel transition.", "grounding": null, "id": "membrane_rigidification", "is_orphan": false, "label": "membrane rigidification/thickening", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "A drop in ambient growth temperature (cooling).", "grounding": null, "id": "temperature_decrease", "is_orphan": false, "label": "temperature decrease", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 5\u201310 \u00b0C.", "grounding": "METPO:1000484", "id": "temperature_delta_low_trait", "is_orphan": false, "label": "temperature delta low", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Unsaturated fatty acids incorporated into membrane lipids that lower the bilayer melting point.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "membrane unsaturated fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Temperature-delta-low limited-breadth thermal adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +711,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

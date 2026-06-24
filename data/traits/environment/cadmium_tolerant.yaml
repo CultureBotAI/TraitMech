@@ -46,6 +46,25 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0030001
     description: Active export of Cd(2+) across the cytoplasmic membrane.
+  - node_id: metallothionein_proteins
+    label: metallothionein / thiol-rich metal-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: Cysteine-rich proteins that bind and sequester cytoplasmic Cd(2+).
+  - node_id: cadmium_sequestration
+    label: cadmium ion sequestration
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular binding and sequestration of cadmium ions, lowering
+      free cytoplasmic Cd(2+).
+  - node_id: cada_ptype_atpase
+    label: CadA P-type (P1B) ATPase
+    node_type: GENE_OR_PROTEIN
+    description: ATP-driven P1B-type efflux ATPase pumping Cd(II) from cytoplasm to
+      periplasm.
+  - node_id: zinc_ion
+    label: zinc(2+) ion
+    node_type: CHEMICAL
+    description: Divalent metal cation that cross-induces the czc cadmium-resistance
+      program.
   edges:
   - subject: cadmium_ion
     predicate: challenges
@@ -71,6 +90,40 @@ causal_graphs:
     - reference: DOI:10.1111/j.1365-2958.2009.06792.x
       notes: The czc efflux system of C. metallidurans confers cadmium resistance.
     predicate_id: METPO:2007407
+  - subject: metallothionein_proteins
+    predicate: enables
+    object: cadmium_sequestration
+    description: Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).
+    evidence:
+    - reference: DOI:10.1007/s40201-023-00887-6
+      notes: Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration
+        as a microbial resistance mechanism.
+  - subject: cadmium_sequestration
+    predicate: mitigates
+    object: cadmium_ion
+    description: Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+)
+      pool.
+    evidence:
+    - reference: DOI:10.1007/s40201-023-00887-6
+      notes: Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II)
+        as a detoxification mechanism.
+  - subject: cada_ptype_atpase
+    predicate: enables
+    object: cadmium_export
+    description: CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.
+    evidence:
+    - reference: DOI:10.1007/s40201-023-00887-6
+      notes: P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to
+        periplasm.
+  - subject: zinc_ion
+    predicate: induces
+    object: czc_efflux_system
+    description: Zinc cross-induces expression of the czc cation-efflux cadmium-resistance
+      program.
+    evidence:
+    - reference: DOI:10.1007/s40201-023-00887-6
+      notes: czc expression is induced by zinc; zinc exposure enhances cadmium resistance
+        via the efflux program.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -89,4 +142,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:B0VPE1×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

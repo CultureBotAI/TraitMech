@@ -52,6 +52,36 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Viscous surroundings where curved or helical morphology can affect
       movement.
+  - node_id: pg_crosslink_relaxation
+    label: peptidoglycan crosslinking relaxation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction in peptidoglycan crosslinking density that loosens the
+      sacculus.
+  - node_id: biased_outer_curve_pg_biosynthesis
+    label: biased outer-curve peptidoglycan biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: A longitudinal zone of elevated peptidoglycan insertion along the
+      outer cell curve.
+  - node_id: cell_curvature
+    label: cell curvature
+    node_type: QUALITY
+    description: Bending of the cell-wall cylinder producing a curved or helical cell
+      axis.
+  - node_id: elongasome_entrapment
+    label: elongasome entrapment
+    node_type: BIOLOGICAL_PROCESS
+    description: Caging of the cell-elongation machinery that restricts where peptidoglycan
+      is inserted.
+  - node_id: periplasmic_flagella
+    label: periplasmic flagella
+    node_type: ORGANELLE
+    description: Endoflagella running within the periplasm of spirochetes that mechanically
+      couple to the cell body.
+  - node_id: cell_body
+    label: cell body
+    node_type: CELLULAR_LOCALIZATION
+    description: The bacterial cell body (protoplasmic cylinder) whose shape is mechanically
+      constrained.
   edges:
   - subject: curvature_scaffold
     predicate: regulates
@@ -94,6 +124,57 @@ causal_graphs:
       notes: Functional association is broad and marked as an association, not as
         a universal cause of the trait.
     predicate_id: biolink:associated_with
+  - subject: pg_crosslink_relaxation
+    predicate: promotes
+    object: helical_curvature
+    description: Relaxation of peptidoglycan crosslinking promotes helical/spiral
+      shape.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1162806
+      notes: Peptidoglycan crosslinking relaxation promotes helical shape and colonization.
+  - subject: elongasome_entrapment
+    predicate: biases
+    object: biased_outer_curve_pg_biosynthesis
+    description: Caging/entrapment of the elongasome biases peptidoglycan insertion
+      toward the outer curve.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51790-z
+      notes: Porin-PapS assemblies entrap the cell elongation machinery, biasing peptidoglycan
+        insertion toward the outer curve.
+  - subject: biased_outer_curve_pg_biosynthesis
+    predicate: establishes
+    object: cell_curvature
+    description: A zone of elevated outer-curve peptidoglycan biosynthesis distorts
+      the wall cylinder and establishes curvature.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51790-z
+      notes: Creating a longitudinal zone of elevated peptidoglycan biosynthesis distorts
+        the cell-wall cylinder and establishes curvature; ~15% bias suffices.
+  - subject: cell_curvature
+    predicate: produces
+    object: spiral_shaped_trait
+    description: Sustained cell curvature produces a spiral/helically curved cell.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51790-z
+      notes: Curvature established by biased outer-curve growth yields curved/helical
+        cell morphology.
+  - subject: periplasmic_flagella
+    predicate: maintains
+    object: spiral_shaped_trait
+    description: Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped
+      cell body.
+    evidence:
+    - reference: DOI:10.3390/biom14121488
+      notes: The periplasmic flagella serves as a cytoskeleton to maintain a spiral-shaped
+        cell body.
+  - subject: periplasmic_flagella
+    predicate: distorts
+    object: cell_body
+    description: Periplasmic flagellar filaments distort and push the cell body to
+      shape it.
+    evidence:
+    - reference: DOI:10.1093/pnasnexus/pgad349
+      notes: Spirochete flagella inside the periplasm distort and push the cell body.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894976+00:00'
   curator: seed_from_metpo
@@ -129,4 +210,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

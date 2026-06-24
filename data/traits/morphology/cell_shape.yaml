@@ -63,6 +63,35 @@ causal_graphs:
     description: Intermediate-filament-like protein required for curved rod shape
       in Caulobacter.
     grounding: UniProtKB:A0A2N9AY16
+  - node_id: rod_complex
+    label: Rod complex (elongasome)
+    node_type: PATHWAY
+    description: Elongasome machinery that directs lateral peptidoglycan synthesis
+      and architecture.
+  - node_id: peptidoglycan_architecture
+    label: peptidoglycan architecture
+    node_type: CELLULAR_LOCALIZATION
+    description: Spatial organization and dense structure of the peptidoglycan wall.
+  - node_id: rod_shape
+    label: rod shape
+    node_type: QUALITY
+    description: Rod (bacillus) cell-shape outcome.
+  - node_id: a22_inhibitor
+    label: A22 (MreB inhibitor)
+    node_type: CHEMICAL
+    description: Small-molecule inhibitor that reduces MreB filament assembly.
+  - node_id: cardiolipin_lipid_order
+    label: cardiolipin / increased lipid order
+    node_type: CHEMICAL
+    description: Membrane lipid composition state with increased lipid order.
+  - node_id: flotillins
+    label: flotillins
+    node_type: GENE_OR_PROTEIN
+    description: Membrane microdomain scaffolding proteins.
+  - node_id: cell_wall_synthesis
+    label: cell wall synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of the bacterial cell wall.
   edges:
   - subject: peptidoglycan_cell_wall
     predicate: regulates
@@ -121,6 +150,52 @@ causal_graphs:
       snippet: crescentin is required for the curved-rod shape
       notes: Supports crescentin as a cell-shape determinant in Caulobacter.
     predicate_id: RO:0002326
+  - subject: rod_complex
+    predicate: shapes
+    object: peptidoglycan_architecture
+    description: The rod complex (elongasome) determines the overall shape and dense
+      architecture of peptidoglycan.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: Rod complex may be a determinant for the whole shape of peptidoglycan
+        and its highly dense structure.
+  - subject: peptidoglycan_architecture
+    predicate: regulates
+    object: cell_shape_trait
+    description: Peptidoglycan wall architecture underlies cell shape.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: Peptidoglycan determines cell shape (broad bacterial claim).
+  - subject: mreB
+    predicate: organizes
+    object: rod_shape
+    description: MreB coordinates with PG synthases to organize cell-wall synthesis
+      for rod shape.
+    evidence:
+    - reference: DOI:10.1042/bsr20221664
+      notes: MreB coordinates with PG synthases and is linked to rod shape.
+  - subject: a22_inhibitor
+    predicate: disrupts
+    object: rod_shape
+    description: A22 reduces MreB filaments, causing loss of rod shape and lysis.
+    evidence:
+    - reference: DOI:10.1128/jb.00433-22
+      notes: A22 reduces MreB filaments leading to loss of rod shape and lysis.
+  - subject: cardiolipin_lipid_order
+    predicate: inhibits
+    object: mreB
+    description: Increased lipid order or cardiolipin interferes with MreB assembly.
+    evidence:
+    - reference: DOI:10.1128/jb.00433-22
+      notes: Increased lipid order or cardiolipin interferes with MreB assembly.
+  - subject: flotillins
+    predicate: promotes
+    object: cell_wall_synthesis
+    description: Flotillins promote MreB activity and cell-wall synthesis via membrane
+      organization.
+    evidence:
+    - reference: DOI:10.1128/jb.00433-22
+      notes: Absence of flotillins downregulates MreB activity and cell wall synthesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884864+00:00'
   curator: seed_from_metpo
@@ -180,4 +255,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

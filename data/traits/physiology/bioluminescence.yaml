@@ -46,6 +46,42 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:15379
     description: Co-substrate of the luciferase reaction.
+  - node_id: long_chain_aldehyde
+    label: long-chain aldehyde
+    node_type: CHEMICAL
+    description: Aliphatic aldehyde substrate (C8-C16) of the luciferase reaction.
+  - node_id: fmnh2
+    label: reduced flavin mononucleotide (FMNH2)
+    node_type: CHEMICAL
+    description: Reduced flavin substrate consumed by luciferase.
+  - node_id: fmn
+    label: flavin mononucleotide (FMN)
+    node_type: CHEMICAL
+    description: Oxidized flavin recycled in the luciferase cycle.
+  - node_id: lux_g
+    label: LuxG flavin reductase
+    node_type: GENE_OR_PROTEIN
+    description: NAD(P)H-dependent flavin reductase generating FMNH2.
+  - node_id: luxcde_complex
+    label: LuxCDE fatty acid reductase complex
+    node_type: GENE_OR_PROTEIN
+    description: LuxC/LuxD/LuxE complex supplying long-chain aldehyde substrate.
+  - node_id: lux_i
+    label: LuxI autoinducer synthase
+    node_type: GENE_OR_PROTEIN
+    description: Synthase producing the 3-oxo-C6-HSL acyl-homoserine lactone autoinducer.
+  - node_id: lux_r
+    label: LuxR transcription factor
+    node_type: GENE_OR_PROTEIN
+    description: Autoinducer-responsive activator of the lux locus.
+  - node_id: autoinducer_hsl
+    label: 3-oxo-C6-HSL autoinducer
+    node_type: CHEMICAL
+    description: LuxI-produced acyl-homoserine lactone quorum-sensing signal.
+  - node_id: lux_locus_expression
+    label: lux locus expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of the lux operon producing light-production machinery.
   edges:
   - subject: luciferase
     predicate: enables
@@ -71,6 +107,91 @@ causal_graphs:
     - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
       notes: Waters & Bassler support quorum-sensing control of luminescence.
     predicate_id: RO:0002327
+  - subject: luciferase
+    predicate: catalyzes
+    object: long_chain_aldehyde
+    description: Luciferase catalyzes the monooxygenation of long-chain aliphatic
+      aldehydes.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation
+        of aliphatic aldehydes to the corresponding acids.
+  - subject: fmnh2
+    predicate: is substrate for
+    object: bioluminescence_process
+    description: FMNH2 is a required substrate consumed in the light-emitting luciferase
+      reaction.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular
+        oxygen (O2) are converted by the enzyme luciferase (LuxAB).
+  - subject: long_chain_aldehyde
+    predicate: is substrate for
+    object: bioluminescence_process
+    description: Long-chain aldehyde is a required substrate of the light-emitting
+      reaction.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular
+        oxygen (O2) are converted by the enzyme luciferase (LuxAB).
+  - subject: lux_g
+    predicate: converts
+    object: fmn
+    description: LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase
+      reaction.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: LuxG converts free flavin (FMN) to reduced flavin (FMNH2); LuxG is a
+        NAD(P)H-dependent flavin reductase.
+  - subject: lux_g
+    predicate: produces
+    object: fmnh2
+    description: LuxG generates the reduced flavin substrate FMNH2.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: LuxG converts free flavin (FMN) to reduced flavin (FMNH2).
+  - subject: luxcde_complex
+    predicate: supplies
+    object: long_chain_aldehyde
+    description: The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde
+      substrate.
+    evidence:
+    - reference: DOI:10.1016/j.csbj.2018.11.003
+      notes: To supply the long-chain aldehyde substrates to the luciferase, the proteins
+        LuxC, LuxD, and LuxE constitute a fatty acid reductase complex.
+  - subject: lux_i
+    predicate: synthesizes
+    object: autoinducer_hsl
+    description: LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.
+    evidence:
+    - reference: DOI:10.1128/jb.00035-24
+      notes: Identifying LuxI as the autoinducer synthase; the LuxI-produced 3-oxo-C6
+        HSL.
+  - subject: autoinducer_hsl
+    predicate: binds
+    object: lux_r
+    description: The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.
+    evidence:
+    - reference: DOI:10.1128/jb.00035-24
+      notes: The LuxI-produced 3-oxo-C6 was shown to bind the N-terminal domain of
+        the transcription factor LuxR.
+  - subject: lux_r
+    predicate: activates expression of
+    object: lux_locus_expression
+    description: Autoinducer-bound LuxR activates expression of the lux locus.
+    evidence:
+    - reference: DOI:10.1128/jb.00035-24
+      notes: Bind the N-terminal domain of the transcription factor LuxR to activate
+        the expression of the lux locus.
+  - subject: lux_locus_expression
+    predicate: produces
+    object: luciferase
+    description: Expression of the lux locus produces the luciferase light-production
+      machinery.
+    evidence:
+    - reference: DOI:10.1128/jb.00035-24
+      notes: Activation of the lux locus drives expression of the light-production
+        machinery including luciferase.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -88,4 +209,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A010SSZ8×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 10 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

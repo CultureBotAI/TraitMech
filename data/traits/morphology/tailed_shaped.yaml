@@ -44,6 +44,34 @@ causal_graphs:
     label: polar appendage
     node_type: BIOLOGICAL_PROCESS
     description: Resulting elongated polar structure.
+  - node_id: bactofilin_polymers
+    label: bactofilin polymers
+    node_type: GENE_OR_PROTEIN
+    description: Cytoskeletal scaffold polymers that organize polar stalk synthesis.
+  - node_id: stalk_base
+    label: stalk base
+    node_type: CELLULAR_LOCALIZATION
+    description: The cell-pole site where stalk synthesis is initiated and confined.
+  - node_id: pg_biosynthesis_at_stalk_base
+    label: peptidoglycan biosynthesis at stalk base
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell wall synthesis spatially restricted to the stalk base.
+  - node_id: cell_wall_synthase
+    label: cell wall synthase
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan synthase recruited to extend the stalk.
+  - node_id: mreb
+    label: MreB
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial actin homolog directing cell-wall synthesis for stalk formation.
+  - node_id: roda
+    label: RodA
+    node_type: GENE_OR_PROTEIN
+    description: SEDS peptidoglycan polymerase required for stalk elongation.
+  - node_id: phosphate_starvation
+    label: phosphate starvation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Phosphate-limited growth condition that induces stalk elongation.
   edges:
   - subject: unipolar_pg_growth
     predicate: regulates
@@ -72,6 +100,65 @@ causal_graphs:
       snippet: prosthecate bacteria
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: bactofilin_polymers
+    predicate: localizes to
+    object: stalk_base
+    description: Bactofilin polymers localize to the stalk base to direct proper stalk
+      formation.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577
+      notes: In C. crescentus and A. biprosthecum bactofilin polymers localize to
+        the stalk base to direct proper stalk formation.
+  - subject: bactofilin_polymers
+    predicate: regulates
+    object: pg_biosynthesis_at_stalk_base
+    description: Bactofilins limit peptidoglycan biosynthesis to the stalk base, confining
+      wall growth spatially.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577
+      notes: Required to efficiently initiate stalk formation and limit peptidoglycan
+        biosynthesis to the stalk base.
+  - subject: bactofilin_polymers
+    predicate: recruits
+    object: cell_wall_synthase
+    description: Bactofilins recruit a cell wall synthase that contributes to stalk
+      elongation.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577
+      notes: In C. crescentus, they recruit a cell wall synthase that contributes
+        to stalk elongation.
+  - subject: cell_wall_synthase
+    predicate: positively regulates
+    object: stalk_outgrowth
+    description: The recruited cell wall synthase contributes to stalk elongation.
+    evidence:
+    - reference: DOI:10.7554/eLife.86577
+      notes: Recruited cell wall synthase contributes to stalk elongation.
+  - subject: mreb
+    predicate: required for
+    object: stalk_outgrowth
+    description: MreB is necessary for stalk formation; depletion causes a stalk elongation
+      defect.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: MreB and RodA are necessary for stalk formation, as depletion of either
+        protein results in a stalk elongation defect.
+  - subject: roda
+    predicate: required for
+    object: stalk_outgrowth
+    description: RodA (SEDS PG polymerase) is necessary for stalk formation; depletion
+      causes a stalk elongation defect.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: MreB and RodA are necessary for stalk formation, as depletion of either
+        protein results in a stalk elongation defect.
+  - subject: phosphate_starvation
+    predicate: induces
+    object: stalk_outgrowth
+    description: Phosphate starvation induces elongated stalks.
+    evidence:
+    - reference: DOI:10.1128/jb.00384-22
+      notes: Cells starved of phosphate grow elongated stalks.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.900946+00:00'
   curator: seed_from_metpo
@@ -107,4 +194,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

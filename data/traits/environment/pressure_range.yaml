@@ -38,6 +38,36 @@ causal_graphs:
     label: growth-permissive pressure span
     node_type: QUALITY
     description: Continuous interval of hydrostatic pressures supporting growth.
+  - node_id: pufa_biosynthesis
+    label: polyunsaturated fatty acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of polyunsaturated fatty acids incorporated into membrane
+      lipids.
+  - node_id: membrane_fluidity_hhp
+    label: membrane fluidity under high hydrostatic pressure
+    node_type: QUALITY
+    description: Degree of membrane lipid disorder/fluidity maintained against pressure-induced
+      ordering.
+  - node_id: unsaturated_membrane_lipids
+    label: unsaturated membrane lipids
+    node_type: CHEMICAL
+    description: Unsaturated fatty acids in membrane phospholipids that counter pressure-induced
+      ordering.
+  - node_id: tmao
+    label: trimethylamine N-oxide (TMAO)
+    node_type: CHEMICAL
+    description: Compatible solute / piezolyte excluded from the protein hydration
+      layer.
+  - node_id: protein_stabilization
+    label: protein stabilization via preferential hydration
+    node_type: BIOLOGICAL_PROCESS
+    description: Stabilization of native protein structure by preferential exclusion
+      of cosolutes.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of compatible solutes (betaine, glutamate, beta-hydroxybutyrate)
+      acting as piezolytes.
   edges:
   - subject: hydrostatic_pressure
     predicate: defines
@@ -59,6 +89,50 @@ causal_graphs:
       notes: Colwellia marinimaniae MTCD1 illustrates a bounded growth-supporting
         pressure span (80-140 MPa).
     predicate_id: biolink:associated_with
+  - subject: pufa_biosynthesis
+    predicate: increases
+    object: membrane_fluidity_hhp
+    description: PUFA biosynthesis increases membrane fluidity to counter pressure-induced
+      membrane ordering.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: PUFAs (C20:5, C22:6) associated with adaptation to high hydrostatic pressure;
+        broad mechanism across taxa.
+  - subject: unsaturated_membrane_lipids
+    predicate: positively regulates
+    object: pressure_range_trait
+    description: Unsaturated membrane lipids support growth across high hydrostatic
+      pressures.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Mutants with reduced C18:1 could not withstand high pressure; unsaturation
+        counters pressure ordering.
+  - subject: membrane_fluidity_hhp
+    predicate: expands
+    object: pressure_range_trait
+    description: Maintaining membrane fluidity under pressure expands the growth-supporting
+      pressure range.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: Pressure compacts membranes; organisms restore membrane disorder/function
+        via unsaturation to sustain growth.
+  - subject: tmao
+    predicate: stabilizes
+    object: protein_stabilization
+    description: TMAO stabilizes proteins via preferential hydration (preferential
+      exclusion from hydration layer).
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.3c00432
+      notes: TMAO preferentially excluded from protein hydration layer causing preferential
+        hydration; biophysical mechanism, not microbe-specific.
+  - subject: compatible_solute_accumulation
+    predicate: stabilizes
+    object: protein_stabilization
+    description: Compatible solutes stabilize proteins via preferential hydration.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by
+        preferential hydration, displacing protein-bound water.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -78,4 +152,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001025×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

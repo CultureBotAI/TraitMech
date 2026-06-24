@@ -90,6 +90,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>Mrp Na+/H+ antiporter complex</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>intracellular pH homeostasis</strong>
+            
+            <p>Mrp Na+/H+ antiporter complex maintains intracellular pH homeostasis under alkaline stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-022-33640-y</code>
+                
+                <span class="meta">Mrp antiporters essential for growth of alkaliphilic bacteria under stress, maintaining intracellular pH and sodium homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>Na+/H+ antiport activity</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>cytoplasm acidification during alkaline growth</strong>
+            
+            <p>Na+/H+ antiport activity acidifies the cytoplasm during alkaline growth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s13205-021-02938-x</code>
+                
+                <span class="meta">Alkaliphiles rely on dedicated Na+/H+ antiporters that import H+ in exchange for Na+, acidifying the cytoplasm for pH homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>cytoplasm acidification during alkaline growth</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>intracellular pH homeostasis</strong>
+            
+            <p>Acidification of the cytoplasm contributes to intracellular pH homeostasis at high external pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s13205-021-02938-x</code>
+                
+                <span class="meta">Proton import via antiport acidifies cytoplasm, a core alkaliphile pH-homeostasis mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>acidic cell-wall polymers (teichuronic acid)</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>pH range mid3</strong>
+            
+            <p>Acidic cell-wall polymers (teichuronic acid) contribute to alkaline pH tolerance.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s13205-021-02938-x</code>
+                
+                <span class="meta">Alkaliphilic Bacilli reinforce the cell wall with negatively charged teichuronic acid/acidic polymers, hypothesized to repel OH- and adsorb Na+/H+.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>cardiolipin-rich negatively charged membrane</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>intracellular pH homeostasis</strong>
+            
+            <p>Cardiolipin-rich negatively charged membranes support pH homeostasis at high pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s13205-021-02938-x</code>
+                
+                <span class="meta">Alkaliphiles tend to enrich membranes in negatively charged phospholipids including cardiolipin, noted as especially important for pH homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>carbonate-buffered alkaline medium</strong>
+            <span class="edge-predicate">enables observation of</span>
+            <strong>pH range mid3</strong>
+            
+            <p>Carbonate-buffered alkaline medium enables assay/observation of the alkaliphile growth phenotype.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s13205-023-03733-6</code>
+                
+                <span class="meta">Alkaliphiles are commonly cultured with sodium carbonate/bicarbonate to set pH around 9.5-10, shaping the measured pH niche.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>observed growth-supporting pH range ~7.5-10.2</strong>
+            <span class="edge-predicate">is evidence for</span>
+            <strong>pH range mid3</strong>
+            
+            <p>Observed growth across pH ~7.5-10.2 is evidence for the pH range mid3 phenotype.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1228266</code>
+                
+                <span class="meta">C. thermarum grows pH 7.5-11; alkaliphilic methanogens grow 7.5-10.0 and 7.7-10.2, delimiting the pH 8-10 trait scope.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -241,6 +360,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -600,7 +725,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis to a pH growth range of approximately 8\u201310.", "edges": [{"description": "Alkaliphile pH-homeostasis enables growth across pH 8\u201310.", "evidence": [{"notes": "Supports alkaliphile cytoplasmic pH homeostasis as the alkaline growth-range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaliphile_homeostasis", "target": "ph_range_mid3_trait"}, {"description": "pH range mid3 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 8\u201310 range as a value within the pH-range distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid3_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Alkaliphile pH-homeostasis enables growth across pH 8\u201310.", "edge_id": "edge-1", "evidence": [{"notes": "Supports alkaliphile cytoplasmic pH homeostasis as the alkaline growth-range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaliphile pH homeostasis", "target": "pH range mid3"}, {"description": "pH range mid3 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 8\u201310 range as a value within the pH-range distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid3", "target": "pH range"}], "graph_id": "ph_range_mid3_alkaliphile_range", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Proton re-import via Na+/H+ antiporters maintaining a less alkaline cytoplasm at high external pH.", "grounding": null, "id": "alkaliphile_homeostasis", "is_orphan": false, "label": "alkaliphile pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 8\u201310.", "grounding": "METPO:1000463", "id": "ph_range_mid3_trait", "is_orphan": false, "label": "pH range mid3", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid3 alkaliphile range"}];
+  var graphs = [{"description": "DOI-backed graph linking alkaliphile cytoplasmic pH homeostasis to a pH growth range of approximately 8\u201310.", "edges": [{"description": "Alkaliphile pH-homeostasis enables growth across pH 8\u201310.", "evidence": [{"notes": "Supports alkaliphile cytoplasmic pH homeostasis as the alkaline growth-range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaliphile_homeostasis", "target": "ph_range_mid3_trait"}, {"description": "pH range mid3 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 8\u201310 range as a value within the pH-range distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid3_trait", "target": "ph_range"}, {"description": "Mrp Na+/H+ antiporter complex maintains intracellular pH homeostasis under alkaline stress.", "evidence": [{"notes": "Mrp antiporters essential for growth of alkaliphilic bacteria under stress, maintaining intracellular pH and sodium homeostasis.", "reference": "DOI:10.1038/s41467-022-33640-y"}], "id": "edge-3", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "mrp_antiporter", "target": "intracellular_ph_homeostasis"}, {"description": "Na+/H+ antiport activity acidifies the cytoplasm during alkaline growth.", "evidence": [{"notes": "Alkaliphiles rely on dedicated Na+/H+ antiporters that import H+ in exchange for Na+, acidifying the cytoplasm for pH homeostasis.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "nahplus_antiport_activity", "target": "cytoplasm_acidification"}, {"description": "Acidification of the cytoplasm contributes to intracellular pH homeostasis at high external pH.", "evidence": [{"notes": "Proton import via antiport acidifies cytoplasm, a core alkaliphile pH-homeostasis mechanism.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "cytoplasm_acidification", "target": "intracellular_ph_homeostasis"}, {"description": "Acidic cell-wall polymers (teichuronic acid) contribute to alkaline pH tolerance.", "evidence": [{"notes": "Alkaliphilic Bacilli reinforce the cell wall with negatively charged teichuronic acid/acidic polymers, hypothesized to repel OH- and adsorb Na+/H+.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "acidic_cell_wall_polymers", "target": "ph_range_mid3_trait"}, {"description": "Cardiolipin-rich negatively charged membranes support pH homeostasis at high pH.", "evidence": [{"notes": "Alkaliphiles tend to enrich membranes in negatively charged phospholipids including cardiolipin, noted as especially important for pH homeostasis.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "id": "edge-7", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "cardiolipin_membrane", "target": "intracellular_ph_homeostasis"}, {"description": "Carbonate-buffered alkaline medium enables assay/observation of the alkaliphile growth phenotype.", "evidence": [{"notes": "Alkaliphiles are commonly cultured with sodium carbonate/bicarbonate to set pH around 9.5-10, shaping the measured pH niche.", "reference": "DOI:10.1007/s13205-023-03733-6"}], "id": "edge-8", "is_orphan": false, "predicate": "enables observation of", "predicate_id": null, "source": "carbonate_buffered_medium", "target": "ph_range_mid3_trait"}, {"description": "Observed growth across pH ~7.5-10.2 is evidence for the pH range mid3 phenotype.", "evidence": [{"notes": "C. thermarum grows pH 7.5-11; alkaliphilic methanogens grow 7.5-10.0 and 7.7-10.2, delimiting the pH 8-10 trait scope.", "reference": "DOI:10.3389/fmicb.2023.1228266"}], "id": "edge-9", "is_orphan": false, "predicate": "is evidence for", "predicate_id": null, "source": "growth_range_observation", "target": "ph_range_mid3_trait"}], "evidence_rows": [{"description": "Alkaliphile pH-homeostasis enables growth across pH 8\u201310.", "edge_id": "edge-1", "evidence": [{"notes": "Supports alkaliphile cytoplasmic pH homeostasis as the alkaline growth-range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "alkaliphiles"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "alkaliphile pH homeostasis", "target": "pH range mid3"}, {"description": "pH range mid3 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 8\u201310 range as a value within the pH-range distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid3", "target": "pH range"}, {"description": "Mrp Na+/H+ antiporter complex maintains intracellular pH homeostasis under alkaline stress.", "edge_id": "edge-3", "evidence": [{"notes": "Mrp antiporters essential for growth of alkaliphilic bacteria under stress, maintaining intracellular pH and sodium homeostasis.", "reference": "DOI:10.1038/s41467-022-33640-y"}], "predicate": "maintains", "predicate_id": null, "source": "Mrp Na+/H+ antiporter complex", "target": "intracellular pH homeostasis"}, {"description": "Na+/H+ antiport activity acidifies the cytoplasm during alkaline growth.", "edge_id": "edge-4", "evidence": [{"notes": "Alkaliphiles rely on dedicated Na+/H+ antiporters that import H+ in exchange for Na+, acidifying the cytoplasm for pH homeostasis.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "predicate": "causes", "predicate_id": null, "source": "Na+/H+ antiport activity", "target": "cytoplasm acidification during alkaline growth"}, {"description": "Acidification of the cytoplasm contributes to intracellular pH homeostasis at high external pH.", "edge_id": "edge-5", "evidence": [{"notes": "Proton import via antiport acidifies cytoplasm, a core alkaliphile pH-homeostasis mechanism.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "predicate": "contributes to", "predicate_id": null, "source": "cytoplasm acidification during alkaline growth", "target": "intracellular pH homeostasis"}, {"description": "Acidic cell-wall polymers (teichuronic acid) contribute to alkaline pH tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "Alkaliphilic Bacilli reinforce the cell wall with negatively charged teichuronic acid/acidic polymers, hypothesized to repel OH- and adsorb Na+/H+.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "predicate": "contributes to", "predicate_id": null, "source": "acidic cell-wall polymers (teichuronic acid)", "target": "pH range mid3"}, {"description": "Cardiolipin-rich negatively charged membranes support pH homeostasis at high pH.", "edge_id": "edge-7", "evidence": [{"notes": "Alkaliphiles tend to enrich membranes in negatively charged phospholipids including cardiolipin, noted as especially important for pH homeostasis.", "reference": "DOI:10.1007/s13205-021-02938-x"}], "predicate": "supports", "predicate_id": null, "source": "cardiolipin-rich negatively charged membrane", "target": "intracellular pH homeostasis"}, {"description": "Carbonate-buffered alkaline medium enables assay/observation of the alkaliphile growth phenotype.", "edge_id": "edge-8", "evidence": [{"notes": "Alkaliphiles are commonly cultured with sodium carbonate/bicarbonate to set pH around 9.5-10, shaping the measured pH niche.", "reference": "DOI:10.1007/s13205-023-03733-6"}], "predicate": "enables observation of", "predicate_id": null, "source": "carbonate-buffered alkaline medium", "target": "pH range mid3"}, {"description": "Observed growth across pH ~7.5-10.2 is evidence for the pH range mid3 phenotype.", "edge_id": "edge-9", "evidence": [{"notes": "C. thermarum grows pH 7.5-11; alkaliphilic methanogens grow 7.5-10.0 and 7.7-10.2, delimiting the pH 8-10 trait scope.", "reference": "DOI:10.3389/fmicb.2023.1228266"}], "predicate": "is evidence for", "predicate_id": null, "source": "observed growth-supporting pH range ~7.5-10.2", "target": "pH range mid3"}], "graph_id": "ph_range_mid3_alkaliphile_range", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Negatively charged cell-wall polymers proposed to repel hydroxide and adsorb cations.", "grounding": null, "id": "acidic_cell_wall_polymers", "is_orphan": false, "label": "acidic cell-wall polymers (teichuronic acid)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Proton re-import via Na+/H+ antiporters maintaining a less alkaline cytoplasm at high external pH.", "grounding": null, "id": "alkaliphile_homeostasis", "is_orphan": false, "label": "alkaliphile pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ccfbf1", "description": "Sodium carbonate/bicarbonate buffering used to set culture pH around 9.5-10.", "grounding": null, "id": "carbonate_buffered_medium", "is_orphan": false, "label": "carbonate-buffered alkaline medium", "node_type": "EXPERIMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane enriched in negatively charged phospholipids including cardiolipin.", "grounding": null, "id": "cardiolipin_membrane", "is_orphan": false, "label": "cardiolipin-rich negatively charged membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Proton import that acidifies the cytoplasm relative to alkaline medium.", "grounding": null, "id": "cytoplasm_acidification", "is_orphan": false, "label": "cytoplasm acidification during alkaline growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ccfbf1", "description": "Primary growth-range measurements spanning pH 7.5 to ~10-11.", "grounding": null, "id": "growth_range_observation", "is_orphan": false, "label": "observed growth-supporting pH range ~7.5-10.2", "node_type": "EXPERIMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a less-alkaline cytoplasm under alkaline external stress.", "grounding": null, "id": "intracellular_ph_homeostasis", "is_orphan": false, "label": "intracellular pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Multi-subunit cation/proton antiporter conserved in many alkaliphiles.", "grounding": null, "id": "mrp_antiporter", "is_orphan": false, "label": "Mrp Na+/H+ antiporter complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Electrogenic exchange importing protons in exchange for sodium ions.", "grounding": null, "id": "nahplus_antiport_activity", "is_orphan": false, "label": "Na+/H+ antiport activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 8\u201310.", "grounding": "METPO:1000463", "id": "ph_range_mid3_trait", "is_orphan": false, "label": "pH range mid3", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid3 alkaliphile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -611,7 +736,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

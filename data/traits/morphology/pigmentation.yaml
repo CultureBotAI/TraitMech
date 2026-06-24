@@ -41,6 +41,54 @@ causal_graphs:
     label: visible colony color
     node_type: MOLECULAR_FUNCTION
     description: Absorption and reflection phenotype observed as microbial color.
+  - node_id: mva_pathway
+    label: mevalonate pathway
+    node_type: PATHWAY
+    description: Pathway producing C5 isoprenoid precursors (IPP and DMAPP) for terpenoid
+      biosynthesis.
+  - node_id: mep_pathway
+    label: MEP pathway
+    node_type: PATHWAY
+    description: 2-C-methyl-D-erythritol 4-phosphate pathway producing C5 isoprenoid
+      precursors IPP and DMAPP.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis
+    node_type: PATHWAY
+    description: Biosynthetic pathway producing carotenoid pigments from isoprenoid
+      precursors.
+  - node_id: shikimate_pathway
+    label: shikimate pathway
+    node_type: PATHWAY
+    description: Pathway providing aromatic precursors used in phenazine biosynthesis.
+  - node_id: phenazine_biosynthesis
+    label: phenazine biosynthesis
+    node_type: PATHWAY
+    description: Biosynthetic pathway producing phenazine pigments such as pyocyanin.
+  - node_id: crt_carotenoid_genes
+    label: crtE/crtB/crtI/crtY gene set
+    node_type: GENE_OR_PROTEIN
+    description: Core carotenogenic genes encoding enzymes for beta-carotene biosynthesis.
+  - node_id: beta_carotene_biosynthesis
+    label: beta-carotene biosynthesis
+    node_type: PATHWAY
+    description: Biosynthetic route producing the carotenoid pigment beta-carotene.
+  - node_id: hppd_gene
+    label: hppD 4-hydroxyphenylpyruvate dioxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisate.
+  - node_id: homogentisate
+    label: homogentisate
+    node_type: CHEMICAL
+    description: Aromatic metabolite that auto-oxidizes and polymerizes to pyomelanin.
+  - node_id: pyomelanin
+    label: pyomelanin
+    node_type: CHEMICAL
+    description: Brown-black pigment formed by polymerization of homogentisate.
+  - node_id: hmga_gene
+    label: hmgA homogentisate 1,2-dioxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting homogentisate to maleylacetoacetate, preventing
+      pyomelanin accumulation.
   edges:
   - subject: pigment_biosynthesis
     predicate: produces
@@ -81,6 +129,74 @@ causal_graphs:
       snippet: focus on applications of bacterial pigments
       notes: Supports pigmentation as a visible output of bacterial pigment chemistry.
     predicate_id: METPO:2007400
+  - subject: mva_pathway
+    predicate: provides precursor for
+    object: carotenoid_biosynthesis
+    description: The mevalonate pathway supplies C5 isoprenoid precursors (IPP/DMAPP)
+      for carotenoid biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA
+        or MEP pathways.
+  - subject: mep_pathway
+    predicate: provides precursor for
+    object: carotenoid_biosynthesis
+    description: The MEP pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for
+      carotenoid biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA
+        or MEP pathways.
+  - subject: crt_carotenoid_genes
+    predicate: enables
+    object: beta_carotene_biosynthesis
+    description: The crtE/crtB/crtI/crtY gene set encodes enzymes enabling beta-carotene
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: 'beta-carotene: crtE, crtY, crtI, crtB; curate as generic carotenoid
+        module.'
+  - subject: beta_carotene_biosynthesis
+    predicate: is a
+    object: carotenoid_biosynthesis
+    description: Beta-carotene biosynthesis is a specific carotenoid biosynthetic
+      route.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11030614
+      notes: Beta-carotene is a carotenoid pigment produced by carotenogenic crt genes.
+  - subject: shikimate_pathway
+    predicate: precursor of
+    object: phenazine_biosynthesis
+    description: The shikimate pathway provides aromatic precursors for phenazine
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: Phenazine pigments (including pyocyanin) derive from the shikimate pathway.
+  - subject: hppd_gene
+    predicate: produces
+    object: homogentisate
+    description: HppD converts 4-hydroxyphenylpyruvate to homogentisate in the pyomelanin
+      pathway.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: Conversion of 4-hydroxyphenylpyruvate to HGA by HppD.
+  - subject: homogentisate
+    predicate: polymerizes to form
+    object: pyomelanin
+    description: Homogentisate auto-oxidizes and polymerizes to form the pigment pyomelanin.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: HGA, excretion of HGA, spontaneous auto-oxidation and polymerization
+        to pyomelanin.
+  - subject: hmga_gene
+    predicate: prevents accumulation of
+    object: pyomelanin
+    description: HmgA converts homogentisate to maleylacetoacetate, preventing pyomelanin
+      accumulation.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00410-24
+      notes: HmgA normally converts HGA to maleylacetoacetate, preventing pigment
+        accumulation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.942456+00:00'
   curator: seed_from_metpo
@@ -122,4 +238,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0046148×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

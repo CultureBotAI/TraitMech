@@ -60,6 +60,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transporters importing glycine betaine, proline, ectoine, or other
       osmoprotectants.
+  - node_id: osmotic_upshift
+    label: osmotic upshift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Hypertonic/NaCl upshift imposing increased external osmolarity.
+  - node_id: water_efflux_volume_decrease
+    label: water efflux and cytoplasmic volume decrease
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid loss of water and drop in cytoplasmic volume/turgor after hypertonic
+      stress.
+  - node_id: rapid_k_uptake
+    label: rapid potassium uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Emergency K+ import as the primary early osmotic-upshift response.
+  - node_id: glutamate
+    label: L-glutamate
+    node_type: CHEMICAL
+    description: Counterion accumulated/synthesized to balance K+ and maintain electroneutrality.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation/synthesis of neutral compatible solutes replacing K+
+      as a secondary osmoadaptive response.
   edges:
   - subject: low_to_moderate_salinity
     predicate: enables
@@ -120,6 +142,44 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01934-12
       snippet: proline as an osmoprotectant
       notes: Supports proline-mediated protection in a non-halophilic bacterial model.
+  - subject: osmotic_upshift
+    predicate: causes
+    object: water_efflux_volume_decrease
+    description: Hypertonic stress drives rapid water efflux and cytoplasmic volume/turgor
+      decrease.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Under hypertonic stress water exits cells within milliseconds, causing
+        cytoplasmic volume decreases up to ~50%, a rapid fall in turgor and increased
+        ionic strength.
+  - subject: osmotic_upshift
+    predicate: induces
+    object: rapid_k_uptake
+    description: Cells import large amounts of K+ as the primary emergency response
+      to osmotic upshift.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Cells commonly import large amounts of K+ during osmotic upshift; generic
+        across non-halophilic bacteria.
+  - subject: rapid_k_uptake
+    predicate: requires counterion balancing by
+    object: glutamate
+    description: Glutamate is imported or synthesized as the counterion to balance
+      accumulated K+ and maintain electroneutrality.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Glutamate commonly imported or synthesized as the counterion to maintain
+        electroneutrality during K+ accumulation.
+  - subject: rapid_k_uptake
+    predicate: promotes replacement by
+    object: compatible_solute_accumulation
+    description: High intracellular K+/ionic strength is mitigated by secondary accumulation
+      of neutral compatible solutes that replace K+.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: Bacteria such as E. coli and B. subtilis accumulate/synthesize neutral
+        compatible solutes to replace K+; compatible-solute accumulation is a secondary
+        response following primary K+ accumulation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863044+00:00'
   curator: seed_from_metpo
@@ -167,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000208×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

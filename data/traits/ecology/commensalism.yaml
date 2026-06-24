@@ -1,8 +1,7 @@
 identifier: traitmech:000042
 label: commensalism
-definition: A symbiosis in which the microorganism benefits from the association
-  (e.g. resources, shelter, transport) while the host's fitness remains essentially
-  unaffected.
+definition: A symbiosis in which the microorganism benefits from the association (e.g.
+  resources, shelter, transport) while the host's fitness remains essentially unaffected.
 definition_source: DOI:10.1038/s41579-021-00550-7
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,11 +14,11 @@ synonyms:
   source: DOI:10.1038/s41579-021-00550-7
 evidence:
 - reference: DOI:10.1038/s41579-021-00550-7
-  notes: Drew et al. place commensalism on the parasite-mutualist continuum as a
-    near-neutral host interaction.
+  notes: Drew et al. place commensalism on the parasite-mutualist continuum as a near-neutral
+    host interaction.
 - reference: DOI:10.1073/pnas.1218525110
-  notes: McFall-Ngai et al. support commensal colonization as a major class of
-    host-associated microbial lifestyles.
+  notes: McFall-Ngai et al. support commensal colonization as a major class of host-associated
+    microbial lifestyles.
 causal_graphs:
 - graph_id: commensalism_neutral_host
   title: Commensalism benefits microbe without affecting host fitness
@@ -30,8 +29,7 @@ causal_graphs:
     label: commensalism
     node_type: TRAIT
     grounding: traitmech:000042
-    description: Microbe benefits from association; host fitness essentially
-      neutral.
+    description: Microbe benefits from association; host fitness essentially neutral.
   - node_id: host_colonization
     label: host colonization
     node_type: BIOLOGICAL_PROCESS
@@ -40,12 +38,51 @@ causal_graphs:
     label: neutral host fitness effect
     node_type: QUALITY
     description: No detectable net fitness change for the host partner.
+  - node_id: secretory_iga
+    label: secretory IgA
+    node_type: GENE_OR_PROTEIN
+    description: Host mucosal antibody that can promote commensal colonization of
+      the mucus layer.
+  - node_id: mucus_layer
+    label: host mucus / mucins
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Host-derived mucin glycan layer providing niche and nutrients for
+      mucin-foraging microbes.
+  - node_id: glycan_binding_proteins
+    label: bacterial glycan-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: Microbial adhesins mediating attachment to host mucin glycans.
+  - node_id: mucin_attachment
+    label: attachment to mucin
+    node_type: BIOLOGICAL_PROCESS
+    description: Microbial adhesion to the host mucin layer supporting persistent
+      colonization.
+  - node_id: eps_production
+    label: extracellular glucan / EPS production
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of extracellular polysaccharides that build the biofilm
+      matrix.
+  - node_id: biofilm_matrix
+    label: EPS biofilm matrix
+    node_type: CELLULAR_LOCALIZATION
+    description: Extracellular polymeric matrix protecting cells from shear forces
+      and antimicrobials.
+  - node_id: persistence_protection
+    label: protection from shear and antimicrobials
+    node_type: QUALITY
+    description: Resistance to physical removal and antimicrobials supporting host-niche
+      persistence.
+  - node_id: low_virulence
+    label: low virulence / no detectable host cost
+    node_type: QUALITY
+    description: Microbe benefits from the host without causing a detectable fitness
+      cost.
   edges:
   - subject: host_colonization
     predicate: enables
     object: commensalism_trait
-    description: Persistent colonization without harm or benefit to the host
-      realizes the commensal lifestyle.
+    description: Persistent colonization without harm or benefit to the host realizes
+      the commensal lifestyle.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
       notes: McFall-Ngai et al. support commensal colonization as a major class of
@@ -54,13 +91,76 @@ causal_graphs:
   - subject: commensalism_trait
     predicate: associated with
     object: neutral_host_fitness
-    description: Commensal interactions sit on the near-neutral point of the
-      parasite-mutualist continuum.
+    description: Commensal interactions sit on the near-neutral point of the parasite-mutualist
+      continuum.
     evidence:
     - reference: DOI:10.1038/s41579-021-00550-7
       notes: Drew et al. place commensalism on the parasite-mutualist continuum as
         a near-neutral host interaction.
     predicate_id: biolink:associated_with
+  - subject: secretory_iga
+    predicate: promotes
+    object: host_colonization
+    description: Secretory IgA can help commensal bacteria colonize the mucus layer.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: IgA can act as a carrot as well as a stick, helping bacteria colonize
+        the mucus layer.
+  - subject: mucus_layer
+    predicate: provides resources for
+    object: host_colonization
+    description: Host mucin glycans provide niche and nutrients enabling commensal
+      persistence.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: Mucin glycan availability selectively feeds mucin-degrading taxa, providing
+        a host-derived resource.
+  - subject: glycan_binding_proteins
+    predicate: enables
+    object: mucin_attachment
+    description: Bacterial glycan-binding proteins mediate attachment to host mucin.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: Bacteria attach to mucin via glycan-binding proteins.
+  - subject: mucin_attachment
+    predicate: enables
+    object: host_colonization
+    description: Attachment to the mucin layer supports persistent host colonization.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: Attachment to mucin via glycan-binding proteins underlies persistent
+        colonization of the mucus niche.
+  - subject: eps_production
+    predicate: produces
+    object: biofilm_matrix
+    description: Synthesis of extracellular glucans builds the EPS biofilm matrix.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2024.1357631
+      notes: Synthesis of extracellular glucans builds the EPS biofilm matrix.
+  - subject: biofilm_matrix
+    predicate: confers
+    object: persistence_protection
+    description: The EPS biofilm matrix protects cells from shear forces and antimicrobials.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2024.1357631
+      notes: Protects cells from shear forces and confers resistance to antimicrobials.
+  - subject: persistence_protection
+    predicate: promotes
+    object: host_colonization
+    description: Protection from removal and antimicrobials supports persistence in
+      the host niche.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2024.1357631
+      notes: Biofilm-conferred resistance supports persistence in a host niche.
+  - subject: low_virulence
+    predicate: operationalizes
+    object: commensalism_trait
+    description: Benefit to the microbe with no detectable host cost operationalizes
+      commensalism.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00550-7
+      notes: Commensals benefit from the interaction with hosts but do not cause a
+        detectable cost.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -72,4 +172,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (commensalism / neutral host fitness)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000066
 label: intracellular inclusion
 definition: A morphology trait describing a discrete intracellular body — a storage
-  granule, gas-filled structure, or protein-bounded microcompartment/organelle —
-  that compartmentalizes material or function within a prokaryotic cell.
+  granule, gas-filled structure, or protein-bounded microcompartment/organelle — that
+  compartmentalizes material or function within a prokaryotic cell.
 definition_source: DOI:10.1038/s41579-020-0413-0
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,26 +15,23 @@ synonyms:
   source: DOI:10.1038/s41579-020-0413-0
 evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
-  notes: Greening & Lithgow, "Formation and function of bacterial organelles",
-    establish that bacteria contain diverse inclusions/organelles (storage granules,
-    gas vesicles, microcompartments, magnetosomes); parent of the inclusion
-    sub-variants.
+  notes: Greening & Lithgow, "Formation and function of bacterial organelles", establish
+    that bacteria contain diverse inclusions/organelles (storage granules, gas vesicles,
+    microcompartments, magnetosomes); parent of the inclusion sub-variants.
 - reference: DOI:10.1038/nrmicro.2018.10
-  notes: Kerfeld et al. review bacterial microcompartments as a major class of
-    protein-bounded intracellular organelles.
+  notes: Kerfeld et al. review bacterial microcompartments as a major class of protein-bounded
+    intracellular organelles.
 causal_graphs:
 - graph_id: inclusion_compartmentalization
   title: Intracellular inclusions compartmentalize prokaryotic cytoplasm
-  description: Evidence-backed causal sketch linking discrete intracellular
-    inclusions (storage granules, gas vesicles, microcompartments) to
-    cytoplasmic compartmentalization.
+  description: Evidence-backed causal sketch linking discrete intracellular inclusions
+    (storage granules, gas vesicles, microcompartments) to cytoplasmic compartmentalization.
   nodes:
   - node_id: inclusion_trait
     label: intracellular inclusion
     node_type: TRAIT
     grounding: traitmech:000066
-    description: Discrete intracellular body compartmentalizing material or
-      function.
+    description: Discrete intracellular body compartmentalizing material or function.
   - node_id: cytoplasmic_compartmentalization
     label: cytoplasmic compartmentalization
     node_type: QUALITY
@@ -44,6 +41,50 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     grounding: GO:0031469
     description: Protein-shelled prokaryotic organelle (e.g. carboxysome).
+  - node_id: pha_synthase_pathway
+    label: PhaA/PhaB/PhaC pathway
+    node_type: PATHWAY
+    description: Beta-ketothiolase/reductase/PHA synthase pathway producing polyhydroxyalkanoate.
+  - node_id: pha_granule
+    label: PHA granule
+    node_type: CELLULAR_LOCALIZATION
+    description: Polyhydroxyalkanoate storage inclusion body.
+  - node_id: nitrogen_depletion
+    label: nitrogen depletion
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient limitation (low N) triggering carbon storage accumulation.
+  - node_id: polyphosphate_kinase
+    label: polyphosphate kinase (Ppk)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme catalyzing polyphosphate synthesis.
+  - node_id: polyphosphate_granule
+    label: polyphosphate granule
+    node_type: CELLULAR_LOCALIZATION
+    description: Inorganic polyphosphate (volutin) storage inclusion.
+  - node_id: gas_vesicle_gene_cluster
+    label: gas vesicle gene cluster
+    node_type: GENE_OR_PROTEIN
+    description: gvp operon encoding gas vesicle structural and assembly proteins.
+  - node_id: gas_vesicle
+    label: gas vesicle
+    node_type: ORGANELLE
+    description: Hollow gas-filled protein nanocompartment.
+  - node_id: buoyancy
+    label: buoyancy
+    node_type: CAPACITY
+    description: Capacity for vertical positioning in the water column.
+  - node_id: bmc_metabolic_cargo
+    label: encapsulated metabolic enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes/pathway segment sequestered within a microcompartment shell.
+  - node_id: sulfide_oxidation
+    label: sulfide oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of sulfide via elemental sulfur intermediate.
+  - node_id: sulfur_globule
+    label: intracellular sulfur globule
+    node_type: CELLULAR_LOCALIZATION
+    description: Intracellular elemental sulfur (S0) storage inclusion.
   edges:
   - subject: inclusion_trait
     predicate: enables
@@ -51,29 +92,90 @@ causal_graphs:
     description: Inclusions partition activities within the prokaryotic cytoplasm.
     evidence:
     - reference: DOI:10.1038/s41579-020-0413-0
-      notes: Greening & Lithgow review formation and function of bacterial
-        organelles/inclusions.
+      notes: Greening & Lithgow review formation and function of bacterial organelles/inclusions.
     predicate_id: RO:0002327
   - subject: bacterial_microcompartment
     predicate: example of
     object: inclusion_trait
-    description: Bacterial microcompartments are protein-bounded inclusion
-      organelles.
+    description: Bacterial microcompartments are protein-bounded inclusion organelles.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. review bacterial microcompartments as protein-bounded
         intracellular organelles.
     predicate_id: rdfs:subClassOf
+  - subject: pha_synthase_pathway
+    predicate: produces
+    object: pha_granule
+    description: The Pha biosynthetic pathway synthesizes PHA chains that form storage
+      granules.
+    evidence:
+    - reference: DOI:10.3390/molecules29102293
+      notes: '"Synthesized PHA chains form intracellular inclusion bodies commonly
+        called PHA granules"; storage-granule subclass.'
+  - subject: nitrogen_depletion
+    predicate: increases accumulation of
+    object: pha_granule
+    description: Depletion of N (and S, P) is a broad trigger for PHA granule accumulation.
+    evidence:
+    - reference: DOI:10.3390/molecules29102293
+      notes: '"Environmental and cultivation triggers for accumulation include...
+        depletion of N, S, P"; broad, not species-specific.'
+  - subject: polyphosphate_kinase
+    predicate: synthesizes
+    object: polyphosphate_granule
+    description: Ppk catalyzes polyphosphate synthesis forming the polyP/volutin granule.
+    evidence:
+    - reference: DOI:10.3390/foods14132211
+      notes: '"polyP synthesis is catalyzed by polyphosphate kinase (Ppk)".'
+  - subject: gas_vesicle_gene_cluster
+    predicate: encodes
+    object: gas_vesicle
+    description: The gvp gene cluster encodes the gas vesicle organelle.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: '"gene-encoded, inert, hollow, gas-filled protein nanoparticles"; direct
+        definitional edge.'
+  - subject: gas_vesicle
+    predicate: enables
+    object: buoyancy
+    description: Gas vesicles confer buoyancy enabling positioning in the water column.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: '"enabling buoyancy for microbes"; core phenotype/function edge.'
+  - subject: bacterial_microcompartment
+    predicate: encapsulates
+    object: bmc_metabolic_cargo
+    description: BMC shells encapsulate a segment of a metabolic pathway in a selectively
+      permeable shell.
+    evidence:
+    - reference: DOI:10.1042/bst20230229
+      notes: '"encapsulate a segment of a metabolic pathway within a selectively permeable
+        protein shell"; direct BMC definition.'
+  - subject: sulfide_oxidation
+    predicate: forms
+    object: sulfur_globule
+    description: Sulfide oxidation proceeds via intracellular accumulation of elemental
+      sulfur globules.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0310265
+      notes: '"oxidized to sulfate through an intermediate accumulation of elemental
+        sulfur (S0) within the cell in the form of sulfur globules"; definitional.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY axis class (intracellular inclusion) to
-    parent the storage-granule, gas-vesicle, magnetosome, and carboxysome traits.
+  changes: Proposed candidate MORPHOLOGY axis class (intracellular inclusion) to parent
+    the storage-granule, gas-vesicle, magnetosome, and carboxysome traits.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (compartmentalization axis) with GO
     node grounding and RO/RDFS predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

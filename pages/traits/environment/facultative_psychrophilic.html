@@ -141,6 +141,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>low temperature</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>two-component signaling system</strong>
+            
+            <p>Cold sensing via membrane physical-state change activates a two-component system.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">sensing the cold... leading to the activation of a two-component system that transduce the signal</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>fatty acid desaturase</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>unsaturated and branched-chain fatty acids</strong>
+            
+            <p>Desaturase acting on membrane acyl chains rapidly increases unsaturated lipids (homeoviscous response).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/B978-0-12-809633-8.02282-2</code>
+                
+                <span class="meta">the desaturase acting on the acyl chains of the membrane lipids comes into play, thereby increasing the amount of unsaturated lipid</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>extracellular polymeric substances (EPS)</strong>
+            <span class="edge-predicate">protects against</span>
+            <strong>freeze-thaw cycles</strong>
+            
+            <p>EPS surrounding cells acts as cryoprotectant against freeze-thaw damage.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.37256/amtt.5220244537</code>
+                
+                <span class="meta">exopolysaccharides (EPS) surrounding bacterial cells... providing protection against freeze-thaw cycles and acting as cryoprotectants</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>trehalose</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>facultative psychrophilic</strong>
+            
+            <p>Trehalose protects bacteria against abiotic stress including low temperature.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41598-023-41323-x</code>
+                
+                <span class="meta">Trehalose... plays an important role in protecting bacteria against a range of stresses</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>cold-shock proteins</strong>
+            <span class="edge-predicate">destabilizes</span>
+            <strong>RNA secondary structure</strong>
+            
+            <p>CSPs act as chaperones destabilizing RNA secondary structures to maintain transcription/translation in cold.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">CSPs function as chaperones that destabilize those secondary structures and maintain a single-stranded molecule</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>compatible osmolytes</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>facultative psychrophilic</strong>
+            
+            <p>Accumulation of compatible osmolytes prevents cell shrinkage and water loss at sub-zero temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1197797</code>
+                
+                <span class="meta">Accumulation of compatible osmolytes (glycine betaine, trehalose, glycerol, sucrose, mannitol etc.)... to prevent cell shrinkage and water loss during sub-zero temperature</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -332,6 +434,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -691,7 +799,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking facultative psychrophily to low-temperature growth, moderate-temperature optima, membrane remodeling, and cold acclimation proteins.", "edges": [{"description": "Facultative psychrophiles can grow at low temperature.", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "is tolerated by", "predicate_id": null, "source": "low_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "id": "edge-2", "is_orphan": false, "predicate": "supports optimum of", "predicate_id": null, "source": "moderate_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Cold temperature decreases membrane fluidity.", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_shock_proteins", "target": "facultative_psychrophilic_trait"}], "evidence_rows": [{"description": "Facultative psychrophiles can grow at low temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "predicate": "is tolerated by", "predicate_id": null, "source": "low temperature", "target": "facultative psychrophilic"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "predicate": "supports optimum of", "predicate_id": null, "source": "moderate temperature", "target": "facultative psychrophilic"}, {"description": "Cold temperature decreases membrane fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "target": "membrane fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold-shock proteins", "target": "facultative psychrophilic"}], "graph_id": "facultative_psychrophilic_cold_tolerance", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins involved in cold shock and cold acclimation responses.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at low temperatures while retaining optimal growth at moderate temperatures.", "grounding": "METPO:1000720", "id": "facultative_psychrophilic_trait", "is_orphan": false, "label": "facultative psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition near 0 degrees C.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane needed for transport and growth.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "Temperature range where facultative psychrophiles can show optimal growth.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that maintain fluidity under cold conditions.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Facultative psychrophily cold-tolerance mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking facultative psychrophily to low-temperature growth, moderate-temperature optima, membrane remodeling, and cold acclimation proteins.", "edges": [{"description": "Facultative psychrophiles can grow at low temperature.", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "id": "edge-1", "is_orphan": false, "predicate": "is tolerated by", "predicate_id": null, "source": "low_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "id": "edge-2", "is_orphan": false, "predicate": "supports optimum of", "predicate_id": null, "source": "moderate_temperature", "target": "facultative_psychrophilic_trait"}, {"description": "Cold temperature decreases membrane fluidity.", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low_temperature", "target": "membrane_fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold_shock_proteins", "target": "facultative_psychrophilic_trait"}, {"description": "Cold sensing via membrane physical-state change activates a two-component system.", "evidence": [{"notes": "sensing the cold... leading to the activation of a two-component system that transduce the signal", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "low_temperature", "target": "two_component_system"}, {"description": "Desaturase acting on membrane acyl chains rapidly increases unsaturated lipids (homeoviscous response).", "evidence": [{"notes": "the desaturase acting on the acyl chains of the membrane lipids comes into play, thereby increasing the amount of unsaturated lipid", "reference": "DOI:10.1016/B978-0-12-809633-8.02282-2"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "fatty_acid_desaturase", "target": "unsaturated_fatty_acids"}, {"description": "EPS surrounding cells acts as cryoprotectant against freeze-thaw damage.", "evidence": [{"notes": "exopolysaccharides (EPS) surrounding bacterial cells... providing protection against freeze-thaw cycles and acting as cryoprotectants", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-8", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "exopolysaccharides", "target": "freeze_thaw_cycles"}, {"description": "Trehalose protects bacteria against abiotic stress including low temperature.", "evidence": [{"notes": "Trehalose... plays an important role in protecting bacteria against a range of stresses", "reference": "DOI:10.1038/s41598-023-41323-x"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "trehalose", "target": "facultative_psychrophilic_trait"}, {"description": "CSPs act as chaperones destabilizing RNA secondary structures to maintain transcription/translation in cold.", "evidence": [{"notes": "CSPs function as chaperones that destabilize those secondary structures and maintain a single-stranded molecule", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-10", "is_orphan": false, "predicate": "destabilizes", "predicate_id": null, "source": "cold_shock_proteins", "target": "rna_secondary_structure"}, {"description": "Accumulation of compatible osmolytes prevents cell shrinkage and water loss at sub-zero temperatures.", "evidence": [{"notes": "Accumulation of compatible osmolytes (glycine betaine, trehalose, glycerol, sucrose, mannitol etc.)... to prevent cell shrinkage and water loss during sub-zero temperature", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "compatible_solutes", "target": "facultative_psychrophilic_trait"}], "evidence_rows": [{"description": "Facultative psychrophiles can grow at low temperature.", "edge_id": "edge-1", "evidence": [{"notes": "Review introduction supports low-temperature growth capacity.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "capable of growth around 0 \u00b0C"}], "predicate": "is tolerated by", "predicate_id": null, "source": "low temperature", "target": "facultative psychrophilic"}, {"description": "Facultative psychrophiles retain optimal growth at moderate temperatures.", "edge_id": "edge-2", "evidence": [{"notes": "Supports distinction from obligate psychrophiles.", "reference": "DOI:10.1111/j.1574-6941.2009.00727.x", "snippet": "optimum temperatures \u003e20 \u00b0C"}], "predicate": "supports optimum of", "predicate_id": null, "source": "moderate temperature", "target": "facultative psychrophilic"}, {"description": "Cold temperature decreases membrane fluidity.", "edge_id": "edge-3", "evidence": [{"notes": "Supports membrane rigidification as a cold challenge.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "decreased membrane fluidity"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "low temperature", "target": "membrane fluidity"}, {"description": "Lipid remodeling maintains membrane function during cold growth.", "edge_id": "edge-4", "evidence": [{"notes": "Supports homoviscous adaptation during lower-temperature growth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "incorporation of proportionally more unsaturated fatty acids"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "unsaturated and branched-chain fatty acids", "target": "membrane fluidity"}, {"description": "Cold-shock proteins contribute to growth after temperature downshift.", "edge_id": "edge-5", "evidence": [{"notes": "Supports cold-shock proteins as cold-acclimation components.", "reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins have also been described"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cold-shock proteins", "target": "facultative psychrophilic"}, {"description": "Cold sensing via membrane physical-state change activates a two-component system.", "edge_id": "edge-6", "evidence": [{"notes": "sensing the cold... leading to the activation of a two-component system that transduce the signal", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "induces", "predicate_id": null, "source": "low temperature", "target": "two-component signaling system"}, {"description": "Desaturase acting on membrane acyl chains rapidly increases unsaturated lipids (homeoviscous response).", "edge_id": "edge-7", "evidence": [{"notes": "the desaturase acting on the acyl chains of the membrane lipids comes into play, thereby increasing the amount of unsaturated lipid", "reference": "DOI:10.1016/B978-0-12-809633-8.02282-2"}], "predicate": "increases", "predicate_id": null, "source": "fatty acid desaturase", "target": "unsaturated and branched-chain fatty acids"}, {"description": "EPS surrounding cells acts as cryoprotectant against freeze-thaw damage.", "edge_id": "edge-8", "evidence": [{"notes": "exopolysaccharides (EPS) surrounding bacterial cells... providing protection against freeze-thaw cycles and acting as cryoprotectants", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "protects against", "predicate_id": null, "source": "extracellular polymeric substances (EPS)", "target": "freeze-thaw cycles"}, {"description": "Trehalose protects bacteria against abiotic stress including low temperature.", "edge_id": "edge-9", "evidence": [{"notes": "Trehalose... plays an important role in protecting bacteria against a range of stresses", "reference": "DOI:10.1038/s41598-023-41323-x"}], "predicate": "contributes to", "predicate_id": null, "source": "trehalose", "target": "facultative psychrophilic"}, {"description": "CSPs act as chaperones destabilizing RNA secondary structures to maintain transcription/translation in cold.", "edge_id": "edge-10", "evidence": [{"notes": "CSPs function as chaperones that destabilize those secondary structures and maintain a single-stranded molecule", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "destabilizes", "predicate_id": null, "source": "cold-shock proteins", "target": "RNA secondary structure"}, {"description": "Accumulation of compatible osmolytes prevents cell shrinkage and water loss at sub-zero temperatures.", "edge_id": "edge-11", "evidence": [{"notes": "Accumulation of compatible osmolytes (glycine betaine, trehalose, glycerol, sucrose, mannitol etc.)... to prevent cell shrinkage and water loss during sub-zero temperature", "reference": "DOI:10.3389/fmicb.2023.1197797"}], "predicate": "contributes to", "predicate_id": null, "source": "compatible osmolytes", "target": "facultative psychrophilic"}], "graph_id": "facultative_psychrophilic_cold_tolerance", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins involved in cold shock and cold acclimation responses.", "grounding": null, "id": "cold_shock_proteins", "is_orphan": false, "label": "cold-shock proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes (glycine betaine, trehalose, glycerol, sucrose, mannitol) preventing cell shrinkage and water loss.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible osmolytes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Secreted polysaccharide matrix acting as cryoprotectant.", "grounding": null, "id": "exopolysaccharides", "is_orphan": false, "label": "extracellular polymeric substances (EPS)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at low temperatures while retaining optimal growth at moderate temperatures.", "grounding": "METPO:1000720", "id": "facultative_psychrophilic_trait", "is_orphan": false, "label": "facultative psychrophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme introducing double bonds into membrane acyl chains, increasing unsaturation in cold.", "grounding": null, "id": "fatty_acid_desaturase", "is_orphan": false, "label": "fatty acid desaturase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Repeated freezing and thawing damaging cells in cold environments.", "grounding": null, "id": "freeze_thaw_cycles", "is_orphan": false, "label": "freeze-thaw cycles", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Cold growth condition near 0 degrees C.", "grounding": "PATO:0001306", "id": "low_temperature", "is_orphan": false, "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the membrane needed for transport and growth.", "grounding": "METPO:1007505", "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "Temperature range where facultative psychrophiles can show optimal growth.", "grounding": null, "id": "moderate_temperature", "is_orphan": false, "label": "moderate temperature", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Stabilized RNA folds at low temperature that impede transcription and translation.", "grounding": null, "id": "rna_secondary_structure", "is_orphan": false, "label": "RNA secondary structure", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute and cryoprotectant protecting cells against abiotic stress including cold.", "grounding": null, "id": "trehalose", "is_orphan": false, "label": "trehalose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Signal transduction module activated by membrane-state changes during cold sensing.", "grounding": null, "id": "two_component_system", "is_orphan": false, "label": "two-component signaling system", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid features that maintain fluidity under cold conditions.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated and branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Facultative psychrophily cold-tolerance mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -702,7 +810,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

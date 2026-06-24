@@ -46,6 +46,35 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006829
     description: Active export of Zn(2+) across the cytoplasmic membrane.
+  - node_id: znta_atpase
+    label: ZntA P-type ATPase
+    node_type: GENE_OR_PROTEIN
+    description: PIB2-type P-type ATPase mediating cytoplasmic zinc efflux.
+  - node_id: zntr_regulator
+    label: ZntR MerR-family regulator
+    node_type: GENE_OR_PROTEIN
+    description: MerR-family zinc-responsive transcriptional activator of zntA.
+  - node_id: znta_expression
+    label: zntA transcription
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of the zntA zinc-efflux ATPase gene.
+  - node_id: czccba_complex
+    label: CzcCBA RND efflux complex
+    node_type: GENE_OR_PROTEIN
+    description: RND transenvelope pump exporting zinc from the periplasm.
+  - node_id: polyphosphate
+    label: polyphosphate
+    node_type: CHEMICAL
+    description: Cytoplasmic metal-binding polymer buffering zinc.
+  - node_id: glutathione
+    label: glutathione
+    node_type: CHEMICAL
+    grounding: CHEBI:16856
+    description: Cytoplasmic thiol buffering intracellular zinc.
+  - node_id: zinc_buffering
+    label: zinc ion buffering
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular sequestration maintaining zinc flow equilibrium.
   edges:
   - subject: zinc_ion
     predicate: challenges
@@ -71,6 +100,73 @@ causal_graphs:
     - reference: DOI:10.1111/j.1365-2958.2009.06792.x
       notes: The czc efflux system of C. metallidurans confers zinc resistance.
     predicate_id: METPO:2007407
+  - subject: znta_atpase
+    predicate: exports
+    object: zinc_ion
+    description: ZntA PIB2-type ATPase effluxes cytoplasmic Zn(2+).
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: Efflux of zinc ions is mediated by the PIB2-type ATPase, ZntA.
+  - subject: znta_atpase
+    predicate: promotes
+    object: zinc_tolerant_trait
+    description: ZntA-mediated efflux is causal for zinc resistance.
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: Deletion of PIB2 ATPases sharply lowers IC50 (to 7.7 uM), showing their
+        causal role in resistance.
+  - subject: zinc_ion
+    predicate: upregulates
+    object: znta_expression
+    description: Elevated zinc induces transcription of the zntA efflux gene.
+    evidence:
+    - reference: DOI:10.1128/jb.00299-24
+      notes: At external zinc concentrations above 200 nM expression of the zntA gene
+        is upregulated.
+  - subject: zntr_regulator
+    predicate: required for
+    object: znta_expression
+    description: ZntR is essential for zinc-responsive zntA expression.
+    evidence:
+    - reference: DOI:10.1128/jb.00299-24
+      notes: ZntR was essential for zntA expression.
+  - subject: znta_expression
+    predicate: results in
+    object: czc_efflux_system
+    description: zntA transcription yields the ZntA efflux machinery.
+    evidence:
+    - reference: DOI:10.1128/jb.00299-24
+      notes: Increased zntA expression provides ZntA exporter under zinc excess.
+  - subject: czccba_complex
+    predicate: exports
+    object: zinc_ion
+    description: CzcCBA RND pump exports Zn(2+) from the periplasm.
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: The plasmid-encoded RND transenvelope pump CzcCBA exports Co(II), Zn(II),
+        and Cd(II).
+  - subject: polyphosphate
+    predicate: contributes to
+    object: zinc_buffering
+    description: Polyphosphate buffers cytoplasmic zinc, shaping flow equilibrium.
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: Metal-binding cytoplasmic components polyphosphate and glutathione influenced
+        the flow equilibrium.
+  - subject: glutathione
+    predicate: contributes to
+    object: zinc_buffering
+    description: Glutathione buffers cytoplasmic zinc, shaping flow equilibrium.
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: Polyphosphate and glutathione influenced the flow equilibrium.
+  - subject: zinc_buffering
+    predicate: mitigates
+    object: zinc_ion
+    description: Buffering lowers free cytoplasmic zinc.
+    evidence:
+    - reference: DOI:10.1128/jb.00080-24
+      notes: Cytoplasmic buffering components influence the zinc flow equilibrium.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -89,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:B0VPE1×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

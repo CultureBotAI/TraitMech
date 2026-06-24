@@ -1,8 +1,8 @@
 identifier: traitmech:000027
 label: mixed-acid fermentation
 definition: A fermentation in which sugars are converted via the glycolytic pathway
-  to a mixture of acids (lactic, acetic, formic, succinic) plus ethanol, CO2 and
-  H2. Characteristic of enteric bacteria such as Escherichia coli.
+  to a mixture of acids (lactic, acetic, formic, succinic) plus ethanol, CO2 and H2.
+  Characteristic of enteric bacteria such as Escherichia coli.
 definition_source: DOI:10.3389/fmicb.2021.703525
 trait_category: METABOLISM
 term_kind: CLASS
@@ -14,13 +14,13 @@ evidence:
   notes: Review of fermentative energy conservation lists acetate, ethanol, lactate,
     succinate and formate as products of mixed-acid fermentation.
 - reference: DOI:10.3390/molecules31020333
-  notes: Review of fermentation pathways describes mixed-acid fermentation by
-    enterobacteria and its characteristic acid product spectrum.
+  notes: Review of fermentation pathways describes mixed-acid fermentation by enterobacteria
+    and its characteristic acid product spectrum.
 causal_graphs:
 - graph_id: mixed_acid_fermentation_enterobacterial
   title: Mixed-acid fermentation yields a spectrum of acids plus ethanol and gases
-  description: Evidence-backed causal sketch linking glycolytic sugar catabolism
-    to mixed acid + ethanol + CO2 + H2 production in enterobacteria.
+  description: Evidence-backed causal sketch linking glycolytic sugar catabolism to
+    mixed acid + ethanol + CO2 + H2 production in enterobacteria.
   nodes:
   - node_id: mixed_acid_fermentation_trait
     label: mixed-acid fermentation
@@ -36,6 +36,54 @@ causal_graphs:
     label: mixed acid + ethanol + CO2/H2 products
     node_type: CHEMICAL
     description: Lactate, acetate, formate, succinate, ethanol, CO2, H2.
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    description: Central glycolytic intermediate feeding fermentation branches.
+  - node_id: pyruvate_formate_lyase
+    label: pyruvate formate lyase (PflB)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme cleaving pyruvate to formate and acetyl-CoA under anaerobiosis.
+  - node_id: formate
+    label: formate
+    node_type: CHEMICAL
+    description: Acid product and substrate for the formate hydrogenlyase complex.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    description: Branch-point intermediate from pyruvate cleavage.
+  - node_id: pta_acka
+    label: phosphotransacetylase / acetate kinase (Pta/AckA)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme pair converting acetyl-CoA to acetate with ATP generation.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    description: Major mixed-acid fermentation end product.
+  - node_id: fhl_complex
+    label: formate hydrogenlyase complex (FHL)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane complex disproportionating formate into CO2 and H2.
+  - node_id: co2
+    label: carbon dioxide
+    node_type: CHEMICAL
+    description: Gas product of formate disproportionation.
+  - node_id: hydrogen
+    label: molecular hydrogen
+    node_type: CHEMICAL
+    description: Gas product of formate disproportionation by FHL.
+  - node_id: acidic_conditions
+    label: acidic conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-pH environment favoring formate cleavage by FHL.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxygen, which suppresses fermentative hydrogen production.
+  - node_id: cytoplasm_ph
+    label: cytoplasmic pH
+    node_type: QUALITY
+    description: Intracellular pH lowered by acid accumulation during fermentation.
   edges:
   - subject: mixed_acid_fermentation_trait
     predicate: participates in
@@ -48,24 +96,118 @@ causal_graphs:
   - subject: mixed_acid_fermentation_trait
     predicate: produces
     object: mixed_acid_products
-    description: The pathway yields the characteristic acid + ethanol + gas
-      spectrum.
+    description: The pathway yields the characteristic acid + ethanol + gas spectrum.
     evidence:
     - reference: DOI:10.3390/molecules31020333
-      notes: Classical-fermentation review describes mixed-acid fermentation by
-        enterobacteria.
+      notes: Classical-fermentation review describes mixed-acid fermentation by enterobacteria.
     predicate_id: METPO:2000202
+  - subject: mixed_acid_fermentation_trait
+    predicate: has output
+    object: pyruvate
+    description: Glycolysis upstream of mixed-acid fermentation produces pyruvate.
+    evidence:
+    - reference: DOI:10.35812/cellulosechemtechnol.2024.58.90
+      notes: Pyruvate, ATP, and NADH are produced when glucose or other carbon sources
+        reach the primary glycolytic pathway.
+  - subject: pyruvate_formate_lyase
+    predicate: catalyzes conversion of
+    object: pyruvate
+    description: PflB cleaves pyruvate into formate and acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1128/iai.00176-23
+      notes: Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into
+        formate and acetyl-CoA.
+  - subject: pyruvate_formate_lyase
+    predicate: produces
+    object: formate
+    description: PflB cleavage of pyruvate yields formate.
+    evidence:
+    - reference: DOI:10.1128/iai.00176-23
+      notes: Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into
+        formate and acetyl-CoA.
+  - subject: pta_acka
+    predicate: converts
+    object: acetate
+    description: Pta and AckA convert acetyl-CoA to acetate (with ATP generation).
+    evidence:
+    - reference: DOI:10.1128/iai.00176-23
+      notes: Acetyl-CoA is further metabolized by Pta and AckA to generate acetate.
+  - subject: formate
+    predicate: induces synthesis of
+    object: fhl_complex
+    description: Formate induces synthesis of the membrane-bound FHL complex.
+    evidence:
+    - reference: DOI:10.1128/aem.01472-24
+      notes: Formate induces the synthesis of the membrane-bound FHL complex that
+        catalyzes formate disproportionation into CO2 and H2.
+  - subject: fhl_complex
+    predicate: produces
+    object: hydrogen
+    description: FHL disproportionates formate into CO2 and H2.
+    evidence:
+    - reference: DOI:10.1128/aem.01472-24
+      notes: Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase
+        complex via FdhF and hydrogenase 3 (HycE).
+  - subject: fhl_complex
+    predicate: produces
+    object: co2
+    description: FHL disproportionates formate into CO2 and H2.
+    evidence:
+    - reference: DOI:10.1128/aem.01472-24
+      notes: Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase
+        complex.
+  - subject: acidic_conditions
+    predicate: positively regulates
+    object: fhl_complex
+    description: Acidic conditions favor FHL-mediated formate cleavage.
+    evidence:
+    - reference: DOI:10.35812/cellulosechemtechnol.2024.58.90
+      notes: The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under
+        acidic conditions into H2 and CO2.
+  - subject: molecular_oxygen
+    predicate: inhibits
+    object: hydrogen
+    description: Oxygen prevents fermentative hydrogen generation.
+    evidence:
+    - reference: DOI:10.35812/cellulosechemtechnol.2024.58.90
+      notes: The presence of oxygen prevents the generation of hydrogen.
+  - subject: mixed_acid_fermentation_trait
+    predicate: lowers
+    object: cytoplasm_ph
+    description: Acid generation by MAF lowers cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.1128/iai.00176-23
+      notes: MAF results in the generation of acid, which subsequently lowers the
+        pH of the cytoplasm.
+  - subject: pyruvate_formate_lyase
+    predicate: produces
+    object: acetyl_coa
+    description: Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.703525
+      notes: Connecting edge wiring the enrichment node into the graph.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (mixed-acid fermentation);
-    product-specific sub-variant of the existing Fermentation class (METPO:1002005).
+  changes: Proposed candidate METABOLISM trait (mixed-acid fermentation); product-specific
+    sub-variant of the existing Fermentation class (METPO:1002005).
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (mixed-acid fermentation) with GO
-    node grounding and METPO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (mixed-acid fermentation) with GO node
+    grounding and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 10 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: FIX_ORPHAN_NODE
+  changes: Connected orphaned node 'acetyl_coa' via pyruvate_formate_lyase -[produces]->
+    acetyl_coa.
   llm_assisted: true

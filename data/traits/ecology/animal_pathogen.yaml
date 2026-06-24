@@ -43,6 +43,58 @@ causal_graphs:
     label: animal disease
     node_type: BIOLOGICAL_PROCESS
     description: Pathology produced in an animal host.
+  - node_id: bacterial_adhesins
+    label: bacterial adhesins
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial surface molecules mediating adherence to host tissues.
+  - node_id: host_cell_attachment
+    label: attachment to host cells and mucosa
+    node_type: BIOLOGICAL_PROCESS
+    description: Adhesion of bacteria to host cells, extracellular matrix, or mucosa.
+  - node_id: complement_regulator_binding_proteins
+    label: complement-regulator-binding surface proteins
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial surface proteins that bind host complement regulators factor
+      H and C4BP.
+  - node_id: complement_evasion
+    label: complement evasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Evasion of host complement-mediated humoral immunity.
+  - node_id: type_iii_secretion_system
+    label: type III secretion system
+    node_type: GENE_OR_PROTEIN
+    description: Injectisome multiprotein complex forming syringe-like structures
+      on bacteria.
+  - node_id: t3ss_effector_delivery
+    label: effector delivery into host-cell cytoplasm
+    node_type: BIOLOGICAL_PROCESS
+    description: Delivery of effector proteins directly into the host-cell cytoplasm.
+  - node_id: type_iv_secretion_system
+    label: type IV secretion system
+    node_type: GENE_OR_PROTEIN
+    description: Versatile nanomachine translocating effector proteins or toxins into
+      target cells.
+  - node_id: effector_translocation_t4ss
+    label: effector/toxin translocation into target cells
+    node_type: BIOLOGICAL_PROCESS
+    description: T4SS-mediated translocation of protein effectors or toxins into target
+      cells.
+  - node_id: low_iron_environment
+    label: low-iron host environment
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Iron-restricted conditions encountered within animal hosts.
+  - node_id: siderophore_biosynthesis
+    label: siderophore biosynthesis gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Expression of siderophore biosynthesis genes for iron scavenging.
+  - node_id: tonb_dependent_transporters
+    label: TonB-dependent transporters
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane transporters importing siderophore-Fe3+ complexes.
+  - node_id: siderophore_iron_import
+    label: siderophore-Fe3+ complex import
+    node_type: BIOLOGICAL_PROCESS
+    description: Import of siderophore-ferric iron complexes into the periplasm.
   edges:
   - subject: metazoan_virulence_factors
     predicate: enables
@@ -81,6 +133,101 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: bacterial_adhesins
+    predicate: enables
+    object: host_cell_attachment
+    description: Bacterial adhesins enable attachment to host cells, extracellular
+      matrix, and mucosa.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Expression of bacterial surface adhesins is critical for adherence to
+        host tissues; common colonization mechanism across body sites.
+  - subject: host_cell_attachment
+    predicate: enables
+    object: animal_tissue_colonization
+    description: Attachment to host surfaces initiates colonization of metazoan barrier
+      sites.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Colonization of metazoan barrier sites commonly begins with adhesion
+        to host surfaces.
+  - subject: complement_regulator_binding_proteins
+    predicate: mediates
+    object: complement_evasion
+    description: Surface proteins binding host complement regulators (factor H, C4BP)
+      mediate complement evasion.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Surface proteins in diverse bacterial pathogens bind fH and C4BP to mediate
+        evasion of complement proteins.
+  - subject: complement_evasion
+    predicate: enables
+    object: immune_evasion
+    description: Complement evasion contributes to overall evasion of host immunity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Complement evasion is a major determinant shaping immune resistance in
+        animal pathogens.
+  - subject: type_iii_secretion_system
+    predicate: enables
+    object: t3ss_effector_delivery
+    description: T3SS injectisomes deliver effector proteins directly into the host-cell
+      cytoplasm.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02224-23
+      notes: T3SSs form syringe-like structures allowing effector proteins to be delivered
+        from bacteria into the host-cell cytoplasm.
+  - subject: t3ss_effector_delivery
+    predicate: enables
+    object: immune_evasion
+    description: T3SS effector delivery modulates host cells and supports immune evasion.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02224-23
+      notes: Effector delivery into host cytoplasm is a canonical virulence mechanism
+        subverting host defenses.
+  - subject: type_iv_secretion_system
+    predicate: enables
+    object: effector_translocation_t4ss
+    description: T4SS nanomachines translocate protein effectors or toxins into target
+      cells.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00974-3
+      notes: Many T4SSs have acquired functionalities relating to translocation of
+        effector proteins or toxins, supporting host-pathogen interactions.
+  - subject: effector_translocation_t4ss
+    predicate: enables
+    object: animal_tissue_colonization
+    description: T4SS effector/toxin translocation supports host-pathogen interactions
+      and colonization.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00974-3
+      notes: T4SSs are versatile nanomachines central to host-pathogen interactions.
+  - subject: low_iron_environment
+    predicate: enables
+    object: siderophore_biosynthesis
+    description: Low iron derepresses Fur, enabling siderophore biosynthesis gene
+      expression.
+    evidence:
+    - reference: DOI:10.1039/d4cb00175c
+      notes: When iron decreases, Fur releases Fe2+ allowing siderophore biosynthesis
+        gene expression.
+  - subject: tonb_dependent_transporters
+    predicate: enables
+    object: siderophore_iron_import
+    description: TonB-dependent transporters import siderophore-Fe3+ complexes into
+      the periplasm.
+    evidence:
+    - reference: DOI:10.1039/d4cb00175c
+      notes: Siderophore-Fe3+ complexes are imported via TonB-dependent transporters
+        into the periplasm.
+  - subject: siderophore_iron_import
+    predicate: enables
+    object: animal_tissue_colonization
+    description: Iron acquisition via siderophore uptake supports growth in iron-restricted
+      host tissues.
+    evidence:
+    - reference: DOI:10.1039/d4cb00175c
+      notes: Iron scavenging uptake is central to nutrient acquisition in host environments.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.948723+00:00'
   curator: seed_from_metpo
@@ -129,4 +276,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 11 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

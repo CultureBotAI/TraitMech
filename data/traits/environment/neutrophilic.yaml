@@ -54,6 +54,31 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transporters contributing to ion and pH homeostasis.
     grounding: UniProtKB:A0A0H3JRG4
+  - node_id: external_acidic_ph
+    label: external acidic pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low external pH that challenges cytoplasmic pH homeostasis.
+  - node_id: cytoplasmic_proton_influx
+    label: cytoplasmic proton influx
+    node_type: BIOLOGICAL_PROCESS
+    description: Entry of protons into the cytoplasm across or through the membrane.
+  - node_id: cytoplasmic_buffering_capacity
+    label: cytoplasmic buffering capacity
+    node_type: CAPACITY
+    description: Proton sequestration by cytoplasmic buffers that dampens pH fluctuations.
+  - node_id: intracellular_ph
+    label: intracellular pH
+    node_type: STATE
+    description: The pH of the cytoplasm.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzyme-catalyzed decarboxylation reaction that consumes cytoplasmic
+      protons.
+  - node_id: f1f0_atpase_proton_pump
+    label: F1F0-ATPase proton pump
+    node_type: GENE_OR_PROTEIN
+    description: ATP-dependent proton transporter contributing to pH restoration.
   edges:
   - subject: near_neutral_external_ph
     predicate: enables
@@ -92,6 +117,52 @@ causal_graphs:
       snippet: maintaining ion and pH homeostasis
       notes: Supports cation/proton antiport as a general pH-homeostasis mechanism.
     predicate_id: RO:0002326
+  - subject: external_acidic_ph
+    predicate: increases
+    object: cytoplasmic_proton_influx
+    description: Low external pH increases H+ entry into the cytoplasm, challenging
+      neutral pH homeostasis.
+    evidence:
+    - reference: DOI:10.1128/msystems.01037-23
+      notes: At low pH, H+ can permeate into the cytoplasm via protonated water chains,
+        ion channels, or damaged membranes (general for neutralophilic bacteria).
+  - subject: cytoplasmic_buffering_capacity
+    predicate: contributes to
+    object: intracellular_ph
+    description: Proton sequestration by cytoplasmic buffers stabilizes intracellular
+      pH and protects enzyme function.
+    evidence:
+    - reference: DOI:10.1128/msystems.01037-23
+      notes: Protons can be sequestered by side-chains of proteins, inorganic phosphates,
+        polyphosphates, or polyamines (general for neutralophiles).
+  - subject: amino_acid_decarboxylation
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Decarboxylation directly removes H+ from the cytoplasm, raising internal
+      pH.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: The decarboxylation of amino acids is an enzyme-catalyzed reaction that
+        consumes protons (general acid-tolerance mechanism in neutralophiles).
+  - subject: amino_acid_decarboxylation
+    predicate: contributes to
+    object: proton_motive_force
+    description: Charge-differential substrate/product antiport plus proton consumption
+      couples pH homeostasis to PMF generation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: The chemistry of the decarboxylation reaction requires a proton, and
+        the equivalent of 1 proton is pumped per molecule decarboxylated (general
+        mechanism).
+  - subject: f1f0_atpase_proton_pump
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: ATP-dependent proton transport helps restore cytoplasmic pH under
+      acid challenge.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Common mechanisms involved in bacterial acid tolerance include the F1-F0-ATPase
+        proton pump (general).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.937067+00:00'
   curator: seed_from_metpo
@@ -169,4 +240,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

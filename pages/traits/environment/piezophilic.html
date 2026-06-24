@@ -107,6 +107,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>high hydrostatic pressure</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>unsaturated / branched-chain fatty acids</strong>
+            
+            <p>HHP increases abundance of membrane unsaturated and branched-chain fatty acids.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmolb.2022.1058381</code>
+                
+                <span class="meta">The abundance of membrane lipids containing unsaturated and branched-chain fatty acids rises with increasing HHP.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>pfa operon</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>omega-3 polyunsaturated fatty acids</strong>
+            
+            <p>The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase enabling PUFA production.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11071629</code>
+                
+                <span class="meta">The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>high hydrostatic pressure</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>omega-3 polyunsaturated fatty acids</strong>
+            
+            <p>HHP increases polyunsaturated fatty acids C20:5 (EPA) and C22:6 (DHA) across multiple piezophilic/piezotolerant taxa.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmolb.2022.1058381</code>
+                
+                <span class="meta">HHP-driven increases in C20:5/C22:6 in Photobacterium profundum SS9, Psychromonas, and Shewanella piezotolerans WP3.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>omega-3 polyunsaturated fatty acids</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>membrane lipid adaptation</strong>
+            
+            <p>Omega-3 PUFAs maintain membrane fluidity, contributing to lipid adaptation under HHP.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmolb.2022.1058381</code>
+                
+                <span class="meta">Unsaturated/polyunsaturated fatty acids maintain membrane fluidity under high pressure.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>high hydrostatic pressure</strong>
+            <span class="edge-predicate">induces accumulation of</span>
+            <strong>piezolytes (compatible solutes)</strong>
+            
+            <p>HHP is associated with accumulation of compatible solutes (piezolytes) such as glutamate, betaine and beta-hydroxybutyrate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11071629</code>
+                
+                <span class="meta">Compatible solutes (piezolytes) detected include glutamate, betaine, and beta-hydroxybutyrate; TMAO acts as a pressure-tolerance molecule.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>piezolytes (compatible solutes)</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>pressure tolerance</strong>
+            
+            <p>Piezolytes stabilize cellular components, conferring tolerance to high hydrostatic pressure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11071629</code>
+                
+                <span class="meta">TMAO and other compatible solutes are highlighted as pressure-tolerance molecules.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>pressure tolerance</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>piezophilic</strong>
+            
+            <p>Pressure tolerance via piezolytes contributes to optimal growth at high pressure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11071629</code>
+                
+                <span class="meta">Piezolytes support growth and survival under high hydrostatic pressure.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -255,6 +374,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (HHP membrane adaptation) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -614,7 +739,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking high hydrostatic pressure to unsaturated / branched-chain fatty-acid membrane adaptation enabling optimal high-pressure growth.", "edges": [{"description": "HHP habitats favor optimal-at-pressure growth phenotype.", "evidence": [{"notes": "HHP-adapted organisms are termed piezophiles for their preference for high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_hydrostatic_pressure", "target": "piezophilic_trait"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity under HHP.", "evidence": [{"notes": "Piezophile adaptation involves unsaturated and branched-chain fatty acids.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated_branched_fa", "target": "membrane_adaptation"}, {"description": "Membrane lipid adaptation enables high-pressure-optimal growth.", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 grows optimally at 120 MPa, supported by HHP-adapted membranes.", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane_adaptation", "target": "piezophilic_trait"}], "evidence_rows": [{"description": "HHP habitats favor optimal-at-pressure growth phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "HHP-adapted organisms are termed piezophiles for their preference for high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high hydrostatic pressure", "target": "piezophilic"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity under HHP.", "edge_id": "edge-2", "evidence": [{"notes": "Piezophile adaptation involves unsaturated and branched-chain fatty acids.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated / branched-chain fatty acids", "target": "membrane lipid adaptation"}, {"description": "Membrane lipid adaptation enables high-pressure-optimal growth.", "edge_id": "edge-3", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 grows optimally at 120 MPa, supported by HHP-adapted membranes.", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane lipid adaptation", "target": "piezophilic"}], "graph_id": "piezophilic_hhp_membrane_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Deep-sea / deep-subsurface hydrostatic pressure (tens to \u003e100 MPa).", "grounding": null, "id": "high_hydrostatic_pressure", "is_orphan": false, "label": "high hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Lipid composition adjustment maintaining membrane fluidity under HHP.", "grounding": null, "id": "membrane_adaptation", "is_orphan": false, "label": "membrane lipid adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth at hydrostatic pressures well above atmospheric.", "grounding": "traitmech:000001", "id": "piezophilic_trait", "is_orphan": false, "label": "piezophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid species maintaining fluidity under high pressure.", "grounding": null, "id": "unsaturated_branched_fa", "is_orphan": false, "label": "unsaturated / branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Piezophilic high-pressure preference via membrane lipid adaptation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking high hydrostatic pressure to unsaturated / branched-chain fatty-acid membrane adaptation enabling optimal high-pressure growth.", "edges": [{"description": "HHP habitats favor optimal-at-pressure growth phenotype.", "evidence": [{"notes": "HHP-adapted organisms are termed piezophiles for their preference for high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high_hydrostatic_pressure", "target": "piezophilic_trait"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity under HHP.", "evidence": [{"notes": "Piezophile adaptation involves unsaturated and branched-chain fatty acids.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated_branched_fa", "target": "membrane_adaptation"}, {"description": "Membrane lipid adaptation enables high-pressure-optimal growth.", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 grows optimally at 120 MPa, supported by HHP-adapted membranes.", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane_adaptation", "target": "piezophilic_trait"}, {"description": "HHP increases abundance of membrane unsaturated and branched-chain fatty acids.", "evidence": [{"notes": "The abundance of membrane lipids containing unsaturated and branched-chain fatty acids rises with increasing HHP.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "high_hydrostatic_pressure", "target": "unsaturated_branched_fa"}, {"description": "The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase enabling PUFA production.", "evidence": [{"notes": "The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "pfa_operon", "target": "omega3_pufa"}, {"description": "HHP increases polyunsaturated fatty acids C20:5 (EPA) and C22:6 (DHA) across multiple piezophilic/piezotolerant taxa.", "evidence": [{"notes": "HHP-driven increases in C20:5/C22:6 in Photobacterium profundum SS9, Psychromonas, and Shewanella piezotolerans WP3.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "high_hydrostatic_pressure", "target": "omega3_pufa"}, {"description": "Omega-3 PUFAs maintain membrane fluidity, contributing to lipid adaptation under HHP.", "evidence": [{"notes": "Unsaturated/polyunsaturated fatty acids maintain membrane fluidity under high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "omega3_pufa", "target": "membrane_adaptation"}, {"description": "HHP is associated with accumulation of compatible solutes (piezolytes) such as glutamate, betaine and beta-hydroxybutyrate.", "evidence": [{"notes": "Compatible solutes (piezolytes) detected include glutamate, betaine, and beta-hydroxybutyrate; TMAO acts as a pressure-tolerance molecule.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-8", "is_orphan": false, "predicate": "induces accumulation of", "predicate_id": null, "source": "high_hydrostatic_pressure", "target": "piezolytes"}, {"description": "Piezolytes stabilize cellular components, conferring tolerance to high hydrostatic pressure.", "evidence": [{"notes": "TMAO and other compatible solutes are highlighted as pressure-tolerance molecules.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "piezolytes", "target": "pressure_tolerance"}, {"description": "Pressure tolerance via piezolytes contributes to optimal growth at high pressure.", "evidence": [{"notes": "Piezolytes support growth and survival under high hydrostatic pressure.", "reference": "DOI:10.3390/microorganisms11071629"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "pressure_tolerance", "target": "piezophilic_trait"}], "evidence_rows": [{"description": "HHP habitats favor optimal-at-pressure growth phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "HHP-adapted organisms are termed piezophiles for their preference for high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "high hydrostatic pressure", "target": "piezophilic"}, {"description": "Unsaturated and branched-chain fatty acids maintain membrane fluidity under HHP.", "edge_id": "edge-2", "evidence": [{"notes": "Piezophile adaptation involves unsaturated and branched-chain fatty acids.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated / branched-chain fatty acids", "target": "membrane lipid adaptation"}, {"description": "Membrane lipid adaptation enables high-pressure-optimal growth.", "edge_id": "edge-3", "evidence": [{"notes": "Colwellia marinimaniae MTCD1 grows optimally at 120 MPa, supported by HHP-adapted membranes.", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "membrane lipid adaptation", "target": "piezophilic"}, {"description": "HHP increases abundance of membrane unsaturated and branched-chain fatty acids.", "edge_id": "edge-4", "evidence": [{"notes": "The abundance of membrane lipids containing unsaturated and branched-chain fatty acids rises with increasing HHP.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "increases", "predicate_id": null, "source": "high hydrostatic pressure", "target": "unsaturated / branched-chain fatty acids"}, {"description": "The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase enabling PUFA production.", "edge_id": "edge-5", "evidence": [{"notes": "The pfa operon encodes an omega-3 polyunsaturated fatty acid synthase.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "enables", "predicate_id": null, "source": "pfa operon", "target": "omega-3 polyunsaturated fatty acids"}, {"description": "HHP increases polyunsaturated fatty acids C20:5 (EPA) and C22:6 (DHA) across multiple piezophilic/piezotolerant taxa.", "edge_id": "edge-6", "evidence": [{"notes": "HHP-driven increases in C20:5/C22:6 in Photobacterium profundum SS9, Psychromonas, and Shewanella piezotolerans WP3.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "increases", "predicate_id": null, "source": "high hydrostatic pressure", "target": "omega-3 polyunsaturated fatty acids"}, {"description": "Omega-3 PUFAs maintain membrane fluidity, contributing to lipid adaptation under HHP.", "edge_id": "edge-7", "evidence": [{"notes": "Unsaturated/polyunsaturated fatty acids maintain membrane fluidity under high pressure.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "enables", "predicate_id": null, "source": "omega-3 polyunsaturated fatty acids", "target": "membrane lipid adaptation"}, {"description": "HHP is associated with accumulation of compatible solutes (piezolytes) such as glutamate, betaine and beta-hydroxybutyrate.", "edge_id": "edge-8", "evidence": [{"notes": "Compatible solutes (piezolytes) detected include glutamate, betaine, and beta-hydroxybutyrate; TMAO acts as a pressure-tolerance molecule.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "induces accumulation of", "predicate_id": null, "source": "high hydrostatic pressure", "target": "piezolytes (compatible solutes)"}, {"description": "Piezolytes stabilize cellular components, conferring tolerance to high hydrostatic pressure.", "edge_id": "edge-9", "evidence": [{"notes": "TMAO and other compatible solutes are highlighted as pressure-tolerance molecules.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "enables", "predicate_id": null, "source": "piezolytes (compatible solutes)", "target": "pressure tolerance"}, {"description": "Pressure tolerance via piezolytes contributes to optimal growth at high pressure.", "edge_id": "edge-10", "evidence": [{"notes": "Piezolytes support growth and survival under high hydrostatic pressure.", "reference": "DOI:10.3390/microorganisms11071629"}], "predicate": "contributes to", "predicate_id": null, "source": "pressure tolerance", "target": "piezophilic"}], "graph_id": "piezophilic_hhp_membrane_adaptation", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Deep-sea / deep-subsurface hydrostatic pressure (tens to \u003e100 MPa).", "grounding": null, "id": "high_hydrostatic_pressure", "is_orphan": false, "label": "high hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Lipid composition adjustment maintaining membrane fluidity under HHP.", "grounding": null, "id": "membrane_adaptation", "is_orphan": false, "label": "membrane lipid adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Omega-3 PUFAs (e.g. EPA C20:5, DHA C22:6) supporting membrane fluidity under HHP.", "grounding": null, "id": "omega3_pufa", "is_orphan": false, "label": "omega-3 polyunsaturated fatty acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Gene cluster encoding an omega-3 polyunsaturated fatty acid synthase.", "grounding": null, "id": "pfa_operon", "is_orphan": false, "label": "pfa operon", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solutes such as glutamate, betaine, beta-hydroxybutyrate and TMAO that confer pressure tolerance.", "grounding": null, "id": "piezolytes", "is_orphan": false, "label": "piezolytes (compatible solutes)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth at hydrostatic pressures well above atmospheric.", "grounding": "traitmech:000001", "id": "piezophilic_trait", "is_orphan": false, "label": "piezophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular stabilization against high hydrostatic pressure.", "grounding": null, "id": "pressure_tolerance", "is_orphan": false, "label": "pressure tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane lipid species maintaining fluidity under high pressure.", "grounding": null, "id": "unsaturated_branched_fa", "is_orphan": false, "label": "unsaturated / branched-chain fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Piezophilic high-pressure preference via membrane lipid adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -625,7 +750,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -107,6 +107,74 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>S-layer constraints</strong>
+            <span class="edge-predicate">determines</span>
+            <strong>polygonal geometry</strong>
+            
+            <p>The S-layer is the determining factor for the polygonal (angular) cell shape.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2021.766527</code>
+                
+                <span class="meta">Cryo-ET shows &#34;the S-layer is the determining factor for their polygonal cell shape&#34;; generic S-layer-driven polygonal envelope mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>rigid S-layer sheets</strong>
+            <span class="edge-predicate">confers rigidity to</span>
+            <strong>polygonal geometry</strong>
+            
+            <p>Very rigid, protein-bridge-cross-linked S-layer sheets confer mechanical rigidity that stabilizes the angular polygonal morphology.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2021.766527</code>
+                
+                <span class="meta">&#34;these S-layer sheets are very rigid&#34; and a &#34;dense net of protein bridges... establishes the observed rigidity&#34;; structural stabilization of angular morphology.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>polygonal geometry</strong>
+            <span class="edge-predicate">shapes</span>
+            <strong>outer membrane</strong>
+            
+            <p>The outer membrane conforms to (follows) the polygonal cell shape imposed by the envelope.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2021.766527</code>
+                
+                <span class="meta">&#34;the outer membrane followed the polygonal cell shape&#34;; outer membrane is a participant conforming to polygonal geometry.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>polygonal geometry</strong>
+            <span class="edge-predicate">does not shape</span>
+            <strong>peptidoglycan layer</strong>
+            
+            <p>The peptidoglycan layer does not adopt the polygonal cell shape, bounding the mechanism to S-layer and outer membrane.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2021.766527</code>
+                
+                <span class="meta">&#34;the S-layer and outer membrane, but not the peptidoglycan layer and the cytoplasmic membrane, exhibited the polygonal shape&#34;; negative boundary edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -268,6 +336,12 @@
           <time>2026-05-24T04:13:22Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -627,7 +701,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking planar anisotropic envelope growth and S-layer-constrained polygonal geometry to flat triangular cells.", "edges": [{"description": "Planar envelope growth allows flat polygonal cell forms.", "evidence": [{"notes": "Supports planar growth as the basis for flat archaeal cells.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar_envelope_growth", "target": "polygonal_geometry"}, {"description": "S-layer geometry constrains the cell into angular polygonal forms.", "evidence": [{"notes": "Supports envelope-architecture constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "slayer_constraints", "target": "polygonal_geometry"}, {"description": "Angular polygonal geometry manifests the triangular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint in triangular halophilic archaea.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "polygonal_geometry", "target": "triangular_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth allows flat polygonal cell forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar growth as the basis for flat archaeal cells.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar envelope growth", "target": "polygonal geometry"}, {"description": "S-layer geometry constrains the cell into angular polygonal forms.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope-architecture constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "S-layer constraints", "target": "polygonal geometry"}, {"description": "Angular polygonal geometry manifests the triangular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint in triangular halophilic archaea.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "polygonal geometry", "target": "triangular shaped"}], "graph_id": "triangular_shaped_planar_polygonal_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Cell-envelope expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Flat, angular cell geometry with defined edges.", "grounding": null, "id": "polygonal_geometry", "is_orphan": false, "label": "polygonal geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Paracrystalline S-layer imposing geometric constraints on shape.", "grounding": "GO:0030115", "id": "slayer_constraints", "is_orphan": false, "label": "S-layer constraints", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Flat triangular or wedge-shaped cell geometry.", "grounding": "METPO:1000696", "id": "triangular_shaped_trait", "is_orphan": false, "label": "triangular shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Triangular-shape planar polygonal envelope growth"}];
+  var graphs = [{"description": "DOI-backed graph linking planar anisotropic envelope growth and S-layer-constrained polygonal geometry to flat triangular cells.", "edges": [{"description": "Planar envelope growth allows flat polygonal cell forms.", "evidence": [{"notes": "Supports planar growth as the basis for flat archaeal cells.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar_envelope_growth", "target": "polygonal_geometry"}, {"description": "S-layer geometry constrains the cell into angular polygonal forms.", "evidence": [{"notes": "Supports envelope-architecture constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "slayer_constraints", "target": "polygonal_geometry"}, {"description": "Angular polygonal geometry manifests the triangular-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint in triangular halophilic archaea.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "polygonal_geometry", "target": "triangular_shaped_trait"}, {"description": "The S-layer is the determining factor for the polygonal (angular) cell shape.", "evidence": [{"notes": "Cryo-ET shows \"the S-layer is the determining factor for their polygonal cell shape\"; generic S-layer-driven polygonal envelope mechanism.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "id": "edge-4", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "slayer_constraints", "target": "polygonal_geometry"}, {"description": "Very rigid, protein-bridge-cross-linked S-layer sheets confer mechanical rigidity that stabilizes the angular polygonal morphology.", "evidence": [{"notes": "\"these S-layer sheets are very rigid\" and a \"dense net of protein bridges... establishes the observed rigidity\"; structural stabilization of angular morphology.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "id": "edge-5", "is_orphan": false, "predicate": "confers rigidity to", "predicate_id": null, "source": "rigid_slayer_sheets", "target": "polygonal_geometry"}, {"description": "The outer membrane conforms to (follows) the polygonal cell shape imposed by the envelope.", "evidence": [{"notes": "\"the outer membrane followed the polygonal cell shape\"; outer membrane is a participant conforming to polygonal geometry.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "id": "edge-6", "is_orphan": false, "predicate": "shapes", "predicate_id": null, "source": "polygonal_geometry", "target": "outer_membrane"}, {"description": "The peptidoglycan layer does not adopt the polygonal cell shape, bounding the mechanism to S-layer and outer membrane.", "evidence": [{"notes": "\"the S-layer and outer membrane, but not the peptidoglycan layer and the cytoplasmic membrane, exhibited the polygonal shape\"; negative boundary edge.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "id": "edge-7", "is_orphan": false, "predicate": "does not shape", "predicate_id": null, "source": "polygonal_geometry", "target": "peptidoglycan_layer"}], "evidence_rows": [{"description": "Planar envelope growth allows flat polygonal cell forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar growth as the basis for flat archaeal cells.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "planar envelope growth", "target": "polygonal geometry"}, {"description": "S-layer geometry constrains the cell into angular polygonal forms.", "edge_id": "edge-2", "evidence": [{"notes": "Supports envelope-architecture constraints (e.g., S-layer) as shape determinants.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "S-layer constraints", "target": "polygonal geometry"}, {"description": "Angular polygonal geometry manifests the triangular-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint in triangular halophilic archaea.", "reference": "DOI:10.1146/annurev-micro-090816-093703", "snippet": "archaeal cell shape"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "polygonal geometry", "target": "triangular shaped"}, {"description": "The S-layer is the determining factor for the polygonal (angular) cell shape.", "edge_id": "edge-4", "evidence": [{"notes": "Cryo-ET shows \"the S-layer is the determining factor for their polygonal cell shape\"; generic S-layer-driven polygonal envelope mechanism.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "predicate": "determines", "predicate_id": null, "source": "S-layer constraints", "target": "polygonal geometry"}, {"description": "Very rigid, protein-bridge-cross-linked S-layer sheets confer mechanical rigidity that stabilizes the angular polygonal morphology.", "edge_id": "edge-5", "evidence": [{"notes": "\"these S-layer sheets are very rigid\" and a \"dense net of protein bridges... establishes the observed rigidity\"; structural stabilization of angular morphology.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "predicate": "confers rigidity to", "predicate_id": null, "source": "rigid S-layer sheets", "target": "polygonal geometry"}, {"description": "The outer membrane conforms to (follows) the polygonal cell shape imposed by the envelope.", "edge_id": "edge-6", "evidence": [{"notes": "\"the outer membrane followed the polygonal cell shape\"; outer membrane is a participant conforming to polygonal geometry.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "predicate": "shapes", "predicate_id": null, "source": "polygonal geometry", "target": "outer membrane"}, {"description": "The peptidoglycan layer does not adopt the polygonal cell shape, bounding the mechanism to S-layer and outer membrane.", "edge_id": "edge-7", "evidence": [{"notes": "\"the S-layer and outer membrane, but not the peptidoglycan layer and the cytoplasmic membrane, exhibited the polygonal shape\"; negative boundary edge.", "reference": "DOI:10.3389/fmicb.2021.766527"}], "predicate": "does not shape", "predicate_id": null, "source": "polygonal geometry", "target": "peptidoglycan layer"}], "graph_id": "triangular_shaped_planar_polygonal_growth", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Cell outer membrane that conforms to the angular polygonal envelope geometry.", "grounding": null, "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ede9fe", "description": "Peptidoglycan-based cell wall layer that does not adopt the polygonal cell shape.", "grounding": null, "id": "peptidoglycan_layer", "is_orphan": false, "label": "peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-envelope expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Flat, angular cell geometry with defined edges.", "grounding": null, "id": "polygonal_geometry", "is_orphan": false, "label": "polygonal geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fce7f3", "description": "Overlapping paracrystalline S-layer sheets cross-linked by a dense net of protein bridges, producing high mechanical rigidity.", "grounding": null, "id": "rigid_slayer_sheets", "is_orphan": false, "label": "rigid S-layer sheets", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#fce7f3", "description": "Paracrystalline S-layer imposing geometric constraints on shape.", "grounding": "GO:0030115", "id": "slayer_constraints", "is_orphan": false, "label": "S-layer constraints", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Flat triangular or wedge-shaped cell geometry.", "grounding": "METPO:1000696", "id": "triangular_shaped_trait", "is_orphan": false, "label": "triangular shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Triangular-shape planar polygonal envelope growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -638,7 +712,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

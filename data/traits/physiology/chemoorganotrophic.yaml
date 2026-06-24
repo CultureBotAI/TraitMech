@@ -68,6 +68,47 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material built from organic carbon.
     grounding: METPO:1007501
+  - node_id: reduced_cofactor
+    label: reduced redox cofactor (NADH)
+    node_type: CHEMICAL
+    description: Reduced electron-carrying cofactor (e.g. NADH) formed during organic
+      substrate oxidation.
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane ubiquinone/menaquinone pool that shuttles electrons within
+      the respiratory chain.
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    description: Respiratory metabolism using oxygen as terminal electron acceptor.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    description: Respiratory metabolism using inorganic acceptors such as nitrate
+      or nitrite.
+  - node_id: oxygen
+    label: oxygen
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Molecular oxygen acting as terminal electron acceptor when present.
+  - node_id: nitrate_nitrite
+    label: nitrate/nitrite
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Inorganic alternative electron acceptors enabling anaerobic respiration.
+  - node_id: acceptor_absence
+    label: absence of external electron acceptor
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Condition in which no external terminal electron acceptor is available.
+  - node_id: fermentation
+    label: fermentation
+    node_type: BIOLOGICAL_PROCESS
+    description: Energy metabolism with electrons relocated onto an organic catabolic
+      product.
+  - node_id: substrate_level_phosphorylation
+    label: substrate-level phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: ATP generation by direct phosphate transfer from a phosphorylated
+      intermediate.
   edges:
   - subject: chemoorganotrophic_trait
     predicate: uses chemical energy source
@@ -130,6 +171,70 @@ causal_graphs:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: carbon source
       notes: Supports organic compounds as carbon sources for biosynthesis.
+  - subject: substrate_oxidation
+    predicate: produces reduced cofactor
+    object: reduced_cofactor
+    description: Organic substrate oxidation reduces redox cofactors such as NAD to
+      NADH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      notes: Redox cofactors (NAD and ferredoxin) accept electrons and become reduced
+        during organic oxidation.
+  - subject: reduced_cofactor
+    predicate: feeds electrons into
+    object: quinone_pool
+    description: Reduced cofactors donate electrons to the membrane quinone pool via
+      dehydrogenases.
+    evidence:
+    - reference: DOI:10.1186/s13213-024-01761-y
+      notes: Some dehydrogenases inject electrons into the quinone pool of the respiratory
+        chain.
+  - subject: quinone_pool
+    predicate: transfers electrons to
+    object: terminal_electron_acceptor
+    description: The quinone pool passes electrons to terminal oxidases reducing the
+      terminal acceptor.
+    evidence:
+    - reference: DOI:10.1186/s13213-024-01761-y
+      notes: Quinol oxidases pass electrons from ubiquinols/menaquinones to oxygen.
+  - subject: oxygen
+    predicate: enables
+    object: aerobic_respiration
+    description: Presence of oxygen enables aerobic respiratory chemoorganotrophy.
+    evidence:
+    - reference: DOI:10.2166/9781789062304_0009
+      notes: Electron acceptors range from O2 in aerobic respiration.
+  - subject: nitrate_nitrite
+    predicate: enables
+    object: anaerobic_respiration
+    description: Inorganic acceptors such as nitrate/nitrite enable anaerobic respiratory
+      chemoorganotrophy.
+    evidence:
+    - reference: DOI:10.2166/9781789062304_0009
+      notes: Organisms catabolize an organic e-donor by respiration with an inorganic
+        e-acceptor such as nitrite or nitrate.
+  - subject: acceptor_absence
+    predicate: leads to
+    object: fermentation
+    description: Absence of an external terminal electron acceptor leads to fermentation.
+    evidence:
+    - reference: DOI:10.2166/9781789062304_0009
+      notes: In fermentation, no terminal e-acceptor is available; electrons are relocated
+        onto an organic catabolic product.
+  - subject: fermentation
+    predicate: generates ATP via
+    object: substrate_level_phosphorylation
+    description: Fermentation generates ATP primarily by substrate-level phosphorylation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      notes: In fermentation, ATP is generated primarily by substrate-level phosphorylation.
+  - subject: substrate_level_phosphorylation
+    predicate: produces
+    object: atp
+    description: Substrate-level phosphorylation directly produces ATP.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae016
+      notes: Fermentative ATP is produced by substrate-level phosphorylation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.883201+00:00'
   curator: seed_from_metpo
@@ -189,4 +294,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -44,6 +44,26 @@ causal_graphs:
     node_type: STATE
     description: Electrochemical gradient powering some gliding motors.
     grounding: METPO:1007500
+  - node_id: helical_track
+    label: helical conveyor track
+    node_type: CELLULAR_LOCALIZATION
+    description: Filamentous/multirail track structure in the cell envelope along
+      which surface adhesins are translocated during gliding.
+  - node_id: substratum_coupling
+    label: substratum coupling and traction
+    node_type: BIOLOGICAL_PROCESS
+    description: Engagement of surface adhesins with the solid substratum to generate
+      the traction that drives cell movement.
+  - node_id: cell_propulsion
+    label: cell propulsion
+    node_type: BIOLOGICAL_PROCESS
+    description: Forward, often screw-like, translocation of the cell body resulting
+      from gliding machinery activity.
+  - node_id: gliding_gene_complement
+    label: gliding machinery gene complement
+    node_type: EXPERIMENTAL_FACTOR
+    description: Presence of the core gliding/secretion machinery gene set in a genome,
+      used to predict gliding capacity.
   edges:
   - subject: solid_surface
     predicate: enables context for
@@ -89,6 +109,50 @@ causal_graphs:
       snippet: proton-driven motor that powers type 9 secretion and gliding motility
       notes: Supports proton-driven gliding machinery in reviewed systems.
     predicate_id: RO:0002327
+  - subject: helical_track
+    predicate: guides
+    object: surface_adhesins
+    description: Adhesins are translocated along an envelope-associated filamentous
+      track during gliding.
+    evidence:
+    - reference: DOI:10.1038/s42003-023-04472-3
+      notes: Filamentous multirail structures in the cell envelope are associated
+        with the gliding machinery and SprB adhesin translocation.
+  - subject: surface_adhesins
+    predicate: enables
+    object: substratum_coupling
+    description: Surface adhesins engage the substratum to generate traction.
+    evidence:
+    - reference: DOI:10.1126/sciadv.abq0619
+      notes: Surface adhesin at bacterial focal adhesions immobilizes motility complexes
+        against the substratum to generate traction.
+  - subject: substratum_coupling
+    predicate: causes
+    object: cell_propulsion
+    description: Traction at substratum-coupled adhesins drives forward movement of
+      the cell body.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3001443
+      notes: Proton-dependent motors power adhesin surface translocation that propels
+        the cell during gliding.
+  - subject: cell_propulsion
+    predicate: realizes
+    object: gliding_trait
+    description: Propulsion of the cell body along a surface constitutes the gliding
+      phenotype.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3001443
+      notes: Adhesin surface translocation produces the smooth surface movement characteristic
+        of gliding.
+  - subject: gliding_gene_complement
+    predicate: predicts
+    object: gliding_trait
+    description: Presence of the core gliding/secretion machinery gene set predicts
+      gliding capacity from genomes.
+    evidence:
+    - reference: DOI:10.1021/acsomega.3c05155
+      notes: T9GPred predicts gliding motility from an 11-protein mandatory component
+        set across Bacteroidetes genomes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907644+00:00'
   curator: seed_from_metpo
@@ -136,4 +200,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

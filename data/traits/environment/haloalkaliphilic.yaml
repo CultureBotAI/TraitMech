@@ -45,6 +45,37 @@ causal_graphs:
     label: alkaline pH homeostasis
     node_type: BIOLOGICAL_PROCESS
     description: Cellular maintenance of internal pH under alkaline conditions.
+  - node_id: compatible_solute_strategy
+    label: compatible-solute (salt-out) strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation by biosynthesis/accumulation of organic compatible
+      solutes.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation by intracellular accumulation of inorganic ions (e.g.
+      K+).
+  - node_id: na_h_antiport
+    label: Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Sodium:proton antiport that expels Na+ and assists cytoplasmic pH
+      regulation.
+  - node_id: na_efflux_ph_regulation
+    label: Na+ efflux and pH regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Coupled extrusion of sodium and maintenance of intracellular pH.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Cyclic amino-acid-derived compatible solute.
+  - node_id: choline_oxidation_pathway
+    label: choline oxidation pathway
+    node_type: PATHWAY
+    description: De novo biosynthesis of glycine betaine via oxidation of choline.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Quaternary ammonium compatible solute.
   edges:
   - subject: soda_lake_environment
     predicate: provides
@@ -100,6 +131,55 @@ causal_graphs:
       notes: Review supports pH homeostasis as a physiological mechanism integrated
         with salinity and other factors.
     predicate_id: RO:0002327
+  - subject: haloalkaliphilic_trait
+    predicate: can use
+    object: compatible_solute_strategy
+    description: Haloalkaliphiles can osmoadapt via compatible-solute accumulation.
+    evidence:
+    - reference: DOI:10.1038/s44185-024-00050-w
+      notes: 'Review: halophiles use two broad osmoadaptation strategies, including
+        biosynthesis/accumulation of compatible solutes.'
+  - subject: haloalkaliphilic_trait
+    predicate: can use
+    object: salt_in_strategy
+    description: Haloalkaliphiles can osmoadapt via the intracellular salt-in strategy.
+    evidence:
+    - reference: DOI:10.1038/s44185-024-00050-w
+      notes: 'Review: halophiles use two broad osmoadaptation strategies, including
+        the intracellular ''salt-in'' strategy.'
+  - subject: na_h_antiport
+    predicate: contributes to
+    object: na_efflux_ph_regulation
+    description: Na+/H+ antiporters expel Na+ and help regulate intracellular pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2025.1550346
+      notes: Na+/H+ antiporters (nhaA/B/C and the mnh complex) expel Na+ and help
+        pH regulation; generalized mechanistic edge relevant to haloalkaliphiles.
+  - subject: na_efflux_ph_regulation
+    predicate: enables
+    object: alkaline_ph_homeostasis
+    description: Sodium efflux coupled to proton import supports pH homeostasis under
+      alkaline conditions.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2025.1550346
+      notes: Na+/H+ antiport expels Na+ while helping pH regulation, supporting cytoplasmic
+        pH homeostasis.
+  - subject: compatible_solute_strategy
+    predicate: involves biosynthesis of
+    object: ectoine
+    description: Compatible-solute strategy includes ectoine biosynthesis/uptake.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2025.1550346
+      notes: Salt-out strategy involved biosynthesis and uptake of compatible solutes
+        including ectoine; strong for hypersaline adaptation broadly.
+  - subject: choline_oxidation_pathway
+    predicate: biosynthesizes
+    object: glycine_betaine
+    description: Glycine betaine is produced de novo via the choline oxidation pathway.
+    evidence:
+    - reference: DOI:10.1038/s44185-024-00050-w
+      notes: 'Review: de novo biosynthesis of glycine betaine via the choline oxidation
+        pathway.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861455+00:00'
   curator: seed_from_metpo
@@ -146,4 +226,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -90,6 +90,159 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>glucose</strong>
+            <span class="edge-predicate">is fermented via</span>
+            <strong>EMP/glycolysis pathway</strong>
+            
+            <p>Homofermentative LAB ferment glucose mainly via the EMP/glycolysis pathway.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">homofermentative LAB rely mainly on glycolysis (EMP).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>EMP/glycolysis pathway</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>pyruvate</strong>
+            
+            <p>Glycolysis yields pyruvate as the intermediate reduced to lactate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/foods12152850</code>
+                
+                <span class="meta">Glycolysis of glucose generates pyruvate, which lactate dehydrogenase reduces to lactate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>pyruvate</strong>
+            <span class="edge-predicate">is converted by</span>
+            <strong>lactate dehydrogenase</strong>
+            
+            <p>Pyruvate is the substrate of lactate dehydrogenase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/foods12152850</code>
+                
+                <span class="meta">Lactate dehydrogenase converts pyruvate to lactate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>lactate dehydrogenase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>lactate</strong>
+            
+            <p>Lactate dehydrogenase reduces pyruvate to lactate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/foods12152850</code>
+                
+                <span class="meta">one mole of glucose produces two moles of lactic acid and two ATP molecules via LDH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>phosphoketolase pathway</strong>
+            <span class="edge-predicate">yields</span>
+            <strong>lactate</strong>
+            
+            <p>Heterofermentative phosphoketolase route yields lactate among its products.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">products are lactate, carbon dioxide, and either ethanol or acetate (phosphoketolase route).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>phosphoketolase pathway</strong>
+            <span class="edge-predicate">yields</span>
+            <strong>carbon dioxide</strong>
+            
+            <p>Heterolactic phosphoketolase route co-produces CO2.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">heterolactic products are lactate, carbon dioxide, and ethanol or acetate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>phosphoketolase pathway</strong>
+            <span class="edge-predicate">yields</span>
+            <strong>ethanol</strong>
+            
+            <p>Heterolactic phosphoketolase route co-produces ethanol (or acetate).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">heterolactic products include ethanol or acetate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>lactate</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>decreased pH</strong>
+            
+            <p>Accumulation of lactic acid acidifies the medium.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">acidification from lactic acid exerts antagonistic effects on microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>decreased pH</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>pathogenic/spoilage microbe</strong>
+            
+            <p>Lactate-driven acidification inhibits spoilage and pathogenic microbes (biopreservation).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/fermentation10030168</code>
+                
+                <span class="meta">higher lactic acid / lower pH increases inhibition of spoilage and pathogenic microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +386,12 @@
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:24996×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 9 evidence-backed generic edges (9 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +751,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking glycolysis-coupled lactate production to substrate-level ATP generation in lactic acid bacteria.", "edges": [{"description": "Lactic acid fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports lactate as a fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "lactic_acid_fermentation_trait", "target": "fermentation_process"}, {"description": "Lactate is the characteristic end product of the pathway.", "evidence": [{"notes": "Classical-fermentation review describes the lactic-acid pathway.", "reference": "DOI:10.3390/molecules31020333"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "lactic_acid_fermentation_trait", "target": "lactate"}], "evidence_rows": [{"description": "Lactic acid fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports lactate as a fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "lactic acid fermentation", "target": "fermentation"}, {"description": "Lactate is the characteristic end product of the pathway.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes the lactic-acid pathway.", "reference": "DOI:10.3390/molecules31020333"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "lactic acid fermentation", "target": "lactate"}], "graph_id": "lactic_acid_fermentation_lactate", "issues": [], "nodes": [{"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Principal end product of homolactic fermentation.", "grounding": "CHEBI:24996", "id": "lactate", "is_orphan": false, "label": "lactate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation producing lactate as the principal end product.", "grounding": "traitmech:000026", "id": "lactic_acid_fermentation_trait", "is_orphan": false, "label": "lactic acid fermentation", "node_type": "TRAIT", "xrefs": []}], "title": "Lactic acid fermentation converts sugars to lactate"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking glycolysis-coupled lactate production to substrate-level ATP generation in lactic acid bacteria.", "edges": [{"description": "Lactic acid fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports lactate as a fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "lactic_acid_fermentation_trait", "target": "fermentation_process"}, {"description": "Lactate is the characteristic end product of the pathway.", "evidence": [{"notes": "Classical-fermentation review describes the lactic-acid pathway.", "reference": "DOI:10.3390/molecules31020333"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "lactic_acid_fermentation_trait", "target": "lactate"}, {"description": "Homofermentative LAB ferment glucose mainly via the EMP/glycolysis pathway.", "evidence": [{"notes": "homofermentative LAB rely mainly on glycolysis (EMP).", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-3", "is_orphan": false, "predicate": "is fermented via", "predicate_id": null, "source": "glucose", "target": "glycolysis_emp"}, {"description": "Glycolysis yields pyruvate as the intermediate reduced to lactate.", "evidence": [{"notes": "Glycolysis of glucose generates pyruvate, which lactate dehydrogenase reduces to lactate.", "reference": "DOI:10.3390/foods12152850"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "glycolysis_emp", "target": "pyruvate"}, {"description": "Pyruvate is the substrate of lactate dehydrogenase.", "evidence": [{"notes": "Lactate dehydrogenase converts pyruvate to lactate.", "reference": "DOI:10.3390/foods12152850"}], "id": "edge-5", "is_orphan": false, "predicate": "is converted by", "predicate_id": null, "source": "pyruvate", "target": "lactate_dehydrogenase"}, {"description": "Lactate dehydrogenase reduces pyruvate to lactate.", "evidence": [{"notes": "one mole of glucose produces two moles of lactic acid and two ATP molecules via LDH.", "reference": "DOI:10.3390/foods12152850"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "lactate_dehydrogenase", "target": "lactate"}, {"description": "Heterofermentative phosphoketolase route yields lactate among its products.", "evidence": [{"notes": "products are lactate, carbon dioxide, and either ethanol or acetate (phosphoketolase route).", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-7", "is_orphan": false, "predicate": "yields", "predicate_id": null, "source": "phosphoketolase_pathway", "target": "lactate"}, {"description": "Heterolactic phosphoketolase route co-produces CO2.", "evidence": [{"notes": "heterolactic products are lactate, carbon dioxide, and ethanol or acetate.", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-8", "is_orphan": false, "predicate": "yields", "predicate_id": null, "source": "phosphoketolase_pathway", "target": "carbon_dioxide"}, {"description": "Heterolactic phosphoketolase route co-produces ethanol (or acetate).", "evidence": [{"notes": "heterolactic products include ethanol or acetate.", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-9", "is_orphan": false, "predicate": "yields", "predicate_id": null, "source": "phosphoketolase_pathway", "target": "ethanol"}, {"description": "Accumulation of lactic acid acidifies the medium.", "evidence": [{"notes": "acidification from lactic acid exerts antagonistic effects on microbes.", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-10", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "lactate", "target": "decreased_ph"}, {"description": "Lactate-driven acidification inhibits spoilage and pathogenic microbes (biopreservation).", "evidence": [{"notes": "higher lactic acid / lower pH increases inhibition of spoilage and pathogenic microbes.", "reference": "DOI:10.3390/fermentation10030168"}], "id": "edge-11", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "decreased_ph", "target": "pathogenic_microbe"}], "evidence_rows": [{"description": "Lactic acid fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports lactate as a fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "lactic acid fermentation", "target": "fermentation"}, {"description": "Lactate is the characteristic end product of the pathway.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes the lactic-acid pathway.", "reference": "DOI:10.3390/molecules31020333"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "lactic acid fermentation", "target": "lactate"}, {"description": "Homofermentative LAB ferment glucose mainly via the EMP/glycolysis pathway.", "edge_id": "edge-3", "evidence": [{"notes": "homofermentative LAB rely mainly on glycolysis (EMP).", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "is fermented via", "predicate_id": null, "source": "glucose", "target": "EMP/glycolysis pathway"}, {"description": "Glycolysis yields pyruvate as the intermediate reduced to lactate.", "edge_id": "edge-4", "evidence": [{"notes": "Glycolysis of glucose generates pyruvate, which lactate dehydrogenase reduces to lactate.", "reference": "DOI:10.3390/foods12152850"}], "predicate": "produces", "predicate_id": null, "source": "EMP/glycolysis pathway", "target": "pyruvate"}, {"description": "Pyruvate is the substrate of lactate dehydrogenase.", "edge_id": "edge-5", "evidence": [{"notes": "Lactate dehydrogenase converts pyruvate to lactate.", "reference": "DOI:10.3390/foods12152850"}], "predicate": "is converted by", "predicate_id": null, "source": "pyruvate", "target": "lactate dehydrogenase"}, {"description": "Lactate dehydrogenase reduces pyruvate to lactate.", "edge_id": "edge-6", "evidence": [{"notes": "one mole of glucose produces two moles of lactic acid and two ATP molecules via LDH.", "reference": "DOI:10.3390/foods12152850"}], "predicate": "produces", "predicate_id": null, "source": "lactate dehydrogenase", "target": "lactate"}, {"description": "Heterofermentative phosphoketolase route yields lactate among its products.", "edge_id": "edge-7", "evidence": [{"notes": "products are lactate, carbon dioxide, and either ethanol or acetate (phosphoketolase route).", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "yields", "predicate_id": null, "source": "phosphoketolase pathway", "target": "lactate"}, {"description": "Heterolactic phosphoketolase route co-produces CO2.", "edge_id": "edge-8", "evidence": [{"notes": "heterolactic products are lactate, carbon dioxide, and ethanol or acetate.", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "yields", "predicate_id": null, "source": "phosphoketolase pathway", "target": "carbon dioxide"}, {"description": "Heterolactic phosphoketolase route co-produces ethanol (or acetate).", "edge_id": "edge-9", "evidence": [{"notes": "heterolactic products include ethanol or acetate.", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "yields", "predicate_id": null, "source": "phosphoketolase pathway", "target": "ethanol"}, {"description": "Accumulation of lactic acid acidifies the medium.", "edge_id": "edge-10", "evidence": [{"notes": "acidification from lactic acid exerts antagonistic effects on microbes.", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "causes", "predicate_id": null, "source": "lactate", "target": "decreased pH"}, {"description": "Lactate-driven acidification inhibits spoilage and pathogenic microbes (biopreservation).", "edge_id": "edge-11", "evidence": [{"notes": "higher lactic acid / lower pH increases inhibition of spoilage and pathogenic microbes.", "reference": "DOI:10.3390/fermentation10030168"}], "predicate": "inhibits", "predicate_id": null, "source": "decreased pH", "target": "pathogenic/spoilage microbe"}], "graph_id": "lactic_acid_fermentation_lactate", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Co-product of heterolactic fermentation.", "grounding": null, "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Acidification resulting from lactic acid accumulation.", "grounding": null, "id": "decreased_ph", "is_orphan": false, "label": "decreased pH", "node_type": "QUALITY", "xrefs": []}, {"color": "#fef3c7", "description": "Co-product of heterolactic fermentation.", "grounding": null, "id": "ethanol", "is_orphan": false, "label": "ethanol", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Hexose substrate fermented by lactic acid bacteria.", "grounding": null, "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Embden-Meyerhof-Parnas glycolytic pathway used by homofermentative LAB.", "grounding": null, "id": "glycolysis_emp", "is_orphan": false, "label": "EMP/glycolysis pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Principal end product of homolactic fermentation.", "grounding": "CHEBI:24996", "id": "lactate", "is_orphan": false, "label": "lactate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that reduces pyruvate to lactate (EC 1.1.1.27).", "grounding": null, "id": "lactate_dehydrogenase", "is_orphan": false, "label": "lactate dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation producing lactate as the principal end product.", "grounding": "traitmech:000026", "id": "lactic_acid_fermentation_trait", "is_orphan": false, "label": "lactic acid fermentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Spoilage and pathogenic microbes inhibited by acidification.", "grounding": null, "id": "pathogenic_microbe", "is_orphan": false, "label": "pathogenic/spoilage microbe", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#e0e7ff", "description": "Pentose-phosphate/phosphoketolase route used by heterofermentative LAB.", "grounding": null, "id": "phosphoketolase_pathway", "is_orphan": false, "label": "phosphoketolase pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Glycolytic intermediate reduced to lactate.", "grounding": null, "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Lactic acid fermentation converts sugars to lactate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +762,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -14,11 +14,10 @@ synonyms:
   source: DOI:10.1128/MMBR.00001-06
 evidence:
 - reference: DOI:10.1128/MMBR.00001-06
-  notes: Young's review treats the tetrad as a division-plane-determined coccal
-    arrangement.
+  notes: Young's review treats the tetrad as a division-plane-determined coccal arrangement.
 - reference: DOI:10.1038/ncomms4842
-  notes: Two-plane division with incomplete daughter-cell separation yields
-    four-cell tetrads.
+  notes: Two-plane division with incomplete daughter-cell separation yields four-cell
+    tetrads.
 causal_graphs:
 - graph_id: tetrad_two_plane_division
   title: Tetrad arrangement via two-plane perpendicular division
@@ -39,16 +38,34 @@ causal_graphs:
     label: two perpendicular division planes
     node_type: QUALITY
     description: Successive division planes oriented perpendicular to each other.
+  - node_id: ftsz_z_ring
+    label: FtsZ Z-ring assembly
+    node_type: GENE_OR_PROTEIN
+    description: FtsZ polymerizes into a Z-ring that scaffolds the divisome at the
+      division site.
+  - node_id: septation
+    label: division septum assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Assembly of the septal cell-wall and membrane between daughter cells.
+  - node_id: cell_wall_hydrolases
+    label: cell wall hydrolases (autolysins)
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan hydrolases/autolysins that cleave the septal cell wall
+      to separate daughter cells.
+  - node_id: daughter_cell_splitting
+    label: daughter-cell splitting
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid physical separation of daughter cells following septation.
   edges:
   - subject: two_plane_perpendicular_division
     predicate: causes
     object: tetrad_trait
-    description: Two perpendicular division planes with incomplete daughter
-      separation yield four-cell tetrads.
+    description: Two perpendicular division planes with incomplete daughter separation
+      yield four-cell tetrads.
     evidence:
     - reference: DOI:10.1038/ncomms4842
-      notes: Two-plane division with incomplete daughter-cell separation yields
-        four-cell tetrads.
+      notes: Two-plane division with incomplete daughter-cell separation yields four-cell
+        tetrads.
     predicate_id: biolink:causes
   - subject: cell_division
     predicate: enables
@@ -56,9 +73,45 @@ causal_graphs:
     description: Bacterial cell division underlies tetrad formation.
     evidence:
     - reference: DOI:10.1128/MMBR.00001-06
-      notes: Young treats the tetrad as a division-plane-determined coccal
-        arrangement.
+      notes: Young treats the tetrad as a division-plane-determined coccal arrangement.
     predicate_id: RO:0002327
+  - subject: ftsz_z_ring
+    predicate: scaffolds
+    object: septation
+    description: FtsZ assembles into a Z-ring that scaffolds the divisome and initiates
+      septation.
+    evidence:
+    - reference: DOI:10.1042/bst20240956
+      notes: FtsZ polymerizes into a Z-ring that scaffolds membrane-associated division
+        factors, forming the divisome that drives septation.
+  - subject: septation
+    predicate: precedes
+    object: daughter_cell_splitting
+    description: Septum assembly precedes the splitting step that physically separates
+      daughter cells.
+    evidence:
+    - reference: DOI:10.1042/bst20240956
+      notes: After septation the cell splits into two daughter cells; splitting is
+        a distinct, very fast step following septation.
+  - subject: cell_wall_hydrolases
+    predicate: mediates
+    object: daughter_cell_splitting
+    description: Cell wall hydrolases/autolysins cleave septal peptidoglycan to drive
+      rapid daughter-cell splitting.
+    evidence:
+    - reference: DOI:10.1042/bst20240956
+      notes: After septation the cell splits into two daughter cells very fast (within
+        milliseconds) and requires the actions of cell wall hydrolases.
+  - subject: daughter_cell_splitting
+    predicate: prevents
+    object: tetrad_trait
+    description: Incomplete or delayed daughter-cell splitting after two-plane division
+      leaves cells attached as four-cell tetrads.
+    evidence:
+    - reference: DOI:10.1042/bst20240956
+      notes: Tetrads arise when a spherical cell divides in one plane and then again
+        in a perpendicular plane, producing four cells arranged as a square due to
+        incomplete separation; failure to complete splitting yields the tetrad.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -70,6 +123,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (two-plane perpendicular division →
-    tetrad) with GO node grounding and RO/biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+    tetrad) with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

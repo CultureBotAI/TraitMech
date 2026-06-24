@@ -49,6 +49,31 @@ causal_graphs:
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
     description: Growth supported without using oxygen as an energy substrate.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    description: Reactive oxygen species produced during oxygen exposure that damages
+      cells.
+  - node_id: hydrogen_peroxide_detoxification
+    label: hydrogen peroxide detoxification
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic removal of hydrogen peroxide to limit oxidative damage.
+  - node_id: catalase
+    label: catalase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that degrades hydrogen peroxide rapidly at higher concentrations.
+  - node_id: rubrerythrin
+    label: rubrerythrin
+    node_type: GENE_OR_PROTEIN
+    description: Non-heme iron protein that scavenges low levels of hydrogen peroxide.
+  - node_id: nadh_peroxidase
+    label: NADH peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme reducing hydrogen peroxide to water using NADH.
+  - node_id: nadph_peroxidase
+    label: NADPH peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme reducing hydrogen peroxide to water using NADPH.
   edges:
   - subject: aerotolerant_trait
     predicate: includes
@@ -89,6 +114,34 @@ causal_graphs:
         SOD
       notes: Supports SOD as a ROS-defense mechanism for aerotolerant anaerobes.
     predicate_id: METPO:2007407
+  - subject: catalase
+    predicate: enables
+    object: hydrogen_peroxide_detoxification
+    description: Catalase degrades hydrogen peroxide, enabling its detoxification.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: catalase degrades H2O2 rapidly at higher concentrations
+  - subject: rubrerythrin
+    predicate: decreases
+    object: hydrogen_peroxide
+    description: Rubrerythrin scavenges low levels of hydrogen peroxide.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: rubrerythrins scavenge low H2O2 levels
+  - subject: nadh_peroxidase
+    predicate: decreases
+    object: hydrogen_peroxide
+    description: NADH peroxidase reduces hydrogen peroxide to water.
+    evidence:
+    - reference: DOI:10.1038/s41598-023-41185-3
+      notes: NADH + H+ + H2O2 reversible to NAD+ + 2 H2O
+  - subject: nadph_peroxidase
+    predicate: decreases
+    object: hydrogen_peroxide
+    description: NADPH peroxidase reduces hydrogen peroxide to water.
+    evidence:
+    - reference: DOI:10.1038/s41598-023-41185-3
+      notes: an analogous NADPH peroxidase produces NADP+
 curation_history:
 - timestamp: '2026-05-05T01:35:46.853836+00:00'
   curator: seed_from_metpo
@@ -140,4 +193,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

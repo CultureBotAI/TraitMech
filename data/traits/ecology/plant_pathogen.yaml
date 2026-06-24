@@ -54,6 +54,34 @@ causal_graphs:
     label: plant disease
     node_type: BIOLOGICAL_PROCESS
     description: Pathology produced in a plant host.
+  - node_id: quorum_sensing
+    label: quorum sensing
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-density-dependent signaling (e.g., AHL, DSF) coordinating group
+      behaviors in bacterial pathogens.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of structured surface-attached microbial communities.
+  - node_id: eps_production
+    label: exopolysaccharide production
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis of extracellular polysaccharides forming the biofilm
+      matrix.
+  - node_id: plant_cell_wall
+    label: plant cell wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Plant-type cell wall, the structural barrier degraded during host
+      invasion.
+  - node_id: apoplastic_effector_secretion
+    label: ER-Golgi apoplastic effector secretion
+    node_type: BIOLOGICAL_PROCESS
+    description: Conventional ER-Golgi secretory pathway delivering apoplastic effectors
+      in fungal/oomycete pathogens.
+  - node_id: apoplastic_effectors
+    label: apoplastic effectors
+    node_type: GENE_OR_PROTEIN
+    description: Secreted pathogen effector proteins acting in the host apoplast.
   edges:
   - subject: cwd_enzymes
     predicate: enables
@@ -113,6 +141,57 @@ causal_graphs:
       snippet: type III secretion
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: quorum_sensing
+    predicate: positively regulates
+    object: biofilm_formation
+    description: Quorum sensing is required for cooperative biofilm formation in plant-pathogenic
+      bacteria.
+    evidence:
+    - reference: DOI:10.3390/plants12112207
+      notes: QS is required for cooperative biofilm formation and regulates toxins,
+        enzymes, EPS, and virulence factors.
+  - subject: quorum_sensing
+    predicate: positively regulates
+    object: eps_production
+    description: Quorum sensing and c-di-GMP signaling positively regulate exopolysaccharide
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/plants12112207
+      notes: EPS such as amylovoran, levan, xanthan, stewartan, and cellulose are
+        often regulated by intracellular c-di-GMP and QS.
+  - subject: eps_production
+    predicate: enables
+    object: biofilm_formation
+    description: Exopolysaccharide production builds the biofilm matrix enabling biofilm
+      formation.
+    evidence:
+    - reference: DOI:10.3390/plants12112207
+      notes: EPS form the matrix of cooperative biofilms in plant-pathogenic bacteria.
+  - subject: cwd_enzymes
+    predicate: degrades
+    object: plant_cell_wall
+    description: Secreted cell-wall-degrading enzymes degrade the plant cell wall.
+    evidence:
+    - reference: DOI:10.21608/mb.2024.307263.1134
+      notes: Secretion of cell-wall-degrading enzymes (pectinase, chitinase, cellulase,
+        protease) that enable invasion and colonization.
+  - subject: apoplastic_effector_secretion
+    predicate: delivers
+    object: apoplastic_effectors
+    description: The conventional ER-Golgi secretory pathway delivers apoplastic effectors.
+    evidence:
+    - reference: DOI:10.1094/MPMI-12-23-0212-CR
+      notes: Apoplastic effectors are secreted via the conventional endoplasmic reticulum
+        (ER)-Golgi pathway.
+  - subject: apoplastic_effectors
+    predicate: suppresses
+    object: plant_immune_suppression
+    description: Secreted apoplastic effectors contribute to suppression of plant
+      immunity during infection.
+    evidence:
+    - reference: DOI:10.1094/MPMI-12-23-0212-CR
+      notes: Apoplastic effectors delivered to the host act to subvert plant defenses
+        and permit infection.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949239+00:00'
   curator: seed_from_metpo
@@ -167,4 +246,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

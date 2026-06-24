@@ -45,6 +45,21 @@ causal_graphs:
     label: polygonal geometry
     node_type: BIOLOGICAL_PROCESS
     description: Flat, angular cell geometry with defined edges.
+  - node_id: rigid_slayer_sheets
+    label: rigid S-layer sheets
+    node_type: ORGANELLE
+    description: Overlapping paracrystalline S-layer sheets cross-linked by a dense
+      net of protein bridges, producing high mechanical rigidity.
+  - node_id: outer_membrane
+    label: outer membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Cell outer membrane that conforms to the angular polygonal envelope
+      geometry.
+  - node_id: peptidoglycan_layer
+    label: peptidoglycan layer
+    node_type: CELLULAR_LOCALIZATION
+    description: Peptidoglycan-based cell wall layer that does not adopt the polygonal
+      cell shape.
   edges:
   - subject: planar_envelope_growth
     predicate: enables
@@ -73,6 +88,43 @@ causal_graphs:
       snippet: archaeal cell shape
       notes: Supports the trait endpoint in triangular halophilic archaea.
     predicate_id: METPO:2007400
+  - subject: slayer_constraints
+    predicate: determines
+    object: polygonal_geometry
+    description: The S-layer is the determining factor for the polygonal (angular)
+      cell shape.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.766527
+      notes: Cryo-ET shows "the S-layer is the determining factor for their polygonal
+        cell shape"; generic S-layer-driven polygonal envelope mechanism.
+  - subject: rigid_slayer_sheets
+    predicate: confers rigidity to
+    object: polygonal_geometry
+    description: Very rigid, protein-bridge-cross-linked S-layer sheets confer mechanical
+      rigidity that stabilizes the angular polygonal morphology.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.766527
+      notes: '"these S-layer sheets are very rigid" and a "dense net of protein bridges...
+        establishes the observed rigidity"; structural stabilization of angular morphology.'
+  - subject: polygonal_geometry
+    predicate: shapes
+    object: outer_membrane
+    description: The outer membrane conforms to (follows) the polygonal cell shape
+      imposed by the envelope.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.766527
+      notes: '"the outer membrane followed the polygonal cell shape"; outer membrane
+        is a participant conforming to polygonal geometry.'
+  - subject: polygonal_geometry
+    predicate: does not shape
+    object: peptidoglycan_layer
+    description: The peptidoglycan layer does not adopt the polygonal cell shape,
+      bounding the mechanism to S-layer and outer membrane.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.766527
+      notes: '"the S-layer and outer membrane, but not the peptidoglycan layer and
+        the cytoplasmic membrane, exhibited the polygonal shape"; negative boundary
+        edge.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901416+00:00'
   curator: seed_from_metpo
@@ -108,4 +160,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

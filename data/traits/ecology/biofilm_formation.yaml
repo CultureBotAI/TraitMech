@@ -1,8 +1,8 @@
 identifier: traitmech:000053
 label: biofilm formation
-definition: An ecological lifestyle in which cells form surface-attached,
-  matrix-enclosed multicellular communities (biofilms) held together by extracellular
-  polymeric substances — a widespread mode of microbial life.
+definition: An ecological lifestyle in which cells form surface-attached, matrix-enclosed
+  multicellular communities (biofilms) held together by extracellular polymeric substances
+  — a widespread mode of microbial life.
 definition_source: DOI:10.1038/nrmicro.2016.94
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -18,14 +18,13 @@ evidence:
   notes: Flemming et al. describe matrix-enclosed, surface-associated communities
     (biofilms) as an emergent, distinct mode of bacterial life.
 - reference: DOI:10.1038/s41579-019-0162-0
-  notes: Flemming & Wuertz support the global ubiquity of the biofilm lifestyle
-    across microbial habitats.
+  notes: Flemming & Wuertz support the global ubiquity of the biofilm lifestyle across
+    microbial habitats.
 causal_graphs:
 - graph_id: biofilm_eps_matrix_community
   title: Biofilm formation builds a matrix-enclosed surface community
-  description: Evidence-backed causal sketch linking secretion of extracellular
-    polymeric substances to assembly of a surface-attached multicellular biofilm
-    community.
+  description: Evidence-backed causal sketch linking secretion of extracellular polymeric
+    substances to assembly of a surface-attached multicellular biofilm community.
   nodes:
   - node_id: biofilm_formation_trait
     label: biofilm formation
@@ -42,6 +41,49 @@ causal_graphs:
     label: extracellular polymeric substance matrix
     node_type: CHEMICAL
     description: Polysaccharide/protein/DNA matrix holding the biofilm together.
+  - node_id: planktonic_cell
+    label: planktonic cell
+    node_type: STATE
+    description: A free-living, non-attached microbial cell.
+  - node_id: amenable_surface
+    label: amenable surface
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A surface suitable for microbial attachment, initiating biofilm formation.
+  - node_id: extracellular_matrix
+    label: extracellular matrix
+    node_type: CELLULAR_LOCALIZATION
+    description: The extracellular matrix (ECM) that is the defining hallmark of bacterial
+      biofilms.
+  - node_id: c_di_gmp
+    label: bis(3'-5')-cyclic dimeric GMP (c-di-GMP)
+    node_type: CHEMICAL
+    description: Second messenger that governs the planktonic-to-sessile lifestyle
+      switch.
+  - node_id: sessile_state
+    label: sessile state
+    node_type: STATE
+    description: Surface-attached, biofilm-associated cellular state.
+  - node_id: nitric_oxide
+    label: nitric oxide
+    node_type: CHEMICAL
+    description: Signaling molecule that induces biofilm dispersal at low concentrations.
+  - node_id: biofilm_dispersal
+    label: biofilm dispersal
+    node_type: BIOLOGICAL_PROCESS
+    description: Release of cells from a biofilm back to the planktonic state.
+  - node_id: edna
+    label: extracellular DNA (eDNA)
+    node_type: CHEMICAL
+    description: Extracellular DNA, a ubiquitous and stabilizing component of the
+      biofilm matrix.
+  - node_id: amyloid_fibers
+    label: amyloid-like fibers
+    node_type: CHEMICAL
+    description: Amyloid-like fibrous protein component of the biofilm matrix.
+  - node_id: qs_autoinducers
+    label: quorum sensing autoinducers (AHL/AIP/AI-2)
+    node_type: CHEMICAL
+    description: Quorum-sensing signal molecules that regulate biofilm formation.
   edges:
   - subject: eps_matrix
     predicate: enables
@@ -49,8 +91,7 @@ causal_graphs:
     description: EPS matrix encloses cells and holds the biofilm together.
     evidence:
     - reference: DOI:10.1038/nrmicro.2016.94
-      notes: Flemming et al. describe the EPS matrix as the structural basis of
-        biofilms.
+      notes: Flemming et al. describe the EPS matrix as the structural basis of biofilms.
     predicate_id: RO:0002327
   - subject: biofilm_formation_process
     predicate: enables
@@ -58,19 +99,93 @@ causal_graphs:
     description: Biofilm-formation activity realizes the biofilm-forming trait.
     evidence:
     - reference: DOI:10.1038/s41579-019-0162-0
-      notes: Flemming & Wuertz frame biofilm formation as the dominant microbial
-        lifestyle.
+      notes: Flemming & Wuertz frame biofilm formation as the dominant microbial lifestyle.
     predicate_id: RO:0002327
+  - subject: planktonic_cell
+    predicate: attaches to
+    object: amenable_surface
+    description: Biofilm formation begins when a planktonic cell attaches to an amenable
+      surface.
+    evidence:
+    - reference: DOI:10.1042/BCJ20210301
+      notes: 'Bohning et al.: biofilm formation begins when a planktonic cell attaches
+        to an amenable surface.'
+  - subject: extracellular_matrix
+    predicate: required for
+    object: biofilm_formation_process
+    description: The extracellular matrix is the defining characteristic and hallmark
+      of all bacterial biofilms.
+    evidence:
+    - reference: DOI:10.1042/BCJ20210301
+      notes: 'Bohning et al.: presence of an ECM is the defining characteristic and
+        hallmark of all bacterial biofilms.'
+  - subject: c_di_gmp
+    predicate: promotes
+    object: sessile_state
+    description: c-di-GMP modulates EPS synthesis and motility, promoting the planktonic-to-sessile
+      transition.
+    evidence:
+    - reference: DOI:10.3390/w17131944
+      notes: 'Wang et al.: c-di-GMP modulated EPS synthesis and flagellar motility,
+        facilitating the transition from planktonic to sessile state. Broadly accepted
+        central regulator.'
+  - subject: sessile_state
+    predicate: enables
+    object: biofilm_formation_process
+    description: The sessile, surface-attached state enables biofilm formation.
+    evidence:
+    - reference: DOI:10.3390/w17131944
+      notes: 'Wang et al.: transition to the sessile state underlies biofilm formation.'
+  - subject: nitric_oxide
+    predicate: induces
+    object: biofilm_dispersal
+    description: A key anti-biofilm property of nitric oxide is its ability to induce
+      biofilm dispersal.
+    evidence:
+    - reference: DOI:10.3390/antibiotics13111047
+      notes: 'Fuentes et al.: one of the key anti-biofilm properties of NO is its
+        ability to induce biofilm dispersal (dose-dependent).'
+  - subject: edna
+    predicate: required for
+    object: extracellular_matrix
+    description: eDNA is ubiquitous in and critical for biofilm ECM stability.
+    evidence:
+    - reference: DOI:10.1042/BCJ20210301
+      notes: 'Bohning et al.: eDNA is ubiquitous in the biofilm ECM and is critical
+        for biofilm ECM stability.'
+  - subject: edna
+    predicate: nucleates
+    object: amyloid_fibers
+    description: eDNA acts as a nucleator triggering amyloid-like fiber formation
+      in the matrix.
+    evidence:
+    - reference: DOI:10.1042/BCJ20210301
+      notes: 'Bohning et al.: eDNA plays an important role in triggering amyloid-like
+        fibre formation, acting as a nucleator.'
+  - subject: qs_autoinducers
+    predicate: regulates
+    object: biofilm_formation_process
+    description: Quorum sensing autoinducers (AHL/AIP/AI-2) regulate biofilm formation.
+    evidence:
+    - reference: DOI:10.3390/bacteria3030008
+      notes: 'Erkihun et al.: QS signals (AHLs, AIPs, AI-2) participate in biofilm
+        formation.'
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ECOLOGY trait (biofilm formation) from literature
-    research to fill the microbial-lifestyle gap.
+  changes: Proposed candidate ECOLOGY trait (biofilm formation) from literature research
+    to fill the microbial-lifestyle gap.
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (biofilm EPS matrix / community) with
     GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -90,6 +90,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>PMF (membrane potential) is required to maintain cytoplasmic pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1103/PRXLife.2.043015</code>
+                
+                <span class="meta">Terradot et al. 2024: decreasing the PMF&#39;s strength impairs the cells&#39; ability to maintain pH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>cytoplasmic pH homeostasis</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>pH range mid1</strong>
+            
+            <p>Maintaining near-neutral cytoplasmic pH supports the neutrophilic pH 6-7 growth range.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1103/PRXLife.2.043015</code>
+                
+                <span class="meta">Cytoplasmic pH held near neutral underlies the neutralophile growth range.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>cation/proton antiporters</strong>
+            <span class="edge-predicate">determines</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Transporter repertoire (ClcA/NhaB/NhaA-like antiporters) sets the external-pH boundaries over which cytoplasmic pH ~7 is maintained.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1103/PRXLife.2.043015</code>
+                
+                <span class="meta">Terradot et al. 2024: ClcA-like ~pHe 2-5, NhaB-like ~5-9, NhaA-like ~9-12 maintain pHi ~7.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>acid challenge</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>respiratory proton-pumping complexes</strong>
+            
+            <p>Under acid challenge cells upregulate proton-pumping respiratory complexes (and downregulate ATP synthase) to support pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping respiratory complexes and down-regulates ATP synthase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>respiratory proton-pumping complexes</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>baseline pH homeostasis</strong>
+            
+            <p>Proton-pumping respiratory activity contributes to baseline pH homeostasis on the acidic side of the range.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance under acid challenge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>alkaline challenge</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>cation/proton antiporters</strong>
+            
+            <p>Under alkaline challenge cells activate cation/proton antiporters and F1Fo-ATP synthase proton-capture to support pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro2549</code>
+                
+                <span class="meta">Krulwich et al. 2011: under alkaline stress cells activate inward proton transport via cation/proton antiporters and increase ATP synthase expression.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -239,6 +341,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -598,7 +706,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking baseline pH-homeostasis at near-neutral external pH to a pH growth range of approximately 6\u20137.", "edges": [{"description": "Baseline pH-homeostasis enables growth across pH 6\u20137.", "evidence": [{"notes": "Supports baseline pH-homeostasis as the neutrophilic range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "baseline_ph_homeostasis", "target": "ph_range_mid1_trait"}, {"description": "pH range mid1 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 6\u20137 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid1_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Baseline pH-homeostasis enables growth across pH 6\u20137.", "edge_id": "edge-1", "evidence": [{"notes": "Supports baseline pH-homeostasis as the neutrophilic range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "baseline pH homeostasis", "target": "pH range mid1"}, {"description": "pH range mid1 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 6\u20137 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid1", "target": "pH range"}], "graph_id": "ph_range_mid1_neutrophile_range", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Minimal proton-extrusion and buffering activity needed to maintain near-neutral cytoplasmic pH at near-neutral external pH.", "grounding": null, "id": "baseline_ph_homeostasis", "is_orphan": false, "label": "baseline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 6\u20137.", "grounding": "METPO:1000461", "id": "ph_range_mid1_trait", "is_orphan": false, "label": "pH range mid1", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid1 neutrophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking baseline pH-homeostasis at near-neutral external pH to a pH growth range of approximately 6\u20137.", "edges": [{"description": "Baseline pH-homeostasis enables growth across pH 6\u20137.", "evidence": [{"notes": "Supports baseline pH-homeostasis as the neutrophilic range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "baseline_ph_homeostasis", "target": "ph_range_mid1_trait"}, {"description": "pH range mid1 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 6\u20137 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid1_trait", "target": "ph_range"}, {"description": "PMF (membrane potential) is required to maintain cytoplasmic pH homeostasis.", "evidence": [{"notes": "Terradot et al. 2024: decreasing the PMF\u0027s strength impairs the cells\u0027 ability to maintain pH.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "proton_motive_force", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Maintaining near-neutral cytoplasmic pH supports the neutrophilic pH 6-7 growth range.", "evidence": [{"notes": "Cytoplasmic pH held near neutral underlies the neutralophile growth range.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cytoplasmic_ph_homeostasis", "target": "ph_range_mid1_trait"}, {"description": "Transporter repertoire (ClcA/NhaB/NhaA-like antiporters) sets the external-pH boundaries over which cytoplasmic pH ~7 is maintained.", "evidence": [{"notes": "Terradot et al. 2024: ClcA-like ~pHe 2-5, NhaB-like ~5-9, NhaA-like ~9-12 maintain pHi ~7.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "id": "edge-5", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "cation_proton_antiporters", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Under acid challenge cells upregulate proton-pumping respiratory complexes (and downregulate ATP synthase) to support pH homeostasis.", "evidence": [{"notes": "Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping respiratory complexes and down-regulates ATP synthase.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "acid_challenge", "target": "respiratory_proton_pumping"}, {"description": "Proton-pumping respiratory activity contributes to baseline pH homeostasis on the acidic side of the range.", "evidence": [{"notes": "Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance under acid challenge.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "respiratory_proton_pumping", "target": "baseline_ph_homeostasis"}, {"description": "Under alkaline challenge cells activate cation/proton antiporters and F1Fo-ATP synthase proton-capture to support pH homeostasis.", "evidence": [{"notes": "Krulwich et al. 2011: under alkaline stress cells activate inward proton transport via cation/proton antiporters and increase ATP synthase expression.", "reference": "DOI:10.1038/nrmicro2549"}], "id": "edge-8", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "alkaline_challenge", "target": "cation_proton_antiporters"}], "evidence_rows": [{"description": "Baseline pH-homeostasis enables growth across pH 6\u20137.", "edge_id": "edge-1", "evidence": [{"notes": "Supports baseline pH-homeostasis as the neutrophilic range mechanism.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "baseline pH homeostasis", "target": "pH range mid1"}, {"description": "pH range mid1 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 6\u20137 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid1", "target": "pH range"}, {"description": "PMF (membrane potential) is required to maintain cytoplasmic pH homeostasis.", "edge_id": "edge-3", "evidence": [{"notes": "Terradot et al. 2024: decreasing the PMF\u0027s strength impairs the cells\u0027 ability to maintain pH.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "predicate": "enables", "predicate_id": null, "source": "proton motive force", "target": "cytoplasmic pH homeostasis"}, {"description": "Maintaining near-neutral cytoplasmic pH supports the neutrophilic pH 6-7 growth range.", "edge_id": "edge-4", "evidence": [{"notes": "Cytoplasmic pH held near neutral underlies the neutralophile growth range.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "predicate": "enables", "predicate_id": null, "source": "cytoplasmic pH homeostasis", "target": "pH range mid1"}, {"description": "Transporter repertoire (ClcA/NhaB/NhaA-like antiporters) sets the external-pH boundaries over which cytoplasmic pH ~7 is maintained.", "edge_id": "edge-5", "evidence": [{"notes": "Terradot et al. 2024: ClcA-like ~pHe 2-5, NhaB-like ~5-9, NhaA-like ~9-12 maintain pHi ~7.", "reference": "DOI:10.1103/PRXLife.2.043015"}], "predicate": "determines", "predicate_id": null, "source": "cation/proton antiporters", "target": "cytoplasmic pH homeostasis"}, {"description": "Under acid challenge cells upregulate proton-pumping respiratory complexes (and downregulate ATP synthase) to support pH homeostasis.", "edge_id": "edge-6", "evidence": [{"notes": "Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping respiratory complexes and down-regulates ATP synthase.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "positively regulates", "predicate_id": null, "source": "acid challenge", "target": "respiratory proton-pumping complexes"}, {"description": "Proton-pumping respiratory activity contributes to baseline pH homeostasis on the acidic side of the range.", "edge_id": "edge-7", "evidence": [{"notes": "Krulwich et al. 2011: proton extrusion supports cytoplasmic pH maintenance under acid challenge.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "enables", "predicate_id": null, "source": "respiratory proton-pumping complexes", "target": "baseline pH homeostasis"}, {"description": "Under alkaline challenge cells activate cation/proton antiporters and F1Fo-ATP synthase proton-capture to support pH homeostasis.", "edge_id": "edge-8", "evidence": [{"notes": "Krulwich et al. 2011: under alkaline stress cells activate inward proton transport via cation/proton antiporters and increase ATP synthase expression.", "reference": "DOI:10.1038/nrmicro2549"}], "predicate": "positively regulates", "predicate_id": null, "source": "alkaline challenge", "target": "cation/proton antiporters"}], "graph_id": "ph_range_mid1_neutrophile_range", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Exposure to acidic external pH below the neutrophilic optimum.", "grounding": null, "id": "acid_challenge", "is_orphan": false, "label": "acid challenge", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Exposure to alkaline external pH above the neutrophilic optimum.", "grounding": null, "id": "alkaline_challenge", "is_orphan": false, "label": "alkaline challenge", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Minimal proton-extrusion and buffering activity needed to maintain near-neutral cytoplasmic pH at near-neutral external pH.", "grounding": null, "id": "baseline_ph_homeostasis", "is_orphan": false, "label": "baseline pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane antiporters (e.g. Na+/H+) whose repertoire sets external-pH boundaries for maintaining cytoplasmic pH ~7.", "grounding": null, "id": "cation_proton_antiporters", "is_orphan": false, "label": "cation/proton antiporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of near-neutral cytoplasmic pH (~7) across the external pH range.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 6\u20137.", "grounding": "METPO:1000461", "id": "ph_range_mid1_trait", "is_orphan": false, "label": "pH range mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical proton gradient (PMF) across the cytoplasmic membrane.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Respiratory chain complexes that extrude protons, upregulated under acid challenge.", "grounding": null, "id": "respiratory_proton_pumping", "is_orphan": false, "label": "respiratory proton-pumping complexes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "pH-range-mid1 neutrophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -609,7 +717,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

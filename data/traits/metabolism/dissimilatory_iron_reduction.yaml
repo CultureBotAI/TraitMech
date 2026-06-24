@@ -1,9 +1,9 @@
 identifier: traitmech:000031
 label: dissimilatory iron reduction
-definition: An anaerobic respiratory metabolism in which an organism conserves
-  energy for growth by coupling the oxidation of organic matter or hydrogen to the
-  reduction of Fe(III) as a terminal electron acceptor. Characteristic of Geobacter
-  and Shewanella, often via extracellular electron transfer.
+definition: An anaerobic respiratory metabolism in which an organism conserves energy
+  for growth by coupling the oxidation of organic matter or hydrogen to the reduction
+  of Fe(III) as a terminal electron acceptor. Characteristic of Geobacter and Shewanella,
+  often via extracellular electron transfer.
 definition_source: DOI:10.1128/mr.55.2.259-287.1991
 trait_category: METABOLISM
 term_kind: CLASS
@@ -20,19 +20,18 @@ synonyms:
 evidence:
 - reference: DOI:10.1128/mr.55.2.259-287.1991
   snippet: The oxidation of organic matter coupled to the reduction of Fe(III) or
-    Mn(IV) is one of the most important biogeochemical reactions in aquatic
-    sediments, soils, and groundwater
-  notes: Lovley review establishes dissimilatory Fe(III)/Mn(IV) reduction as
-    energy-conserving anaerobic respiration coupling organic-matter oxidation to
-    metal reduction.
+    Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments,
+    soils, and groundwater
+  notes: Lovley review establishes dissimilatory Fe(III)/Mn(IV) reduction as energy-conserving
+    anaerobic respiration coupling organic-matter oxidation to metal reduction.
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     Fe(III) and Mn(IV) as terminal electron acceptors competitive with nitrate.
 causal_graphs:
 - graph_id: dir_ferric_iron_respiration
   title: Dissimilatory iron reduction respires Fe(III) to Fe(II)
-  description: Evidence-backed causal sketch linking ferric iron as terminal
-    electron acceptor to anaerobic respiration in Geobacter and Shewanella.
+  description: Evidence-backed causal sketch linking ferric iron as terminal electron
+    acceptor to anaerobic respiration in Geobacter and Shewanella.
   nodes:
   - node_id: dir_trait
     label: dissimilatory iron reduction
@@ -49,6 +48,30 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:29033
     description: Soluble product released after Fe(III) reduction.
+  - node_id: anaerobic_respiration
+    label: energy-conserving anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    description: Anaerobic respiratory metabolism conserving energy via a terminal
+      electron acceptor.
+  - node_id: organic_matter_oxidation
+    label: oxidation of organic matter
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of organic carbon serving as the electron donor in DIR.
+  - node_id: hydrogen_oxidation
+    label: H2 oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of molecular hydrogen as an electron donor coupled to Fe(III)
+      reduction.
+  - node_id: dissolved_fe3_om_complex
+    label: dissolved Fe(III)-organic-matter complex
+    node_type: CHEMICAL
+    description: Soluble Fe(III) bound to organic matter; reduced faster than solid
+      Fe(III) minerals.
+  - node_id: solid_fe3_mineral
+    label: solid Fe(III) mineral
+    node_type: CHEMICAL
+    description: Insoluble Fe(III) oxide mineral phase serving as terminal electron
+      acceptor.
   edges:
   - subject: ferric_iron
     predicate: oxidized to
@@ -56,8 +79,8 @@ causal_graphs:
     description: Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.
     evidence:
     - reference: DOI:10.1128/mr.55.2.259-287.1991
-      notes: Lovley establishes Fe(III) reduction coupled to organic-matter
-        oxidation as energy-conserving anaerobic respiration.
+      notes: Lovley establishes Fe(III) reduction coupled to organic-matter oxidation
+        as energy-conserving anaerobic respiration.
     predicate_id: METPO:2007405
   - subject: ferric_iron
     predicate: enables
@@ -65,9 +88,42 @@ causal_graphs:
     description: Fe(III) acts as terminal electron acceptor enabling DIR.
     evidence:
     - reference: PMID:7826009
-      notes: Nealson & Saffarini support Fe(III) as a terminal electron acceptor
-        competitive with nitrate.
+      notes: Nealson & Saffarini support Fe(III) as a terminal electron acceptor competitive
+        with nitrate.
     predicate_id: RO:0002327
+  - subject: dir_trait
+    predicate: is a
+    object: anaerobic_respiration
+    description: DIR is a form of energy-conserving anaerobic respiration.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Organisms can obtain energy by completely oxidizing organic compounds
+        to CO2 with Fe(III) or Mn(IV) as the sole acceptor.
+  - subject: organic_matter_oxidation
+    predicate: coupled to
+    object: ferric_iron
+    description: Oxidation of organic matter is coupled to Fe(III) reduction in DIR.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: The oxidation of organic matter coupled to the reduction of Fe(III) or
+        Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.
+  - subject: hydrogen_oxidation
+    predicate: coupled to
+    object: ferric_iron
+    description: H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.
+    evidence:
+    - reference: DOI:10.1128/mr.55.2.259-287.1991
+      notes: Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV)
+        reduction in sediments.
+  - subject: dissolved_fe3_om_complex
+    predicate: reduced faster than
+    object: solid_fe3_mineral
+    description: Dissolved Fe(III)-OM complexes are reduced at significantly higher
+      rates than solid Fe(III) minerals.
+    evidence:
+    - reference: DOI:10.1007/s10533-024-01186-4
+      notes: The reduction rates of dissolved Fe(III)-OM complexes are significantly
+        higher than those observed for solid Fe(III) minerals.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -81,4 +137,10 @@ curation_history:
   changes: Added evidence-backed causal graph (Fe(III) → Fe(II) respiration) with
     CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED to
     REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -49,6 +49,30 @@ causal_graphs:
     label: yellow-orange-red color
     node_type: MOLECULAR_FUNCTION
     description: Visible colors associated with carotenoid absorption spectra.
+  - node_id: phytoene_synthase
+    label: phytoene synthase
+    node_type: GENE_OR_PROTEIN
+    description: CrtB-type enzyme condensing prenyl diphosphate to phytoene.
+  - node_id: phytoene
+    label: phytoene
+    node_type: CHEMICAL
+    description: Colorless C40 carotenoid precursor.
+  - node_id: phytoene_desaturase
+    label: phytoene desaturase
+    node_type: GENE_OR_PROTEIN
+    description: CrtI-type enzyme desaturating phytoene toward lycopene.
+  - node_id: lycopene
+    label: lycopene
+    node_type: CHEMICAL
+    description: Red C40 carotenoid intermediate formed by desaturation.
+  - node_id: lycopene_cyclases
+    label: lycopene cyclases
+    node_type: GENE_OR_PROTEIN
+    description: CrtY-type enzymes cyclizing lycopene into cyclic carotenes.
+  - node_id: cyclic_carotenes
+    label: cyclic carotenes
+    node_type: CHEMICAL
+    description: alpha-, epsilon-, and beta-carotene formed by lycopene cyclization.
   edges:
   - subject: isoprenoid_precursors
     predicate: feed into
@@ -97,6 +121,56 @@ causal_graphs:
       snippet: responsible for the red, pink, orange, and yellow pigmentation
       notes: Supports the trait-level mapping from carotenoid chemistry to pigmentation.
     predicate_id: METPO:2007400
+  - subject: phytoene_synthase
+    predicate: converts
+    object: phytoene
+    description: Phytoene synthase condenses prenyl diphosphate (GFDP) to form phytoene.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: Through the catalytic action of phytoene synthase, GFDP undergoes condensation
+        to form phytoene.
+  - subject: phytoene
+    predicate: is substrate for
+    object: phytoene_desaturase
+    description: Phytoene is dehydrogenated by phytoene desaturase en route to lycopene.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: Phytoene is further dehydrogenated by dehydrogenase to generate phytofluene,
+        which is subsequently converted into lycopene.
+  - subject: phytoene_desaturase
+    predicate: produces
+    object: lycopene
+    description: Phytoene desaturase converts phytoene (via phytofluene) to lycopene.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: Phytoene is further dehydrogenated... which is subsequently converted
+        into lycopene.
+  - subject: lycopene_cyclases
+    predicate: converts
+    object: cyclic_carotenes
+    description: Lycopene cyclases cyclize lycopene into alpha-, epsilon-, and beta-carotene.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: The cyclization of lycopene... lead[s] to the formation of alpha-carotene,
+        epsilon-carotene, and beta-carotene under the catalysis of various lycopene
+        cyclases.
+  - subject: lycopene
+    predicate: is substrate for
+    object: lycopene_cyclases
+    description: Lycopene is the substrate cyclized by lycopene cyclases.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: The cyclization of lycopene... under the catalysis of various lycopene
+        cyclases.
+  - subject: cyclic_carotenes
+    predicate: is a
+    object: conjugated_carotenoids
+    description: Cyclic carotenes are conjugated carotenoid pigments contributing
+      to coloration.
+    evidence:
+    - reference: DOI:10.3390/molecules29174235
+      notes: Cyclic carotenes (alpha-/epsilon-/beta-carotene) are conjugated carotenoid
+        pigment products of the pathway.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947657+00:00'
   curator: seed_from_metpo
@@ -132,4 +206,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0016117×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

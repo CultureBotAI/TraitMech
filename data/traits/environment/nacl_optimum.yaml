@@ -54,6 +54,55 @@ causal_graphs:
     label: maximal growth rate
     node_type: BIOLOGICAL_PROCESS
     description: Peak specific growth rate achieved at the optimal NaCl.
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular stress imposed by an external salt concentration that perturbs
+      water activity.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptive strategy of accumulating molar inorganic ions (notably
+      KCl) in the cytoplasm.
+  - node_id: intracellular_k_accumulation
+    label: intracellular K+ accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of molar concentrations of potassium ions to balance
+      external salt.
+  - node_id: acidic_proteome
+    label: acidic proteome
+    node_type: QUALITY
+    description: Highly acidic proteome adapted to function at high intracellular
+      salt concentrations.
+  - node_id: protein_stability_high_salt
+    label: protein stability at high salt
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of protein folding and enzymatic function under near-saturating
+      intracellular salt.
+  - node_id: compatible_solute_accumulation
+    label: compatible-solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of organic compatible solutes that do not interfere
+      with enzymatic activity.
+  - node_id: compatible_solute_uptake
+    label: compatible solute uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Import of compatible solutes from the medium, energetically favored
+      over de novo synthesis.
+  - node_id: lower_energetic_cost
+    label: lower energetic cost than de novo synthesis
+    node_type: QUALITY
+    description: Reduced metabolic energy expenditure relative to synthesizing compatible
+      solutes de novo.
+  - node_id: na_antiport_activity
+    label: Na+/H+ antiport activity
+    node_type: MOLECULAR_FUNCTION
+    description: Antiporter-mediated Na+ extrusion lowering cytoplasmic Na+ to prevent
+      toxicity.
+  - node_id: cytoplasmic_na_homeostasis
+    label: cytoplasmic Na+ homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of low cytoplasmic Na+ concentration to prevent ion toxicity.
   edges:
   - subject: ambient_nacl
     predicate: causes
@@ -104,6 +153,59 @@ causal_graphs:
       snippet: optimal NaCl
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: ambient_nacl
+    predicate: induces
+    object: osmotic_stress
+    description: External NaCl concentration imposes osmotic stress that drives osmoadaptation.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      notes: Halophilic microorganisms use two strategies to balance their cytoplasm
+        osmotically with their medium (broad review-level mechanism).
+  - subject: salt_in_strategy
+    predicate: increases
+    object: intracellular_k_accumulation
+    description: The salt-in strategy accumulates molar concentrations of KCl in the
+      cytoplasm.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      notes: The first involves accumulation of molar concentrations of KCl; strong
+        general mechanism across extreme halophiles.
+  - subject: acidic_proteome
+    predicate: enables
+    object: protein_stability_high_salt
+    description: An acidic proteome enables protein stability and enzymatic function
+      at high intracellular salt.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      notes: The proteome of such organisms is highly acidic; requires adaptation
+        of the intracellular enzymatic machinery at near-saturating salt.
+  - subject: compatible_solute_accumulation
+    predicate: regulates
+    object: osmotic_balance
+    description: Accumulation of organic compatible solutes maintains osmotic balance
+      without interfering with enzyme activity.
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      notes: Exclude salt from the cytoplasm and synthesize/accumulate organic compatible
+        solutes that do not interfere with enzymatic activity; broad canonical mechanism.
+  - subject: compatible_solute_uptake
+    predicate: associated with
+    object: lower_energetic_cost
+    description: Uptake of compatible solutes from the medium is energetically favored
+      over de novo synthesis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.846677
+      notes: Uptake of compatible solute from the medium is preferred over de novo
+        synthesis, reflecting an energetically favored mechanism.
+  - subject: na_antiport_activity
+    predicate: regulates
+    object: cytoplasmic_na_homeostasis
+    description: Na+/H+ antiport activity lowers cytoplasmic Na+ to maintain ion homeostasis
+      and prevent toxicity.
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      notes: Na+/H+ antiporters function to lower cytoplasmic Na+ to prevent toxicity
+        and contribute to salt acclimation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815612+00:00'
   curator: seed_from_metpo
@@ -164,4 +266,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -50,6 +50,60 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mild K+/H+ antiport and cytoplasmic acidification activity enabling
       growth at slightly basic external pH.
+  - node_id: external_ph_7_8
+    label: external pH 7-8
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Mildly alkaline to neutral external pH condition spanning approximately
+      7-8.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of internal pH near 7.0-7.5 despite external pH variation.
+  - node_id: cytoplasmic_buffering
+    label: cytoplasmic buffering
+    node_type: BIOLOGICAL_PROCESS
+    description: Inorganic/organic buffers limit pH fluctuation given very low free
+      proton count.
+  - node_id: na_h_antiport_activity
+    label: Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Coupled Na+/H+ exchange that acidifies the cytoplasm when internal
+      pH rises.
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    description: Intracellular compartment whose pH is regulated by antiport activity.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Composite electrochemical proton gradient used for energy transduction
+      and transport.
+  - node_id: external_ph_5_8
+    label: external pH 5-8
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH span across which neutralophiles keep PMF relatively
+      constant.
+  - node_id: dpsi_dph_rebalancing
+    label: membrane potential / ΔpH rebalancing
+    node_type: BIOLOGICAL_PROCESS
+    description: Shifting relative contributions of Δψ and ΔpH with external pH to
+      preserve PMF.
+  - node_id: f0f1_atpase
+    label: F0F1-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: ATP synthase coupling proton re-entry (PMF) to ATP generation.
+  - node_id: atp_synthesis
+    label: ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Generation of ATP driven by the proton motive force.
+  - node_id: proton_ion_antiporters
+    label: proton:ion antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Antiporters with a direct role in sustaining membrane potential.
+  - node_id: membrane_potential
+    label: membrane potential (Δψ)
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane electrical potential contributing to PMF.
   edges:
   - subject: modest_alkaline_tolerance
     predicate: enables
@@ -70,6 +124,64 @@ causal_graphs:
       snippet: cytoplasmic pH
       notes: Supports the pH 7–8 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: external_ph_7_8
+    predicate: permits maintenance of
+    object: cytoplasmic_ph_homeostasis
+    description: External pH 7-8 permits cells to keep internal pH near 7.0-7.5.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Internal pH kept within 7.0-7.5 and PMF relatively constant across external
+        pH 5-8.
+  - subject: cytoplasmic_buffering
+    predicate: stabilizes
+    object: cytoplasmic_ph_homeostasis
+    description: Cytoplasmic buffering stabilizes internal pH given very low free
+      proton count.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: A ~1 fL cytoplasm at pH 7.2 contains only ~10 free protons, so buffering
+        is critical.
+  - subject: na_h_antiport_activity
+    predicate: acidifies
+    object: cytoplasm
+    description: Na+/H+ antiporter activity acidifies the cytoplasm when internal
+      pH rises.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Na+/H+ and K+/H+ antiporters acidify the cytoplasm by exchanging exported
+        cations for H+.
+  - subject: proton_motive_force
+    predicate: remains relatively constant across
+    object: external_ph_5_8
+    description: Neutralophiles keep PMF relatively constant across external pH ~5-8.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Neutralophilic bacteria adjust ΔpH vs Δψ so PMF stays relatively constant
+        across external pH ~5-8.
+  - subject: dpsi_dph_rebalancing
+    predicate: maintains
+    object: proton_motive_force
+    description: Rebalancing of ΔpH and Δψ with external pH maintains PMF.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: The relative contribution of ΔpH and Δψ shifts with external pH to preserve
+        PMF.
+  - subject: f0f1_atpase
+    predicate: couples
+    object: atp_synthesis
+    description: F0F1-ATPase couples the proton motive force to ATP synthesis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: PMF drives ATP synthesis; F0F1 uses ~3-5 H+ per ATP.
+  - subject: proton_ion_antiporters
+    predicate: maintain
+    object: membrane_potential
+    description: Proton:ion antiporters have a direct role in maintaining membrane
+      potential.
+    evidence:
+    - reference: DOI:10.1146/annurev-biophys-030822-032215
+      notes: Antiporters have a direct role in maintaining membrane potential in E.
+        coli.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.831107+00:00'
   curator: seed_from_metpo
@@ -87,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

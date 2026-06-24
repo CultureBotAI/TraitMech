@@ -90,6 +90,159 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>mucin O-glycans</strong>
+            <span class="edge-predicate">serves as nutrient source for</span>
+            <strong>host colonization</strong>
+            
+            <p>Mucin O-glycans are degraded and utilized as a nutrient source supporting colonization.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1152/ajpgi.00261.2022</code>
+                
+                <span class="meta">Mucin O-glycans and glycan-derived sugars are degraded and utilized as a nutrient source by host-associated microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>cell appendages and adhesins</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>attachment to host surfaces</strong>
+            
+            <p>Cell appendages and adhesins mediate attachment to host mucus and epithelia.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae008</code>
+                
+                <span class="meta">Cell appendages (flagella, pili, fimbriae) and adhesins mediate attachment to host mucus/epithelia.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>attachment to host surfaces</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>host colonization</strong>
+            
+            <p>Attachment to host surfaces is a prerequisite step for persistent colonization.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae008</code>
+                
+                <span class="meta">Attachment to host surfaces underlies the transition to stable colonization.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>c-di-GMP and cAMP second messengers</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>biofilm formation</strong>
+            
+            <p>c-di-GMP and cAMP trigger EPS and surface-protein production, driving irreversible attachment and biofilm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae008</code>
+                
+                <span class="meta">cAMP and c-di-GMP regulate transition from reversible to irreversible attachment, triggering surface proteins and EPS leading to biofilm formation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>biofilm formation</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>host colonization</strong>
+            
+            <p>Biofilm formation supports persistent microbial occupancy of host surfaces.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuae008</code>
+                
+                <span class="meta">Biofilm formation following irreversible attachment supports persistent host colonization.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>plant root exudates</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>chemotaxis toward host</strong>
+            
+            <p>Root exudates trigger chemotaxis via MCP/CheA/CheY signaling toward the host.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biology13020095</code>
+                
+                <span class="meta">Methyl-accepting chemotaxis proteins bind root exudates and trigger signal transduction (CheW/CheA/CheY), driving chemotaxis as the first colonization step.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>chemotaxis toward host</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>host colonization</strong>
+            
+            <p>Chemotaxis toward host cues is an initial step enabling colonization.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biology13020095</code>
+                
+                <span class="meta">Chemotaxis is identified as the first step of host colonization.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>plant root exudates</strong>
+            <span class="edge-predicate">provides nutrient source for</span>
+            <strong>host colonization</strong>
+            
+            <p>Root exudates supply carbon and substrates supporting microbial growth and persistence.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad066</code>
+                
+                <span class="meta">Plants secrete 11-40% of photosynthate as exudates that supply carbon and substrates for rhizobacterial growth and persistence.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>mucus layer niches</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>host colonization</strong>
+            
+            <p>Structured inner and outer mucus layers create distinct niches for microbial colonization.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/ecosalplus.esp-0006-2023</code>
+                
+                <span class="meta">Structured inner (firm, sparsely colonized) versus outer (looser, microbe-colonized) mucus creates distinct colonization niches.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -227,6 +380,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (host-associated microbiome membership) with RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 9 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +745,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking host habitat to persistent membership in a host-associated microbial community.", "edges": [{"description": "Host tissues provide the habitat in which the microbe colonizes.", "evidence": [{"notes": "McFall-Ngai et al. document ubiquitous host-associated microbial communities across animals.", "reference": "DOI:10.1073/pnas.1218525110"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "host_habitat", "target": "host_colonization"}, {"description": "Persistent host colonization realizes the host-associated lifestyle.", "evidence": [{"notes": "B\u00e4ckhed et al. characterize host-associated microbiota as dense, coevolved communities.", "reference": "DOI:10.1126/science.1104816"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "host_colonization", "target": "host_associated_trait"}], "evidence_rows": [{"description": "Host tissues provide the habitat in which the microbe colonizes.", "edge_id": "edge-1", "evidence": [{"notes": "McFall-Ngai et al. document ubiquitous host-associated microbial communities across animals.", "reference": "DOI:10.1073/pnas.1218525110"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "host habitat", "target": "host colonization"}, {"description": "Persistent host colonization realizes the host-associated lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "B\u00e4ckhed et al. characterize host-associated microbiota as dense, coevolved communities.", "reference": "DOI:10.1126/science.1104816"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "host colonization", "target": "host-associated"}], "graph_id": "host_associated_microbiome", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Persistent life on or in a plant or animal host.", "grounding": "traitmech:000049", "id": "host_associated_trait", "is_orphan": false, "label": "host-associated", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Persistent establishment of microbes on or in a host.", "grounding": null, "id": "host_colonization", "is_orphan": false, "label": "host colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Plant or animal tissue surface or lumen.", "grounding": null, "id": "host_habitat", "is_orphan": false, "label": "host habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Host association establishes persistent host microbiome membership"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking host habitat to persistent membership in a host-associated microbial community.", "edges": [{"description": "Host tissues provide the habitat in which the microbe colonizes.", "evidence": [{"notes": "McFall-Ngai et al. document ubiquitous host-associated microbial communities across animals.", "reference": "DOI:10.1073/pnas.1218525110"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "host_habitat", "target": "host_colonization"}, {"description": "Persistent host colonization realizes the host-associated lifestyle.", "evidence": [{"notes": "B\u00e4ckhed et al. characterize host-associated microbiota as dense, coevolved communities.", "reference": "DOI:10.1126/science.1104816"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "host_colonization", "target": "host_associated_trait"}, {"description": "Mucin O-glycans are degraded and utilized as a nutrient source supporting colonization.", "evidence": [{"notes": "Mucin O-glycans and glycan-derived sugars are degraded and utilized as a nutrient source by host-associated microbes.", "reference": "DOI:10.1152/ajpgi.00261.2022"}], "id": "edge-3", "is_orphan": false, "predicate": "serves as nutrient source for", "predicate_id": null, "source": "mucin_o_glycans", "target": "host_colonization"}, {"description": "Cell appendages and adhesins mediate attachment to host mucus and epithelia.", "evidence": [{"notes": "Cell appendages (flagella, pili, fimbriae) and adhesins mediate attachment to host mucus/epithelia.", "reference": "DOI:10.1093/femsre/fuae008"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "host_surface_adhesins", "target": "host_surface_attachment"}, {"description": "Attachment to host surfaces is a prerequisite step for persistent colonization.", "evidence": [{"notes": "Attachment to host surfaces underlies the transition to stable colonization.", "reference": "DOI:10.1093/femsre/fuae008"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "host_surface_attachment", "target": "host_colonization"}, {"description": "c-di-GMP and cAMP trigger EPS and surface-protein production, driving irreversible attachment and biofilm.", "evidence": [{"notes": "cAMP and c-di-GMP regulate transition from reversible to irreversible attachment, triggering surface proteins and EPS leading to biofilm formation.", "reference": "DOI:10.1093/femsre/fuae008"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "cyclic_di_gmp_camp", "target": "biofilm_formation"}, {"description": "Biofilm formation supports persistent microbial occupancy of host surfaces.", "evidence": [{"notes": "Biofilm formation following irreversible attachment supports persistent host colonization.", "reference": "DOI:10.1093/femsre/fuae008"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "biofilm_formation", "target": "host_colonization"}, {"description": "Root exudates trigger chemotaxis via MCP/CheA/CheY signaling toward the host.", "evidence": [{"notes": "Methyl-accepting chemotaxis proteins bind root exudates and trigger signal transduction (CheW/CheA/CheY), driving chemotaxis as the first colonization step.", "reference": "DOI:10.3390/biology13020095"}], "id": "edge-8", "is_orphan": false, "predicate": "activates", "predicate_id": null, "source": "root_exudates", "target": "chemotaxis_to_host"}, {"description": "Chemotaxis toward host cues is an initial step enabling colonization.", "evidence": [{"notes": "Chemotaxis is identified as the first step of host colonization.", "reference": "DOI:10.3390/biology13020095"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "chemotaxis_to_host", "target": "host_colonization"}, {"description": "Root exudates supply carbon and substrates supporting microbial growth and persistence.", "evidence": [{"notes": "Plants secrete 11-40% of photosynthate as exudates that supply carbon and substrates for rhizobacterial growth and persistence.", "reference": "DOI:10.1093/femsre/fuad066"}], "id": "edge-10", "is_orphan": false, "predicate": "provides nutrient source for", "predicate_id": null, "source": "root_exudates", "target": "host_colonization"}, {"description": "Structured inner and outer mucus layers create distinct niches for microbial colonization.", "evidence": [{"notes": "Structured inner (firm, sparsely colonized) versus outer (looser, microbe-colonized) mucus creates distinct colonization niches.", "reference": "DOI:10.1128/ecosalplus.esp-0006-2023"}], "id": "edge-11", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "mucus_layer_niches", "target": "host_colonization"}], "evidence_rows": [{"description": "Host tissues provide the habitat in which the microbe colonizes.", "edge_id": "edge-1", "evidence": [{"notes": "McFall-Ngai et al. document ubiquitous host-associated microbial communities across animals.", "reference": "DOI:10.1073/pnas.1218525110"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "host habitat", "target": "host colonization"}, {"description": "Persistent host colonization realizes the host-associated lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "B\u00e4ckhed et al. characterize host-associated microbiota as dense, coevolved communities.", "reference": "DOI:10.1126/science.1104816"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "host colonization", "target": "host-associated"}, {"description": "Mucin O-glycans are degraded and utilized as a nutrient source supporting colonization.", "edge_id": "edge-3", "evidence": [{"notes": "Mucin O-glycans and glycan-derived sugars are degraded and utilized as a nutrient source by host-associated microbes.", "reference": "DOI:10.1152/ajpgi.00261.2022"}], "predicate": "serves as nutrient source for", "predicate_id": null, "source": "mucin O-glycans", "target": "host colonization"}, {"description": "Cell appendages and adhesins mediate attachment to host mucus and epithelia.", "edge_id": "edge-4", "evidence": [{"notes": "Cell appendages (flagella, pili, fimbriae) and adhesins mediate attachment to host mucus/epithelia.", "reference": "DOI:10.1093/femsre/fuae008"}], "predicate": "enables", "predicate_id": null, "source": "cell appendages and adhesins", "target": "attachment to host surfaces"}, {"description": "Attachment to host surfaces is a prerequisite step for persistent colonization.", "edge_id": "edge-5", "evidence": [{"notes": "Attachment to host surfaces underlies the transition to stable colonization.", "reference": "DOI:10.1093/femsre/fuae008"}], "predicate": "enables", "predicate_id": null, "source": "attachment to host surfaces", "target": "host colonization"}, {"description": "c-di-GMP and cAMP trigger EPS and surface-protein production, driving irreversible attachment and biofilm.", "edge_id": "edge-6", "evidence": [{"notes": "cAMP and c-di-GMP regulate transition from reversible to irreversible attachment, triggering surface proteins and EPS leading to biofilm formation.", "reference": "DOI:10.1093/femsre/fuae008"}], "predicate": "induces", "predicate_id": null, "source": "c-di-GMP and cAMP second messengers", "target": "biofilm formation"}, {"description": "Biofilm formation supports persistent microbial occupancy of host surfaces.", "edge_id": "edge-7", "evidence": [{"notes": "Biofilm formation following irreversible attachment supports persistent host colonization.", "reference": "DOI:10.1093/femsre/fuae008"}], "predicate": "enables", "predicate_id": null, "source": "biofilm formation", "target": "host colonization"}, {"description": "Root exudates trigger chemotaxis via MCP/CheA/CheY signaling toward the host.", "edge_id": "edge-8", "evidence": [{"notes": "Methyl-accepting chemotaxis proteins bind root exudates and trigger signal transduction (CheW/CheA/CheY), driving chemotaxis as the first colonization step.", "reference": "DOI:10.3390/biology13020095"}], "predicate": "activates", "predicate_id": null, "source": "plant root exudates", "target": "chemotaxis toward host"}, {"description": "Chemotaxis toward host cues is an initial step enabling colonization.", "edge_id": "edge-9", "evidence": [{"notes": "Chemotaxis is identified as the first step of host colonization.", "reference": "DOI:10.3390/biology13020095"}], "predicate": "enables", "predicate_id": null, "source": "chemotaxis toward host", "target": "host colonization"}, {"description": "Root exudates supply carbon and substrates supporting microbial growth and persistence.", "edge_id": "edge-10", "evidence": [{"notes": "Plants secrete 11-40% of photosynthate as exudates that supply carbon and substrates for rhizobacterial growth and persistence.", "reference": "DOI:10.1093/femsre/fuad066"}], "predicate": "provides nutrient source for", "predicate_id": null, "source": "plant root exudates", "target": "host colonization"}, {"description": "Structured inner and outer mucus layers create distinct niches for microbial colonization.", "edge_id": "edge-11", "evidence": [{"notes": "Structured inner (firm, sparsely colonized) versus outer (looser, microbe-colonized) mucus creates distinct colonization niches.", "reference": "DOI:10.1128/ecosalplus.esp-0006-2023"}], "predicate": "enables", "predicate_id": null, "source": "mucus layer niches", "target": "host colonization"}], "graph_id": "host_associated_microbiome", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Irreversible attachment with EPS and surface-protein production.", "grounding": null, "id": "biofilm_formation", "is_orphan": false, "label": "biofilm formation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Directed motility toward host-derived chemical cues.", "grounding": null, "id": "chemotaxis_to_host", "is_orphan": false, "label": "chemotaxis toward host", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Second messengers regulating the attachment-to-biofilm transition.", "grounding": null, "id": "cyclic_di_gmp_camp", "is_orphan": false, "label": "c-di-GMP and cAMP second messengers", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Persistent life on or in a plant or animal host.", "grounding": "traitmech:000049", "id": "host_associated_trait", "is_orphan": false, "label": "host-associated", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Persistent establishment of microbes on or in a host.", "grounding": null, "id": "host_colonization", "is_orphan": false, "label": "host colonization", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Plant or animal tissue surface or lumen.", "grounding": null, "id": "host_habitat", "is_orphan": false, "label": "host habitat", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Flagella, pili, fimbriae, and adhesins including mucus-binding proteins.", "grounding": null, "id": "host_surface_adhesins", "is_orphan": false, "label": "cell appendages and adhesins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Adhesion of microbes to host mucus or epithelial surfaces.", "grounding": null, "id": "host_surface_attachment", "is_orphan": false, "label": "attachment to host surfaces", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Host mucus glycans degradable as a microbial nutrient source.", "grounding": null, "id": "mucin_o_glycans", "is_orphan": false, "label": "mucin O-glycans", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Distinct inner (firm) and outer (loose) mucus colonization niches.", "grounding": null, "id": "mucus_layer_niches", "is_orphan": false, "label": "mucus layer niches", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Host-derived metabolites secreted from plant roots.", "grounding": null, "id": "root_exudates", "is_orphan": false, "label": "plant root exudates", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Host association establishes persistent host microbiome membership"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +756,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -42,6 +42,57 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Combined membrane remodeling and protein-thermostability capacity
       supporting growth across an extreme temperature span.
+  - node_id: decreased_growth_temperature
+    label: decreased growth temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A decrease in ambient growth temperature.
+  - node_id: unsaturated_fatty_acid_biosynthesis
+    label: unsaturated fatty acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis of unsaturated fatty acids for membrane remodeling.
+  - node_id: homoviscous_adaptation
+    label: homoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Temperature-driven remodeling of membrane lipid composition to maintain
+      bilayer order.
+  - node_id: membrane_fluidity_homeostasis
+    label: membrane fluidity homeostasis
+    node_type: STATE
+    description: Maintenance of membrane fluidity and permeability across thermal
+      shifts.
+  - node_id: decreased_membrane_fluidity
+    label: decreased membrane fluidity
+    node_type: STATE
+    description: Reduced membrane fluidity sensed as a signal upon cooling.
+  - node_id: lipid_desaturase_activity
+    label: lipid desaturase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Desaturase activity introducing cis double bonds into fatty acids.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity of the membrane lipid bilayer.
+  - node_id: cis_trans_isomerase_activity
+    label: cis-trans isomerase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Isomerization of existing unsaturated fatty acids to trans configuration.
+  - node_id: membrane_viscosity_high_temperature
+    label: membrane viscosity at higher temperature
+    node_type: QUALITY
+    description: Increased membrane viscosity to counter excess fluidity during warming.
+  - node_id: increased_fatty_acid_diversity
+    label: increased short-/branched-/unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Shifts toward short-chain, branched-chain and unsaturated fatty acids
+      in the membrane.
+  - node_id: thermostable_enzyme
+    label: hyperthermophilic enzyme thermostability
+    node_type: QUALITY
+    description: Intrinsic thermostability of enzymes from hyperthermophiles.
+  - node_id: irreversible_protein_inactivation
+    label: irreversible inactivation at high temperatures
+    node_type: BIOLOGICAL_PROCESS
+    description: Irreversible loss of protein activity at high temperatures.
   edges:
   - subject: maximal_thermal_adaptation
     predicate: produces
@@ -64,6 +115,69 @@ causal_graphs:
       snippet: more unsaturated fatty acids
       notes: Supports the >30 °C breadth as a value within the temperature-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: decreased_growth_temperature
+    predicate: increases
+    object: unsaturated_fatty_acid_biosynthesis
+    description: Lower growth temperature increases incorporation of unsaturated fatty
+      acids (homoviscous adaptation).
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Bacteria remodel membrane fluidity via proportionally more unsaturated
+        fatty acids as growth temperature decreases.
+  - subject: homoviscous_adaptation
+    predicate: maintains
+    object: membrane_fluidity_homeostasis
+    description: Homoviscous adaptation maintains membrane fluidity/permeability homeostasis
+      across thermal shifts.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Homoviscous adaptation disrupts lipid bilayer order and optimizes cellular
+        processes at the new temperature.
+  - subject: decreased_membrane_fluidity
+    predicate: upregulates
+    object: unsaturated_fatty_acid_biosynthesis
+    description: Reduced membrane fluidity is sensed and upregulates unsaturated fatty
+      acid biosynthesis.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Microbes sense decreased membrane fluidity and initiate responses that
+        upregulate unsaturated fatty acid biosynthesis.
+  - subject: lipid_desaturase_activity
+    predicate: increases
+    object: membrane_fluidity
+    description: Lipid desaturases introduce cis double bonds (~30 deg kink) creating
+      packing defects that increase fluidity.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      notes: Organisms maintain membrane fluidity by activating lipid desaturases
+        that introduce cis double bonds to increase packing defects and fluidity.
+  - subject: cis_trans_isomerase_activity
+    predicate: increases
+    object: membrane_viscosity_high_temperature
+    description: Cis-trans isomerization of existing UFAs yields trans-UFAs resembling
+      SFAs, raising membrane viscosity during warming.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      notes: Cis-trans isomerase converts UFAs; trans-UFAs resemble SFAs and raise
+        membrane viscosity, compensating at higher temperature.
+  - subject: increased_fatty_acid_diversity
+    predicate: increases
+    object: membrane_fluidity
+    description: Shifts in acyl chain length/branching and unsaturation jointly increase
+      membrane fluidity at lower temperatures.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      notes: Membrane composition adjustments (SCFA, BCFA, unsaturation, lysophospholipids)
+        can increase membrane fluidity at lower temperatures.
+  - subject: thermostable_enzyme
+    predicate: resists
+    object: irreversible_protein_inactivation
+    description: Intrinsic enzyme thermostability resists irreversible inactivation,
+      extending upper growth limits.
+    evidence:
+    - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+      notes: Enzymes from hyperthermophiles are typically thermostable, i.e., resistant
+        to irreversible inactivation at high temperatures.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845441+00:00'
   curator: seed_from_metpo
@@ -81,4 +195,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -49,6 +49,35 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Span of external pH between the minimum and maximum that supports
       growth.
+  - node_id: ph_gradient
+    label: transmembrane pH gradient (ΔpH)
+    node_type: CHEMICAL
+    description: Difference between external and cytoplasmic pH, a component of the
+      proton motive force.
+  - node_id: membrane_potential
+    label: membrane potential (Δψ)
+    node_type: CHEMICAL
+    description: Electrical component of the proton motive force across the cell membrane.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a near-constant cytoplasmic pH compatible with macromolecular
+      function.
+  - node_id: membrane_proton_impermeability
+    label: membrane proton impermeability
+    node_type: QUALITY
+    description: Reduced proton leak across the cell membrane that limits passive
+      H+ influx.
+  - node_id: mrp_antiporter_activity
+    label: Mrp Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Cation/proton antiport that imports protons while exporting Na+ to
+      support pH homeostasis.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Glutamate or arginine decarboxylation that consumes intracellular
+      protons and alkalinizes the cytoplasm.
   edges:
   - subject: external_ph
     predicate: defines
@@ -88,6 +117,60 @@ causal_graphs:
       snippet: pH homeostasis
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: ph_gradient
+    predicate: contributes to
+    object: bounded_growth_window
+    description: The transmembrane pH gradient sets whether cytoplasmic pH can be
+      maintained across the external pH range.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: PMF architecture (Δψ − 59 ΔpH) determines the range of pHout over which
+        bacteria can tolerate or grow.
+  - subject: membrane_potential
+    predicate: compensates for
+    object: external_ph
+    description: Adjustment or reversal of the membrane-potential PMF component offsets
+      extreme external pH stress.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Under strong pH stress the orientation of a PMF component can reverse
+        to maintain homeostasis.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: enables
+    object: bounded_growth_window
+    description: Keeping cytoplasmic pH compatible with protein function enables growth
+      across the external pH range.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Bacteria maintain a distinct cytoplasmic pH required for protein function,
+        bounding the phenotype.
+  - subject: membrane_proton_impermeability
+    predicate: extends
+    object: acid_tolerance
+    description: Reduced proton leak helps maintain cytoplasmic pH and extends growth
+      to lower external pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.556140
+      notes: Modification of membrane lipid composition to reduce proton permeability
+        is a general acid-stress mechanism.
+  - subject: mrp_antiporter_activity
+    predicate: supports
+    object: alkaline_tolerance
+    description: Na+/H+ exchange imports protons and is a principal strategy for alkaline
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Na+/H+ antiport is the principal strategy for cytoplasmic pH homeostasis
+        at high external pH.
+  - subject: amino_acid_decarboxylation
+    predicate: alkalinizes
+    object: cytoplasmic_ph_homeostasis
+    description: Glutamate or arginine decarboxylation consumes intracellular protons,
+      supporting cytoplasmic pH at acidic external pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.556140
+      notes: Decarboxylation of glutamate or arginine is a recurring proton-consuming
+        acid-response module.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815188+00:00'
   curator: seed_from_metpo
@@ -123,4 +206,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

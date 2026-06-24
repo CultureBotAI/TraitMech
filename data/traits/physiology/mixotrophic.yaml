@@ -61,6 +61,34 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material formed from combined carbon acquisition.
     grounding: METPO:1007501
+  - node_id: electron_transport_chain
+    label: electron transport chain
+    node_type: PATHWAY
+    description: Membrane redox chain transferring electrons to terminal acceptors.
+  - node_id: atp_synthesis
+    label: ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of ATP coupling energy metabolism to cellular work.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane proton gradient driving ATP synthase.
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key CBB enzyme.
+  - node_id: cbb_cycle
+    label: Calvin-Benson-Bassham cycle
+    node_type: PATHWAY
+    description: Reductive pentose phosphate cycle fixing CO2 into organic carbon.
+  - node_id: organic_matter_limitation
+    label: organic matter limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low availability of organic substrates in the environment.
+  - node_id: light_limitation
+    label: light limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low light availability limiting phototrophic energy capture.
   edges:
   - subject: mixotrophic_trait
     predicate: uses carbon source
@@ -116,6 +144,60 @@ causal_graphs:
       snippet: incorporation of a compound into biomass
       notes: Supports assimilatory conversion of organic compounds into biomass.
     predicate_id: biolink:part_of
+  - subject: electron_transport_chain
+    predicate: drives
+    object: atp_synthesis
+    description: Electron transport chain activity drives ATP synthesis.
+    evidence:
+    - reference: DOI:10.1128/aem.00599-24
+      notes: Complete ETC complexes and F-type ATPase support ETC-driven ATP synthesis.
+  - subject: proton_motive_force
+    predicate: drives
+    object: atp_synthesis
+    description: Proton gradient drives ATP synthesis via ATP synthase.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02177-23
+      notes: A proton gradient drives ATP synthesis (canonical bioenergetic edge).
+  - subject: phototrophic_energy_capture
+    predicate: generates
+    object: proton_motive_force
+    description: Proton-pump rhodopsin photosystems generate a proton gradient.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02177-23
+      notes: Proton-pump rhodopsin acts as a photosystem-independent proton pump creating
+        a proton gradient.
+  - subject: rubisco
+    predicate: enables
+    object: cbb_cycle
+    description: RuBisCO enables the Calvin-Benson-Bassham cycle.
+    evidence:
+    - reference: DOI:10.1128/aem.00599-24
+      notes: MAGs encode Form II RuBisCO (rbcL/cbbM) and a full CBB cycle.
+  - subject: cbb_cycle
+    predicate: fixes
+    object: carbon_dioxide
+    description: The Calvin-Benson-Bassham cycle fixes CO2 into organic carbon.
+    evidence:
+    - reference: DOI:10.1128/aem.00599-24
+      notes: A full CBB cycle is consistent with CO2 fixation potential.
+  - subject: organic_matter_limitation
+    predicate: promotes switching to
+    object: phototrophic_energy_capture
+    description: When organic matter is limiting, mixotrophs switch to light-based
+      energy and inorganic carbon use.
+    evidence:
+    - reference: DOI:10.1128/AEM.01559-06
+      notes: If organic matter is limiting, a mixotroph can switch to using light
+        as an energy source and inorganic carbon as a carbon source.
+  - subject: light_limitation
+    predicate: promotes switching to
+    object: organic_carbon
+    description: When light is limiting, mixotrophs switch back to degradation of
+      organic substances.
+    evidence:
+    - reference: DOI:10.1128/AEM.01559-06
+      notes: As light gets limiting, the organism can switch back to degradation of
+        organic substances.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.877636+00:00'
   curator: seed_from_metpo
@@ -169,4 +251,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

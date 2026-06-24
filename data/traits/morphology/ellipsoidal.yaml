@@ -47,6 +47,35 @@ causal_graphs:
     label: ellipsoid geometry
     node_type: BIOLOGICAL_PROCESS
     description: Rounded cell geometry elongated along one axis.
+  - node_id: divisome
+    label: divisome (FtsZ/PBP2x/FtsW)
+    node_type: GENE_OR_PROTEIN
+    description: Inner septal PG synthesis machine including FtsZ, bPBP2x and FtsW.
+  - node_id: septal_pg_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Constriction-associated PG synthesis at the division septum.
+  - node_id: elongasome
+    label: elongasome (PBP2b/RodA)
+    node_type: GENE_OR_PROTEIN
+    description: Outer peripheral PG synthesis machine including bPBP2b and RodA.
+  - node_id: peripheral_pg_synthesis
+    label: peripheral peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Elongation-associated lateral PG synthesis.
+  - node_id: spatial_ring_separation
+    label: spatial separation of septal and peripheral PG rings
+    node_type: CELLULAR_LOCALIZATION
+    description: Concentric inner sPG and outer pPG rings at midcell.
+  - node_id: undecaprenyl_phosphate
+    label: undecaprenyl phosphate (Und-P)
+    node_type: CHEMICAL
+    description: Lipid carrier delivering cell wall precursors; limiting for PG synthesis.
+  - node_id: combined_septal_peripheral
+    label: combined septal and peripheral PG synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Joint use of septal and peripheral PG synthesis characteristic of
+      ovococci.
   edges:
   - subject: pbp2b
     predicate: promotes
@@ -96,6 +125,57 @@ causal_graphs:
       snippet: ovococci that are ellipsoid
       notes: Supports the morphology endpoint.
     predicate_id: METPO:2007400
+  - subject: divisome
+    predicate: carries out
+    object: septal_pg_synthesis
+    description: The divisome (FtsZ/bPBP2x/FtsW) carries out septal PG synthesis.
+    evidence:
+    - reference: DOI:10.1111/mmi.14659
+      notes: an inner sPG machine (bPBP2x TP with FtsW GT)
+  - subject: elongasome
+    predicate: carries out
+    object: peripheral_pg_synthesis
+    description: The elongasome (bPBP2b/RodA plus Rod complex) carries out peripheral
+      PG synthesis.
+    evidence:
+    - reference: DOI:10.1111/mmi.14659
+      notes: an outer pPG machine (bPBP2b TP with RodA GT plus Rod complex proteins)
+  - subject: pbp2b
+    predicate: required for
+    object: peripheral_pg_synthesis
+    description: PBP2b is indispensable for lateral/peripheral PG synthesis and elongasome
+      function.
+    evidence:
+    - reference: DOI:10.1111/mmi.13543
+      notes: PBP2b is identified as indispensable for lateral PG synthesis and is
+        a key component of the elongasome
+  - subject: spatial_ring_separation
+    predicate: enables
+    object: combined_septal_peripheral
+    description: Spatial separation of inner sPG and outer pPG rings enables concurrent
+      septal and peripheral synthesis underlying ellipsoidal shape.
+    evidence:
+    - reference: DOI:10.1111/mmi.14659
+      notes: septal and peripheral peptidoglycan synthesis are spatially separated
+        at midcell into two concentric structures
+  - subject: undecaprenyl_phosphate
+    predicate: preferentially required for
+    object: septal_pg_synthesis
+    description: Septal PG synthesis is more sensitive to Und-P limitation than peripheral
+      synthesis, so Und-P limitation favors elongation.
+    evidence:
+    - reference: DOI:10.7554/eLife.75607
+      notes: septal peptidoglycan synthesis is more sensitive to reduced Und-P levels
+        than peripheral peptidoglycan synthesis
+  - subject: combined_septal_peripheral
+    predicate: results in
+    object: ellipsoidal_trait
+    description: Ovococcal/ellipsoidal shape results from combined use of septal and
+      peripheral PG synthesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: Ovococcal cells, with an ellipsoid shape... ovococci use both septal
+        and peripheral peptidoglycan synthesis
 curation_history:
 - timestamp: '2026-05-05T01:35:46.888945+00:00'
   curator: seed_from_metpo
@@ -149,4 +229,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

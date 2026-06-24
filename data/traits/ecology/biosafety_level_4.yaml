@@ -39,6 +39,39 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Pathogens with extreme virulence, aerosol transmission, and absent
       or inadequate medical countermeasures.
+  - node_id: life_threatening_disease
+    label: life-threatening disease
+    node_type: BIOLOGICAL_PROCESS
+    description: Disease that threatens the life of a healthy host, a defining hazard
+      criterion for BSL-4 agents.
+  - node_id: no_effective_countermeasure
+    label: absence of effective prevention or treatment
+    node_type: STATE
+    description: Lack of available vaccine or therapy for the agent, a defining BSL-4
+      hazard criterion.
+  - node_id: aerosol_lab_infection_risk
+    label: high risk of aerosol-transmitted laboratory infection
+    node_type: BIOLOGICAL_PROCESS
+    description: High likelihood of laboratory-acquired infection via aerosol transmission.
+  - node_id: positive_pressure_suit
+    label: positive-pressure air-supplied suit
+    node_type: EXPERIMENTAL_FACTOR
+    description: Full-body positive-pressure air-supplied protective suit, a hallmark
+      engineering control of BSL-4 suit labs.
+  - node_id: airlock
+    label: airlock
+    node_type: EXPERIMENTAL_FACTOR
+    description: Air-sealed entry/exit chamber required for BSL-4 maximum-containment
+      facilities.
+  - node_id: decontamination_shower
+    label: decontamination shower
+    node_type: EXPERIMENTAL_FACTOR
+    description: Mandatory personnel decontamination shower in BSL-4 facilities.
+  - node_id: specialized_waste_disposal
+    label: specialized waste disposal
+    node_type: EXPERIMENTAL_FACTOR
+    description: Specialized waste decontamination and disposal system required at
+      BSL-4.
   edges:
   - subject: extreme_pathogen_hazard
     predicate: produces
@@ -60,6 +93,70 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports BSL-4 as a member of the biosafety-level classification.
     predicate_id: rdfs:subClassOf
+  - subject: life_threatening_disease
+    predicate: requires containment level
+    object: bsl4_trait
+    description: Organisms causing life-threatening disease in a healthy host require
+      BSL-4 maximum containment.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: '"Organisms that cause life-threatening disease in a healthy host..."'
+    - reference: DOI:10.3390/laboratories1030013
+      notes: BSL-4 as the highest containment level for the most dangerous, life-threatening
+        agents.
+  - subject: no_effective_countermeasure
+    predicate: requires containment level
+    object: bsl4_trait
+    description: Absence of effective prevention or treatment for an agent mandates
+      BSL-4 containment.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: '"effective prevention and/or treatment are not usually available"'
+    - reference: DOI:10.3390/laboratories1030013
+      notes: BSL-4 representing maximum containment for agents with severe risks and
+        no available treatments.
+  - subject: aerosol_lab_infection_risk
+    predicate: requires containment level
+    object: bsl4_trait
+    description: High risk of aerosol-transmitted laboratory infection is a defining
+      BSL-4 criterion.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: '"pose a high risk of aerosol-transmitted laboratory infections with
+        no vaccine or therapy"'
+  - subject: bsl4_trait
+    predicate: necessitates use of
+    object: positive_pressure_suit
+    description: BSL-4 containment necessitates wearing a full-body positive-pressure
+      air-supplied suit.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: '"wearing a full body, positive pressure, air supplied suit"'
+    - reference: DOI:10.3390/laboratories1030013
+      notes: Suit labs adopted positive pressure suits as a hallmark advanced containment
+        strategy.
+  - subject: bsl4_trait
+    predicate: requires
+    object: airlock
+    description: BSL-4 facilities require airlocks as a maximum-containment engineering
+      control.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: '"requires airlocks, showers, and specialized waste disposal"'
+  - subject: bsl4_trait
+    predicate: requires
+    object: decontamination_shower
+    description: BSL-4 facilities require personnel decontamination showers.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: '"requires airlocks, showers, and specialized waste disposal"'
+  - subject: bsl4_trait
+    predicate: requires
+    object: specialized_waste_disposal
+    description: BSL-4 facilities require specialized waste disposal systems.
+    evidence:
+    - reference: DOI:10.3390/laboratories1030013
+      notes: '"requires airlocks, showers, and specialized waste disposal"'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.934198+00:00'
   curator: seed_from_metpo
@@ -77,4 +174,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

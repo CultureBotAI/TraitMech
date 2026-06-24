@@ -124,6 +124,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>pH range</strong>
+            <span class="edge-predicate">requires</span>
+            <strong>maintenance of near-neutral cytoplasmic pH</strong>
+            
+            <p>Growth across an external pH range requires maintenance of near-neutral cytoplasmic pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external pH of about 5-8 to sustain growth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>K+/H+ or Na+/H+ antiporter activity</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cytoplasmic acidification</strong>
+            
+            <p>K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting growth at alkaline external pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons when internal pH gets too high.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>cytoplasmic acidification</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>pH range</strong>
+            
+            <p>Antiporter-driven cytoplasmic acidification supports growth at the alkaline end of the pH range.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Cytoplasmic acidification counters alkaline external pH, extending the upper pH growth boundary.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>F0F1-ATPase / proton-pumping respiratory chain activity</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>prevention of cytoplasmic acidification</strong>
+            
+            <p>F0F1-ATPase and proton-pumping respiratory chains prevent cytoplasmic acidification, supporting growth across the external pH range.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Activation/upregulation of proton-pumping respiratory chains and the F0F1-ATPase prevents cytoplasmic acidification.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>amino-acid decarboxylase/antiporter system</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>maintenance of near-neutral cytoplasmic pH</strong>
+            
+            <p>Amino-acid decarboxylase/antiporter systems generate PMF and raise internal pH, enabling growth under acidic external pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Each decarboxylation pumps one proton equivalent; decarboxylases increase activity when internal pH falls, extending the acid-side boundary.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>hypertonic salinity increase</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>cell shrinkage and lowered turgor</strong>
+            
+            <p>A hypertonic salinity increase causes cell shrinkage and lowered turgor; growth ceases below the turgor limit, setting the upper salinity boundary.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Hypertonicity leads to cell shrinkage and lowering of turgor; the lower turgor limit is reached before cell growth ceases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>OpuA-mediated glycine betaine uptake</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>compatible solute accumulation</strong>
+            
+            <p>OpuA-mediated glycine betaine uptake drives compatible-solute accumulation that counteracts hyperosmotic stress and supports salinity-range growth.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">OpuA accumulates the compatible solute glycine betaine to (sub)molar levels to counteract hyperosmotic stress.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>compatible solute accumulation</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>NaCl range</strong>
+            
+            <p>Compatible-solute accumulation counteracts hyperosmotic stress, supporting growth across the NaCl salinity range.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Compatible-solute accumulation offsets hyperosmotic stress, broadening the salinity growth range.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -277,6 +413,12 @@
           <time>2026-05-24T07:37:39Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -636,7 +778,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph framing the growth-range phenotype as a generic bounded-span descriptor over any numerical environmental axis, with `is a` edges to the axis-specific growth-range phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose bounded growth-supporting span yields the growth-range phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a bounded growth-supporting span is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "growth_range_phenotype_trait"}, {"description": "NaCl range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports NaCl range as a growth-range phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range", "target": "growth_range_phenotype_trait"}, {"description": "pH range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports pH range as a growth-range phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range", "target": "growth_range_phenotype_trait"}, {"description": "Temperature range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports temperature range as a growth-range phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range", "target": "growth_range_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose bounded growth-supporting span yields the growth-range phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a bounded growth-supporting span is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "growth range phenotype with numerical limits"}, {"description": "NaCl range is an axis-specific growth-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl range as a growth-range phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range", "target": "growth range phenotype with numerical limits"}, {"description": "pH range is an axis-specific growth-range phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH range as a growth-range phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range", "target": "growth range phenotype with numerical limits"}, {"description": "Temperature range is an axis-specific growth-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature range as a growth-range phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range", "target": "growth range phenotype with numerical limits"}], "graph_id": "growth_range_phenotype_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Phenotype defined by the span between minimum and maximum growth-supporting values of an environmental variable.", "grounding": "METPO:1000535", "id": "growth_range_phenotype_trait", "is_orphan": false, "label": "growth range phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}], "title": "Growth-range phenotype descriptor across environmental axes"}];
+  var graphs = [{"description": "DOI-backed graph framing the growth-range phenotype as a generic bounded-span descriptor over any numerical environmental axis, with `is a` edges to the axis-specific growth-range phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose bounded growth-supporting span yields the growth-range phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a bounded growth-supporting span is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "growth_range_phenotype_trait"}, {"description": "NaCl range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports NaCl range as a growth-range phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range", "target": "growth_range_phenotype_trait"}, {"description": "pH range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports pH range as a growth-range phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range", "target": "growth_range_phenotype_trait"}, {"description": "Temperature range is an axis-specific growth-range phenotype.", "evidence": [{"notes": "Supports temperature range as a growth-range phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range", "target": "growth_range_phenotype_trait"}, {"description": "Growth across an external pH range requires maintenance of near-neutral cytoplasmic pH.", "evidence": [{"notes": "Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external pH of about 5-8 to sustain growth.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-5", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "ph_range", "target": "cytoplasmic_ph_homeostasis"}, {"description": "K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting growth at alkaline external pH.", "evidence": [{"notes": "Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons when internal pH gets too high.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "cation_proton_antiporter", "target": "cytoplasm_acidification"}, {"description": "Antiporter-driven cytoplasmic acidification supports growth at the alkaline end of the pH range.", "evidence": [{"notes": "Cytoplasmic acidification counters alkaline external pH, extending the upper pH growth boundary.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "cytoplasm_acidification", "target": "ph_range"}, {"description": "F0F1-ATPase and proton-pumping respiratory chains prevent cytoplasmic acidification, supporting growth across the external pH range.", "evidence": [{"notes": "Activation/upregulation of proton-pumping respiratory chains and the F0F1-ATPase prevents cytoplasmic acidification.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "proton_pumping_atpase_respiration", "target": "prevent_cytoplasm_acidification"}, {"description": "Amino-acid decarboxylase/antiporter systems generate PMF and raise internal pH, enabling growth under acidic external pH.", "evidence": [{"notes": "Each decarboxylation pumps one proton equivalent; decarboxylases increase activity when internal pH falls, extending the acid-side boundary.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "aa_decarboxylase_antiporter", "target": "cytoplasmic_ph_homeostasis"}, {"description": "A hypertonic salinity increase causes cell shrinkage and lowered turgor; growth ceases below the turgor limit, setting the upper salinity boundary.", "evidence": [{"notes": "Hypertonicity leads to cell shrinkage and lowering of turgor; the lower turgor limit is reached before cell growth ceases.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-10", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "hypertonic_salinity_increase", "target": "cell_shrinkage_low_turgor"}, {"description": "OpuA-mediated glycine betaine uptake drives compatible-solute accumulation that counteracts hyperosmotic stress and supports salinity-range growth.", "evidence": [{"notes": "OpuA accumulates the compatible solute glycine betaine to (sub)molar levels to counteract hyperosmotic stress.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-11", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "opua_glycine_betaine_uptake", "target": "compatible_solute_accumulation"}, {"description": "Compatible-solute accumulation counteracts hyperosmotic stress, supporting growth across the NaCl salinity range.", "evidence": [{"notes": "Compatible-solute accumulation offsets hyperosmotic stress, broadening the salinity growth range.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "nacl_range"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose bounded growth-supporting span yields the growth-range phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a bounded growth-supporting span is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "growth range phenotype with numerical limits"}, {"description": "NaCl range is an axis-specific growth-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl range as a growth-range phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range", "target": "growth range phenotype with numerical limits"}, {"description": "pH range is an axis-specific growth-range phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH range as a growth-range phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "external pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range", "target": "growth range phenotype with numerical limits"}, {"description": "Temperature range is an axis-specific growth-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature range as a growth-range phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range", "target": "growth range phenotype with numerical limits"}, {"description": "Growth across an external pH range requires maintenance of near-neutral cytoplasmic pH.", "edge_id": "edge-5", "evidence": [{"notes": "Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external pH of about 5-8 to sustain growth.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "requires", "predicate_id": null, "source": "pH range", "target": "maintenance of near-neutral cytoplasmic pH"}, {"description": "K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting growth at alkaline external pH.", "edge_id": "edge-6", "evidence": [{"notes": "Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons when internal pH gets too high.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "enables", "predicate_id": null, "source": "K+/H+ or Na+/H+ antiporter activity", "target": "cytoplasmic acidification"}, {"description": "Antiporter-driven cytoplasmic acidification supports growth at the alkaline end of the pH range.", "edge_id": "edge-7", "evidence": [{"notes": "Cytoplasmic acidification counters alkaline external pH, extending the upper pH growth boundary.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "contributes to", "predicate_id": null, "source": "cytoplasmic acidification", "target": "pH range"}, {"description": "F0F1-ATPase and proton-pumping respiratory chains prevent cytoplasmic acidification, supporting growth across the external pH range.", "edge_id": "edge-8", "evidence": [{"notes": "Activation/upregulation of proton-pumping respiratory chains and the F0F1-ATPase prevents cytoplasmic acidification.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "enables", "predicate_id": null, "source": "F0F1-ATPase / proton-pumping respiratory chain activity", "target": "prevention of cytoplasmic acidification"}, {"description": "Amino-acid decarboxylase/antiporter systems generate PMF and raise internal pH, enabling growth under acidic external pH.", "edge_id": "edge-9", "evidence": [{"notes": "Each decarboxylation pumps one proton equivalent; decarboxylases increase activity when internal pH falls, extending the acid-side boundary.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "enables", "predicate_id": null, "source": "amino-acid decarboxylase/antiporter system", "target": "maintenance of near-neutral cytoplasmic pH"}, {"description": "A hypertonic salinity increase causes cell shrinkage and lowered turgor; growth ceases below the turgor limit, setting the upper salinity boundary.", "edge_id": "edge-10", "evidence": [{"notes": "Hypertonicity leads to cell shrinkage and lowering of turgor; the lower turgor limit is reached before cell growth ceases.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "causes", "predicate_id": null, "source": "hypertonic salinity increase", "target": "cell shrinkage and lowered turgor"}, {"description": "OpuA-mediated glycine betaine uptake drives compatible-solute accumulation that counteracts hyperosmotic stress and supports salinity-range growth.", "edge_id": "edge-11", "evidence": [{"notes": "OpuA accumulates the compatible solute glycine betaine to (sub)molar levels to counteract hyperosmotic stress.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "enables", "predicate_id": null, "source": "OpuA-mediated glycine betaine uptake", "target": "compatible solute accumulation"}, {"description": "Compatible-solute accumulation counteracts hyperosmotic stress, supporting growth across the NaCl salinity range.", "edge_id": "edge-12", "evidence": [{"notes": "Compatible-solute accumulation offsets hyperosmotic stress, broadening the salinity growth range.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "contributes to", "predicate_id": null, "source": "compatible solute accumulation", "target": "NaCl range"}], "graph_id": "growth_range_phenotype_descriptor", "issues": [], "nodes": [{"color": "#cffafe", "description": "Coupled amino-acid decarboxylase and antiporter activity that consumes intracellular protons and generates PMF, raising internal pH under acidic conditions.", "grounding": null, "id": "aa_decarboxylase_antiporter", "is_orphan": false, "label": "amino-acid decarboxylase/antiporter system", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#cffafe", "description": "Ion/H+ antiporter activity that exports K+ or Na+ in exchange for protons to acidify the cytoplasm when internal pH rises.", "grounding": null, "id": "cation_proton_antiporter", "is_orphan": false, "label": "K+/H+ or Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#f3f4f6", "description": "Hypertonicity-driven loss of cell volume and turgor pressure that limits growth at the salinity boundary.", "grounding": null, "id": "cell_shrinkage_low_turgor", "is_orphan": false, "label": "cell shrinkage and lowered turgor", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation of compatible solutes (e.g., glycine betaine) that counteract hyperosmotic stress.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Lowering of cytoplasmic pH, used to counter alkaline external conditions or resulting from acid stress.", "grounding": null, "id": "cytoplasm_acidification", "is_orphan": false, "label": "cytoplasmic acidification", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Homeostatic maintenance of cytoplasmic pH (~7.0-7.5) across a range of external pH values.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "maintenance of near-neutral cytoplasmic pH", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by the span between minimum and maximum growth-supporting values of an environmental variable.", "grounding": "METPO:1000535", "id": "growth_range_phenotype_trait", "is_orphan": false, "label": "growth range phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Rise in external salinity producing hypertonic conditions.", "grounding": null, "id": "hypertonic_salinity_increase", "is_orphan": false, "label": "hypertonic salinity increase", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#cffafe", "description": "ABC-transporter (OpuA) mediated uptake of the compatible solute glycine betaine.", "grounding": null, "id": "opua_glycine_betaine_uptake", "is_orphan": false, "label": "OpuA-mediated glycine betaine uptake", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Process counteracting excessive cytoplasmic acidification to keep internal pH within the growth-supporting window.", "grounding": null, "id": "prevent_cytoplasm_acidification", "is_orphan": false, "label": "prevention of cytoplasmic acidification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Proton-pumping by the F0F1-ATPase and respiratory chains that prevents cytoplasmic acidification.", "grounding": null, "id": "proton_pumping_atpase_respiration", "is_orphan": false, "label": "F0F1-ATPase / proton-pumping respiratory chain activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}], "title": "Growth-range phenotype descriptor across environmental axes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -647,7 +789,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

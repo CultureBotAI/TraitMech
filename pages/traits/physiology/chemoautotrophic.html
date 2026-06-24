@@ -209,6 +209,142 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-10">
+            <strong>carboxysome</strong>
+            <span class="edge-predicate">encapsulates</span>
+            <strong>RuBisCO</strong>
+            
+            <p>Carboxysomes encapsulate RuBisCO and carbonic anhydrase within a protein shell.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>carboxysome</strong>
+            <span class="edge-predicate">encapsulates</span>
+            <strong>carbonic anhydrase</strong>
+            
+            <p>Carboxysomes encapsulate carbonic anhydrase alongside RuBisCO.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>carbonic anhydrase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>carbon dioxide</strong>
+            
+            <p>Carbonic anhydrase converts bicarbonate to CO2 inside the carboxysome for RuBisCO.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>carbonic anhydrase</strong>
+            <span class="edge-predicate">uses substrate</span>
+            <strong>bicarbonate</strong>
+            
+            <p>Carbonic anhydrase uses bicarbonate as substrate to generate CO2.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>dissolved inorganic carbon transporter</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>carbon-concentrating mechanism</strong>
+            
+            <p>DIC (CO2/HCO3-) transporters supply substrate for the carbon-concentrating mechanism.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">CCMs consist of CO2 and HCO3- transporters and carboxysomes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-15">
+            <strong>carbon-concentrating mechanism</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>Calvin-Benson cycle</strong>
+            
+            <p>The carbon-concentrating mechanism elevates CO2 around RuBisCO to support Calvin-Benson fixation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/AEM.01075-24</code>
+                
+                <span class="meta">CCMs consisting of transporters and carboxysomes concentrate CO2 for RubisCO-mediated fixation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-16">
+            <strong>Calvin-Benson cycle</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>inorganic carbon assimilation</strong>
+            
+            <p>The Calvin-Benson-Bassham cycle drives inorganic carbon assimilation in chemolithoautotrophs.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2024.08.01.606197</code>
+                
+                <span class="meta">The CBB cycle accounts for &gt;99% of global autotrophy and is used in chemolithoautotrophs.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-17">
+            <strong>carbon dioxide</strong>
+            <span class="edge-predicate">fixed by</span>
+            <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+            
+            <p>The 3HP/4HB cycle is an energy-efficient aerobic CO2-fixation pathway used by chemoautotrophs.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-024-06432-x</code>
+                
+                <span class="meta">Currently considered the most energy-efficient aerobic carbon fixation pathway.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -394,6 +530,12 @@
           <time>2026-06-14T05:51:46Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:16474×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -753,7 +895,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking chemical electron donors, energy conservation, RuBisCO/Calvin-Benson carbon fixation, and biomass production.", "edges": [{"description": "Chemoautotrophs derive energy from oxidizing reduced inorganic compounds.", "evidence": [{"notes": "Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy substrate", "predicate_id": null, "source": "chemoautotrophic_trait", "target": "reduced_inorganic_compound"}, {"description": "Oxidation of chemical substrates supports energy conservation.", "evidence": [{"notes": "Supports energy conservation from redox reactions in respiratory systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced_inorganic_compound", "target": "respiratory_energy_conservation"}, {"description": "Energy conservation produces ATP for biosynthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_energy_conservation", "target": "atp"}, {"description": "Chemoautotrophic electron flow supplies reducing equivalents.", "evidence": [{"notes": "Supports reduced redox cofactors in chemolithoautotrophic metabolism.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_energy_conservation", "target": "nadph"}, {"description": "CO2 can be fixed through the Calvin-Benson cycle.", "evidence": [{"notes": "Supports Calvin-Benson as a microbial autotrophic CO2-fixation pathway.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "id": "edge-5", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "calvin_benson_cycle"}, {"description": "RuBisCO catalyzes the carboxylation step of Calvin-Benson CO2 fixation.", "evidence": [{"notes": "Supports RuBisCO as a Calvin-Benson cycle enzyme.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "form I RuBisCO"}], "id": "edge-6", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "rubisco", "target": "calvin_benson_cycle"}, {"description": "ATP is required for chemoautotrophic CO2 fixation.", "evidence": [{"notes": "Supports ATP/energy requirement for carbon fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp", "target": "calvin_benson_cycle"}, {"description": "Reducing equivalents support reductive CO2 fixation.", "evidence": [{"notes": "Supports NAD(P)H-like reductant use in carbon fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nadph", "target": "calvin_benson_cycle"}, {"description": "Fixed carbon is incorporated into cellular biomass.", "evidence": [{"notes": "Review scope supports chemoautotrophic bacterial growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology, ecology, and molecular biology"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "calvin_benson_cycle", "target": "cellular_biomass"}], "evidence_rows": [{"description": "Chemoautotrophs derive energy from oxidizing reduced inorganic compounds.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "predicate": "uses energy substrate", "predicate_id": null, "source": "chemoautotrophic", "target": "reduced inorganic compound"}, {"description": "Oxidation of chemical substrates supports energy conservation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy conservation from redox reactions in respiratory systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced inorganic compound", "target": "respiratory energy conservation"}, {"description": "Energy conservation produces ATP for biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory energy conservation", "target": "ATP"}, {"description": "Chemoautotrophic electron flow supplies reducing equivalents.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reduced redox cofactors in chemolithoautotrophic metabolism.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory energy conservation", "target": "NADPH"}, {"description": "CO2 can be fixed through the Calvin-Benson cycle.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Calvin-Benson as a microbial autotrophic CO2-fixation pathway.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "Calvin-Benson cycle"}, {"description": "RuBisCO catalyzes the carboxylation step of Calvin-Benson CO2 fixation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports RuBisCO as a Calvin-Benson cycle enzyme.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "form I RuBisCO"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "RuBisCO", "target": "Calvin-Benson cycle"}, {"description": "ATP is required for chemoautotrophic CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP/energy requirement for carbon fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP", "target": "Calvin-Benson cycle"}, {"description": "Reducing equivalents support reductive CO2 fixation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports NAD(P)H-like reductant use in carbon fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "NADPH", "target": "Calvin-Benson cycle"}, {"description": "Fixed carbon is incorporated into cellular biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Review scope supports chemoautotrophic bacterial growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology, ecology, and molecular biology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Calvin-Benson cycle", "target": "cellular biomass"}], "graph_id": "chemoautotrophic_chemical_energy_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier used in carbon fixation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Common microbial CO2-fixation pathway.", "grounding": "GO:0019253", "id": "calvin_benson_cycle", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular material produced from fixed carbon.", "grounding": null, "id": "cellular_biomass", "is_orphan": false, "label": "cellular biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using chemical energy and CO2 as carbon source.", "grounding": "METPO:1000635", "id": "chemoautotrophic_trait", "is_orphan": false, "label": "chemoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Reducing equivalent used in reductive biosynthesis.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Chemical energy substrate oxidized by chemoautotrophs.", "grounding": null, "id": "reduced_inorganic_compound", "is_orphan": false, "label": "reduced inorganic compound", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Energy conservation from redox reactions.", "grounding": null, "id": "respiratory_energy_conservation", "is_orphan": false, "label": "respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson cycle.", "grounding": "UniProtKB:A0A075WF79", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Chemoautotrophic chemical-energy CO2 fixation"}];
+  var graphs = [{"description": "DOI-backed graph linking chemical electron donors, energy conservation, RuBisCO/Calvin-Benson carbon fixation, and biomass production.", "edges": [{"description": "Chemoautotrophs derive energy from oxidizing reduced inorganic compounds.", "evidence": [{"notes": "Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "uses energy substrate", "predicate_id": null, "source": "chemoautotrophic_trait", "target": "reduced_inorganic_compound"}, {"description": "Oxidation of chemical substrates supports energy conservation.", "evidence": [{"notes": "Supports energy conservation from redox reactions in respiratory systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced_inorganic_compound", "target": "respiratory_energy_conservation"}, {"description": "Energy conservation produces ATP for biosynthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_energy_conservation", "target": "atp"}, {"description": "Chemoautotrophic electron flow supplies reducing equivalents.", "evidence": [{"notes": "Supports reduced redox cofactors in chemolithoautotrophic metabolism.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory_energy_conservation", "target": "nadph"}, {"description": "CO2 can be fixed through the Calvin-Benson cycle.", "evidence": [{"notes": "Supports Calvin-Benson as a microbial autotrophic CO2-fixation pathway.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "id": "edge-5", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "calvin_benson_cycle"}, {"description": "RuBisCO catalyzes the carboxylation step of Calvin-Benson CO2 fixation.", "evidence": [{"notes": "Supports RuBisCO as a Calvin-Benson cycle enzyme.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "form I RuBisCO"}], "id": "edge-6", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "rubisco", "target": "calvin_benson_cycle"}, {"description": "ATP is required for chemoautotrophic CO2 fixation.", "evidence": [{"notes": "Supports ATP/energy requirement for carbon fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp", "target": "calvin_benson_cycle"}, {"description": "Reducing equivalents support reductive CO2 fixation.", "evidence": [{"notes": "Supports NAD(P)H-like reductant use in carbon fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "nadph", "target": "calvin_benson_cycle"}, {"description": "Fixed carbon is incorporated into cellular biomass.", "evidence": [{"notes": "Review scope supports chemoautotrophic bacterial growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology, ecology, and molecular biology"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "calvin_benson_cycle", "target": "cellular_biomass"}, {"description": "Carboxysomes encapsulate RuBisCO and carbonic anhydrase within a protein shell.", "evidence": [{"notes": "Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-10", "is_orphan": false, "predicate": "encapsulates", "predicate_id": null, "source": "carboxysome", "target": "rubisco"}, {"description": "Carboxysomes encapsulate carbonic anhydrase alongside RuBisCO.", "evidence": [{"notes": "Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-11", "is_orphan": false, "predicate": "encapsulates", "predicate_id": null, "source": "carboxysome", "target": "carbonic_anhydrase"}, {"description": "Carbonic anhydrase converts bicarbonate to CO2 inside the carboxysome for RuBisCO.", "evidence": [{"notes": "Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-12", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "carbonic_anhydrase", "target": "carbon_dioxide"}, {"description": "Carbonic anhydrase uses bicarbonate as substrate to generate CO2.", "evidence": [{"notes": "Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-13", "is_orphan": false, "predicate": "uses substrate", "predicate_id": null, "source": "carbonic_anhydrase", "target": "bicarbonate"}, {"description": "DIC (CO2/HCO3-) transporters supply substrate for the carbon-concentrating mechanism.", "evidence": [{"notes": "CCMs consist of CO2 and HCO3- transporters and carboxysomes.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-14", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "dic_transporter", "target": "carbon_concentrating_mechanism"}, {"description": "The carbon-concentrating mechanism elevates CO2 around RuBisCO to support Calvin-Benson fixation.", "evidence": [{"notes": "CCMs consisting of transporters and carboxysomes concentrate CO2 for RubisCO-mediated fixation.", "reference": "DOI:10.1128/AEM.01075-24"}], "id": "edge-15", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "carbon_concentrating_mechanism", "target": "calvin_benson_cycle"}, {"description": "The Calvin-Benson-Bassham cycle drives inorganic carbon assimilation in chemolithoautotrophs.", "evidence": [{"notes": "The CBB cycle accounts for \u003e99% of global autotrophy and is used in chemolithoautotrophs.", "reference": "DOI:10.1101/2024.08.01.606197"}], "id": "edge-16", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "calvin_benson_cycle", "target": "inorganic_carbon_assimilation"}, {"description": "The 3HP/4HB cycle is an energy-efficient aerobic CO2-fixation pathway used by chemoautotrophs.", "evidence": [{"notes": "Currently considered the most energy-efficient aerobic carbon fixation pathway.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "id": "edge-17", "is_orphan": false, "predicate": "fixed by", "predicate_id": null, "source": "carbon_dioxide", "target": "hp_hb_cycle"}], "evidence_rows": [{"description": "Chemoautotrophs derive energy from oxidizing reduced inorganic compounds.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports chemoautotrophic metabolism based on chemical energy and CO2 fixation.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology ... of chemoautotrophic bacteria"}], "predicate": "uses energy substrate", "predicate_id": null, "source": "chemoautotrophic", "target": "reduced inorganic compound"}, {"description": "Oxidation of chemical substrates supports energy conservation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports energy conservation from redox reactions in respiratory systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "free energy of a redox reaction"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "reduced inorganic compound", "target": "respiratory energy conservation"}, {"description": "Energy conservation produces ATP for biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory energy conservation", "target": "ATP"}, {"description": "Chemoautotrophic electron flow supplies reducing equivalents.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reduced redox cofactors in chemolithoautotrophic metabolism.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "NADH, or ... NADPH"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "respiratory energy conservation", "target": "NADPH"}, {"description": "CO2 can be fixed through the Calvin-Benson cycle.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Calvin-Benson as a microbial autotrophic CO2-fixation pathway.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "Calvin-Benson reductive pentose phosphate cycle"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "Calvin-Benson cycle"}, {"description": "RuBisCO catalyzes the carboxylation step of Calvin-Benson CO2 fixation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports RuBisCO as a Calvin-Benson cycle enzyme.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "form I RuBisCO"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "RuBisCO", "target": "Calvin-Benson cycle"}, {"description": "ATP is required for chemoautotrophic CO2 fixation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP/energy requirement for carbon fixation.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "energy required for autotrophic CO2 fixation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP", "target": "Calvin-Benson cycle"}, {"description": "Reducing equivalents support reductive CO2 fixation.", "edge_id": "edge-8", "evidence": [{"notes": "Supports NAD(P)H-like reductant use in carbon fixation.", "reference": "DOI:10.1016/j.biortech.2021.125768", "snippet": "reduction of CO2"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "NADPH", "target": "Calvin-Benson cycle"}, {"description": "Fixed carbon is incorporated into cellular biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Review scope supports chemoautotrophic bacterial growth from fixed carbon.", "reference": "DOI:10.1146/annurev.micro.52.1.191", "snippet": "physiology, ecology, and molecular biology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Calvin-Benson cycle", "target": "cellular biomass"}, {"description": "Carboxysomes encapsulate RuBisCO and carbonic anhydrase within a protein shell.", "edge_id": "edge-10", "evidence": [{"notes": "Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "encapsulates", "predicate_id": null, "source": "carboxysome", "target": "RuBisCO"}, {"description": "Carboxysomes encapsulate carbonic anhydrase alongside RuBisCO.", "edge_id": "edge-11", "evidence": [{"notes": "Carboxysomes encapsulate RubisCO and carbonic anhydrase (CA) within a protein shell.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "encapsulates", "predicate_id": null, "source": "carboxysome", "target": "carbonic anhydrase"}, {"description": "Carbonic anhydrase converts bicarbonate to CO2 inside the carboxysome for RuBisCO.", "edge_id": "edge-12", "evidence": [{"notes": "Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "produces", "predicate_id": null, "source": "carbonic anhydrase", "target": "carbon dioxide"}, {"description": "Carbonic anhydrase uses bicarbonate as substrate to generate CO2.", "edge_id": "edge-13", "evidence": [{"notes": "Inside carboxysomes, CA converts HCO3- to CO2, which RubisCO then fixes.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "uses substrate", "predicate_id": null, "source": "carbonic anhydrase", "target": "bicarbonate"}, {"description": "DIC (CO2/HCO3-) transporters supply substrate for the carbon-concentrating mechanism.", "edge_id": "edge-14", "evidence": [{"notes": "CCMs consist of CO2 and HCO3- transporters and carboxysomes.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "enables", "predicate_id": null, "source": "dissolved inorganic carbon transporter", "target": "carbon-concentrating mechanism"}, {"description": "The carbon-concentrating mechanism elevates CO2 around RuBisCO to support Calvin-Benson fixation.", "edge_id": "edge-15", "evidence": [{"notes": "CCMs consisting of transporters and carboxysomes concentrate CO2 for RubisCO-mediated fixation.", "reference": "DOI:10.1128/AEM.01075-24"}], "predicate": "enables", "predicate_id": null, "source": "carbon-concentrating mechanism", "target": "Calvin-Benson cycle"}, {"description": "The Calvin-Benson-Bassham cycle drives inorganic carbon assimilation in chemolithoautotrophs.", "edge_id": "edge-16", "evidence": [{"notes": "The CBB cycle accounts for \u003e99% of global autotrophy and is used in chemolithoautotrophs.", "reference": "DOI:10.1101/2024.08.01.606197"}], "predicate": "enables", "predicate_id": null, "source": "Calvin-Benson cycle", "target": "inorganic carbon assimilation"}, {"description": "The 3HP/4HB cycle is an energy-efficient aerobic CO2-fixation pathway used by chemoautotrophs.", "edge_id": "edge-17", "evidence": [{"notes": "Currently considered the most energy-efficient aerobic carbon fixation pathway.", "reference": "DOI:10.1038/s42003-024-06432-x"}], "predicate": "fixed by", "predicate_id": null, "source": "carbon dioxide", "target": "3-hydroxypropionate/4-hydroxybutyrate cycle"}], "graph_id": "chemoautotrophic_chemical_energy_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier used in carbon fixation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Dissolved inorganic carbon species imported and converted to CO2 for fixation.", "grounding": null, "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Common microbial CO2-fixation pathway.", "grounding": "GO:0019253", "id": "calvin_benson_cycle", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "System of DIC transporters and carboxysomes that elevates CO2 around RuBisCO.", "grounding": null, "id": "carbon_concentrating_mechanism", "is_orphan": false, "label": "carbon-concentrating mechanism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon source.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting bicarbonate to CO2 inside the carboxysome to feed RuBisCO.", "grounding": null, "id": "carbonic_anhydrase", "is_orphan": false, "label": "carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fce7f3", "description": "Bacterial microcompartment that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2.", "grounding": null, "id": "carboxysome", "is_orphan": false, "label": "carboxysome", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular material produced from fixed carbon.", "grounding": null, "id": "cellular_biomass", "is_orphan": false, "label": "cellular biomass", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using chemical energy and CO2 as carbon source.", "grounding": "METPO:1000635", "id": "chemoautotrophic_trait", "is_orphan": false, "label": "chemoautotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "CO2/HCO3- transporters that supply inorganic carbon to the carbon-concentrating mechanism.", "grounding": null, "id": "dic_transporter", "is_orphan": false, "label": "dissolved inorganic carbon transporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "Energy-efficient aerobic autotrophic CO2-fixation pathway.", "grounding": null, "id": "hp_hb_cycle", "is_orphan": false, "label": "3-hydroxypropionate/4-hydroxybutyrate cycle", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Incorporation of inorganic carbon into cellular metabolites.", "grounding": null, "id": "inorganic_carbon_assimilation", "is_orphan": false, "label": "inorganic carbon assimilation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reducing equivalent used in reductive biosynthesis.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Chemical energy substrate oxidized by chemoautotrophs.", "grounding": null, "id": "reduced_inorganic_compound", "is_orphan": false, "label": "reduced inorganic compound", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Energy conservation from redox reactions.", "grounding": null, "id": "respiratory_energy_conservation", "is_orphan": false, "label": "respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson cycle.", "grounding": "UniProtKB:A0A075WF79", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Chemoautotrophic chemical-energy CO2 fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -764,7 +906,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

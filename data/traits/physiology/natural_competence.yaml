@@ -1,7 +1,7 @@
 identifier: traitmech:000087
 label: natural competence
-definition: A physiological state in which a cell takes up free extracellular DNA from
-  the environment and integrates it into its genome (natural genetic transformation).
+definition: A physiological state in which a cell takes up free extracellular DNA
+  from the environment and integrates it into its genome (natural genetic transformation).
 definition_source: DOI:10.1038/nrmicro3199
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -17,8 +17,8 @@ evidence:
   notes: Johnston et al. review the distribution, shared mechanisms, and control of
     natural bacterial transformation (competence for DNA uptake).
 - reference: DOI:10.1038/s41579-021-00650-4
-  notes: Review of horizontal gene transfer supports natural transformation as a
-    major route of bacterial DNA acquisition.
+  notes: Review of horizontal gene transfer supports natural transformation as a major
+    route of bacterial DNA acquisition.
 causal_graphs:
 - graph_id: natural_competence_dna_uptake
   title: Competence-driven DNA uptake and transformation
@@ -39,6 +39,46 @@ causal_graphs:
     label: extracellular DNA
     node_type: CHEMICAL
     description: Free environmental DNA taken up by competent cells.
+  - node_id: competence_pilus
+    label: type IV competence pilus
+    node_type: GENE_OR_PROTEIN
+    description: Retractile DNA-binding pilus filament of the competence apparatus.
+  - node_id: pilus_retraction
+    label: competence pilus retraction
+    node_type: BIOLOGICAL_PROCESS
+    description: Disassembly of the competence pilus that pulls bound DNA toward the
+      cell.
+  - node_id: dna_uptake
+    label: extracellular DNA uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Import of bound extracellular DNA across the cell envelope.
+  - node_id: comec
+    label: ComEC
+    node_type: GENE_OR_PROTEIN
+    description: Inner-membrane channel required for DNA uptake into the cytoplasm.
+  - node_id: comea
+    label: ComEA
+    node_type: GENE_OR_PROTEIN
+    description: DNA receptor that binds incoming DNA and mediates transfer toward
+      the periplasm.
+  - node_id: periplasm
+    label: periplasm
+    node_type: CELLULAR_LOCALIZATION
+    description: Compartment to which bound DNA is transferred during uptake.
+  - node_id: dpra
+    label: DprA
+    node_type: GENE_OR_PROTEIN
+    description: Competence ssDNA-binding protein that protects incoming DNA and recruits
+      RecA.
+  - node_id: reca
+    label: RecA
+    node_type: GENE_OR_PROTEIN
+    description: Recombinase that mediates homologous recombination of transforming
+      DNA.
+  - node_id: homologous_recombination
+    label: homologous recombination of transforming DNA
+    node_type: BIOLOGICAL_PROCESS
+    description: Integration of incoming ssDNA into the genome via homologous recombination.
   edges:
   - subject: competence_process
     predicate: consumes
@@ -56,6 +96,58 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00650-4
       notes: Transformation is a major route of bacterial DNA acquisition.
     predicate_id: RO:0002327
+  - subject: competence_pilus
+    predicate: binds
+    object: extracellular_dna
+    description: Competence pili are retractile, DNA-binding filaments that capture
+      extracellular DNA.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00125-23
+      notes: Competence pili "produce retractile, DNA-binding pili" and co-localize
+        DNA at their tips (Zuke & Burton 2024).
+  - subject: pilus_retraction
+    predicate: promotes
+    object: dna_uptake
+    description: Pilus retraction is mechanistically coupled to DNA delivery into
+      the uptake apparatus.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00125-23
+      notes: Physical obstruction of T4P retraction decreased transformation rate
+        (Zuke & Burton 2024).
+  - subject: comec
+    predicate: required for
+    object: dna_uptake
+    description: ComEC forms a membrane channel required for DNA uptake.
+    evidence:
+    - reference: DOI:10.1101/2024.02.06.579203
+      notes: '"ComEC is a membrane channel required for DNA uptake" (Hardy et al.
+        2024).'
+  - subject: comea
+    predicate: mediates transfer to
+    object: periplasm
+    description: ComEA acts as an external DNA receptor and mediates transfer of DNA
+      into the periplasm.
+    evidence:
+    - reference: DOI:10.1101/2024.02.06.579203
+      notes: '"ComEA functions as an external DNA receptor and mediates transfer into
+        the periplasm" (Hardy et al. 2024).'
+  - subject: dpra
+    predicate: recruits
+    object: reca
+    description: DprA protects incoming ssDNA and recruits RecA for recombination.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002814
+      notes: '"DprA hands incoming ssDNA to RecA" / "protection of incoming ssDNA
+        by DprA and recruitment of RecA" (Mazzamurro et al. 2024).'
+  - subject: reca
+    predicate: mediates
+    object: homologous_recombination
+    description: RecA mediates homologous recombination of incoming transforming DNA
+      into the genome.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002814
+      notes: Transformation is followed by RecA-dependent homologous recombination
+        (Mazzamurro et al. 2024).
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -68,4 +160,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (competence DNA uptake) with GO node
     grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,9 +1,8 @@
 identifier: traitmech:000030
 label: dissimilatory nitrate reduction to ammonium
-definition: An anaerobic respiratory metabolism in which nitrate is reduced via
-  nitrite to ammonium (rather than to N2), conserving fixed nitrogen within the
-  ecosystem. It is favored over denitrification under nitrate-limited,
-  high-electron-donor conditions.
+definition: An anaerobic respiratory metabolism in which nitrate is reduced via nitrite
+  to ammonium (rather than to N2), conserving fixed nitrogen within the ecosystem.
+  It is favored over denitrification under nitrate-limited, high-electron-donor conditions.
 definition_source: DOI:10.1126/science.1254070
 trait_category: METABOLISM
 term_kind: CLASS
@@ -19,8 +18,8 @@ synonyms:
   source: DOI:10.1007/s11157-025-09719-5
 evidence:
 - reference: DOI:10.1126/science.1254070
-  notes: Kraft et al. show the donor-to-acceptor ratio governs whether nitrate
-    respiration ends in ammonium (DNRA) or N2 (denitrification).
+  notes: Kraft et al. show the donor-to-acceptor ratio governs whether nitrate respiration
+    ends in ammonium (DNRA) or N2 (denitrification).
 - reference: DOI:10.1007/s11157-025-09719-5
   notes: Review of DNRA vs denitrification supports DNRA's competitive advantage and
     nitrogen-retaining role under nitrate-limited conditions.
@@ -48,18 +47,51 @@ causal_graphs:
   - node_id: donor_acceptor_ratio
     label: high donor-to-acceptor ratio
     node_type: ENVIRONMENTAL_FACTOR
-    description: Nitrate-limited, high-electron-donor environment selecting for
-      DNRA over denitrification.
+    description: Nitrate-limited, high-electron-donor environment selecting for DNRA
+      over denitrification.
+  - node_id: nitrite
+    label: nitrite
+    node_type: CHEMICAL
+    grounding: CHEBI:16301
+    description: Intermediate reduced from nitrate and then to ammonium in DNRA.
+  - node_id: narghi
+    label: NarGHI nitrate reductase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound nitrate reductase catalyzing the first DNRA step (nitrate
+      to nitrite).
+  - node_id: nrfa
+    label: NrfA cytochrome c nitrite reductase
+    node_type: GENE_OR_PROTEIN
+    description: Cytochrome c nitrite reductase catalyzing the canonical second DNRA
+      step (nitrite to ammonium).
+  - node_id: narx_narl
+    label: NarX-NarL two-component system
+    node_type: GENE_OR_PROTEIN
+    description: Nitrate/nitrite-sensing two-component regulatory system activating
+      DNRA operon transcription.
+  - node_id: fnr
+    label: FNR regulator
+    node_type: GENE_OR_PROTEIN
+    description: O2/NO-sensing global regulator activating nitrate respiration operons
+      under anaerobic conditions.
+  - node_id: nrf_operon
+    label: nrf operon
+    node_type: GENE_OR_PROTEIN
+    description: Operon encoding cytochrome c nitrite reductase (NrfA) and accessory
+      subunits for DNRA.
+  - node_id: anaerobic_conditions
+    label: anaerobic conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Oxygen-depleted environment permissive for DNRA respiration.
   edges:
   - subject: nitrate
     predicate: oxidized to
     object: ammonium
-    description: Nitrate is reduced via nitrite to ammonium, retaining N in the
-      cell/system.
+    description: Nitrate is reduced via nitrite to ammonium, retaining N in the cell/system.
     evidence:
     - reference: DOI:10.1126/science.1254070
-      notes: Kraft et al. show DNRA produces ammonium from nitrate under
-        nitrate-limited conditions.
+      notes: Kraft et al. show DNRA produces ammonium from nitrate under nitrate-limited
+        conditions.
     predicate_id: METPO:2007405
   - subject: donor_acceptor_ratio
     predicate: selects for
@@ -67,9 +99,68 @@ causal_graphs:
     description: High donor-to-acceptor ratio favors DNRA over denitrification.
     evidence:
     - reference: DOI:10.1007/s11157-025-09719-5
-      notes: DNRA review supports its competitive advantage and N-retaining role
-        under nitrate-limited conditions.
+      notes: DNRA review supports its competitive advantage and N-retaining role under
+        nitrate-limited conditions.
     predicate_id: METPO:2007401
+  - subject: nitrate
+    predicate: reduced to
+    object: nitrite
+    description: NarGHI nitrate reductase catalyzes the canonical first DNRA step,
+      reducing nitrate to nitrite.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: Nitrate is reduced via nitrite; known nitrate reductases include cytoplasmic
+        NarGHI (egas2024).
+  - subject: narghi
+    predicate: catalyzes
+    object: nitrite
+    description: NarGHI nitrate reductase catalyzes production of nitrite from nitrate.
+    evidence:
+    - reference: DOI:10.1128/msystems.00967-23
+      notes: Known nitrate reductases include periplasmic NapAB and cytoplasmic NarGHI
+        catalyzing the first step.
+  - subject: nitrite
+    predicate: reduced to
+    object: ammonium
+    description: NrfA cytochrome c nitrite reductase catalyzes the canonical second
+      DNRA step, reducing nitrite to ammonium.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      notes: 'Second step performed by cytochrome c nitrite reductase (NrfA): reduction
+        of nitrite to ammonium (hird2025).'
+  - subject: nrfa
+    predicate: catalyzes
+    object: ammonium
+    description: NrfA reduces nitrite to ammonium, the final DNRA product.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      notes: Cytochrome c nitrite reductase (NrfA) performs the canonical reduction
+        of nitrite to ammonium.
+  - subject: narx_narl
+    predicate: activates expression of
+    object: nrf_operon
+    description: NarX-NarL nitrate/nitrite sensing activates transcription of the
+      nrf operon.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      notes: Expression of nap and nrf operons is tightly regulated by NarX-NarL and
+        NarQ-NarP, activating transcription under appropriate conditions (hird2025).
+  - subject: fnr
+    predicate: activates expression of
+    object: nrf_operon
+    description: FNR activates nrf operon transcription under anaerobic conditions.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      notes: FNR (O2/NO sensing) activates transcription under anaerobic and nitrate/nitrite-rich
+        conditions (hird2025).
+  - subject: anaerobic_conditions
+    predicate: permits
+    object: dnra_trait
+    description: Anaerobic conditions, sensed via FNR, permit DNRA respiration.
+    evidence:
+    - reference: DOI:10.1128/aem.00292-25
+      notes: nap/nrf operon expression activated under anaerobic conditions; DNRA
+        proceeds under oxygen-depleted conditions (hird2025).
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -81,6 +172,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (DNRA nitrate → ammonium retention)
-    with CHEBI node groundings and METPO predicate groundings; promoted PROPOSED
-    to REVIEWED.
+    with CHEBI node groundings and METPO predicate groundings; promoted PROPOSED to
+    REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

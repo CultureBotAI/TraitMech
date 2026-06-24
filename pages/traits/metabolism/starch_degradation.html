@@ -90,6 +90,74 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>starch (amylose/amylopectin)</strong>
+            <span class="edge-predicate">is hydrolyzed to</span>
+            <strong>maltooligosaccharides</strong>
+            
+            <p>Endo-amylolytic cleavage of starch yields maltooligosaccharides as the core trait-level intermediate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s00018-023-04812-w</code>
+                
+                <span class="meta">Reports hydrolysis of starch into maltooligosaccharides; flagged as broad trait-level core edge across taxa.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>amylases / starch-active glycoside hydrolases</strong>
+            <span class="edge-predicate">hydrolyzes</span>
+            <strong>maltooligosaccharides</strong>
+            
+            <p>Alpha-amylase endo-cleaves starch alpha-1,4 bonds to generate maltooligosaccharides.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s00018-023-04812-w</code>
+                
+                <span class="meta">An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic alpha-amylase (EC 3.2.1.1) chemistry.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>alpha-glucosidase / glucoamylase</strong>
+            <span class="edge-predicate">degrades</span>
+            <strong>maltooligosaccharides</strong>
+            
+            <p>Alpha-glucosidase/glucoamylase exo-acts on maltooligosaccharides to release glucose.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.01506-24</code>
+                
+                <span class="meta">Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose; generic terminal exo-hydrolysis step.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>alpha-glucosidase / glucoamylase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>glucose</strong>
+            
+            <p>Exo-amylolytic release of glucose monomers from maltooligosaccharides.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.01506-24</code>
+                
+                <span class="meta">Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose, the terminal assimilable sugar.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -233,6 +301,12 @@
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17234×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking amylase systems to hydrolysis of starch into maltooligosaccharides and glucose.", "edges": [{"description": "Amylases hydrolyze starch\u0027s alpha-1,4 and alpha-1,6 linkages.", "evidence": [{"notes": "van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze starch.", "reference": "DOI:10.1016/S0168-1656(01)00407-2"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "amylase", "target": "starch_degradation_trait"}, {"description": "Starch hydrolysis yields maltodextrins and glucose.", "evidence": [{"notes": "CAZy review classifies glycoside hydrolases (including amylases) used to degrade starch and other polysaccharides.", "reference": "DOI:10.1093/nar/gkt1178"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "starch_degradation_trait", "target": "glucose"}], "evidence_rows": [{"description": "Amylases hydrolyze starch\u0027s alpha-1,4 and alpha-1,6 linkages.", "edge_id": "edge-1", "evidence": [{"notes": "van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze starch.", "reference": "DOI:10.1016/S0168-1656(01)00407-2"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "amylases / starch-active glycoside hydrolases", "target": "starch degradation"}, {"description": "Starch hydrolysis yields maltodextrins and glucose.", "edge_id": "edge-2", "evidence": [{"notes": "CAZy review classifies glycoside hydrolases (including amylases) used to degrade starch and other polysaccharides.", "reference": "DOI:10.1093/nar/gkt1178"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "starch degradation", "target": "glucose"}], "graph_id": "starch_degradation_amylase", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Alpha-amylase family enzymes acting on starch.", "grounding": null, "id": "amylase", "is_orphan": false, "label": "amylases / starch-active glycoside hydrolases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Monomeric sugar released from starch hydrolysis.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Hydrolysis of starch to assimilable sugars.", "grounding": "traitmech:000115", "id": "starch_degradation_trait", "is_orphan": false, "label": "starch degradation", "node_type": "TRAIT", "xrefs": []}], "title": "Starch degradation hydrolyzes amylose/amylopectin to glucose"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking amylase systems to hydrolysis of starch into maltooligosaccharides and glucose.", "edges": [{"description": "Amylases hydrolyze starch\u0027s alpha-1,4 and alpha-1,6 linkages.", "evidence": [{"notes": "van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze starch.", "reference": "DOI:10.1016/S0168-1656(01)00407-2"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "amylase", "target": "starch_degradation_trait"}, {"description": "Starch hydrolysis yields maltodextrins and glucose.", "evidence": [{"notes": "CAZy review classifies glycoside hydrolases (including amylases) used to degrade starch and other polysaccharides.", "reference": "DOI:10.1093/nar/gkt1178"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "starch_degradation_trait", "target": "glucose"}, {"description": "Endo-amylolytic cleavage of starch yields maltooligosaccharides as the core trait-level intermediate.", "evidence": [{"notes": "Reports hydrolysis of starch into maltooligosaccharides; flagged as broad trait-level core edge across taxa.", "reference": "DOI:10.1007/s00018-023-04812-w"}], "id": "edge-3", "is_orphan": false, "predicate": "is hydrolyzed to", "predicate_id": null, "source": "starch", "target": "maltooligosaccharides"}, {"description": "Alpha-amylase endo-cleaves starch alpha-1,4 bonds to generate maltooligosaccharides.", "evidence": [{"notes": "An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic alpha-amylase (EC 3.2.1.1) chemistry.", "reference": "DOI:10.1007/s00018-023-04812-w"}], "id": "edge-4", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": null, "source": "amylase", "target": "maltooligosaccharides"}, {"description": "Alpha-glucosidase/glucoamylase exo-acts on maltooligosaccharides to release glucose.", "evidence": [{"notes": "Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose; generic terminal exo-hydrolysis step.", "reference": "DOI:10.1128/mbio.01506-24"}], "id": "edge-5", "is_orphan": false, "predicate": "degrades", "predicate_id": null, "source": "alpha_glucosidase", "target": "maltooligosaccharides"}, {"description": "Exo-amylolytic release of glucose monomers from maltooligosaccharides.", "evidence": [{"notes": "Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose, the terminal assimilable sugar.", "reference": "DOI:10.1128/mbio.01506-24"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "alpha_glucosidase", "target": "glucose"}], "evidence_rows": [{"description": "Amylases hydrolyze starch\u0027s alpha-1,4 and alpha-1,6 linkages.", "edge_id": "edge-1", "evidence": [{"notes": "van der Maarel et al. review alpha-amylase-family enzymes that hydrolyze starch.", "reference": "DOI:10.1016/S0168-1656(01)00407-2"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "amylases / starch-active glycoside hydrolases", "target": "starch degradation"}, {"description": "Starch hydrolysis yields maltodextrins and glucose.", "edge_id": "edge-2", "evidence": [{"notes": "CAZy review classifies glycoside hydrolases (including amylases) used to degrade starch and other polysaccharides.", "reference": "DOI:10.1093/nar/gkt1178"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "starch degradation", "target": "glucose"}, {"description": "Endo-amylolytic cleavage of starch yields maltooligosaccharides as the core trait-level intermediate.", "edge_id": "edge-3", "evidence": [{"notes": "Reports hydrolysis of starch into maltooligosaccharides; flagged as broad trait-level core edge across taxa.", "reference": "DOI:10.1007/s00018-023-04812-w"}], "predicate": "is hydrolyzed to", "predicate_id": null, "source": "starch (amylose/amylopectin)", "target": "maltooligosaccharides"}, {"description": "Alpha-amylase endo-cleaves starch alpha-1,4 bonds to generate maltooligosaccharides.", "edge_id": "edge-4", "evidence": [{"notes": "An alpha-amylase hydrolyzes starch into maltooligosaccharides; generic alpha-amylase (EC 3.2.1.1) chemistry.", "reference": "DOI:10.1007/s00018-023-04812-w"}], "predicate": "hydrolyzes", "predicate_id": null, "source": "amylases / starch-active glycoside hydrolases", "target": "maltooligosaccharides"}, {"description": "Alpha-glucosidase/glucoamylase exo-acts on maltooligosaccharides to release glucose.", "edge_id": "edge-5", "evidence": [{"notes": "Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose; generic terminal exo-hydrolysis step.", "reference": "DOI:10.1128/mbio.01506-24"}], "predicate": "degrades", "predicate_id": null, "source": "alpha-glucosidase / glucoamylase", "target": "maltooligosaccharides"}, {"description": "Exo-amylolytic release of glucose monomers from maltooligosaccharides.", "edge_id": "edge-6", "evidence": [{"notes": "Alpha-glucosidase/glucoamylase degrades maltooligosaccharides to glucose, the terminal assimilable sugar.", "reference": "DOI:10.1128/mbio.01506-24"}], "predicate": "produces", "predicate_id": null, "source": "alpha-glucosidase / glucoamylase", "target": "glucose"}], "graph_id": "starch_degradation_amylase", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Exo-acting glycoside hydrolase that releases glucose from maltooligosaccharides.", "grounding": null, "id": "alpha_glucosidase", "is_orphan": false, "label": "alpha-glucosidase / glucoamylase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Alpha-amylase family enzymes acting on starch.", "grounding": null, "id": "amylase", "is_orphan": false, "label": "amylases / starch-active glycoside hydrolases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Monomeric sugar released from starch hydrolysis.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Short alpha-1,4-linked glucose oligomers released by endo-amylase cleavage of starch.", "grounding": null, "id": "maltooligosaccharides", "is_orphan": false, "label": "maltooligosaccharides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Alpha-glucan polysaccharide substrate of amylolytic degradation.", "grounding": null, "id": "starch", "is_orphan": false, "label": "starch (amylose/amylopectin)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Hydrolysis of starch to assimilable sugars.", "grounding": "traitmech:000115", "id": "starch_degradation_trait", "is_orphan": false, "label": "starch degradation", "node_type": "TRAIT", "xrefs": []}], "title": "Starch degradation hydrolyzes amylose/amylopectin to glucose"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +677,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

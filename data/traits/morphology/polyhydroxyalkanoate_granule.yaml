@@ -1,8 +1,8 @@
 identifier: traitmech:000067
 label: polyhydroxyalkanoate granule
-definition: An intracellular storage inclusion composed of polyhydroxyalkanoate
-  (e.g. polyhydroxybutyrate, PHB), a carbon and energy reserve accumulated as
-  cytoplasmic granules.
+definition: An intracellular storage inclusion composed of polyhydroxyalkanoate (e.g.
+  polyhydroxybutyrate, PHB), a carbon and energy reserve accumulated as cytoplasmic
+  granules.
 definition_source: DOI:10.1128/mr.54.4.450-472.1990
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -26,9 +26,8 @@ evidence:
 causal_graphs:
 - graph_id: pha_granule_carbon_energy_storage
   title: PHA granules store carbon and energy as polyhydroxyalkanoate
-  description: Evidence-backed causal sketch linking polyhydroxyalkanoate
-    biosynthesis to intracellular storage granules serving as carbon and energy
-    reserves.
+  description: Evidence-backed causal sketch linking polyhydroxyalkanoate biosynthesis
+    to intracellular storage granules serving as carbon and energy reserves.
   nodes:
   - node_id: pha_granule_trait
     label: polyhydroxyalkanoate granule
@@ -43,6 +42,52 @@ causal_graphs:
     label: carbon and energy storage
     node_type: BIOLOGICAL_PROCESS
     description: Accumulation of carbon/energy reserves under nutrient excess.
+  - node_id: nutrient_limitation_high_cn
+    label: nutrient limitation / high C:N ratio
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High carbon-to-nitrogen ratio and depletion of N, S, or P with excess
+      carbon.
+  - node_id: pha_accumulation
+    label: polyhydroxyalkanoate accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular accumulation of PHA/PHB polymer.
+  - node_id: pha_synthase_phac
+    label: PHA synthase (PhaC)
+    node_type: GENE_OR_PROTEIN
+    description: Polymerase that condenses (R)-3-hydroxyacyl-CoA into PHA/PHB polymer.
+  - node_id: phasin_phap
+    label: phasin (PhaP)
+    node_type: GENE_OR_PROTEIN
+    description: Granule-associated protein coating and stabilizing PHB chains at
+      the granule surface.
+  - node_id: phb_granule_size_number
+    label: PHB granule size and number
+    node_type: QUALITY
+    description: Morphological quality of granule dimensions and count per cell.
+  - node_id: phar_regulator
+    label: PhaR regulator
+    node_type: GENE_OR_PROTEIN
+    description: Transcriptional repressor that binds phaP promoters.
+  - node_id: phap_gene
+    label: phaP gene
+    node_type: GENE_OR_PROTEIN
+    description: Gene encoding phasin.
+  - node_id: pha_depolymerase_phaz
+    label: PHA depolymerase (PhaZ)
+    node_type: GENE_OR_PROTEIN
+    description: Intracellular depolymerase cleaving PHB to 3-hydroxybutyrate.
+  - node_id: phb_mobilization
+    label: PHB mobilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Degradation and utilization of stored PHB as carbon/energy reserve.
+  - node_id: carbon_starvation
+    label: carbon starvation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Starvation or exogenous carbon depletion.
+  - node_id: phb_degradation
+    label: PHB degradation
+    node_type: BIOLOGICAL_PROCESS
+    description: Breakdown of stored PHB polymer.
   edges:
   - subject: polyhydroxyalkanoate
     predicate: located in
@@ -50,8 +95,8 @@ causal_graphs:
     description: PHA polymer accumulates inside cytoplasmic granules.
     evidence:
     - reference: DOI:10.1128/mr.54.4.450-472.1990
-      notes: Anderson & Dawes describe PHAs (chiefly PHB) as carbon/energy
-        reserves stored as cytoplasmic granules.
+      notes: Anderson & Dawes describe PHAs (chiefly PHB) as carbon/energy reserves
+        stored as cytoplasmic granules.
     predicate_id: biolink:located_in
   - subject: pha_granule_trait
     predicate: enables
@@ -59,9 +104,69 @@ causal_graphs:
     description: PHA granules realize the carbon/energy storage function.
     evidence:
     - reference: DOI:10.1038/s41579-020-0413-0
-      notes: Greening & Lithgow include PHA bodies among bacterial intracellular
-        organelles.
+      notes: Greening & Lithgow include PHA bodies among bacterial intracellular organelles.
     predicate_id: RO:0002327
+  - subject: nutrient_limitation_high_cn
+    predicate: increases
+    object: pha_accumulation
+    description: High C/N ratio and N/S/P depletion stimulate PHA accumulation.
+    evidence:
+    - reference: DOI:10.3390/molecules29102293
+      notes: PHA accumulation is stimulated by a high C/N ratio, depletion of N, S,
+        and P, or a low rate of respiration.
+  - subject: nutrient_limitation_high_cn
+    predicate: induces
+    object: pha_accumulation
+    description: Nutrient limitation with excess carbon induces PHA accumulation.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      notes: Environmental triggers include nutrient limitation and excess carbon
+        that induce PHA accumulation.
+  - subject: pha_synthase_phac
+    predicate: catalyzes
+    object: polyhydroxyalkanoate
+    description: PhaC polymerizes hydroxyacyl-CoA into PHA/PHB polymer.
+    evidence:
+    - reference: DOI:10.3390/polym15143027
+      notes: PhbC polymerizing beta-hydroxybutyryl-CoA into PHB.
+  - subject: phasin_phap
+    predicate: stabilizes
+    object: polyhydroxyalkanoate
+    description: Phasins coat and stabilize PHB chains at the granule surface.
+    evidence:
+    - reference: DOI:10.3390/polym15143027
+      notes: Phasins are GAPs that coat and stabilize PHB chains.
+  - subject: phasin_phap
+    predicate: controls
+    object: phb_granule_size_number
+    description: Phasins control the size and number of PHB granules.
+    evidence:
+    - reference: DOI:10.3390/polym15143027
+      notes: Phasins control the size of the PHB granules.
+  - subject: phar_regulator
+    predicate: represses transcription of
+    object: phap_gene
+    description: PhaR binds phaP promoters and represses transcription.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107523
+      notes: PhaR is a transcriptional repressor that binds phaP promoters and represses
+        their transcription.
+  - subject: pha_depolymerase_phaz
+    predicate: mediates
+    object: phb_mobilization
+    description: PHB depolymerase cleaves PHB to 3-hydroxybutyrate, mediating mobilization.
+    evidence:
+    - reference: DOI:10.3390/polym15143027
+      notes: PHB mobilization involves a PHB depolymerase (PhbZ/PhaZ) that cleaves
+        PHB to beta-hydroxybutyrate.
+  - subject: carbon_starvation
+    predicate: triggers
+    object: phb_degradation
+    description: Starvation or exogenous carbon depletion triggers PHB degradation.
+    evidence:
+    - reference: DOI:10.3390/polym15143027
+      notes: PHB is degraded during starvation/exogenous carbon depletion or stationary
+        phase.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -74,4 +179,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (PHA granule carbon/energy storage)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

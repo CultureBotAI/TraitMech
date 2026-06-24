@@ -42,6 +42,50 @@ causal_graphs:
     node_type: CHEMICAL
     description: Monomeric assimilable sugar released from cellulose.
     grounding: CHEBI:17234
+  - node_id: cellulose
+    label: cellulose
+    node_type: CHEMICAL
+    description: Beta-1,4-linked glucose polymer substrate.
+  - node_id: endoglucanase
+    label: endoglucanase
+    node_type: GENE_OR_PROTEIN
+    description: Cellulase that cleaves internal bonds of cellulose chains.
+  - node_id: cellobiohydrolase
+    label: cellobiohydrolase / exoglucanase
+    node_type: GENE_OR_PROTEIN
+    description: Cellulase that processively releases cellobiose from chain ends.
+  - node_id: beta_glucosidase
+    label: beta-glucosidase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme hydrolyzing cellobiose to glucose.
+  - node_id: cellobiose
+    label: cellobiose
+    node_type: CHEMICAL
+    description: Glucose disaccharide intermediate of cellulose hydrolysis.
+  - node_id: cellulosome
+    label: cellulosome
+    node_type: CELLULAR_LOCALIZATION
+    description: Multienzyme complex built on scaffoldins for cellulose degradation.
+  - node_id: scaffoldin
+    label: scaffoldin
+    node_type: GENE_OR_PROTEIN
+    description: Non-catalytic backbone protein of the cellulosome.
+  - node_id: cohesin_domain
+    label: cohesin domain
+    node_type: GENE_OR_PROTEIN
+    description: Scaffoldin module that binds dockerin domains.
+  - node_id: dockerin_domain
+    label: dockerin domain
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme-borne module that binds scaffoldin cohesin domains.
+  - node_id: ccr
+    label: carbon catabolite repression
+    node_type: BIOLOGICAL_PROCESS
+    description: Glucose-signal-driven repression of catabolic gene transcription.
+  - node_id: cellulolytic_genes
+    label: cellulolytic / lignocellulose-catabolic genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes encoding cellulose-degrading enzymes.
   edges:
   - subject: cellulase
     predicate: enables
@@ -60,6 +104,70 @@ causal_graphs:
     - reference: DOI:10.1016/j.cbpa.2015.10.018
       notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation.
     predicate_id: METPO:2000202
+  - subject: endoglucanase
+    predicate: degrades
+    object: cellulose
+    description: Endoglucanase participates in concerted hydrolysis of cellulose.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Complete degradation of cellulose to glucose requires concerted action
+        of cellobiohydrolases, endoglucanases and beta-glucosidases.
+  - subject: cellobiohydrolase
+    predicate: degrades
+    object: cellulose
+    description: Cellobiohydrolase/exoglucanase participates in concerted hydrolysis
+      of cellulose.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Complete degradation of cellulose to glucose requires concerted action
+        of cellobiohydrolases, endoglucanases and beta-glucosidases.
+  - subject: beta_glucosidase
+    predicate: hydrolyzes
+    object: cellobiose
+    description: Beta-glucosidase hydrolyzes cellobiose in the downstream saccharification
+      step.
+    evidence:
+    - reference: DOI:10.1186/s13568-023-01658-0
+      notes: Beta-glucosidase activity converting cellobiose into glucose.
+  - subject: beta_glucosidase
+    predicate: produces
+    object: glucose
+    description: Beta-glucosidase releases glucose from cellobiose.
+    evidence:
+    - reference: DOI:10.1186/s13568-023-01658-0
+      notes: Beta-glucosidase activity converting cellobiose into glucose; product
+        edge directly stated.
+  - subject: cellulosome
+    predicate: has backbone component
+    object: scaffoldin
+    description: Cellulosomes are multienzyme complexes built on scaffoldins.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: They are multienzyme complexes built on scaffoldins.
+  - subject: scaffoldin
+    predicate: contains
+    object: cohesin_domain
+    description: Scaffoldins bear cohesin modules.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1288286
+      notes: Scaffoldins are the non-catalytic backbone and bear modules called cohesin.
+  - subject: dockerin_domain
+    predicate: binds to
+    object: cohesin_domain
+    description: Dockerin-cohesin interaction assembles enzymes onto the scaffoldin.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Dockerin modules interacting with scaffoldin cohesin modules; canonical
+        assembly interaction.
+  - subject: ccr
+    predicate: represses
+    object: cellulolytic_genes
+    description: Carbon catabolite repression represses cellulolytic/lignocellulose-catabolic
+      genes when glucose signals are high.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic
+        genes when glucose-derived signals are high.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -78,4 +186,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17234×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

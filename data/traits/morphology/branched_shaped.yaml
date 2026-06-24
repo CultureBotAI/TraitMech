@@ -51,6 +51,43 @@ causal_graphs:
     label: lateral branch outgrowth
     node_type: BIOLOGICAL_PROCESS
     description: Emergence and extension of a new hyphal branch.
+  - node_id: polarisome_splitting
+    label: DivIVA polarisome splitting
+    node_type: BIOLOGICAL_PROCESS
+    description: Splitting of polarisomes at growing tips generating daughter polarisomes.
+  - node_id: divIVA_scy_filp_polarisome
+    label: DivIVA/Scy/FilP polarisome
+    node_type: GENE_OR_PROTEIN
+    description: Apical polarisome complex of DivIVA with Scy and FilP.
+  - node_id: pg_enzyme_localization
+    label: localization of peptidoglycan synthases and hydrolases to the apex
+    node_type: BIOLOGICAL_PROCESS
+    description: Recruitment of cell-wall synthesis enzymes to the growing pole.
+  - node_id: afsk_divIVA_phosphorylation
+    label: AfsK-mediated DivIVA phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: AfsK kinase phosphorylation of DivIVA driving new polarisome formation.
+  - node_id: multiple_polarisomes_hyperbranching
+    label: multiple new polarisomes and hyperbranching
+    node_type: STATE
+    description: Formation of extra polarisomes producing a hyperbranching phenotype.
+  - node_id: sppa_divIVA_dephosphorylation
+    label: SppA dephosphorylation of DivIVA
+    node_type: BIOLOGICAL_PROCESS
+    description: SppA phosphatase reversal of DivIVA phosphorylation opposing hyperbranching.
+  - node_id: cell_wall_stress
+    label: cell-wall stress (bacitracin/vancomycin)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Antibiotic-induced cell-wall stress signaling.
+  - node_id: stlp_membrane_microdomains
+    label: StlP membrane microdomain formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Stomatin-like protein StlP organizing membrane microdomains governing
+      polar growth.
+  - node_id: proper_polar_growth_branch_spacing
+    label: proper polar growth and normal branch spacing
+    node_type: STATE
+    description: Regulated polar growth yielding normal tip-to-branch distance.
   edges:
   - subject: divIVA_foci
     predicate: marks
@@ -98,6 +135,62 @@ causal_graphs:
       snippet: initiation of new branches
       notes: Supports branched morphology as a Streptomyces growth phenotype.
     predicate_id: METPO:2007400
+  - subject: polarisome_splitting
+    predicate: causes
+    object: lateral_branch_outgrowth
+    description: Polarisome splitting at growing tips generates daughter polarisomes
+      that coordinate new lateral branch emergence.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Splitting of polarisomes at growing tips generates daughter polarisomes
+        that coordinate emergence of new lateral branches upon reaching a critical
+        size.
+  - subject: divIVA_scy_filp_polarisome
+    predicate: localizes
+    object: pg_enzyme_localization
+    description: The DivIVA/Scy/FilP polarisome localizes peptidoglycan synthases
+      and hydrolases to the apex.
+    evidence:
+    - reference: DOI:10.1128/mbio.01492-24
+      notes: The polarisome composed of DivIVA with Scy and FilP localizes cell-wall
+        enzymes to one pole, linking polarity establishment to branching.
+  - subject: afsk_divIVA_phosphorylation
+    predicate: stimulates
+    object: multiple_polarisomes_hyperbranching
+    description: AfsK-mediated DivIVA phosphorylation disassembles the apical polarisome
+      and stimulates multiple new polarisomes.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Constitutive AfsK activity/high DivIVA phosphorylation disassembles the
+        apical polarisome and stimulates multiple new polarisomes, producing a hyperbranching
+        phenotype.
+  - subject: sppa_divIVA_dephosphorylation
+    predicate: opposes
+    object: multiple_polarisomes_hyperbranching
+    description: SppA dephosphorylation of DivIVA opposes AfsK-driven hyperbranching,
+      defining a reversible branching-control circuit.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: AfsK phosphorylates DivIVA in response to bacitracin/vancomycin stress,
+        while SppA dephosphorylates DivIVA, defining a reversible branching-control
+        circuit.
+  - subject: cell_wall_stress
+    predicate: activates
+    object: afsk_divIVA_phosphorylation
+    description: Cell-wall stress activates AfsK-dependent DivIVA phosphorylation.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: AfsK phosphorylates DivIVA in response to cell-wall stress (e.g., bacitracin,
+        vancomycin).
+  - subject: stlp_membrane_microdomains
+    predicate: enables
+    object: proper_polar_growth_branch_spacing
+    description: StlP membrane microdomain formation enables proper polar growth and
+      normal branch spacing.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-58093-x
+      notes: Loss of StlP leads to branching of filaments; constitutive stlP expression
+        notably reduces lateral branching and increases tip-to-branch distance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896783+00:00'
   curator: seed_from_metpo
@@ -127,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

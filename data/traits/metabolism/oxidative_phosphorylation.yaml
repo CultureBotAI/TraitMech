@@ -52,6 +52,46 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy-rich nucleotide product.
+  - node_id: nadh
+    label: NADH
+    node_type: CHEMICAL
+    description: Reduced electron donor feeding the respiratory chain.
+  - node_id: complex_i
+    label: Complex I / NADH:quinone oxidoreductase (NDH-1)
+    node_type: GENE_OR_PROTEIN
+    description: Proton-translocating NADH:quinone oxidoreductase entry complex.
+  - node_id: succinate
+    label: succinate
+    node_type: CHEMICAL
+    description: Electron donor oxidized by succinate dehydrogenase.
+  - node_id: succinate_dehydrogenase
+    label: succinate dehydrogenase / Complex II
+    node_type: GENE_OR_PROTEIN
+    description: Complex II coupling succinate oxidation to quinone reduction.
+  - node_id: quinone_pool
+    label: quinone pool
+    node_type: CHEMICAL
+    description: Membrane quinone/quinol electron carrier pool (ubiquinone/menaquinone).
+  - node_id: proton
+    label: proton
+    node_type: CHEMICAL
+    description: Translocated ion forming the transmembrane gradient.
+  - node_id: proton_translocation
+    label: proton translocation
+    node_type: BIOLOGICAL_PROCESS
+    description: Vectorial transmembrane transfer of protons by respiratory complexes.
+  - node_id: terminal_oxidase
+    label: terminal oxidase
+    node_type: GENE_OR_PROTEIN
+    description: Respiratory enzyme reducing molecular oxygen to water.
+  - node_id: oxygen
+    label: oxygen
+    node_type: CHEMICAL
+    description: Terminal electron acceptor in aerobic respiration.
+  - node_id: heme_copper_oxidase
+    label: heme-copper oxidase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-pumping terminal oxidase class.
   edges:
   - subject: oxidative_phosphorylation_trait
     predicate: uses pathway
@@ -99,6 +139,59 @@ causal_graphs:
       snippet: synthesis of ATP is also driven by a proton motive force
       notes: ATP synthase review supports pmf-driven ATP synthesis.
     predicate_id: METPO:2000202
+  - subject: nadh
+    predicate: is oxidized by
+    object: complex_i
+    description: Complex I oxidizes NADH at the respiratory chain entry point.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      notes: complex I catalyzes the oxidation of NADH by ubiquinone (general prokaryotic
+        claim).
+  - subject: complex_i
+    predicate: reduces
+    object: quinone_pool
+    description: Complex I transfers electrons from NADH to the quinone pool.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      notes: oxidation of NADH by ubiquinone; reduces the membrane quinone pool.
+  - subject: complex_i
+    predicate: translocates
+    object: proton
+    description: Complex I couples redox chemistry to transmembrane proton translocation.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      notes: coupled with the vectorial transmembrane transfer of four H+ ions.
+  - subject: succinate
+    predicate: is oxidized by
+    object: succinate_dehydrogenase
+    description: Succinate dehydrogenase oxidizes succinate, reducing quinone.
+    evidence:
+    - reference: DOI:10.1007/s10863-024-10041-y
+      notes: succinate dehydrogenase catalyzes the two-electron reduction of quinone
+        by succinate.
+  - subject: proton_translocation
+    predicate: generates
+    object: proton_motive_force
+    description: Vectorial proton translocation establishes the proton motive force.
+    evidence:
+    - reference: DOI:10.3390/ijms252413421
+      notes: energy conservation in the form of an electrochemical gradient (proton
+        motive force, pmf).
+  - subject: terminal_oxidase
+    predicate: reduces
+    object: oxygen
+    description: Terminal oxidases catalyze four-electron reduction of O2 to water.
+    evidence:
+    - reference: DOI:10.3390/ijms25021277
+      notes: Terminal oxidases catalyze four-electron reduction of O2 to 2H2O (general
+        bacterial claim).
+  - subject: heme_copper_oxidase
+    predicate: translocates
+    object: proton
+    description: Heme-copper oxidases act as proton pumps contributing to PMF.
+    evidence:
+    - reference: DOI:10.3390/ijms25021277
+      notes: Heme-copper oxidases are true proton pumps (general claim).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.912667+00:00'
   curator: seed_from_metpo
@@ -146,4 +239,10 @@ curation_history:
   action: RETYPE_CAUSAL_NODES
   changes: 'Re-typed 1 causal-node node_type field(s) to align with CausalNodeTypeEnum
     semantics: proton motive force: BIOLOGICAL_PROCESS → STATE ×1.'
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

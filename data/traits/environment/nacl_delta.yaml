@@ -42,6 +42,48 @@ causal_graphs:
     label: tolerance breadth
     node_type: BIOLOGICAL_PROCESS
     description: Span between the minimum and maximum growth-supporting NaCl.
+  - node_id: hyperosmotic_upshift
+    label: hyperosmotic upshift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A rise in ambient NaCl/osmolarity imposing osmotic stress.
+  - node_id: potassium_uptake
+    label: potassium ion uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid import of K+ as the principal cytoplasmic cation during osmotic
+      upshift.
+  - node_id: osmoadaptation
+    label: response to osmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular adjustment of osmolyte and ion pools in response to osmotic
+      stress.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation or synthesis of neutral compatible solutes (glycine
+      betaine, trehalose, ectoine, proline).
+  - node_id: salt_out_strategy
+    label: salt-out strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation by excluding Na+ while accumulating organic compatible
+      solutes.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation by accumulating intracellular KCl matching environmental
+      salinity, favored at very high salt.
+  - node_id: high_maximal_nacl_tolerance
+    label: high maximal NaCl tolerance
+    node_type: QUALITY
+    description: Capacity to grow at very high, near-saturating NaCl concentrations.
+  - node_id: mechanosensitive_channels
+    label: mechanosensitive channels (MscL/MscS)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane safety-valve channels releasing solutes during sudden hypoosmotic
+      shocks.
+  - node_id: hypoosmotic_shock
+    label: hypoosmotic shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A sudden drop in ambient salinity causing turgor stress.
   edges:
   - subject: osmoadaptive_flexibility
     predicate: enables
@@ -71,6 +113,61 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: compatible_solute_accumulation
+    predicate: enables
+    object: osmoadaptation
+    description: Accumulation of neutral compatible solutes enables osmoadaptation
+      and broader salt-supported growth.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: To avoid K+-induced cytotoxicity and high ionic strength, cells accumulate
+        or synthesize neutral compatible solutes (glycine betaine, trehalose, ectoine,
+        proline).
+  - subject: hyperosmotic_upshift
+    predicate: causes
+    object: potassium_uptake
+    description: Hyperosmotic upshift triggers rapid K+ import as an early osmoadaptive
+      response.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: Cells import large amounts of K+ during osmotic upshift; potassium is
+        the principal cytoplasmic cation.
+  - subject: potassium_uptake
+    predicate: contributes to
+    object: osmoadaptation
+    description: K+ accumulation is a core early osmoadaptive response to increased
+      NaCl.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: Cytoplasmic K+ levels ~250 mM (E. coli) to ~500 mM (C. glutamicum, L.
+        lactis) accumulate as a core osmoadaptive response.
+  - subject: salt_out_strategy
+    predicate: uses
+    object: compatible_solute_accumulation
+    description: The salt-out strategy relies on accumulation of organic compatible
+      solutes.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Salt-out excludes Na+ while accumulating organic compatible solutes like
+        sugars, polyalcohols, ectoine, trehalose, glycine-betaine.
+  - subject: salt_in_strategy
+    predicate: supports
+    object: high_maximal_nacl_tolerance
+    description: The salt-in strategy supports very high maximal salinity tolerance,
+      extending the upper NaCl limit.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Salt-out is energetically costly and less suited to saturating salinities;
+        salt-in is favored at very high salt.
+  - subject: mechanosensitive_channels
+    predicate: protects against
+    object: hypoosmotic_shock
+    description: Mechanosensitive channels act as safety valves protecting cells against
+      sudden hypoosmotic shocks at the low-salinity end of the range.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Mechanosensitive (Msc) channels and compatible-solute efflux systems
+        act as safety valves during sudden hypoosmotic shocks.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816534+00:00'
   curator: seed_from_metpo
@@ -94,4 +191,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

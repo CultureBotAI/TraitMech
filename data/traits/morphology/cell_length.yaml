@@ -50,6 +50,31 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell division that resets cell length each generation.
     grounding: GO:0000910
+  - node_id: elongasome
+    label: Rod complex (elongasome)
+    node_type: GENE_OR_PROTEIN
+    description: MreB/RodA/PBP2-based multiprotein complex driving cell elongation.
+  - node_id: sidewall_pg_synthesis
+    label: sidewall peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Lateral/sidewall PG insertion that lengthens the cell prior to division.
+  - node_id: ftsa_zipa
+    label: FtsA and ZipA (proto-ring tethers)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane tethers that attach FtsZ to the membrane forming the proto-ring.
+  - node_id: ftswi_septal_synthase
+    label: FtsWI septal PG synthase
+    node_type: GENE_OR_PROTEIN
+    description: FtsW/FtsI complex that drives septal peptidoglycan synthesis.
+  - node_id: septum_synthesis
+    label: septum synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Septal PG synthesis driving division constriction.
+  - node_id: min_nucleoid_occlusion
+    label: Min system and nucleoid occlusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial regulators acting as localized negative regulators of FtsZ
+      polymerization.
   edges:
   - subject: growth_rate
     predicate: contributes to
@@ -97,6 +122,61 @@ causal_graphs:
     - reference: DOI:10.1016/j.cell.2014.11.022
       snippet: cells grow by a fixed amount between divisions
       notes: Supports division as the event that resets length each generation.
+  - subject: elongasome
+    predicate: mediates
+    object: sidewall_pg_synthesis
+    description: The Rod complex/elongasome drives sidewall peptidoglycan synthesis.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2023.1205488
+      notes: elongasome drives sidewall peptidoglycan synthesis necessary for rod
+        shape and lengthening of the cell prior to division.
+  - subject: sidewall_pg_synthesis
+    predicate: contributes to
+    object: cell_length_trait
+    description: Sidewall PG synthesis lengthens the cell prior to division.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2023.1205488
+      notes: sidewall peptidoglycan synthesis necessary for the lengthening of the
+        cell prior to division.
+  - subject: elongasome
+    predicate: mediates
+    object: growth_rate
+    description: The Rod complex/elongasome mediates cell elongation.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-07279-y
+      notes: elongation is mediated by the Rod complex (the elongasome).
+  - subject: ftsa_zipa
+    predicate: attaches
+    object: ftsz_ring
+    description: FtsA and ZipA tether FtsZ to the membrane forming the proto-ring.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00942-x
+      notes: FtsZ membrane attachment depends on tethers FtsA and ZipA (the proto-ring).
+  - subject: ftswi_septal_synthase
+    predicate: drives
+    object: septum_synthesis
+    description: FtsWI septal PG synthases drive septum synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00942-x
+      notes: essential septal peptidoglycan synthases FtsW and FtsI (FtsWI) that drive
+        septum synthesis.
+  - subject: septum_synthesis
+    predicate: contributes to
+    object: cytokinesis
+    description: Septum synthesis drives division constriction completing cytokinesis.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00942-x
+      notes: inactivation of essential divisome proteins blocks division, altering
+        cell length; septum synthesis drives division constriction.
+  - subject: min_nucleoid_occlusion
+    predicate: regulates
+    object: division_site_placement
+    description: Min system and nucleoid occlusion determine division site placement
+      via localized negative regulation of FtsZ polymerization.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00942-x
+      notes: the Min system and nucleoid occlusion act as localized negative regulators
+        of FtsZ polymerization and thus determine division site placement.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918489+00:00'
   curator: seed_from_metpo
@@ -132,4 +212,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0000910×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

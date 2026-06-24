@@ -50,6 +50,26 @@ causal_graphs:
     label: corkscrew motility
     node_type: BIOLOGICAL_PROCESS
     description: Helical or undulating movement produced by periplasmic flagella.
+  - node_id: flbb_ring
+    label: FlbB periplasmic ring
+    node_type: GENE_OR_PROTEIN
+    description: Spirochete-specific FlbB protein ring that forms around the flagellar
+      rotor and scaffolds the collar.
+  - node_id: flagellar_rotor
+    label: flagellar rotor
+    node_type: GENE_OR_PROTEIN
+    description: Rotating core of the flagellar motor (MS/C ring) around which the
+      FlbB ring forms.
+  - node_id: stator_complex
+    label: stator complex
+    node_type: GENE_OR_PROTEIN
+    description: Ion-powered torque-generating stator units recruited around the rotor
+      for flagellar rotation.
+  - node_id: wavy_cell_morphology
+    label: wavy / flat-wave cell morphology
+    node_type: QUALITY
+    description: Helical/flat-wave cell body shape established by periplasmic flagella
+      acting like a cytoskeleton.
   edges:
   - subject: periplasmic_flagella
     predicate: defines
@@ -108,6 +128,42 @@ causal_graphs:
       snippet: mechanics of spirochete motility
       notes: Supports cell-body mechanics as the phenotype-level expression of periplasmic
         flagella.
+  - subject: flbb_ring
+    predicate: forms ring around
+    object: flagellar_rotor
+    description: FlbB forms a novel periplasmic ring around the flagellar rotor, a
+      structural scaffold for the spirochete motor.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012812
+      notes: '"FlbB forms a novel periplasmic ring around the rotor"; broadly applicable
+        to spirochetes with FlbB homologs.'
+  - subject: flbb_ring
+    predicate: recruits
+    object: stator_complex
+    description: The FlbB-based collar scaffold supports recruitment of torque-generating
+      stator complexes around the rotor.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012812
+      notes: '"acts as a scaffold supporting collar assembly and subsequent recruitment
+        of stator complexes"'
+  - subject: stator_complex
+    predicate: generates
+    object: torque_generation
+    description: Ion-powered stator complexes generate the torque that drives periplasmic
+      flagellar rotation.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012812
+      notes: '"bridges the rotor and 16 torque-generating stator complexes in each
+        flagellar motor"; stators are the torque-generating units.'
+  - subject: periplasmic_flagella
+    predicate: contributes to
+    object: wavy_cell_morphology
+    description: Periplasmic flagella establish the wavy/flat-wave cell morphology,
+      acting like a cytoskeleton.
+    evidence:
+    - reference: DOI:10.3390/biom10040550
+      notes: '"Another important role of the PF is to establish a wavy morphology,
+        similar to a cytoskeleton"'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.907078+00:00'
   curator: seed_from_metpo
@@ -144,4 +200,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

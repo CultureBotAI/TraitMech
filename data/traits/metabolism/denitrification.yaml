@@ -18,8 +18,8 @@ evidence:
   notes: Zumft reviews the cell biology and molecular basis of denitrification, the
     stepwise respiratory reduction of nitrate to dinitrogen.
 - reference: DOI:10.1038/nrmicro.2018.9
-  notes: Kuypers et al. place denitrification as a nitrogen-loss branch of the
-    microbial nitrogen-cycling network.
+  notes: Kuypers et al. place denitrification as a nitrogen-loss branch of the microbial
+    nitrogen-cycling network.
 causal_graphs:
 - graph_id: denitrification_stepwise_nitrate_to_n2
   title: Denitrification reduces nitrate stepwise to N2
@@ -46,6 +46,51 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009061
     description: Energy-conserving respiration with a non-O2 terminal acceptor.
+  - node_id: narghi
+    label: respiratory nitrate reductase NarGHI
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound respiratory nitrate reductase catalyzing NO3- to NO2-.
+  - node_id: nitrate_reduction_to_nitrite
+    label: nitrate reduction to nitrite
+    node_type: BIOLOGICAL_PROCESS
+    description: 'First step of denitrification: reduction of nitrate to nitrite.'
+  - node_id: nirs
+    label: cytochrome cd1 nitrite reductase NirS
+    node_type: GENE_OR_PROTEIN
+    description: Cytochrome cd1 nitrite reductase reducing nitrite to nitric oxide.
+  - node_id: nitrite_reduction_to_no
+    label: nitrite reduction to nitric oxide
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of nitrite to nitric oxide, the committed denitrification
+      step.
+  - node_id: nor
+    label: nitric oxide reductase Nor
+    node_type: GENE_OR_PROTEIN
+    description: Nitric oxide reductase (norB) reducing NO to N2O.
+  - node_id: no_reduction_to_n2o
+    label: nitric oxide reduction to nitrous oxide
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of nitric oxide to nitrous oxide.
+  - node_id: nosz
+    label: nitrous oxide reductase NosZ
+    node_type: GENE_OR_PROTEIN
+    description: Nitrous oxide reductase (nosZ) reducing N2O to N2, terminal step.
+  - node_id: n2o_reduction_to_n2
+    label: nitrous oxide reduction to dinitrogen
+    node_type: BIOLOGICAL_PROCESS
+    description: 'Terminal step: reduction of N2O to N2.'
+  - node_id: oxygen
+    label: oxygen (O2)
+    node_type: CHEMICAL
+    description: Molecular oxygen, superordinate repressor of denitrification.
+  - node_id: denitrification_modularity
+    label: denitrification pathway modularity
+    node_type: QUALITY
+    description: Modular organization of denitrification enzyme steps across organisms.
+  - node_id: transient_intermediate_accumulation
+    label: transient accumulation of intermediates
+    node_type: STATE
+    description: Transient build-up of denitrification intermediates (NO2-, NO, N2O).
   edges:
   - subject: nitrate
     predicate: oxidized to
@@ -58,13 +103,67 @@ causal_graphs:
   - subject: denitrification_trait
     predicate: participates in
     object: anaerobic_respiration
-    description: Denitrification is a nitrate-respiring form of anaerobic
-      respiration.
+    description: Denitrification is a nitrate-respiring form of anaerobic respiration.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.9
-      notes: Kuypers et al. place denitrification within the microbial
-        nitrogen-cycling network.
+      notes: Kuypers et al. place denitrification within the microbial nitrogen-cycling
+        network.
     predicate_id: biolink:participates_in
+  - subject: narghi
+    predicate: enables
+    object: nitrate_reduction_to_nitrite
+    description: Respiratory nitrate reductase NarGHI catalyzes the first denitrification
+      step.
+    evidence:
+    - reference: DOI:10.1186/s40793-024-00643-9
+      notes: narG (NO3- reductase) supports the canonical first step of denitrification.
+  - subject: nirs
+    predicate: enables
+    object: nitrite_reduction_to_no
+    description: Cytochrome cd1 nitrite reductase NirS reduces nitrite to nitric oxide.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae020
+      notes: Nitrite is reduced to gaseous NO by nitrite reductases including cytochrome
+        cd1 NirS; strong general mechanistic support.
+  - subject: nor
+    predicate: enables
+    object: no_reduction_to_n2o
+    description: Nitric oxide reductase Nor reduces NO to N2O.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1218207
+      notes: NO reductase (NOR), encoded by norB, reduces NO to N2O; canonical N2O-producing
+        step.
+  - subject: nosz
+    predicate: enables
+    object: n2o_reduction_to_n2
+    description: Nitrous oxide reductase NosZ reduces N2O to N2, the terminal step.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1218207
+      notes: N2O reductase (NOS) catalyzes reduction of N2O to N2; canonical terminal
+        step.
+  - subject: nosz
+    predicate: part_of
+    object: denitrification_trait
+    description: NosZ is the final-step component of complete denitrification.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1407573
+      notes: Reduction of N2O to N2 requires nitrous oxide reductase encoded by nosZ.
+  - subject: oxygen
+    predicate: negatively regulates
+    object: denitrification_trait
+    description: Oxygen acts as a superordinate repressor of denitrification.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51688-w
+      notes: O2 acts as a superordinate repressor of denitrification.
+  - subject: denitrification_modularity
+    predicate: causes
+    object: transient_intermediate_accumulation
+    description: Modularity of the denitrification pathway drives transient accumulation
+      of intermediates.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51688-w
+      notes: The modular nature of the denitrification pathway affects phenotypes
+        and transient accumulation of intermediates.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -76,6 +175,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (nitrate → N2 denitrification) with
-    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted
-    PROPOSED to REVIEWED.
+    CHEBI/GO node groundings and METPO/biolink predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

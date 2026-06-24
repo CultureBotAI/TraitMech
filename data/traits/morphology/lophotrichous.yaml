@@ -18,8 +18,8 @@ evidence:
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
   title: Lophotrichous flagellation — polar tuft of flagella
-  description: Evidence-backed causal sketch linking a polar tuft of bacterial
-    flagella to the lophotrichous arrangement.
+  description: Evidence-backed causal sketch linking a polar tuft of bacterial flagella
+    to the lophotrichous arrangement.
   nodes:
   - node_id: lophotrichous_trait
     label: lophotrichous
@@ -35,12 +35,42 @@ causal_graphs:
     label: polar tuft placement
     node_type: QUALITY
     description: Multiple flagella clustered at one cell pole.
+  - node_id: flhf_protein
+    label: FlhF
+    node_type: GENE_OR_PROTEIN
+    description: SRP-type GTPase that positions and initiates polar flagellar assembly.
+  - node_id: cell_pole
+    label: cell pole
+    node_type: CELLULAR_LOCALIZATION
+    description: The cell pole where polar flagellar assembly is nucleated.
+  - node_id: flig_protein
+    label: FliG
+    node_type: GENE_OR_PROTEIN
+    description: Flagellar C-ring switch protein recruited during basal-body assembly.
+  - node_id: flif_protein
+    label: FliF
+    node_type: GENE_OR_PROTEIN
+    description: MS-ring protein forming the membrane base of the flagellar basal
+      body.
+  - node_id: fipa_protein
+    label: FipA
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-localized polar landmark/licensing factor required for normal
+      polar flagellar synthesis.
+  - node_id: flhg_protein
+    label: FlhG
+    node_type: GENE_OR_PROTEIN
+    description: MinD-type ATPase that regulates flagellar number by stimulating FlhF
+      GTPase activity.
+  - node_id: flagellar_number
+    label: flagellar number
+    node_type: QUALITY
+    description: Number of flagella assembled per cell.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
     object: lophotrichous_trait
-    description: A tuft of flagella at one pole defines the lophotrichous
-      arrangement.
+    description: A tuft of flagella at one pole defines the lophotrichous arrangement.
     evidence:
     - reference: DOI:10.1093/femsre/fuv034
       notes: Schuhmacher et al. describe polar tufts of flagella (lophotrichous).
@@ -51,19 +81,76 @@ causal_graphs:
     description: The lophotrichous pattern places multiple flagella at one pole.
     evidence:
     - reference: DOI:10.3390/biom9070279
-      notes: Flagellum review supports multiple flagellar filaments acting as
-        locomotory organelles.
+      notes: Flagellum review supports multiple flagellar filaments acting as locomotory
+        organelles.
     predicate_id: biolink:associated_with
+  - subject: flhf_protein
+    predicate: localizes to and promotes assembly at
+    object: cell_pole
+    description: GTP-bound FlhF localizes to the cell pole and recruits initial flagellar
+      building blocks.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: GTP-bound dimeric FlhF localizes to the cell pole and recruits initial
+        flagellar building blocks; deletion of flhF causes absence/mislocalization
+        of flagella.
+  - subject: flhf_protein
+    predicate: recruits
+    object: flig_protein
+    description: FlhF binds the C-ring protein FliG to initiate polar assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhF binds the C-ring protein FliG via its N-terminus.
+  - subject: flig_protein
+    predicate: captures
+    object: flif_protein
+    description: The FlhF:FliG complex recruits/captures FliF to promote MS-ring formation
+      at the pole.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: FliG captures FliF to promote MS-ring formation; recruits a functional
+        FliF/FliG complex to the pole.
+  - subject: fipa_protein
+    predicate: required for
+    object: lophotrichous_trait
+    description: FipA is required for normal FlhF activity and polar flagellar synthesis.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: FipA is required for normal FlhF activity and polar flagellar synthesis;
+        deletion abolishes swimming motility and yields cells lacking surface flagella.
+  - subject: flhg_protein
+    predicate: negatively regulates
+    object: flagellar_number
+    description: FlhG limits flagellar number; its loss causes hyper-flagellation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: Loss of FlhG causes hyper-flagellation; deletion of flhG produces hyper-flagellated
+        strains.
+  - subject: flhg_protein
+    predicate: stimulates GTPase activity of
+    object: flhf_protein
+    description: FlhG stimulates the GTPase activity of FlhF, converting GTP-bound
+      to GDP-bound FlhF.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhG stimulates the GTPase activity of the SRP-type GTPase FlhF, converting
+        GTP-bound FlhF to GDP-bound FlhF.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (lophotrichous flagellation);
-    sub-variant of flagellar arrangement.
+  changes: Proposed candidate MORPHOLOGY trait (lophotrichous flagellation); sub-variant
+    of flagellar arrangement.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (polar tuft) with GO node grounding
     and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

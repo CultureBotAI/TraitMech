@@ -90,6 +90,108 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>temperature decrease</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>membrane rigidification/thickening</strong>
+            
+            <p>Cooling reduces membrane fluidity and increases bilayer thickness, the initiating physical signal for adaptation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Membrane rigidification and increased thickness act as the primary physical signal upon cooling.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>fatty-acid desaturation</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Double bonds disrupt tight acyl-chain packing, reversing cold-induced rigidification.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Desaturation fluidizes the membrane and reduces thickness; strong and broadly conserved principle.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>anteiso-branched fatty acids</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity</strong>
+            
+            <p>Anteiso chains disorder lipids effectively, supporting growth at lower temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/cells12101353</code>
+                
+                <span class="meta">Anteiso-BCFAs are more effective at fluidizing membranes than iso-BCFAs; generalizable across many Gram-positives.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>branched-chain amino acids</strong>
+            <span class="edge-predicate">precursor for</span>
+            <strong>anteiso-branched fatty acids</strong>
+            
+            <p>Branched-chain amino acids supply carbon skeletons for iso/anteiso-branched fatty acid synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">Iso- and anteiso-branched FAs are derived from valine, leucine, and isoleucine precursors.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>RNA thermometer melting</strong>
+            <span class="edge-predicate">exposes</span>
+            <strong>Shine-Dalgarno sequence exposure</strong>
+            
+            <p>Temperature-dependent melting of RNA thermometers exposes the Shine-Dalgarno sequence to control translation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">5&#39;-UTR cis-elements occlude or expose Shine-Dalgarno sequences to control translation; strong general mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>temperature shift</strong>
+            <span class="edge-predicate">changes</span>
+            <strong>DNA supercoiling</strong>
+            
+            <p>DNA topology functions as a thermosensor that globally reprograms transcription after temperature change.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">DNA topology acts as a thermosensor; cold stress enhances negative DNA supercoiling.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -235,6 +337,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -594,7 +702,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking lower-mesophile adaptation to a temperature growth range of approximately 22\u201327 \u00b0C.", "edges": [{"description": "Lower-mesophile adaptation enables growth across 22\u201327 \u00b0C.", "evidence": [{"notes": "Supports homoviscous mesophile adaptation as the lower-mesophile range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "lower_mesophile_adaptation", "target": "temperature_range_mid1_trait"}, {"description": "Temperature range mid1 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 22\u201327 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_mid1_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Lower-mesophile adaptation enables growth across 22\u201327 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous mesophile adaptation as the lower-mesophile range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "lower-mesophile adaptation", "target": "temperature range mid1"}, {"description": "Temperature range mid1 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 22\u201327 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range mid1", "target": "temperature range"}], "graph_id": "temperature_range_mid1_lower_mesophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mesophile membrane and enzyme adaptation sustaining growth at modest ambient temperatures.", "grounding": null, "id": "lower_mesophile_adaptation", "is_orphan": false, "label": "lower-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 22\u201327 \u00b0C.", "grounding": "METPO:1000450", "id": "temperature_range_mid1_trait", "is_orphan": false, "label": "temperature range mid1", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-range-mid1 lower-mesophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking lower-mesophile adaptation to a temperature growth range of approximately 22\u201327 \u00b0C.", "edges": [{"description": "Lower-mesophile adaptation enables growth across 22\u201327 \u00b0C.", "evidence": [{"notes": "Supports homoviscous mesophile adaptation as the lower-mesophile range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "lower_mesophile_adaptation", "target": "temperature_range_mid1_trait"}, {"description": "Temperature range mid1 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 22\u201327 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_mid1_trait", "target": "temperature_range"}, {"description": "Cooling reduces membrane fluidity and increases bilayer thickness, the initiating physical signal for adaptation.", "evidence": [{"notes": "Membrane rigidification and increased thickness act as the primary physical signal upon cooling.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "temperature_decrease", "target": "membrane_rigidification"}, {"description": "Double bonds disrupt tight acyl-chain packing, reversing cold-induced rigidification.", "evidence": [{"notes": "Desaturation fluidizes the membrane and reduces thickness; strong and broadly conserved principle.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "fatty_acid_desaturation", "target": "membrane_fluidity"}, {"description": "Anteiso chains disorder lipids effectively, supporting growth at lower temperatures.", "evidence": [{"notes": "Anteiso-BCFAs are more effective at fluidizing membranes than iso-BCFAs; generalizable across many Gram-positives.", "reference": "DOI:10.3390/cells12101353"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "anteiso_branched_fatty_acids", "target": "membrane_fluidity"}, {"description": "Branched-chain amino acids supply carbon skeletons for iso/anteiso-branched fatty acid synthesis.", "evidence": [{"notes": "Iso- and anteiso-branched FAs are derived from valine, leucine, and isoleucine precursors.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-6", "is_orphan": false, "predicate": "precursor for", "predicate_id": null, "source": "branched_chain_amino_acids", "target": "anteiso_branched_fatty_acids"}, {"description": "Temperature-dependent melting of RNA thermometers exposes the Shine-Dalgarno sequence to control translation.", "evidence": [{"notes": "5\u0027-UTR cis-elements occlude or expose Shine-Dalgarno sequences to control translation; strong general mechanism.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-7", "is_orphan": false, "predicate": "exposes", "predicate_id": null, "source": "rna_thermometer_melting", "target": "shine_dalgarno_exposure"}, {"description": "DNA topology functions as a thermosensor that globally reprograms transcription after temperature change.", "evidence": [{"notes": "DNA topology acts as a thermosensor; cold stress enhances negative DNA supercoiling.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-8", "is_orphan": false, "predicate": "changes", "predicate_id": null, "source": "temperature_shift", "target": "dna_supercoiling"}], "evidence_rows": [{"description": "Lower-mesophile adaptation enables growth across 22\u201327 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports homoviscous mesophile adaptation as the lower-mesophile range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "lower-mesophile adaptation", "target": "temperature range mid1"}, {"description": "Temperature range mid1 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 22\u201327 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range mid1", "target": "temperature range"}, {"description": "Cooling reduces membrane fluidity and increases bilayer thickness, the initiating physical signal for adaptation.", "edge_id": "edge-3", "evidence": [{"notes": "Membrane rigidification and increased thickness act as the primary physical signal upon cooling.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "causes", "predicate_id": null, "source": "temperature decrease", "target": "membrane rigidification/thickening"}, {"description": "Double bonds disrupt tight acyl-chain packing, reversing cold-induced rigidification.", "edge_id": "edge-4", "evidence": [{"notes": "Desaturation fluidizes the membrane and reduces thickness; strong and broadly conserved principle.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "increases", "predicate_id": null, "source": "fatty-acid desaturation", "target": "membrane fluidity"}, {"description": "Anteiso chains disorder lipids effectively, supporting growth at lower temperatures.", "edge_id": "edge-5", "evidence": [{"notes": "Anteiso-BCFAs are more effective at fluidizing membranes than iso-BCFAs; generalizable across many Gram-positives.", "reference": "DOI:10.3390/cells12101353"}], "predicate": "increases", "predicate_id": null, "source": "anteiso-branched fatty acids", "target": "membrane fluidity"}, {"description": "Branched-chain amino acids supply carbon skeletons for iso/anteiso-branched fatty acid synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Iso- and anteiso-branched FAs are derived from valine, leucine, and isoleucine precursors.", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "precursor for", "predicate_id": null, "source": "branched-chain amino acids", "target": "anteiso-branched fatty acids"}, {"description": "Temperature-dependent melting of RNA thermometers exposes the Shine-Dalgarno sequence to control translation.", "edge_id": "edge-7", "evidence": [{"notes": "5\u0027-UTR cis-elements occlude or expose Shine-Dalgarno sequences to control translation; strong general mechanism.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "exposes", "predicate_id": null, "source": "RNA thermometer melting", "target": "Shine-Dalgarno sequence exposure"}, {"description": "DNA topology functions as a thermosensor that globally reprograms transcription after temperature change.", "edge_id": "edge-8", "evidence": [{"notes": "DNA topology acts as a thermosensor; cold stress enhances negative DNA supercoiling.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "changes", "predicate_id": null, "source": "temperature shift", "target": "DNA supercoiling"}], "graph_id": "temperature_range_mid1_lower_mesophile", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Anteiso-branched-chain fatty acids that disorder membrane lipids.", "grounding": null, "id": "anteiso_branched_fatty_acids", "is_orphan": false, "label": "anteiso-branched fatty acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Valine, leucine and isoleucine serving as precursors for branched-chain fatty acids.", "grounding": null, "id": "branched_chain_amino_acids", "is_orphan": false, "label": "branched-chain amino acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "DNA topological state acting as a thermosensor that reprograms transcription.", "grounding": null, "id": "dna_supercoiling", "is_orphan": false, "label": "DNA supercoiling", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Introduction of double bonds into membrane fatty acyl chains.", "grounding": null, "id": "fatty_acid_desaturation", "is_orphan": false, "label": "fatty-acid desaturation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Mesophile membrane and enzyme adaptation sustaining growth at modest ambient temperatures.", "grounding": null, "id": "lower_mesophile_adaptation", "is_orphan": false, "label": "lower-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical fluidity/viscosity state of the cell membrane lipid bilayer.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Cooling-induced reduction of membrane fluidity and increased bilayer thickness.", "grounding": null, "id": "membrane_rigidification", "is_orphan": false, "label": "membrane rigidification/thickening", "node_type": "QUALITY", "xrefs": []}, {"color": "#cffafe", "description": "Temperature-dependent unfolding of 5-prime-UTR cis-elements controlling translation.", "grounding": null, "id": "rna_thermometer_melting", "is_orphan": false, "label": "RNA thermometer melting", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#cffafe", "description": "Exposure of the ribosome-binding Shine-Dalgarno sequence enabling translation.", "grounding": null, "id": "shine_dalgarno_exposure", "is_orphan": false, "label": "Shine-Dalgarno sequence exposure", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dcfce7", "description": "A drop in ambient growth temperature within or toward the mesophilic range.", "grounding": null, "id": "temperature_decrease", "is_orphan": false, "label": "temperature decrease", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 22\u201327 \u00b0C.", "grounding": "METPO:1000450", "id": "temperature_range_mid1_trait", "is_orphan": false, "label": "temperature range mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "A change in ambient growth temperature.", "grounding": null, "id": "temperature_shift", "is_orphan": false, "label": "temperature shift", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Temperature-range-mid1 lower-mesophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,7 +713,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

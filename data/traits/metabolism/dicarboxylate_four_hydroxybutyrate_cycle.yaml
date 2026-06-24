@@ -1,9 +1,9 @@
 identifier: traitmech:000025
 label: dicarboxylate/4-hydroxybutyrate cycle
 definition: An autotrophic carbon-fixation pathway that fixes one molecule of CO2
-  and one of bicarbonate per turn via a dicarboxylate stage and a
-  4-hydroxybutyrate stage. It operates in anaerobic and microaerophilic
-  Crenarchaeota such as Ignicoccus and Thermoproteales.
+  and one of bicarbonate per turn via a dicarboxylate stage and a 4-hydroxybutyrate
+  stage. It operates in anaerobic and microaerophilic Crenarchaeota such as Ignicoccus
+  and Thermoproteales.
 definition_source: DOI:10.1126/science.1149976
 trait_category: METABOLISM
 term_kind: CLASS
@@ -16,17 +16,16 @@ synonyms:
   source: DOI:10.1128/AEM.02473-10
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
-  notes: Berg review describes the dicarboxylate/4-hydroxybutyrate cycle as the
-    anaerobic archaeal counterpart of the 3HP/4HB cycle.
+  notes: Berg review describes the dicarboxylate/4-hydroxybutyrate cycle as the anaerobic
+    archaeal counterpart of the 3HP/4HB cycle.
 - reference: DOI:10.1126/science.1149976
   notes: Berg et al.'s archaeal carbon-fixation work establishes the 4-hydroxybutyrate
     chemistry shared by this cycle in Crenarchaeota.
 causal_graphs:
 - graph_id: dc_four_hb_anaerobic_archaeal_co2_fixation
   title: DC/4HB cycle fixes CO2 in anaerobic Crenarchaeota
-  description: Evidence-backed causal sketch linking dicarboxylate and
-    4-hydroxybutyrate intermediates to CO2 fixation in anaerobic / microaerophilic
-    Crenarchaeota.
+  description: Evidence-backed causal sketch linking dicarboxylate and 4-hydroxybutyrate
+    intermediates to CO2 fixation in anaerobic / microaerophilic Crenarchaeota.
   nodes:
   - node_id: dc_four_hb_trait
     label: dicarboxylate/4-hydroxybutyrate cycle
@@ -43,6 +42,52 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0015977
     description: Conversion of inorganic carbon into organic compounds.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    description: O2; inactivates O2-sensitive enzymes and electron carriers of the
+      cycle.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: HCO3-; inorganic carbon species used as a carboxylation cosubstrate.
+  - node_id: pyruvate_synthase
+    label: pyruvate synthase (pyruvate:ferredoxin oxidoreductase)
+    node_type: GENE_OR_PROTEIN
+    description: Reductively carboxylates acetyl-CoA to pyruvate using CO2.
+  - node_id: pep_carboxylase
+    label: phosphoenolpyruvate carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Carboxylates PEP to oxaloacetate using bicarbonate.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    description: Starting and regenerated C2 acceptor of the cycle.
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    description: Product of reductive carboxylation of acetyl-CoA.
+  - node_id: phosphoenolpyruvate
+    label: phosphoenolpyruvate
+    node_type: CHEMICAL
+    description: Substrate for carboxylation to oxaloacetate.
+  - node_id: oxaloacetate
+    label: oxaloacetate
+    node_type: CHEMICAL
+    description: C4 product of PEP carboxylation in the dicarboxylate stage.
+  - node_id: four_hydroxybutyryl_coa
+    label: 4-hydroxybutyryl-CoA
+    node_type: CHEMICAL
+    description: Substrate of the hallmark radical dehydratase in the 4HB branch.
+  - node_id: four_hydroxybutyryl_coa_dehydratase
+    label: 4-hydroxybutyryl-CoA dehydratase
+    node_type: GENE_OR_PROTEIN
+    description: Hallmark radical enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
+  - node_id: crotonyl_coa
+    label: crotonyl-CoA
+    node_type: CHEMICAL
+    description: Product of the radical dehydratase; cleaved via beta-oxidation to
+      two acetyl-CoA.
   edges:
   - subject: carbon_dioxide
     predicate: fixed by
@@ -50,30 +95,116 @@ causal_graphs:
     description: CO2 is fixed by the anaerobic archaeal DC/4HB cycle.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
-      notes: Berg describes the DC/4HB cycle as the anaerobic counterpart of the
-        3HP/4HB cycle.
+      notes: Berg describes the DC/4HB cycle as the anaerobic counterpart of the 3HP/4HB
+        cycle.
     predicate_id: METPO:2007404
   - subject: dc_four_hb_trait
     predicate: contributes to
     object: carbon_fixation_process
-    description: The DC/4HB cycle is one of the recognized autotrophic CO2
-      pathways.
+    description: The DC/4HB cycle is one of the recognized autotrophic CO2 pathways.
     evidence:
     - reference: DOI:10.1126/science.1149976
-      notes: Berg et al. establish 4-hydroxybutyrate chemistry shared by the
-        cycle in Crenarchaeota.
+      notes: Berg et al. establish 4-hydroxybutyrate chemistry shared by the cycle
+        in Crenarchaeota.
     predicate_id: RO:0002326
+  - subject: molecular_oxygen
+    predicate: negatively regulates
+    object: dc_four_hb_trait
+    description: O2 constrains the cycle because key enzymes and electron carriers
+      are oxygen-sensitive, restricting it to anoxic conditions.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Restricted to organisms growing under anoxic conditions due to oxygen
+        sensitivity of key enzymes and electron carriers.
+  - subject: carbon_dioxide
+    predicate: is cosubstrate for
+    object: pyruvate_synthase
+    description: CO2 serves as the carboxylation cosubstrate for pyruvate synthase
+      in the cycle.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: CO2 as cosubstrate for pyruvate synthase.
+  - subject: bicarbonate
+    predicate: is cosubstrate for
+    object: pep_carboxylase
+    description: Bicarbonate is the inorganic carbon cosubstrate for PEP carboxylase,
+      supporting mixed CO2/HCO3- usage.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: Bicarbonate as cosubstrate for PEP carboxylase.
+  - subject: pyruvate_synthase
+    predicate: catalyzes conversion of
+    object: acetyl_coa
+    description: Pyruvate synthase reductively carboxylates acetyl-CoA to pyruvate,
+      the first fixation step.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: Starts from acetyl-CoA, which is reductively carboxylated to pyruvate.
+  - subject: pyruvate_synthase
+    predicate: produces
+    object: pyruvate
+    description: Reductive carboxylation of acetyl-CoA by pyruvate synthase yields
+      pyruvate.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: Acetyl-CoA is reductively carboxylated to pyruvate.
+  - subject: pep_carboxylase
+    predicate: catalyzes conversion of
+    object: phosphoenolpyruvate
+    description: PEP carboxylase carboxylates phosphoenolpyruvate to oxaloacetate
+      in the dicarboxylate stage.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: Pyruvate is converted to PEP and then carboxylated to oxaloacetate.
+  - subject: pep_carboxylase
+    predicate: produces
+    object: oxaloacetate
+    description: Carboxylation of PEP by PEP carboxylase yields oxaloacetate.
+    evidence:
+    - reference: DOI:10.1002/9783527629916
+      notes: PEP is carboxylated to oxaloacetate.
+  - subject: four_hydroxybutyryl_coa_dehydratase
+    predicate: catalyzes conversion of
+    object: four_hydroxybutyryl_coa
+    description: Hallmark radical 4-hydroxybutyryl-CoA dehydratase dehydrates 4-hydroxybutyryl-CoA
+      to crotonyl-CoA.
+    evidence:
+    - reference: DOI:10.1073/pnas.0801043105
+      notes: Dehydrated by a radical 4-hydroxybutyryl-CoA dehydratase to crotonyl-CoA;
+        core hallmark enzyme of the 4HB branch.
+  - subject: four_hydroxybutyryl_coa_dehydratase
+    predicate: produces
+    object: crotonyl_coa
+    description: The radical dehydratase yields crotonyl-CoA in the 4-hydroxybutyrate
+      branch.
+    evidence:
+    - reference: DOI:10.1073/pnas.0801043105
+      notes: Dehydrated to crotonyl-CoA.
+  - subject: crotonyl_coa
+    predicate: is converted via beta-oxidation to
+    object: acetyl_coa
+    description: Crotonyl-CoA is cleaved via beta-oxidation to regenerate two acetyl-CoA,
+      closing the cycle.
+    evidence:
+    - reference: DOI:10.1073/pnas.0801043105
+      notes: Via beta-oxidation yields two acetyl-CoA.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (dicarboxylate/4-hydroxybutyrate
-    cycle); archaeal sub-variant of carbon fixation.
+  changes: Proposed candidate METABOLISM trait (dicarboxylate/4-hydroxybutyrate cycle);
+    archaeal sub-variant of carbon fixation.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (DC/4HB anaerobic archaeal CO2
-    fixation) with CHEBI/GO node groundings and RO/METPO predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (DC/4HB anaerobic archaeal CO2 fixation)
+    with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 10 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

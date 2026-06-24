@@ -41,6 +41,57 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cold-active enzymes and unsaturated-lipid membranes that sustain
       function near freezing.
+  - node_id: low_temperature
+    label: low temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Ambient temperature at or below ~10 C imposing cold stress.
+  - node_id: membrane_fatty_acid_desaturation
+    label: membrane fatty-acid desaturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Introduction of double bonds into membrane lipids during cold adaptation.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity of the membrane bilayer required for function in
+      the cold.
+  - node_id: two_component_cold_signaling
+    label: two-component cold signaling
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-component regulatory systems triggered by cold-induced membrane
+      state changes.
+  - node_id: cold_shock_proteins
+    label: cold-shock proteins (CspA-family)
+    node_type: GENE_OR_PROTEIN
+    description: CspA-family RNA chaperones that bind nucleic acids during cold acclimation.
+  - node_id: rna_secondary_structure
+    label: mRNA/RNA secondary structure
+    node_type: CHEMICAL
+    description: Cold-stabilized RNA secondary structures impeding translation.
+  - node_id: molecular_chaperones
+    label: molecular chaperones (DnaK/GroEL/GroES/Clp/TF)
+    node_type: GENE_OR_PROTEIN
+    description: Chaperone and protease systems maintaining proteostasis under cold.
+  - node_id: proteostasis_cold
+    label: protein folding and proteostasis in the cold
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of correct protein folding despite cold-slowed folding
+      kinetics.
+  - node_id: compatible_solutes
+    label: compatible solutes (glycine betaine/trehalose/glycerol)
+    node_type: CHEMICAL
+    description: Osmolytes that lower freezing damage and stabilize macromolecules.
+  - node_id: protein_membrane_stabilization
+    label: protein and membrane stabilization
+    node_type: BIOLOGICAL_PROCESS
+    description: Stabilization of proteins and membranes against cold/freezing damage.
+  - node_id: ice_binding_proteins
+    label: ice-binding/antifreeze proteins
+    node_type: GENE_OR_PROTEIN
+    description: AFPs/IBPs that bind ice and inhibit ice-crystal growth.
+  - node_id: ice_crystal_growth
+    label: ice-crystal growth/recrystallization
+    node_type: BIOLOGICAL_PROCESS
+    description: Damaging ice-crystal growth and recrystallization around cells.
   edges:
   - subject: psychrophile_machinery
     predicate: enables
@@ -62,6 +113,57 @@ causal_graphs:
       snippet: growing well at temperatures around the freezing point of water
       notes: Supports a ≤10 °C range as a value within the temperature-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: membrane_fatty_acid_desaturation
+    predicate: increases
+    object: membrane_fluidity
+    description: Homeoviscous adaptation via lipid desaturation maintains membrane
+      fluidity in the cold.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Cells adapt membrane composition (increasing double bonds in lipids)
+        to maintain fluidity and function.
+  - subject: low_temperature
+    predicate: activates
+    object: two_component_cold_signaling
+    description: Cold-induced membrane state changes activate two-component cold signaling.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Cold sensing occurs via changes in the liquid-crystalline state of membranes
+        that activate two-component signaling systems.
+  - subject: cold_shock_proteins
+    predicate: acts on
+    object: rna_secondary_structure
+    description: CspA-family RNA chaperones resolve cold-stabilized RNA structures
+      to sustain translation.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Cold-shock proteins (CSPs) act on mRNAs; increased levels of nucleic-acid-binding
+        CspA-related proteins.
+  - subject: molecular_chaperones
+    predicate: preserves
+    object: proteostasis_cold
+    description: Chaperone/protease systems counter cold-slowed folding and misfolding
+      risk.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1197797
+      notes: Psychrophiles constitutively synthesize molecular chaperones; Clp/GroEL/DnaK/GroES/TF
+        upregulated during cold shock.
+  - subject: compatible_solutes
+    predicate: stabilizes
+    object: protein_membrane_stabilization
+    description: Osmolytes lower freezing damage and stabilize proteins and membranes.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1197797
+      notes: Accumulation of compatible osmolytes prevents cell shrinkage, lowers
+        cytoplasmic freezing point, and stabilizes proteins and membranes.
+  - subject: ice_binding_proteins
+    predicate: inhibits
+    object: ice_crystal_growth
+    description: AFPs/IBPs bind ice and inhibit ice-crystal growth and recrystallization.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1197797
+      notes: AFPs bind ice, inhibit ice-crystal growth, produce thermal hysteresis,
+        and show IRI activity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822647+00:00'
   curator: seed_from_metpo
@@ -79,4 +181,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

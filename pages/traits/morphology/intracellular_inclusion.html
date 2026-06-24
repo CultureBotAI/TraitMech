@@ -90,6 +90,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>PhaA/PhaB/PhaC pathway</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>PHA granule</strong>
+            
+            <p>The Pha biosynthetic pathway synthesizes PHA chains that form storage granules.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29102293</code>
+                
+                <span class="meta">&#34;Synthesized PHA chains form intracellular inclusion bodies commonly called PHA granules&#34;; storage-granule subclass.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>nitrogen depletion</strong>
+            <span class="edge-predicate">increases accumulation of</span>
+            <strong>PHA granule</strong>
+            
+            <p>Depletion of N (and S, P) is a broad trigger for PHA granule accumulation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/molecules29102293</code>
+                
+                <span class="meta">&#34;Environmental and cultivation triggers for accumulation include... depletion of N, S, P&#34;; broad, not species-specific.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>polyphosphate kinase (Ppk)</strong>
+            <span class="edge-predicate">synthesizes</span>
+            <strong>polyphosphate granule</strong>
+            
+            <p>Ppk catalyzes polyphosphate synthesis forming the polyP/volutin granule.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/foods14132211</code>
+                
+                <span class="meta">&#34;polyP synthesis is catalyzed by polyphosphate kinase (Ppk)&#34;.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>gas vesicle gene cluster</strong>
+            <span class="edge-predicate">encodes</span>
+            <strong>gas vesicle</strong>
+            
+            <p>The gvp gene cluster encodes the gas vesicle organelle.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">&#34;gene-encoded, inert, hollow, gas-filled protein nanoparticles&#34;; direct definitional edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>gas vesicle</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>buoyancy</strong>
+            
+            <p>Gas vesicles confer buoyancy enabling positioning in the water column.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">&#34;enabling buoyancy for microbes&#34;; core phenotype/function edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>bacterial microcompartment</strong>
+            <span class="edge-predicate">encapsulates</span>
+            <strong>encapsulated metabolic enzymes</strong>
+            
+            <p>BMC shells encapsulate a segment of a metabolic pathway in a selectively permeable shell.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1042/bst20230229</code>
+                
+                <span class="meta">&#34;encapsulate a segment of a metabolic pathway within a selectively permeable protein shell&#34;; direct BMC definition.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>sulfide oxidation</strong>
+            <span class="edge-predicate">forms</span>
+            <strong>intracellular sulfur globule</strong>
+            
+            <p>Sulfide oxidation proceeds via intracellular accumulation of elemental sulfur globules.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pone.0310265</code>
+                
+                <span class="meta">&#34;oxidized to sulfate through an intermediate accumulation of elemental sulfur (S0) within the cell in the form of sulfur globules&#34;; definitional.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -246,6 +365,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (compartmentalization axis) with GO node grounding and RO/RDFS predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -605,7 +730,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking discrete intracellular inclusions (storage granules, gas vesicles, microcompartments) to cytoplasmic compartmentalization.", "edges": [{"description": "Inclusions partition activities within the prokaryotic cytoplasm.", "evidence": [{"notes": "Greening \u0026 Lithgow review formation and function of bacterial organelles/inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "inclusion_trait", "target": "cytoplasmic_compartmentalization"}, {"description": "Bacterial microcompartments are protein-bounded inclusion organelles.", "evidence": [{"notes": "Kerfeld et al. review bacterial microcompartments as protein-bounded intracellular organelles.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "bacterial_microcompartment", "target": "inclusion_trait"}], "evidence_rows": [{"description": "Inclusions partition activities within the prokaryotic cytoplasm.", "edge_id": "edge-1", "evidence": [{"notes": "Greening \u0026 Lithgow review formation and function of bacterial organelles/inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "intracellular inclusion", "target": "cytoplasmic compartmentalization"}, {"description": "Bacterial microcompartments are protein-bounded inclusion organelles.", "edge_id": "edge-2", "evidence": [{"notes": "Kerfeld et al. review bacterial microcompartments as protein-bounded intracellular organelles.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "bacterial microcompartment", "target": "intracellular inclusion"}], "graph_id": "inclusion_compartmentalization", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Protein-shelled prokaryotic organelle (e.g. carboxysome).", "grounding": "GO:0031469", "id": "bacterial_microcompartment", "is_orphan": false, "label": "bacterial microcompartment", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3f4f6", "description": "Spatial segregation of material or activity within the cytoplasm.", "grounding": null, "id": "cytoplasmic_compartmentalization", "is_orphan": false, "label": "cytoplasmic compartmentalization", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Discrete intracellular body compartmentalizing material or function.", "grounding": "traitmech:000066", "id": "inclusion_trait", "is_orphan": false, "label": "intracellular inclusion", "node_type": "TRAIT", "xrefs": []}], "title": "Intracellular inclusions compartmentalize prokaryotic cytoplasm"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking discrete intracellular inclusions (storage granules, gas vesicles, microcompartments) to cytoplasmic compartmentalization.", "edges": [{"description": "Inclusions partition activities within the prokaryotic cytoplasm.", "evidence": [{"notes": "Greening \u0026 Lithgow review formation and function of bacterial organelles/inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "inclusion_trait", "target": "cytoplasmic_compartmentalization"}, {"description": "Bacterial microcompartments are protein-bounded inclusion organelles.", "evidence": [{"notes": "Kerfeld et al. review bacterial microcompartments as protein-bounded intracellular organelles.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "bacterial_microcompartment", "target": "inclusion_trait"}, {"description": "The Pha biosynthetic pathway synthesizes PHA chains that form storage granules.", "evidence": [{"notes": "\"Synthesized PHA chains form intracellular inclusion bodies commonly called PHA granules\"; storage-granule subclass.", "reference": "DOI:10.3390/molecules29102293"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "pha_synthase_pathway", "target": "pha_granule"}, {"description": "Depletion of N (and S, P) is a broad trigger for PHA granule accumulation.", "evidence": [{"notes": "\"Environmental and cultivation triggers for accumulation include... depletion of N, S, P\"; broad, not species-specific.", "reference": "DOI:10.3390/molecules29102293"}], "id": "edge-4", "is_orphan": false, "predicate": "increases accumulation of", "predicate_id": null, "source": "nitrogen_depletion", "target": "pha_granule"}, {"description": "Ppk catalyzes polyphosphate synthesis forming the polyP/volutin granule.", "evidence": [{"notes": "\"polyP synthesis is catalyzed by polyphosphate kinase (Ppk)\".", "reference": "DOI:10.3390/foods14132211"}], "id": "edge-5", "is_orphan": false, "predicate": "synthesizes", "predicate_id": null, "source": "polyphosphate_kinase", "target": "polyphosphate_granule"}, {"description": "The gvp gene cluster encodes the gas vesicle organelle.", "evidence": [{"notes": "\"gene-encoded, inert, hollow, gas-filled protein nanoparticles\"; direct definitional edge.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-6", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "gas_vesicle_gene_cluster", "target": "gas_vesicle"}, {"description": "Gas vesicles confer buoyancy enabling positioning in the water column.", "evidence": [{"notes": "\"enabling buoyancy for microbes\"; core phenotype/function edge.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "gas_vesicle", "target": "buoyancy"}, {"description": "BMC shells encapsulate a segment of a metabolic pathway in a selectively permeable shell.", "evidence": [{"notes": "\"encapsulate a segment of a metabolic pathway within a selectively permeable protein shell\"; direct BMC definition.", "reference": "DOI:10.1042/bst20230229"}], "id": "edge-8", "is_orphan": false, "predicate": "encapsulates", "predicate_id": null, "source": "bacterial_microcompartment", "target": "bmc_metabolic_cargo"}, {"description": "Sulfide oxidation proceeds via intracellular accumulation of elemental sulfur globules.", "evidence": [{"notes": "\"oxidized to sulfate through an intermediate accumulation of elemental sulfur (S0) within the cell in the form of sulfur globules\"; definitional.", "reference": "DOI:10.1371/journal.pone.0310265"}], "id": "edge-9", "is_orphan": false, "predicate": "forms", "predicate_id": null, "source": "sulfide_oxidation", "target": "sulfur_globule"}], "evidence_rows": [{"description": "Inclusions partition activities within the prokaryotic cytoplasm.", "edge_id": "edge-1", "evidence": [{"notes": "Greening \u0026 Lithgow review formation and function of bacterial organelles/inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "intracellular inclusion", "target": "cytoplasmic compartmentalization"}, {"description": "Bacterial microcompartments are protein-bounded inclusion organelles.", "edge_id": "edge-2", "evidence": [{"notes": "Kerfeld et al. review bacterial microcompartments as protein-bounded intracellular organelles.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "bacterial microcompartment", "target": "intracellular inclusion"}, {"description": "The Pha biosynthetic pathway synthesizes PHA chains that form storage granules.", "edge_id": "edge-3", "evidence": [{"notes": "\"Synthesized PHA chains form intracellular inclusion bodies commonly called PHA granules\"; storage-granule subclass.", "reference": "DOI:10.3390/molecules29102293"}], "predicate": "produces", "predicate_id": null, "source": "PhaA/PhaB/PhaC pathway", "target": "PHA granule"}, {"description": "Depletion of N (and S, P) is a broad trigger for PHA granule accumulation.", "edge_id": "edge-4", "evidence": [{"notes": "\"Environmental and cultivation triggers for accumulation include... depletion of N, S, P\"; broad, not species-specific.", "reference": "DOI:10.3390/molecules29102293"}], "predicate": "increases accumulation of", "predicate_id": null, "source": "nitrogen depletion", "target": "PHA granule"}, {"description": "Ppk catalyzes polyphosphate synthesis forming the polyP/volutin granule.", "edge_id": "edge-5", "evidence": [{"notes": "\"polyP synthesis is catalyzed by polyphosphate kinase (Ppk)\".", "reference": "DOI:10.3390/foods14132211"}], "predicate": "synthesizes", "predicate_id": null, "source": "polyphosphate kinase (Ppk)", "target": "polyphosphate granule"}, {"description": "The gvp gene cluster encodes the gas vesicle organelle.", "edge_id": "edge-6", "evidence": [{"notes": "\"gene-encoded, inert, hollow, gas-filled protein nanoparticles\"; direct definitional edge.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "encodes", "predicate_id": null, "source": "gas vesicle gene cluster", "target": "gas vesicle"}, {"description": "Gas vesicles confer buoyancy enabling positioning in the water column.", "edge_id": "edge-7", "evidence": [{"notes": "\"enabling buoyancy for microbes\"; core phenotype/function edge.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "enables", "predicate_id": null, "source": "gas vesicle", "target": "buoyancy"}, {"description": "BMC shells encapsulate a segment of a metabolic pathway in a selectively permeable shell.", "edge_id": "edge-8", "evidence": [{"notes": "\"encapsulate a segment of a metabolic pathway within a selectively permeable protein shell\"; direct BMC definition.", "reference": "DOI:10.1042/bst20230229"}], "predicate": "encapsulates", "predicate_id": null, "source": "bacterial microcompartment", "target": "encapsulated metabolic enzymes"}, {"description": "Sulfide oxidation proceeds via intracellular accumulation of elemental sulfur globules.", "edge_id": "edge-9", "evidence": [{"notes": "\"oxidized to sulfate through an intermediate accumulation of elemental sulfur (S0) within the cell in the form of sulfur globules\"; definitional.", "reference": "DOI:10.1371/journal.pone.0310265"}], "predicate": "forms", "predicate_id": null, "source": "sulfide oxidation", "target": "intracellular sulfur globule"}], "graph_id": "inclusion_compartmentalization", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Protein-shelled prokaryotic organelle (e.g. carboxysome).", "grounding": "GO:0031469", "id": "bacterial_microcompartment", "is_orphan": false, "label": "bacterial microcompartment", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes/pathway segment sequestered within a microcompartment shell.", "grounding": null, "id": "bmc_metabolic_cargo", "is_orphan": false, "label": "encapsulated metabolic enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity for vertical positioning in the water column.", "grounding": null, "id": "buoyancy", "is_orphan": false, "label": "buoyancy", "node_type": "CAPACITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Spatial segregation of material or activity within the cytoplasm.", "grounding": null, "id": "cytoplasmic_compartmentalization", "is_orphan": false, "label": "cytoplasmic compartmentalization", "node_type": "QUALITY", "xrefs": []}, {"color": "#fce7f3", "description": "Hollow gas-filled protein nanocompartment.", "grounding": null, "id": "gas_vesicle", "is_orphan": false, "label": "gas vesicle", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#f3e8ff", "description": "gvp operon encoding gas vesicle structural and assembly proteins.", "grounding": null, "id": "gas_vesicle_gene_cluster", "is_orphan": false, "label": "gas vesicle gene cluster", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Discrete intracellular body compartmentalizing material or function.", "grounding": "traitmech:000066", "id": "inclusion_trait", "is_orphan": false, "label": "intracellular inclusion", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Nutrient limitation (low N) triggering carbon storage accumulation.", "grounding": null, "id": "nitrogen_depletion", "is_orphan": false, "label": "nitrogen depletion", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ede9fe", "description": "Polyhydroxyalkanoate storage inclusion body.", "grounding": null, "id": "pha_granule", "is_orphan": false, "label": "PHA granule", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#e0e7ff", "description": "Beta-ketothiolase/reductase/PHA synthase pathway producing polyhydroxyalkanoate.", "grounding": null, "id": "pha_synthase_pathway", "is_orphan": false, "label": "PhaA/PhaB/PhaC pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ede9fe", "description": "Inorganic polyphosphate (volutin) storage inclusion.", "grounding": null, "id": "polyphosphate_granule", "is_orphan": false, "label": "polyphosphate granule", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing polyphosphate synthesis.", "grounding": null, "id": "polyphosphate_kinase", "is_orphan": false, "label": "polyphosphate kinase (Ppk)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of sulfide via elemental sulfur intermediate.", "grounding": null, "id": "sulfide_oxidation", "is_orphan": false, "label": "sulfide oxidation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Intracellular elemental sulfur (S0) storage inclusion.", "grounding": null, "id": "sulfur_globule", "is_orphan": false, "label": "intracellular sulfur globule", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}], "title": "Intracellular inclusions compartmentalize prokaryotic cytoplasm"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -616,7 +741,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

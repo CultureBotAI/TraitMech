@@ -51,6 +51,45 @@ causal_graphs:
     label: balanced mesophilic growth
     node_type: BIOLOGICAL_PROCESS
     description: Sustained growth rate at intermediate temperatures.
+  - node_id: temperature_decrease
+    label: temperature decrease
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A downshift in ambient temperature within the mesophilic regime.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Membrane acyl chains with cis double bonds that increase membrane
+      fluidity.
+  - node_id: cold_shock
+    label: cold shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Abrupt temperature downshift triggering the cold-shock response.
+  - node_id: cspa
+    label: CspA cold-shock protein
+    node_type: GENE_OR_PROTEIN
+    description: Major cold-shock RNA chaperone preventing inhibitory RNA secondary
+      structure.
+  - node_id: translation
+    label: translation
+    node_type: BIOLOGICAL_PROCESS
+    description: Protein synthesis from mRNA, maintained during cold shock.
+  - node_id: heat_shock
+    label: heat shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Temperature upshift triggering the heat-shock response.
+  - node_id: rpoh_sigma32
+    label: sigma-32 (RpoH)
+    node_type: GENE_OR_PROTEIN
+    description: Alternative sigma factor controlling the bacterial heat-shock regulon.
+  - node_id: heat_shock_genes
+    label: heat shock genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes (e.g. chaperones, proteases) induced to mitigate heat stress.
+  - node_id: dnak
+    label: DnaK chaperone
+    node_type: GENE_OR_PROTEIN
+    description: Hsp70 chaperone that sequesters sigma-32, negatively regulating its
+      activity.
   edges:
   - subject: moderate_temperature
     predicate: selects for
@@ -92,6 +131,56 @@ causal_graphs:
       snippet: Escherichia coli, a mesophilic bacterium
       notes: Supports the trait endpoint in a representative organism.
     predicate_id: METPO:2007400
+  - subject: temperature_decrease
+    predicate: increases
+    object: unsaturated_fatty_acids
+    description: Temperature downshift increases membrane unsaturated fatty acid content
+      (homeoviscous adaptation).
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Low-temperature adaptation includes increased unsaturation of membrane
+        acyl chains; broad bacterial homeoviscous adaptation.
+  - subject: cold_shock
+    predicate: induces
+    object: cspa
+    description: Cold shock induces the cold-shock protein CspA.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Cold shock responses include induction of Csp proteins, notably CspA
+        (~15% of protein synthesis after cold shock).
+  - subject: cspa
+    predicate: promotes
+    object: translation
+    description: CspA acts as an RNA chaperone preventing RNA secondary structure,
+      promoting translation during cold shock.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: CspA binds/unwinds RNA to promote single-strandedness and translation
+        during cold shock.
+  - subject: heat_shock
+    predicate: induces
+    object: rpoh_sigma32
+    description: Heat shock induces synthesis of sigma-32 (RpoH).
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Heat-induced synthesis of sigma-32 (rpoH); canonical bacterial heat-shock
+        regulation relevant to mesophiles near the upper temperature range.
+  - subject: rpoh_sigma32
+    predicate: activates expression of
+    object: heat_shock_genes
+    description: Sigma-32 (RpoH) activates expression of heat-shock genes.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Heat shock regulation centers on sigma factor RpoH (sigma-32) directing
+        heat-shock gene expression.
+  - subject: dnak
+    predicate: negatively regulates
+    object: rpoh_sigma32
+    description: DnaK chaperone sequesters sigma-32, negatively regulating its activity.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: RpoH is controlled by DnaK chaperone sequestration; canonical negative
+        regulation in Gram-negative bacteria.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
@@ -157,4 +246,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

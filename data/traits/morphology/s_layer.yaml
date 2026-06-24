@@ -15,8 +15,8 @@ synonyms:
   source: DOI:10.1038/nrmicro3213
 evidence:
 - reference: DOI:10.1038/nrmicro3213
-  notes: Fagan & Fairweather describe the S-layer as a self-assembled, regularly
-    spaced two-dimensional protein array coating the cell surface.
+  notes: Fagan & Fairweather describe the S-layer as a self-assembled, regularly spaced
+    two-dimensional protein array coating the cell surface.
 - reference: DOI:10.1038/s41579-025-01258-8
   notes: Review of assembly, architecture and functional roles of microbial surface
     layers supports the S-layer as a defined cell-surface structure.
@@ -38,8 +38,12 @@ causal_graphs:
   - node_id: s_layer_assembly
     label: S-layer assembly
     node_type: BIOLOGICAL_PROCESS
-    description: Self-assembly of S-layer subunits into a regularly spaced 2D
-      array.
+    description: Self-assembly of S-layer subunits into a regularly spaced 2D array.
+  - node_id: s_layer_2d_lattice
+    label: 2D paracrystalline S-layer lattice
+    node_type: CELLULAR_LOCALIZATION
+    description: Regularly spaced two-dimensional paracrystalline lattice formed by
+      self-assembled S-layer proteins coating the cell surface.
   edges:
   - subject: s_layer_subunits
     predicate: enables
@@ -47,8 +51,8 @@ causal_graphs:
     description: Self-assembling (glyco)protein subunits build the S-layer array.
     evidence:
     - reference: DOI:10.1038/nrmicro3213
-      notes: Fagan & Fairweather describe self-assembled (glyco)protein arrays
-        forming the S-layer.
+      notes: Fagan & Fairweather describe self-assembled (glyco)protein arrays forming
+        the S-layer.
     predicate_id: RO:0002327
   - subject: s_layer_assembly
     predicate: enables
@@ -56,19 +60,34 @@ causal_graphs:
     description: Completed 2D assembly realizes the S-layer surface coating.
     evidence:
     - reference: DOI:10.1038/s41579-025-01258-8
-      notes: Review of assembly, architecture, and functional roles of microbial
-        surface layers.
+      notes: Review of assembly, architecture, and functional roles of microbial surface
+        layers.
     predicate_id: RO:0002327
+  - subject: s_layer_subunits
+    predicate: self-assembles into
+    object: s_layer_2d_lattice
+    description: S-layer proteins self-assemble into a 2D paracrystalline lattice;
+      N-terminal regions mediate self-assembly into the layer.
+    evidence:
+    - reference: DOI:10.1073/pnas.2401686121
+      notes: S-layers are self-assembling, crystalline surface proteins; the N-terminal
+        region mediates self-assembly into the layer (curation-safe at class level).
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (S-layer) from literature research to
-    fill the cell-surface-structure gap.
+  changes: Proposed candidate MORPHOLOGY trait (S-layer) from literature research
+    to fill the cell-surface-structure gap.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (S-layer 2D protein array assembly)
     with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 1 evidence-backed generic edges (1 new nodes) from the deep-research
+    report.
   llm_assisted: true

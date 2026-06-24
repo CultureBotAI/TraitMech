@@ -1,8 +1,8 @@
 identifier: traitmech:000106
 label: sulfur oxidation
-definition: A metabolism in which an organism oxidizes reduced inorganic sulfur
-  compounds (sulfide, elemental sulfur, thiosulfate) to sulfate, conserving energy
-  and often supporting chemolithotrophic growth.
+definition: A metabolism in which an organism oxidizes reduced inorganic sulfur compounds
+  (sulfide, elemental sulfur, thiosulfate) to sulfate, conserving energy and often
+  supporting chemolithotrophic growth.
 definition_source: DOI:10.1111/j.1574-6976.2009.00187.x
 trait_category: METABOLISM
 term_kind: CLASS
@@ -18,8 +18,8 @@ evidence:
   notes: Ghosh & Dam review the biochemistry and molecular biology of lithotrophic
     sulfur oxidation across bacteria and archaea.
 - reference: DOI:10.1128/AEM.67.7.2873-2882.2001
-  notes: Friedrich et al. describe a common mechanism for bacterial oxidation of
-    reduced inorganic sulfur compounds (the Sox system).
+  notes: Friedrich et al. describe a common mechanism for bacterial oxidation of reduced
+    inorganic sulfur compounds (the Sox system).
 causal_graphs:
 - graph_id: sulfur_oxidation_sox
   title: Lithotrophic sulfur oxidation to sulfate
@@ -45,6 +45,47 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16189
     description: Oxidized sulfur end product.
+  - node_id: sqr_enzyme
+    label: sulfide:quinone oxidoreductase (SQR)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane flavoprotein oxidizing sulfide to sulfane sulfur/polysulfide.
+  - node_id: sulfane_sulfur
+    label: sulfane sulfur
+    node_type: CHEMICAL
+    grounding: CHEBI:15037
+    description: Sulfane sulfur / S0 / polysulfide intermediate.
+  - node_id: pdo_enzyme
+    label: persulfide dioxygenase (PDO)
+    node_type: GENE_OR_PROTEIN
+    description: Oxidizes glutathione persulfide to sulfite using O2.
+  - node_id: glutathione_persulfide
+    label: glutathione persulfide (GSSH)
+    node_type: CHEMICAL
+    description: Persulfide substrate of persulfide dioxygenase.
+  - node_id: sulfite
+    label: sulfite
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Sulfite intermediate in sulfur oxidation.
+  - node_id: thiosulfate
+    label: thiosulfate
+    node_type: CHEMICAL
+    grounding: CHEBI:30087
+    description: Thiosulfate intermediate substrate of the Sox system.
+  - node_id: tsda_enzyme
+    label: thiosulfate dehydrogenase (TsdA)
+    node_type: GENE_OR_PROTEIN
+    description: Oxidizes thiosulfate to tetrathionate.
+  - node_id: tetrathionate
+    label: tetrathionate
+    node_type: CHEMICAL
+    grounding: CHEBI:30926
+    description: Tetrathionate intermediate in the S4 intermediate pathway.
+  - node_id: teth_enzyme
+    label: tetrathionate hydrolase (TetH)
+    node_type: GENE_OR_PROTEIN
+    description: Hydrolyzes/disproportionates tetrathionate to S0, thiosulfate and
+      sulfate.
   edges:
   - subject: sox_system
     predicate: enables
@@ -71,17 +112,89 @@ causal_graphs:
     - reference: DOI:10.1111/j.1574-6976.2009.00187.x
       notes: Supports sulfate as the oxidized end product.
     predicate_id: METPO:2000202
+  - subject: sqr_enzyme
+    predicate: oxidizes
+    object: hydrogen_sulfide
+    description: SQR oxidizes sulfide to sulfane sulfur (S0/polysulfide).
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).
+  - subject: sqr_enzyme
+    predicate: produces
+    object: sulfane_sulfur
+    description: SQR produces sulfane sulfur/polysulfide from sulfide.
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: SQR oxidizing sulfide to sulfane sulfur (S0/polysulfide).
+  - subject: pdo_enzyme
+    predicate: oxidizes
+    object: glutathione_persulfide
+    description: PDO oxidizes glutathione persulfide (GSSH).
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: PDO oxidizes glutathione persulfide (GSSH); O2-dependent.
+  - subject: pdo_enzyme
+    predicate: produces
+    object: sulfite
+    description: Persulfide dioxygenase produces sulfite (GSSH + O2 + H2O -> GSH +
+      SO3(2-)).
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: GSSH + O2 + H2O -> GSH + SO3(2-) + 2H+; oxygen-dependent.
+  - subject: sulfite
+    predicate: reacts to form
+    object: thiosulfate
+    description: Sulfite reacts with sulfane sulfur to form thiosulfate (non-enzymatic).
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: The generated sulfite can react with sulfane sulfur to form thiosulfate.
+  - subject: sox_system
+    predicate: oxidizes
+    object: thiosulfate
+    description: Thiosulfate is oxidized to sulfate via the Sox system.
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: Thiosulfate is then oxidized to sulfate via the Sox-system.
+  - subject: tsda_enzyme
+    predicate: oxidizes
+    object: thiosulfate
+    description: TsdA oxidizes thiosulfate to tetrathionate (S2O32- to S4O62-).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: tsdA (S2O32- to S4O62-).
+  - subject: tsda_enzyme
+    predicate: produces
+    object: tetrathionate
+    description: TsdA produces tetrathionate from thiosulfate.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: tsdA (S2O32- to S4O62-).
+  - subject: teth_enzyme
+    predicate: oxidizes
+    object: tetrathionate
+    description: TetH disproportionates/hydrolyzes tetrathionate to S0, thiosulfate
+      and sulfate.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1426584
+      notes: Tetrathionate generated by tsdA can be disproportionated by tetH to yield
+        S0, thiosulfate and sulfate.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (sulfur oxidation); round 2,
-    sulfur-cycle gap.
+  changes: Proposed candidate METABOLISM trait (sulfur oxidation); round 2, sulfur-cycle
+    gap.
   llm_assisted: true
 - timestamp: '2026-06-08T12:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (Sox-mediated sulfur oxidation to
-    sulfate) with CHEBI node groundings and RO/METPO predicate groundings; promoted
-    PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (Sox-mediated sulfur oxidation to sulfate)
+    with CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

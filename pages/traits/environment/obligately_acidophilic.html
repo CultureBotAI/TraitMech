@@ -158,6 +158,125 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-7">
+            <strong>K+ uptake system (Kdp/Kef)</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>reversed membrane potential</strong>
+            
+            <p>K+ uptake systems generate the inside-positive (reversed) membrane potential that forms an electrochemical barrier to protons.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Review describes inside-positive membrane potential via potassium-transporting ATPases and K+ uptake systems (kdp, Kef) forming an electrochemical barrier to proton influx.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>P-type proton-translocating ATPase</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>proton efflux from cytoplasm</strong>
+            
+            <p>P-type ATPases actively export protons from the cytoplasm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Dopson review lists active proton efflux via P-type ATPases as a pH homeostasis strategy in acidophiles.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>proton efflux from cytoplasm</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Active proton efflux helps maintain near-neutral cytoplasmic pH under acidic conditions.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Proton pumps/ATPases maintain a near-neutral cytoplasm during acidophilic growth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>Na+/H+ antiporter (Nha)</strong>
+            <span class="edge-predicate">exports</span>
+            <strong>proton</strong>
+            
+            <p>Na+/H+ antiporters exchange cytoplasmic protons for extracellular sodium, contributing to proton export.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Dopson lists Na+/H+ exchange (nhaA sodium/proton antiporter) among acidophile pH-homeostasis systems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>hopanoid-containing membrane</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>low proton permeability membrane</strong>
+            
+            <p>Hopanoid membrane lipids reduce membrane proton permeability, reinforcing proton exclusion.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1758-2229.70019</code>
+                
+                <span class="meta">Acid resistance is linked to hopanoid membrane lipids and reduced proton permeability as a core proton-exclusion strategy.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>cyclopropane fatty acids</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>low proton permeability membrane</strong>
+            
+            <p>Cyclopropane fatty acid formation reduces membrane proton permeability.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Review includes cyclopropane-fatty-acyl-phospholipid synthase among membrane adaptations that reduce proton permeability.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>glutamate decarboxylase system (Gad)</strong>
+            <span class="edge-predicate">consumes</span>
+            <strong>proton</strong>
+            
+            <p>Glutamate decarboxylase consumes cytoplasmic protons during decarboxylation, buffering intracellular pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1149903</code>
+                
+                <span class="meta">Review lists decarboxylases (Adi, Gad) as cytoplasmic proton-consuming systems used in acidophile pH homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
@@ -343,6 +462,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -702,7 +827,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking obligate acidophily to acidic external pH, proton stress, and constitutive pH homeostasis mechanisms.", "edges": [{"description": "Acidic environments select for organisms with acidic pH growth optima.", "evidence": [{"notes": "Review supports acidophile classification by acidic optimum pH; the obligate neutral-pH exclusion remains from the METPO definition.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "obligately_acidophilic_trait"}, {"description": "Low external pH creates a steep proton gradient across the membrane.", "evidence": [{"notes": "Supports external-to-internal proton gradient under low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton gradient across the cytoplasmic membrane"}], "id": "edge-2", "is_orphan": false, "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic_external_ph", "target": "proton"}, {"description": "Reduced membrane permeability helps obligate acidophiles maintain intracellular pH.", "evidence": [{"notes": "Supports proton exclusion by membrane properties in acidophiles.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-3", "is_orphan": false, "predicate": "limits influx of", "predicate_id": null, "source": "low_proton_permeability_membrane", "target": "proton"}, {"description": "Reversed membrane potential reduces passive proton entry.", "evidence": [{"notes": "Supports reversed membrane potential as a shared acidophile feature.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "id": "edge-4", "is_orphan": false, "predicate": "suppresses influx of", "predicate_id": null, "source": "reversed_membrane_potential", "target": "proton"}, {"description": "Proton export and antiport systems contribute to intracellular pH control during acid stress.", "evidence": [{"notes": "Supports transporter-mediated acid resistance mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_export_pumps", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Obligate acidophilic growth requires maintaining cytoplasmic pH despite acidic external pH.", "evidence": [{"notes": "Supports intracellular pH control during extreme acidophilic growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "maintain a cytoplasmic pH of approximately 6.0"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "obligately_acidophilic_trait"}], "evidence_rows": [{"description": "Acidic environments select for organisms with acidic pH growth optima.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports acidophile classification by acidic optimum pH; the obligate neutral-pH exclusion remains from the METPO definition.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "target": "obligately acidophilic"}, {"description": "Low external pH creates a steep proton gradient across the membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports external-to-internal proton gradient under low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton gradient across the cytoplasmic membrane"}], "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic external pH", "target": "proton"}, {"description": "Reduced membrane permeability helps obligate acidophiles maintain intracellular pH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton exclusion by membrane properties in acidophiles.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "limits influx of", "predicate_id": null, "source": "low proton permeability membrane", "target": "proton"}, {"description": "Reversed membrane potential reduces passive proton entry.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reversed membrane potential as a shared acidophile feature.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "predicate": "suppresses influx of", "predicate_id": null, "source": "reversed membrane potential", "target": "proton"}, {"description": "Proton export and antiport systems contribute to intracellular pH control during acid stress.", "edge_id": "edge-5", "evidence": [{"notes": "Supports transporter-mediated acid resistance mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton export pumps and antiporters", "target": "cytoplasmic pH homeostasis"}, {"description": "Obligate acidophilic growth requires maintaining cytoplasmic pH despite acidic external pH.", "edge_id": "edge-6", "evidence": [{"notes": "Supports intracellular pH control during extreme acidophilic growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "maintain a cytoplasmic pH of approximately 6.0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "obligately acidophilic"}], "graph_id": "obligately_acidophilic_ph_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH in the acidic range supporting acidophile growth.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of near-neutral intracellular pH during acidic growth.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Cell envelope properties that reduce inward proton leak.", "grounding": null, "id": "low_proton_permeability_membrane", "is_orphan": false, "label": "low proton permeability membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires acidic pH and does not extend to neutral or alkaline pH values.", "grounding": "METPO:1003006", "id": "obligately_acidophilic_trait", "is_orphan": false, "label": "obligately acidophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion whose high external activity drives proton stress.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Transport systems proposed to remove protons or exchange ions during acid stress.", "grounding": null, "id": "proton_export_pumps", "is_orphan": false, "label": "proton export pumps and antiporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Positive-inside membrane potential that suppresses proton influx.", "grounding": null, "id": "reversed_membrane_potential", "is_orphan": false, "label": "reversed membrane potential", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Obligate acidophily pH homeostasis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking obligate acidophily to acidic external pH, proton stress, and constitutive pH homeostasis mechanisms.", "edges": [{"description": "Acidic environments select for organisms with acidic pH growth optima.", "evidence": [{"notes": "Review supports acidophile classification by acidic optimum pH; the obligate neutral-pH exclusion remains from the METPO definition.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "obligately_acidophilic_trait"}, {"description": "Low external pH creates a steep proton gradient across the membrane.", "evidence": [{"notes": "Supports external-to-internal proton gradient under low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton gradient across the cytoplasmic membrane"}], "id": "edge-2", "is_orphan": false, "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic_external_ph", "target": "proton"}, {"description": "Reduced membrane permeability helps obligate acidophiles maintain intracellular pH.", "evidence": [{"notes": "Supports proton exclusion by membrane properties in acidophiles.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "id": "edge-3", "is_orphan": false, "predicate": "limits influx of", "predicate_id": null, "source": "low_proton_permeability_membrane", "target": "proton"}, {"description": "Reversed membrane potential reduces passive proton entry.", "evidence": [{"notes": "Supports reversed membrane potential as a shared acidophile feature.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "id": "edge-4", "is_orphan": false, "predicate": "suppresses influx of", "predicate_id": null, "source": "reversed_membrane_potential", "target": "proton"}, {"description": "Proton export and antiport systems contribute to intracellular pH control during acid stress.", "evidence": [{"notes": "Supports transporter-mediated acid resistance mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_export_pumps", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Obligate acidophilic growth requires maintaining cytoplasmic pH despite acidic external pH.", "evidence": [{"notes": "Supports intracellular pH control during extreme acidophilic growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "maintain a cytoplasmic pH of approximately 6.0"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "obligately_acidophilic_trait"}, {"description": "K+ uptake systems generate the inside-positive (reversed) membrane potential that forms an electrochemical barrier to protons.", "evidence": [{"notes": "Review describes inside-positive membrane potential via potassium-transporting ATPases and K+ uptake systems (kdp, Kef) forming an electrochemical barrier to proton influx.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-7", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "k_uptake_system_kdp_kef", "target": "reversed_membrane_potential"}, {"description": "P-type ATPases actively export protons from the cytoplasm.", "evidence": [{"notes": "Dopson review lists active proton efflux via P-type ATPases as a pH homeostasis strategy in acidophiles.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "p_type_proton_atpase", "target": "proton_efflux"}, {"description": "Active proton efflux helps maintain near-neutral cytoplasmic pH under acidic conditions.", "evidence": [{"notes": "Proton pumps/ATPases maintain a near-neutral cytoplasm during acidophilic growth.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "proton_efflux", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Na+/H+ antiporters exchange cytoplasmic protons for extracellular sodium, contributing to proton export.", "evidence": [{"notes": "Dopson lists Na+/H+ exchange (nhaA sodium/proton antiporter) among acidophile pH-homeostasis systems.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-10", "is_orphan": false, "predicate": "exports", "predicate_id": null, "source": "na_h_antiporter", "target": "proton"}, {"description": "Hopanoid membrane lipids reduce membrane proton permeability, reinforcing proton exclusion.", "evidence": [{"notes": "Acid resistance is linked to hopanoid membrane lipids and reduced proton permeability as a core proton-exclusion strategy.", "reference": "DOI:10.1111/1758-2229.70019"}], "id": "edge-11", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "hopanoid_membrane", "target": "low_proton_permeability_membrane"}, {"description": "Cyclopropane fatty acid formation reduces membrane proton permeability.", "evidence": [{"notes": "Review includes cyclopropane-fatty-acyl-phospholipid synthase among membrane adaptations that reduce proton permeability.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-12", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "cyclopropane_fatty_acids", "target": "low_proton_permeability_membrane"}, {"description": "Glutamate decarboxylase consumes cytoplasmic protons during decarboxylation, buffering intracellular pH.", "evidence": [{"notes": "Review lists decarboxylases (Adi, Gad) as cytoplasmic proton-consuming systems used in acidophile pH homeostasis.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-13", "is_orphan": false, "predicate": "consumes", "predicate_id": null, "source": "glutamate_decarboxylase", "target": "proton"}], "evidence_rows": [{"description": "Acidic environments select for organisms with acidic pH growth optima.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports acidophile classification by acidic optimum pH; the obligate neutral-pH exclusion remains from the METPO definition.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "target": "obligately acidophilic"}, {"description": "Low external pH creates a steep proton gradient across the membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports external-to-internal proton gradient under low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton gradient across the cytoplasmic membrane"}], "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic external pH", "target": "proton"}, {"description": "Reduced membrane permeability helps obligate acidophiles maintain intracellular pH.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton exclusion by membrane properties in acidophiles.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "highly impermeable cell membranes"}], "predicate": "limits influx of", "predicate_id": null, "source": "low proton permeability membrane", "target": "proton"}, {"description": "Reversed membrane potential reduces passive proton entry.", "edge_id": "edge-4", "evidence": [{"notes": "Supports reversed membrane potential as a shared acidophile feature.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "reversed membrane potential"}], "predicate": "suppresses influx of", "predicate_id": null, "source": "reversed membrane potential", "target": "proton"}, {"description": "Proton export and antiport systems contribute to intracellular pH control during acid stress.", "edge_id": "edge-5", "evidence": [{"notes": "Supports transporter-mediated acid resistance mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton export pumps and antiporters", "target": "cytoplasmic pH homeostasis"}, {"description": "Obligate acidophilic growth requires maintaining cytoplasmic pH despite acidic external pH.", "edge_id": "edge-6", "evidence": [{"notes": "Supports intracellular pH control during extreme acidophilic growth.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "maintain a cytoplasmic pH of approximately 6.0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "obligately acidophilic"}, {"description": "K+ uptake systems generate the inside-positive (reversed) membrane potential that forms an electrochemical barrier to protons.", "edge_id": "edge-7", "evidence": [{"notes": "Review describes inside-positive membrane potential via potassium-transporting ATPases and K+ uptake systems (kdp, Kef) forming an electrochemical barrier to proton influx.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "increases", "predicate_id": null, "source": "K+ uptake system (Kdp/Kef)", "target": "reversed membrane potential"}, {"description": "P-type ATPases actively export protons from the cytoplasm.", "edge_id": "edge-8", "evidence": [{"notes": "Dopson review lists active proton efflux via P-type ATPases as a pH homeostasis strategy in acidophiles.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "increases", "predicate_id": null, "source": "P-type proton-translocating ATPase", "target": "proton efflux from cytoplasm"}, {"description": "Active proton efflux helps maintain near-neutral cytoplasmic pH under acidic conditions.", "edge_id": "edge-9", "evidence": [{"notes": "Proton pumps/ATPases maintain a near-neutral cytoplasm during acidophilic growth.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "contributes to", "predicate_id": null, "source": "proton efflux from cytoplasm", "target": "cytoplasmic pH homeostasis"}, {"description": "Na+/H+ antiporters exchange cytoplasmic protons for extracellular sodium, contributing to proton export.", "edge_id": "edge-10", "evidence": [{"notes": "Dopson lists Na+/H+ exchange (nhaA sodium/proton antiporter) among acidophile pH-homeostasis systems.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "exports", "predicate_id": null, "source": "Na+/H+ antiporter (Nha)", "target": "proton"}, {"description": "Hopanoid membrane lipids reduce membrane proton permeability, reinforcing proton exclusion.", "edge_id": "edge-11", "evidence": [{"notes": "Acid resistance is linked to hopanoid membrane lipids and reduced proton permeability as a core proton-exclusion strategy.", "reference": "DOI:10.1111/1758-2229.70019"}], "predicate": "decreases", "predicate_id": null, "source": "hopanoid-containing membrane", "target": "low proton permeability membrane"}, {"description": "Cyclopropane fatty acid formation reduces membrane proton permeability.", "edge_id": "edge-12", "evidence": [{"notes": "Review includes cyclopropane-fatty-acyl-phospholipid synthase among membrane adaptations that reduce proton permeability.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "decreases", "predicate_id": null, "source": "cyclopropane fatty acids", "target": "low proton permeability membrane"}, {"description": "Glutamate decarboxylase consumes cytoplasmic protons during decarboxylation, buffering intracellular pH.", "edge_id": "edge-13", "evidence": [{"notes": "Review lists decarboxylases (Adi, Gad) as cytoplasmic proton-consuming systems used in acidophile pH homeostasis.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "consumes", "predicate_id": null, "source": "glutamate decarboxylase system (Gad)", "target": "proton"}], "graph_id": "obligately_acidophilic_ph_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH in the acidic range supporting acidophile growth.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Cyclopropane-fatty-acyl phospholipids that rigidify the membrane and lower proton permeability.", "grounding": null, "id": "cyclopropane_fatty_acids", "is_orphan": false, "label": "cyclopropane fatty acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of near-neutral intracellular pH during acidic growth.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Glutamate decarboxylase (gadA/gadB/gadC) that consumes cytoplasmic protons during decarboxylation.", "grounding": null, "id": "glutamate_decarboxylase", "is_orphan": false, "label": "glutamate decarboxylase system (Gad)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Membrane enriched in hopanoid lipids that reduces proton permeability.", "grounding": null, "id": "hopanoid_membrane", "is_orphan": false, "label": "hopanoid-containing membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Potassium-transporting ATPases and K+ uptake systems (kdp, kef) that establish an inside-positive membrane potential.", "grounding": null, "id": "k_uptake_system_kdp_kef", "is_orphan": false, "label": "K+ uptake system (Kdp/Kef)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Cell envelope properties that reduce inward proton leak.", "grounding": null, "id": "low_proton_permeability_membrane", "is_orphan": false, "label": "low proton permeability membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Sodium/proton antiporters (nhaA, nhaB) that exchange cytoplasmic protons for sodium ions.", "grounding": null, "id": "na_h_antiporter", "is_orphan": false, "label": "Na+/H+ antiporter (Nha)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Growth requires acidic pH and does not extend to neutral or alkaline pH values.", "grounding": "METPO:1003006", "id": "obligately_acidophilic_trait", "is_orphan": false, "label": "obligately acidophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Active proton-efflux ATPase that pumps protons out of the cytoplasm during acid stress.", "grounding": null, "id": "p_type_proton_atpase", "is_orphan": false, "label": "P-type proton-translocating ATPase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion whose high external activity drives proton stress.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Active export of protons from the cytoplasm to maintain near-neutral intracellular pH.", "grounding": null, "id": "proton_efflux", "is_orphan": false, "label": "proton efflux from cytoplasm", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Transport systems proposed to remove protons or exchange ions during acid stress.", "grounding": null, "id": "proton_export_pumps", "is_orphan": false, "label": "proton export pumps and antiporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Positive-inside membrane potential that suppresses proton influx.", "grounding": null, "id": "reversed_membrane_potential", "is_orphan": false, "label": "reversed membrane potential", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Obligate acidophily pH homeostasis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -713,7 +838,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:03 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

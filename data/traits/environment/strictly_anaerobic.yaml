@@ -49,6 +49,20 @@ causal_graphs:
     label: oxygen-sensitive enzymes
     node_type: GENE_OR_PROTEIN
     description: Anaerobic enzymes vulnerable to oxygen or ROS.
+  - node_id: iron_sulfur_cluster_enzymes
+    label: iron-sulfur cluster enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Mononuclear iron enzymes and solvent-exposed iron-sulfur cluster
+      enzymes that are directly oxidized by oxygen.
+  - node_id: glycyl_radical_enzymes
+    label: glycyl radical enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme class inherently incompatible with molecular oxygen.
+  - node_id: low_potential_metabolic_enzymes
+    label: low-potential energy-metabolism enzymes (PFOR/PFL)
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-sensitive anaerobic energy-metabolism enzymes such as pyruvate:ferredoxin
+      oxidoreductase (PFOR) and pyruvate formate lyase (PFL).
   edges:
   - subject: anoxic_condition
     predicate: enables
@@ -86,6 +100,34 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: poisoning by molecular oxygen and ROS
       notes: Supports enzyme vulnerability as a mechanism of oxygen toxicity.
+  - subject: molecular_oxygen
+    predicate: oxidizes/inactivates
+    object: iron_sulfur_cluster_enzymes
+    description: Oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed
+      iron-sulfur clusters.
+    evidence:
+    - reference: DOI:10.1128/iai.00502-24
+      notes: '"oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed
+        iron-sulfur clusters" - general oxygen toxicity mechanism across anaerobes.'
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: glycyl_radical_enzymes
+    description: Glycyl radical enzymes are inherently incompatible with molecular
+      oxygen.
+    evidence:
+    - reference: DOI:10.1128/iai.00502-24
+      notes: '"Certain enzyme classes (e.g., glycyl radical enzymes) are inherently
+        incompatible with molecular oxygen" - broad across taxa.'
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: low_potential_metabolic_enzymes
+    description: Key anaerobic energy-metabolism enzymes (PFOR, PFL) with low-potential
+      Fe-S clusters are oxygen sensitive.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: '"key enzymes involved in energy metabolism in anaerobes such as pyruvate
+        ferrodoxin oxidoreductase (PFOR), pyruvate formate lyase (PFL)... are known
+        to be O2 sensitive" - general anaerobe biology.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855051+00:00'
   curator: seed_from_metpo
@@ -136,4 +178,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

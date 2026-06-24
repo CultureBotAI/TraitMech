@@ -42,6 +42,55 @@ causal_graphs:
     node_type: CHEMICAL
     description: Reduced end product characteristic of propionibacteria.
     grounding: CHEBI:17272
+  - node_id: wood_werkman_cycle
+    label: Wood-Werkman cycle
+    node_type: PATHWAY
+    description: Methylmalonyl-CoA cycle; predominant propionate-forming route in
+      propionibacteria.
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    description: Central glycolytic intermediate feeding the Wood-Werkman cycle.
+  - node_id: oxaloacetate
+    label: oxaloacetate
+    node_type: CHEMICAL
+    description: Formed by biotin-dependent carboxylation of pyruvate.
+  - node_id: malate
+    label: malate
+    node_type: CHEMICAL
+    description: Reduction product of oxaloacetate in the reductive branch.
+  - node_id: fumarate
+    label: fumarate
+    node_type: CHEMICAL
+    description: Dehydration product of malate in the Wood-Werkman route.
+  - node_id: succinate
+    label: succinate
+    node_type: CHEMICAL
+    description: Reduction product of fumarate en route to propionate.
+  - node_id: succinyl_coa
+    label: succinyl-CoA
+    node_type: CHEMICAL
+    description: Intermediate formed from succinate before rearrangement.
+  - node_id: methylmalonyl_coa
+    label: methylmalonyl-CoA
+    node_type: CHEMICAL
+    description: Intermediate rearranged toward propionyl-CoA.
+  - node_id: propionyl_coa
+    label: propionyl-CoA
+    node_type: CHEMICAL
+    description: Immediate CoA-thioester precursor of propionate.
+  - node_id: mmc_carboxytransferase
+    label: methylmalonyl-CoA carboxytransferase
+    node_type: GENE_OR_PROTEIN
+    description: Biotin-dependent transcarboxylase converting pyruvate to oxaloacetate.
+  - node_id: biotin
+    label: biotin
+    node_type: CHEMICAL
+    description: Cofactor required by the carboxytransferase step.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    description: Co-product of propionic acid fermentation.
   edges:
   - subject: propionic_acid_fermentation_trait
     predicate: participates in
@@ -61,6 +110,77 @@ causal_graphs:
       notes: Classical-fermentation review describes propionic acid fermentation via
         the Wood-Werkman pathway in propionibacteria.
     predicate_id: METPO:2000202
+  - subject: propionic_acid_fermentation_trait
+    predicate: has major pathway
+    object: wood_werkman_cycle
+    description: The Wood-Werkman methylmalonyl-CoA cycle is the predominant propionate-forming
+      route.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Wood-Werkman cycle described as the predominant propionate-forming route
+        in Propionibacterium and Acidipropionibacterium.
+  - subject: pyruvate
+    predicate: causally upstream of
+    object: oxaloacetate
+    description: Pyruvate is carboxylated to oxaloacetate in a biotin-dependent reaction.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Pyruvate is carboxylated to oxaloacetate by methylmalonyl-CoA carboxytransferase
+        in a biotin-dependent reaction.
+  - subject: biotin
+    predicate: cofactor for
+    object: mmc_carboxytransferase
+    description: The transcarboxylation step is biotin-dependent.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: The transcarboxylation converting pyruvate to oxaloacetate is explicitly
+        described as biotin-dependent.
+  - subject: oxaloacetate
+    predicate: causally upstream of
+    object: malate
+    description: Oxaloacetate is reduced to malate in the reductive branch.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Oxaloacetate is reduced to malate in the reductive branch leading toward
+        succinate.
+  - subject: malate
+    predicate: causally upstream of
+    object: fumarate
+    description: Malate is dehydrated to fumarate.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Malate is dehydrated to fumarate in the Wood-Werkman route.
+  - subject: fumarate
+    predicate: causally upstream of
+    object: succinate
+    description: Fumarate is reduced to succinate.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Fumarate is reduced to succinate en route to propionate formation.
+  - subject: succinyl_coa
+    predicate: causally upstream of
+    object: methylmalonyl_coa
+    description: The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates
+        during propionate formation.
+  - subject: propionyl_coa
+    predicate: causally upstream of
+    object: propionate
+    description: Propionyl-CoA is converted to propionate by a CoA-transferase.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: Propionyl-CoA is finally converted to propionic acid or propionate by
+        a CoA-transferase.
+  - subject: propionic_acid_fermentation_trait
+    predicate: has byproduct
+    object: acetate
+    description: The fermentation produces propionate with acetate as a co-product.
+    evidence:
+    - reference: DOI:10.3390/molecules31020333
+      notes: The fermentation is defined as producing propionic acid with acetate
+        as a co-product.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -79,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17272×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

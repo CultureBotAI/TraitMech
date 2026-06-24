@@ -18,21 +18,20 @@ evidence:
   notes: Kumar, Mella-Herrera & Golden describe heterocysts as differentiated cells
     whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.
 - reference: DOI:10.1093/femsre/fuw029
-  notes: Herrero, Stavans & Flores describe heterocysts within the multicellular
-    filament of heterocyst-forming cyanobacteria.
+  notes: Herrero, Stavans & Flores describe heterocysts within the multicellular filament
+    of heterocyst-forming cyanobacteria.
 causal_graphs:
 - graph_id: heterocyst_microoxic_nitrogen_fixation
   title: Heterocyst differentiation creates a microoxic interior for N2 fixation
-  description: Evidence-backed causal sketch linking cyanobacterial cell
-    differentiation into thick-walled heterocysts to a microoxic interior that
-    accommodates oxygen-sensitive nitrogen fixation.
+  description: Evidence-backed causal sketch linking cyanobacterial cell differentiation
+    into thick-walled heterocysts to a microoxic interior that accommodates oxygen-sensitive
+    nitrogen fixation.
   nodes:
   - node_id: heterocyst_trait
     label: heterocyst
     node_type: TRAIT
     grounding: traitmech:000073
-    description: Differentiated thick-walled cyanobacterial cell with microoxic
-      interior.
+    description: Differentiated thick-walled cyanobacterial cell with microoxic interior.
   - node_id: cell_differentiation
     label: cell differentiation
     node_type: BIOLOGICAL_PROCESS
@@ -47,37 +46,133 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009399
     description: Reduction of atmospheric N2 to ammonia by nitrogenase.
+  - node_id: het_diff_process
+    label: heterocyst differentiation
+    node_type: BIOLOGICAL_PROCESS
+    description: Developmental program producing a mature heterocyst.
+  - node_id: hetr_regulator
+    label: HetR transcriptional regulator
+    node_type: GENE_OR_PROTEIN
+    description: Master transcriptional regulator of heterocyst development.
+  - node_id: furc_perr
+    label: FurC / PerR
+    node_type: GENE_OR_PROTEIN
+    description: Cyanobacterial Fur-family redox-responsive transcription factor.
+  - node_id: hetr_promoter
+    label: hetR promoter
+    node_type: CELLULAR_LOCALIZATION
+    description: Promoter region controlling hetR expression.
+  - node_id: glycolipid_layer
+    label: heterocyst glycolipid layer (HGL)
+    node_type: CELLULAR_LOCALIZATION
+    description: Inner heterocyst-specific glycolipid envelope layer limiting gas
+      diffusion.
+  - node_id: polysaccharide_layer
+    label: heterocyst envelope polysaccharide layer (HEP)
+    node_type: CELLULAR_LOCALIZATION
+    description: Outer envelope polysaccharide layer providing mechanical support.
+  - node_id: oxygen
+    label: oxygen
+    node_type: CHEMICAL
+    description: Molecular oxygen (O2).
+  - node_id: het_envelope
+    label: heterocyst envelope (Hgl/Hep)
+    node_type: CELLULAR_LOCALIZATION
+    description: Multilayered heterocyst cell envelope limiting O2 entry.
+  - node_id: pats_peptide
+    label: PatS peptide
+    node_type: GENE_OR_PROTEIN
+    description: Inhibitory peptide controlling heterocyst pattern/spacing.
+  - node_id: hetn_regulator
+    label: HetN regulator
+    node_type: GENE_OR_PROTEIN
+    description: Regulator maintaining heterocyst spacing pattern.
   edges:
   - subject: cell_differentiation
     predicate: enables
     object: heterocyst_trait
-    description: Cyanobacterial cell differentiation realizes the thick-walled
-      heterocyst.
+    description: Cyanobacterial cell differentiation realizes the thick-walled heterocyst.
     evidence:
     - reference: DOI:10.1093/femsre/fuw029
-      notes: Herrero et al. describe heterocysts within the multicellular
-        filament of heterocyst-forming cyanobacteria.
+      notes: Herrero et al. describe heterocysts within the multicellular filament
+        of heterocyst-forming cyanobacteria.
     predicate_id: RO:0002327
   - subject: heterocyst_trait
     predicate: causes
     object: microoxic_interior
-    description: The thick heterocyst wall and altered metabolism produce a
-      microoxic interior.
+    description: The thick heterocyst wall and altered metabolism produce a microoxic
+      interior.
     evidence:
     - reference: DOI:10.1101/cshperspect.a000315
-      notes: Kumar et al. describe heterocysts as differentiated cells whose
-        structure accommodates oxygen-sensitive N2 fixation.
+      notes: Kumar et al. describe heterocysts as differentiated cells whose structure
+        accommodates oxygen-sensitive N2 fixation.
     predicate_id: biolink:causes
   - subject: microoxic_interior
     predicate: enables
     object: nitrogen_fixation
-    description: The microoxic interior protects nitrogenase, enabling N2
-      fixation.
+    description: The microoxic interior protects nitrogenase, enabling N2 fixation.
     evidence:
     - reference: DOI:10.1101/cshperspect.a000315
-      notes: Kumar et al. link heterocyst microoxia to oxygen-sensitive N2
-        fixation.
+      notes: Kumar et al. link heterocyst microoxia to oxygen-sensitive N2 fixation.
     predicate_id: RO:0002327
+  - subject: hetr_regulator
+    predicate: positively regulates
+    object: het_diff_process
+    description: HetR is the master positive regulator of heterocyst development.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0289761
+      notes: '"hetR, the master regulator of heterocyst development".'
+  - subject: furc_perr
+    predicate: binds promoter of
+    object: hetr_promoter
+    description: FurC binds distal and proximal regions of the hetR promoter.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0289761
+      notes: EMSA detected FurC binding to distal (S1) and proximal (S3) regions of
+        the hetR promoter.
+  - subject: glycolipid_layer
+    predicate: reduces diffusion of
+    object: oxygen
+    description: The inner glycolipid layer reduces O2 gas diffusion into the heterocyst.
+    evidence:
+    - reference: DOI:10.1101/2023.10.04.560878
+      notes: '"the inner heterocyst-specific glycolipid layer (HGL) reduces gas diffusion
+        (including O2)".'
+  - subject: polysaccharide_layer
+    predicate: provides mechanical support to
+    object: glycolipid_layer
+    description: The outer polysaccharide layer mechanically supports the glycolipid
+      layer.
+    evidence:
+    - reference: DOI:10.1101/2023.10.04.560878
+      notes: '"the outer heterocyst envelope polysaccharide layer (HEP) provides mechanical
+        support to the HGL".'
+  - subject: het_envelope
+    predicate: enables
+    object: microoxic_interior
+    description: The Hgl/Hep envelope contributes to creating the microoxic heterocyst
+      interior.
+    evidence:
+    - reference: DOI:10.1093/pcp/pcae011
+      notes: '"These oxygen protection mechanisms create hypoxic environments in the
+        heterocysts so that nitrogenase can operate".'
+  - subject: pats_peptide
+    predicate: negatively regulates
+    object: het_diff_process
+    description: PatS inactivation yields a multiple-contiguous-heterocyst phenotype,
+      indicating negative regulation of differentiation/spacing.
+    evidence:
+    - reference: DOI:10.1101/2023.10.04.560878
+      notes: '"inactivation of one of the genes patS and hetN" caused the Mch (multiple
+        contiguous heterocyst) phenotype.'
+  - subject: hetn_regulator
+    predicate: negatively regulates
+    object: het_diff_process
+    description: HetN inactivation yields multiple contiguous heterocysts, indicating
+      negative regulation of differentiation/spacing.
+    evidence:
+    - reference: DOI:10.1101/2023.10.04.560878
+      notes: '"inactivation of one of the genes patS and hetN" caused the Mch phenotype.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -88,7 +183,13 @@ curation_history:
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (heterocyst differentiation /
-    microoxic N2 fixation) with GO node groundings and RO/biolink predicate
-    groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (heterocyst differentiation / microoxic
+    N2 fixation) with GO node groundings and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true
