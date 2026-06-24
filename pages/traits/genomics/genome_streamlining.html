@@ -90,12 +90,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>oligotrophic environment</strong>
+            <span class="edge-predicate">selects for</span>
+            <strong>smaller microbial genome size</strong>
+            
+            <p>Resource-poor oligotrophic waters select for smaller microbial genomes across free-living marine microbes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-36988-x</code>
+                
+                <span class="meta">Ngugi 2023: &#34;small microbial genomes in the resource-poor photic ocean&#34;; broad comparative support across 364 marine metagenomes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>genome streamlining</strong>
+            <span class="edge-predicate">associated with</span>
+            <strong>depletion of metabolic genes</strong>
+            
+            <p>Streamlined genomes show a generalizable depletion of metabolic genes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-50368-z</code>
+                
+                <span class="meta">Dong 2024: &#34;reduced genome sizes associated with a depletion of metabolic genes&#34;; generalizable signature of streamlined genomes under stress.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>genome streamlining</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>metabolic cross-feeding</strong>
+            
+            <p>Streamlining and resulting auxotrophies promote metabolic cross-feeding in bacterioplankton communities.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-46374-w</code>
+                
+                <span class="meta">Giordano 2024: &#34;genome streamlining and metabolic auxotrophies as central joint mechanisms shaping bacterioplankton community assembly&#34;.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>reduced cofactor/vitamin biosynthesis</strong>
+            <span class="edge-predicate">increases dependence on</span>
+            <strong>dependence on exogenous B-vitamin precursors</strong>
+            
+            <p>Loss of cofactor/vitamin biosynthesis increases reliance on exogenous B-vitamin precursors and products.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-024-46374-w</code>
+                
+                <span class="meta">Giordano 2024: &#34;reliance ... on exogenous B1 and B12 precursors/products&#34;; Black Queen-like public-goods dependency.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>reductive genome evolution</strong>
+            <span class="edge-predicate">removes</span>
+            <strong>genes with marginal fitness benefit</strong>
+            
+            <p>Selection in oligotrophic lineages removes genes with marginal fitness benefit, realizing genome reduction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuac043</code>
+                
+                <span class="meta">Diez 2023 review: &#34;genome reduction was driven by selection removing genes with marginal fitness benefit&#34;; classical streamlining theory.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +322,12 @@
           <time>2026-06-16T06:54:40Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (METPO:1007721×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +687,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking oligotrophic, high-Ne lifestyles to selective reduction of genome content.", "edges": [{"description": "Resource limitation and large Ne favor minimizing cellular cost via genome reduction.", "evidence": [{"notes": "Giovannoni et al. articulate streamlining theory for abundant oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "oligotrophic_environment", "target": "streamlining_trait"}, {"description": "Reductive evolution is the population-genetic process realizing the streamlined-genome phenotype.", "evidence": [{"notes": "Batut et al. compare reductive genome evolution across the bacterial population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive_genome_evolution", "target": "streamlining_trait"}], "evidence_rows": [{"description": "Resource limitation and large Ne favor minimizing cellular cost via genome reduction.", "edge_id": "edge-1", "evidence": [{"notes": "Giovannoni et al. articulate streamlining theory for abundant oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "oligotrophic environment", "target": "genome streamlining"}, {"description": "Reductive evolution is the population-genetic process realizing the streamlined-genome phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Batut et al. compare reductive genome evolution across the bacterial population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive genome evolution", "target": "genome streamlining"}], "graph_id": "streamlining_oligotrophic_selection", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Low-nutrient habitat supporting large free-living populations.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Selective and drift-driven loss of genomic content.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Selective reduction of genome size and gene content.", "grounding": "traitmech:000099", "id": "streamlining_trait", "is_orphan": false, "label": "genome streamlining", "node_type": "TRAIT", "xrefs": []}], "title": "Oligotrophic environments select for streamlined genomes"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking oligotrophic, high-Ne lifestyles to selective reduction of genome content.", "edges": [{"description": "Resource limitation and large Ne favor minimizing cellular cost via genome reduction.", "evidence": [{"notes": "Giovannoni et al. articulate streamlining theory for abundant oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "oligotrophic_environment", "target": "streamlining_trait"}, {"description": "Reductive evolution is the population-genetic process realizing the streamlined-genome phenotype.", "evidence": [{"notes": "Batut et al. compare reductive genome evolution across the bacterial population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive_genome_evolution", "target": "streamlining_trait"}, {"description": "Resource-poor oligotrophic waters select for smaller microbial genomes across free-living marine microbes.", "evidence": [{"notes": "Ngugi 2023: \"small microbial genomes in the resource-poor photic ocean\"; broad comparative support across 364 marine metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "id": "edge-3", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "oligotrophic_environment", "target": "smaller_microbial_genome"}, {"description": "Streamlined genomes show a generalizable depletion of metabolic genes.", "evidence": [{"notes": "Dong 2024: \"reduced genome sizes associated with a depletion of metabolic genes\"; generalizable signature of streamlined genomes under stress.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": null, "source": "streamlining_trait", "target": "depletion_metabolic_genes"}, {"description": "Streamlining and resulting auxotrophies promote metabolic cross-feeding in bacterioplankton communities.", "evidence": [{"notes": "Giordano 2024: \"genome streamlining and metabolic auxotrophies as central joint mechanisms shaping bacterioplankton community assembly\".", "reference": "DOI:10.1038/s41467-024-46374-w"}], "id": "edge-5", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "streamlining_trait", "target": "metabolic_cross_feeding"}, {"description": "Loss of cofactor/vitamin biosynthesis increases reliance on exogenous B-vitamin precursors and products.", "evidence": [{"notes": "Giordano 2024: \"reliance ... on exogenous B1 and B12 precursors/products\"; Black Queen-like public-goods dependency.", "reference": "DOI:10.1038/s41467-024-46374-w"}], "id": "edge-6", "is_orphan": false, "predicate": "increases dependence on", "predicate_id": null, "source": "reduced_cofactor_biosynthesis", "target": "exogenous_bvitamin_dependence"}, {"description": "Selection in oligotrophic lineages removes genes with marginal fitness benefit, realizing genome reduction.", "evidence": [{"notes": "Diez 2023 review: \"genome reduction was driven by selection removing genes with marginal fitness benefit\"; classical streamlining theory.", "reference": "DOI:10.1093/femsre/fuac043"}], "id": "edge-7", "is_orphan": false, "predicate": "removes", "predicate_id": null, "source": "reductive_genome_evolution", "target": "marginal_fitness_genes"}], "evidence_rows": [{"description": "Resource limitation and large Ne favor minimizing cellular cost via genome reduction.", "edge_id": "edge-1", "evidence": [{"notes": "Giovannoni et al. articulate streamlining theory for abundant oligotrophic microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "oligotrophic environment", "target": "genome streamlining"}, {"description": "Reductive evolution is the population-genetic process realizing the streamlined-genome phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Batut et al. compare reductive genome evolution across the bacterial population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive genome evolution", "target": "genome streamlining"}, {"description": "Resource-poor oligotrophic waters select for smaller microbial genomes across free-living marine microbes.", "edge_id": "edge-3", "evidence": [{"notes": "Ngugi 2023: \"small microbial genomes in the resource-poor photic ocean\"; broad comparative support across 364 marine metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "predicate": "selects for", "predicate_id": null, "source": "oligotrophic environment", "target": "smaller microbial genome size"}, {"description": "Streamlined genomes show a generalizable depletion of metabolic genes.", "edge_id": "edge-4", "evidence": [{"notes": "Dong 2024: \"reduced genome sizes associated with a depletion of metabolic genes\"; generalizable signature of streamlined genomes under stress.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "predicate": "associated with", "predicate_id": null, "source": "genome streamlining", "target": "depletion of metabolic genes"}, {"description": "Streamlining and resulting auxotrophies promote metabolic cross-feeding in bacterioplankton communities.", "edge_id": "edge-5", "evidence": [{"notes": "Giordano 2024: \"genome streamlining and metabolic auxotrophies as central joint mechanisms shaping bacterioplankton community assembly\".", "reference": "DOI:10.1038/s41467-024-46374-w"}], "predicate": "promotes", "predicate_id": null, "source": "genome streamlining", "target": "metabolic cross-feeding"}, {"description": "Loss of cofactor/vitamin biosynthesis increases reliance on exogenous B-vitamin precursors and products.", "edge_id": "edge-6", "evidence": [{"notes": "Giordano 2024: \"reliance ... on exogenous B1 and B12 precursors/products\"; Black Queen-like public-goods dependency.", "reference": "DOI:10.1038/s41467-024-46374-w"}], "predicate": "increases dependence on", "predicate_id": null, "source": "reduced cofactor/vitamin biosynthesis", "target": "dependence on exogenous B-vitamin precursors"}, {"description": "Selection in oligotrophic lineages removes genes with marginal fitness benefit, realizing genome reduction.", "edge_id": "edge-7", "evidence": [{"notes": "Diez 2023 review: \"genome reduction was driven by selection removing genes with marginal fitness benefit\"; classical streamlining theory.", "reference": "DOI:10.1093/femsre/fuac043"}], "predicate": "removes", "predicate_id": null, "source": "reductive genome evolution", "target": "genes with marginal fitness benefit"}], "graph_id": "streamlining_oligotrophic_selection", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Generalizable signature: loss of metabolic gene content in streamlined genomes.", "grounding": null, "id": "depletion_metabolic_genes", "is_orphan": false, "label": "depletion of metabolic genes", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Reliance on externally supplied B1/B12 precursors and products.", "grounding": null, "id": "exogenous_bvitamin_dependence", "is_orphan": false, "label": "dependence on exogenous B-vitamin precursors", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Genes whose marginal fitness contribution makes them targets of selective removal.", "grounding": null, "id": "marginal_fitness_genes", "is_orphan": false, "label": "genes with marginal fitness benefit", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Community-level exchange of metabolites among auxotrophic members.", "grounding": null, "id": "metabolic_cross_feeding", "is_orphan": false, "label": "metabolic cross-feeding", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Low-nutrient habitat supporting large free-living populations.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Loss of cofactor and vitamin biosynthetic capacity.", "grounding": null, "id": "reduced_cofactor_biosynthesis", "is_orphan": false, "label": "reduced cofactor/vitamin biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Selective and drift-driven loss of genomic content.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced genome size in free-living microbes.", "grounding": null, "id": "smaller_microbial_genome", "is_orphan": false, "label": "smaller microbial genome size", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Selective reduction of genome size and gene content.", "grounding": "traitmech:000099", "id": "streamlining_trait", "is_orphan": false, "label": "genome streamlining", "node_type": "TRAIT", "xrefs": []}], "title": "Oligotrophic environments select for streamlined genomes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +698,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

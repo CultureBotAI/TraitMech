@@ -54,6 +54,48 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Regulation of flagellar rotation and movement direction.
     grounding: GO:0006935
+  - node_id: ft3ss_export_system
+    label: flagellar type III secretion system
+    node_type: GENE_OR_PROTEIN
+    description: fT3SS at the flagellar base that exports structural subunits to the
+      assembly site.
+  - node_id: flagellar_structural_subunits
+    label: flagellar structural subunits
+    node_type: GENE_OR_PROTEIN
+    description: Axial protein subunits exported through the central channel for distal
+      assembly.
+  - node_id: flii_atpase_complex
+    label: FliH-FliI-FliJ ATPase complex
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic ATPase ring complex providing ATP hydrolysis to drive
+      flagellar protein export.
+  - node_id: fld_filament_cap
+    label: FliD filament cap
+    node_type: GENE_OR_PROTEIN
+    description: Pentameric cap at the filament tip that aids flagellin polymerization.
+  - node_id: hook_filament_junction
+    label: FlgK/FlgL hook-filament junction
+    node_type: GENE_OR_PROTEIN
+    description: Adapter proteins connecting hook to filament and required for filament
+      polymerization.
+  - node_id: filament_polymerization
+    label: flagellar filament polymerization
+    node_type: BIOLOGICAL_PROCESS
+    description: Polymerization of flagellin subunits into the helical filament.
+  - node_id: proton_channel
+    label: transmembrane H+ channel
+    node_type: MOLECULAR_FUNCTION
+    description: Proton conduction pathway through the MotA-MotB stator that drives
+      torque generation.
+  - node_id: chey_p
+    label: CheY-P
+    node_type: GENE_OR_PROTEIN
+    description: Phosphorylated chemotaxis response regulator that binds the C ring
+      to control rotation.
+  - node_id: rotational_switching
+    label: flagellar rotational switching
+    node_type: BIOLOGICAL_PROCESS
+    description: Switching of flagellar motor rotation between CCW and CW states.
   edges:
   - subject: flagellar_filament
     predicate: enables
@@ -99,6 +141,76 @@ causal_graphs:
       snippet: regulate the direction of flagella-driven motility
       notes: Supports chemotaxis regulation of flagellated motility.
     predicate_id: RO:0002211
+  - subject: ft3ss_export_system
+    predicate: exports
+    object: flagellar_structural_subunits
+    description: The fT3SS exports flagellar structural subunits to the distal assembly
+      site.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.esp-0011-2023
+      notes: '"a flagellar type III secretion system (fT3SS) at the base exports structural
+        subunits from the cytoplasm through a narrow central channel to the distal
+        tip where assembly occurs"'
+  - subject: flii_atpase_complex
+    predicate: enables
+    object: ft3ss_export_system
+    description: The FliH-FliI-FliJ ATPase complex powers flagellar protein export
+      by the fT3SS.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.esp-0011-2023
+      notes: '"the ATPase ring complex (FliI, with FliH and FliJ) provides ATP hydrolysis
+        for export"'
+  - subject: fld_filament_cap
+    predicate: enables
+    object: filament_polymerization
+    description: The FliD filament cap aids polymerization of flagellin into the filament.
+    evidence:
+    - reference: DOI:10.3390/biom14121488
+      notes: '"flagellin subunits (~30,000) polymerize into a filament aided by a
+        five-subunit FliD cap"'
+  - subject: hook_filament_junction
+    predicate: enables
+    object: filament_polymerization
+    description: FlgK/FlgL hook-filament junction proteins are required for filament
+      polymerization.
+    evidence:
+    - reference: DOI:10.3390/biom14121488
+      notes: '"absence of FlgK/FlgL/FliD prevents filament polymerization"'
+  - subject: filament_polymerization
+    predicate: results in formation of
+    object: flagellar_filament
+    description: Polymerization of flagellin subunits forms the flagellar filament.
+    evidence:
+    - reference: DOI:10.3390/biom14121488
+      notes: '"flagellin subunits (~30,000) polymerize into a filament" forming the
+        helical filament.'
+  - subject: stator_complex
+    predicate: has function
+    object: proton_channel
+    description: The MotA-MotB stator complex acts as a transmembrane H+ channel powering
+      rotation.
+    evidence:
+    - reference: DOI:10.3390/biom14121488
+      notes: '"stator units formed by MotA and MotB ... act as a transmembrane H+
+        channel"'
+  - subject: chey_p
+    predicate: regulates
+    object: rotational_switching
+    description: CheY-P binding to the C ring causes flagellar rotational switching
+      (CCW/CW).
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01630-z
+      notes: '"Directional switching is triggered by the chemotaxis regulator CheY-P
+        binding to FliM, causing full reversal of rotation"'
+  - subject: rotational_switching
+    predicate: regulates
+    object: flagellated_trait
+    description: Switching of motor rotation direction modulates flagellated motility
+      behavior.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.esp-0011-2023
+      notes: '"the C ring switches its conformational state" changing the direction
+        of flagella-driven motility.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.906575+00:00'
   curator: seed_from_metpo
@@ -140,4 +252,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006935×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -45,6 +45,53 @@ causal_graphs:
     label: Rod-complex peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized lateral peptidoglycan assembly.
+  - node_id: roda_pbp2_complex
+    label: RodA-PBP2 elongasome complex
+    node_type: GENE_OR_PROTEIN
+    description: SEDS-bPBP synthase pair driving lateral (sidewall) peptidoglycan
+      synthesis.
+  - node_id: roda_pbp2_activation
+    label: RodA-PBP2 allosteric activation
+    node_type: BIOLOGICAL_PROCESS
+    description: Structural opening coupling peptidoglycan polymerization and crosslinking.
+  - node_id: pg_polymerization_crosslinking
+    label: peptidoglycan polymerization and crosslinking
+    node_type: BIOLOGICAL_PROCESS
+    description: Glycan-chain polymerization and transpeptidase crosslinking during
+      elongation.
+  - node_id: sidewall_pg_insertion
+    label: lateral sidewall peptidoglycan insertion
+    node_type: BIOLOGICAL_PROCESS
+    description: Insertion of new peptidoglycan at dispersed lateral cell-wall sites.
+  - node_id: mreb_filaments
+    label: MreB cytoskeletal filaments
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like filaments guiding circumferential peptidoglycan insertion.
+  - node_id: circumferential_pg_insertion
+    label: circumferential peptidoglycan insertion
+    node_type: BIOLOGICAL_PROCESS
+    description: Peptidoglycan insertion oriented perpendicular to the long cell axis.
+  - node_id: rod_complex_rotation
+    label: Rod-complex circumferential rotation
+    node_type: BIOLOGICAL_PROCESS
+    description: Rotation of the Rod complex perpendicular to the long cell axis.
+  - node_id: even_pg_distribution
+    label: even peptidoglycan distribution
+    node_type: QUALITY
+    description: Evenly distributed insertion of peptidoglycan in the cell-surface
+      layer.
+  - node_id: mrec_mred_balance
+    label: MreC-MreD balance
+    node_type: GENE_OR_PROTEIN
+    description: Stoichiometric balance of MreC and MreD accessory regulators.
+  - node_id: pbp2_activity
+    label: PBP2 transpeptidase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Peptidoglycan crosslinking activity of the bifunctional PBP2 synthase.
+  - node_id: lipid_ii
+    label: Lipid II
+    node_type: CHEMICAL
+    description: Disaccharide-pentapeptide lipid-linked peptidoglycan precursor.
   edges:
   - subject: rich_growth_conditions
     predicate: shifts
@@ -73,6 +120,66 @@ causal_graphs:
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports large width as a value within the regulated cell-width distribution.
     predicate_id: rdfs:subClassOf
+  - subject: roda_pbp2_activation
+    predicate: positively regulates
+    object: pg_polymerization_crosslinking
+    description: Allosteric structural opening of RodA-PBP2 activates coupled PG polymerization
+      and crosslinking.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: '"Structural opening couples the activation of polymerization and crosslinking
+        and is essential in vivo."'
+  - subject: roda_pbp2_complex
+    predicate: mediates
+    object: sidewall_pg_insertion
+    description: Activated RodA-PBP2 elongasome synthesizes and inserts new PG at
+      lateral wall sites.
+    evidence:
+    - reference: DOI:10.1073/pnas.2215237120
+      notes: '"The elongasome... synthesizing and inserting new PG material at dispersed
+        sites in the lateral cell wall."'
+  - subject: sidewall_pg_insertion
+    predicate: contributes to
+    object: rod_complex_pg
+    description: Lateral sidewall PG insertion is the Rod-complex-driven wall-elongation
+      process that sets rod radius.
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      notes: Lateral PG insertion is the MreB/Rod-complex activity governing rod radius.
+  - subject: mreb_filaments
+    predicate: orients
+    object: circumferential_pg_insertion
+    description: MreB filaments orient peptidoglycan insertion perpendicular to the
+      long cell axis, controlling rod radius.
+    evidence:
+    - reference: DOI:10.1073/pnas.2301987120
+      notes: '"MreB filaments are thought to orient it orthogonally to the long cell
+        axis" guiding PG insertion perpendicular to the long axis.'
+  - subject: rod_complex_rotation
+    predicate: enables
+    object: even_pg_distribution
+    description: Rotation of the Rod complex around the circumference enables evenly
+      distributed PG insertion.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: '"the Rod complex rotates perpendicularly to the long axis of the cell...
+        allowing the insertion of peptidoglycan... in an evenly distributed manner."'
+  - subject: mrec_mred_balance
+    predicate: regulates
+    object: pbp2_activity
+    description: The balance between MreC and MreD determines PBP2 synthase activity.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1385
+      notes: '"the balance between MreC and MreD determines the activity of PBP2"'
+  - subject: lipid_ii
+    predicate: required for
+    object: pg_polymerization_crosslinking
+    description: Lipid II is the substrate required for peptidoglycan polymerization
+      by Rod/elongasome synthases.
+    evidence:
+    - reference: DOI:10.3390/biom13050720
+      notes: '"GTases and TPases utilize the disaccharide pentapeptide of Lipid-II
+        as a substrate for PG polymerization and synthesis of the PG layer."'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.922624+00:00'
   curator: seed_from_metpo
@@ -90,4 +197,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

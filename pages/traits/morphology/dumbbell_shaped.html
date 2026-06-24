@@ -107,12 +107,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>septal peptidoglycan hydrolysis</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>daughter cell separation</strong>
+            
+            <p>Timed, localized septal PG hydrolysis enables daughter-cell separation / V-snapping.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1073/pnas.2214599119</code>
+                
+                <span class="meta">Daughter cell separation requires precisely timed and localized peptidoglycan hydrolysis at the septal junction.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>septal peptidoglycan hydrolysis</strong>
+            <span class="edge-predicate">combined with</span>
+            <strong>mechanical snapping separation</strong>
+            
+            <p>Septal PG cleavage while outer AG/MA layers remain continuous leads to mechanical snapping separation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00028-07</code>
+                
+                <span class="meta">Overlying envelope layers (AG, mycolic acids) remain continuous across the septum; separation occurs by rupture of these outer layers, an uneven mechanical snap.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>outer envelope layer continuity</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>mechanical snapping separation</strong>
+            
+            <p>Continuity of outer envelope layers forces a final mechanical rupture (snap) to complete separation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00028-07</code>
+                
+                <span class="meta">Continuity/intertwining of AG and mycolate outer layers forces a final mechanical rupture.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>mechanical snapping separation</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>V-shaped attached daughters</strong>
+            
+            <p>Uneven rupture of intertwined outer envelope layers produces V-shaped attached daughters.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00028-07</code>
+                
+                <span class="meta">Uneven rupturing produces the V-shape; snapping division produces angular daughter arrangements.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>septal peptidoglycan hydrolases (RipA/RpfB)</strong>
+            <span class="edge-predicate">mediates</span>
+            <strong>septal peptidoglycan hydrolysis</strong>
+            
+            <p>Septal PG hydrolases (RipA, RpfB) cleave the septum to separate daughter cells.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3299</code>
+                
+                <span class="meta">RipA and RpfB cleave the septum to separate the daughter cells.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>polar growth from nascent septum</strong>
+            <span class="edge-predicate">aggravates</span>
+            <strong>mechanical snapping separation</strong>
+            
+            <p>Polar growth from the nascent septum can aggravate rupture/snapping of outer layers.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00028-07</code>
+                
+                <span class="meta">Polar growth from the nascent septum can aggravate rupture; relevant to transient two-bulb dumbbell form before full snap.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -258,6 +364,12 @@
           <time>2026-05-23T21:30:07Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007400×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -617,7 +729,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking pre-separation septum constriction and snapping/incomplete cell division to dumbbell cell pairs.", "edges": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell_constriction", "target": "dumbbell_intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "snapping_division", "target": "dumbbell_intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell_intermediate", "target": "dumbbell_shaped_trait"}], "evidence_rows": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell constriction", "target": "dumbbell intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "stabilizes", "predicate_id": null, "source": "snapping division", "target": "dumbbell intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell intermediate", "target": "dumbbell shaped"}], "graph_id": "dumbbell_shaped_snapping_division", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Two-lobe cell pair joined by an isthmus prior to full separation.", "grounding": null, "id": "dumbbell_intermediate", "is_orphan": false, "label": "dumbbell intermediate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Two-lobe cell body joined by a central isthmus.", "grounding": "METPO:1000672", "id": "dumbbell_shaped_trait", "is_orphan": false, "label": "dumbbell shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Division-site constriction pinching the cell at midcell.", "grounding": null, "id": "midcell_constriction", "is_orphan": false, "label": "midcell constriction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Incomplete outer-layer separation that keeps daughter cells linked.", "grounding": null, "id": "snapping_division", "is_orphan": false, "label": "snapping division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Dumbbell-shape snapping division intermediate"}];
+  var graphs = [{"description": "DOI-backed graph linking pre-separation septum constriction and snapping/incomplete cell division to dumbbell cell pairs.", "edges": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell_constriction", "target": "dumbbell_intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-2", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "snapping_division", "target": "dumbbell_intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell_intermediate", "target": "dumbbell_shaped_trait"}, {"description": "Timed, localized septal PG hydrolysis enables daughter-cell separation / V-snapping.", "evidence": [{"notes": "Daughter cell separation requires precisely timed and localized peptidoglycan hydrolysis at the septal junction.", "reference": "DOI:10.1073/pnas.2214599119"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "septal_pg_hydrolysis", "target": "daughter_cell_separation"}, {"description": "Septal PG cleavage while outer AG/MA layers remain continuous leads to mechanical snapping separation.", "evidence": [{"notes": "Overlying envelope layers (AG, mycolic acids) remain continuous across the septum; separation occurs by rupture of these outer layers, an uneven mechanical snap.", "reference": "DOI:10.1128/mmbr.00028-07"}], "id": "edge-5", "is_orphan": false, "predicate": "combined with", "predicate_id": null, "source": "septal_pg_hydrolysis", "target": "mechanical_snapping_separation"}, {"description": "Continuity of outer envelope layers forces a final mechanical rupture (snap) to complete separation.", "evidence": [{"notes": "Continuity/intertwining of AG and mycolate outer layers forces a final mechanical rupture.", "reference": "DOI:10.1128/mmbr.00028-07"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "outer_envelope_continuity", "target": "mechanical_snapping_separation"}, {"description": "Uneven rupture of intertwined outer envelope layers produces V-shaped attached daughters.", "evidence": [{"notes": "Uneven rupturing produces the V-shape; snapping division produces angular daughter arrangements.", "reference": "DOI:10.1128/mmbr.00028-07"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "mechanical_snapping_separation", "target": "v_shaped_daughters"}, {"description": "Septal PG hydrolases (RipA, RpfB) cleave the septum to separate daughter cells.", "evidence": [{"notes": "RipA and RpfB cleave the septum to separate the daughter cells.", "reference": "DOI:10.1038/nrmicro3299"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "septal_hydrolases", "target": "septal_pg_hydrolysis"}, {"description": "Polar growth from the nascent septum can aggravate rupture/snapping of outer layers.", "evidence": [{"notes": "Polar growth from the nascent septum can aggravate rupture; relevant to transient two-bulb dumbbell form before full snap.", "reference": "DOI:10.1128/mmbr.00028-07"}], "id": "edge-9", "is_orphan": false, "predicate": "aggravates", "predicate_id": null, "source": "polar_growth", "target": "mechanical_snapping_separation"}], "evidence_rows": [{"description": "Strong midcell constriction creates a two-lobe pre-division morphology.", "edge_id": "edge-1", "evidence": [{"notes": "Supports midcell constriction as the proximate event preceding dumbbell intermediates.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "midcell constriction", "target": "dumbbell intermediate"}, {"description": "Snapping/V-form division preserves linkage between daughter cells.", "edge_id": "edge-2", "evidence": [{"notes": "Supports snapping division as the mechanism stabilizing post-division dumbbells.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "stabilizes", "predicate_id": null, "source": "snapping division", "target": "dumbbell intermediate"}, {"description": "The dumbbell intermediate manifests the dumbbell-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1111/j.1574-6976.2011.00298.x", "snippet": "snapping cell division"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "dumbbell intermediate", "target": "dumbbell shaped"}, {"description": "Timed, localized septal PG hydrolysis enables daughter-cell separation / V-snapping.", "edge_id": "edge-4", "evidence": [{"notes": "Daughter cell separation requires precisely timed and localized peptidoglycan hydrolysis at the septal junction.", "reference": "DOI:10.1073/pnas.2214599119"}], "predicate": "enables", "predicate_id": null, "source": "septal peptidoglycan hydrolysis", "target": "daughter cell separation"}, {"description": "Septal PG cleavage while outer AG/MA layers remain continuous leads to mechanical snapping separation.", "edge_id": "edge-5", "evidence": [{"notes": "Overlying envelope layers (AG, mycolic acids) remain continuous across the septum; separation occurs by rupture of these outer layers, an uneven mechanical snap.", "reference": "DOI:10.1128/mmbr.00028-07"}], "predicate": "combined with", "predicate_id": null, "source": "septal peptidoglycan hydrolysis", "target": "mechanical snapping separation"}, {"description": "Continuity of outer envelope layers forces a final mechanical rupture (snap) to complete separation.", "edge_id": "edge-6", "evidence": [{"notes": "Continuity/intertwining of AG and mycolate outer layers forces a final mechanical rupture.", "reference": "DOI:10.1128/mmbr.00028-07"}], "predicate": "promotes", "predicate_id": null, "source": "outer envelope layer continuity", "target": "mechanical snapping separation"}, {"description": "Uneven rupture of intertwined outer envelope layers produces V-shaped attached daughters.", "edge_id": "edge-7", "evidence": [{"notes": "Uneven rupturing produces the V-shape; snapping division produces angular daughter arrangements.", "reference": "DOI:10.1128/mmbr.00028-07"}], "predicate": "produces", "predicate_id": null, "source": "mechanical snapping separation", "target": "V-shaped attached daughters"}, {"description": "Septal PG hydrolases (RipA, RpfB) cleave the septum to separate daughter cells.", "edge_id": "edge-8", "evidence": [{"notes": "RipA and RpfB cleave the septum to separate the daughter cells.", "reference": "DOI:10.1038/nrmicro3299"}], "predicate": "mediates", "predicate_id": null, "source": "septal peptidoglycan hydrolases (RipA/RpfB)", "target": "septal peptidoglycan hydrolysis"}, {"description": "Polar growth from the nascent septum can aggravate rupture/snapping of outer layers.", "edge_id": "edge-9", "evidence": [{"notes": "Polar growth from the nascent septum can aggravate rupture; relevant to transient two-bulb dumbbell form before full snap.", "reference": "DOI:10.1128/mmbr.00028-07"}], "predicate": "aggravates", "predicate_id": null, "source": "polar growth from nascent septum", "target": "mechanical snapping separation"}], "graph_id": "dumbbell_shaped_snapping_division", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Resolution of the septum into two physically separated daughter cells, often via V-snapping.", "grounding": null, "id": "daughter_cell_separation", "is_orphan": false, "label": "daughter cell separation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Two-lobe cell pair joined by an isthmus prior to full separation.", "grounding": null, "id": "dumbbell_intermediate", "is_orphan": false, "label": "dumbbell intermediate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Two-lobe cell body joined by a central isthmus.", "grounding": "METPO:1000672", "id": "dumbbell_shaped_trait", "is_orphan": false, "label": "dumbbell shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Rupture of continuous outer envelope layers producing an uneven mechanical snap.", "grounding": null, "id": "mechanical_snapping_separation", "is_orphan": false, "label": "mechanical snapping separation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Division-site constriction pinching the cell at midcell.", "grounding": null, "id": "midcell_constriction", "is_orphan": false, "label": "midcell constriction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Arabinogalactan and mycolic-acid outer layers remaining continuous across the septum.", "grounding": null, "id": "outer_envelope_continuity", "is_orphan": false, "label": "outer envelope layer continuity", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Apical cell-wall growth initiated from the new pole at the nascent septum.", "grounding": null, "id": "polar_growth", "is_orphan": false, "label": "polar growth from nascent septum", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Peptidoglycan-cleaving enzymes that cut the septum to separate daughter cells.", "grounding": null, "id": "septal_hydrolases", "is_orphan": false, "label": "septal peptidoglycan hydrolases (RipA/RpfB)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Precisely timed and localized hydrolysis of septal peptidoglycan at the division junction.", "grounding": null, "id": "septal_pg_hydrolysis", "is_orphan": false, "label": "septal peptidoglycan hydrolysis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Incomplete outer-layer separation that keeps daughter cells linked.", "grounding": null, "id": "snapping_division", "is_orphan": false, "label": "snapping division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Angular V-shaped arrangement of partially attached daughter cells from snapping division.", "grounding": null, "id": "v_shaped_daughters", "is_orphan": false, "label": "V-shaped attached daughters", "node_type": "TRAIT", "xrefs": []}], "title": "Dumbbell-shape snapping division intermediate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -628,7 +740,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

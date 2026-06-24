@@ -90,12 +90,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>bacteriochlorophyll</strong>
+            <span class="edge-predicate">absorbs</span>
+            <strong>light energy</strong>
+            
+            <p>Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.tim.2006.09.001</code>
+                
+                <span class="meta">Bryant &amp; Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>light energy</strong>
+            <span class="edge-predicate">powers</span>
+            <strong>photosynthetic electron transport</strong>
+            
+            <p>Absorbed light energy drives photosynthetic electron transport through the single photosystem.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.tim.2006.09.001</code>
+                
+                <span class="meta">Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>Type I reaction center</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>anoxygenic photosynthesis</strong>
+            
+            <p>A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14030311</code>
+                
+                <span class="meta">Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>Type I reaction center</strong>
+            <span class="edge-predicate">part of</span>
+            <strong>photosynthetic electron transport</strong>
+            
+            <p>The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41586-024-07180-y</code>
+                
+                <span class="meta">Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>sulfide</strong>
+            <span class="edge-predicate">oxidized to</span>
+            <strong>elemental sulfur (S0)</strong>
+            
+            <p>Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2024.1417714</code>
+                
+                <span class="meta">Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -227,6 +316,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (sulfide-driven anoxygenic photosynthesis) with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +681,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a single bacteriochlorophyll photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic electron flow without O2 evolution.", "edges": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic_etc"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_etc", "target": "anoxygenic_photosynthesis_trait"}], "evidence_rows": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "edge_id": "edge-1", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic electron transport"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "target": "anoxygenic photosynthesis"}], "graph_id": "anoxygenic_photosynthesis_sulfide_donor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacteriochlorophyll-based photosynthesis using non-water electron donors.", "grounding": "traitmech:000035", "id": "anoxygenic_photosynthesis_trait", "is_orphan": false, "label": "anoxygenic photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Single-photosystem electron transport powering anoxygenic photosynthesis.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur electron donor (representative anoxygenic donor).", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "xrefs": []}], "title": "Anoxygenic photosynthesis uses non-water electron donors"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a single bacteriochlorophyll photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic electron flow without O2 evolution.", "edges": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-1", "is_orphan": false, "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic_etc"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic_etc", "target": "anoxygenic_photosynthesis_trait"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-3", "is_orphan": false, "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light_energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": null, "source": "light_energy", "target": "photosynthetic_etc"}, {"description": "A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.", "evidence": [{"notes": "Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.", "reference": "DOI:10.3390/biom14030311"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "type_i_reaction_center", "target": "anoxygenic_photosynthesis_trait"}, {"description": "The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.", "evidence": [{"notes": "Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.", "reference": "DOI:10.1038/s41586-024-07180-y"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "type_i_reaction_center", "target": "photosynthetic_etc"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidized to", "predicate_id": null, "source": "sulfide", "target": "elemental_sulfur"}], "evidence_rows": [{"description": "Sulfide and other non-water donors feed electrons into the single photosystem.", "edge_id": "edge-1", "evidence": [{"notes": "Review of green sulfur bacteria supports sulfide as electron donor and the absence of oxygen production.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "feeds electrons into", "predicate_id": "METPO:2007402", "source": "sulfide", "target": "photosynthetic electron transport"}, {"description": "Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Bryant \u0026 Frigaard describe anoxygenic photosynthesis across five prokaryotic phyla using bacteriochlorophyll and a single photosystem.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "photosynthetic electron transport", "target": "anoxygenic photosynthesis"}, {"description": "Bacteriochlorophyll harvests light energy to drive single-photosystem photochemistry.", "edge_id": "edge-3", "evidence": [{"notes": "Bryant \u0026 Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll and a single photosystem to capture light energy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "absorbs", "predicate_id": null, "source": "bacteriochlorophyll", "target": "light energy"}, {"description": "Absorbed light energy drives photosynthetic electron transport through the single photosystem.", "edge_id": "edge-4", "evidence": [{"notes": "Light energy captured by bacteriochlorophyll powers single-photosystem electron flow in anoxygenic phototrophs.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "powers", "predicate_id": null, "source": "light energy", "target": "photosynthetic electron transport"}, {"description": "A homodimeric Type I reaction-center photosystem mediates anoxygenic photosynthesis across diverse phyla.", "edge_id": "edge-5", "evidence": [{"notes": "Niederman: diverse homodimeric Type I reaction-center photosystems underpin anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y showing Chloroflexota use a Type I RC.", "reference": "DOI:10.3390/biom14030311"}], "predicate": "enables", "predicate_id": null, "source": "Type I reaction center", "target": "anoxygenic photosynthesis"}, {"description": "The Type I reaction center is the photochemical core of the single-photosystem electron transport chain.", "edge_id": "edge-6", "evidence": [{"notes": "Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type I reaction centre for photosynthetic electron transport.", "reference": "DOI:10.1038/s41586-024-07180-y"}], "predicate": "part of", "predicate_id": null, "source": "Type I reaction center", "target": "photosynthetic electron transport"}, {"description": "Sulfide donated to the photosystem is oxidized to elemental sulfur (S0) during anoxygenic photosynthesis.", "edge_id": "edge-7", "evidence": [{"notes": "Kushkevych et al.: H2S serves as electron donor and is oxidized to S0 in green/purple sulfur bacteria anoxygenic photosynthesis.", "reference": "DOI:10.3389/fmicb.2024.1417714"}], "predicate": "oxidized to", "predicate_id": null, "source": "sulfide", "target": "elemental sulfur (S0)"}], "graph_id": "anoxygenic_photosynthesis_sulfide_donor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacteriochlorophyll-based photosynthesis using non-water electron donors.", "grounding": "traitmech:000035", "id": "anoxygenic_photosynthesis_trait", "is_orphan": false, "label": "anoxygenic photosynthesis", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Light-harvesting pigment of anoxygenic phototrophs.", "grounding": null, "id": "bacteriochlorophyll", "is_orphan": false, "label": "bacteriochlorophyll", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized sulfur product from sulfide oxidation during anoxygenic photosynthesis.", "grounding": null, "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur (S0)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Light input driving photochemistry in anoxygenic photosynthesis.", "grounding": null, "id": "light_energy", "is_orphan": false, "label": "light energy", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#e0e7ff", "description": "Single-photosystem electron transport powering anoxygenic photosynthesis.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced sulfur electron donor (representative anoxygenic donor).", "grounding": "CHEBI:15138", "id": "sulfide", "is_orphan": false, "label": "sulfide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Homodimeric Type I reaction-center photosystem of anoxygenic phototrophs.", "grounding": null, "id": "type_i_reaction_center", "is_orphan": false, "label": "Type I reaction center", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Anoxygenic photosynthesis uses non-water electron donors"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +692,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

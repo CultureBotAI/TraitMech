@@ -47,6 +47,20 @@ causal_graphs:
     label: crescent cell curvature
     node_type: BIOLOGICAL_PROCESS
     description: Maintenance of a curved crescent cell body.
+  - node_id: pg_insertion_inner_curvature
+    label: peptidoglycan insertion at inner curvature
+    node_type: BIOLOGICAL_PROCESS
+    description: Rate of new peptidoglycan insertion on the concave (inner) side of
+      the cell.
+  - node_id: differential_pg_insertion
+    label: differential peptidoglycan insertion rates
+    node_type: BIOLOGICAL_PROCESS
+    description: Gradient of peptidoglycan insertion rates around the cell circumference.
+  - node_id: crescentin_envelope_association
+    label: crescentin envelope association
+    node_type: STATE
+    description: Attachment of crescentin to the cell envelope, required for its curvature
+      function.
   edges:
   - subject: crescentin
     predicate: localizes to
@@ -85,6 +99,42 @@ causal_graphs:
       snippet: required for the ... shapes of Caulobacter
       notes: Supports crescentin-dependent curved morphology as the trait endpoint.
     predicate_id: METPO:2000202
+  - subject: crescentin
+    predicate: decreases rate of
+    object: pg_insertion_inner_curvature
+    description: Crescentin reduces peptidoglycan insertion on the side where it is
+      located, setting up a growth-rate gradient.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      notes: the crescentin structure would not only reduce peptidoglycan insertion
+        at the side where crescentin is located but would also generate a gradient
+        of increasing peptidoglycan growth rates
+  - subject: pg_insertion_inner_curvature
+    predicate: contributes to
+    object: differential_pg_insertion
+    description: Reduced inner-side insertion creates a gradient of differential peptidoglycan
+      insertion rates around the circumference.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      notes: would also generate a gradient of increasing peptidoglycan growth rates
+  - subject: differential_pg_insertion
+    predicate: produces
+    object: crescent_shaped_trait
+    description: Differential peptidoglycan insertion rates around the cell circumference
+      produce cell curvature.
+    evidence:
+    - reference: DOI:10.1038/emboj.2009.61
+      notes: the crescentin structure caused differential peptidoglycan insertion
+        rates around the cell circumference to produce cell curvature
+  - subject: crescentin_envelope_association
+    predicate: required for
+    object: crescent_shaped_trait
+    description: Association of crescentin with the cell envelope is required to produce
+      curvature; attachment-defective mutants fail to curve.
+    evidence:
+    - reference: DOI:10.1128/jb.01371-09
+      notes: Envelope association is required for crescentin function (attachment-defective
+        mutants fail to produce curvature)
 curation_history:
 - timestamp: '2026-05-05T01:35:46.886631+00:00'
   curator: seed_from_metpo
@@ -126,4 +176,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

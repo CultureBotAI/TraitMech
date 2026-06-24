@@ -158,12 +158,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-7">
+            <strong>thiosulfate</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>Sox multienzyme system</strong>
+            
+            <p>Thiosulfate is oxidized by the periplasmic Sox multienzyme system.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11061436</code>
+                
+                <span class="meta">Review: &#34;The Sox multienzyme system... performs periplasmic thiosulfate oxidation.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>sulfite</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>SoeABC sulfite dehydrogenase</strong>
+            
+            <p>Sulfite is oxidized to sulfate by membrane-bound SoeABC sulfite dehydrogenase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11061436</code>
+                
+                <span class="meta">Review: &#34;Sulfite produced is oxidized to sulfate by membrane-bound SoeABC.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>ammonia</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>ammonia monooxygenase (AMO)</strong>
+            
+            <p>Ammonia is oxidized by ammonia monooxygenase (AMO) in ammonia-oxidizing lithotrophs.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40168-025-02290-9</code>
+                
+                <span class="meta">Key NH4+ oxidation enzymes including ammonia monooxygenase (AMO); canonical enzyme role.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>hydroxylamine</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>hydroxylamine oxidoreductase (HAO)</strong>
+            
+            <p>Hydroxylamine is oxidized by hydroxylamine oxidoreductase (HAO).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s40168-025-02290-9</code>
+                
+                <span class="meta">Key NH4+ oxidation enzymes including hydroxylamine oxidoreductase (HAO).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>nitrite</strong>
+            <span class="edge-predicate">oxidized by</span>
+            <strong>nitrite oxidoreductase (NXR)</strong>
+            
+            <p>Nitrite is oxidized to nitrate by nitrite oxidoreductase (NXR).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mbio.00749-25</code>
+                
+                <span class="meta">Nitrite further oxidized to nitrate by a nitrite oxidoreductase gene (nxr).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>molecular oxygen</strong>
+            <span class="edge-predicate">serves as terminal acceptor for</span>
+            <strong>sulfur oxidation</strong>
+            
+            <p>Molecular oxygen serves as a terminal electron acceptor for aerobic sulfur oxidation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-024-01104-3</code>
+                
+                <span class="meta">Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic sulfur oxidation contexts.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -339,6 +445,12 @@
           <time>2026-06-14T07:26:20Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007403×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (12 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -698,7 +810,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking inorganic electron donors to respiratory electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Lithotrophic organisms use inorganic compounds as electron donors.", "evidence": [{"notes": "Supports inorganic electron donors as the defining lithotrophic substrate class.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Molecular hydrogen is a representative inorganic electron donor.", "evidence": [{"notes": "Supports hydrogen gas as a microbial inorganic electron donor.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "hydrogen", "target": "inorganic_electron_donor"}, {"description": "Reduced sulfur compounds are representative lithotrophic electron donors.", "evidence": [{"notes": "Supports sulfur oxidation as a lithotrophic process.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "lithotrophic sulfur oxidation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced_sulfur_compound", "target": "inorganic_electron_donor"}, {"description": "Electrons from inorganic donors enter respiratory electron transport.", "evidence": [{"notes": "Supports membrane-bound redox chains as energy-conserving electron-transfer systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-4", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "inorganic_electron_donor", "target": "membrane_electron_transport_chain"}, {"description": "Respiratory redox reactions are conserved as an electrochemical ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by respiratory electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "membrane_electron_transport_chain", "target": "proton_motive_force"}, {"description": "Proton motive force drives ATP synthesis.", "evidence": [{"notes": "Supports ATP production from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient ... drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "drives synthesis of", "predicate_id": "biolink:produces", "source": "proton_motive_force", "target": "atp"}], "evidence_rows": [{"description": "Lithotrophic organisms use inorganic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic electron donors as the defining lithotrophic substrate class.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithotrophic", "target": "inorganic electron donor"}, {"description": "Molecular hydrogen is a representative inorganic electron donor.", "edge_id": "edge-2", "evidence": [{"notes": "Supports hydrogen gas as a microbial inorganic electron donor.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "molecular hydrogen", "target": "inorganic electron donor"}, {"description": "Reduced sulfur compounds are representative lithotrophic electron donors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfur oxidation as a lithotrophic process.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "lithotrophic sulfur oxidation"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced sulfur compound", "target": "inorganic electron donor"}, {"description": "Electrons from inorganic donors enter respiratory electron transport.", "edge_id": "edge-4", "evidence": [{"notes": "Supports membrane-bound redox chains as energy-conserving electron-transfer systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "inorganic electron donor", "target": "membrane electron transport chain"}, {"description": "Respiratory redox reactions are conserved as an electrochemical ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports proton motive force generation by respiratory electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "membrane electron transport chain", "target": "proton motive force"}, {"description": "Proton motive force drives ATP synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP production from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient ... drives ATP synthesis"}], "predicate": "drives synthesis of", "predicate_id": "biolink:produces", "source": "proton motive force", "target": "ATP"}], "graph_id": "lithotrophic_inorganic_donor_energy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced from respiratory energy conservation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Example inorganic electron donor.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound used as a source of electrons.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic electron donors for energy generation.", "grounding": "METPO:1000649", "id": "lithotrophic_trait", "is_orphan": false, "label": "lithotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Redox chain coupling electron flow to ion translocation.", "grounding": "GO:0022900", "id": "membrane_electron_transport_chain", "is_orphan": false, "label": "membrane electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient used for energy conservation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "Example inorganic electron donor class.", "grounding": null, "id": "reduced_sulfur_compound", "is_orphan": false, "label": "reduced sulfur compound", "node_type": "CHEMICAL", "xrefs": []}], "title": "Lithotrophic inorganic-donor energy mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking inorganic electron donors to respiratory electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Lithotrophic organisms use inorganic compounds as electron donors.", "evidence": [{"notes": "Supports inorganic electron donors as the defining lithotrophic substrate class.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "id": "edge-1", "is_orphan": false, "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithotrophic_trait", "target": "inorganic_electron_donor"}, {"description": "Molecular hydrogen is a representative inorganic electron donor.", "evidence": [{"notes": "Supports hydrogen gas as a microbial inorganic electron donor.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "id": "edge-2", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "hydrogen", "target": "inorganic_electron_donor"}, {"description": "Reduced sulfur compounds are representative lithotrophic electron donors.", "evidence": [{"notes": "Supports sulfur oxidation as a lithotrophic process.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "lithotrophic sulfur oxidation"}], "id": "edge-3", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced_sulfur_compound", "target": "inorganic_electron_donor"}, {"description": "Electrons from inorganic donors enter respiratory electron transport.", "evidence": [{"notes": "Supports membrane-bound redox chains as energy-conserving electron-transfer systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-4", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "inorganic_electron_donor", "target": "membrane_electron_transport_chain"}, {"description": "Respiratory redox reactions are conserved as an electrochemical ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by respiratory electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-5", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "membrane_electron_transport_chain", "target": "proton_motive_force"}, {"description": "Proton motive force drives ATP synthesis.", "evidence": [{"notes": "Supports ATP production from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient ... drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "drives synthesis of", "predicate_id": "biolink:produces", "source": "proton_motive_force", "target": "atp"}, {"description": "Thiosulfate is oxidized by the periplasmic Sox multienzyme system.", "evidence": [{"notes": "Review: \"The Sox multienzyme system... performs periplasmic thiosulfate oxidation.\"", "reference": "DOI:10.3390/microorganisms11061436"}], "id": "edge-7", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "sox_multienzyme_system"}, {"description": "Sulfite is oxidized to sulfate by membrane-bound SoeABC sulfite dehydrogenase.", "evidence": [{"notes": "Review: \"Sulfite produced is oxidized to sulfate by membrane-bound SoeABC.\"", "reference": "DOI:10.3390/microorganisms11061436"}], "id": "edge-8", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "sulfite", "target": "soeabc_sulfite_dehydrogenase"}, {"description": "Ammonia is oxidized by ammonia monooxygenase (AMO) in ammonia-oxidizing lithotrophs.", "evidence": [{"notes": "Key NH4+ oxidation enzymes including ammonia monooxygenase (AMO); canonical enzyme role.", "reference": "DOI:10.1186/s40168-025-02290-9"}], "id": "edge-9", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "ammonia", "target": "ammonia_monooxygenase"}, {"description": "Hydroxylamine is oxidized by hydroxylamine oxidoreductase (HAO).", "evidence": [{"notes": "Key NH4+ oxidation enzymes including hydroxylamine oxidoreductase (HAO).", "reference": "DOI:10.1186/s40168-025-02290-9"}], "id": "edge-10", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "hydroxylamine", "target": "hydroxylamine_oxidoreductase"}, {"description": "Nitrite is oxidized to nitrate by nitrite oxidoreductase (NXR).", "evidence": [{"notes": "Nitrite further oxidized to nitrate by a nitrite oxidoreductase gene (nxr).", "reference": "DOI:10.1128/mbio.00749-25"}], "id": "edge-11", "is_orphan": false, "predicate": "oxidized by", "predicate_id": null, "source": "nitrite", "target": "nitrite_oxidoreductase"}, {"description": "Molecular oxygen serves as a terminal electron acceptor for aerobic sulfur oxidation.", "evidence": [{"notes": "Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic sulfur oxidation contexts.", "reference": "DOI:10.1038/s41579-024-01104-3"}], "id": "edge-12", "is_orphan": false, "predicate": "serves as terminal acceptor for", "predicate_id": null, "source": "oxygen", "target": "sulfur_oxidation_process"}], "evidence_rows": [{"description": "Lithotrophic organisms use inorganic compounds as electron donors.", "edge_id": "edge-1", "evidence": [{"notes": "Supports inorganic electron donors as the defining lithotrophic substrate class.", "reference": "DOI:10.1016/B978-0-12-378630-2.00219-X", "snippet": "inorganic atoms or molecules as a growth-supporting reductant"}], "predicate": "uses electron donor", "predicate_id": "METPO:2000009", "source": "lithotrophic", "target": "inorganic electron donor"}, {"description": "Molecular hydrogen is a representative inorganic electron donor.", "edge_id": "edge-2", "evidence": [{"notes": "Supports hydrogen gas as a microbial inorganic electron donor.", "reference": "DOI:10.21775/cimb.006.159", "snippet": "oxidation of hydrogen gas"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "molecular hydrogen", "target": "inorganic electron donor"}, {"description": "Reduced sulfur compounds are representative lithotrophic electron donors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports sulfur oxidation as a lithotrophic process.", "reference": "DOI:10.1111/j.1574-6976.2009.00187.x", "snippet": "lithotrophic sulfur oxidation"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "reduced sulfur compound", "target": "inorganic electron donor"}, {"description": "Electrons from inorganic donors enter respiratory electron transport.", "edge_id": "edge-4", "evidence": [{"notes": "Supports membrane-bound redox chains as energy-conserving electron-transfer systems.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "inorganic electron donor", "target": "membrane electron transport chain"}, {"description": "Respiratory redox reactions are conserved as an electrochemical ion gradient.", "edge_id": "edge-5", "evidence": [{"notes": "Supports proton motive force generation by respiratory electron transport.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "membrane electron transport chain", "target": "proton motive force"}, {"description": "Proton motive force drives ATP synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP production from the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient ... drives ATP synthesis"}], "predicate": "drives synthesis of", "predicate_id": "biolink:produces", "source": "proton motive force", "target": "ATP"}, {"description": "Thiosulfate is oxidized by the periplasmic Sox multienzyme system.", "edge_id": "edge-7", "evidence": [{"notes": "Review: \"The Sox multienzyme system... performs periplasmic thiosulfate oxidation.\"", "reference": "DOI:10.3390/microorganisms11061436"}], "predicate": "oxidized by", "predicate_id": null, "source": "thiosulfate", "target": "Sox multienzyme system"}, {"description": "Sulfite is oxidized to sulfate by membrane-bound SoeABC sulfite dehydrogenase.", "edge_id": "edge-8", "evidence": [{"notes": "Review: \"Sulfite produced is oxidized to sulfate by membrane-bound SoeABC.\"", "reference": "DOI:10.3390/microorganisms11061436"}], "predicate": "oxidized by", "predicate_id": null, "source": "sulfite", "target": "SoeABC sulfite dehydrogenase"}, {"description": "Ammonia is oxidized by ammonia monooxygenase (AMO) in ammonia-oxidizing lithotrophs.", "edge_id": "edge-9", "evidence": [{"notes": "Key NH4+ oxidation enzymes including ammonia monooxygenase (AMO); canonical enzyme role.", "reference": "DOI:10.1186/s40168-025-02290-9"}], "predicate": "oxidized by", "predicate_id": null, "source": "ammonia", "target": "ammonia monooxygenase (AMO)"}, {"description": "Hydroxylamine is oxidized by hydroxylamine oxidoreductase (HAO).", "edge_id": "edge-10", "evidence": [{"notes": "Key NH4+ oxidation enzymes including hydroxylamine oxidoreductase (HAO).", "reference": "DOI:10.1186/s40168-025-02290-9"}], "predicate": "oxidized by", "predicate_id": null, "source": "hydroxylamine", "target": "hydroxylamine oxidoreductase (HAO)"}, {"description": "Nitrite is oxidized to nitrate by nitrite oxidoreductase (NXR).", "edge_id": "edge-11", "evidence": [{"notes": "Nitrite further oxidized to nitrate by a nitrite oxidoreductase gene (nxr).", "reference": "DOI:10.1128/mbio.00749-25"}], "predicate": "oxidized by", "predicate_id": null, "source": "nitrite", "target": "nitrite oxidoreductase (NXR)"}, {"description": "Molecular oxygen serves as a terminal electron acceptor for aerobic sulfur oxidation.", "edge_id": "edge-12", "evidence": [{"notes": "Sulfur oxidation susceptible to oxidation by electron acceptors; aerobic sulfur oxidation contexts.", "reference": "DOI:10.1038/s41579-024-01104-3"}], "predicate": "serves as terminal acceptor for", "predicate_id": null, "source": "molecular oxygen", "target": "sulfur oxidation"}], "graph_id": "lithotrophic_inorganic_donor_energy", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Inorganic nitrogen electron donor for ammonia-oxidizing lithotrophs.", "grounding": null, "id": "ammonia", "is_orphan": false, "label": "ammonia", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing the first step of ammonia oxidation (EC 1.14.99.39).", "grounding": null, "id": "ammonia_monooxygenase", "is_orphan": false, "label": "ammonia monooxygenase (AMO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced from respiratory energy conservation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Example inorganic electron donor.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Intermediate of ammonia oxidation.", "grounding": null, "id": "hydroxylamine", "is_orphan": false, "label": "hydroxylamine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing hydroxylamine during ammonia oxidation (EC 1.7.2.6).", "grounding": null, "id": "hydroxylamine_oxidoreductase", "is_orphan": false, "label": "hydroxylamine oxidoreductase (HAO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic compound used as a source of electrons.", "grounding": "METPO:1007502", "id": "inorganic_electron_donor", "is_orphan": false, "label": "inorganic electron donor", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using inorganic electron donors for energy generation.", "grounding": "METPO:1000649", "id": "lithotrophic_trait", "is_orphan": false, "label": "lithotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#e0e7ff", "description": "Redox chain coupling electron flow to ion translocation.", "grounding": "GO:0022900", "id": "membrane_electron_transport_chain", "is_orphan": false, "label": "membrane electron transport chain", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic nitrogen electron donor for nitrite-oxidizing lithotrophs.", "grounding": null, "id": "nitrite", "is_orphan": false, "label": "nitrite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing nitrite to nitrate (EC 1.7.5.1).", "grounding": null, "id": "nitrite_oxidoreductase", "is_orphan": false, "label": "nitrite oxidoreductase (NXR)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor for aerobic lithotrophic oxidation.", "grounding": null, "id": "oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient used for energy conservation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "Example inorganic electron donor class.", "grounding": null, "id": "reduced_sulfur_compound", "is_orphan": false, "label": "reduced sulfur compound", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound sulfite dehydrogenase oxidizing sulfite to sulfate.", "grounding": null, "id": "soeabc_sulfite_dehydrogenase", "is_orphan": false, "label": "SoeABC sulfite dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic thiosulfate-oxidizing multienzyme complex (soxXA/soxYZ/soxB/soxCD).", "grounding": null, "id": "sox_multienzyme_system", "is_orphan": false, "label": "Sox multienzyme system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic sulfur intermediate oxidized to sulfate during sulfur lithotrophy.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced sulfur compounds for energy conservation.", "grounding": null, "id": "sulfur_oxidation_process", "is_orphan": false, "label": "sulfur oxidation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reduced inorganic sulfur compound used as a lithotrophic electron donor.", "grounding": null, "id": "thiosulfate", "is_orphan": false, "label": "thiosulfate", "node_type": "CHEMICAL", "xrefs": []}], "title": "Lithotrophic inorganic-donor energy mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -709,7 +821,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

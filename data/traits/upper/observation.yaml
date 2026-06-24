@@ -45,6 +45,48 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000186
     description: Entity or sample about which an observation is made.
+  - node_id: geographic_location
+    label: geographic location
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Contextual place metadata (e.g., location) attached to an observation
+      data item.
+  - node_id: material_entity_evaluant
+    label: material entity with evaluant role
+    node_type: TRAIT
+    description: Generalized observed target/input of an assay, bearing an evaluant
+      role.
+  - node_id: measurement_datum
+    label: measurement datum
+    node_type: EXPERIMENTAL_FACTOR
+    description: Information output of an observation/assay process, comparable to
+      SOSA Result.
+  - node_id: planned_process
+    label: planned process
+    node_type: EXPERIMENTAL_FACTOR
+    description: OBI planned process with specified inputs and outputs; assays are
+      planned processes.
+  - node_id: sample
+    label: sample
+    node_type: TRAIT
+    description: Collected material entity about which observations are made.
+  - node_id: metadata
+    label: metadata
+    node_type: EXPERIMENTAL_FACTOR
+    description: Contextual information about samples, procedures, and analysis.
+  - node_id: mixs_standard
+    label: MIxS reporting standard
+    node_type: EXPERIMENTAL_FACTOR
+    description: Standard providing per-sample metadata elements for genomic sample
+      provenance.
+  - node_id: fair_principles
+    label: FAIR principles
+    node_type: EXPERIMENTAL_FACTOR
+    description: Principles tying observation reuse to rich metadata and persistent
+      identifiers.
+  - node_id: unique_identifier
+    label: unique identifier
+    node_type: EXPERIMENTAL_FACTOR
+    description: Persistent identifier required for FAIR objects and datasets.
   edges:
   - subject: assay_measurement
     predicate: produces
@@ -72,6 +114,59 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pone.0154556
       snippet: can be about any material entity
       notes: Supports observations and study outputs as about material entities.
+  - subject: observation_trait
+    predicate: has context
+    object: geographic_location
+    description: Observation data items require contextual information about time
+      and place of measurement.
+    evidence:
+    - reference: DOI:10.3233/sw-223096
+      notes: An observation data item requires a data structure to encompass the contextual
+        information about the time and place etc. of a measurement.
+  - subject: assay_measurement
+    predicate: has specified input
+    object: material_entity_evaluant
+    description: An assay has a material entity with evaluant role as specified input.
+    evidence:
+    - reference: DOI:10.3233/sw-223096
+      notes: 'OBI: assay and has_specified_input some (material entity and has role
+        some evaluant role); generalized, not microbe-specific.'
+  - subject: assay_measurement
+    predicate: has output
+    object: measurement_datum
+    description: An assay produces a measurement datum as output of the observation
+      process.
+    evidence:
+    - reference: DOI:10.3233/sw-223096
+      notes: SOSA Result and IAO measurement datum are comparable outputs of an observation
+        process.
+  - subject: planned_process
+    predicate: has specified input
+    object: sample
+    description: A planned process takes material entities such as samples as specified
+      inputs.
+    evidence:
+    - reference: DOI:10.3233/sw-223096
+      notes: OBI has specified input/output pertain to planned process with material
+        entities (for assays) as targets.
+  - subject: metadata
+    predicate: recorded in
+    object: mixs_standard
+    description: Sample/source-environment metadata is recorded using MIxS metadata
+      elements.
+    evidence:
+    - reference: DOI:10.1007/978-1-0716-3838-5_20
+      notes: MIxS consists of a number of metadata elements that describe a particular
+        characteristic of the sample or its source environment.
+  - subject: fair_principles
+    predicate: requires metadata
+    object: unique_identifier
+    description: FAIR requires each object or dataset to have a unique identifier
+      and rich metadata.
+    evidence:
+    - reference: DOI:10.3389/fcimb.2024.1384809
+      notes: FAIR requires each FAIR object or dataset have a unique identifier and
+        be described with rich metadata.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.923123+00:00'
   curator: seed_from_metpo
@@ -90,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

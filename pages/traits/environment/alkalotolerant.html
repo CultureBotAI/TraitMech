@@ -141,12 +141,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>alkaline external pH</strong>
+            <span class="edge-predicate">increases importance of</span>
+            <strong>electrogenic Na+/H+ antiport</strong>
+            
+            <p>Alkaline extracellular pH makes electrogenic Na+/H+ antiport particularly important for proton import.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms23169156</code>
+                
+                <span class="meta">Negative-inside membrane potential drives Na+ extrusion, particularly important when extracellular pH is alkaline (general prokaryotic mechanism).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>acidic non-peptidoglycan cell-surface polymers</strong>
+            <span class="edge-predicate">helps maintain</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Acidic non-peptidoglycan polymers create surface negative charges that reduce pH at the cell surface and help keep intracellular pH near neutrality.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/978-4-431-55408-0_4</code>
+                
+                <span class="meta">Acidic non-peptidoglycan polymers create negative charges that reduce pH at the cell surface and help keep intracellular pH controlled.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>acidic non-peptidoglycan cell-surface polymers</strong>
+            <span class="edge-predicate">adsorbs</span>
+            <strong>sodium and hydronium ions</strong>
+            
+            <p>Negatively charged cell-surface polymers adsorb sodium and hydronium ions.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.63.4.735-750.1999</code>
+                
+                <span class="meta">Cell surface acidic polymers adsorb sodium and hydronium ions; cell-envelope charge chemistry mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>acidic non-peptidoglycan cell-surface polymers</strong>
+            <span class="edge-predicate">repels</span>
+            <strong>hydroxide ion</strong>
+            
+            <p>Negatively charged cell-surface polymers repel hydroxide ions, mitigating alkaline stress at the surface.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.63.4.735-750.1999</code>
+                
+                <span class="meta">Acidic non-peptidoglycan polymers repulse hydroxide ions at the cell surface.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>sodium motive force</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>A sodium motive force mediated by Na+/H+ antiporters and related proteins supports intracellular pH control.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s11244-024-01919-7</code>
+                
+                <span class="meta">Sodium motive force mediated by Na+/H+ antiporters, Na+ channels or stator proteins supports intracellular pH control (review-level, broad).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -308,6 +397,12 @@
           <time>2026-06-15T07:20:36Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -&gt; corrected, verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -667,7 +762,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking alkalotolerance to alkaline exposure, proton retention, and cation/proton antiport.", "edges": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "alkalotolerant_trait"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_retention", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation_proton_antiporter", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "alkalotolerant_trait"}], "evidence_rows": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "edge_id": "edge-1", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "alkalotolerant"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "cytoplasmic pH homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton retention", "target": "cytoplasmic pH homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation/proton antiporter", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "alkalotolerant"}], "graph_id": "alkalotolerant_alkaline_stress_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral.", "grounding": null, "id": "alkaline_exposure", "is_orphan": false, "label": "alkaline exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates alkaline pH while growing optimally near neutral pH.", "grounding": "METPO:1003009", "id": "alkalotolerant_trait", "is_orphan": false, "label": "alkalotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporter exchanging cations for protons during pH stress.", "grounding": "UniProtKB:A0A0H3JRG4", "id": "cation_proton_antiporter", "is_orphan": false, "label": "cation/proton antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH during alkaline challenge.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Retaining or capturing protons at the cell surface or cytoplasm.", "grounding": null, "id": "proton_retention", "is_orphan": false, "label": "proton retention", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Alkalotolerant alkaline-stress pH homeostasis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking alkalotolerance to alkaline exposure, proton retention, and cation/proton antiport.", "edges": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "alkalotolerant_trait"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "id": "edge-2", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline_exposure", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_retention", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation_proton_antiporter", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic_ph_homeostasis", "target": "alkalotolerant_trait"}, {"description": "Alkaline extracellular pH makes electrogenic Na+/H+ antiport particularly important for proton import.", "evidence": [{"notes": "Negative-inside membrane potential drives Na+ extrusion, particularly important when extracellular pH is alkaline (general prokaryotic mechanism).", "reference": "DOI:10.3390/ijms23169156"}], "id": "edge-6", "is_orphan": false, "predicate": "increases importance of", "predicate_id": null, "source": "alkaline_external_ph", "target": "electrogenic_na_h_antiport"}, {"description": "Acidic non-peptidoglycan polymers create surface negative charges that reduce pH at the cell surface and help keep intracellular pH near neutrality.", "evidence": [{"notes": "Acidic non-peptidoglycan polymers create negative charges that reduce pH at the cell surface and help keep intracellular pH controlled.", "reference": "DOI:10.1007/978-4-431-55408-0_4"}], "id": "edge-7", "is_orphan": false, "predicate": "helps maintain", "predicate_id": null, "source": "cell_surface_acidic_polymers", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Negatively charged cell-surface polymers adsorb sodium and hydronium ions.", "evidence": [{"notes": "Cell surface acidic polymers adsorb sodium and hydronium ions; cell-envelope charge chemistry mechanism.", "reference": "DOI:10.1128/MMBR.63.4.735-750.1999"}], "id": "edge-8", "is_orphan": false, "predicate": "adsorbs", "predicate_id": null, "source": "cell_surface_acidic_polymers", "target": "sodium_ion"}, {"description": "Negatively charged cell-surface polymers repel hydroxide ions, mitigating alkaline stress at the surface.", "evidence": [{"notes": "Acidic non-peptidoglycan polymers repulse hydroxide ions at the cell surface.", "reference": "DOI:10.1128/MMBR.63.4.735-750.1999"}], "id": "edge-9", "is_orphan": false, "predicate": "repels", "predicate_id": null, "source": "cell_surface_acidic_polymers", "target": "hydroxide_ion"}, {"description": "A sodium motive force mediated by Na+/H+ antiporters and related proteins supports intracellular pH control.", "evidence": [{"notes": "Sodium motive force mediated by Na+/H+ antiporters, Na+ channels or stator proteins supports intracellular pH control (review-level, broad).", "reference": "DOI:10.1007/s11244-024-01919-7"}], "id": "edge-10", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "sodium_motive_force", "target": "cytoplasmic_ph_homeostasis"}], "evidence_rows": [{"description": "Alkalotolerance reflects capacity to withstand alkaline pH outside the growth optimum.", "edge_id": "edge-1", "evidence": [{"notes": "Review explicitly covers alkali-tolerant bacteria.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "alkali-tolerant and extremely alkaliphilic bacteria"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "alkalotolerant"}, {"description": "Alkaline pH requires maintenance of a less alkaline cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "Review supports pH homeostasis for growth outside cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "grow in environments with external pH values"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "alkaline exposure", "target": "cytoplasmic pH homeostasis"}, {"description": "Proton capture and retention support pH homeostasis in alkaline environments.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton retention mechanisms during alkaline pH challenge.", "reference": "DOI:10.1016/j.bbamem.2005.09.010", "snippet": "promote proton capture and retention"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton retention", "target": "cytoplasmic pH homeostasis"}, {"description": "Cation/proton antiporters help regulate intracellular pH under alkaline stress.", "edge_id": "edge-4", "evidence": [{"notes": "Supports cation/proton antiporters as pH-homeostasis transporters.", "reference": "DOI:10.3390/ijms21124566", "snippet": "maintaining ion and pH homeostasis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cation/proton antiporter", "target": "cytoplasmic pH homeostasis"}, {"description": "Alkaline tolerance depends on maintaining cytoplasmic pH during alkaline exposure.", "edge_id": "edge-5", "evidence": [{"notes": "Supports pH homeostasis as a broad enabling process.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cell-wide physiological process"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cytoplasmic pH homeostasis", "target": "alkalotolerant"}, {"description": "Alkaline extracellular pH makes electrogenic Na+/H+ antiport particularly important for proton import.", "edge_id": "edge-6", "evidence": [{"notes": "Negative-inside membrane potential drives Na+ extrusion, particularly important when extracellular pH is alkaline (general prokaryotic mechanism).", "reference": "DOI:10.3390/ijms23169156"}], "predicate": "increases importance of", "predicate_id": null, "source": "alkaline external pH", "target": "electrogenic Na+/H+ antiport"}, {"description": "Acidic non-peptidoglycan polymers create surface negative charges that reduce pH at the cell surface and help keep intracellular pH near neutrality.", "edge_id": "edge-7", "evidence": [{"notes": "Acidic non-peptidoglycan polymers create negative charges that reduce pH at the cell surface and help keep intracellular pH controlled.", "reference": "DOI:10.1007/978-4-431-55408-0_4"}], "predicate": "helps maintain", "predicate_id": null, "source": "acidic non-peptidoglycan cell-surface polymers", "target": "cytoplasmic pH homeostasis"}, {"description": "Negatively charged cell-surface polymers adsorb sodium and hydronium ions.", "edge_id": "edge-8", "evidence": [{"notes": "Cell surface acidic polymers adsorb sodium and hydronium ions; cell-envelope charge chemistry mechanism.", "reference": "DOI:10.1128/MMBR.63.4.735-750.1999"}], "predicate": "adsorbs", "predicate_id": null, "source": "acidic non-peptidoglycan cell-surface polymers", "target": "sodium and hydronium ions"}, {"description": "Negatively charged cell-surface polymers repel hydroxide ions, mitigating alkaline stress at the surface.", "edge_id": "edge-9", "evidence": [{"notes": "Acidic non-peptidoglycan polymers repulse hydroxide ions at the cell surface.", "reference": "DOI:10.1128/MMBR.63.4.735-750.1999"}], "predicate": "repels", "predicate_id": null, "source": "acidic non-peptidoglycan cell-surface polymers", "target": "hydroxide ion"}, {"description": "A sodium motive force mediated by Na+/H+ antiporters and related proteins supports intracellular pH control.", "edge_id": "edge-10", "evidence": [{"notes": "Sodium motive force mediated by Na+/H+ antiporters, Na+ channels or stator proteins supports intracellular pH control (review-level, broad).", "reference": "DOI:10.1007/s11244-024-01919-7"}], "predicate": "supports", "predicate_id": null, "source": "sodium motive force", "target": "cytoplasmic pH homeostasis"}], "graph_id": "alkalotolerant_alkaline_stress_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH above neutral.", "grounding": null, "id": "alkaline_exposure", "is_orphan": false, "label": "alkaline exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Elevated extracellular pH above neutral.", "grounding": null, "id": "alkaline_external_ph", "is_orphan": false, "label": "alkaline external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerates alkaline pH while growing optimally near neutral pH.", "grounding": "METPO:1003009", "id": "alkalotolerant_trait", "is_orphan": false, "label": "alkalotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporter exchanging cations for protons during pH stress.", "grounding": "UniProtKB:A0A0H3JRG4", "id": "cation_proton_antiporter", "is_orphan": false, "label": "cation/proton antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Negatively charged cell-wall polymers that modulate ion adsorption at the cell surface.", "grounding": null, "id": "cell_surface_acidic_polymers", "is_orphan": false, "label": "acidic non-peptidoglycan cell-surface polymers", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH during alkaline challenge.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Electrogenic exchange of sodium for protons, important under alkaline pH.", "grounding": null, "id": "electrogenic_na_h_antiport", "is_orphan": false, "label": "electrogenic Na+/H+ antiport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Hydroxide ion (OH-) repelled by the negatively charged cell surface.", "grounding": null, "id": "hydroxide_ion", "is_orphan": false, "label": "hydroxide ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Retaining or capturing protons at the cell surface or cytoplasm.", "grounding": null, "id": "proton_retention", "is_orphan": false, "label": "proton retention", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Cations (Na+, H3O+) adsorbed at the cell surface.", "grounding": null, "id": "sodium_ion", "is_orphan": false, "label": "sodium and hydronium ions", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Transmembrane sodium gradient supporting bioenergetics and pH control.", "grounding": null, "id": "sodium_motive_force", "is_orphan": false, "label": "sodium motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Alkalotolerant alkaline-stress pH homeostasis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -678,7 +773,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

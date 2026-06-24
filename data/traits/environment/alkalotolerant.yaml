@@ -45,6 +45,32 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging cations for protons during pH stress.
     grounding: UniProtKB:A0A0H3JRG4
+  - node_id: alkaline_external_ph
+    label: alkaline external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Elevated extracellular pH above neutral.
+  - node_id: electrogenic_na_h_antiport
+    label: electrogenic Na+/H+ antiport
+    node_type: MOLECULAR_FUNCTION
+    description: Electrogenic exchange of sodium for protons, important under alkaline
+      pH.
+  - node_id: cell_surface_acidic_polymers
+    label: acidic non-peptidoglycan cell-surface polymers
+    node_type: CHEMICAL
+    description: Negatively charged cell-wall polymers that modulate ion adsorption
+      at the cell surface.
+  - node_id: sodium_ion
+    label: sodium and hydronium ions
+    node_type: CHEMICAL
+    description: Cations (Na+, H3O+) adsorbed at the cell surface.
+  - node_id: hydroxide_ion
+    label: hydroxide ion
+    node_type: CHEMICAL
+    description: Hydroxide ion (OH-) repelled by the negatively charged cell surface.
+  - node_id: sodium_motive_force
+    label: sodium motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane sodium gradient supporting bioenergetics and pH control.
   edges:
   - subject: alkaline_exposure
     predicate: challenges
@@ -94,6 +120,51 @@ causal_graphs:
       snippet: cell-wide physiological process
       notes: Supports pH homeostasis as a broad enabling process.
     predicate_id: RO:0002327
+  - subject: alkaline_external_ph
+    predicate: increases importance of
+    object: electrogenic_na_h_antiport
+    description: Alkaline extracellular pH makes electrogenic Na+/H+ antiport particularly
+      important for proton import.
+    evidence:
+    - reference: DOI:10.3390/ijms23169156
+      notes: Negative-inside membrane potential drives Na+ extrusion, particularly
+        important when extracellular pH is alkaline (general prokaryotic mechanism).
+  - subject: cell_surface_acidic_polymers
+    predicate: helps maintain
+    object: cytoplasmic_ph_homeostasis
+    description: Acidic non-peptidoglycan polymers create surface negative charges
+      that reduce pH at the cell surface and help keep intracellular pH near neutrality.
+    evidence:
+    - reference: DOI:10.1007/978-4-431-55408-0_4
+      notes: Acidic non-peptidoglycan polymers create negative charges that reduce
+        pH at the cell surface and help keep intracellular pH controlled.
+  - subject: cell_surface_acidic_polymers
+    predicate: adsorbs
+    object: sodium_ion
+    description: Negatively charged cell-surface polymers adsorb sodium and hydronium
+      ions.
+    evidence:
+    - reference: DOI:10.1128/MMBR.63.4.735-750.1999
+      notes: Cell surface acidic polymers adsorb sodium and hydronium ions; cell-envelope
+        charge chemistry mechanism.
+  - subject: cell_surface_acidic_polymers
+    predicate: repels
+    object: hydroxide_ion
+    description: Negatively charged cell-surface polymers repel hydroxide ions, mitigating
+      alkaline stress at the surface.
+    evidence:
+    - reference: DOI:10.1128/MMBR.63.4.735-750.1999
+      notes: Acidic non-peptidoglycan polymers repulse hydroxide ions at the cell
+        surface.
+  - subject: sodium_motive_force
+    predicate: supports
+    object: cytoplasmic_ph_homeostasis
+    description: A sodium motive force mediated by Na+/H+ antiporters and related
+      proteins supports intracellular pH control.
+    evidence:
+    - reference: DOI:10.1007/s11244-024-01919-7
+      notes: Sodium motive force mediated by Na+/H+ antiporters, Na+ channels or stator
+        proteins supports intracellular pH control (review-level, broad).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941966+00:00'
   curator: seed_from_metpo
@@ -135,4 +206,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
     vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

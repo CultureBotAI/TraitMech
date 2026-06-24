@@ -16,15 +16,15 @@ evidence:
     confers cobalt resistance.
 - reference: DOI:10.3389/fmicb.2020.00047
   snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
-    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
-    uM) and Pb2+ (1.7 mM)
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+
+    (1 uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates cobalt to a MIC
     of 20 mM.'
 causal_graphs:
 - graph_id: cobalt_tolerance_czc_cnr_efflux
   title: Cobalt tolerance via czc/cnr cation-efflux systems
-  description: Evidence-backed causal sketch linking the czc and cnr efflux
-    determinants to cytoplasmic cobalt detoxification.
+  description: Evidence-backed causal sketch linking the czc and cnr efflux determinants
+    to cytoplasmic cobalt detoxification.
   nodes:
   - node_id: cobalt_tolerant_trait
     label: cobalt tolerant
@@ -45,6 +45,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0030001
     description: Active export of Co(2+) across the cytoplasmic membrane.
+  - node_id: czcCBA_complex
+    label: CzcCBA efflux complex
+    node_type: GENE_OR_PROTEIN
+    description: HME-RND/CBA chemiosmotic divalent-cation/proton antiporter exporting
+      Co2+, Zn2+, Cd2+.
+  - node_id: czcRS_two_component
+    label: CzcS/CzcR two-component system
+    node_type: GENE_OR_PROTEIN
+    description: Sensor kinase CzcS and response regulator CzcR that transcriptionally
+      activate czcCBA.
+  - node_id: czcCBA_expression
+    label: czcCBA operon expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of the czcCBA efflux operon.
+  - node_id: cnr_operon
+    label: cnr (cnrCBAYXHT) determinant
+    node_type: GENE_OR_PROTEIN
+    description: Cobalt-nickel resistance operon on plasmid pMOL28 conferring Co/Ni
+      efflux.
+  - node_id: dmeF_exporter
+    label: DmeF CDF-family exporter
+    node_type: GENE_OR_PROTEIN
+    description: Cation diffusion facilitator with cobalt as preferred substrate.
+  - node_id: rcnA_exporter
+    label: RcnA/YohM Co/Ni efflux protein
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound efflux system conferring nickel and cobalt resistance.
+  - node_id: cobalt_homeostasis
+    label: cellular cobalt homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Baseline management of cytoplasmic cobalt levels, including under
+      non-stress conditions.
   edges:
   - subject: cobalt_ion
     predicate: challenges
@@ -70,6 +102,66 @@ causal_graphs:
     - reference: DOI:10.1111/j.1365-2958.2009.06792.x
       notes: The czc efflux system of C. metallidurans confers cobalt resistance.
     predicate_id: METPO:2007407
+  - subject: czcCBA_complex
+    predicate: exports
+    object: cobalt_ion
+    description: CzcCBA RND antiporter effluxes cytoplasmic cobalt together with Zn2+
+      and Cd2+.
+    evidence:
+    - reference: DOI:10.3390/ijms26125716
+      notes: CzcCBA, an RND-superfamily chemiosmotic divalent cation/proton antiporter,
+        deals with the efflux of Cd2+, Zn2+, and Co2+.
+  - subject: czcRS_two_component
+    predicate: activates transcription of
+    object: czcCBA_expression
+    description: CzcS sensor kinase activates response regulator CzcR, which transcriptionally
+      activates czcCBA.
+    evidence:
+    - reference: DOI:10.3390/ijms26125716
+      notes: Activated CzcR functions as a transcriptional activator of czcCBA expression.
+  - subject: czcCBA_expression
+    predicate: enables
+    object: cobalt_export
+    description: Expression of the czcCBA operon produces the efflux complex enabling
+      cobalt export.
+    evidence:
+    - reference: DOI:10.3390/ijms26125716
+      notes: czcCBA encodes the CzcCBA system mediating Co2+ efflux.
+  - subject: cnr_operon
+    predicate: confers resistance to
+    object: cobalt_tolerant_trait
+    description: The cnrCBAYXHT operon confers cobalt (and nickel) resistance.
+    evidence:
+    - reference: DOI:10.1007/s44274-025-00301-y
+      notes: This strain exhibits resistance to 3 mM Ni and 5 mM Co, conferred by
+        the cnrCBAYXHT operon located on plasmid pMOL28.
+  - subject: dmeF_exporter
+    predicate: exports
+    object: cobalt_ion
+    description: DmeF CDF-family exporter preferentially effluxes cobalt.
+    evidence:
+    - reference: DOI:10.1007/s44274-025-00301-y
+      notes: Co2+ is the preferred substrate for the DmeF protein in Cupriavidus metallidurans
+        CH34.
+  - subject: rcnA_exporter
+    predicate: enables
+    object: cobalt_export
+    description: RcnA/YohM is an efflux system for nickel and cobalt, increasing cobalt
+      resistance.
+    evidence:
+    - reference: DOI:10.1128/JB.187.8.2912-2916.2005
+      notes: yohM encodes a membrane-bound polypeptide conferring increased nickel
+        and cobalt resistance in E. coli; YohM is the first described efflux system
+        for nickel and cobalt in E. coli.
+  - subject: cobalt_export
+    predicate: contributes to
+    object: cobalt_homeostasis
+    description: Czc/Cnr efflux complexes are present even without added metals, contributing
+      to baseline cobalt homeostasis as well as stress resistance.
+    evidence:
+    - reference: DOI:10.1093/mtomcs/mfae058
+      notes: Czc-CBA proteins were also present in control cells cultivated without
+        added metals so that Czc has also a function in metal homeostasis.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -81,6 +173,11 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (czc/cnr cobalt efflux) with CHEBI/GO
-    node groundings and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

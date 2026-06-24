@@ -107,12 +107,152 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>ionizing or UV radiation exposure</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>reactive oxygen species (ROS)</strong>
+            
+            <p>Ionizing/UV radiation produces reactive oxygen species.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pone.0304810</code>
+                
+                <span class="meta">Another aftermath of irradiation is the production of reactive oxygen species (ROS); general mechanism across microbes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>manganese(II) ion</strong>
+            <span class="edge-predicate">acts as antioxidant against</span>
+            <strong>reactive oxygen species (ROS)</strong>
+            
+            <p>Mn2+ acts as an antioxidant that scavenges ROS.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03838-23</code>
+                
+                <span class="meta">Manganese is an antioxidant, acting as a sponge of ROS; general bacterial mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>iron(II) ion</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>reactive oxygen species (ROS)</strong>
+            
+            <p>Fe2+ furthers the spread of ROS through Fenton chemistry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03838-23</code>
+                
+                <span class="meta">Iron furthers the spread of ROS through Fenton chemistry; mechanistic basis of Mn/Fe ratio association with tolerance.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>manganese(II) ion</strong>
+            <span class="edge-predicate">part of</span>
+            <strong>manganese-antioxidant proteome protection</strong>
+            
+            <p>Mn2+ antioxidant activity is part of the Mn-antioxidant proteome protection process.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03838-23</code>
+                
+                <span class="meta">Intracellular Mn/Fe ratio is the best-understood predictor of IR tolerance; Mn acts as a ROS sponge protecting the proteome.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>RecA recombinase</strong>
+            <span class="edge-predicate">mediates</span>
+            <strong>homologous recombination</strong>
+            
+            <p>RecA mediates homologous recombination repair of double-strand breaks.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/su17177864</code>
+                
+                <span class="meta">HR is central for double-strand break repair, with RecA abundant and RecA expression increasing eightfold after 15 kGy.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>homologous recombination</strong>
+            <span class="edge-predicate">part of</span>
+            <strong>DNA repair</strong>
+            
+            <p>Homologous recombination is a component of radiation-induced DNA repair.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/su17177864</code>
+                
+                <span class="meta">HR is central for double-strand break repair of radiation-induced lesions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>nucleotide excision repair (UvrABC)</strong>
+            <span class="edge-predicate">part of</span>
+            <strong>DNA repair</strong>
+            
+            <p>UvrABC nucleotide excision repair repairs UV-induced helix-distorting lesions.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/genes14091803</code>
+                
+                <span class="meta">UvrA is the initial damage sensor in NER, recruiting UvrB and, with UvrC, performing dual-incision to remove UV-induced damaged DNA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>carotenoid pigments</strong>
+            <span class="edge-predicate">scavenges</span>
+            <strong>reactive oxygen species (ROS)</strong>
+            
+            <p>Carotenoid pigments scavenge ROS as non-enzymatic antioxidants.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/su17177864</code>
+                
+                <span class="meta">The carotenoid deinoxanthin scavenges ROS quantitatively (removed up to 69.7% H2O2 and quenched singlet oxygen up to 99%).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -255,6 +395,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (radiotolerance via DNA repair + Mn-antioxidant) with GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -614,7 +760,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking efficient DNA-damage repair and manganese-antioxidant protection to survival of lethal radiation doses.", "edges": [{"description": "Radiation exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans is the reference organism for surviving ionizing radiation, UV, desiccation, and oxidizing agents.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "radiation_exposure", "target": "radiotolerant_trait"}, {"description": "Efficient repair of radiation-induced DNA lesions enables survival.", "evidence": [{"notes": "Review of extreme radiation resistance highlights efficient DNA repair as a core radiotolerance mechanism.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "dna_damage_repair", "target": "radiotolerant_trait"}, {"description": "Mn-antioxidant protection of the proteome preserves repair capacity under irradiation.", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mn_antioxidant_protection", "target": "radiotolerant_trait"}], "evidence_rows": [{"description": "Radiation exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans is the reference organism for surviving ionizing radiation, UV, desiccation, and oxidizing agents.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "ionizing or UV radiation exposure", "target": "radiotolerant"}, {"description": "Efficient repair of radiation-induced DNA lesions enables survival.", "edge_id": "edge-2", "evidence": [{"notes": "Review of extreme radiation resistance highlights efficient DNA repair as a core radiotolerance mechanism.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "DNA repair", "target": "radiotolerant"}, {"description": "Mn-antioxidant protection of the proteome preserves repair capacity under irradiation.", "edge_id": "edge-3", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "manganese-antioxidant proteome protection", "target": "radiotolerant"}], "graph_id": "radiotolerance_repair_antioxidant", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Repair of radiation-induced DNA lesions (double-strand breaks, adducts, dimers).", "grounding": "GO:0006281", "id": "dna_damage_repair", "is_orphan": false, "label": "DNA repair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Mn-driven protection of repair proteins from oxidative damage.", "grounding": null, "id": "mn_antioxidant_protection", "is_orphan": false, "label": "manganese-antioxidant proteome protection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "High dose of ionizing or ultraviolet radiation.", "grounding": null, "id": "radiation_exposure", "is_orphan": false, "label": "ionizing or UV radiation exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Survival of ionizing and/or UV radiation doses lethal to most microbes.", "grounding": "traitmech:000007", "id": "radiotolerant_trait", "is_orphan": false, "label": "radiotolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Radiotolerance via DNA repair and Mn-antioxidant proteome protection"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking efficient DNA-damage repair and manganese-antioxidant protection to survival of lethal radiation doses.", "edges": [{"description": "Radiation exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans is the reference organism for surviving ionizing radiation, UV, desiccation, and oxidizing agents.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "radiation_exposure", "target": "radiotolerant_trait"}, {"description": "Efficient repair of radiation-induced DNA lesions enables survival.", "evidence": [{"notes": "Review of extreme radiation resistance highlights efficient DNA repair as a core radiotolerance mechanism.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "dna_damage_repair", "target": "radiotolerant_trait"}, {"description": "Mn-antioxidant protection of the proteome preserves repair capacity under irradiation.", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mn_antioxidant_protection", "target": "radiotolerant_trait"}, {"description": "Ionizing/UV radiation produces reactive oxygen species.", "evidence": [{"notes": "Another aftermath of irradiation is the production of reactive oxygen species (ROS); general mechanism across microbes.", "reference": "DOI:10.1371/journal.pone.0304810"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "radiation_exposure", "target": "reactive_oxygen_species"}, {"description": "Mn2+ acts as an antioxidant that scavenges ROS.", "evidence": [{"notes": "Manganese is an antioxidant, acting as a sponge of ROS; general bacterial mechanism.", "reference": "DOI:10.1128/spectrum.03838-23"}], "id": "edge-5", "is_orphan": false, "predicate": "acts as antioxidant against", "predicate_id": null, "source": "mn2_ion", "target": "reactive_oxygen_species"}, {"description": "Fe2+ furthers the spread of ROS through Fenton chemistry.", "evidence": [{"notes": "Iron furthers the spread of ROS through Fenton chemistry; mechanistic basis of Mn/Fe ratio association with tolerance.", "reference": "DOI:10.1128/spectrum.03838-23"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "fe2_ion", "target": "reactive_oxygen_species"}, {"description": "Mn2+ antioxidant activity is part of the Mn-antioxidant proteome protection process.", "evidence": [{"notes": "Intracellular Mn/Fe ratio is the best-understood predictor of IR tolerance; Mn acts as a ROS sponge protecting the proteome.", "reference": "DOI:10.1128/spectrum.03838-23"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "mn2_ion", "target": "mn_antioxidant_protection"}, {"description": "RecA mediates homologous recombination repair of double-strand breaks.", "evidence": [{"notes": "HR is central for double-strand break repair, with RecA abundant and RecA expression increasing eightfold after 15 kGy.", "reference": "DOI:10.3390/su17177864"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "reca_protein", "target": "homologous_recombination"}, {"description": "Homologous recombination is a component of radiation-induced DNA repair.", "evidence": [{"notes": "HR is central for double-strand break repair of radiation-induced lesions.", "reference": "DOI:10.3390/su17177864"}], "id": "edge-9", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "homologous_recombination", "target": "dna_damage_repair"}, {"description": "UvrABC nucleotide excision repair repairs UV-induced helix-distorting lesions.", "evidence": [{"notes": "UvrA is the initial damage sensor in NER, recruiting UvrB and, with UvrC, performing dual-incision to remove UV-induced damaged DNA.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-10", "is_orphan": false, "predicate": "part of", "predicate_id": null, "source": "ner_uvrabc", "target": "dna_damage_repair"}, {"description": "Carotenoid pigments scavenge ROS as non-enzymatic antioxidants.", "evidence": [{"notes": "The carotenoid deinoxanthin scavenges ROS quantitatively (removed up to 69.7% H2O2 and quenched singlet oxygen up to 99%).", "reference": "DOI:10.3390/su17177864"}], "id": "edge-11", "is_orphan": false, "predicate": "scavenges", "predicate_id": null, "source": "carotenoid_pigments", "target": "reactive_oxygen_species"}], "evidence_rows": [{"description": "Radiation exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans is the reference organism for surviving ionizing radiation, UV, desiccation, and oxidizing agents.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "ionizing or UV radiation exposure", "target": "radiotolerant"}, {"description": "Efficient repair of radiation-induced DNA lesions enables survival.", "edge_id": "edge-2", "evidence": [{"notes": "Review of extreme radiation resistance highlights efficient DNA repair as a core radiotolerance mechanism.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "DNA repair", "target": "radiotolerant"}, {"description": "Mn-antioxidant protection of the proteome preserves repair capacity under irradiation.", "edge_id": "edge-3", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "manganese-antioxidant proteome protection", "target": "radiotolerant"}, {"description": "Ionizing/UV radiation produces reactive oxygen species.", "edge_id": "edge-4", "evidence": [{"notes": "Another aftermath of irradiation is the production of reactive oxygen species (ROS); general mechanism across microbes.", "reference": "DOI:10.1371/journal.pone.0304810"}], "predicate": "causes", "predicate_id": null, "source": "ionizing or UV radiation exposure", "target": "reactive oxygen species (ROS)"}, {"description": "Mn2+ acts as an antioxidant that scavenges ROS.", "edge_id": "edge-5", "evidence": [{"notes": "Manganese is an antioxidant, acting as a sponge of ROS; general bacterial mechanism.", "reference": "DOI:10.1128/spectrum.03838-23"}], "predicate": "acts as antioxidant against", "predicate_id": null, "source": "manganese(II) ion", "target": "reactive oxygen species (ROS)"}, {"description": "Fe2+ furthers the spread of ROS through Fenton chemistry.", "edge_id": "edge-6", "evidence": [{"notes": "Iron furthers the spread of ROS through Fenton chemistry; mechanistic basis of Mn/Fe ratio association with tolerance.", "reference": "DOI:10.1128/spectrum.03838-23"}], "predicate": "promotes", "predicate_id": null, "source": "iron(II) ion", "target": "reactive oxygen species (ROS)"}, {"description": "Mn2+ antioxidant activity is part of the Mn-antioxidant proteome protection process.", "edge_id": "edge-7", "evidence": [{"notes": "Intracellular Mn/Fe ratio is the best-understood predictor of IR tolerance; Mn acts as a ROS sponge protecting the proteome.", "reference": "DOI:10.1128/spectrum.03838-23"}], "predicate": "part of", "predicate_id": null, "source": "manganese(II) ion", "target": "manganese-antioxidant proteome protection"}, {"description": "RecA mediates homologous recombination repair of double-strand breaks.", "edge_id": "edge-8", "evidence": [{"notes": "HR is central for double-strand break repair, with RecA abundant and RecA expression increasing eightfold after 15 kGy.", "reference": "DOI:10.3390/su17177864"}], "predicate": "mediates", "predicate_id": null, "source": "RecA recombinase", "target": "homologous recombination"}, {"description": "Homologous recombination is a component of radiation-induced DNA repair.", "edge_id": "edge-9", "evidence": [{"notes": "HR is central for double-strand break repair of radiation-induced lesions.", "reference": "DOI:10.3390/su17177864"}], "predicate": "part of", "predicate_id": null, "source": "homologous recombination", "target": "DNA repair"}, {"description": "UvrABC nucleotide excision repair repairs UV-induced helix-distorting lesions.", "edge_id": "edge-10", "evidence": [{"notes": "UvrA is the initial damage sensor in NER, recruiting UvrB and, with UvrC, performing dual-incision to remove UV-induced damaged DNA.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "part of", "predicate_id": null, "source": "nucleotide excision repair (UvrABC)", "target": "DNA repair"}, {"description": "Carotenoid pigments scavenge ROS as non-enzymatic antioxidants.", "edge_id": "edge-11", "evidence": [{"notes": "The carotenoid deinoxanthin scavenges ROS quantitatively (removed up to 69.7% H2O2 and quenched singlet oxygen up to 99%).", "reference": "DOI:10.3390/su17177864"}], "predicate": "scavenges", "predicate_id": null, "source": "carotenoid pigments", "target": "reactive oxygen species (ROS)"}], "graph_id": "radiotolerance_repair_antioxidant", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Carotenoid pigments (e.g. deinoxanthin) that scavenge ROS as non-enzymatic antioxidants.", "grounding": null, "id": "carotenoid_pigments", "is_orphan": false, "label": "carotenoid pigments", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Repair of radiation-induced DNA lesions (double-strand breaks, adducts, dimers).", "grounding": "GO:0006281", "id": "dna_damage_repair", "is_orphan": false, "label": "DNA repair", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular Fe2+ that propagates ROS through Fenton chemistry.", "grounding": null, "id": "fe2_ion", "is_orphan": false, "label": "iron(II) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Homologous recombination repair of DNA double-strand breaks.", "grounding": null, "id": "homologous_recombination", "is_orphan": false, "label": "homologous recombination", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular Mn2+ that acts as an antioxidant scavenging ROS.", "grounding": null, "id": "mn2_ion", "is_orphan": false, "label": "manganese(II) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Mn-driven protection of repair proteins from oxidative damage.", "grounding": null, "id": "mn_antioxidant_protection", "is_orphan": false, "label": "manganese-antioxidant proteome protection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "UvrABC excinuclease-mediated nucleotide excision repair of UV-induced helix-distorting lesions.", "grounding": null, "id": "ner_uvrabc", "is_orphan": false, "label": "nucleotide excision repair (UvrABC)", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "High dose of ionizing or ultraviolet radiation.", "grounding": null, "id": "radiation_exposure", "is_orphan": false, "label": "ionizing or UV radiation exposure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Survival of ionizing and/or UV radiation doses lethal to most microbes.", "grounding": "traitmech:000007", "id": "radiotolerant_trait", "is_orphan": false, "label": "radiotolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species generated as an aftermath of irradiation that damage DNA and proteins.", "grounding": null, "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species (ROS)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "RecA recombinase central to homologous-recombination repair of radiation-induced double-strand breaks.", "grounding": null, "id": "reca_protein", "is_orphan": false, "label": "RecA recombinase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Radiotolerance via DNA repair and Mn-antioxidant proteome protection"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -625,7 +771,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

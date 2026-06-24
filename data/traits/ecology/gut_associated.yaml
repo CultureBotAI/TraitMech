@@ -1,8 +1,8 @@
 identifier: traitmech:000052
 label: gut-associated
 definition: A host association in which an organism is a persistent member of the
-  gastrointestinal microbiota of an animal host, often contributing to host
-  nutrition and physiology.
+  gastrointestinal microbiota of an animal host, often contributing to host nutrition
+  and physiology.
 definition_source: DOI:10.1126/science.1104816
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,16 +15,16 @@ synonyms:
   source: DOI:10.1126/science.1104816
 evidence:
 - reference: DOI:10.1126/science.1104816
-  notes: Bäckhed et al. characterize the distal intestine as a dense microbial
-    habitat whose residents provide metabolic capabilities to the host.
+  notes: Bäckhed et al. characterize the distal intestine as a dense microbial habitat
+    whose residents provide metabolic capabilities to the host.
 - reference: DOI:10.1073/pnas.1218525110
-  notes: McFall-Ngai et al. support the gut as a major site of host-associated
-    microbial communities across animals.
+  notes: McFall-Ngai et al. support the gut as a major site of host-associated microbial
+    communities across animals.
 causal_graphs:
 - graph_id: gut_associated_microbiota_metabolism
   title: Gut-associated lifestyle in the gastrointestinal microbiota
-  description: Evidence-backed causal sketch linking gastrointestinal habitat to
-    persistent gut-microbiota membership and host nutritional contributions.
+  description: Evidence-backed causal sketch linking gastrointestinal habitat to persistent
+    gut-microbiota membership and host nutritional contributions.
   nodes:
   - node_id: gut_associated_trait
     label: gut-associated
@@ -39,6 +39,44 @@ causal_graphs:
     label: host metabolic contribution
     node_type: BIOLOGICAL_PROCESS
     description: Microbially mediated nutrient harvest and metabolism for the host.
+  - node_id: adhesins
+    label: bacterial adhesins
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial surface adhesins that bind host receptors.
+  - node_id: mucosal_adhesion
+    label: adhesion to intestinal mucus/epithelium
+    node_type: BIOLOGICAL_PROCESS
+    description: Binding of bacterial adhesins to intestinal mucus or epithelial receptors.
+  - node_id: bile_acids
+    label: bile acids/bile salts
+    node_type: CHEMICAL
+    description: Host bile acids and conjugated bile salts in the gut.
+  - node_id: antimicrobial_peptides
+    label: Paneth-cell antimicrobial peptides
+    node_type: CHEMICAL
+    description: Antimicrobial peptides secreted by Paneth cells in the small intestine.
+  - node_id: small_intestinal_bacterial_growth
+    label: bacterial growth in small intestine
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth of bacteria in the small-intestinal lumen.
+  - node_id: peristalsis
+    label: intestinal peristalsis
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Mechanical flow/clearance of luminal contents in the gut.
+  - node_id: duodenal_retention
+    label: colonization/retention in duodenum
+    node_type: BIOLOGICAL_PROCESS
+    description: Persistent retention/colonization in the duodenum and proximal small
+      intestine.
+  - node_id: luminal_oxygen_limitation
+    label: limitation of colonic luminal oxygen diffusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Host functions that limit oxygen diffusion into the colonic lumen
+      during homeostasis.
+  - node_id: primary_fermenter_community
+    label: primary-fermenter-dominated community
+    node_type: STATE
+    description: A gut microbial community dominated by anaerobic primary fermenters.
   edges:
   - subject: gastrointestinal_habitat
     predicate: enables
@@ -55,21 +93,90 @@ causal_graphs:
     description: Gut microbiota provide metabolic capabilities to the host.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
-      notes: McFall-Ngai et al. support the gut microbiota as a metabolically
-        consequential host-associated community.
+      notes: McFall-Ngai et al. support the gut microbiota as a metabolically consequential
+        host-associated community.
     predicate_id: RO:0002326
+  - subject: adhesins
+    predicate: enables
+    object: mucosal_adhesion
+    description: Bacterial adhesins bind host receptors to enable adhesion.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12051026
+      notes: Adhesion primarily relies on adhesins; binding of bacterial adhesins
+        to host receptors is a prerequisite for long-term colonization (Lin et al.,
+        2024).
+  - subject: mucosal_adhesion
+    predicate: prerequisite for
+    object: gut_associated_trait
+    description: Adhesion to mucus/epithelium is a prerequisite for long-term gut
+      colonization.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12051026
+      notes: Adhesion emphasized as the prerequisite for persistence (adhesion ->
+        growth -> reproduction) (Lin et al., 2024).
+  - subject: bile_acids
+    predicate: exerts antimicrobial pressure on
+    object: gastrointestinal_habitat
+    description: Bile acids shape gut community via antimicrobial and detergent-like
+      properties.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03576-23
+      notes: Bile acids shape the gut microbiome composition due to antimicrobial
+        and detergent-like properties, creating a harsh gut environment (McMillan
+        et al., 2024).
+  - subject: bile_acids
+    predicate: inhibits
+    object: small_intestinal_bacterial_growth
+    description: Small-intestinal bile salts inhibit growth of many bacteria.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: Bile salts and Paneth-cell antimicrobial peptides inhibit growth of many
+        bacteria in the small intestine (Muramatsu & Winter, 2024).
+  - subject: antimicrobial_peptides
+    predicate: inhibits
+    object: small_intestinal_bacterial_growth
+    description: Paneth-cell antimicrobial peptides inhibit growth of many small-intestinal
+      bacteria.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: Antimicrobial peptides released by Paneth cells inhibit growth of many
+        bacteria in the small intestine (Muramatsu & Winter, 2024).
+  - subject: peristalsis
+    predicate: reduces
+    object: duodenal_retention
+    description: Strong peristalsis (plus bile/antimicrobials) makes the duodenum
+      hostile to retention.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12051026
+      notes: The duodenum is hostile to retention due to bile, antimicrobials, and
+        strong peristalsis (Lin et al., 2024).
+  - subject: luminal_oxygen_limitation
+    predicate: enables
+    object: primary_fermenter_community
+    description: Host limitation of luminal oxygen shelters a primary-fermenter-dominated
+      community.
+    evidence:
+    - reference: DOI:10.1128/iai.00302-24
+      notes: During homeostasis, host functions that limit oxygen diffusion into the
+        colonic lumen shelter a community dominated by primary fermenters (Lee et
+        al., 2024).
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ECOLOGY trait (gut-associated); sub-variant of
-    host-associated.
+  changes: Proposed candidate ECOLOGY trait (gut-associated); sub-variant of host-associated.
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (gut microbiota / host metabolic
-    contribution) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (gut microbiota / host metabolic contribution)
+    with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3

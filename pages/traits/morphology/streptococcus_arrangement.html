@@ -90,12 +90,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>parallel division planes</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cell division</strong>
+            
+            <p>Ovococci divide in successive parallel planes perpendicular to the long axis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mSphere.00119-21</code>
+                
+                <span class="meta">Ovococci are elongated ellipsoids divided in successive parallel planes perpendicular to their long axis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>peptidoglycan hydrolases</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>peptidoglycan remodeling</strong>
+            
+            <p>PG hydrolases release nascent glycan strands and cleave muropeptides, enabling PG remodeling and eventual splitting.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2021.737396</code>
+                
+                <span class="meta">PG hydrolases are required to release nascent glycan strands and cleave muropeptides, enabling integration of new material and eventual splitting.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>PcsB autolysin</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>peptidoglycan remodeling</strong>
+            
+            <p>PcsB PG remodeling activity is coordinated with cell division.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mSphere.00119-21</code>
+                
+                <span class="meta">The PG remodeling activity by PcsB is coordinated with cell division through its interaction with the FtsEX complex.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>FtsEX complex</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>PcsB autolysin</strong>
+            
+            <p>The FtsEX complex is required for PcsB autolysin function.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mSphere.00119-21</code>
+                
+                <span class="meta">PcsB is the only essential PG autolysin, and the FtsEX complex is required for the PcsB function.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>peptidoglycan remodeling</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>daughter-cell separation</strong>
+            
+            <p>Septal PG remodeling/splitting enables daughter cells to separate; failure maintains chains.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mSphere.00119-21</code>
+                
+                <span class="meta">Part of the residual structure of PG did not fully disintegrate, resulting in incomplete cell separation (chain phenotype).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>daughter-cell separation</strong>
+            <span class="edge-predicate">prevents</span>
+            <strong>streptococcus arrangement</strong>
+            
+            <p>Complete daughter-cell separation prevents chain formation; its failure produces chains.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/ncomms4842</code>
+                
+                <span class="meta">Daughter-cell separation during division determines whether cocci stay attached in chains versus separating.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>lipoteichoic acid</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>cell division</strong>
+            
+            <p>Lipoteichoic acid supports proper cell shape and bacterial division.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13567-024-01287-w</code>
+                
+                <span class="meta">LTA is involved in maintaining proper cell shape and influences cell shape and bacterial division.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -227,6 +350,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (parallel-plane division → chain) with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +715,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking parallel division planes and incomplete daughter-cell separation to coccal chains.", "edges": [{"description": "Parallel successive division planes with incomplete daughter separation produce coccal chains.", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains.", "reference": "DOI:10.1038/ncomms4842"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "parallel_division_planes", "target": "streptococcus_trait"}, {"description": "Bacterial cell division underlies coccal chain formation.", "evidence": [{"notes": "Young treats chain arrangement as a heritable, division-determined morphology.", "reference": "DOI:10.1128/MMBR.00001-06"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cell_division", "target": "streptococcus_trait"}], "evidence_rows": [{"description": "Parallel successive division planes with incomplete daughter separation produce coccal chains.", "edge_id": "edge-1", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains.", "reference": "DOI:10.1038/ncomms4842"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "parallel division planes", "target": "streptococcus arrangement"}, {"description": "Bacterial cell division underlies coccal chain formation.", "edge_id": "edge-2", "evidence": [{"notes": "Young treats chain arrangement as a heritable, division-determined morphology.", "reference": "DOI:10.1128/MMBR.00001-06"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cell division", "target": "streptococcus arrangement"}], "graph_id": "streptococcus_parallel_division_chain", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacterial binary fission.", "grounding": "GO:0051301", "id": "cell_division", "is_orphan": false, "label": "cell division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Successive division planes oriented in parallel.", "grounding": null, "id": "parallel_division_planes", "is_orphan": false, "label": "parallel division planes", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Dividing cocci remain attached in chains.", "grounding": "traitmech:000117", "id": "streptococcus_trait", "is_orphan": false, "label": "streptococcus arrangement", "node_type": "TRAIT", "xrefs": []}], "title": "Streptococcus arrangement via parallel division and incomplete separation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking parallel division planes and incomplete daughter-cell separation to coccal chains.", "edges": [{"description": "Parallel successive division planes with incomplete daughter separation produce coccal chains.", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains.", "reference": "DOI:10.1038/ncomms4842"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "parallel_division_planes", "target": "streptococcus_trait"}, {"description": "Bacterial cell division underlies coccal chain formation.", "evidence": [{"notes": "Young treats chain arrangement as a heritable, division-determined morphology.", "reference": "DOI:10.1128/MMBR.00001-06"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cell_division", "target": "streptococcus_trait"}, {"description": "Ovococci divide in successive parallel planes perpendicular to the long axis.", "evidence": [{"notes": "Ovococci are elongated ellipsoids divided in successive parallel planes perpendicular to their long axis.", "reference": "DOI:10.1128/mSphere.00119-21"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "parallel_division_planes", "target": "cell_division"}, {"description": "PG hydrolases release nascent glycan strands and cleave muropeptides, enabling PG remodeling and eventual splitting.", "evidence": [{"notes": "PG hydrolases are required to release nascent glycan strands and cleave muropeptides, enabling integration of new material and eventual splitting.", "reference": "DOI:10.3389/fmicb.2021.737396"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "pg_hydrolases", "target": "pg_remodeling"}, {"description": "PcsB PG remodeling activity is coordinated with cell division.", "evidence": [{"notes": "The PG remodeling activity by PcsB is coordinated with cell division through its interaction with the FtsEX complex.", "reference": "DOI:10.1128/mSphere.00119-21"}], "id": "edge-5", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "pcsb_autolysin", "target": "pg_remodeling"}, {"description": "The FtsEX complex is required for PcsB autolysin function.", "evidence": [{"notes": "PcsB is the only essential PG autolysin, and the FtsEX complex is required for the PcsB function.", "reference": "DOI:10.1128/mSphere.00119-21"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "ftsex_complex", "target": "pcsb_autolysin"}, {"description": "Septal PG remodeling/splitting enables daughter cells to separate; failure maintains chains.", "evidence": [{"notes": "Part of the residual structure of PG did not fully disintegrate, resulting in incomplete cell separation (chain phenotype).", "reference": "DOI:10.1128/mSphere.00119-21"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "pg_remodeling", "target": "daughter_cell_separation"}, {"description": "Complete daughter-cell separation prevents chain formation; its failure produces chains.", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains versus separating.", "reference": "DOI:10.1038/ncomms4842"}], "id": "edge-8", "is_orphan": false, "predicate": "prevents", "predicate_id": null, "source": "daughter_cell_separation", "target": "streptococcus_trait"}, {"description": "Lipoteichoic acid supports proper cell shape and bacterial division.", "evidence": [{"notes": "LTA is involved in maintaining proper cell shape and influences cell shape and bacterial division.", "reference": "DOI:10.1186/s13567-024-01287-w"}], "id": "edge-9", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "lipoteichoic_acid", "target": "cell_division"}], "evidence_rows": [{"description": "Parallel successive division planes with incomplete daughter separation produce coccal chains.", "edge_id": "edge-1", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains.", "reference": "DOI:10.1038/ncomms4842"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "parallel division planes", "target": "streptococcus arrangement"}, {"description": "Bacterial cell division underlies coccal chain formation.", "edge_id": "edge-2", "evidence": [{"notes": "Young treats chain arrangement as a heritable, division-determined morphology.", "reference": "DOI:10.1128/MMBR.00001-06"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cell division", "target": "streptococcus arrangement"}, {"description": "Ovococci divide in successive parallel planes perpendicular to the long axis.", "edge_id": "edge-3", "evidence": [{"notes": "Ovococci are elongated ellipsoids divided in successive parallel planes perpendicular to their long axis.", "reference": "DOI:10.1128/mSphere.00119-21"}], "predicate": "enables", "predicate_id": null, "source": "parallel division planes", "target": "cell division"}, {"description": "PG hydrolases release nascent glycan strands and cleave muropeptides, enabling PG remodeling and eventual splitting.", "edge_id": "edge-4", "evidence": [{"notes": "PG hydrolases are required to release nascent glycan strands and cleave muropeptides, enabling integration of new material and eventual splitting.", "reference": "DOI:10.3389/fmicb.2021.737396"}], "predicate": "enables", "predicate_id": null, "source": "peptidoglycan hydrolases", "target": "peptidoglycan remodeling"}, {"description": "PcsB PG remodeling activity is coordinated with cell division.", "edge_id": "edge-5", "evidence": [{"notes": "The PG remodeling activity by PcsB is coordinated with cell division through its interaction with the FtsEX complex.", "reference": "DOI:10.1128/mSphere.00119-21"}], "predicate": "promotes", "predicate_id": null, "source": "PcsB autolysin", "target": "peptidoglycan remodeling"}, {"description": "The FtsEX complex is required for PcsB autolysin function.", "edge_id": "edge-6", "evidence": [{"notes": "PcsB is the only essential PG autolysin, and the FtsEX complex is required for the PcsB function.", "reference": "DOI:10.1128/mSphere.00119-21"}], "predicate": "required for", "predicate_id": null, "source": "FtsEX complex", "target": "PcsB autolysin"}, {"description": "Septal PG remodeling/splitting enables daughter cells to separate; failure maintains chains.", "edge_id": "edge-7", "evidence": [{"notes": "Part of the residual structure of PG did not fully disintegrate, resulting in incomplete cell separation (chain phenotype).", "reference": "DOI:10.1128/mSphere.00119-21"}], "predicate": "promotes", "predicate_id": null, "source": "peptidoglycan remodeling", "target": "daughter-cell separation"}, {"description": "Complete daughter-cell separation prevents chain formation; its failure produces chains.", "edge_id": "edge-8", "evidence": [{"notes": "Daughter-cell separation during division determines whether cocci stay attached in chains versus separating.", "reference": "DOI:10.1038/ncomms4842"}], "predicate": "prevents", "predicate_id": null, "source": "daughter-cell separation", "target": "streptococcus arrangement"}, {"description": "Lipoteichoic acid supports proper cell shape and bacterial division.", "edge_id": "edge-9", "evidence": [{"notes": "LTA is involved in maintaining proper cell shape and influences cell shape and bacterial division.", "reference": "DOI:10.1186/s13567-024-01287-w"}], "predicate": "promotes", "predicate_id": null, "source": "lipoteichoic acid", "target": "cell division"}], "graph_id": "streptococcus_parallel_division_chain", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacterial binary fission.", "grounding": "GO:0051301", "id": "cell_division", "is_orphan": false, "label": "cell division", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Splitting of the septum so that daughter cells fully separate after division.", "grounding": null, "id": "daughter_cell_separation", "is_orphan": false, "label": "daughter-cell separation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane complex required for PcsB autolysin function.", "grounding": null, "id": "ftsex_complex", "is_orphan": false, "label": "FtsEX complex", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Cell-wall anionic polymer involved in proper cell shape and division.", "grounding": null, "id": "lipoteichoic_acid", "is_orphan": false, "label": "lipoteichoic acid", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Successive division planes oriented in parallel.", "grounding": null, "id": "parallel_division_planes", "is_orphan": false, "label": "parallel division planes", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Essential PG autolysin coordinating PG remodeling with cell division.", "grounding": null, "id": "pcsb_autolysin", "is_orphan": false, "label": "PcsB autolysin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Septal and peripheral PG hydrolases (e.g. FtsEX-PcsB, CbpD) that cleave muropeptides enabling splitting.", "grounding": null, "id": "pg_hydrolases", "is_orphan": false, "label": "peptidoglycan hydrolases", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Remodeling and cleavage of septal/peripheral peptidoglycan during elongation and division.", "grounding": null, "id": "pg_remodeling", "is_orphan": false, "label": "peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Dividing cocci remain attached in chains.", "grounding": "traitmech:000117", "id": "streptococcus_trait", "is_orphan": false, "label": "streptococcus arrangement", "node_type": "TRAIT", "xrefs": []}], "title": "Streptococcus arrangement via parallel division and incomplete separation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +726,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

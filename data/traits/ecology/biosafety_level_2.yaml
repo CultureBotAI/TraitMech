@@ -39,6 +39,37 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Pathogens with established virulence in healthy adults but generally
       treatable with available countermeasures.
+  - node_id: risk_group_2_pathogen
+    label: risk group 2 pathogen
+    node_type: BIOLOGICAL_PROCESS
+    description: Agent of moderate individual risk and limited community risk; mapped
+      to BSL-2 containment.
+  - node_id: pathogenicity
+    label: pathogenicity
+    node_type: BIOLOGICAL_PROCESS
+    description: Capacity of an agent to cause disease; a criterion used in risk-group
+      assignment.
+  - node_id: mode_of_transmission
+    label: mode and ease of transmission
+    node_type: BIOLOGICAL_PROCESS
+    description: Route and efficiency of agent transmission; a criterion used in risk-group
+      assignment.
+  - node_id: aerosol_splash_procedure
+    label: aerosol- or splash-generating procedure
+    node_type: EXPERIMENTAL_FACTOR
+    description: Laboratory procedures producing infectious aerosols or splashes.
+  - node_id: biosafety_cabinet
+    label: biological safety cabinet class I/II
+    node_type: EXPERIMENTAL_FACTOR
+    description: Engineering control used at BSL-2 for aerosol/splash-generating procedures.
+  - node_id: appropriate_ppe
+    label: appropriate personal protective equipment
+    node_type: EXPERIMENTAL_FACTOR
+    description: Lab coat, gloves, and eye protection as needed at BSL-2.
+  - node_id: restricted_lab_access
+    label: restricted laboratory access
+    node_type: EXPERIMENTAL_FACTOR
+    description: Administrative control limiting laboratory entry, required at BSL-2.
   edges:
   - subject: moderate_pathogen_hazard
     predicate: produces
@@ -59,6 +90,59 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports BSL-2 as a member of the biosafety-level classification.
     predicate_id: rdfs:subClassOf
+  - subject: risk_group_2_pathogen
+    predicate: supports assignment to
+    object: bsl2_trait
+    description: RG2 agents (moderate individual, limited community risk) are assigned
+      to BSL-2 containment.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: Risk Group 2 ("moderate individual risk, limited community risk") associates
+        RG-2 agents with BSL-2/PC-2.
+  - subject: pathogenicity
+    predicate: influences selection of
+    object: bsl2_trait
+    description: Agent pathogenicity is a criterion driving risk-group/biosafety-level
+      assignment.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: Risk Groups are assigned based on pathogenicity, transmission, host range,
+        and countermeasure availability.
+  - subject: mode_of_transmission
+    predicate: influences selection of
+    object: bsl2_trait
+    description: Mode and ease of transmission is a criterion driving biosafety-level
+      assignment; airborne transmission escalates above BSL-2.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: Risk Groups assigned based on mode/ease of transmission; airborne lethal
+        agents are escalated to BSL-3.
+  - subject: aerosol_splash_procedure
+    predicate: necessitates use of
+    object: biosafety_cabinet
+    description: Procedures generating infectious aerosols or splashes require a class
+      I/II biological safety cabinet at BSL-2.
+    evidence:
+    - reference: DOI:10.1007/978-1-4939-8935-5_19
+      notes: All procedures that could create infectious aerosols/splashes are conducted
+        in biological safety cabinets at BSL-2.
+  - subject: appropriate_ppe
+    predicate: mitigates risk in
+    object: bsl2_trait
+    description: Lab coats, gloves, and eye protection reduce exposure risk at BSL-2.
+    evidence:
+    - reference: DOI:10.1016/j.pathol.2020.09.006
+      notes: Appropriate PPE (lab coats and gloves), with eye protection as needed,
+        must be worn in BSL-2/PC-2.
+  - subject: restricted_lab_access
+    predicate: is required for
+    object: bsl2_trait
+    description: Restricted laboratory access is a required administrative control
+      at BSL-2.
+    evidence:
+    - reference: DOI:10.1007/978-1-4939-8935-5_19
+      notes: BSL-2 requires restricted access and additional agent-specific training
+        compared with BSL-1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.933068+00:00'
   curator: seed_from_metpo
@@ -76,6 +160,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-066a51aacfb6

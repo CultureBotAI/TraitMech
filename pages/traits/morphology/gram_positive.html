@@ -141,12 +141,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>iodine mordant</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>crystal violet-iodine complex formation</strong>
+            
+            <p>Iodine acts as a mordant, interacting with crystal violet to form large complexes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.52403/ijrr.20230934</code>
+                
+                <span class="meta">When iodine is added, it interacts with CV+ to form large complexes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>crystal violet-iodine complex formation</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>crystal violet-iodine complex</strong>
+            
+            <p>Formation of the crystal violet-iodine complex retained within the peptidoglycan mesh.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-026-10072-8</code>
+                
+                <span class="meta">The Gram stain relies on retention of crystal violet-iodine complexes within the peptidoglycan mesh.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>peptidoglycan mesh low porosity</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>crystal violet-iodine complex</strong>
+            
+            <p>Low-porosity thick peptidoglycan walls trap and retain the dye complex.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s42003-026-10072-8</code>
+                
+                <span class="meta">Crystal violet-iodine retention depends on the physical porosity of the peptidoglycan mesh; thick, low-porosity walls can trap the complex.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>D-alanine esters on teichoic acids</strong>
+            <span class="edge-predicate">neutralizes</span>
+            <strong>teichoic-acid negative charge</strong>
+            
+            <p>D-alanine esters neutralize the phosphate-rich negative charge of teichoic acids.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41564-023-01411-0</code>
+                
+                <span class="meta">These polymers are commonly modified with D-alanine esters that neutralize phosphate-rich negative charge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>D-alanylation of teichoic acids</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>positively charged cell surface</strong>
+            
+            <p>D-alanylation of both teichoic acid types leads to a more positively charged cell surface.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuaa064</code>
+                
+                <span class="meta">D-alanylation of both teichoic acid types leads to a more positively charged cell surface.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>wall teichoic acids</strong>
+            <span class="edge-predicate">influences</span>
+            <strong>positively charged cell surface</strong>
+            
+            <p>Wall teichoic acids and their anionic/cationic balance affect cell-surface charge.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-micro-092412-155620</code>
+                
+                <span class="meta">WTAs anionic/cationic balance affects cell-surface charge and antimicrobial interactions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -304,6 +410,12 @@
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:28640×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -663,7 +775,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-positive staining to thick peptidoglycan, wall teichoic acids, low decolorizer permeability, and crystal violet-iodine retention.", "edges": [{"description": "Thick Gram-positive cell walls retain the dye-iodine complex during decolorization.", "evidence": [{"notes": "Supports retention of crystal violet-iodine complex by the Gram-positive cell wall.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-1", "is_orphan": false, "predicate": "retains", "predicate_id": null, "source": "thick_peptidoglycan_cell_wall", "target": "crystal_violet_iodine_complex"}, {"description": "Wall teichoic acids are major glycopolymers in the Gram-positive wall matrix.", "evidence": [{"notes": "Supports teichoic acids as peptidoglycan-attached Gram-positive wall polymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "peptidoglycan-attached"}], "id": "edge-2", "is_orphan": false, "predicate": "embedded in", "predicate_id": "biolink:located_in", "source": "wall_teichoic_acids", "target": "thick_peptidoglycan_cell_wall"}, {"description": "Lipoteichoic acids are membrane-attached glycopolymers in Gram-positive cell envelopes.", "evidence": [{"notes": "Supports lipoteichoic acids as membrane-attached Gram-positive glycopolymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "membrane-attached"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipoteichoic_acids", "target": "thick_peptidoglycan_cell_wall"}, {"description": "Gram-positive cells retain dye complex after decolorization and remain purple.", "evidence": [{"notes": "Supports retention during the Gram reaction.", "reference": "DOI:10.3109/10520299609117151", "snippet": "retention of a crystal violet:iodine complex"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to remove", "predicate_id": null, "source": "alcohol_decolorization", "target": "crystal_violet_iodine_complex"}, {"description": "Retained dye complex produces the observed Gram-positive staining phenotype.", "evidence": [{"notes": "Supports the dye complex as the chemical basis of staining.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "crystal violet-iodine complex"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal_violet_iodine_complex", "target": "gram_positive_trait"}], "evidence_rows": [{"description": "Thick Gram-positive cell walls retain the dye-iodine complex during decolorization.", "edge_id": "edge-1", "evidence": [{"notes": "Supports retention of crystal violet-iodine complex by the Gram-positive cell wall.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "retains", "predicate_id": null, "source": "thick peptidoglycan cell wall", "target": "crystal violet-iodine complex"}, {"description": "Wall teichoic acids are major glycopolymers in the Gram-positive wall matrix.", "edge_id": "edge-2", "evidence": [{"notes": "Supports teichoic acids as peptidoglycan-attached Gram-positive wall polymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "peptidoglycan-attached"}], "predicate": "embedded in", "predicate_id": "biolink:located_in", "source": "wall teichoic acids", "target": "thick peptidoglycan cell wall"}, {"description": "Lipoteichoic acids are membrane-attached glycopolymers in Gram-positive cell envelopes.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipoteichoic acids as membrane-attached Gram-positive glycopolymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "membrane-attached"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipoteichoic acids", "target": "thick peptidoglycan cell wall"}, {"description": "Gram-positive cells retain dye complex after decolorization and remain purple.", "edge_id": "edge-4", "evidence": [{"notes": "Supports retention during the Gram reaction.", "reference": "DOI:10.3109/10520299609117151", "snippet": "retention of a crystal violet:iodine complex"}], "predicate": "fails to remove", "predicate_id": null, "source": "alcohol decolorization", "target": "crystal violet-iodine complex"}, {"description": "Retained dye complex produces the observed Gram-positive staining phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the dye complex as the chemical basis of staining.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "crystal violet-iodine complex"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal violet-iodine complex", "target": "gram positive"}], "graph_id": "gram_positive_cell_wall_retention", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Gram stain step that removes dye complex from Gram-negative cells.", "grounding": null, "id": "alcohol_decolorization", "is_orphan": false, "label": "alcohol decolorization", "node_type": "EXPERIMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex retained after decolorization.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells retain crystal violet and appear purple.", "grounding": "METPO:1000698", "id": "gram_positive_trait", "is_orphan": false, "label": "gram positive", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane-anchored Gram-positive cell-wall glycopolymers.", "grounding": "CHEBI:28640", "id": "lipoteichoic_acids", "is_orphan": false, "label": "lipoteichoic acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Multilayered peptidoglycan wall characteristic of Gram-positive bacteria.", "grounding": null, "id": "thick_peptidoglycan_cell_wall", "is_orphan": false, "label": "thick peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "Anionic cell-wall glycopolymers attached to Gram-positive peptidoglycan.", "grounding": null, "id": "wall_teichoic_acids", "is_orphan": false, "label": "wall teichoic acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Gram-positive cell-wall dye retention mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-positive staining to thick peptidoglycan, wall teichoic acids, low decolorizer permeability, and crystal violet-iodine retention.", "edges": [{"description": "Thick Gram-positive cell walls retain the dye-iodine complex during decolorization.", "evidence": [{"notes": "Supports retention of crystal violet-iodine complex by the Gram-positive cell wall.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-1", "is_orphan": false, "predicate": "retains", "predicate_id": null, "source": "thick_peptidoglycan_cell_wall", "target": "crystal_violet_iodine_complex"}, {"description": "Wall teichoic acids are major glycopolymers in the Gram-positive wall matrix.", "evidence": [{"notes": "Supports teichoic acids as peptidoglycan-attached Gram-positive wall polymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "peptidoglycan-attached"}], "id": "edge-2", "is_orphan": false, "predicate": "embedded in", "predicate_id": "biolink:located_in", "source": "wall_teichoic_acids", "target": "thick_peptidoglycan_cell_wall"}, {"description": "Lipoteichoic acids are membrane-attached glycopolymers in Gram-positive cell envelopes.", "evidence": [{"notes": "Supports lipoteichoic acids as membrane-attached Gram-positive glycopolymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "membrane-attached"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipoteichoic_acids", "target": "thick_peptidoglycan_cell_wall"}, {"description": "Gram-positive cells retain dye complex after decolorization and remain purple.", "evidence": [{"notes": "Supports retention during the Gram reaction.", "reference": "DOI:10.3109/10520299609117151", "snippet": "retention of a crystal violet:iodine complex"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to remove", "predicate_id": null, "source": "alcohol_decolorization", "target": "crystal_violet_iodine_complex"}, {"description": "Retained dye complex produces the observed Gram-positive staining phenotype.", "evidence": [{"notes": "Supports the dye complex as the chemical basis of staining.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "crystal violet-iodine complex"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal_violet_iodine_complex", "target": "gram_positive_trait"}, {"description": "Iodine acts as a mordant, interacting with crystal violet to form large complexes.", "evidence": [{"notes": "When iodine is added, it interacts with CV+ to form large complexes.", "reference": "DOI:10.52403/ijrr.20230934"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "iodine_mordant", "target": "cv_iodine_complex_formation"}, {"description": "Formation of the crystal violet-iodine complex retained within the peptidoglycan mesh.", "evidence": [{"notes": "The Gram stain relies on retention of crystal violet-iodine complexes within the peptidoglycan mesh.", "reference": "DOI:10.1038/s42003-026-10072-8"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "cv_iodine_complex_formation", "target": "crystal_violet_iodine_complex"}, {"description": "Low-porosity thick peptidoglycan walls trap and retain the dye complex.", "evidence": [{"notes": "Crystal violet-iodine retention depends on the physical porosity of the peptidoglycan mesh; thick, low-porosity walls can trap the complex.", "reference": "DOI:10.1038/s42003-026-10072-8"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "peptidoglycan_mesh_low_porosity", "target": "crystal_violet_iodine_complex"}, {"description": "D-alanine esters neutralize the phosphate-rich negative charge of teichoic acids.", "evidence": [{"notes": "These polymers are commonly modified with D-alanine esters that neutralize phosphate-rich negative charge.", "reference": "DOI:10.1038/s41564-023-01411-0"}], "id": "edge-9", "is_orphan": false, "predicate": "neutralizes", "predicate_id": null, "source": "d_alanine_esters", "target": "teichoic_acid_negative_charge"}, {"description": "D-alanylation of both teichoic acid types leads to a more positively charged cell surface.", "evidence": [{"notes": "D-alanylation of both teichoic acid types leads to a more positively charged cell surface.", "reference": "DOI:10.1093/femsre/fuaa064"}], "id": "edge-10", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "d_alanylation_teichoic_acids", "target": "positively_charged_cell_surface"}, {"description": "Wall teichoic acids and their anionic/cationic balance affect cell-surface charge.", "evidence": [{"notes": "WTAs anionic/cationic balance affects cell-surface charge and antimicrobial interactions.", "reference": "DOI:10.1146/annurev-micro-092412-155620"}], "id": "edge-11", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "wall_teichoic_acids", "target": "positively_charged_cell_surface"}], "evidence_rows": [{"description": "Thick Gram-positive cell walls retain the dye-iodine complex during decolorization.", "edge_id": "edge-1", "evidence": [{"notes": "Supports retention of crystal violet-iodine complex by the Gram-positive cell wall.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "retains", "predicate_id": null, "source": "thick peptidoglycan cell wall", "target": "crystal violet-iodine complex"}, {"description": "Wall teichoic acids are major glycopolymers in the Gram-positive wall matrix.", "edge_id": "edge-2", "evidence": [{"notes": "Supports teichoic acids as peptidoglycan-attached Gram-positive wall polymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "peptidoglycan-attached"}], "predicate": "embedded in", "predicate_id": "biolink:located_in", "source": "wall teichoic acids", "target": "thick peptidoglycan cell wall"}, {"description": "Lipoteichoic acids are membrane-attached glycopolymers in Gram-positive cell envelopes.", "edge_id": "edge-3", "evidence": [{"notes": "Supports lipoteichoic acids as membrane-attached Gram-positive glycopolymers.", "reference": "DOI:10.1038/nrmicro1861", "snippet": "membrane-attached"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipoteichoic acids", "target": "thick peptidoglycan cell wall"}, {"description": "Gram-positive cells retain dye complex after decolorization and remain purple.", "edge_id": "edge-4", "evidence": [{"notes": "Supports retention during the Gram reaction.", "reference": "DOI:10.3109/10520299609117151", "snippet": "retention of a crystal violet:iodine complex"}], "predicate": "fails to remove", "predicate_id": null, "source": "alcohol decolorization", "target": "crystal violet-iodine complex"}, {"description": "Retained dye complex produces the observed Gram-positive staining phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the dye complex as the chemical basis of staining.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "crystal violet-iodine complex"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "crystal violet-iodine complex", "target": "gram positive"}, {"description": "Iodine acts as a mordant, interacting with crystal violet to form large complexes.", "edge_id": "edge-6", "evidence": [{"notes": "When iodine is added, it interacts with CV+ to form large complexes.", "reference": "DOI:10.52403/ijrr.20230934"}], "predicate": "causes", "predicate_id": null, "source": "iodine mordant", "target": "crystal violet-iodine complex formation"}, {"description": "Formation of the crystal violet-iodine complex retained within the peptidoglycan mesh.", "edge_id": "edge-7", "evidence": [{"notes": "The Gram stain relies on retention of crystal violet-iodine complexes within the peptidoglycan mesh.", "reference": "DOI:10.1038/s42003-026-10072-8"}], "predicate": "produces", "predicate_id": null, "source": "crystal violet-iodine complex formation", "target": "crystal violet-iodine complex"}, {"description": "Low-porosity thick peptidoglycan walls trap and retain the dye complex.", "edge_id": "edge-8", "evidence": [{"notes": "Crystal violet-iodine retention depends on the physical porosity of the peptidoglycan mesh; thick, low-porosity walls can trap the complex.", "reference": "DOI:10.1038/s42003-026-10072-8"}], "predicate": "increases", "predicate_id": null, "source": "peptidoglycan mesh low porosity", "target": "crystal violet-iodine complex"}, {"description": "D-alanine esters neutralize the phosphate-rich negative charge of teichoic acids.", "edge_id": "edge-9", "evidence": [{"notes": "These polymers are commonly modified with D-alanine esters that neutralize phosphate-rich negative charge.", "reference": "DOI:10.1038/s41564-023-01411-0"}], "predicate": "neutralizes", "predicate_id": null, "source": "D-alanine esters on teichoic acids", "target": "teichoic-acid negative charge"}, {"description": "D-alanylation of both teichoic acid types leads to a more positively charged cell surface.", "edge_id": "edge-10", "evidence": [{"notes": "D-alanylation of both teichoic acid types leads to a more positively charged cell surface.", "reference": "DOI:10.1093/femsre/fuaa064"}], "predicate": "increases", "predicate_id": null, "source": "D-alanylation of teichoic acids", "target": "positively charged cell surface"}, {"description": "Wall teichoic acids and their anionic/cationic balance affect cell-surface charge.", "edge_id": "edge-11", "evidence": [{"notes": "WTAs anionic/cationic balance affects cell-surface charge and antimicrobial interactions.", "reference": "DOI:10.1146/annurev-micro-092412-155620"}], "predicate": "influences", "predicate_id": null, "source": "wall teichoic acids", "target": "positively charged cell surface"}], "graph_id": "gram_positive_cell_wall_retention", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Gram stain step that removes dye complex from Gram-negative cells.", "grounding": null, "id": "alcohol_decolorization", "is_orphan": false, "label": "alcohol decolorization", "node_type": "EXPERIMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex retained after decolorization.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Formation of large crystal violet-iodine complexes within the cell during Gram staining.", "grounding": null, "id": "cv_iodine_complex_formation", "is_orphan": false, "label": "crystal violet-iodine complex formation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "D-alanine ester modifications on teichoic acids that neutralize phosphate negative charge.", "grounding": null, "id": "d_alanine_esters", "is_orphan": false, "label": "D-alanine esters on teichoic acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Modification of wall and lipoteichoic acids with D-alanine esters.", "grounding": null, "id": "d_alanylation_teichoic_acids", "is_orphan": false, "label": "D-alanylation of teichoic acids", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells retain crystal violet and appear purple.", "grounding": "METPO:1000698", "id": "gram_positive_trait", "is_orphan": false, "label": "gram positive", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Iodine added during Gram staining that acts as a mordant binding crystal violet.", "grounding": null, "id": "iodine_mordant", "is_orphan": false, "label": "iodine mordant", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane-anchored Gram-positive cell-wall glycopolymers.", "grounding": "CHEBI:28640", "id": "lipoteichoic_acids", "is_orphan": false, "label": "lipoteichoic acids", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Low physical porosity of the thick peptidoglycan mesh that traps the dye complex.", "grounding": null, "id": "peptidoglycan_mesh_low_porosity", "is_orphan": false, "label": "peptidoglycan mesh low porosity", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3f4f6", "description": "More positively charged Gram-positive cell surface resulting from D-alanylation.", "grounding": null, "id": "positively_charged_cell_surface", "is_orphan": false, "label": "positively charged cell surface", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Anionic phosphate-rich negative charge contributed by teichoic acids.", "grounding": null, "id": "teichoic_acid_negative_charge", "is_orphan": false, "label": "teichoic-acid negative charge", "node_type": "QUALITY", "xrefs": []}, {"color": "#ede9fe", "description": "Multilayered peptidoglycan wall characteristic of Gram-positive bacteria.", "grounding": null, "id": "thick_peptidoglycan_cell_wall", "is_orphan": false, "label": "thick peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "Anionic cell-wall glycopolymers attached to Gram-positive peptidoglycan.", "grounding": null, "id": "wall_teichoic_acids", "is_orphan": false, "label": "wall teichoic acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Gram-positive cell-wall dye retention mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -674,7 +786,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -1,8 +1,8 @@
 identifier: traitmech:000080
 label: dormancy
 definition: A reversible physiological state of greatly reduced metabolic activity
-  that allows a cell to survive unfavorable conditions and later resuscitate,
-  generating a microbial seed bank.
+  that allows a cell to survive unfavorable conditions and later resuscitate, generating
+  a microbial seed bank.
 definition_source: DOI:10.1038/nrmicro2504
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -15,15 +15,15 @@ synonyms:
   source: DOI:10.1038/nrmicro2504
 evidence:
 - reference: DOI:10.1038/nrmicro2504
-  notes: Lennon & Jones review microbial seed banks and the mechanisms by which
-    microorganisms enter and exit dormancy; parent of VBNC and persister sub-variants.
+  notes: Lennon & Jones review microbial seed banks and the mechanisms by which microorganisms
+    enter and exit dormancy; parent of VBNC and persister sub-variants.
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links dormancy to persister-cell survival and infectious disease.
 causal_graphs:
 - graph_id: dormancy_seed_bank
   title: Reversible dormancy and resuscitation
-  description: Evidence-backed causal sketch linking unfavorable conditions to a
-    reversible dormant state forming a microbial seed bank.
+  description: Evidence-backed causal sketch linking unfavorable conditions to a reversible
+    dormant state forming a microbial seed bank.
   nodes:
   - node_id: dormancy_trait
     label: dormancy
@@ -39,6 +39,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0022611
     description: Entry into a reversible quiescent state.
+  - node_id: nutrient_heat_stress
+    label: nutrient limitation or heat stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient starvation or heat stress that triggers the stringent response.
+  - node_id: ppgpp_stringent_response
+    label: (p)ppGpp stringent response
+    node_type: BIOLOGICAL_PROCESS
+    description: Guanosine tetra/pentaphosphate-mediated stringent response reprogramming
+      cell activity.
+  - node_id: toxin_antitoxin_modules
+    label: toxin-antitoxin modules
+    node_type: GENE_OR_PROTEIN
+    description: Chromosomal toxin-antitoxin systems (e.g. hipAB, mazEF, relBE) inducing
+      growth arrest.
+  - node_id: ribosome_hibernation_factors
+    label: ribosome hibernation factors (RMF/HPF/RaiA)
+    node_type: GENE_OR_PROTEIN
+    description: Factors that bind ribosomes to silence translation during dormancy.
+  - node_id: protein_synthesis
+    label: protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Translation of mRNA into protein.
+  - node_id: ribosome
+    label: ribosome
+    node_type: ORGANELLE
+    description: Ribonucleoprotein machine for protein synthesis, protected during
+      dormancy.
+  - node_id: rpf_proteins
+    label: resuscitation-promoting factors (Rpf)
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan-hydrolase Rpf proteins that reactivate dormant/VBNC
+      cells.
   edges:
   - subject: unfavorable_conditions
     predicate: causes
@@ -56,16 +88,71 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1557
       notes: Lewis links dormancy to long-term survival.
     predicate_id: RO:0002327
+  - subject: nutrient_heat_stress
+    predicate: activates
+    object: ppgpp_stringent_response
+    description: Nutrient limitation and heat stress activate the (p)ppGpp stringent
+      response.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: The stringent response mediated by (p)ppGpp is activated by nutrient/heat
+        stresses.
+  - subject: ppgpp_stringent_response
+    predicate: causes
+    object: dormancy_process
+    description: (p)ppGpp reprograms cellular activity, resulting in slow growth or
+      dormancy.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: (p)ppGpp can reprogram cellular life activities resulting in slow cell
+        growth or dormancy.
+  - subject: ppgpp_stringent_response
+    predicate: upregulates
+    object: toxin_antitoxin_modules
+    description: (p)ppGpp upregulates multiple toxin-antitoxin modules.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: (p)ppGpp upregulates multiple TA modules (hipAB, dinJ/yafQ, mazEF, mqsRA,
+        relBE, yafNO and hokB).
+  - subject: ribosome_hibernation_factors
+    predicate: turns off
+    object: protein_synthesis
+    description: Ribosome hibernation factors turn off protein synthesis during dormancy.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1386179
+      notes: Classical ribosome hibernation factors (RMF, HPF, YfiA) turn off protein
+        synthesis.
+  - subject: ribosome_hibernation_factors
+    predicate: protects
+    object: ribosome
+    description: Hibernation factor binding protects ribosomes from ribonuclease degradation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1386179
+      notes: Hibernation factors directly block ribonucleases from entering the ribosome
+        in response to starvation.
+  - subject: rpf_proteins
+    predicate: promotes
+    object: dormancy_process
+    description: Rpf proteins promote resuscitation (exit) of dormant/VBNC bacteria.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081528
+      notes: Rpfs reactivate dormant bacteria at very low concentrations.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY axis class (dormancy) to parent the VBNC and
-    persister-cell sub-variants.
+  changes: Proposed candidate PHYSIOLOGY axis class (dormancy) to parent the VBNC
+    and persister-cell sub-variants.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (reversible dormancy) with GO node
-    grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (reversible dormancy) with GO node grounding
+    and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

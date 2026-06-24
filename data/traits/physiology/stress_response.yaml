@@ -15,16 +15,16 @@ synonyms:
   source: DOI:10.1146/annurev-micro-090110-102946
 evidence:
 - reference: DOI:10.1146/annurev-micro-090110-102946
-  notes: Battesti, Majdalani & Gottesman review the RpoS-mediated general stress
-    response, a broad protective program induced by stress and stationary phase.
+  notes: Battesti, Majdalani & Gottesman review the RpoS-mediated general stress response,
+    a broad protective program induced by stress and stationary phase.
 - reference: DOI:10.1038/nrmicro3032
   notes: Imlay reviews molecular stress-defense mechanisms, exemplifying inducible
     protective responses; parent of the oxidative-stress-response sub-variant.
 causal_graphs:
 - graph_id: stress_response_induction
   title: Stress-induced protective response
-  description: Evidence-backed causal sketch linking environmental stress to an
-    induced, protective general stress response.
+  description: Evidence-backed causal sketch linking environmental stress to an induced,
+    protective general stress response.
   nodes:
   - node_id: stress_response_trait
     label: stress response
@@ -40,6 +40,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006950
     description: Change in cell state triggered by a stressor.
+  - node_id: ppgpp
+    label: (p)ppGpp
+    node_type: CHEMICAL
+    description: Guanosine tetra/pentaphosphate alarmone of the stringent response.
+  - node_id: rsh_enzymes
+    label: RelA/SpoT homologue enzymes
+    node_type: GENE_OR_PROTEIN
+    description: RSH enzyme family that synthesizes and hydrolyzes (p)ppGpp.
+  - node_id: nutrient_limitation
+    label: nutrient limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Limiting availability of nutrients that triggers stress signaling.
+  - node_id: ribosome_biosynthesis
+    label: ribosome biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of ribosomes and translation-associated growth machinery.
+  - node_id: stress_tolerance
+    label: stress tolerance
+    node_type: QUALITY
+    description: Capacity to tolerate environmental stress.
+  - node_id: rpos
+    label: RpoS (sigma S)
+    node_type: GENE_OR_PROTEIN
+    description: General-stress-response sigma factor (sigma S / sigma 38).
+  - node_id: general_stress_resistance
+    label: general stress resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Broad protective resistance to multiple stresses.
+  - node_id: hfq
+    label: Hfq
+    node_type: GENE_OR_PROTEIN
+    description: RNA chaperone enabling sRNA-dependent translational regulation.
   edges:
   - subject: environmental_stress
     predicate: causes
@@ -57,17 +89,85 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3032
       notes: Imlay reviews inducible molecular stress defenses.
     predicate_id: RO:0002327
+  - subject: rsh_enzymes
+    predicate: synthesizes/hydrolyzes
+    object: ppgpp
+    description: RSH enzymes synthesize and hydrolyze the (p)ppGpp alarmone.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001483
+      notes: (p)ppGpp is synthesized and hydrolysed by RelA-SpoT homologue (RSH) enzymes;
+        broadly conserved in bacteria.
+  - subject: nutrient_limitation
+    predicate: triggers
+    object: ppgpp
+    description: Nutrient-limiting conditions trigger a surge of (p)ppGpp.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001483
+      notes: Stringent response mediated by (p)ppGpp, whose intracellular surge is
+        triggered by nutrient-limiting conditions.
+  - subject: ppgpp
+    predicate: inhibits
+    object: ribosome_biosynthesis
+    description: (p)ppGpp inhibits ribosome biosynthesis, slowing growth.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001483
+      notes: (p)ppGpp inhibits ribosome biosynthesis, inducing a slow-growth phenotype.
+  - subject: ppgpp
+    predicate: enhances
+    object: stress_tolerance
+    description: Moderate (p)ppGpp induction enhances stress tolerance.
+    evidence:
+    - reference: DOI:10.1016/j.isci.2024.108818
+      notes: Moderate induction of (p)ppGpp reduces growth rate while enhancing stress
+        tolerance.
+  - subject: ppgpp
+    predicate: positively regulates
+    object: rpos
+    description: (p)ppGpp positively regulates RpoS abundance/activity.
+    evidence:
+    - reference: DOI:10.1016/j.isci.2024.108818
+      notes: (p)ppGpp positively regulates RpoS by transcriptional activation and
+        by inhibiting RpoS proteolysis.
+  - subject: rpos
+    predicate: induces
+    object: general_stress_resistance
+    description: RpoS-dependent gene expression induces general stress resistance.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-090110-102946
+      notes: RpoS-dependent gene expression leads to general stress resistance of
+        cells.
+  - subject: hfq
+    predicate: enables
+    object: rpos
+    description: Hfq enables sRNA-dependent translation of RpoS.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00151-22
+      notes: Hfq is needed for sRNA-dependent RpoS translation.
+  - subject: general_stress_resistance
+    predicate: enables
+    object: stress_response_trait
+    description: General stress resistance realizes the stress-response trait.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-090110-102946
+      notes: RpoS-mediated general stress resistance is the protective program defining
+        the trait.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY axis class (stress response) to parent
-    specific stress-response sub-variants.
+  changes: Proposed candidate PHYSIOLOGY axis class (stress response) to parent specific
+    stress-response sub-variants.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (stress-induced protective response)
-    with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    with GO node grounding and biolink/RO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

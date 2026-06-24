@@ -42,6 +42,58 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16526
     description: Inorganic carbon substrate reduced to acetyl-CoA.
+  - node_id: methyl_branch
+    label: methyl branch
+    node_type: PATHWAY
+    description: Eastern branch of WLP reducing CO2 stepwise to methyl-tetrahydrofolate.
+  - node_id: carbonyl_branch
+    label: carbonyl branch
+    node_type: PATHWAY
+    description: Western branch of WLP reducing CO2 to CO at the CODH/ACS complex.
+  - node_id: formate_dehydrogenase
+    label: formate dehydrogenase (FDH)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme reducing CO2 to formate, the first step of the WLP methyl
+      branch.
+  - node_id: formate
+    label: formate
+    node_type: CHEMICAL
+    description: C1 intermediate produced by reduction of CO2 in the methyl branch.
+  - node_id: formyl_thf_synthetase
+    label: formyl-THF synthetase (FTS/Fhs)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme forming formyl-THF from formate, consuming one ATP.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    description: Adenosine triphosphate consumed during formate activation in the
+      WLP.
+  - node_id: methyltransferase
+    label: methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme transferring the methyl group onto the corrinoid iron-sulfur
+      protein.
+  - node_id: cofesp
+    label: corrinoid iron-sulfur protein (CoFeSP)
+    node_type: GENE_OR_PROTEIN
+    description: Corrinoid iron-sulfur protein carrying the methyl group to ACS.
+  - node_id: acetyl_coa_synthase
+    label: acetyl-CoA synthase (ACS)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme condensing CO, methyl-CoFeSP and CoA into acetyl-CoA.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    description: Central product of the WLP, the convergence point of both branches.
+  - node_id: tetrahydrofolate
+    label: tetrahydrofolate (THF)
+    node_type: CHEMICAL
+    description: C1 carrier cofactor of the WLP methyl branch.
+  - node_id: net_zero_atp_slp
+    label: zero net ATP from substrate-level phosphorylation
+    node_type: QUALITY
+    description: 'Energetic property: formate activation offsets SLP so the WLP nets
+      zero ATP.'
   edges:
   - subject: wood_ljungdahl_pathway
     predicate: enables
@@ -61,6 +113,79 @@ causal_graphs:
       notes: Berg places Wood-Ljungdahl among the recognized autotrophic carbon-fixation
         pathways.
     predicate_id: METPO:2007404
+  - subject: wood_ljungdahl_pathway
+    predicate: has part
+    object: methyl_branch
+    description: The WLP comprises a methyl (eastern) branch.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: 'The Wood-Ljungdahl pathway is a two-branch autotrophic CO2 fixation
+        pathway: a methyl branch and a carbonyl branch.'
+  - subject: wood_ljungdahl_pathway
+    predicate: has part
+    object: carbonyl_branch
+    description: The WLP comprises a carbonyl (western) branch.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: The Wood-Ljungdahl pathway is a two-branch autotrophic CO2 fixation pathway
+        with a carbonyl branch.
+  - subject: formate_dehydrogenase
+    predicate: reduces
+    object: carbon_dioxide
+    description: 'FDH reduces CO2 to formate, the first methyl-branch step (product:
+      formate node).'
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: Formate dehydrogenase (FDH) reduces CO2 to formate; canonical bacterial
+        WLP step.
+  - subject: formate_dehydrogenase
+    predicate: produces
+    object: formate
+    description: FDH-catalyzed reduction of CO2 yields formate.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: Formate dehydrogenase (FDH) reduces CO2 to formate.
+  - subject: formyl_thf_synthetase
+    predicate: requires
+    object: atp
+    description: Formyl-THF synthetase consumes one ATP to activate formate.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: Formyl-THF synthetase (FTS) forms formyl-THF, consuming one ATP.
+  - subject: methyltransferase
+    predicate: transfers methyl to
+    object: cofesp
+    description: Methyltransferase transfers the methyl group onto the corrinoid iron-sulfur
+      protein.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: Methyltransferase transfers the methyl onto a corrinoid iron-sulfur protein
+        (CoFeSP).
+  - subject: acetyl_coa_synthase
+    predicate: produces
+    object: acetyl_coa
+    description: ACS condenses CO, methyl-CoFeSP and CoA into acetyl-CoA, the terminal
+      WLP step.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: ACS combines CO, methyl-CoFeSP and CoA into acetyl-CoA; central terminal
+        step of WLP.
+  - subject: tetrahydrofolate
+    predicate: functions as C1 carrier in
+    object: methyl_branch
+    description: THF serves as the C1 carrier of the WLP methyl branch.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: WLP converts two CO2 to one acetyl-CoA using THF as the C1 carrier.
+  - subject: wood_ljungdahl_pathway
+    predicate: has quality
+    object: net_zero_atp_slp
+    description: Formate activation offsets SLP so the WLP nets zero ATP by substrate-level
+      phosphorylation.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2024.1395540
+      notes: Activation of formate consumes one ATP, so substrate-level phosphorylation
+        nets zero ATP.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -81,4 +206,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
     vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -57,6 +57,40 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transport systems proposed to remove protons or exchange ions during
       acid stress.
+  - node_id: k_uptake_system_kdp_kef
+    label: K+ uptake system (Kdp/Kef)
+    node_type: GENE_OR_PROTEIN
+    description: Potassium-transporting ATPases and K+ uptake systems (kdp, kef) that
+      establish an inside-positive membrane potential.
+  - node_id: p_type_proton_atpase
+    label: P-type proton-translocating ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Active proton-efflux ATPase that pumps protons out of the cytoplasm
+      during acid stress.
+  - node_id: proton_efflux
+    label: proton efflux from cytoplasm
+    node_type: BIOLOGICAL_PROCESS
+    description: Active export of protons from the cytoplasm to maintain near-neutral
+      intracellular pH.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter (Nha)
+    node_type: GENE_OR_PROTEIN
+    description: Sodium/proton antiporters (nhaA, nhaB) that exchange cytoplasmic
+      protons for sodium ions.
+  - node_id: hopanoid_membrane
+    label: hopanoid-containing membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Membrane enriched in hopanoid lipids that reduces proton permeability.
+  - node_id: cyclopropane_fatty_acids
+    label: cyclopropane fatty acids
+    node_type: CHEMICAL
+    description: Cyclopropane-fatty-acyl phospholipids that rigidify the membrane
+      and lower proton permeability.
+  - node_id: glutamate_decarboxylase
+    label: glutamate decarboxylase system (Gad)
+    node_type: GENE_OR_PROTEIN
+    description: Glutamate decarboxylase (gadA/gadB/gadC) that consumes cytoplasmic
+      protons during decarboxylation.
   edges:
   - subject: acidic_external_ph
     predicate: selects for
@@ -114,6 +148,68 @@ causal_graphs:
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports intracellular pH control during extreme acidophilic growth.
     predicate_id: RO:0002327
+  - subject: k_uptake_system_kdp_kef
+    predicate: increases
+    object: reversed_membrane_potential
+    description: K+ uptake systems generate the inside-positive (reversed) membrane
+      potential that forms an electrochemical barrier to protons.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Review describes inside-positive membrane potential via potassium-transporting
+        ATPases and K+ uptake systems (kdp, Kef) forming an electrochemical barrier
+        to proton influx.
+  - subject: p_type_proton_atpase
+    predicate: increases
+    object: proton_efflux
+    description: P-type ATPases actively export protons from the cytoplasm.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Dopson review lists active proton efflux via P-type ATPases as a pH homeostasis
+        strategy in acidophiles.
+  - subject: proton_efflux
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Active proton efflux helps maintain near-neutral cytoplasmic pH under
+      acidic conditions.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Proton pumps/ATPases maintain a near-neutral cytoplasm during acidophilic
+        growth.
+  - subject: na_h_antiporter
+    predicate: exports
+    object: proton
+    description: Na+/H+ antiporters exchange cytoplasmic protons for extracellular
+      sodium, contributing to proton export.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Dopson lists Na+/H+ exchange (nhaA sodium/proton antiporter) among acidophile
+        pH-homeostasis systems.
+  - subject: hopanoid_membrane
+    predicate: decreases
+    object: low_proton_permeability_membrane
+    description: Hopanoid membrane lipids reduce membrane proton permeability, reinforcing
+      proton exclusion.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: Acid resistance is linked to hopanoid membrane lipids and reduced proton
+        permeability as a core proton-exclusion strategy.
+  - subject: cyclopropane_fatty_acids
+    predicate: decreases
+    object: low_proton_permeability_membrane
+    description: Cyclopropane fatty acid formation reduces membrane proton permeability.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Review includes cyclopropane-fatty-acyl-phospholipid synthase among membrane
+        adaptations that reduce proton permeability.
+  - subject: glutamate_decarboxylase
+    predicate: consumes
+    object: proton
+    description: Glutamate decarboxylase consumes cytoplasmic protons during decarboxylation,
+      buffering intracellular pH.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: Review lists decarboxylases (Adi, Gad) as cytoplasmic proton-consuming
+        systems used in acidophile pH homeostasis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.940216+00:00'
   curator: seed_from_metpo
@@ -174,4 +270,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

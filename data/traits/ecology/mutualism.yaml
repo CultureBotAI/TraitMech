@@ -1,7 +1,7 @@
 identifier: traitmech:000041
 label: mutualism
-definition: A symbiosis in which both the microorganism and its host or partner
-  benefit from the association, often through exchange of nutrients or services.
+definition: A symbiosis in which both the microorganism and its host or partner benefit
+  from the association, often through exchange of nutrients or services.
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -14,8 +14,8 @@ synonyms:
   source: DOI:10.1073/pnas.1218525110
 evidence:
 - reference: DOI:10.1073/pnas.1218525110
-  notes: McFall-Ngai et al. document widespread mutually beneficial host-microbe
-    associations across animals.
+  notes: McFall-Ngai et al. document widespread mutually beneficial host-microbe associations
+    across animals.
 - reference: DOI:10.1126/science.1104816
   notes: Bäckhed et al., "Host-bacterial mutualism in the human intestine", supports
     reciprocal benefit (nutrient harvest for the host, habitat for the microbes) as
@@ -34,22 +34,53 @@ causal_graphs:
   - node_id: nutrient_exchange
     label: nutrient and service exchange
     node_type: BIOLOGICAL_PROCESS
-    description: Bidirectional transfer of metabolites or functions between host
-      and microbe.
+    description: Bidirectional transfer of metabolites or functions between host and
+      microbe.
   - node_id: reciprocal_benefit
     label: reciprocal fitness benefit
     node_type: QUALITY
     description: Positive net fitness change for both host and microbe.
+  - node_id: host_control_mechanisms
+    label: host control mechanisms
+    node_type: BIOLOGICAL_PROCESS
+    description: Host-imposed controls (immunity, barrier function, homeostasis, transit)
+      that shape symbionts.
+  - node_id: host_beneficial_microbial_traits
+    label: microbial traits beneficial to host
+    node_type: QUALITY
+    description: Microbial traits selected because they benefit the host.
+  - node_id: cross_feeding_architecture
+    label: co-auxotrophy / cross-feeding architecture
+    node_type: BIOLOGICAL_PROCESS
+    description: Reciprocal metabolite dependence where each member supplies a nutrient
+      another cannot make.
+  - node_id: obligate_mutualism_syntrophy
+    label: obligate mutualism (syntrophy)
+    node_type: STATE
+    description: Mutualism in which partners are metabolically dependent on one another.
+  - node_id: micronutrient_exchange
+    label: vitamin/N-source/micronutrient exchange
+    node_type: BIOLOGICAL_PROCESS
+    description: Provision of metabolites such as N-sources, vitamins, and micronutrients
+      between partners.
+  - node_id: metabolite_secretion_profile
+    label: metabolite secretion profile
+    node_type: CHEMICAL
+    description: The set of metabolites secreted by an interacting partner.
+  - node_id: interaction_outcome_state
+    label: mutualism vs antagonism outcome
+    node_type: STATE
+    description: Context-dependent interaction state ranging from mutualistic to antagonistic.
   edges:
   - subject: nutrient_exchange
     predicate: causes
     object: reciprocal_benefit
-    description: Exchange of nutrients or services yields positive fitness for
-      both partners.
+    description: Exchange of nutrients or services yields positive fitness for both
+      partners.
     evidence:
     - reference: DOI:10.1126/science.1104816
-      notes: Bäckhed et al. document reciprocal nutrient-harvest benefits in the
-        gut-microbiota mutualism.
+      notes: Bäckhed et al. document reciprocal nutrient-harvest benefits in the gut-microbiota
+        mutualism.
     predicate_id: biolink:causes
   - subject: reciprocal_benefit
     predicate: enables
@@ -57,9 +88,55 @@ causal_graphs:
     description: Sustained mutual benefit realizes the mutualistic lifestyle.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
-      notes: McFall-Ngai et al. document mutually beneficial host-microbe
-        associations across animals.
+      notes: McFall-Ngai et al. document mutually beneficial host-microbe associations
+        across animals.
     predicate_id: RO:0002327
+  - subject: host_control_mechanisms
+    predicate: selects for
+    object: host_beneficial_microbial_traits
+    description: Host control mechanisms generate selection for microbial traits that
+      benefit the host.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: 'Wilde et al. 2024: host controls (immunity, barrier, homeostasis, transit)
+        generate natural selection for microbial traits that benefit the host.'
+  - subject: host_beneficial_microbial_traits
+    predicate: enables
+    object: mutualism_trait
+    description: Selection for host-beneficial microbial traits sustains the mutualistic
+      relationship.
+    evidence:
+    - reference: DOI:10.1126/science.adi3338
+      notes: Host control selecting for host-beneficial microbial traits underpins
+        stable host-microbe mutualism.
+  - subject: cross_feeding_architecture
+    predicate: creates
+    object: obligate_mutualism_syntrophy
+    description: Reciprocal metabolite dependence (co-auxotrophy) generates obligate
+      mutualism / syntrophy.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01596-4
+      notes: 'Peng et al. 2024: in co-auxotrophic consortia each member depends on
+        others supplying a nutrient it cannot synthesize, defining syntrophy/obligate
+        mutualism.'
+  - subject: micronutrient_exchange
+    predicate: enables
+    object: mutualism_trait
+    description: Exchange of N-sources, vitamins, and micronutrients supports mutualistic
+      associations.
+    evidence:
+    - reference: DOI:10.3390/plants13060829
+      notes: 'Burgunter-Delamare et al. 2024: mutualistic benefits are framed as provision
+        of metabolites (N-sources, vitamins, micronutrients).'
+  - subject: metabolite_secretion_profile
+    predicate: determines
+    object: interaction_outcome_state
+    description: The secreted metabolite profile shifts the interaction between mutualism
+      and antagonism.
+    evidence:
+    - reference: DOI:10.3390/plants13060829
+      notes: 'Burgunter-Delamare et al. 2024: the same partner pair can be mutualistic
+        or antagonistic depending on the metabolites secreted.'
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -71,4 +148,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (mutualism / reciprocal benefit) with
     RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

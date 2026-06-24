@@ -45,6 +45,32 @@ causal_graphs:
     label: right-angle growth geometry
     node_type: BIOLOGICAL_PROCESS
     description: Growth pattern producing perpendicular cell edges.
+  - node_id: archaeal_slayer
+    label: archaeal S-layer
+    node_type: ORGANELLE
+    description: Paracrystalline surface (S-)layer of glycosylated proteins coating
+      the archaeal cell.
+  - node_id: cell_shape
+    label: cell shape
+    node_type: QUALITY
+    description: Overall geometric form of the cell.
+  - node_id: mechanical_stability
+    label: mechanical stability
+    node_type: QUALITY
+    description: Resistance of the cell envelope to mechanical deformation.
+  - node_id: cytoskeletal_growth_axis_control
+    label: cytoskeletal control of local growth and division axis
+    node_type: BIOLOGICAL_PROCESS
+    description: Precise control of local envelope growth and division axis guided
+      by cytoskeletal filaments and an overlying S-layer coat.
+  - node_id: slayer_proteins
+    label: S-layer proteins
+    node_type: GENE_OR_PROTEIN
+    description: Glycoprotein subunits forming the paracrystalline S-layer lattice.
+  - node_id: cell_shape_size_defect
+    label: cell shape and size defect
+    node_type: STATE
+    description: Aberrant cell shape and size resulting from loss of S-layer integrity.
   edges:
   - subject: planar_envelope_growth
     predicate: enables
@@ -75,6 +101,44 @@ causal_graphs:
       snippet: square or disc-shaped cells
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: archaeal_slayer
+    predicate: defines
+    object: cell_shape
+    description: The archaeal S-layer is a primary structural determinant of cell
+      shape.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01215-8
+      notes: S-layers are known to fulfil roles in defining the cell-shape, providing
+        mechanical stability and functioning as molecular sieves.
+  - subject: archaeal_slayer
+    predicate: provides
+    object: mechanical_stability
+    description: The archaeal S-layer provides mechanical stability to the cell envelope.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01215-8
+      notes: S-layers are known to fulfil roles in defining the cell-shape, providing
+        mechanical stability and functioning as molecular sieves.
+  - subject: cytoskeletal_growth_axis_control
+    predicate: gives rise to
+    object: square_shaped_trait
+    description: Precise cytoskeleton- and S-layer-guided control of local growth
+      and division axis gives rise to flat geometric (square/triangular) archaeal
+      shapes.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01215-8
+      notes: These cell shapes arise as the result of precise cellular control of
+        local growth and the axis of division under the guidance of cytoskeletal filaments
+        and an overlying coat of glycosylated proteins, also termed the S-layer.
+  - subject: slayer_proteins
+    predicate: causes when lost
+    object: cell_shape_size_defect
+    description: Loss of S-layer proteins causes profound defects in cell shape and
+      size, evidencing the S-layer causal role in archaeal morphology.
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01215-8
+      notes: S-layer proteins were recently found to be dispensable for S.islandicus
+        viability, but cells lacking these proteins exhibited profound defects in
+        cell shape and size.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.900481+00:00'
   curator: seed_from_metpo
@@ -110,4 +174,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

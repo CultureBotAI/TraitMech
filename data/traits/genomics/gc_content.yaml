@@ -70,6 +70,26 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000431
     description: METPO GC-mid2 bin (synonym GC_57.0_66.3; see record).
+  - node_id: cytosine_deamination
+    label: cytosine deamination
+    node_type: BIOLOGICAL_PROCESS
+    description: Hydrolytic deamination of cytosine to uracil/thymine, a GC-to-AT
+      mutational lesion.
+  - node_id: guanine_oxidation
+    label: guanine oxidation (8-oxoG)
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidative damage forming 8-oxoguanine that mispairs and biases the
+      mutational spectrum toward AT.
+  - node_id: dna_repair_replication_system
+    label: DNA replication and repair (DRR) system change
+    node_type: BIOLOGICAL_PROCESS
+    description: Evolutionary change in DNA replication/repair machinery producing
+      mutational biases that shape GC composition.
+  - node_id: translesion_synthesis
+    label: error-prone translesion synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Error-prone DNA synthesis past lesions by specialized polymerases,
+      causally linked to increased genomic GC.
   edges:
   - subject: genomic_dna
     predicate: carries
@@ -148,6 +168,48 @@ causal_graphs:
       snippet: GC content
       notes: Supports the binned phenotype as a value within the GC-content distribution.
     predicate_id: rdfs:subClassOf
+  - subject: cytosine_deamination
+    predicate: decreases
+    object: gc_content_trait
+    description: Cytosine deamination introduces GC-to-AT changes, reducing genome-wide
+      GC content.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      snippet: cytosine deamination reduces the GC content
+      notes: Strong mechanistic statement from bacterial comparative study; general
+        mutation-bias edge.
+  - subject: guanine_oxidation
+    predicate: decreases
+    object: gc_content_trait
+    description: Guanine oxidation (8-oxoG) promotes G:C to A:T mispairing, biasing
+      composition toward lower GC.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      snippet: guanine oxidation (8OG) causes A mis-pairing
+      notes: Source-backed oxidative-damage mechanism shifting the mutational spectrum
+        toward AT.
+  - subject: dna_repair_replication_system
+    predicate: causes
+    object: gc_content_trait
+    description: Changes in the DNA replication and repair system drive mutational
+      biases that shape GC-content evolution.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      snippet: ancient adaptations transformed the DRR system, producing mutational
+        biases that shaped GC-content evolution
+      notes: Core, directly stated high-level mechanistic edge for the mutation-bias
+        module.
+  - subject: translesion_synthesis
+    predicate: increases
+    object: gc_content_trait
+    description: Error-prone translesion synthesis polymerases are causally linked
+      to increases in genomic GC content.
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      snippet: Error-prone polymerases are causally linked to increases in genomic
+        GC
+      notes: Direction explicit in comparative study; complements existing mutation-bias
+        drivers.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811180+00:00'
   curator: seed_from_metpo
@@ -178,4 +240,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

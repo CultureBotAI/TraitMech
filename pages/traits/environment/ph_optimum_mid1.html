@@ -107,12 +107,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>F0F1-ATPase</strong>
+            <span class="edge-predicate">exports</span>
+            <strong>proton (H+)</strong>
+            
+            <p>The F0F1-ATPase actively exports protons to maintain cytoplasmic pH.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.ppat.1011927</code>
+                
+                <span class="meta">actively exporting protons via proton pumps such as the F0F1-ATPase; classic pH-homeostasis mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>amino-acid decarboxylation pathways</strong>
+            <span class="edge-predicate">consumes</span>
+            <strong>proton (H+)</strong>
+            
+            <p>Amino-acid decarboxylation pathways consume cytoplasmic protons, supporting pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.ppat.1011927</code>
+                
+                <span class="meta">consume protons through amino-acid decarboxylation pathways (glutamate, lysine, arginine); general acid-resistance edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>glutamate decarboxylation / GABA pathway</strong>
+            <span class="edge-predicate">consumes</span>
+            <strong>proton (H+)</strong>
+            
+            <p>The glutamate decarboxylation / GABA pathway consumes intracellular H+.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.00569-24</code>
+                
+                <span class="meta">glutamate-based systems and the GABA metabolic pathway consume H+.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ammonia (NH3)</strong>
+            <span class="edge-predicate">binds</span>
+            <strong>proton (H+)</strong>
+            
+            <p>Ammonia binds free protons, buffering against acidification.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.00569-24</code>
+                
+                <span class="meta">generated NH3 bind with intracellular free H+ to form NH4+; direct acid-buffering chemistry, generalizable.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>ammonia (NH3)</strong>
+            <span class="edge-predicate">forms</span>
+            <strong>ammonium (NH4+)</strong>
+            
+            <p>Ammonia combines with a proton to form ammonium, sequestering acid.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.00569-24</code>
+                
+                <span class="meta">generated NH3 bind with intracellular free H+ to form NH4+.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>F0F1-ATPase</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>minimal pH-homeostasis load</strong>
+            
+            <p>Proton export by the F0F1-ATPase keeps the cytoplasmic-pH gradient small near neutral, contributing to minimal homeostasis load.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.ppat.1011927</code>
+                
+                <span class="meta">Proton pumping via F0F1-ATPase maintains cytosolic pH; near-neutral external pH minimizes the pumping demand.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -266,6 +372,12 @@
           <time>2026-06-15T07:21:43Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2; verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -625,7 +737,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking minimal pH-homeostasis load at near-neutral external pH to a pH-optimum between 6 and 7 (neutrophile).", "edges": [{"description": "Near-neutral external pH imposes minimal pH-homeostasis demand on the cell.", "evidence": [{"notes": "Supports near-neutral external pH as the regime with the smallest cytoplasmic-pH gradient to maintain.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "near_neutral_external_ph", "target": "minimal_ph_homeostasis_load"}, {"description": "Minimal pH-homeostasis load yields a neutrophilic pH-optimum setpoint.", "evidence": [{"notes": "Supports a near-neutral optimum as the neutrophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal_ph_homeostasis_load", "target": "ph_optimum_mid1_trait"}, {"description": "pH optimum mid1 is a quantitative bin of the pH-optimum phenotype.", "evidence": [{"notes": "Supports a near-neutral optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum_mid1_trait", "target": "ph_optimum"}], "evidence_rows": [{"description": "Near-neutral external pH imposes minimal pH-homeostasis demand on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports near-neutral external pH as the regime with the smallest cytoplasmic-pH gradient to maintain.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "imposes", "predicate_id": null, "source": "near-neutral external pH", "target": "minimal pH-homeostasis load"}, {"description": "Minimal pH-homeostasis load yields a neutrophilic pH-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a near-neutral optimum as the neutrophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal pH-homeostasis load", "target": "pH optimum mid1"}, {"description": "pH optimum mid1 is a quantitative bin of the pH-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a near-neutral optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum mid1", "target": "pH optimum"}], "graph_id": "ph_optimum_mid1_neutrophile_setpoint", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Modest demand on proton extrusion and cytoplasmic buffering near a near-neutral cytoplasmic pH.", "grounding": null, "id": "minimal_ph_homeostasis_load", "is_orphan": false, "label": "minimal pH-homeostasis load", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "External pH 6\u20137, typical of fresh-water and many host environments.", "grounding": "PATO:0001428", "id": "near_neutral_external_ph", "is_orphan": false, "label": "near-neutral external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH optimum approximately 6\u20137.", "grounding": "METPO:1000456", "id": "ph_optimum_mid1_trait", "is_orphan": false, "label": "pH optimum mid1", "node_type": "TRAIT", "xrefs": []}], "title": "pH-optimum-mid1 neutrophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking minimal pH-homeostasis load at near-neutral external pH to a pH-optimum between 6 and 7 (neutrophile).", "edges": [{"description": "Near-neutral external pH imposes minimal pH-homeostasis demand on the cell.", "evidence": [{"notes": "Supports near-neutral external pH as the regime with the smallest cytoplasmic-pH gradient to maintain.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "near_neutral_external_ph", "target": "minimal_ph_homeostasis_load"}, {"description": "Minimal pH-homeostasis load yields a neutrophilic pH-optimum setpoint.", "evidence": [{"notes": "Supports a near-neutral optimum as the neutrophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal_ph_homeostasis_load", "target": "ph_optimum_mid1_trait"}, {"description": "pH optimum mid1 is a quantitative bin of the pH-optimum phenotype.", "evidence": [{"notes": "Supports a near-neutral optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_optimum_mid1_trait", "target": "ph_optimum"}, {"description": "The F0F1-ATPase actively exports protons to maintain cytoplasmic pH.", "evidence": [{"notes": "actively exporting protons via proton pumps such as the F0F1-ATPase; classic pH-homeostasis mechanism.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "id": "edge-4", "is_orphan": false, "predicate": "exports", "predicate_id": null, "source": "f0f1_atpase", "target": "proton"}, {"description": "Amino-acid decarboxylation pathways consume cytoplasmic protons, supporting pH homeostasis.", "evidence": [{"notes": "consume protons through amino-acid decarboxylation pathways (glutamate, lysine, arginine); general acid-resistance edge.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "id": "edge-5", "is_orphan": false, "predicate": "consumes", "predicate_id": null, "source": "amino_acid_decarboxylation", "target": "proton"}, {"description": "The glutamate decarboxylation / GABA pathway consumes intracellular H+.", "evidence": [{"notes": "glutamate-based systems and the GABA metabolic pathway consume H+.", "reference": "DOI:10.1128/aem.00569-24"}], "id": "edge-6", "is_orphan": false, "predicate": "consumes", "predicate_id": null, "source": "gad_gaba_pathway", "target": "proton"}, {"description": "Ammonia binds free protons, buffering against acidification.", "evidence": [{"notes": "generated NH3 bind with intracellular free H+ to form NH4+; direct acid-buffering chemistry, generalizable.", "reference": "DOI:10.1128/aem.00569-24"}], "id": "edge-7", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "ammonia", "target": "proton"}, {"description": "Ammonia combines with a proton to form ammonium, sequestering acid.", "evidence": [{"notes": "generated NH3 bind with intracellular free H+ to form NH4+.", "reference": "DOI:10.1128/aem.00569-24"}], "id": "edge-8", "is_orphan": false, "predicate": "forms", "predicate_id": null, "source": "ammonia", "target": "ammonium"}, {"description": "Proton export by the F0F1-ATPase keeps the cytoplasmic-pH gradient small near neutral, contributing to minimal homeostasis load.", "evidence": [{"notes": "Proton pumping via F0F1-ATPase maintains cytosolic pH; near-neutral external pH minimizes the pumping demand.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "f0f1_atpase", "target": "minimal_ph_homeostasis_load"}], "evidence_rows": [{"description": "Near-neutral external pH imposes minimal pH-homeostasis demand on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports near-neutral external pH as the regime with the smallest cytoplasmic-pH gradient to maintain.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "imposes", "predicate_id": null, "source": "near-neutral external pH", "target": "minimal pH-homeostasis load"}, {"description": "Minimal pH-homeostasis load yields a neutrophilic pH-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports a near-neutral optimum as the neutrophile outcome.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "minimal pH-homeostasis load", "target": "pH optimum mid1"}, {"description": "pH optimum mid1 is a quantitative bin of the pH-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a near-neutral optimum as a value within the pH-optimum distribution.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH optimum mid1", "target": "pH optimum"}, {"description": "The F0F1-ATPase actively exports protons to maintain cytoplasmic pH.", "edge_id": "edge-4", "evidence": [{"notes": "actively exporting protons via proton pumps such as the F0F1-ATPase; classic pH-homeostasis mechanism.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "predicate": "exports", "predicate_id": null, "source": "F0F1-ATPase", "target": "proton (H+)"}, {"description": "Amino-acid decarboxylation pathways consume cytoplasmic protons, supporting pH homeostasis.", "edge_id": "edge-5", "evidence": [{"notes": "consume protons through amino-acid decarboxylation pathways (glutamate, lysine, arginine); general acid-resistance edge.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "predicate": "consumes", "predicate_id": null, "source": "amino-acid decarboxylation pathways", "target": "proton (H+)"}, {"description": "The glutamate decarboxylation / GABA pathway consumes intracellular H+.", "edge_id": "edge-6", "evidence": [{"notes": "glutamate-based systems and the GABA metabolic pathway consume H+.", "reference": "DOI:10.1128/aem.00569-24"}], "predicate": "consumes", "predicate_id": null, "source": "glutamate decarboxylation / GABA pathway", "target": "proton (H+)"}, {"description": "Ammonia binds free protons, buffering against acidification.", "edge_id": "edge-7", "evidence": [{"notes": "generated NH3 bind with intracellular free H+ to form NH4+; direct acid-buffering chemistry, generalizable.", "reference": "DOI:10.1128/aem.00569-24"}], "predicate": "binds", "predicate_id": null, "source": "ammonia (NH3)", "target": "proton (H+)"}, {"description": "Ammonia combines with a proton to form ammonium, sequestering acid.", "edge_id": "edge-8", "evidence": [{"notes": "generated NH3 bind with intracellular free H+ to form NH4+.", "reference": "DOI:10.1128/aem.00569-24"}], "predicate": "forms", "predicate_id": null, "source": "ammonia (NH3)", "target": "ammonium (NH4+)"}, {"description": "Proton export by the F0F1-ATPase keeps the cytoplasmic-pH gradient small near neutral, contributing to minimal homeostasis load.", "edge_id": "edge-9", "evidence": [{"notes": "Proton pumping via F0F1-ATPase maintains cytosolic pH; near-neutral external pH minimizes the pumping demand.", "reference": "DOI:10.1371/journal.ppat.1011927"}], "predicate": "contributes to", "predicate_id": null, "source": "F0F1-ATPase", "target": "minimal pH-homeostasis load"}], "graph_id": "ph_optimum_mid1_neutrophile_setpoint", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Glutamate/lysine/arginine decarboxylase pathways that consume cytoplasmic protons.", "grounding": null, "id": "amino_acid_decarboxylation", "is_orphan": false, "label": "amino-acid decarboxylation pathways", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Ammonia, a base that scavenges protons.", "grounding": null, "id": "ammonia", "is_orphan": false, "label": "ammonia (NH3)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Ammonium ion formed when ammonia binds a proton.", "grounding": null, "id": "ammonium", "is_orphan": false, "label": "ammonium (NH4+)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "F-type ATP synthase/ATPase functioning as a proton pump.", "grounding": null, "id": "f0f1_atpase", "is_orphan": false, "label": "F0F1-ATPase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "Glutamate decarboxylase / GABA shunt pathway consuming intracellular H+.", "grounding": null, "id": "gad_gaba_pathway", "is_orphan": false, "label": "glutamate decarboxylation / GABA pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Modest demand on proton extrusion and cytoplasmic buffering near a near-neutral cytoplasmic pH.", "grounding": null, "id": "minimal_ph_homeostasis_load", "is_orphan": false, "label": "minimal pH-homeostasis load", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "External pH 6\u20137, typical of fresh-water and many host environments.", "grounding": "PATO:0001428", "id": "near_neutral_external_ph", "is_orphan": false, "label": "near-neutral external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "External pH supporting maximal growth.", "grounding": "METPO:1000331", "id": "ph_optimum", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH optimum approximately 6\u20137.", "grounding": "METPO:1000456", "id": "ph_optimum_mid1_trait", "is_orphan": false, "label": "pH optimum mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion (H+), the determinant of pH.", "grounding": null, "id": "proton", "is_orphan": false, "label": "proton (H+)", "node_type": "CHEMICAL", "xrefs": []}], "title": "pH-optimum-mid1 neutrophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -636,7 +748,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

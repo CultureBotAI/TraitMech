@@ -40,6 +40,27 @@ causal_graphs:
     label: oxidative sulfur metabolism
     node_type: BIOLOGICAL_PROCESS
     description: Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).
+  - node_id: sqr
+    label: sulfide:quinone oxidoreductase (SQR)
+    node_type: GENE_OR_PROTEIN
+    description: Flavoenzyme that oxidizes sulfide, initiating intracellular sulfur
+      oxidation.
+  - node_id: sulfane_sulfur
+    label: sulfane sulfur
+    node_type: CHEMICAL
+    description: Reactive zero-valent sulfur species produced during sulfide oxidation.
+  - node_id: polysulfide
+    label: polysulfide (H2Sn)
+    node_type: CHEMICAL
+    description: Short-chain inorganic polysulfide intermediate of sulfide oxidation.
+  - node_id: persulfide_dioxygenase
+    label: persulfide dioxygenase (PDO)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme oxidizing glutathione persulfide (GSSH) to sulfite.
+  - node_id: sulfite
+    label: sulfite
+    node_type: CHEMICAL
+    description: Oxidation product of glutathione persulfide via PDO.
   edges:
   - subject: oxidative_sulfur_metabolism
     predicate: produces
@@ -60,6 +81,41 @@ causal_graphs:
       notes: Greening & Lithgow include sulfur globules among bacterial intracellular
         storage inclusions.
     predicate_id: biolink:located_in
+  - subject: sqr
+    predicate: produces
+    object: sulfane_sulfur
+    description: SQR-catalyzed oxidation of sulfide generates sulfane sulfur intermediates.
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: Initial oxidation of sulfide occurs under the action of SQR, producing
+        sulfane sulfur; generalizes broadly to intracellular sulfur oxidizers.
+  - subject: sqr
+    predicate: produces
+    object: polysulfide
+    description: SQR oxidizes sulfide to short-chain inorganic polysulfide (H2Sn,
+      n>=2).
+    evidence:
+    - reference: DOI:10.1128/aem.01941-21
+      notes: SQR oxidized H2S into short-chain inorganic polysulfide (H2Sn, n >= 2);
+        broad sulfur-chemistry mechanism.
+  - subject: polysulfide
+    predicate: precursor of
+    object: sulfur_globule_trait
+    description: Polysulfide/sulfane sulfur spontaneously generates S8 that aggregates
+      into sulfur globules.
+    evidence:
+    - reference: DOI:10.1128/aem.01941-21
+      notes: SQR oxidized H2S to H2Sn, which spontaneously generated S8; S8 aggregated
+        into sulfur globules.
+  - subject: persulfide_dioxygenase
+    predicate: oxidizes
+    object: sulfite
+    description: PDO oxidizes glutathione persulfide (GSSH) to sulfite (GSSH + O2
+      + H2O -> GSH + SO3^2- + 2H+).
+    evidence:
+    - reference: DOI:10.3390/ijms252010962
+      notes: 'PDO acts on GSSH: GSSH + O2 + H2O -> GSH + SO3^2- + 2H+; well-defined
+        enzymatic edge.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -79,4 +135,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:26833×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

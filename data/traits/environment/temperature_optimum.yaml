@@ -56,6 +56,21 @@ causal_graphs:
     label: maximal growth rate
     node_type: BIOLOGICAL_PROCESS
     description: Peak specific growth rate achieved at the optimal temperature.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Generic lipid-remodeling strategy that maintains a target membrane
+      physical state (fluidity) across growth temperatures.
+  - node_id: arrhenius_plot_deviation
+    label: Arrhenius plot deviation from linearity
+    node_type: EXPERIMENTAL_FACTOR
+    description: Departure from a linear growth-rate-vs-temperature Arrhenius relationship
+      used to interpret temperature-response measurements.
+  - node_id: stress_growth_regime
+    label: stress / non-physiological growth regime
+    node_type: STATE
+    description: Growth condition outside the physiological temperature range, indicated
+      by non-linear Arrhenius behavior.
   edges:
   - subject: ambient_temperature
     predicate: regulates
@@ -109,6 +124,33 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: homeoviscous_adaptation
+    predicate: regulates
+    object: membrane_fluidity
+    description: Homeoviscous adaptation remodels membrane lipids to maintain target
+      fluidity across temperatures.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: 'Broad bacterial review: ''to maintain membrane fluidity at low temperature
+        organisms alter membrane lipid composition (homeoviscous adaptation)''.'
+  - subject: membrane_fluidity
+    predicate: enables
+    object: maximal_growth_rate
+    description: Membrane physical state (fluidity) is a proximal determinant of growth,
+      constraining transport, signaling, and division required for peak growth.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Membrane fluidity maintenance via homeoviscous adaptation supports the
+        cellular processes underlying growth across the temperature range.
+  - subject: arrhenius_plot_deviation
+    predicate: indicates
+    object: stress_growth_regime
+    description: Deviation from Arrhenius linearity in growth-rate-vs-temperature
+      data marks a stress / non-physiological growth regime, bounding the optimum.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: '''Arrhenius plots, with linear regions indicating physiological growth
+        and deviations indicating stress''.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.813650+00:00'
   curator: seed_from_metpo
@@ -169,4 +211,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

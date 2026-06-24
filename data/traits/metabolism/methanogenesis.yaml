@@ -68,6 +68,42 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16183
     description: Primary reduced carbon end product.
+  - node_id: mcr_gene_cluster
+    label: mcrABG gene cluster
+    node_type: GENE_OR_PROTEIN
+    description: Conserved gene cluster encoding the methyl-coenzyme M reductase complex.
+  - node_id: acetoclastic_methanogenesis
+    label: acetoclastic methanogenesis
+    node_type: PATHWAY
+    description: Methanogenic pathway splitting acetate into methane and CO2.
+  - node_id: acetate
+    label: acetate
+    node_type: CHEMICAL
+    grounding: CHEBI:30089
+    description: C2 substrate for acetoclastic methanogenesis.
+  - node_id: methyl_based_methanogenesis
+    label: methyl-based methanogenesis
+    node_type: PATHWAY
+    description: Methanogenic pathway using methylated compounds as substrate.
+  - node_id: methylated_compounds
+    label: methylated compounds
+    node_type: CHEMICAL
+    description: Methyl-bearing substrates (e.g. methanol, methylamines) feeding methyl-based
+      methanogenesis.
+  - node_id: coenzyme_b
+    label: coenzyme B
+    node_type: CHEMICAL
+    description: Thiol cofactor (CoB) required in the terminal methane-forming reaction.
+  - node_id: coenzyme_m
+    label: coenzyme M
+    node_type: CHEMICAL
+    description: Methyl-carrier cofactor (CoM) onto which methyl groups are transferred
+      to form methyl-CoM.
+  - node_id: coenzyme_f420
+    label: coenzyme F420 (F420H2)
+    node_type: CHEMICAL
+    description: Reduced deazaflavin electron carrier donating electrons for C1 reduction
+      steps.
   edges:
   - subject: methanogenesis_trait
     predicate: occurs in
@@ -114,6 +150,51 @@ causal_graphs:
       snippet: from CO2 and H2 to methane
       notes: Supports methane as the reduced product of hydrogenotrophic methanogenesis.
     predicate_id: METPO:2000202
+  - subject: mcr_gene_cluster
+    predicate: enables
+    object: methyl_coenzyme_m_reductase
+    description: The mcrABG gene cluster encodes the methyl-coenzyme M reductase complex.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00024-22
+      notes: A key genetic requirement across these pathways is the presence of mcrABG.
+  - subject: acetate
+    predicate: serves as substrate for
+    object: acetoclastic_methanogenesis
+    description: Acetate is the substrate split to methane and CO2 in acetoclastic
+      methanogenesis.
+    evidence:
+    - reference: DOI:10.1007/s00253-023-12700-3
+      notes: acetoclastic (splitting acetate to CH4 and CO2).
+  - subject: methylated_compounds
+    predicate: serves as substrate for
+    object: methyl_based_methanogenesis
+    description: Methylated compounds are the substrates for methyl-based methanogenesis.
+    evidence:
+    - reference: DOI:10.1007/s00253-023-12700-3
+      notes: methylotrophic (using methylated compounds).
+  - subject: coenzyme_b
+    predicate: is required for
+    object: methane
+    description: Coenzyme B reacts with methyl-CoM in the terminal step to yield methane.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00024-22
+      notes: methyl-CoM reacts with coenzyme B (CoB) to yield methane.
+  - subject: coenzyme_m
+    predicate: carries methyl group in
+    object: methanogenesis_trait
+    description: Methyltransferases transfer methyl groups to coenzyme M to form methyl-CoM.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00024-22
+      notes: methyltransferases transfer methyl groups ultimately to CoM to form methyl-CoM.
+  - subject: coenzyme_f420
+    predicate: donates electrons to
+    object: carbon_dioxide
+    description: Reduced coenzyme F420 donates electrons for reduction of C1 intermediates
+      derived from CO2.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1296008
+      notes: Reduced coenzyme F420 (F420H2) donates electrons for reductions of methenyl/methylene
+        intermediates.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.914643+00:00'
   curator: seed_from_metpo
@@ -167,4 +248,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

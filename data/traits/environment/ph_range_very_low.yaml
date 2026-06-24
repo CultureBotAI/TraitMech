@@ -53,6 +53,43 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Combined low-permeability membrane and reversed membrane potential
       preventing cytoplasmic acidification at strongly acidic external pH.
+  - node_id: potassium_influx
+    label: potassium influx / K+ transport
+    node_type: BIOLOGICAL_PROCESS
+    description: Active influx of cations such as K+ across the cytoplasmic membrane.
+  - node_id: reversed_membrane_potential
+    label: inside-positive (reversed) membrane potential
+    node_type: STATE
+    description: Inside-positive transmembrane electrical potential characteristic
+      of extreme acidophiles.
+  - node_id: proton_influx
+    label: passive proton influx
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive entry of protons/hydronium ions into the cytoplasm down the
+      steep pH gradient.
+  - node_id: low_proton_permeability
+    label: low passive proton permeability
+    node_type: QUALITY
+    description: Low permeability of the cell envelope to passive proton flux.
+  - node_id: near_neutral_cytoplasmic_ph
+    label: near-neutral cytoplasmic pH
+    node_type: STATE
+    description: Maintenance of a near-neutral intracellular pH despite strongly acidic
+      external pH.
+  - node_id: weak_organic_acids
+    label: protonated weak organic acids
+    node_type: CHEMICAL
+    description: Lipophilic protonated weak organic acids (e.g., acetic acid) that
+      can permeate the membrane.
+  - node_id: cytoplasm
+    label: cytoplasm
+    node_type: CELLULAR_LOCALIZATION
+    description: Intracellular cytoplasmic compartment.
+  - node_id: cytoplasmic_acidification
+    label: cytoplasmic acidification
+    node_type: BIOLOGICAL_PROCESS
+    description: Acidification of the cytoplasm by influx and dissociation of permeant
+      protons/acids.
   edges:
   - subject: extreme_acidophile_envelope
     predicate: enables
@@ -73,6 +110,51 @@ causal_graphs:
       snippet: growing at pH 1.0-3.0
       notes: Supports a very-low pH range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: potassium_influx
+    predicate: causes
+    object: reversed_membrane_potential
+    description: Active influx of cations such as K+ generates an inside-positive
+      membrane potential.
+    evidence:
+    - reference: DOI:10.1128/9781555818821.ch4.3.1
+      notes: generate positive (inside) membrane potentials via the active influx
+        of cations, such as K+; mechanism general to acidophiles.
+  - subject: reversed_membrane_potential
+    predicate: reduces
+    object: proton_influx
+    description: The inside-positive (reversed) membrane potential reduces passive
+      proton influx, supporting a large ΔpH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: maintain a large transmembrane ΔpH supported by a reversed membrane potential
+        (inside-positive); links reversed Δψ to reduced proton entry.
+  - subject: low_proton_permeability
+    predicate: enables maintenance of
+    object: near_neutral_cytoplasmic_ph
+    description: Low passive proton permeability enables maintenance of a near-neutral
+      cytoplasmic pH at acidic external pH.
+    evidence:
+    - reference: DOI:10.3389/frbis.2023.1338019
+      notes: a low passive proton permeability and a near neutral intracellular pH
+        can be maintained.
+  - subject: weak_organic_acids
+    predicate: diffuse into
+    object: cytoplasm
+    description: Lipophilic protonated weak organic acids can diffuse across the membrane
+      into the cytoplasm.
+    evidence:
+    - reference: DOI:10.1128/9781555818821.ch4.3.1
+      notes: lipophilic weak organic acids can diffuse in and acidify the cytoplasm;
+        general principle, key boundary condition for acidophily.
+  - subject: weak_organic_acids
+    predicate: cause
+    object: cytoplasmic_acidification
+    description: Permeant weak organic acids dissociate inside the cell and acidify
+      the cytoplasm.
+    evidence:
+    - reference: DOI:10.1128/AEM.04031-15
+      notes: small organic acids can act as uncouplers and acidify the cytoplasm;
+        strong inhibitor edge distinguishing mineral from permeant organic acids.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.829000+00:00'
   curator: seed_from_metpo
@@ -90,4 +172,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

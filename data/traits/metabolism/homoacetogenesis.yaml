@@ -73,6 +73,57 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy carrier conserved during acetate formation.
+  - node_id: formate
+    label: formate
+    node_type: CHEMICAL
+    description: C1 intermediate in the methyl branch of the Wood-Ljungdahl pathway.
+  - node_id: formate_dehydrogenase
+    label: formate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme reducing CO2 to formate in the methyl branch.
+  - node_id: formyl_thf
+    label: formyl-tetrahydrofolate
+    node_type: CHEMICAL
+    description: Formyl-THF, the C1-loaded folate intermediate of the methyl branch.
+  - node_id: formyl_thf_synthetase
+    label: formyl-THF synthetase (Fhs)
+    node_type: GENE_OR_PROTEIN
+    description: Formate--tetrahydrofolate ligase converting formate to formyl-THF.
+  - node_id: methyl_branch
+    label: methyl branch of WLP
+    node_type: PATHWAY
+    description: Eastern/methyl branch generating the methyl group of acetyl-CoA.
+  - node_id: carbonyl_branch
+    label: carbonyl branch of WLP
+    node_type: PATHWAY
+    description: Western/carbonyl branch generating the carbonyl group via CO.
+  - node_id: acs_codh_complex
+    label: ACS/CODH complex
+    node_type: GENE_OR_PROTEIN
+    description: Acetyl-CoA synthase / CO dehydrogenase complex where the two WLP
+      branches converge.
+  - node_id: acetate_kinase
+    label: acetate kinase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme generating ATP by substrate-level phosphorylation during acetate
+      formation.
+  - node_id: substrate_level_phosphorylation
+    label: substrate-level phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: ATP-generating phosphoryl transfer at acetate kinase in the WLP.
+  - node_id: energy_conservation_module
+    label: membrane energy-conservation module (Rnf/Ech)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-associated Rnf or Ech complex translocating ions to build
+      the transmembrane gradient.
+  - node_id: transmembrane_ion_gradient
+    label: transmembrane ion gradient
+    node_type: BIOLOGICAL_PROCESS
+    description: Na+/H+ electrochemical gradient driving ATP synthase during acetogenesis.
+  - node_id: atp_synthase
+    label: ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane enzyme using the ion gradient to synthesize ATP.
   edges:
   - subject: homoacetogenesis_trait
     predicate: occurs in
@@ -152,6 +203,98 @@ causal_graphs:
     - reference: DOI:10.1016/j.tibtech.2019.05.008
       snippet: further to acetate
       notes: Review discusses acetate formation as the energy-conserving product branch.
+  - subject: carbon_dioxide
+    predicate: reduced by enzyme to
+    object: formate
+    description: CO2 is reduced to formate by formate dehydrogenase in the methyl
+      branch.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: CO2 to formate catalyzed by formate dehydrogenase (Fdh); core WLP methyl-branch
+        step.
+  - subject: formate_dehydrogenase
+    predicate: catalyzes
+    object: formate
+    description: Formate dehydrogenase produces formate from CO2.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: CO2 -> formate catalyzed by formate dehydrogenase (Fdh).
+  - subject: formate
+    predicate: converted by enzyme to
+    object: formyl_thf
+    description: Formate is converted to formyl-THF by formyl-THF synthetase.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: formate -> formyl-THF by formyl-THF synthetase (Fhs); methyl-branch step.
+  - subject: formyl_thf_synthetase
+    predicate: catalyzes
+    object: formyl_thf
+    description: Formyl-THF synthetase (Fhs) forms formyl-THF from formate.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: formate -> formyl-THF by formyl-THF synthetase (Fhs).
+  - subject: methyl_branch
+    predicate: converges with
+    object: carbonyl_branch
+    description: The methyl and carbonyl branches of the WLP converge at the ACS/CODH
+      complex.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02554-w
+      notes: eastern/methyl branch and carbonyl/western branch meet at the acetyl-CoA
+        synthase/carbon monoxide dehydrogenase complex (ACS/CODH); canonical WLP architecture.
+  - subject: acs_codh_complex
+    predicate: produces
+    object: acetyl_coa
+    description: The ACS/CODH complex condenses the methyl and carbonyl groups into
+      acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02554-w
+      notes: the two WLP branches meet at the ACS/CODH complex to form acetyl-CoA.
+  - subject: acetate_kinase
+    predicate: generates
+    object: atp
+    description: Acetate kinase generates ATP by substrate-level phosphorylation during
+      acetate formation, the only WLP ATP-yielding step.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: acetyl-CoA -> acetate via acetyl-phosphate with ATP from substrate-level
+        phosphorylation (acetate kinase); WLP is otherwise net-zero ATP.
+  - subject: acetate_kinase
+    predicate: participates in
+    object: substrate_level_phosphorylation
+    description: Acetate kinase mediates substrate-level phosphorylation in the acetate
+      branch.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: ATP from substrate-level phosphorylation at acetate kinase.
+  - subject: energy_conservation_module
+    predicate: generates
+    object: transmembrane_ion_gradient
+    description: The membrane Rnf or Ech module translocates Na+/H+ to generate the
+      transmembrane ion gradient.
+    evidence:
+    - reference: DOI:10.1039/d4cb00099d
+      notes: Rnf transfers electrons from Fdred to NAD+ while translocating Na+/H+;
+        Ech acts as Fd:H+ oxidoreductase.
+    - reference: DOI:10.3389/fmicb.2023.1185739
+      notes: membrane-associated energy-conservation module involving Rnf or Ech plus
+        ATP synthase.
+  - subject: transmembrane_ion_gradient
+    predicate: drives
+    object: atp_synthase
+    description: The transmembrane ion gradient drives ATP synthase to conserve energy
+      during acetogenesis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1185739
+      notes: membrane-associated energy-conservation module ... plus ATP synthase.
+  - subject: atp_synthase
+    predicate: produces
+    object: atp
+    description: ATP synthase produces ATP from the ion gradient, conserving energy
+      in the near-thermodynamic-limit acetogenic metabolism.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1185739
+      notes: ATP synthase couples the ion gradient to ATP synthesis in acetogens.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.916045+00:00'
   curator: seed_from_metpo
@@ -205,4 +348,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
     vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 11 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

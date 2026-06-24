@@ -41,6 +41,40 @@ causal_graphs:
     description: Long-term loss of genomic content under relaxed selection and small
       effective population sizes.
     grounding: METPO:1007721
+  - node_id: confined_intracellular_habitat
+    label: confined intracellular habitat
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Spatially restricted, host-cell-confined niche occupied by endosymbionts.
+  - node_id: metabolic_gene_loss
+    label: metabolic gene loss
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of metabolic genes under relaxed selection in confined intracellular
+      life.
+  - node_id: transmission_bottleneck
+    label: transmission bottleneck
+    node_type: BIOLOGICAL_PROCESS
+    description: Few founding cells transmitted between host generations, reducing
+      effective population size.
+  - node_id: limited_recombination
+    label: limited recombination
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduced genetic recombination resulting from colonies originating
+      from few ancestors.
+  - node_id: host_symbiont_aa_complementarity
+    label: host-symbiont amino-acid pathway complementarity
+    node_type: BIOLOGICAL_PROCESS
+    description: Complementarity in amino-acid metabolic pathways shared between host
+      and endosymbiont.
+  - node_id: nutritional_compensation
+    label: nutritional compensation
+    node_type: BIOLOGICAL_PROCESS
+    description: Provision of biosynthetic capacity (amino acids/cofactors) compensating
+      host nutritional needs.
+  - node_id: intracellular_dependence
+    label: dependence on the intracellular environment
+    node_type: STATE
+    description: Obligate reliance of the reduced-genome symbiont on the host intracellular
+      environment.
   edges:
   - subject: intracellular_localization
     predicate: enables
@@ -61,6 +95,52 @@ causal_graphs:
       notes: McCutcheon & Moran review extreme genome reduction in obligate symbiotic
         bacteria.
     predicate_id: biolink:causes
+  - subject: confined_intracellular_habitat
+    predicate: drives
+    object: metabolic_gene_loss
+    description: Selective pressures in confined intracellular habitats drive metabolic
+      gene loss and genome shrinkage.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae117
+      notes: 'Song 2024: selective pressures in confined habitats drive metabolic
+        gene loss and genome shrinkage (free-living 2-10 Mb vs obligate endosymbionts
+        often <1.5 Mb).'
+  - subject: metabolic_gene_loss
+    predicate: contributes to
+    object: reductive_genome_evolution
+    description: Metabolic gene loss in confined intracellular life feeds long-term
+      reductive genome evolution.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae117
+      notes: 'Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage
+        characteristic of obligate endosymbionts.'
+  - subject: transmission_bottleneck
+    predicate: associated with
+    object: limited_recombination
+    description: Colonies originate from few ancestors, producing limited recombination
+      in obligate endosymbionts.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae117
+      notes: 'Song 2024: colonies originate from few ancestors, limited recombination.'
+  - subject: host_symbiont_aa_complementarity
+    predicate: supports
+    object: nutritional_compensation
+    description: Complementarity in amino-acid metabolic pathways between host and
+      symbiont supports nutritional compensation.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae052
+      notes: 'Bai 2024: a comprehensive analysis demonstrated complementarity in amino
+        acid metabolic pathways between host and symbiont, supporting nutritional
+        compensation.'
+  - subject: reductive_genome_evolution
+    predicate: leads to
+    object: intracellular_dependence
+    description: Severe genome reduction leads to obligate dependence on the host
+      intracellular environment.
+    evidence:
+    - reference: DOI:10.3390/ijms25084228
+      notes: 'Silva 2024: has undergone severe genome reduction leading to dependence
+        on the intracellular environment.'
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -79,6 +159,12 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007721×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-a6758e26f5a6

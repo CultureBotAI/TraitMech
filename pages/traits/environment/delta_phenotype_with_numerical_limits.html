@@ -124,12 +124,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>homeoviscous adaptation</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>membrane fluidity/stability</strong>
+            
+            <p>Homeoviscous adaptation regulates lipid composition to maintain membrane fluidity/structure under temperature, salinity, and pH stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/d4cc03114h</code>
+                
+                <span class="meta">Key strategies include homeoviscous adaptation (HVA), involving the regulation of lipid composition; linked to tolerance of temperature, salinity, and pH extremes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>membrane fluidity/stability</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>delta phenotype with numerical limits</strong>
+            
+            <p>Maintaining membrane fluidity/integrity across conditions widens the growth-supporting range whose span defines the delta phenotype.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/d4cc03114h</code>
+                
+                <span class="meta">HVA framed as a universal paradigm of membrane adaptation spanning diverse extremophiles and stressors, supporting breadth of growth-supporting conditions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>compatible solutes / osmolytes</strong>
+            <span class="edge-predicate">stabilizes</span>
+            <strong>membrane fluidity/stability</strong>
+            
+            <p>Compatible solutes stabilize proteins and membranes and restore osmotic balance, broadening tolerance across temperature and osmotic conditions.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.37256/amtt.5220244537</code>
+                
+                <span class="meta">Compatible solutes depress the freezing point, stabilize proteins and membranes, restore osmotic balance; broad cold + osmotic support, not species-specific.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>saturated:unsaturated fatty-acid ratio</strong>
+            <span class="edge-predicate">modulates</span>
+            <strong>membrane fluidity/stability</strong>
+            
+            <p>Alteration of the saturated:unsaturated fatty-acid ratio modulates membrane stability across temperatures.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Membrane stability is modulated by alteration of the ratio of saturated and unsaturated fatty acids; maintenance across temperature shifts.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>core central metabolism</strong>
+            <span class="edge-predicate">maintained across</span>
+            <strong>temperature delta</strong>
+            
+            <p>Regulatory-metabolic cross talk buffers core central metabolism across a wide temperature range, supporting a broad temperature delta.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/msystems.01124-22</code>
+                
+                <span class="meta">Different growth temperatures induce broad transcriptional changes, yet most key central metabolites show overlapping trends via intense regulatory-metabolic cross talk; maintenance across 0 and 15C.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -277,6 +366,12 @@
           <time>2026-05-24T07:37:39Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -636,7 +731,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph framing the delta phenotype as a generic derived breadth descriptor over any numerical environmental axis, with `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "delta_phenotype_trait"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta", "target": "delta_phenotype_trait"}, {"description": "pH delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta", "target": "delta_phenotype_trait"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta", "target": "delta_phenotype_trait"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "delta phenotype with numerical limits"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta", "target": "delta phenotype with numerical limits"}, {"description": "pH delta is an axis-specific delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta", "target": "delta phenotype with numerical limits"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta", "target": "delta phenotype with numerical limits"}], "graph_id": "delta_phenotype_breadth_descriptor", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Phenotype defined by the max \u2212 min span of a growth-supporting environmental variable.", "grounding": "METPO:1000534", "id": "delta_phenotype_trait", "is_orphan": false, "label": "delta phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}], "title": "Delta phenotype breadth descriptor across environmental axes"}];
+  var graphs = [{"description": "DOI-backed graph framing the delta phenotype as a generic derived breadth descriptor over any numerical environmental axis, with `is a` edges to the axis-specific delta phenotypes for NaCl, pH, and temperature.", "edges": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical_environmental_axis", "target": "delta_phenotype_trait"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta", "target": "delta_phenotype_trait"}, {"description": "pH delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_delta", "target": "delta_phenotype_trait"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta", "target": "delta_phenotype_trait"}, {"description": "Homeoviscous adaptation regulates lipid composition to maintain membrane fluidity/structure under temperature, salinity, and pH stress.", "evidence": [{"notes": "Key strategies include homeoviscous adaptation (HVA), involving the regulation of lipid composition; linked to tolerance of temperature, salinity, and pH extremes.", "reference": "DOI:10.1039/d4cc03114h"}], "id": "edge-5", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "homeoviscous_adaptation", "target": "membrane_fluidity"}, {"description": "Maintaining membrane fluidity/integrity across conditions widens the growth-supporting range whose span defines the delta phenotype.", "evidence": [{"notes": "HVA framed as a universal paradigm of membrane adaptation spanning diverse extremophiles and stressors, supporting breadth of growth-supporting conditions.", "reference": "DOI:10.1039/d4cc03114h"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "membrane_fluidity", "target": "delta_phenotype_trait"}, {"description": "Compatible solutes stabilize proteins and membranes and restore osmotic balance, broadening tolerance across temperature and osmotic conditions.", "evidence": [{"notes": "Compatible solutes depress the freezing point, stabilize proteins and membranes, restore osmotic balance; broad cold + osmotic support, not species-specific.", "reference": "DOI:10.37256/amtt.5220244537"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solutes", "target": "membrane_fluidity"}, {"description": "Alteration of the saturated:unsaturated fatty-acid ratio modulates membrane stability across temperatures.", "evidence": [{"notes": "Membrane stability is modulated by alteration of the ratio of saturated and unsaturated fatty acids; maintenance across temperature shifts.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-8", "is_orphan": false, "predicate": "modulates", "predicate_id": null, "source": "fatty_acid_ratio", "target": "membrane_fluidity"}, {"description": "Regulatory-metabolic cross talk buffers core central metabolism across a wide temperature range, supporting a broad temperature delta.", "evidence": [{"notes": "Different growth temperatures induce broad transcriptional changes, yet most key central metabolites show overlapping trends via intense regulatory-metabolic cross talk; maintenance across 0 and 15C.", "reference": "DOI:10.1128/msystems.01124-22"}], "id": "edge-9", "is_orphan": false, "predicate": "maintained across", "predicate_id": null, "source": "core_metabolism", "target": "temperature_delta"}], "evidence_rows": [{"description": "A numerical environmental axis defines the values whose max and min are subtracted to yield the delta phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Supports a numerical environmental axis as the axis on which a growth-supporting range (and hence its breadth) is measured.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "numerical environmental axis", "target": "delta phenotype with numerical limits"}, {"description": "NaCl delta is an axis-specific delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports NaCl delta as a delta phenotype defined over the salinity axis.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta", "target": "delta phenotype with numerical limits"}, {"description": "pH delta is an axis-specific delta phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pH delta as a delta phenotype defined over the external-pH axis.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH delta", "target": "delta phenotype with numerical limits"}, {"description": "Temperature delta is an axis-specific delta phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports temperature delta as a delta phenotype defined over the ambient-temperature axis.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta", "target": "delta phenotype with numerical limits"}, {"description": "Homeoviscous adaptation regulates lipid composition to maintain membrane fluidity/structure under temperature, salinity, and pH stress.", "edge_id": "edge-5", "evidence": [{"notes": "Key strategies include homeoviscous adaptation (HVA), involving the regulation of lipid composition; linked to tolerance of temperature, salinity, and pH extremes.", "reference": "DOI:10.1039/d4cc03114h"}], "predicate": "maintains", "predicate_id": null, "source": "homeoviscous adaptation", "target": "membrane fluidity/stability"}, {"description": "Maintaining membrane fluidity/integrity across conditions widens the growth-supporting range whose span defines the delta phenotype.", "edge_id": "edge-6", "evidence": [{"notes": "HVA framed as a universal paradigm of membrane adaptation spanning diverse extremophiles and stressors, supporting breadth of growth-supporting conditions.", "reference": "DOI:10.1039/d4cc03114h"}], "predicate": "enables", "predicate_id": null, "source": "membrane fluidity/stability", "target": "delta phenotype with numerical limits"}, {"description": "Compatible solutes stabilize proteins and membranes and restore osmotic balance, broadening tolerance across temperature and osmotic conditions.", "edge_id": "edge-7", "evidence": [{"notes": "Compatible solutes depress the freezing point, stabilize proteins and membranes, restore osmotic balance; broad cold + osmotic support, not species-specific.", "reference": "DOI:10.37256/amtt.5220244537"}], "predicate": "stabilizes", "predicate_id": null, "source": "compatible solutes / osmolytes", "target": "membrane fluidity/stability"}, {"description": "Alteration of the saturated:unsaturated fatty-acid ratio modulates membrane stability across temperatures.", "edge_id": "edge-8", "evidence": [{"notes": "Membrane stability is modulated by alteration of the ratio of saturated and unsaturated fatty acids; maintenance across temperature shifts.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "modulates", "predicate_id": null, "source": "saturated:unsaturated fatty-acid ratio", "target": "membrane fluidity/stability"}, {"description": "Regulatory-metabolic cross talk buffers core central metabolism across a wide temperature range, supporting a broad temperature delta.", "edge_id": "edge-9", "evidence": [{"notes": "Different growth temperatures induce broad transcriptional changes, yet most key central metabolites show overlapping trends via intense regulatory-metabolic cross talk; maintenance across 0 and 15C.", "reference": "DOI:10.1128/msystems.01124-22"}], "predicate": "maintained across", "predicate_id": null, "source": "core central metabolism", "target": "temperature delta"}], "graph_id": "delta_phenotype_breadth_descriptor", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Small organic molecules that stabilize proteins and membranes and restore osmotic balance.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes / osmolytes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Central metabolic network whose key metabolite levels are buffered across a wide temperature range.", "grounding": null, "id": "core_metabolism", "is_orphan": false, "label": "core central metabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Phenotype defined by the max \u2212 min span of a growth-supporting environmental variable.", "grounding": "METPO:1000534", "id": "delta_phenotype_trait", "is_orphan": false, "label": "delta phenotype with numerical limits", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Relative abundance of saturated versus unsaturated fatty acids that tunes membrane stability across temperatures.", "grounding": null, "id": "fatty_acid_ratio", "is_orphan": false, "label": "saturated:unsaturated fatty-acid ratio", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Regulation of membrane lipid composition to keep fluidity within a functional window under stress.", "grounding": null, "id": "homeoviscous_adaptation", "is_orphan": false, "label": "homeoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical state of the lipid bilayer (fluidity, packing, integrity) that must be maintained for growth.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity/stability", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "Any continuous environmental variable (NaCl, pH, temperature, etc.) on which microbial growth can be measured quantitatively.", "grounding": null, "id": "numerical_environmental_axis", "is_orphan": false, "label": "numerical environmental axis", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting external pH range.", "grounding": "METPO:1000232", "id": "ph_delta", "is_orphan": false, "label": "pH delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}], "title": "Delta phenotype breadth descriptor across environmental axes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -647,7 +742,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

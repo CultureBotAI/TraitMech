@@ -48,6 +48,29 @@ causal_graphs:
     label: cell-body curvature
     node_type: BIOLOGICAL_PROCESS
     description: Curving of an otherwise rod-like cell body.
+  - node_id: crvB
+    label: CrvB
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic curvature determinant that co-assembles with CrvA into
+      the inner-curve filament.
+  - node_id: vadR_srna
+    label: VadR sRNA
+    node_type: GENE_OR_PROTEIN
+    description: Small RNA that post-transcriptionally represses crvA mRNA to limit
+      curvature.
+  - node_id: crvA_mrna
+    label: crvA mRNA
+    node_type: GENE_OR_PROTEIN
+    description: Messenger RNA encoding the CrvA curvature determinant.
+  - node_id: vxrAB_tcs
+    label: VxrAB two-component system
+    node_type: GENE_OR_PROTEIN
+    description: Two-component signaling system that activates vadR transcription.
+  - node_id: cyclic_di_gmp
+    label: cyclic di-GMP
+    node_type: CHEMICAL
+    description: Second messenger that, when elevated, decreases cell curvature to
+      generate straight rods.
   edges:
   - subject: crvA
     predicate: self-assembles into
@@ -84,6 +107,64 @@ causal_graphs:
       snippet: characteristic curved rod morphology
       notes: Supports the observed Vibrio morphology as a curved-rod shape.
     predicate_id: METPO:2000202
+  - subject: crvB
+    predicate: increases
+    object: cell_body_curvature
+    description: CrvB expression increases CrvA assembly and cell curvature in a dose-dependent
+      manner.
+    evidence:
+    - reference: DOI:10.1101/2020.02.20.954503
+      notes: crvB expression increased CrvA-GFP assembly as well as cell curvature
+        in a dose-dependent manner.
+  - subject: crvB
+    predicate: colocalizes with
+    object: periplasmic_filament
+    description: CrvB colocalizes with CrvA in the same periplasmic inner-curve filament
+      structure.
+    evidence:
+    - reference: DOI:10.1101/2020.02.20.954503
+      notes: Both proteins localized to the same structure; CrvB-GFP filaments colocalized
+        with periplasmic DsbA-mCherry.
+  - subject: vadR_srna
+    predicate: represses
+    object: crvA_mrna
+    description: VadR sRNA is a post-transcriptional inhibitor of crvA mRNA.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-19890-8
+      notes: The VadR small RNA acts as a post-transcriptional inhibitor of the crvA
+        mRNA.
+  - subject: crvA_mrna
+    predicate: translated into
+    object: crvA
+    description: crvA mRNA is translated into the CrvA curvature determinant protein.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-19890-8
+      notes: crvA mRNA encodes the periplasmic CrvA protein that determines cell curvature.
+  - subject: vadR_srna
+    predicate: decreases
+    object: cell_body_curvature
+    description: Mutation of vadR increases cell curvature whereas overexpression
+      has the inverse effect, indicating VadR limits curvature.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-19890-8
+      notes: Mutation of vadR increases cell curvature, whereas overexpression has
+        the inverse effect.
+  - subject: vxrAB_tcs
+    predicate: activates transcription of
+    object: vadR_srna
+    description: The VxrAB two-component system activates vadR transcription.
+    evidence:
+    - reference: DOI:10.1038/s41467-020-19890-8
+      notes: vadR transcription is activated by the VxrAB two-component system.
+  - subject: cyclic_di_gmp
+    predicate: decreases
+    object: cell_body_curvature
+    description: High c-di-GMP concentrations decrease cell curvature to generate
+      straight rods.
+    evidence:
+    - reference: DOI:10.1073/pnas.2010199117
+      notes: High c-di-GMP concentrations decrease cell curvature to generate straight
+        rods.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.896189+00:00'
   curator: seed_from_metpo
@@ -107,4 +188,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

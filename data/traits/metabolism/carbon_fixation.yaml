@@ -1,8 +1,8 @@
 identifier: traitmech:000019
 label: carbon fixation
 definition: A metabolic process in which an organism assimilates inorganic carbon
-  (CO2 or bicarbonate) into organic compounds (autotrophy). Six distinct natural
-  autotrophic carbon-fixation pathways are currently recognized.
+  (CO2 or bicarbonate) into organic compounds (autotrophy). Six distinct natural autotrophic
+  carbon-fixation pathways are currently recognized.
 definition_source: DOI:10.1128/AEM.02473-10
 trait_category: METABOLISM
 term_kind: CLASS
@@ -18,25 +18,23 @@ synonyms:
   source: DOI:10.1146/annurev-marine-120709-142712
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
-  notes: Berg review of the distribution of autotrophic CO2-fixation pathways
-    establishes that, besides the Calvin-Benson-Bassham cycle, five further
-    autotrophic carbon-fixation pathways are known, parent of the six pathway
-    sub-variants proposed here.
+  notes: Berg review of the distribution of autotrophic CO2-fixation pathways establishes
+    that, besides the Calvin-Benson-Bassham cycle, five further autotrophic carbon-fixation
+    pathways are known, parent of the six pathway sub-variants proposed here.
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert, "Beyond the Calvin cycle", supports multiple autotrophic
     carbon-fixation pathways operating among ocean microorganisms.
 causal_graphs:
 - graph_id: carbon_fixation_co2_assimilation
   title: Autotrophic carbon fixation assimilates CO2 into organic carbon
-  description: Evidence-backed causal sketch linking inorganic CO2 to organic
-    carbon via six recognized autotrophic carbon-fixation pathways.
+  description: Evidence-backed causal sketch linking inorganic CO2 to organic carbon
+    via six recognized autotrophic carbon-fixation pathways.
   nodes:
   - node_id: carbon_fixation_trait
     label: carbon fixation
     node_type: TRAIT
     grounding: traitmech:000019
-    description: Assimilation of inorganic carbon into organic compounds
-      (autotrophy).
+    description: Assimilation of inorganic carbon into organic compounds (autotrophy).
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -47,12 +45,61 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0015977
     description: Conversion of inorganic CO2/bicarbonate into organic compounds.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: Dissolved inorganic carbon species; substrate/intermediate in carbon
+      fixation.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme accelerating interconversion of CO2 and bicarbonate.
+  - node_id: rubisco
+    label: ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)
+    node_type: GENE_OR_PROTEIN
+    description: Carboxylating enzyme of the Calvin-Benson-Bassham cycle that fixes
+      CO2.
+  - node_id: cbb_cycle
+    label: Calvin-Benson-Bassham cycle
+    node_type: PATHWAY
+    description: Canonical autotrophic carbon-fixation pathway.
+  - node_id: rtca_cycle
+    label: reverse (reductive) tricarboxylic acid cycle
+    node_type: PATHWAY
+    description: Reductive TCA autotrophic carbon-fixation pathway.
+  - node_id: hp_hb_cycle
+    label: 3-hydroxypropionate/4-hydroxybutyrate cycle
+    node_type: PATHWAY
+    description: Autotrophic carbon-fixation pathway in some archaea.
+  - node_id: wood_ljungdahl_pathway
+    label: Wood-Ljungdahl pathway
+    node_type: PATHWAY
+    description: Reductive acetyl-CoA autotrophic carbon-fixation pathway.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    description: Product of CO2 fixation via the Wood-Ljungdahl pathway.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    description: Energy cofactor consumed by carbon-fixation pathways.
+  - node_id: nadph
+    label: NADPH
+    node_type: CHEMICAL
+    description: Reducing-equivalent cofactor consumed by carbon-fixation pathways.
+  - node_id: reduced_ferredoxin
+    label: reduced ferredoxin
+    node_type: CHEMICAL
+    description: Low-potential electron carrier required by the reverse TCA cycle.
+  - node_id: atp_citrate_lyase
+    label: ATP citrate lyase (aclAB)
+    node_type: GENE_OR_PROTEIN
+    description: Key marker enzyme enabling the reverse TCA carbon-fixation cycle.
   edges:
   - subject: carbon_dioxide
     predicate: fixed by
     object: carbon_fixation_trait
-    description: CO2 is the substrate fixed by autotrophic carbon-fixation
-      pathways.
+    description: CO2 is the substrate fixed by autotrophic carbon-fixation pathways.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
       notes: Berg reviews the distribution of autotrophic CO2-fixation pathways.
@@ -63,9 +110,80 @@ causal_graphs:
     description: The autotrophic carbon-fixation process realizes the trait.
     evidence:
     - reference: DOI:10.1146/annurev-marine-120709-142712
-      notes: Hügler & Sievert support multiple autotrophic carbon-fixation
-        pathways operating among ocean microorganisms.
+      notes: Hügler & Sievert support multiple autotrophic carbon-fixation pathways
+        operating among ocean microorganisms.
     predicate_id: RO:0002327
+  - subject: carbonic_anhydrase
+    predicate: accelerates interconversion of
+    object: carbon_dioxide
+    description: Carbonic anhydrase speeds interconversion of CO2 and bicarbonate,
+      bridging DIC supply to demand.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: 'Scott 2024: CA activity speeds the interconversion of CO2 and HCO3-.'
+  - subject: rubisco
+    predicate: uses substrate
+    object: carbon_dioxide
+    description: RubisCO fixes CO2 as its carboxylation substrate in CBB-associated
+      fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: 'Scott 2024: RubisCO substrate is CO2; applies broadly to CBB-associated
+        fixation.'
+  - subject: cbb_cycle
+    predicate: consumes
+    object: atp
+    description: CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to
+      one GAP).
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: 'Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.'
+  - subject: cbb_cycle
+    predicate: consumes
+    object: nadph
+    description: CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: 'Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.'
+  - subject: rtca_cycle
+    predicate: requires
+    object: reduced_ferredoxin
+    description: The reverse TCA carbon-fixation cycle requires reduced ferredoxin
+      as a cofactor.
+    evidence:
+    - reference: DOI:10.4014/jmb.2306.06005
+      notes: 'Kang 2023: rTCA cycle cofactors include NAD(P)H, ATP, Fdred, FADH.'
+  - subject: hp_hb_cycle
+    predicate: requires
+    object: nadph
+    description: The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.
+    evidence:
+    - reference: DOI:10.4014/jmb.2306.06005
+      notes: 'Kang 2023: 3-HP/4-HB cycle NADPH and ATP required.'
+  - subject: wood_ljungdahl_pathway
+    predicate: fixes CO2 to produce
+    object: acetyl_coa
+    description: The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.
+    evidence:
+    - reference: DOI:10.3390/bioengineering10121357
+      notes: 'Kurt 2023: WLP is employed for CO2 fixation and acetyl-CoA production.'
+  - subject: atp_citrate_lyase
+    predicate: enables
+    object: rtca_cycle
+    description: ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA
+      carbon-fixation cycle.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01704-y
+      notes: 'Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to
+        run the TCA cycle in reverse.'
+  - subject: carbonic_anhydrase
+    predicate: produces
+    object: bicarbonate
+    description: Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic
+      carbon to fixation.
+    evidence:
+    - reference: DOI:10.1128/AEM.02473-10
+      notes: Connecting edge wiring the enrichment node into the graph.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -77,7 +195,18 @@ curation_history:
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (CO2 assimilation axis) with
-    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
-    to REVIEWED.
+  changes: Added evidence-backed causal graph (CO2 assimilation axis) with CHEBI/GO
+    node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: FIX_ORPHAN_NODE
+  changes: Connected orphaned node 'bicarbonate' via carbonic_anhydrase -[produces]->
+    bicarbonate.
   llm_assisted: true

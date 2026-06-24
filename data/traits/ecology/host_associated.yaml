@@ -1,7 +1,7 @@
 identifier: traitmech:000049
 label: host-associated
-definition: A habitat association in which an organism lives persistently on or in a
-  plant or animal host (e.g. as a member of a host microbiome), spanning commensal,
+definition: A habitat association in which an organism lives persistently on or in
+  a plant or animal host (e.g. as a member of a host microbiome), spanning commensal,
   mutualistic, and pathogenic relationships.
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
@@ -11,16 +11,16 @@ parent_traits:
 - traitmech:000047
 evidence:
 - reference: DOI:10.1073/pnas.1218525110
-  notes: McFall-Ngai et al. document the ubiquity of host-associated microbial
-    communities across the animal kingdom.
+  notes: McFall-Ngai et al. document the ubiquity of host-associated microbial communities
+    across the animal kingdom.
 - reference: DOI:10.1126/science.1104816
   notes: Bäckhed et al. characterize the host-associated gut microbiota as a dense,
     coevolved community.
 causal_graphs:
 - graph_id: host_associated_microbiome
   title: Host association establishes persistent host microbiome membership
-  description: Evidence-backed causal sketch linking host habitat to persistent
-    membership in a host-associated microbial community.
+  description: Evidence-backed causal sketch linking host habitat to persistent membership
+    in a host-associated microbial community.
   nodes:
   - node_id: host_associated_trait
     label: host-associated
@@ -35,6 +35,38 @@ causal_graphs:
     label: host colonization
     node_type: BIOLOGICAL_PROCESS
     description: Persistent establishment of microbes on or in a host.
+  - node_id: mucin_o_glycans
+    label: mucin O-glycans
+    node_type: CHEMICAL
+    description: Host mucus glycans degradable as a microbial nutrient source.
+  - node_id: host_surface_adhesins
+    label: cell appendages and adhesins
+    node_type: GENE_OR_PROTEIN
+    description: Flagella, pili, fimbriae, and adhesins including mucus-binding proteins.
+  - node_id: host_surface_attachment
+    label: attachment to host surfaces
+    node_type: BIOLOGICAL_PROCESS
+    description: Adhesion of microbes to host mucus or epithelial surfaces.
+  - node_id: cyclic_di_gmp_camp
+    label: c-di-GMP and cAMP second messengers
+    node_type: CHEMICAL
+    description: Second messengers regulating the attachment-to-biofilm transition.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Irreversible attachment with EPS and surface-protein production.
+  - node_id: root_exudates
+    label: plant root exudates
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Host-derived metabolites secreted from plant roots.
+  - node_id: chemotaxis_to_host
+    label: chemotaxis toward host
+    node_type: BIOLOGICAL_PROCESS
+    description: Directed motility toward host-derived chemical cues.
+  - node_id: mucus_layer_niches
+    label: mucus layer niches
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Distinct inner (firm) and outer (loose) mucus colonization niches.
   edges:
   - subject: host_habitat
     predicate: enables
@@ -42,19 +74,97 @@ causal_graphs:
     description: Host tissues provide the habitat in which the microbe colonizes.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
-      notes: McFall-Ngai et al. document ubiquitous host-associated microbial
-        communities across animals.
+      notes: McFall-Ngai et al. document ubiquitous host-associated microbial communities
+        across animals.
     predicate_id: RO:0002327
   - subject: host_colonization
     predicate: enables
     object: host_associated_trait
-    description: Persistent host colonization realizes the host-associated
-      lifestyle.
+    description: Persistent host colonization realizes the host-associated lifestyle.
     evidence:
     - reference: DOI:10.1126/science.1104816
-      notes: Bäckhed et al. characterize host-associated microbiota as dense,
-        coevolved communities.
+      notes: Bäckhed et al. characterize host-associated microbiota as dense, coevolved
+        communities.
     predicate_id: RO:0002327
+  - subject: mucin_o_glycans
+    predicate: serves as nutrient source for
+    object: host_colonization
+    description: Mucin O-glycans are degraded and utilized as a nutrient source supporting
+      colonization.
+    evidence:
+    - reference: DOI:10.1152/ajpgi.00261.2022
+      notes: Mucin O-glycans and glycan-derived sugars are degraded and utilized as
+        a nutrient source by host-associated microbes.
+  - subject: host_surface_adhesins
+    predicate: enables
+    object: host_surface_attachment
+    description: Cell appendages and adhesins mediate attachment to host mucus and
+      epithelia.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae008
+      notes: Cell appendages (flagella, pili, fimbriae) and adhesins mediate attachment
+        to host mucus/epithelia.
+  - subject: host_surface_attachment
+    predicate: enables
+    object: host_colonization
+    description: Attachment to host surfaces is a prerequisite step for persistent
+      colonization.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae008
+      notes: Attachment to host surfaces underlies the transition to stable colonization.
+  - subject: cyclic_di_gmp_camp
+    predicate: induces
+    object: biofilm_formation
+    description: c-di-GMP and cAMP trigger EPS and surface-protein production, driving
+      irreversible attachment and biofilm.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae008
+      notes: cAMP and c-di-GMP regulate transition from reversible to irreversible
+        attachment, triggering surface proteins and EPS leading to biofilm formation.
+  - subject: biofilm_formation
+    predicate: enables
+    object: host_colonization
+    description: Biofilm formation supports persistent microbial occupancy of host
+      surfaces.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae008
+      notes: Biofilm formation following irreversible attachment supports persistent
+        host colonization.
+  - subject: root_exudates
+    predicate: activates
+    object: chemotaxis_to_host
+    description: Root exudates trigger chemotaxis via MCP/CheA/CheY signaling toward
+      the host.
+    evidence:
+    - reference: DOI:10.3390/biology13020095
+      notes: Methyl-accepting chemotaxis proteins bind root exudates and trigger signal
+        transduction (CheW/CheA/CheY), driving chemotaxis as the first colonization
+        step.
+  - subject: chemotaxis_to_host
+    predicate: enables
+    object: host_colonization
+    description: Chemotaxis toward host cues is an initial step enabling colonization.
+    evidence:
+    - reference: DOI:10.3390/biology13020095
+      notes: Chemotaxis is identified as the first step of host colonization.
+  - subject: root_exudates
+    predicate: provides nutrient source for
+    object: host_colonization
+    description: Root exudates supply carbon and substrates supporting microbial growth
+      and persistence.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad066
+      notes: Plants secrete 11-40% of photosynthate as exudates that supply carbon
+        and substrates for rhizobacterial growth and persistence.
+  - subject: mucus_layer_niches
+    predicate: enables
+    object: host_colonization
+    description: Structured inner and outer mucus layers create distinct niches for
+      microbial colonization.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.esp-0006-2023
+      notes: Structured inner (firm, sparsely colonized) versus outer (looser, microbe-colonized)
+        mucus creates distinct colonization niches.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -65,6 +175,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (host-associated microbiome
-    membership) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (host-associated microbiome membership)
+    with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

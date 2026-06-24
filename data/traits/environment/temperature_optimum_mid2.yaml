@@ -45,6 +45,28 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Standard mesophile membrane and enzyme repertoire matching a moderate
       ambient-temperature setpoint.
+  - node_id: temperature_decrease
+    label: temperature decrease
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A drop in ambient temperature below the growth setpoint.
+  - node_id: membrane_rigidification
+    label: membrane rigidification
+    node_type: QUALITY
+    description: Increased bilayer order/thickness and liquid-crystalline to gel transition
+      of the cytoplasmic membrane.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Membrane fatty acyl chains bearing one or more double bonds (CHEBI:27208).
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity/disorder state of the cytoplasmic membrane.
+  - node_id: mesophile_category
+    label: mesophile category
+    node_type: STATE
+    description: Organisms growing between approximately 20 and 45 degrees C ambient
+      temperature.
   edges:
   - subject: mesophilic_environment
     predicate: engages
@@ -74,6 +96,48 @@ causal_graphs:
       notes: Supports the 27–30 °C optimum as a value within the temperature-optimum
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: temperature_decrease
+    predicate: causes
+    object: membrane_rigidification
+    description: A temperature drop rigidifies and thickens the cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Temperature drops cause membrane rigidification and thickening and can
+        induce a liquid-crystalline to gel phase change; general bacterial mechanism.
+  - subject: unsaturated_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Higher unsaturated fatty acid content fluidizes and thins the bilayer.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Increasing the saturated/unsaturated ratio toward UFAs increases fluidity;
+        UFAs are central membrane fluidizers.
+  - subject: baseline_mesophile_adaptation
+    predicate: increases
+    object: unsaturated_fatty_acids
+    description: Homeoviscous mesophile adaptation raises unsaturated fatty acid content
+      to offset cooling.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Homeoviscous adaptation adjusts the saturated/unsaturated fatty-acid
+        ratio to maintain membrane fluidity at the growth temperature.
+  - subject: membrane_fluidity
+    predicate: enables
+    object: baseline_mesophile_adaptation
+    description: Maintained membrane fluidity supports the baseline mesophile physiological
+      state.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Cells sense and correct membrane fluidity via desaturation to keep the
+        bilayer functional at the ambient temperature.
+  - subject: temperature_optimum_mid2_trait
+    predicate: subclass of
+    object: mesophile_category
+    description: The 27-30 C optimum falls within the mesophile growth range.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Mesophiles grow between about 20 C and 45 C; 27-30 C lies inside this
+        range, making mid2 a mesophile subset.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.820411+00:00'
   curator: seed_from_metpo
@@ -91,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

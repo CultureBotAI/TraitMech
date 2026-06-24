@@ -41,6 +41,16 @@ causal_graphs:
     label: spindle geometry
     node_type: BIOLOGICAL_PROCESS
     description: Bilaterally symmetric tapered body geometry.
+  - node_id: localized_pg_insertion
+    label: localized peptidoglycan insertion
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatially restricted incorporation of new peptidoglycan at distinct
+      rates in defined cell locations.
+  - node_id: non_spherical_morphology
+    label: non-spherical morphology
+    node_type: QUALITY
+    description: A differentiated, non-spherical cell shape produced by spatially
+      patterned wall growth.
   edges:
   - subject: symmetric_polar_pg
     predicate: produces
@@ -69,6 +79,25 @@ causal_graphs:
       snippet: cell shape is genetically determined
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: localized_pg_insertion
+    predicate: required for
+    object: non_spherical_morphology
+    description: Spatially localized (non-dispersed) peptidoglycan insertion is required
+      to generate any non-spherical, differentiated cell shape.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.01264
+      notes: To generate shapes other than a sphere, incorporation must occur at distinct
+        rates in different locations and for defined periods of time. Broad mechanistic
+        principle for non-spherical morphogenesis.
+  - subject: localized_pg_insertion
+    predicate: enables
+    object: symmetric_polar_pg
+    description: Generic localized PG insertion underlies the symmetric polar peptidoglycan
+      growth that taper the poles.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.01264
+      notes: Localized, temporally defined PG incorporation is the general prerequisite
+        for the symmetric polar growth that produces tapered spindle poles.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899347+00:00'
   curator: seed_from_metpo
@@ -104,4 +133,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 2 evidence-backed generic edges (2 new nodes) from the deep-research
+    report.
   llm_assisted: true

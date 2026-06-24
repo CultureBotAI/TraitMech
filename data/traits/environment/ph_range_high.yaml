@@ -51,6 +51,49 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Robust Na+/H+ antiporter activity importing H+ at strongly alkaline
       external pH.
+  - node_id: mrp_antiporter_complex
+    label: Mrp Na+/H+ antiporter complex
+    node_type: GENE_OR_PROTEIN
+    description: Hetero-oligomeric CPA3-family Na+/H+ antiporter complex essential
+      at high external pH.
+  - node_id: mrp_operon
+    label: mrpA-G operon
+    node_type: GENE_OR_PROTEIN
+    description: Operon encoding the seven hydrophobic Mrp proteins that form the
+      antiporter complex.
+  - node_id: membrane_potential
+    label: transmembrane potential (delta-psi)
+    node_type: QUALITY
+    description: Large transmembrane electrical potential energizing electrogenic
+      cation/H+ antiport.
+  - node_id: na_solute_symporters
+    label: Na+/solute symporters
+    node_type: GENE_OR_PROTEIN
+    description: Symporters re-importing Na+ with solutes to supply cytoplasmic Na+
+      for antiport.
+  - node_id: cytoplasmic_na
+    label: cytoplasmic Na+
+    node_type: CHEMICAL
+    description: Intracellular sodium pool required to sustain alkaliphile antiport
+      activity.
+  - node_id: f1fo_atp_synthase
+    label: F1Fo-ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-translocating ATP synthase whose proton uptake contributes
+      to pH homeostasis.
+  - node_id: alkaline_ph_homeostasis
+    label: alkaline pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a near-neutral cytoplasmic pH against a strongly alkaline
+      exterior.
+  - node_id: external_ph_high
+    label: external pH > 10.3
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Strongly alkaline external pH above ~10.3.
+  - node_id: carbonate_speciation
+    label: carbonate (CO3 2-) speciation
+    node_type: CHEMICAL
+    description: Shift of dissolved inorganic carbon toward carbonate at high pH.
   edges:
   - subject: extreme_alkaliphile_antiport
     predicate: enables
@@ -71,6 +114,77 @@ causal_graphs:
       snippet: alkaliphiles
       notes: Supports the pH 10–14 range as a value within the pH-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: mrp_antiporter_complex
+    predicate: enables
+    object: ph_range_high_trait
+    description: The hetero-oligomeric Mrp antiporter has an indispensable role in
+      growth at high pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: The unusual hetero-oligomeric Mrp antiporter has an indispensable role
+        at high pH.
+  - subject: mrp_operon
+    predicate: encodes
+    object: mrp_antiporter_complex
+    description: The mrpA-G operon encodes the seven proteins forming the hetero-oligomeric
+      Mrp complex.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Mrp antiporters are encoded in operons containing genes for seven hydrophobic
+        proteins; all required to form the hetero-oligomeric complex.
+  - subject: membrane_potential
+    predicate: drives
+    object: mrp_antiporter_complex
+    description: A large transmembrane potential drives electrogenic Na+/H+ antiport
+      that imports H+.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: A large transmembrane potential is essential to drive electrogenic Na+/H+
+        and K+/H+ antiporters that import H+.
+  - subject: na_solute_symporters
+    predicate: supplies
+    object: cytoplasmic_na
+    description: Na+/solute symporters supply the cytoplasmic Na+ required to sustain
+      antiport activity.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: The ongoing requirement for cytoplasmic Na+ to support high levels of
+        alkaliphile antiport activity is met by numerous Na+/solute symporters.
+  - subject: cytoplasmic_na
+    predicate: enables
+    object: mrp_antiporter_complex
+    description: Cytoplasmic Na+ is the substrate that sustains high levels of alkaliphile
+      antiport activity.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Cytoplasmic Na+ is required to support high levels of alkaliphile antiport
+        activity.
+  - subject: f1fo_atp_synthase
+    predicate: contributes to
+    object: alkaline_ph_homeostasis
+    description: Proton uptake accompanying ATP synthesis contributes to alkaliphile
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: The proton uptake that accompanies ATP synthesis by the F1Fo-ATP synthase
+        contributes to alkaliphile pH homeostasis.
+  - subject: alkaline_ph_homeostasis
+    predicate: enables
+    object: ph_range_high_trait
+    description: Maintenance of cytoplasmic pH homeostasis enables growth at strongly
+      alkaline external pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Alkaline pH homeostasis underlies extreme-alkaliphile growth above pH
+        10.
+  - subject: external_ph_high
+    predicate: shifts speciation toward
+    object: carbonate_speciation
+    description: External pH above ~10.3 shifts dissolved inorganic carbon speciation
+      toward carbonate.
+    evidence:
+    - reference: DOI:10.1128/AEM.01557-23
+      notes: DIC speciation shifts strongly with pH, toward CO3= above ~10.3.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.832881+00:00'
   curator: seed_from_metpo
@@ -88,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

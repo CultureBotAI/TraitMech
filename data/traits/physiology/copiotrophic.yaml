@@ -57,6 +57,39 @@ causal_graphs:
     label: rapid growth
     node_type: BIOLOGICAL_PROCESS
     description: Fast biomass accumulation under nutrient-rich conditions.
+  - node_id: genome_size
+    label: genome size
+    node_type: QUALITY
+    description: Total genome length; copiotrophs tend toward larger genomes.
+  - node_id: motility_functions
+    label: cell motility functions
+    node_type: BIOLOGICAL_PROCESS
+    description: Flagellar/motility capacity enriched in copiotrophic genomes.
+  - node_id: chemotaxis
+    label: chemotaxis
+    node_type: BIOLOGICAL_PROCESS
+    description: Directed movement toward nutrients; enriched in copiotrophs.
+  - node_id: outer_membrane_secreted_proteins
+    label: outer membrane and secreted proteins
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane and extracellular proteins enriched in copiotrophic
+      genomes.
+  - node_id: catabolite_repression
+    label: catabolite repression / dynamic transcriptional regulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulatory mechanism reallocating proteome under nutrient upshift.
+  - node_id: proteome_reallocation
+    label: proteome reallocation
+    node_type: BIOLOGICAL_PROCESS
+    description: Dynamic reallocation of proteome sectors under changing nutrients.
+  - node_id: ribosome_synthesis
+    label: ribosome synthesis / biogenesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maximizing ribosome synthesis in favorable conditions for fast growth.
+  - node_id: minimum_doubling_time
+    label: minimum doubling time
+    node_type: QUALITY
+    description: Shortest doubling time; shorter values indicate copiotrophic lifestyle.
   edges:
   - subject: high_nutrient_environment
     predicate: selects for
@@ -112,6 +145,61 @@ causal_graphs:
     - reference: DOI:10.1002/bies.1091
       snippet: Bacteria can grow rapidly
       notes: Supports rapid growth as part of the copiotroph/oligotroph contrast.
+  - subject: genome_size
+    predicate: associated with
+    object: copiotrophic_trait
+    description: Larger genome size is associated with the copiotrophic strategy.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae081
+      notes: Copiotrophs had larger genomes versus oligotrophs (curate as association).
+    - reference: DOI:10.1073/pnas.0903507106
+      notes: 'Comparative genomics: copiotrophs show larger genomes than oligotrophs.'
+  - subject: copiotrophic_trait
+    predicate: associated with
+    object: motility_functions
+    description: Copiotrophic genomes are enriched in cell motility functions.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      notes: Cell motility (COG category N) high in copiotrophs vs low in oligotrophs.
+  - subject: copiotrophic_trait
+    predicate: associated with
+    object: chemotaxis
+    description: Copiotrophic genomes are enriched in chemotaxis genes/proteins.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae081
+      notes: Oligotrophs under-represented in chemotaxis/motility; copiotrophs enriched.
+  - subject: copiotrophic_trait
+    predicate: associated with
+    object: outer_membrane_secreted_proteins
+    description: Copiotrophic genomes encode more outer-membrane and secreted proteins.
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      notes: More outer-membrane and secreted proteins in copiotrophs.
+  - subject: catabolite_repression
+    predicate: enables
+    object: proteome_reallocation
+    description: Catabolite repression and dynamic transcriptional regulation enable
+      proteome reallocation under nutrient upshift.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-48591-9
+      notes: Strong transcriptional regulation (e.g. catabolite repression) dynamically
+        reallocates proteome sectors.
+  - subject: ribosome_synthesis
+    predicate: promotes
+    object: rapid_growth
+    description: Proteome allocation maximizing ribosome synthesis in favorable conditions
+      promotes rapid growth.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-48591-9
+      notes: Achieve rapid growth via maximizing ribosome synthesis during favorable
+        conditions.
+  - subject: minimum_doubling_time
+    predicate: indicates
+    object: copiotrophic_trait
+    description: Shorter minimum doubling time indicates a more copiotrophic lifestyle.
+    evidence:
+    - reference: DOI:10.1093/ismeco/ycae081
+      notes: Minimum doubling times shorter in genomes from more copiotrophic environments.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.873168+00:00'
   curator: seed_from_metpo
@@ -147,4 +235,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

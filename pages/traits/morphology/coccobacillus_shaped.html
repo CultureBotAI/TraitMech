@@ -124,12 +124,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>RodA/PBP3 elongasome</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>cell length-to-width ratio</strong>
+            
+            <p>Elongasome-driven lateral wall synthesis increases the long-to-short axis ratio, opposing a coccoid shape.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mBio.03235-23</code>
+                
+                <span class="meta">This elongation depends on the SEDS/PBP pair RodA/PBP3 and is seen as an increased ratio of long to short cell axes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cell length-to-width ratio</strong>
+            <span class="edge-predicate">determines</span>
+            <strong>short-rod geometry</strong>
+            
+            <p>A reduced but non-coccoid length-to-width ratio defines the short-rod geometry of coccobacilli.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mBio.03235-23</code>
+                
+                <span class="meta">Long-to-short cell axis ratio quantifies the elongation state intermediate between coccus and rod.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>GpsB</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>PBP2 localization</strong>
+            
+            <p>GpsB regulates the localization of PBP2 between cell periphery and division septum.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mBio.03235-23</code>
+                
+                <span class="meta">a gpsB mutant shows the strongest morphological phenotype, driven by partial delocalization of PBP2 and PBP4 away from the division septum.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>PBP2 localization</strong>
+            <span class="edge-predicate">controls</span>
+            <strong>peptidoglycan synthesis</strong>
+            
+            <p>Spatial localization of PBP2 controls where peptidoglycan insertion and crosslinking occur, biasing cells toward elongation or rounding.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mBio.03235-23</code>
+                
+                <span class="meta">Increased PBP2/PBP4 at the cell periphery raises peptidoglycan insertion and crosslinking throughout the cell, impairing elongation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>FtsZ filament properties</strong>
+            <span class="edge-predicate">directs</span>
+            <strong>peptidoglycan synthesis</strong>
+            
+            <p>FtsZ filament geometry directs asymmetric, helical patterns of cell-wall insertion.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mBio.00908-16</code>
+                
+                <span class="meta">altered FtsZ filaments direct asymmetric, helical cell-wall insertion, generating elongation; this helical pattern of wall insertion leads to elongation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>PBP2 (elongasome transpeptidase)</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>short-rod geometry</strong>
+            
+            <p>PBP2 transpeptidase activity within the RodA-PBP2 elongasome is required to maintain non-spherical rod/short-rod geometry.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1073/pnas.2215237120</code>
+                
+                <span class="meta">Loss of RodA-PBP2 elongasome activity drives a rod-to-sphere transition; PBP2 transpeptidase activity is required for rod-shape maintenance.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -297,6 +403,12 @@
           <time>2026-05-24T05:05:14Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A1B1UYY2×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -656,7 +768,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking coccobacillus shape to peptidoglycan synthesis, MreB-associated elongation, septal growth, and reduced length-to-width ratio.", "edges": [{"description": "MreB contributes to control of peptidoglycan synthetic complexes.", "evidence": [{"notes": "Supports MreB involvement in shape-related PG synthesis.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "control of the peptidoglycan synthetic complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "mreB", "target": "peptidoglycan_synthesis"}, {"description": "Wall synthesis patterns determine whether cells remain rod-like or become short coccobacilli.", "evidence": [{"notes": "Supports PG-associated shape changes to a coccobacillus state.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "conditions causing changes in cell shape"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_synthesis", "target": "short_rod_geometry"}, {"description": "Division-associated septal growth contributes to the short-rod intermediate geometry.", "evidence": [{"notes": "Supports a septation-linked role for MreB in representative coccobacillus-forming cells.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "role at mid-cell ... in early septation"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septal_growth", "target": "short_rod_geometry"}, {"description": "Short-rod geometry produces the coccobacillus-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint as a short-rod morphology.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "from a rod to coccobacillus"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "short_rod_geometry", "target": "coccobacillus_shaped_trait"}], "evidence_rows": [{"description": "MreB contributes to control of peptidoglycan synthetic complexes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB involvement in shape-related PG synthesis.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "control of the peptidoglycan synthetic complexes"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "MreB", "target": "peptidoglycan synthesis"}, {"description": "Wall synthesis patterns determine whether cells remain rod-like or become short coccobacilli.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PG-associated shape changes to a coccobacillus state.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "conditions causing changes in cell shape"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan synthesis", "target": "short-rod geometry"}, {"description": "Division-associated septal growth contributes to the short-rod intermediate geometry.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a septation-linked role for MreB in representative coccobacillus-forming cells.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "role at mid-cell ... in early septation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septal growth", "target": "short-rod geometry"}, {"description": "Short-rod geometry produces the coccobacillus-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint as a short-rod morphology.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "from a rod to coccobacillus"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "short-rod geometry", "target": "coccobacillus shaped"}], "graph_id": "coccobacillus_shaped_short_rod_morphogenesis", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Short, plump rod morphology intermediate between coccus and bacillus.", "grounding": "METPO:1000688", "id": "coccobacillus_shaped_trait", "is_orphan": false, "label": "coccobacillus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like bacterial cytoskeletal protein involved in cell-shape control.", "grounding": "UniProtKB:A0A1B1UYY2", "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Division-associated cell-wall synthesis.", "grounding": null, "id": "septal_growth", "is_orphan": false, "label": "septal growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell geometry with reduced length-to-width ratio.", "grounding": null, "id": "short_rod_geometry", "is_orphan": false, "label": "short-rod geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Coccobacillus short-rod morphogenesis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking coccobacillus shape to peptidoglycan synthesis, MreB-associated elongation, septal growth, and reduced length-to-width ratio.", "edges": [{"description": "MreB contributes to control of peptidoglycan synthetic complexes.", "evidence": [{"notes": "Supports MreB involvement in shape-related PG synthesis.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "control of the peptidoglycan synthetic complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "controls", "predicate_id": "RO:0002211", "source": "mreB", "target": "peptidoglycan_synthesis"}, {"description": "Wall synthesis patterns determine whether cells remain rod-like or become short coccobacilli.", "evidence": [{"notes": "Supports PG-associated shape changes to a coccobacillus state.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "conditions causing changes in cell shape"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_synthesis", "target": "short_rod_geometry"}, {"description": "Division-associated septal growth contributes to the short-rod intermediate geometry.", "evidence": [{"notes": "Supports a septation-linked role for MreB in representative coccobacillus-forming cells.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "role at mid-cell ... in early septation"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septal_growth", "target": "short_rod_geometry"}, {"description": "Short-rod geometry produces the coccobacillus-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint as a short-rod morphology.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "from a rod to coccobacillus"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "short_rod_geometry", "target": "coccobacillus_shaped_trait"}, {"description": "Elongasome-driven lateral wall synthesis increases the long-to-short axis ratio, opposing a coccoid shape.", "evidence": [{"notes": "This elongation depends on the SEDS/PBP pair RodA/PBP3 and is seen as an increased ratio of long to short cell axes.", "reference": "DOI:10.1128/mBio.03235-23"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "rodA_pbp3_elongasome", "target": "length_to_width_ratio"}, {"description": "A reduced but non-coccoid length-to-width ratio defines the short-rod geometry of coccobacilli.", "evidence": [{"notes": "Long-to-short cell axis ratio quantifies the elongation state intermediate between coccus and rod.", "reference": "DOI:10.1128/mBio.03235-23"}], "id": "edge-6", "is_orphan": false, "predicate": "determines", "predicate_id": null, "source": "length_to_width_ratio", "target": "short_rod_geometry"}, {"description": "GpsB regulates the localization of PBP2 between cell periphery and division septum.", "evidence": [{"notes": "a gpsB mutant shows the strongest morphological phenotype, driven by partial delocalization of PBP2 and PBP4 away from the division septum.", "reference": "DOI:10.1128/mBio.03235-23"}], "id": "edge-7", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "gpsB", "target": "pbp2_localization"}, {"description": "Spatial localization of PBP2 controls where peptidoglycan insertion and crosslinking occur, biasing cells toward elongation or rounding.", "evidence": [{"notes": "Increased PBP2/PBP4 at the cell periphery raises peptidoglycan insertion and crosslinking throughout the cell, impairing elongation.", "reference": "DOI:10.1128/mBio.03235-23"}], "id": "edge-8", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "pbp2_localization", "target": "peptidoglycan_synthesis"}, {"description": "FtsZ filament geometry directs asymmetric, helical patterns of cell-wall insertion.", "evidence": [{"notes": "altered FtsZ filaments direct asymmetric, helical cell-wall insertion, generating elongation; this helical pattern of wall insertion leads to elongation.", "reference": "DOI:10.1128/mBio.00908-16"}], "id": "edge-9", "is_orphan": false, "predicate": "directs", "predicate_id": null, "source": "ftsZ_filament", "target": "peptidoglycan_synthesis"}, {"description": "PBP2 transpeptidase activity within the RodA-PBP2 elongasome is required to maintain non-spherical rod/short-rod geometry.", "evidence": [{"notes": "Loss of RodA-PBP2 elongasome activity drives a rod-to-sphere transition; PBP2 transpeptidase activity is required for rod-shape maintenance.", "reference": "DOI:10.1073/pnas.2215237120"}], "id": "edge-10", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "pbp2_elongasome", "target": "short_rod_geometry"}], "evidence_rows": [{"description": "MreB contributes to control of peptidoglycan synthetic complexes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB involvement in shape-related PG synthesis.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "control of the peptidoglycan synthetic complexes"}], "predicate": "controls", "predicate_id": "RO:0002211", "source": "MreB", "target": "peptidoglycan synthesis"}, {"description": "Wall synthesis patterns determine whether cells remain rod-like or become short coccobacilli.", "edge_id": "edge-2", "evidence": [{"notes": "Supports PG-associated shape changes to a coccobacillus state.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "conditions causing changes in cell shape"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan synthesis", "target": "short-rod geometry"}, {"description": "Division-associated septal growth contributes to the short-rod intermediate geometry.", "edge_id": "edge-3", "evidence": [{"notes": "Supports a septation-linked role for MreB in representative coccobacillus-forming cells.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "role at mid-cell ... in early septation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "septal growth", "target": "short-rod geometry"}, {"description": "Short-rod geometry produces the coccobacillus-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint as a short-rod morphology.", "reference": "DOI:10.1128/JB.187.1.54-64.2005", "snippet": "from a rod to coccobacillus"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "short-rod geometry", "target": "coccobacillus shaped"}, {"description": "Elongasome-driven lateral wall synthesis increases the long-to-short axis ratio, opposing a coccoid shape.", "edge_id": "edge-5", "evidence": [{"notes": "This elongation depends on the SEDS/PBP pair RodA/PBP3 and is seen as an increased ratio of long to short cell axes.", "reference": "DOI:10.1128/mBio.03235-23"}], "predicate": "increases", "predicate_id": null, "source": "RodA/PBP3 elongasome", "target": "cell length-to-width ratio"}, {"description": "A reduced but non-coccoid length-to-width ratio defines the short-rod geometry of coccobacilli.", "edge_id": "edge-6", "evidence": [{"notes": "Long-to-short cell axis ratio quantifies the elongation state intermediate between coccus and rod.", "reference": "DOI:10.1128/mBio.03235-23"}], "predicate": "determines", "predicate_id": null, "source": "cell length-to-width ratio", "target": "short-rod geometry"}, {"description": "GpsB regulates the localization of PBP2 between cell periphery and division septum.", "edge_id": "edge-7", "evidence": [{"notes": "a gpsB mutant shows the strongest morphological phenotype, driven by partial delocalization of PBP2 and PBP4 away from the division septum.", "reference": "DOI:10.1128/mBio.03235-23"}], "predicate": "regulates", "predicate_id": null, "source": "GpsB", "target": "PBP2 localization"}, {"description": "Spatial localization of PBP2 controls where peptidoglycan insertion and crosslinking occur, biasing cells toward elongation or rounding.", "edge_id": "edge-8", "evidence": [{"notes": "Increased PBP2/PBP4 at the cell periphery raises peptidoglycan insertion and crosslinking throughout the cell, impairing elongation.", "reference": "DOI:10.1128/mBio.03235-23"}], "predicate": "controls", "predicate_id": null, "source": "PBP2 localization", "target": "peptidoglycan synthesis"}, {"description": "FtsZ filament geometry directs asymmetric, helical patterns of cell-wall insertion.", "edge_id": "edge-9", "evidence": [{"notes": "altered FtsZ filaments direct asymmetric, helical cell-wall insertion, generating elongation; this helical pattern of wall insertion leads to elongation.", "reference": "DOI:10.1128/mBio.00908-16"}], "predicate": "directs", "predicate_id": null, "source": "FtsZ filament properties", "target": "peptidoglycan synthesis"}, {"description": "PBP2 transpeptidase activity within the RodA-PBP2 elongasome is required to maintain non-spherical rod/short-rod geometry.", "edge_id": "edge-10", "evidence": [{"notes": "Loss of RodA-PBP2 elongasome activity drives a rod-to-sphere transition; PBP2 transpeptidase activity is required for rod-shape maintenance.", "reference": "DOI:10.1073/pnas.2215237120"}], "predicate": "required for", "predicate_id": null, "source": "PBP2 (elongasome transpeptidase)", "target": "short-rod geometry"}], "graph_id": "coccobacillus_shaped_short_rod_morphogenesis", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Short, plump rod morphology intermediate between coccus and bacillus.", "grounding": "METPO:1000688", "id": "coccobacillus_shaped_trait", "is_orphan": false, "label": "coccobacillus shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Divisome tubulin-homolog FtsZ filament conformation affecting cell-wall insertion geometry.", "grounding": null, "id": "ftsZ_filament", "is_orphan": false, "label": "FtsZ filament properties", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-cycle regulator coordinating peptidoglycan synthase localization.", "grounding": null, "id": "gpsB", "is_orphan": false, "label": "GpsB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Geometric ratio of long to short cell axes that distinguishes rods from cocci.", "grounding": null, "id": "length_to_width_ratio", "is_orphan": false, "label": "cell length-to-width ratio", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like bacterial cytoskeletal protein involved in cell-shape control.", "grounding": "UniProtKB:A0A1B1UYY2", "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Penicillin-binding protein 2, transpeptidase of the RodA-PBP2 elongasome supporting rod shape.", "grounding": null, "id": "pbp2_elongasome", "is_orphan": false, "label": "PBP2 (elongasome transpeptidase)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Spatial distribution of penicillin-binding protein 2 between periphery and septum.", "grounding": null, "id": "pbp2_localization", "is_orphan": false, "label": "PBP2 localization", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS/PBP pair RodA/PBP3 mediating lateral cell-wall elongation.", "grounding": null, "id": "rodA_pbp3_elongasome", "is_orphan": false, "label": "RodA/PBP3 elongasome", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Division-associated cell-wall synthesis.", "grounding": null, "id": "septal_growth", "is_orphan": false, "label": "septal growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell geometry with reduced length-to-width ratio.", "grounding": null, "id": "short_rod_geometry", "is_orphan": false, "label": "short-rod geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Coccobacillus short-rod morphogenesis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -667,7 +779,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

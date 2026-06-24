@@ -40,6 +40,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Selective and drift-driven loss of genomic content.
     grounding: METPO:1007721
+  - node_id: ocean_depth
+    label: ocean depth
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Depth layer in the marine water column (epipelagic to bathypelagic).
+  - node_id: soil_ph
+    label: soil pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Acidity/alkalinity of soil habitat.
+  - node_id: horizontal_gene_transfer
+    label: horizontal gene transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Acquisition of genetic material between organisms, expanding gene
+      content.
+  - node_id: mobile_genetic_elements
+    label: mobile genetic elements
+    node_type: CHEMICAL
+    description: Plasmids, phages, ICEs, transposons and insertion sequences that
+      move DNA between genomes.
+  - node_id: gene_loss
+    label: gene loss
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of protein-coding genes leading to genome reduction.
+  - node_id: metabolic_versatility
+    label: metabolic versatility
+    node_type: CAPACITY
+    description: Breadth of metabolic functions encoded by a genome.
   edges:
   - subject: effective_population_size
     predicate: regulates
@@ -60,6 +86,56 @@ causal_graphs:
       notes: Giovannoni et al. link streamlining theory to small genomes in abundant
         free-living microbes.
     predicate_id: biolink:causes
+  - subject: ocean_depth
+    predicate: positively associated with
+    object: genome_size_trait
+    description: Average genome size of marine communities increases with ocean depth.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-36988-x
+      notes: 'Ngugi 2023: AGS increases with depth across epipelagic, mesopelagic
+        and bathypelagic metagenomes.'
+  - subject: soil_ph
+    predicate: negatively associated with
+    object: genome_size_trait
+    description: Low-pH soils host communities with larger average genomes.
+    evidence:
+    - reference: DOI:10.1101/2021.11.17.469016
+      notes: 'Chuckran 2023: negative AGS-pH relationship in soil; strengthened after
+        microbial-DNA correction (R2 0.32->0.57).'
+  - subject: horizontal_gene_transfer
+    predicate: increases
+    object: genome_size_trait
+    description: HGT is a driving force behind genome expansion, adding accessory
+      gene content.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02357-0
+      notes: 'Dmitrijeva 2024: HGT described as driving force behind genome expansion;
+        ~42.5% of genes affected by HGT per species.'
+  - subject: mobile_genetic_elements
+    predicate: mediates
+    object: horizontal_gene_transfer
+    description: MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry
+      out HGT.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.16630
+      notes: 'Kogay 2024: MGEs crucial for horizontal gene transfer, including plasmids,
+        ICEs, transposons, IS and phages.'
+  - subject: gene_loss
+    predicate: decreases
+    object: genome_size_trait
+    description: Loss of protein-coding genes reduces genome length.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50368-z
+      notes: 'Dong 2024: KO-abundance changes track genome size, indicating protein-coding
+        gene loss and genome reduction.'
+  - subject: metabolic_versatility
+    predicate: positively associated with
+    object: genome_size_trait
+    description: Greater metabolic versatility is correlated with larger genomes.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01465-0
+      notes: 'Piton 2023: soil bacterial trait axis of metabolic versatility strongly
+        positively correlated with genome size (R2=0.64).'
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -77,4 +153,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007721×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

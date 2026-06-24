@@ -43,6 +43,32 @@ causal_graphs:
     label: osmoprotectant transport
     node_type: MOLECULAR_FUNCTION
     description: Uptake of compatible solutes such as glycine betaine.
+  - node_id: salt_tolerance
+    label: salt tolerance
+    node_type: CAPACITY
+    description: Capacity to grow and survive under elevated salinity / salt stress.
+  - node_id: ectoine_biosynthesis
+    label: ectoine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis of the compatible solute ectoine via the ectABC/ectBACD
+      pathway.
+  - node_id: ect_gene_cluster
+    label: ectABC/ectBACD gene cluster
+    node_type: GENE_OR_PROTEIN
+    description: Ectoine biosynthesis operon encoding the ectoine pathway enzymes.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: A major compatible solute (osmolyte) accumulated under salt stress.
+  - node_id: ion_homeostasis
+    label: ion homeostasis during salt stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of Na+/K+ balance under salt stress.
+  - node_id: na_k_transcription
+    label: Na+/K+ transcriptional induction
+    node_type: BIOLOGICAL_PROCESS
+    description: Coordinated induction of sodium/potassium transport transcription
+      under salt stress.
   edges:
   - subject: low_moderate_nacl
     predicate: enables
@@ -84,6 +110,47 @@ causal_graphs:
       notes: Review supports accumulation of organic osmotic solutes in bacterial
         osmoadaptation.
     predicate_id: METPO:2000210
+  - subject: ect_gene_cluster
+    predicate: enables
+    object: ectoine_biosynthesis
+    description: The ect gene cluster encodes the enzymes that carry out ectoine biosynthesis.
+    evidence:
+    - reference: DOI:10.1128/aem.01905-23
+      notes: ectoine biosynthesis genes are denoted by ectABC; ectBACD up-regulated
+        as an osmoadaptation system.
+  - subject: ectoine_biosynthesis
+    predicate: produces
+    object: ectoine
+    description: Ectoine biosynthesis produces the compatible solute ectoine.
+    evidence:
+    - reference: DOI:10.1128/aem.01905-23
+      notes: Wild-type accumulates ectoine as its major osmolyte via the ectABC pathway.
+  - subject: ectoine
+    predicate: increases
+    object: salt_tolerance
+    description: Accumulation of ectoine as a compatible solute increases salt tolerance.
+    evidence:
+    - reference: DOI:10.1128/aem.01905-23
+      notes: Wild-type accumulates ectoine as its major osmolyte while the ectABC-deleted
+        strain is salt-sensitive.
+  - subject: osmoprotectant_transport
+    predicate: increases
+    object: salt_tolerance
+    description: Uptake of compatible solutes is a general salt-out osmoadaptation
+      strategy that raises salt tolerance.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy026
+      notes: Salt-out strategists exclude salt and/or synthesize or uptake compatible
+        solutes (e.g. glycine betaine); dominant strategy in many halophilic bacteria.
+  - subject: na_k_transcription
+    predicate: supports
+    object: ion_homeostasis
+    description: Coordinated induction of Na+/K+ transcription supports ion homeostasis
+      during salt stress.
+    evidence:
+    - reference: DOI:10.1038/s42003-022-04319-3
+      notes: Coordinated induction of Na+/K+ transcription and ectoine, proline, and
+        betaine biosynthesis under salt stress.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.863572+00:00'
   curator: seed_from_metpo
@@ -147,4 +214,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

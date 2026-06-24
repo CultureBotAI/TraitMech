@@ -49,6 +49,32 @@ causal_graphs:
     label: lateral cell-wall elongation
     node_type: BIOLOGICAL_PROCESS
     description: Sidewall growth mode that lengthens rods.
+  - node_id: mreB_elongation_machinery
+    label: MreB-mediated elongation machinery
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like MreB cytoskeleton directing lateral (rod) elongation.
+  - node_id: elongation_capacity
+    label: elongation capacity
+    node_type: CAPACITY
+    description: Capacity of a cell to elongate into a rod via sidewall growth.
+  - node_id: divisome_pbps
+    label: divisome and PBPs
+    node_type: GENE_OR_PROTEIN
+    description: Division machinery and penicillin-binding proteins recruited to mid-cell.
+  - node_id: ftsZ_treadmilling
+    label: FtsZ treadmilling
+    node_type: BIOLOGICAL_PROCESS
+    description: Treadmilling of FtsZ polymers distributing PG synthases around the
+      Z-ring.
+  - node_id: ftsW_flippase
+    label: FtsW lipid II flippase
+    node_type: GENE_OR_PROTEIN
+    description: Septally localized flippase that translocates lipid II across the
+      membrane.
+  - node_id: lipid_ii
+    label: lipid II
+    node_type: CHEMICAL
+    description: Membrane-bound peptidoglycan precursor and PBP substrate.
   edges:
   - subject: ftsZ_division_ring
     predicate: enables
@@ -87,6 +113,61 @@ causal_graphs:
       snippet: primary role in maintaining cell shape
       notes: Supports the cell wall as central to bacterial shape maintenance.
     predicate_id: RO:0002211
+  - subject: septal_peptidoglycan_synthesis
+    predicate: contributes to
+    object: sphere_shaped_trait
+    description: Septal-only peptidoglycan synthesis in cocci produces spherical morphology.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: spherical cocci synthesize peptidoglycan only at the division septum
+  - subject: mreB_elongation_machinery
+    predicate: causally upstream of
+    object: elongation_capacity
+    description: Loss of the MreB cytoskeleton removes the elongation capacity that
+      lengthens rods.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: loss of the MreB cytoskeleton is the main factor that prevents cocci
+        from elongating into rods
+  - subject: elongation_capacity
+    predicate: reduced in
+    object: sphere_shaped_trait
+    description: Loss of elongation capacity prevents cocci from elongating into rods,
+      favoring a sphere.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: prevents cocci from elongating into rods
+  - subject: ftsZ_division_ring
+    predicate: recruits
+    object: divisome_pbps
+    description: FtsZ assembly into a mid-cell Z ring recruits PBPs and divisome components.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: cell division is initiated by FtsZ assembly into a mid-cell Z ring that
+        recruits PBPs and divisome components
+  - subject: ftsZ_treadmilling
+    predicate: regulates
+    object: septal_peptidoglycan_synthesis
+    description: FtsZ treadmilling distributes the PG synthases that form the septum.
+    evidence:
+    - reference: DOI:10.1042/bsr20221664
+      notes: The FtsZ polymers undergo treadmilling around the Z-ring to distribute
+        the PG synthases forming the septum
+  - subject: ftsW_flippase
+    predicate: enables
+    object: lipid_ii
+    description: FtsW flips lipid II to the outer septal face for PG synthesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: lipid II is flipped to the outside by the septally localized flippase
+        FtsW
+  - subject: lipid_ii
+    predicate: enables
+    object: septal_peptidoglycan_synthesis
+    description: Lipid II serves as the PBP substrate for septal peptidoglycan synthesis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3088
+      notes: PG synthesis uses lipid II as the PBP substrate
 curation_history:
 - timestamp: '2026-05-05T01:35:46.894456+00:00'
   curator: seed_from_metpo
@@ -129,4 +210,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

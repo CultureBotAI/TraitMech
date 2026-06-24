@@ -48,6 +48,38 @@ causal_graphs:
     label: minimal osmoadaptive load
     node_type: BIOLOGICAL_PROCESS
     description: Low demand on osmolyte and ion-transport machinery at low salt.
+  - node_id: non_halophile_optimum_definition
+    label: non-halophilic optimum NaCl (<0.2 M / ~1% w/v)
+    node_type: TRAIT
+    description: Optimal growth at less than 0.2 M (about 1% w/v) NaCl, defining non-halophilic
+      physiology.
+  - node_id: halotolerant_organism
+    label: halotolerant organism
+    node_type: TRAIT
+    description: A non-halophilic organism able to grow at high salt concentrations.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular accumulation of low-molecular-weight compatible solutes
+      (osmolytes) in response to osmotic stress.
+  - node_id: osmotic_stress_adaptation
+    label: osmotic stress adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular adaptation maintaining turgor and function under osmotic
+      stress.
+  - node_id: cyclic_di_amp
+    label: cyclic di-AMP
+    node_type: CHEMICAL
+    description: Second messenger nucleotide that regulates osmolyte and ion transport.
+  - node_id: k_uptake_systems
+    label: K+ uptake systems (Trk/Ktr/Kup/KimA)
+    node_type: GENE_OR_PROTEIN
+    description: Potassium uptake transporters whose activity responds to osmotic
+      signaling.
+  - node_id: opua_opuc_transport
+    label: OpuA/OpuC compatible-solute transporters
+    node_type: GENE_OR_PROTEIN
+    description: ABC-type importers of compatible solutes such as glycine betaine.
   edges:
   - subject: low_ambient_nacl
     predicate: imposes
@@ -75,6 +107,60 @@ causal_graphs:
       snippet: optimal NaCl
       notes: Supports low-salt optima as a value within the NaCl-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: non_halophile_optimum_definition
+    predicate: defined as
+    object: nacl_optimum_low_trait
+    description: Non-halophilic optimum at <0.2 M (~1% w/v) NaCl corresponds to the
+      NaCl-optimum-low trait.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2019.01895
+      notes: non-halophilic microorganisms grow optimally at less than 0.2 M (1%)
+        NaCl.
+  - subject: halotolerant_organism
+    predicate: is a
+    object: non_halophile_optimum_definition
+    description: Halotolerant organisms are non-halophiles (low-NaCl optimum) able
+      to grow at high salt.
+    evidence:
+    - reference: DOI:10.1007/s40201-020-00519-3
+      notes: halotolerant organisms are those non-halophilic able to grow at high
+        salt concentrations.
+  - subject: compatible_solute_accumulation
+    predicate: supports
+    object: osmotic_stress_adaptation
+    description: Accumulation of compatible solutes supports adaptation to osmotic
+      stress.
+    evidence:
+    - reference: DOI:10.1128/aem.00619-25
+      notes: Bacteria respond to osmotic stress by intracellularly accumulating compatible
+        solutes.
+  - subject: minimal_osmoadaptive_load
+    predicate: reduces demand for
+    object: compatible_solute_accumulation
+    description: At low ambient NaCl, minimal osmoadaptive load reduces the need for
+      compatible-solute accumulation.
+    evidence:
+    - reference: DOI:10.1128/aem.00619-25
+      notes: Compatible solutes are accumulated in response to osmotic stress; low
+        salt imposes minimal such demand.
+  - subject: cyclic_di_amp
+    predicate: inhibits
+    object: k_uptake_systems
+    description: Cyclic di-AMP binds gating subunits of Trk/Ktr/Kup/KimA and inhibits
+      K+ uptake.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: gating subunits of Trk/Ktr bind cyclic di-AMP; KUP-family activity is
+        inhibited by cyclic di-AMP.
+  - subject: cyclic_di_amp
+    predicate: negatively regulates
+    object: opua_opuc_transport
+    description: Cyclic di-AMP binds OpuA/OpuC importers and negatively regulates
+      compatible-solute transport.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: c-di-AMP binds CBS and RCK_C domains of OpuA/OpuC and negatively regulates
+        their transport activity.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.833539+00:00'
   curator: seed_from_metpo
@@ -92,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

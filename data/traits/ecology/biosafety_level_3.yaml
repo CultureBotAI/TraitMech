@@ -44,6 +44,40 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Highly virulent pathogens with aerosol transmission potential causing
       serious or lethal disease.
+  - node_id: aerosol_transmission_risk
+    label: aerosol transmission risk
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Risk of agent transmission via aerosols, driving need for high containment.
+  - node_id: negative_pressure_airflow
+    label: negative pressure directional airflow
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Inward directional airflow with negative pressure (2.5-10 Pa) used
+      as a BSL-3 engineering control.
+  - node_id: hepa_filtration
+    label: HEPA filtration of exhaust air
+    node_type: ENVIRONMENTAL_FACTOR
+    description: HEPA-filtered exhaust removing 99.97% of particles >=0.3 um as a
+      BSL-3 engineering control.
+  - node_id: boundary_integrity_testing
+    label: boundary integrity testing
+    node_type: EXPERIMENTAL_FACTOR
+    description: Quantitative leakage/porosity testing verifying that a containment
+      room meets minimum requirements.
+  - node_id: pressure_decay_testing
+    label: pressure decay testing
+    node_type: EXPERIMENTAL_FACTOR
+    description: Leakage test maintaining steady negative pressure to quantify containment
+      integrity.
+  - node_id: iso_35001_biorisk_management
+    label: ISO 35001 biorisk management system
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Plan-Do-Check-Act biorisk management-system standard for laboratory
+      biosafety.
+  - node_id: laboratory_acquired_infection
+    label: laboratory-acquired infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Infection acquired by personnel during laboratory work with biological
+      agents.
   edges:
   - subject: serious_pathogen_hazard
     predicate: produces
@@ -64,6 +98,54 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports BSL-3 as a member of the biosafety-level classification.
     predicate_id: rdfs:subClassOf
+  - subject: aerosol_transmission_risk
+    predicate: necessitates
+    object: bsl3_trait
+    description: Risk of severe/lethal disease via aerosol route necessitates BSL-3
+      containment.
+    evidence:
+    - reference: DOI:10.64483/jmph-115
+      notes: '"can cause severe or lethal disease by aerosol route... requires respiratory
+        protection"'
+  - subject: bsl3_trait
+    predicate: implemented by
+    object: negative_pressure_airflow
+    description: BSL-3 containment is implemented by negative-pressure directional
+      airflow.
+    evidence:
+    - reference: DOI:10.64483/jmph-115
+      notes: '"negative pressure (2.5 to 10 Pascals) with inward airflow"'
+  - subject: bsl3_trait
+    predicate: implemented by
+    object: hepa_filtration
+    description: BSL-3 containment is implemented by HEPA filtration of exhaust air.
+    evidence:
+    - reference: DOI:10.64483/jmph-115
+      notes: '"HEPA-filtered exhaust (eliminating 99.97% of particles >=0.3 um)"'
+  - subject: bsl3_trait
+    predicate: verified by
+    object: boundary_integrity_testing
+    description: BSL-3 containment integrity is verified by quantitative boundary
+      integrity testing.
+    evidence:
+    - reference: DOI:10.1089/apb.2023.0017
+      notes: '"quantitative leakage testing to verify it meets minimum requirements"'
+  - subject: boundary_integrity_testing
+    predicate: utilizes
+    object: pressure_decay_testing
+    description: Boundary integrity testing utilizes pressure decay testing under
+      steady negative pressure.
+    evidence:
+    - reference: DOI:10.1089/apb.2023.0017
+      notes: '"maintain a steady negative pressure during leakage testing"'
+  - subject: iso_35001_biorisk_management
+    predicate: mitigates
+    object: laboratory_acquired_infection
+    description: ISO 35001 biorisk management systems mitigate laboratory-acquired
+      infections.
+    evidence:
+    - reference: DOI:10.26686/nzjhsp.v1i2.9540
+      notes: '"safety management systems generally improve health and safety performance"'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.933585+00:00'
   curator: seed_from_metpo
@@ -81,6 +163,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-2ee31ba13f9c

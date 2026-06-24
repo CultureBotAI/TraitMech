@@ -45,6 +45,40 @@ causal_graphs:
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
     description: Growth that does not require oxygen.
+  - node_id: intermediate_oxygen_level
+    label: intermediate oxygen level
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Sub-atmospheric, microoxic O2 concentration between anoxia and air.
+  - node_id: superoxide
+    label: superoxide
+    node_type: CHEMICAL
+    description: Superoxide radical anion, a reactive oxygen species.
+  - node_id: superoxide_reductase
+    label: superoxide reductase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme (SOR) that reduces superoxide to hydrogen peroxide.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    description: H2O2, a reactive oxygen species generated during O2 exposure.
+  - node_id: rubrerythrin_peroxidase
+    label: rubrerythrin/peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Rubrerythrin and peroxidase enzymes that reduce H2O2 to water.
+  - node_id: reduced_electron_donors
+    label: reduced electron donors (NADH)
+    node_type: CHEMICAL
+    description: Reduced electron donors such as NADH that power ROS-detoxifying enzymes.
+  - node_id: gut_oxygen_gradient
+    label: gut lumen oxygen gradient
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Spatial O2 gradient in host gut, ~0.1-0.4% in lumen up to ~5% in
+      tissues.
+  - node_id: low_oxygen_defense_systems
+    label: low-oxygen defense systems
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular systems mitigating ROS and consuming O2 under low-oxygen
+      exposure.
   edges:
   - subject: limited_oxygen_exposure
     predicate: tolerated by
@@ -91,6 +125,57 @@ causal_graphs:
     - reference: DOI:10.1016/j.biortech.2011.02.011
       snippet: microaerotolerant or aerotolerant anaerobes
       notes: Supports microaerotolerance as an anaerobe oxygen-tolerance subtype.
+  - subject: intermediate_oxygen_level
+    predicate: maximizes growth of
+    object: microaerotolerant_trait
+    description: Maximal growth of microaerotolerant cells often occurs at intermediate
+      oxygen levels.
+    evidence:
+    - reference: DOI:10.1128/CMR.00110-14
+      notes: Growth occurs in the presence or absence of oxygen; however, maximal
+        growth occurs at intermediate oxygen levels.
+  - subject: superoxide_reductase
+    predicate: reduces
+    object: superoxide
+    description: Superoxide reductase reduces superoxide (to hydrogen peroxide) using
+      reduced electron donors.
+    evidence:
+    - reference: DOI:10.1128/IAI.00502-24
+      notes: Review notes SOR reduces superoxide using electrons from donors like
+        NADH.
+  - subject: superoxide_reductase
+    predicate: produces
+    object: hydrogen_peroxide
+    description: Reduction of superoxide by SOR yields hydrogen peroxide.
+    evidence:
+    - reference: DOI:10.1128/IAI.00502-24
+      notes: SOR reduces superoxide to H2O2 as part of the anaerobe oxygen-defense
+        backbone.
+  - subject: rubrerythrin_peroxidase
+    predicate: reduces
+    object: hydrogen_peroxide
+    description: Rubrerythrin/peroxidases reduce hydrogen peroxide to water.
+    evidence:
+    - reference: DOI:10.1128/IAI.00502-24
+      notes: Review states Rbr/peroxidases reduce H2O2 to water.
+  - subject: reduced_electron_donors
+    predicate: enables function of
+    object: oxidative_stress_defense
+    description: Protection by SOR/Rbr defenses depends on available reduced electron
+      donors.
+    evidence:
+    - reference: DOI:10.1128/IAI.00502-24
+      notes: The protection conferred by SOR/Rbr depends on available reduced electron
+        donors.
+  - subject: gut_oxygen_gradient
+    predicate: creates selection for
+    object: low_oxygen_defense_systems
+    description: Host gut oxygen gradients expose anaerobes to low O2, selecting for
+      low-O2 defense systems.
+    evidence:
+    - reference: DOI:10.1128/IAI.00502-24
+      notes: Gut O2 gradients (colon lumen 0.1-0.4% to ~5% in tissues) expose anaerobes
+        to low O2 during colonization/inflammation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.854338+00:00'
   curator: seed_from_metpo
@@ -124,4 +209,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

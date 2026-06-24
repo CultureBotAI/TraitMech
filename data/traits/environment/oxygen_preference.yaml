@@ -63,6 +63,39 @@ causal_graphs:
     grounding: METPO:1000612
     description: Growth across a range of oxygen availabilities, switching between
       aerobic and anaerobic metabolism.
+  - node_id: molecular_oxygen
+    label: molecular oxygen
+    node_type: CHEMICAL
+    description: O2 used as a terminal electron acceptor in aerobic respiration.
+  - node_id: oxygen_terminal_electron_acceptor
+    label: O2 as terminal electron acceptor
+    node_type: MOLECULAR_FUNCTION
+    description: Use of molecular oxygen as the terminal electron acceptor of the
+      respiratory chain.
+  - node_id: reactive_oxygen_species_stress
+    label: oxygen / reactive oxygen species stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Exposure to O2 and reactive oxygen species such as hydrogen peroxide.
+  - node_id: detoxifying_enzyme_expression
+    label: detoxifying-enzyme gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Upregulation of genes encoding oxidative-stress detoxifying enzymes.
+  - node_id: catalase
+    label: catalase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that degrades hydrogen peroxide to water and oxygen.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    description: Reactive oxygen species produced during aerobic metabolism.
+  - node_id: superoxide_dismutase
+    label: superoxide dismutase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that dismutates superoxide; key oxidative-stress defense.
+  - node_id: oxygen_tolerance
+    label: oxygen tolerance
+    node_type: CAPACITY
+    description: Capacity of a cell to survive exposure to molecular oxygen.
   edges:
   - subject: ambient_oxygen
     predicate: defines
@@ -114,6 +147,57 @@ causal_graphs:
       notes: Supports facultative organisms as a mixed-O2 setting on the oxygen-preference
         axis, switching between aerobic and anaerobic metabolism.
     predicate_id: rdfs:subClassOf
+  - subject: oxygen_terminal_electron_acceptor
+    predicate: enables
+    object: aerobic_phenotype
+    description: Obligate aerobic growth depends on molecular oxygen as terminal electron
+      acceptor.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012084
+      notes: Obligate aerobes use only oxygen as the terminal electron acceptor, defining
+        aerobic oxygen-preference.
+  - subject: molecular_oxygen
+    predicate: serves as
+    object: oxygen_terminal_electron_acceptor
+    description: Molecular oxygen functions as the terminal electron acceptor in aerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012084
+      notes: Oxygen is used as the terminal electron acceptor of the aerobic respiratory
+        chain.
+  - subject: reactive_oxygen_species_stress
+    predicate: upregulates
+    object: detoxifying_enzyme_expression
+    description: O2 or H2O2 stress upregulates detoxifying-enzyme genes.
+    evidence:
+    - reference: DOI:10.1128/aem.00606-23
+      notes: Expression of genes encoding detoxifying enzymes was upregulated in response
+        to O2 or H2O2 stress.
+  - subject: detoxifying_enzyme_expression
+    predicate: increases
+    object: oxygen_tolerance
+    description: A larger detoxifying-enzyme repertoire increases survival under oxygen
+      exposure.
+    evidence:
+    - reference: DOI:10.1128/aem.00606-23
+      notes: Cells with more detoxifying genes survived longer than those with few
+        scavenging enzymes.
+  - subject: catalase
+    predicate: degrades
+    object: hydrogen_peroxide
+    description: Catalase rapidly degrades hydrogen peroxide, a reactive oxygen species.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: Catalase is the most prominent enzyme for H2O2 degradation at higher
+        concentrations.
+  - subject: superoxide_dismutase
+    predicate: increases
+    object: oxygen_tolerance
+    description: Higher superoxide dismutase activity is associated with higher oxygen
+      tolerance.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: Higher Sod activity corresponded to higher oxygen tolerance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848644+00:00'
   curator: seed_from_metpo
@@ -143,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -52,6 +52,30 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Radical chemistry and low-potential metal centers vulnerable to oxygen
       or ROS.
+  - node_id: antioxidant_enzymes
+    label: antioxidant enzymes (Sod/Cat/peroxidases)
+    node_type: GENE_OR_PROTEIN
+    description: Superoxide dismutase, catalase, and peroxidases that detoxify reactive
+      oxygen species.
+  - node_id: ros_detoxification
+    label: ROS detoxification
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic removal of reactive oxygen species to limit oxidative damage.
+  - node_id: respiratory_reductases
+    label: respiratory reductases
+    node_type: GENE_OR_PROTEIN
+    description: Terminal reductases that allow use of non-oxygen molecules as respiratory
+      electron acceptors.
+  - node_id: alternative_electron_acceptors
+    label: alternative anaerobic electron acceptors
+    node_type: CHEMICAL
+    description: Non-O2 molecules present in anaerobic ecosystems used as terminal
+      electron acceptors.
+  - node_id: anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    description: Energy generation using terminal electron acceptors other than molecular
+      oxygen.
   edges:
   - subject: anoxic_condition
     predicate: enables
@@ -88,6 +112,60 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: vulnerable to direct poisoning by molecular oxygen and ROS
       notes: Supports ROS-sensitive catalytic sites as mechanistic vulnerability.
+  - subject: antioxidant_enzymes
+    predicate: detoxifies
+    object: reactive_oxygen_species
+    description: Superoxide dismutase, catalase, and peroxidases remove ROS in anaerobes
+      exposed to oxygen.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: organisms use anti-oxidative enzymes - superoxide dismutase (Sod), catalase
+        (Cat), and peroxidases - to detoxify ROS.
+  - subject: antioxidant_enzymes
+    predicate: enables
+    object: ros_detoxification
+    description: Antioxidant enzyme activity carries out the detoxification of reactive
+      oxygen species.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: Anti-oxidative enzymes (Sod/Cat/peroxidases) detoxify ROS, mediating
+        ROS detoxification.
+  - subject: ros_detoxification
+    predicate: protects against
+    object: reactive_oxygen_species
+    description: ROS detoxification limits oxidative damage from oxygen-derived oxidants
+      in anaerobes.
+    evidence:
+    - reference: DOI:10.1038/s43705-023-00251-7
+      notes: Detoxification system removes ROS produced when O2 is reduced, a broad
+        protective mechanism.
+  - subject: respiratory_reductases
+    predicate: enables utilization of
+    object: alternative_electron_acceptors
+    description: Respiratory reductases let microbes use non-O2 molecules as energy-generating
+      electron acceptors.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01560-2
+      notes: Respiratory reductases enable microbes to utilize molecules present in
+        anaerobic ecosystems as energy-generating respiratory electron acceptors.
+  - subject: alternative_electron_acceptors
+    predicate: enables
+    object: anaerobic_respiration
+    description: Availability of non-O2 electron acceptors supports anaerobic respiration
+      in low-oxygen niches.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01560-2
+      notes: Molecules in anaerobic ecosystems serve as respiratory electron acceptors
+        for anaerobic respiration.
+  - subject: anaerobic_respiration
+    predicate: enables
+    object: anaerobic_trait
+    description: Use of alternative terminal electron acceptors supports growth without
+      molecular oxygen.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01560-2
+      notes: Diverse gut bacteria use dietary- and host-derived metabolites for anaerobic
+        respiration, enabling growth without O2.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.849856+00:00'
   curator: seed_from_metpo
@@ -127,4 +205,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

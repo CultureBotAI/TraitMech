@@ -43,6 +43,15 @@ causal_graphs:
     label: flat disc geometry
     node_type: BIOLOGICAL_PROCESS
     description: Resulting flat, plate-like cell body.
+  - node_id: slayer_glycoprotein_maturation
+    label: S-layer glycoprotein C-terminal processing and lipid anchoring
+    node_type: BIOLOGICAL_PROCESS
+    description: ArtA peptidase and Pss enzyme dependent C-terminal processing and
+      covalent lipid attachment of the surface (S-layer) glycoprotein.
+  - node_id: rod_shaped_state
+    label: rod-shaped morphology
+    node_type: STATE
+    description: Elongated rod cell type that disc/plate cells interconvert with.
   edges:
   - subject: planar_envelope_growth
     predicate: causes
@@ -72,6 +81,25 @@ causal_graphs:
       snippet: disc-shaped cells
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: slayer_glycoprotein_maturation
+    predicate: enables
+    object: flat_geometry
+    description: C-terminal processing and lipid anchoring of the S-layer glycoprotein
+      is required for stable flat plate-shaped cell formation.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001012
+      notes: Required for the C-terminal processing and covalent lipid attachment
+        of S-layer glycoprotein, required for effective and stable plate-shaped cell
+        formation.
+  - subject: disc_shaped_trait
+    predicate: interconverts with
+    object: rod_shaped_state
+    description: Disc/plate cell type interconverts with the rod cell type as part
+      of regulated shape switching.
+    evidence:
+    - reference: DOI:10.1038/nature13983
+      notes: H. volcanii exhibits interconvertible plate and rod cell types; transition
+        from a disk-shape to a rod-shape.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.897674+00:00'
   curator: seed_from_metpo
@@ -107,4 +135,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 2 evidence-backed generic edges (2 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -27,8 +27,7 @@ causal_graphs:
 - graph_id: proteolysis_extracellular_protease
   title: Proteolysis hydrolyzes extracellular proteins to amino acids
   description: Evidence-backed causal sketch linking secreted bacterial proteases
-    to extracellular hydrolysis of proteins/peptides into amino acids and short
-    peptides.
+    to extracellular hydrolysis of proteins/peptides into amino acids and short peptides.
   nodes:
   - node_id: proteolysis_trait
     label: proteolysis
@@ -43,6 +42,31 @@ causal_graphs:
     label: amino acids / short peptides
     node_type: CHEMICAL
     description: Assimilable nutrients released from protein hydrolysis.
+  - node_id: peptides
+    label: peptides / oligopeptides
+    node_type: CHEMICAL
+    description: Oligopeptides (~4-30 aa) released by extracellular protease cleavage
+      of proteins.
+  - node_id: peptide_transport_systems
+    label: peptide transport systems (Opp/DtpT/Dpp)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane transporters (oligopeptide permease Opp, DtpT, ABC transporter
+      Dpp) importing peptides short enough for uptake.
+  - node_id: intracellular_peptidases
+    label: intracellular peptidases
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic exo-/endo-peptidases that further hydrolyze imported
+      peptides to free amino acids.
+  - node_id: large_proteins
+    label: large extracellular proteins
+    node_type: CHEMICAL
+    description: Intact extracellular proteins too large for direct uptake by prokaryotic
+      transporters.
+  - node_id: substrate_stoichiometry
+    label: substrate source / concentration / C:N stoichiometry
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environmental substrate characteristics that filter expression of
+      secreted extracellular proteases.
   edges:
   - subject: extracellular_protease
     predicate: enables
@@ -50,8 +74,8 @@ causal_graphs:
     description: Secreted proteases drive extracellular protein hydrolysis.
     evidence:
     - reference: DOI:10.1128/mmbr.62.3.597-635.1998
-      notes: Rao et al. review microbial proteases and their depolymerizing
-        nutritional role.
+      notes: Rao et al. review microbial proteases and their depolymerizing nutritional
+        role.
     predicate_id: RO:0002327
   - subject: proteolysis_trait
     predicate: produces
@@ -61,6 +85,53 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuab046
       notes: Bacillus protease review covers extracellular protease activities.
     predicate_id: METPO:2000202
+  - subject: proteolysis_trait
+    predicate: produces
+    object: peptides
+    description: Extracellular protein hydrolysis yields oligopeptides (~4-30 aa).
+    evidence:
+    - reference: DOI:10.1186/s43014-023-00165-w
+      notes: '"protein to oligopeptides" / "producing peptides of roughly 4-30 amino
+        acids"; extracellular proteolytic enzymes produce peptides.'
+  - subject: peptide_transport_systems
+    predicate: imports
+    object: peptides
+    description: Peptide transporters import peptides short enough for uptake.
+    evidence:
+    - reference: DOI:10.1186/s43014-023-00165-w
+      notes: 'Peptides "taken up by dedicated transporters: oligopeptide permease
+        (Opp, an ATP-driven system)", DtpT and ABC transporter Dpp.'
+  - subject: intracellular_peptidases
+    predicate: hydrolyzes
+    object: peptides
+    description: Intracellular peptidases further hydrolyze imported peptides.
+    evidence:
+    - reference: DOI:10.1186/s43014-023-00165-w
+      notes: '"Inside the cell, multiple peptidases... further hydrolyze peptides".'
+  - subject: intracellular_peptidases
+    predicate: produces
+    object: amino_acids
+    description: Intracellular peptidases produce free amino acids used for growth.
+    evidence:
+    - reference: DOI:10.1186/s43014-023-00165-w
+      notes: '"further hydrolyze peptides to free amino acids used for growth".'
+  - subject: large_proteins
+    predicate: necessitates
+    object: proteolysis_trait
+    description: Proteins too large for direct uptake necessitate extracellular hydrolysis.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03036-23
+      notes: '"proteins are too large for direct uptake by prokaryotic transporter
+        systems... explaining the need for extracellular cleavage".'
+  - subject: substrate_stoichiometry
+    predicate: controls expression of
+    object: extracellular_protease
+    description: Substrate source/concentration/C:N stoichiometry filters expression
+      of secreted proteases.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03036-23
+      notes: '"the substrate''s source, concentration and stoichiometry impose strong
+        filtering on the expression of extracellular enzymes".'
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -73,4 +144,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (extracellular protease / amino-acid
     release) with RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

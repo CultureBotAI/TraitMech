@@ -90,12 +90,67 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>OxyR transcriptional regulator</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>response to oxidative stress</strong>
+            
+            <p>OxyR activates transcription of genes that defend the cell against oxidative stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1099/mic.0.001481</code>
+                
+                <span class="meta">OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>RpoS (sigma-S) general stress sigma factor</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>response to oxidative stress</strong>
+            
+            <p>The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00151-22</code>
+                
+                <span class="meta">Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>thioredoxin system</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>response to oxidative stress</strong>
+            
+            <p>Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.ppat.1012001</code>
+                
+                <span class="meta">Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -218,6 +273,12 @@
           <time>2026-06-08T13:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (ROS defense) with GO/CHEBI node groundings and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 3 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -577,7 +638,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking reactive oxygen species to an induced oxidative-stress defense.", "edges": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "oxidative_stress_process"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "oxidative_stress_process", "target": "oxidative_stress_response_trait"}], "evidence_rows": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "edge_id": "edge-1", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "target": "response to oxidative stress"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "edge_id": "edge-2", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "response to oxidative stress", "target": "oxidative stress response"}], "graph_id": "oxidative_stress_response_ros_defense", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reactive oxygen species.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Defense response to reactive oxygen species.", "grounding": "GO:0006979", "id": "oxidative_stress_process", "is_orphan": false, "label": "response to oxidative stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to defend against reactive oxygen species.", "grounding": "traitmech:000079", "id": "oxidative_stress_response_trait", "is_orphan": false, "label": "oxidative stress response", "node_type": "TRAIT", "xrefs": []}], "title": "Defense against reactive oxygen species"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking reactive oxygen species to an induced oxidative-stress defense.", "edges": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen_peroxide", "target": "oxidative_stress_process"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "oxidative_stress_process", "target": "oxidative_stress_response_trait"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "id": "edge-3", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "oxyr_regulator", "target": "oxidative_stress_process"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "id": "edge-4", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "rpos_sigma_factor", "target": "oxidative_stress_process"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "thioredoxin_system", "target": "oxidative_stress_process"}], "evidence_rows": [{"description": "Reactive oxygen species trigger the oxidative-stress response.", "edge_id": "edge-1", "evidence": [{"notes": "Imlay reviews ROS damage and induced defenses.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrogen peroxide", "target": "response to oxidative stress"}, {"description": "The induced defense realizes the oxidative-stress-response trait.", "edge_id": "edge-2", "evidence": [{"notes": "Chelikani et al. support catalases as core oxidative-stress enzymes.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "response to oxidative stress", "target": "oxidative stress response"}, {"description": "OxyR activates transcription of genes that defend the cell against oxidative stress.", "edge_id": "edge-3", "evidence": [{"notes": "OxyR is widely conserved in bacteria and activates transcription of a set of genes that influence cellular defence against oxidative stress.", "reference": "DOI:10.1099/mic.0.001481"}], "predicate": "positively regulates", "predicate_id": null, "source": "OxyR transcriptional regulator", "target": "response to oxidative stress"}, {"description": "The general stress sigma factor RpoS controls oxidative-stress defense outputs; its loss increases sensitivity to oxidative stress.", "edge_id": "edge-4", "evidence": [{"notes": "Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon includes oxidative-stress genes (dps, catalases, sodA, osmC).", "reference": "DOI:10.1128/mmbr.00151-22"}], "predicate": "positively regulates", "predicate_id": null, "source": "RpoS (sigma-S) general stress sigma factor", "target": "response to oxidative stress"}, {"description": "Thioredoxin thiol-repair systems support survival under oxidative/oxidant stress, including in anaerobes and spores.", "edge_id": "edge-5", "evidence": [{"notes": "Multiple thioredoxin systems are involved in the response to oxidative stresses, broadening thiol-repair scope beyond classic aerobes.", "reference": "DOI:10.1371/journal.ppat.1012001"}], "predicate": "contributes to", "predicate_id": null, "source": "thioredoxin system", "target": "response to oxidative stress"}], "graph_id": "oxidative_stress_response_ros_defense", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Representative reactive oxygen species.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Defense response to reactive oxygen species.", "grounding": "GO:0006979", "id": "oxidative_stress_process", "is_orphan": false, "label": "response to oxidative stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to defend against reactive oxygen species.", "grounding": "traitmech:000079", "id": "oxidative_stress_response_trait", "is_orphan": false, "label": "oxidative stress response", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Widely conserved bacterial transcription factor that activates oxidative-stress defense genes.", "grounding": null, "id": "oxyr_regulator", "is_orphan": false, "label": "OxyR transcriptional regulator", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Global stress sigma factor controlling a stress regulon that includes oxidative-stress defenses.", "grounding": null, "id": "rpos_sigma_factor", "is_orphan": false, "label": "RpoS (sigma-S) general stress sigma factor", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "Thiol-disulfide redox repair system supporting survival under oxidative/oxidant stress.", "grounding": null, "id": "thioredoxin_system", "is_orphan": false, "label": "thioredoxin system", "node_type": "PATHWAY", "xrefs": []}], "title": "Defense against reactive oxygen species"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -588,7 +649,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

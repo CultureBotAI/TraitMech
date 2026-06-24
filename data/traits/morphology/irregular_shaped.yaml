@@ -44,6 +44,36 @@ causal_graphs:
     label: variable cell geometry
     node_type: BIOLOGICAL_PROCESS
     description: Population-level variability in cell shape.
+  - node_id: mreb_cytoskeleton_function
+    label: MreB cytoskeletal function
+    node_type: BIOLOGICAL_PROCESS
+    description: MreB-mediated curvature sensing and spatial direction of lateral
+      peptidoglycan insertion that maintains regular cell shape.
+  - node_id: mreb_loss
+    label: loss of MreB function
+    node_type: BIOLOGICAL_PROCESS
+    description: Inhibition or depletion of MreB cytoskeletal activity removing localized
+      wall-insertion control.
+  - node_id: synthase_hydrolase_imbalance
+    label: peptidoglycan synthase-hydrolase imbalance
+    node_type: BIOLOGICAL_PROCESS
+    description: Disrupted coordination between peptidoglycan synthases and hydrolases
+      destabilizing the cell wall.
+  - node_id: polar_growth_organization
+    label: polarized growth organization
+    node_type: BIOLOGICAL_PROCESS
+    description: Apical tip-organizing machinery that focuses cell-wall synthesis
+      for ordered polar growth.
+  - node_id: polar_growth_perturbation
+    label: perturbation of polar growth determinants
+    node_type: BIOLOGICAL_PROCESS
+    description: Disruption of apical polar growth determinants leading to mispatterned
+      wall synthesis.
+  - node_id: wall_less_state
+    label: wall-less (L-form) state
+    node_type: STATE
+    description: Absence of a rigid peptidoglycan wall removing canonical cell-shape
+      constraints.
   edges:
   - subject: reduced_wall_patterning
     predicate: enables
@@ -73,6 +103,65 @@ causal_graphs:
       snippet: cell shape is genetically determined
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: mreb_loss
+    predicate: disrupts
+    object: mreb_cytoskeleton_function
+    description: Inhibition or depletion of MreB removes curvature sensing and localized
+      cell-wall insertion control.
+    evidence:
+    - reference: DOI:10.1101/2024.11.22.624946
+      notes: MreB filaments sense curvature and direct localized cell-wall insertion;
+        A22 inhibition of MreB polymerization alters width and causes rounding/loss
+        of rod shape.
+  - subject: mreb_loss
+    predicate: causes
+    object: irregular_shaped_trait
+    description: Loss of MreB-mediated localized PG insertion removes rod-shape maintenance,
+      yielding rounding and heterogeneous morphologies.
+    evidence:
+    - reference: DOI:10.1101/2024.11.22.624946
+      notes: Inhibition of MreB polymerization causes rounding/loss of rod shape across
+        model bacteria; a broadly conserved shape-maintenance module.
+  - subject: synthase_hydrolase_imbalance
+    predicate: contributes to
+    object: reduced_wall_patterning
+    description: Loss of coordination between peptidoglycan synthases and hydrolases
+      degrades spatial control of wall synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-41082-3
+      notes: Coordinated peptidoglycan synthases and hydrolases stabilize the bacterial
+        cell wall; uncoupling them (e.g. excess hydrolase activity) accelerates loss
+        of regular shape as a general loss-of-patterning mechanism.
+  - subject: polar_growth_perturbation
+    predicate: disrupts
+    object: polar_growth_organization
+    description: Disruption of apical polar growth determinants disorganizes the tip-organizing
+      center and wall-synthesis focusing.
+    evidence:
+    - reference: DOI:10.21203/rs.3.rs-3811693/v1
+      notes: Apical determinants stabilize the tip-organizing center; their perturbation
+        is associated with abnormal branching and mispatterned wall synthesis in filamentous
+        bacteria.
+  - subject: polar_growth_perturbation
+    predicate: produces
+    object: variable_geometry
+    description: Mispatterned apical wall synthesis from disrupted polar growth produces
+      irregular, branched/bulged geometry.
+    evidence:
+    - reference: DOI:10.21203/rs.3.rs-3811693/v1
+      notes: Partial depletion of the polar scaffold DivIVA causes hyphal bulging
+        and irregular branching, an irregular-shape outcome of disorganized polar
+        growth.
+  - subject: wall_less_state
+    predicate: manifests as
+    object: irregular_shaped_trait
+    description: Absence of a cylindrical wall removes canonical shape constraints,
+      yielding irregular, amoeboid morphology.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-07279-y
+      notes: Wall-less L-form cells have heterogeneous, amoeboid morphology; loss
+        of the rigid wall removes shape constraints, a general consequence of wall
+        absence.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898746+00:00'
   curator: seed_from_metpo
@@ -96,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

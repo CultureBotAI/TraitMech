@@ -1,7 +1,7 @@
 identifier: traitmech:000120
 label: sarcina arrangement
-definition: A cell arrangement in which cocci divide in three perpendicular planes and
-  remain attached as cubic packets of eight (sarcinae).
+definition: A cell arrangement in which cocci divide in three perpendicular planes
+  and remain attached as cubic packets of eight (sarcinae).
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -39,12 +39,59 @@ causal_graphs:
     label: three perpendicular division planes
     node_type: QUALITY
     description: Successive division planes oriented along three orthogonal axes.
+  - node_id: ftsz_protein
+    label: FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Tubulin-like division protein that polymerizes at the division site.
+  - node_id: z_ring
+    label: Z ring
+    node_type: CELLULAR_LOCALIZATION
+    description: Dynamic FtsZ polymer ring that marks the division site.
+  - node_id: ftsa_protein
+    label: FtsA
+    node_type: GENE_OR_PROTEIN
+    description: Actin-like protein tethering the Z ring to the cytoplasmic membrane.
+  - node_id: cytoplasmic_membrane
+    label: cytoplasmic membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Plasma membrane to which the divisome attaches.
+  - node_id: septal_pg_remodeling
+    label: septal peptidoglycan remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Coordinated synthesis and hydrolysis of peptidoglycan to build the
+      septal cross-wall.
+  - node_id: pg_synthetases_hydrolases
+    label: peptidoglycan synthetases and hydrolases
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes that synthesize and degrade peptidoglycan during division.
+  - node_id: cell_wall_synthesis_division_site
+    label: cell wall synthesis at division site
+    node_type: BIOLOGICAL_PROCESS
+    description: FtsZ-dependent peptidoglycan synthesis localized to the division
+      site.
+  - node_id: septum_formation
+    label: division septum formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of the division septum (cross-wall).
+  - node_id: pg_hydrolases
+    label: peptidoglycan hydrolases
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes that cleave peptidoglycan bonds to enable daughter-cell separation.
+  - node_id: peripheral_pg_bridge
+    label: peripheral peptidoglycan bridge
+    node_type: CELLULAR_LOCALIZATION
+    description: Peripheral peptidoglycan connection holding daughter cells together
+      after septation.
+  - node_id: daughter_cell_separation
+    label: daughter-cell separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Physical splitting of daughter cells after division.
   edges:
   - subject: three_plane_perpendicular_division
     predicate: causes
     object: sarcina_trait
-    description: Three perpendicular division planes with incomplete separation
-      yield cubic eight-cell packets.
+    description: Three perpendicular division planes with incomplete separation yield
+      cubic eight-cell packets.
     evidence:
     - reference: DOI:10.1038/ncomms4842
       notes: Three-plane division with incomplete daughter-cell separation yields
@@ -59,6 +106,68 @@ causal_graphs:
       notes: Young treats the sarcina cubic packet as a division-plane-determined
         coccal arrangement.
     predicate_id: RO:0002327
+  - subject: ftsz_protein
+    predicate: polymerizes to form
+    object: z_ring
+    description: FtsZ polymerizes to form the dynamic Z ring at the division site.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: FtsZ polymerizes to form a dynamic structure known as the Z ring; broadly
+        conserved bacterial/coccal mechanism.
+  - subject: ftsa_protein
+    predicate: attaches
+    object: z_ring
+    description: FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome
+      assembly.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: Proper Z ring assembly requires attachment to the cytoplasmic membrane
+        via interactions with FtsA; general divisome mechanism.
+  - subject: ftsa_protein
+    predicate: attaches Z ring to
+    object: cytoplasmic_membrane
+    description: FtsA attaches the Z ring to the cytoplasmic membrane.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: Z ring attachment to the cytoplasmic membrane occurs via interactions
+        with FtsA.
+  - subject: pg_synthetases_hydrolases
+    predicate: cooperate in
+    object: septal_pg_remodeling
+    description: PG synthetases and hydrolases work together to build the septal cross-wall.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: PG synthetases and hydrolases work together to incorporate new PG into
+        the existing mesh and to make the septal cross wall; general cell-wall remodeling
+        principle.
+  - subject: cell_wall_synthesis_division_site
+    predicate: drives
+    object: septum_formation
+    description: FtsZ-dependent cell wall synthesis at the division site drives septum
+      formation.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6976.2007.00098.x
+      notes: FtsZ-dependent cell wall synthesis is predominant; coccal cell wall synthesis
+        occurs mainly at the division site, driving septation.
+  - subject: pg_hydrolases
+    predicate: degrade
+    object: peripheral_pg_bridge
+    description: Peptidoglycan hydrolases degrade the peripheral PG bridge connecting
+      daughter cells.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: Hydrolases likely trigger cell splitting by degrading the peripheral
+        bridge, not the entire septum; general separation mechanism.
+  - subject: peripheral_pg_bridge
+    predicate: degradation triggers
+    object: daughter_cell_separation
+    description: Degradation of the peripheral PG bridge triggers daughter-cell splitting;
+      incomplete separation retains packets.
+    evidence:
+    - reference: DOI:10.1002/mbo3.1338
+      notes: Degradation of the peripheral PG bridge, together with mechanical factors,
+        results in a sudden crack that separates the cells; regulated/incomplete separation
+        determines packet retention.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -69,7 +178,13 @@ curation_history:
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (three-plane perpendicular division →
-    cubic packet) with GO node grounding and RO/biolink predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (three-plane perpendicular division
+    → cubic packet) with GO node grounding and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

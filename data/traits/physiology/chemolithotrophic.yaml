@@ -80,6 +80,28 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:30616
     description: Energy carrier produced by respiratory energy conservation.
+  - node_id: calvin_benson_bassham_cycle
+    label: Calvin-Benson-Bassham cycle
+    node_type: PATHWAY
+    grounding: GO:0015977
+    description: Reductive pentose phosphate carbon-fixation pathway.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Inorganic carbon source fixed during chemolithoautotrophy.
+  - node_id: acidification
+    label: acidification
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Decrease in environmental pH.
+  - node_id: nitrification_rate
+    label: nitrification rate
+    node_type: BIOLOGICAL_PROCESS
+    description: Rate of microbial oxidation of ammonia to nitrate.
+  - node_id: nitrous_oxide
+    label: nitrous oxide
+    node_type: CHEMICAL
+    description: N2O byproduct generated during nitrification.
   edges:
   - subject: chemolithotrophic_trait
     predicate: uses electron donor
@@ -145,6 +167,28 @@ causal_graphs:
       snippet: drives ATP synthesis
       notes: Supports ATP synthesis from the respiratory ion gradient.
     predicate_id: METPO:2000202
+  - subject: calvin_benson_bassham_cycle
+    predicate: mediates fixation of
+    object: carbon_dioxide
+    description: Chemolithoautotrophs fix CO2 via the Calvin-Benson-Bassham cycle.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12030590
+      notes: fixes atmospheric CO2 via the Calvin-Benson-Bassham (CBB) cycle
+  - subject: acidification
+    predicate: decreases
+    object: nitrification_rate
+    description: Environmental acidification reduces nitrification rates.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-37104-9
+      notes: a 5.8-18.1% drop and ~11.1-34.1% decline when pCO2 was doubled
+  - subject: acidification
+    predicate: stimulates generation of
+    object: nitrous_oxide
+    description: Acidification stimulates N2O byproduct generation during nitrification.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-37104-9
+      notes: Acidification also stimulate[s] generation of byproduct nitrous oxide
+        (N2O)
 curation_history:
 - timestamp: '2026-05-05T01:35:46.871549+00:00'
   curator: seed_from_metpo
@@ -203,4 +247,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) to corrected CURIEs (phase-2 id-label
     fix; verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

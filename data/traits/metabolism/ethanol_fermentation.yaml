@@ -41,6 +41,35 @@ causal_graphs:
     node_type: CHEMICAL
     description: Reduced end product regenerating NAD+ from NADH.
     grounding: CHEBI:16236
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    description: Glycolytic end product decarboxylated in ethanol fermentation.
+  - node_id: pyruvate_decarboxylase
+    label: pyruvate decarboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and
+      CO2.
+  - node_id: acetaldehyde
+    label: acetaldehyde
+    node_type: CHEMICAL
+    description: Intermediate produced from pyruvate and reduced to ethanol.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    description: CO2 released during pyruvate decarboxylation.
+  - node_id: alcohol_dehydrogenase
+    label: alcohol dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.
+  - node_id: nadh
+    label: NADH
+    node_type: CHEMICAL
+    description: Reduced cofactor reoxidized during ethanol formation.
+  - node_id: nad_plus
+    label: NAD+
+    node_type: CHEMICAL
+    description: Oxidized cofactor regenerated to sustain glycolysis.
   edges:
   - subject: ethanol_fermentation_trait
     predicate: participates in
@@ -60,6 +89,60 @@ causal_graphs:
       notes: Classical-fermentation review describes pyruvate decarboxylation and
         reduction to ethanol.
     predicate_id: METPO:2000202
+  - subject: pyruvate
+    predicate: is substrate for
+    object: pyruvate_decarboxylase
+    description: Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde
+      + CO2.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
+        (PDC), releasing CO2.
+  - subject: pyruvate_decarboxylase
+    predicate: produces
+    object: acetaldehyde
+    description: Pyruvate decarboxylase yields acetaldehyde from pyruvate.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
+        (PDC).
+  - subject: pyruvate_decarboxylase
+    predicate: produces
+    object: carbon_dioxide
+    description: Decarboxylation of pyruvate releases CO2.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase
+        (PDC), releasing CO2.
+  - subject: acetaldehyde
+    predicate: is substrate for
+    object: alcohol_dehydrogenase
+    description: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).
+  - subject: alcohol_dehydrogenase
+    predicate: produces
+    object: ethanol
+    description: Alcohol dehydrogenase produces ethanol from acetaldehyde.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).
+  - subject: alcohol_dehydrogenase
+    predicate: consumes
+    object: nadh
+    description: The ADH reduction step oxidizes NADH.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.
+  - subject: alcohol_dehydrogenase
+    predicate: produces
+    object: nad_plus
+    description: NAD+ is regenerated from NADH during ethanol formation, sustaining
+      glycolysis.
+    evidence:
+    - reference: DOI:10.5376/be.2024.14.0025
+      notes: Regenerating NAD+ from NADH to sustain glycolysis.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -79,4 +162,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16236×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

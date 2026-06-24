@@ -69,6 +69,34 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material formed from organic carbon.
     grounding: METPO:1007501
+  - node_id: emp_glycolysis
+    label: Embden-Meyerhof glycolysis pathway
+    node_type: PATHWAY
+    description: Central glycolytic pathway converting sugars to pyruvate with ATP
+      and reducing equivalents.
+  - node_id: short_chain_fatty_acids
+    label: short-chain fatty acids
+    node_type: CHEMICAL
+    description: Fermentation end products such as acetate, propionate, and succinate.
+  - node_id: mannitol_pts
+    label: PEP-dependent phosphotransferase system (mannitol PTS)
+    node_type: GENE_OR_PROTEIN
+    description: PEP-PTS transporter importing and phosphorylating sugar alcohols
+      during organotrophic uptake.
+  - node_id: mannitol
+    label: mannitol
+    node_type: CHEMICAL
+    description: Sugar alcohol imported and phosphorylated as an organic carbon and
+      energy source.
+  - node_id: mtld
+    label: mtlD mannitol-1-phosphate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme converting mannitol-1-phosphate to fructose-6-phosphate, bridging
+      uptake to glycolysis.
+  - node_id: fructose_6_phosphate
+    label: fructose-6-phosphate
+    node_type: CHEMICAL
+    description: Glycolytic intermediate entering central carbon catabolism.
   edges:
   - subject: chemoheterotrophic_trait
     predicate: uses energy source
@@ -149,6 +177,51 @@ causal_graphs:
       snippet: incorporation of a compound into biomass
       notes: Supports assimilation of compounds into cell material.
     predicate_id: biolink:part_of
+  - subject: emp_glycolysis
+    predicate: contributes to
+    object: catabolism
+    description: Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism
+      in chemoheterotrophs.
+    evidence:
+    - reference: DOI:10.1128/mbio.00992-24
+      notes: harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic
+        core of chemoheterotrophic catabolism.
+  - subject: fermentation
+    predicate: generates
+    object: short_chain_fatty_acids
+    description: Fermentation of organic substrates yields short-chain fatty acids
+      such as acetate, succinate, and propionate.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: subsequent fermentation to short-chain fatty acids (acetate, succinate,
+        propionate); broadly useful fermentation output edge.
+  - subject: mannitol_pts
+    predicate: imports and phosphorylates
+    object: mannitol
+    description: A PEP-dependent phosphotransferase system imports and phosphorylates
+      mannitol as an organic substrate.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: mannitol is imported/phosphorylated via a PEP-PTS to mannitol-1-phosphate;
+        canonical organotrophic uptake mechanism.
+  - subject: mtld
+    predicate: converts
+    object: fructose_6_phosphate
+    description: mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding
+      catabolism into glycolysis.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: converted by mtlD to fructose-6-phosphate and enters glycolysis; bridge
+        from transport to central carbon metabolism.
+  - subject: fructose_6_phosphate
+    predicate: broken down by
+    object: emp_glycolysis
+    description: Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis
+      pathway.
+    evidence:
+    - reference: DOI:10.1016/j.chom.2024.05.011
+      notes: enters glycolysis; links upstream sugar catabolism to the glycolytic
+        pathway.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.869925+00:00'
   curator: seed_from_metpo
@@ -190,4 +263,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:72695×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

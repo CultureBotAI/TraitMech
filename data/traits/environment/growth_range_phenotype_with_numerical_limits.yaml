@@ -50,6 +50,55 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000306
     description: Span of ambient temperatures supporting growth.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: maintenance of near-neutral cytoplasmic pH
+    node_type: BIOLOGICAL_PROCESS
+    description: Homeostatic maintenance of cytoplasmic pH (~7.0-7.5) across a range
+      of external pH values.
+  - node_id: cation_proton_antiporter
+    label: K+/H+ or Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Ion/H+ antiporter activity that exports K+ or Na+ in exchange for
+      protons to acidify the cytoplasm when internal pH rises.
+  - node_id: cytoplasm_acidification
+    label: cytoplasmic acidification
+    node_type: STATE
+    description: Lowering of cytoplasmic pH, used to counter alkaline external conditions
+      or resulting from acid stress.
+  - node_id: proton_pumping_atpase_respiration
+    label: F0F1-ATPase / proton-pumping respiratory chain activity
+    node_type: MOLECULAR_FUNCTION
+    description: Proton-pumping by the F0F1-ATPase and respiratory chains that prevents
+      cytoplasmic acidification.
+  - node_id: prevent_cytoplasm_acidification
+    label: prevention of cytoplasmic acidification
+    node_type: BIOLOGICAL_PROCESS
+    description: Process counteracting excessive cytoplasmic acidification to keep
+      internal pH within the growth-supporting window.
+  - node_id: aa_decarboxylase_antiporter
+    label: amino-acid decarboxylase/antiporter system
+    node_type: MOLECULAR_FUNCTION
+    description: Coupled amino-acid decarboxylase and antiporter activity that consumes
+      intracellular protons and generates PMF, raising internal pH under acidic conditions.
+  - node_id: hypertonic_salinity_increase
+    label: hypertonic salinity increase
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Rise in external salinity producing hypertonic conditions.
+  - node_id: cell_shrinkage_low_turgor
+    label: cell shrinkage and lowered turgor
+    node_type: STATE
+    description: Hypertonicity-driven loss of cell volume and turgor pressure that
+      limits growth at the salinity boundary.
+  - node_id: opua_glycine_betaine_uptake
+    label: OpuA-mediated glycine betaine uptake
+    node_type: MOLECULAR_FUNCTION
+    description: ABC-transporter (OpuA) mediated uptake of the compatible solute glycine
+      betaine.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of compatible solutes (e.g., glycine betaine) that counteract
+      hyperosmotic stress.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -92,6 +141,78 @@ causal_graphs:
       notes: Supports temperature range as a growth-range phenotype defined over the
         ambient-temperature axis.
     predicate_id: rdfs:subClassOf
+  - subject: ph_range
+    predicate: requires
+    object: cytoplasmic_ph_homeostasis
+    description: Growth across an external pH range requires maintenance of near-neutral
+      cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Neutralophilic bacteria keep cytoplasmic pH within 7.0-7.5 across external
+        pH of about 5-8 to sustain growth.
+  - subject: cation_proton_antiporter
+    predicate: enables
+    object: cytoplasm_acidification
+    description: K+/H+ or Na+/H+ antiporter activity acidifies the cytoplasm, supporting
+      growth at alkaline external pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ for protons
+        when internal pH gets too high.
+  - subject: cytoplasm_acidification
+    predicate: contributes to
+    object: ph_range
+    description: Antiporter-driven cytoplasmic acidification supports growth at the
+      alkaline end of the pH range.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Cytoplasmic acidification counters alkaline external pH, extending the
+        upper pH growth boundary.
+  - subject: proton_pumping_atpase_respiration
+    predicate: enables
+    object: prevent_cytoplasm_acidification
+    description: F0F1-ATPase and proton-pumping respiratory chains prevent cytoplasmic
+      acidification, supporting growth across the external pH range.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Activation/upregulation of proton-pumping respiratory chains and the
+        F0F1-ATPase prevents cytoplasmic acidification.
+  - subject: aa_decarboxylase_antiporter
+    predicate: enables
+    object: cytoplasmic_ph_homeostasis
+    description: Amino-acid decarboxylase/antiporter systems generate PMF and raise
+      internal pH, enabling growth under acidic external pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Each decarboxylation pumps one proton equivalent; decarboxylases increase
+        activity when internal pH falls, extending the acid-side boundary.
+  - subject: hypertonic_salinity_increase
+    predicate: causes
+    object: cell_shrinkage_low_turgor
+    description: A hypertonic salinity increase causes cell shrinkage and lowered
+      turgor; growth ceases below the turgor limit, setting the upper salinity boundary.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Hypertonicity leads to cell shrinkage and lowering of turgor; the lower
+        turgor limit is reached before cell growth ceases.
+  - subject: opua_glycine_betaine_uptake
+    predicate: enables
+    object: compatible_solute_accumulation
+    description: OpuA-mediated glycine betaine uptake drives compatible-solute accumulation
+      that counteracts hyperosmotic stress and supports salinity-range growth.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: OpuA accumulates the compatible solute glycine betaine to (sub)molar
+        levels to counteract hyperosmotic stress.
+  - subject: compatible_solute_accumulation
+    predicate: contributes to
+    object: nacl_range
+    description: Compatible-solute accumulation counteracts hyperosmotic stress, supporting
+      growth across the NaCl salinity range.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Compatible-solute accumulation offsets hyperosmotic stress, broadening
+        the salinity growth range.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847733+00:00'
   curator: seed_from_metpo
@@ -115,4 +236,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

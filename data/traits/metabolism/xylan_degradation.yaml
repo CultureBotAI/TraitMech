@@ -43,6 +43,30 @@ causal_graphs:
     node_type: CHEMICAL
     description: Pentose monosaccharide released from xylan.
     grounding: CHEBI:18222
+  - node_id: hemicellulase_genes
+    label: hemicellulase gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Expression of xylanase/hemicellulase-encoding genes underlying xylan
+      degradation.
+  - node_id: carbon_catabolite_repression
+    label: carbon catabolite repression
+    node_type: BIOLOGICAL_PROCESS
+    description: Glucose-dependent repression (HPr/CcpA-mediated) of catabolic gene
+      expression.
+  - node_id: glucuronoyl_esterase
+    label: CE15 glucuronoyl esterases
+    node_type: GENE_OR_PROTEIN
+    description: Accessory esterases cleaving lignin-carbohydrate ester linkages on
+      glucuronoxylan.
+  - node_id: xylan_saccharification
+    label: xylan saccharification
+    node_type: BIOLOGICAL_PROCESS
+    description: Enzymatic release of soluble sugars from xylan/hemicellulose.
+  - node_id: aldouronic_acids
+    label: aldouronic acids
+    node_type: CHEMICAL
+    description: Glucuronoxylan-derived acidic xylo-oligosaccharides released during
+      degradation.
   edges:
   - subject: xylanase
     predicate: enables
@@ -61,6 +85,35 @@ causal_graphs:
       notes: Cragg et al. include hemicellulose (xylan) degradation within lignocellulose
         breakdown across organisms.
     predicate_id: METPO:2000202
+  - subject: carbon_catabolite_repression
+    predicate: represses
+    object: hemicellulase_genes
+    description: CCR (HPr/CcpA) represses hemicellulase gene expression when glucose
+      is available.
+    evidence:
+    - reference: DOI:10.1007/s00253-023-12977-4
+      notes: 'Novak & Gardner 2024: carbon catabolite repression (HPr/CcpA) mediates
+        glucose-dependent repression of hemicellulase expression; broad regulatory
+        edge directly relevant to trait expression conditions.'
+  - subject: glucuronoyl_esterase
+    predicate: positively regulates
+    object: xylan_saccharification
+    description: CE15 glucuronoyl esterases synergistically increase xylanase saccharification
+      of pretreated biomass.
+    evidence:
+    - reference: DOI:10.1186/s13068-025-02639-0
+      notes: 'Pentari et al. 2025: CE15 glucuronoyl esterases increased saccharification
+        by xylanases (57-61 uM xylose equivalents) on pretreated lignocellulose; accessory-enzyme
+        synergy edge.'
+  - subject: glucuronoyl_esterase
+    predicate: produces
+    object: aldouronic_acids
+    description: CE15 glucuronoyl esterases promote GH30 glucuronoxylanase release
+      of aldouronic acids.
+    evidence:
+    - reference: DOI:10.1186/s13068-025-02639-0
+      notes: 'Pentari et al. 2025: CE15 esterases led to up to three-times higher
+        release of aldouronic acids by GH30 glucuronoxylanase.'
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -79,4 +132,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:18222×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

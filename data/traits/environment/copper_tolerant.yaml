@@ -21,15 +21,15 @@ evidence:
     basis of bacterial copper tolerance.
 - reference: DOI:10.3389/fmicb.2020.00047
   snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
-    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
-    uM) and Pb2+ (1.7 mM)
-  notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates copper (Cu2+) to
-    a MIC of 5 mM.'
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+
+    (1 uM) and Pb2+ (1.7 mM)
+  notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates copper (Cu2+)
+    to a MIC of 5 mM.'
 causal_graphs:
 - graph_id: copper_tolerance_cop_efflux
   title: Copper tolerance via cop/cue/cus/pco efflux systems
-  description: Evidence-backed causal sketch linking dedicated copper-efflux
-    machinery to cytoplasmic copper detoxification.
+  description: Evidence-backed causal sketch linking dedicated copper-efflux machinery
+    to cytoplasmic copper detoxification.
   nodes:
   - node_id: copper_tolerant_trait
     label: copper tolerant
@@ -44,19 +44,33 @@ causal_graphs:
   - node_id: copper_efflux_system
     label: copper efflux systems (cue/cus/pco/cop)
     node_type: GENE_OR_PROTEIN
-    description: ATPase- and RND-driven pumps removing copper from the cytoplasm
-      or periplasm.
+    description: ATPase- and RND-driven pumps removing copper from the cytoplasm or
+      periplasm.
   - node_id: copper_transport
     label: copper ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0035434
     description: Active export of copper ions across the cytoplasmic membrane.
+  - node_id: ros_oxidative_damage
+    label: ROS-mediated oxidative damage
+    node_type: BIOLOGICAL_PROCESS
+    description: Fenton-like Cu(I) chemistry generating ROS that damage lipids, proteins,
+      DNA, and Fe-S clusters.
+  - node_id: multicopper_oxidase
+    label: periplasmic multicopper oxidase (CueO-type)
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-dependent multicopper oxidase that oxidizes toxic Cu(I) to
+      less-toxic Cu(II) in the periplasm.
+  - node_id: cu1_oxidation
+    label: Cu(I) to Cu(II) oxidation
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic oxidation of toxic cuprous Cu(I) to less-toxic cupric Cu(II)
+      reducing ROS-mediated damage.
   edges:
   - subject: copper_ion
     predicate: challenges
     object: copper_tolerant_trait
-    description: Elevated cytoplasmic copper is the toxic challenge the trait
-      counters.
+    description: Elevated cytoplasmic copper is the toxic challenge the trait counters.
     evidence:
     - reference: DOI:10.3389/fmicb.2020.00047
       notes: Cupriavidus metallidurans BS1 tolerates Cu(2+) to a MIC of 5 mM.
@@ -76,9 +90,45 @@ causal_graphs:
     description: Copper export depletes the cytoplasmic copper pool.
     evidence:
     - reference: DOI:10.1007/s10565-013-9262-1
-      notes: Cytoplasmic copper detoxification is the basis of bacterial copper
-        tolerance.
+      notes: Cytoplasmic copper detoxification is the basis of bacterial copper tolerance.
     predicate_id: METPO:2007407
+  - subject: copper_ion
+    predicate: causes
+    object: ros_oxidative_damage
+    description: Excess intracellular copper drives Fenton-like reactions producing
+      ROS that damage cellular macromolecules.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Cu(I) driving Fenton-like reactions causing damage to lipids, proteins
+        and DNA and disrupting Fe-S clusters; defines why tolerance mechanisms matter.
+  - subject: copper_transport
+    predicate: mitigates
+    object: ros_oxidative_damage
+    description: P1B-type ATPase copper efflux lowers cytoplasmic copper, reducing
+      copper-driven oxidative toxicity.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Primary defense is active efflux via P1B-1 (P-type) ATPases; in Gram-negatives
+        CopA pumps cytoplasmic Cu(I) to the periplasm, decreasing cytoplasmic copper
+        toxicity.
+  - subject: multicopper_oxidase
+    predicate: enables
+    object: cu1_oxidation
+    description: CueO-type periplasmic multicopper oxidase catalyzes oxidation of
+      Cu(I) to Cu(II) in the presence of oxygen.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: CueO oxidizes Cu(I) to less-toxic Cu(II) in oxygen; generalized periplasmic
+        detox mechanism (aerobic context).
+  - subject: cu1_oxidation
+    predicate: mitigates
+    object: copper_ion
+    description: Oxidation of Cu(I) to less-toxic Cu(II) lowers the reactive copper
+      burden in the periplasm.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Oxidation of Cu(I) to less-toxic Cu(II) reduces reactive-copper toxicity
+        and ROS-mediated membrane damage.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -92,4 +142,10 @@ curation_history:
   changes: Added evidence-backed causal graph (cop/cue/cus/pco copper efflux) with
     CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
     to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

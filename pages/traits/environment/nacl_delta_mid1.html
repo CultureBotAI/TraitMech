@@ -90,12 +90,152 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>osmotic upshift</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>potassium import</strong>
+            
+            <p>Hyperosmotic upshift triggers rapid K+ import to raise cytoplasmic osmolarity/turgor.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">Bacterial cells commonly import a lot of potassium during an osmotic upshift (broad bacterial relevance).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>potassium import</strong>
+            <span class="edge-predicate">precedes/replaced by</span>
+            <strong>compatible solute accumulation</strong>
+            
+            <p>Initial K+ accumulation is subsequently replaced by neutral compatible solutes to reduce ionic stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">Cells begin accumulating/synthesizing neutral compatible solutes such as glycine betaine, trehalose, and other osmolytes to replace K+ ions.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>osmotic upshift</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>compatible solute accumulation</strong>
+            
+            <p>Osmoadaptation transitions from inorganic K+ accumulation to organic osmoprotectants.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2019.02811</code>
+                
+                <span class="meta">Cells initially accumulate potassium as an emergency stress reaction and subsequently replace most of this ion with compatible solutes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>compatible solute accumulation</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>osmoadaptation / growth under NaCl stress</strong>
+            
+            <p>Organic osmolytes stabilize proteins/membranes and raise intracellular osmotic strength without salt-in toxicity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuaf020</code>
+                
+                <span class="meta">Bacteria commonly use compatible solutes - notably glycine betaine, proline, trehalose, ectoine and carnitine - to support osmoadaptation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>ectoine biosynthesis (EctB/EctA/EctC)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>ectoine</strong>
+            
+            <p>The EctB/EctA/EctC pathway synthesizes the compatible solute ectoine.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2019.02811</code>
+                
+                <span class="meta">Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>ectoine</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>compatible solute accumulation</strong>
+            
+            <p>Ectoine is one of the compatible solutes accumulated during osmoadaptation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuaf020</code>
+                
+                <span class="meta">Ectoine is among the compatible solutes bacteria commonly use for osmoprotection.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>potassium import</strong>
+            
+            <p>Elevated c-di-AMP downregulates osmoregulatory K+ import.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">High cyclic di-AMP reduces K+ import (review-level regulatory edge).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">controls</span>
+            <strong>compatible organic osmolyte influx and biosynthesis</strong>
+            
+            <p>c-di-AMP regulates both the influx of compatible organic osmolytes and their biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/JB.00190-24</code>
+                
+                <span class="meta">c-di-AMP plays a key role by controlling (i) the influx of physiologically compatible organic osmolytes and (ii) the biosynthesis of such osmolytes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +373,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +738,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking modest osmoadaptive flexibility to a 1\u20133% (w/v) NaCl growth breadth.", "edges": [{"description": "Modest osmoadaptive flexibility yields a 1\u20133% NaCl-delta breadth.", "evidence": [{"notes": "Supports modest osmoadaptive flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "modest_osmoadaptive_flexibility", "target": "nacl_delta_mid1_trait"}, {"description": "NaCl delta mid1 is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20133% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta_mid1_trait", "target": "nacl_delta"}], "evidence_rows": [{"description": "Modest osmoadaptive flexibility yields a 1\u20133% NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports modest osmoadaptive flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "modest osmoadaptive flexibility", "target": "NaCl delta mid1"}, {"description": "NaCl delta mid1 is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20133% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta mid1", "target": "NaCl delta"}], "graph_id": "nacl_delta_mid1_modest_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Moderate capacity to remodel osmolytes across ambient salinity shifts.", "grounding": null, "id": "modest_osmoadaptive_flexibility", "is_orphan": false, "label": "modest osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth approximately 1\u20133% w/v.", "grounding": "METPO:1000480", "id": "nacl_delta_mid1_trait", "is_orphan": false, "label": "NaCl delta mid1", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-delta-mid1 modest-breadth osmoadaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking modest osmoadaptive flexibility to a 1\u20133% (w/v) NaCl growth breadth.", "edges": [{"description": "Modest osmoadaptive flexibility yields a 1\u20133% NaCl-delta breadth.", "evidence": [{"notes": "Supports modest osmoadaptive flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "modest_osmoadaptive_flexibility", "target": "nacl_delta_mid1_trait"}, {"description": "NaCl delta mid1 is a quantitative bin of the NaCl-delta phenotype.", "evidence": [{"notes": "Supports the 1\u20133% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_delta_mid1_trait", "target": "nacl_delta"}, {"description": "Hyperosmotic upshift triggers rapid K+ import to raise cytoplasmic osmolarity/turgor.", "evidence": [{"notes": "Bacterial cells commonly import a lot of potassium during an osmotic upshift (broad bacterial relevance).", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-3", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "osmotic_upshift", "target": "k_import"}, {"description": "Initial K+ accumulation is subsequently replaced by neutral compatible solutes to reduce ionic stress.", "evidence": [{"notes": "Cells begin accumulating/synthesizing neutral compatible solutes such as glycine betaine, trehalose, and other osmolytes to replace K+ ions.", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-4", "is_orphan": false, "predicate": "precedes/replaced by", "predicate_id": null, "source": "k_import", "target": "compatible_solute_accumulation"}, {"description": "Osmoadaptation transitions from inorganic K+ accumulation to organic osmoprotectants.", "evidence": [{"notes": "Cells initially accumulate potassium as an emergency stress reaction and subsequently replace most of this ion with compatible solutes.", "reference": "DOI:10.3389/fmicb.2019.02811"}], "id": "edge-5", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "osmotic_upshift", "target": "compatible_solute_accumulation"}, {"description": "Organic osmolytes stabilize proteins/membranes and raise intracellular osmotic strength without salt-in toxicity.", "evidence": [{"notes": "Bacteria commonly use compatible solutes - notably glycine betaine, proline, trehalose, ectoine and carnitine - to support osmoadaptation.", "reference": "DOI:10.1093/femsre/fuaf020"}], "id": "edge-6", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "compatible_solute_accumulation", "target": "osmoadaptation_under_nacl"}, {"description": "The EctB/EctA/EctC pathway synthesizes the compatible solute ectoine.", "evidence": [{"notes": "Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).", "reference": "DOI:10.3389/fmicb.2019.02811"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "ectoine_biosynthesis", "target": "ectoine"}, {"description": "Ectoine is one of the compatible solutes accumulated during osmoadaptation.", "evidence": [{"notes": "Ectoine is among the compatible solutes bacteria commonly use for osmoprotection.", "reference": "DOI:10.1093/femsre/fuaf020"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "ectoine", "target": "compatible_solute_accumulation"}, {"description": "Elevated c-di-AMP downregulates osmoregulatory K+ import.", "evidence": [{"notes": "High cyclic di-AMP reduces K+ import (review-level regulatory edge).", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-9", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "c_di_amp", "target": "k_import"}, {"description": "c-di-AMP regulates both the influx of compatible organic osmolytes and their biosynthesis.", "evidence": [{"notes": "c-di-AMP plays a key role by controlling (i) the influx of physiologically compatible organic osmolytes and (ii) the biosynthesis of such osmolytes.", "reference": "DOI:10.1128/JB.00190-24"}], "id": "edge-10", "is_orphan": false, "predicate": "controls", "predicate_id": null, "source": "c_di_amp", "target": "organic_osmolyte_influx_biosynthesis"}], "evidence_rows": [{"description": "Modest osmoadaptive flexibility yields a 1\u20133% NaCl-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports modest osmoadaptive flexibility as the basis of an intermediate breadth.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "modest osmoadaptive flexibility", "target": "NaCl delta mid1"}, {"description": "NaCl delta mid1 is a quantitative bin of the NaCl-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 1\u20133% breadth as a value within the NaCl-delta distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl delta mid1", "target": "NaCl delta"}, {"description": "Hyperosmotic upshift triggers rapid K+ import to raise cytoplasmic osmolarity/turgor.", "edge_id": "edge-3", "evidence": [{"notes": "Bacterial cells commonly import a lot of potassium during an osmotic upshift (broad bacterial relevance).", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "induces", "predicate_id": null, "source": "osmotic upshift", "target": "potassium import"}, {"description": "Initial K+ accumulation is subsequently replaced by neutral compatible solutes to reduce ionic stress.", "edge_id": "edge-4", "evidence": [{"notes": "Cells begin accumulating/synthesizing neutral compatible solutes such as glycine betaine, trehalose, and other osmolytes to replace K+ ions.", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "precedes/replaced by", "predicate_id": null, "source": "potassium import", "target": "compatible solute accumulation"}, {"description": "Osmoadaptation transitions from inorganic K+ accumulation to organic osmoprotectants.", "edge_id": "edge-5", "evidence": [{"notes": "Cells initially accumulate potassium as an emergency stress reaction and subsequently replace most of this ion with compatible solutes.", "reference": "DOI:10.3389/fmicb.2019.02811"}], "predicate": "induces", "predicate_id": null, "source": "osmotic upshift", "target": "compatible solute accumulation"}, {"description": "Organic osmolytes stabilize proteins/membranes and raise intracellular osmotic strength without salt-in toxicity.", "edge_id": "edge-6", "evidence": [{"notes": "Bacteria commonly use compatible solutes - notably glycine betaine, proline, trehalose, ectoine and carnitine - to support osmoadaptation.", "reference": "DOI:10.1093/femsre/fuaf020"}], "predicate": "supports", "predicate_id": null, "source": "compatible solute accumulation", "target": "osmoadaptation / growth under NaCl stress"}, {"description": "The EctB/EctA/EctC pathway synthesizes the compatible solute ectoine.", "edge_id": "edge-7", "evidence": [{"notes": "Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).", "reference": "DOI:10.3389/fmicb.2019.02811"}], "predicate": "produces", "predicate_id": null, "source": "ectoine biosynthesis (EctB/EctA/EctC)", "target": "ectoine"}, {"description": "Ectoine is one of the compatible solutes accumulated during osmoadaptation.", "edge_id": "edge-8", "evidence": [{"notes": "Ectoine is among the compatible solutes bacteria commonly use for osmoprotection.", "reference": "DOI:10.1093/femsre/fuaf020"}], "predicate": "contributes to", "predicate_id": null, "source": "ectoine", "target": "compatible solute accumulation"}, {"description": "Elevated c-di-AMP downregulates osmoregulatory K+ import.", "edge_id": "edge-9", "evidence": [{"notes": "High cyclic di-AMP reduces K+ import (review-level regulatory edge).", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "decreases", "predicate_id": null, "source": "cyclic di-AMP", "target": "potassium import"}, {"description": "c-di-AMP regulates both the influx of compatible organic osmolytes and their biosynthesis.", "edge_id": "edge-10", "evidence": [{"notes": "c-di-AMP plays a key role by controlling (i) the influx of physiologically compatible organic osmolytes and (ii) the biosynthesis of such osmolytes.", "reference": "DOI:10.1128/JB.00190-24"}], "predicate": "controls", "predicate_id": null, "source": "cyclic di-AMP", "target": "compatible organic osmolyte influx and biosynthesis"}], "graph_id": "nacl_delta_mid1_modest_breadth", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Second messenger (CHEBI:167606) central to osmoregulation of K+ and osmolyte economy.", "grounding": null, "id": "c_di_amp", "is_orphan": false, "label": "cyclic di-AMP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Accumulation/synthesis of neutral organic osmolytes (glycine betaine, proline, trehalose, ectoine, carnitine).", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:22586) contributing to salt tolerance.", "grounding": null, "id": "ectoine", "is_orphan": false, "label": "ectoine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Three-enzyme biosynthetic pathway producing the compatible solute ectoine.", "grounding": null, "id": "ectoine_biosynthesis", "is_orphan": false, "label": "ectoine biosynthesis (EctB/EctA/EctC)", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Rapid cytoplasmic accumulation of K+ as a first-line osmoadaptive response.", "grounding": null, "id": "k_import", "is_orphan": false, "label": "potassium import", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Moderate capacity to remodel osmolytes across ambient salinity shifts.", "grounding": null, "id": "modest_osmoadaptive_flexibility", "is_orphan": false, "label": "modest osmoadaptive flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting NaCl range.", "grounding": "METPO:1000335", "id": "nacl_delta", "is_orphan": false, "label": "NaCl delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting breadth approximately 1\u20133% w/v.", "grounding": "METPO:1000480", "id": "nacl_delta_mid1_trait", "is_orphan": false, "label": "NaCl delta mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Influx and biosynthesis of physiologically compatible organic osmolytes.", "grounding": null, "id": "organic_osmolyte_influx_biosynthesis", "is_orphan": false, "label": "compatible organic osmolyte influx and biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of turgor, protein and membrane stability, and growth across NaCl stress.", "grounding": null, "id": "osmoadaptation_under_nacl", "is_orphan": false, "label": "osmoadaptation / growth under NaCl stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Sudden increase in external osmolarity (e.g. NaCl) imposing hyperosmotic stress.", "grounding": null, "id": "osmotic_upshift", "is_orphan": false, "label": "osmotic upshift", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "NaCl-delta-mid1 modest-breadth osmoadaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +749,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

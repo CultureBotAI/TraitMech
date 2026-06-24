@@ -46,6 +46,39 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:15379
     description: Terminal electron acceptor reduced to water.
+  - node_id: family_a_cytochrome_c_oxidase
+    label: family A cytochrome c oxidase
+    node_type: GENE_OR_PROTEIN
+    description: Canonical heme-copper terminal oxidase with heme a/a3 and CuA/CuB
+      centers, the classic oxidase-test target.
+  - node_id: reduced_cytochrome_c
+    label: reduced cytochrome c
+    node_type: CHEMICAL
+    description: Ferrocytochrome c, the physiological electron donor to cytochrome
+      c oxidase.
+  - node_id: cua_center
+    label: CuA center
+    node_type: CHEMICAL
+    description: Dicopper electron-entry center in subunit II of family A cytochrome
+      c oxidase.
+  - node_id: heme_a
+    label: heme a
+    node_type: CHEMICAL
+    description: Low-spin heme A cofactor relaying electrons within family A cytochrome
+      c oxidase.
+  - node_id: heme_a3_cub_binuclear_center
+    label: heme a3-CuB binuclear center
+    node_type: CHEMICAL
+    description: Catalytic dioxygen-reduction site of heme-copper oxidases.
+  - node_id: cua_cub_copper_centers
+    label: CuA/CuB copper centers
+    node_type: CHEMICAL
+    description: The three copper atoms (dicopper CuA and CuB) of family A cytochrome
+      c oxidase.
+  - node_id: carbon_monoxide
+    label: carbon monoxide
+    node_type: CHEMICAL
+    description: Gaseous ligand that potently inhibits heme-copper terminal oxidases.
   edges:
   - subject: cytochrome_c_oxidase
     predicate: enables
@@ -71,6 +104,56 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms10050926
       notes: Supports the oxidase-test basis.
     predicate_id: RO:0002327
+  - subject: reduced_cytochrome_c
+    predicate: donates electrons to
+    object: cua_center
+    description: Reduced cytochrome c donates electrons to the CuA center of subunit
+      II.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: 'Hederstedt: "reduced cytochrome c donates electrons to the CuA center
+        in subunit II."'
+  - subject: cua_center
+    predicate: transfers electrons to
+    object: heme_a
+    description: The CuA center relays electrons to low-spin heme a.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: 'Hederstedt: electrons pass from CuA "then to low-spin heme a."'
+  - subject: heme_a3_cub_binuclear_center
+    predicate: reduces
+    object: molecular_oxygen
+    description: The heme a3-CuB binuclear center reduces molecular oxygen to water.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: 'Hederstedt: "the dioxygen reduction site (heme a3 + CuB)."'
+  - subject: family_a_cytochrome_c_oxidase
+    predicate: has cofactor
+    object: heme_a
+    description: Family A cytochrome c oxidase contains two heme A prosthetic groups
+      (heme a and heme a3).
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: 'Hederstedt: "contains two heme A prosthetic groups (heme a and heme
+        a3)."'
+  - subject: family_a_cytochrome_c_oxidase
+    predicate: has cofactor
+    object: cua_cub_copper_centers
+    description: Family A cytochrome c oxidase carries three copper atoms in CuA and
+      CuB centers.
+    evidence:
+    - reference: DOI:10.3390/microorganisms10050926
+      notes: 'Hederstedt: "three copper atoms (CuA is di-copper in subunit II; CuB
+        in subunit I)."'
+  - subject: carbon_monoxide
+    predicate: inhibits
+    object: cytochrome_c_oxidase_function
+    description: Carbon monoxide is a potent inhibitor of heme-copper cytochrome c
+      oxidase activity.
+    evidence:
+    - reference: DOI:10.3390/ijms26062809
+      notes: 'Borisov & Forte 2025: "CO is a potent inhibitor of heme-copper cytochrome
+        c oxidase (Ki ~0.3 uM)."'
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -90,4 +173,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A075NZN5×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

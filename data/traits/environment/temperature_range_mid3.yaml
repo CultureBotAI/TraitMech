@@ -41,6 +41,57 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mesophile membrane and enzyme tuning for ambient temperatures near
       common animal host body temperatures.
+  - node_id: membrane_order
+    label: membrane order / fluidity state
+    node_type: QUALITY
+    description: Physical order/fluidity state of the membrane bilayer; the proximate
+      signal for thermosensing.
+  - node_id: desk_kinase_state
+    label: DesK kinase-dominant state
+    node_type: STATE
+    description: Membrane thickness sensor DesK in its autophosphorylating kinase-dominant
+      conformation.
+  - node_id: desk
+    label: DesK
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound histidine kinase that senses membrane order/thickness.
+  - node_id: desr
+    label: DesR
+    node_type: GENE_OR_PROTEIN
+    description: Response regulator activated by DesK to control des transcription.
+  - node_id: phospho_desr
+    label: phosphorylated DesR
+    node_type: STATE
+    description: Phosphorylated DesR that tetramerizes and binds the des promoter.
+  - node_id: des_gene
+    label: des (acyl-lipid desaturase)
+    node_type: GENE_OR_PROTEIN
+    description: Fatty-acid desaturase that introduces double bonds to fluidize the
+      membrane.
+  - node_id: membrane_fatty_acyl_chains
+    label: membrane fatty acyl chains
+    node_type: CHEMICAL
+    description: Fatty acyl chains of membrane phospholipids whose unsaturation modulates
+      fluidity.
+  - node_id: membrane_rigidification
+    label: membrane rigidification and increased thickness
+    node_type: BIOLOGICAL_PROCESS
+    description: Cooling-induced membrane rigidification and bilayer thickening, the
+      general homeoviscous sensing signal.
+  - node_id: temperature_decrease
+    label: temperature decrease
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Drop in ambient temperature within/near the mesophilic range.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Adjustment of membrane lipid composition to maintain constant fluidity
+      across temperatures.
+  - node_id: liquid_crystalline_membrane
+    label: liquid-crystalline membrane state
+    node_type: STATE
+    description: Functional liquid-crystalline phase of the membrane required for
+      growth.
   edges:
   - subject: upper_mesophile_adaptation
     predicate: enables
@@ -61,6 +112,57 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the 30–34 °C range as a value within the temperature-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: membrane_order
+    predicate: drives
+    object: desk_kinase_state
+    description: Increased membrane order (reduced fluidity) drives DesK to a kinase-dominant
+      state; membrane physical state is the proximate signal.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00069-23
+      notes: increased membrane order (reduced fluidity) drives DesK to a kinase-dominant
+        state
+  - subject: desk
+    predicate: phosphorylates
+    object: desr
+    description: Core two-component signaling step linking membrane physical state
+      to transcriptional response.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: DesK autophosphorylates (His188) and phosphorylates DesR
+  - subject: phospho_desr
+    predicate: activates transcription of
+    object: des_gene
+    description: DesR-P tetramerizes, binds the des promoter and induces lipid desaturation
+      to restore membrane fluidity.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: P-DesR tetramerizes, binds Pdes, and activates des expression
+  - subject: des_gene
+    predicate: introduces double bonds into
+    object: membrane_fatty_acyl_chains
+    description: Des-mediated unsaturation fluidizes the membrane and reduces bilayer
+      thickness.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Des introduces double bonds into fatty acyl chains, fluidizing the membrane
+        and reducing thickness
+  - subject: temperature_decrease
+    predicate: causes
+    object: membrane_rigidification
+    description: General physical trigger underlying homeoviscous adaptation across
+      microbes.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: membrane rigidification and increased thickness are proposed as sensing
+        signals that trigger adaptive responses
+  - subject: homeoviscous_adaptation
+    predicate: maintains
+    object: liquid_crystalline_membrane
+    description: 'Broad mechanism relevant to upper-mesophile growth: cells preserve
+      membrane function across temperature fluctuations.'
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: maintain the liquid-crystalline phase at low temperature
 curation_history:
 - timestamp: '2026-05-05T01:35:46.824789+00:00'
   curator: seed_from_metpo
@@ -78,4 +180,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

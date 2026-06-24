@@ -78,6 +78,31 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000641
     description: Chemical-energy-driven trophic phenotype.
+  - node_id: cbb_cycle_rubisco
+    label: Calvin-Benson-Bassham cycle (RuBisCO)
+    node_type: PATHWAY
+    description: CO2-fixation pathway encoded by rbcL/cbbM RuBisCO and full CBB cycle
+      genes.
+  - node_id: co2_fixation
+    label: CO2 fixation
+    node_type: BIOLOGICAL_PROCESS
+    description: Assimilation of inorganic carbon (CO2) into biomass, the basis of
+      autotrophic carbon use.
+  - node_id: sox_sulfur_oxidation
+    label: SOX sulfur/thiosulfate oxidation
+    node_type: PATHWAY
+    description: Oxidation of thiosulfate/sulfur species via the soxABXYZ/soxCD system
+      as an inorganic electron-donor source.
+  - node_id: sugar_uptake_cazyme_catabolism
+    label: sugar/polysaccharide uptake and CAZyme catabolism
+    node_type: PATHWAY
+    description: Heterotrophic uptake (e.g. gtsABC, frcABC) and CAZyme-mediated degradation
+      of sugars and polysaccharides for organic-carbon use.
+  - node_id: nife_hydrogenase_h2_oxidation
+    label: '[NiFe]-hydrogenase H2 oxidation'
+    node_type: PATHWAY
+    description: Oxidation of molecular hydrogen by [NiFe]-hydrogenases as an inorganic
+      electron donor (hydrogen lithotrophy).
   edges:
   - subject: carbon_source_use
     predicate: causes
@@ -155,6 +180,51 @@ causal_graphs:
       snippet: energy source
       notes: Supports chemotrophy as one energy-source-defined trophic phenotype.
     predicate_id: rdfs:subClassOf
+  - subject: cbb_cycle_rubisco
+    predicate: enables
+    object: co2_fixation
+    description: Form II RuBisCO and a full Calvin-Benson-Bassham cycle enable CO2
+      fixation, marking autotrophic carbon-assimilation potential.
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      notes: All MAGs encode Form II RuBisCO (rbcL/cbbM) and a full CBB cycle, indicating
+        CO2 fixation potential.
+  - subject: co2_fixation
+    predicate: causes
+    object: carbon_source_use
+    description: CO2 fixation establishes inorganic-carbon (autotrophic) use on the
+      carbon-source axis of trophic type.
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      notes: CBB-driven CO2 fixation defines autotrophic carbon assimilation on the
+        carbon-source classification axis.
+  - subject: sox_sulfur_oxidation
+    predicate: causes
+    object: electron_donor_use
+    description: SOX-mediated thiosulfate/sulfur oxidation supplies inorganic electron
+      donors, defining lithotrophy on the electron-donor axis.
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      notes: Presence of soxABXYZ (and soxCD) is tied to thiosulfate oxidation, enabling
+        use of sulfur species as electron donors.
+  - subject: sugar_uptake_cazyme_catabolism
+    predicate: causes
+    object: carbon_source_use
+    description: Sugar transporters and CAZyme catabolism enable heterotrophic/organotrophic
+      use of organic carbon on the carbon-source axis.
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      notes: Sugar transporters (gtsABC, frcABC), maltodextrin import/degradation
+        and CAZy enzymes indicate capacity for heterotrophic use of sugars and polysaccharides.
+  - subject: nife_hydrogenase_h2_oxidation
+    predicate: causes
+    object: electron_donor_use
+    description: '[NiFe]-hydrogenase H2 oxidation supplies an inorganic electron donor,
+      contributing hydrogen lithotrophy to the electron-donor axis.'
+    evidence:
+    - reference: DOI:10.1128/mSystems.00148-24
+      notes: Hydrogenase genes link hydrogen-based lithotrophy to chemoautotrophic
+        metabolism.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
@@ -185,4 +255,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×3).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

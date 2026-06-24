@@ -1,8 +1,8 @@
 identifier: traitmech:000095
 label: restriction-modification system
-definition: A genomics trait describing possession of a restriction-modification
-  system that distinguishes self from non-self DNA through sequence-specific
-  methylation and cleavage of unmethylated DNA by a restriction endonuclease.
+definition: A genomics trait describing possession of a restriction-modification system
+  that distinguishes self from non-self DNA through sequence-specific methylation
+  and cleavage of unmethylated DNA by a restriction endonuclease.
 definition_source: DOI:10.1128/MMBR.00044-12
 trait_category: GENOMICS
 term_kind: CLASS
@@ -22,31 +22,69 @@ evidence:
 causal_graphs:
 - graph_id: rm_self_nonself_defense
   title: Restriction-modification distinguishes self from non-self DNA
-  description: Evidence-backed causal sketch linking R-M system possession to
-    sequence-specific cleavage of unmethylated foreign DNA.
+  description: Evidence-backed causal sketch linking R-M system possession to sequence-specific
+    cleavage of unmethylated foreign DNA.
   nodes:
   - node_id: rm_trait
     label: restriction-modification system
     node_type: TRAIT
     grounding: traitmech:000095
-    description: Possession of a paired methyltransferase / restriction
-      endonuclease defense system.
+    description: Possession of a paired methyltransferase / restriction endonuclease
+      defense system.
   - node_id: dna_restriction_modification
     label: DNA restriction-modification system
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0009307
-    description: Sequence-specific methylation marking self DNA and cleavage of
-      unmethylated foreign DNA.
+    description: Sequence-specific methylation marking self DNA and cleavage of unmethylated
+      foreign DNA.
   - node_id: foreign_dna
     label: foreign DNA
     node_type: ENVIRONMENTAL_FACTOR
     description: Invading phage or plasmid DNA challenging the cell.
+  - node_id: cognate_mtase
+    label: cognate DNA methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Methyltransferase that methylates the host recognition sites of an
+      R-M system.
+  - node_id: host_site_methylation
+    label: host recognition site methylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Methylation marking self DNA at R-M recognition sites.
+  - node_id: restriction_endonuclease
+    label: restriction endonuclease
+    node_type: GENE_OR_PROTEIN
+    description: Endonuclease that cleaves unmethylated double-stranded DNA at recognition
+      sites.
+  - node_id: endonuclease_cleavage
+    label: restriction endonuclease cleavage
+    node_type: MOLECULAR_FUNCTION
+    description: Sequence-specific cleavage activity of the restriction endonuclease.
+  - node_id: type_iv_restriction_enzyme
+    label: type IV restriction enzyme
+    node_type: GENE_OR_PROTEIN
+    description: Modification-dependent restriction enzyme that cleaves methylated
+      DNA motifs.
+  - node_id: methylated_dna_motif
+    label: methylated DNA motif
+    node_type: CHEMICAL
+    description: DNA motif carrying a methyl or other base modification, targeted
+      by type IV enzymes.
+  - node_id: plasmid_methylase
+    label: plasmid-encoded methylase
+    node_type: GENE_OR_PROTEIN
+    description: Methyltransferase encoded by a mobile element that pre-methylates
+      its DNA to evade host restriction.
+  - node_id: phage_mtase
+    label: phage-encoded DNA methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Phage methyltransferase that methylates the phage genome to counter
+      host restriction.
   edges:
   - subject: rm_trait
     predicate: enables
     object: dna_restriction_modification
-    description: R-M systems realize self-vs-non-self discrimination by paired
-      methylation and restriction.
+    description: R-M systems realize self-vs-non-self discrimination by paired methylation
+      and restriction.
     evidence:
     - reference: DOI:10.1128/MMBR.00044-12
       notes: Vasu & Nagaraja review R-M systems and their defense functions.
@@ -54,13 +92,72 @@ causal_graphs:
   - subject: dna_restriction_modification
     predicate: mitigates
     object: foreign_dna
-    description: Restriction endonuclease cleavage destroys unmethylated foreign
-      DNA before it can establish.
+    description: Restriction endonuclease cleavage destroys unmethylated foreign DNA
+      before it can establish.
     evidence:
     - reference: DOI:10.3389/fmicb.2015.00528
-      notes: R-M systems as engines of genomic diversity through differential
-        cleavage of foreign DNA.
+      notes: R-M systems as engines of genomic diversity through differential cleavage
+        of foreign DNA.
     predicate_id: METPO:2007407
+  - subject: cognate_mtase
+    predicate: methylates
+    object: host_site_methylation
+    description: The cognate methyltransferase methylates host recognition sites,
+      marking self DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad452
+      notes: A methyltransferase methylates those sites to protect host DNA (shaw2023).
+  - subject: host_site_methylation
+    predicate: protects against
+    object: endonuclease_cleavage
+    description: Methylation of host recognition sites protects self DNA from cognate
+      restriction endonuclease cleavage.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad452
+      notes: Host DNA is protected while incoming foreign DNA lacking the same methylation
+        is cleaved (shaw2023).
+  - subject: restriction_endonuclease
+    predicate: has function
+    object: endonuclease_cleavage
+    description: The restriction endonuclease cleaves unmethylated foreign double-stranded
+      DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad452
+      notes: A restriction endonuclease cuts double-stranded DNA; unmethylated foreign
+        DNA is cleaved (shaw2023).
+  - subject: endonuclease_cleavage
+    predicate: mitigates
+    object: foreign_dna
+    description: Restriction endonuclease cleavage destroys unmethylated foreign DNA.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad452
+      notes: Incoming foreign DNA lacking host methylation is cleaved (shaw2023).
+  - subject: type_iv_restriction_enzyme
+    predicate: cleaves
+    object: methylated_dna_motif
+    description: Type IV restriction enzymes cleave methylated DNA motifs, complementing
+      Types I-III that cleave unmethylated DNA.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122962
+      notes: Type IV enzymes cut methylated motifs (kottenhahn2023).
+  - subject: plasmid_methylase
+    predicate: protects against
+    object: endonuclease_cleavage
+    description: Plasmid-encoded methylases pre-methylate plasmid DNA, protecting
+      it from host restriction activity.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae896
+      notes: Some plasmids encode methylases that protect against restriction activity
+        (dimitriu2024).
+  - subject: phage_mtase
+    predicate: protects against
+    object: endonuclease_cleavage
+    description: Phage-encoded DNA methyltransferases methylate the phage genome to
+      reduce host RM restriction.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00044-12
+      notes: Phages encode DNA methyltransferases to protect their genomes from restriction
+        (vasu2013).
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -73,4 +170,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (R-M self / non-self defense) with GO
     node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

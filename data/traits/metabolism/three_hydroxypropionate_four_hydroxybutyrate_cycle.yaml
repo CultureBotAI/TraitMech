@@ -1,9 +1,8 @@
 identifier: traitmech:000024
 label: 3-hydroxypropionate/4-hydroxybutyrate cycle
-definition: An autotrophic carbon-fixation pathway that fixes two molecules of
-  bicarbonate per turn via 3-hydroxypropionate and 4-hydroxybutyrate intermediates.
-  It operates in aerobic and microaerophilic Crenarchaeota such as Sulfolobus and
-  Metallosphaera.
+definition: An autotrophic carbon-fixation pathway that fixes two molecules of bicarbonate
+  per turn via 3-hydroxypropionate and 4-hydroxybutyrate intermediates. It operates
+  in aerobic and microaerophilic Crenarchaeota such as Sulfolobus and Metallosphaera.
 definition_source: DOI:10.1126/science.1149976
 trait_category: METABOLISM
 term_kind: CLASS
@@ -24,8 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: three_hp_four_hb_sulfolobales
   title: 3HP/4HB cycle fixes bicarbonate in aerobic Crenarchaeota
-  description: Evidence-backed causal sketch linking bicarbonate fixation via
-    3-hydroxypropionate and 4-hydroxybutyrate intermediates in Sulfolobales.
+  description: Evidence-backed causal sketch linking bicarbonate fixation via 3-hydroxypropionate
+    and 4-hydroxybutyrate intermediates in Sulfolobales.
   nodes:
   - node_id: three_hp_four_hb_trait
     label: 3-hydroxypropionate/4-hydroxybutyrate cycle
@@ -42,6 +41,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0015977
     description: Conversion of inorganic carbon into organic compounds.
+  - node_id: acetyl_coa
+    label: acetyl-CoA
+    node_type: CHEMICAL
+    description: Central product/regenerated CoA-thioester of the cycle.
+  - node_id: succinyl_coa
+    label: succinyl-CoA
+    node_type: CHEMICAL
+    description: Central CoA-thioester intermediate of the 3HP/4HB cycle.
+  - node_id: four_hydroxybutyrate
+    label: 4-hydroxybutyrate
+    node_type: CHEMICAL
+    description: Defining 4-hydroxybutyrate intermediate of the cycle.
+  - node_id: crotonyl_coa
+    label: crotonyl-CoA
+    node_type: CHEMICAL
+    description: CoA-thioester intermediate formed by 4-hydroxybutyryl-CoA dehydration.
+  - node_id: four_hydroxybutyryl_coa
+    label: 4-hydroxybutyryl-CoA
+    node_type: CHEMICAL
+    description: Activated CoA-thioester of 4-hydroxybutyrate.
+  - node_id: nadph
+    label: NADPH
+    node_type: CHEMICAL
+    description: Reducing cofactor consumed by reductive steps of the cycle.
+  - node_id: acetyl_propionyl_coa_carboxylase
+    label: acetyl-CoA/propionyl-CoA carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Primary carboxylase fixing inorganic carbon in the cycle.
+  - node_id: four_hydroxybutyryl_coa_dehydratase
+    label: 4-hydroxybutyryl-CoA dehydratase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
   edges:
   - subject: bicarbonate
     predicate: fixed by
@@ -54,13 +85,74 @@ causal_graphs:
   - subject: three_hp_four_hb_trait
     predicate: contributes to
     object: carbon_fixation_process
-    description: The 3HP/4HB cycle is among the six recognized autotrophic
-      pathways.
+    description: The 3HP/4HB cycle is among the six recognized autotrophic pathways.
     evidence:
     - reference: DOI:10.1128/AEM.02473-10
-      notes: Berg situates the 3HP/4HB cycle among recognized carbon-fixation
-        pathways.
+      notes: Berg situates the 3HP/4HB cycle among recognized carbon-fixation pathways.
     predicate_id: RO:0002326
+  - subject: three_hp_four_hb_trait
+    predicate: produces
+    object: acetyl_coa
+    description: A complete cycle turn fixes two bicarbonate to produce one acetyl-CoA.
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: A complete 3HP/4HB cycle fixes two HCO3- to produce one acetyl-CoA.
+  - subject: three_hp_four_hb_trait
+    predicate: forms intermediate
+    object: succinyl_coa
+    description: Carboxylation of acetyl-CoA/propionyl-CoA yields succinyl-CoA from
+      two bicarbonate.
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: The pathway carboxylates acetyl-CoA/propionyl-CoA to form succinyl-CoA
+        from two HCO3-.
+  - subject: succinyl_coa
+    predicate: is reduced to
+    object: four_hydroxybutyrate
+    description: Succinyl-CoA is reduced to 4-hydroxybutyrate.
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: Succinyl-CoA is reduced to 4-hydroxybutyrate.
+  - subject: four_hydroxybutyryl_coa_dehydratase
+    predicate: dehydrates
+    object: four_hydroxybutyryl_coa
+    description: 4-hydroxybutyryl-CoA is dehydrated to crotonyl-CoA.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-06432-x
+      notes: The cycle dehydrates 4-hydroxybutyryl-CoA to crotonyl-CoA.
+  - subject: four_hydroxybutyryl_coa_dehydratase
+    predicate: produces
+    object: crotonyl_coa
+    description: Dehydration of 4-hydroxybutyryl-CoA yields crotonyl-CoA.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-06432-x
+      notes: The pathway diagram shows dehydration to crotonyl-CoA.
+  - subject: crotonyl_coa
+    predicate: regenerates
+    object: acetyl_coa
+    description: Crotonyl-CoA is processed/cleaved to regenerate acetyl-CoA for further
+      cycle turns.
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: The pathway finally cleaves to yield acetyl-CoA for further turns.
+  - subject: nadph
+    predicate: is required by
+    object: three_hp_four_hb_trait
+    description: Reductive steps of the cycle consume NADPH (about four NADPH per
+      turn).
+    evidence:
+    - reference: DOI:10.1186/s40643-023-00705-9
+      notes: Five reactions in the cycle require oxidation of NADPH; full cycle consumes
+        four NADPH.
+  - subject: acetyl_propionyl_coa_carboxylase
+    predicate: mediates carboxylation in
+    object: three_hp_four_hb_trait
+    description: Acetyl-CoA/propionyl-CoA carboxylase is the primary carboxylase fixing
+      inorganic carbon.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-06432-x
+      notes: The cycle fixes CO2 onto acetyl-CoA via an acetyl-CoA/propionyl-CoA carboxylase,
+        the primary carboxylase.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -71,7 +163,13 @@ curation_history:
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (3HP/4HB Sulfolobales bicarbonate
-    fixation) with CHEBI/GO node groundings and RO/METPO predicate groundings;
-    promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (3HP/4HB Sulfolobales bicarbonate fixation)
+    with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -141,12 +141,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>catalase activity</strong>
+            <span class="edge-predicate">decomposes</span>
+            <strong>hydrogen peroxide</strong>
+            
+            <p>Catalase activity rapidly decomposes hydrogen peroxide into water and molecular oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom14060697</code>
+                
+                <span class="meta">Catalase rapidly decomposes hydrogen peroxide into water and molecular oxygen (canonical enzymology).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>hydrogen peroxide</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>OxyR</strong>
+            
+            <p>Hydrogen peroxide activates the OxyR peroxide-sensing regulator.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3032</code>
+                
+                <span class="meta">An intracellular H2O2 concentration of ~200 nM is sufficient to drive OxyR into a disulfide-bonded (active) form.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>hydrogen peroxide</strong>
+            <span class="edge-predicate">favors scavenging by</span>
+            <strong>catalase activity</strong>
+            
+            <p>High hydrogen peroxide concentrations favor scavenging by catalases, which turn over much faster than alkyl hydroperoxide reductase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3032</code>
+                
+                <span class="meta">Organisms rely on catalases when H2O2 levels are high; catalases turn over much more quickly than Ahp. Likely general across aerobes/facultative anaerobes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>OxyR</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>peroxide defense systems</strong>
+            
+            <p>OxyR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fimmu.2021.667343</code>
+                
+                <span class="meta">Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>PerR</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>peroxide defense systems</strong>
+            
+            <p>PerR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fimmu.2021.667343</code>
+                
+                <span class="meta">Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>heme biosynthesis</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>catalase</strong>
+            
+            <p>Heme biosynthesis is required for catalase activation; impaired heme synthesis delays peroxide degradation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/mmi.12967</code>
+                
+                <span class="meta">Ferrochelatase (hemH) function is required for timely induction of catalase (KatG) activity; loss delays H2O2 degradation and growth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -284,6 +390,12 @@
           <time>2026-06-14T06:38:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A071MK53×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -643,7 +755,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking catalase to dismutation of hydrogen peroxide into water and molecular oxygen.", "edges": [{"description": "Catalase carries out the catalase molecular function.", "evidence": [{"notes": "Chelikani et al. characterize catalases as the enzymes performing this dismutation.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase_function"}, {"description": "The catalase reaction consumes hydrogen peroxide.", "evidence": [{"notes": "Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "catalase_function", "target": "hydrogen_peroxide"}, {"description": "The catalase reaction produces molecular oxygen.", "evidence": [{"notes": "Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase_function", "target": "molecular_oxygen"}, {"description": "The catalase reaction produces water.", "evidence": [{"notes": "Catalase dismutation yields water.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase_function", "target": "water"}, {"description": "Production of catalase confers the catalase-activity phenotype.", "evidence": [{"notes": "Supports catalase possession as the basis of the catalase-activity phenotype.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase_activity_trait"}], "evidence_rows": [{"description": "Catalase carries out the catalase molecular function.", "edge_id": "edge-1", "evidence": [{"notes": "Chelikani et al. characterize catalases as the enzymes performing this dismutation.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase activity"}, {"description": "The catalase reaction consumes hydrogen peroxide.", "edge_id": "edge-2", "evidence": [{"notes": "Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "catalase activity", "target": "hydrogen peroxide"}, {"description": "The catalase reaction produces molecular oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase activity", "target": "molecular oxygen"}, {"description": "The catalase reaction produces water.", "edge_id": "edge-4", "evidence": [{"notes": "Catalase dismutation yields water.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase activity", "target": "water"}, {"description": "Production of catalase confers the catalase-activity phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports catalase possession as the basis of the catalase-activity phenotype.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase activity"}], "graph_id": "catalase_activity_h2o2_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Heme enzyme that dismutates hydrogen peroxide.", "grounding": "UniProtKB:A0A071MK53", "id": "catalase", "is_orphan": false, "label": "catalase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to decompose hydrogen peroxide via catalase.", "grounding": "traitmech:000075", "id": "catalase_activity_trait", "is_orphan": false, "label": "catalase activity", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Catalysis of 2 H2O2 = O2 + 2 H2O.", "grounding": "GO:0004096", "id": "catalase_function", "is_orphan": false, "label": "catalase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species detoxified by catalase.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Product of hydrogen peroxide dismutation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Product of hydrogen peroxide dismutation.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "xrefs": []}], "title": "Catalase hydrogen-peroxide detoxification"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking catalase to dismutation of hydrogen peroxide into water and molecular oxygen.", "edges": [{"description": "Catalase carries out the catalase molecular function.", "evidence": [{"notes": "Chelikani et al. characterize catalases as the enzymes performing this dismutation.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase_function"}, {"description": "The catalase reaction consumes hydrogen peroxide.", "evidence": [{"notes": "Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "catalase_function", "target": "hydrogen_peroxide"}, {"description": "The catalase reaction produces molecular oxygen.", "evidence": [{"notes": "Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase_function", "target": "molecular_oxygen"}, {"description": "The catalase reaction produces water.", "evidence": [{"notes": "Catalase dismutation yields water.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase_function", "target": "water"}, {"description": "Production of catalase confers the catalase-activity phenotype.", "evidence": [{"notes": "Supports catalase possession as the basis of the catalase-activity phenotype.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase_activity_trait"}, {"description": "Catalase activity rapidly decomposes hydrogen peroxide into water and molecular oxygen.", "evidence": [{"notes": "Catalase rapidly decomposes hydrogen peroxide into water and molecular oxygen (canonical enzymology).", "reference": "DOI:10.3390/biom14060697"}], "id": "edge-6", "is_orphan": false, "predicate": "decomposes", "predicate_id": null, "source": "catalase_activity_trait", "target": "hydrogen_peroxide"}, {"description": "Hydrogen peroxide activates the OxyR peroxide-sensing regulator.", "evidence": [{"notes": "An intracellular H2O2 concentration of ~200 nM is sufficient to drive OxyR into a disulfide-bonded (active) form.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-7", "is_orphan": false, "predicate": "activates", "predicate_id": null, "source": "hydrogen_peroxide", "target": "oxyr_regulator"}, {"description": "High hydrogen peroxide concentrations favor scavenging by catalases, which turn over much faster than alkyl hydroperoxide reductase.", "evidence": [{"notes": "Organisms rely on catalases when H2O2 levels are high; catalases turn over much more quickly than Ahp. Likely general across aerobes/facultative anaerobes.", "reference": "DOI:10.1038/nrmicro3032"}], "id": "edge-8", "is_orphan": false, "predicate": "favors scavenging by", "predicate_id": null, "source": "hydrogen_peroxide", "target": "catalase_activity_trait"}, {"description": "OxyR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.", "evidence": [{"notes": "Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.", "reference": "DOI:10.3389/fimmu.2021.667343"}], "id": "edge-9", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "oxyr_regulator", "target": "peroxide_defense_systems"}, {"description": "PerR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.", "evidence": [{"notes": "Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.", "reference": "DOI:10.3389/fimmu.2021.667343"}], "id": "edge-10", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "perr_regulator", "target": "peroxide_defense_systems"}, {"description": "Heme biosynthesis is required for catalase activation; impaired heme synthesis delays peroxide degradation.", "evidence": [{"notes": "Ferrochelatase (hemH) function is required for timely induction of catalase (KatG) activity; loss delays H2O2 degradation and growth.", "reference": "DOI:10.1111/mmi.12967"}], "id": "edge-11", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "heme_biosynthesis", "target": "catalase"}], "evidence_rows": [{"description": "Catalase carries out the catalase molecular function.", "edge_id": "edge-1", "evidence": [{"notes": "Chelikani et al. characterize catalases as the enzymes performing this dismutation.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase activity"}, {"description": "The catalase reaction consumes hydrogen peroxide.", "edge_id": "edge-2", "evidence": [{"notes": "Imlay supports catalase as a primary hydrogen-peroxide scavenging defense.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "catalase activity", "target": "hydrogen peroxide"}, {"description": "The catalase reaction produces molecular oxygen.", "edge_id": "edge-3", "evidence": [{"notes": "Catalase dismutation yields O2 (2 H2O2 to O2 + 2 H2O).", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase activity", "target": "molecular oxygen"}, {"description": "The catalase reaction produces water.", "edge_id": "edge-4", "evidence": [{"notes": "Catalase dismutation yields water.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "catalase activity", "target": "water"}, {"description": "Production of catalase confers the catalase-activity phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports catalase possession as the basis of the catalase-activity phenotype.", "reference": "DOI:10.1007/s00018-003-3206-5"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "catalase", "target": "catalase activity"}, {"description": "Catalase activity rapidly decomposes hydrogen peroxide into water and molecular oxygen.", "edge_id": "edge-6", "evidence": [{"notes": "Catalase rapidly decomposes hydrogen peroxide into water and molecular oxygen (canonical enzymology).", "reference": "DOI:10.3390/biom14060697"}], "predicate": "decomposes", "predicate_id": null, "source": "catalase activity", "target": "hydrogen peroxide"}, {"description": "Hydrogen peroxide activates the OxyR peroxide-sensing regulator.", "edge_id": "edge-7", "evidence": [{"notes": "An intracellular H2O2 concentration of ~200 nM is sufficient to drive OxyR into a disulfide-bonded (active) form.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "activates", "predicate_id": null, "source": "hydrogen peroxide", "target": "OxyR"}, {"description": "High hydrogen peroxide concentrations favor scavenging by catalases, which turn over much faster than alkyl hydroperoxide reductase.", "edge_id": "edge-8", "evidence": [{"notes": "Organisms rely on catalases when H2O2 levels are high; catalases turn over much more quickly than Ahp. Likely general across aerobes/facultative anaerobes.", "reference": "DOI:10.1038/nrmicro3032"}], "predicate": "favors scavenging by", "predicate_id": null, "source": "hydrogen peroxide", "target": "catalase activity"}, {"description": "OxyR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.", "edge_id": "edge-9", "evidence": [{"notes": "Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.", "reference": "DOI:10.3389/fimmu.2021.667343"}], "predicate": "regulates", "predicate_id": null, "source": "OxyR", "target": "peroxide defense systems"}, {"description": "PerR regulates peroxide defense systems; most bacteria sense H2O2 via OxyR or PerR.", "edge_id": "edge-10", "evidence": [{"notes": "Most bacteria sense H2O2 via OxyR or PerR transcription factors that control peroxide defense systems.", "reference": "DOI:10.3389/fimmu.2021.667343"}], "predicate": "regulates", "predicate_id": null, "source": "PerR", "target": "peroxide defense systems"}, {"description": "Heme biosynthesis is required for catalase activation; impaired heme synthesis delays peroxide degradation.", "edge_id": "edge-11", "evidence": [{"notes": "Ferrochelatase (hemH) function is required for timely induction of catalase (KatG) activity; loss delays H2O2 degradation and growth.", "reference": "DOI:10.1111/mmi.12967"}], "predicate": "required for", "predicate_id": null, "source": "heme biosynthesis", "target": "catalase"}], "graph_id": "catalase_activity_h2o2_detoxification", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Heme enzyme that dismutates hydrogen peroxide.", "grounding": "UniProtKB:A0A071MK53", "id": "catalase", "is_orphan": false, "label": "catalase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to decompose hydrogen peroxide via catalase.", "grounding": "traitmech:000075", "id": "catalase_activity_trait", "is_orphan": false, "label": "catalase activity", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Catalysis of 2 H2O2 = O2 + 2 H2O.", "grounding": "GO:0004096", "id": "catalase_function", "is_orphan": false, "label": "catalase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of the heme cofactor required for catalase maturation and activity.", "grounding": null, "id": "heme_biosynthesis", "is_orphan": false, "label": "heme biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive oxygen species detoxified by catalase.", "grounding": "CHEBI:16240", "id": "hydrogen_peroxide", "is_orphan": false, "label": "hydrogen peroxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Product of hydrogen peroxide dismutation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Peroxide-sensing transcriptional regulator activated by hydrogen peroxide.", "grounding": null, "id": "oxyr_regulator", "is_orphan": false, "label": "OxyR", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Antioxidant defense systems (e.g. catalases, peroxidases) that detoxify hydrogen peroxide.", "grounding": null, "id": "peroxide_defense_systems", "is_orphan": false, "label": "peroxide defense systems", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Fe-dependent peroxide-sensing transcriptional repressor inactivated by hydrogen peroxide.", "grounding": null, "id": "perr_regulator", "is_orphan": false, "label": "PerR", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Product of hydrogen peroxide dismutation.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "xrefs": []}], "title": "Catalase hydrogen-peroxide detoxification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -654,7 +766,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

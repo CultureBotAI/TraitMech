@@ -53,6 +53,37 @@ causal_graphs:
     label: ovoid geometry
     node_type: BIOLOGICAL_PROCESS
     description: Rounded, egg-like cell-body geometry.
+  - node_id: septal_pg_synthesis
+    label: septal peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Mode of PG synthesis building the division septum in ovococci.
+  - node_id: peripheral_pg_synthesis
+    label: peripheral peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Mode of PG synthesis elongating the cell wall, producing ovoid aspect
+      ratio.
+  - node_id: ftsz_treadmilling
+    label: FtsZ treadmilling
+    node_type: BIOLOGICAL_PROCESS
+    description: Treadmilling dynamics of the FtsZ cytoskeletal ring guiding septal
+      synthesis.
+  - node_id: ftsw_pbp2x
+    label: FtsW-PBP2x complex
+    node_type: GENE_OR_PROTEIN
+    description: Divisome PG synthase complex that builds the division septum.
+  - node_id: roda_pbp2b
+    label: RodA-PBP2b elongasome
+    node_type: GENE_OR_PROTEIN
+    description: Elongasome PG synthase pair driving peripheral wall elongation.
+  - node_id: ftsz_ring
+    label: FtsZ ring
+    node_type: CELLULAR_LOCALIZATION
+    description: The Z-ring division apparatus positioned at midcell.
+  - node_id: concentric_midcell_rings
+    label: concentric midcell rings
+    node_type: CELLULAR_LOCALIZATION
+    description: Organization of septal and peripheral PG machineries into concentric
+      midcell rings.
   edges:
   - subject: mapZ
     predicate: positions
@@ -98,6 +129,63 @@ causal_graphs:
       snippet: ovoid-shaped bacteria
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: midcell_pg_assembly
+    predicate: has component
+    object: septal_pg_synthesis
+    description: Ovococcal midcell growth includes a distinct septal PG synthesis
+      mode.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: 'There are two spatially distinct modes of PG synthesis: septal and peripheral.'
+  - subject: midcell_pg_assembly
+    predicate: has component
+    object: peripheral_pg_synthesis
+    description: Ovococcal midcell growth includes a distinct peripheral PG synthesis
+      mode.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: 'There are two spatially distinct modes of PG synthesis: septal and peripheral.'
+  - subject: ftsz_treadmilling
+    predicate: drives
+    object: septal_pg_synthesis
+    description: FtsZ treadmilling drives septal PG synthesis.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: FtsZ treadmilling drives septal PG synthesis together with the FtsW-PBP2x
+        complex.
+  - subject: ftsw_pbp2x
+    predicate: synthesizes
+    object: septal_pg_synthesis
+    description: The FtsW-PBP2x complex synthesizes the division septum.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: Septal PG synthesis is driven by the FtsW-PBP2x complex to synthesize
+        the division septum.
+  - subject: roda_pbp2b
+    predicate: drives
+    object: peripheral_pg_synthesis
+    description: The RodA-PBP2b elongasome drives peripheral PG synthesis.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: Peripheral (elongation) activity is carried out by the elongasome, driven
+        by the RodA-PBP2b pair.
+  - subject: mapZ
+    predicate: positions
+    object: ftsz_ring
+    description: MapZ guides movement and positioning of the FtsZ ring.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: MapZ guides movement of FtsZ and associated proteins from the septal
+        ring to the equatorial ring.
+  - subject: midcell_pg_assembly
+    predicate: assembles as
+    object: concentric_midcell_rings
+    description: Septal and peripheral PG machineries assemble at midcell into concentric
+      rings.
+    evidence:
+    - reference: DOI:10.1042/BSR20221664
+      notes: Septal and peripheral PG-synthesis machineries assemble at mid-cell into
+        concentric rings (inner septal, outer peripheral).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.891106+00:00'
   curator: seed_from_metpo
@@ -139,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:Q1IYG2×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

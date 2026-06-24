@@ -192,12 +192,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-9">
+            <strong>copper</strong>
+            <span class="edge-predicate">positively regulates</span>
+            <strong>particulate methane monooxygenase (pMMO)</strong>
+            
+            <p>High copper favors pMMO expression (the copper switch).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/D3CY00737E</code>
+                
+                <span class="meta">high copper favors pMMO and represses sMMO</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>copper</strong>
+            <span class="edge-predicate">negatively regulates</span>
+            <strong>soluble methane monooxygenase (sMMO)</strong>
+            
+            <p>High copper represses sMMO; low copper favors sMMO (the copper switch).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/D3CY00737E</code>
+                
+                <span class="meta">high copper favors pMMO and represses sMMO; low copper/biomass favors sMMO</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>pmoCAB operon</strong>
+            <span class="edge-predicate">encodes</span>
+            <strong>PmoA/PmoB/PmoC subunits</strong>
+            
+            <p>pmoCAB operon encodes the PmoA, PmoB and PmoC subunits of pMMO.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/D3CY00737E</code>
+                
+                <span class="meta">pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB operon</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>mmoXYZ genes</strong>
+            <span class="edge-predicate">encodes</span>
+            <strong>MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)</strong>
+            
+            <p>mmoXYZ genes encode the MMOH alpha/beta/gamma hydroxylase subunits of sMMO.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/D3CY00737E</code>
+                
+                <span class="meta">MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>methanobactin</strong>
+            <span class="edge-predicate">binds</span>
+            <strong>Cu(I)</strong>
+            
+            <p>Methanobactin binds Cu(I) with high affinity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/acs.chemrev.3c00727</code>
+                
+                <span class="meta">Mbns are ribosomally synthesized ... that bind Cu(I) with particularly high affinity</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>methanobactin</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>copper acquisition</strong>
+            
+            <p>Methanobactin-mediated copper chelation enables copper uptake.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1039/D3CY00737E</code>
+                
+                <span class="meta">some methanotrophs produce methanobactin (high affinity for Cu(I)) for copper collection</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-15">
+            <strong>copper acquisition</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>particulate methane monooxygenase (pMMO)</strong>
+            
+            <p>Copper acquisition supplies the cofactor required for pMMO activity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/acs.chemrev.3c00727</code>
+                
+                <span class="meta">As a required cofactor for pMMO activity ... copper is central to methanotroph physiology</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -371,6 +494,12 @@
           <time>2026-06-14T05:51:47Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0019649×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -730,7 +859,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph for aerobic methane oxidation from methane to methanol, formaldehyde assimilation, and carbon dioxide production.", "edges": [{"description": "Methane is the defining carbon and energy source for methanotrophy.", "evidence": [{"notes": "Review places methane among C1 compounds used by methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane as carbon and energy sources"}], "id": "edge-1", "is_orphan": false, "predicate": "uses substrate", "predicate_id": null, "source": "methanotrophic_trait", "target": "methane"}, {"description": "Methane monooxygenase catalyzes methane oxidation.", "evidence": [{"notes": "Supports MMO as the enzyme for the first oxidation step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane oxidation ... catalyzed by two types of methane monooxygenases"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methane_monooxygenase", "target": "methane"}, {"description": "Aerobic methane monooxygenases activate oxygen during methane oxidation.", "evidence": [{"notes": "Supports oxygen involvement in MMO catalysis.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "activation of molecular oxygen"}], "id": "edge-3", "is_orphan": false, "predicate": "uses oxidant", "predicate_id": null, "source": "methane_monooxygenase", "target": "molecular_oxygen"}, {"description": "The first aerobic methane oxidation product is methanol.", "evidence": [{"notes": "Supports methane-to-methanol conversion by MMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "convert methane to methanol"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "methane", "target": "methanol"}, {"description": "Particulate methane monooxygenase is membrane associated in methanotrophs.", "evidence": [{"notes": "Supports subcellular localization for pMMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "pMMO is located in the characteristic intracellular membrane"}], "id": "edge-5", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "methane_monooxygenase", "target": "intracellular_membrane"}, {"description": "Methanol dehydrogenase converts methanol onward to formaldehyde.", "evidence": [{"notes": "Supports methanol dehydrogenase as the next step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "Methanol is oxidized to formaldehyde"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methanol_dehydrogenase", "target": "methanol"}, {"description": "Formaldehyde can be assimilated through RuMP or serine pathways.", "evidence": [{"notes": "Supports formaldehyde assimilation routes in methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "RuMP pathway and the serine pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "formaldehyde", "target": "formaldehyde_assimilation"}, {"description": "Methane oxidation can continue to carbon dioxide for energy metabolism.", "evidence": [{"notes": "Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane cycle between ... methane and CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanotrophic_trait", "target": "carbon_dioxide"}], "evidence_rows": [{"description": "Methane is the defining carbon and energy source for methanotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Review places methane among C1 compounds used by methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane as carbon and energy sources"}], "predicate": "uses substrate", "predicate_id": null, "source": "methanotrophic", "target": "methane"}, {"description": "Methane monooxygenase catalyzes methane oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports MMO as the enzyme for the first oxidation step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane oxidation ... catalyzed by two types of methane monooxygenases"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methane monooxygenase", "target": "methane"}, {"description": "Aerobic methane monooxygenases activate oxygen during methane oxidation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen involvement in MMO catalysis.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "activation of molecular oxygen"}], "predicate": "uses oxidant", "predicate_id": null, "source": "methane monooxygenase", "target": "molecular oxygen"}, {"description": "The first aerobic methane oxidation product is methanol.", "edge_id": "edge-4", "evidence": [{"notes": "Supports methane-to-methanol conversion by MMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "convert methane to methanol"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "methane", "target": "methanol"}, {"description": "Particulate methane monooxygenase is membrane associated in methanotrophs.", "edge_id": "edge-5", "evidence": [{"notes": "Supports subcellular localization for pMMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "pMMO is located in the characteristic intracellular membrane"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "methane monooxygenase", "target": "intracellular membrane"}, {"description": "Methanol dehydrogenase converts methanol onward to formaldehyde.", "edge_id": "edge-6", "evidence": [{"notes": "Supports methanol dehydrogenase as the next step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "Methanol is oxidized to formaldehyde"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methanol dehydrogenase", "target": "methanol"}, {"description": "Formaldehyde can be assimilated through RuMP or serine pathways.", "edge_id": "edge-7", "evidence": [{"notes": "Supports formaldehyde assimilation routes in methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "RuMP pathway and the serine pathway"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "formaldehyde", "target": "formaldehyde assimilation"}, {"description": "Methane oxidation can continue to carbon dioxide for energy metabolism.", "edge_id": "edge-8", "evidence": [{"notes": "Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane cycle between ... methane and CO2"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanotrophic", "target": "carbon dioxide"}], "graph_id": "methanotrophic_methane_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Oxidized C1 product of methane metabolism.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Central C1 intermediate for assimilation or oxidation.", "grounding": "CHEBI:16842", "id": "formaldehyde", "is_orphan": false, "label": "formaldehyde", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "RuMP or serine pathway incorporation of formaldehyde into biomass.", "grounding": "GO:0019649", "id": "formaldehyde_assimilation", "is_orphan": false, "label": "formaldehyde assimilation", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ede9fe", "description": "Localization associated with particulate methane monooxygenase.", "grounding": null, "id": "intracellular_membrane", "is_orphan": false, "label": "intracellular membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "Primary C1 substrate of methanotrophs.", "grounding": "CHEBI:16183", "id": "methane", "is_orphan": false, "label": "methane", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme family catalyzing the first methane oxidation step.", "grounding": "UniProtKB:A0A0A3YNQ7", "id": "methane_monooxygenase", "is_orphan": false, "label": "methane monooxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "First oxidation product of methane.", "grounding": "CHEBI:17790", "id": "methanol", "is_orphan": false, "label": "methanol", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing methanol to formaldehyde.", "grounding": "UniProtKB:A0A010SCY7", "id": "methanol_dehydrogenase", "is_orphan": false, "label": "methanol dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using methane as carbon and energy source.", "grounding": "METPO:1000650", "id": "methanotrophic_trait", "is_orphan": false, "label": "methanotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidant used by aerobic methane monooxygenases.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Aerobic methanotrophic methane oxidation mechanism"}];
+  var graphs = [{"description": "DOI-backed graph for aerobic methane oxidation from methane to methanol, formaldehyde assimilation, and carbon dioxide production.", "edges": [{"description": "Methane is the defining carbon and energy source for methanotrophy.", "evidence": [{"notes": "Review places methane among C1 compounds used by methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane as carbon and energy sources"}], "id": "edge-1", "is_orphan": false, "predicate": "uses substrate", "predicate_id": null, "source": "methanotrophic_trait", "target": "methane"}, {"description": "Methane monooxygenase catalyzes methane oxidation.", "evidence": [{"notes": "Supports MMO as the enzyme for the first oxidation step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane oxidation ... catalyzed by two types of methane monooxygenases"}], "id": "edge-2", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methane_monooxygenase", "target": "methane"}, {"description": "Aerobic methane monooxygenases activate oxygen during methane oxidation.", "evidence": [{"notes": "Supports oxygen involvement in MMO catalysis.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "activation of molecular oxygen"}], "id": "edge-3", "is_orphan": false, "predicate": "uses oxidant", "predicate_id": null, "source": "methane_monooxygenase", "target": "molecular_oxygen"}, {"description": "The first aerobic methane oxidation product is methanol.", "evidence": [{"notes": "Supports methane-to-methanol conversion by MMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "convert methane to methanol"}], "id": "edge-4", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "methane", "target": "methanol"}, {"description": "Particulate methane monooxygenase is membrane associated in methanotrophs.", "evidence": [{"notes": "Supports subcellular localization for pMMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "pMMO is located in the characteristic intracellular membrane"}], "id": "edge-5", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "methane_monooxygenase", "target": "intracellular_membrane"}, {"description": "Methanol dehydrogenase converts methanol onward to formaldehyde.", "evidence": [{"notes": "Supports methanol dehydrogenase as the next step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "Methanol is oxidized to formaldehyde"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methanol_dehydrogenase", "target": "methanol"}, {"description": "Formaldehyde can be assimilated through RuMP or serine pathways.", "evidence": [{"notes": "Supports formaldehyde assimilation routes in methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "RuMP pathway and the serine pathway"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "formaldehyde", "target": "formaldehyde_assimilation"}, {"description": "Methane oxidation can continue to carbon dioxide for energy metabolism.", "evidence": [{"notes": "Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane cycle between ... methane and CO2"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanotrophic_trait", "target": "carbon_dioxide"}, {"description": "High copper favors pMMO expression (the copper switch).", "evidence": [{"notes": "high copper favors pMMO and represses sMMO", "reference": "DOI:10.1039/D3CY00737E"}], "id": "edge-9", "is_orphan": false, "predicate": "positively regulates", "predicate_id": null, "source": "copper", "target": "particulate_methane_monooxygenase"}, {"description": "High copper represses sMMO; low copper favors sMMO (the copper switch).", "evidence": [{"notes": "high copper favors pMMO and represses sMMO; low copper/biomass favors sMMO", "reference": "DOI:10.1039/D3CY00737E"}], "id": "edge-10", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": null, "source": "copper", "target": "soluble_methane_monooxygenase"}, {"description": "pmoCAB operon encodes the PmoA, PmoB and PmoC subunits of pMMO.", "evidence": [{"notes": "pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB operon", "reference": "DOI:10.1039/D3CY00737E"}], "id": "edge-11", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "pmocab_operon", "target": "pmmo_subunits"}, {"description": "mmoXYZ genes encode the MMOH alpha/beta/gamma hydroxylase subunits of sMMO.", "evidence": [{"notes": "MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes", "reference": "DOI:10.1039/D3CY00737E"}], "id": "edge-12", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "mmoxyz_genes", "target": "mmoh_subunits"}, {"description": "Methanobactin binds Cu(I) with high affinity.", "evidence": [{"notes": "Mbns are ribosomally synthesized ... that bind Cu(I) with particularly high affinity", "reference": "DOI:10.1021/acs.chemrev.3c00727"}], "id": "edge-13", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "methanobactin", "target": "cuprous_ion"}, {"description": "Methanobactin-mediated copper chelation enables copper uptake.", "evidence": [{"notes": "some methanotrophs produce methanobactin (high affinity for Cu(I)) for copper collection", "reference": "DOI:10.1039/D3CY00737E"}], "id": "edge-14", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "methanobactin", "target": "copper_acquisition"}, {"description": "Copper acquisition supplies the cofactor required for pMMO activity.", "evidence": [{"notes": "As a required cofactor for pMMO activity ... copper is central to methanotroph physiology", "reference": "DOI:10.1021/acs.chemrev.3c00727"}], "id": "edge-15", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "copper_acquisition", "target": "particulate_methane_monooxygenase"}], "evidence_rows": [{"description": "Methane is the defining carbon and energy source for methanotrophy.", "edge_id": "edge-1", "evidence": [{"notes": "Review places methane among C1 compounds used by methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane as carbon and energy sources"}], "predicate": "uses substrate", "predicate_id": null, "source": "methanotrophic", "target": "methane"}, {"description": "Methane monooxygenase catalyzes methane oxidation.", "edge_id": "edge-2", "evidence": [{"notes": "Supports MMO as the enzyme for the first oxidation step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane oxidation ... catalyzed by two types of methane monooxygenases"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methane monooxygenase", "target": "methane"}, {"description": "Aerobic methane monooxygenases activate oxygen during methane oxidation.", "edge_id": "edge-3", "evidence": [{"notes": "Supports oxygen involvement in MMO catalysis.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "activation of molecular oxygen"}], "predicate": "uses oxidant", "predicate_id": null, "source": "methane monooxygenase", "target": "molecular oxygen"}, {"description": "The first aerobic methane oxidation product is methanol.", "edge_id": "edge-4", "evidence": [{"notes": "Supports methane-to-methanol conversion by MMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "convert methane to methanol"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "methane", "target": "methanol"}, {"description": "Particulate methane monooxygenase is membrane associated in methanotrophs.", "edge_id": "edge-5", "evidence": [{"notes": "Supports subcellular localization for pMMO.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "pMMO is located in the characteristic intracellular membrane"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "methane monooxygenase", "target": "intracellular membrane"}, {"description": "Methanol dehydrogenase converts methanol onward to formaldehyde.", "edge_id": "edge-6", "evidence": [{"notes": "Supports methanol dehydrogenase as the next step.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "Methanol is oxidized to formaldehyde"}], "predicate": "oxidizes", "predicate_id": "METPO:2000016", "source": "methanol dehydrogenase", "target": "methanol"}, {"description": "Formaldehyde can be assimilated through RuMP or serine pathways.", "edge_id": "edge-7", "evidence": [{"notes": "Supports formaldehyde assimilation routes in methanotrophs.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "RuMP pathway and the serine pathway"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "formaldehyde", "target": "formaldehyde assimilation"}, {"description": "Methane oxidation can continue to carbon dioxide for energy metabolism.", "edge_id": "edge-8", "evidence": [{"notes": "Supports methane oxidation in the methane-carbon dioxide cycle; graph focuses on aerobic methanotrophy.", "reference": "DOI:10.1039/D3CY00737E", "snippet": "methane cycle between ... methane and CO2"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "methanotrophic", "target": "carbon dioxide"}, {"description": "High copper favors pMMO expression (the copper switch).", "edge_id": "edge-9", "evidence": [{"notes": "high copper favors pMMO and represses sMMO", "reference": "DOI:10.1039/D3CY00737E"}], "predicate": "positively regulates", "predicate_id": null, "source": "copper", "target": "particulate methane monooxygenase (pMMO)"}, {"description": "High copper represses sMMO; low copper favors sMMO (the copper switch).", "edge_id": "edge-10", "evidence": [{"notes": "high copper favors pMMO and represses sMMO; low copper/biomass favors sMMO", "reference": "DOI:10.1039/D3CY00737E"}], "predicate": "negatively regulates", "predicate_id": null, "source": "copper", "target": "soluble methane monooxygenase (sMMO)"}, {"description": "pmoCAB operon encodes the PmoA, PmoB and PmoC subunits of pMMO.", "edge_id": "edge-11", "evidence": [{"notes": "pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB operon", "reference": "DOI:10.1039/D3CY00737E"}], "predicate": "encodes", "predicate_id": null, "source": "pmoCAB operon", "target": "PmoA/PmoB/PmoC subunits"}, {"description": "mmoXYZ genes encode the MMOH alpha/beta/gamma hydroxylase subunits of sMMO.", "edge_id": "edge-12", "evidence": [{"notes": "MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes", "reference": "DOI:10.1039/D3CY00737E"}], "predicate": "encodes", "predicate_id": null, "source": "mmoXYZ genes", "target": "MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)"}, {"description": "Methanobactin binds Cu(I) with high affinity.", "edge_id": "edge-13", "evidence": [{"notes": "Mbns are ribosomally synthesized ... that bind Cu(I) with particularly high affinity", "reference": "DOI:10.1021/acs.chemrev.3c00727"}], "predicate": "binds", "predicate_id": null, "source": "methanobactin", "target": "Cu(I)"}, {"description": "Methanobactin-mediated copper chelation enables copper uptake.", "edge_id": "edge-14", "evidence": [{"notes": "some methanotrophs produce methanobactin (high affinity for Cu(I)) for copper collection", "reference": "DOI:10.1039/D3CY00737E"}], "predicate": "enables", "predicate_id": null, "source": "methanobactin", "target": "copper acquisition"}, {"description": "Copper acquisition supplies the cofactor required for pMMO activity.", "edge_id": "edge-15", "evidence": [{"notes": "As a required cofactor for pMMO activity ... copper is central to methanotroph physiology", "reference": "DOI:10.1021/acs.chemrev.3c00727"}], "predicate": "promotes", "predicate_id": null, "source": "copper acquisition", "target": "particulate methane monooxygenase (pMMO)"}], "graph_id": "methanotrophic_methane_oxidation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Oxidized C1 product of methane metabolism.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Copper availability acts as a regulatory and cofactor lever in methanotrophy.", "grounding": null, "id": "copper", "is_orphan": false, "label": "copper", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Uptake of copper required for pMMO function.", "grounding": null, "id": "copper_acquisition", "is_orphan": false, "label": "copper acquisition", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Cuprous ion bound with high affinity by methanobactin.", "grounding": null, "id": "cuprous_ion", "is_orphan": false, "label": "Cu(I)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Central C1 intermediate for assimilation or oxidation.", "grounding": "CHEBI:16842", "id": "formaldehyde", "is_orphan": false, "label": "formaldehyde", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "RuMP or serine pathway incorporation of formaldehyde into biomass.", "grounding": "GO:0019649", "id": "formaldehyde_assimilation", "is_orphan": false, "label": "formaldehyde assimilation", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ede9fe", "description": "Localization associated with particulate methane monooxygenase.", "grounding": null, "id": "intracellular_membrane", "is_orphan": false, "label": "intracellular membrane", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "Primary C1 substrate of methanotrophs.", "grounding": "CHEBI:16183", "id": "methane", "is_orphan": false, "label": "methane", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme family catalyzing the first methane oxidation step.", "grounding": "UniProtKB:A0A0A3YNQ7", "id": "methane_monooxygenase", "is_orphan": false, "label": "methane monooxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Ribosomally synthesized copper-chelating chalkophore.", "grounding": null, "id": "methanobactin", "is_orphan": false, "label": "methanobactin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "First oxidation product of methane.", "grounding": "CHEBI:17790", "id": "methanol", "is_orphan": false, "label": "methanol", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing methanol to formaldehyde.", "grounding": "UniProtKB:A0A010SCY7", "id": "methanol_dehydrogenase", "is_orphan": false, "label": "methanol dehydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type using methane as carbon and energy source.", "grounding": "METPO:1000650", "id": "methanotrophic_trait", "is_orphan": false, "label": "methanotrophic", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Hydroxylase subunits of soluble methane monooxygenase.", "grounding": null, "id": "mmoh_subunits", "is_orphan": false, "label": "MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Genes encoding the soluble MMO hydroxylase (MMOH) subunits.", "grounding": null, "id": "mmoxyz_genes", "is_orphan": false, "label": "mmoXYZ genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidant used by aerobic methane monooxygenases.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound copper-containing methane monooxygenase complex.", "grounding": null, "id": "particulate_methane_monooxygenase", "is_orphan": false, "label": "particulate methane monooxygenase (pMMO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Structural subunits of the particulate methane monooxygenase complex.", "grounding": null, "id": "pmmo_subunits", "is_orphan": false, "label": "PmoA/PmoB/PmoC subunits", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Operon encoding the pMMO subunits PmoA, PmoB and PmoC.", "grounding": null, "id": "pmocab_operon", "is_orphan": false, "label": "pmoCAB operon", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic iron-containing methane monooxygenase, expressed under low copper.", "grounding": null, "id": "soluble_methane_monooxygenase", "is_orphan": false, "label": "soluble methane monooxygenase (sMMO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Aerobic methanotrophic methane oxidation mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -741,7 +870,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

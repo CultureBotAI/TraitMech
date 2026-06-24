@@ -90,12 +90,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>acyl-lipid desaturase (Des)</strong>
+            <span class="edge-predicate">increases abundance of</span>
+            <strong>unsaturated fatty acids</strong>
+            
+            <p>Desaturase remodels existing lipids, raising unsaturated:saturated fatty acid ratio.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">A rapid change in the saturated:unsaturated fatty acid ratio by desaturation of existing lipids.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>unsaturated fatty acids</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>membrane fluidity / homeoviscous adaptation</strong>
+            
+            <p>Unsaturation fluidizes the membrane, supporting homeoviscous adaptation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Desaturation fluidizes the membrane; strong general mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>membrane fluidity / homeoviscous adaptation</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>broad thermal-adaptation flexibility</strong>
+            
+            <p>Maintaining membrane fluidity across temperatures underpins broad thermal-adaptation flexibility.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Homeoviscous adaptation via fluidity maintenance underlies adaptation across a temperature range.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>RpoS sigma factor (sigma-S)</strong>
+            <span class="edge-predicate">positively regulates expression of</span>
+            <strong>otsAB trehalose biosynthesis operon</strong>
+            
+            <p>RpoS controls cold-shock-triggered induction of the otsAB operon.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">otsAB induction is RpoS-dependent and triggered by osmotic stress, cold shock, or stationary phase.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>otsAB trehalose biosynthesis operon</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>trehalose</strong>
+            
+            <p>The otsAB pathway synthesizes trehalose.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Trehalose is synthesized by the otsAB operon.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>trehalose</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>cold / cold-shock tolerance</strong>
+            
+            <p>Trehalose acts as a compatible solute supporting cold-shock tolerance.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s12275-023-00031-x</code>
+                
+                <span class="meta">Trehalose helps cold shock tolerance.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +339,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +704,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking broad thermal-adaptation flexibility to a 20\u201330 \u00b0C temperature growth breadth.", "edges": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad_thermal_adaptation", "target": "temperature_delta_mid2_trait"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_mid2_trait", "target": "temperature_delta"}], "evidence_rows": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad thermal-adaptation flexibility", "target": "temperature delta mid2"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta mid2", "target": "temperature delta"}], "graph_id": "temperature_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Strong capacity to remodel membrane lipids and enzymes across temperature shifts of ~20\u201330 \u00b0C.", "grounding": null, "id": "broad_thermal_adaptation", "is_orphan": false, "label": "broad thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 20\u201330 \u00b0C.", "grounding": "METPO:1000486", "id": "temperature_delta_mid2_trait", "is_orphan": false, "label": "temperature delta mid2", "node_type": "TRAIT", "xrefs": []}], "title": "Temperature-delta-mid2 broad-breadth thermal adaptation"}];
+  var graphs = [{"description": "DOI-backed graph linking broad thermal-adaptation flexibility to a 20\u201330 \u00b0C temperature growth breadth.", "edges": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad_thermal_adaptation", "target": "temperature_delta_mid2_trait"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_delta_mid2_trait", "target": "temperature_delta"}, {"description": "Desaturase remodels existing lipids, raising unsaturated:saturated fatty acid ratio.", "evidence": [{"notes": "A rapid change in the saturated:unsaturated fatty acid ratio by desaturation of existing lipids.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-3", "is_orphan": false, "predicate": "increases abundance of", "predicate_id": null, "source": "des_desaturase", "target": "unsaturated_fatty_acids"}, {"description": "Unsaturation fluidizes the membrane, supporting homeoviscous adaptation.", "evidence": [{"notes": "Desaturation fluidizes the membrane; strong general mechanism.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "unsaturated_fatty_acids", "target": "membrane_fluidity"}, {"description": "Maintaining membrane fluidity across temperatures underpins broad thermal-adaptation flexibility.", "evidence": [{"notes": "Homeoviscous adaptation via fluidity maintenance underlies adaptation across a temperature range.", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "membrane_fluidity", "target": "broad_thermal_adaptation"}, {"description": "RpoS controls cold-shock-triggered induction of the otsAB operon.", "evidence": [{"notes": "otsAB induction is RpoS-dependent and triggered by osmotic stress, cold shock, or stationary phase.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates expression of", "predicate_id": null, "source": "rpos_sigma_factor", "target": "otsab_operon"}, {"description": "The otsAB pathway synthesizes trehalose.", "evidence": [{"notes": "Trehalose is synthesized by the otsAB operon.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "otsab_operon", "target": "trehalose"}, {"description": "Trehalose acts as a compatible solute supporting cold-shock tolerance.", "evidence": [{"notes": "Trehalose helps cold shock tolerance.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "trehalose", "target": "cold_tolerance"}], "evidence_rows": [{"description": "Broad thermal-adaptation flexibility yields a 20\u201330 \u00b0C temperature-delta breadth.", "edge_id": "edge-1", "evidence": [{"notes": "Supports broad remodeling flexibility as the basis of broad breadth.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "broad thermal-adaptation flexibility", "target": "temperature delta mid2"}, {"description": "Temperature delta mid2 is a quantitative bin of the temperature-delta phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 20\u201330 \u00b0C breadth as a value within the temperature-delta distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature delta mid2", "target": "temperature delta"}, {"description": "Desaturase remodels existing lipids, raising unsaturated:saturated fatty acid ratio.", "edge_id": "edge-3", "evidence": [{"notes": "A rapid change in the saturated:unsaturated fatty acid ratio by desaturation of existing lipids.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "increases abundance of", "predicate_id": null, "source": "acyl-lipid desaturase (Des)", "target": "unsaturated fatty acids"}, {"description": "Unsaturation fluidizes the membrane, supporting homeoviscous adaptation.", "edge_id": "edge-4", "evidence": [{"notes": "Desaturation fluidizes the membrane; strong general mechanism.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "increases", "predicate_id": null, "source": "unsaturated fatty acids", "target": "membrane fluidity / homeoviscous adaptation"}, {"description": "Maintaining membrane fluidity across temperatures underpins broad thermal-adaptation flexibility.", "edge_id": "edge-5", "evidence": [{"notes": "Homeoviscous adaptation via fluidity maintenance underlies adaptation across a temperature range.", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "enables", "predicate_id": null, "source": "membrane fluidity / homeoviscous adaptation", "target": "broad thermal-adaptation flexibility"}, {"description": "RpoS controls cold-shock-triggered induction of the otsAB operon.", "edge_id": "edge-6", "evidence": [{"notes": "otsAB induction is RpoS-dependent and triggered by osmotic stress, cold shock, or stationary phase.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "positively regulates expression of", "predicate_id": null, "source": "RpoS sigma factor (sigma-S)", "target": "otsAB trehalose biosynthesis operon"}, {"description": "The otsAB pathway synthesizes trehalose.", "edge_id": "edge-7", "evidence": [{"notes": "Trehalose is synthesized by the otsAB operon.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "produces", "predicate_id": null, "source": "otsAB trehalose biosynthesis operon", "target": "trehalose"}, {"description": "Trehalose acts as a compatible solute supporting cold-shock tolerance.", "edge_id": "edge-8", "evidence": [{"notes": "Trehalose helps cold shock tolerance.", "reference": "DOI:10.1007/s12275-023-00031-x"}], "predicate": "contributes to", "predicate_id": null, "source": "trehalose", "target": "cold / cold-shock tolerance"}], "graph_id": "temperature_delta_mid2_broad_breadth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Strong capacity to remodel membrane lipids and enzymes across temperature shifts of ~20\u201330 \u00b0C.", "grounding": null, "id": "broad_thermal_adaptation", "is_orphan": false, "label": "broad thermal-adaptation flexibility", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Response to cold supporting growth/survival at low temperatures.", "grounding": null, "id": "cold_tolerance", "is_orphan": false, "label": "cold / cold-shock tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane desaturase that introduces double bonds into existing acyl chains.", "grounding": null, "id": "des_desaturase", "is_orphan": false, "label": "acyl-lipid desaturase (Des)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of optimal membrane fluidity across temperatures.", "grounding": null, "id": "membrane_fluidity", "is_orphan": false, "label": "membrane fluidity / homeoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#e0e7ff", "description": "otsA/otsB pathway synthesizing trehalose-6-phosphate and trehalose.", "grounding": null, "id": "otsab_operon", "is_orphan": false, "label": "otsAB trehalose biosynthesis operon", "node_type": "PATHWAY", "xrefs": []}, {"color": "#f3e8ff", "description": "General stress-response sigma factor controlling stress regulons.", "grounding": null, "id": "rpos_sigma_factor", "is_orphan": false, "label": "RpoS sigma factor (sigma-S)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Breadth of the growth-supporting ambient-temperature range.", "grounding": "METPO:1000303", "id": "temperature_delta", "is_orphan": false, "label": "temperature delta", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting breadth approximately 20\u201330 \u00b0C.", "grounding": "METPO:1000486", "id": "temperature_delta_mid2_trait", "is_orphan": false, "label": "temperature delta mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute (CHEBI:18150) supporting cold/stress tolerance.", "grounding": null, "id": "trehalose", "is_orphan": false, "label": "trehalose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Acyl chains bearing double bonds (CHEBI:27208) that fluidize the membrane.", "grounding": null, "id": "unsaturated_fatty_acids", "is_orphan": false, "label": "unsaturated fatty acids", "node_type": "CHEMICAL", "xrefs": []}], "title": "Temperature-delta-mid2 broad-breadth thermal adaptation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +715,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -1,7 +1,7 @@
 identifier: traitmech:000051
 label: rhizosphere association
-definition: A habitat association in which an organism lives in the rhizosphere — the
-  soil zone influenced by plant roots and root exudates — a hotspot of microbial
+definition: A habitat association in which an organism lives in the rhizosphere —
+  the soil zone influenced by plant roots and root exudates — a hotspot of microbial
   activity and plant-microbe interaction.
 definition_source: DOI:10.1038/nrmicro3109
 trait_category: ECOLOGY
@@ -23,8 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: rhizosphere_root_exudate
   title: Root exudates structure the rhizosphere microbial habitat
-  description: Evidence-backed causal sketch linking root exudates to the
-    high-activity rhizosphere community.
+  description: Evidence-backed causal sketch linking root exudates to the high-activity
+    rhizosphere community.
   nodes:
   - node_id: rhizosphere_trait
     label: rhizosphere association
@@ -34,12 +34,40 @@ causal_graphs:
   - node_id: root_exudates
     label: root exudates
     node_type: CHEMICAL
-    description: Plant-derived carbon compounds released from roots into
-      surrounding soil.
+    description: Plant-derived carbon compounds released from roots into surrounding
+      soil.
   - node_id: rhizosphere_habitat
     label: rhizosphere habitat
     node_type: ENVIRONMENTAL_FACTOR
     description: Root-influenced soil zone with elevated microbial activity.
+  - node_id: bacterial_chemotaxis
+    label: bacterial chemotaxis
+    node_type: BIOLOGICAL_PROCESS
+    description: Directed bacterial movement along chemical gradients of root exudate
+      compounds.
+  - node_id: flagellar_motility
+    label: flagellum-dependent cell motility
+    node_type: BIOLOGICAL_PROCESS
+    description: Flagella-driven swimming motility that propels cells toward roots.
+  - node_id: mcp_chemoreceptor
+    label: methyl-accepting chemotaxis protein (MCP)
+    node_type: GENE_OR_PROTEIN
+    description: Transmembrane chemoreceptor that senses root exudate compounds and
+      initiates chemotactic signaling.
+  - node_id: che_signaling
+    label: CheA/CheW/CheY chemotaxis signaling
+    node_type: PATHWAY
+    description: Canonical two-component chemotaxis phosphorelay coupling chemoreception
+      to flagellar motility.
+  - node_id: root_colonization
+    label: root colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of bacteria on and around plant roots.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Aggregation of cells into structured, matrix-enclosed communities
+      on root surfaces.
   edges:
   - subject: root_exudates
     predicate: causes
@@ -53,23 +81,76 @@ causal_graphs:
   - subject: rhizosphere_habitat
     predicate: enables
     object: rhizosphere_trait
-    description: The rhizosphere habitat supports the rhizosphere-associated
-      lifestyle.
+    description: The rhizosphere habitat supports the rhizosphere-associated lifestyle.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
-      notes: Fierer documents the rhizosphere as a high-activity subset of the
-        broader soil microbiome.
+      notes: Fierer documents the rhizosphere as a high-activity subset of the broader
+        soil microbiome.
     predicate_id: RO:0002327
+  - subject: mcp_chemoreceptor
+    predicate: positively regulates
+    object: bacterial_chemotaxis
+    description: MCP chemoreceptors sense diverse root exudates to drive chemotaxis.
+    evidence:
+    - reference: DOI:10.3389/fpls.2024.1491495
+      notes: Bacteria use transmembrane chemoreceptors (MCPs) to sense diverse root
+        exudates.
+  - subject: che_signaling
+    predicate: positively regulates
+    object: flagellar_motility
+    description: Phosphorylated CheY interacts with motility proteins to mediate movement.
+    evidence:
+    - reference: DOI:10.3389/fpls.2024.1491495
+      notes: Phosphorylated CheY interacts with motility proteins, mediating bacterial
+        movement.
+  - subject: bacterial_chemotaxis
+    predicate: enables
+    object: root_colonization
+    description: Chemotaxis is the first step in root colonization by motile bacteria.
+    evidence:
+    - reference: DOI:10.3390/biology13020095
+      notes: Chemotaxis is the first step in the root colonization by motile bacteria.
+  - subject: flagellar_motility
+    predicate: positively regulates
+    object: rhizosphere_trait
+    description: Flagellar motility is required for efficient root colonization /
+      rhizosphere association.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad066
+      notes: Disruption of chemotaxis or flagellin synthesis led to a 100-fold decrease
+        in root colonization efficiency.
+  - subject: root_exudates
+    predicate: positively regulates
+    object: biofilm_formation
+    description: Root exudates serve as carbon sources prerequisite for biofilm formation.
+    evidence:
+    - reference: DOI:10.3389/fpls.2024.1491495
+      notes: Root exudates serve as carbon sources that are prerequisites for biofilm
+        formation.
+  - subject: biofilm_formation
+    predicate: positively regulates
+    object: rhizosphere_trait
+    description: Biofilms provide nutrient-rich microenvironments and protection supporting
+      rhizosphere persistence.
+    evidence:
+    - reference: DOI:10.3390/biology13020095
+      notes: Biofilms provide nutrient-rich microenvironments and protection.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate ECOLOGY trait (rhizosphere association); sub-variant of
-    habitat association.
+  changes: Proposed candidate ECOLOGY trait (rhizosphere association); sub-variant
+    of habitat association.
   llm_assisted: true
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (rhizosphere / root exudate habitat)
     with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

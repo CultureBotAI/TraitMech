@@ -48,6 +48,42 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000335
     description: Breadth (max − min) of the growth-supporting NaCl range.
+  - node_id: intracellular_osmotic_balance
+    label: intracellular osmotic balance across salinity
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cytoplasmic osmotic equilibrium under varying ambient
+      salinity.
+  - node_id: salt_out_compatible_solute_strategy
+    label: compatible-solute (salt-out) strategy
+    node_type: PATHWAY
+    description: Osmoadaptation by accumulating small organic compatible solutes.
+  - node_id: salt_in_strategy
+    label: salt-in strategy
+    node_type: PATHWAY
+    description: Osmoadaptation by accumulating high intracellular salt, mainly potassium.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Compatible solute accumulating with rising salinity.
+  - node_id: l_proline
+    label: L-proline
+    node_type: CHEMICAL
+    description: Compatible solute / osmoprotectant amino acid.
+  - node_id: proline_biosynthesis_pathway
+    label: proB/proA/proC proline biosynthesis pathway
+    node_type: PATHWAY
+    description: Sequential biosynthesis of L-proline by gamma-glutamyl kinase, GSA
+      dehydrogenase, and P5C reductase.
+  - node_id: chaotropic_ions
+    label: chaotropic ions (Mg/Ca/Li/Fe salts)
+    node_type: CHEMICAL
+    description: Chaotropic cations whose presence reduces microbial habitability
+      of brines.
+  - node_id: water_activity
+    label: water activity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Available water (aw); a key abiotic constraint co-determining salinity
+      limits.
   edges:
   - subject: nacl_concentration_axis
     predicate: defines
@@ -88,6 +124,67 @@ causal_graphs:
       notes: Supports growth-range breadth as a derived numerical salinity descriptor
         of the same axis.
     predicate_id: rdfs:subClassOf
+  - subject: salt_out_compatible_solute_strategy
+    predicate: maintains
+    object: intracellular_osmotic_balance
+    description: Accumulation of compatible solutes maintains intracellular osmotic
+      balance across salinity.
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      notes: Salt-out strategy relies on accumulation of small organic compatible
+        solutes.
+  - subject: salt_in_strategy
+    predicate: maintains
+    object: intracellular_osmotic_balance
+    description: Salt-in strategy maintains osmotic balance via high intracellular
+      salt (mainly potassium).
+    evidence:
+    - reference: DOI:10.3389/frmbi.2023.1329925
+      notes: Salt-in strategy involves high intracellular concentration of salts,
+        mainly potassium.
+  - subject: glycine_betaine
+    predicate: contributes to
+    object: intracellular_osmotic_balance
+    description: Glycine betaine accumulates with rising salinity, contributing to
+      intracellular osmotic balance.
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      notes: Intracellular content of compatible solutes including glycine betaine
+        increases with rising salinity.
+  - subject: l_proline
+    predicate: increases
+    object: salinity_phenotype_trait
+    description: L-proline accumulation increases high-salinity stress tolerance.
+    evidence:
+    - reference: DOI:10.1128/aem.01195-24
+      notes: Overproduction of L-proline improves high-salinity stress tolerance;
+        broadly plausible mechanism.
+  - subject: proline_biosynthesis_pathway
+    predicate: produces
+    object: l_proline
+    description: proB/proA/proC pathway produces L-proline via three sequential enzymes.
+    evidence:
+    - reference: DOI:10.1128/aem.01195-24
+      notes: Pro is biosynthesized by sequential actions of three enzymes encoded
+        by proB, proA, and proC; general across many bacteria.
+  - subject: chaotropic_ions
+    predicate: decreases
+    object: salinity_phenotype_trait
+    description: Chaotropic ions reduce habitability at a given salinity, modifying
+      observed salinity limits.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: Highly chaotropic brines are deleterious and seem devoid of microbial
+        life; salt composition modifies salinity limits.
+  - subject: water_activity
+    predicate: constrains
+    object: salinity_phenotype_trait
+    description: Water activity is a general abiotic constraint on salinity growth
+      limits.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: Systems of lower water activity constrain growth; relevant beyond NaCl-only
+        limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
@@ -111,4 +208,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

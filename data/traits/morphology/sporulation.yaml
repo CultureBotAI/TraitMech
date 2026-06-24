@@ -56,6 +56,60 @@ causal_graphs:
     label: endospore
     node_type: ORGANELLE
     description: Dormant stress-resistant spore produced by sporulating bacteria.
+  - node_id: mother_cell_forespore
+    label: mother cell and forespore
+    node_type: CELLULAR_LOCALIZATION
+    description: The two cellular compartments produced by asymmetric division during
+      sporulation.
+  - node_id: spoiiie_translocase
+    label: SpoIIIE
+    node_type: GENE_OR_PROTEIN
+    description: DNA translocase that pumps the chromosome into the forespore during
+      sporulation.
+  - node_id: chromosome_translocation
+    label: chromosome translocation
+    node_type: BIOLOGICAL_PROCESS
+    description: Movement of the trapped chromosome across the asymmetric septum into
+      the forespore.
+  - node_id: forespore_engulfment
+    label: forespore engulfment
+    node_type: BIOLOGICAL_PROCESS
+    description: Mother-cell membrane migration around the forespore producing a cell-within-a-cell
+      state.
+  - node_id: cell_within_cell_state
+    label: cell-within-a-cell state
+    node_type: STATE
+    description: Engulfed forespore fully enclosed within the mother-cell cytoplasm.
+  - node_id: sigma_f
+    label: sigma F
+    node_type: GENE_OR_PROTEIN
+    description: First compartment-specific sigma factor activated in the forespore.
+  - node_id: sigma_e
+    label: sigma E
+    node_type: GENE_OR_PROTEIN
+    description: Mother-cell sigma factor activated downstream of sigma F.
+  - node_id: sigma_g
+    label: sigma G
+    node_type: GENE_OR_PROTEIN
+    description: Late forespore sigma factor driving spore maturation and DNA protection.
+  - node_id: sigma_k
+    label: sigma K
+    node_type: GENE_OR_PROTEIN
+    description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
+  - node_id: spore_dna_protection
+    label: spore DNA protection
+    node_type: BIOLOGICAL_PROCESS
+    description: Protection of spore chromosomal DNA, e.g. via small acid-soluble
+      (Ssp) proteins.
+  - node_id: spore_coat_cortex
+    label: spore coat and cortex
+    node_type: CELLULAR_LOCALIZATION
+    description: Protective spore envelope layers (cortex, coat, exosporium) deposited
+      during maturation.
+  - node_id: stress_resistance
+    label: heat and chemical resistance
+    node_type: QUALITY
+    description: Resistance of the mature endospore to heat and chemical stress.
   edges:
   - subject: nutrient_limitation
     predicate: activates
@@ -112,6 +166,61 @@ causal_graphs:
       snippet: production of a highly resistant dormant cell type known as the spore
       notes: Supports endospore production as the trait outcome.
     predicate_id: METPO:2007400
+  - subject: asymmetric_septation
+    predicate: produces
+    object: mother_cell_forespore
+    description: Asymmetric division produces distinct mother-cell and forespore compartments.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      notes: via an asymmetric division into a forespore and mother cell (central
+        defining morphogenesis edge).
+  - subject: spoiiie_translocase
+    predicate: mediates
+    object: chromosome_translocation
+    description: SpoIIIE translocates the chromosome into the forespore after asymmetric
+      septation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      notes: recruitment of SpoIIIE for chromosome translocation.
+  - subject: forespore_engulfment
+    predicate: creates
+    object: cell_within_cell_state
+    description: Engulfment of the forespore by the mother cell creates a cell-within-a-cell
+      state.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      notes: forespore engulfment, creating a cell-within-a-cell state.
+  - subject: sigma_f
+    predicate: activates
+    object: sigma_e
+    description: Forespore sigma F drives activation of mother-cell sigma E.
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2024.107905
+      notes: SigF activated first in the forespore; SigE activation in the mother
+        cell depends on SigF.
+  - subject: sigma_g
+    predicate: drives
+    object: spore_dna_protection
+    description: Late forespore sigma G drives spore DNA protection during maturation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      notes: sigma G drives spore maturation and spore DNA protection via Ssp proteins.
+  - subject: sigma_k
+    predicate: controls
+    object: spore_coat_cortex
+    description: Mother-cell sigma K controls spore coat and cortex maturation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51654-6
+      notes: mother-cell sigma K controls spore coat and cortex maturation.
+  - subject: spore_coat_cortex
+    predicate: confers
+    object: stress_resistance
+    description: Deposition of cortex, coat and exosporium confers heat and chemical
+      resistance.
+    evidence:
+    - reference: DOI:10.1038/s42003-024-06521-x
+      notes: deposition of cortex, coat and exosporium (conferring heat and chemical
+        resistance).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.916642+00:00'
   curator: seed_from_metpo
@@ -160,4 +269,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -51,6 +51,43 @@ causal_graphs:
     label: anaerobic metabolism
     node_type: BIOLOGICAL_PROCESS
     description: Energy metabolism optimized for anoxic conditions.
+  - node_id: oxygen_exposure
+    label: oxygen exposure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Exposure of anaerobic cells to molecular oxygen, triggering oxidative
+      stress.
+  - node_id: oxidative_damage_biomolecules
+    label: oxidative damage to biomolecules
+    node_type: BIOLOGICAL_PROCESS
+    description: ROS-mediated oxidative damage to proteins and nucleic acids.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    description: Reactive oxygen species; substrate for Fenton chemistry.
+  - node_id: ferrous_iron
+    label: ferrous iron (Fe(II))
+    node_type: CHEMICAL
+    description: Fe(II) reactant driving hydroxyl-radical generation via Fenton reaction.
+  - node_id: hydroxyl_radical
+    label: hydroxyl radical
+    node_type: CHEMICAL
+    description: Highly damaging ROS produced via Fenton chemistry.
+  - node_id: dna_damage
+    label: DNA damage
+    node_type: BIOLOGICAL_PROCESS
+    description: Irreparable lesions blocking replication caused by hydroxyl radicals.
+  - node_id: pyruvate_formate_lyase
+    label: pyruvate formate-lyase (PFL)
+    node_type: GENE_OR_PROTEIN
+    description: Glycyl-radical enzyme rapidly inactivated by O2.
+  - node_id: pyruvate_ferredoxin_oxidoreductase
+    label: pyruvate:ferredoxin oxidoreductase (PFOR)
+    node_type: GENE_OR_PROTEIN
+    description: O2-sensitive anaerobic metalloenzyme.
+  - node_id: fefe_hydrogenase
+    label: '[FeFe]-hydrogenase'
+    node_type: GENE_OR_PROTEIN
+    description: Oxygen-sensitive low-potential redox enzyme.
   edges:
   - subject: molecular_oxygen
     predicate: inhibits
@@ -89,6 +126,66 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-021-00583-y
       snippet: direct poisoning by molecular oxygen and ROS
       notes: Supports ROS-mediated impairment of anaerobic catalytic sites.
+  - subject: oxygen_exposure
+    predicate: causes
+    object: reactive_oxygen_species
+    description: O2 exposure generates ROS such as superoxide, peroxides, and hydroxyl
+      radicals.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01909-7
+      notes: As a consequence of oxygenation, reactive oxygen species like superoxide,
+        peroxides, and hydroxyl radicals are produced.
+  - subject: oxygen_exposure
+    predicate: causes
+    object: oxidative_damage_biomolecules
+    description: O2 exposure causes oxidative stress damaging biomolecules.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01909-7
+      notes: ROS cause oxidative stress due to damage to biomolecules like proteins
+        and nucleic acids.
+  - subject: hydrogen_peroxide
+    predicate: causes
+    object: hydroxyl_radical
+    description: H2O2 reacts with Fe(II) to produce hydroxyl radicals (Fenton chemistry).
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: Fe(II)+H2O2 produces hydroxyl radicals.
+  - subject: ferrous_iron
+    predicate: causes
+    object: hydroxyl_radical
+    description: Fe(II) drives hydroxyl-radical generation via the Fenton reaction.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: Fe(II)+H2O2 produces hydroxyl radicals.
+  - subject: hydroxyl_radical
+    predicate: causes
+    object: dna_damage
+    description: Hydroxyl radicals create irreparable lesions and block replication.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: hydroxyl radicals create irreparable lesions and block replication.
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: pyruvate_formate_lyase
+    description: O2 rapidly inactivates the glycyl-radical enzyme PFL.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: PFL is rapidly inactivated by O2; even low O2 levels can inactivate PFL
+        within seconds.
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: pyruvate_ferredoxin_oxidoreductase
+    description: O2 directly inactivates the metalloenzyme PFOR.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: O2 directly inactivates diverse metalloenzymes (e.g., PFOR).
+  - subject: molecular_oxygen
+    predicate: inactivates
+    object: fefe_hydrogenase
+    description: O2 directly inactivates oxygen-sensitive [FeFe]-hydrogenases.
+    evidence:
+    - reference: DOI:10.1038/s41579-021-00583-y
+      notes: O2 directly inactivates diverse metalloenzymes... hydrogenases.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.852690+00:00'
   curator: seed_from_metpo
@@ -121,4 +218,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

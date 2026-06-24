@@ -1,8 +1,8 @@
 identifier: traitmech:000008
 label: ionizing radiation tolerant
 definition: An environmental tolerance in which an organism survives high doses of
-  ionizing radiation (e.g. gamma rays), typically via efficient repair of DNA
-  double-strand breaks and protection of the proteome from oxidative damage.
+  ionizing radiation (e.g. gamma rays), typically via efficient repair of DNA double-strand
+  breaks and protection of the proteome from oxidative damage.
 definition_source: DOI:10.3390/genes14091803
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -18,8 +18,8 @@ evidence:
   snippet: Deinococcus radiodurans R1 demonstrates a significantly higher radiation
     resistance with D10 values exceeding 12 kGy for gamma radiation and 700 J/m2 for
     UV-C radiation
-  notes: 'Organism example: Deinococcus radiodurans tolerates gamma (ionizing)
-    radiation D10 doses exceeding 12 kGy.'
+  notes: 'Organism example: Deinococcus radiodurans tolerates gamma (ionizing) radiation
+    D10 doses exceeding 12 kGy.'
 - reference: DOI:10.1101/cshperspect.a012765
   snippet: A strong correlation has been shown between intracellular Mn/Fe concentration
     ratios and bacterial resistance to radiation
@@ -28,9 +28,8 @@ evidence:
 causal_graphs:
 - graph_id: ionizing_radiation_tolerance_dsb_repair
   title: Ionizing-radiation tolerance via double-strand-break repair
-  description: Evidence-backed causal sketch linking gamma-radiation exposure to
-    efficient repair of DNA double-strand breaks and Mn-mediated oxidative
-    protection.
+  description: Evidence-backed causal sketch linking gamma-radiation exposure to efficient
+    repair of DNA double-strand breaks and Mn-mediated oxidative protection.
   nodes:
   - node_id: ionizing_tolerant_trait
     label: ionizing radiation tolerant
@@ -49,8 +48,17 @@ causal_graphs:
   - node_id: mn_antioxidant_protection
     label: manganese-mediated oxidative-damage protection
     node_type: BIOLOGICAL_PROCESS
-    description: Mn(II)-antioxidant shielding of repair proteins from oxidative
-      damage.
+    description: Mn(II)-antioxidant shielding of repair proteins from oxidative damage.
+  - node_id: dsb_clustered_lesions
+    label: DNA double-strand breaks and clustered lesions
+    node_type: STATE
+    description: Single- and double-strand DNA breaks, abasic sites and complex clustered
+      lesions produced by ionizing radiation.
+  - node_id: mn_fe_ratio
+    label: high intracellular Mn/Fe ratio
+    node_type: QUALITY
+    description: Elevated intracellular manganese-to-iron concentration ratio associated
+      with antioxidant proteome protection.
   edges:
   - subject: gamma_radiation
     predicate: challenges
@@ -63,12 +71,11 @@ causal_graphs:
   - subject: dsb_repair
     predicate: enables
     object: ionizing_tolerant_trait
-    description: Efficient DSB repair restores chromosomal integrity after
-      ionizing-radiation damage.
+    description: Efficient DSB repair restores chromosomal integrity after ionizing-radiation
+      damage.
     evidence:
     - reference: DOI:10.3390/genes14091803
-      notes: D. radiodurans tolerates lethal gamma doses through DSB-repair
-        machinery.
+      notes: D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.
     predicate_id: RO:0002327
   - subject: mn_antioxidant_protection
     predicate: enables
@@ -77,9 +84,44 @@ causal_graphs:
       irradiation.
     evidence:
     - reference: DOI:10.1101/cshperspect.a012765
-      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation
-        resistance.
+      notes: Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.
     predicate_id: RO:0002327
+  - subject: gamma_radiation
+    predicate: causes
+    object: dsb_clustered_lesions
+    description: Ionizing radiation produces DNA double- and single-strand breaks
+      and complex clustered lesions.
+    evidence:
+    - reference: DOI:10.1007/978-3-031-18810-7_9
+      notes: Ionizing radiation produces single- and double-strand DNA breaks, abasic
+        sites and complex clustered lesions (broad radiobiology, across taxa).
+  - subject: dsb_repair
+    predicate: repairs
+    object: dsb_clustered_lesions
+    description: Double-strand break repair resolves the clustered DNA lesions inflicted
+      by ionizing radiation.
+    evidence:
+    - reference: DOI:10.1007/978-3-031-18810-7_9
+      notes: DSB-repair machinery resolves radiation-induced strand breaks and clustered
+        lesions to restore chromosomal integrity.
+  - subject: mn_fe_ratio
+    predicate: positively correlates with
+    object: ionizing_tolerant_trait
+    description: A high intracellular Mn/Fe ratio correlates with antioxidant proteome
+      protection and survival of ionizing radiation.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: 'Strong correlation: radiation-resistant bacteria carry more Mn2+ and
+        ~3x less Fe2+, giving antioxidant protection of the cellular proteome.'
+  - subject: mn_fe_ratio
+    predicate: enables
+    object: mn_antioxidant_protection
+    description: A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair
+      proteins from oxidative damage.
+    evidence:
+    - reference: DOI:10.1101/cshperspect.a012765
+      notes: Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome
+        during irradiation.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -91,6 +133,11 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (DSB repair + Mn-antioxidant) with GO
-    node grounding and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (2 new nodes) from the deep-research
+    report.
   llm_assisted: true

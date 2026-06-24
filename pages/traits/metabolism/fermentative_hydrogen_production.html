@@ -90,12 +90,84 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>[FeFe] hydrogenase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>molecular hydrogen</strong>
+            
+            <p>[FeFe]-hydrogenases are producers of H2 in dark fermentation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/en16083321</code>
+                
+                <span class="meta">[FeFe]-hydrogenases explicitly noted as producers of H2 in dark fermentation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>low H2 partial pressure</strong>
+            <span class="edge-predicate">stimulates</span>
+            <strong>fermentative hydrogen production</strong>
+            
+            <p>Low ambient H2 partial pressure stimulates H2 formation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.00634-23</code>
+                
+                <span class="meta">Low ambient H2 stimulated hydrogen (H2) formation; likely broadly relevant across fermenters.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>high H2 partial pressure</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>fermentative hydrogen production</strong>
+            
+            <p>High ambient H2 partial pressure inhibits H2 formation (product feedback).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.00634-23</code>
+                
+                <span class="meta">High H2 inhibited H2 formation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>pH</strong>
+            <span class="edge-predicate">affects</span>
+            <strong>fermentative hydrogen production</strong>
+            
+            <p>pH affects the activity of hydrogenase enzymes and thus dark fermentative H2 yield.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/en16083321</code>
+                
+                <span class="meta">pH affects the activity of hydrogenase enzymes and dark fermentative H2 yield.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -227,6 +299,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (fermentative H2 production) with GO/CHEBI node groundings and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +664,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking hydrogenase activity on reduced ferredoxin or formate to molecular hydrogen production as a redox-balancing fermentation output.", "edges": [{"description": "Fermentative H2 production is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports H2 production as a redox-balancing fermentation output via hydrogenases.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "fermentative_h2_trait", "target": "fermentation_process"}, {"description": "Hydrogenases produce H2 to regenerate oxidized cofactors.", "evidence": [{"notes": "Hallenbeck \u0026 Benemann review biological hydrogen production, including dark fermentative H2 generation.", "reference": "DOI:10.1016/S0360-3199(02)00131-3"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "fermentative_h2_trait", "target": "molecular_hydrogen"}], "evidence_rows": [{"description": "Fermentative H2 production is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports H2 production as a redox-balancing fermentation output via hydrogenases.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "fermentative hydrogen production", "target": "fermentation"}, {"description": "Hydrogenases produce H2 to regenerate oxidized cofactors.", "edge_id": "edge-2", "evidence": [{"notes": "Hallenbeck \u0026 Benemann review biological hydrogen production, including dark fermentative H2 generation.", "reference": "DOI:10.1016/S0360-3199(02)00131-3"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "fermentative hydrogen production", "target": "molecular hydrogen"}], "graph_id": "fermentative_h2_production", "issues": [], "nodes": [{"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation that yields H2 to dispose of excess electrons.", "grounding": "traitmech:000109", "id": "fermentative_h2_trait", "is_orphan": false, "label": "fermentative hydrogen production", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "H2 produced by hydrogenases.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Fermentative H2 production disposes of excess reducing equivalents"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking hydrogenase activity on reduced ferredoxin or formate to molecular hydrogen production as a redox-balancing fermentation output.", "edges": [{"description": "Fermentative H2 production is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports H2 production as a redox-balancing fermentation output via hydrogenases.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "fermentative_h2_trait", "target": "fermentation_process"}, {"description": "Hydrogenases produce H2 to regenerate oxidized cofactors.", "evidence": [{"notes": "Hallenbeck \u0026 Benemann review biological hydrogen production, including dark fermentative H2 generation.", "reference": "DOI:10.1016/S0360-3199(02)00131-3"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "fermentative_h2_trait", "target": "molecular_hydrogen"}, {"description": "[FeFe]-hydrogenases are producers of H2 in dark fermentation.", "evidence": [{"notes": "[FeFe]-hydrogenases explicitly noted as producers of H2 in dark fermentation.", "reference": "DOI:10.3390/en16083321"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "fefe_hydrogenase", "target": "molecular_hydrogen"}, {"description": "Low ambient H2 partial pressure stimulates H2 formation.", "evidence": [{"notes": "Low ambient H2 stimulated hydrogen (H2) formation; likely broadly relevant across fermenters.", "reference": "DOI:10.1128/aem.00634-23"}], "id": "edge-4", "is_orphan": false, "predicate": "stimulates", "predicate_id": null, "source": "low_h2_partial_pressure", "target": "fermentative_h2_trait"}, {"description": "High ambient H2 partial pressure inhibits H2 formation (product feedback).", "evidence": [{"notes": "High H2 inhibited H2 formation.", "reference": "DOI:10.1128/aem.00634-23"}], "id": "edge-5", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "high_h2_partial_pressure", "target": "fermentative_h2_trait"}, {"description": "pH affects the activity of hydrogenase enzymes and thus dark fermentative H2 yield.", "evidence": [{"notes": "pH affects the activity of hydrogenase enzymes and dark fermentative H2 yield.", "reference": "DOI:10.3390/en16083321"}], "id": "edge-6", "is_orphan": false, "predicate": "affects", "predicate_id": null, "source": "environmental_ph", "target": "fermentative_h2_trait"}], "evidence_rows": [{"description": "Fermentative H2 production is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports H2 production as a redox-balancing fermentation output via hydrogenases.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "fermentative hydrogen production", "target": "fermentation"}, {"description": "Hydrogenases produce H2 to regenerate oxidized cofactors.", "edge_id": "edge-2", "evidence": [{"notes": "Hallenbeck \u0026 Benemann review biological hydrogen production, including dark fermentative H2 generation.", "reference": "DOI:10.1016/S0360-3199(02)00131-3"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "fermentative hydrogen production", "target": "molecular hydrogen"}, {"description": "[FeFe]-hydrogenases are producers of H2 in dark fermentation.", "edge_id": "edge-3", "evidence": [{"notes": "[FeFe]-hydrogenases explicitly noted as producers of H2 in dark fermentation.", "reference": "DOI:10.3390/en16083321"}], "predicate": "produces", "predicate_id": null, "source": "[FeFe] hydrogenase", "target": "molecular hydrogen"}, {"description": "Low ambient H2 partial pressure stimulates H2 formation.", "edge_id": "edge-4", "evidence": [{"notes": "Low ambient H2 stimulated hydrogen (H2) formation; likely broadly relevant across fermenters.", "reference": "DOI:10.1128/aem.00634-23"}], "predicate": "stimulates", "predicate_id": null, "source": "low H2 partial pressure", "target": "fermentative hydrogen production"}, {"description": "High ambient H2 partial pressure inhibits H2 formation (product feedback).", "edge_id": "edge-5", "evidence": [{"notes": "High H2 inhibited H2 formation.", "reference": "DOI:10.1128/aem.00634-23"}], "predicate": "inhibits", "predicate_id": null, "source": "high H2 partial pressure", "target": "fermentative hydrogen production"}, {"description": "pH affects the activity of hydrogenase enzymes and thus dark fermentative H2 yield.", "edge_id": "edge-6", "evidence": [{"notes": "pH affects the activity of hydrogenase enzymes and dark fermentative H2 yield.", "reference": "DOI:10.3390/en16083321"}], "predicate": "affects", "predicate_id": null, "source": "pH", "target": "fermentative hydrogen production"}], "graph_id": "fermentative_h2_production", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Environmental pH affecting hydrogenase activity and fermentative H2 yield.", "grounding": null, "id": "environmental_ph", "is_orphan": false, "label": "pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Hydrogenase enzyme that catalyzes reduction of protons to molecular hydrogen in dark fermentation.", "grounding": null, "id": "fefe_hydrogenase", "is_orphan": false, "label": "[FeFe] hydrogenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation that yields H2 to dispose of excess electrons.", "grounding": "traitmech:000109", "id": "fermentative_h2_trait", "is_orphan": false, "label": "fermentative hydrogen production", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "High ambient hydrogen partial pressure in the environment.", "grounding": null, "id": "high_h2_partial_pressure", "is_orphan": false, "label": "high H2 partial pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Low ambient hydrogen partial pressure in the environment.", "grounding": null, "id": "low_h2_partial_pressure", "is_orphan": false, "label": "low H2 partial pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "H2 produced by hydrogenases.", "grounding": "CHEBI:18276", "id": "molecular_hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "xrefs": []}], "title": "Fermentative H2 production disposes of excess reducing equivalents"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +675,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

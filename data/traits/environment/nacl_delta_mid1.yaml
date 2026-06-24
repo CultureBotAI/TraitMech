@@ -37,6 +37,44 @@ causal_graphs:
     label: modest osmoadaptive flexibility
     node_type: BIOLOGICAL_PROCESS
     description: Moderate capacity to remodel osmolytes across ambient salinity shifts.
+  - node_id: osmotic_upshift
+    label: osmotic upshift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Sudden increase in external osmolarity (e.g. NaCl) imposing hyperosmotic
+      stress.
+  - node_id: k_import
+    label: potassium import
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid cytoplasmic accumulation of K+ as a first-line osmoadaptive
+      response.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation/synthesis of neutral organic osmolytes (glycine betaine,
+      proline, trehalose, ectoine, carnitine).
+  - node_id: osmoadaptation_under_nacl
+    label: osmoadaptation / growth under NaCl stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of turgor, protein and membrane stability, and growth
+      across NaCl stress.
+  - node_id: ectoine_biosynthesis
+    label: ectoine biosynthesis (EctB/EctA/EctC)
+    node_type: PATHWAY
+    description: Three-enzyme biosynthetic pathway producing the compatible solute
+      ectoine.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Compatible solute (CHEBI:22586) contributing to salt tolerance.
+  - node_id: c_di_amp
+    label: cyclic di-AMP
+    node_type: CHEMICAL
+    description: Second messenger (CHEBI:167606) central to osmoregulation of K+ and
+      osmolyte economy.
+  - node_id: organic_osmolyte_influx_biosynthesis
+    label: compatible organic osmolyte influx and biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Influx and biosynthesis of physiologically compatible organic osmolytes.
   edges:
   - subject: modest_osmoadaptive_flexibility
     predicate: produces
@@ -57,6 +95,72 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the 1–3% breadth as a value within the NaCl-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: osmotic_upshift
+    predicate: induces
+    object: k_import
+    description: Hyperosmotic upshift triggers rapid K+ import to raise cytoplasmic
+      osmolarity/turgor.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: Bacterial cells commonly import a lot of potassium during an osmotic
+        upshift (broad bacterial relevance).
+  - subject: k_import
+    predicate: precedes/replaced by
+    object: compatible_solute_accumulation
+    description: Initial K+ accumulation is subsequently replaced by neutral compatible
+      solutes to reduce ionic stress.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: Cells begin accumulating/synthesizing neutral compatible solutes such
+        as glycine betaine, trehalose, and other osmolytes to replace K+ ions.
+  - subject: osmotic_upshift
+    predicate: induces
+    object: compatible_solute_accumulation
+    description: Osmoadaptation transitions from inorganic K+ accumulation to organic
+      osmoprotectants.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2019.02811
+      notes: Cells initially accumulate potassium as an emergency stress reaction
+        and subsequently replace most of this ion with compatible solutes.
+  - subject: compatible_solute_accumulation
+    predicate: supports
+    object: osmoadaptation_under_nacl
+    description: Organic osmolytes stabilize proteins/membranes and raise intracellular
+      osmotic strength without salt-in toxicity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuaf020
+      notes: Bacteria commonly use compatible solutes - notably glycine betaine, proline,
+        trehalose, ectoine and carnitine - to support osmoadaptation.
+  - subject: ectoine_biosynthesis
+    predicate: produces
+    object: ectoine
+    description: The EctB/EctA/EctC pathway synthesizes the compatible solute ectoine.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2019.02811
+      notes: Ectoine biosynthesis is mediated by three enzymes (EctB, EctA, EctC).
+  - subject: ectoine
+    predicate: contributes to
+    object: compatible_solute_accumulation
+    description: Ectoine is one of the compatible solutes accumulated during osmoadaptation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuaf020
+      notes: Ectoine is among the compatible solutes bacteria commonly use for osmoprotection.
+  - subject: c_di_amp
+    predicate: decreases
+    object: k_import
+    description: Elevated c-di-AMP downregulates osmoregulatory K+ import.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00181-23
+      notes: High cyclic di-AMP reduces K+ import (review-level regulatory edge).
+  - subject: c_di_amp
+    predicate: controls
+    object: organic_osmolyte_influx_biosynthesis
+    description: c-di-AMP regulates both the influx of compatible organic osmolytes
+      and their biosynthesis.
+    evidence:
+    - reference: DOI:10.1128/JB.00190-24
+      notes: c-di-AMP plays a key role by controlling (i) the influx of physiologically
+        compatible organic osmolytes and (ii) the biosynthesis of such osmolytes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.841250+00:00'
   curator: seed_from_metpo
@@ -74,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -107,12 +107,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>carboxysome shell</strong>
+            <span class="edge-predicate">prevents loss of</span>
+            <strong>carbon dioxide</strong>
+            
+            <p>The carboxysome protein shell retains CO2, preventing its escape to the cytoplasm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro.2018.10</code>
+                
+                <span class="meta">Kerfeld 2018: &#34;The shell prevents loss of CO2 to the cytoplasm.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>carbonic anhydrase</strong>
+            <span class="edge-predicate">converts</span>
+            <strong>bicarbonate</strong>
+            
+            <p>Carboxysomal carbonic anhydrase dehydrates imported bicarbonate to CO2.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.01075-24</code>
+                
+                <span class="meta">Wieschollek 2024: HCO3- entering carboxysomes is converted by CA to CO2; broad to bacterial CCMs with carboxysomes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>carboxysome shell</strong>
+            <span class="edge-predicate">permits passage of</span>
+            <strong>bicarbonate</strong>
+            
+            <p>Selective shell permeability allows HCO3- (and RuBP) to enter the carboxysome.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/plphys/kiae438</code>
+                
+                <span class="meta">Cheng 2024: &#34;the shell has selective permeability that permits HCO3- and RuBP passage.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>carboxysome shell</strong>
+            <span class="edge-predicate">limits influx of</span>
+            <strong>oxygen</strong>
+            
+            <p>The carboxysome shell restricts O2 influx, reducing unproductive RuBisCO oxygenation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/plphys/kiae438</code>
+                
+                <span class="meta">Cheng 2024: shell permits HCO3-/RuBP passage &#34;while limiting O2 influx.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>carbonic anhydrase</strong>
+            <span class="edge-predicate">elevates local concentration of</span>
+            <strong>carbon dioxide</strong>
+            
+            <p>CA activity inside the carboxysome elevates local CO2 around RuBisCO.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/plphys/kiae438</code>
+                
+                <span class="meta">Cheng 2024: &#34;CA inside the carboxysome dehydrates HCO3- to CO2, elevating CO2 concentration around Rubisco.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>carbon dioxide</strong>
+            <span class="edge-predicate">enhances</span>
+            <strong>RuBisCO carboxylation</strong>
+            
+            <p>Elevated CO2 around RuBisCO enhances carboxylation and reduces oxygenation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/plphys/kiae438</code>
+                
+                <span class="meta">Cheng 2024: elevated CO2 &#34;enhances Rubisco carboxylation rates and reduces unproductive oxygenation.&#34;</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>BMC-H/T/P shell proteins</strong>
+            <span class="edge-predicate">form</span>
+            <strong>carboxysome shell</strong>
+            
+            <p>BMC-H hexamers, BMC-T pseudohexamers and BMC-P pentamers form the selectively permeable shell with central pores.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro.2018.10</code>
+                
+                <span class="meta">Kerfeld 2018: BMC-H/T/P proteins build the shell; a central pore &#34;serves as a channel for metabolites&#34;; generalized across BMCs including carboxysomes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -244,6 +367,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (carboxysome CO2-concentrating / carbon fixation) with GO/CHEBI node groundings and RO/RDFS/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -603,7 +732,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the carboxysome protein shell encapsulating RuBisCO and carbonic anhydrase to enhanced carbon fixation.", "edges": [{"description": "The carboxysome is the archetypal bacterial microcompartment.", "evidence": [{"notes": "Yeates et al. describe the carboxysome shell and its encapsulated enzymes.", "reference": "DOI:10.1038/nrmicro1913"}], "id": "edge-1", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "carboxysome_trait", "target": "bacterial_microcompartment"}, {"description": "Carboxysomal CO2 concentration accelerates RuBisCO-catalysed fixation.", "evidence": [{"notes": "Kerfeld et al. frame the carboxysome as a CO2-concentrating microcompartment supporting carbon fixation.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carboxysome_trait", "target": "carbon_fixation"}, {"description": "CO2 is concentrated within the carboxysome shell for fixation.", "evidence": [{"notes": "Kerfeld et al. review CO2 concentration inside the carboxysome.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-3", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "carbon_dioxide", "target": "carboxysome_trait"}], "evidence_rows": [{"description": "The carboxysome is the archetypal bacterial microcompartment.", "edge_id": "edge-1", "evidence": [{"notes": "Yeates et al. describe the carboxysome shell and its encapsulated enzymes.", "reference": "DOI:10.1038/nrmicro1913"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "carboxysome", "target": "bacterial microcompartment"}, {"description": "Carboxysomal CO2 concentration accelerates RuBisCO-catalysed fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Kerfeld et al. frame the carboxysome as a CO2-concentrating microcompartment supporting carbon fixation.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carboxysome", "target": "carbon fixation"}, {"description": "CO2 is concentrated within the carboxysome shell for fixation.", "edge_id": "edge-3", "evidence": [{"notes": "Kerfeld et al. review CO2 concentration inside the carboxysome.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "carbon dioxide", "target": "carboxysome"}], "graph_id": "carboxysome_co2_concentrating", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Protein-shelled prokaryotic microcompartment organelle.", "grounding": "GO:0031469", "id": "bacterial_microcompartment", "is_orphan": false, "label": "bacterial microcompartment", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "CO2 substrate concentrated by the carboxysome shell.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic CO2 into organic carbon (Calvin cycle).", "grounding": "GO:0015977", "id": "carbon_fixation", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Polyhedral protein-shelled microcompartment encapsulating RuBisCO.", "grounding": "traitmech:000072", "id": "carboxysome_trait", "is_orphan": false, "label": "carboxysome", "node_type": "TRAIT", "xrefs": []}], "title": "Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the carboxysome protein shell encapsulating RuBisCO and carbonic anhydrase to enhanced carbon fixation.", "edges": [{"description": "The carboxysome is the archetypal bacterial microcompartment.", "evidence": [{"notes": "Yeates et al. describe the carboxysome shell and its encapsulated enzymes.", "reference": "DOI:10.1038/nrmicro1913"}], "id": "edge-1", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "carboxysome_trait", "target": "bacterial_microcompartment"}, {"description": "Carboxysomal CO2 concentration accelerates RuBisCO-catalysed fixation.", "evidence": [{"notes": "Kerfeld et al. frame the carboxysome as a CO2-concentrating microcompartment supporting carbon fixation.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carboxysome_trait", "target": "carbon_fixation"}, {"description": "CO2 is concentrated within the carboxysome shell for fixation.", "evidence": [{"notes": "Kerfeld et al. review CO2 concentration inside the carboxysome.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-3", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "carbon_dioxide", "target": "carboxysome_trait"}, {"description": "The carboxysome protein shell retains CO2, preventing its escape to the cytoplasm.", "evidence": [{"notes": "Kerfeld 2018: \"The shell prevents loss of CO2 to the cytoplasm.\"", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-4", "is_orphan": false, "predicate": "prevents loss of", "predicate_id": null, "source": "carboxysome_shell", "target": "carbon_dioxide"}, {"description": "Carboxysomal carbonic anhydrase dehydrates imported bicarbonate to CO2.", "evidence": [{"notes": "Wieschollek 2024: HCO3- entering carboxysomes is converted by CA to CO2; broad to bacterial CCMs with carboxysomes.", "reference": "DOI:10.1128/aem.01075-24"}], "id": "edge-5", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "carbonic_anhydrase", "target": "bicarbonate"}, {"description": "Selective shell permeability allows HCO3- (and RuBP) to enter the carboxysome.", "evidence": [{"notes": "Cheng 2024: \"the shell has selective permeability that permits HCO3- and RuBP passage.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "id": "edge-6", "is_orphan": false, "predicate": "permits passage of", "predicate_id": null, "source": "carboxysome_shell", "target": "bicarbonate"}, {"description": "The carboxysome shell restricts O2 influx, reducing unproductive RuBisCO oxygenation.", "evidence": [{"notes": "Cheng 2024: shell permits HCO3-/RuBP passage \"while limiting O2 influx.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "id": "edge-7", "is_orphan": false, "predicate": "limits influx of", "predicate_id": null, "source": "carboxysome_shell", "target": "oxygen"}, {"description": "CA activity inside the carboxysome elevates local CO2 around RuBisCO.", "evidence": [{"notes": "Cheng 2024: \"CA inside the carboxysome dehydrates HCO3- to CO2, elevating CO2 concentration around Rubisco.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "id": "edge-8", "is_orphan": false, "predicate": "elevates local concentration of", "predicate_id": null, "source": "carbonic_anhydrase", "target": "carbon_dioxide"}, {"description": "Elevated CO2 around RuBisCO enhances carboxylation and reduces oxygenation.", "evidence": [{"notes": "Cheng 2024: elevated CO2 \"enhances Rubisco carboxylation rates and reduces unproductive oxygenation.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "id": "edge-9", "is_orphan": false, "predicate": "enhances", "predicate_id": null, "source": "carbon_dioxide", "target": "rubisco_carboxylation"}, {"description": "BMC-H hexamers, BMC-T pseudohexamers and BMC-P pentamers form the selectively permeable shell with central pores.", "evidence": [{"notes": "Kerfeld 2018: BMC-H/T/P proteins build the shell; a central pore \"serves as a channel for metabolites\"; generalized across BMCs including carboxysomes.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "id": "edge-10", "is_orphan": false, "predicate": "form", "predicate_id": null, "source": "bmc_shell_proteins", "target": "carboxysome_shell"}], "evidence_rows": [{"description": "The carboxysome is the archetypal bacterial microcompartment.", "edge_id": "edge-1", "evidence": [{"notes": "Yeates et al. describe the carboxysome shell and its encapsulated enzymes.", "reference": "DOI:10.1038/nrmicro1913"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "carboxysome", "target": "bacterial microcompartment"}, {"description": "Carboxysomal CO2 concentration accelerates RuBisCO-catalysed fixation.", "edge_id": "edge-2", "evidence": [{"notes": "Kerfeld et al. frame the carboxysome as a CO2-concentrating microcompartment supporting carbon fixation.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carboxysome", "target": "carbon fixation"}, {"description": "CO2 is concentrated within the carboxysome shell for fixation.", "edge_id": "edge-3", "evidence": [{"notes": "Kerfeld et al. review CO2 concentration inside the carboxysome.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "carbon dioxide", "target": "carboxysome"}, {"description": "The carboxysome protein shell retains CO2, preventing its escape to the cytoplasm.", "edge_id": "edge-4", "evidence": [{"notes": "Kerfeld 2018: \"The shell prevents loss of CO2 to the cytoplasm.\"", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "prevents loss of", "predicate_id": null, "source": "carboxysome shell", "target": "carbon dioxide"}, {"description": "Carboxysomal carbonic anhydrase dehydrates imported bicarbonate to CO2.", "edge_id": "edge-5", "evidence": [{"notes": "Wieschollek 2024: HCO3- entering carboxysomes is converted by CA to CO2; broad to bacterial CCMs with carboxysomes.", "reference": "DOI:10.1128/aem.01075-24"}], "predicate": "converts", "predicate_id": null, "source": "carbonic anhydrase", "target": "bicarbonate"}, {"description": "Selective shell permeability allows HCO3- (and RuBP) to enter the carboxysome.", "edge_id": "edge-6", "evidence": [{"notes": "Cheng 2024: \"the shell has selective permeability that permits HCO3- and RuBP passage.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "predicate": "permits passage of", "predicate_id": null, "source": "carboxysome shell", "target": "bicarbonate"}, {"description": "The carboxysome shell restricts O2 influx, reducing unproductive RuBisCO oxygenation.", "edge_id": "edge-7", "evidence": [{"notes": "Cheng 2024: shell permits HCO3-/RuBP passage \"while limiting O2 influx.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "predicate": "limits influx of", "predicate_id": null, "source": "carboxysome shell", "target": "oxygen"}, {"description": "CA activity inside the carboxysome elevates local CO2 around RuBisCO.", "edge_id": "edge-8", "evidence": [{"notes": "Cheng 2024: \"CA inside the carboxysome dehydrates HCO3- to CO2, elevating CO2 concentration around Rubisco.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "predicate": "elevates local concentration of", "predicate_id": null, "source": "carbonic anhydrase", "target": "carbon dioxide"}, {"description": "Elevated CO2 around RuBisCO enhances carboxylation and reduces oxygenation.", "edge_id": "edge-9", "evidence": [{"notes": "Cheng 2024: elevated CO2 \"enhances Rubisco carboxylation rates and reduces unproductive oxygenation.\"", "reference": "DOI:10.1093/plphys/kiae438"}], "predicate": "enhances", "predicate_id": null, "source": "carbon dioxide", "target": "RuBisCO carboxylation"}, {"description": "BMC-H hexamers, BMC-T pseudohexamers and BMC-P pentamers form the selectively permeable shell with central pores.", "edge_id": "edge-10", "evidence": [{"notes": "Kerfeld 2018: BMC-H/T/P proteins build the shell; a central pore \"serves as a channel for metabolites\"; generalized across BMCs including carboxysomes.", "reference": "DOI:10.1038/nrmicro.2018.10"}], "predicate": "form", "predicate_id": null, "source": "BMC-H/T/P shell proteins", "target": "carboxysome shell"}], "graph_id": "carboxysome_co2_concentrating", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Protein-shelled prokaryotic microcompartment organelle.", "grounding": "GO:0031469", "id": "bacterial_microcompartment", "is_orphan": false, "label": "bacterial microcompartment", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#fef3c7", "description": "HCO3- accumulated in cytoplasm and imported into the carboxysome.", "grounding": null, "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Hexameric, trimeric and pentameric protein paralogues forming the BMC shell.", "grounding": null, "id": "bmc_shell_proteins", "is_orphan": false, "label": "BMC-H/T/P shell proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "CO2 substrate concentrated by the carboxysome shell.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic CO2 into organic carbon (Calvin cycle).", "grounding": "GO:0015977", "id": "carbon_fixation", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxysomal enzyme dehydrating bicarbonate to CO2 near RuBisCO.", "grounding": null, "id": "carbonic_anhydrase", "is_orphan": false, "label": "carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fce7f3", "description": "Polyhedral selectively permeable protein shell of the carboxysome.", "grounding": null, "id": "carboxysome_shell", "is_orphan": false, "label": "carboxysome shell", "node_type": "ORGANELLE", "xrefs": []}, {"color": "#dbeafe", "description": "Polyhedral protein-shelled microcompartment encapsulating RuBisCO.", "grounding": "traitmech:000072", "id": "carboxysome_trait", "is_orphan": false, "label": "carboxysome", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "O2; competing substrate of RuBisCO whose influx the shell limits.", "grounding": null, "id": "oxygen", "is_orphan": false, "label": "oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Carboxylation of RuBP by RuBisCO, the productive carbon-fixation reaction.", "grounding": null, "id": "rubisco_carboxylation", "is_orphan": false, "label": "RuBisCO carboxylation", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,7 +743,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

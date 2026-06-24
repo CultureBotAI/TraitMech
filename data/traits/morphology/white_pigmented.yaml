@@ -51,6 +51,30 @@ causal_graphs:
     label: visible white color
     node_type: MOLECULAR_FUNCTION
     description: Observed white or nonpigmented colony color.
+  - node_id: melanin_biosynthesis
+    label: melanin biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: PKS-type biosynthesis of melanin pigments (e.g. DHN melanin) in fungi
+      and bacteria.
+  - node_id: melanin
+    label: melanin
+    node_type: CHEMICAL
+    description: Dark brown/black chromophore pigment class; a major visible microbial
+      pigment.
+  - node_id: reduced_melanin
+    label: reduced melanin accumulation
+    node_type: CHEMICAL
+    description: Absent or lowered accumulation of melanin chromophore.
+  - node_id: sigB
+    label: SigB (sigma factor B)
+    node_type: GENE_OR_PROTEIN
+    description: Alternative sigma factor B; positive regulator of staphyloxanthin
+      biosynthesis genes.
+  - node_id: glmS
+    label: GlmS
+    node_type: GENE_OR_PROTEIN
+    description: Glucosamine-6-phosphate synthase; transcriptional upregulator of
+      sigB.
   edges:
   - subject: crtOPQMN_operon
     predicate: encodes
@@ -101,6 +125,49 @@ causal_graphs:
       notes: Supports trait-level white pigmentation in a representative microbial
         context.
     predicate_id: METPO:2007400
+  - subject: melanin_biosynthesis
+    predicate: produces
+    object: melanin
+    description: PKS-mediated melanin biosynthesis produces the melanin chromophore.
+    evidence:
+    - reference: DOI:10.1007/s00792-024-01354-2
+      notes: pks1 mutation abolishes melanization / decreased DHN melanin accumulation,
+        establishing the PKS biosynthetic route to melanin.
+  - subject: reduced_melanin
+    predicate: results from reduced
+    object: melanin_biosynthesis
+    description: Reduced melanin biosynthesis lowers melanin chromophore accumulation.
+    evidence:
+    - reference: DOI:10.1080/21501203.2023.2249010
+      notes: Knockout of PKS gene (pksA) reduced melanin production, yielding melanin-deficient
+        cells.
+  - subject: reduced_melanin
+    predicate: causes
+    object: visible_white_color
+    description: Loss of melanin chromophore yields a white colony surface / white
+      cells.
+    evidence:
+    - reference: DOI:10.1080/21501203.2023.2249010
+      notes: Mel- colonies are uneven with a white surface and white conidia; generic
+        melanin-loss to white-pigment link.
+  - subject: sigB
+    predicate: positively regulates
+    object: staphyloxanthin_biosynthesis
+    description: Sigma factor B positively regulates staphyloxanthin biosynthesis
+      genes; its loss reduces pigment.
+    evidence:
+    - reference: DOI:10.1128/mbio.00346-24
+      notes: SigB positively regulates genes involved in staphyloxanthin synthesis;
+        disruptive sigB mutations give white colonies.
+  - subject: glmS
+    predicate: positively regulates
+    object: sigB
+    description: GlmS directly upregulates sigB transcription, feeding the carotenoid-pigment
+      regulatory cascade.
+    evidence:
+    - reference: DOI:10.1080/21505594.2024.2352476
+      notes: GlmS directly upregulates sigB transcription (dual-luciferase and EMSA
+        promoter binding); glmS knockout reduces sigB and golden pigment.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946745+00:00'
   curator: seed_from_metpo
@@ -142,4 +209,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:71690×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

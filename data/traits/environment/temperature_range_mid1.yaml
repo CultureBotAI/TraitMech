@@ -41,6 +41,51 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mesophile membrane and enzyme adaptation sustaining growth at modest
       ambient temperatures.
+  - node_id: temperature_decrease
+    label: temperature decrease
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A drop in ambient growth temperature within or toward the mesophilic
+      range.
+  - node_id: membrane_rigidification
+    label: membrane rigidification/thickening
+    node_type: QUALITY
+    description: Cooling-induced reduction of membrane fluidity and increased bilayer
+      thickness.
+  - node_id: fatty_acid_desaturation
+    label: fatty-acid desaturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Introduction of double bonds into membrane fatty acyl chains.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity/viscosity state of the cell membrane lipid bilayer.
+  - node_id: branched_chain_amino_acids
+    label: branched-chain amino acids
+    node_type: CHEMICAL
+    description: Valine, leucine and isoleucine serving as precursors for branched-chain
+      fatty acids.
+  - node_id: anteiso_branched_fatty_acids
+    label: anteiso-branched fatty acids
+    node_type: CHEMICAL
+    description: Anteiso-branched-chain fatty acids that disorder membrane lipids.
+  - node_id: rna_thermometer_melting
+    label: RNA thermometer melting
+    node_type: MOLECULAR_FUNCTION
+    description: Temperature-dependent unfolding of 5-prime-UTR cis-elements controlling
+      translation.
+  - node_id: shine_dalgarno_exposure
+    label: Shine-Dalgarno sequence exposure
+    node_type: MOLECULAR_FUNCTION
+    description: Exposure of the ribosome-binding Shine-Dalgarno sequence enabling
+      translation.
+  - node_id: temperature_shift
+    label: temperature shift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A change in ambient growth temperature.
+  - node_id: dna_supercoiling
+    label: DNA supercoiling
+    node_type: QUALITY
+    description: DNA topological state acting as a thermosensor that reprograms transcription.
   edges:
   - subject: lower_mesophile_adaptation
     predicate: enables
@@ -62,6 +107,60 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the 22–27 °C range as a value within the temperature-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: temperature_decrease
+    predicate: causes
+    object: membrane_rigidification
+    description: Cooling reduces membrane fluidity and increases bilayer thickness,
+      the initiating physical signal for adaptation.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Membrane rigidification and increased thickness act as the primary physical
+        signal upon cooling.
+  - subject: fatty_acid_desaturation
+    predicate: increases
+    object: membrane_fluidity
+    description: Double bonds disrupt tight acyl-chain packing, reversing cold-induced
+      rigidification.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Desaturation fluidizes the membrane and reduces thickness; strong and
+        broadly conserved principle.
+  - subject: anteiso_branched_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Anteiso chains disorder lipids effectively, supporting growth at
+      lower temperatures.
+    evidence:
+    - reference: DOI:10.3390/cells12101353
+      notes: Anteiso-BCFAs are more effective at fluidizing membranes than iso-BCFAs;
+        generalizable across many Gram-positives.
+  - subject: branched_chain_amino_acids
+    predicate: precursor for
+    object: anteiso_branched_fatty_acids
+    description: Branched-chain amino acids supply carbon skeletons for iso/anteiso-branched
+      fatty acid synthesis.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Iso- and anteiso-branched FAs are derived from valine, leucine, and isoleucine
+        precursors.
+  - subject: rna_thermometer_melting
+    predicate: exposes
+    object: shine_dalgarno_exposure
+    description: Temperature-dependent melting of RNA thermometers exposes the Shine-Dalgarno
+      sequence to control translation.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: 5'-UTR cis-elements occlude or expose Shine-Dalgarno sequences to control
+        translation; strong general mechanism.
+  - subject: temperature_shift
+    predicate: changes
+    object: dna_supercoiling
+    description: DNA topology functions as a thermosensor that globally reprograms
+      transcription after temperature change.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: DNA topology acts as a thermosensor; cold stress enhances negative DNA
+        supercoiling.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.823745+00:00'
   curator: seed_from_metpo
@@ -79,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

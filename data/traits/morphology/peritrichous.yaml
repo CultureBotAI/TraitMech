@@ -35,12 +35,42 @@ causal_graphs:
     label: surface-distributed placement
     node_type: QUALITY
     description: Flagella spaced over the cell surface rather than at the poles.
+  - node_id: polar_placement
+    label: polar flagellar arrangement
+    node_type: QUALITY
+    description: Flagella localized at one or both cell poles.
+  - node_id: flhg_regulator
+    label: FlhG
+    node_type: GENE_OR_PROTEIN
+    description: MinD-type ATPase that modulates FlhF and regulates flagellar assembly
+      progression.
+  - node_id: flagellar_assembly_progression
+    label: progression of flagellar assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Ordered progression of flagellar biogenesis from C-ring through filament.
+  - node_id: flagellar_filament_number
+    label: flagellar filament number
+    node_type: QUALITY
+    description: Number of flagellar filaments per cell, multiple in peritrichous
+      cells.
+  - node_id: swimming_velocity
+    label: swimming velocity
+    node_type: CAPACITY
+    description: Cell swimming speed driven by flagellar rotation.
+  - node_id: carbon_limitation
+    label: carbon limitation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Growth under limited carbon availability.
+  - node_id: motility_investment
+    label: motility
+    node_type: CAPACITY
+    description: Investment in motile, flagellum-driven swimming behavior.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
     object: peritrichous_trait
-    description: Flagella distributed over the cell surface define the
-      peritrichous arrangement.
+    description: Flagella distributed over the cell surface define the peritrichous
+      arrangement.
     evidence:
     - reference: DOI:10.1093/femsre/fuv034
       notes: Schuhmacher et al. describe peritrichous flagellation as a conserved
@@ -49,24 +79,68 @@ causal_graphs:
   - subject: peritrichous_trait
     predicate: associated with
     object: surface_placement
-    description: The peritrichous pattern spaces multiple flagella across the
-      cell surface.
+    description: The peritrichous pattern spaces multiple flagella across the cell
+      surface.
     evidence:
     - reference: DOI:10.3390/biom9070279
-      notes: Flagellum review supports multiple surface flagellar filaments as
-        locomotory organelles.
+      notes: Flagellum review supports multiple surface flagellar filaments as locomotory
+        organelles.
     predicate_id: biolink:associated_with
+  - subject: peritrichous_trait
+    predicate: distinguished from
+    object: polar_placement
+    description: Peritrichous surface-distributed flagella are distinguished from
+      polar flagellar arrangements.
+    evidence:
+    - reference: DOI:10.3390/fermentation10120606
+      notes: Frolov et al. 2024 contrast Pseudomonas polar flagella located at one
+        pole with peritrichous flagella located throughout the cell wall.
+  - subject: flhg_regulator
+    predicate: modulates
+    object: flagellar_assembly_progression
+    description: FlhG modulates FlhF and controls FliG interactions with C-ring proteins,
+      regulating progression of flagellar assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: 'Dornes et al. 2024: FlhG''s modulation of FlhF controls FliG interaction
+        with FliM/FliN, thereby regulating progression of flagellar assembly; general
+        placement/number control.'
+  - subject: flagellar_filament_number
+    predicate: positively influences (saturating)
+    object: swimming_velocity
+    description: Swimming velocity rises with flagellar filament number up to a critical
+      number then saturates.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56980-x
+      notes: 'Lisevich et al. 2025: swimming velocity increases with flagellar-gene
+        expression only up to ~5 flagella, above which it saturates; functional phenotype
+        of multiple peritrichous flagella.'
+  - subject: carbon_limitation
+    predicate: inversely correlates with
+    object: motility_investment
+    description: Under carbon-limited growth, motility stays below maximal and inversely
+      correlates with growth rate.
+    evidence:
+    - reference: DOI:10.1038/s41467-025-56980-x
+      notes: 'Lisevich et al. 2025: during carbon-limited growth motility remains
+        below maximal levels and inversely correlates with growth rate.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (peritrichous flagellation);
-    sub-variant of flagellar arrangement.
+  changes: Proposed candidate MORPHOLOGY trait (peritrichous flagellation); sub-variant
+    of flagellar arrangement.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (surface-distributed flagella) with
-    GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED
-    to REVIEWED.
+    GO node grounding and METPO/biolink predicate groundings; promoted PROPOSED to
+    REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,8 +1,7 @@
 identifier: traitmech:000002
 label: obligately piezophilic
-definition: A pressure growth preference in which an organism requires elevated
-  hydrostatic pressure for growth and is unable to grow at atmospheric pressure
-  (0.1 MPa).
+definition: A pressure growth preference in which an organism requires elevated hydrostatic
+  pressure for growth and is unable to grow at atmospheric pressure (0.1 MPa).
 definition_source: DOI:10.1038/srep27289
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -17,8 +16,8 @@ evidence:
 - reference: DOI:10.1038/srep27289
   snippet: High hydrostatic pressure adaptive strategies in an obligate piezophile
     Pyrococcus yayanosii
-  notes: 'Organism example: Pyrococcus yayanosii is an obligate piezophile that
-    requires high hydrostatic pressure for growth.'
+  notes: 'Organism example: Pyrococcus yayanosii is an obligate piezophile that requires
+    high hydrostatic pressure for growth.'
 - reference: DOI:10.1099/ijsem.0.001671
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: 'Organism example: Colwellia marinimaniae MTCD1 grows only at high pressure
@@ -26,8 +25,8 @@ evidence:
 causal_graphs:
 - graph_id: obligate_piezophily_high_pressure_requirement
   title: 'Obligate piezophily: growth requires elevated hydrostatic pressure'
-  description: Evidence-backed causal sketch linking obligate HHP adaptation to
-    inability to grow at atmospheric pressure.
+  description: Evidence-backed causal sketch linking obligate HHP adaptation to inability
+    to grow at atmospheric pressure.
   nodes:
   - node_id: obligate_piezophilic_trait
     label: obligately piezophilic
@@ -37,33 +36,82 @@ causal_graphs:
   - node_id: obligate_hhp
     label: obligate high hydrostatic pressure
     node_type: ENVIRONMENTAL_FACTOR
-    description: Hydrostatic pressure level required for growth (no growth at
-      0.1 MPa).
+    description: Hydrostatic pressure level required for growth (no growth at 0.1
+      MPa).
   - node_id: pressure_dependent_machinery
     label: pressure-dependent cellular machinery
     node_type: BIOLOGICAL_PROCESS
     description: Membrane, ribosome, and replication systems adapted only to HHP.
+  - node_id: ambient_pressure_growth_failure
+    label: inability to grow at ambient pressure (0.1 MPa)
+    node_type: QUALITY
+    description: Obligate piezophiles cannot grow at atmospheric pressure (0.1 MPa).
+  - node_id: membrane_unsaturated_branched_lipids
+    label: unsaturated/branched-chain membrane lipids
+    node_type: CHEMICAL
+    description: Membrane fatty acids with increased unsaturation/branching that maintain
+      fluidity under HHP.
+  - node_id: membrane_fluidity_maintenance
+    label: maintenance of membrane fluidity under HHP
+    node_type: BIOLOGICAL_PROCESS
+    description: Homeoviscous adaptation preserving membrane fluidity at elevated
+      hydrostatic pressure.
   edges:
   - subject: obligate_hhp
     predicate: causes
     object: obligate_piezophilic_trait
-    description: HHP adaptation that no longer functions at 0.1 MPa makes high
-      pressure obligatory for growth.
+    description: HHP adaptation that no longer functions at 0.1 MPa makes high pressure
+      obligatory for growth.
     evidence:
     - reference: DOI:10.1099/ijsem.0.001671
-      notes: Colwellia marinimaniae MTCD1 has a growth range of 80-140 MPa
-        (optimum 120 MPa) and does not grow at atmospheric pressure.
+      notes: Colwellia marinimaniae MTCD1 has a growth range of 80-140 MPa (optimum
+        120 MPa) and does not grow at atmospheric pressure.
     predicate_id: biolink:causes
   - subject: pressure_dependent_machinery
     predicate: enables
     object: obligate_piezophilic_trait
-    description: Cellular machinery requiring HHP for function realizes the
-      obligate-piezophile phenotype.
+    description: Cellular machinery requiring HHP for function realizes the obligate-piezophile
+      phenotype.
     evidence:
     - reference: DOI:10.1038/srep27289
-      notes: Pyrococcus yayanosii is an obligate piezophile requiring HHP for
-        growth.
+      notes: Pyrococcus yayanosii is an obligate piezophile requiring HHP for growth.
     predicate_id: RO:0002327
+  - subject: obligate_piezophilic_trait
+    predicate: has characteristic
+    object: ambient_pressure_growth_failure
+    description: The obligate-piezophile phenotype is defined by inability to grow
+      at ambient pressure (0.1 MPa).
+    evidence:
+    - reference: DOI:10.1038/s41396-021-00930-0
+      notes: Obligate piezophiles (or hyperpiezophiles) are unable to grow at ambient
+        pressure (0.1 MPa).
+  - subject: obligate_hhp
+    predicate: increases amount of
+    object: membrane_unsaturated_branched_lipids
+    description: Elevated hydrostatic pressure increases the requirement for and abundance
+      of unsaturated/branched-chain membrane lipids.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: The abundance of specific membrane lipids, such as those containing unsaturated
+        and branched-chain fatty acids, rises with increasing HHP across marine piezophiles.
+  - subject: membrane_unsaturated_branched_lipids
+    predicate: enables
+    object: membrane_fluidity_maintenance
+    description: Unsaturated/branched-chain lipids maintain membrane fluidity under
+      HHP (homeoviscous adaptation).
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Membrane lipid adaptation (unsaturated/branched fatty acids) is a homeoviscous
+        response maintaining membrane fluidity under high hydrostatic pressure.
+  - subject: membrane_fluidity_maintenance
+    predicate: contributes to
+    object: pressure_dependent_machinery
+    description: Maintained membrane fluidity supports the pressure-dependent cellular
+      machinery underlying obligate piezophily.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: Membrane fluidity maintenance via lipid adaptation underlies the pressure-adapted
+        membrane systems of piezophiles.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -75,6 +123,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (obligate HHP requirement) with
-    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (obligate HHP requirement) with RO/biolink
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

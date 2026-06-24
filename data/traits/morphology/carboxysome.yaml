@@ -1,8 +1,8 @@
 identifier: traitmech:000072
 label: carboxysome
 definition: A bacterial microcompartment — a polyhedral protein-shelled organelle
-  that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 for carbon
-  fixation in cyanobacteria and many chemoautotrophs.
+  that encapsulates RuBisCO and carbonic anhydrase to concentrate CO2 for carbon fixation
+  in cyanobacteria and many chemoautotrophs.
 definition_source: DOI:10.1038/nrmicro.2018.10
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -19,8 +19,8 @@ evidence:
     archetypal protein-shelled CO2-fixing microcompartment.
 - reference: DOI:10.1038/nrmicro1913
   notes: Yeates et al. describe protein-based organelles in bacteria (carboxysomes
-    and related microcompartments), including the carboxysome shell and its
-    encapsulated enzymes.
+    and related microcompartments), including the carboxysome shell and its encapsulated
+    enzymes.
 causal_graphs:
 - graph_id: carboxysome_co2_concentrating
   title: Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation
@@ -47,6 +47,32 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16526
     description: CO2 substrate concentrated by the carboxysome shell.
+  - node_id: carboxysome_shell
+    label: carboxysome shell
+    node_type: ORGANELLE
+    description: Polyhedral selectively permeable protein shell of the carboxysome.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Carboxysomal enzyme dehydrating bicarbonate to CO2 near RuBisCO.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: HCO3- accumulated in cytoplasm and imported into the carboxysome.
+  - node_id: oxygen
+    label: oxygen
+    node_type: CHEMICAL
+    description: O2; competing substrate of RuBisCO whose influx the shell limits.
+  - node_id: rubisco_carboxylation
+    label: RuBisCO carboxylation
+    node_type: MOLECULAR_FUNCTION
+    description: Carboxylation of RuBP by RuBisCO, the productive carbon-fixation
+      reaction.
+  - node_id: bmc_shell_proteins
+    label: BMC-H/T/P shell proteins
+    node_type: GENE_OR_PROTEIN
+    description: Hexameric, trimeric and pentameric protein paralogues forming the
+      BMC shell.
   edges:
   - subject: carboxysome_trait
     predicate: example of
@@ -54,18 +80,16 @@ causal_graphs:
     description: The carboxysome is the archetypal bacterial microcompartment.
     evidence:
     - reference: DOI:10.1038/nrmicro1913
-      notes: Yeates et al. describe the carboxysome shell and its encapsulated
-        enzymes.
+      notes: Yeates et al. describe the carboxysome shell and its encapsulated enzymes.
     predicate_id: rdfs:subClassOf
   - subject: carboxysome_trait
     predicate: contributes to
     object: carbon_fixation
-    description: Carboxysomal CO2 concentration accelerates RuBisCO-catalysed
-      fixation.
+    description: Carboxysomal CO2 concentration accelerates RuBisCO-catalysed fixation.
     evidence:
     - reference: DOI:10.1038/nrmicro.2018.10
-      notes: Kerfeld et al. frame the carboxysome as a CO2-concentrating
-        microcompartment supporting carbon fixation.
+      notes: Kerfeld et al. frame the carboxysome as a CO2-concentrating microcompartment
+        supporting carbon fixation.
     predicate_id: RO:0002326
   - subject: carbon_dioxide
     predicate: located in
@@ -75,6 +99,65 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro.2018.10
       notes: Kerfeld et al. review CO2 concentration inside the carboxysome.
     predicate_id: biolink:located_in
+  - subject: carboxysome_shell
+    predicate: prevents loss of
+    object: carbon_dioxide
+    description: The carboxysome protein shell retains CO2, preventing its escape
+      to the cytoplasm.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: 'Kerfeld 2018: "The shell prevents loss of CO2 to the cytoplasm."'
+  - subject: carbonic_anhydrase
+    predicate: converts
+    object: bicarbonate
+    description: Carboxysomal carbonic anhydrase dehydrates imported bicarbonate to
+      CO2.
+    evidence:
+    - reference: DOI:10.1128/aem.01075-24
+      notes: 'Wieschollek 2024: HCO3- entering carboxysomes is converted by CA to
+        CO2; broad to bacterial CCMs with carboxysomes.'
+  - subject: carboxysome_shell
+    predicate: permits passage of
+    object: bicarbonate
+    description: Selective shell permeability allows HCO3- (and RuBP) to enter the
+      carboxysome.
+    evidence:
+    - reference: DOI:10.1093/plphys/kiae438
+      notes: 'Cheng 2024: "the shell has selective permeability that permits HCO3-
+        and RuBP passage."'
+  - subject: carboxysome_shell
+    predicate: limits influx of
+    object: oxygen
+    description: The carboxysome shell restricts O2 influx, reducing unproductive
+      RuBisCO oxygenation.
+    evidence:
+    - reference: DOI:10.1093/plphys/kiae438
+      notes: 'Cheng 2024: shell permits HCO3-/RuBP passage "while limiting O2 influx."'
+  - subject: carbonic_anhydrase
+    predicate: elevates local concentration of
+    object: carbon_dioxide
+    description: CA activity inside the carboxysome elevates local CO2 around RuBisCO.
+    evidence:
+    - reference: DOI:10.1093/plphys/kiae438
+      notes: 'Cheng 2024: "CA inside the carboxysome dehydrates HCO3- to CO2, elevating
+        CO2 concentration around Rubisco."'
+  - subject: carbon_dioxide
+    predicate: enhances
+    object: rubisco_carboxylation
+    description: Elevated CO2 around RuBisCO enhances carboxylation and reduces oxygenation.
+    evidence:
+    - reference: DOI:10.1093/plphys/kiae438
+      notes: 'Cheng 2024: elevated CO2 "enhances Rubisco carboxylation rates and reduces
+        unproductive oxygenation."'
+  - subject: bmc_shell_proteins
+    predicate: form
+    object: carboxysome_shell
+    description: BMC-H hexamers, BMC-T pseudohexamers and BMC-P pentamers form the
+      selectively permeable shell with central pores.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2018.10
+      notes: 'Kerfeld 2018: BMC-H/T/P proteins build the shell; a central pore "serves
+        as a channel for metabolites"; generalized across BMCs including carboxysomes.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -85,7 +168,13 @@ curation_history:
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (carboxysome CO2-concentrating /
-    carbon fixation) with GO/CHEBI node groundings and RO/RDFS/biolink predicate
-    groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (carboxysome CO2-concentrating / carbon
+    fixation) with GO/CHEBI node groundings and RO/RDFS/biolink predicate groundings;
+    promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

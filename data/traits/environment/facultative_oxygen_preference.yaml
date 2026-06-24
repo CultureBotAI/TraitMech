@@ -48,6 +48,25 @@ causal_graphs:
     label: oxygen-sensing regulation
     node_type: GENE_OR_PROTEIN
     description: Regulatory systems such as FNR-type sensors that respond to oxygen.
+  - node_id: aerobic_energy_pathways
+    label: aerobic energy-generating pathways
+    node_type: PATHWAY
+    description: Aerobic respiratory energy-generation modules downregulated under
+      anaerobiosis.
+  - node_id: anaerobic_metabolism_genes
+    label: anaerobic metabolism genes
+    node_type: PATHWAY
+    description: Genes encoding anaerobic metabolic functions induced when oxygen
+      is low or absent.
+  - node_id: nitrate_electron_acceptor
+    label: nitrate
+    node_type: CHEMICAL
+    description: Alternative terminal electron acceptor supporting anaerobic respiration.
+  - node_id: terminal_oxidase_cytochrome_bd
+    label: cytochrome bd terminal oxidase
+    node_type: GENE_OR_PROTEIN
+    description: High-affinity terminal oxidase enabling oxygen respiration at low
+      O2 tensions.
   edges:
   - subject: facultative_oxygen_trait
     predicate: responds to
@@ -83,6 +102,43 @@ causal_graphs:
     - reference: DOI:10.1089/ars.2011.4051
       snippet: Fnr-type transcriptional regulators that directly sense O2
       notes: Supports regulatory oxygen sensing as a causal graph entity.
+  - subject: oxygen_sensing_regulation
+    predicate: represses
+    object: aerobic_energy_pathways
+    description: Oxygen-responsive regulators (FNR/ArcA) repress aerobic energy-generating
+      pathways under anaerobiosis.
+    evidence:
+    - reference: DOI:10.1128/aem.01491-23
+      notes: FNR and ArcA "repress aerobic energy-generating pathways" under anaerobiosis.
+  - subject: oxygen_sensing_regulation
+    predicate: induces
+    object: anaerobic_metabolism_genes
+    description: Oxygen-responsive regulators induce anaerobic metabolism genes enabling
+      growth without O2.
+    evidence:
+    - reference: DOI:10.1128/aem.01491-23
+      notes: FNR and ArcA "induce genes for anaerobic metabolism"; general regulatory
+        edge for facultative bacteria.
+  - subject: nitrate_electron_acceptor
+    predicate: promotes
+    object: anaerobic_respiration_or_fermentation
+    description: Nitrate substitutes for O2 as terminal electron acceptor, supporting
+      non-fermentative anaerobic respiration.
+    evidence:
+    - reference: DOI:10.1128/msphere.00774-23
+      notes: '"addition of nitrate as a TEA promotes anaerobic respiration"; broadly
+        relevant across facultative species with nitrate reductases.'
+  - subject: molecular_oxygen
+    predicate: enables
+    object: terminal_oxidase_cytochrome_bd
+    description: Trace/available oxygen lets cells use cytochrome bd as terminal oxidase;
+      active terminal enzyme depends on which final electron acceptor (oxygen vs fumarate)
+      is available.
+    evidence:
+    - reference: DOI:10.1128/jb.00389-22
+      notes: '"which of these terminal enzymes is active in electron transfer depends
+        on the availability of the final electron acceptor: fumarate or oxygen"; supports
+        electron-acceptor-dependent branch switching.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.855860+00:00'
   curator: seed_from_metpo
@@ -100,4 +156,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

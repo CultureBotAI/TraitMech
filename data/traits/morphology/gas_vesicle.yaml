@@ -17,14 +17,12 @@ evidence:
   notes: Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous
     flotation structures in bacteria and archaea.
 - reference: DOI:10.1038/s41579-020-0413-0
-  notes: Greening & Lithgow include gas vesicles among bacterial intracellular
-    organelles.
+  notes: Greening & Lithgow include gas vesicles among bacterial intracellular organelles.
 causal_graphs:
 - graph_id: gas_vesicle_buoyancy
   title: Gas vesicles provide buoyancy and water-column positioning
-  description: Evidence-backed causal sketch linking proteinaceous gas-filled
-    intracellular vesicles to buoyancy and vertical positioning in the water
-    column.
+  description: Evidence-backed causal sketch linking proteinaceous gas-filled intracellular
+    vesicles to buoyancy and vertical positioning in the water column.
   nodes:
   - node_id: gas_vesicle_trait
     label: gas vesicle
@@ -39,6 +37,49 @@ causal_graphs:
     label: water-column positioning
     node_type: BIOLOGICAL_PROCESS
     description: Vertical migration of planktonic microbes within the water column.
+  - node_id: gvpa_protein
+    label: GvpA
+    node_type: GENE_OR_PROTEIN
+    description: Small hydrophobic primary structural protein forming the gas vesicle
+      shell.
+  - node_id: gas_vesicle_shell
+    label: gas vesicle shell
+    node_type: CELLULAR_LOCALIZATION
+    description: Hollow proteinaceous wall enclosing the gas-filled lumen.
+  - node_id: gvpc_protein
+    label: GvpC
+    node_type: GENE_OR_PROTEIN
+    description: Accessory coat protein that reinforces the gas vesicle shell.
+  - node_id: hydrophobic_inner_surface
+    label: hydrophobic inner shell surface
+    node_type: QUALITY
+    description: Water-repellent inner surface of the gas vesicle shell.
+  - node_id: water_condensation
+    label: water condensation into lumen
+    node_type: BIOLOGICAL_PROCESS
+    description: Heterogeneous condensation of water molecules into liquid inside
+      the lumen.
+  - node_id: hydrostatic_pressure
+    label: hydrostatic pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External physical pressure acting on the gas vesicle.
+  - node_id: gas_vesicle_collapse
+    label: gas vesicle collapse
+    node_type: BIOLOGICAL_PROCESS
+    description: Irreversible structural collapse of the gas vesicle above a critical
+      pressure.
+  - node_id: gvpd_protein
+    label: GvpD
+    node_type: GENE_OR_PROTEIN
+    description: Regulatory protein with an inhibitory effect on gas vesicle formation.
+  - node_id: gas_vesicle_formation
+    label: gas vesicle formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Biogenesis and assembly of gas vesicles.
+  - node_id: ultrasound_scattering
+    label: ultrasound scattering
+    node_type: BIOLOGICAL_PROCESS
+    description: Scattering of ultrasound waves due to gas/aqueous density contrast.
   edges:
   - subject: gas_vesicle_trait
     predicate: enables
@@ -52,13 +93,62 @@ causal_graphs:
   - subject: buoyancy
     predicate: enables
     object: water_column_positioning
-    description: Buoyancy allows planktonic bacteria/archaea to position in the
-      water column.
+    description: Buoyancy allows planktonic bacteria/archaea to position in the water
+      column.
     evidence:
     - reference: DOI:10.1038/s41579-020-0413-0
       notes: Greening & Lithgow include gas vesicles among bacterial intracellular
         organelles.
     predicate_id: RO:0002327
+  - subject: gvpa_protein
+    predicate: forms
+    object: gas_vesicle_shell
+    description: GvpA is a small hydrophobic protein that forms the hollow protein
+      shell of the gas vesicle.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: GvpA is the structural protein that forms the hollow protein structure
+        of GV.
+  - subject: gvpc_protein
+    predicate: strengthens
+    object: gas_vesicle_shell
+    description: GvpC is a coat protein that strengthens the gas vesicle shell.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: GvpC has the function of strengthening the GV shell.
+  - subject: hydrophobic_inner_surface
+    predicate: prevents
+    object: water_condensation
+    description: The hydrophobic inner surface prevents heterogeneous condensation
+      of water into liquid, maintaining the gas compartment.
+    evidence:
+    - reference: DOI:10.1038/s44318-024-00178-2
+      notes: GVs maintain an inner gas compartment via a hydrophobic inner surface
+        that prevents condensation of water into liquid.
+  - subject: hydrostatic_pressure
+    predicate: causes
+    object: gas_vesicle_collapse
+    description: Above a critical pressure the gas vesicle irreversibly collapses.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: When GVs are under pressure, there is a critical point at which the GV
+        irreversibly collapses.
+  - subject: gvpd_protein
+    predicate: inhibits
+    object: gas_vesicle_formation
+    description: GvpD has an inhibitory effect on gas vesicle formation.
+    evidence:
+    - reference: DOI:10.1186/s13036-024-00426-3
+      notes: GvpD has an inhibitory effect on GV formation.
+  - subject: gas_vesicle_shell
+    predicate: enables
+    object: ultrasound_scattering
+    description: The gas-filled vesicle scatters ultrasound due to density/compressibility
+      contrast with the surrounding medium.
+    evidence:
+    - reference: DOI:10.1021/acssynbio.4c00283
+      notes: GVs scatter US due to the difference in density and compressibility of
+        their gaseous interior relative to surrounding aqueous medium.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -71,4 +161,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (gas vesicle buoyancy / water-column
     positioning) with RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

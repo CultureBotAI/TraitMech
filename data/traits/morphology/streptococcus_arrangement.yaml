@@ -1,8 +1,7 @@
 identifier: traitmech:000117
 label: streptococcus arrangement
-definition: A cell arrangement in which dividing cocci remain attached in chains
-  because successive division planes are parallel and daughter cells do not fully
-  separate.
+definition: A cell arrangement in which dividing cocci remain attached in chains because
+  successive division planes are parallel and daughter cells do not fully separate.
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,11 +14,11 @@ synonyms:
   source: DOI:10.1128/MMBR.00001-06
 evidence:
 - reference: DOI:10.1128/MMBR.00001-06
-  notes: Young's review of the selective value of bacterial shape treats cell
-    arrangement (including chains) as a heritable, division-determined morphology.
+  notes: Young's review of the selective value of bacterial shape treats cell arrangement
+    (including chains) as a heritable, division-determined morphology.
 - reference: DOI:10.1038/ncomms4842
-  notes: Daughter-cell separation during division determines whether cocci stay
-    attached in chains versus separating.
+  notes: Daughter-cell separation during division determines whether cocci stay attached
+    in chains versus separating.
 causal_graphs:
 - graph_id: streptococcus_parallel_division_chain
   title: Streptococcus arrangement via parallel division and incomplete separation
@@ -40,16 +39,43 @@ causal_graphs:
     label: parallel division planes
     node_type: QUALITY
     description: Successive division planes oriented in parallel.
+  - node_id: daughter_cell_separation
+    label: daughter-cell separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Splitting of the septum so that daughter cells fully separate after
+      division.
+  - node_id: pg_remodeling
+    label: peptidoglycan remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Remodeling and cleavage of septal/peripheral peptidoglycan during
+      elongation and division.
+  - node_id: pg_hydrolases
+    label: peptidoglycan hydrolases
+    node_type: GENE_OR_PROTEIN
+    description: Septal and peripheral PG hydrolases (e.g. FtsEX-PcsB, CbpD) that
+      cleave muropeptides enabling splitting.
+  - node_id: pcsb_autolysin
+    label: PcsB autolysin
+    node_type: GENE_OR_PROTEIN
+    description: Essential PG autolysin coordinating PG remodeling with cell division.
+  - node_id: ftsex_complex
+    label: FtsEX complex
+    node_type: GENE_OR_PROTEIN
+    description: Membrane complex required for PcsB autolysin function.
+  - node_id: lipoteichoic_acid
+    label: lipoteichoic acid
+    node_type: CHEMICAL
+    description: Cell-wall anionic polymer involved in proper cell shape and division.
   edges:
   - subject: parallel_division_planes
     predicate: causes
     object: streptococcus_trait
-    description: Parallel successive division planes with incomplete daughter
-      separation produce coccal chains.
+    description: Parallel successive division planes with incomplete daughter separation
+      produce coccal chains.
     evidence:
     - reference: DOI:10.1038/ncomms4842
-      notes: Daughter-cell separation during division determines whether cocci
-        stay attached in chains.
+      notes: Daughter-cell separation during division determines whether cocci stay
+        attached in chains.
     predicate_id: biolink:causes
   - subject: cell_division
     predicate: enables
@@ -57,9 +83,68 @@ causal_graphs:
     description: Bacterial cell division underlies coccal chain formation.
     evidence:
     - reference: DOI:10.1128/MMBR.00001-06
-      notes: Young treats chain arrangement as a heritable, division-determined
-        morphology.
+      notes: Young treats chain arrangement as a heritable, division-determined morphology.
     predicate_id: RO:0002327
+  - subject: parallel_division_planes
+    predicate: enables
+    object: cell_division
+    description: Ovococci divide in successive parallel planes perpendicular to the
+      long axis.
+    evidence:
+    - reference: DOI:10.1128/mSphere.00119-21
+      notes: Ovococci are elongated ellipsoids divided in successive parallel planes
+        perpendicular to their long axis.
+  - subject: pg_hydrolases
+    predicate: enables
+    object: pg_remodeling
+    description: PG hydrolases release nascent glycan strands and cleave muropeptides,
+      enabling PG remodeling and eventual splitting.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.737396
+      notes: PG hydrolases are required to release nascent glycan strands and cleave
+        muropeptides, enabling integration of new material and eventual splitting.
+  - subject: pcsb_autolysin
+    predicate: promotes
+    object: pg_remodeling
+    description: PcsB PG remodeling activity is coordinated with cell division.
+    evidence:
+    - reference: DOI:10.1128/mSphere.00119-21
+      notes: The PG remodeling activity by PcsB is coordinated with cell division
+        through its interaction with the FtsEX complex.
+  - subject: ftsex_complex
+    predicate: required for
+    object: pcsb_autolysin
+    description: The FtsEX complex is required for PcsB autolysin function.
+    evidence:
+    - reference: DOI:10.1128/mSphere.00119-21
+      notes: PcsB is the only essential PG autolysin, and the FtsEX complex is required
+        for the PcsB function.
+  - subject: pg_remodeling
+    predicate: promotes
+    object: daughter_cell_separation
+    description: Septal PG remodeling/splitting enables daughter cells to separate;
+      failure maintains chains.
+    evidence:
+    - reference: DOI:10.1128/mSphere.00119-21
+      notes: Part of the residual structure of PG did not fully disintegrate, resulting
+        in incomplete cell separation (chain phenotype).
+  - subject: daughter_cell_separation
+    predicate: prevents
+    object: streptococcus_trait
+    description: Complete daughter-cell separation prevents chain formation; its failure
+      produces chains.
+    evidence:
+    - reference: DOI:10.1038/ncomms4842
+      notes: Daughter-cell separation during division determines whether cocci stay
+        attached in chains versus separating.
+  - subject: lipoteichoic_acid
+    predicate: promotes
+    object: cell_division
+    description: Lipoteichoic acid supports proper cell shape and bacterial division.
+    evidence:
+    - reference: DOI:10.1186/s13567-024-01287-w
+      notes: LTA is involved in maintaining proper cell shape and influences cell
+        shape and bacterial division.
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -70,7 +155,12 @@ curation_history:
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (parallel-plane division → chain)
-    with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
-    to REVIEWED.
+  changes: Added evidence-backed causal graph (parallel-plane division → chain) with
+    GO node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

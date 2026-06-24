@@ -52,6 +52,34 @@ causal_graphs:
     node_type: STATE
     description: Electrochemical gradient powering ATP synthesis.
     grounding: METPO:1007500
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxygen-dependent respiratory metabolism.
+  - node_id: anoxia
+    label: absence of oxygen (anoxia)
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environmental condition lacking molecular oxygen.
+  - node_id: superoxide
+    label: superoxide
+    node_type: CHEMICAL
+    description: Reactive oxygen species generated during aerobic metabolism.
+  - node_id: hydrogen_peroxide
+    label: hydrogen peroxide
+    node_type: CHEMICAL
+    description: Reactive oxygen species generated during aerobic metabolism.
+  - node_id: superoxide_dismutase
+    label: superoxide dismutase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzyme activity that detoxifies superoxide.
+  - node_id: catalase
+    label: catalase / catalase-peroxidase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzyme activity that detoxifies hydrogen peroxide.
+  - node_id: fe_s_cluster_enzymes
+    label: Fe-S cluster enzymes
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes with exposed iron-sulfur clusters vulnerable to ROS.
   edges:
   - subject: obligate_aerobic_trait
     predicate: depends on
@@ -90,6 +118,54 @@ causal_graphs:
       snippet: production of a proton motive force
       notes: Supports bioenergetic coupling by cytochrome bd oxygen reductases.
     predicate_id: RO:0002326
+  - subject: molecular_oxygen
+    predicate: enables
+    object: aerobic_respiration
+    description: Molecular oxygen enables aerobic respiration.
+    evidence:
+    - reference: DOI:10.1111/cmi.13338
+      notes: Aerobic respiration is identified as the main cause of bacterial oxygen
+        consumption.
+  - subject: anoxia
+    predicate: interrupts flux through
+    object: electron_transport_chain
+    description: Anoxia interrupts electron flux through the electron transport chain.
+    evidence:
+    - reference: DOI:10.1128/JB.00797-19
+      notes: Interrupted flux through the electron transport chain (ETC) due to the
+        absence of oxygen.
+  - subject: electron_transport_chain
+    predicate: maintains
+    object: proton_motive_force
+    description: Electron transport chain flux maintains the proton motive force;
+      anoxic interruption impairs it.
+    evidence:
+    - reference: DOI:10.1128/JB.00797-19
+      notes: Obligate aerobes must maintain redox balance and the proton motive force
+        (PMF) despite interrupted flux through the electron transport chain.
+  - subject: superoxide_dismutase
+    predicate: mitigates
+    object: superoxide
+    description: Superoxide dismutase mitigates superoxide stress in aerobes.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2020.10.001
+      notes: Aerobes deploy scavenging enzymes (SOD, catalase, other peroxidases).
+  - subject: catalase
+    predicate: mitigates
+    object: hydrogen_peroxide
+    description: Catalase/catalase-peroxidase mitigates hydrogen peroxide stress in
+      aerobes.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2020.10.001
+      notes: Aerobes deploy scavenging enzymes (SOD, catalase, other peroxidases).
+  - subject: superoxide
+    predicate: inactivates
+    object: fe_s_cluster_enzymes
+    description: Superoxide and H2O2 oxidize and inactivate exposed Fe-S cluster enzymes.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2020.10.001
+      notes: Rate constants for cluster oxidation given (~1e6 M-1 s-1 for superoxide
+        and ~1e4 M-1 s-1 for H2O2), explaining ROS-defense need in aerobes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851998+00:00'
   curator: seed_from_metpo
@@ -153,4 +229,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000017×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -158,12 +158,152 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-7">
+            <strong>glycine betaine biosynthesis</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>glycine betaine</strong>
+            
+            <p>Choline is oxidized to glycine betaine in two steps by BetA and BetB.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1192059</code>
+                
+                <span class="meta">Choline is transformed into glycine betaine in two oxidative steps carried out by BetA (K00108) and BetB (K00130).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>choline</strong>
+            <span class="edge-predicate">is precursor of</span>
+            <strong>glycine betaine</strong>
+            
+            <p>Choline serves as the substrate for glycine betaine biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1192059</code>
+                
+                <span class="meta">Choline is transformed into glycine betaine in two oxidative steps (BetA/BetB).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>glycine betaine</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>osmotic imbalance</strong>
+            
+            <p>Glycine betaine accumulates as a compatible solute to balance osmotic pressure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1192059</code>
+                
+                <span class="meta">Glycine betaine is a compatible solute used in the salt-out osmoadaptation strategy.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>ectoine biosynthesis</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>ectoine</strong>
+            
+            <p>Ectoine is synthesized from L-aspartate in five steps (lysC/asd/ectB/ectA/ectC).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1192059</code>
+                
+                <span class="meta">Ectoine is obtained from L-aspartate in five steps mediated by lysC, asd, ectB, ectA, and ectC.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>ectoine</strong>
+            <span class="edge-predicate">mitigates</span>
+            <strong>osmotic imbalance</strong>
+            
+            <p>Ectoine acts as an osmoprotective compatible solute under salinity stress.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1192059</code>
+                
+                <span class="meta">Ectoine widely implicated in halophily and salinity tolerance; protects cell components under stress.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>mechanosensitive channels (Msc)</strong>
+            <span class="edge-predicate">responds to</span>
+            <strong>osmotic downshock</strong>
+            
+            <p>Msc channels serve as safety valves releasing ions and organic solutes during sudden downward osmotic shocks.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms12081738</code>
+                
+                <span class="meta">Msc mechanosensitive channels serve as safety valves, allowing the rapid release of ions and organic solutes in the case of sudden downward osmotic shocks.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-13">
+            <strong>Na+/H+ antiporter</strong>
+            <span class="edge-predicate">exports</span>
+            <strong>cytoplasmic sodium ions</strong>
+            
+            <p>Na+/H+ antiporters expel sodium ions from the cytoplasm to maintain ion homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms12081738</code>
+                
+                <span class="meta">Sodium ions are expelled from the cytoplasm, usually performed with the help of Na+/H+ antiporters.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-14">
+            <strong>proteome acidification</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>euryhaline</strong>
+            
+            <p>Acidification of the proteome improves protein solubility across salinity regimes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1126/sciadv.adg2059</code>
+                
+                <span class="meta">Increase in acidic amino acids (notably glutamate); acidification of the proteome essential for protein solubility at higher ionic strength.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -340,6 +480,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -699,7 +845,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking euryhalinity to broad salinity ranges, osmotic imbalance, compatible solutes, and salinity-adaptation genes.", "edges": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide_salinity_range", "target": "euryhaline_trait"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity_gradient", "target": "euryhaline_trait"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity_gradient", "target": "osmotic_imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2000208", "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity_adaptation_genes", "target": "euryhaline_trait"}], "evidence_rows": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "edge_id": "edge-1", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide salinity range", "target": "euryhaline"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "edge_id": "edge-2", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity gradient", "target": "euryhaline"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity gradient", "target": "osmotic imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": "METPO:2000208", "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity-adaptation genes", "target": "euryhaline"}], "graph_id": "euryhaline_wide_salinity_tolerance", "issues": [], "nodes": [{"color": "#cffafe", "description": "Uptake of osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated to adjust cell osmotic potential.", "grounding": "CHEBI:25728", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerance of a wide range of salinity conditions.", "grounding": "METPO:1000627", "id": "euryhaline_trait", "is_orphan": false, "label": "euryhaline", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Difference between external and internal osmotic potential.", "grounding": null, "id": "osmotic_imbalance", "is_orphan": false, "label": "osmotic imbalance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Gene families associated with microbial salinity adaptation across gradients.", "grounding": null, "id": "salinity_adaptation_genes", "is_orphan": false, "label": "salinity-adaptation genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Spatial or temporal gradient from low to high salinity.", "grounding": null, "id": "salinity_gradient", "is_orphan": false, "label": "salinity gradient", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Environmental salinity range broad enough to require flexible osmoadaptation.", "grounding": null, "id": "wide_salinity_range", "is_orphan": false, "label": "wide salinity range", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Euryhaline wide-salinity tolerance mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking euryhalinity to broad salinity ranges, osmotic imbalance, compatible solutes, and salinity-adaptation genes.", "edges": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide_salinity_range", "target": "euryhaline_trait"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "id": "edge-2", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity_gradient", "target": "euryhaline_trait"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity_gradient", "target": "osmotic_imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "id": "edge-4", "is_orphan": false, "predicate": "imports", "predicate_id": "METPO:2000208", "source": "compatible_solute_transport", "target": "compatible_solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible_solutes", "target": "osmotic_imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity_adaptation_genes", "target": "euryhaline_trait"}, {"description": "Choline is oxidized to glycine betaine in two steps by BetA and BetB.", "evidence": [{"notes": "Choline is transformed into glycine betaine in two oxidative steps carried out by BetA (K00108) and BetB (K00130).", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "glycine_betaine_biosynthesis", "target": "glycine_betaine"}, {"description": "Choline serves as the substrate for glycine betaine biosynthesis.", "evidence": [{"notes": "Choline is transformed into glycine betaine in two oxidative steps (BetA/BetB).", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "id": "edge-8", "is_orphan": false, "predicate": "is precursor of", "predicate_id": null, "source": "choline", "target": "glycine_betaine"}, {"description": "Glycine betaine accumulates as a compatible solute to balance osmotic pressure.", "evidence": [{"notes": "Glycine betaine is a compatible solute used in the salt-out osmoadaptation strategy.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "id": "edge-9", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "glycine_betaine", "target": "osmotic_imbalance"}, {"description": "Ectoine is synthesized from L-aspartate in five steps (lysC/asd/ectB/ectA/ectC).", "evidence": [{"notes": "Ectoine is obtained from L-aspartate in five steps mediated by lysC, asd, ectB, ectA, and ectC.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "id": "edge-10", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "ectoine_biosynthesis", "target": "ectoine"}, {"description": "Ectoine acts as an osmoprotective compatible solute under salinity stress.", "evidence": [{"notes": "Ectoine widely implicated in halophily and salinity tolerance; protects cell components under stress.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "id": "edge-11", "is_orphan": false, "predicate": "mitigates", "predicate_id": null, "source": "ectoine", "target": "osmotic_imbalance"}, {"description": "Msc channels serve as safety valves releasing ions and organic solutes during sudden downward osmotic shocks.", "evidence": [{"notes": "Msc mechanosensitive channels serve as safety valves, allowing the rapid release of ions and organic solutes in the case of sudden downward osmotic shocks.", "reference": "DOI:10.3390/microorganisms12081738"}], "id": "edge-12", "is_orphan": false, "predicate": "responds to", "predicate_id": null, "source": "mechanosensitive_channels", "target": "osmotic_downshock"}, {"description": "Na+/H+ antiporters expel sodium ions from the cytoplasm to maintain ion homeostasis.", "evidence": [{"notes": "Sodium ions are expelled from the cytoplasm, usually performed with the help of Na+/H+ antiporters.", "reference": "DOI:10.3390/microorganisms12081738"}], "id": "edge-13", "is_orphan": false, "predicate": "exports", "predicate_id": null, "source": "na_h_antiporter", "target": "cytoplasmic_sodium"}, {"description": "Acidification of the proteome improves protein solubility across salinity regimes.", "evidence": [{"notes": "Increase in acidic amino acids (notably glutamate); acidification of the proteome essential for protein solubility at higher ionic strength.", "reference": "DOI:10.1126/sciadv.adg2059"}], "id": "edge-14", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "proteome_acidification", "target": "euryhaline_trait"}], "evidence_rows": [{"description": "Euryhaline organisms tolerate or grow across broad salinity ranges.", "edge_id": "edge-1", "evidence": [{"notes": "Communication proposes a quantitative characterization for euryhaline halophiles.", "reference": "DOI:10.5928/kaiyou.14.337", "snippet": "growing over a salinity range of 15%"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "wide salinity range", "target": "euryhaline"}, {"description": "Variable salinity environments select for broad salinity tolerance.", "edge_id": "edge-2", "evidence": [{"notes": "Estuary metagenome study uses salinity gradients to analyze microbial salinity adaptation.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "salinity gradient of a typical short residence-time estuary"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "salinity gradient", "target": "euryhaline"}, {"description": "Movement across salinity gradients changes osmotic pressure on the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports osmotic imbalance and water flux during salinity change.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "water immediately rushes into the cell"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "salinity gradient", "target": "osmotic imbalance"}, {"description": "Euryhaline tolerance can use flexible uptake of osmoprotectants.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports compatible-solute uptake and biosynthesis as bacterial salt-stress responses.", "reference": "DOI:10.1016/j.csbj.2021.01.030", "snippet": "biosynthesis and/or uptake of compatible solutes"}], "predicate": "imports", "predicate_id": "METPO:2000208", "source": "compatible-solute transport", "target": "compatible solutes"}, {"description": "Compatible solutes help balance external osmotic pressure across changing salinity.", "edge_id": "edge-5", "evidence": [{"notes": "Supports compatible solutes as osmolytes under salinity stress.", "reference": "DOI:10.1186/1746-1448-1-5", "snippet": "balance external osmotic pressure"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "compatible solutes", "target": "osmotic imbalance"}, {"description": "Salinity-adaptation gene repertoires contribute to broad salinity tolerance.", "edge_id": "edge-6", "evidence": [{"notes": "Supports salinity-adaptation genes as contributors to microbial salinity niche breadth.", "reference": "DOI:10.1186/s40168-024-01817-w", "snippet": "genes associated with microbial salinity adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "salinity-adaptation genes", "target": "euryhaline"}, {"description": "Choline is oxidized to glycine betaine in two steps by BetA and BetB.", "edge_id": "edge-7", "evidence": [{"notes": "Choline is transformed into glycine betaine in two oxidative steps carried out by BetA (K00108) and BetB (K00130).", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "predicate": "produces", "predicate_id": null, "source": "glycine betaine biosynthesis", "target": "glycine betaine"}, {"description": "Choline serves as the substrate for glycine betaine biosynthesis.", "edge_id": "edge-8", "evidence": [{"notes": "Choline is transformed into glycine betaine in two oxidative steps (BetA/BetB).", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "predicate": "is precursor of", "predicate_id": null, "source": "choline", "target": "glycine betaine"}, {"description": "Glycine betaine accumulates as a compatible solute to balance osmotic pressure.", "edge_id": "edge-9", "evidence": [{"notes": "Glycine betaine is a compatible solute used in the salt-out osmoadaptation strategy.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "predicate": "mitigates", "predicate_id": null, "source": "glycine betaine", "target": "osmotic imbalance"}, {"description": "Ectoine is synthesized from L-aspartate in five steps (lysC/asd/ectB/ectA/ectC).", "edge_id": "edge-10", "evidence": [{"notes": "Ectoine is obtained from L-aspartate in five steps mediated by lysC, asd, ectB, ectA, and ectC.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "predicate": "produces", "predicate_id": null, "source": "ectoine biosynthesis", "target": "ectoine"}, {"description": "Ectoine acts as an osmoprotective compatible solute under salinity stress.", "edge_id": "edge-11", "evidence": [{"notes": "Ectoine widely implicated in halophily and salinity tolerance; protects cell components under stress.", "reference": "DOI:10.3389/fmicb.2023.1192059"}], "predicate": "mitigates", "predicate_id": null, "source": "ectoine", "target": "osmotic imbalance"}, {"description": "Msc channels serve as safety valves releasing ions and organic solutes during sudden downward osmotic shocks.", "edge_id": "edge-12", "evidence": [{"notes": "Msc mechanosensitive channels serve as safety valves, allowing the rapid release of ions and organic solutes in the case of sudden downward osmotic shocks.", "reference": "DOI:10.3390/microorganisms12081738"}], "predicate": "responds to", "predicate_id": null, "source": "mechanosensitive channels (Msc)", "target": "osmotic downshock"}, {"description": "Na+/H+ antiporters expel sodium ions from the cytoplasm to maintain ion homeostasis.", "edge_id": "edge-13", "evidence": [{"notes": "Sodium ions are expelled from the cytoplasm, usually performed with the help of Na+/H+ antiporters.", "reference": "DOI:10.3390/microorganisms12081738"}], "predicate": "exports", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "cytoplasmic sodium ions"}, {"description": "Acidification of the proteome improves protein solubility across salinity regimes.", "edge_id": "edge-14", "evidence": [{"notes": "Increase in acidic amino acids (notably glutamate); acidification of the proteome essential for protein solubility at higher ionic strength.", "reference": "DOI:10.1126/sciadv.adg2059"}], "predicate": "contributes to", "predicate_id": null, "source": "proteome acidification", "target": "euryhaline"}], "graph_id": "euryhaline_wide_salinity_tolerance", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Precursor metabolite converted to glycine betaine.", "grounding": "CHEBI:15354", "id": "choline", "is_orphan": false, "label": "choline", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#cffafe", "description": "Uptake of osmoprotectants from the environment.", "grounding": null, "id": "compatible_solute_transport", "is_orphan": false, "label": "compatible-solute transport", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated to adjust cell osmotic potential.", "grounding": "CHEBI:25728", "id": "compatible_solutes", "is_orphan": false, "label": "compatible solutes", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular Na+ that must be exported to maintain ion homeostasis.", "grounding": "CHEBI:29101", "id": "cytoplasmic_sodium", "is_orphan": false, "label": "cytoplasmic sodium ions", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute widely implicated in halophily and salinity tolerance.", "grounding": "CHEBI:22563", "id": "ectoine", "is_orphan": false, "label": "ectoine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Five-step biosynthesis of ectoine from L-aspartate (lysC/asd/ectB/ectA/ectC).", "grounding": null, "id": "ectoine_biosynthesis", "is_orphan": false, "label": "ectoine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Tolerance of a wide range of salinity conditions.", "grounding": "METPO:1000627", "id": "euryhaline_trait", "is_orphan": false, "label": "euryhaline", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Compatible solute / osmoprotectant accumulated under salt stress.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Two-step oxidative conversion of choline to glycine betaine by BetA/BetB.", "grounding": null, "id": "glycine_betaine_biosynthesis", "is_orphan": false, "label": "glycine betaine biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Channels acting as safety valves releasing ions and solutes during osmotic downshock.", "grounding": null, "id": "mechanosensitive_channels", "is_orphan": false, "label": "mechanosensitive channels (Msc)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporter that expels sodium ions from the cytoplasm.", "grounding": null, "id": "na_h_antiporter", "is_orphan": false, "label": "Na+/H+ antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sudden drop in external salinity causing rapid water influx and turgor rise.", "grounding": null, "id": "osmotic_downshock", "is_orphan": false, "label": "osmotic downshock", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Difference between external and internal osmotic potential.", "grounding": null, "id": "osmotic_imbalance", "is_orphan": false, "label": "osmotic imbalance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Increased proportion of acidic amino acids improving protein solubility at high ionic strength.", "grounding": null, "id": "proteome_acidification", "is_orphan": false, "label": "proteome acidification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Gene families associated with microbial salinity adaptation across gradients.", "grounding": null, "id": "salinity_adaptation_genes", "is_orphan": false, "label": "salinity-adaptation genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Spatial or temporal gradient from low to high salinity.", "grounding": null, "id": "salinity_gradient", "is_orphan": false, "label": "salinity gradient", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Environmental salinity range broad enough to require flexible osmoadaptation.", "grounding": null, "id": "wide_salinity_range", "is_orphan": false, "label": "wide salinity range", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Euryhaline wide-salinity tolerance mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -710,7 +856,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

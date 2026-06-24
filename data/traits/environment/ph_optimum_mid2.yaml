@@ -51,6 +51,40 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mild K+/H+ antiport and cytoplasmic acidification activity maintaining
       cytoplasmic pH at slightly basic external pH.
+  - node_id: cytoplasmic_buffering_capacity
+    label: cytoplasmic buffering capacity
+    node_type: BIOLOGICAL_PROCESS
+    description: Buffering of the cytoplasm (e.g. phosphate pools) absorbing pH fluctuations.
+  - node_id: intracellular_ph_homeostasis
+    label: intracellular pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Regulation maintaining cytoplasmic pH near neutral.
+  - node_id: na_h_antiporters
+    label: Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Sodium:proton antiporters that acidify the cytoplasm when internal
+      pH is too high.
+  - node_id: k_h_antiporters
+    label: K+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Potassium:proton antiporters regulating bacterial internal pH.
+  - node_id: respiratory_proton_pumping
+    label: proton-pumping respiratory chain components
+    node_type: PATHWAY
+    description: Respiratory electron transport chain components that pump protons.
+  - node_id: metabolite_decarboxylation
+    label: metabolite decarboxylation pathways
+    node_type: PATHWAY
+    description: Decarboxylation reactions whose free-energy change can be stored
+      as PMF.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient (ΔpH + Δψ) across the membrane.
+  - node_id: f0f1_atp_synthase
+    label: F0F1-ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-transporting ATP synthase complex that makes ATP from PMF.
   edges:
   - subject: slightly_alkaline_external_ph
     predicate: engages
@@ -80,6 +114,59 @@ causal_graphs:
       snippet: cytoplasmic pH
       notes: Supports the 7–8 optimum as a value within the pH-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: cytoplasmic_buffering_capacity
+    predicate: stabilizes
+    object: intracellular_ph_homeostasis
+    description: Cytoplasmic buffering capacity stabilizes intracellular pH against
+      fluctuations.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Buffering capacity of the cytoplasm absorbs pH fluctuations; broad bacterial
+        mechanism supporting near-neutral pHi at external pH 7-8.
+  - subject: na_h_antiporters
+    predicate: maintains
+    object: intracellular_ph_homeostasis
+    description: Na+/H+ antiporters acidify the cytoplasm when pHi is too high, maintaining
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Proton-sensing antiporters acidify the cytoplasm by exporting Na+ for
+        protons when internal pH gets too high; general mechanism relevant at external
+        pH 7-8.
+  - subject: k_h_antiporters
+    predicate: regulates
+    object: intracellular_ph_homeostasis
+    description: K+/H+ antiporters are key regulators of bacterial internal pH.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Na+/H+ and K+/H+ antiporters are key regulators of bacterial pH homeostasis;
+        general regulator.
+  - subject: respiratory_proton_pumping
+    predicate: maintains
+    object: intracellular_ph_homeostasis
+    description: Proton-pumping respiratory chain components prevent the internal
+      pH from becoming too low.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Activation of proton-pumping respiratory chains prevents internal pH
+        becoming too low; broad statement across respiratory bacteria.
+  - subject: metabolite_decarboxylation
+    predicate: generates
+    object: proton_motive_force
+    description: Metabolite decarboxylation pathways store free energy as proton motive
+      force.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: The free energy change from decarboxylation reactions can be stored as
+        a proton motive force; general, not taxon-specific.
+  - subject: proton_motive_force
+    predicate: powers
+    object: f0f1_atp_synthase
+    description: Proton motive force powers F0F1-ATP synthase ATP synthesis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: The proton motive force can be used by F0F1-ATP synthase to make ATP;
+        strong general bioenergetic edge.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827757+00:00'
   curator: seed_from_metpo
@@ -97,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

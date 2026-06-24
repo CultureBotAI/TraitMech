@@ -90,12 +90,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>external pH 7-8</strong>
+            <span class="edge-predicate">permits maintenance of</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>External pH 7-8 permits cells to keep internal pH near 7.0-7.5.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Internal pH kept within 7.0-7.5 and PMF relatively constant across external pH 5-8.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>cytoplasmic buffering</strong>
+            <span class="edge-predicate">stabilizes</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Cytoplasmic buffering stabilizes internal pH given very low free proton count.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">A ~1 fL cytoplasm at pH 7.2 contains only ~10 free protons, so buffering is critical.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>Na+/H+ antiporter activity</strong>
+            <span class="edge-predicate">acidifies</span>
+            <strong>cytoplasm</strong>
+            
+            <p>Na+/H+ antiporter activity acidifies the cytoplasm when internal pH rises.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Na+/H+ and K+/H+ antiporters acidify the cytoplasm by exchanging exported cations for H+.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">remains relatively constant across</span>
+            <strong>external pH 5-8</strong>
+            
+            <p>Neutralophiles keep PMF relatively constant across external pH ~5-8.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Neutralophilic bacteria adjust ΔpH vs Δψ so PMF stays relatively constant across external pH ~5-8.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>membrane potential / ΔpH rebalancing</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>proton motive force</strong>
+            
+            <p>Rebalancing of ΔpH and Δψ with external pH maintains PMF.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">The relative contribution of ΔpH and Δψ shifts with external pH to preserve PMF.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>F0F1-ATPase</strong>
+            <span class="edge-predicate">couples</span>
+            <strong>ATP synthesis</strong>
+            
+            <p>F0F1-ATPase couples the proton motive force to ATP synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">PMF drives ATP synthesis; F0F1 uses ~3-5 H+ per ATP.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>proton:ion antiporters</strong>
+            <span class="edge-predicate">maintain</span>
+            <strong>membrane potential (Δψ)</strong>
+            
+            <p>Proton:ion antiporters have a direct role in maintaining membrane potential.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1146/annurev-biophys-030822-032215</code>
+                
+                <span class="meta">Antiporters have a direct role in maintaining membrane potential in E. coli.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -241,6 +364,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (12 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -600,7 +729,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth range of approximately 7\u20138.", "edges": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest_alkaline_tolerance", "target": "ph_range_mid2_trait"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid2_trait", "target": "ph_range"}], "evidence_rows": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "edge_id": "edge-1", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest alkaline-tolerance physiology", "target": "pH range mid2"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid2", "target": "pH range"}], "graph_id": "ph_range_mid2_mild_alkaline_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Mild K+/H+ antiport and cytoplasmic acidification activity enabling growth at slightly basic external pH.", "grounding": null, "id": "modest_alkaline_tolerance", "is_orphan": false, "label": "modest alkaline-tolerance physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 7\u20138.", "grounding": "METPO:1000462", "id": "ph_range_mid2_trait", "is_orphan": false, "label": "pH range mid2", "node_type": "TRAIT", "xrefs": []}], "title": "pH-range-mid2 mild-alkaline-tolerance range"}];
+  var graphs = [{"description": "DOI-backed graph linking modest alkaline pH-homeostasis to a pH growth range of approximately 7\u20138.", "edges": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest_alkaline_tolerance", "target": "ph_range_mid2_trait"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ph_range_mid2_trait", "target": "ph_range"}, {"description": "External pH 7-8 permits cells to keep internal pH near 7.0-7.5.", "evidence": [{"notes": "Internal pH kept within 7.0-7.5 and PMF relatively constant across external pH 5-8.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-3", "is_orphan": false, "predicate": "permits maintenance of", "predicate_id": null, "source": "external_ph_7_8", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Cytoplasmic buffering stabilizes internal pH given very low free proton count.", "evidence": [{"notes": "A ~1 fL cytoplasm at pH 7.2 contains only ~10 free protons, so buffering is critical.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-4", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic_buffering", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Na+/H+ antiporter activity acidifies the cytoplasm when internal pH rises.", "evidence": [{"notes": "Na+/H+ and K+/H+ antiporters acidify the cytoplasm by exchanging exported cations for H+.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-5", "is_orphan": false, "predicate": "acidifies", "predicate_id": null, "source": "na_h_antiport_activity", "target": "cytoplasm"}, {"description": "Neutralophiles keep PMF relatively constant across external pH ~5-8.", "evidence": [{"notes": "Neutralophilic bacteria adjust \u0394pH vs \u0394\u03c8 so PMF stays relatively constant across external pH ~5-8.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-6", "is_orphan": false, "predicate": "remains relatively constant across", "predicate_id": null, "source": "proton_motive_force", "target": "external_ph_5_8"}, {"description": "Rebalancing of \u0394pH and \u0394\u03c8 with external pH maintains PMF.", "evidence": [{"notes": "The relative contribution of \u0394pH and \u0394\u03c8 shifts with external pH to preserve PMF.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-7", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "dpsi_dph_rebalancing", "target": "proton_motive_force"}, {"description": "F0F1-ATPase couples the proton motive force to ATP synthesis.", "evidence": [{"notes": "PMF drives ATP synthesis; F0F1 uses ~3-5 H+ per ATP.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-8", "is_orphan": false, "predicate": "couples", "predicate_id": null, "source": "f0f1_atpase", "target": "atp_synthesis"}, {"description": "Proton:ion antiporters have a direct role in maintaining membrane potential.", "evidence": [{"notes": "Antiporters have a direct role in maintaining membrane potential in E. coli.", "reference": "DOI:10.1146/annurev-biophys-030822-032215"}], "id": "edge-9", "is_orphan": false, "predicate": "maintain", "predicate_id": null, "source": "proton_ion_antiporters", "target": "membrane_potential"}], "evidence_rows": [{"description": "Modest alkaline-tolerance physiology enables growth across pH 7\u20138.", "edge_id": "edge-1", "evidence": [{"notes": "Supports balanced proton motive force at slightly alkaline pH as the range mechanism.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "modest alkaline-tolerance physiology", "target": "pH range mid2"}, {"description": "pH range mid2 is a quantitative bin of the pH-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the pH 7\u20138 range as a value within the pH-range distribution.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pH range mid2", "target": "pH range"}, {"description": "External pH 7-8 permits cells to keep internal pH near 7.0-7.5.", "edge_id": "edge-3", "evidence": [{"notes": "Internal pH kept within 7.0-7.5 and PMF relatively constant across external pH 5-8.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "permits maintenance of", "predicate_id": null, "source": "external pH 7-8", "target": "cytoplasmic pH homeostasis"}, {"description": "Cytoplasmic buffering stabilizes internal pH given very low free proton count.", "edge_id": "edge-4", "evidence": [{"notes": "A ~1 fL cytoplasm at pH 7.2 contains only ~10 free protons, so buffering is critical.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic buffering", "target": "cytoplasmic pH homeostasis"}, {"description": "Na+/H+ antiporter activity acidifies the cytoplasm when internal pH rises.", "edge_id": "edge-5", "evidence": [{"notes": "Na+/H+ and K+/H+ antiporters acidify the cytoplasm by exchanging exported cations for H+.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "acidifies", "predicate_id": null, "source": "Na+/H+ antiporter activity", "target": "cytoplasm"}, {"description": "Neutralophiles keep PMF relatively constant across external pH ~5-8.", "edge_id": "edge-6", "evidence": [{"notes": "Neutralophilic bacteria adjust \u0394pH vs \u0394\u03c8 so PMF stays relatively constant across external pH ~5-8.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "remains relatively constant across", "predicate_id": null, "source": "proton motive force", "target": "external pH 5-8"}, {"description": "Rebalancing of \u0394pH and \u0394\u03c8 with external pH maintains PMF.", "edge_id": "edge-7", "evidence": [{"notes": "The relative contribution of \u0394pH and \u0394\u03c8 shifts with external pH to preserve PMF.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "maintains", "predicate_id": null, "source": "membrane potential / \u0394pH rebalancing", "target": "proton motive force"}, {"description": "F0F1-ATPase couples the proton motive force to ATP synthesis.", "edge_id": "edge-8", "evidence": [{"notes": "PMF drives ATP synthesis; F0F1 uses ~3-5 H+ per ATP.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "couples", "predicate_id": null, "source": "F0F1-ATPase", "target": "ATP synthesis"}, {"description": "Proton:ion antiporters have a direct role in maintaining membrane potential.", "edge_id": "edge-9", "evidence": [{"notes": "Antiporters have a direct role in maintaining membrane potential in E. coli.", "reference": "DOI:10.1146/annurev-biophys-030822-032215"}], "predicate": "maintain", "predicate_id": null, "source": "proton:ion antiporters", "target": "membrane potential (\u0394\u03c8)"}], "graph_id": "ph_range_mid2_mild_alkaline_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Generation of ATP driven by the proton motive force.", "grounding": null, "id": "atp_synthesis", "is_orphan": false, "label": "ATP synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Intracellular compartment whose pH is regulated by antiport activity.", "grounding": null, "id": "cytoplasm", "is_orphan": false, "label": "cytoplasm", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Inorganic/organic buffers limit pH fluctuation given very low free proton count.", "grounding": null, "id": "cytoplasmic_buffering", "is_orphan": false, "label": "cytoplasmic buffering", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of internal pH near 7.0-7.5 despite external pH variation.", "grounding": null, "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Shifting relative contributions of \u0394\u03c8 and \u0394pH with external pH to preserve PMF.", "grounding": null, "id": "dpsi_dph_rebalancing", "is_orphan": false, "label": "membrane potential / \u0394pH rebalancing", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "External pH span across which neutralophiles keep PMF relatively constant.", "grounding": null, "id": "external_ph_5_8", "is_orphan": false, "label": "external pH 5-8", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Mildly alkaline to neutral external pH condition spanning approximately 7-8.", "grounding": null, "id": "external_ph_7_8", "is_orphan": false, "label": "external pH 7-8", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "ATP synthase coupling proton re-entry (PMF) to ATP generation.", "grounding": null, "id": "f0f1_atpase", "is_orphan": false, "label": "F0F1-ATPase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Transmembrane electrical potential contributing to PMF.", "grounding": null, "id": "membrane_potential", "is_orphan": false, "label": "membrane potential (\u0394\u03c8)", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Mild K+/H+ antiport and cytoplasmic acidification activity enabling growth at slightly basic external pH.", "grounding": null, "id": "modest_alkaline_tolerance", "is_orphan": false, "label": "modest alkaline-tolerance physiology", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Coupled Na+/H+ exchange that acidifies the cytoplasm when internal pH rises.", "grounding": null, "id": "na_h_antiport_activity", "is_orphan": false, "label": "Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "Span of external pH values supporting growth.", "grounding": "METPO:1000332", "id": "ph_range", "is_orphan": false, "label": "pH range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "pH growth-supporting range approximately 7\u20138.", "grounding": "METPO:1000462", "id": "ph_range_mid2_trait", "is_orphan": false, "label": "pH range mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Antiporters with a direct role in sustaining membrane potential.", "grounding": null, "id": "proton_ion_antiporters", "is_orphan": false, "label": "proton:ion antiporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Composite electrochemical proton gradient used for energy transduction and transport.", "grounding": null, "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "pH-range-mid2 mild-alkaline-tolerance range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -611,7 +740,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

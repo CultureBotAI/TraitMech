@@ -46,6 +46,47 @@ causal_graphs:
     label: visible yellow color
     node_type: MOLECULAR_FUNCTION
     description: Observed yellow color produced by pigment absorption spectra.
+  - node_id: ipp_dmapp
+    label: IPP/DMAPP
+    node_type: CHEMICAL
+    description: C5 isoprenoid precursors isopentenyl diphosphate and dimethylallyl
+      diphosphate.
+  - node_id: ggpp
+    label: geranylgeranyl diphosphate (GGPP)
+    node_type: CHEMICAL
+    description: C20 isoprenoid precursor of carotenoid backbones.
+  - node_id: idsa_crte
+    label: IdsA/CrtE (GGPP synthase)
+    node_type: GENE_OR_PROTEIN
+    description: Geranylgeranyl diphosphate synthase converting IPP and DMAPP to GGPP.
+  - node_id: lycopene
+    label: lycopene
+    node_type: CHEMICAL
+    description: C40 carotenoid backbone intermediate.
+  - node_id: crti
+    label: CrtI (phytoene desaturase)
+    node_type: GENE_OR_PROTEIN
+    description: Phytoene desaturase that produces lycopene in carotenoid biosynthesis.
+  - node_id: lycopene_biosynthesis
+    label: lycopene biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Pathway steps producing lycopene from phytoene.
+  - node_id: crty
+    label: CrtY (lycopene beta-cyclase)
+    node_type: GENE_OR_PROTEIN
+    description: Lycopene beta-cyclase converting lycopene to beta-carotene.
+  - node_id: beta_carotene
+    label: beta-carotene
+    node_type: CHEMICAL
+    description: Canonical yellow/orange carotenoid pigment.
+  - node_id: flexirubin_pigment
+    label: flexirubin-type pigment
+    node_type: CHEMICAL
+    description: Aryl polyene yellow pigment class distinct from carotenoids.
+  - node_id: ros_damage
+    label: reactive oxygen species damage
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidative damage caused by reactive oxygen species.
   edges:
   - subject: crt_enzymes
     predicate: catalyzes
@@ -84,6 +125,79 @@ causal_graphs:
       snippet: yellow pigmentation in bacteria
       notes: Supports trait-level yellow pigmentation.
     predicate_id: METPO:2007400
+  - subject: ipp_dmapp
+    predicate: precursor of
+    object: ggpp
+    description: C5 precursors IPP/DMAPP are elongated to the C20 carotenoid precursor
+      GGPP.
+    evidence:
+    - reference: DOI:10.1038/s41598-024-58700-9
+      notes: Carotenoid synthesis begins from the C5 isoprenoid precursors IPP and
+        DMAPP, which are converted via chain elongation to the C20 precursor GGPP.
+  - subject: idsa_crte
+    predicate: catalyzes
+    object: ggpp
+    description: IdsA/CrtE (GGPP synthase) catalyzes formation of GGPP from IPP and
+      DMAPP.
+    evidence:
+    - reference: DOI:10.1038/s41598-024-58700-9
+      notes: IdsA, the major geranylgeranyl diphosphate synthase converting IPP and
+        DMAPP to GGPP; GGPPS annotated CrtE/IdsA.
+  - subject: ggpp
+    predicate: precursor of
+    object: lycopene
+    description: Two GGPP molecules condense to form the C40 backbone lycopene.
+    evidence:
+    - reference: DOI:10.1038/s41598-024-58700-9
+      notes: Two GGPP molecules condense to form the C40 backbone lycopene.
+  - subject: crti
+    predicate: enables
+    object: lycopene_biosynthesis
+    description: CrtI (phytoene desaturase) enables lycopene biosynthesis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12040803
+      notes: Phytoene desaturase (CrtI) to produce lycopene.
+  - subject: lycopene_biosynthesis
+    predicate: produces
+    object: lycopene
+    description: Lycopene biosynthesis produces lycopene.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12040803
+      notes: Pathway proceeds through phytoene synthase (CrtB) and phytoene desaturase
+        (CrtI) to produce lycopene.
+  - subject: crty
+    predicate: catalyzes conversion to
+    object: beta_carotene
+    description: CrtY (lycopene beta-cyclase) cyclizes lycopene to beta-carotene.
+    evidence:
+    - reference: DOI:10.1038/s41598-024-58700-9
+      notes: Lycopene is cyclized to beta-carotene by lycopene beta-cyclase (crtY).
+  - subject: beta_carotene
+    predicate: causes or contributes to
+    object: yellow_pigmented_trait
+    description: beta-carotene is a canonical yellow/orange carotenoid that contributes
+      to the yellow phenotype.
+    evidence:
+    - reference: DOI:10.4014/jmb.2404.04018
+      notes: beta-carotene serves as a colorant and is the classic yellow/orange carotenoid
+        pigment.
+  - subject: flexirubin_pigment
+    predicate: contributes to
+    object: yellow_pigmented_trait
+    description: Flexirubin-type pigments produce yellow colony coloration, a carotenoid-independent
+      yellow pigment route.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54112-5
+      notes: Flexirubin-type pigment-producing bacterium is yellow (or orange) in
+        color; flexirubin is a known yellow pigment.
+  - subject: flexirubin_pigment
+    predicate: protects against
+    object: ros_damage
+    description: Flexirubin protects against reactive oxygen species damage.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-54112-5
+      notes: Flexirubin is known as a yellow pigment that effectively protects against
+        reactive oxygen species damage.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.947204+00:00'
   curator: seed_from_metpo
@@ -119,4 +233,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0016117×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

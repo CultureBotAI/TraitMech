@@ -1,8 +1,8 @@
 identifier: traitmech:000082
 label: persister cell formation
-definition: Formation of dormant phenotypic variants (persister cells) that are
-  transiently tolerant to antibiotics and other lethal stresses without carrying
-  genetic resistance, arising stochastically in a population.
+definition: Formation of dormant phenotypic variants (persister cells) that are transiently
+  tolerant to antibiotics and other lethal stresses without carrying genetic resistance,
+  arising stochastically in a population.
 definition_source: DOI:10.1146/annurev.micro.112408.134306
 trait_category: PHYSIOLOGY
 term_kind: CLASS
@@ -15,11 +15,9 @@ synonyms:
   source: DOI:10.1146/annurev.micro.112408.134306
 evidence:
 - reference: DOI:10.1146/annurev.micro.112408.134306
-  notes: Lewis reviews persister cells as dormant variants highly tolerant to
-    antibiotics.
+  notes: Lewis reviews persister cells as dormant variants highly tolerant to antibiotics.
 - reference: DOI:10.1038/nrmicro1557
-  notes: Lewis links persister-cell dormancy to the recalcitrance of chronic
-    infections.
+  notes: Lewis links persister-cell dormancy to the recalcitrance of chronic infections.
 causal_graphs:
 - graph_id: persister_dormancy_tolerance
   title: Persister dormancy and antibiotic tolerance
@@ -40,6 +38,40 @@ causal_graphs:
     label: antibiotic tolerance
     node_type: BIOLOGICAL_PROCESS
     description: Transient survival of lethal antibiotic exposure.
+  - node_id: biphasic_killing_curve
+    label: biphasic killing curve
+    node_type: EXPERIMENTAL_FACTOR
+    description: 'Hallmark biphasic time-kill readout: rapid death of bulk population
+      then slow killing of persister subpopulation.'
+  - node_id: mic_susceptible
+    label: minimum inhibitory concentration of susceptible cells
+    node_type: QUALITY
+    description: MIC value characteristic of antibiotic-susceptible cells; unchanged
+      in persisters.
+  - node_id: antibiotic_resistance
+    label: antibiotic resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Genetically encoded ability to grow at elevated antibiotic concentrations;
+      distinct from tolerance/persistence.
+  - node_id: elevated_mic
+    label: elevated minimum inhibitory concentration
+    node_type: QUALITY
+    description: Increased MIC characteristic of resistant bacteria, distinguishing
+      resistance from persistence.
+  - node_id: whole_population_phenotype
+    label: whole-population phenotype
+    node_type: QUALITY
+    description: Property applying to the entire population rather than a small subpopulation.
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Residual respiratory ATP synthesis maintaining proton motive force
+      in persisters.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane electrochemical gradient maintained by persisters during
+      starvation.
   edges:
   - subject: dormancy_process
     predicate: enables
@@ -57,6 +89,60 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1557
       notes: Lewis links persisters to recalcitrant infection.
     predicate_id: RO:0002327
+  - subject: persister_trait
+    predicate: characterized by
+    object: biphasic_killing_curve
+    description: Persistence produces a biphasic time-kill curve diagnostic of a tolerant
+      subpopulation.
+    evidence:
+    - reference: DOI:10.1128/ecosalplus.esp-0025-2022
+      notes: A hallmark of persistence is the biphasic killing curve.
+  - subject: persister_trait
+    predicate: has characteristic
+    object: mic_susceptible
+    description: Persisters retain the same MIC as susceptible cells, distinguishing
+      persistence from resistance.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: Persisters had the same minimum inhibitory concentration (MIC) as the
+        susceptible cells.
+  - subject: antibiotic_resistance
+    predicate: has characteristic
+    object: elevated_mic
+    description: Resistant bacteria have a significantly higher MIC, contrasting with
+      the unchanged MIC of persisters.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: The MIC of resistant bacteria was significantly higher; scope edge excluding
+        resistance from persistence.
+  - subject: antibiotic_tolerance
+    predicate: has characteristic
+    object: whole_population_phenotype
+    description: Tolerance applies to the whole population, whereas persisters are
+      a small subpopulation.
+    evidence:
+    - reference: DOI:10.1186/s12866-024-03628-3
+      notes: Persisters are a smaller subpopulation, whereas tolerance is for the
+        microbiota as a whole.
+  - subject: persister_trait
+    predicate: enables
+    object: oxidative_phosphorylation
+    description: Persisters actively undergo a residual level of oxidative phosphorylation
+      even during nutrient starvation.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.70042
+      notes: Persisters still actively generated PMF by undergoing a certain level
+        of oxidative phosphorylation, even after complete nutrient starvation for
+        24 h.
+  - subject: oxidative_phosphorylation
+    predicate: results in
+    object: proton_motive_force
+    description: Residual oxidative phosphorylation generates proton motive force
+      that sustains persister survival.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.70042
+      notes: Persisters generated PMF via oxidative phosphorylation; ETC components
+        maintain PMF underlying tolerance.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -67,6 +153,12 @@ curation_history:
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (persister dormancy/tolerance) with GO
-    node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (persister dormancy/tolerance) with
+    GO node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

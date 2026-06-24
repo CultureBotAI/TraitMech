@@ -124,12 +124,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>external pH</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>proton motive force</strong>
+            
+            <p>The external pH largely determines the magnitude of the pH gradient (ΔpH) component of the proton motive force.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Cells maintain cytoplasmic pH near neutral, so the magnitude of the pH gradient is largely determined by the external pH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>proton motive force</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>ATP synthesis by F0F1-ATP synthase</strong>
+            
+            <p>The proton motive force drives ATP synthesis via the F0F1-ATP synthase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">PMF drives the synthesis of ATP; the F0F1-ATP synthase uses three to five protons to synthesize one ATP.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>Na+/H+ antiporter activity</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>cytoplasm acidification</strong>
+            
+            <p>Proton-sensing Na+/H+ (and K+/H+) antiporters acidify the cytoplasm when internal pH gets too high.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>cytoplasm acidification</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Antiporter-driven cytoplasm acidification contributes to cytoplasmic pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">Acidifying the cytoplasm when internal pH gets too high is a homeostatic mechanism maintaining near-neutral cytoplasmic pH.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>metabolite decarboxylation pathways</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>cytoplasmic pH homeostasis</strong>
+            
+            <p>Proton-consuming decarboxylation reactions raise the internal pH and contribute to pH homeostasis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">The chemistry of the decarboxylation reaction requires a proton, raising internal pH, and the enzymes have a built-in self-regulatory mechanism contributing to pH homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>metabolite decarboxylation pathways</strong>
+            <span class="edge-predicate">generates</span>
+            <strong>proton motive force</strong>
+            
+            <p>Free energy from decarboxylation reactions can be stored as a proton motive force.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">The free energy change from decarboxylation reactions can be stored in the form of a proton motive force.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>cytoplasmic buffering capacity</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>internal pH</strong>
+            
+            <p>Cytoplasmic buffering capacity stabilizes the internal pH by absorbing pH fluctuations.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/femsre/fuad033</code>
+                
+                <span class="meta">The buffering capacity of the cytoplasm is important in absorbing pH fluctuations (e.g. inorganic and organic phosphates).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -323,6 +446,12 @@
           <time>2026-06-15T07:20:36Z</time> ·
           <strong>FIX_NODE_GROUNDING_CURIE</strong> · claude
           <p class="changes">Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -&gt; corrected, verified vs OAK).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -682,7 +811,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the external pH at which cytoplasmic pH-homeostasis machinery operates with minimal load to maximal growth and the pH-optimum phenotype.", "edges": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes gradient of", "predicate_id": "METPO:2007601", "source": "external_ph", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic_ph_homeostasis", "target": "proton_motive_force"}, {"description": "A balanced proton motive force enables peak growth.", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton_motive_force", "target": "maximal_growth_rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal_growth_rate", "target": "ph_optimum_trait"}], "evidence_rows": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "predicate": "imposes gradient of", "predicate_id": "METPO:2007601", "source": "external pH", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic pH homeostasis", "target": "proton motive force"}, {"description": "A balanced proton motive force enables peak growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton motive force", "target": "maximal growth rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal growth rate", "target": "pH optimum"}], "graph_id": "ph_optimum_balanced_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against the external H+ gradient.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal external pH.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "External pH at which growth rate is maximal.", "grounding": "METPO:1000331", "id": "ph_optimum_trait", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "H+ ion whose transmembrane gradient drives the proton motive force.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical proton gradient powering ATP synthesis and transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}], "title": "pH-optimum balanced cytoplasmic homeostasis"}];
+  var graphs = [{"description": "DOI-backed graph linking the external pH at which cytoplasmic pH-homeostasis machinery operates with minimal load to maximal growth and the pH-optimum phenotype.", "edges": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "id": "edge-1", "is_orphan": false, "predicate": "imposes gradient of", "predicate_id": "METPO:2007601", "source": "external_ph", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic_ph_homeostasis", "target": "proton_motive_force"}, {"description": "A balanced proton motive force enables peak growth.", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton_motive_force", "target": "maximal_growth_rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal_growth_rate", "target": "ph_optimum_trait"}, {"description": "The external pH largely determines the magnitude of the pH gradient (\u0394pH) component of the proton motive force.", "evidence": [{"notes": "Cells maintain cytoplasmic pH near neutral, so the magnitude of the pH gradient is largely determined by the external pH.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "external_ph", "target": "proton_motive_force"}, {"description": "The proton motive force drives ATP synthesis via the F0F1-ATP synthase.", "evidence": [{"notes": "PMF drives the synthesis of ATP; the F0F1-ATP synthase uses three to five protons to synthesize one ATP.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-6", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp_synthesis"}, {"description": "Proton-sensing Na+/H+ (and K+/H+) antiporters acidify the cytoplasm when internal pH gets too high.", "evidence": [{"notes": "Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "na_h_antiporter_activity", "target": "cytoplasm_acidification"}, {"description": "Antiporter-driven cytoplasm acidification contributes to cytoplasmic pH homeostasis.", "evidence": [{"notes": "Acidifying the cytoplasm when internal pH gets too high is a homeostatic mechanism maintaining near-neutral cytoplasmic pH.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "cytoplasm_acidification", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Proton-consuming decarboxylation reactions raise the internal pH and contribute to pH homeostasis.", "evidence": [{"notes": "The chemistry of the decarboxylation reaction requires a proton, raising internal pH, and the enzymes have a built-in self-regulatory mechanism contributing to pH homeostasis.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "decarboxylation_pathways", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Free energy from decarboxylation reactions can be stored as a proton motive force.", "evidence": [{"notes": "The free energy change from decarboxylation reactions can be stored in the form of a proton motive force.", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-10", "is_orphan": false, "predicate": "generates", "predicate_id": null, "source": "decarboxylation_pathways", "target": "proton_motive_force"}, {"description": "Cytoplasmic buffering capacity stabilizes the internal pH by absorbing pH fluctuations.", "evidence": [{"notes": "The buffering capacity of the cytoplasm is important in absorbing pH fluctuations (e.g. inorganic and organic phosphates).", "reference": "DOI:10.1093/femsre/fuad033"}], "id": "edge-11", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "cytoplasmic_buffering_capacity", "target": "internal_ph"}], "evidence_rows": [{"description": "External pH imposes a transmembrane H+ gradient on the cell.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the transmembrane H+ gradient as the determinant of the proton motive force.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "major contributor to the proton motive force"}], "predicate": "imposes gradient of", "predicate_id": "METPO:2007601", "source": "external pH", "target": "proton"}, {"description": "Cytoplasmic pH homeostasis maintains a balanced proton motive force at the optimal external pH.", "edge_id": "edge-2", "evidence": [{"notes": "Supports pH homeostasis as the mechanism balancing the proton motive force.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "pH homeostasis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cytoplasmic pH homeostasis", "target": "proton motive force"}, {"description": "A balanced proton motive force enables peak growth.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the proton motive force as the energetic basis of growth at the optimal external pH.", "reference": "DOI:10.1016/j.tim.2007.02.005", "snippet": "proton motive force"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "proton motive force", "target": "maximal growth rate"}, {"description": "The external pH supporting peak growth manifests the pH-optimum phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "cytoplasmic pH"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "maximal growth rate", "target": "pH optimum"}, {"description": "The external pH largely determines the magnitude of the pH gradient (\u0394pH) component of the proton motive force.", "edge_id": "edge-5", "evidence": [{"notes": "Cells maintain cytoplasmic pH near neutral, so the magnitude of the pH gradient is largely determined by the external pH.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "contributes to", "predicate_id": null, "source": "external pH", "target": "proton motive force"}, {"description": "The proton motive force drives ATP synthesis via the F0F1-ATP synthase.", "edge_id": "edge-6", "evidence": [{"notes": "PMF drives the synthesis of ATP; the F0F1-ATP synthase uses three to five protons to synthesize one ATP.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "target": "ATP synthesis by F0F1-ATP synthase"}, {"description": "Proton-sensing Na+/H+ (and K+/H+) antiporters acidify the cytoplasm when internal pH gets too high.", "edge_id": "edge-7", "evidence": [{"notes": "Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "enables", "predicate_id": null, "source": "Na+/H+ antiporter activity", "target": "cytoplasm acidification"}, {"description": "Antiporter-driven cytoplasm acidification contributes to cytoplasmic pH homeostasis.", "edge_id": "edge-8", "evidence": [{"notes": "Acidifying the cytoplasm when internal pH gets too high is a homeostatic mechanism maintaining near-neutral cytoplasmic pH.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "regulates", "predicate_id": null, "source": "cytoplasm acidification", "target": "cytoplasmic pH homeostasis"}, {"description": "Proton-consuming decarboxylation reactions raise the internal pH and contribute to pH homeostasis.", "edge_id": "edge-9", "evidence": [{"notes": "The chemistry of the decarboxylation reaction requires a proton, raising internal pH, and the enzymes have a built-in self-regulatory mechanism contributing to pH homeostasis.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "contributes to", "predicate_id": null, "source": "metabolite decarboxylation pathways", "target": "cytoplasmic pH homeostasis"}, {"description": "Free energy from decarboxylation reactions can be stored as a proton motive force.", "edge_id": "edge-10", "evidence": [{"notes": "The free energy change from decarboxylation reactions can be stored in the form of a proton motive force.", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "generates", "predicate_id": null, "source": "metabolite decarboxylation pathways", "target": "proton motive force"}, {"description": "Cytoplasmic buffering capacity stabilizes the internal pH by absorbing pH fluctuations.", "edge_id": "edge-11", "evidence": [{"notes": "The buffering capacity of the cytoplasm is important in absorbing pH fluctuations (e.g. inorganic and organic phosphates).", "reference": "DOI:10.1093/femsre/fuad033"}], "predicate": "regulates", "predicate_id": null, "source": "cytoplasmic buffering capacity", "target": "internal pH"}], "graph_id": "ph_optimum_balanced_homeostasis", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Synthesis of ATP driven by proton flux through the F0F1-ATP synthase.", "grounding": null, "id": "atp_synthesis", "is_orphan": false, "label": "ATP synthesis by F0F1-ATP synthase", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Lowering of cytoplasmic pH when internal pH becomes too high.", "grounding": null, "id": "cytoplasm_acidification", "is_orphan": false, "label": "cytoplasm acidification", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity of cytoplasmic buffers (e.g. inorganic/organic phosphates) to absorb pH fluctuations.", "grounding": null, "id": "cytoplasmic_buffering_capacity", "is_orphan": false, "label": "cytoplasmic buffering capacity", "node_type": "CAPACITY", "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of a near-neutral cytoplasmic pH against the external H+ gradient.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#e0e7ff", "description": "Proton-consuming decarboxylation reactions that contribute to pH homeostasis and energy conservation.", "grounding": null, "id": "decarboxylation_pathways", "is_orphan": false, "label": "metabolite decarboxylation pathways", "node_type": "PATHWAY", "xrefs": []}, {"color": "#dcfce7", "description": "Ambient proton activity (pH) imposed on the cell.", "grounding": null, "id": "external_ph", "is_orphan": false, "label": "external pH", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3f4f6", "description": "Cytoplasmic proton activity (pH) maintained near neutrality.", "grounding": null, "id": "internal_ph", "is_orphan": false, "label": "internal pH", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "Peak specific growth rate achieved at the optimal external pH.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Proton-sensing antiporter that exports Na+/K+ in exchange for protons to acidify the cytoplasm.", "grounding": null, "id": "na_h_antiporter_activity", "is_orphan": false, "label": "Na+/H+ antiporter activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#dbeafe", "description": "External pH at which growth rate is maximal.", "grounding": "METPO:1000331", "id": "ph_optimum_trait", "is_orphan": false, "label": "pH optimum", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "H+ ion whose transmembrane gradient drives the proton motive force.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical proton gradient powering ATP synthesis and transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "xrefs": []}], "title": "pH-optimum balanced cytoplasmic homeostasis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -693,7 +822,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -48,6 +48,31 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Substantial accumulation of organic osmolytes (ectoine, glycine betaine)
       under moderately hypersaline conditions.
+  - node_id: ectoine_biosynthesis_module
+    label: ectoine biosynthesis module (ectABC)
+    node_type: PATHWAY
+    description: Canonical ectABC (ectA/ectB/ectC) pathway producing the compatible
+      solute ectoine.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Major organic compatible solute (CHEBI:22563) accumulated during
+      osmoadaptation.
+  - node_id: compatible_solute_strategy
+    label: compatible-solute strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation strategy buffering osmotic stress via accumulation
+      of small organic osmolytes.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Organic compatible solute (CHEBI:17750) used in compatible-solute
+      osmoadaptation.
+  - node_id: l_proline
+    label: L-proline
+    node_type: CHEMICAL
+    description: Organic compatible solute (CHEBI:26271) used in compatible-solute
+      osmoadaptation.
   edges:
   - subject: elevated_nacl
     predicate: regulates
@@ -78,6 +103,69 @@ causal_graphs:
       snippet: optimal NaCl
       notes: Supports the 3–8% optimum as a value within the NaCl-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: elevated_nacl
+    predicate: induces
+    object: ectoine_biosynthesis_module
+    description: Elevated salinity (>3% NaCl) triggers the canonical ectoine biosynthesis
+      pathway.
+    evidence:
+    - reference: DOI:10.1128/aem.01905-23
+      notes: Exposure to salt concentrations higher than 3% NaCl triggers biosynthesis
+        and intracellular accumulation of ectoine as a major compatible solute (Zou
+        et al. 2024).
+  - subject: elevated_nacl
+    predicate: upregulates
+    object: ectoine_biosynthesis_module
+    description: Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates
+      the ectoine biosynthesis module.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02515-w
+      notes: Transcriptomics showed the ectoine biosynthesis module is upregulated
+        under salt stress, with 60 g/L NaCl (~6% w/v, inside 3-8% window) optimal
+        for growth (Chen et al. 2024).
+  - subject: ectoine_biosynthesis_module
+    predicate: produces
+    object: ectoine
+    description: The ectABC pathway synthesizes the compatible solute ectoine.
+    evidence:
+    - reference: DOI:10.1128/aem.01905-23
+      notes: Biosynthesis and intracellular accumulation of ectoine as a major compatible
+        solute via the ectoine pathway (Zou et al. 2024).
+  - subject: pronounced_compatible_solutes
+    predicate: is a
+    object: compatible_solute_strategy
+    description: Pronounced organic-osmolyte accumulation is an instance of the compatible-solute
+      osmoadaptation strategy.
+    evidence:
+    - reference: DOI:10.3390/biotech14020049
+      notes: The compatible-solute strategy accumulates small organic osmolytes including
+        glycine, betaine, and ectoine (Neagu & Stancu 2025).
+  - subject: compatible_solute_strategy
+    predicate: uses
+    object: ectoine
+    description: Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.
+    evidence:
+    - reference: DOI:10.1186/s12934-025-02757-2
+      notes: Many species naturally produce the osmolyte ectoine (plus hydroxyectoine,
+        betaine, glycine, proline) (Coimbra et al. 2025).
+  - subject: compatible_solute_strategy
+    predicate: uses
+    object: glycine_betaine
+    description: Compatible-solute osmoadaptation employs glycine betaine as an organic
+      osmolyte.
+    evidence:
+    - reference: DOI:10.3390/biotech14020049
+      notes: Identified compatible solutes include glycine, betaine, and ectoine (Neagu
+        & Stancu 2025).
+  - subject: compatible_solute_strategy
+    predicate: uses
+    object: l_proline
+    description: Compatible-solute osmoadaptation employs L-proline as an organic
+      osmolyte.
+    evidence:
+    - reference: DOI:10.1186/s12934-025-02757-2
+      notes: Many species naturally produce the osmolyte ectoine plus hydroxyectoine,
+        betaine, glycine, proline (Coimbra et al. 2025).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.834715+00:00'
   curator: seed_from_metpo
@@ -107,4 +195,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

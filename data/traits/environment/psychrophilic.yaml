@@ -54,6 +54,36 @@ causal_graphs:
     label: antifreeze and ice-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins that mitigate ice formation or recrystallization damage.
+  - node_id: transcription_translation
+    label: transcription and translation
+    node_type: BIOLOGICAL_PROCESS
+    description: Macromolecular synthesis processes impaired by cold-induced nucleic-acid
+      secondary structure.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Low-molecular-weight osmolytes (e.g. trehalose, glycine betaine,
+      glycerol) accumulated for cryoprotection.
+  - node_id: trehalose
+    label: trehalose
+    node_type: CHEMICAL
+    description: Disaccharide cryoprotectant with colligative and protein-stabilizing
+      effects.
+  - node_id: protein_membrane_stability
+    label: protein and membrane stability
+    node_type: QUALITY
+    description: Structural integrity of proteins and membranes maintained against
+      cold denaturation.
+  - node_id: ice_crystals
+    label: ice crystals
+    node_type: CHEMICAL
+    description: Intracellular/extracellular ice whose growth and recrystallization
+      damage cells.
+  - node_id: reactive_oxygen_species
+    label: reactive oxygen species
+    node_type: CHEMICAL
+    description: ROS whose concentration rises at low temperature due to increased
+      gas solubility.
   edges:
   - subject: low_temperature
     predicate: selects for
@@ -112,6 +142,50 @@ causal_graphs:
       snippet: intracellular ice formation
       notes: Review identifies ice formation as a cold challenge and cites bacterial
         antifreeze protein activity.
+  - subject: cold_shock_proteins
+    predicate: regulates
+    object: transcription_translation
+    description: Cold-shock proteins regulate transcription and translation during
+      cold acclimation.
+    evidence:
+    - reference: DOI:10.1002/embr.201338170
+      notes: cold-shock proteins (CSPs) regulate a variety of cellular processes,
+        including transcription, translation.
+  - subject: trehalose
+    predicate: prevents
+    object: protein_membrane_stability
+    description: Trehalose helps prevent protein denaturation and aggregation, acting
+      as a cryoprotectant.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      notes: Trehalose is thought to have a colligative effect, but probably also
+        helps in preventing protein denaturation and aggregation.
+  - subject: compatible_solutes
+    predicate: maintains
+    object: protein_membrane_stability
+    description: Compatible solutes depress the freezing point and stabilize proteins
+      and membranes.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Compatible solutes depress the freezing point... stabilize proteins and
+        membranes.
+  - subject: antifreeze_proteins
+    predicate: binds to
+    object: ice_crystals
+    description: Antifreeze/ice-binding proteins bind ice crystals to control ice
+      growth and recrystallization.
+    evidence:
+    - reference: DOI:10.1038/sj.embor.7400662
+      notes: Antifreeze proteins (AFPs) have the ability to bind to ice crystals.
+  - subject: low_temperature
+    predicate: increases
+    object: reactive_oxygen_species
+    description: Increased gas solubility at low temperature raises reactive oxygen
+      species concentrations.
+    evidence:
+    - reference: DOI:10.1002/embr.201338170
+      notes: The solubility of gases increases at lower temperatures, resulting in
+        increased concentrations of reactive oxygen species.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857091+00:00'
   curator: seed_from_metpo
@@ -188,4 +262,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

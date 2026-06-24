@@ -1,9 +1,8 @@
 identifier: traitmech:000038
 label: photosynthesis
-definition: A phototrophic metabolism that uses light energy and chlorophyll- or
-  bacteriochlorophyll-based photochemical reaction centers to drive electron flow,
-  fixing CO2 and/or generating reducing power. Subdivided into oxygenic and
-  anoxygenic photosynthesis.
+definition: A phototrophic metabolism that uses light energy and chlorophyll- or bacteriochlorophyll-based
+  photochemical reaction centers to drive electron flow, fixing CO2 and/or generating
+  reducing power. Subdivided into oxygenic and anoxygenic photosynthesis.
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
@@ -15,14 +14,14 @@ evidence:
   notes: Bryant & Frigaard treat prokaryotic photosynthesis (reaction-center based)
     as encompassing both oxygenic and anoxygenic forms across five phyla.
 - reference: DOI:10.1146/annurev-earth-060313-054810
-  notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports
-    reaction-center photosynthesis as the chlorophyll-based, CO2-fixing branch of
-    phototrophy distinct from rhodopsin-based light capture.
+  notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports reaction-center
+    photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy distinct
+    from rhodopsin-based light capture.
 causal_graphs:
 - graph_id: photosynthesis_chlorophyll_reaction_center
   title: Chlorophyll-based photosynthesis drives electron flow and CO2 fixation
-  description: Evidence-backed causal sketch linking chlorophyll-based reaction
-    centers to electron flow that powers CO2 fixation.
+  description: Evidence-backed causal sketch linking chlorophyll-based reaction centers
+    to electron flow that powers CO2 fixation.
   nodes:
   - node_id: photosynthesis_trait
     label: photosynthesis
@@ -39,6 +38,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0015977
     description: Assimilation of inorganic CO2 into organic carbon.
+  - node_id: light_energy
+    label: light energy
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Photon energy absorbed and channeled by photosynthetic pigments.
+  - node_id: light_harvesting
+    label: light harvesting / excitation transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Absorption and transfer of excitation energy by antenna pigments
+      to reaction centers.
+  - node_id: charge_separation
+    label: reaction-center charge separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Light-driven primary charge separation in chlorophyll/bacteriochlorophyll
+      reaction centers.
+  - node_id: electron_transport
+    label: photosynthetic electron transport
+    node_type: BIOLOGICAL_PROCESS
+    description: Light-driven electron flow through the photosynthetic electron transport
+      chain (linear or cyclic).
+  - node_id: proton_gradient
+    label: transmembrane electrochemical proton gradient
+    node_type: STATE
+    description: Proton motive force generated across the membrane by photosynthetic
+      electron transport.
+  - node_id: atp_synthesis
+    label: ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Chemiosmotic ATP generation coupled to the proton motive force.
+  - node_id: reducing_power
+    label: reducing power (NAD(P)H)
+    node_type: CHEMICAL
+    description: NADPH/NAD(P)H reducing equivalents produced by the light reactions.
   edges:
   - subject: photosynthesis_process
     predicate: enables
@@ -55,20 +86,86 @@ causal_graphs:
     description: Photosynthetic electron flow powers autotrophic CO2 fixation.
     evidence:
     - reference: DOI:10.1146/annurev-earth-060313-054810
-      notes: Fischer et al. frame reaction-center photosynthesis as the
-        chlorophyll-based, CO2-fixing branch of phototrophy.
+      notes: Fischer et al. frame reaction-center photosynthesis as the chlorophyll-based,
+        CO2-fixing branch of phototrophy.
     predicate_id: RO:0002326
+  - subject: light_energy
+    predicate: enables
+    object: light_harvesting
+    description: Light energy drives pigment absorption and excitation transfer to
+      reaction-center antennae.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: Chlorophyll/antenna pigments absorb and transfer light energy to the
+        photosystems (light harvesting).
+  - subject: light_harvesting
+    predicate: initiates
+    object: charge_separation
+    description: Transferred excitation energy drives primary charge separation at
+      the reaction-center special pair.
+    evidence:
+    - reference: DOI:10.3390/biom14030311
+      notes: Light-driven charge separation in reaction-center photosystems initiates
+        downstream electron flow (generic to Type I/II RCs).
+  - subject: charge_separation
+    predicate: powers
+    object: electron_transport
+    description: Reaction-center charge separation drives photosynthetic electron
+      transport (linear or cyclic).
+    evidence:
+    - reference: DOI:10.3390/biom14030311
+      notes: Light-driven charge separation powers electron transfer pathways; generalization
+        for reaction-center photosystems.
+  - subject: electron_transport
+    predicate: generates
+    object: proton_gradient
+    description: Photosynthetic electron transport establishes a transmembrane electrochemical
+      proton gradient.
+    evidence:
+    - reference: DOI:10.3390/biom14030311
+      notes: Electron transfer creates a transmembrane electrochemical proton gradient
+        (energy-conservation edge).
+  - subject: proton_gradient
+    predicate: drives
+    object: atp_synthesis
+    description: The proton motive force is used to drive chemiosmotic ATP synthesis.
+    evidence:
+    - reference: DOI:10.3390/biom14030311
+      notes: The electrochemical proton gradient drives ATP synthesis; canonical bioenergetic
+        edge.
+  - subject: photosynthesis_process
+    predicate: produces
+    object: reducing_power
+    description: Light-dependent reactions generate ATP and NAD(P)H reducing power.
+    evidence:
+    - reference: DOI:10.5287/ora-8jgz2nrvd
+      notes: Light-dependent reactions generate ATP and NAD(P)H; broad linkage across
+        chlorophyll-based photosynthetic systems.
+  - subject: reducing_power
+    predicate: used in
+    object: carbon_fixation
+    description: NADPH reducing power supplies electrons for autotrophic CO2 fixation.
+    evidence:
+    - reference: DOI:10.1111/1751-7915.14519
+      notes: NADPH from the light reactions is used in biosynthesis, including carbon
+        fixation.
 curation_history:
 - timestamp: '2026-05-31T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Minted intermediate axis class (photosynthesis) under phototrophy to
-    parent the oxygenic- and anoxygenic-photosynthesis traits.
+  changes: Minted intermediate axis class (photosynthesis) under phototrophy to parent
+    the oxygenic- and anoxygenic-photosynthesis traits.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (reaction-center photosynthesis /
-    CO2 fixation) with GO node groundings and RO predicate groundings; promoted
-    PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (reaction-center photosynthesis / CO2
+    fixation) with GO node groundings and RO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

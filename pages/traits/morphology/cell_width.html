@@ -124,12 +124,84 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>class A PBP (aPBP) cell-wall synthesis system</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>cell width</strong>
+            
+            <p>Rod and aPBP systems act oppositely to set cell diameter; MreB-directed lateral PG synthesis is the control point governing width.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/biom13050720</code>
+                
+                <span class="meta">Review states Rod and aPBP systems &#34;act oppositely to set B. subtilis cell diameter&#34;; MreB-directed PG synthesis identified as the control point governing cell width.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>RodA-PBP2 core synthase</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>Rod-complex peptidoglycan synthesis</strong>
+            
+            <p>Activation/open state of the RodA-PBP2 core synthase couples PG polymerization and crosslinking required for elongation-based lateral wall synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-39037-9</code>
+                
+                <span class="meta">RodA-PBP2 undergoes dynamic exchange between closed and open states; structural opening couples activation of polymerization and crosslinking and is essential in vivo.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>Rod-complex accessory proteins MreC/MreD/RodZ</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>RodA-PBP2 core synthase</strong>
+            
+            <p>Rod-complex accessory components MreC/MreD/RodZ regulate RodA-PBP2 activity and thereby lateral wall synthesis affecting width.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-39037-9</code>
+                
+                <span class="meta">Rod complex has accessory components MreCD and RodZ; genetic studies implicated MreC as a potential regulator of enzymatic activity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>cell envelope bending rigidity</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>cell width</strong>
+            
+            <p>Cell envelope bending rigidity constrains cell width homeostasis; width increases and saturates primarily under the control of envelope bending rigidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2024.11.22.624946</code>
+                
+                <span class="meta">Width increases and saturates primarily under the control of envelope bending rigidity, which constrains width homeostasis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -285,6 +357,12 @@
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -644,7 +722,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking MreB cytoskeletal organization, Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width phenotype.", "edges": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "rod_complex_pg", "target": "peptidoglycan_cell_wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "cell_width_trait"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "balances", "predicate_id": null, "source": "turgor_pressure", "target": "peptidoglycan_cell_wall"}], "evidence_rows": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "Rod-complex peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "cell width"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "edge_id": "edge-4", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "balances", "predicate_id": null, "source": "turgor pressure", "target": "peptidoglycan cell wall"}], "graph_id": "cell_width_mreb_lateral_wall", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Shorter dimension of the cell body, perpendicular to the long axis.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments that pattern lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Load-bearing peptidoglycan sacculus that constrains cell shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized peptidoglycan synthesis along the cylindrical wall.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dcfce7", "description": "Internal hydrostatic pressure pushing against the cell wall.", "grounding": null, "id": "turgor_pressure", "is_orphan": false, "label": "turgor pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Cell-width control by MreB-directed lateral cell-wall assembly"}];
+  var graphs = [{"description": "DOI-backed graph linking MreB cytoskeletal organization, Rod-complex peptidoglycan synthesis, and turgor-balanced wall mechanics to the observed cell-width phenotype.", "edges": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "rod_complex_pg", "target": "peptidoglycan_cell_wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-3", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "cell_width_trait"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-4", "is_orphan": false, "predicate": "balances", "predicate_id": null, "source": "turgor_pressure", "target": "peptidoglycan_cell_wall"}, {"description": "Rod and aPBP systems act oppositely to set cell diameter; MreB-directed lateral PG synthesis is the control point governing width.", "evidence": [{"notes": "Review states Rod and aPBP systems \"act oppositely to set B. subtilis cell diameter\"; MreB-directed PG synthesis identified as the control point governing cell width.", "reference": "DOI:10.3390/biom13050720"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "apbp_system", "target": "cell_width_trait"}, {"description": "Activation/open state of the RodA-PBP2 core synthase couples PG polymerization and crosslinking required for elongation-based lateral wall synthesis.", "evidence": [{"notes": "RodA-PBP2 undergoes dynamic exchange between closed and open states; structural opening couples activation of polymerization and crosslinking and is essential in vivo.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "roda_pbp2_synthase", "target": "rod_complex_pg"}, {"description": "Rod-complex accessory components MreC/MreD/RodZ regulate RodA-PBP2 activity and thereby lateral wall synthesis affecting width.", "evidence": [{"notes": "Rod complex has accessory components MreCD and RodZ; genetic studies implicated MreC as a potential regulator of enzymatic activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-7", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "mre_accessory_proteins", "target": "roda_pbp2_synthase"}, {"description": "Cell envelope bending rigidity constrains cell width homeostasis; width increases and saturates primarily under the control of envelope bending rigidity.", "evidence": [{"notes": "Width increases and saturates primarily under the control of envelope bending rigidity, which constrains width homeostasis.", "reference": "DOI:10.1101/2024.11.22.624946"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "envelope_bending_rigidity", "target": "cell_width_trait"}], "evidence_rows": [{"description": "MreB filaments organize Rod-complex peptidoglycan synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the organizer of lateral PG synthesis.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex peptidoglycan synthesis builds the lateral cylindrical wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the wall-building activity.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "Rod-complex peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "The peptidoglycan sacculus constrains cell width against turgor.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the cell wall as the structural constraint on width.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "cell width"}, {"description": "Turgor pressure is mechanically balanced by the peptidoglycan wall, determining the steady-state radius.", "edge_id": "edge-4", "evidence": [{"notes": "Supports wall mechanics as the determinant of steady-state cell width.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "balances", "predicate_id": null, "source": "turgor pressure", "target": "peptidoglycan cell wall"}, {"description": "Rod and aPBP systems act oppositely to set cell diameter; MreB-directed lateral PG synthesis is the control point governing width.", "edge_id": "edge-5", "evidence": [{"notes": "Review states Rod and aPBP systems \"act oppositely to set B. subtilis cell diameter\"; MreB-directed PG synthesis identified as the control point governing cell width.", "reference": "DOI:10.3390/biom13050720"}], "predicate": "regulates", "predicate_id": null, "source": "class A PBP (aPBP) cell-wall synthesis system", "target": "cell width"}, {"description": "Activation/open state of the RodA-PBP2 core synthase couples PG polymerization and crosslinking required for elongation-based lateral wall synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "RodA-PBP2 undergoes dynamic exchange between closed and open states; structural opening couples activation of polymerization and crosslinking and is essential in vivo.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "enables", "predicate_id": null, "source": "RodA-PBP2 core synthase", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex accessory components MreC/MreD/RodZ regulate RodA-PBP2 activity and thereby lateral wall synthesis affecting width.", "edge_id": "edge-7", "evidence": [{"notes": "Rod complex has accessory components MreCD and RodZ; genetic studies implicated MreC as a potential regulator of enzymatic activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "regulates", "predicate_id": null, "source": "Rod-complex accessory proteins MreC/MreD/RodZ", "target": "RodA-PBP2 core synthase"}, {"description": "Cell envelope bending rigidity constrains cell width homeostasis; width increases and saturates primarily under the control of envelope bending rigidity.", "edge_id": "edge-8", "evidence": [{"notes": "Width increases and saturates primarily under the control of envelope bending rigidity, which constrains width homeostasis.", "reference": "DOI:10.1101/2024.11.22.624946"}], "predicate": "regulates", "predicate_id": null, "source": "cell envelope bending rigidity", "target": "cell width"}], "graph_id": "cell_width_mreb_lateral_wall", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Class A penicillin-binding-protein peptidoglycan synthesis system that acts oppositely to the Rod complex to set cell diameter.", "grounding": null, "id": "apbp_system", "is_orphan": false, "label": "class A PBP (aPBP) cell-wall synthesis system", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Shorter dimension of the cell body, perpendicular to the long axis.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3f4f6", "description": "Mechanical bending rigidity of the cell envelope that constrains width and its homeostasis.", "grounding": null, "id": "envelope_bending_rigidity", "is_orphan": false, "label": "cell envelope bending rigidity", "node_type": "QUALITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Accessory components of the Rod complex that regulate RodA-PBP2 enzymatic activity.", "grounding": null, "id": "mre_accessory_proteins", "is_orphan": false, "label": "Rod-complex accessory proteins MreC/MreD/RodZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments that pattern lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Load-bearing peptidoglycan sacculus that constrains cell shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized peptidoglycan synthesis along the cylindrical wall.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Essential Rod-complex peptidoglycan synthase (RodA glycosyltransferase with PBP2 transpeptidase) driving lateral elongation.", "grounding": null, "id": "roda_pbp2_synthase", "is_orphan": false, "label": "RodA-PBP2 core synthase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Internal hydrostatic pressure pushing against the cell wall.", "grounding": null, "id": "turgor_pressure", "is_orphan": false, "label": "turgor pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}], "title": "Cell-width control by MreB-directed lateral cell-wall assembly"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -655,7 +733,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

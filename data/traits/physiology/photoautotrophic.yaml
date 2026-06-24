@@ -101,6 +101,29 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cellular material formed from fixed carbon.
     grounding: METPO:1007501
+  - node_id: carbon_concentrating_mechanism
+    label: carbon-concentrating mechanism
+    node_type: BIOLOGICAL_PROCESS
+    description: Inorganic carbon-concentrating mechanism that elevates CO2 around
+      RuBisCO.
+  - node_id: rubisco_oxygenase_activity
+    label: RuBisCO oxygenase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Wasteful oxygenation side-reaction of RuBisCO leading to photorespiration.
+  - node_id: carboxysome
+    label: carboxysome
+    node_type: ORGANELLE
+    description: Proteinaceous microcompartment housing RuBisCO and carbonic anhydrase
+      for CO2 fixation.
+  - node_id: carboxysomal_carbonic_anhydrase
+    label: carboxysomal carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Carbonic anhydrase that dehydrates bicarbonate to CO2 inside the
+      carboxysome.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: Inorganic carbon species accumulated and converted to CO2 for fixation.
   edges:
   - subject: photoautotrophic_trait
     predicate: uses energy source
@@ -175,6 +198,41 @@ causal_graphs:
       snippet: fix ... CO2 into ... biomass
       notes: Supports CO2 fixation into biomass by cyanobacterial photoautotrophy.
     predicate_id: METPO:2000202
+  - subject: photosynthetic_electron_transport
+    predicate: enables
+    object: calvin_benson_cycle
+    description: Light-driven photosynthetic electron transport supplies the energy/reductant
+      that drives CBB-cycle CO2 fixation.
+    evidence:
+    - reference: DOI:10.3389/fpls.2024.1417680
+      notes: Phototrophs use light energy to drive a photosynthetic electron transport
+        chain, and CO2 fixation occurs via the Calvin-Benson-Bassham cycle.
+  - subject: carbon_concentrating_mechanism
+    predicate: lowers
+    object: rubisco_oxygenase_activity
+    description: The CCM enriches intracellular inorganic carbon, suppressing the
+      wasteful RuBisCO oxygenase reaction.
+    evidence:
+    - reference: DOI:10.3389/fpls.2024.1417680
+      notes: The CCM lowers RuBisCO's oxygenase reaction to below ~1% by enriching
+        intracellular inorganic carbon.
+  - subject: bicarbonate
+    predicate: diffuses into
+    object: carboxysome
+    description: Cytoplasmic bicarbonate enters the carboxysome where it is converted
+      to CO2 for fixation.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: Cytoplasmic HCO3- diffuses into the carboxysome.
+  - subject: carboxysomal_carbonic_anhydrase
+    predicate: converts
+    object: bicarbonate
+    description: Carboxysomal carbonic anhydrase dehydrates bicarbonate to CO2 to
+      feed RuBisCO.
+    evidence:
+    - reference: DOI:10.1111/ppl.14140
+      notes: Bicarbonate is converted back to CO2 by carbonic anhydrase inside carboxysomes
+        (CA produces CO2).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.879777+00:00'
   curator: seed_from_metpo
@@ -233,4 +291,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A075WF79×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

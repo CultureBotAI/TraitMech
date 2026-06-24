@@ -43,6 +43,40 @@ causal_graphs:
     label: bulbous body
     node_type: BIOLOGICAL_PROCESS
     description: Wider rounded body region opposite the neck.
+  - node_id: zonal_polar_pg_synthesis
+    label: zonal polar peptidoglycan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Localized cell-wall (peptidoglycan) insertion at a cell pole.
+  - node_id: polar_outgrowth
+    label: polar envelope outgrowth
+    node_type: BIOLOGICAL_PROCESS
+    description: Asymmetric extension of one pole producing a stalk/prostheca-like
+      neck.
+  - node_id: pg_growth_zone_position
+    label: position of polar PG growth zone
+    node_type: QUALITY
+    description: Spatial location of the localized cell-wall growth zone on the cell.
+  - node_id: appendage_position_shape
+    label: appendage position and shape
+    node_type: QUALITY
+    description: Where and how a polar neck-like extension forms on the cell.
+  - node_id: bactofilin_lmdc_module
+    label: bactofilin-M23 endopeptidase module
+    node_type: PATHWAY
+    description: Conserved scaffold/hydrolase morphogenetic module driving local cell-wall
+      remodeling.
+  - node_id: cell_wall_biosynthesis
+    label: cell wall biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis and remodeling of the peptidoglycan cell wall.
+  - node_id: bactofilin_cytoskeleton
+    label: bactofilin cytoskeleton
+    node_type: GENE_OR_PROTEIN
+    description: Bactofilin polymer scaffold marking sites of asymmetric wall growth.
+  - node_id: asymmetric_compartment_growth
+    label: asymmetric compartment growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Outgrowth of stalk/bud-like compartments at a cell pole.
   edges:
   - subject: unipolar_pg_growth
     predicate: regulates
@@ -70,6 +104,42 @@ causal_graphs:
       snippet: polar growth
       notes: Supports the trait endpoint via asymmetric polar growth.
     predicate_id: METPO:2007400
+  - subject: zonal_polar_pg_synthesis
+    predicate: produces
+    object: polar_outgrowth
+    description: Polarized cell-wall insertion is a general mechanism producing asymmetric
+      bulb-plus-neck outgrowths.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      notes: Caulobacter prostheca arises from zonal growth at the pole; general mechanism
+        for asymmetric morphologies.
+  - subject: pg_growth_zone_position
+    predicate: regulates
+    object: appendage_position_shape
+    description: Moving the localized growth zone changes where neck-like extensions
+      form.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002565
+      notes: Asticcacaulis prosthecate variants result from repositioning growth zones
+        to subpolar/bilateral sites.
+  - subject: bactofilin_lmdc_module
+    predicate: regulates
+    object: cell_wall_biosynthesis
+    description: Conserved scaffold/hydrolase module promotes local changes in the
+      mode of cell wall biosynthesis underlying complex shapes.
+    evidence:
+    - reference: DOI:10.7554/elife.86577.2
+      notes: Bactofilins and M23 peptidases form a conserved functional module that
+        promotes local changes in cell wall biosynthesis.
+  - subject: bactofilin_cytoskeleton
+    predicate: regulates
+    object: asymmetric_compartment_growth
+    description: Bactofilin scaffold constrains polar compartment growth; its loss
+      causes unconstrained asymmetric outgrowth.
+    evidence:
+    - reference: DOI:10.7554/elife.86577.2
+      notes: Loss of bactofilins causes unconstrained growth of the stalk and bud
+        compartments.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.890141+00:00'
   curator: seed_from_metpo
@@ -99,4 +169,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

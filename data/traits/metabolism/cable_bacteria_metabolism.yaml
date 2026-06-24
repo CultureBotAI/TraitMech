@@ -69,6 +69,25 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16189
     description: Oxidized sulfur product.
+  - node_id: cell_envelope
+    label: cell envelope
+    node_type: CELLULAR_LOCALIZATION
+    description: Outer cell-envelope structure in which conductive fibers are embedded.
+  - node_id: nickel_cofactor
+    label: sulfur-ligated nickel cofactor
+    node_type: CHEMICAL
+    description: Novel nickel-containing cofactor (NiBiD) associated with the conductive
+      fibers.
+  - node_id: cytochrome_redox_gradient
+    label: cytochrome redox gradient
+    node_type: STATE
+    description: Redox state gradient of cytochromes maintained along the conductive
+      filament.
+  - node_id: sulfur_oxidation_pathway
+    label: Dsr-Apr-Qmo-Sqr-Psr/Phs sulfur oxidation pathway
+    node_type: PATHWAY
+    description: Genomically predicted dissimilatory sulfur oxidation pathway supporting
+      sulfide oxidation.
   edges:
   - subject: cable_bacteria_trait
     predicate: occurs in
@@ -150,6 +169,47 @@ causal_graphs:
     - reference: DOI:10.3389/fmars.2017.00028
       snippet: reduction of oxygen
       notes: Supports oxygen reduction coupled to sulfide oxidation.
+  - subject: conductive_fiber_network
+    predicate: part of
+    object: cell_envelope
+    description: Conductive fibers are embedded in and run along the cell envelope.
+    evidence:
+    - reference: DOI:10.1186/s12864-024-10594-7
+      notes: Fibers are "embedded in the cell envelope" and run along filament length.
+  - subject: nickel_cofactor
+    predicate: component of
+    object: conductive_fiber_network
+    description: A sulfur-ligated nickel cofactor is a component of the conductive
+      fibers.
+    evidence:
+    - reference: DOI:10.1186/s12864-024-10594-7
+      notes: Conductive fibers "harbour a novel nickel-containing cofactor"; Raman/extraction
+        data show Ni-cofactor-associated modes.
+  - subject: nickel_cofactor
+    predicate: mediates
+    object: long_distance_electron_transport
+    description: The nickel cofactor supports/mediates long-range electron transport.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1208033
+      notes: Authors link a "Ni-based, long-range electron transport pathway" to the
+        cofactor; orientation-dependent Raman aligns cofactor with electron path.
+  - subject: long_distance_electron_transport
+    predicate: maintains
+    object: cytochrome_redox_gradient
+    description: An intact electrical connection along the filament maintains the
+      cytochrome redox gradient.
+    evidence:
+    - reference: DOI:10.1073/pnas.1800367115
+      notes: A redox gradient along filaments immediately broke down upon removal
+        of oxygen or laser cutting, showing dependence on intact long-distance transport.
+  - subject: sulfur_oxidation_pathway
+    predicate: supports
+    object: electrogenic_sulfur_oxidation
+    description: The Dsr-Apr-Qmo-Sqr-Psr/Phs pathway supports sulfide oxidation metabolism.
+    evidence:
+    - reference: DOI:10.1186/s12864-024-10594-7
+      notes: Comparative genomics predicts sulfur oxidation through a Dsr-Apr-Qmo-Sqr-Psr/Phs
+        pathway with DsrMKJOPG across closed genomes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.935199+00:00'
   curator: seed_from_metpo
@@ -186,4 +246,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15138×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

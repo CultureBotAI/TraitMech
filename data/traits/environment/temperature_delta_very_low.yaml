@@ -38,6 +38,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Narrow capacity to remodel membrane lipid composition and enzyme
       repertoire across temperature shifts.
+  - node_id: unsaturated_fatty_acid_content
+    label: unsaturated fatty acid content
+    node_type: CHEMICAL
+    description: Proportion of unsaturated fatty acids in membrane phospholipids.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity of the cell membrane, central to homeoviscous adaptation.
+  - node_id: cold_shock
+    label: cold shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Abrupt decrease in ambient temperature.
+  - node_id: cspa_protein
+    label: CspA cold-shock protein
+    node_type: GENE_OR_PROTEIN
+    description: RNA chaperone induced upon cold shock that promotes single-stranded
+      RNA states.
+  - node_id: csda_helicase
+    label: CsdA DEAD-box RNA helicase
+    node_type: GENE_OR_PROTEIN
+    description: DEAD-box RNA helicase that assists ribosomes and RNA remodeling at
+      low temperature.
+  - node_id: translation_under_cold
+    label: translation under cold shock
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of protein synthesis at low temperature.
   edges:
   - subject: very_limited_thermal_adaptation
     predicate: produces
@@ -60,6 +86,40 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the 1–5 °C breadth as a value within the temperature-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: unsaturated_fatty_acid_content
+    predicate: increases
+    object: membrane_fluidity
+    description: Higher unsaturated fatty acid proportion prevents excessive rigidification
+      and maintains membrane fluidity at low temperature.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Proportionally more unsaturated fatty acids maintain membrane fluidity
+        within an optimal range; broad across microbes.
+  - subject: membrane_fluidity
+    predicate: decreased by reduced unsaturated fatty acids
+    object: unsaturated_fatty_acid_content
+    description: Reduced unsaturated fatty acid content decreases membrane fluidity,
+      a direct physical consequence linking composition to cold stress.
+    evidence:
+    - reference: DOI:10.1111/mmi.15323
+      notes: Decrease in membrane fluidity due to decrease in unsaturated fatty acid
+        content.
+  - subject: cold_shock
+    predicate: induces
+    object: cspa_protein
+    description: Cold shock induces CspA, an RNA chaperone counteracting low-temperature
+      RNA secondary structure.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Cold-shock proteins (notably CspA) bind RNA to promote single-stranded
+        states.
+  - subject: csda_helicase
+    predicate: maintains
+    object: translation_under_cold
+    description: CsdA binds ribosomes to maintain translation under cold shock.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: CsdA binds ribosomes to maintain translation under cold shock.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.843238+00:00'
   curator: seed_from_metpo
@@ -77,4 +137,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

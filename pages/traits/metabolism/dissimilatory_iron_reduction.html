@@ -90,12 +90,84 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>dissimilatory iron reduction</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>energy-conserving anaerobic respiration</strong>
+            
+            <p>DIR is a form of energy-conserving anaerobic respiration.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mr.55.2.259-287.1991</code>
+                
+                <span class="meta">Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>oxidation of organic matter</strong>
+            <span class="edge-predicate">coupled to</span>
+            <strong>iron(3+)</strong>
+            
+            <p>Oxidation of organic matter is coupled to Fe(III) reduction in DIR.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mr.55.2.259-287.1991</code>
+                
+                <span class="meta">The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>H2 oxidation</strong>
+            <span class="edge-predicate">coupled to</span>
+            <strong>iron(3+)</strong>
+            
+            <p>H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mr.55.2.259-287.1991</code>
+                
+                <span class="meta">Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>dissolved Fe(III)-organic-matter complex</strong>
+            <span class="edge-predicate">reduced faster than</span>
+            <strong>solid Fe(III) mineral</strong>
+            
+            <p>Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s10533-024-01186-4</code>
+                
+                <span class="meta">The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -229,6 +301,12 @@
           <time>2026-06-10T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (Fe(III) → Fe(II) respiration) with CHEBI node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -588,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking ferric iron as terminal electron acceptor to anaerobic respiration in Geobacter and Shewanella.", "edges": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ferric_iron", "target": "ferrous_iron"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferric_iron", "target": "dir_trait"}], "evidence_rows": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "iron(3+)", "target": "iron(2+)"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "iron(3+)", "target": "dissimilatory iron reduction"}], "graph_id": "dir_ferric_iron_respiration", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Anaerobic respiration on Fe(III) as terminal electron acceptor.", "grounding": "traitmech:000031", "id": "dir_trait", "is_orphan": false, "label": "dissimilatory iron reduction", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DIR.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "iron(3+)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Soluble product released after Fe(III) reduction.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "iron(2+)", "node_type": "CHEMICAL", "xrefs": []}], "title": "Dissimilatory iron reduction respires Fe(III) to Fe(II)"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking ferric iron as terminal electron acceptor to anaerobic respiration in Geobacter and Shewanella.", "edges": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ferric_iron", "target": "ferrous_iron"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferric_iron", "target": "dir_trait"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "dir_trait", "target": "anaerobic_respiration"}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-4", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "organic_matter_oxidation", "target": "ferric_iron"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-5", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "hydrogen_oxidation", "target": "ferric_iron"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "id": "edge-6", "is_orphan": false, "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved_fe3_om_complex", "target": "solid_fe3_mineral"}], "evidence_rows": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "iron(3+)", "target": "iron(2+)"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "iron(3+)", "target": "dissimilatory iron reduction"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "is a", "predicate_id": null, "source": "dissimilatory iron reduction", "target": "energy-conserving anaerobic respiration"}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "edge_id": "edge-4", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "oxidation of organic matter", "target": "iron(3+)"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "edge_id": "edge-5", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "H2 oxidation", "target": "iron(3+)"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "edge_id": "edge-6", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved Fe(III)-organic-matter complex", "target": "solid Fe(III) mineral"}], "graph_id": "dir_ferric_iron_respiration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Anaerobic respiratory metabolism conserving energy via a terminal electron acceptor.", "grounding": null, "id": "anaerobic_respiration", "is_orphan": false, "label": "energy-conserving anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on Fe(III) as terminal electron acceptor.", "grounding": "traitmech:000031", "id": "dir_trait", "is_orphan": false, "label": "dissimilatory iron reduction", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Fe(III) bound to organic matter; reduced faster than solid Fe(III) minerals.", "grounding": null, "id": "dissolved_fe3_om_complex", "is_orphan": false, "label": "dissolved Fe(III)-organic-matter complex", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DIR.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "iron(3+)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Soluble product released after Fe(III) reduction.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "iron(2+)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of molecular hydrogen as an electron donor coupled to Fe(III) reduction.", "grounding": null, "id": "hydrogen_oxidation", "is_orphan": false, "label": "H2 oxidation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of organic carbon serving as the electron donor in DIR.", "grounding": null, "id": "organic_matter_oxidation", "is_orphan": false, "label": "oxidation of organic matter", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Fe(III) oxide mineral phase serving as terminal electron acceptor.", "grounding": null, "id": "solid_fe3_mineral", "is_orphan": false, "label": "solid Fe(III) mineral", "node_type": "CHEMICAL", "xrefs": []}], "title": "Dissimilatory iron reduction respires Fe(III) to Fe(II)"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -599,7 +677,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

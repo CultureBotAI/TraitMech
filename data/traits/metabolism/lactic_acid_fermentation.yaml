@@ -42,6 +42,44 @@ causal_graphs:
     node_type: CHEMICAL
     description: Principal end product of homolactic fermentation.
     grounding: CHEBI:24996
+  - node_id: glucose
+    label: glucose
+    node_type: CHEMICAL
+    description: Hexose substrate fermented by lactic acid bacteria.
+  - node_id: glycolysis_emp
+    label: EMP/glycolysis pathway
+    node_type: PATHWAY
+    description: Embden-Meyerhof-Parnas glycolytic pathway used by homofermentative
+      LAB.
+  - node_id: pyruvate
+    label: pyruvate
+    node_type: CHEMICAL
+    description: Glycolytic intermediate reduced to lactate.
+  - node_id: lactate_dehydrogenase
+    label: lactate dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that reduces pyruvate to lactate (EC 1.1.1.27).
+  - node_id: phosphoketolase_pathway
+    label: phosphoketolase pathway
+    node_type: PATHWAY
+    description: Pentose-phosphate/phosphoketolase route used by heterofermentative
+      LAB.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    description: Co-product of heterolactic fermentation.
+  - node_id: ethanol
+    label: ethanol
+    node_type: CHEMICAL
+    description: Co-product of heterolactic fermentation.
+  - node_id: decreased_ph
+    label: decreased pH
+    node_type: QUALITY
+    description: Acidification resulting from lactic acid accumulation.
+  - node_id: pathogenic_microbe
+    label: pathogenic/spoilage microbe
+    node_type: BIOLOGICAL_PROCESS
+    description: Spoilage and pathogenic microbes inhibited by acidification.
   edges:
   - subject: lactic_acid_fermentation_trait
     predicate: participates in
@@ -59,6 +97,76 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: Classical-fermentation review describes the lactic-acid pathway.
     predicate_id: METPO:2000202
+  - subject: glucose
+    predicate: is fermented via
+    object: glycolysis_emp
+    description: Homofermentative LAB ferment glucose mainly via the EMP/glycolysis
+      pathway.
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: homofermentative LAB rely mainly on glycolysis (EMP).
+  - subject: glycolysis_emp
+    predicate: produces
+    object: pyruvate
+    description: Glycolysis yields pyruvate as the intermediate reduced to lactate.
+    evidence:
+    - reference: DOI:10.3390/foods12152850
+      notes: Glycolysis of glucose generates pyruvate, which lactate dehydrogenase
+        reduces to lactate.
+  - subject: pyruvate
+    predicate: is converted by
+    object: lactate_dehydrogenase
+    description: Pyruvate is the substrate of lactate dehydrogenase.
+    evidence:
+    - reference: DOI:10.3390/foods12152850
+      notes: Lactate dehydrogenase converts pyruvate to lactate.
+  - subject: lactate_dehydrogenase
+    predicate: produces
+    object: lactate
+    description: Lactate dehydrogenase reduces pyruvate to lactate.
+    evidence:
+    - reference: DOI:10.3390/foods12152850
+      notes: one mole of glucose produces two moles of lactic acid and two ATP molecules
+        via LDH.
+  - subject: phosphoketolase_pathway
+    predicate: yields
+    object: lactate
+    description: Heterofermentative phosphoketolase route yields lactate among its
+      products.
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: products are lactate, carbon dioxide, and either ethanol or acetate (phosphoketolase
+        route).
+  - subject: phosphoketolase_pathway
+    predicate: yields
+    object: carbon_dioxide
+    description: Heterolactic phosphoketolase route co-produces CO2.
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: heterolactic products are lactate, carbon dioxide, and ethanol or acetate.
+  - subject: phosphoketolase_pathway
+    predicate: yields
+    object: ethanol
+    description: Heterolactic phosphoketolase route co-produces ethanol (or acetate).
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: heterolactic products include ethanol or acetate.
+  - subject: lactate
+    predicate: causes
+    object: decreased_ph
+    description: Accumulation of lactic acid acidifies the medium.
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: acidification from lactic acid exerts antagonistic effects on microbes.
+  - subject: decreased_ph
+    predicate: inhibits
+    object: pathogenic_microbe
+    description: Lactate-driven acidification inhibits spoilage and pathogenic microbes
+      (biopreservation).
+    evidence:
+    - reference: DOI:10.3390/fermentation10030168
+      notes: higher lactic acid / lower pH increases inhibition of spoilage and pathogenic
+        microbes.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -78,4 +186,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:24996×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -44,6 +44,44 @@ causal_graphs:
     label: human disease
     node_type: BIOLOGICAL_PROCESS
     description: Pathology produced in a human host.
+  - node_id: type_iv_secretion_system
+    label: type IV secretion system
+    node_type: GENE_OR_PROTEIN
+    description: Multiprotein machine translocating protein effectors and toxins into
+      host cells.
+  - node_id: host_cell_manipulation
+    label: host cell manipulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Effector-driven subversion of host-cell processes promoting infection.
+  - node_id: horizontal_gene_transfer
+    label: horizontal gene transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Acquisition of genes via plasmids, transduction, transposons, and
+      IS elements.
+  - node_id: virulence_gene_acquisition
+    label: acquisition of virulence/host-adaptation genes
+    node_type: BIOLOGICAL_PROCESS
+    description: Gain of one or more genes facilitating virulence and host-species
+      tropism.
+  - node_id: within_host_genetic_diversification
+    label: within-host genetic diversification
+    node_type: BIOLOGICAL_PROCESS
+    description: Hypermutation, structural variation, and MGE/phage insertions generating
+      diversity.
+  - node_id: within_host_adaptation
+    label: within-host adaptation and chronic infection
+    node_type: BIOLOGICAL_PROCESS
+    description: Adaptation to the host enabling increased pathogenicity and long-term
+      persistence.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Surface-attached communities increasing treatment resistance and
+      persistence.
+  - node_id: treatment_resistance_persistence
+    label: treatment resistance and persistence
+    node_type: QUALITY
+    description: Tolerance to antimicrobial treatment and persistent infection.
   edges:
   - subject: human_virulence_factors
     predicate: enables
@@ -83,6 +121,77 @@ causal_graphs:
       snippet: virulence factors
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: type_iv_secretion_system
+    predicate: enables
+    object: host_cell_manipulation
+    description: Type IV secretion systems translocate protein effectors and toxins
+      that manipulate host cells during infection.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00974-3
+      notes: T4SSs function as protein effector translocators delivering effectors
+        or toxins; viable targets to thwart infection by pathogens.
+  - subject: host_cell_manipulation
+    predicate: enables
+    object: human_disease
+    description: Effector-driven host cell manipulation supports establishment of
+      human infection and disease.
+    evidence:
+    - reference: DOI:10.1038/s41579-023-00974-3
+      notes: Effector translocation enables host cell manipulation and infection by
+        pathogens.
+  - subject: horizontal_gene_transfer
+    predicate: enables
+    object: virulence_gene_acquisition
+    description: HGT via plasmids, transduction, transposons, and IS elements enables
+      acquisition of virulence and host-adaptation genes.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: HGT via conjugation, transduction, transposons, IS elements can be associated
+        with gain of genes facilitating host tropism and virulence factors.
+  - subject: virulence_gene_acquisition
+    predicate: enables
+    object: human_virulence_factors
+    description: Acquired genes contribute the human-adapted virulence factor repertoire
+      underlying human pathogenicity.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuae019
+      notes: Gene acquisition facilitates changes in host species tropism, including
+        virulence factors enabling human-pathogenic lineages.
+  - subject: within_host_genetic_diversification
+    predicate: enables
+    object: within_host_adaptation
+    description: Hypermutation, structural variation, and MGE/phage insertions generate
+      diversity driving within-host adaptation.
+    evidence:
+    - reference: DOI:10.1146/annurev-pathmechdis-051122-111408
+      notes: Secondary mechanisms including hypermutation, structural variation, and
+        MGE/phage insertions can increase pathogenicity and facilitate long-term persistence.
+  - subject: within_host_adaptation
+    predicate: enables
+    object: human_disease
+    description: Within-host adaptation increases pathogenicity and supports chronic
+      human infection.
+    evidence:
+    - reference: DOI:10.1146/annurev-pathmechdis-051122-111408
+      notes: Within-host evolution can increase pathogenicity and facilitate long-term
+        persistence in the host.
+  - subject: biofilm_formation
+    predicate: enables
+    object: treatment_resistance_persistence
+    description: Biofilm formation makes bacteria resistant to treatment and supports
+      persistence.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1370818
+      notes: Bacteria can form biofilms, making them resistant to treatment.
+  - subject: treatment_resistance_persistence
+    predicate: enables
+    object: human_disease
+    description: Treatment resistance and persistence exacerbate the severity and
+      duration of human infection.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1370818
+      notes: Biofilm-associated resistance to treatment contributes to infection severity
+        and persistence.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.949749+00:00'
   curator: seed_from_metpo
@@ -124,4 +233,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

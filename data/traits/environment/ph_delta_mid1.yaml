@@ -38,6 +38,51 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mid-range capacity to remodel proton extrusion and envelope buffering
       across a few pH units.
+  - node_id: f0f1_atpase
+    label: F0F1-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: F0F1-ATP synthase/ATPase complex that can hydrolyze ATP to consume
+      and export intracellular protons.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of near-neutral cytoplasmic pH under external pH stress.
+  - node_id: gln_glu_decarboxylation_pathway
+    label: glutamine/glutamate decarboxylation pathway
+    node_type: PATHWAY
+    description: Coupled glutamine conversion and glutamate decarboxylation that consumes
+      intracellular protons.
+  - node_id: intracellular_proton
+    label: intracellular proton (H+)
+    node_type: CHEMICAL
+    description: Cytoplasmic hydron whose concentration sets internal pH.
+  - node_id: ybas_glutaminase
+    label: YbaS glutaminase
+    node_type: GENE_OR_PROTEIN
+    description: Glutaminase converting glutamine to glutamate plus ammonia.
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+    description: Ammonia that neutralizes intracellular protons.
+  - node_id: membrane_saturated_fatty_acids
+    label: membrane saturated fatty acid content
+    node_type: QUALITY
+    description: Increased proportion of saturated fatty acids in the membrane lipid
+      bilayer.
+  - node_id: proton_diffusion_across_membrane
+    label: proton diffusion across membrane
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive leakage of protons across the cytoplasmic membrane.
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation / electron transport chain
+    node_type: PATHWAY
+    description: ETC activity (nuo, cyo, ndh, sdh) generating and maintaining the
+      proton motive force.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Transmembrane electrochemical proton gradient supporting acid-side
+      pH homeostasis.
   edges:
   - subject: moderate_ph_homeostasis
     predicate: produces
@@ -58,6 +103,70 @@ causal_graphs:
       snippet: external pH
       notes: Supports the 2–3 unit breadth as a value within the pH-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: f0f1_atpase
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Under acid stress F0F1-ATPase hydrolyzes ATP to consume/export intracellular
+      H+, maintaining cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: F0F1-ATPase under acid stress hydrolyzes ATP to consume intracellular
+        H+ to maintain homeostasis; broad pH-homeostasis mechanism.
+  - subject: gln_glu_decarboxylation_pathway
+    predicate: consumes
+    object: intracellular_proton
+    description: Coupled glutamine conversion and glutamate decarboxylation consume
+      two intracellular H+, enhancing acid resistance.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: Glutamine conversion and glutamate decarboxylation can act together to
+        consume two H+; pathway-level proton-consumption module.
+  - subject: ybas_glutaminase
+    predicate: produces
+    object: ammonia
+    description: YbaS glutaminase converts glutamine to glutamate and releases ammonia,
+      which neutralizes intracellular protons.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: The glutaminase YbaS converts glutamine to glutamate and releases ammonia,
+        which neutralizes intracellular protons.
+  - subject: membrane_saturated_fatty_acids
+    predicate: decreases
+    object: proton_diffusion_across_membrane
+    description: A higher proportion of saturated membrane fatty acids limits passive
+      proton diffusion across the membrane.
+    evidence:
+    - reference: DOI:10.1128/aem.00569-24
+      notes: Conversion of unsaturated to saturated fatty acids limits proton diffusion;
+        broadly plausible membrane-permeability mechanism.
+  - subject: oxidative_phosphorylation
+    predicate: maintains
+    object: proton_motive_force
+    description: Upregulated oxidative phosphorylation/ETC increases proton export
+      and maintains the proton motive force, helping resist cytoplasmic pH decreases.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081565
+      notes: Upregulation of oxidative phosphorylation genes increases proton export
+        rate and maintains a proton motive force that helps cells resist cytoplasmic
+        pH decreases under mild acid (pH 6.0) growth.
+  - subject: proton_motive_force
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: A maintained proton motive force supports cytoplasmic pH homeostasis
+      under acid stress.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081565
+      notes: PMF generated/maintained by oxidative phosphorylation helps cells resist
+        cytoplasmic pH decreases.
+  - subject: cytoplasmic_ph_homeostasis
+    predicate: contributes to
+    object: moderate_ph_homeostasis
+    description: Cytoplasmic pH homeostasis modules collectively underlie moderate
+      pH-homeostasis flexibility.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: Proton-consumption and proton-export modules maintaining cytoplasmic
+        pH underpin homeostatic flexibility across a few pH units.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838958+00:00'
   curator: seed_from_metpo
@@ -75,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

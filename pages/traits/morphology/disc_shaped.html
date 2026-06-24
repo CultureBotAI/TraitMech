@@ -107,12 +107,50 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>S-layer glycoprotein C-terminal processing and lipid anchoring</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>flat disc geometry</strong>
+            
+            <p>C-terminal processing and lipid anchoring of the S-layer glycoprotein is required for stable flat plate-shaped cell formation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1099/mic.0.001012</code>
+                
+                <span class="meta">Required for the C-terminal processing and covalent lipid attachment of S-layer glycoprotein, required for effective and stable plate-shaped cell formation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>disc shaped</strong>
+            <span class="edge-predicate">interconverts with</span>
+            <strong>rod-shaped morphology</strong>
+            
+            <p>Disc/plate cell type interconverts with the rod cell type as part of regulated shape switching.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nature13983</code>
+                
+                <span class="meta">H. volcanii exhibits interconvertible plate and rod cell types; transition from a disk-shape to a rod-shape.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -268,6 +306,12 @@
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 2 evidence-backed generic edges (2 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -627,7 +671,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer growth and suppressed axial extension to flat disc-shaped cell geometry.", "edges": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar_envelope_growth", "target": "flat_geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial_extension_suppression", "target": "flat_geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat_geometry", "target": "disc_shaped_trait"}], "evidence_rows": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar envelope growth", "target": "flat disc geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial extension suppression", "target": "flat disc geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat disc geometry", "target": "disc shaped"}], "graph_id": "disc_shaped_anisotropic_wall_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced or absent extension along the orthogonal cell axis.", "grounding": null, "id": "axial_extension_suppression", "is_orphan": false, "label": "axial extension suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flat, circular cellular morphology.", "grounding": "METPO:1000689", "id": "disc_shaped_trait", "is_orphan": false, "label": "disc shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Resulting flat, plate-like cell body.", "grounding": null, "id": "flat_geometry", "is_orphan": false, "label": "flat disc geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-envelope (peptidoglycan or S-layer) expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Disc-shape anisotropic cell-wall growth"}];
+  var graphs = [{"description": "DOI-backed graph linking anisotropic, planar peptidoglycan or S-layer growth and suppressed axial extension to flat disc-shaped cell geometry.", "edges": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar_envelope_growth", "target": "flat_geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial_extension_suppression", "target": "flat_geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat_geometry", "target": "disc_shaped_trait"}, {"description": "C-terminal processing and lipid anchoring of the S-layer glycoprotein is required for stable flat plate-shaped cell formation.", "evidence": [{"notes": "Required for the C-terminal processing and covalent lipid attachment of S-layer glycoprotein, required for effective and stable plate-shaped cell formation.", "reference": "DOI:10.1099/mic.0.001012"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "slayer_glycoprotein_maturation", "target": "flat_geometry"}, {"description": "Disc/plate cell type interconverts with the rod cell type as part of regulated shape switching.", "evidence": [{"notes": "H. volcanii exhibits interconvertible plate and rod cell types; transition from a disk-shape to a rod-shape.", "reference": "DOI:10.1038/nature13983"}], "id": "edge-5", "is_orphan": false, "predicate": "interconverts with", "predicate_id": null, "source": "disc_shaped_trait", "target": "rod_shaped_state"}], "evidence_rows": [{"description": "Planar envelope growth produces a 2D-expanded cell body.", "edge_id": "edge-1", "evidence": [{"notes": "Supports planar envelope growth producing flat morphology in disc-shaped halophiles.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "flat square or disc-shaped cells"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "planar envelope growth", "target": "flat disc geometry"}, {"description": "Suppression of axial extension keeps cells thin.", "edge_id": "edge-2", "evidence": [{"notes": "Supports anisotropic growth as a control mechanism for cell shape.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "axial extension suppression", "target": "flat disc geometry"}, {"description": "Flat geometry manifests the disc-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1099/ijs.0.65431-0", "snippet": "disc-shaped cells"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "flat disc geometry", "target": "disc shaped"}, {"description": "C-terminal processing and lipid anchoring of the S-layer glycoprotein is required for stable flat plate-shaped cell formation.", "edge_id": "edge-4", "evidence": [{"notes": "Required for the C-terminal processing and covalent lipid attachment of S-layer glycoprotein, required for effective and stable plate-shaped cell formation.", "reference": "DOI:10.1099/mic.0.001012"}], "predicate": "enables", "predicate_id": null, "source": "S-layer glycoprotein C-terminal processing and lipid anchoring", "target": "flat disc geometry"}, {"description": "Disc/plate cell type interconverts with the rod cell type as part of regulated shape switching.", "edge_id": "edge-5", "evidence": [{"notes": "H. volcanii exhibits interconvertible plate and rod cell types; transition from a disk-shape to a rod-shape.", "reference": "DOI:10.1038/nature13983"}], "predicate": "interconverts with", "predicate_id": null, "source": "disc shaped", "target": "rod-shaped morphology"}], "graph_id": "disc_shaped_anisotropic_wall_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduced or absent extension along the orthogonal cell axis.", "grounding": null, "id": "axial_extension_suppression", "is_orphan": false, "label": "axial extension suppression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Flat, circular cellular morphology.", "grounding": "METPO:1000689", "id": "disc_shaped_trait", "is_orphan": false, "label": "disc shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Resulting flat, plate-like cell body.", "grounding": null, "id": "flat_geometry", "is_orphan": false, "label": "flat disc geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-envelope (peptidoglycan or S-layer) expansion in a 2D plane.", "grounding": null, "id": "planar_envelope_growth", "is_orphan": false, "label": "planar envelope growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Elongated rod cell type that disc/plate cells interconvert with.", "grounding": null, "id": "rod_shaped_state", "is_orphan": false, "label": "rod-shaped morphology", "node_type": "STATE", "xrefs": []}, {"color": "#ecfccb", "description": "ArtA peptidase and Pss enzyme dependent C-terminal processing and covalent lipid attachment of the surface (S-layer) glycoprotein.", "grounding": null, "id": "slayer_glycoprotein_maturation", "is_orphan": false, "label": "S-layer glycoprotein C-terminal processing and lipid anchoring", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Disc-shape anisotropic cell-wall growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -638,7 +682,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

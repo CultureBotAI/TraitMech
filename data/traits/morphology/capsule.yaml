@@ -49,6 +49,41 @@ causal_graphs:
     label: host immune evasion
     node_type: QUALITY
     description: Reduced recognition and clearance by host innate immunity.
+  - node_id: wzx_flippase
+    label: Wzx flippase
+    node_type: GENE_OR_PROTEIN
+    description: Inner-membrane flippase that translocates lipid-linked capsule repeat
+      units across the inner membrane in the Wzx/Wzy-dependent pathway.
+  - node_id: lipid_linked_repeat_unit
+    label: lipid-linked capsule repeat unit
+    node_type: CHEMICAL
+    description: Undecaprenyl-linked oligosaccharide repeat unit assembled on the
+      cytoplasmic face of the inner membrane.
+  - node_id: wzy_polymerase
+    label: Wzy polymerase
+    node_type: GENE_OR_PROTEIN
+    description: Polymerase that links capsule repeat units into a growing polysaccharide
+      chain in the Wzx/Wzy-dependent pathway.
+  - node_id: wzb_phosphatase_cycle
+    label: Wzb phosphatase cycle
+    node_type: BIOLOGICAL_PROCESS
+    description: Wzb-catalyzed phosphorylation/dephosphorylation cycle of the Wzc
+      tyrosine autokinase regulating capsule assembly.
+  - node_id: wzc_capsule_assembly
+    label: Wzc-regulated capsule assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Capsule polymerization and export controlled by the Wzc polysaccharide
+      copolymerase/tyrosine autokinase.
+  - node_id: wza_export_protein
+    label: Wza outer-membrane export protein
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane polysaccharide export protein that translocates capsule
+      polymer across the outer membrane.
+  - node_id: kpsmt_abc_transporter
+    label: KpsMT ABC transporter
+    node_type: GENE_OR_PROTEIN
+    description: ATP-binding cassette transporter that exports capsule polysaccharide
+      chains across the inner membrane in the ABC-dependent pathway.
   edges:
   - subject: capsule_assembly
     predicate: produces
@@ -57,8 +92,8 @@ causal_graphs:
       polysaccharide.
     evidence:
     - reference: DOI:10.1146/annurev.biochem.75.103004.142545
-      notes: Whitfield reviews biosynthesis, export, and surface assembly of the
-        capsular polysaccharide polymer.
+      notes: Whitfield reviews biosynthesis, export, and surface assembly of the capsular
+        polysaccharide polymer.
     predicate_id: biolink:produces
   - subject: capsule_assembly
     predicate: enables
@@ -77,6 +112,50 @@ causal_graphs:
       notes: Roberts frames capsular polysaccharide as an immune-evasion and adhesion
         structure.
     predicate_id: RO:0002326
+  - subject: wzx_flippase
+    predicate: flips
+    object: lipid_linked_repeat_unit
+    description: Wzx flippase turns the completed lipid-linked repeat unit outward
+      across the inner membrane.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00497-6
+      notes: '"the complete repeat unit is turned outward by the Wzx flip enzyme";
+        general Wzx/Wzy capsule biosynthesis, not taxon-specific.'
+  - subject: wzy_polymerase
+    predicate: polymerizes
+    object: capsular_polysaccharide
+    description: Wzy polymerase attaches the growing chain to new repeat units, building
+      the capsular polysaccharide.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00497-6
+      notes: '"the Wzy polymerase attaches the growing polymer chain to the newly
+        formed repeat unit"; general Wzx/Wzy pathway.'
+  - subject: wzb_phosphatase_cycle
+    predicate: required for
+    object: wzc_capsule_assembly
+    description: The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step
+      for capsule assembly.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00497-6
+      notes: '"The phosphorylation cycle of Wzc, catalyzed by Wzb, is a crucial step.";
+        general capsule biosynthesis.'
+  - subject: wza_export_protein
+    predicate: exports
+    object: capsular_polysaccharide
+    description: Wza translocates the assembled capsule polymer across the outer membrane.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00497-6
+      notes: '"The polymer translocates across the outer membrane via Wza"; Wzx/Wzy-dependent
+        pathway, broad mechanistic statement.'
+  - subject: kpsmt_abc_transporter
+    predicate: exports
+    object: capsular_polysaccharide
+    description: The KpsMT ABC transporter exports capsule polysaccharide chains across
+      the inner membrane in the ABC-dependent pathway.
+    evidence:
+    - reference: DOI:10.1038/s41522-024-00497-6
+      notes: '"the ABC transporter (KpsMT) plays a pivotal role in exporting these
+        chains"; general ABC-dependent capsule export.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -99,6 +178,12 @@ curation_history:
 - timestamp: '2026-06-16T00:00:00Z'
   curator: claude
   action: FIX_ORPHAN_NODE
-  changes: Connected the previously-orphaned capsular_polysaccharide node via a
-    'produces' (biolink:produces) edge from capsule_assembly.
+  changes: Connected the previously-orphaned capsular_polysaccharide node via a 'produces'
+    (biolink:produces) edge from capsule_assembly.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

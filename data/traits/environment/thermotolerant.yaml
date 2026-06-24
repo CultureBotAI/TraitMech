@@ -46,6 +46,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Modest protein and membrane stability at elevated temperatures compared
       with obligate thermophiles.
+  - node_id: rpoH_sigma32
+    label: RpoH (sigma-32) heat-shock sigma factor
+    node_type: GENE_OR_PROTEIN
+    description: Alternative RNA polymerase sigma factor that activates the heat-shock
+      regulon.
+  - node_id: heat_shock_chaperone_expression
+    label: heat-shock chaperone gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Induced expression of groEL, dnaKJ, grpE, and clpB chaperone/disaggregase
+      genes.
+  - node_id: rpoE_envelope_sigma
+    label: RpoE envelope-stress sigma factor
+    node_type: GENE_OR_PROTEIN
+    description: Extracytoplasmic-stress sigma factor inducing periplasmic proteases
+      and envelope-protective genes.
+  - node_id: membrane_protein_folding_lps
+    label: membrane protein folding and LPS biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Folding of membrane proteins and biosynthesis of lipopolysaccharide
+      maintaining envelope integrity under heat.
+  - node_id: unsaturated_fa_biosynthesis
+    label: unsaturated fatty acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis of unsaturated fatty acids tuning membrane fluidity
+      (homeoviscous adaptation).
+  - node_id: compatible_solute_accumulation
+    label: trehalose compatible-solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of trehalose and related compatible solutes protecting
+      proteins and membranes from heat damage.
   edges:
   - subject: elevated_temperature
     predicate: causes
@@ -75,6 +105,60 @@ causal_graphs:
       snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
       notes: Supports the trait endpoint in a representative organism.
     predicate_id: RO:0002327
+  - subject: rpoH_sigma32
+    predicate: positively regulates
+    object: heat_shock_chaperone_expression
+    description: RpoH (sigma-32) drives expression of the groEL, dnaKJ, grpE, and
+      clpB heat-shock genes.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02602-y
+      notes: The expression of groEL, dnaKJ, grpE, and clpB were regulated by the
+        sigma factor RpoH, whose deletion led to heat sensitivity.
+  - subject: heat_shock_chaperone_expression
+    predicate: enables
+    object: heat_shock_response
+    description: Induced chaperone/disaggregase gene expression enables the protective
+      heat-shock response.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02602-y
+      notes: groEL, dnaKJ, grpE, clpB constitute the chaperone/disaggregase machinery
+        of the heat-shock response.
+  - subject: elevated_temperature
+    predicate: causes
+    object: membrane_protein_folding_lps
+    description: Heat-activated RpoE induces membrane protein folding and LPS biosynthesis
+      to preserve envelope integrity.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Activated RpoE induces genes involved in folding of membrane proteins
+        and biosynthesis of lipopolysaccharides under heat shock.
+  - subject: rpoE_envelope_sigma
+    predicate: positively regulates
+    object: membrane_protein_folding_lps
+    description: RpoE envelope-stress sigma factor positively regulates membrane protein
+      folding and LPS biosynthesis.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Activated RpoE induces heat-shock proteins, periplasmic proteases (HtrA,
+        DegP), and genes for membrane protein folding and LPS biosynthesis.
+  - subject: unsaturated_fa_biosynthesis
+    predicate: contributes to
+    object: thermotolerant_trait
+    description: Unsaturated fatty acid biosynthesis tunes membrane fluidity, contributing
+      to thermotolerance.
+    evidence:
+    - reference: DOI:10.1128/spectrum.01627-23
+      notes: A sharp relationship between thermotolerance and fatty-acid metabolism;
+        saturated/unsaturated FA balance modulates heat tolerance.
+  - subject: compatible_solute_accumulation
+    predicate: positively regulates
+    object: limited_thermostability
+    description: Trehalose compatible-solute accumulation stabilizes proteins and
+      membranes against heat damage.
+    evidence:
+    - reference: DOI:10.1186/s40694-023-00168-9
+      notes: Accumulation of mannitol and trehalose as the main compatible solutes
+        is a key factor for heat resistance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860266+00:00'
   curator: seed_from_metpo
@@ -133,4 +217,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

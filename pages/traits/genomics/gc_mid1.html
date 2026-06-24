@@ -90,12 +90,84 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>NHEJ pathway (Ku, LigD)</strong>
+            <span class="edge-predicate">positively correlated with</span>
+            <strong>GC mid1</strong>
+            
+            <p>Ku/NHEJ presence is strongly associated with elevated genomic GC content.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pgen.1008493</code>
+                
+                <span class="meta">Strong association between Ku presence and elevated GC content; Pearson r=0.54 (p&lt;2.2e-16). Correlational across prokaryotes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>high double-strand break rate</strong>
+            <span class="edge-predicate">selects for</span>
+            <strong>GC mid1</strong>
+            
+            <p>Higher DSB formation rate selects for increased GC content relative to genomic background.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pgen.1008493</code>
+                
+                <span class="meta">Sites with higher DSB rates are under selection for increased GC content; proposed unifying driver of GC content across prokaryotes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>DNA replication and repair (DRR) system composition</strong>
+            <span class="edge-predicate">strongly correlated with</span>
+            <strong>GC mid1</strong>
+            
+            <p>DRR-system KEGG-ortholog composition explains a large fraction of genomic GC variance.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.02145-22</code>
+                
+                <span class="meta">Linear model using 217 DRR-related KEGG orthologs explains up to 88% of variance in genomic GC (multiple correlation 0.94).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>GC mid1</strong>
+            <span class="edge-predicate">may increase</span>
+            <strong>NHEJ end-joining efficiency</strong>
+            
+            <p>High GC may increase NHEJ repair efficiency by stabilizing short overhangs/microhomologies via extra hydrogen bonds.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1371/journal.pgen.1008493</code>
+                
+                <span class="meta">High GC via increased hydrogen bonds may stabilize short overhang/microhomology pairing and increase NHEJ efficiency.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +305,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +670,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking strong GC-biased gene conversion to a GC content above ~66.3% (the threshold encoded by the METPO synonym GC_\u003e66.3 on this record).", "edges": [{"description": "Strong GC-biased gene conversion yields high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of high-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "strong_gbgc", "target": "gc_mid1_trait"}, {"description": "GC mid1 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the \u003e66.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_mid1_trait", "target": "gc_content"}], "evidence_rows": [{"description": "Strong GC-biased gene conversion yields high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of high-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "strong GC-biased gene conversion", "target": "GC mid1"}, {"description": "GC mid1 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e66.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC mid1", "target": "GC content"}], "graph_id": "gc_mid1_high_gc_bin", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content above ~66.3% (per METPO synonym GC_\u003e66.3).", "grounding": "METPO:1000430", "id": "gc_mid1_trait", "is_orphan": false, "label": "GC mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated process strongly favoring GC alleles that elevates genome-wide GC content into the high range.", "grounding": null, "id": "strong_gbgc", "is_orphan": false, "label": "strong GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid1 (METPO \u003e66.3%) high-GC bin"}];
+  var graphs = [{"description": "DOI-backed graph linking strong GC-biased gene conversion to a GC content above ~66.3% (the threshold encoded by the METPO synonym GC_\u003e66.3 on this record).", "edges": [{"description": "Strong GC-biased gene conversion yields high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of high-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "strong_gbgc", "target": "gc_mid1_trait"}, {"description": "GC mid1 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the \u003e66.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_mid1_trait", "target": "gc_content"}, {"description": "Ku/NHEJ presence is strongly associated with elevated genomic GC content.", "evidence": [{"notes": "Strong association between Ku presence and elevated GC content; Pearson r=0.54 (p\u003c2.2e-16). Correlational across prokaryotes.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "id": "edge-3", "is_orphan": false, "predicate": "positively correlated with", "predicate_id": null, "source": "nhej_pathway", "target": "gc_mid1_trait"}, {"description": "Higher DSB formation rate selects for increased GC content relative to genomic background.", "evidence": [{"notes": "Sites with higher DSB rates are under selection for increased GC content; proposed unifying driver of GC content across prokaryotes.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "id": "edge-4", "is_orphan": false, "predicate": "selects for", "predicate_id": null, "source": "high_dsb_rate", "target": "gc_mid1_trait"}, {"description": "DRR-system KEGG-ortholog composition explains a large fraction of genomic GC variance.", "evidence": [{"notes": "Linear model using 217 DRR-related KEGG orthologs explains up to 88% of variance in genomic GC (multiple correlation 0.94).", "reference": "DOI:10.1128/spectrum.02145-22"}], "id": "edge-5", "is_orphan": false, "predicate": "strongly correlated with", "predicate_id": null, "source": "drr_system_composition", "target": "gc_mid1_trait"}, {"description": "High GC may increase NHEJ repair efficiency by stabilizing short overhangs/microhomologies via extra hydrogen bonds.", "evidence": [{"notes": "High GC via increased hydrogen bonds may stabilize short overhang/microhomology pairing and increase NHEJ efficiency.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "id": "edge-6", "is_orphan": false, "predicate": "may increase", "predicate_id": null, "source": "gc_mid1_trait", "target": "nhej_end_joining_efficiency"}], "evidence_rows": [{"description": "Strong GC-biased gene conversion yields high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of high-GC composition.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "strong GC-biased gene conversion", "target": "GC mid1"}, {"description": "GC mid1 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e66.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC mid1", "target": "GC content"}, {"description": "Ku/NHEJ presence is strongly associated with elevated genomic GC content.", "edge_id": "edge-3", "evidence": [{"notes": "Strong association between Ku presence and elevated GC content; Pearson r=0.54 (p\u003c2.2e-16). Correlational across prokaryotes.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "predicate": "positively correlated with", "predicate_id": null, "source": "NHEJ pathway (Ku, LigD)", "target": "GC mid1"}, {"description": "Higher DSB formation rate selects for increased GC content relative to genomic background.", "edge_id": "edge-4", "evidence": [{"notes": "Sites with higher DSB rates are under selection for increased GC content; proposed unifying driver of GC content across prokaryotes.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "predicate": "selects for", "predicate_id": null, "source": "high double-strand break rate", "target": "GC mid1"}, {"description": "DRR-system KEGG-ortholog composition explains a large fraction of genomic GC variance.", "edge_id": "edge-5", "evidence": [{"notes": "Linear model using 217 DRR-related KEGG orthologs explains up to 88% of variance in genomic GC (multiple correlation 0.94).", "reference": "DOI:10.1128/spectrum.02145-22"}], "predicate": "strongly correlated with", "predicate_id": null, "source": "DNA replication and repair (DRR) system composition", "target": "GC mid1"}, {"description": "High GC may increase NHEJ repair efficiency by stabilizing short overhangs/microhomologies via extra hydrogen bonds.", "edge_id": "edge-6", "evidence": [{"notes": "High GC via increased hydrogen bonds may stabilize short overhang/microhomology pairing and increase NHEJ efficiency.", "reference": "DOI:10.1371/journal.pgen.1008493"}], "predicate": "may increase", "predicate_id": null, "source": "GC mid1", "target": "NHEJ end-joining efficiency"}], "graph_id": "gc_mid1_high_gc_bin", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Composition of DRR pathways (BER/NER/MMR/HR/NHEJ/TLS) whose KEGG-ortholog profile correlates with genomic GC.", "grounding": null, "id": "drr_system_composition", "is_orphan": false, "label": "DNA replication and repair (DRR) system composition", "node_type": "PATHWAY", "xrefs": []}, {"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content above ~66.3% (per METPO synonym GC_\u003e66.3).", "grounding": "METPO:1000430", "id": "gc_mid1_trait", "is_orphan": false, "label": "GC mid1", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Elevated rate of DNA double-strand break formation that may select for increased GC content.", "grounding": null, "id": "high_dsb_rate", "is_orphan": false, "label": "high double-strand break rate", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#cffafe", "description": "Efficiency of NHEJ end-joining via stabilized short overhang / microhomology pairing.", "grounding": null, "id": "nhej_end_joining_efficiency", "is_orphan": false, "label": "NHEJ end-joining efficiency", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#e0e7ff", "description": "Non-homologous end joining double-strand-break repair pathway (Ku, LigD); KEGG ko03450.", "grounding": null, "id": "nhej_pathway", "is_orphan": false, "label": "NHEJ pathway (Ku, LigD)", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated process strongly favoring GC alleles that elevates genome-wide GC content into the high range.", "grounding": null, "id": "strong_gbgc", "is_orphan": false, "label": "strong GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid1 (METPO \u003e66.3%) high-GC bin"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +681,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

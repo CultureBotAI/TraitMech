@@ -49,6 +49,35 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Span of ambient temperatures between the minimum and maximum that
       support growth.
+  - node_id: membrane_lipid_unsaturation
+    label: membrane lipid unsaturation
+    node_type: BIOLOGICAL_PROCESS
+    description: Increase in unsaturated fatty acids in membrane lipids in response
+      to low temperature (homeoviscous adaptation).
+  - node_id: lipid_desaturase_activity
+    label: lipid desaturase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic introduction of double bonds into membrane fatty acids.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity of the cytoplasmic membrane that must be maintained
+      for function at low temperature.
+  - node_id: chaperone_systems
+    label: molecular chaperone systems
+    node_type: BIOLOGICAL_PROCESS
+    description: Heat-shock chaperone systems (e.g. DnaK/GroEL) that maintain protein
+      folding at high temperature.
+  - node_id: compatible_solutes
+    label: compatible solutes
+    node_type: CHEMICAL
+    description: Cryoprotective osmolytes (e.g. glycine betaine, trehalose, glycerol)
+      accumulated to protect against low-temperature stress.
+  - node_id: two_component_cold_sensing
+    label: two-component cold sensing
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-component signal transduction triggered by changes in the liquid-crystalline
+      membrane state at low temperature.
   edges:
   - subject: ambient_temperature
     predicate: defines
@@ -88,6 +117,78 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: ambient_temperature
+    predicate: increases
+    object: membrane_lipid_unsaturation
+    description: Decreased ambient temperature increases membrane lipid unsaturation
+      via homeoviscous adaptation.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: E. coli increases unsaturated cis-vaccenic acid and decreases palmitic
+        acid with cold; broad bacterial mechanism affecting the lower growth bound.
+  - subject: lipid_desaturase_activity
+    predicate: increases
+    object: membrane_fluidity
+    description: Lipid desaturase activity increases membrane fluidity at low temperature.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Upregulation of genes for fatty acid synthesis/desaturation maintains
+        membrane fluidity at low temperature.
+  - subject: membrane_lipid_unsaturation
+    predicate: increases
+    object: membrane_fluidity
+    description: Increased membrane lipid unsaturation maintains membrane fluidity
+      at low temperature.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Fatty acid desaturation maintains membrane fluidity, a broadly supported
+        homeoviscous adaptation underpinning cold tolerance.
+  - subject: membrane_fluidity
+    predicate: enables
+    object: cold_tolerance
+    description: Maintenance of membrane fluidity enables cold tolerance at the lower
+      temperature bound.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Maintaining membrane fluidity at low temperature is a core mechanism
+        supporting growth at the cold end of the range.
+  - subject: ambient_temperature
+    predicate: induces
+    object: chaperone_systems
+    description: Elevated ambient temperature induces molecular chaperone systems
+      that support heat tolerance.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Molecular chaperones DnaK/Hsp70 and GroEL are implicated in survival
+        at high temperatures; broad across bacteria.
+  - subject: chaperone_systems
+    predicate: enables
+    object: heat_tolerance
+    description: Molecular chaperone systems enable heat tolerance at the upper temperature
+      bound.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Chaperone-mediated protein folding supports the upper-bound (Tmax) heat-tolerance
+        mechanism.
+  - subject: compatible_solutes
+    predicate: protects against
+    object: cold_tolerance
+    description: Compatible solutes protect against low-temperature and freezing stress,
+      supporting cold tolerance.
+    evidence:
+    - reference: DOI:10.37256/amtt.5220244537
+      notes: Glycine, betaine, glycerol, and trehalose act as cryoprotectants and
+        osmolytes; broad low-end mechanism.
+  - subject: membrane_fluidity
+    predicate: activates
+    object: two_component_cold_sensing
+    description: Changes in the liquid-crystalline membrane state activate two-component
+      cold sensing.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: Cold sensing via changes in the liquid-crystalline membrane state that
+        activate two-component signal transduction; generic edge linking membrane
+        state to regulatory response.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814231+00:00'
   curator: seed_from_metpo
@@ -123,4 +224,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

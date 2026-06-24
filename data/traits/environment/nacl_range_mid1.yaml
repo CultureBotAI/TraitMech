@@ -43,6 +43,35 @@ causal_graphs:
     label: modest osmoadaptive tolerance
     node_type: BIOLOGICAL_PROCESS
     description: Osmoadaptive capacity supporting growth across seawater-range NaCl.
+  - node_id: slight_halophile
+    label: slight halophile
+    node_type: TRAIT
+    description: Organisms that grow best in media with 1-3% NaCl.
+  - node_id: moderate_halophile
+    label: moderate halophile
+    node_type: TRAIT
+    description: Organisms growing optimally in 3-15% NaCl (0.5-2.5 M salt).
+  - node_id: optimal_growth_0_5_to_2_5_M_salt
+    label: optimal growth between 0.5 and 2.5 M salt
+    node_type: QUALITY
+    description: Salt optimum defining moderate halophiles.
+  - node_id: potassium_accumulation
+    label: K+ accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Intracellular accumulation of potassium ions for osmotic balancing.
+  - node_id: osmotic_balance
+    label: osmotic balance / salt adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cellular osmotic homeostasis under salt stress.
+  - node_id: compatible_solute_strategy
+    label: compatible solute strategy
+    node_type: BIOLOGICAL_PROCESS
+    description: Osmoadaptation via ion exclusion and production of compatible solutes
+      such as glycine betaine.
+  - node_id: halotolerant_and_moderate_halophiles
+    label: halotolerant and moderate halophiles
+    node_type: TRAIT
+    description: Organisms tolerating or requiring moderate salinity.
   edges:
   - subject: modest_osmoadaptive_tolerance
     predicate: produces
@@ -62,6 +91,47 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the 1–3% range as a value within the NaCl-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: nacl_range_mid1_trait
+    predicate: corresponds to
+    object: slight_halophile
+    description: The 1-3% w/v NaCl range corresponds to the slight-halophile phenotype.
+    evidence:
+    - reference: DOI:10.1007/978-3-540-74231-9
+      notes: slight halophiles grow best in media with 1 to 3% NaCl
+  - subject: slight_halophile
+    predicate: distinct from
+    object: moderate_halophile
+    description: Slight halophiles are distinct from moderate halophiles, which grow
+      optimally at higher NaCl.
+    evidence:
+    - reference: DOI:10.1007/978-3-540-74231-9
+      notes: moderate halophiles grow optimally in media with 3 to 15% NaCl
+  - subject: moderate_halophile
+    predicate: defined as
+    object: optimal_growth_0_5_to_2_5_M_salt
+    description: Moderate halophiles are defined as organisms growing optimally between
+      0.5 and 2.5 M salt.
+    evidence:
+    - reference: DOI:10.1128/MMBR.62.2.504-544.1998
+      notes: moderate halophiles as organisms growing optimally between 0.5 and 2.5
+        M salt
+  - subject: potassium_accumulation
+    predicate: contributes to
+    object: osmotic_balance
+    description: K+ accumulation contributes to osmotic balance and salt adaptation.
+    evidence:
+    - reference: DOI:10.1128/AEM.00145-24
+      notes: simultaneously accumulating compatible solutes and K+; general osmoadaptation
+        edge
+  - subject: compatible_solute_strategy
+    predicate: characterizes
+    object: halotolerant_and_moderate_halophiles
+    description: The compatible-solute strategy characterizes halotolerant and moderate
+      halophiles.
+    evidence:
+    - reference: DOI:10.1093/FEMSRE/FUY026
+      notes: halotolerant and moderate halophiles rely on excluding ions and producing
+        compatible solutes such as glycine betaine
 curation_history:
 - timestamp: '2026-05-05T01:35:46.836372+00:00'
   curator: seed_from_metpo
@@ -79,4 +149,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

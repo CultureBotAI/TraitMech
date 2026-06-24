@@ -124,12 +124,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>Trk/Ktr potassium influx systems</strong>
+            
+            <p>c-di-AMP binds gating subunits of Trk/Ktr systems, inhibiting potassium influx.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">TrkAH, KtrAB and KtrCD gating subunits bind c-di-AMP, inhibiting potassium influx (Foster et al. 2024, review across multiple bacteria).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>KimA/Kup high-affinity K+ uptake transporters</strong>
+            
+            <p>c-di-AMP directly inhibits high-affinity K+ uptake transporters KimA and Kup.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">High-affinity transporters (KimA, KupA/KupB) are inhibited directly by cyclic di-AMP, affecting K+ homeostasis underlying NaCl limits.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>Kdp system / KdpFABC expression</strong>
+            
+            <p>c-di-AMP binding to KdpD inhibits kdpFABC transcription.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">KdpD binding of cyclic di-AMP inhibits kdpFABC transcription (Foster et al. 2024 review).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>OpuA-like compatible-solute importers</strong>
+            
+            <p>c-di-AMP binds and regulates OpuA-like compatible-solute importers.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">c-di-AMP binds OpuA-like ABC compatible-solute importers, linking the regulatory module to osmolyte accumulation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>cyclic di-AMP</strong>
+            <span class="edge-predicate">reduces</span>
+            <strong>high-salt tolerance</strong>
+            
+            <p>Elevated c-di-AMP correlates with salt sensitivity and narrower NaCl tolerance.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/MMBR.00181-23</code>
+                
+                <span class="meta">High cyclic di-AMP levels correlate with salt sensitivity, narrowing salt tolerance via suppressed K+ uptake (Foster et al. 2024 review).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -293,6 +382,12 @@
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007500×2).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -652,7 +747,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low and high salt, and the bounded span of growth-supporting NaCl concentrations.", "edges": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient_nacl", "target": "bounded_growth_window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low_salt_tolerance", "target": "bounded_growth_window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high_salt_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "nacl_range_trait"}], "evidence_rows": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient NaCl concentration", "target": "bounded growth window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low-salt tolerance", "target": "bounded growth window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high-salt tolerance", "target": "bounded growth window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded growth window", "target": "NaCl range"}], "graph_id": "nacl_range_tolerance_breadth", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl level imposed on the cell.", "grounding": null, "id": "ambient_nacl", "is_orphan": false, "label": "ambient NaCl concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Span of NaCl concentrations between the minimum and maximum that support growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain osmotic balance under elevated NaCl.", "grounding": null, "id": "high_salt_tolerance", "is_orphan": false, "label": "high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain turgor and ion homeostasis at low ambient NaCl.", "grounding": null, "id": "low_salt_tolerance", "is_orphan": false, "label": "low-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range_trait", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}], "title": "NaCl-range osmotic-tolerance breadth"}];
+  var graphs = [{"description": "DOI-backed graph linking ambient NaCl, osmoadaptive tolerance to low and high salt, and the bounded span of growth-supporting NaCl concentrations.", "edges": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient_nacl", "target": "bounded_growth_window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "id": "edge-2", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low_salt_tolerance", "target": "bounded_growth_window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "id": "edge-3", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high_salt_tolerance", "target": "bounded_growth_window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded_growth_window", "target": "nacl_range_trait"}, {"description": "c-di-AMP binds gating subunits of Trk/Ktr systems, inhibiting potassium influx.", "evidence": [{"notes": "TrkAH, KtrAB and KtrCD gating subunits bind c-di-AMP, inhibiting potassium influx (Foster et al. 2024, review across multiple bacteria).", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-5", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "c_di_amp", "target": "trk_ktr_k_influx"}, {"description": "c-di-AMP directly inhibits high-affinity K+ uptake transporters KimA and Kup.", "evidence": [{"notes": "High-affinity transporters (KimA, KupA/KupB) are inhibited directly by cyclic di-AMP, affecting K+ homeostasis underlying NaCl limits.", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-6", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "c_di_amp", "target": "kima_kup_k_uptake"}, {"description": "c-di-AMP binding to KdpD inhibits kdpFABC transcription.", "evidence": [{"notes": "KdpD binding of cyclic di-AMP inhibits kdpFABC transcription (Foster et al. 2024 review).", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-7", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "c_di_amp", "target": "kdp_expression"}, {"description": "c-di-AMP binds and regulates OpuA-like compatible-solute importers.", "evidence": [{"notes": "c-di-AMP binds OpuA-like ABC compatible-solute importers, linking the regulatory module to osmolyte accumulation.", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "c_di_amp", "target": "opua_solute_importers"}, {"description": "Elevated c-di-AMP correlates with salt sensitivity and narrower NaCl tolerance.", "evidence": [{"notes": "High cyclic di-AMP levels correlate with salt sensitivity, narrowing salt tolerance via suppressed K+ uptake (Foster et al. 2024 review).", "reference": "DOI:10.1128/MMBR.00181-23"}], "id": "edge-9", "is_orphan": false, "predicate": "reduces", "predicate_id": null, "source": "c_di_amp", "target": "high_salt_tolerance"}], "evidence_rows": [{"description": "Ambient NaCl defines the axis over which the growth window is bounded.", "edge_id": "edge-1", "evidence": [{"notes": "Supports NaCl as the axis bounding the growth window.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "ambient NaCl concentration", "target": "bounded growth window"}, {"description": "Tolerance to low salt sets the lower bound of the growth window.", "edge_id": "edge-2", "evidence": [{"notes": "Saline-Systems review frames halophily around salt-tolerance mechanisms that span both the lower and upper limits of growth-supporting salinity.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "cope with the high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "low-salt tolerance", "target": "bounded growth window"}, {"description": "Tolerance to high salt sets the upper bound of the growth window.", "edge_id": "edge-3", "evidence": [{"notes": "Supports tolerance to high salt as the upper-bound mechanism.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "high salt concentrations"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "high-salt tolerance", "target": "bounded growth window"}, {"description": "The bounded growth window manifests the NaCl-range phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "bounded growth window", "target": "NaCl range"}, {"description": "c-di-AMP binds gating subunits of Trk/Ktr systems, inhibiting potassium influx.", "edge_id": "edge-5", "evidence": [{"notes": "TrkAH, KtrAB and KtrCD gating subunits bind c-di-AMP, inhibiting potassium influx (Foster et al. 2024, review across multiple bacteria).", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "inhibits", "predicate_id": null, "source": "cyclic di-AMP", "target": "Trk/Ktr potassium influx systems"}, {"description": "c-di-AMP directly inhibits high-affinity K+ uptake transporters KimA and Kup.", "edge_id": "edge-6", "evidence": [{"notes": "High-affinity transporters (KimA, KupA/KupB) are inhibited directly by cyclic di-AMP, affecting K+ homeostasis underlying NaCl limits.", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "inhibits", "predicate_id": null, "source": "cyclic di-AMP", "target": "KimA/Kup high-affinity K+ uptake transporters"}, {"description": "c-di-AMP binding to KdpD inhibits kdpFABC transcription.", "edge_id": "edge-7", "evidence": [{"notes": "KdpD binding of cyclic di-AMP inhibits kdpFABC transcription (Foster et al. 2024 review).", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "inhibits", "predicate_id": null, "source": "cyclic di-AMP", "target": "Kdp system / KdpFABC expression"}, {"description": "c-di-AMP binds and regulates OpuA-like compatible-solute importers.", "edge_id": "edge-8", "evidence": [{"notes": "c-di-AMP binds OpuA-like ABC compatible-solute importers, linking the regulatory module to osmolyte accumulation.", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "regulates", "predicate_id": null, "source": "cyclic di-AMP", "target": "OpuA-like compatible-solute importers"}, {"description": "Elevated c-di-AMP correlates with salt sensitivity and narrower NaCl tolerance.", "edge_id": "edge-9", "evidence": [{"notes": "High cyclic di-AMP levels correlate with salt sensitivity, narrowing salt tolerance via suppressed K+ uptake (Foster et al. 2024 review).", "reference": "DOI:10.1128/MMBR.00181-23"}], "predicate": "reduces", "predicate_id": null, "source": "cyclic di-AMP", "target": "high-salt tolerance"}], "graph_id": "nacl_range_tolerance_breadth", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Ambient NaCl level imposed on the cell.", "grounding": null, "id": "ambient_nacl", "is_orphan": false, "label": "ambient NaCl concentration", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Span of NaCl concentrations between the minimum and maximum that support growth.", "grounding": null, "id": "bounded_growth_window", "is_orphan": false, "label": "bounded growth window", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Second messenger nucleotide that regulates K+ uptake and osmolyte transport.", "grounding": null, "id": "c_di_amp", "is_orphan": false, "label": "cyclic di-AMP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain osmotic balance under elevated NaCl.", "grounding": null, "id": "high_salt_tolerance", "is_orphan": false, "label": "high-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the kdpFABC high-affinity K+ uptake operon, regulated via KdpD.", "grounding": null, "id": "kdp_expression", "is_orphan": false, "label": "Kdp system / KdpFABC expression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "High-affinity potassium uptake transporters (KimA, KupA/KupB) directly inhibited by c-di-AMP.", "grounding": null, "id": "kima_kup_k_uptake", "is_orphan": false, "label": "KimA/Kup high-affinity K+ uptake transporters", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Capacity to maintain turgor and ion homeostasis at low ambient NaCl.", "grounding": null, "id": "low_salt_tolerance", "is_orphan": false, "label": "low-salt tolerance", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range_trait", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "ABC-type compatible-solute importers (OpuA family) bound and regulated by c-di-AMP.", "grounding": null, "id": "opua_solute_importers", "is_orphan": false, "label": "OpuA-like compatible-solute importers", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Low-affinity potassium import systems (TrkAH, KtrAB, KtrCD) with c-di-AMP-binding gating subunits.", "grounding": null, "id": "trk_ktr_k_influx", "is_orphan": false, "label": "Trk/Ktr potassium influx systems", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "NaCl-range osmotic-tolerance breadth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -663,7 +758,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -48,6 +48,26 @@ causal_graphs:
     label: proton efflux transport
     node_type: MOLECULAR_FUNCTION
     description: Export or exclusion of excess protons from the cytoplasm.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylase system
+    node_type: PATHWAY
+    description: Proton-consuming amino-acid decarboxylation (e.g. glutamate/Gad system)
+      that consumes intracellular H+.
+  - node_id: membrane_lipid_remodeling
+    label: membrane lipid remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Changes in membrane lipid composition (e.g. cyclopropane fatty acid
+      formation, altered saturated/unsaturated ratio) increasing acid resistance.
+  - node_id: inward_proton_leakage
+    label: inward proton leakage
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive entry of protons across the membrane that challenges cytoplasmic
+      pH homeostasis.
+  - node_id: cation_proton_antiport
+    label: cation/H+ antiport
+    node_type: MOLECULAR_FUNCTION
+    description: Na+/H+ and K+/H+ antiporter activity exchanging cations for protons
+      to stabilize intracellular pH.
   edges:
   - subject: acidic_exposure
     predicate: challenges
@@ -85,6 +105,53 @@ causal_graphs:
       snippet: bacterial pH homeostasis is a cell-wide physiological process
       notes: Supports pH homeostasis as a broad mechanism for acid tolerance.
     predicate_id: RO:0002327
+  - subject: amino_acid_decarboxylation
+    predicate: maintains
+    object: cytoplasmic_ph_homeostasis
+    description: Amino-acid decarboxylation (e.g. GadA/B converting glutamate to GABA
+      + CO2) consumes intracellular H+ and sustains cytoplasmic pH homeostasis under
+      acid stress.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: GadA/B decarboxylate glutamate to GABA + CO2 while consuming intracellular
+        H+; broadly reusable proton-consuming module across bacteria/LAB.
+  - subject: membrane_lipid_remodeling
+    predicate: increases
+    object: acidotolerant_trait
+    description: Membrane lipid remodeling (e.g. conversion of unsaturated to cyclopropane
+      fatty acids) reduces proton permeability and improves acid resistance.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: Membrane lipids enhance acid resistance by altering saturated/unsaturated
+        ratios or converting unsaturated fatty acids to cyclopropane fatty acids;
+        generic membrane mechanism.
+  - subject: membrane_lipid_remodeling
+    predicate: reduces
+    object: inward_proton_leakage
+    description: Changes in membrane lipids and porins minimize passive inward proton
+      leakage, a broad cross-taxon pH-homeostasis mechanism.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: 'Krulwich review: changes in membrane lipids and porins minimize inward
+        proton leakage.'
+  - subject: inward_proton_leakage
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: Inward proton leakage raises cytoplasmic proton load, opposing maintenance
+      of internal pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: pH homeostasis must counter inward proton leakage to keep cytoplasmic
+        pH near neutral.
+  - subject: cation_proton_antiport
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: Na+/H+ and K+/H+ antiporters exchange cations for protons to stabilize
+      intracellular pH, a core cross-bacterial homeostasis mechanism.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Na+/H+ and K+/H+ antiporters support cytoplasmic pH control; generic
+        across bacteria.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941434+00:00'
   curator: seed_from_metpo
@@ -120,4 +187,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 causal-node grounding(s) (obsolete/wrong GO -> corrected, verified
     vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

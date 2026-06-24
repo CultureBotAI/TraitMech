@@ -107,12 +107,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>MreB</strong>
+            <span class="edge-predicate">guides</span>
+            <strong>lateral peptidoglycan synthesis</strong>
+            
+            <p>MreB filaments orient lateral PG synthesis to maintain rod-like cell shape.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-020-0366-3</code>
+                
+                <span class="meta">MreB orients peptidoglycan synthesis to generate or maintain a smooth cylindrical rod shape.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>RodZ</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>MreB polymer localization/assembly</strong>
+            
+            <p>RodZ modulates geometric localization and assembly of MreB.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12964-025-02373-y</code>
+                
+                <span class="meta">RodZ modulates geometric localization of MreB and is required for proper MreB cytoskeleton assembly.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>RodZ</strong>
+            <span class="edge-predicate">scaffolds</span>
+            <strong>elongasome complex</strong>
+            
+            <p>RodZ provides a scaffold for the elongasome via MreB, RodA, PBP2, PBP1A/1B.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-020-0366-3</code>
+                
+                <span class="meta">RodZ interacts with MreB, RodA, PBP2 and PBP1A/1B, providing a scaffold for the elongasome.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>MreC</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>PBP2</strong>
+            
+            <p>MreC induces a structural change in PBP2 promoting its TPase activity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-020-0366-3</code>
+                
+                <span class="meta">MreC induces a structural change in PBP2, promoting PBP2 TPase and RodA GTase activity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>RodA</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>lateral peptidoglycan synthesis</strong>
+            
+            <p>SEDS protein RodA with cognate bPBP mediates lateral PG incorporation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2021.01.011</code>
+                
+                <span class="meta">SEDS proteins RodA/FtsW with cognate bPBPs mediate lateral versus septal PG incorporation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>FtsW</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>septal peptidoglycan incorporation</strong>
+            
+            <p>FtsW with cognate bPBP mediates septal PG incorporation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.mib.2021.01.011</code>
+                
+                <span class="meta">FtsW with cognate bPBP mediates septal PG incorporation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -268,6 +374,12 @@
           <time>2026-05-24T04:13:21Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -627,7 +739,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking graded polar peptidoglycan growth and reduced end-cap radius to fusiform tapered morphology.", "edges": [{"description": "Graded PG growth produces reduced end-cap radius.", "evidence": [{"notes": "Supports polar PG growth as the mechanism producing tapered ends.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "graded_polar_pg", "target": "end_cap_taper"}, {"description": "End-cap taper at both poles yields the fusiform body geometry.", "evidence": [{"notes": "Supports tapered geometry as a genetically determined shape outcome.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "end_cap_taper", "target": "tapered_geometry"}, {"description": "Tapered geometry at both poles manifests the fusiform-shaped trait.", "evidence": [{"notes": "Supports fusiform morphology as the trait endpoint.", "reference": "DOI:10.1111/1462-2920.13731", "snippet": "Fusobacterium nucleatum"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tapered_geometry", "target": "fusiform_shaped_trait"}], "evidence_rows": [{"description": "Graded PG growth produces reduced end-cap radius.", "edge_id": "edge-1", "evidence": [{"notes": "Supports polar PG growth as the mechanism producing tapered ends.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "graded polar peptidoglycan growth", "target": "end-cap taper"}, {"description": "End-cap taper at both poles yields the fusiform body geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tapered geometry as a genetically determined shape outcome.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "end-cap taper", "target": "tapered geometry"}, {"description": "Tapered geometry at both poles manifests the fusiform-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports fusiform morphology as the trait endpoint.", "reference": "DOI:10.1111/1462-2920.13731", "snippet": "Fusobacterium nucleatum"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tapered geometry", "target": "fusiform shaped"}], "graph_id": "fusiform_shaped_tapered_polar_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Reduction in radius near the cell poles producing pointed ends.", "grounding": null, "id": "end_cap_taper", "is_orphan": false, "label": "end-cap taper", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Cell wider at middle and tapering at both poles.", "grounding": "METPO:1000690", "id": "fusiform_shaped_trait", "is_orphan": false, "label": "fusiform shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Polar PG growth with reduced incorporation toward the cell tips.", "grounding": null, "id": "graded_polar_pg", "is_orphan": false, "label": "graded polar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-body geometry that narrows toward both poles.", "grounding": null, "id": "tapered_geometry", "is_orphan": false, "label": "tapered geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Fusiform-shape tapered polar growth"}];
+  var graphs = [{"description": "DOI-backed graph linking graded polar peptidoglycan growth and reduced end-cap radius to fusiform tapered morphology.", "edges": [{"description": "Graded PG growth produces reduced end-cap radius.", "evidence": [{"notes": "Supports polar PG growth as the mechanism producing tapered ends.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "graded_polar_pg", "target": "end_cap_taper"}, {"description": "End-cap taper at both poles yields the fusiform body geometry.", "evidence": [{"notes": "Supports tapered geometry as a genetically determined shape outcome.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "end_cap_taper", "target": "tapered_geometry"}, {"description": "Tapered geometry at both poles manifests the fusiform-shaped trait.", "evidence": [{"notes": "Supports fusiform morphology as the trait endpoint.", "reference": "DOI:10.1111/1462-2920.13731", "snippet": "Fusobacterium nucleatum"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tapered_geometry", "target": "fusiform_shaped_trait"}, {"description": "MreB filaments orient lateral PG synthesis to maintain rod-like cell shape.", "evidence": [{"notes": "MreB orients peptidoglycan synthesis to generate or maintain a smooth cylindrical rod shape.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "id": "edge-4", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "mreb", "target": "lateral_pg_synthesis"}, {"description": "RodZ modulates geometric localization and assembly of MreB.", "evidence": [{"notes": "RodZ modulates geometric localization of MreB and is required for proper MreB cytoskeleton assembly.", "reference": "DOI:10.1186/s12964-025-02373-y"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "rodz", "target": "mreb_localization"}, {"description": "RodZ provides a scaffold for the elongasome via MreB, RodA, PBP2, PBP1A/1B.", "evidence": [{"notes": "RodZ interacts with MreB, RodA, PBP2 and PBP1A/1B, providing a scaffold for the elongasome.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "id": "edge-6", "is_orphan": false, "predicate": "scaffolds", "predicate_id": null, "source": "rodz", "target": "elongasome"}, {"description": "MreC induces a structural change in PBP2 promoting its TPase activity.", "evidence": [{"notes": "MreC induces a structural change in PBP2, promoting PBP2 TPase and RodA GTase activity.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "id": "edge-7", "is_orphan": false, "predicate": "activates", "predicate_id": null, "source": "mrec", "target": "pbp2"}, {"description": "SEDS protein RodA with cognate bPBP mediates lateral PG incorporation.", "evidence": [{"notes": "SEDS proteins RodA/FtsW with cognate bPBPs mediate lateral versus septal PG incorporation.", "reference": "DOI:10.1016/j.mib.2021.01.011"}], "id": "edge-8", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "roda", "target": "lateral_pg_synthesis"}, {"description": "FtsW with cognate bPBP mediates septal PG incorporation.", "evidence": [{"notes": "FtsW with cognate bPBP mediates septal PG incorporation.", "reference": "DOI:10.1016/j.mib.2021.01.011"}], "id": "edge-9", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "ftsw", "target": "septal_pg_incorporation"}], "evidence_rows": [{"description": "Graded PG growth produces reduced end-cap radius.", "edge_id": "edge-1", "evidence": [{"notes": "Supports polar PG growth as the mechanism producing tapered ends.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "polar growth"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "graded polar peptidoglycan growth", "target": "end-cap taper"}, {"description": "End-cap taper at both poles yields the fusiform body geometry.", "edge_id": "edge-2", "evidence": [{"notes": "Supports tapered geometry as a genetically determined shape outcome.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "end-cap taper", "target": "tapered geometry"}, {"description": "Tapered geometry at both poles manifests the fusiform-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports fusiform morphology as the trait endpoint.", "reference": "DOI:10.1111/1462-2920.13731", "snippet": "Fusobacterium nucleatum"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "tapered geometry", "target": "fusiform shaped"}, {"description": "MreB filaments orient lateral PG synthesis to maintain rod-like cell shape.", "edge_id": "edge-4", "evidence": [{"notes": "MreB orients peptidoglycan synthesis to generate or maintain a smooth cylindrical rod shape.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "predicate": "guides", "predicate_id": null, "source": "MreB", "target": "lateral peptidoglycan synthesis"}, {"description": "RodZ modulates geometric localization and assembly of MreB.", "edge_id": "edge-5", "evidence": [{"notes": "RodZ modulates geometric localization of MreB and is required for proper MreB cytoskeleton assembly.", "reference": "DOI:10.1186/s12964-025-02373-y"}], "predicate": "regulates", "predicate_id": null, "source": "RodZ", "target": "MreB polymer localization/assembly"}, {"description": "RodZ provides a scaffold for the elongasome via MreB, RodA, PBP2, PBP1A/1B.", "edge_id": "edge-6", "evidence": [{"notes": "RodZ interacts with MreB, RodA, PBP2 and PBP1A/1B, providing a scaffold for the elongasome.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "predicate": "scaffolds", "predicate_id": null, "source": "RodZ", "target": "elongasome complex"}, {"description": "MreC induces a structural change in PBP2 promoting its TPase activity.", "edge_id": "edge-7", "evidence": [{"notes": "MreC induces a structural change in PBP2, promoting PBP2 TPase and RodA GTase activity.", "reference": "DOI:10.1038/s41579-020-0366-3"}], "predicate": "activates", "predicate_id": null, "source": "MreC", "target": "PBP2"}, {"description": "SEDS protein RodA with cognate bPBP mediates lateral PG incorporation.", "edge_id": "edge-8", "evidence": [{"notes": "SEDS proteins RodA/FtsW with cognate bPBPs mediate lateral versus septal PG incorporation.", "reference": "DOI:10.1016/j.mib.2021.01.011"}], "predicate": "required for", "predicate_id": null, "source": "RodA", "target": "lateral peptidoglycan synthesis"}, {"description": "FtsW with cognate bPBP mediates septal PG incorporation.", "edge_id": "edge-9", "evidence": [{"notes": "FtsW with cognate bPBP mediates septal PG incorporation.", "reference": "DOI:10.1016/j.mib.2021.01.011"}], "predicate": "required for", "predicate_id": null, "source": "FtsW", "target": "septal peptidoglycan incorporation"}], "graph_id": "fusiform_shaped_tapered_polar_growth", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Lateral wall-growth machinery containing MreB, RodA, PBP2, RodZ, MreC, MreD.", "grounding": null, "id": "elongasome", "is_orphan": false, "label": "elongasome complex", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Reduction in radius near the cell poles producing pointed ends.", "grounding": null, "id": "end_cap_taper", "is_orphan": false, "label": "end-cap taper", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS divisome polymerase for septal PG incorporation.", "grounding": null, "id": "ftsw", "is_orphan": false, "label": "FtsW", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Cell wider at middle and tapering at both poles.", "grounding": "METPO:1000690", "id": "fusiform_shaped_trait", "is_orphan": false, "label": "fusiform shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Polar PG growth with reduced incorporation toward the cell tips.", "grounding": null, "id": "graded_polar_pg", "is_orphan": false, "label": "graded polar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall PG incorporation that sustains elongated cell geometry.", "grounding": null, "id": "lateral_pg_synthesis", "is_orphan": false, "label": "lateral peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial actin homolog that orients peptidoglycan synthesis to maintain cell shape.", "grounding": null, "id": "mreb", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Geometric localization and assembly of the MreB actin cytoskeleton.", "grounding": null, "id": "mreb_localization", "is_orphan": false, "label": "MreB polymer localization/assembly", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Elongasome component that activates PBP2 and RodA synthesis functions.", "grounding": null, "id": "mrec", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Class B PBP in the elongasome coupled to RodA for rod-like wall growth.", "grounding": null, "id": "pbp2", "is_orphan": false, "label": "PBP2", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS glycosyltransferase mediating lateral PG incorporation with PBP2.", "grounding": null, "id": "roda", "is_orphan": false, "label": "RodA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "MreB-associated shape protein modulating MreB localization and elongasome assembly.", "grounding": null, "id": "rodz", "is_orphan": false, "label": "RodZ", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Division-site PG synthesis relevant to end-shaping and growth partitioning.", "grounding": null, "id": "septal_pg_incorporation", "is_orphan": false, "label": "septal peptidoglycan incorporation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-body geometry that narrows toward both poles.", "grounding": null, "id": "tapered_geometry", "is_orphan": false, "label": "tapered geometry", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Fusiform-shape tapered polar growth"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -638,7 +750,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

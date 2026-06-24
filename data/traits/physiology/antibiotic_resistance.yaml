@@ -40,6 +40,48 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0046677
     description: Cellular response conferring survival under antibiotic exposure.
+  - node_id: intracellular_antibiotic_concentration
+    label: intracellular antibiotic concentration
+    node_type: CHEMICAL
+    description: Concentration of antibiotic accumulated inside the cell.
+  - node_id: outer_membrane_porin
+    label: outer membrane porin
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane channel mediating antibiotic influx; loss/modification
+      reduces permeability.
+  - node_id: antibiotic_influx
+    label: antibiotic influx
+    node_type: BIOLOGICAL_PROCESS
+    description: Uptake of antibiotic across the cell envelope.
+  - node_id: beta_lactamase
+    label: beta-lactamase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that hydrolyzes the beta-lactam ring, inactivating beta-lactam
+      antibiotics.
+  - node_id: beta_lactam_antibiotic
+    label: beta-lactam antibiotic
+    node_type: CHEMICAL
+    description: Antibiotic class containing a beta-lactam ring.
+  - node_id: qrdr_mutation
+    label: QRDR mutation in DNA gyrase/topoisomerase IV
+    node_type: GENE_OR_PROTEIN
+    description: Quinolone resistance-determining region mutation altering the fluoroquinolone
+      target.
+  - node_id: fluoroquinolone
+    label: fluoroquinolone
+    node_type: CHEMICAL
+    description: Fluoroquinolone class antibiotic targeting DNA gyrase/topoisomerase
+      IV.
+  - node_id: rrna_methylation_23s
+    label: 23S rRNA methylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Methylation of 23S rRNA that modifies the ribosomal antibiotic-binding
+      site.
+  - node_id: macrolide_antibiotic
+    label: macrolide antibiotic
+    node_type: CHEMICAL
+    description: Macrolide class antibiotic binding the 23S rRNA of the large ribosomal
+      subunit.
   edges:
   - subject: efflux_pump
     predicate: enables
@@ -57,6 +99,51 @@ causal_graphs:
     - reference: DOI:10.1038/s41579-022-00820-y
       notes: Updated review of antibiotic-resistance mechanisms.
     predicate_id: biolink:participates_in
+  - subject: efflux_pump
+    predicate: decreases
+    object: intracellular_antibiotic_concentration
+    description: Efflux pump overexpression lowers intracellular antibiotic concentration,
+      producing resistance phenotypes.
+    evidence:
+    - reference: DOI:10.3390/pharmaceutics16020170
+      notes: Efflux pumps reduce intracellular antibiotic concentrations; upregulation
+        under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).
+  - subject: outer_membrane_porin
+    predicate: decreases
+    object: antibiotic_influx
+    description: Porin loss/modification reduces antibiotic influx, a major resistance
+      mechanism.
+    evidence:
+    - reference: DOI:10.3390/pharmaceutics16020170
+      notes: Reduced permeability/porin loss and modification of outer membrane porin
+        channels listed as major resistance mechanisms.
+  - subject: beta_lactamase
+    predicate: hydrolyzes
+    object: beta_lactam_antibiotic
+    description: Beta-lactamases hydrolyze the beta-lactam ring, inactivating the
+      drug.
+    evidence:
+    - reference: DOI:10.1038/s43856-024-00591-y
+      notes: Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam
+        ring. Strong canonical mechanism.
+  - subject: qrdr_mutation
+    predicate: confers resistance to
+    object: fluoroquinolone
+    description: QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone
+      resistance (class-level edge).
+    evidence:
+    - reference: DOI:10.3389/fphar.2024.1444781
+      notes: QRDR mutations in DNA gyrase and topoisomerase IV cause quinolone/fluoroquinolone
+        resistance.
+  - subject: rrna_methylation_23s
+    predicate: decreases binding of
+    object: macrolide_antibiotic
+    description: 23S rRNA methylation modifies the ribosomal target, decreasing macrolide
+      binding and conferring resistance.
+    evidence:
+    - reference: DOI:10.3389/fphar.2024.1444781
+      notes: Methylation of 23S rRNA confers linezolid, chloramphenicol, clindamycin,
+        and macrolide resistance.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -75,4 +162,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A3RNR9×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

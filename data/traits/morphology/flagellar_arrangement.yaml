@@ -1,8 +1,8 @@
 identifier: traitmech:000056
 label: flagellar arrangement
-definition: A morphology trait describing the number and spatial distribution of
-  flagella on a cell (the flagellation pattern), e.g. monotrichous, lophotrichous,
-  amphitrichous, or peritrichous.
+definition: A morphology trait describing the number and spatial distribution of flagella
+  on a cell (the flagellation pattern), e.g. monotrichous, lophotrichous, amphitrichous,
+  or peritrichous.
 definition_source: DOI:10.1093/femsre/fuv034
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,9 +15,9 @@ synonyms:
   source: DOI:10.1093/femsre/fuv034
 evidence:
 - reference: DOI:10.1093/femsre/fuv034
-  notes: Schuhmacher, Thormann & Bange describe how bacteria maintain a regular
-    number and cellular location of flagella (the flagellation pattern); parent of
-    the specific arrangement sub-variants.
+  notes: Schuhmacher, Thormann & Bange describe how bacteria maintain a regular number
+    and cellular location of flagella (the flagellation pattern); parent of the specific
+    arrangement sub-variants.
 - reference: DOI:10.3390/biom9070279
   notes: Bacterial flagellum review supports the flagellum as the locomotory organelle
     whose number and placement define flagellar arrangement.
@@ -41,6 +41,35 @@ causal_graphs:
     label: FlhF/FlhG flagellar placement regulation
     node_type: BIOLOGICAL_PROCESS
     description: Regulatory system setting flagellar number and cellular position.
+  - node_id: flhf
+    label: FlhF
+    node_type: GENE_OR_PROTEIN
+    description: SRP-type GTPase that marks the future flagellar assembly site and
+      directs MS-ring protein FliF to the cell pole.
+  - node_id: flhg
+    label: FlhG
+    node_type: GENE_OR_PROTEIN
+    description: MinD-type ATPase that stimulates FlhF GTPase activity and limits/positions
+      flagellar number.
+  - node_id: flif_msring
+    label: FliF (MS-ring protein)
+    node_type: GENE_OR_PROTEIN
+    description: MS-ring forming protein recruited to the cell pole as the earliest
+      basal-body assembly step.
+  - node_id: flig
+    label: FliG
+    node_type: GENE_OR_PROTEIN
+    description: C-ring switch protein bound by FlhF and engaging FliF during basal-body
+      assembly.
+  - node_id: cell_pole
+    label: cell pole
+    node_type: CELLULAR_LOCALIZATION
+    description: Polar region of the bacterial cell where flagellar assembly is nucleated.
+  - node_id: flagellar_assembly_site_marking
+    label: marking of future flagellar assembly site
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial designation of the future flagellar assembly site that precedes
+      basal-body assembly.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -48,8 +77,8 @@ causal_graphs:
     description: The cellular distribution of flagella defines the arrangement.
     evidence:
     - reference: DOI:10.3390/biom9070279
-      notes: Bacterial flagellum review supports the flagellum as the locomotory
-        organelle whose number and placement define the arrangement.
+      notes: Bacterial flagellum review supports the flagellum as the locomotory organelle
+        whose number and placement define the arrangement.
     predicate_id: METPO:2007500
   - subject: flhf_flhg_regulation
     predicate: regulates
@@ -60,18 +89,77 @@ causal_graphs:
       notes: Schuhmacher et al. describe FlhF/FlhG governance of the flagellation
         pattern.
     predicate_id: RO:0002211
+  - subject: flhg
+    predicate: stimulates GTPase activity of
+    object: flhf
+    description: FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory
+      interaction governing flagellar placement.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: 'Dornes 2024: "FlhG acts on FlhF by stimulating its GTPase activity"
+        - conserved core regulatory edge.'
+  - subject: flhf
+    predicate: directs to cell pole
+    object: flif_msring
+    description: FlhF is required to direct the initial MS-ring protein FliF to the
+      cell pole, nucleating basal-body assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: 'Dornes 2024: "FlhF... is required to direct the initial MS-ring protein
+        FliF to the cell pole."'
+  - subject: flhf
+    predicate: binds
+    object: flig
+    description: FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring
+      assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: 'Dornes 2024: FlhF B-domain (FliG Interaction Domain) is necessary and
+        sufficient for FliG binding.'
+  - subject: flig
+    predicate: engages / recruits
+    object: flif_msring
+    description: FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG
+      complex to the pole.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: 'Dornes 2024: "FlhF-bound FliG then engages the MS-ring protein FliF,
+        recruiting a FliF-FliG complex to the pole."'
+  - subject: flhf
+    predicate: establishes
+    object: flagellar_assembly_site_marking
+    description: FlhF marks the future flagellar assembly site, after which basal-body
+      assembly proceeds.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: 'Schuhmacher 2015: "After FlhF marked the future flagellar site, assembly
+        of the basal body will proceed."'
+  - subject: flagellar_assembly_site_marking
+    predicate: occurs at
+    object: cell_pole
+    description: The marking of the future flagellar assembly site localizes basal-body
+      building blocks to the cell pole.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      notes: 'Schuhmacher 2015: FlhF B-domain recruits MS-ring component FliF to the
+        cell pole.'
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY axis class (flagellar arrangement) under the
-    existing flagellated class (METPO:1000704); parent of monotrichous/lophotrichous/
+  changes: Proposed candidate MORPHOLOGY axis class (flagellar arrangement) under
+    the existing flagellated class (METPO:1000704); parent of monotrichous/lophotrichous/
     amphitrichous/peritrichous.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (FlhF/FlhG flagellation pattern) with
-    GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    GO node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

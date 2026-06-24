@@ -53,6 +53,21 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygen-dependent transcriptional regulator of anaerobic respiration
       genes in E. coli.
+  - node_id: arca_regulator
+    label: ArcA/ArcAB two-component regulator
+    node_type: GENE_OR_PROTEIN
+    description: Two-component regulatory system that represses the aerobic respiration
+      program during the aerobic-to-anaerobic transition.
+  - node_id: alternative_electron_acceptors
+    label: alternative terminal electron acceptors
+    node_type: CHEMICAL
+    description: Non-oxygen terminal electron acceptors (e.g. nitrate, fumarate, DMSO,
+      TMAO) used for anaerobic electron transport.
+  - node_id: anaerobic_etc
+    label: anaerobic electron transport chain operation
+    node_type: BIOLOGICAL_PROCESS
+    description: Operation of the electron transport chain using non-oxygen terminal
+      electron acceptors when O2 is absent.
   edges:
   - subject: molecular_oxygen
     predicate: enables
@@ -92,6 +107,42 @@ causal_graphs:
       snippet: expression of anaerobic respiration
       notes: E. coli-focused evidence for anaerobic respiratory programs in a facultative
         anaerobe.
+  - subject: molecular_oxygen
+    predicate: oxidizes/inactivates
+    object: fnr_regulator
+    description: Oxygen oxidizes the FNR [4Fe-4S] cluster, inactivating FNR and preventing
+      transcription of anaerobic respiration genes.
+    evidence:
+    - reference: DOI:10.1101/2025.01.08.631794
+      notes: In the presence of oxygen, FNR is inactivated through oxidation of its
+        FeS cluster, preventing transcription of anaerobic respiration genes.
+  - subject: arca_regulator
+    predicate: represses
+    object: aerobic_respiration
+    description: ArcAB represses the aerobic respiration program, mediating metabolic
+      adaptation to lower oxygen.
+    evidence:
+    - reference: DOI:10.1128/mbio.01448-23
+      notes: ArcAB, a two-component regulatory system that represses aerobic respiration,
+        is a key mediator of metabolic adaptation.
+  - subject: alternative_electron_acceptors
+    predicate: enable
+    object: anaerobic_etc
+    description: Alternative terminal electron acceptors enable anaerobic electron
+      transport chain operation when oxygen is absent.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51029-x
+      notes: Alternative terminal electron acceptors (nitrate, fumarate, DMSO, TMAO)
+        allow anaerobic ETC operation when O2 is absent.
+  - subject: anaerobic_etc
+    predicate: is part of
+    object: anaerobic_respiration
+    description: Anaerobic ETC operation constitutes the respiratory energy metabolism
+      used in the absence of oxygen.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-51029-x
+      notes: Anaerobic ETC operation with alternative terminal electron acceptors
+        underlies anaerobic respiration in facultative anaerobes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.851077+00:00'
   curator: seed_from_metpo
@@ -119,4 +170,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

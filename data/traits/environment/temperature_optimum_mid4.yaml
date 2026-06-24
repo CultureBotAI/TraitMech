@@ -46,6 +46,53 @@ causal_graphs:
     label: warm-mesophile adaptation
     node_type: BIOLOGICAL_PROCESS
     description: Membrane and enzyme repertoires tuned for warm host-body temperatures.
+  - node_id: temperature_downshift
+    label: temperature downshift
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A decrease in ambient growth temperature.
+  - node_id: unsaturated_fatty_acid_proportion
+    label: unsaturated fatty acid proportion
+    node_type: CHEMICAL
+    description: Proportion of unsaturated fatty acids in membrane phospholipids.
+  - node_id: membrane_fluidity_homeostasis
+    label: membrane fluidity homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of optimal membrane fluidity (homeoviscous adaptation).
+  - node_id: unsaturated_fa_biosynthesis_response
+    label: unsaturated fatty acid biosynthesis response
+    node_type: BIOLOGICAL_PROCESS
+    description: Upregulation of unsaturated fatty acid biosynthesis upon sensed membrane
+      rigidification.
+  - node_id: rna_thermometer
+    label: RNA thermometer hairpin
+    node_type: GENE_OR_PROTEIN
+    description: Cis-regulatory mRNA hairpin (e.g. ROSE/FourU) controlling translation
+      by temperature.
+  - node_id: shine_dalgarno_sequence
+    label: Shine-Dalgarno / AUG ribosome binding site
+    node_type: GENE_OR_PROTEIN
+    description: Ribosome-binding region of mRNA required for translation initiation.
+  - node_id: temperature_upshift
+    label: temperature upshift / heat shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: An increase in ambient temperature, including heat shock.
+  - node_id: translation_initiation
+    label: ribosome binding and translation initiation
+    node_type: BIOLOGICAL_PROCESS
+    description: Binding of the ribosome to mRNA and initiation of translation.
+  - node_id: dnak_chaperone
+    label: DnaK chaperone
+    node_type: GENE_OR_PROTEIN
+    description: Hsp70-family chaperone that binds and sequesters the heat-shock sigma
+      factor RpoH.
+  - node_id: rpoh_sigma_factor
+    label: RpoH (sigma-32) heat-shock sigma factor
+    node_type: GENE_OR_PROTEIN
+    description: Alternative sigma factor directing the heat-shock response regulon.
+  - node_id: ftsh_protease
+    label: FtsH protease
+    node_type: GENE_OR_PROTEIN
+    description: ATP-dependent membrane protease that controls RpoH protein levels.
   edges:
   - subject: warm_environment
     predicate: engages
@@ -75,6 +122,72 @@ causal_graphs:
       notes: Supports the 34–40 °C optimum as a value within the temperature-optimum
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: temperature_downshift
+    predicate: increases
+    object: unsaturated_fatty_acid_proportion
+    description: Temperature downshift increases the proportion of unsaturated fatty
+      acids (homeoviscous adaptation).
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Bacteria perform homeoviscous adaptation by incorporating proportionally
+        more unsaturated fatty acids as growth temperature decreases.
+  - subject: unsaturated_fatty_acid_proportion
+    predicate: maintains
+    object: membrane_fluidity_homeostasis
+    description: Increased unsaturated fatty acids maintain membrane fluidity homeostasis.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Disrupting bilayer order optimizes cellular processes at the new temperature;
+        membrane fluidity homeostasis.
+  - subject: membrane_fluidity_homeostasis
+    predicate: induces
+    object: unsaturated_fa_biosynthesis_response
+    description: Sensed decreases in membrane fluidity induce the unsaturated fatty
+      acid biosynthesis response.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Microbes sense decreases in membrane fluidity and initiate responses
+        that upregulate biosynthesis of unsaturated fatty acids.
+  - subject: rna_thermometer
+    predicate: occludes
+    object: shine_dalgarno_sequence
+    description: RNA thermometer hairpins occlude the Shine-Dalgarno/AUG region, repressing
+      translation at low temperature.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: ROSE and FourU RNA thermometers form inhibitory hairpins that cover Shine-Dalgarno/AUG.
+  - subject: temperature_upshift
+    predicate: melts
+    object: rna_thermometer
+    description: Temperature upshift / heat shock melts RNA thermometer structures.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: RNA thermometers are stable at low temperatures but undergo conformational
+        change (melting) at heat shock.
+  - subject: rna_thermometer
+    predicate: enables
+    object: translation_initiation
+    description: Melting of the RNA thermometer exposes the ribosome binding site
+      and enables translation initiation.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Melting releases translation inhibition, allowing ribosome binding and
+        translation initiation.
+  - subject: dnak_chaperone
+    predicate: negatively regulates
+    object: rpoh_sigma_factor
+    description: DnaK binds and retains RpoH, negatively regulating the heat-shock
+      sigma factor.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: DnaK binds and retains RpoH until heat-denatured proteins displace it.
+  - subject: ftsh_protease
+    predicate: controls abundance of
+    object: rpoh_sigma_factor
+    description: FtsH protease controls RpoH protein levels.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: ATP-dependent proteases FtsH and ClpXP control RpoH protein levels.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.821571+00:00'
   curator: seed_from_metpo
@@ -92,4 +205,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

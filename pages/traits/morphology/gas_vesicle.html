@@ -90,12 +90,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>GvpA</strong>
+            <span class="edge-predicate">forms</span>
+            <strong>gas vesicle shell</strong>
+            
+            <p>GvpA is a small hydrophobic protein that forms the hollow protein shell of the gas vesicle.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">GvpA is the structural protein that forms the hollow protein structure of GV.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>GvpC</strong>
+            <span class="edge-predicate">strengthens</span>
+            <strong>gas vesicle shell</strong>
+            
+            <p>GvpC is a coat protein that strengthens the gas vesicle shell.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">GvpC has the function of strengthening the GV shell.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>hydrophobic inner shell surface</strong>
+            <span class="edge-predicate">prevents</span>
+            <strong>water condensation into lumen</strong>
+            
+            <p>The hydrophobic inner surface prevents heterogeneous condensation of water into liquid, maintaining the gas compartment.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s44318-024-00178-2</code>
+                
+                <span class="meta">GVs maintain an inner gas compartment via a hydrophobic inner surface that prevents condensation of water into liquid.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>hydrostatic pressure</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>gas vesicle collapse</strong>
+            
+            <p>Above a critical pressure the gas vesicle irreversibly collapses.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">When GVs are under pressure, there is a critical point at which the GV irreversibly collapses.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>GvpD</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>gas vesicle formation</strong>
+            
+            <p>GvpD has an inhibitory effect on gas vesicle formation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13036-024-00426-3</code>
+                
+                <span class="meta">GvpD has an inhibitory effect on GV formation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>gas vesicle shell</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>ultrasound scattering</strong>
+            
+            <p>The gas-filled vesicle scatters ultrasound due to density/compressibility contrast with the surrounding medium.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/acssynbio.4c00283</code>
+                
+                <span class="meta">GVs scatter US due to the difference in density and compressibility of their gaseous interior relative to surrounding aqueous medium.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -227,6 +333,12 @@
           <time>2026-06-09T15:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (gas vesicle buoyancy / water-column positioning) with RO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (10 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +698,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking proteinaceous gas-filled intracellular vesicles to buoyancy and vertical positioning in the water column.", "edges": [{"description": "Internal gas-filled vesicles lower effective density and provide buoyancy.", "evidence": [{"notes": "Pfeifer describes gas vesicles as gas-filled flotation structures.", "reference": "DOI:10.1038/nrmicro2834"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "gas_vesicle_trait", "target": "buoyancy"}, {"description": "Buoyancy allows planktonic bacteria/archaea to position in the water column.", "evidence": [{"notes": "Greening \u0026 Lithgow include gas vesicles among bacterial intracellular organelles.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "buoyancy", "target": "water_column_positioning"}], "evidence_rows": [{"description": "Internal gas-filled vesicles lower effective density and provide buoyancy.", "edge_id": "edge-1", "evidence": [{"notes": "Pfeifer describes gas vesicles as gas-filled flotation structures.", "reference": "DOI:10.1038/nrmicro2834"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "gas vesicle", "target": "cellular buoyancy"}, {"description": "Buoyancy allows planktonic bacteria/archaea to position in the water column.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include gas vesicles among bacterial intracellular organelles.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellular buoyancy", "target": "water-column positioning"}], "graph_id": "gas_vesicle_buoyancy", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Reduced effective cell density permitting vertical positioning.", "grounding": null, "id": "buoyancy", "is_orphan": false, "label": "cellular buoyancy", "node_type": "QUALITY", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular gas-filled proteinaceous flotation structure.", "grounding": "traitmech:000070", "id": "gas_vesicle_trait", "is_orphan": false, "label": "gas vesicle", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Vertical migration of planktonic microbes within the water column.", "grounding": null, "id": "water_column_positioning", "is_orphan": false, "label": "water-column positioning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Gas vesicles provide buoyancy and water-column positioning"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking proteinaceous gas-filled intracellular vesicles to buoyancy and vertical positioning in the water column.", "edges": [{"description": "Internal gas-filled vesicles lower effective density and provide buoyancy.", "evidence": [{"notes": "Pfeifer describes gas vesicles as gas-filled flotation structures.", "reference": "DOI:10.1038/nrmicro2834"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "gas_vesicle_trait", "target": "buoyancy"}, {"description": "Buoyancy allows planktonic bacteria/archaea to position in the water column.", "evidence": [{"notes": "Greening \u0026 Lithgow include gas vesicles among bacterial intracellular organelles.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "buoyancy", "target": "water_column_positioning"}, {"description": "GvpA is a small hydrophobic protein that forms the hollow protein shell of the gas vesicle.", "evidence": [{"notes": "GvpA is the structural protein that forms the hollow protein structure of GV.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-3", "is_orphan": false, "predicate": "forms", "predicate_id": null, "source": "gvpa_protein", "target": "gas_vesicle_shell"}, {"description": "GvpC is a coat protein that strengthens the gas vesicle shell.", "evidence": [{"notes": "GvpC has the function of strengthening the GV shell.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-4", "is_orphan": false, "predicate": "strengthens", "predicate_id": null, "source": "gvpc_protein", "target": "gas_vesicle_shell"}, {"description": "The hydrophobic inner surface prevents heterogeneous condensation of water into liquid, maintaining the gas compartment.", "evidence": [{"notes": "GVs maintain an inner gas compartment via a hydrophobic inner surface that prevents condensation of water into liquid.", "reference": "DOI:10.1038/s44318-024-00178-2"}], "id": "edge-5", "is_orphan": false, "predicate": "prevents", "predicate_id": null, "source": "hydrophobic_inner_surface", "target": "water_condensation"}, {"description": "Above a critical pressure the gas vesicle irreversibly collapses.", "evidence": [{"notes": "When GVs are under pressure, there is a critical point at which the GV irreversibly collapses.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "hydrostatic_pressure", "target": "gas_vesicle_collapse"}, {"description": "GvpD has an inhibitory effect on gas vesicle formation.", "evidence": [{"notes": "GvpD has an inhibitory effect on GV formation.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "id": "edge-7", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "gvpd_protein", "target": "gas_vesicle_formation"}, {"description": "The gas-filled vesicle scatters ultrasound due to density/compressibility contrast with the surrounding medium.", "evidence": [{"notes": "GVs scatter US due to the difference in density and compressibility of their gaseous interior relative to surrounding aqueous medium.", "reference": "DOI:10.1021/acssynbio.4c00283"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "gas_vesicle_shell", "target": "ultrasound_scattering"}], "evidence_rows": [{"description": "Internal gas-filled vesicles lower effective density and provide buoyancy.", "edge_id": "edge-1", "evidence": [{"notes": "Pfeifer describes gas vesicles as gas-filled flotation structures.", "reference": "DOI:10.1038/nrmicro2834"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "gas vesicle", "target": "cellular buoyancy"}, {"description": "Buoyancy allows planktonic bacteria/archaea to position in the water column.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include gas vesicles among bacterial intracellular organelles.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellular buoyancy", "target": "water-column positioning"}, {"description": "GvpA is a small hydrophobic protein that forms the hollow protein shell of the gas vesicle.", "edge_id": "edge-3", "evidence": [{"notes": "GvpA is the structural protein that forms the hollow protein structure of GV.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "forms", "predicate_id": null, "source": "GvpA", "target": "gas vesicle shell"}, {"description": "GvpC is a coat protein that strengthens the gas vesicle shell.", "edge_id": "edge-4", "evidence": [{"notes": "GvpC has the function of strengthening the GV shell.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "strengthens", "predicate_id": null, "source": "GvpC", "target": "gas vesicle shell"}, {"description": "The hydrophobic inner surface prevents heterogeneous condensation of water into liquid, maintaining the gas compartment.", "edge_id": "edge-5", "evidence": [{"notes": "GVs maintain an inner gas compartment via a hydrophobic inner surface that prevents condensation of water into liquid.", "reference": "DOI:10.1038/s44318-024-00178-2"}], "predicate": "prevents", "predicate_id": null, "source": "hydrophobic inner shell surface", "target": "water condensation into lumen"}, {"description": "Above a critical pressure the gas vesicle irreversibly collapses.", "edge_id": "edge-6", "evidence": [{"notes": "When GVs are under pressure, there is a critical point at which the GV irreversibly collapses.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "causes", "predicate_id": null, "source": "hydrostatic pressure", "target": "gas vesicle collapse"}, {"description": "GvpD has an inhibitory effect on gas vesicle formation.", "edge_id": "edge-7", "evidence": [{"notes": "GvpD has an inhibitory effect on GV formation.", "reference": "DOI:10.1186/s13036-024-00426-3"}], "predicate": "inhibits", "predicate_id": null, "source": "GvpD", "target": "gas vesicle formation"}, {"description": "The gas-filled vesicle scatters ultrasound due to density/compressibility contrast with the surrounding medium.", "edge_id": "edge-8", "evidence": [{"notes": "GVs scatter US due to the difference in density and compressibility of their gaseous interior relative to surrounding aqueous medium.", "reference": "DOI:10.1021/acssynbio.4c00283"}], "predicate": "enables", "predicate_id": null, "source": "gas vesicle shell", "target": "ultrasound scattering"}], "graph_id": "gas_vesicle_buoyancy", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Reduced effective cell density permitting vertical positioning.", "grounding": null, "id": "buoyancy", "is_orphan": false, "label": "cellular buoyancy", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Irreversible structural collapse of the gas vesicle above a critical pressure.", "grounding": null, "id": "gas_vesicle_collapse", "is_orphan": false, "label": "gas vesicle collapse", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Biogenesis and assembly of gas vesicles.", "grounding": null, "id": "gas_vesicle_formation", "is_orphan": false, "label": "gas vesicle formation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Hollow proteinaceous wall enclosing the gas-filled lumen.", "grounding": null, "id": "gas_vesicle_shell", "is_orphan": false, "label": "gas vesicle shell", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular gas-filled proteinaceous flotation structure.", "grounding": "traitmech:000070", "id": "gas_vesicle_trait", "is_orphan": false, "label": "gas vesicle", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Small hydrophobic primary structural protein forming the gas vesicle shell.", "grounding": null, "id": "gvpa_protein", "is_orphan": false, "label": "GvpA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Accessory coat protein that reinforces the gas vesicle shell.", "grounding": null, "id": "gvpc_protein", "is_orphan": false, "label": "GvpC", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Regulatory protein with an inhibitory effect on gas vesicle formation.", "grounding": null, "id": "gvpd_protein", "is_orphan": false, "label": "GvpD", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Water-repellent inner surface of the gas vesicle shell.", "grounding": null, "id": "hydrophobic_inner_surface", "is_orphan": false, "label": "hydrophobic inner shell surface", "node_type": "QUALITY", "xrefs": []}, {"color": "#dcfce7", "description": "External physical pressure acting on the gas vesicle.", "grounding": null, "id": "hydrostatic_pressure", "is_orphan": false, "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Scattering of ultrasound waves due to gas/aqueous density contrast.", "grounding": null, "id": "ultrasound_scattering", "is_orphan": false, "label": "ultrasound scattering", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Vertical migration of planktonic microbes within the water column.", "grounding": null, "id": "water_column_positioning", "is_orphan": false, "label": "water-column positioning", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Heterogeneous condensation of water molecules into liquid inside the lumen.", "grounding": null, "id": "water_condensation", "is_orphan": false, "label": "water condensation into lumen", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Gas vesicles provide buoyancy and water-column positioning"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +709,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

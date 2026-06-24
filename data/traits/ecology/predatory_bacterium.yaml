@@ -1,8 +1,7 @@
 identifier: traitmech:000054
 label: predatory bacterium
-definition: A trophic-ecology lifestyle in which a bacterium actively kills and
-  consumes other bacteria for nutrients, e.g. the periplasmic predator Bdellovibrio
-  bacteriovorus.
+definition: A trophic-ecology lifestyle in which a bacterium actively kills and consumes
+  other bacteria for nutrients, e.g. the periplasmic predator Bdellovibrio bacteriovorus.
 definition_source: DOI:10.1146/annurev.micro.091208.073346
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,11 +14,11 @@ synonyms:
   source: DOI:10.1146/annurev.micro.091208.073346
 evidence:
 - reference: DOI:10.1146/annurev.micro.091208.073346
-  notes: Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus", describes
-    invasion, killing, and digestion of prey bacteria as a predatory lifestyle.
+  notes: Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus", describes invasion,
+    killing, and digestion of prey bacteria as a predatory lifestyle.
 - reference: DOI:10.1111/1462-2920.13171
-  notes: Pérez et al. survey predatory bacteria, their hunting strategies, prey
-    ranges, and genome characteristics.
+  notes: Pérez et al. survey predatory bacteria, their hunting strategies, prey ranges,
+    and genome characteristics.
 causal_graphs:
 - graph_id: predatory_bacterium_prey_killing
   title: Predatory bacteria kill and consume other bacteria
@@ -39,6 +38,40 @@ causal_graphs:
     label: bacteriolytic killing
     node_type: BIOLOGICAL_PROCESS
     description: Lysis or digestion of prey bacterial cells.
+  - node_id: invasion_portal
+    label: prey attachment/invasion complex (portal)
+    node_type: CELLULAR_LOCALIZATION
+    description: Flexible portal complex lining the prey peptidoglycan entry hole
+      during predator invasion.
+  - node_id: prey_entry_pore
+    label: prey peptidoglycan entry pore / bdelloplast pore
+    node_type: CELLULAR_LOCALIZATION
+    description: Hole in the prey peptidoglycan through which the predator enters;
+      sealed to form the bdelloplast.
+  - node_id: prey_cell_wall_modification
+    label: prey cell-wall modification enzymes
+    node_type: MOLECULAR_FUNCTION
+    description: Predator enzymes that modify the prey cell wall during invasion.
+  - node_id: bdelloplast
+    label: bdelloplast
+    node_type: CELLULAR_LOCALIZATION
+    description: Rounded, sealed killed-prey cell within which the predator grows
+      and replicates.
+  - node_id: intraperiplasmic_growth
+    label: intraperiplasmic growth / predator replication
+    node_type: BIOLOGICAL_PROCESS
+    description: Growth and replication of the predator inside the prey periplasm
+      (bdelloplast).
+  - node_id: exit_lytic_activity
+    label: exit-associated lytic activity
+    node_type: MOLECULAR_FUNCTION
+    description: Lytic activity that breaks down the prey cell wall to release predator
+      progeny.
+  - node_id: progeny_release
+    label: prey cell-wall lysis and progeny release
+    node_type: BIOLOGICAL_PROCESS
+    description: Lysis of the spent prey cell wall and exit of newly formed predator
+      progeny.
   edges:
   - subject: predatory_trait
     predicate: enables
@@ -46,8 +79,7 @@ causal_graphs:
     description: Predatory bacteria invade and lyse prey cells for nutrients.
     evidence:
     - reference: DOI:10.1146/annurev.micro.091208.073346
-      notes: Sockett describes Bdellovibrio invasion and digestion of prey
-        bacteria.
+      notes: Sockett describes Bdellovibrio invasion and digestion of prey bacteria.
     predicate_id: RO:0002327
   - subject: prey_killing
     predicate: consumes
@@ -55,9 +87,43 @@ causal_graphs:
     description: Killed prey cells provide nutrients to the predator.
     evidence:
     - reference: DOI:10.1111/1462-2920.13171
-      notes: Pérez et al. survey predatory bacteria and their prey-killing
-        strategies.
+      notes: Pérez et al. survey predatory bacteria and their prey-killing strategies.
     predicate_id: biolink:consumes
+  - subject: invasion_portal
+    predicate: seals
+    object: prey_entry_pore
+    description: A flexible portal lines the prey peptidoglycan hole and seals the
+      entry pore to form a bdelloplast.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      notes: 'Cryo-ET: a flexible portal lines the hole during entry and the entry
+        pore is sealed to form a bdelloplast.'
+  - subject: prey_cell_wall_modification
+    predicate: causes
+    object: bdelloplast
+    description: Predator modification of the prey cell wall rounds the killed prey
+      into a bdelloplast.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-47412-3
+      notes: During invasion the predator modifies the prey cell wall, rounding the
+        killed prey into a bdelloplast.
+  - subject: bdelloplast
+    predicate: provides environment for
+    object: intraperiplasmic_growth
+    description: The sealed bdelloplast houses a live predator that grows and replicates
+      inside the prey periplasm.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      notes: The sealed bdelloplast contains a live predator that grows and replicates
+        inside the prey periplasm.
+  - subject: exit_lytic_activity
+    predicate: causes
+    object: progeny_release
+    description: After septation, lytic activity breaks the prey cell wall so progeny
+      lyse and exit.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      notes: After synchronous septation, progeny lyse the prey cell wall and exit.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -68,6 +134,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (predator / prey killing) with
-    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (predator / prey killing) with RO/biolink
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

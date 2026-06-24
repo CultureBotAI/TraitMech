@@ -42,6 +42,29 @@ causal_graphs:
     node_type: QUALITY
     description: Pathogenicity, symbiosis, or metabolic capability encoded by the
       island.
+  - node_id: mobility_module
+    label: integrase/recombinase/transposase mobility module
+    node_type: GENE_OR_PROTEIN
+    description: DDE transposases or tyrosine/serine recombinases that mediate island
+      integration and mobility.
+  - node_id: integrative_conjugative_element
+    label: integrative conjugative element (ICE)
+    node_type: BIOLOGICAL_PROCESS
+    description: Self-transmissible genomic island subclass that excises, transfers
+      by conjugation, and reintegrates.
+  - node_id: conjugation
+    label: conjugation
+    node_type: BIOLOGICAL_PROCESS
+    description: Contact-dependent transfer of DNA between cells.
+  - node_id: type_iv_secretion_system
+    label: type IV secretion system (T4SS)
+    node_type: GENE_OR_PROTEIN
+    description: Secretion apparatus that mediates conjugative DNA transfer.
+  - node_id: integrative_mobilizable_element
+    label: integrative mobilizable element (IME)
+    node_type: BIOLOGICAL_PROCESS
+    description: Genomic island subclass that lacks its own conjugation apparatus
+      and spreads using a helper ICE or conjugative plasmid.
   edges:
   - subject: horizontal_gene_transfer
     predicate: causes
@@ -61,6 +84,38 @@ causal_graphs:
       notes: Dobrindt et al. review genomic islands carrying virulence and metabolic
         functions in pathogens and environmental microbes.
     predicate_id: RO:0002326
+  - subject: gi_trait
+    predicate: carries
+    object: mobility_module
+    description: Genomic islands often encode a dedicated mobility module (DDE transposase
+      or tyrosine/serine recombinase).
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      notes: Intracellular mobility is often mediated by dedicated DDE transposases
+        or integrases belonging to serine or tyrosine recombinases.
+  - subject: integrative_conjugative_element
+    predicate: disseminates by
+    object: conjugation
+    description: ICE-type genomic islands spread by conjugation.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      notes: ICEs disseminate by conjugation.
+  - subject: integrative_conjugative_element
+    predicate: requires
+    object: type_iv_secretion_system
+    description: ICE conjugative transfer requires a type IV secretion system.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      notes: ICEs disseminate by conjugation using a type IV secretion system (T4SS).
+  - subject: integrative_mobilizable_element
+    predicate: uses
+    object: conjugation
+    description: IME-type islands lack their own apparatus and spread via the conjugative
+      apparatus of a helper ICE or conjugative plasmid.
+    evidence:
+    - reference: DOI:10.1093/nar/gkad644
+      notes: IMEs spread via the conjugative apparatus encoded by a helper ICE or
+        conjugative plasmid.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -79,4 +134,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009292×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

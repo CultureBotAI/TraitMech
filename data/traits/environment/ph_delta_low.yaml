@@ -38,6 +38,48 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Modest capacity to remodel proton extrusion and envelope buffering
       across small pH shifts.
+  - node_id: external_ph_stress
+    label: external pH stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External pH values outside the range maintainable as cytoplasmic
+      pH.
+  - node_id: cytoplasmic_ph_homeostasis
+    label: cytoplasmic pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of growth-permissive intracellular pH across external
+      pH change.
+  - node_id: pmf_architecture
+    label: proton motive force architecture
+    node_type: BIOLOGICAL_PROCESS
+    description: Tuning of Delta-psi and Delta-pH components of the proton motive
+      force.
+  - node_id: ph_homeostasis_capacity
+    label: pH homeostasis capacity
+    node_type: CAPACITY
+    description: Capacity to balance and maintain cytoplasmic pH under pH stress.
+  - node_id: weak_organic_acids
+    label: weak organic acids
+    node_type: CHEMICAL
+    description: Uncharged weak acids that cross membranes and perturb the proton
+      gradient.
+  - node_id: delta_ph
+    label: delta pH / cytoplasmic pH
+    node_type: STATE
+    description: Trans-membrane proton gradient and resulting cytoplasmic pH.
+  - node_id: electrogenic_na_h_antiport
+    label: electrogenic Na+/H+ antiport
+    node_type: BIOLOGICAL_PROCESS
+    description: Inward proton transport via cation/proton antiport driven by membrane
+      potential.
+  - node_id: alkaline_ph_homeostasis
+    label: alkaline pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cytoplasmic pH under alkaline external conditions.
+  - node_id: f1fo_atpase
+    label: F1Fo-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-coupled ATPase that expels or imports H+ using or generating
+      PMF.
   edges:
   - subject: limited_ph_homeostasis
     predicate: produces
@@ -58,6 +100,52 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports the 1–2 unit breadth as a value within the pH-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: external_ph_stress
+    predicate: challenges
+    object: cytoplasmic_ph_homeostasis
+    description: External pH outside the maintainable cytoplasmic range challenges
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis enable
+        most bacteria to tolerate external pH outside the cytoplasmic range; general
+        across bacteria.
+  - subject: pmf_architecture
+    predicate: determines
+    object: ph_homeostasis_capacity
+    description: PMF architecture (Delta-psi and Delta-pH balancing) determines pH
+      homeostasis capacity.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Bacteria tune and even reverse the relative magnitudes of Delta-psi and
+        Delta-pH under pH stress; strong general mechanistic edge.
+  - subject: weak_organic_acids
+    predicate: perturbs
+    object: delta_ph
+    description: Weak organic acids cross the membrane and perturb the proton gradient
+      / cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Uncharged weak-acid forms cross membranes and become trapped when charged,
+        perturbing Delta-pH; general chemical-factor edge.
+  - subject: electrogenic_na_h_antiport
+    predicate: supports
+    object: alkaline_ph_homeostasis
+    description: Electrogenic Na+/H+ antiport supports cytoplasmic pH homeostasis
+      under alkaline stress.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Under alkaline stress, inward proton transport through cation/proton
+        antiporters is crucial; strong general transporter-mediated edge.
+  - subject: f1fo_atpase
+    predicate: contributes to
+    object: cytoplasmic_ph_homeostasis
+    description: F1Fo-ATPase contributes to cytoplasmic pH homeostasis by expelling
+      or importing H+.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Respiratory complexes and proton-coupled ATPases use or generate PMF
+        to expel or import H+; general higher-level edge.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838505+00:00'
   curator: seed_from_metpo
@@ -75,4 +163,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

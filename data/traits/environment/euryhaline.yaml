@@ -54,6 +54,53 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Gene families associated with microbial salinity adaptation across
       gradients.
+  - node_id: choline
+    label: choline
+    node_type: CHEMICAL
+    description: Precursor metabolite converted to glycine betaine.
+    grounding: CHEBI:15354
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Compatible solute / osmoprotectant accumulated under salt stress.
+    grounding: CHEBI:17750
+  - node_id: glycine_betaine_biosynthesis
+    label: glycine betaine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Two-step oxidative conversion of choline to glycine betaine by BetA/BetB.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Compatible solute widely implicated in halophily and salinity tolerance.
+    grounding: CHEBI:22563
+  - node_id: ectoine_biosynthesis
+    label: ectoine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Five-step biosynthesis of ectoine from L-aspartate (lysC/asd/ectB/ectA/ectC).
+  - node_id: mechanosensitive_channels
+    label: mechanosensitive channels (Msc)
+    node_type: GENE_OR_PROTEIN
+    description: Channels acting as safety valves releasing ions and solutes during
+      osmotic downshock.
+  - node_id: osmotic_downshock
+    label: osmotic downshock
+    node_type: BIOLOGICAL_PROCESS
+    description: Sudden drop in external salinity causing rapid water influx and turgor
+      rise.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Antiporter that expels sodium ions from the cytoplasm.
+  - node_id: cytoplasmic_sodium
+    label: cytoplasmic sodium ions
+    node_type: CHEMICAL
+    description: Intracellular Na+ that must be exported to maintain ion homeostasis.
+    grounding: CHEBI:29101
+  - node_id: proteome_acidification
+    label: proteome acidification
+    node_type: BIOLOGICAL_PROCESS
+    description: Increased proportion of acidic amino acids improving protein solubility
+      at high ionic strength.
   edges:
   - subject: wide_salinity_range
     predicate: defines
@@ -116,6 +163,75 @@ causal_graphs:
       notes: Supports salinity-adaptation genes as contributors to microbial salinity
         niche breadth.
     predicate_id: RO:0002326
+  - subject: glycine_betaine_biosynthesis
+    predicate: produces
+    object: glycine_betaine
+    description: Choline is oxidized to glycine betaine in two steps by BetA and BetB.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Choline is transformed into glycine betaine in two oxidative steps carried
+        out by BetA (K00108) and BetB (K00130).
+  - subject: choline
+    predicate: is precursor of
+    object: glycine_betaine
+    description: Choline serves as the substrate for glycine betaine biosynthesis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Choline is transformed into glycine betaine in two oxidative steps (BetA/BetB).
+  - subject: glycine_betaine
+    predicate: mitigates
+    object: osmotic_imbalance
+    description: Glycine betaine accumulates as a compatible solute to balance osmotic
+      pressure.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Glycine betaine is a compatible solute used in the salt-out osmoadaptation
+        strategy.
+  - subject: ectoine_biosynthesis
+    predicate: produces
+    object: ectoine
+    description: Ectoine is synthesized from L-aspartate in five steps (lysC/asd/ectB/ectA/ectC).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Ectoine is obtained from L-aspartate in five steps mediated by lysC,
+        asd, ectB, ectA, and ectC.
+  - subject: ectoine
+    predicate: mitigates
+    object: osmotic_imbalance
+    description: Ectoine acts as an osmoprotective compatible solute under salinity
+      stress.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Ectoine widely implicated in halophily and salinity tolerance; protects
+        cell components under stress.
+  - subject: mechanosensitive_channels
+    predicate: responds to
+    object: osmotic_downshock
+    description: Msc channels serve as safety valves releasing ions and organic solutes
+      during sudden downward osmotic shocks.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Msc mechanosensitive channels serve as safety valves, allowing the rapid
+        release of ions and organic solutes in the case of sudden downward osmotic
+        shocks.
+  - subject: na_h_antiporter
+    predicate: exports
+    object: cytoplasmic_sodium
+    description: Na+/H+ antiporters expel sodium ions from the cytoplasm to maintain
+      ion homeostasis.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Sodium ions are expelled from the cytoplasm, usually performed with the
+        help of Na+/H+ antiporters.
+  - subject: proteome_acidification
+    predicate: contributes to
+    object: euryhaline_trait
+    description: Acidification of the proteome improves protein solubility across
+      salinity regimes.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adg2059
+      notes: Increase in acidic amino acids (notably glutamate); acidification of
+        the proteome essential for protein solubility at higher ionic strength.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.864669+00:00'
   curator: seed_from_metpo
@@ -180,4 +296,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

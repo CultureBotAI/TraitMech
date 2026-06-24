@@ -47,6 +47,41 @@ causal_graphs:
     label: energy-transducing enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes involved in membrane bioenergetics at elevated temperature.
+  - node_id: reverse_gyrase
+    label: reverse gyrase
+    node_type: GENE_OR_PROTEIN
+    description: ATP-dependent topoisomerase that introduces positive DNA supercoils,
+      characteristic of thermophiles.
+  - node_id: positive_dna_supercoiling
+    label: positive DNA supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    description: Introduction of positive supercoils into genomic DNA.
+  - node_id: dna_melting
+    label: DNA melting
+    node_type: BIOLOGICAL_PROCESS
+    description: Thermal denaturation/strand separation of DNA at elevated temperature.
+  - node_id: genome_integrity
+    label: genome integrity maintenance
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of genome integrity including DNA repair under thermal
+      stress.
+  - node_id: group_ii_chaperonin
+    label: group II chaperonin (thermosome)
+    node_type: GENE_OR_PROTEIN
+    description: HSP60-type group II chaperonin that refolds denatured proteins in
+      an ATP-dependent manner.
+  - node_id: denatured_proteins
+    label: denatured proteins
+    node_type: GENE_OR_PROTEIN
+    description: Proteins unfolded or denatured during thermal stress.
+  - node_id: cyclopentane_ring_number
+    label: tetraether lipid cyclopentane ring number
+    node_type: QUALITY
+    description: Number of cyclopentane rings in archaeal tetraether membrane lipids.
+  - node_id: membrane_rigidity
+    label: membrane rigidity
+    node_type: QUALITY
+    description: Membrane condensation, packing tightness, and rigidity.
   edges:
   - subject: high_temperature
     predicate: selects for
@@ -96,6 +131,49 @@ causal_graphs:
       notes: Review cites higher turnover rates and coupling-ion changes in high-temperature
         adaptation.
     predicate_id: RO:0002327
+  - subject: reverse_gyrase
+    predicate: introduces
+    object: positive_dna_supercoiling
+    description: Reverse gyrase introduces positive supercoils into thermophile DNA.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: 'Takemata 2024: "reverse gyrase introduces positive supercoils" (broadly
+        accepted in thermophile genomics).'
+  - subject: positive_dna_supercoiling
+    predicate: limits
+    object: dna_melting
+    description: Positive DNA supercoiling limits thermal DNA melting, protecting
+      genome integrity.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: 'Takemata 2024: "maintain the genome integrity of thermophiles by limiting
+        DNA melting"; mechanism generalized across thermophiles.'
+  - subject: reverse_gyrase
+    predicate: mediates
+    object: genome_integrity
+    description: Reverse gyrase mediates DNA repair and genome-integrity maintenance
+      in thermophiles.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: 'Takemata 2024: "maintain the genome integrity of thermophiles by ...
+        mediating DNA repair".'
+  - subject: group_ii_chaperonin
+    predicate: refolds
+    object: denatured_proteins
+    description: The group II chaperonin (thermosome) refolds denatured proteins in
+      an ATP-dependent manner.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      notes: 'Baes 2023: "thermosome, which refolds proteins in an ATP-dependent manner".'
+  - subject: cyclopentane_ring_number
+    predicate: increases
+    object: membrane_rigidity
+    description: Increased cyclopentane ring number in tetraether lipids increases
+      membrane condensation and rigidity.
+    evidence:
+    - reference: DOI:10.3389/frbis.2023.1338019
+      notes: 'Chong 2024: "cyclopentane ring cyclization ... increase membrane condensation,
+        packing tightness, rigidity".'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.858214+00:00'
   curator: seed_from_metpo
@@ -155,4 +233,10 @@ curation_history:
   action: REMOVE_REDUNDANT_SYNONYM
   changes: Removed 1 synonym(s) whose text duplicated the label (seeder redundancy;
     no information lost).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

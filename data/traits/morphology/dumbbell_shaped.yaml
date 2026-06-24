@@ -44,6 +44,41 @@ causal_graphs:
     label: dumbbell intermediate
     node_type: BIOLOGICAL_PROCESS
     description: Two-lobe cell pair joined by an isthmus prior to full separation.
+  - node_id: septal_pg_hydrolysis
+    label: septal peptidoglycan hydrolysis
+    node_type: BIOLOGICAL_PROCESS
+    description: Precisely timed and localized hydrolysis of septal peptidoglycan
+      at the division junction.
+  - node_id: daughter_cell_separation
+    label: daughter cell separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Resolution of the septum into two physically separated daughter cells,
+      often via V-snapping.
+  - node_id: outer_envelope_continuity
+    label: outer envelope layer continuity
+    node_type: STATE
+    description: Arabinogalactan and mycolic-acid outer layers remaining continuous
+      across the septum.
+  - node_id: mechanical_snapping_separation
+    label: mechanical snapping separation
+    node_type: BIOLOGICAL_PROCESS
+    description: Rupture of continuous outer envelope layers producing an uneven mechanical
+      snap.
+  - node_id: v_shaped_daughters
+    label: V-shaped attached daughters
+    node_type: TRAIT
+    description: Angular V-shaped arrangement of partially attached daughter cells
+      from snapping division.
+  - node_id: septal_hydrolases
+    label: septal peptidoglycan hydrolases (RipA/RpfB)
+    node_type: GENE_OR_PROTEIN
+    description: Peptidoglycan-cleaving enzymes that cut the septum to separate daughter
+      cells.
+  - node_id: polar_growth
+    label: polar growth from nascent septum
+    node_type: BIOLOGICAL_PROCESS
+    description: Apical cell-wall growth initiated from the new pole at the nascent
+      septum.
   edges:
   - subject: midcell_constriction
     predicate: produces
@@ -73,6 +108,60 @@ causal_graphs:
       snippet: snapping cell division
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: septal_pg_hydrolysis
+    predicate: enables
+    object: daughter_cell_separation
+    description: Timed, localized septal PG hydrolysis enables daughter-cell separation
+      / V-snapping.
+    evidence:
+    - reference: DOI:10.1073/pnas.2214599119
+      notes: Daughter cell separation requires precisely timed and localized peptidoglycan
+        hydrolysis at the septal junction.
+  - subject: septal_pg_hydrolysis
+    predicate: combined with
+    object: mechanical_snapping_separation
+    description: Septal PG cleavage while outer AG/MA layers remain continuous leads
+      to mechanical snapping separation.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00028-07
+      notes: Overlying envelope layers (AG, mycolic acids) remain continuous across
+        the septum; separation occurs by rupture of these outer layers, an uneven
+        mechanical snap.
+  - subject: outer_envelope_continuity
+    predicate: promotes
+    object: mechanical_snapping_separation
+    description: Continuity of outer envelope layers forces a final mechanical rupture
+      (snap) to complete separation.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00028-07
+      notes: Continuity/intertwining of AG and mycolate outer layers forces a final
+        mechanical rupture.
+  - subject: mechanical_snapping_separation
+    predicate: produces
+    object: v_shaped_daughters
+    description: Uneven rupture of intertwined outer envelope layers produces V-shaped
+      attached daughters.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00028-07
+      notes: Uneven rupturing produces the V-shape; snapping division produces angular
+        daughter arrangements.
+  - subject: septal_hydrolases
+    predicate: mediates
+    object: septal_pg_hydrolysis
+    description: Septal PG hydrolases (RipA, RpfB) cleave the septum to separate daughter
+      cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3299
+      notes: RipA and RpfB cleave the septum to separate the daughter cells.
+  - subject: polar_growth
+    predicate: aggravates
+    object: mechanical_snapping_separation
+    description: Polar growth from the nascent septum can aggravate rupture/snapping
+      of outer layers.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00028-07
+      notes: Polar growth from the nascent septum can aggravate rupture; relevant
+        to transient two-bulb dumbbell form before full snap.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.888187+00:00'
   curator: seed_from_metpo
@@ -96,4 +185,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

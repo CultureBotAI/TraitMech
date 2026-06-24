@@ -124,12 +124,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>CrvB</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>cell-body curvature</strong>
+            
+            <p>CrvB expression increases CrvA assembly and cell curvature in a dose-dependent manner.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2020.02.20.954503</code>
+                
+                <span class="meta">crvB expression increased CrvA-GFP assembly as well as cell curvature in a dose-dependent manner.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>CrvB</strong>
+            <span class="edge-predicate">colocalizes with</span>
+            <strong>periplasmic filament</strong>
+            
+            <p>CrvB colocalizes with CrvA in the same periplasmic inner-curve filament structure.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/2020.02.20.954503</code>
+                
+                <span class="meta">Both proteins localized to the same structure; CrvB-GFP filaments colocalized with periplasmic DsbA-mCherry.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>VadR sRNA</strong>
+            <span class="edge-predicate">represses</span>
+            <strong>crvA mRNA</strong>
+            
+            <p>VadR sRNA is a post-transcriptional inhibitor of crvA mRNA.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-020-19890-8</code>
+                
+                <span class="meta">The VadR small RNA acts as a post-transcriptional inhibitor of the crvA mRNA.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>crvA mRNA</strong>
+            <span class="edge-predicate">translated into</span>
+            <strong>CrvA</strong>
+            
+            <p>crvA mRNA is translated into the CrvA curvature determinant protein.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-020-19890-8</code>
+                
+                <span class="meta">crvA mRNA encodes the periplasmic CrvA protein that determines cell curvature.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>VadR sRNA</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>cell-body curvature</strong>
+            
+            <p>Mutation of vadR increases cell curvature whereas overexpression has the inverse effect, indicating VadR limits curvature.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-020-19890-8</code>
+                
+                <span class="meta">Mutation of vadR increases cell curvature, whereas overexpression has the inverse effect.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>VxrAB two-component system</strong>
+            <span class="edge-predicate">activates transcription of</span>
+            <strong>VadR sRNA</strong>
+            
+            <p>The VxrAB two-component system activates vadR transcription.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-020-19890-8</code>
+                
+                <span class="meta">vadR transcription is activated by the VxrAB two-component system.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>cyclic di-GMP</strong>
+            <span class="edge-predicate">decreases</span>
+            <strong>cell-body curvature</strong>
+            
+            <p>High c-di-GMP concentrations decrease cell curvature to generate straight rods.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1073/pnas.2010199117</code>
+                
+                <span class="meta">High c-di-GMP concentrations decrease cell curvature to generate straight rods.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -275,6 +398,12 @@
           <time>2026-05-20T05:49:25Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -634,7 +763,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking vibrioid curved-rod morphology to periplasmic CrvA polymers and asymmetric peptidoglycan insertion.", "edges": [{"description": "CrvA forms periplasmic filaments at the inner face of cell curvature.", "evidence": [{"notes": "Supports CrvA as a periplasmic polymer at the inner curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "CrvA self-assembles into filaments at the inner face"}], "id": "edge-1", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "crvA", "target": "periplasmic_filament"}, {"description": "CrvA filaments pattern differential peptidoglycan insertion.", "evidence": [{"notes": "Supports CrvA-dependent spatial patterning of wall insertion.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "patterns", "predicate_id": null, "source": "periplasmic_filament", "target": "asymmetric_peptidoglycan_insertion"}, {"description": "Unequal peptidoglycan insertion creates more material on the outer face than the inner face, curving the cell.", "evidence": [{"notes": "Supports asymmetric wall insertion as the proximal cause of curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "causing more material insertions into the outer face"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "asymmetric_peptidoglycan_insertion", "target": "cell_body_curvature"}, {"description": "Curved rod morphology produces the vibrioid/comma-shaped trait.", "evidence": [{"notes": "Supports the observed Vibrio morphology as a curved-rod shape.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "characteristic curved rod morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell_body_curvature", "target": "vibrio_shaped_trait"}], "evidence_rows": [{"description": "CrvA forms periplasmic filaments at the inner face of cell curvature.", "edge_id": "edge-1", "evidence": [{"notes": "Supports CrvA as a periplasmic polymer at the inner curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "CrvA self-assembles into filaments at the inner face"}], "predicate": "self-assembles into", "predicate_id": null, "source": "CrvA", "target": "periplasmic filament"}, {"description": "CrvA filaments pattern differential peptidoglycan insertion.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CrvA-dependent spatial patterning of wall insertion.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "patterns", "predicate_id": null, "source": "periplasmic filament", "target": "asymmetric peptidoglycan insertion"}, {"description": "Unequal peptidoglycan insertion creates more material on the outer face than the inner face, curving the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports asymmetric wall insertion as the proximal cause of curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "causing more material insertions into the outer face"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "asymmetric peptidoglycan insertion", "target": "cell-body curvature"}, {"description": "Curved rod morphology produces the vibrioid/comma-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the observed Vibrio morphology as a curved-rod shape.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "characteristic curved rod morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell-body curvature", "target": "vibrio shaped"}], "graph_id": "vibrio_shaped_crvA_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Unequal cell-wall insertion across inner and outer faces.", "grounding": null, "id": "asymmetric_peptidoglycan_insertion", "is_orphan": false, "label": "asymmetric peptidoglycan insertion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Curving of an otherwise rod-like cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic polymer-forming curvature determinant in Vibrio.", "grounding": null, "id": "crvA", "is_orphan": false, "label": "CrvA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "CrvA polymer structure at the inner curved face of the cell.", "grounding": null, "id": "periplasmic_filament", "is_orphan": false, "label": "periplasmic filament", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#dbeafe", "description": "Short curved-rod or comma-shaped bacterial morphology.", "grounding": "METPO:1000686", "id": "vibrio_shaped_trait", "is_orphan": false, "label": "vibrio shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Vibrio-shape CrvA curvature mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking vibrioid curved-rod morphology to periplasmic CrvA polymers and asymmetric peptidoglycan insertion.", "edges": [{"description": "CrvA forms periplasmic filaments at the inner face of cell curvature.", "evidence": [{"notes": "Supports CrvA as a periplasmic polymer at the inner curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "CrvA self-assembles into filaments at the inner face"}], "id": "edge-1", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "crvA", "target": "periplasmic_filament"}, {"description": "CrvA filaments pattern differential peptidoglycan insertion.", "evidence": [{"notes": "Supports CrvA-dependent spatial patterning of wall insertion.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "patterns", "predicate_id": null, "source": "periplasmic_filament", "target": "asymmetric_peptidoglycan_insertion"}, {"description": "Unequal peptidoglycan insertion creates more material on the outer face than the inner face, curving the cell.", "evidence": [{"notes": "Supports asymmetric wall insertion as the proximal cause of curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "causing more material insertions into the outer face"}], "id": "edge-3", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "asymmetric_peptidoglycan_insertion", "target": "cell_body_curvature"}, {"description": "Curved rod morphology produces the vibrioid/comma-shaped trait.", "evidence": [{"notes": "Supports the observed Vibrio morphology as a curved-rod shape.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "characteristic curved rod morphology"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell_body_curvature", "target": "vibrio_shaped_trait"}, {"description": "CrvB expression increases CrvA assembly and cell curvature in a dose-dependent manner.", "evidence": [{"notes": "crvB expression increased CrvA-GFP assembly as well as cell curvature in a dose-dependent manner.", "reference": "DOI:10.1101/2020.02.20.954503"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "crvB", "target": "cell_body_curvature"}, {"description": "CrvB colocalizes with CrvA in the same periplasmic inner-curve filament structure.", "evidence": [{"notes": "Both proteins localized to the same structure; CrvB-GFP filaments colocalized with periplasmic DsbA-mCherry.", "reference": "DOI:10.1101/2020.02.20.954503"}], "id": "edge-6", "is_orphan": false, "predicate": "colocalizes with", "predicate_id": null, "source": "crvB", "target": "periplasmic_filament"}, {"description": "VadR sRNA is a post-transcriptional inhibitor of crvA mRNA.", "evidence": [{"notes": "The VadR small RNA acts as a post-transcriptional inhibitor of the crvA mRNA.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "id": "edge-7", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "vadR_srna", "target": "crvA_mrna"}, {"description": "crvA mRNA is translated into the CrvA curvature determinant protein.", "evidence": [{"notes": "crvA mRNA encodes the periplasmic CrvA protein that determines cell curvature.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "id": "edge-8", "is_orphan": false, "predicate": "translated into", "predicate_id": null, "source": "crvA_mrna", "target": "crvA"}, {"description": "Mutation of vadR increases cell curvature whereas overexpression has the inverse effect, indicating VadR limits curvature.", "evidence": [{"notes": "Mutation of vadR increases cell curvature, whereas overexpression has the inverse effect.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "id": "edge-9", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "vadR_srna", "target": "cell_body_curvature"}, {"description": "The VxrAB two-component system activates vadR transcription.", "evidence": [{"notes": "vadR transcription is activated by the VxrAB two-component system.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "id": "edge-10", "is_orphan": false, "predicate": "activates transcription of", "predicate_id": null, "source": "vxrAB_tcs", "target": "vadR_srna"}, {"description": "High c-di-GMP concentrations decrease cell curvature to generate straight rods.", "evidence": [{"notes": "High c-di-GMP concentrations decrease cell curvature to generate straight rods.", "reference": "DOI:10.1073/pnas.2010199117"}], "id": "edge-11", "is_orphan": false, "predicate": "decreases", "predicate_id": null, "source": "cyclic_di_gmp", "target": "cell_body_curvature"}], "evidence_rows": [{"description": "CrvA forms periplasmic filaments at the inner face of cell curvature.", "edge_id": "edge-1", "evidence": [{"notes": "Supports CrvA as a periplasmic polymer at the inner curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "CrvA self-assembles into filaments at the inner face"}], "predicate": "self-assembles into", "predicate_id": null, "source": "CrvA", "target": "periplasmic filament"}, {"description": "CrvA filaments pattern differential peptidoglycan insertion.", "edge_id": "edge-2", "evidence": [{"notes": "Supports CrvA-dependent spatial patterning of wall insertion.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "asymmetrically patterns peptidoglycan insertion"}], "predicate": "patterns", "predicate_id": null, "source": "periplasmic filament", "target": "asymmetric peptidoglycan insertion"}, {"description": "Unequal peptidoglycan insertion creates more material on the outer face than the inner face, curving the cell.", "edge_id": "edge-3", "evidence": [{"notes": "Supports asymmetric wall insertion as the proximal cause of curvature.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "causing more material insertions into the outer face"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "asymmetric peptidoglycan insertion", "target": "cell-body curvature"}, {"description": "Curved rod morphology produces the vibrioid/comma-shaped trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the observed Vibrio morphology as a curved-rod shape.", "reference": "DOI:10.1016/j.cell.2016.12.019", "snippet": "characteristic curved rod morphology"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cell-body curvature", "target": "vibrio shaped"}, {"description": "CrvB expression increases CrvA assembly and cell curvature in a dose-dependent manner.", "edge_id": "edge-5", "evidence": [{"notes": "crvB expression increased CrvA-GFP assembly as well as cell curvature in a dose-dependent manner.", "reference": "DOI:10.1101/2020.02.20.954503"}], "predicate": "increases", "predicate_id": null, "source": "CrvB", "target": "cell-body curvature"}, {"description": "CrvB colocalizes with CrvA in the same periplasmic inner-curve filament structure.", "edge_id": "edge-6", "evidence": [{"notes": "Both proteins localized to the same structure; CrvB-GFP filaments colocalized with periplasmic DsbA-mCherry.", "reference": "DOI:10.1101/2020.02.20.954503"}], "predicate": "colocalizes with", "predicate_id": null, "source": "CrvB", "target": "periplasmic filament"}, {"description": "VadR sRNA is a post-transcriptional inhibitor of crvA mRNA.", "edge_id": "edge-7", "evidence": [{"notes": "The VadR small RNA acts as a post-transcriptional inhibitor of the crvA mRNA.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "predicate": "represses", "predicate_id": null, "source": "VadR sRNA", "target": "crvA mRNA"}, {"description": "crvA mRNA is translated into the CrvA curvature determinant protein.", "edge_id": "edge-8", "evidence": [{"notes": "crvA mRNA encodes the periplasmic CrvA protein that determines cell curvature.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "predicate": "translated into", "predicate_id": null, "source": "crvA mRNA", "target": "CrvA"}, {"description": "Mutation of vadR increases cell curvature whereas overexpression has the inverse effect, indicating VadR limits curvature.", "edge_id": "edge-9", "evidence": [{"notes": "Mutation of vadR increases cell curvature, whereas overexpression has the inverse effect.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "predicate": "decreases", "predicate_id": null, "source": "VadR sRNA", "target": "cell-body curvature"}, {"description": "The VxrAB two-component system activates vadR transcription.", "edge_id": "edge-10", "evidence": [{"notes": "vadR transcription is activated by the VxrAB two-component system.", "reference": "DOI:10.1038/s41467-020-19890-8"}], "predicate": "activates transcription of", "predicate_id": null, "source": "VxrAB two-component system", "target": "VadR sRNA"}, {"description": "High c-di-GMP concentrations decrease cell curvature to generate straight rods.", "edge_id": "edge-11", "evidence": [{"notes": "High c-di-GMP concentrations decrease cell curvature to generate straight rods.", "reference": "DOI:10.1073/pnas.2010199117"}], "predicate": "decreases", "predicate_id": null, "source": "cyclic di-GMP", "target": "cell-body curvature"}], "graph_id": "vibrio_shaped_crvA_curvature", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Unequal cell-wall insertion across inner and outer faces.", "grounding": null, "id": "asymmetric_peptidoglycan_insertion", "is_orphan": false, "label": "asymmetric peptidoglycan insertion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Curving of an otherwise rod-like cell body.", "grounding": null, "id": "cell_body_curvature", "is_orphan": false, "label": "cell-body curvature", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic polymer-forming curvature determinant in Vibrio.", "grounding": null, "id": "crvA", "is_orphan": false, "label": "CrvA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Messenger RNA encoding the CrvA curvature determinant.", "grounding": null, "id": "crvA_mrna", "is_orphan": false, "label": "crvA mRNA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic curvature determinant that co-assembles with CrvA into the inner-curve filament.", "grounding": null, "id": "crvB", "is_orphan": false, "label": "CrvB", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Second messenger that, when elevated, decreases cell curvature to generate straight rods.", "grounding": null, "id": "cyclic_di_gmp", "is_orphan": false, "label": "cyclic di-GMP", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "CrvA polymer structure at the inner curved face of the cell.", "grounding": null, "id": "periplasmic_filament", "is_orphan": false, "label": "periplasmic filament", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Small RNA that post-transcriptionally represses crvA mRNA to limit curvature.", "grounding": null, "id": "vadR_srna", "is_orphan": false, "label": "VadR sRNA", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Short curved-rod or comma-shaped bacterial morphology.", "grounding": "METPO:1000686", "id": "vibrio_shaped_trait", "is_orphan": false, "label": "vibrio shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Two-component signaling system that activates vadR transcription.", "grounding": null, "id": "vxrAB_tcs", "is_orphan": false, "label": "VxrAB two-component system", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Vibrio-shape CrvA curvature mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -645,7 +774,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

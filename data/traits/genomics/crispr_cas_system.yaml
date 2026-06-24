@@ -23,15 +23,14 @@ evidence:
 causal_graphs:
 - graph_id: crispr_adaptive_immunity
   title: CRISPR-Cas adaptive immunity against invading nucleic acids
-  description: Evidence-backed causal sketch linking Cas-protein-mediated CRISPR
-    machinery to defense against invading mobile genetic elements.
+  description: Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery
+    to defense against invading mobile genetic elements.
   nodes:
   - node_id: crispr_trait
     label: CRISPR-Cas system
     node_type: TRAIT
     grounding: traitmech:000094
-    description: Possession of CRISPR arrays and Cas proteins for adaptive
-      immunity.
+    description: Possession of CRISPR arrays and Cas proteins for adaptive immunity.
   - node_id: cas_proteins
     label: Cas proteins
     node_type: GENE_OR_PROTEIN
@@ -41,12 +40,44 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0051607
     description: Cleavage of invading viral or plasmid nucleic acids.
+  - node_id: cas1_cas2_complex
+    label: Cas1-Cas2 complex
+    node_type: GENE_OR_PROTEIN
+    description: Cas1-Cas2 integrase complex that captures and integrates new spacers.
+  - node_id: spacer_acquisition
+    label: spacer acquisition (adaptation)
+    node_type: BIOLOGICAL_PROCESS
+    description: Integration of invader-derived fragments as new spacers into the
+      CRISPR array.
+  - node_id: crispr_array_transcription
+    label: CRISPR array transcription and processing
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of the CRISPR array and processing of the precursor
+      into mature crRNAs.
+  - node_id: crrna
+    label: crRNA
+    node_type: GENE_OR_PROTEIN
+    description: Mature CRISPR RNA that guides Cas effectors to complementary targets.
+  - node_id: crrna_effector_complex
+    label: crRNA-Cas effector complex
+    node_type: GENE_OR_PROTEIN
+    description: Ribonucleoprotein complex of crRNA and Cas effector(s) performing
+      interference.
+  - node_id: invading_nucleic_acid
+    label: invading nucleic acid target
+    node_type: CHEMICAL
+    description: Foreign DNA or RNA from phages, plasmids, or other mobile genetic
+      elements.
+  - node_id: phage_plasmid_pressure
+    label: phage and plasmid pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Selective pressure from invading bacteriophages and plasmids.
   edges:
   - subject: cas_proteins
     predicate: enables
     object: crispr_trait
-    description: Cas nucleases together with CRISPR arrays realize the adaptive
-      immune system.
+    description: Cas nucleases together with CRISPR arrays realize the adaptive immune
+      system.
     evidence:
     - reference: DOI:10.1038/s41579-019-0299-x
       notes: Makarova et al. classify CRISPR-Cas systems by Cas-protein content.
@@ -54,24 +85,71 @@ causal_graphs:
   - subject: crispr_trait
     predicate: participates in
     object: defense_response_to_virus
-    description: CRISPR-Cas mounts sequence-specific defense against invading
-      genetic elements.
+    description: CRISPR-Cas mounts sequence-specific defense against invading genetic
+      elements.
     evidence:
     - reference: DOI:10.1016/j.molcel.2014.03.011
-      notes: Barrangou & Marraffini frame CRISPR-Cas as prokaryotic adaptive
-        immunity.
+      notes: Barrangou & Marraffini frame CRISPR-Cas as prokaryotic adaptive immunity.
     predicate_id: biolink:participates_in
+  - subject: cas1_cas2_complex
+    predicate: integrates spacers via
+    object: spacer_acquisition
+    description: Cas1-Cas2 complexes act as molecular recorders that integrate new
+      spacers into the CRISPR array during adaptation.
+    evidence:
+    - reference: DOI:10.5483/bmbrep.2023-0050
+      notes: Cas1-Cas2 complexes function as molecular recorders to integrate spacers;
+        core adaptation edge, broad across canonical CRISPR-Cas systems.
+  - subject: crispr_array_transcription
+    predicate: produces
+    object: crrna
+    description: Transcription and processing of the CRISPR array yields mature crRNAs.
+    evidence:
+    - reference: DOI:10.1016/j.heliyon.2024.e39538
+      notes: CRISPR arrays are transcribed and processed into crRNAs; general edge
+        across systems.
+  - subject: crrna
+    predicate: guides
+    object: crrna_effector_complex
+    description: crRNA assembles with Cas effector(s) to form the interference-competent
+      effector complex.
+    evidence:
+    - reference: DOI:10.5483/bmbrep.2023-0050
+      notes: Effector-crRNA complexes drive the RNA-guided interference pathways.
+  - subject: crrna_effector_complex
+    predicate: cleaves
+    object: invading_nucleic_acid
+    description: The crRNA-Cas effector complex recognizes and cleaves complementary
+      invading nucleic acid targets.
+    evidence:
+    - reference: DOI:10.5483/bmbrep.2023-0050
+      notes: Effector-crRNA complexes perform RNA-guided interference against invading
+        targets; high-level interference edge.
+  - subject: phage_plasmid_pressure
+    predicate: selects for
+    object: crispr_trait
+    description: Selective pressure from invading phages and plasmids favors maintenance
+      of CRISPR-Cas immunity.
+    evidence:
+    - reference: DOI:10.5483/bmbrep.2023-0050
+      notes: CRISPR-Cas protects hosts from invasion by bacteriophages and plasmids;
+        broad ecological selection edge.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate GENOMICS trait (CRISPR-Cas system) from literature
-    research to fill the genome-defense-system gap.
+  changes: Proposed candidate GENOMICS trait (CRISPR-Cas system) from literature research
+    to fill the genome-defense-system gap.
   llm_assisted: true
 - timestamp: '2026-06-08T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (CRISPR adaptive immunity) with GO
-    node grounding and RO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (CRISPR adaptive immunity) with GO node
+    grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

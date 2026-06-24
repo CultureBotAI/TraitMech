@@ -50,6 +50,41 @@ causal_graphs:
     description: Intracellular K+ accumulation balancing high external NaCl osmotic
       activity.
     grounding: METPO:1007720
+  - node_id: intracellular_kcl
+    label: intracellular KCl concentration
+    node_type: CHEMICAL
+    description: High cytoplasmic potassium chloride (>3 M) balancing external osmolarity
+      in salt-in halophiles.
+  - node_id: potassium_uptake_system
+    label: potassium uptake system
+    node_type: GENE_OR_PROTEIN
+    description: K+ transporters/channels (Trk-family) mediating potassium accumulation
+      for the salt-in strategy.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Sodium/proton antiporter mediating Na+ exclusion and ion homeostasis
+      under high salt.
+  - node_id: acidic_proteome
+    label: acidic proteome
+    node_type: QUALITY
+    description: Proteome enriched in acidic residues (Asp/Glu) with low median pI,
+      hallmark of salt-in halophiles.
+  - node_id: protein_function_high_salinity
+    label: protein function at high salinity
+    node_type: MOLECULAR_FUNCTION
+    description: Maintenance of protein structure and activity at molar intracellular
+      salt concentrations.
+  - node_id: acidic_aa_content
+    label: increased acidic amino-acid content
+    node_type: QUALITY
+    description: Elevated Asp/Glu content in proteins promoting solubility in high
+      intracellular KCl.
+  - node_id: protein_solubility_high_salt
+    label: protein solubility in high salt
+    node_type: QUALITY
+    description: Salt-induced stabilization and solubility of halophilic proteins
+      at high salinity.
   edges:
   - subject: hypersaline_nacl
     predicate: selects for
@@ -79,6 +114,55 @@ causal_graphs:
       snippet: optimal NaCl
       notes: Supports >8% optimum as a value within the NaCl-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: salt_in_strategy
+    predicate: increases
+    object: intracellular_kcl
+    description: Salt-in osmoadaptation accumulates high intracellular KCl.
+    evidence:
+    - reference: DOI:10.1002/pro.5003
+      notes: Halophiles accumulate intracellular concentrations of potassium chloride
+        even above 3 M.
+  - subject: salt_in_strategy
+    predicate: requires
+    object: potassium_uptake_system
+    description: Salt-in strategy depends on K+ uptake systems to accumulate cytoplasmic
+      potassium.
+    evidence:
+    - reference: DOI:10.1002/pro.5003
+      notes: Upregulating potassium-selective ion channels supports salt-in K+ accumulation.
+  - subject: na_h_antiporter
+    predicate: supports
+    object: salt_in_strategy
+    description: Na+/H+ antiporter activity supports salt-in osmoadaptation via Na+
+      exclusion.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Na+ extrusion via Na+/H+ antiporters driven by a proton electrochemical
+        gradient.
+  - subject: intracellular_kcl
+    predicate: selects for
+    object: acidic_proteome
+    description: High intracellular KCl selects for an acidic proteome.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: The salt-in strategy is concomitant with an excess of acidic amino acids.
+  - subject: acidic_proteome
+    predicate: enables
+    object: protein_function_high_salinity
+    description: Acidic proteome enables protein function at high salinity.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: Proteome acidification preserves protein structure/function under high
+        intracellular salt.
+  - subject: acidic_aa_content
+    predicate: increases
+    object: protein_solubility_high_salt
+    description: Increased acidic amino-acid content increases protein solubility
+      in high salt.
+    evidence:
+    - reference: DOI:10.1002/pro.5003
+      notes: Increase the number of short, polar and acidic amino acids to improve
+        salt-induced stabilization and solubility.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835295+00:00'
   curator: seed_from_metpo
@@ -108,4 +192,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1007720×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

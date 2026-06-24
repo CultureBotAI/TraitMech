@@ -50,6 +50,57 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Heat-stable membrane lipids and proteins that retain function at
       elevated temperatures.
+  - node_id: reverse_gyrase
+    label: reverse gyrase
+    node_type: GENE_OR_PROTEIN
+    description: Thermophile topoisomerase that introduces positive supercoils into
+      DNA.
+  - node_id: positive_dna_supercoiling
+    label: positive DNA supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    description: Positive supercoiling of DNA, a hallmark topological state in thermophiles.
+  - node_id: dna_melting_high_temperature
+    label: DNA melting at high temperature
+    node_type: BIOLOGICAL_PROCESS
+    description: Thermal denaturation (strand separation) of DNA at elevated temperature.
+  - node_id: nucleoid_associated_proteins
+    label: nucleoid-associated proteins
+    node_type: GENE_OR_PROTEIN
+    description: Proteins that organize the nucleoid and enhance DNA thermostability.
+  - node_id: genome_thermostability
+    label: genome thermostability
+    node_type: QUALITY
+    description: Resistance of the genome to heat-induced denaturation.
+  - node_id: small_heat_shock_proteins
+    label: small heat shock proteins
+    node_type: GENE_OR_PROTEIN
+    description: Chaperones that bind denaturing proteins to prevent aggregation under
+      heat stress.
+  - node_id: protein_aggregation_heat
+    label: heat-induced protein aggregation
+    node_type: BIOLOGICAL_PROCESS
+    description: Aggregation of denatured proteins under elevated temperature.
+  - node_id: thermosome
+    label: thermosome (group II chaperonin)
+    node_type: GENE_OR_PROTEIN
+    description: Group II chaperonin that refolds denatured proteins in an ATP-dependent
+      manner.
+  - node_id: denatured_protein_refolding
+    label: refolding of denatured proteins
+    node_type: BIOLOGICAL_PROCESS
+    description: ATP-dependent refolding of heat-denatured proteins.
+  - node_id: membrane_lipid_composition
+    label: altered membrane lipid composition
+    node_type: BIOLOGICAL_PROCESS
+    description: Remodeling of cytoplasmic membrane lipids in response to high temperature.
+  - node_id: membrane_thermostability
+    label: cytoplasmic membrane thermostability
+    node_type: QUALITY
+    description: Stabilization of the cytoplasmic membrane at high temperature.
+  - node_id: aa_composition_thermostability
+    label: hydrophobic and charged amino acid enrichment
+    node_type: BIOLOGICAL_PROCESS
+    description: Enrichment of hydrophobic and charged residues in thermophile proteins.
   edges:
   - subject: hot_environment
     predicate: selects for
@@ -80,6 +131,65 @@ causal_graphs:
       notes: Supports the >40 °C optimum as a value within the temperature-optimum
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: reverse_gyrase
+    predicate: positively regulates
+    object: positive_dna_supercoiling
+    description: Reverse gyrase introduces positive supercoils into DNA, a thermophile
+      hallmark.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: Reverse gyrase introduces positive supercoils into DNA and is a hallmark
+        of many thermophiles.
+  - subject: positive_dna_supercoiling
+    predicate: reduces
+    object: dna_melting_high_temperature
+    description: Positive supercoiling limits DNA melting and prevents thermal denaturation.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: Reverse gyrase / positive supercoiling proposed to limit DNA melting
+        and prevent thermal denaturation.
+  - subject: nucleoid_associated_proteins
+    predicate: increases
+    object: genome_thermostability
+    description: Nucleoid-associated proteins enhance DNA/genome thermostability.
+    evidence:
+    - reference: DOI:10.1264/jsme2.me23087
+      notes: NAPs affect 3D genome organization and enhance DNA thermostability; abundance
+        correlates with growth temperature.
+  - subject: small_heat_shock_proteins
+    predicate: prevents
+    object: protein_aggregation_heat
+    description: Small heat shock proteins bind denaturing proteins to prevent heat-induced
+      aggregation.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      notes: Small HSPs bind denaturing proteins and protect them from aggregation
+        under heat stress.
+  - subject: thermosome
+    predicate: refolds
+    object: denatured_protein_refolding
+    description: Thermosome refolds denatured proteins in an ATP-dependent manner.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      notes: Thermosome refolds denatured proteins in an ATP-dependent manner.
+  - subject: membrane_lipid_composition
+    predicate: stabilizes
+    object: membrane_thermostability
+    description: Altered membrane lipid composition stabilizes the cytoplasmic membrane
+      at high temperature.
+    evidence:
+    - reference: DOI:10.1128/mbio.03593-22
+      notes: Heat shock leads to an altered lipid composition of the cytoplasmic membrane;
+        unique membrane composition is a recognized thermophile adaptation.
+  - subject: aa_composition_thermostability
+    predicate: increases
+    object: thermophile_thermostability
+    description: Enrichment in hydrophobic and charged amino acids increases protein
+      thermostability.
+    evidence:
+    - reference: DOI:10.1128/mbio.02174-23
+      notes: Thermophiles show enrichment in hydrophobic and charged amino acids contributing
+        to intrinsic protein thermostability.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.822120+00:00'
   curator: seed_from_metpo
@@ -103,4 +213,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

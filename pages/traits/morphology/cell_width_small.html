@@ -107,12 +107,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>MreC</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>RodA-PBP2 open conformation</strong>
+            
+            <p>MreC favors the open, active conformation of the RodA-PBP2 synthase.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-39037-9</code>
+                
+                <span class="meta">MreC favors the open, active PBP2 state; PBP2 suppressor alleles bypass defective MreC and increase polymerization activity (conserved Rod complex).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>RodA-PBP2 open conformation</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>peptidoglycan polymerization and crosslinking</strong>
+            
+            <p>The open RodA-PBP2 state couples activation of polymerization and crosslinking.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-39037-9</code>
+                
+                <span class="meta">Structural opening couples activation of polymerization and crosslinking; open-state mutants show stronger polymerization (conserved SEDS-bPBP systems).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>peptidoglycan polymerization and crosslinking</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Rod-complex peptidoglycan synthesis</strong>
+            
+            <p>PG polymerization and crosslinking constitute the Rod-complex synthetic output.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41467-023-39037-9</code>
+                
+                <span class="meta">Open-state activation links RodA-PBP2 conformation to peptidoglycan synthetic output of the Rod complex.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>MreB cytoskeleton</strong>
+            <span class="edge-predicate">required for</span>
+            <strong>rod width/diameter control</strong>
+            
+            <p>MreB is a key determinant of rod shape and steady-state diameter/width control.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.cell.2018.02.050</code>
+                
+                <span class="meta">MreB is a key determinant of rod shape and diameter; perturbing MreB changes steady-state diameter and width control (broad, foundational).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>rod width/diameter control</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>cell width small</strong>
+            
+            <p>Stable diameter control maintains the narrow rod radius set-point.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.cell.2018.02.050</code>
+                
+                <span class="meta">Width/diameter control governs the steady-state rod radius producing the narrow width phenotype.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>Mg2+</strong>
+            <span class="edge-predicate">inhibits</span>
+            <strong>peptidoglycan hydrolase activity</strong>
+            
+            <p>Exogenous Mg2+ inhibits autolysins/cell-wall hydrolases.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41598-021-04294-5</code>
+                
+                <span class="meta">Exogenous Mg2+ inhibits autolysins/CW hydrolases and compensates increased DL-endopeptidase activity (clearest environmental modifier edge).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -262,6 +368,12 @@
           <time>2026-05-26T05:00:50Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -621,7 +733,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking MreB-organized lateral wall synthesis to a narrow rod radius set-point (0.5\u20130.65 \u03bcm).", "edges": [{"description": "MreB organizes lateral PG synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the lateral PG organizer.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex PG synthesis maintains a narrow cylinder radius.", "evidence": [{"notes": "Supports lateral PG assembly as the producer of the narrow rod radius.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "rod_complex_pg", "target": "cell_width_small_trait"}, {"description": "Small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports small width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_small_trait", "target": "cell_width_trait"}], "evidence_rows": [{"description": "MreB organizes lateral PG synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the lateral PG organizer.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex PG synthesis maintains a narrow cylinder radius.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the producer of the narrow rod radius.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Rod-complex peptidoglycan synthesis", "target": "cell width small"}, {"description": "Small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports small width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width small", "target": "cell width"}], "graph_id": "cell_width_small_mreb_setpoint", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell width approximately 0.5\u20130.65 \u03bcm.", "grounding": "METPO:1000888", "id": "cell_width_small_trait", "is_orphan": false, "label": "cell width small", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments organizing lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized lateral peptidoglycan assembly.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Small cell-width MreB-Rod set-point"}];
+  var graphs = [{"description": "DOI-backed graph linking MreB-organized lateral wall synthesis to a narrow rod radius set-point (0.5\u20130.65 \u03bcm).", "edges": [{"description": "MreB organizes lateral PG synthesis along the cylinder.", "evidence": [{"notes": "Supports MreB as the lateral PG organizer.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mreb_cytoskeleton", "target": "rod_complex_pg"}, {"description": "Rod-complex PG synthesis maintains a narrow cylinder radius.", "evidence": [{"notes": "Supports lateral PG assembly as the producer of the narrow rod radius.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "rod_complex_pg", "target": "cell_width_small_trait"}, {"description": "Small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports small width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_small_trait", "target": "cell_width_trait"}, {"description": "MreC favors the open, active conformation of the RodA-PBP2 synthase.", "evidence": [{"notes": "MreC favors the open, active PBP2 state; PBP2 suppressor alleles bypass defective MreC and increase polymerization activity (conserved Rod complex).", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-4", "is_orphan": false, "predicate": "activates", "predicate_id": null, "source": "mrec_protein", "target": "roda_pbp2_open"}, {"description": "The open RodA-PBP2 state couples activation of polymerization and crosslinking.", "evidence": [{"notes": "Structural opening couples activation of polymerization and crosslinking; open-state mutants show stronger polymerization (conserved SEDS-bPBP systems).", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "roda_pbp2_open", "target": "pg_polymerization_crosslinking"}, {"description": "PG polymerization and crosslinking constitute the Rod-complex synthetic output.", "evidence": [{"notes": "Open-state activation links RodA-PBP2 conformation to peptidoglycan synthetic output of the Rod complex.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "pg_polymerization_crosslinking", "target": "rod_complex_pg"}, {"description": "MreB is a key determinant of rod shape and steady-state diameter/width control.", "evidence": [{"notes": "MreB is a key determinant of rod shape and diameter; perturbing MreB changes steady-state diameter and width control (broad, foundational).", "reference": "DOI:10.1016/j.cell.2018.02.050"}], "id": "edge-7", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "mreb_cytoskeleton", "target": "rod_diameter_control"}, {"description": "Stable diameter control maintains the narrow rod radius set-point.", "evidence": [{"notes": "Width/diameter control governs the steady-state rod radius producing the narrow width phenotype.", "reference": "DOI:10.1016/j.cell.2018.02.050"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "rod_diameter_control", "target": "cell_width_small_trait"}, {"description": "Exogenous Mg2+ inhibits autolysins/cell-wall hydrolases.", "evidence": [{"notes": "Exogenous Mg2+ inhibits autolysins/CW hydrolases and compensates increased DL-endopeptidase activity (clearest environmental modifier edge).", "reference": "DOI:10.1038/s41598-021-04294-5"}], "id": "edge-9", "is_orphan": false, "predicate": "inhibits", "predicate_id": null, "source": "magnesium_ion", "target": "pg_hydrolase_activity"}], "evidence_rows": [{"description": "MreB organizes lateral PG synthesis along the cylinder.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB as the lateral PG organizer.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "MreB cytoskeleton", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "Rod-complex PG synthesis maintains a narrow cylinder radius.", "edge_id": "edge-2", "evidence": [{"notes": "Supports lateral PG assembly as the producer of the narrow rod radius.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "rod-shape is maintained"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "Rod-complex peptidoglycan synthesis", "target": "cell width small"}, {"description": "Small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports small width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width small", "target": "cell width"}, {"description": "MreC favors the open, active conformation of the RodA-PBP2 synthase.", "edge_id": "edge-4", "evidence": [{"notes": "MreC favors the open, active PBP2 state; PBP2 suppressor alleles bypass defective MreC and increase polymerization activity (conserved Rod complex).", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "activates", "predicate_id": null, "source": "MreC", "target": "RodA-PBP2 open conformation"}, {"description": "The open RodA-PBP2 state couples activation of polymerization and crosslinking.", "edge_id": "edge-5", "evidence": [{"notes": "Structural opening couples activation of polymerization and crosslinking; open-state mutants show stronger polymerization (conserved SEDS-bPBP systems).", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "increases", "predicate_id": null, "source": "RodA-PBP2 open conformation", "target": "peptidoglycan polymerization and crosslinking"}, {"description": "PG polymerization and crosslinking constitute the Rod-complex synthetic output.", "edge_id": "edge-6", "evidence": [{"notes": "Open-state activation links RodA-PBP2 conformation to peptidoglycan synthetic output of the Rod complex.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "contributes to", "predicate_id": null, "source": "peptidoglycan polymerization and crosslinking", "target": "Rod-complex peptidoglycan synthesis"}, {"description": "MreB is a key determinant of rod shape and steady-state diameter/width control.", "edge_id": "edge-7", "evidence": [{"notes": "MreB is a key determinant of rod shape and diameter; perturbing MreB changes steady-state diameter and width control (broad, foundational).", "reference": "DOI:10.1016/j.cell.2018.02.050"}], "predicate": "required for", "predicate_id": null, "source": "MreB cytoskeleton", "target": "rod width/diameter control"}, {"description": "Stable diameter control maintains the narrow rod radius set-point.", "edge_id": "edge-8", "evidence": [{"notes": "Width/diameter control governs the steady-state rod radius producing the narrow width phenotype.", "reference": "DOI:10.1016/j.cell.2018.02.050"}], "predicate": "produces", "predicate_id": null, "source": "rod width/diameter control", "target": "cell width small"}, {"description": "Exogenous Mg2+ inhibits autolysins/cell-wall hydrolases.", "edge_id": "edge-9", "evidence": [{"notes": "Exogenous Mg2+ inhibits autolysins/CW hydrolases and compensates increased DL-endopeptidase activity (clearest environmental modifier edge).", "reference": "DOI:10.1038/s41598-021-04294-5"}], "predicate": "inhibits", "predicate_id": null, "source": "Mg2+", "target": "peptidoglycan hydrolase activity"}], "graph_id": "cell_width_small_mreb_setpoint", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Cell width approximately 0.5\u20130.65 \u03bcm.", "grounding": "METPO:1000888", "id": "cell_width_small_trait", "is_orphan": false, "label": "cell width small", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Magnesium ion, an environmental modifier of cell-wall hydrolase activity.", "grounding": null, "id": "magnesium_ion", "is_orphan": false, "label": "Mg2+", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB filaments organizing lateral cell-wall synthesis.", "grounding": null, "id": "mreb_cytoskeleton", "is_orphan": false, "label": "MreB cytoskeleton", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic Rod-complex protein that favors the open, active PBP2 state.", "grounding": null, "id": "mrec_protein", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#cffafe", "description": "Cell-wall hydrolase/autolysin activity that cleaves peptidoglycan.", "grounding": null, "id": "pg_hydrolase_activity", "is_orphan": false, "label": "peptidoglycan hydrolase activity", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}, {"color": "#ecfccb", "description": "Glycan strand polymerization and peptide crosslinking output of the Rod complex.", "grounding": null, "id": "pg_polymerization_crosslinking", "is_orphan": false, "label": "peptidoglycan polymerization and crosslinking", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "MreB-organized lateral peptidoglycan assembly.", "grounding": null, "id": "rod_complex_pg", "is_orphan": false, "label": "Rod-complex peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Maintenance of a stable steady-state rod diameter (width set-point).", "grounding": null, "id": "rod_diameter_control", "is_orphan": false, "label": "rod width/diameter control", "node_type": "CAPACITY", "xrefs": []}, {"color": "#f3f4f6", "description": "Activated open conformation of the SEDS-bPBP RodA-PBP2 synthase complex.", "grounding": null, "id": "roda_pbp2_open", "is_orphan": false, "label": "RodA-PBP2 open conformation", "node_type": "STATE", "xrefs": []}], "title": "Small cell-width MreB-Rod set-point"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -632,7 +744,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -80,6 +80,28 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cellular material formed from fixed carbon.
     grounding: METPO:1007501
+  - node_id: nadph
+    label: NADPH
+    node_type: CHEMICAL
+    description: Reduced electron carrier produced by photosynthetic electron transport.
+  - node_id: carbonic_anhydrase
+    label: carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme interconverting CO2 and bicarbonate for inorganic carbon supply.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: Dissolved inorganic carbon species in equilibrium with CO2.
+  - node_id: dic_transporter
+    label: inorganic carbon transporter
+    node_type: GENE_OR_PROTEIN
+    description: Transporter importing dissolved inorganic carbon species into the
+      cell.
+  - node_id: rubisco
+    label: RuBisCO
+    node_type: GENE_OR_PROTEIN
+    description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key autotrophic
+      carboxylase.
   edges:
   - subject: photolithoautotrophic_trait
     predicate: uses energy source
@@ -157,6 +179,47 @@ causal_graphs:
       snippet: cellular carbon
       notes: Supports assimilation of CO2 into cellular carbon.
     predicate_id: METPO:2000202
+  - subject: photosynthetic_electron_transport
+    predicate: generates
+    object: nadph
+    description: Photosynthetic electron transport generates NADPH as terminal reductant.
+    evidence:
+    - reference: DOI:10.1038/s44222-023-00093-x
+      notes: Ferredoxin and FNR yield NADPH as the terminal reductant of phototrophic
+        electron transport.
+  - subject: carbonic_anhydrase
+    predicate: interconverts
+    object: bicarbonate
+    description: Carbonic anhydrase interconverts CO2 and bicarbonate, accelerating
+      DIC equilibration.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: CA catalyzes CO2 <-> H2CO3 <-> HCO3- interconversion, accelerating DIC
+        equilibration (general CCM mechanism).
+  - subject: dic_transporter
+    predicate: imports
+    object: bicarbonate
+    description: Inorganic carbon transporters import dissolved inorganic carbon species.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: HCO3- uptake systems bridge environmental DIC supply to fixation demand.
+  - subject: rubisco
+    predicate: catalyzes
+    object: autotrophic_co2_fixation
+    description: RuBisCO catalyzes the carboxylation step of autotrophic CO2 fixation.
+    evidence:
+    - reference: DOI:10.1128/aem.01557-23
+      notes: RuBisCO is the key CO2-specific carboxylase for autotrophic CO2 fixation
+        (broadly accepted).
+  - subject: reducing_power
+    predicate: has part
+    object: nadph
+    description: NADPH is a concrete reductant constituting the reducing power for
+      biosynthesis.
+    evidence:
+    - reference: DOI:10.1038/s44222-023-00093-x
+      notes: NADPH is the terminal reductant tabulated as reducing equivalent for
+        phototrophic biosynthesis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.884349+00:00'
   curator: seed_from_metpo
@@ -240,4 +303,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

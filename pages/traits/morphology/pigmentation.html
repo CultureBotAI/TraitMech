@@ -124,12 +124,152 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>mevalonate pathway</strong>
+            <span class="edge-predicate">provides precursor for</span>
+            <strong>carotenoid biosynthesis</strong>
+            
+            <p>The mevalonate pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11122920</code>
+                
+                <span class="meta">GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>MEP pathway</strong>
+            <span class="edge-predicate">provides precursor for</span>
+            <strong>carotenoid biosynthesis</strong>
+            
+            <p>The MEP pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11122920</code>
+                
+                <span class="meta">GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>crtE/crtB/crtI/crtY gene set</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>beta-carotene biosynthesis</strong>
+            
+            <p>The crtE/crtB/crtI/crtY gene set encodes enzymes enabling beta-carotene biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11030614</code>
+                
+                <span class="meta">beta-carotene: crtE, crtY, crtI, crtB; curate as generic carotenoid module.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>beta-carotene biosynthesis</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>carotenoid biosynthesis</strong>
+            
+            <p>Beta-carotene biosynthesis is a specific carotenoid biosynthetic route.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11030614</code>
+                
+                <span class="meta">Beta-carotene is a carotenoid pigment produced by carotenogenic crt genes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>shikimate pathway</strong>
+            <span class="edge-predicate">precursor of</span>
+            <strong>phenazine biosynthesis</strong>
+            
+            <p>The shikimate pathway provides aromatic precursors for phenazine biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms11122920</code>
+                
+                <span class="meta">Phenazine pigments (including pyocyanin) derive from the shikimate pathway.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>hppD 4-hydroxyphenylpyruvate dioxygenase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>homogentisate</strong>
+            
+            <p>HppD converts 4-hydroxyphenylpyruvate to homogentisate in the pyomelanin pathway.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.00410-24</code>
+                
+                <span class="meta">Conversion of 4-hydroxyphenylpyruvate to HGA by HppD.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>homogentisate</strong>
+            <span class="edge-predicate">polymerizes to form</span>
+            <strong>pyomelanin</strong>
+            
+            <p>Homogentisate auto-oxidizes and polymerizes to form the pigment pyomelanin.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.00410-24</code>
+                
+                <span class="meta">HGA, excretion of HGA, spontaneous auto-oxidation and polymerization to pyomelanin.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-12">
+            <strong>hmgA homogentisate 1,2-dioxygenase</strong>
+            <span class="edge-predicate">prevents accumulation of</span>
+            <strong>pyomelanin</strong>
+            
+            <p>HmgA converts homogentisate to maleylacetoacetate, preventing pyomelanin accumulation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.00410-24</code>
+                
+                <span class="meta">HmgA normally converts HGA to maleylacetoacetate, preventing pigment accumulation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -309,6 +449,12 @@
           <time>2026-06-14T05:51:46Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (GO:0046148×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -668,7 +814,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking microbial pigmentation to pigment biosynthesis pathways, chromophore-containing metabolites, environmental regulation, and visible colony color.", "edges": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment_biosynthesis", "target": "chromophore_metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore_metabolites", "target": "visible_colony_color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "environmental_regulation", "target": "pigment_biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_colony_color", "target": "pigmentation_trait"}], "evidence_rows": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment biosynthesis", "target": "chromophore-containing metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "edge_id": "edge-2", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore-containing metabolites", "target": "visible colony color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "environmental regulation", "target": "pigment biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible colony color", "target": "pigmentation"}], "graph_id": "pigmentation_biosynthetic_colorants", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Colored molecules such as carotenoids, prodiginines, melanins, and phenazines.", "grounding": null, "id": "chromophore_metabolites", "is_orphan": false, "label": "chromophore-containing metabolites", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Culture and environmental conditions that alter pigment production.", "grounding": null, "id": "environmental_regulation", "is_orphan": false, "label": "environmental regulation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic production of colored microbial metabolites.", "grounding": "GO:0046148", "id": "pigment_biosynthesis", "is_orphan": false, "label": "pigment biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial phenotype defined by pigment-derived color.", "grounding": "METPO:1003021", "id": "pigmentation_trait", "is_orphan": false, "label": "pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#cffafe", "description": "Absorption and reflection phenotype observed as microbial color.", "grounding": null, "id": "visible_colony_color", "is_orphan": false, "label": "visible colony color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Microbial pigmentation biosynthetic mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking microbial pigmentation to pigment biosynthesis pathways, chromophore-containing metabolites, environmental regulation, and visible colony color.", "edges": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment_biosynthesis", "target": "chromophore_metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore_metabolites", "target": "visible_colony_color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "environmental_regulation", "target": "pigment_biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_colony_color", "target": "pigmentation_trait"}, {"description": "The mevalonate pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.", "evidence": [{"notes": "GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.", "reference": "DOI:10.3390/microorganisms11122920"}], "id": "edge-5", "is_orphan": false, "predicate": "provides precursor for", "predicate_id": null, "source": "mva_pathway", "target": "carotenoid_biosynthesis"}, {"description": "The MEP pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.", "evidence": [{"notes": "GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.", "reference": "DOI:10.3390/microorganisms11122920"}], "id": "edge-6", "is_orphan": false, "predicate": "provides precursor for", "predicate_id": null, "source": "mep_pathway", "target": "carotenoid_biosynthesis"}, {"description": "The crtE/crtB/crtI/crtY gene set encodes enzymes enabling beta-carotene biosynthesis.", "evidence": [{"notes": "beta-carotene: crtE, crtY, crtI, crtB; curate as generic carotenoid module.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "crt_carotenoid_genes", "target": "beta_carotene_biosynthesis"}, {"description": "Beta-carotene biosynthesis is a specific carotenoid biosynthetic route.", "evidence": [{"notes": "Beta-carotene is a carotenoid pigment produced by carotenogenic crt genes.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-8", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "beta_carotene_biosynthesis", "target": "carotenoid_biosynthesis"}, {"description": "The shikimate pathway provides aromatic precursors for phenazine biosynthesis.", "evidence": [{"notes": "Phenazine pigments (including pyocyanin) derive from the shikimate pathway.", "reference": "DOI:10.3390/microorganisms11122920"}], "id": "edge-9", "is_orphan": false, "predicate": "precursor of", "predicate_id": null, "source": "shikimate_pathway", "target": "phenazine_biosynthesis"}, {"description": "HppD converts 4-hydroxyphenylpyruvate to homogentisate in the pyomelanin pathway.", "evidence": [{"notes": "Conversion of 4-hydroxyphenylpyruvate to HGA by HppD.", "reference": "DOI:10.1128/spectrum.00410-24"}], "id": "edge-10", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "hppd_gene", "target": "homogentisate"}, {"description": "Homogentisate auto-oxidizes and polymerizes to form the pigment pyomelanin.", "evidence": [{"notes": "HGA, excretion of HGA, spontaneous auto-oxidation and polymerization to pyomelanin.", "reference": "DOI:10.1128/spectrum.00410-24"}], "id": "edge-11", "is_orphan": false, "predicate": "polymerizes to form", "predicate_id": null, "source": "homogentisate", "target": "pyomelanin"}, {"description": "HmgA converts homogentisate to maleylacetoacetate, preventing pyomelanin accumulation.", "evidence": [{"notes": "HmgA normally converts HGA to maleylacetoacetate, preventing pigment accumulation.", "reference": "DOI:10.1128/spectrum.00410-24"}], "id": "edge-12", "is_orphan": false, "predicate": "prevents accumulation of", "predicate_id": null, "source": "hmga_gene", "target": "pyomelanin"}], "evidence_rows": [{"description": "Pigment biosynthetic pathways produce colored metabolites.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports bacterial pigment production as biosynthesis of colored compounds.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "bacterial pigments and their applications"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "pigment biosynthesis", "target": "chromophore-containing metabolites"}, {"description": "Chromophore-containing metabolites cause visible microbial color.", "edge_id": "edge-2", "evidence": [{"notes": "Supports multiple chemically distinct bacterial pigments as colorants.", "reference": "DOI:10.1177/1934578X1801301240", "snippet": "such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein, prodigiosin"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "chromophore-containing metabolites", "target": "visible colony color"}, {"description": "Growth and environmental conditions can modulate pigment biosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Supports pigment production as condition- and regulation-sensitive; retained as a broad regulatory edge.", "reference": "DOI:10.3389/fsufs.2020.00100", "snippet": "bacterial pigments ... production ... genetic engineering"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "environmental regulation", "target": "pigment biosynthesis"}, {"description": "Visible colony color manifests the pigmentation phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports pigmentation as a visible output of bacterial pigment chemistry.", "reference": "DOI:10.1016/j.procbio.2013.06.006", "snippet": "focus on applications of bacterial pigments"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible colony color", "target": "pigmentation"}, {"description": "The mevalonate pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.", "edge_id": "edge-5", "evidence": [{"notes": "GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.", "reference": "DOI:10.3390/microorganisms11122920"}], "predicate": "provides precursor for", "predicate_id": null, "source": "mevalonate pathway", "target": "carotenoid biosynthesis"}, {"description": "The MEP pathway supplies C5 isoprenoid precursors (IPP/DMAPP) for carotenoid biosynthesis.", "edge_id": "edge-6", "evidence": [{"notes": "GGPP originates from C5 precursors (IPP and DMAPP) via either the MVA or MEP pathways.", "reference": "DOI:10.3390/microorganisms11122920"}], "predicate": "provides precursor for", "predicate_id": null, "source": "MEP pathway", "target": "carotenoid biosynthesis"}, {"description": "The crtE/crtB/crtI/crtY gene set encodes enzymes enabling beta-carotene biosynthesis.", "edge_id": "edge-7", "evidence": [{"notes": "beta-carotene: crtE, crtY, crtI, crtB; curate as generic carotenoid module.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "enables", "predicate_id": null, "source": "crtE/crtB/crtI/crtY gene set", "target": "beta-carotene biosynthesis"}, {"description": "Beta-carotene biosynthesis is a specific carotenoid biosynthetic route.", "edge_id": "edge-8", "evidence": [{"notes": "Beta-carotene is a carotenoid pigment produced by carotenogenic crt genes.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "is a", "predicate_id": null, "source": "beta-carotene biosynthesis", "target": "carotenoid biosynthesis"}, {"description": "The shikimate pathway provides aromatic precursors for phenazine biosynthesis.", "edge_id": "edge-9", "evidence": [{"notes": "Phenazine pigments (including pyocyanin) derive from the shikimate pathway.", "reference": "DOI:10.3390/microorganisms11122920"}], "predicate": "precursor of", "predicate_id": null, "source": "shikimate pathway", "target": "phenazine biosynthesis"}, {"description": "HppD converts 4-hydroxyphenylpyruvate to homogentisate in the pyomelanin pathway.", "edge_id": "edge-10", "evidence": [{"notes": "Conversion of 4-hydroxyphenylpyruvate to HGA by HppD.", "reference": "DOI:10.1128/spectrum.00410-24"}], "predicate": "produces", "predicate_id": null, "source": "hppD 4-hydroxyphenylpyruvate dioxygenase", "target": "homogentisate"}, {"description": "Homogentisate auto-oxidizes and polymerizes to form the pigment pyomelanin.", "edge_id": "edge-11", "evidence": [{"notes": "HGA, excretion of HGA, spontaneous auto-oxidation and polymerization to pyomelanin.", "reference": "DOI:10.1128/spectrum.00410-24"}], "predicate": "polymerizes to form", "predicate_id": null, "source": "homogentisate", "target": "pyomelanin"}, {"description": "HmgA converts homogentisate to maleylacetoacetate, preventing pyomelanin accumulation.", "edge_id": "edge-12", "evidence": [{"notes": "HmgA normally converts HGA to maleylacetoacetate, preventing pigment accumulation.", "reference": "DOI:10.1128/spectrum.00410-24"}], "predicate": "prevents accumulation of", "predicate_id": null, "source": "hmgA homogentisate 1,2-dioxygenase", "target": "pyomelanin"}], "graph_id": "pigmentation_biosynthetic_colorants", "issues": [], "nodes": [{"color": "#e0e7ff", "description": "Biosynthetic route producing the carotenoid pigment beta-carotene.", "grounding": null, "id": "beta_carotene_biosynthesis", "is_orphan": false, "label": "beta-carotene biosynthesis", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Biosynthetic pathway producing carotenoid pigments from isoprenoid precursors.", "grounding": null, "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "PATHWAY", "xrefs": []}, {"color": "#fef3c7", "description": "Colored molecules such as carotenoids, prodiginines, melanins, and phenazines.", "grounding": null, "id": "chromophore_metabolites", "is_orphan": false, "label": "chromophore-containing metabolites", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Core carotenogenic genes encoding enzymes for beta-carotene biosynthesis.", "grounding": null, "id": "crt_carotenoid_genes", "is_orphan": false, "label": "crtE/crtB/crtI/crtY gene set", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dcfce7", "description": "Culture and environmental conditions that alter pigment production.", "grounding": null, "id": "environmental_regulation", "is_orphan": false, "label": "environmental regulation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting homogentisate to maleylacetoacetate, preventing pyomelanin accumulation.", "grounding": null, "id": "hmga_gene", "is_orphan": false, "label": "hmgA homogentisate 1,2-dioxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Aromatic metabolite that auto-oxidizes and polymerizes to pyomelanin.", "grounding": null, "id": "homogentisate", "is_orphan": false, "label": "homogentisate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting 4-hydroxyphenylpyruvate to homogentisate.", "grounding": null, "id": "hppd_gene", "is_orphan": false, "label": "hppD 4-hydroxyphenylpyruvate dioxygenase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#e0e7ff", "description": "2-C-methyl-D-erythritol 4-phosphate pathway producing C5 isoprenoid precursors IPP and DMAPP.", "grounding": null, "id": "mep_pathway", "is_orphan": false, "label": "MEP pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Pathway producing C5 isoprenoid precursors (IPP and DMAPP) for terpenoid biosynthesis.", "grounding": null, "id": "mva_pathway", "is_orphan": false, "label": "mevalonate pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#e0e7ff", "description": "Biosynthetic pathway producing phenazine pigments such as pyocyanin.", "grounding": null, "id": "phenazine_biosynthesis", "is_orphan": false, "label": "phenazine biosynthesis", "node_type": "PATHWAY", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic production of colored microbial metabolites.", "grounding": "GO:0046148", "id": "pigment_biosynthesis", "is_orphan": false, "label": "pigment biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Microbial phenotype defined by pigment-derived color.", "grounding": "METPO:1003021", "id": "pigmentation_trait", "is_orphan": false, "label": "pigmentation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Brown-black pigment formed by polymerization of homogentisate.", "grounding": null, "id": "pyomelanin", "is_orphan": false, "label": "pyomelanin", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#e0e7ff", "description": "Pathway providing aromatic precursors used in phenazine biosynthesis.", "grounding": null, "id": "shikimate_pathway", "is_orphan": false, "label": "shikimate pathway", "node_type": "PATHWAY", "xrefs": []}, {"color": "#cffafe", "description": "Absorption and reflection phenotype observed as microbial color.", "grounding": null, "id": "visible_colony_color", "is_orphan": false, "label": "visible colony color", "node_type": "MOLECULAR_FUNCTION", "xrefs": []}], "title": "Microbial pigmentation biosynthetic mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -679,7 +825,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

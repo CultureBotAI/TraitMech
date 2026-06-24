@@ -46,6 +46,26 @@ causal_graphs:
     label: turgor pressure
     node_type: ENVIRONMENTAL_FACTOR
     description: Internal hydrostatic pressure pushing against the cell wall.
+  - node_id: apbp_system
+    label: class A PBP (aPBP) cell-wall synthesis system
+    node_type: BIOLOGICAL_PROCESS
+    description: Class A penicillin-binding-protein peptidoglycan synthesis system
+      that acts oppositely to the Rod complex to set cell diameter.
+  - node_id: roda_pbp2_synthase
+    label: RodA-PBP2 core synthase
+    node_type: GENE_OR_PROTEIN
+    description: Essential Rod-complex peptidoglycan synthase (RodA glycosyltransferase
+      with PBP2 transpeptidase) driving lateral elongation.
+  - node_id: mre_accessory_proteins
+    label: Rod-complex accessory proteins MreC/MreD/RodZ
+    node_type: GENE_OR_PROTEIN
+    description: Accessory components of the Rod complex that regulate RodA-PBP2 enzymatic
+      activity.
+  - node_id: envelope_bending_rigidity
+    label: cell envelope bending rigidity
+    node_type: QUALITY
+    description: Mechanical bending rigidity of the cell envelope that constrains
+      width and its homeostasis.
   edges:
   - subject: mreb_cytoskeleton
     predicate: enables
@@ -85,6 +105,45 @@ causal_graphs:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports wall mechanics as the determinant of steady-state cell width.
+  - subject: apbp_system
+    predicate: regulates
+    object: cell_width_trait
+    description: Rod and aPBP systems act oppositely to set cell diameter; MreB-directed
+      lateral PG synthesis is the control point governing width.
+    evidence:
+    - reference: DOI:10.3390/biom13050720
+      notes: Review states Rod and aPBP systems "act oppositely to set B. subtilis
+        cell diameter"; MreB-directed PG synthesis identified as the control point
+        governing cell width.
+  - subject: roda_pbp2_synthase
+    predicate: enables
+    object: rod_complex_pg
+    description: Activation/open state of the RodA-PBP2 core synthase couples PG polymerization
+      and crosslinking required for elongation-based lateral wall synthesis.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: RodA-PBP2 undergoes dynamic exchange between closed and open states;
+        structural opening couples activation of polymerization and crosslinking and
+        is essential in vivo.
+  - subject: mre_accessory_proteins
+    predicate: regulates
+    object: roda_pbp2_synthase
+    description: Rod-complex accessory components MreC/MreD/RodZ regulate RodA-PBP2
+      activity and thereby lateral wall synthesis affecting width.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Rod complex has accessory components MreCD and RodZ; genetic studies
+        implicated MreC as a potential regulator of enzymatic activity.
+  - subject: envelope_bending_rigidity
+    predicate: regulates
+    object: cell_width_trait
+    description: Cell envelope bending rigidity constrains cell width homeostasis;
+      width increases and saturates primarily under the control of envelope bending
+      rigidity.
+    evidence:
+    - reference: DOI:10.1101/2024.11.22.624946
+      notes: Width increases and saturates primarily under the control of envelope
+        bending rigidity, which constrains width homeostasis.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.918950+00:00'
   curator: seed_from_metpo
@@ -114,4 +173,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:produces×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -1,8 +1,8 @@
 identifier: traitmech:000017
 label: arsenic tolerant
-definition: A metalloid tolerance in which an organism grows in the presence of
-  elevated arsenic (arsenite/arsenate) concentrations, typically via the ars operon,
-  whose ArsB pump extrudes arsenite from the cytoplasm.
+definition: A metalloid tolerance in which an organism grows in the presence of elevated
+  arsenic (arsenite/arsenate) concentrations, typically via the ars operon, whose
+  ArsB pump extrudes arsenite from the cytoplasm.
 definition_source: DOI:10.3389/fmicb.2018.02473
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -17,12 +17,12 @@ evidence:
 - reference: DOI:10.3389/fmicb.2018.02473
   snippet: ArsB is an integral membrane protein able to extrude arsenite from the
     cell cytoplasm, thus diminishing arsenite accumulation
-  notes: Review supports the ars operon as a near-ubiquitous arsenic-resistance
-    determinant, "more common than genes for tryptophan biosynthesis".
+  notes: Review supports the ars operon as a near-ubiquitous arsenic-resistance determinant,
+    "more common than genes for tryptophan biosynthesis".
 - reference: DOI:10.3389/fmicb.2020.00047
   snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC of 20
-    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+ (1
-    uM) and Pb2+ (1.7 mM)
+    mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5 mM), Au3+
+    (1 uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates arsenite (As3+)
     to a MIC of 3.5 mM.'
 causal_graphs:
@@ -44,13 +44,51 @@ causal_graphs:
   - node_id: ars_operon
     label: ars operon (ArsB pump)
     node_type: GENE_OR_PROTEIN
-    description: Arsenite efflux machinery encoded by the near-ubiquitous ars
-      operon.
+    description: Arsenite efflux machinery encoded by the near-ubiquitous ars operon.
   - node_id: arsenite_export
     label: arsenite transmembrane transport
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0030001
     description: Active export of arsenite across the cytoplasmic membrane.
+  - node_id: arsenate
+    label: arsenate(3-)
+    node_type: CHEMICAL
+    description: Pentavalent arsenic species; substrate for arsenate reductase.
+  - node_id: arsR_repressor
+    label: ArsR transcriptional repressor
+    node_type: GENE_OR_PROTEIN
+    description: Trans-acting repressor that binds the ars promoter and de-represses
+      upon arsenite binding.
+  - node_id: ars_promoter
+    label: ars promoter
+    node_type: GENE_OR_PROTEIN
+    description: Promoter controlling transcription of the ars operon.
+  - node_id: arsC_reductase
+    label: ArsC arsenate reductase
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic arsenate reductase converting As(V) to As(III).
+  - node_id: arsenate_reduction
+    label: arsenate reduction to arsenite
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of intracellular arsenate to arsenite prior to efflux.
+  - node_id: arsB_pump
+    label: ArsB arsenite efflux permease
+    node_type: GENE_OR_PROTEIN
+    description: Integral membrane arsenite efflux pump extruding As(III) from the
+      cytoplasm.
+  - node_id: acr3_pump
+    label: Acr3 arsenite efflux permease
+    node_type: GENE_OR_PROTEIN
+    description: Alternative inorganic arsenite efflux pump exporting As(III).
+  - node_id: arsM_methyltransferase
+    label: ArsM arsenite S-adenosylmethionine methyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme methylating arsenite to volatile methylated arsenicals.
+  - node_id: arsenite_methylation
+    label: arsenite methylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Methylation of arsenite producing volatile methylated arsenic, a
+      detoxification route.
   edges:
   - subject: arsenite
     predicate: challenges
@@ -77,6 +115,75 @@ causal_graphs:
     - reference: DOI:10.3389/fmicb.2018.02473
       notes: The ars operon is the near-ubiquitous arsenic-resistance determinant.
     predicate_id: METPO:2007407
+  - subject: arsR_repressor
+    predicate: represses
+    object: ars_promoter
+    description: ArsR represses ars-operon transcription in the absence of arsenite.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: ArsR is a trans-acting transcriptional repressor that binds the ars promoter.
+  - subject: arsenite
+    predicate: relieves repression by
+    object: arsR_repressor
+    description: Arsenite binding changes ArsR conformation and de-represses ars transcription.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1494872
+      notes: Binding of As(III) to ArsR changes its conformation and relieves repression
+        of the ars operon.
+  - subject: arsC_reductase
+    predicate: enables
+    object: arsenate_reduction
+    description: ArsC reduces intracellular arsenate to arsenite.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: ArsC is an arsenate reductase that converts intracellular As(V) to As(III).
+  - subject: arsenate_reduction
+    predicate: produces
+    object: arsenite
+    description: Arsenate reduction yields arsenite, the substrate for efflux.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: ArsC converts intracellular As(V) to As(III), feeding the efflux route.
+  - subject: arsB_pump
+    predicate: enables
+    object: arsenite_export
+    description: ArsB is an integral membrane pump extruding arsenite from the cytoplasm.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+
+        from the cytoplasm.
+  - subject: acr3_pump
+    predicate: enables
+    object: arsenite_export
+    description: Acr3 is an alternative inorganic arsenite efflux pump.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12010074
+      notes: Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.
+  - subject: arsM_methyltransferase
+    predicate: enables
+    object: arsenite_methylation
+    description: ArsM methylates arsenite to volatile methylated arsenicals.
+    evidence:
+    - reference: DOI:10.7717/peerj.18383
+      notes: arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile
+        methylated arsenicals.
+  - subject: arsenite_methylation
+    predicate: mitigates
+    object: arsenite
+    description: Methylation and volatilization depletes the cytoplasmic arsenite
+      pool, a detoxification route.
+    evidence:
+    - reference: DOI:10.7717/peerj.18383
+      notes: Produced arsenite is methylated by arsM to volatile methylated arsenic,
+        removing it from the cell.
+  - subject: arsC_reductase
+    predicate: reduces
+    object: arsenate
+    description: Arsenate reductase reduces arsenate to arsenite, the form handled
+      by efflux pumps.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.00047
+      notes: Connecting edge wiring the enrichment node into the graph.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -87,7 +194,17 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (ars-operon arsenite efflux) with
-    CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
-    to REVIEWED.
+  changes: Added evidence-backed causal graph (ars-operon arsenite efflux) with CHEBI/GO
+    node groundings and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: FIX_ORPHAN_NODE
+  changes: Connected orphaned node 'arsenate' via arsC_reductase -[reduces]-> arsenate.
   llm_assisted: true

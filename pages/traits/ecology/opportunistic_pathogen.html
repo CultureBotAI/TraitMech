@@ -90,12 +90,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>epithelial barrier breach / sterile site access</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>opportunistic infection</strong>
+            
+            <p>Barrier breach exposes sterile tissue, enabling infection by normally innocuous microbes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-024-01035-z</code>
+                
+                <span class="meta">Uberoi et al.: barrier breach exposes sterile tissue to microbes (generalizable ecological/clinical edge).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>antibiotic exposure</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>microbiota dysbiosis</strong>
+            
+            <p>Antimicrobial exposure disrupts the resident microbiota, producing dysbiosis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s40588-023-00190-w</code>
+                
+                <span class="meta">Jacobsen: antibiotic exposure is a common risk factor driving overgrowth of opportunists; curated as exposure to dysbiosis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>microbiota dysbiosis</strong>
+            <span class="edge-predicate">increases</span>
+            <strong>opportunist colonization / overgrowth</strong>
+            
+            <p>Dysbiosis increases colonization/overgrowth by opportunistic microbes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s40588-023-00190-w</code>
+                
+                <span class="meta">Jacobsen: defects/dysbiosis permit expansion of normally controlled opportunists (high-level ecological edge).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>opportunist colonization / overgrowth</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>opportunistic infection</strong>
+            
+            <p>Expanded opportunist colonization provides the population reservoir from which infection can arise.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s40588-023-00190-w</code>
+                
+                <span class="meta">Jacobsen: colonization is a risk factor preceding opportunistic disease.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>host colonization without disease</strong>
+            <span class="edge-predicate">progresses to under host susceptibility</span>
+            <strong>opportunistic infection</strong>
+            
+            <p>Most colonization is benign; only some progresses to infection under permissive host conditions, capturing context-dependence.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s41579-024-01035-z</code>
+                
+                <span class="meta">Uberoi: nearly all wounds are colonized but only some progress to infection; opportunism is context-dependent, not equivalent to colonization.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>nutritional immunity / iron limitation</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>high-affinity iron acquisition</strong>
+            
+            <p>Host iron limitation induces high-affinity iron transport and siderophore production, a general opportunist adaptation in-host.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14241</code>
+                
+                <span class="meta">Sanchez-Jimenez: under iron limitation, high-affinity iron transport systems are promoted (general iron-acquisition biology).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>high-affinity iron acquisition</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>opportunistic infection</strong>
+            
+            <p>Iron acquisition under host-imposed restriction supports opportunist fitness during infection.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1111/1751-7915.14241</code>
+                
+                <span class="meta">Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence determinant of opportunists.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -227,6 +350,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (opportunistic / context-dependent virulence) with RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (7 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -586,7 +715,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking compromised host defenses to context-dependent virulence in normally commensal/environmental microbes.", "edges": [{"description": "Breached or weakened host defenses enable a normally innocuous microbe to cause disease.", "evidence": [{"notes": "Brown et al. support context-dependent virulence in opportunistic pathogens.", "reference": "DOI:10.1016/j.tim.2012.04.005"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "compromised_host_defense", "target": "opportunistic_infection"}, {"description": "Context-dependent infection realizes the opportunistic-pathogen lifestyle.", "evidence": [{"notes": "Drew et al. support facultative shifts toward pathogenicity along the parasite-mutualist continuum.", "reference": "DOI:10.1038/s41579-021-00550-7"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "opportunistic_infection", "target": "opportunistic_pathogen_trait"}], "evidence_rows": [{"description": "Breached or weakened host defenses enable a normally innocuous microbe to cause disease.", "edge_id": "edge-1", "evidence": [{"notes": "Brown et al. support context-dependent virulence in opportunistic pathogens.", "reference": "DOI:10.1016/j.tim.2012.04.005"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "compromised host defense", "target": "opportunistic infection"}, {"description": "Context-dependent infection realizes the opportunistic-pathogen lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "Drew et al. support facultative shifts toward pathogenicity along the parasite-mutualist continuum.", "reference": "DOI:10.1038/s41579-021-00550-7"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "opportunistic infection", "target": "opportunistic pathogen"}], "graph_id": "opportunistic_pathogen_context_dependent_virulence", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Immunosuppression, barrier breach, or sterile-site translocation.", "grounding": null, "id": "compromised_host_defense", "is_orphan": false, "label": "compromised host defense", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Disease arising from a normally commensal or environmental microbe in a permissive host context.", "grounding": null, "id": "opportunistic_infection", "is_orphan": false, "label": "opportunistic infection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Disease causation only under compromised host defenses or sterile-site translocation.", "grounding": "traitmech:000046", "id": "opportunistic_pathogen_trait", "is_orphan": false, "label": "opportunistic pathogen", "node_type": "TRAIT", "xrefs": []}], "title": "Opportunistic pathogenesis under compromised host defense"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking compromised host defenses to context-dependent virulence in normally commensal/environmental microbes.", "edges": [{"description": "Breached or weakened host defenses enable a normally innocuous microbe to cause disease.", "evidence": [{"notes": "Brown et al. support context-dependent virulence in opportunistic pathogens.", "reference": "DOI:10.1016/j.tim.2012.04.005"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "compromised_host_defense", "target": "opportunistic_infection"}, {"description": "Context-dependent infection realizes the opportunistic-pathogen lifestyle.", "evidence": [{"notes": "Drew et al. support facultative shifts toward pathogenicity along the parasite-mutualist continuum.", "reference": "DOI:10.1038/s41579-021-00550-7"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "opportunistic_infection", "target": "opportunistic_pathogen_trait"}, {"description": "Barrier breach exposes sterile tissue, enabling infection by normally innocuous microbes.", "evidence": [{"notes": "Uberoi et al.: barrier breach exposes sterile tissue to microbes (generalizable ecological/clinical edge).", "reference": "DOI:10.1038/s41579-024-01035-z"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "barrier_breach", "target": "opportunistic_infection"}, {"description": "Antimicrobial exposure disrupts the resident microbiota, producing dysbiosis.", "evidence": [{"notes": "Jacobsen: antibiotic exposure is a common risk factor driving overgrowth of opportunists; curated as exposure to dysbiosis.", "reference": "DOI:10.1007/s40588-023-00190-w"}], "id": "edge-4", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "antibiotic_exposure", "target": "microbiota_dysbiosis"}, {"description": "Dysbiosis increases colonization/overgrowth by opportunistic microbes.", "evidence": [{"notes": "Jacobsen: defects/dysbiosis permit expansion of normally controlled opportunists (high-level ecological edge).", "reference": "DOI:10.1007/s40588-023-00190-w"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": null, "source": "microbiota_dysbiosis", "target": "opportunist_colonization"}, {"description": "Expanded opportunist colonization provides the population reservoir from which infection can arise.", "evidence": [{"notes": "Jacobsen: colonization is a risk factor preceding opportunistic disease.", "reference": "DOI:10.1007/s40588-023-00190-w"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "opportunist_colonization", "target": "opportunistic_infection"}, {"description": "Most colonization is benign; only some progresses to infection under permissive host conditions, capturing context-dependence.", "evidence": [{"notes": "Uberoi: nearly all wounds are colonized but only some progress to infection; opportunism is context-dependent, not equivalent to colonization.", "reference": "DOI:10.1038/s41579-024-01035-z"}], "id": "edge-7", "is_orphan": false, "predicate": "progresses to under host susceptibility", "predicate_id": null, "source": "host_colonization", "target": "opportunistic_infection"}, {"description": "Host iron limitation induces high-affinity iron transport and siderophore production, a general opportunist adaptation in-host.", "evidence": [{"notes": "Sanchez-Jimenez: under iron limitation, high-affinity iron transport systems are promoted (general iron-acquisition biology).", "reference": "DOI:10.1111/1751-7915.14241"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "nutritional_immunity", "target": "high_affinity_iron_acquisition"}, {"description": "Iron acquisition under host-imposed restriction supports opportunist fitness during infection.", "evidence": [{"notes": "Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence determinant of opportunists.", "reference": "DOI:10.1111/1751-7915.14241"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "high_affinity_iron_acquisition", "target": "opportunistic_infection"}], "evidence_rows": [{"description": "Breached or weakened host defenses enable a normally innocuous microbe to cause disease.", "edge_id": "edge-1", "evidence": [{"notes": "Brown et al. support context-dependent virulence in opportunistic pathogens.", "reference": "DOI:10.1016/j.tim.2012.04.005"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "compromised host defense", "target": "opportunistic infection"}, {"description": "Context-dependent infection realizes the opportunistic-pathogen lifestyle.", "edge_id": "edge-2", "evidence": [{"notes": "Drew et al. support facultative shifts toward pathogenicity along the parasite-mutualist continuum.", "reference": "DOI:10.1038/s41579-021-00550-7"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "opportunistic infection", "target": "opportunistic pathogen"}, {"description": "Barrier breach exposes sterile tissue, enabling infection by normally innocuous microbes.", "edge_id": "edge-3", "evidence": [{"notes": "Uberoi et al.: barrier breach exposes sterile tissue to microbes (generalizable ecological/clinical edge).", "reference": "DOI:10.1038/s41579-024-01035-z"}], "predicate": "enables", "predicate_id": null, "source": "epithelial barrier breach / sterile site access", "target": "opportunistic infection"}, {"description": "Antimicrobial exposure disrupts the resident microbiota, producing dysbiosis.", "edge_id": "edge-4", "evidence": [{"notes": "Jacobsen: antibiotic exposure is a common risk factor driving overgrowth of opportunists; curated as exposure to dysbiosis.", "reference": "DOI:10.1007/s40588-023-00190-w"}], "predicate": "promotes", "predicate_id": null, "source": "antibiotic exposure", "target": "microbiota dysbiosis"}, {"description": "Dysbiosis increases colonization/overgrowth by opportunistic microbes.", "edge_id": "edge-5", "evidence": [{"notes": "Jacobsen: defects/dysbiosis permit expansion of normally controlled opportunists (high-level ecological edge).", "reference": "DOI:10.1007/s40588-023-00190-w"}], "predicate": "increases", "predicate_id": null, "source": "microbiota dysbiosis", "target": "opportunist colonization / overgrowth"}, {"description": "Expanded opportunist colonization provides the population reservoir from which infection can arise.", "edge_id": "edge-6", "evidence": [{"notes": "Jacobsen: colonization is a risk factor preceding opportunistic disease.", "reference": "DOI:10.1007/s40588-023-00190-w"}], "predicate": "enables", "predicate_id": null, "source": "opportunist colonization / overgrowth", "target": "opportunistic infection"}, {"description": "Most colonization is benign; only some progresses to infection under permissive host conditions, capturing context-dependence.", "edge_id": "edge-7", "evidence": [{"notes": "Uberoi: nearly all wounds are colonized but only some progress to infection; opportunism is context-dependent, not equivalent to colonization.", "reference": "DOI:10.1038/s41579-024-01035-z"}], "predicate": "progresses to under host susceptibility", "predicate_id": null, "source": "host colonization without disease", "target": "opportunistic infection"}, {"description": "Host iron limitation induces high-affinity iron transport and siderophore production, a general opportunist adaptation in-host.", "edge_id": "edge-8", "evidence": [{"notes": "Sanchez-Jimenez: under iron limitation, high-affinity iron transport systems are promoted (general iron-acquisition biology).", "reference": "DOI:10.1111/1751-7915.14241"}], "predicate": "promotes", "predicate_id": null, "source": "nutritional immunity / iron limitation", "target": "high-affinity iron acquisition"}, {"description": "Iron acquisition under host-imposed restriction supports opportunist fitness during infection.", "edge_id": "edge-9", "evidence": [{"notes": "Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence determinant of opportunists.", "reference": "DOI:10.1111/1751-7915.14241"}], "predicate": "contributes to", "predicate_id": null, "source": "high-affinity iron acquisition", "target": "opportunistic infection"}], "graph_id": "opportunistic_pathogen_context_dependent_virulence", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Prior or concurrent antimicrobial treatment.", "grounding": null, "id": "antibiotic_exposure", "is_orphan": false, "label": "antibiotic exposure", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dcfce7", "description": "Disruption of epithelial barriers exposing normally sterile tissue to microbes.", "grounding": null, "id": "barrier_breach", "is_orphan": false, "label": "epithelial barrier breach / sterile site access", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dcfce7", "description": "Immunosuppression, barrier breach, or sterile-site translocation.", "grounding": null, "id": "compromised_host_defense", "is_orphan": false, "label": "compromised host defense", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Induction of high-affinity iron transport and siderophore production under iron limitation.", "grounding": null, "id": "high_affinity_iron_acquisition", "is_orphan": false, "label": "high-affinity iron acquisition", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Microbial colonization of a host site that may or may not progress to infection.", "grounding": null, "id": "host_colonization", "is_orphan": false, "label": "host colonization without disease", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Disrupted microbial community composition permitting opportunist expansion.", "grounding": null, "id": "microbiota_dysbiosis", "is_orphan": false, "label": "microbiota dysbiosis", "node_type": "STATE", "xrefs": []}, {"color": "#dcfce7", "description": "Host-imposed restriction of nutrient metals such as iron.", "grounding": null, "id": "nutritional_immunity", "is_orphan": false, "label": "nutritional immunity / iron limitation", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Increased colonization or overgrowth by opportunistic microbes.", "grounding": null, "id": "opportunist_colonization", "is_orphan": false, "label": "opportunist colonization / overgrowth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Disease arising from a normally commensal or environmental microbe in a permissive host context.", "grounding": null, "id": "opportunistic_infection", "is_orphan": false, "label": "opportunistic infection", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Disease causation only under compromised host defenses or sterile-site translocation.", "grounding": "traitmech:000046", "id": "opportunistic_pathogen_trait", "is_orphan": false, "label": "opportunistic pathogen", "node_type": "TRAIT", "xrefs": []}], "title": "Opportunistic pathogenesis under compromised host defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -597,7 +726,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

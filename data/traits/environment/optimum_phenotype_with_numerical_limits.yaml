@@ -50,6 +50,49 @@ causal_graphs:
     node_type: TRAIT
     grounding: METPO:1000304
     description: Ambient temperature supporting maximal growth.
+  - node_id: na_h_antiporters
+    label: Na+/H+ antiporters
+    node_type: GENE_OR_PROTEIN
+    description: Cation/proton antiporters that exchange cytoplasmic Na+ (or K+) for
+      protons.
+  - node_id: intracellular_ph_homeostasis
+    label: intracellular pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cytoplasmic pH within a narrow range (~7.0-7.5) despite
+      external pH.
+  - node_id: f1f0_atp_synthase
+    label: F1F0-ATP synthase
+    node_type: GENE_OR_PROTEIN
+    description: Membrane ATP synthase coupling proton flux to ATP synthesis/hydrolysis.
+  - node_id: opua_transporter
+    label: OpuA compatible-solute transporter
+    node_type: GENE_OR_PROTEIN
+    description: ABC importer accumulating compatible solutes such as glycine betaine
+      to high levels.
+  - node_id: intracellular_glycine_betaine
+    label: intracellular glycine betaine
+    node_type: CHEMICAL
+    description: Compatible solute accumulated in the cytoplasm to counter osmotic
+      stress.
+  - node_id: hyperosmotic_stress
+    label: hyperosmotic stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External hypertonicity causing cell shrinkage and plasmolysis.
+  - node_id: compatible_solute_accumulation
+    label: compatible-solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Active import/synthesis of compatible solutes to restore turgor under
+      osmotic stress.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Decarboxylase activity that consumes cytoplasmic protons, raising
+      internal pH under acid stress.
+  - node_id: proton_motive_force
+    label: proton motive force
+    node_type: BIOLOGICAL_PROCESS
+    description: Electrochemical proton gradient across the membrane used for energy
+      coupling.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -92,6 +135,60 @@ causal_graphs:
       notes: Membrane-adaptation review supports temperature optima as a homoviscous-adaptation-tuned
         setpoint on the temperature axis.
     predicate_id: rdfs:subClassOf
+  - subject: na_h_antiporters
+    predicate: contributes to
+    object: intracellular_ph_homeostasis
+    description: Na+/H+ (and K+/H+) antiporters are key regulators of bacterial pH
+      homeostasis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters;
+        stabilizes internal pH at the external-pH optimum.
+  - subject: f1f0_atp_synthase
+    predicate: contributes to
+    object: intracellular_ph_homeostasis
+    description: F1F0-ATP synthase activity contributes to pH homeostasis via proton
+      translocation.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: F1F0-ATP synthase activity contributes to pH homeostasis; general bacterial
+        bioenergetic mechanism.
+  - subject: opua_transporter
+    predicate: increases
+    object: intracellular_glycine_betaine
+    description: OpuA accumulates the compatible solute glycine betaine to (sub)molar
+      levels.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: OpuA can accumulate the compatible solute glycine betaine to (sub)molar
+        levels; mechanism for osmolarity optimum.
+  - subject: hyperosmotic_stress
+    predicate: activates
+    object: compatible_solute_accumulation
+    description: Hypertonicity drives active import of compatible solutes to restore
+      turgor.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Hypertonicity causes shrinkage/plasmolysis; active importers accumulate
+        compatible solutes in response.
+  - subject: amino_acid_decarboxylation
+    predicate: contributes to
+    object: intracellular_ph_homeostasis
+    description: Amino-acid decarboxylase activity rises when internal pH drops, raising
+      cytoplasmic pH under acid stress.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Amino-acid decarboxylases have low pH optima and activity increases when
+        internal pH drops, contributing to pH homeostasis.
+  - subject: amino_acid_decarboxylation
+    predicate: generates
+    object: proton_motive_force
+    description: Decarboxylation coupled to antiporter exchange generates a proton
+      motive force.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Decarboxylation plus antiporter exchange generates PMF, ~1 proton per
+        molecule decarboxylated.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.848187+00:00'
   curator: seed_from_metpo
@@ -115,4 +212,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007500×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

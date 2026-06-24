@@ -39,6 +39,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Strong capacity to remodel membrane lipids and enzymes across temperature
       shifts of ~20–30 °C.
+  - node_id: des_desaturase
+    label: acyl-lipid desaturase (Des)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane desaturase that introduces double bonds into existing acyl
+      chains.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Acyl chains bearing double bonds (CHEBI:27208) that fluidize the
+      membrane.
+  - node_id: membrane_fluidity
+    label: membrane fluidity / homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of optimal membrane fluidity across temperatures.
+  - node_id: rpos_sigma_factor
+    label: RpoS sigma factor (sigma-S)
+    node_type: GENE_OR_PROTEIN
+    description: General stress-response sigma factor controlling stress regulons.
+  - node_id: otsab_operon
+    label: otsAB trehalose biosynthesis operon
+    node_type: PATHWAY
+    description: otsA/otsB pathway synthesizing trehalose-6-phosphate and trehalose.
+  - node_id: trehalose
+    label: trehalose
+    node_type: CHEMICAL
+    description: Compatible solute (CHEBI:18150) supporting cold/stress tolerance.
+  - node_id: cold_tolerance
+    label: cold / cold-shock tolerance
+    node_type: BIOLOGICAL_PROCESS
+    description: Response to cold supporting growth/survival at low temperatures.
   edges:
   - subject: broad_thermal_adaptation
     predicate: produces
@@ -61,6 +91,53 @@ causal_graphs:
       notes: Supports the 20–30 °C breadth as a value within the temperature-delta
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: des_desaturase
+    predicate: increases abundance of
+    object: unsaturated_fatty_acids
+    description: Desaturase remodels existing lipids, raising unsaturated:saturated
+      fatty acid ratio.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: A rapid change in the saturated:unsaturated fatty acid ratio by desaturation
+        of existing lipids.
+  - subject: unsaturated_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Unsaturation fluidizes the membrane, supporting homeoviscous adaptation.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Desaturation fluidizes the membrane; strong general mechanism.
+  - subject: membrane_fluidity
+    predicate: enables
+    object: broad_thermal_adaptation
+    description: Maintaining membrane fluidity across temperatures underpins broad
+      thermal-adaptation flexibility.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: Homeoviscous adaptation via fluidity maintenance underlies adaptation
+        across a temperature range.
+  - subject: rpos_sigma_factor
+    predicate: positively regulates expression of
+    object: otsab_operon
+    description: RpoS controls cold-shock-triggered induction of the otsAB operon.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: otsAB induction is RpoS-dependent and triggered by osmotic stress, cold
+        shock, or stationary phase.
+  - subject: otsab_operon
+    predicate: produces
+    object: trehalose
+    description: The otsAB pathway synthesizes trehalose.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Trehalose is synthesized by the otsAB operon.
+  - subject: trehalose
+    predicate: contributes to
+    object: cold_tolerance
+    description: Trehalose acts as a compatible solute supporting cold-shock tolerance.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: Trehalose helps cold shock tolerance.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844944+00:00'
   curator: seed_from_metpo
@@ -78,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

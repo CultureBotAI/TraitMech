@@ -58,6 +58,43 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Low-permeability membranes and reversed membrane potential that exclude
       protons in acidophiles.
+  - node_id: low_external_ph
+    label: low external pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Acidic medium external pH below ~3 imposing a steep proton gradient.
+  - node_id: transmembrane_ph_gradient
+    label: large transmembrane pH gradient
+    node_type: BIOLOGICAL_PROCESS
+    description: Steep outside-to-inside proton (delta pH) gradient maintained by
+      acidophiles.
+  - node_id: inside_positive_membrane_potential
+    label: inside-positive membrane potential
+    node_type: BIOLOGICAL_PROCESS
+    description: Reversed (inside-positive) membrane potential creating an electrochemical
+      barrier to proton influx.
+  - node_id: proton_influx
+    label: proton influx
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive entry of protons into the cytoplasm down the pH gradient.
+  - node_id: proton_pumping_respiratory_complexes
+    label: proton-pumping respiratory complexes
+    node_type: GENE_OR_PROTEIN
+    description: Respiratory chain complexes (I, III, IV) that actively extrude cytoplasmic
+      protons.
+  - node_id: cytoplasmic_proton_load
+    label: cytoplasmic proton load
+    node_type: STATE
+    description: Concentration of protons in the cytoplasm threatening near-neutral
+      intracellular pH.
+  - node_id: proton_impermeable_membrane
+    label: rigid proton-impermeable membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Rigid membrane highly resistant to proton influx, reducing passive
+      proton permeability.
+  - node_id: passive_proton_permeability
+    label: passive proton permeability
+    node_type: QUALITY
+    description: Rate of passive proton leakage across the cell membrane.
   edges:
   - subject: acidic_external_ph
     predicate: selects for
@@ -87,6 +124,45 @@ causal_graphs:
       snippet: cytoplasmic pH
       notes: Supports an acidic optimum as a value within the pH-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: low_external_ph
+    predicate: drives
+    object: transmembrane_ph_gradient
+    description: Acidic external pH forces acidophiles to sustain a large transmembrane
+      pH gradient.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: cytoplasmic pH ~6.0 while growing at external pH <3; broad physiological
+        input edge.
+  - subject: inside_positive_membrane_potential
+    predicate: counteracts
+    object: proton_influx
+    description: A reversed inside-positive membrane potential electrostatically opposes
+      proton entry.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: sustain a large delta pH with a reversed inside-positive membrane potential;
+        hallmark of extreme acidophiles.
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: inside positive membrane potential creates an electrochemical barrier
+        to proton influx.
+  - subject: proton_pumping_respiratory_complexes
+    predicate: removes
+    object: cytoplasmic_proton_load
+    description: Proton-pumping respiratory complexes actively extrude protons to
+      lower cytoplasmic proton load.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: increased expression of proton-pumping respiratory chain complexes; broad
+        mechanism, specific complexes vary by lineage.
+  - subject: proton_impermeable_membrane
+    predicate: decreases
+    object: passive_proton_permeability
+    description: A rigid proton-impermeable membrane reduces passive proton leak and
+      the energetic burden of pH homeostasis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1149903
+      notes: rigid and impermeable membrane that is highly resistant to the influx
+        of protons; high-level trait edge.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.826407+00:00'
   curator: seed_from_metpo
@@ -122,4 +198,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

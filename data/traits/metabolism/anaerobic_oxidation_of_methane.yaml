@@ -1,9 +1,9 @@
 identifier: traitmech:000033
 label: anaerobic oxidation of methane
-definition: A metabolism in which methane is oxidized under anoxic conditions,
-  classically coupled to sulfate reduction and mediated by consortia of anaerobic
-  methanotrophic archaea (ANME) and sulfate-reducing bacteria. It is a major sink
-  for methane in marine sediments.
+definition: A metabolism in which methane is oxidized under anoxic conditions, classically
+  coupled to sulfate reduction and mediated by consortia of anaerobic methanotrophic
+  archaea (ANME) and sulfate-reducing bacteria. It is a major sink for methane in
+  marine sediments.
 definition_source: DOI:10.1038/35036572
 trait_category: METABOLISM
 term_kind: CLASS
@@ -22,21 +22,20 @@ evidence:
   notes: Boetius et al. described the marine microbial consortium of ANME archaea
     and sulfate-reducing bacteria mediating anaerobic oxidation of methane.
 - reference: DOI:10.3389/fmars.2025.1609892
-  notes: Review of AOM in marine sediments supports sulfate- and metal-coupled
-    anaerobic methane oxidation as a major methane sink.
+  notes: Review of AOM in marine sediments supports sulfate- and metal-coupled anaerobic
+    methane oxidation as a major methane sink.
 causal_graphs:
 - graph_id: aom_anme_sulfate_consortium
   title: AOM couples methane oxidation to sulfate reduction in ANME-SRB consortia
-  description: Evidence-backed causal sketch linking anaerobic methanotrophic
-    archaea (ANME) and sulfate-reducing bacteria to coupled methane oxidation
-    and sulfate reduction.
+  description: Evidence-backed causal sketch linking anaerobic methanotrophic archaea
+    (ANME) and sulfate-reducing bacteria to coupled methane oxidation and sulfate
+    reduction.
   nodes:
   - node_id: aom_trait
     label: anaerobic oxidation of methane
     node_type: TRAIT
     grounding: traitmech:000033
-    description: Anaerobic methane oxidation, classically coupled to sulfate
-      reduction.
+    description: Anaerobic methane oxidation, classically coupled to sulfate reduction.
   - node_id: methane
     label: methane
     node_type: CHEMICAL
@@ -47,6 +46,31 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16189
     description: Terminal electron acceptor for AOM.
+  - node_id: reverse_methanogenesis
+    label: reverse methanogenesis
+    node_type: PATHWAY
+    description: Core pathway by which methane is activated and oxidized to CO2 during
+      AOM.
+  - node_id: mcr
+    label: methyl-coenzyme M reductase (MCR)
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme that activates methane (to methyl-S-CoM) as the initial step
+      of AOM.
+  - node_id: diet
+    label: direct interspecies electron transfer (DIET)
+    node_type: BIOLOGICAL_PROCESS
+    description: Electron transfer from ANME to sulfate-reducing bacteria via conserved
+      outer-membrane complexes in sulfate-AOM syntrophy.
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    grounding: CHEBI:17632
+    description: Terminal electron acceptor for nitrate-dependent AOM.
+  - node_id: nitrite
+    label: nitrite
+    node_type: CHEMICAL
+    grounding: CHEBI:16301
+    description: Terminal electron acceptor for nitrite-dependent AOM.
   edges:
   - subject: methane
     predicate: oxidized to
@@ -55,8 +79,7 @@ causal_graphs:
       consortium.
     evidence:
     - reference: DOI:10.1038/35036572
-      notes: Boetius et al. described the marine ANME-SRB consortium mediating
-        AOM.
+      notes: Boetius et al. described the marine ANME-SRB consortium mediating AOM.
     predicate_id: METPO:2007405
   - subject: aom_trait
     predicate: associated with
@@ -64,9 +87,61 @@ causal_graphs:
     description: AOM is a major biological sink for methane in anoxic sediments.
     evidence:
     - reference: DOI:10.3389/fmars.2025.1609892
-      notes: AOM review supports sulfate- and metal-coupled methane oxidation as
-        a major methane sink.
+      notes: AOM review supports sulfate- and metal-coupled methane oxidation as a
+        major methane sink.
     predicate_id: biolink:associated_with
+  - subject: aom_trait
+    predicate: has core pathway
+    object: reverse_methanogenesis
+    description: AOM proceeds via the reverse methanogenesis pathway, oxidizing methane
+      to CO2.
+    evidence:
+    - reference: DOI:10.3390/fermentation9070645
+      notes: 'AOM proceeds via the reverse methanogenesis pathway: CH4 is converted
+        to methyl-S-CoM by Mcr then oxidized to CO2.'
+  - subject: mcr
+    predicate: catalyzes initial step of
+    object: aom_trait
+    description: MCR activates methane as the initial step of AOM (reverse methanogenesis).
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c07197
+      notes: Methane activation by methyl-coenzyme M reductase (MCR) is the methane-activation
+        step in reverse methanogenesis.
+  - subject: sulfate
+    predicate: serves as terminal electron acceptor for
+    object: aom_trait
+    description: Sulfate is the terminal electron acceptor in sulfate-coupled AOM.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002292
+      notes: Sulfate-coupled AOM is performed by consortia of ANME in obligate syntrophic
+        partnership with sulfate-reducing bacteria.
+  - subject: diet
+    predicate: enables
+    object: aom_trait
+    description: DIET via conserved ANME-to-SRB outer-membrane complexes enables sulfate-coupled
+      AOM syntrophy.
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3002292
+      notes: Protein complexes involved in direct interspecies electron transfer (DIET)
+        from ANME to the SRB outer membrane are conserved.
+  - subject: nitrate
+    predicate: serves as terminal electron acceptor for
+    object: aom_trait
+    description: Nitrate serves as terminal electron acceptor in nitrate-dependent
+      AOM via reverse methanogenesis.
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c07197
+      notes: Methane oxidation via a reverse methanogenesis pathway coupled to nitrate
+        reduction to nitrite.
+  - subject: nitrite
+    predicate: serves as terminal electron acceptor for
+    object: aom_trait
+    description: Nitrite serves as terminal electron acceptor in nitrite-dependent
+      AOM (n-DAMO).
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c07197
+      notes: Nitrite-dependent methane oxidation reduces nitrite to nitric oxide in
+        an intra-aerobic pathway.
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
@@ -79,6 +154,11 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (ANME-SRB AOM consortium) with CHEBI
-    node groundings and METPO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    node groundings and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

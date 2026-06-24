@@ -1,8 +1,8 @@
 identifier: traitmech:000090
 label: plasmid carriage
-definition: A genomics trait describing possession of one or more plasmids —
-  extrachromosomal, typically circular DNA replicons that carry accessory genes such
-  as resistance, virulence, or metabolic functions and can transfer by conjugation.
+definition: A genomics trait describing possession of one or more plasmids — extrachromosomal,
+  typically circular DNA replicons that carry accessory genes such as resistance,
+  virulence, or metabolic functions and can transfer by conjugation.
 definition_source: DOI:10.1128/MMBR.00020-10
 trait_category: GENOMICS
 term_kind: CLASS
@@ -15,15 +15,15 @@ synonyms:
   source: DOI:10.1128/MMBR.00020-10
 evidence:
 - reference: DOI:10.1128/MMBR.00020-10
-  notes: Smillie et al. review plasmid mobility, classifying conjugative and
-    mobilizable plasmids as key vectors of horizontal gene transfer.
+  notes: Smillie et al. review plasmid mobility, classifying conjugative and mobilizable
+    plasmids as key vectors of horizontal gene transfer.
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include plasmids among the principal mobile genetic elements.
 causal_graphs:
 - graph_id: plasmid_conjugation_hgt
   title: Plasmid carriage drives conjugative horizontal gene transfer
-  description: Evidence-backed causal sketch linking plasmid possession to
-    conjugation and accessory-function delivery.
+  description: Evidence-backed causal sketch linking plasmid possession to conjugation
+    and accessory-function delivery.
   nodes:
   - node_id: plasmid_carriage_trait
     label: plasmid carriage
@@ -39,12 +39,47 @@ causal_graphs:
     label: accessory function
     node_type: QUALITY
     description: Plasmid-encoded resistance, virulence, or metabolic capability.
+  - node_id: ta_system
+    label: toxin-antitoxin system
+    node_type: GENE_OR_PROTEIN
+    description: Selfish genetic module mediating plasmid addiction / post-segregational
+      killing.
+  - node_id: plasmid_vertical_inheritance
+    label: plasmid vertical inheritance
+    node_type: BIOLOGICAL_PROCESS
+    description: Stable transmission of a plasmid to daughter cells across generations.
+  - node_id: plasmid_methylase
+    label: plasmid-encoded methylase
+    node_type: MOLECULAR_FUNCTION
+    description: Plasmid-borne methyltransferase shielding plasmid DNA from restriction.
+  - node_id: restriction_of_plasmid_dna
+    label: restriction of incoming plasmid DNA
+    node_type: BIOLOGICAL_PROCESS
+    description: Cleavage of unmethylated incoming plasmid DNA by restriction-modification
+      systems.
+  - node_id: anti_restriction_genes
+    label: plasmid-encoded anti-restriction genes
+    node_type: GENE_OR_PROTEIN
+    description: Plasmid genes inhibiting host restriction-modification defence.
+  - node_id: antibiotic_selective_pressure
+    label: antibiotic selective pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Antibiotic exposure selecting for retention of resistance plasmids.
+  - node_id: fitness_cost
+    label: plasmid fitness cost
+    node_type: QUALITY
+    description: Reduced host fitness from additional material and energy consumption
+      of plasmid carriage.
+  - node_id: compensatory_mutation
+    label: compensatory mutation
+    node_type: BIOLOGICAL_PROCESS
+    description: Chromosomal or plasmid mutation that ameliorates plasmid-imposed
+      fitness cost.
   edges:
   - subject: plasmid_carriage_trait
     predicate: enables
     object: conjugation
-    description: Conjugative plasmids encode the machinery for cell-to-cell
-      transfer.
+    description: Conjugative plasmids encode the machinery for cell-to-cell transfer.
     evidence:
     - reference: DOI:10.1128/MMBR.00020-10
       notes: Smillie et al. classify conjugative and mobilizable plasmids.
@@ -55,9 +90,60 @@ causal_graphs:
     description: Plasmids carry accessory genes that extend host phenotype.
     evidence:
     - reference: DOI:10.1038/nrmicro1235
-      notes: Frost et al. include plasmids among the principal MGEs delivering
-        accessory functions.
+      notes: Frost et al. include plasmids among the principal MGEs delivering accessory
+        functions.
     predicate_id: RO:0002326
+  - subject: ta_system
+    predicate: stabilizes
+    object: plasmid_vertical_inheritance
+    description: Toxin-antitoxin systems increase vertical stability of their replicons.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae018
+      notes: TA systems are small selfish genetic modules that increase vertical stability
+        of their replicons.
+  - subject: plasmid_methylase
+    predicate: protects against
+    object: restriction_of_plasmid_dna
+    description: Plasmid-encoded methylases protect plasmid DNA from host restriction.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae896
+      notes: plasmid-encoded methylases that protect plasmids from restriction.
+  - subject: anti_restriction_genes
+    predicate: protects against
+    object: restriction_of_plasmid_dna
+    description: Plasmid-encoded anti-restriction genes counter multiple RM system
+      types.
+    evidence:
+    - reference: DOI:10.1093/nar/gkae896
+      notes: plasmid-encoded anti-restriction genes that protect against multiple
+        RM types.
+  - subject: antibiotic_selective_pressure
+    predicate: promotes retention of
+    object: plasmid_carriage_trait
+    description: Without selection plasmids tend to be lost; antibiotic pressure promotes
+      retention.
+    evidence:
+    - reference: DOI:10.1080/22221751.2024.2352432
+      notes: without selection plasmids tend to be lost, whereas antibiotic (or metal)
+        selective pressure promotes retention.
+  - subject: plasmid_carriage_trait
+    predicate: imposes
+    object: fitness_cost
+    description: Plasmid carriage imposes a fitness cost from additional material
+      and energy consumption.
+    evidence:
+    - reference: DOI:10.1080/22221751.2024.2352432
+      notes: Plasmid carriage imposes fitness costs (additional material and energy
+        consumption).
+  - subject: compensatory_mutation
+    predicate: reduces
+    object: fitness_cost
+    description: Compensatory evolution of chromosomes and plasmids counteracts plasmid
+      fitness cost.
+    evidence:
+    - reference: DOI:10.1002/ece3.70121
+      notes: Compensatory evolution of chromosomes and plasmids counteracts the plasmid
+        fitness cost.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -70,4 +156,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (plasmid conjugation / HGT) with GO
     node grounding and RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

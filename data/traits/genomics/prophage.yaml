@@ -1,8 +1,8 @@
 identifier: traitmech:000091
 label: prophage
-definition: A genomics trait describing possession of an integrated (or
-  extrachromosomal) temperate bacteriophage genome (a prophage) maintained in the
-  host during lysogeny, often contributing genes that alter host phenotype.
+definition: A genomics trait describing possession of an integrated (or extrachromosomal)
+  temperate bacteriophage genome (a prophage) maintained in the host during lysogeny,
+  often contributing genes that alter host phenotype.
 definition_source: DOI:10.1128/MMBR.67.2.238-276.2003
 trait_category: GENOMICS
 term_kind: CLASS
@@ -34,12 +34,59 @@ causal_graphs:
   - node_id: lysogeny
     label: lysogeny
     node_type: BIOLOGICAL_PROCESS
-    description: Maintenance of a temperate phage genome within the host without
-      lysis.
+    description: Maintenance of a temperate phage genome within the host without lysis.
   - node_id: host_phenotype
     label: host phenotype
     node_type: QUALITY
     description: Phage-encoded gene functions expressed in the lysogen.
+  - node_id: host_chromosome
+    label: bacterial chromosome
+    node_type: CELLULAR_LOCALIZATION
+    description: Host genomic DNA into which a temperate prophage integrates.
+  - node_id: ci_repressor
+    label: CI master repressor
+    node_type: GENE_OR_PROTEIN
+    description: Phage-encoded cI-family repressor that maintains lysogeny by blocking
+      lytic gene expression.
+  - node_id: lytic_gene_expression
+    label: lytic gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Expression of phage lytic genes (from promoter PR) leading to the
+      lytic cycle.
+  - node_id: dna_damage
+    label: DNA damage / replication stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Genotoxic stress or replication inhibition that generates ssDNA and
+      triggers the SOS response.
+  - node_id: sos_response
+    label: RecA-LexA SOS response
+    node_type: BIOLOGICAL_PROCESS
+    description: Bacterial DNA-damage-inducible SOS response mediated by RecA and
+      LexA.
+  - node_id: reca_filament
+    label: RecA* nucleoprotein filament
+    node_type: GENE_OR_PROTEIN
+    description: Activated RecA nucleoprotein filament that promotes autocleavage
+      of LexA and phage repressors.
+  - node_id: lexa_repressor
+    label: LexA repressor
+    node_type: GENE_OR_PROTEIN
+    description: Host SOS master repressor inactivated by RecA*-stimulated autoproteolysis.
+  - node_id: prophage_induction
+    label: prophage induction
+    node_type: BIOLOGICAL_PROCESS
+    description: Switch from lysogeny to the lytic cycle following derepression of
+      phage lytic genes.
+  - node_id: phage_plasmid
+    label: phage-plasmid
+    node_type: GENE_OR_PROTEIN
+    description: Hybrid mobile genetic element; a temperate phage maintained extrachromosomally
+      as a plasmid.
+  - node_id: extrachromosomal_maintenance
+    label: extrachromosomal prophage maintenance
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of a temperate phage genome episomally rather than integrated
+      in the chromosome.
   edges:
   - subject: prophage_trait
     predicate: enables
@@ -53,13 +100,74 @@ causal_graphs:
   - subject: prophage_trait
     predicate: contributes to
     object: host_phenotype
-    description: Prophage-encoded genes can alter host virulence or fitness
-      (lysogenic conversion).
+    description: Prophage-encoded genes can alter host virulence or fitness (lysogenic
+      conversion).
     evidence:
     - reference: DOI:10.1038/ismej.2017.16
-      notes: Howard-Varona et al. review host-phenotype effects of lysogeny in
-        nature.
+      notes: Howard-Varona et al. review host-phenotype effects of lysogeny in nature.
     predicate_id: RO:0002326
+  - subject: prophage_trait
+    predicate: integrates into
+    object: host_chromosome
+    description: Temperate prophages canonically integrate into the host chromosome
+      (though some persist extrachromosomally).
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06376-y
+      notes: Temperate phages remain dormant as prophages integrated into the host
+        genome and passed to host progeny.
+  - subject: ci_repressor
+    predicate: represses
+    object: lytic_gene_expression
+    description: Lysogeny is maintained by a phage-encoded CI repressor that binds
+      the lysis promoter PR to block lytic gene expression.
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06376-y
+      notes: cI repressor binds the lysis promoter (PR) to block lytic gene expression.
+  - subject: dna_damage
+    predicate: activates
+    object: sos_response
+    description: DNA damage / replication stress generates ssDNA that triggers the
+      RecA-LexA SOS response.
+    evidence:
+    - reference: DOI:10.1073/pnas.2407832121
+      notes: Replication inhibition creates ssDNA gaps that trigger the classical
+        SOS response.
+  - subject: reca_filament
+    predicate: promotes autocleavage of
+    object: lexa_repressor
+    description: Activated RecA* promotes LexA autoproteolysis, de-repressing the
+      SOS regulon.
+    evidence:
+    - reference: DOI:10.1128/aem.01716-22
+      notes: RecA* activation induces LexA autoproteolysis; SOS response is mediated
+        by RecA and LexA.
+  - subject: reca_filament
+    predicate: promotes autocleavage of
+    object: ci_repressor
+    description: RecA* stimulates self-cleavage/inactivation of the phage CI repressor,
+      de-repressing lysis and triggering induction.
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06376-y
+      notes: Host RecA activation leads to autoproteolysis and inactivation of cI,
+        de-repressing lysis.
+  - subject: ci_repressor
+    predicate: prevents
+    object: prophage_induction
+    description: While intact, the CI repressor maintains lysogeny and prevents prophage
+      induction; its inactivation triggers induction.
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06376-y
+      notes: CI repression must be relieved (cI inactivation) to de-repress lysis
+        and drive prophage induction.
+  - subject: phage_plasmid
+    predicate: enables
+    object: extrachromosomal_maintenance
+    description: Phage-plasmids are temperate phages maintained extrachromosomally,
+      so prophages need not be integrated.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-45757-3
+      notes: Phage-plasmids are temperate phages maintained extrachromosomally as
+        low-copy-number episomal forms.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -72,4 +180,10 @@ curation_history:
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (prophage lysogeny) with RO predicate
     groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

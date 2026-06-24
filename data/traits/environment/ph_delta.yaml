@@ -38,6 +38,47 @@ causal_graphs:
     label: pH tolerance breadth
     node_type: BIOLOGICAL_PROCESS
     description: Span between the minimum and maximum growth-supporting external pH.
+  - node_id: ph_homeostasis
+    label: external pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of intracellular pH within viable bounds across external
+      pH variation.
+  - node_id: proton_motive_force_generation
+    label: proton motive force generation
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of the transmembrane electrochemical proton gradient.
+  - node_id: f0f1_atpase_activity
+    label: F0F1-ATPase activity
+    node_type: MOLECULAR_FUNCTION
+    description: F-type H+-transporting ATPase coupling proton flux to ATP synthesis/hydrolysis.
+  - node_id: cation_proton_antiporter_activity
+    label: monovalent cation:H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Exchange of Na+/K+ for H+ to support pH homeostasis, notably under
+      alkaline conditions.
+  - node_id: membrane_lipid_remodeling
+    label: saturated membrane fatty acid remodeling
+    node_type: BIOLOGICAL_PROCESS
+    description: Enrichment of saturated membrane fatty acids that reduces membrane
+      proton permeability.
+  - node_id: proton_permeability
+    label: membrane proton permeability
+    node_type: QUALITY
+    description: Passive permeability of the cell membrane to protons.
+  - node_id: amino_acid_decarboxylase_acid_resistance
+    label: amino-acid decarboxylase acid-resistance system
+    node_type: PATHWAY
+    description: Decarboxylase systems that consume intracellular protons and export
+      amines under acid stress.
+  - node_id: low_ph_tolerance
+    label: low-pH tolerance
+    node_type: CAPACITY
+    description: Capacity to grow and survive under acidic external pH.
+  - node_id: oxidative_phosphorylation
+    label: oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Respiratory generation of PMF and proton export contributing to cytoplasmic
+      pH defense.
   edges:
   - subject: ph_homeostasis_flexibility
     predicate: enables
@@ -59,6 +100,67 @@ causal_graphs:
       notes: Supports the bounded proton motive force as the determinant of the pH
         tolerance breadth.
     predicate_id: METPO:2007400
+  - subject: ph_homeostasis
+    predicate: enables
+    object: ph_delta_trait
+    description: External pH homeostasis enables a broader external pH growth breadth.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: Na+/H+ and K+/H+ antiporters and proton-pumping systems prevent internal
+        pH from becoming too low, underpinning growth across pH (general bacteria,
+        review).
+  - subject: proton_motive_force_generation
+    predicate: supports
+    object: ph_homeostasis
+    description: Proton motive force generation supports external pH homeostasis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: PMF-linked systems regulate internal pH; decarboxylation can store free
+        energy as PMF (general bacteria, review).
+  - subject: f0f1_atpase_activity
+    predicate: supports
+    object: ph_homeostasis
+    description: F0F1-ATPase activity supports external pH homeostasis.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      notes: F0F1-ATPase uses 3-5 protons per ATP and is among systems that prevent
+        internal pH from becoming too low (general bacteria, review).
+  - subject: cation_proton_antiporter_activity
+    predicate: supports
+    object: ph_homeostasis
+    description: Monovalent cation:H+ antiporter activity supports pH homeostasis
+      under alkaline conditions.
+    evidence:
+    - reference: DOI:10.1128/AEM.00569-24
+      notes: Monovalent antiporters exchange Na+/K+ to facilitate proton entry for
+        alkali tolerance (generic transporter class).
+  - subject: membrane_lipid_remodeling
+    predicate: decreases
+    object: proton_permeability
+    description: Saturated membrane fatty acid remodeling decreases membrane proton
+      permeability.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034164
+      notes: Membranes enriched in saturated fatty acids reduce proton permeability,
+        minimizing proton influx in acidic environments (generalizable low-pH mechanism).
+  - subject: amino_acid_decarboxylase_acid_resistance
+    predicate: increases
+    object: low_ph_tolerance
+    description: Amino-acid decarboxylase acid-resistance systems increase low-pH
+      tolerance.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12091774
+      notes: Amino-acid decarboxylase systems consume protons and export corresponding
+        amines as a key acid-resistance mechanism (authoritative review).
+  - subject: oxidative_phosphorylation
+    predicate: supports
+    object: ph_homeostasis
+    description: Oxidative phosphorylation upregulation supports proton export and
+      resistance to cytoplasmic acidification.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081565
+      notes: Increased oxidative phosphorylation generates PMF and a higher proton
+        export rate, causally helping cells resist decreases in cytoplasmic pH.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812528+00:00'
   curator: seed_from_metpo
@@ -82,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

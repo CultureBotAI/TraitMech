@@ -90,12 +90,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>molecular oxygen (O2)</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>manganese oxidation</strong>
+            
+            <p>O2 serves as the direct oxidant enabling multicopper-oxidase-mediated Mn(II) oxidation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/jacs.3c06537</code>
+                
+                <span class="meta">Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes for Mn(II) oxidation.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>manganese oxidation</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>Mn(III)(OH)Mn(III) intermediate</strong>
+            
+            <p>A cooperative two-electron oxidation step produces a Mn(III)(OH)Mn(III) intermediate.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/jacs.3c06537</code>
+                
+                <span class="meta">Cryo-EM mechanistic model: a cooperative two-electron step producing a Mn(III)(OH)Mn(III) intermediate.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>Mn(III)(OH)Mn(III) intermediate</strong>
+            <span class="edge-predicate">disproportionates to form</span>
+            <strong>Mn(IV)(O)Mn(IV) intermediate</strong>
+            
+            <p>Two Mn(III)(OH)Mn(III) species disproportionate to form Mn(IV)(O)Mn(IV).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/jacs.3c06537</code>
+                
+                <span class="meta">Disproportionation of two Mn(III)(OH)Mn(III) species to form Mn(IV)(O)Mn(IV).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>Mn(IV)(O)Mn(IV) intermediate</strong>
+            <span class="edge-predicate">condenses into</span>
+            <strong>MnO2 nanoparticles</strong>
+            
+            <p>Mn(IV)(O)Mn(IV) condenses en route to MnO2 nanoparticle release.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/jacs.3c06537</code>
+                
+                <span class="meta">Mn(IV)(O)Mn(IV) is en route to MnO2, with release of MnO2 nanoparticles.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>MnO2 nanoparticles</strong>
+            <span class="edge-predicate">is a</span>
+            <strong>Mn(III/IV) oxides</strong>
+            
+            <p>MnO2 nanoparticles are a form of the insoluble biogenic Mn(III/IV) oxide product.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1021/jacs.3c06537</code>
+                
+                <span class="meta">MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product of the oxidation cascade.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +322,12 @@
           <time>2026-06-14T06:38:15Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A059ZYC2×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (4 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +687,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking multicopper-oxidase activity to oxidation of soluble Mn(II) to insoluble Mn(III/IV) oxides.", "edges": [{"description": "Multicopper oxidases catalyze the Mn(II) \u2192 Mn(III/IV) oxidation step.", "evidence": [{"notes": "Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase mechanism.", "reference": "DOI:10.1016/j.tim.2005.07.009"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "multicopper_oxidase", "target": "manganese_oxidation_trait"}, {"description": "The metabolism deposits biogenic Mn(III/IV) oxides.", "evidence": [{"notes": "Tebo et al. characterize the formation and properties of bacterially produced Mn(III/IV) oxides.", "reference": "DOI:10.1146/annurev.earth.32.101802.120213"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "manganese_oxidation_trait", "target": "mn_oxides"}], "evidence_rows": [{"description": "Multicopper oxidases catalyze the Mn(II) \u2192 Mn(III/IV) oxidation step.", "edge_id": "edge-1", "evidence": [{"notes": "Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase mechanism.", "reference": "DOI:10.1016/j.tim.2005.07.009"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "multicopper oxidase", "target": "manganese oxidation"}, {"description": "The metabolism deposits biogenic Mn(III/IV) oxides.", "edge_id": "edge-2", "evidence": [{"notes": "Tebo et al. characterize the formation and properties of bacterially produced Mn(III/IV) oxides.", "reference": "DOI:10.1146/annurev.earth.32.101802.120213"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "manganese oxidation", "target": "Mn(III/IV) oxides"}], "graph_id": "manganese_oxidation_multicopper_oxidase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacterial oxidation of Mn(II) to Mn(III/IV) oxides.", "grounding": "traitmech:000032", "id": "manganese_oxidation_trait", "is_orphan": false, "label": "manganese oxidation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble bacterially-produced manganese oxides.", "grounding": null, "id": "mn_oxides", "is_orphan": false, "label": "Mn(III/IV) oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme family catalyzing Mn(II) oxidation in bacteria.", "grounding": "UniProtKB:A0A059ZYC2", "id": "multicopper_oxidase", "is_orphan": false, "label": "multicopper oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Manganese oxidation produces insoluble Mn(III/IV) oxides"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking multicopper-oxidase activity to oxidation of soluble Mn(II) to insoluble Mn(III/IV) oxides.", "edges": [{"description": "Multicopper oxidases catalyze the Mn(II) \u2192 Mn(III/IV) oxidation step.", "evidence": [{"notes": "Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase mechanism.", "reference": "DOI:10.1016/j.tim.2005.07.009"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "multicopper_oxidase", "target": "manganese_oxidation_trait"}, {"description": "The metabolism deposits biogenic Mn(III/IV) oxides.", "evidence": [{"notes": "Tebo et al. characterize the formation and properties of bacterially produced Mn(III/IV) oxides.", "reference": "DOI:10.1146/annurev.earth.32.101802.120213"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "manganese_oxidation_trait", "target": "mn_oxides"}, {"description": "O2 serves as the direct oxidant enabling multicopper-oxidase-mediated Mn(II) oxidation.", "evidence": [{"notes": "Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes for Mn(II) oxidation.", "reference": "DOI:10.1021/jacs.3c06537"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "molecular_oxygen", "target": "manganese_oxidation_trait"}, {"description": "A cooperative two-electron oxidation step produces a Mn(III)(OH)Mn(III) intermediate.", "evidence": [{"notes": "Cryo-EM mechanistic model: a cooperative two-electron step producing a Mn(III)(OH)Mn(III) intermediate.", "reference": "DOI:10.1021/jacs.3c06537"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "manganese_oxidation_trait", "target": "mn_iii_oh_mn_iii_intermediate"}, {"description": "Two Mn(III)(OH)Mn(III) species disproportionate to form Mn(IV)(O)Mn(IV).", "evidence": [{"notes": "Disproportionation of two Mn(III)(OH)Mn(III) species to form Mn(IV)(O)Mn(IV).", "reference": "DOI:10.1021/jacs.3c06537"}], "id": "edge-5", "is_orphan": false, "predicate": "disproportionates to form", "predicate_id": null, "source": "mn_iii_oh_mn_iii_intermediate", "target": "mn_iv_o_mn_iv_intermediate"}, {"description": "Mn(IV)(O)Mn(IV) condenses en route to MnO2 nanoparticle release.", "evidence": [{"notes": "Mn(IV)(O)Mn(IV) is en route to MnO2, with release of MnO2 nanoparticles.", "reference": "DOI:10.1021/jacs.3c06537"}], "id": "edge-6", "is_orphan": false, "predicate": "condenses into", "predicate_id": null, "source": "mn_iv_o_mn_iv_intermediate", "target": "mno2_nanoparticles"}, {"description": "MnO2 nanoparticles are a form of the insoluble biogenic Mn(III/IV) oxide product.", "evidence": [{"notes": "MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product of the oxidation cascade.", "reference": "DOI:10.1021/jacs.3c06537"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": null, "source": "mno2_nanoparticles", "target": "mn_oxides"}], "evidence_rows": [{"description": "Multicopper oxidases catalyze the Mn(II) \u2192 Mn(III/IV) oxidation step.", "edge_id": "edge-1", "evidence": [{"notes": "Tebo et al. support bacterial Mn(II) oxidation via a multicopper- oxidase mechanism.", "reference": "DOI:10.1016/j.tim.2005.07.009"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "multicopper oxidase", "target": "manganese oxidation"}, {"description": "The metabolism deposits biogenic Mn(III/IV) oxides.", "edge_id": "edge-2", "evidence": [{"notes": "Tebo et al. characterize the formation and properties of bacterially produced Mn(III/IV) oxides.", "reference": "DOI:10.1146/annurev.earth.32.101802.120213"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "manganese oxidation", "target": "Mn(III/IV) oxides"}, {"description": "O2 serves as the direct oxidant enabling multicopper-oxidase-mediated Mn(II) oxidation.", "edge_id": "edge-3", "evidence": [{"notes": "Some microbes can use O2 directly via multicopper oxidase (MCO) enzymes for Mn(II) oxidation.", "reference": "DOI:10.1021/jacs.3c06537"}], "predicate": "enables", "predicate_id": null, "source": "molecular oxygen (O2)", "target": "manganese oxidation"}, {"description": "A cooperative two-electron oxidation step produces a Mn(III)(OH)Mn(III) intermediate.", "edge_id": "edge-4", "evidence": [{"notes": "Cryo-EM mechanistic model: a cooperative two-electron step producing a Mn(III)(OH)Mn(III) intermediate.", "reference": "DOI:10.1021/jacs.3c06537"}], "predicate": "produces", "predicate_id": null, "source": "manganese oxidation", "target": "Mn(III)(OH)Mn(III) intermediate"}, {"description": "Two Mn(III)(OH)Mn(III) species disproportionate to form Mn(IV)(O)Mn(IV).", "edge_id": "edge-5", "evidence": [{"notes": "Disproportionation of two Mn(III)(OH)Mn(III) species to form Mn(IV)(O)Mn(IV).", "reference": "DOI:10.1021/jacs.3c06537"}], "predicate": "disproportionates to form", "predicate_id": null, "source": "Mn(III)(OH)Mn(III) intermediate", "target": "Mn(IV)(O)Mn(IV) intermediate"}, {"description": "Mn(IV)(O)Mn(IV) condenses en route to MnO2 nanoparticle release.", "edge_id": "edge-6", "evidence": [{"notes": "Mn(IV)(O)Mn(IV) is en route to MnO2, with release of MnO2 nanoparticles.", "reference": "DOI:10.1021/jacs.3c06537"}], "predicate": "condenses into", "predicate_id": null, "source": "Mn(IV)(O)Mn(IV) intermediate", "target": "MnO2 nanoparticles"}, {"description": "MnO2 nanoparticles are a form of the insoluble biogenic Mn(III/IV) oxide product.", "edge_id": "edge-7", "evidence": [{"notes": "MnO2 nanoparticles are the final insoluble Mn(IV) oxide biomineral product of the oxidation cascade.", "reference": "DOI:10.1021/jacs.3c06537"}], "predicate": "is a", "predicate_id": null, "source": "MnO2 nanoparticles", "target": "Mn(III/IV) oxides"}], "graph_id": "manganese_oxidation_multicopper_oxidase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Bacterial oxidation of Mn(II) to Mn(III/IV) oxides.", "grounding": "traitmech:000032", "id": "manganese_oxidation_trait", "is_orphan": false, "label": "manganese oxidation", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Binuclear Mn(III) intermediate formed during cooperative two-electron Mn(II) oxidation.", "grounding": null, "id": "mn_iii_oh_mn_iii_intermediate", "is_orphan": false, "label": "Mn(III)(OH)Mn(III) intermediate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Binuclear Mn(IV) species formed by disproportionation of Mn(III)(OH)Mn(III), en route to MnO2.", "grounding": null, "id": "mn_iv_o_mn_iv_intermediate", "is_orphan": false, "label": "Mn(IV)(O)Mn(IV) intermediate", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble bacterially-produced manganese oxides.", "grounding": null, "id": "mn_oxides", "is_orphan": false, "label": "Mn(III/IV) oxides", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble MnO2 nanoparticles released as the final biomineral product.", "grounding": null, "id": "mno2_nanoparticles", "is_orphan": false, "label": "MnO2 nanoparticles", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "O2 used directly as the terminal oxidant by multicopper-oxidase Mn(II)-oxidizing systems.", "grounding": null, "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen (O2)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme family catalyzing Mn(II) oxidation in bacteria.", "grounding": "UniProtKB:A0A059ZYC2", "id": "multicopper_oxidase", "is_orphan": false, "label": "multicopper oxidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Manganese oxidation produces insoluble Mn(III/IV) oxides"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +698,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

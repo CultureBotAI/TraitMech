@@ -23,8 +23,8 @@ evidence:
 causal_graphs:
 - graph_id: vbnc_stress_induced_dormancy
   title: Stress-induced viable-but-nonculturable state
-  description: Evidence-backed causal sketch linking stress to a dormant
-    viable-but-nonculturable state that resuscitates later.
+  description: Evidence-backed causal sketch linking stress to a dormant viable-but-nonculturable
+    state that resuscitates later.
   nodes:
   - node_id: vbnc_trait
     label: viable but nonculturable state
@@ -40,6 +40,39 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0022611
     description: Entry into a reversible quiescent state.
+  - node_id: oxidative_stress
+    label: oxidative stress / ROS accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Reactive oxygen species accumulation acting as a major VBNC trigger.
+  - node_id: ppgpp
+    label: (p)ppGpp
+    node_type: CHEMICAL
+    description: Alarmone nucleotide accumulating during VBNC entry, mediating the
+      stringent response.
+  - node_id: stress_resistance
+    label: stress resistance
+    node_type: BIOLOGICAL_PROCESS
+    description: Enhanced tolerance to stress supporting VBNC maintenance.
+  - node_id: rpos
+    label: RpoS sigma factor
+    node_type: GENE_OR_PROTEIN
+    description: Stationary-phase/general stress sigma factor expressed in VBNC cells.
+  - node_id: resuscitation
+    label: resuscitation from VBNC
+    node_type: BIOLOGICAL_PROCESS
+    description: Recovery of culturability from the viable-but-nonculturable state.
+  - node_id: atp
+    label: ATP
+    node_type: CHEMICAL
+    description: Cellular ATP whose residual availability drives resuscitation metabolism.
+  - node_id: nad_synthesis
+    label: NAD+ biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: NAD+ synthesis during the resuscitating lag phase.
+  - node_id: tca_oxphos
+    label: TCA cycle flux and oxidative phosphorylation
+    node_type: BIOLOGICAL_PROCESS
+    description: Central energy metabolism restored during resuscitation.
   edges:
   - subject: stress
     predicate: causes
@@ -57,16 +90,78 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2504
       notes: Lennon & Jones frame VBNC within microbial dormancy.
     predicate_id: RO:0002327
+  - subject: oxidative_stress
+    predicate: promotes
+    object: vbnc_trait
+    description: Oxidative stress / ROS accumulation promotes entry into the VBNC
+      state.
+    evidence:
+    - reference: DOI:10.3390/foods12061179
+      notes: 'Oxidative stress is a major trigger: ROS increase during VBNC entry
+        (review across foodborne pathogens, mechanistically broad).'
+  - subject: ppgpp
+    predicate: enhances
+    object: stress_resistance
+    description: (p)ppGpp accumulation enhances stress resistance during VBNC.
+    evidence:
+    - reference: DOI:10.3390/foods12061179
+      notes: Accumulation of (p)ppGpp, enhancing stress resistance, supports the regulatory
+        layer upstream of VBNC maintenance.
+  - subject: stress_resistance
+    predicate: contributes to
+    object: vbnc_trait
+    description: Enhanced stress resistance supports maintenance of the VBNC state.
+    evidence:
+    - reference: DOI:10.3390/foods12061179
+      notes: Stress resistance enhanced via (p)ppGpp underlies persistence in the
+        VBNC state.
+  - subject: rpos
+    predicate: required for
+    object: resuscitation
+    description: RpoS is required for resuscitation from the VBNC state.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12010039
+      notes: RpoS is expressed in VBNC cells and required for resuscitation; RpoS
+        mutants fail to resuscitate.
+  - subject: atp
+    predicate: promotes
+    object: resuscitation
+    description: ATP availability promotes resuscitation efficiency from VBNC.
+    evidence:
+    - reference: DOI:10.1016/j.jare.2023.08.002
+      notes: Higher ATP levels correlated with higher resuscitation efficiency.
+  - subject: atp
+    predicate: drives
+    object: nad_synthesis
+    description: Residual ATP drives NAD+ synthesis during the resuscitating lag phase.
+    evidence:
+    - reference: DOI:10.1016/j.jare.2023.08.002
+      notes: Part of cellular ATP is consumed during the lag phase to synthesize NAD+.
+  - subject: nad_synthesis
+    predicate: restores
+    object: tca_oxphos
+    description: NAD+ synthesis restores TCA cycle flux and oxidative phosphorylation
+      during resuscitation.
+    evidence:
+    - reference: DOI:10.1016/j.jare.2023.08.002
+      notes: ATP-mediated NAD+ synthesis increases NAD+ availability, restoring TCA
+        cycle flux and driving oxidative phosphorylation.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY trait (viable but nonculturable state);
-    sub-variant of dormancy.
+  changes: Proposed candidate PHYSIOLOGY trait (viable but nonculturable state); sub-variant
+    of dormancy.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (stress-induced VBNC) with GO node
-    grounding and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (stress-induced VBNC) with GO node grounding
+    and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

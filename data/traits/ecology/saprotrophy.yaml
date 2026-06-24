@@ -1,8 +1,7 @@
 identifier: traitmech:000055
 label: saprotrophy
-definition: A trophic-ecology lifestyle in which an organism feeds on dead or
-  decaying organic matter, mineralizing it and driving carbon and nutrient cycling
-  (decomposition).
+definition: A trophic-ecology lifestyle in which an organism feeds on dead or decaying
+  organic matter, mineralizing it and driving carbon and nutrient cycling (decomposition).
 definition_source: DOI:10.3389/fmicb.2012.00348
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -18,16 +17,16 @@ synonyms:
   source: DOI:10.3389/fmicb.2012.00348
 evidence:
 - reference: DOI:10.3389/fmicb.2012.00348
-  notes: Schimel & Schaeffer, "Microbial control over carbon cycling in soil",
-    support microbial decomposition of organic matter as a central ecosystem process.
+  notes: Schimel & Schaeffer, "Microbial control over carbon cycling in soil", support
+    microbial decomposition of organic matter as a central ecosystem process.
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer supports decomposer/saprotrophic activity as a key function of soil
     microbial communities.
 causal_graphs:
 - graph_id: saprotrophy_decomposition_cycling
   title: Saprotrophy decomposes dead organic matter and drives nutrient cycling
-  description: Evidence-backed causal sketch linking decomposer activity on dead
-    organic matter to carbon and nutrient cycling.
+  description: Evidence-backed causal sketch linking decomposer activity on dead organic
+    matter to carbon and nutrient cycling.
   nodes:
   - node_id: saprotrophy_trait
     label: saprotrophy
@@ -41,8 +40,54 @@ causal_graphs:
   - node_id: decomposition
     label: organic matter decomposition
     node_type: BIOLOGICAL_PROCESS
-    description: Microbial mineralization of organic matter releasing CO2 and
-      inorganic nutrients.
+    description: Microbial mineralization of organic matter releasing CO2 and inorganic
+      nutrients.
+  - node_id: extracellular_exoenzymes
+    label: extracellular exoenzymes
+    node_type: GENE_OR_PROTEIN
+    description: Secreted hydrolytic/oxidative enzymes acting outside the cell on
+      organic matter.
+  - node_id: soluble_organic_compounds
+    label: soluble organic compounds
+    node_type: CHEMICAL
+    description: Low-molecular-weight soluble products available for microbial uptake.
+  - node_id: cellulolytic_enzymes
+    label: cellulolytic enzyme system
+    node_type: GENE_OR_PROTEIN
+    description: Cellobiohydrolases, endoglucanases, and beta-glucosidases acting
+      in concert.
+  - node_id: cellulose
+    label: cellulose
+    node_type: CHEMICAL
+    description: Beta-1,4-linked glucose polymer, major plant cell-wall polysaccharide.
+  - node_id: glucose
+    label: glucose
+    node_type: CHEMICAL
+    description: Monosaccharide product of cellulose depolymerization.
+  - node_id: cazymes
+    label: carbohydrate-active enzymes (CAZymes)
+    node_type: GENE_OR_PROTEIN
+    description: Enzymes acting on glycosidic bonds of plant cell-wall polysaccharides.
+  - node_id: hemicellulose
+    label: hemicellulose
+    node_type: CHEMICAL
+    description: Heterogeneous matrix polysaccharides of plant cell walls.
+  - node_id: laccase
+    label: laccase
+    node_type: GENE_OR_PROTEIN
+    description: Multicopper oxidase that oxidizes lignin and phenolic substrates.
+  - node_id: lignin
+    label: lignin
+    node_type: CHEMICAL
+    description: Complex aromatic polymer in plant cell walls.
+  - node_id: manganese_peroxidase
+    label: manganese peroxidase (MnP)
+    node_type: GENE_OR_PROTEIN
+    description: H2O2-dependent fungal ligninolytic peroxidase.
+  - node_id: lignocellulolytic_gene_expression
+    label: lignocellulolytic gene expression
+    node_type: BIOLOGICAL_PROCESS
+    description: Transcription of genes encoding lignocellulose-degrading enzymes.
   edges:
   - subject: saprotrophy_trait
     predicate: enables
@@ -62,6 +107,69 @@ causal_graphs:
       notes: Fierer supports decomposer activity as a key function of soil microbial
         communities.
     predicate_id: biolink:consumes
+  - subject: extracellular_exoenzymes
+    predicate: converts insoluble organic matter into
+    object: soluble_organic_compounds
+    description: Saprotrophs use secreted exoenzymes to hydrolyze/oxidize insoluble
+      dead organic matter into soluble compounds for uptake.
+    evidence:
+    - reference: DOI:10.1093/ismejo/wrae073
+      notes: Saprotrophic microbes obtain carbon and energy by hydrolyzing/oxidizing
+        dead organic matter into soluble compounds; insoluble compounds require extracellular
+        enzymes.
+  - subject: cellulolytic_enzymes
+    predicate: depolymerizes
+    object: cellulose
+    description: Cellobiohydrolases, endoglucanases, and beta-glucosidases act in
+      concert to break down cellulose.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Complete degradation of cellulose into glucose involves concerted action
+        of cellobiohydrolases, endoglucanases, and beta-glucosidases.
+  - subject: cellulose
+    predicate: is converted to
+    object: glucose
+    description: Cellulose depolymerization yields glucose.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Complete degradation of cellulose into glucose by the cellulolytic enzyme
+        system.
+  - subject: cazymes
+    predicate: hydrolyzes
+    object: hemicellulose
+    description: Extracellular CAZymes hydrolyze hemicellulose polysaccharides at
+      glycosidic bonds.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: CAZymes act on glycosidic bonds; hemicellulose is targeted by xylanases,
+        beta-mannanases, pectate lyases and related enzymes.
+  - subject: laccase
+    predicate: oxidizes and depolymerizes
+    object: lignin
+    description: Laccase oxidatively depolymerizes lignin and phenolic substrates
+      via electron transfer.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Laccases and peroxidases degrade lignin and the corresponding monomers;
+        laccases modify lignin via hydrogen atom abstraction or electron transfer.
+  - subject: manganese_peroxidase
+    predicate: catalyzes H2O2-dependent oxidation of
+    object: lignin
+    description: Manganese peroxidase performs H2O2-dependent oxidative degradation
+      of lignin.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Fungal ligninolytic enzymes are mainly manganese peroxidases (MnP) and
+        lignin peroxidases (LiP) catalyzing oxidative reactions dependent on H2O2.
+  - subject: glucose
+    predicate: represses
+    object: lignocellulolytic_gene_expression
+    description: Simple sugars/glucose trigger carbon catabolite repression that represses
+      lignocellulolytic gene expression.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      notes: Glucose is a repressor of fungal cellulolytic enzymes; preferred simple
+        carbon sources cause CreA/Cre1-mediated repression.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -72,6 +180,12 @@ curation_history:
 - timestamp: '2026-06-09T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (saprotrophy / decomposition) with
-    RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (saprotrophy / decomposition) with RO/biolink
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

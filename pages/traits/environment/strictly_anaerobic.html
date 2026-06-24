@@ -124,12 +124,67 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>molecular oxygen</strong>
+            <span class="edge-predicate">oxidizes/inactivates</span>
+            <strong>iron-sulfur cluster enzymes</strong>
+            
+            <p>Oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/iai.00502-24</code>
+                
+                <span class="meta">&#34;oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters&#34; - general oxygen toxicity mechanism across anaerobes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>molecular oxygen</strong>
+            <span class="edge-predicate">inactivates</span>
+            <strong>glycyl radical enzymes</strong>
+            
+            <p>Glycyl radical enzymes are inherently incompatible with molecular oxygen.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/iai.00502-24</code>
+                
+                <span class="meta">&#34;Certain enzyme classes (e.g., glycyl radical enzymes) are inherently incompatible with molecular oxygen&#34; - broad across taxa.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>molecular oxygen</strong>
+            <span class="edge-predicate">inactivates</span>
+            <strong>low-potential energy-metabolism enzymes (PFOR/PFL)</strong>
+            
+            <p>Key anaerobic energy-metabolism enzymes (PFOR, PFL) with low-potential Fe-S clusters are oxygen sensitive.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/s43705-023-00251-7</code>
+                
+                <span class="meta">&#34;key enzymes involved in energy metabolism in anaerobes such as pyruvate ferrodoxin oxidoreductase (PFOR), pyruvate formate lyase (PFL)... are known to be O2 sensitive&#34; - general anaerobe biology.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -303,6 +358,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 3 evidence-backed generic edges (3 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -662,7 +723,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking strict anaerobic growth to anoxic environments and oxygen-sensitive cellular chemistry.", "edges": [{"description": "Strict anaerobes require oxygen-excluding conditions for growth.", "evidence": [{"notes": "Review supports anoxic environments as the ecological context for anaerobe growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic or anoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic_condition", "target": "strictly_anaerobic_trait"}, {"description": "Oxygen exposure blocks strict anaerobic growth.", "evidence": [{"notes": "Supports oxygen as an inhibitory exposure for obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-2", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "strictly_anaerobic_trait"}, {"description": "Oxygen exposure can generate reactive oxygen stress.", "evidence": [{"notes": "Review links oxygen exposure to ROS stress in anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "causes formation of", "predicate_id": "biolink:produces", "source": "molecular_oxygen", "target": "reactive_oxygen_species"}, {"description": "ROS can impair oxygen-sensitive anaerobic enzyme systems.", "evidence": [{"notes": "Supports enzyme vulnerability as a mechanism of oxygen toxicity.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "oxygen_sensitive_enzymes"}], "evidence_rows": [{"description": "Strict anaerobes require oxygen-excluding conditions for growth.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports anoxic environments as the ecological context for anaerobe growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic or anoxic conditions"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic condition", "target": "strictly anaerobic"}, {"description": "Oxygen exposure blocks strict anaerobic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as an inhibitory exposure for obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "target": "strictly anaerobic"}, {"description": "Oxygen exposure can generate reactive oxygen stress.", "edge_id": "edge-3", "evidence": [{"notes": "Review links oxygen exposure to ROS stress in anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "predicate": "causes formation of", "predicate_id": "biolink:produces", "source": "molecular oxygen", "target": "reactive oxygen species"}, {"description": "ROS can impair oxygen-sensitive anaerobic enzyme systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports enzyme vulnerability as a mechanism of oxygen toxicity.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "target": "oxygen-sensitive enzymes"}], "graph_id": "strict_anaerobe_oxygen_sensitivity", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-excluding environment required for strict anaerobic growth.", "grounding": "PATO:0001456", "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen exposure that prevents strict anaerobe growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Anaerobic enzymes vulnerable to oxygen or ROS.", "grounding": null, "id": "oxygen_sensitive_enzymes", "is_orphan": false, "label": "oxygen-sensitive enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Does not grow in the presence of oxygen gas.", "grounding": "METPO:1000611", "id": "strictly_anaerobic_trait", "is_orphan": false, "label": "strictly anaerobic", "node_type": "TRAIT", "xrefs": []}], "title": "Strict anaerobe oxygen-sensitivity mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking strict anaerobic growth to anoxic environments and oxygen-sensitive cellular chemistry.", "edges": [{"description": "Strict anaerobes require oxygen-excluding conditions for growth.", "evidence": [{"notes": "Review supports anoxic environments as the ecological context for anaerobe growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic or anoxic conditions"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic_condition", "target": "strictly_anaerobic_trait"}, {"description": "Oxygen exposure blocks strict anaerobic growth.", "evidence": [{"notes": "Supports oxygen as an inhibitory exposure for obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "id": "edge-2", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular_oxygen", "target": "strictly_anaerobic_trait"}, {"description": "Oxygen exposure can generate reactive oxygen stress.", "evidence": [{"notes": "Review links oxygen exposure to ROS stress in anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "id": "edge-3", "is_orphan": false, "predicate": "causes formation of", "predicate_id": "biolink:produces", "source": "molecular_oxygen", "target": "reactive_oxygen_species"}, {"description": "ROS can impair oxygen-sensitive anaerobic enzyme systems.", "evidence": [{"notes": "Supports enzyme vulnerability as a mechanism of oxygen toxicity.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "poisoning by molecular oxygen and ROS"}], "id": "edge-4", "is_orphan": false, "predicate": "damages", "predicate_id": null, "source": "reactive_oxygen_species", "target": "oxygen_sensitive_enzymes"}, {"description": "Oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters.", "evidence": [{"notes": "\"oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters\" - general oxygen toxicity mechanism across anaerobes.", "reference": "DOI:10.1128/iai.00502-24"}], "id": "edge-5", "is_orphan": false, "predicate": "oxidizes/inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "iron_sulfur_cluster_enzymes"}, {"description": "Glycyl radical enzymes are inherently incompatible with molecular oxygen.", "evidence": [{"notes": "\"Certain enzyme classes (e.g., glycyl radical enzymes) are inherently incompatible with molecular oxygen\" - broad across taxa.", "reference": "DOI:10.1128/iai.00502-24"}], "id": "edge-6", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "glycyl_radical_enzymes"}, {"description": "Key anaerobic energy-metabolism enzymes (PFOR, PFL) with low-potential Fe-S clusters are oxygen sensitive.", "evidence": [{"notes": "\"key enzymes involved in energy metabolism in anaerobes such as pyruvate ferrodoxin oxidoreductase (PFOR), pyruvate formate lyase (PFL)... are known to be O2 sensitive\" - general anaerobe biology.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "id": "edge-7", "is_orphan": false, "predicate": "inactivates", "predicate_id": null, "source": "molecular_oxygen", "target": "low_potential_metabolic_enzymes"}], "evidence_rows": [{"description": "Strict anaerobes require oxygen-excluding conditions for growth.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports anoxic environments as the ecological context for anaerobe growth.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "hypoxic or anoxic conditions"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "anoxic condition", "target": "strictly anaerobic"}, {"description": "Oxygen exposure blocks strict anaerobic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as an inhibitory exposure for obligate anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "oxygen blocks their growth"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "molecular oxygen", "target": "strictly anaerobic"}, {"description": "Oxygen exposure can generate reactive oxygen stress.", "edge_id": "edge-3", "evidence": [{"notes": "Review links oxygen exposure to ROS stress in anaerobes.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "molecular oxygen and ROS"}], "predicate": "causes formation of", "predicate_id": "biolink:produces", "source": "molecular oxygen", "target": "reactive oxygen species"}, {"description": "ROS can impair oxygen-sensitive anaerobic enzyme systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports enzyme vulnerability as a mechanism of oxygen toxicity.", "reference": "DOI:10.1038/s41579-021-00583-y", "snippet": "poisoning by molecular oxygen and ROS"}], "predicate": "damages", "predicate_id": null, "source": "reactive oxygen species", "target": "oxygen-sensitive enzymes"}, {"description": "Oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters.", "edge_id": "edge-5", "evidence": [{"notes": "\"oxygen directly oxidizes mononuclear iron enzymes and solvent-exposed iron-sulfur clusters\" - general oxygen toxicity mechanism across anaerobes.", "reference": "DOI:10.1128/iai.00502-24"}], "predicate": "oxidizes/inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "iron-sulfur cluster enzymes"}, {"description": "Glycyl radical enzymes are inherently incompatible with molecular oxygen.", "edge_id": "edge-6", "evidence": [{"notes": "\"Certain enzyme classes (e.g., glycyl radical enzymes) are inherently incompatible with molecular oxygen\" - broad across taxa.", "reference": "DOI:10.1128/iai.00502-24"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "glycyl radical enzymes"}, {"description": "Key anaerobic energy-metabolism enzymes (PFOR, PFL) with low-potential Fe-S clusters are oxygen sensitive.", "edge_id": "edge-7", "evidence": [{"notes": "\"key enzymes involved in energy metabolism in anaerobes such as pyruvate ferrodoxin oxidoreductase (PFOR), pyruvate formate lyase (PFL)... are known to be O2 sensitive\" - general anaerobe biology.", "reference": "DOI:10.1038/s43705-023-00251-7"}], "predicate": "inactivates", "predicate_id": null, "source": "molecular oxygen", "target": "low-potential energy-metabolism enzymes (PFOR/PFL)"}], "graph_id": "strict_anaerobe_oxygen_sensitivity", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Oxygen-excluding environment required for strict anaerobic growth.", "grounding": "PATO:0001456", "id": "anoxic_condition", "is_orphan": false, "label": "anoxic condition", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme class inherently incompatible with molecular oxygen.", "grounding": null, "id": "glycyl_radical_enzymes", "is_orphan": false, "label": "glycyl radical enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Mononuclear iron enzymes and solvent-exposed iron-sulfur cluster enzymes that are directly oxidized by oxygen.", "grounding": null, "id": "iron_sulfur_cluster_enzymes", "is_orphan": false, "label": "iron-sulfur cluster enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Oxygen-sensitive anaerobic energy-metabolism enzymes such as pyruvate:ferredoxin oxidoreductase (PFOR) and pyruvate formate lyase (PFL).", "grounding": null, "id": "low_potential_metabolic_enzymes", "is_orphan": false, "label": "low-potential energy-metabolism enzymes (PFOR/PFL)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Dioxygen exposure that prevents strict anaerobe growth.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Anaerobic enzymes vulnerable to oxygen or ROS.", "grounding": null, "id": "oxygen_sensitive_enzymes", "is_orphan": false, "label": "oxygen-sensitive enzymes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Oxygen-derived oxidants.", "grounding": "CHEBI:26523", "id": "reactive_oxygen_species", "is_orphan": false, "label": "reactive oxygen species", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Does not grow in the presence of oxygen gas.", "grounding": "METPO:1000611", "id": "strictly_anaerobic_trait", "is_orphan": false, "label": "strictly anaerobic", "node_type": "TRAIT", "xrefs": []}], "title": "Strict anaerobe oxygen-sensitivity mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -673,7 +734,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

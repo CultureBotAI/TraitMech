@@ -38,6 +38,56 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Strong capacity to remodel proton extrusion, K+/H+ antiport, and
       envelope buffering across a broad pH span.
+  - node_id: external_ph_stress
+    label: external pH stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Deviation of external pH that perturbs proton motive force balance.
+  - node_id: pmf_component_balance
+    label: PMF component balance
+    node_type: BIOLOGICAL_PROCESS
+    description: Balance of proton motive force components (delta-pH and delta-psi).
+  - node_id: respiratory_proton_pumps
+    label: proton-pumping respiratory complexes
+    node_type: GENE_OR_PROTEIN
+    description: Primary respiratory-chain proton pumps that establish the PMF.
+  - node_id: pmf_generation
+    label: proton motive force generation
+    node_type: BIOLOGICAL_PROCESS
+    description: Generation of proton motive force across the membrane.
+  - node_id: f1fo_atpase
+    label: F1Fo-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: Proton-coupled F1Fo-ATP synthase functioning as a proton pump.
+  - node_id: proton_translocation_homeostasis
+    label: proton translocation for pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Active proton translocation that maintains cytoplasmic pH homeostasis.
+  - node_id: na_h_antiporter_activity
+    label: Na+/H+ antiporter activity
+    node_type: MOLECULAR_FUNCTION
+    description: Cation/proton antiport that imports H+ and extrudes Na+.
+  - node_id: alkaline_ph_homeostasis
+    label: alkaline pH homeostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of cytoplasmic pH under alkaline external conditions.
+  - node_id: glutamate_decarboxylase_system
+    label: glutamate decarboxylase system
+    node_type: PATHWAY
+    description: Proton-consuming glutamate decarboxylase (gad/GadB) acid-resistance
+      system.
+  - node_id: intracellular_proton
+    label: intracellular H+
+    node_type: CHEMICAL
+    description: Cytoplasmic protons whose concentration sets cytoplasmic pH.
+  - node_id: cytoplasmic_buffers
+    label: cytoplasmic buffering molecules
+    node_type: CHEMICAL
+    description: Small molecules (polyamines, amino acids, phosphate) providing passive
+      pH buffering.
+  - node_id: cytoplasmic_ph_buffering
+    label: cytoplasmic pH buffering
+    node_type: BIOLOGICAL_PROCESS
+    description: Passive buffering of cytoplasmic pH by small molecules.
   edges:
   - subject: broad_ph_homeostasis
     predicate: produces
@@ -57,6 +107,60 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports the 3–4 unit breadth as a value within the pH-delta distribution.
     predicate_id: rdfs:subClassOf
+  - subject: external_ph_stress
+    predicate: alters
+    object: pmf_component_balance
+    description: External pH stress alters the balance/orientation of PMF components
+      (delta-pH, delta-psi).
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Relative magnitudes and even orientation of PMF components change with
+        external pH; under strong pH stress a component can reverse orientation.
+  - subject: respiratory_proton_pumps
+    predicate: generates
+    object: pmf_generation
+    description: Primary respiratory-chain proton pumps generate the proton motive
+      force.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Primary proton pumps (respiratory chain pumps) generate PMF; broad mechanism
+        across bacteria.
+  - subject: f1fo_atpase
+    predicate: contributes to
+    object: proton_translocation_homeostasis
+    description: Proton-coupled F1Fo-ATPase contributes to proton translocation supporting
+      pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Proton-coupled ATPases are a primary strategy; F1-F0 ATPase proton pump
+        is an active pH-homeostasis mechanism.
+  - subject: na_h_antiporter_activity
+    predicate: supports
+    object: alkaline_ph_homeostasis
+    description: Na+/H+ antiporter activity imports H+ and extrudes Na+ to support
+      alkaline pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Cation/proton antiporters are transcriptionally up-regulated for inward
+        proton transport under alkaline stress.
+  - subject: glutamate_decarboxylase_system
+    predicate: consumes
+    object: intracellular_proton
+    description: The glutamate decarboxylase system consumes intracellular protons
+      during decarboxylation.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Glutamate decarboxylase (GadB with its antiporter) is a proton-consuming
+        acid-tolerance mechanism (GDAR), broadly curated in Gram-negatives.
+  - subject: cytoplasmic_buffers
+    predicate: buffers
+    object: cytoplasmic_ph_buffering
+    description: Small molecules (polyamines, amino acids, phosphate) passively buffer
+      cytoplasmic pH.
+    evidence:
+    - reference: DOI:10.3390/antibiotics12091474
+      notes: Passive buffering of cytoplasmic pH is provided by small molecules (amino
+        acids, proteins, polyamines, polyphosphate, inorganic phosphate).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.839415+00:00'
   curator: seed_from_metpo
@@ -74,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

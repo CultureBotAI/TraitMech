@@ -90,12 +90,152 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>endoglucanase</strong>
+            <span class="edge-predicate">degrades</span>
+            <strong>cellulose</strong>
+            
+            <p>Endoglucanase participates in concerted hydrolysis of cellulose.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/jambio/lxac002</code>
+                
+                <span class="meta">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>cellobiohydrolase / exoglucanase</strong>
+            <span class="edge-predicate">degrades</span>
+            <strong>cellulose</strong>
+            
+            <p>Cellobiohydrolase/exoglucanase participates in concerted hydrolysis of cellulose.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/jambio/lxac002</code>
+                
+                <span class="meta">Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>beta-glucosidase</strong>
+            <span class="edge-predicate">hydrolyzes</span>
+            <strong>cellobiose</strong>
+            
+            <p>Beta-glucosidase hydrolyzes cellobiose in the downstream saccharification step.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13568-023-01658-0</code>
+                
+                <span class="meta">Beta-glucosidase activity converting cellobiose into glucose.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>beta-glucosidase</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>glucose</strong>
+            
+            <p>Beta-glucosidase releases glucose from cellobiose.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s13568-023-01658-0</code>
+                
+                <span class="meta">Beta-glucosidase activity converting cellobiose into glucose; product edge directly stated.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>cellulosome</strong>
+            <span class="edge-predicate">has backbone component</span>
+            <strong>scaffoldin</strong>
+            
+            <p>Cellulosomes are multienzyme complexes built on scaffoldins.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/jambio/lxac002</code>
+                
+                <span class="meta">They are multienzyme complexes built on scaffoldins.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>scaffoldin</strong>
+            <span class="edge-predicate">contains</span>
+            <strong>cohesin domain</strong>
+            
+            <p>Scaffoldins bear cohesin modules.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fmicb.2023.1288286</code>
+                
+                <span class="meta">Scaffoldins are the non-catalytic backbone and bear modules called cohesin.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>dockerin domain</strong>
+            <span class="edge-predicate">binds to</span>
+            <strong>cohesin domain</strong>
+            
+            <p>Dockerin-cohesin interaction assembles enzymes onto the scaffoldin.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/jambio/lxac002</code>
+                
+                <span class="meta">Dockerin modules interacting with scaffoldin cohesin modules; canonical assembly interaction.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>carbon catabolite repression</strong>
+            <span class="edge-predicate">represses</span>
+            <strong>cellulolytic / lignocellulose-catabolic genes</strong>
+            
+            <p>Carbon catabolite repression represses cellulolytic/lignocellulose-catabolic genes when glucose signals are high.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1093/jambio/lxac002</code>
+                
+                <span class="meta">CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic genes when glucose-derived signals are high.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -235,6 +375,12 @@
           <time>2026-06-14T06:55:38Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:17234×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 8 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -594,7 +740,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking cellulase systems (cellulosomes / free enzymes) to cellulose hydrolysis into cellodextrins and glucose.", "edges": [{"description": "Cellulase systems hydrolyze cellulose extracellularly.", "evidence": [{"notes": "Lynd et al. review microbial cellulose utilization and the cellulase systems involved.", "reference": "DOI:10.1128/MMBR.66.3.506-577.2002"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellulase", "target": "cellulolysis_trait"}, {"description": "Cellulose hydrolysis yields cellodextrins and glucose.", "evidence": [{"notes": "Cragg et al. place cellulose deconstruction within lignocellulose degradation.", "reference": "DOI:10.1016/j.cbpa.2015.10.018"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cellulolysis_trait", "target": "glucose"}], "evidence_rows": [{"description": "Cellulase systems hydrolyze cellulose extracellularly.", "edge_id": "edge-1", "evidence": [{"notes": "Lynd et al. review microbial cellulose utilization and the cellulase systems involved.", "reference": "DOI:10.1128/MMBR.66.3.506-577.2002"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellulase systems", "target": "cellulolysis"}, {"description": "Cellulose hydrolysis yields cellodextrins and glucose.", "edge_id": "edge-2", "evidence": [{"notes": "Cragg et al. place cellulose deconstruction within lignocellulose degradation.", "reference": "DOI:10.1016/j.cbpa.2015.10.018"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cellulolysis", "target": "glucose"}], "graph_id": "cellulolysis_cellulase_systems", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Endoglucanases, exoglucanases, and beta-glucosidases (sometimes cellulosomal).", "grounding": null, "id": "cellulase", "is_orphan": false, "label": "cellulase systems", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Hydrolysis of cellulose to assimilable sugars.", "grounding": "traitmech:000111", "id": "cellulolysis_trait", "is_orphan": false, "label": "cellulolysis", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Monomeric assimilable sugar released from cellulose.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "xrefs": []}], "title": "Cellulolysis hydrolyzes cellulose to glucose"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking cellulase systems (cellulosomes / free enzymes) to cellulose hydrolysis into cellodextrins and glucose.", "edges": [{"description": "Cellulase systems hydrolyze cellulose extracellularly.", "evidence": [{"notes": "Lynd et al. review microbial cellulose utilization and the cellulase systems involved.", "reference": "DOI:10.1128/MMBR.66.3.506-577.2002"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellulase", "target": "cellulolysis_trait"}, {"description": "Cellulose hydrolysis yields cellodextrins and glucose.", "evidence": [{"notes": "Cragg et al. place cellulose deconstruction within lignocellulose degradation.", "reference": "DOI:10.1016/j.cbpa.2015.10.018"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cellulolysis_trait", "target": "glucose"}, {"description": "Endoglucanase participates in concerted hydrolysis of cellulose.", "evidence": [{"notes": "Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.", "reference": "DOI:10.1093/jambio/lxac002"}], "id": "edge-3", "is_orphan": false, "predicate": "degrades", "predicate_id": null, "source": "endoglucanase", "target": "cellulose"}, {"description": "Cellobiohydrolase/exoglucanase participates in concerted hydrolysis of cellulose.", "evidence": [{"notes": "Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.", "reference": "DOI:10.1093/jambio/lxac002"}], "id": "edge-4", "is_orphan": false, "predicate": "degrades", "predicate_id": null, "source": "cellobiohydrolase", "target": "cellulose"}, {"description": "Beta-glucosidase hydrolyzes cellobiose in the downstream saccharification step.", "evidence": [{"notes": "Beta-glucosidase activity converting cellobiose into glucose.", "reference": "DOI:10.1186/s13568-023-01658-0"}], "id": "edge-5", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": null, "source": "beta_glucosidase", "target": "cellobiose"}, {"description": "Beta-glucosidase releases glucose from cellobiose.", "evidence": [{"notes": "Beta-glucosidase activity converting cellobiose into glucose; product edge directly stated.", "reference": "DOI:10.1186/s13568-023-01658-0"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "beta_glucosidase", "target": "glucose"}, {"description": "Cellulosomes are multienzyme complexes built on scaffoldins.", "evidence": [{"notes": "They are multienzyme complexes built on scaffoldins.", "reference": "DOI:10.1093/jambio/lxac002"}], "id": "edge-7", "is_orphan": false, "predicate": "has backbone component", "predicate_id": null, "source": "cellulosome", "target": "scaffoldin"}, {"description": "Scaffoldins bear cohesin modules.", "evidence": [{"notes": "Scaffoldins are the non-catalytic backbone and bear modules called cohesin.", "reference": "DOI:10.3389/fmicb.2023.1288286"}], "id": "edge-8", "is_orphan": false, "predicate": "contains", "predicate_id": null, "source": "scaffoldin", "target": "cohesin_domain"}, {"description": "Dockerin-cohesin interaction assembles enzymes onto the scaffoldin.", "evidence": [{"notes": "Dockerin modules interacting with scaffoldin cohesin modules; canonical assembly interaction.", "reference": "DOI:10.1093/jambio/lxac002"}], "id": "edge-9", "is_orphan": false, "predicate": "binds to", "predicate_id": null, "source": "dockerin_domain", "target": "cohesin_domain"}, {"description": "Carbon catabolite repression represses cellulolytic/lignocellulose-catabolic genes when glucose signals are high.", "evidence": [{"notes": "CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic genes when glucose-derived signals are high.", "reference": "DOI:10.1093/jambio/lxac002"}], "id": "edge-10", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "ccr", "target": "cellulolytic_genes"}], "evidence_rows": [{"description": "Cellulase systems hydrolyze cellulose extracellularly.", "edge_id": "edge-1", "evidence": [{"notes": "Lynd et al. review microbial cellulose utilization and the cellulase systems involved.", "reference": "DOI:10.1128/MMBR.66.3.506-577.2002"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "cellulase systems", "target": "cellulolysis"}, {"description": "Cellulose hydrolysis yields cellodextrins and glucose.", "edge_id": "edge-2", "evidence": [{"notes": "Cragg et al. place cellulose deconstruction within lignocellulose degradation.", "reference": "DOI:10.1016/j.cbpa.2015.10.018"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "cellulolysis", "target": "glucose"}, {"description": "Endoglucanase participates in concerted hydrolysis of cellulose.", "edge_id": "edge-3", "evidence": [{"notes": "Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.", "reference": "DOI:10.1093/jambio/lxac002"}], "predicate": "degrades", "predicate_id": null, "source": "endoglucanase", "target": "cellulose"}, {"description": "Cellobiohydrolase/exoglucanase participates in concerted hydrolysis of cellulose.", "edge_id": "edge-4", "evidence": [{"notes": "Complete degradation of cellulose to glucose requires concerted action of cellobiohydrolases, endoglucanases and beta-glucosidases.", "reference": "DOI:10.1093/jambio/lxac002"}], "predicate": "degrades", "predicate_id": null, "source": "cellobiohydrolase / exoglucanase", "target": "cellulose"}, {"description": "Beta-glucosidase hydrolyzes cellobiose in the downstream saccharification step.", "edge_id": "edge-5", "evidence": [{"notes": "Beta-glucosidase activity converting cellobiose into glucose.", "reference": "DOI:10.1186/s13568-023-01658-0"}], "predicate": "hydrolyzes", "predicate_id": null, "source": "beta-glucosidase", "target": "cellobiose"}, {"description": "Beta-glucosidase releases glucose from cellobiose.", "edge_id": "edge-6", "evidence": [{"notes": "Beta-glucosidase activity converting cellobiose into glucose; product edge directly stated.", "reference": "DOI:10.1186/s13568-023-01658-0"}], "predicate": "produces", "predicate_id": null, "source": "beta-glucosidase", "target": "glucose"}, {"description": "Cellulosomes are multienzyme complexes built on scaffoldins.", "edge_id": "edge-7", "evidence": [{"notes": "They are multienzyme complexes built on scaffoldins.", "reference": "DOI:10.1093/jambio/lxac002"}], "predicate": "has backbone component", "predicate_id": null, "source": "cellulosome", "target": "scaffoldin"}, {"description": "Scaffoldins bear cohesin modules.", "edge_id": "edge-8", "evidence": [{"notes": "Scaffoldins are the non-catalytic backbone and bear modules called cohesin.", "reference": "DOI:10.3389/fmicb.2023.1288286"}], "predicate": "contains", "predicate_id": null, "source": "scaffoldin", "target": "cohesin domain"}, {"description": "Dockerin-cohesin interaction assembles enzymes onto the scaffoldin.", "edge_id": "edge-9", "evidence": [{"notes": "Dockerin modules interacting with scaffoldin cohesin modules; canonical assembly interaction.", "reference": "DOI:10.1093/jambio/lxac002"}], "predicate": "binds to", "predicate_id": null, "source": "dockerin domain", "target": "cohesin domain"}, {"description": "Carbon catabolite repression represses cellulolytic/lignocellulose-catabolic genes when glucose signals are high.", "edge_id": "edge-10", "evidence": [{"notes": "CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic genes when glucose-derived signals are high.", "reference": "DOI:10.1093/jambio/lxac002"}], "predicate": "represses", "predicate_id": null, "source": "carbon catabolite repression", "target": "cellulolytic / lignocellulose-catabolic genes"}], "graph_id": "cellulolysis_cellulase_systems", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzyme hydrolyzing cellobiose to glucose.", "grounding": null, "id": "beta_glucosidase", "is_orphan": false, "label": "beta-glucosidase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Glucose-signal-driven repression of catabolic gene transcription.", "grounding": null, "id": "ccr", "is_orphan": false, "label": "carbon catabolite repression", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Cellulase that processively releases cellobiose from chain ends.", "grounding": null, "id": "cellobiohydrolase", "is_orphan": false, "label": "cellobiohydrolase / exoglucanase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Glucose disaccharide intermediate of cellulose hydrolysis.", "grounding": null, "id": "cellobiose", "is_orphan": false, "label": "cellobiose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Endoglucanases, exoglucanases, and beta-glucosidases (sometimes cellulosomal).", "grounding": null, "id": "cellulase", "is_orphan": false, "label": "cellulase systems", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Hydrolysis of cellulose to assimilable sugars.", "grounding": "traitmech:000111", "id": "cellulolysis_trait", "is_orphan": false, "label": "cellulolysis", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "Genes encoding cellulose-degrading enzymes.", "grounding": null, "id": "cellulolytic_genes", "is_orphan": false, "label": "cellulolytic / lignocellulose-catabolic genes", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Beta-1,4-linked glucose polymer substrate.", "grounding": null, "id": "cellulose", "is_orphan": false, "label": "cellulose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ede9fe", "description": "Multienzyme complex built on scaffoldins for cellulose degradation.", "grounding": null, "id": "cellulosome", "is_orphan": false, "label": "cellulosome", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#f3e8ff", "description": "Scaffoldin module that binds dockerin domains.", "grounding": null, "id": "cohesin_domain", "is_orphan": false, "label": "cohesin domain", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme-borne module that binds scaffoldin cohesin domains.", "grounding": null, "id": "dockerin_domain", "is_orphan": false, "label": "dockerin domain", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Cellulase that cleaves internal bonds of cellulose chains.", "grounding": null, "id": "endoglucanase", "is_orphan": false, "label": "endoglucanase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Monomeric assimilable sugar released from cellulose.", "grounding": "CHEBI:17234", "id": "glucose", "is_orphan": false, "label": "glucose", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Non-catalytic backbone protein of the cellulosome.", "grounding": null, "id": "scaffoldin", "is_orphan": false, "label": "scaffoldin", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Cellulolysis hydrolyzes cellulose to glucose"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,7 +751,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

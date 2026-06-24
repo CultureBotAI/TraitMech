@@ -124,12 +124,135 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-5">
+            <strong>septal peptidoglycan synthesis</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>sphere shaped</strong>
+            
+            <p>Septal-only peptidoglycan synthesis in cocci produces spherical morphology.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">spherical cocci synthesize peptidoglycan only at the division septum</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>MreB-mediated elongation machinery</strong>
+            <span class="edge-predicate">causally upstream of</span>
+            <strong>elongation capacity</strong>
+            
+            <p>Loss of the MreB cytoskeleton removes the elongation capacity that lengthens rods.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">loss of the MreB cytoskeleton is the main factor that prevents cocci from elongating into rods</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>elongation capacity</strong>
+            <span class="edge-predicate">reduced in</span>
+            <strong>sphere shaped</strong>
+            
+            <p>Loss of elongation capacity prevents cocci from elongating into rods, favoring a sphere.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">prevents cocci from elongating into rods</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>FtsZ division ring</strong>
+            <span class="edge-predicate">recruits</span>
+            <strong>divisome and PBPs</strong>
+            
+            <p>FtsZ assembly into a mid-cell Z ring recruits PBPs and divisome components.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">cell division is initiated by FtsZ assembly into a mid-cell Z ring that recruits PBPs and divisome components</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>FtsZ treadmilling</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>septal peptidoglycan synthesis</strong>
+            
+            <p>FtsZ treadmilling distributes the PG synthases that form the septum.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1042/bsr20221664</code>
+                
+                <span class="meta">The FtsZ polymers undergo treadmilling around the Z-ring to distribute the PG synthases forming the septum</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>FtsW lipid II flippase</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>lipid II</strong>
+            
+            <p>FtsW flips lipid II to the outer septal face for PG synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">lipid II is flipped to the outside by the septally localized flippase FtsW</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>lipid II</strong>
+            <span class="edge-predicate">enables</span>
+            <strong>septal peptidoglycan synthesis</strong>
+            
+            <p>Lipid II serves as the PBP substrate for septal peptidoglycan synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1038/nrmicro3088</code>
+                
+                <span class="meta">PG synthesis uses lipid II as the PBP substrate</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -293,6 +416,12 @@
           <time>2026-06-13T21:03:26Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:produces×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 7 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -652,7 +781,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking spherical cell shape to FtsZ-associated septal synthesis, peptidoglycan remodeling, and limited lateral elongation.", "edges": [{"description": "The FtsZ division ring organizes septal wall synthesis.", "evidence": [{"notes": "Supports FtsZ-PBP cooperation in division-associated shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ftsZ_division_ring", "target": "septal_peptidoglycan_synthesis"}, {"description": "Septal synthesis builds and remodels the spherical cell wall.", "evidence": [{"notes": "Supports septal-only PG synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "septal_peptidoglycan_synthesis", "target": "peptidoglycan_cell_wall"}, {"description": "Reduced lateral elongation helps preserve a sphere rather than a rod.", "evidence": [{"notes": "Broad review supports different growth mechanisms for coccoid versus rod-shaped bacteria.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "mechanisms controlling growth and division of coccoid bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced in", "predicate_id": null, "source": "lateral_elongation", "target": "sphere_shaped_trait"}, {"description": "Peptidoglycan wall geometry maintains the spherical shape.", "evidence": [{"notes": "Supports the cell wall as central to bacterial shape maintenance.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "sphere_shaped_trait"}], "evidence_rows": [{"description": "The FtsZ division ring organizes septal wall synthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports FtsZ-PBP cooperation in division-associated shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FtsZ division ring", "target": "septal peptidoglycan synthesis"}, {"description": "Septal synthesis builds and remodels the spherical cell wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports septal-only PG synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "septal peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "Reduced lateral elongation helps preserve a sphere rather than a rod.", "edge_id": "edge-3", "evidence": [{"notes": "Broad review supports different growth mechanisms for coccoid versus rod-shaped bacteria.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "mechanisms controlling growth and division of coccoid bacteria"}], "predicate": "reduced in", "predicate_id": null, "source": "lateral cell-wall elongation", "target": "sphere shaped"}, {"description": "Peptidoglycan wall geometry maintains the spherical shape.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the cell wall as central to bacterial shape maintenance.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "sphere shaped"}], "graph_id": "sphere_shaped_septal_peptidoglycan", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Tubulin-like division scaffold.", "grounding": null, "id": "ftsZ_division_ring", "is_orphan": false, "label": "FtsZ division ring", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth mode that lengthens rods.", "grounding": null, "id": "lateral_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer network maintaining bacterial shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis localized to the division septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Spherical bacterial cell morphology.", "grounding": "METPO:1000683", "id": "sphere_shaped_trait", "is_orphan": false, "label": "sphere shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Spherical shape septal peptidoglycan mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking spherical cell shape to FtsZ-associated septal synthesis, peptidoglycan remodeling, and limited lateral elongation.", "edges": [{"description": "The FtsZ division ring organizes septal wall synthesis.", "evidence": [{"notes": "Supports FtsZ-PBP cooperation in division-associated shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ftsZ_division_ring", "target": "septal_peptidoglycan_synthesis"}, {"description": "Septal synthesis builds and remodels the spherical cell wall.", "evidence": [{"notes": "Supports septal-only PG synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "id": "edge-2", "is_orphan": false, "predicate": "builds", "predicate_id": "biolink:produces", "source": "septal_peptidoglycan_synthesis", "target": "peptidoglycan_cell_wall"}, {"description": "Reduced lateral elongation helps preserve a sphere rather than a rod.", "evidence": [{"notes": "Broad review supports different growth mechanisms for coccoid versus rod-shaped bacteria.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "mechanisms controlling growth and division of coccoid bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced in", "predicate_id": null, "source": "lateral_elongation", "target": "sphere_shaped_trait"}, {"description": "Peptidoglycan wall geometry maintains the spherical shape.", "evidence": [{"notes": "Supports the cell wall as central to bacterial shape maintenance.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan_cell_wall", "target": "sphere_shaped_trait"}, {"description": "Septal-only peptidoglycan synthesis in cocci produces spherical morphology.", "evidence": [{"notes": "spherical cocci synthesize peptidoglycan only at the division septum", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": null, "source": "septal_peptidoglycan_synthesis", "target": "sphere_shaped_trait"}, {"description": "Loss of the MreB cytoskeleton removes the elongation capacity that lengthens rods.", "evidence": [{"notes": "loss of the MreB cytoskeleton is the main factor that prevents cocci from elongating into rods", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-6", "is_orphan": false, "predicate": "causally upstream of", "predicate_id": null, "source": "mreB_elongation_machinery", "target": "elongation_capacity"}, {"description": "Loss of elongation capacity prevents cocci from elongating into rods, favoring a sphere.", "evidence": [{"notes": "prevents cocci from elongating into rods", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-7", "is_orphan": false, "predicate": "reduced in", "predicate_id": null, "source": "elongation_capacity", "target": "sphere_shaped_trait"}, {"description": "FtsZ assembly into a mid-cell Z ring recruits PBPs and divisome components.", "evidence": [{"notes": "cell division is initiated by FtsZ assembly into a mid-cell Z ring that recruits PBPs and divisome components", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-8", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "ftsZ_division_ring", "target": "divisome_pbps"}, {"description": "FtsZ treadmilling distributes the PG synthases that form the septum.", "evidence": [{"notes": "The FtsZ polymers undergo treadmilling around the Z-ring to distribute the PG synthases forming the septum", "reference": "DOI:10.1042/bsr20221664"}], "id": "edge-9", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "ftsZ_treadmilling", "target": "septal_peptidoglycan_synthesis"}, {"description": "FtsW flips lipid II to the outer septal face for PG synthesis.", "evidence": [{"notes": "lipid II is flipped to the outside by the septally localized flippase FtsW", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "ftsW_flippase", "target": "lipid_ii"}, {"description": "Lipid II serves as the PBP substrate for septal peptidoglycan synthesis.", "evidence": [{"notes": "PG synthesis uses lipid II as the PBP substrate", "reference": "DOI:10.1038/nrmicro3088"}], "id": "edge-11", "is_orphan": false, "predicate": "enables", "predicate_id": null, "source": "lipid_ii", "target": "septal_peptidoglycan_synthesis"}], "evidence_rows": [{"description": "The FtsZ division ring organizes septal wall synthesis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports FtsZ-PBP cooperation in division-associated shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "FtsZ division ring", "target": "septal peptidoglycan synthesis"}, {"description": "Septal synthesis builds and remodels the spherical cell wall.", "edge_id": "edge-2", "evidence": [{"notes": "Supports septal-only PG synthesis in spherical cocci.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "synthesize peptidoglycan only at the division septum"}], "predicate": "builds", "predicate_id": "biolink:produces", "source": "septal peptidoglycan synthesis", "target": "peptidoglycan cell wall"}, {"description": "Reduced lateral elongation helps preserve a sphere rather than a rod.", "edge_id": "edge-3", "evidence": [{"notes": "Broad review supports different growth mechanisms for coccoid versus rod-shaped bacteria.", "reference": "DOI:10.1038/nrmicro3088", "snippet": "mechanisms controlling growth and division of coccoid bacteria"}], "predicate": "reduced in", "predicate_id": null, "source": "lateral cell-wall elongation", "target": "sphere shaped"}, {"description": "Peptidoglycan wall geometry maintains the spherical shape.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the cell wall as central to bacterial shape maintenance.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "primary role in maintaining cell shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "peptidoglycan cell wall", "target": "sphere shaped"}, {"description": "Septal-only peptidoglycan synthesis in cocci produces spherical morphology.", "edge_id": "edge-5", "evidence": [{"notes": "spherical cocci synthesize peptidoglycan only at the division septum", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "contributes to", "predicate_id": null, "source": "septal peptidoglycan synthesis", "target": "sphere shaped"}, {"description": "Loss of the MreB cytoskeleton removes the elongation capacity that lengthens rods.", "edge_id": "edge-6", "evidence": [{"notes": "loss of the MreB cytoskeleton is the main factor that prevents cocci from elongating into rods", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "causally upstream of", "predicate_id": null, "source": "MreB-mediated elongation machinery", "target": "elongation capacity"}, {"description": "Loss of elongation capacity prevents cocci from elongating into rods, favoring a sphere.", "edge_id": "edge-7", "evidence": [{"notes": "prevents cocci from elongating into rods", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "reduced in", "predicate_id": null, "source": "elongation capacity", "target": "sphere shaped"}, {"description": "FtsZ assembly into a mid-cell Z ring recruits PBPs and divisome components.", "edge_id": "edge-8", "evidence": [{"notes": "cell division is initiated by FtsZ assembly into a mid-cell Z ring that recruits PBPs and divisome components", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "recruits", "predicate_id": null, "source": "FtsZ division ring", "target": "divisome and PBPs"}, {"description": "FtsZ treadmilling distributes the PG synthases that form the septum.", "edge_id": "edge-9", "evidence": [{"notes": "The FtsZ polymers undergo treadmilling around the Z-ring to distribute the PG synthases forming the septum", "reference": "DOI:10.1042/bsr20221664"}], "predicate": "regulates", "predicate_id": null, "source": "FtsZ treadmilling", "target": "septal peptidoglycan synthesis"}, {"description": "FtsW flips lipid II to the outer septal face for PG synthesis.", "edge_id": "edge-10", "evidence": [{"notes": "lipid II is flipped to the outside by the septally localized flippase FtsW", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "enables", "predicate_id": null, "source": "FtsW lipid II flippase", "target": "lipid II"}, {"description": "Lipid II serves as the PBP substrate for septal peptidoglycan synthesis.", "edge_id": "edge-11", "evidence": [{"notes": "PG synthesis uses lipid II as the PBP substrate", "reference": "DOI:10.1038/nrmicro3088"}], "predicate": "enables", "predicate_id": null, "source": "lipid II", "target": "septal peptidoglycan synthesis"}], "graph_id": "sphere_shaped_septal_peptidoglycan", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Division machinery and penicillin-binding proteins recruited to mid-cell.", "grounding": null, "id": "divisome_pbps", "is_orphan": false, "label": "divisome and PBPs", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Capacity of a cell to elongate into a rod via sidewall growth.", "grounding": null, "id": "elongation_capacity", "is_orphan": false, "label": "elongation capacity", "node_type": "CAPACITY", "xrefs": []}, {"color": "#f3e8ff", "description": "Septally localized flippase that translocates lipid II across the membrane.", "grounding": null, "id": "ftsW_flippase", "is_orphan": false, "label": "FtsW lipid II flippase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like division scaffold.", "grounding": null, "id": "ftsZ_division_ring", "is_orphan": false, "label": "FtsZ division ring", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Treadmilling of FtsZ polymers distributing PG synthases around the Z-ring.", "grounding": null, "id": "ftsZ_treadmilling", "is_orphan": false, "label": "FtsZ treadmilling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth mode that lengthens rods.", "grounding": null, "id": "lateral_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "Membrane-bound peptidoglycan precursor and PBP substrate.", "grounding": null, "id": "lipid_ii", "is_orphan": false, "label": "lipid II", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like MreB cytoskeleton directing lateral (rod) elongation.", "grounding": null, "id": "mreB_elongation_machinery", "is_orphan": false, "label": "MreB-mediated elongation machinery", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer network maintaining bacterial shape.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis localized to the division septum.", "grounding": null, "id": "septal_peptidoglycan_synthesis", "is_orphan": false, "label": "septal peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Spherical bacterial cell morphology.", "grounding": "METPO:1000683", "id": "sphere_shaped_trait", "is_orphan": false, "label": "sphere shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Spherical shape septal peptidoglycan mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -663,7 +792,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

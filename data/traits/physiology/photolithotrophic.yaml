@@ -67,6 +67,32 @@ causal_graphs:
     node_type: CHEMICAL
     description: Cell material formed from fixed carbon.
     grounding: METPO:1007501
+  - node_id: photosynthetic_reaction_center
+    label: photosynthetic reaction center
+    node_type: GENE_OR_PROTEIN
+    description: Pigment-protein complex that captures light quanta and drives charge
+      separation in anoxygenic photosynthesis.
+  - node_id: hydrogen_sulfide_oxidation
+    label: hydrogen sulfide oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of H2S during phototrophic sulfur metabolism.
+  - node_id: elemental_sulfur
+    label: elemental sulfur
+    node_type: CHEMICAL
+    description: Product of phototrophic hydrogen sulfide oxidation.
+  - node_id: co2_fixation
+    label: photosynthetic CO2 fixation
+    node_type: BIOLOGICAL_PROCESS
+    description: Assimilation of inorganic carbon into biomass during anoxygenic photosynthetic
+      growth.
+  - node_id: ferrous_iron_oxidation
+    label: Fe(II) oxidation
+    node_type: BIOLOGICAL_PROCESS
+    description: Oxidation of reduced iron coupled to anoxygenic photosynthesis.
+  - node_id: photoferrotrophy
+    label: photoferrotrophy
+    node_type: TRAIT
+    description: Photolithotrophic subtype oxidizing Fe(II) via anoxygenic photosynthesis.
   edges:
   - subject: photolithotrophic_trait
     predicate: uses energy source
@@ -139,6 +165,48 @@ causal_graphs:
       snippet: inorganic carbon is fixed into organic matter
       notes: Supports organic matter formation from inorganic carbon in photoferrotrophy.
     predicate_id: METPO:2000202
+  - subject: light
+    predicate: provides energy to
+    object: photosynthetic_reaction_center
+    description: Light quanta excite the photosynthetic reaction center to drive electron
+      transport.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1417714
+      notes: Anoxygenic photosynthesis proceeds from capture of a light quantum through
+        transport of an excited electron.
+  - subject: hydrogen_sulfide
+    predicate: acts as electron donor for
+    object: anoxygenic_photosynthesis
+    description: H2S is the main electron donor in sulfur-based anoxygenic photosynthesis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1417714
+      notes: In anoxygenic photosynthesis, hydrogen sulfide (H2S) is used as the main
+        electron donor.
+  - subject: hydrogen_sulfide_oxidation
+    predicate: produces
+    object: elemental_sulfur
+    description: Phototrophic oxidation of H2S yields elemental sulfur.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1417714
+      notes: GSB oxidize H2S to elemental sulfur.
+  - subject: inorganic_electron_donor
+    predicate: supports
+    object: co2_fixation
+    description: Oxidation of reduced sulfur compounds supports photosynthetic CO2
+      fixation.
+    evidence:
+    - reference: DOI:10.3390/life14050591
+      notes: Oxidize sulfide, thiosulfate, and elemental sulfur for photosynthetic
+        growth (anoxygenic photosynthetic CO2 fixation).
+  - subject: ferrous_iron_oxidation
+    predicate: defines
+    object: photoferrotrophy
+    description: Photoferrotrophy is the oxidation of reduced iron via anoxygenic
+      photosynthesis.
+    evidence:
+    - reference: DOI:10.1038/s41561-024-01560-9
+      notes: Photoferrotrophy is the oxidation of reduced iron via anoxygenic photosynthesis;
+        anoxygenic phototrophic Fe(II) oxidizers are photoferrotrophs.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.881359+00:00'
   curator: seed_from_metpo
@@ -198,4 +266,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

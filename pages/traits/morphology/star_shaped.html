@@ -107,12 +107,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>BacA-LmdC morphogenesis module</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>local peptidoglycan remodeling</strong>
+            
+            <p>The bactofilin-M23 peptidase module promotes local changes in cell-wall biosynthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.7554/eLife.86577.2</code>
+                
+                <span class="meta">Bactofilins and M23 peptidases form a conserved functional module that promotes local changes in the mode of cell wall biosynthesis.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>local peptidoglycan remodeling</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>cell shape determination</strong>
+            
+            <p>Local peptidoglycan remodeling drives cell shape determination.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.7554/eLife.86577.2</code>
+                
+                <span class="meta">Thereby driving cell shape determination in morphologically complex bacteria.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>restriction of elongasome movement</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>peptidoglycan biosynthesis confined to growth zones</strong>
+            
+            <p>Restriction of elongasome movement confines peptidoglycan biosynthesis to specific growth zones.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.7554/eLife.86577.2</code>
+                
+                <span class="meta">Bactofilin polymers act as a barrier restricting elongasome movement, confining PG biosynthesis to specific growth zones.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>bactofilins</strong>
+            <span class="edge-predicate">localizes</span>
+            <strong>PbpC localization at prosthecate pole</strong>
+            
+            <p>Bactofilins localize the bifunctional PBP PbpC to the prosthecate pole.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.tim.2017.09.012</code>
+                
+                <span class="meta">In C. crescentus bactofilins localize the bifunctional PBP PbpC to the prosthecate pole; conserved prostheca mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>PbpC localization at prosthecate pole</strong>
+            <span class="edge-predicate">promotes</span>
+            <strong>prostheca outgrowth</strong>
+            
+            <p>PbpC localization at the prosthecate pole promotes prostheca synthesis.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.tim.2017.09.012</code>
+                
+                <span class="meta">Deletion of PbpC reduces prostheca synthesis, implicating its polar localization in prostheca outgrowth.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>SpmX</strong>
+            <span class="edge-predicate">regulates</span>
+            <strong>prostheca outgrowth</strong>
+            
+            <p>SpmX is co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1016/j.tim.2017.09.012</code>
+                
+                <span class="meta">SpmX co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -272,6 +378,12 @@
           <time>2026-05-24T04:13:22Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002211×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (8 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -631,7 +743,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking multi-site polar peptidoglycan growth and prostheca outgrowth to a star-shaped cell body with radiating projections.", "edges": [{"description": "Multi-site polar PG growth drives extension of cellular projections.", "evidence": [{"notes": "Supports prostheca extension via polar wall growth.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "multi_site_polar_pg", "target": "prostheca_outgrowth"}, {"description": "Multiple prosthecae form radiating projections from the cell body.", "evidence": [{"notes": "Supports prosthecate morphology in star-shaped lineages.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "prostheca_outgrowth", "target": "radiating_projections"}, {"description": "Radiating projections manifest the star-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "radiating_projections", "target": "star_shaped_trait"}], "evidence_rows": [{"description": "Multi-site polar PG growth drives extension of cellular projections.", "edge_id": "edge-1", "evidence": [{"notes": "Supports prostheca extension via polar wall growth.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "multi-site polar peptidoglycan growth", "target": "prostheca outgrowth"}, {"description": "Multiple prosthecae form radiating projections from the cell body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports prosthecate morphology in star-shaped lineages.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "prostheca outgrowth", "target": "radiating projections"}, {"description": "Radiating projections manifest the star-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "radiating projections", "target": "star shaped"}], "graph_id": "star_shaped_multiple_prosthecae", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Polar wall growth initiated at multiple sites on the cell body.", "grounding": null, "id": "multi_site_polar_pg", "is_orphan": false, "label": "multi-site polar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Outward extension of cytoplasmic projections (prosthecae).", "grounding": null, "id": "prostheca_outgrowth", "is_orphan": false, "label": "prostheca outgrowth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Multiple projecting arms emerging from a central cell body.", "grounding": null, "id": "radiating_projections", "is_orphan": false, "label": "radiating projections", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Cell body with multiple radiating projections.", "grounding": "METPO:1000685", "id": "star_shaped_trait", "is_orphan": false, "label": "star shaped", "node_type": "TRAIT", "xrefs": []}], "title": "Star-shape multiple prosthecae extension"}];
+  var graphs = [{"description": "DOI-backed graph linking multi-site polar peptidoglycan growth and prostheca outgrowth to a star-shaped cell body with radiating projections.", "edges": [{"description": "Multi-site polar PG growth drives extension of cellular projections.", "evidence": [{"notes": "Supports prostheca extension via polar wall growth.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "multi_site_polar_pg", "target": "prostheca_outgrowth"}, {"description": "Multiple prosthecae form radiating projections from the cell body.", "evidence": [{"notes": "Supports prosthecate morphology in star-shaped lineages.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "prostheca_outgrowth", "target": "radiating_projections"}, {"description": "Radiating projections manifest the star-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "radiating_projections", "target": "star_shaped_trait"}, {"description": "The bactofilin-M23 peptidase module promotes local changes in cell-wall biosynthesis.", "evidence": [{"notes": "Bactofilins and M23 peptidases form a conserved functional module that promotes local changes in the mode of cell wall biosynthesis.", "reference": "DOI:10.7554/eLife.86577.2"}], "id": "edge-4", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "baca_lmdc_module", "target": "local_pg_remodeling"}, {"description": "Local peptidoglycan remodeling drives cell shape determination.", "evidence": [{"notes": "Thereby driving cell shape determination in morphologically complex bacteria.", "reference": "DOI:10.7554/eLife.86577.2"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "local_pg_remodeling", "target": "cell_shape_determination"}, {"description": "Restriction of elongasome movement confines peptidoglycan biosynthesis to specific growth zones.", "evidence": [{"notes": "Bactofilin polymers act as a barrier restricting elongasome movement, confining PG biosynthesis to specific growth zones.", "reference": "DOI:10.7554/eLife.86577.2"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "elongasome_restriction", "target": "zonal_pg_biosynthesis"}, {"description": "Bactofilins localize the bifunctional PBP PbpC to the prosthecate pole.", "evidence": [{"notes": "In C. crescentus bactofilins localize the bifunctional PBP PbpC to the prosthecate pole; conserved prostheca mechanism.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "id": "edge-7", "is_orphan": false, "predicate": "localizes", "predicate_id": null, "source": "bactofilins", "target": "pbpc_prosthecate_pole"}, {"description": "PbpC localization at the prosthecate pole promotes prostheca synthesis.", "evidence": [{"notes": "Deletion of PbpC reduces prostheca synthesis, implicating its polar localization in prostheca outgrowth.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "id": "edge-8", "is_orphan": false, "predicate": "promotes", "predicate_id": null, "source": "pbpc_prosthecate_pole", "target": "prostheca_outgrowth"}, {"description": "SpmX is co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.", "evidence": [{"notes": "SpmX co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "id": "edge-9", "is_orphan": false, "predicate": "regulates", "predicate_id": null, "source": "spmx", "target": "prostheca_outgrowth"}], "evidence_rows": [{"description": "Multi-site polar PG growth drives extension of cellular projections.", "edge_id": "edge-1", "evidence": [{"notes": "Supports prostheca extension via polar wall growth.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "multi-site polar peptidoglycan growth", "target": "prostheca outgrowth"}, {"description": "Multiple prosthecae form radiating projections from the cell body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports prosthecate morphology in star-shaped lineages.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "prostheca outgrowth", "target": "radiating projections"}, {"description": "Radiating projections manifest the star-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev.micro.061705.103240", "snippet": "prosthecate bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "radiating projections", "target": "star shaped"}, {"description": "The bactofilin-M23 peptidase module promotes local changes in cell-wall biosynthesis.", "edge_id": "edge-4", "evidence": [{"notes": "Bactofilins and M23 peptidases form a conserved functional module that promotes local changes in the mode of cell wall biosynthesis.", "reference": "DOI:10.7554/eLife.86577.2"}], "predicate": "promotes", "predicate_id": null, "source": "BacA-LmdC morphogenesis module", "target": "local peptidoglycan remodeling"}, {"description": "Local peptidoglycan remodeling drives cell shape determination.", "edge_id": "edge-5", "evidence": [{"notes": "Thereby driving cell shape determination in morphologically complex bacteria.", "reference": "DOI:10.7554/eLife.86577.2"}], "predicate": "regulates", "predicate_id": null, "source": "local peptidoglycan remodeling", "target": "cell shape determination"}, {"description": "Restriction of elongasome movement confines peptidoglycan biosynthesis to specific growth zones.", "edge_id": "edge-6", "evidence": [{"notes": "Bactofilin polymers act as a barrier restricting elongasome movement, confining PG biosynthesis to specific growth zones.", "reference": "DOI:10.7554/eLife.86577.2"}], "predicate": "regulates", "predicate_id": null, "source": "restriction of elongasome movement", "target": "peptidoglycan biosynthesis confined to growth zones"}, {"description": "Bactofilins localize the bifunctional PBP PbpC to the prosthecate pole.", "edge_id": "edge-7", "evidence": [{"notes": "In C. crescentus bactofilins localize the bifunctional PBP PbpC to the prosthecate pole; conserved prostheca mechanism.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "predicate": "localizes", "predicate_id": null, "source": "bactofilins", "target": "PbpC localization at prosthecate pole"}, {"description": "PbpC localization at the prosthecate pole promotes prostheca synthesis.", "edge_id": "edge-8", "evidence": [{"notes": "Deletion of PbpC reduces prostheca synthesis, implicating its polar localization in prostheca outgrowth.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "predicate": "promotes", "predicate_id": null, "source": "PbpC localization at prosthecate pole", "target": "prostheca outgrowth"}, {"description": "SpmX is co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.", "edge_id": "edge-9", "evidence": [{"notes": "SpmX co-opted as a morphogen to position prosthecae via zonal peptidoglycan remodeling.", "reference": "DOI:10.1016/j.tim.2017.09.012"}], "predicate": "regulates", "predicate_id": null, "source": "SpmX", "target": "prostheca outgrowth"}], "graph_id": "star_shaped_multiple_prosthecae", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Conserved bactofilin (BacA) and M23 endopeptidase (LmdC) functional module.", "grounding": null, "id": "baca_lmdc_module", "is_orphan": false, "label": "BacA-LmdC morphogenesis module", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Bactofilin cytoskeletal scaffold proteins.", "grounding": null, "id": "bactofilins", "is_orphan": false, "label": "bactofilins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Establishment of cell shape in morphologically complex bacteria.", "grounding": null, "id": "cell_shape_determination", "is_orphan": false, "label": "cell shape determination", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Bactofilin polymers restrict movement of elongasome complexes.", "grounding": null, "id": "elongasome_restriction", "is_orphan": false, "label": "restriction of elongasome movement", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Localized change in the mode of cell-wall biosynthesis and remodeling.", "grounding": null, "id": "local_pg_remodeling", "is_orphan": false, "label": "local peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Polar wall growth initiated at multiple sites on the cell body.", "grounding": null, "id": "multi_site_polar_pg", "is_orphan": false, "label": "multi-site polar peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ede9fe", "description": "Bifunctional penicillin-binding protein PbpC localized to the prosthecate pole.", "grounding": null, "id": "pbpc_prosthecate_pole", "is_orphan": false, "label": "PbpC localization at prosthecate pole", "node_type": "CELLULAR_LOCALIZATION", "xrefs": []}, {"color": "#ecfccb", "description": "Outward extension of cytoplasmic projections (prosthecae).", "grounding": null, "id": "prostheca_outgrowth", "is_orphan": false, "label": "prostheca outgrowth", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Multiple projecting arms emerging from a central cell body.", "grounding": null, "id": "radiating_projections", "is_orphan": false, "label": "radiating projections", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Developmental regulator co-opted as a morphogen to position prosthecae.", "grounding": null, "id": "spmx", "is_orphan": false, "label": "SpmX", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Cell body with multiple radiating projections.", "grounding": "METPO:1000685", "id": "star_shaped_trait", "is_orphan": false, "label": "star shaped", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Peptidoglycan biosynthesis spatially confined to discrete growth zones.", "grounding": null, "id": "zonal_pg_biosynthesis", "is_orphan": false, "label": "peptidoglycan biosynthesis confined to growth zones", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Star-shape multiple prosthecae extension"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -642,7 +754,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

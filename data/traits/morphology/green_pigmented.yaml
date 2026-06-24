@@ -46,6 +46,36 @@ causal_graphs:
     label: visible green color
     node_type: MOLECULAR_FUNCTION
     description: Observed green or blue-green culture color.
+  - node_id: chorismate
+    label: chorismate
+    node_type: CHEMICAL
+    description: Shikimate-pathway intermediate; precursor of phenazines.
+  - node_id: phenazine_1_carboxylic_acid
+    label: phenazine-1-carboxylic acid (PCA)
+    node_type: CHEMICAL
+    description: Core phenazine intermediate converted toward pyocyanin.
+  - node_id: quorum_sensing
+    label: quorum sensing
+    node_type: BIOLOGICAL_PROCESS
+    description: Cell-density-dependent regulatory signaling controlling phenazine
+      production.
+  - node_id: pyocyanin_redox_ph
+    label: pyocyanin redox state and pH
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Environmental redox/pH conditions altering apparent pyocyanin color.
+  - node_id: pyoverdine_biosynthesis
+    label: pyoverdine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: NRPS-driven biosynthesis of the fluorescent siderophore pyoverdine.
+  - node_id: pvd_nrps
+    label: pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD)
+    node_type: GENE_OR_PROTEIN
+    description: Nonribosomal peptide synthetases assembling the pyoverdine peptide
+      backbone.
+  - node_id: iron_limitation
+    label: iron-deficient conditions
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Low-iron growth conditions that induce pyoverdine biosynthesis.
   edges:
   - subject: phz_operons
     predicate: encodes
@@ -85,6 +115,67 @@ causal_graphs:
       notes: Supports trait-level green pigmentation from pyocyanin and related pigments
         in representative cultures.
     predicate_id: METPO:2007400
+  - subject: chorismate
+    predicate: precursor of
+    object: phenazine_1_carboxylic_acid
+    description: Chorismate is the shikimate-pathway precursor of phenazine-1-carboxylic
+      acid.
+    evidence:
+    - reference: DOI:10.1007/s11274-023-03548-w
+      notes: Biosynthesis of PYO and other phenazines proceeds from chorismate via
+        the shikimate pathway.
+  - subject: phenazine_1_carboxylic_acid
+    predicate: precursor of
+    object: pyocyanin
+    description: Phenazine-1-carboxylic acid is the core intermediate converted toward
+      pyocyanin.
+    evidence:
+    - reference: DOI:10.1007/s11274-023-03548-w
+      notes: PCA is the central phenazine from which pyocyanin is derived via the
+        shikimate/phenazine pathway.
+  - subject: quorum_sensing
+    predicate: positively regulates
+    object: pyocyanin
+    description: Quorum sensing positively regulates pyocyanin production.
+    evidence:
+    - reference: DOI:10.1186/s12934-023-02122-1
+      notes: Quorum sensing controls pyocyanin synthesis; AHL and PQS autoinducers
+        and LasR-LasI/RhlR-RhlI systems activate pyocyanin expression.
+  - subject: pyocyanin_redox_ph
+    predicate: modifies
+    object: visible_green_color
+    description: Redox state and pH alter the apparent color of pyocyanin pigment.
+    evidence:
+    - reference: DOI:10.1007/s11274-023-03548-w
+      notes: PYO exhibits blue-green color at neutral/alkaline pH, shifting to pink-red
+        in acidic conditions; oxidized PYO is blue while reduced form is transparent.
+  - subject: pvd_nrps
+    predicate: participates in
+    object: pyoverdine_biosynthesis
+    description: PvdL/PvdI/PvdJ/PvdD NRPS enzymes synthesize the pyoverdine peptide
+      backbone.
+    evidence:
+    - reference: DOI:10.3390/ijms25116013
+      notes: The pyoverdine peptide backbone is synthesized by four NRPSs (PvdL, PvdI,
+        PvdJ, PvdD).
+  - subject: iron_limitation
+    predicate: induces
+    object: pyoverdine_biosynthesis
+    description: Iron-deficient conditions induce expression of pyoverdine biosynthetic
+      enzymes.
+    evidence:
+    - reference: DOI:10.3390/ijms25116013
+      notes: Expression of the fluorescent (pyoverdine) enzymes was induced by iron-deficient
+        growing conditions.
+  - subject: pyoverdine_biosynthesis
+    predicate: contributes to
+    object: visible_green_color
+    description: Pyoverdine, a yellow-green fluorescent pigment, contributes to green
+      coloration alongside pyocyanin.
+    evidence:
+    - reference: DOI:10.1186/s12934-023-02122-1
+      notes: Blue (pyocyanin) and yellow (fluorescein/pyoverdine-like) pigments combine
+        to produce green colorization of the culture.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.944814+00:00'
   curator: seed_from_metpo
@@ -126,4 +217,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0002047×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

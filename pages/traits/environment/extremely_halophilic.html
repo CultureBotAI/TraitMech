@@ -141,12 +141,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-6">
+            <strong>hypersaline brine</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>osmotic stress</strong>
+            
+            <p>High external NaCl imposes osmotic stress on the cell.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12934-024-02358-5</code>
+                
+                <span class="meta">NaCl shock induced osmotic stress; environmental-to-stress edge broadly applicable.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>osmotic stress</strong>
+            <span class="edge-predicate">induces</span>
+            <strong>potassium ion</strong>
+            
+            <p>Osmotic stress triggers rapid intracellular K+ uptake/accumulation.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12934-024-02358-5</code>
+                
+                <span class="meta">Many microbes rapidly uptake K+ as an emergency osmoadaptation response.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>Na+/H+ antiporter</strong>
+            <span class="edge-predicate">mediates</span>
+            <strong>sodium efflux</strong>
+            
+            <p>Na+/H+ antiporters drive sodium exclusion from the cytoplasm.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms12081738</code>
+                
+                <span class="meta">Sodium exclusion is mediated largely by Na+/H+ antiporters (general haloarchaeal review).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-9">
+            <strong>acidic halophilic proteins</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>protein solubility and function in high salt</strong>
+            
+            <p>Surface acidic residues maintain protein solubility and function at high ionic strength.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/microorganisms12081738</code>
+                
+                <span class="meta">Halophilic proteins have increased surface acidic residues maintaining solubility and function in high salt.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-10">
+            <strong>S-layer glycoprotein N-glycosylation</strong>
+            <span class="edge-predicate">supports</span>
+            <strong>S-layer stability</strong>
+            
+            <p>N-glycosylation stabilizes the haloarchaeal S-layer.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/v15071469</code>
+                
+                <span class="meta">N-glycosylation supports protein folding/stability and specifically stabilizes the S-layer.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-11">
+            <strong>hypersaline brine</strong>
+            <span class="edge-predicate">changes</span>
+            <strong>S-layer glycoprotein N-glycosylation</strong>
+            
+            <p>External salinity alters S-layer glycoprotein N-glycosylation pathways.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/v15071469</code>
+                
+                <span class="meta">Growth at different salt concentrations alters S-layer glycoprotein N-glycosylation; two distinct pathways process it upon salinity changes.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -308,6 +414,12 @@
           <time>2026-06-17T04:09:43Z</time> ·
           <strong>REMOVE_REDUNDANT_SYNONYM</strong> · claude
           <p class="changes">Removed 1 synonym(s) whose text duplicated the label (seeder redundancy; no information lost).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -667,7 +779,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking extreme halophily to saturated salt environments, intracellular KCl, and salt-adapted acidic proteins.", "edges": [{"description": "Extreme halophiles are adapted to growth in hypersaline brines.", "evidence": [{"notes": "Review supports saturated salt environments as extreme-halophile habitats.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salt concentrations up to NaCl saturation"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline_brine", "target": "extremely_halophilic_trait"}, {"description": "Extreme haloarchaea often balance osmotic pressure by accumulating intracellular KCl.", "evidence": [{"notes": "Supports KCl accumulation as a model salt-in strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-2", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "salt_in_strategy", "target": "potassium_ion"}, {"description": "Maintaining high intracellular salt supports growth at extreme external salinity.", "evidence": [{"notes": "Haloarchaeal salinity-stress study describes salt-in adaptation in extreme halophiles.", "reference": "DOI:10.1038/srep25642", "snippet": "Salt-in strategy"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "salt_in_strategy", "target": "extremely_halophilic_trait"}, {"description": "Acidic proteins remain soluble and functional in high salt.", "evidence": [{"notes": "Review supports acidic proteomes as a molecular adaptation to hypersaline cytoplasm.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "negatively charged due to an excess of acidic over basic residues"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "acidic_halophilic_proteins", "target": "extremely_halophilic_trait"}, {"description": "Intracellular salt accumulation requires proteins adapted to high ionic strength.", "evidence": [{"notes": "Supports functional coupling between high-salt cytoplasm and salt-adapted proteins.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "promote function in low water activity conditions"}], "id": "edge-5", "is_orphan": false, "predicate": "requires adaptation of", "predicate_id": null, "source": "salt_in_strategy", "target": "acidic_halophilic_proteins"}], "evidence_rows": [{"description": "Extreme halophiles are adapted to growth in hypersaline brines.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports saturated salt environments as extreme-halophile habitats.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salt concentrations up to NaCl saturation"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline brine", "target": "extremely halophilic"}, {"description": "Extreme haloarchaea often balance osmotic pressure by accumulating intracellular KCl.", "edge_id": "edge-2", "evidence": [{"notes": "Supports KCl accumulation as a model salt-in strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "uses", "predicate_id": null, "source": "salt-in strategy", "target": "potassium ion"}, {"description": "Maintaining high intracellular salt supports growth at extreme external salinity.", "edge_id": "edge-3", "evidence": [{"notes": "Haloarchaeal salinity-stress study describes salt-in adaptation in extreme halophiles.", "reference": "DOI:10.1038/srep25642", "snippet": "Salt-in strategy"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "salt-in strategy", "target": "extremely halophilic"}, {"description": "Acidic proteins remain soluble and functional in high salt.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports acidic proteomes as a molecular adaptation to hypersaline cytoplasm.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "negatively charged due to an excess of acidic over basic residues"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "acidic halophilic proteins", "target": "extremely halophilic"}, {"description": "Intracellular salt accumulation requires proteins adapted to high ionic strength.", "edge_id": "edge-5", "evidence": [{"notes": "Supports functional coupling between high-salt cytoplasm and salt-adapted proteins.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "promote function in low water activity conditions"}], "predicate": "requires adaptation of", "predicate_id": null, "source": "salt-in strategy", "target": "acidic halophilic proteins"}], "graph_id": "extreme_halophile_salt_in_acidic_proteome", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins enriched in acidic residues and adapted to high ionic strength.", "grounding": null, "id": "acidic_halophilic_proteins", "is_orphan": false, "label": "acidic halophilic proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth requires very high salt concentrations.", "grounding": "METPO:1000628", "id": "extremely_halophilic_trait", "is_orphan": false, "label": "extremely halophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "High-salt or near-saturating brine environment.", "grounding": null, "id": "hypersaline_brine", "is_orphan": false, "label": "hypersaline brine", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#fef3c7", "description": "K+ accumulated intracellularly in salt-in osmoadaptation.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular inorganic salt accumulation for osmotic balance.", "grounding": "METPO:1007720", "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Extreme halophile salt-in and acidic-proteome mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking extreme halophily to saturated salt environments, intracellular KCl, and salt-adapted acidic proteins.", "edges": [{"description": "Extreme halophiles are adapted to growth in hypersaline brines.", "evidence": [{"notes": "Review supports saturated salt environments as extreme-halophile habitats.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salt concentrations up to NaCl saturation"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline_brine", "target": "extremely_halophilic_trait"}, {"description": "Extreme haloarchaea often balance osmotic pressure by accumulating intracellular KCl.", "evidence": [{"notes": "Supports KCl accumulation as a model salt-in strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-2", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "salt_in_strategy", "target": "potassium_ion"}, {"description": "Maintaining high intracellular salt supports growth at extreme external salinity.", "evidence": [{"notes": "Haloarchaeal salinity-stress study describes salt-in adaptation in extreme halophiles.", "reference": "DOI:10.1038/srep25642", "snippet": "Salt-in strategy"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "salt_in_strategy", "target": "extremely_halophilic_trait"}, {"description": "Acidic proteins remain soluble and functional in high salt.", "evidence": [{"notes": "Review supports acidic proteomes as a molecular adaptation to hypersaline cytoplasm.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "negatively charged due to an excess of acidic over basic residues"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "acidic_halophilic_proteins", "target": "extremely_halophilic_trait"}, {"description": "Intracellular salt accumulation requires proteins adapted to high ionic strength.", "evidence": [{"notes": "Supports functional coupling between high-salt cytoplasm and salt-adapted proteins.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "promote function in low water activity conditions"}], "id": "edge-5", "is_orphan": false, "predicate": "requires adaptation of", "predicate_id": null, "source": "salt_in_strategy", "target": "acidic_halophilic_proteins"}, {"description": "High external NaCl imposes osmotic stress on the cell.", "evidence": [{"notes": "NaCl shock induced osmotic stress; environmental-to-stress edge broadly applicable.", "reference": "DOI:10.1186/s12934-024-02358-5"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "hypersaline_brine", "target": "osmotic_stress"}, {"description": "Osmotic stress triggers rapid intracellular K+ uptake/accumulation.", "evidence": [{"notes": "Many microbes rapidly uptake K+ as an emergency osmoadaptation response.", "reference": "DOI:10.1186/s12934-024-02358-5"}], "id": "edge-7", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "osmotic_stress", "target": "potassium_ion"}, {"description": "Na+/H+ antiporters drive sodium exclusion from the cytoplasm.", "evidence": [{"notes": "Sodium exclusion is mediated largely by Na+/H+ antiporters (general haloarchaeal review).", "reference": "DOI:10.3390/microorganisms12081738"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "na_h_antiporter", "target": "sodium_efflux"}, {"description": "Surface acidic residues maintain protein solubility and function at high ionic strength.", "evidence": [{"notes": "Halophilic proteins have increased surface acidic residues maintaining solubility and function in high salt.", "reference": "DOI:10.3390/microorganisms12081738"}], "id": "edge-9", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "acidic_halophilic_proteins", "target": "protein_solubility_high_salt"}, {"description": "N-glycosylation stabilizes the haloarchaeal S-layer.", "evidence": [{"notes": "N-glycosylation supports protein folding/stability and specifically stabilizes the S-layer.", "reference": "DOI:10.3390/v15071469"}], "id": "edge-10", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "s_layer_n_glycosylation", "target": "s_layer_stability"}, {"description": "External salinity alters S-layer glycoprotein N-glycosylation pathways.", "evidence": [{"notes": "Growth at different salt concentrations alters S-layer glycoprotein N-glycosylation; two distinct pathways process it upon salinity changes.", "reference": "DOI:10.3390/v15071469"}], "id": "edge-11", "is_orphan": false, "predicate": "changes", "predicate_id": null, "source": "hypersaline_brine", "target": "s_layer_n_glycosylation"}], "evidence_rows": [{"description": "Extreme halophiles are adapted to growth in hypersaline brines.", "edge_id": "edge-1", "evidence": [{"notes": "Review supports saturated salt environments as extreme-halophile habitats.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salt concentrations up to NaCl saturation"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "hypersaline brine", "target": "extremely halophilic"}, {"description": "Extreme haloarchaea often balance osmotic pressure by accumulating intracellular KCl.", "edge_id": "edge-2", "evidence": [{"notes": "Supports KCl accumulation as a model salt-in strategy.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "uses", "predicate_id": null, "source": "salt-in strategy", "target": "potassium ion"}, {"description": "Maintaining high intracellular salt supports growth at extreme external salinity.", "edge_id": "edge-3", "evidence": [{"notes": "Haloarchaeal salinity-stress study describes salt-in adaptation in extreme halophiles.", "reference": "DOI:10.1038/srep25642", "snippet": "Salt-in strategy"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "salt-in strategy", "target": "extremely halophilic"}, {"description": "Acidic proteins remain soluble and functional in high salt.", "edge_id": "edge-4", "evidence": [{"notes": "Review supports acidic proteomes as a molecular adaptation to hypersaline cytoplasm.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "negatively charged due to an excess of acidic over basic residues"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "acidic halophilic proteins", "target": "extremely halophilic"}, {"description": "Intracellular salt accumulation requires proteins adapted to high ionic strength.", "edge_id": "edge-5", "evidence": [{"notes": "Supports functional coupling between high-salt cytoplasm and salt-adapted proteins.", "reference": "DOI:10.1016/j.copbio.2015.05.004", "snippet": "promote function in low water activity conditions"}], "predicate": "requires adaptation of", "predicate_id": null, "source": "salt-in strategy", "target": "acidic halophilic proteins"}, {"description": "High external NaCl imposes osmotic stress on the cell.", "edge_id": "edge-6", "evidence": [{"notes": "NaCl shock induced osmotic stress; environmental-to-stress edge broadly applicable.", "reference": "DOI:10.1186/s12934-024-02358-5"}], "predicate": "causes", "predicate_id": null, "source": "hypersaline brine", "target": "osmotic stress"}, {"description": "Osmotic stress triggers rapid intracellular K+ uptake/accumulation.", "edge_id": "edge-7", "evidence": [{"notes": "Many microbes rapidly uptake K+ as an emergency osmoadaptation response.", "reference": "DOI:10.1186/s12934-024-02358-5"}], "predicate": "induces", "predicate_id": null, "source": "osmotic stress", "target": "potassium ion"}, {"description": "Na+/H+ antiporters drive sodium exclusion from the cytoplasm.", "edge_id": "edge-8", "evidence": [{"notes": "Sodium exclusion is mediated largely by Na+/H+ antiporters (general haloarchaeal review).", "reference": "DOI:10.3390/microorganisms12081738"}], "predicate": "mediates", "predicate_id": null, "source": "Na+/H+ antiporter", "target": "sodium efflux"}, {"description": "Surface acidic residues maintain protein solubility and function at high ionic strength.", "edge_id": "edge-9", "evidence": [{"notes": "Halophilic proteins have increased surface acidic residues maintaining solubility and function in high salt.", "reference": "DOI:10.3390/microorganisms12081738"}], "predicate": "supports", "predicate_id": null, "source": "acidic halophilic proteins", "target": "protein solubility and function in high salt"}, {"description": "N-glycosylation stabilizes the haloarchaeal S-layer.", "edge_id": "edge-10", "evidence": [{"notes": "N-glycosylation supports protein folding/stability and specifically stabilizes the S-layer.", "reference": "DOI:10.3390/v15071469"}], "predicate": "supports", "predicate_id": null, "source": "S-layer glycoprotein N-glycosylation", "target": "S-layer stability"}, {"description": "External salinity alters S-layer glycoprotein N-glycosylation pathways.", "edge_id": "edge-11", "evidence": [{"notes": "Growth at different salt concentrations alters S-layer glycoprotein N-glycosylation; two distinct pathways process it upon salinity changes.", "reference": "DOI:10.3390/v15071469"}], "predicate": "changes", "predicate_id": null, "source": "hypersaline brine", "target": "S-layer glycoprotein N-glycosylation"}], "graph_id": "extreme_halophile_salt_in_acidic_proteome", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Proteins enriched in acidic residues and adapted to high ionic strength.", "grounding": null, "id": "acidic_halophilic_proteins", "is_orphan": false, "label": "acidic halophilic proteins", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth requires very high salt concentrations.", "grounding": "METPO:1000628", "id": "extremely_halophilic_trait", "is_orphan": false, "label": "extremely halophilic", "node_type": "TRAIT", "xrefs": []}, {"color": "#dcfce7", "description": "High-salt or near-saturating brine environment.", "grounding": null, "id": "hypersaline_brine", "is_orphan": false, "label": "hypersaline brine", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane transporter mediating sodium exclusion in exchange for protons.", "grounding": null, "id": "na_h_antiporter", "is_orphan": false, "label": "Na+/H+ antiporter", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Cellular response to high external solute/osmotic pressure.", "grounding": null, "id": "osmotic_stress", "is_orphan": false, "label": "osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#fef3c7", "description": "K+ accumulated intracellularly in salt-in osmoadaptation.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Maintenance of protein solubility and activity in hypersaline cytoplasm.", "grounding": null, "id": "protein_solubility_high_salt", "is_orphan": false, "label": "protein solubility and function in high salt", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "N-linked glycosylation of the S-layer glycoprotein in haloarchaea.", "grounding": null, "id": "s_layer_n_glycosylation", "is_orphan": false, "label": "S-layer glycoprotein N-glycosylation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Structural stability of the haloarchaeal S-layer cell envelope.", "grounding": null, "id": "s_layer_stability", "is_orphan": false, "label": "S-layer stability", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular inorganic salt accumulation for osmotic balance.", "grounding": "METPO:1007720", "id": "salt_in_strategy", "is_orphan": false, "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Active export of Na+ to maintain low cytoplasmic sodium.", "grounding": null, "id": "sodium_efflux", "is_orphan": false, "label": "sodium efflux", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Extreme halophile salt-in and acidic-proteome mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -678,7 +790,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

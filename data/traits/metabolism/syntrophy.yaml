@@ -53,6 +53,48 @@ causal_graphs:
     node_type: PATHWAY
     grounding: METPO:1000844
     description: Hydrogen- or formate-consuming methane-producing pathway.
+  - node_id: interspecies_hydrogen_transfer
+    label: interspecies hydrogen transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: H2-mediated interspecies electron transfer (MIET) between syntrophic
+      partners.
+  - node_id: interspecies_formate_transfer
+    label: interspecies formate transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: Formate-mediated interspecies electron transfer between syntrophic
+      partners.
+  - node_id: low_hydrogen_partial_pressure
+    label: low hydrogen partial pressure
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Extremely low H2 partial pressure required for thermodynamic feasibility
+      of MIET.
+  - node_id: formate_dehydrogenase_complex
+    label: formate dehydrogenase complex
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme complex producing/consuming formate in syntrophic formate
+      transfer.
+  - node_id: hydrogenase_complex
+    label: hydrogenase complex
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme complex producing/consuming H2 in syntrophic hydrogen transfer.
+  - node_id: direct_interspecies_electron_transfer
+    label: direct interspecies electron transfer
+    node_type: BIOLOGICAL_PROCESS
+    description: 'DIET: electron transfer via conductive structures without soluble
+      H2/formate intermediates.'
+  - node_id: hydrogen_pressure_inhibition
+    label: hydrogen pressure inhibition
+    node_type: STATE
+    description: Thermodynamic inhibition of syntrophic oxidation by elevated H2 partial
+      pressure.
+  - node_id: conductive_pili
+    label: conductive pili (e-pili)
+    node_type: CELLULAR_LOCALIZATION
+    description: Electrically conductive pili that serve as a DIET conduit.
+  - node_id: multiheme_cytochromes
+    label: multiheme c-type cytochromes
+    node_type: GENE_OR_PROTEIN
+    description: Outer-surface multiheme c-type cytochromes mediating DIET.
   edges:
   - subject: syntrophy_trait
     predicate: requires partner interaction
@@ -109,6 +151,74 @@ causal_graphs:
       snippet: syntrophic methanogenic communities
       notes: Supports hydrogen-linked electron flow into methanogenic partners.
     predicate_id: biolink:participates_in
+  - subject: low_hydrogen_partial_pressure
+    predicate: enables
+    object: interspecies_hydrogen_transfer
+    description: H2-mediated transfer is thermodynamically feasible only at extremely
+      low H2 partial pressure.
+    evidence:
+    - reference: DOI:10.3390/fermentation9050467
+      notes: H2-mediated transfer thermodynamically feasible only when H2 < 10^-4
+        atm.
+  - subject: interspecies_hydrogen_transfer
+    predicate: mediates
+    object: syntrophy_trait
+    description: Interspecies hydrogen transfer is a core mechanistic sub-process
+      of syntrophy.
+    evidence:
+    - reference: DOI:10.3390/fermentation9050467
+      notes: H2-mediated MIET (IHT) is a main interspecies electron transfer mode
+        relevant to syntrophy.
+  - subject: interspecies_formate_transfer
+    predicate: mediates
+    object: syntrophy_trait
+    description: Interspecies formate transfer is a core mechanistic sub-process of
+      syntrophy.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuab057
+      notes: Interspecies formate transfer is one of three IET mechanisms in syntrophic
+        propionate oxidation.
+  - subject: formate_dehydrogenase_complex
+    predicate: mediates
+    object: interspecies_formate_transfer
+    description: Formate dehydrogenases provide the enzymatic basis for formate production/consumption
+      in syntrophy.
+    evidence:
+    - reference: DOI:10.1186/s40168-020-00885-y
+      notes: Formate dehydrogenases and formate transporters expressed by FA-degrading
+        syntrophic species.
+  - subject: hydrogenase_complex
+    predicate: mediates
+    object: interspecies_hydrogen_transfer
+    description: Hydrogenases provide the enzymatic basis for H2 production/consumption
+      in syntrophy.
+    evidence:
+    - reference: DOI:10.1038/s41396-023-01504-y
+      notes: Hydrogen-mediated transfer supported by expression of hydrogenases in
+        syntrophic communities.
+  - subject: direct_interspecies_electron_transfer
+    predicate: bypasses
+    object: hydrogen_pressure_inhibition
+    description: DIET can overcome inhibition by hydrogen pressure, enabling syntrophy
+      without soluble carriers.
+    evidence:
+    - reference: DOI:10.3390/fermentation9100884
+      notes: DIET can overcome the inhibition of hydrogen pressure and formate concentration.
+  - subject: conductive_pili
+    predicate: mediates
+    object: direct_interspecies_electron_transfer
+    description: Conductive pili (e-pili) are a canonical DIET conduit.
+    evidence:
+    - reference: DOI:10.1134/S0026261720020101
+      notes: DIET occurs via conductive pili (e-pili).
+  - subject: multiheme_cytochromes
+    predicate: mediates
+    object: direct_interspecies_electron_transfer
+    description: Outer-surface multiheme c-type cytochromes are a core DIET redox
+      conduit.
+    evidence:
+    - reference: DOI:10.3390/life14050591
+      notes: DIET operates via outer-surface c-type cytochromes.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.936190+00:00'
   curator: seed_from_metpo
@@ -150,4 +260,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007600×2).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -46,6 +46,31 @@ causal_graphs:
     label: visible red color
     node_type: MOLECULAR_FUNCTION
     description: Observed red color produced by pigment absorption spectra.
+  - node_id: pig_red_gene_cluster
+    label: prodiginine biosynthetic gene cluster (Pig/Red)
+    node_type: GENE_OR_PROTEIN
+    description: Variable gene cluster (Pig in Serratia, Red in Streptomyces) encoding
+      prodiginine biosynthesis.
+  - node_id: pigC_ligase
+    label: PigC ligase
+    node_type: GENE_OR_PROTEIN
+    description: Key condensing enzyme/ligase encoded by pigC that links MAP and MBC
+      to form prodigiosin.
+  - node_id: cpxA_cpxR_system
+    label: CpxA/CpxR two-component system
+    node_type: GENE_OR_PROTEIN
+    description: Sensor histidine kinase/response regulator system whose activation
+      represses pig gene cluster transcription.
+  - node_id: carotenoid_biosynthesis
+    label: carotenoid biosynthesis (phytoene synthase pathway)
+    node_type: BIOLOGICAL_PROCESS
+    description: Phytoene synthase condenses two GGPP to phytoene, then desaturation/isomerization
+      yields lycopene.
+  - node_id: lycopene
+    label: lycopene
+    node_type: CHEMICAL
+    description: Red-colored carotenoid pigment produced via the phytoene synthase
+      pathway.
   edges:
   - subject: prodiginine_biosynthesis
     predicate: includes
@@ -83,6 +108,60 @@ causal_graphs:
       snippet: red-pigmented prodiginines
       notes: Supports trait-level red pigmentation from prodiginines.
     predicate_id: METPO:2007400
+  - subject: pig_red_gene_cluster
+    predicate: enables
+    object: red_pigmented_trait
+    description: Prodiginine biosynthetic gene clusters (Pig/Red) encode the pathway
+      producing red tripyrrole pigments, enabling the red-pigmented phenotype across
+      taxa.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: Prodiginines are red tripyrrole pigments genetically encoded by variable
+        gene clusters (Pig in Serratia, Red in Streptomyces); broad cross-taxon mechanism.
+  - subject: pig_red_gene_cluster
+    predicate: has part
+    object: pigC_ligase
+    description: The pig gene cluster encodes the PigC ligase that catalyzes the final
+      condensation step.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1412776
+      notes: The ligase encoded by pigC is the key enzyme that links MAP and MBC.
+  - subject: pigC_ligase
+    predicate: catalyzes
+    object: pigC_redH_condensation
+    description: PigC ligase catalyzes the condensation of MAP and MBC that forms
+      prodigiosin.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1412776
+      notes: The ligase encoded by pigC is the key enzyme that links MAP and MBC to
+        form prodigiosin.
+  - subject: cpxA_cpxR_system
+    predicate: represses transcription of
+    object: pig_red_gene_cluster
+    description: Activation of the CpxA/CpxR system triggers a phosphorylation cascade
+      that inhibits transcription of pig gene clusters, reducing prodigiosin and red
+      pigmentation.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1412776
+      notes: Activated CpxA triggers a phosphorylation cascade that inhibits transcription
+        of pig gene clusters and reduces PG production.
+  - subject: carotenoid_biosynthesis
+    predicate: produces
+    object: lycopene
+    description: Phytoene synthase condenses two GGPP to phytoene, then desaturation/isomerization
+      yields the red pigment lycopene.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: Two GGPP molecules condensed by phytoene synthase form phytoene, ultimately
+        yielding lycopene, a red-colored pigment.
+  - subject: lycopene
+    predicate: causes
+    object: visible_red_color
+    description: Lycopene is a red-colored carotenoid pigment that confers red color,
+      providing a carotenoid route to red pigmentation.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11122920
+      notes: Lycopene described explicitly as 'a red-colored pigment'.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946258+00:00'
   curator: seed_from_metpo
@@ -124,4 +203,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:82758×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

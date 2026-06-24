@@ -38,6 +38,36 @@ causal_graphs:
     label: maximal growth rate
     node_type: BIOLOGICAL_PROCESS
     description: Peak specific growth rate achieved at the optimum pressure.
+  - node_id: membrane_unsaturated_fatty_acids
+    label: membrane unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Unsaturated/polyunsaturated fatty acids whose abundance in membrane
+      lipids rises with increasing hydrostatic pressure.
+  - node_id: intracellular_cation_concentration
+    label: intracellular cation concentration
+    node_type: STATE
+    description: Intracellular concentration of cations (Mg2+, K+, Na+) raised by
+      cation import under high hydrostatic pressure.
+  - node_id: intracellular_osmotic_pressure
+    label: intracellular osmotic pressure
+    node_type: STATE
+    description: Osmotic pressure inside the cell, raised by cation/compatible-solute
+      accumulation.
+  - node_id: hhp_tolerance
+    label: high hydrostatic pressure tolerance
+    node_type: CAPACITY
+    description: Capacity of an organism to grow and survive under high hydrostatic
+      pressure.
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of piezolytes/osmolytes (glutamate, betaine, beta-hydroxybutyrate,
+      proline, TMAO).
+  - node_id: protein_stabilization_preferential_hydration
+    label: protein stabilization by preferential hydration
+    node_type: BIOLOGICAL_PROCESS
+    description: Stabilization of proteins by compatible solutes via preferential
+      hydration.
   edges:
   - subject: hydrostatic_pressure
     predicate: defines
@@ -59,6 +89,49 @@ causal_graphs:
       notes: Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum
         (120 MPa).
     predicate_id: biolink:associated_with
+  - subject: membrane_unsaturated_fatty_acids
+    predicate: enables
+    object: pressure_optimum_trait
+    description: Increased membrane unsaturated/PUFA content enables growth at elevated
+      hydrostatic pressure, shaping the pressure optimum.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: 'Review: abundance of membrane lipids with unsaturated and branched-chain
+        fatty acids rises with increasing HHP.'
+  - subject: intracellular_cation_concentration
+    predicate: increases
+    object: intracellular_osmotic_pressure
+    description: Increased cation import raises intracellular osmotic pressure.
+    evidence:
+    - reference: DOI:10.1128/mbio.00958-23
+      notes: Authors propose increased cation import to raise intracellular osmotic
+        pressure under HHP.
+  - subject: intracellular_osmotic_pressure
+    predicate: enables
+    object: hhp_tolerance
+    description: Elevated intracellular osmotic pressure enables high hydrostatic
+      pressure tolerance.
+    evidence:
+    - reference: DOI:10.1128/mbio.00958-23
+      notes: 'Proposed HHP-tolerance model: importing cations to raise intracellular
+        osmotic pressure.'
+  - subject: compatible_solute_accumulation
+    predicate: promotes
+    object: protein_stabilization_preferential_hydration
+    description: Compatible solutes (piezolytes) stabilize proteins by preferential
+      hydration.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: Compatible solutes displace water bound to proteins via preferential
+        hydration; glutamate/betaine/beta-hydroxybutyrate detected at 20-30 MPa.
+  - subject: compatible_solute_accumulation
+    predicate: enables
+    object: hhp_tolerance
+    description: Compatible-solute (piezolyte) accumulation enables pressure tolerance.
+    evidence:
+    - reference: DOI:10.1007/s00253-023-12906-5
+      notes: Osmolyte-based protection (proline, glutamate, betaine, beta-hydroxybutyrate,
+        TMAO) supports pressure tolerance across taxa.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -78,4 +151,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001025×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

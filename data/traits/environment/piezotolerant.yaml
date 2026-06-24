@@ -44,6 +44,33 @@ causal_graphs:
     label: membrane lipid adaptation
     node_type: BIOLOGICAL_PROCESS
     description: Adjustment of membrane lipid composition under varying pressure.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Fluidity of the cell membrane lipid bilayer.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated membrane fatty acids
+    node_type: CHEMICAL
+    description: Unsaturated fatty acids incorporated into membrane lipids.
+  - node_id: branched_unsaturated_fatty_acids
+    label: branched-chain and unsaturated membrane fatty acids
+    node_type: CHEMICAL
+    description: Branched-chain and unsaturated fatty acids enriched in membrane lipids
+      under pressure.
+  - node_id: heat_shock_genes
+    label: heat-shock response genes (rpoH, rpoE, dnaK, groEL)
+    node_type: GENE_OR_PROTEIN
+    description: Key heat-shock/chaperone genes transcriptionally upregulated after
+      pressure shock.
+  - node_id: piezolyte_accumulation
+    label: piezolyte accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of compatible solutes (piezolytes) in response to high
+      pressure.
+  - node_id: protein_protection
+    label: protein protection under pressure
+    node_type: BIOLOGICAL_PROCESS
+    description: Stabilization/protection of proteins under elevated hydrostatic pressure.
   edges:
   - subject: hydrostatic_pressure
     predicate: regulates
@@ -64,6 +91,57 @@ causal_graphs:
       notes: Contrast with obligate piezophiles (growth limited to 80-140 MPa) defines
         piezotolerant as the atmospheric-capable phenotype.
     predicate_id: RO:0002327
+  - subject: hydrostatic_pressure
+    predicate: decreases
+    object: membrane_fluidity
+    description: High hydrostatic pressure compacts fatty acids, reducing membrane
+      fluidity.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: high hydrostatic pressure reduces membrane fluidity by compacting fatty
+        acids
+  - subject: membrane_fluidity
+    predicate: causes increase in
+    object: unsaturated_fatty_acids
+    description: Reduced membrane fluidity is countered by increasing unsaturated
+      fatty acid proportions.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: organisms counter HHP by increasing the proportions of unsaturated fatty
+        acids
+  - subject: hydrostatic_pressure
+    predicate: increases abundance of
+    object: branched_unsaturated_fatty_acids
+    description: Membrane lipids with unsaturated and branched-chain fatty acids increase
+      with rising pressure.
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      notes: abundance of membrane lipids containing unsaturated and branched-chain
+        fatty acids increases with increasing HHP
+  - subject: hydrostatic_pressure
+    predicate: induces transcription of
+    object: heat_shock_genes
+    description: Pressure shock transcriptionally upregulates key heat-shock genes.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1470617
+      notes: key heat shock genes rpoH, rpoE, dnaK, and groEL are transcriptionally
+        upregulated following pressure shock
+  - subject: hydrostatic_pressure
+    predicate: induces accumulation of
+    object: piezolyte_accumulation
+    description: High pressure induces accumulation of piezolytes (compatible solutes).
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: piezolytes are molecules that accumulate in cells in response to high
+        pressure (e.g., glutamate, betaine, beta-hydroxybutyrate)
+  - subject: piezolyte_accumulation
+    predicate: protects
+    object: protein_protection
+    description: Accumulated piezolytes protect proteins via preferential hydration
+      under pressure.
+    evidence:
+    - reference: DOI:10.3390/microorganisms11071629
+      notes: compatible solutes act via preferential hydration to protect proteins
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -83,4 +161,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001025×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

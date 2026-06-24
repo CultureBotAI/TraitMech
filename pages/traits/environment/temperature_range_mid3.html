@@ -90,12 +90,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>membrane order / fluidity state</strong>
+            <span class="edge-predicate">drives</span>
+            <strong>DesK kinase-dominant state</strong>
+            
+            <p>Increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state; membrane physical state is the proximate signal.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/mmbr.00069-23</code>
+                
+                <span class="meta">increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>DesK</strong>
+            <span class="edge-predicate">phosphorylates</span>
+            <strong>DesR</strong>
+            
+            <p>Core two-component signaling step linking membrane physical state to transcriptional response.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">DesK autophosphorylates (His188) and phosphorylates DesR</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>phosphorylated DesR</strong>
+            <span class="edge-predicate">activates transcription of</span>
+            <strong>des (acyl-lipid desaturase)</strong>
+            
+            <p>DesR-P tetramerizes, binds the des promoter and induces lipid desaturation to restore membrane fluidity.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">P-DesR tetramerizes, binds Pdes, and activates des expression</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>des (acyl-lipid desaturase)</strong>
+            <span class="edge-predicate">introduces double bonds into</span>
+            <strong>membrane fatty acyl chains</strong>
+            
+            <p>Des-mediated unsaturation fluidizes the membrane and reduces bilayer thickness.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/spectrum.03925-23</code>
+                
+                <span class="meta">Des introduces double bonds into fatty acyl chains, fluidizing the membrane and reducing thickness</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>temperature decrease</strong>
+            <span class="edge-predicate">causes</span>
+            <strong>membrane rigidification and increased thickness</strong>
+            
+            <p>General physical trigger underlying homeoviscous adaptation across microbes.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">membrane rigidification and increased thickness are proposed as sensing signals that trigger adaptive responses</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>homeoviscous adaptation</strong>
+            <span class="edge-predicate">maintains</span>
+            <strong>liquid-crystalline membrane state</strong>
+            
+            <p>Broad mechanism relevant to upper-mesophile growth: cells preserve membrane function across temperature fluctuations.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1007/s42770-023-01057-4</code>
+                
+                <span class="meta">maintain the liquid-crystalline phase at low temperature</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -235,6 +341,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (RO:0002327×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (11 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -594,7 +706,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking upper-mesophile adaptation to a temperature growth range of approximately 30\u201334 \u00b0C.", "edges": [{"description": "Upper-mesophile adaptation enables growth across 30\u201334 \u00b0C.", "evidence": [{"notes": "Supports upper-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "upper_mesophile_adaptation", "target": "temperature_range_mid3_trait"}, {"description": "Temperature range mid3 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_mid3_trait", "target": "temperature_range"}], "evidence_rows": [{"description": "Upper-mesophile adaptation enables growth across 30\u201334 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports upper-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "upper-mesophile adaptation", "target": "temperature range mid3"}, {"description": "Temperature range mid3 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range mid3", "target": "temperature range"}], "graph_id": "temperature_range_mid3_upper_mesophile", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 30\u201334 \u00b0C.", "grounding": "METPO:1000452", "id": "temperature_range_mid3_trait", "is_orphan": false, "label": "temperature range mid3", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Mesophile membrane and enzyme tuning for ambient temperatures near common animal host body temperatures.", "grounding": null, "id": "upper_mesophile_adaptation", "is_orphan": false, "label": "upper-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-range-mid3 upper-mesophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking upper-mesophile adaptation to a temperature growth range of approximately 30\u201334 \u00b0C.", "edges": [{"description": "Upper-mesophile adaptation enables growth across 30\u201334 \u00b0C.", "evidence": [{"notes": "Supports upper-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "upper_mesophile_adaptation", "target": "temperature_range_mid3_trait"}, {"description": "Temperature range mid3 is a quantitative bin of the temperature-range phenotype.", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature_range_mid3_trait", "target": "temperature_range"}, {"description": "Increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state; membrane physical state is the proximate signal.", "evidence": [{"notes": "increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state", "reference": "DOI:10.1128/mmbr.00069-23"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "membrane_order", "target": "desk_kinase_state"}, {"description": "Core two-component signaling step linking membrane physical state to transcriptional response.", "evidence": [{"notes": "DesK autophosphorylates (His188) and phosphorylates DesR", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-4", "is_orphan": false, "predicate": "phosphorylates", "predicate_id": null, "source": "desk", "target": "desr"}, {"description": "DesR-P tetramerizes, binds the des promoter and induces lipid desaturation to restore membrane fluidity.", "evidence": [{"notes": "P-DesR tetramerizes, binds Pdes, and activates des expression", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-5", "is_orphan": false, "predicate": "activates transcription of", "predicate_id": null, "source": "phospho_desr", "target": "des_gene"}, {"description": "Des-mediated unsaturation fluidizes the membrane and reduces bilayer thickness.", "evidence": [{"notes": "Des introduces double bonds into fatty acyl chains, fluidizing the membrane and reducing thickness", "reference": "DOI:10.1128/spectrum.03925-23"}], "id": "edge-6", "is_orphan": false, "predicate": "introduces double bonds into", "predicate_id": null, "source": "des_gene", "target": "membrane_fatty_acyl_chains"}, {"description": "General physical trigger underlying homeoviscous adaptation across microbes.", "evidence": [{"notes": "membrane rigidification and increased thickness are proposed as sensing signals that trigger adaptive responses", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": null, "source": "temperature_decrease", "target": "membrane_rigidification"}, {"description": "Broad mechanism relevant to upper-mesophile growth: cells preserve membrane function across temperature fluctuations.", "evidence": [{"notes": "maintain the liquid-crystalline phase at low temperature", "reference": "DOI:10.1007/s42770-023-01057-4"}], "id": "edge-8", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "homeoviscous_adaptation", "target": "liquid_crystalline_membrane"}], "evidence_rows": [{"description": "Upper-mesophile adaptation enables growth across 30\u201334 \u00b0C.", "edge_id": "edge-1", "evidence": [{"notes": "Supports upper-mesophile homeoviscous adaptation as the range mechanism.", "reference": "DOI:10.1146/annurev-micro-091313-103612", "snippet": "more unsaturated fatty acids"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "upper-mesophile adaptation", "target": "temperature range mid3"}, {"description": "Temperature range mid3 is a quantitative bin of the temperature-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 30\u201334 \u00b0C range as a value within the temperature-range distribution.", "reference": "DOI:10.1016/s0300-9629(97)00003-0", "snippet": "adapted to environments of high temperature"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "temperature range mid3", "target": "temperature range"}, {"description": "Increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state; membrane physical state is the proximate signal.", "edge_id": "edge-3", "evidence": [{"notes": "increased membrane order (reduced fluidity) drives DesK to a kinase-dominant state", "reference": "DOI:10.1128/mmbr.00069-23"}], "predicate": "drives", "predicate_id": null, "source": "membrane order / fluidity state", "target": "DesK kinase-dominant state"}, {"description": "Core two-component signaling step linking membrane physical state to transcriptional response.", "edge_id": "edge-4", "evidence": [{"notes": "DesK autophosphorylates (His188) and phosphorylates DesR", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "phosphorylates", "predicate_id": null, "source": "DesK", "target": "DesR"}, {"description": "DesR-P tetramerizes, binds the des promoter and induces lipid desaturation to restore membrane fluidity.", "edge_id": "edge-5", "evidence": [{"notes": "P-DesR tetramerizes, binds Pdes, and activates des expression", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "activates transcription of", "predicate_id": null, "source": "phosphorylated DesR", "target": "des (acyl-lipid desaturase)"}, {"description": "Des-mediated unsaturation fluidizes the membrane and reduces bilayer thickness.", "edge_id": "edge-6", "evidence": [{"notes": "Des introduces double bonds into fatty acyl chains, fluidizing the membrane and reducing thickness", "reference": "DOI:10.1128/spectrum.03925-23"}], "predicate": "introduces double bonds into", "predicate_id": null, "source": "des (acyl-lipid desaturase)", "target": "membrane fatty acyl chains"}, {"description": "General physical trigger underlying homeoviscous adaptation across microbes.", "edge_id": "edge-7", "evidence": [{"notes": "membrane rigidification and increased thickness are proposed as sensing signals that trigger adaptive responses", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "causes", "predicate_id": null, "source": "temperature decrease", "target": "membrane rigidification and increased thickness"}, {"description": "Broad mechanism relevant to upper-mesophile growth: cells preserve membrane function across temperature fluctuations.", "edge_id": "edge-8", "evidence": [{"notes": "maintain the liquid-crystalline phase at low temperature", "reference": "DOI:10.1007/s42770-023-01057-4"}], "predicate": "maintains", "predicate_id": null, "source": "homeoviscous adaptation", "target": "liquid-crystalline membrane state"}], "graph_id": "temperature_range_mid3_upper_mesophile", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Fatty-acid desaturase that introduces double bonds to fluidize the membrane.", "grounding": null, "id": "des_gene", "is_orphan": false, "label": "des (acyl-lipid desaturase)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane-bound histidine kinase that senses membrane order/thickness.", "grounding": null, "id": "desk", "is_orphan": false, "label": "DesK", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#f3f4f6", "description": "Membrane thickness sensor DesK in its autophosphorylating kinase-dominant conformation.", "grounding": null, "id": "desk_kinase_state", "is_orphan": false, "label": "DesK kinase-dominant state", "node_type": "STATE", "xrefs": []}, {"color": "#f3e8ff", "description": "Response regulator activated by DesK to control des transcription.", "grounding": null, "id": "desr", "is_orphan": false, "label": "DesR", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Adjustment of membrane lipid composition to maintain constant fluidity across temperatures.", "grounding": null, "id": "homeoviscous_adaptation", "is_orphan": false, "label": "homeoviscous adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Functional liquid-crystalline phase of the membrane required for growth.", "grounding": null, "id": "liquid_crystalline_membrane", "is_orphan": false, "label": "liquid-crystalline membrane state", "node_type": "STATE", "xrefs": []}, {"color": "#fef3c7", "description": "Fatty acyl chains of membrane phospholipids whose unsaturation modulates fluidity.", "grounding": null, "id": "membrane_fatty_acyl_chains", "is_orphan": false, "label": "membrane fatty acyl chains", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3f4f6", "description": "Physical order/fluidity state of the membrane bilayer; the proximate signal for thermosensing.", "grounding": null, "id": "membrane_order", "is_orphan": false, "label": "membrane order / fluidity state", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Cooling-induced membrane rigidification and bilayer thickening, the general homeoviscous sensing signal.", "grounding": null, "id": "membrane_rigidification", "is_orphan": false, "label": "membrane rigidification and increased thickness", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Phosphorylated DesR that tetramerizes and binds the des promoter.", "grounding": null, "id": "phospho_desr", "is_orphan": false, "label": "phosphorylated DesR", "node_type": "STATE", "xrefs": []}, {"color": "#dcfce7", "description": "Drop in ambient temperature within/near the mesophilic range.", "grounding": null, "id": "temperature_decrease", "is_orphan": false, "label": "temperature decrease", "node_type": "ENVIRONMENTAL_FACTOR", "xrefs": []}, {"color": "#dbeafe", "description": "Span of ambient temperatures supporting growth.", "grounding": "METPO:1000306", "id": "temperature_range", "is_orphan": false, "label": "temperature range", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "Temperature growth-supporting range approximately 30\u201334 \u00b0C.", "grounding": "METPO:1000452", "id": "temperature_range_mid3_trait", "is_orphan": false, "label": "temperature range mid3", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Mesophile membrane and enzyme tuning for ambient temperatures near common animal host body temperatures.", "grounding": null, "id": "upper_mesophile_adaptation", "is_orphan": false, "label": "upper-mesophile adaptation", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "Temperature-range-mid3 upper-mesophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,7 +717,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

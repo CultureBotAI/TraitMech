@@ -40,6 +40,37 @@ causal_graphs:
     label: biogeographic community structure
     node_type: QUALITY
     description: Habitat-specific microbial community membership.
+  - node_id: community_composition
+    label: microbial community composition
+    node_type: QUALITY
+    description: Taxonomic membership and structure of a microbial community in a
+      habitat.
+  - node_id: environmental_stress
+    label: environmental stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Abiotic stress (e.g. pH, salinity, contaminant load) imposed by a
+      habitat.
+  - node_id: selection_assembly
+    label: deterministic selection in community assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Deterministic assembly process favoring environmentally adapted taxa.
+  - node_id: ecological_drift
+    label: ecological drift in community assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Stochastic demographic process contributing to community turnover.
+  - node_id: dispersal_limitation
+    label: dispersal limitation in community assembly
+    node_type: BIOLOGICAL_PROCESS
+    description: Spatial/historical process limiting taxon movement between habitats.
+  - node_id: salinity
+    label: salinity
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Salt concentration; major abiotic filter structuring aquatic communities.
+  - node_id: osmolyte_genes
+    label: osmolyte transport and synthesis genes
+    node_type: GENE_OR_PROTEIN
+    description: Gene repertoire for compatible-solute transport/synthesis enabling
+      salt tolerance.
   edges:
   - subject: habitat
     predicate: causes
@@ -58,6 +89,57 @@ causal_graphs:
       notes: Fierer documents environment-specific community membership (e.g. the
         soil microbiome).
     predicate_id: biolink:associated_with
+  - subject: habitat
+    predicate: structures
+    object: community_composition
+    description: The habitat/environment selects for spatial variation in community
+      composition.
+    evidence:
+    - reference: DOI:10.1038/nrmicro1341
+      notes: Free-living taxa exhibit biogeographic patterns; the environment selects
+        for spatial variation in diversity (Martiny et al. review).
+  - subject: environmental_stress
+    predicate: increases
+    object: selection_assembly
+    description: Higher environmental stress increases the contribution of deterministic
+      selection to assembly.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01573-x
+      notes: Selection producing more dissimilar communities increased with stress
+        (groundwater assembly study).
+  - subject: environmental_stress
+    predicate: decreases
+    object: ecological_drift
+    description: Higher environmental stress decreases the contribution of stochastic
+      drift to assembly.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01573-x
+      notes: Drift showed negative correlation with stress; stochastic importance
+        decreased with increasing environmental stress.
+  - subject: environmental_stress
+    predicate: decreases
+    object: dispersal_limitation
+    description: Higher environmental stress decreases the contribution of dispersal
+      limitation to assembly.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01573-x
+      notes: Dispersal limitation showed negative correlations with stress.
+  - subject: salinity
+    predicate: structures
+    object: community_composition
+    description: Salinity is a primary abiotic regulator of aquatic community composition.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01979-7
+      notes: Lake microbiomes primarily regulated by salinity; saline vs freshwater
+        lakes show distinct taxonomic profiles.
+  - subject: salinity
+    predicate: enriches
+    object: osmolyte_genes
+    description: Saline habitats enrich for osmolyte transport and synthesis genes.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01979-7
+      notes: Saline-lake microbiomes possess more genes encoding osmolyte transport
+        and synthesis.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -76,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (ENVO:01000739×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

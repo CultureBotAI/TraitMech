@@ -14,8 +14,8 @@ evidence:
   notes: Imlay reviews the molecular mechanisms and physiological consequences of
     oxidative stress and the cellular defenses against reactive oxygen species.
 - reference: DOI:10.1007/s00018-003-3206-5
-  notes: Chelikani, Fita & Loewen support catalases as core enzymes of the
-    oxidative-stress defense.
+  notes: Chelikani, Fita & Loewen support catalases as core enzymes of the oxidative-stress
+    defense.
 causal_graphs:
 - graph_id: oxidative_stress_response_ros_defense
   title: Defense against reactive oxygen species
@@ -37,6 +37,21 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006979
     description: Defense response to reactive oxygen species.
+  - node_id: oxyr_regulator
+    label: OxyR transcriptional regulator
+    node_type: GENE_OR_PROTEIN
+    description: Widely conserved bacterial transcription factor that activates oxidative-stress
+      defense genes.
+  - node_id: rpos_sigma_factor
+    label: RpoS (sigma-S) general stress sigma factor
+    node_type: GENE_OR_PROTEIN
+    description: Global stress sigma factor controlling a stress regulon that includes
+      oxidative-stress defenses.
+  - node_id: thioredoxin_system
+    label: thioredoxin system
+    node_type: PATHWAY
+    description: Thiol-disulfide redox repair system supporting survival under oxidative/oxidant
+      stress.
   edges:
   - subject: hydrogen_peroxide
     predicate: causes
@@ -54,16 +69,49 @@ causal_graphs:
     - reference: DOI:10.1007/s00018-003-3206-5
       notes: Chelikani et al. support catalases as core oxidative-stress enzymes.
     predicate_id: RO:0002327
+  - subject: oxyr_regulator
+    predicate: positively regulates
+    object: oxidative_stress_process
+    description: OxyR activates transcription of genes that defend the cell against
+      oxidative stress.
+    evidence:
+    - reference: DOI:10.1099/mic.0.001481
+      notes: OxyR is widely conserved in bacteria and activates transcription of a
+        set of genes that influence cellular defence against oxidative stress.
+  - subject: rpos_sigma_factor
+    predicate: positively regulates
+    object: oxidative_stress_process
+    description: The general stress sigma factor RpoS controls oxidative-stress defense
+      outputs; its loss increases sensitivity to oxidative stress.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00151-22
+      notes: Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon
+        includes oxidative-stress genes (dps, catalases, sodA, osmC).
+  - subject: thioredoxin_system
+    predicate: contributes to
+    object: oxidative_stress_process
+    description: Thioredoxin thiol-repair systems support survival under oxidative/oxidant
+      stress, including in anaerobes and spores.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1012001
+      notes: Multiple thioredoxin systems are involved in the response to oxidative
+        stresses, broadening thiol-repair scope beyond classic aerobes.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate PHYSIOLOGY trait (oxidative stress response);
-    sub-variant of stress response.
+  changes: Proposed candidate PHYSIOLOGY trait (oxidative stress response); sub-variant
+    of stress response.
   llm_assisted: true
 - timestamp: '2026-06-08T13:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (ROS defense) with GO/CHEBI node
-    groundings and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (ROS defense) with GO/CHEBI node groundings
+    and biolink/RO predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 3 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

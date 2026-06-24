@@ -1,8 +1,8 @@
 identifier: traitmech:000010
 label: desiccation tolerant
 definition: An environmental tolerance in which an organism survives extreme water
-  loss and resumes growth after rehydration (anhydrobiosis), protecting cellular
-  macromolecules during drying.
+  loss and resumes growth after rehydration (anhydrobiosis), protecting cellular macromolecules
+  during drying.
 definition_source: DOI:10.3390/microorganisms10020432
 trait_category: ENVIRONMENT
 term_kind: CLASS
@@ -22,8 +22,8 @@ evidence:
     survival of near-complete water loss.
 - reference: DOI:10.3390/genes14091803
   snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is a
-    remarkable example of such an organism, showcasing an impressive resistance to a
-    wide array of stressors, including ionizing radiation, desiccation, UV radiation,
+    remarkable example of such an organism, showcasing an impressive resistance to
+    a wide array of stressors, including ionizing radiation, desiccation, UV radiation,
     and oxidizing agents
   notes: 'Organism example: Deinococcus radiodurans is desiccation-tolerant, sharing
     DNA-repair machinery with its radiation tolerance.'
@@ -51,6 +51,44 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0006302
     description: Repair of DNA double-strand breaks accumulated during drying.
+  - node_id: oxidative_stress
+    label: oxidative stress / ROS
+    node_type: BIOLOGICAL_PROCESS
+    description: Accumulation of reactive oxygen species and oxidative damage during
+      drying.
+  - node_id: trehalose
+    label: trehalose
+    node_type: CHEMICAL
+    description: Disaccharide osmolyte accumulated as a desiccation protectant.
+  - node_id: plasma_membrane
+    label: plasma membrane
+    node_type: CELLULAR_LOCALIZATION
+    description: Phospholipid bilayer whose head groups are stabilized during dehydration.
+  - node_id: vitrification
+    label: vitrification / glass formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of a molecular glass that reduces motion and prevents crystallization.
+  - node_id: sod_activity
+    label: superoxide dismutase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic dismutation of superoxide as an antioxidant defense.
+  - node_id: catalase_activity
+    label: catalase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Enzymatic detoxification of hydrogen peroxide / ROS.
+  - node_id: chaperone_activity
+    label: heat shock protein / chaperone activity
+    node_type: MOLECULAR_FUNCTION
+    description: Binding of denatured proteins to prevent aggregation and aid refolding
+      on rehydration.
+  - node_id: protein_aggregation
+    label: protein aggregation
+    node_type: BIOLOGICAL_PROCESS
+    description: Aggregation/denaturation of proteins induced by water loss.
+  - node_id: desiccation_idps
+    label: desiccation-related intrinsically disordered proteins
+    node_type: GENE_OR_PROTEIN
+    description: IDPs (e.g. LEA/CAHS) that protect cellular components during drying.
   edges:
   - subject: water_loss
     predicate: causes
@@ -72,13 +110,73 @@ causal_graphs:
   - subject: dsb_repair
     predicate: enables
     object: desiccation_tolerant_trait
-    description: Efficient DNA double-strand-break repair restores integrity on
-      rehydration.
+    description: Efficient DNA double-strand-break repair restores integrity on rehydration.
     evidence:
     - reference: DOI:10.3390/genes14091803
-      notes: Deinococcus radiodurans shares DNA-repair machinery between
-        radiation and desiccation tolerance.
+      notes: Deinococcus radiodurans shares DNA-repair machinery between radiation
+        and desiccation tolerance.
     predicate_id: RO:0002327
+  - subject: water_loss
+    predicate: causes
+    object: oxidative_stress
+    description: Drying below the protective water monolayer threshold induces oxidative
+      stress / ROS.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.2c00659
+      notes: 'Cross-kingdom review: desiccation tolerance organisms face oxidative
+        stress and recover after rehydration.'
+  - subject: trehalose
+    predicate: stabilizes
+    object: plasma_membrane
+    description: Trehalose interacts with phospholipid polar head groups to stabilize
+      membranes during dehydration.
+    evidence:
+    - reference: DOI:10.1007/s00203-023-03683-w
+      notes: Trehalose interacts with phospholipid polar groups to stabilize membranes.
+  - subject: trehalose
+    predicate: promotes
+    object: vitrification
+    description: Trehalose-mediated vitrification reduces molecular motion and prevents
+      crystallization in the dry state.
+    evidence:
+    - reference: DOI:10.1038/s41598-023-31586-9
+      notes: Trehalose-mediated vitrification reduces molecular motion and prevents
+        crystallization.
+  - subject: sod_activity
+    predicate: negatively regulates
+    object: oxidative_stress
+    description: Superoxide dismutase is upregulated as a conserved antioxidant defense,
+      lowering ROS.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.2c00659
+      notes: Desiccation-tolerant organisms upregulate superoxide dismutase as conserved
+        oxidative-stress defense.
+  - subject: catalase_activity
+    predicate: negatively regulates
+    object: oxidative_stress
+    description: Catalase detoxifies H2O2/ROS as a conserved oxidative-stress defense
+      during drying.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.2c00659
+      notes: Desiccation-tolerant organisms upregulate catalases for ROS detoxification.
+  - subject: chaperone_activity
+    predicate: negatively regulates
+    object: protein_aggregation
+    description: Heat shock proteins bind denatured proteins, preventing aggregation
+      and aiding repair on rehydration.
+    evidence:
+    - reference: DOI:10.1007/s00203-023-03683-w
+      notes: Heat shock proteins bind denatured proteins, preventing aggregation and
+        aiding repair on rehydration.
+  - subject: desiccation_idps
+    predicate: synergizes with
+    object: trehalose
+    description: Desiccation-related IDPs synergize with endogenous cosolutes such
+      as trehalose to enhance protection during drying.
+    evidence:
+    - reference: DOI:10.7554/eLife.97231
+      notes: Desiccation-related IDPs synergize with endogenous cosolutes to enhance
+        protection during drying.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -90,6 +188,11 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (anhydrobiosis / DSB repair) with GO
-    node grounding and RO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+    node grounding and RO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

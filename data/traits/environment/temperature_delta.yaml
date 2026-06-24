@@ -38,6 +38,25 @@ causal_graphs:
     label: temperature tolerance breadth
     node_type: BIOLOGICAL_PROCESS
     description: Span between the minimum and maximum growth-supporting ambient temperatures.
+  - node_id: unsaturated_fatty_acids
+    label: unsaturated fatty acids
+    node_type: CHEMICAL
+    description: Fatty acids bearing cis double bonds incorporated into membrane lipids.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical state of the lipid bilayer; higher fluidity corresponds
+      to lower lipid order and lower transition temperature.
+  - node_id: anteiso_branched_chain_fatty_acids
+    label: anteiso-branched-chain fatty acids
+    node_type: CHEMICAL
+    description: Branched-chain fatty acids that disrupt lipid packing and lower the
+      membrane transition temperature.
+  - node_id: low_temperature_growth
+    label: membrane function and growth at low temperature
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of membrane function supporting growth at the low-temperature
+      end of the range.
   edges:
   - subject: thermal_adaptation_flexibility
     predicate: enables
@@ -59,6 +78,52 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the trait endpoint via thermal adaptation across a span.
     predicate_id: METPO:2007400
+  - subject: unsaturated_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: cis-Unsaturated fatty acids disrupt lipid packing, lower the membrane
+      transition temperature, and increase fluidity.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: cis-unsaturated fatty acids disrupt packing, lower Tm, and increase fluidity;
+        foundational and broadly applicable.
+  - subject: unsaturated_fatty_acids
+    predicate: supports
+    object: low_temperature_growth
+    description: Incorporation of more unsaturated fatty acids optimizes membrane
+      function for growth at lower temperatures, extending the low-temperature end
+      of the range.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: bacteria respond to decreasing growth temperature by incorporating proportionally
+        more unsaturated fatty acids, optimizing cellular processes at the new temperature.
+  - subject: anteiso_branched_chain_fatty_acids
+    predicate: increases
+    object: membrane_fluidity
+    description: Anteiso-branched-chain fatty acids disrupt lipid packing and lower
+      the membrane transition temperature, increasing fluidity.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: anteiso-branched-chain fatty acids (a-BCFAs) disrupt packing, lower Tm;
+        generalized across bacteria using branched lipids.
+  - subject: anteiso_branched_chain_fatty_acids
+    predicate: required for
+    object: low_temperature_growth
+    description: Membrane function and growth at low temperature require both anteiso-branched-chain
+      fatty acids and unsaturated fatty acids.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Membrane function/growth at low temperature requires both anteiso-branched-chain
+        fatty acids (a-BCFAs) and unsaturated fatty acids (UFAs).
+  - subject: low_temperature_growth
+    predicate: contributes to
+    object: tolerance_breadth
+    description: Supporting growth at the low-temperature end widens the span between
+      minimum and maximum growth-supporting temperatures.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      notes: Membrane homeoviscous adaptation extends low-temperature growth, broadening
+        the temperature tolerance span (delta).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812991+00:00'
   curator: seed_from_metpo
@@ -82,4 +147,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

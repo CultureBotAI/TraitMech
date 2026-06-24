@@ -56,6 +56,26 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:15377
     description: Product of hydrogen peroxide dismutation.
+  - node_id: oxyr_regulator
+    label: OxyR
+    node_type: GENE_OR_PROTEIN
+    description: Peroxide-sensing transcriptional regulator activated by hydrogen
+      peroxide.
+  - node_id: perr_regulator
+    label: PerR
+    node_type: GENE_OR_PROTEIN
+    description: Fe-dependent peroxide-sensing transcriptional repressor inactivated
+      by hydrogen peroxide.
+  - node_id: peroxide_defense_systems
+    label: peroxide defense systems
+    node_type: BIOLOGICAL_PROCESS
+    description: Antioxidant defense systems (e.g. catalases, peroxidases) that detoxify
+      hydrogen peroxide.
+  - node_id: heme_biosynthesis
+    label: heme biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of the heme cofactor required for catalase maturation and
+      activity.
   edges:
   - subject: catalase
     predicate: enables
@@ -98,6 +118,60 @@ causal_graphs:
     - reference: DOI:10.1007/s00018-003-3206-5
       notes: Supports catalase possession as the basis of the catalase-activity phenotype.
     predicate_id: RO:0002327
+  - subject: catalase_activity_trait
+    predicate: decomposes
+    object: hydrogen_peroxide
+    description: Catalase activity rapidly decomposes hydrogen peroxide into water
+      and molecular oxygen.
+    evidence:
+    - reference: DOI:10.3390/biom14060697
+      notes: Catalase rapidly decomposes hydrogen peroxide into water and molecular
+        oxygen (canonical enzymology).
+  - subject: hydrogen_peroxide
+    predicate: activates
+    object: oxyr_regulator
+    description: Hydrogen peroxide activates the OxyR peroxide-sensing regulator.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3032
+      notes: An intracellular H2O2 concentration of ~200 nM is sufficient to drive
+        OxyR into a disulfide-bonded (active) form.
+  - subject: hydrogen_peroxide
+    predicate: favors scavenging by
+    object: catalase_activity_trait
+    description: High hydrogen peroxide concentrations favor scavenging by catalases,
+      which turn over much faster than alkyl hydroperoxide reductase.
+    evidence:
+    - reference: DOI:10.1038/nrmicro3032
+      notes: Organisms rely on catalases when H2O2 levels are high; catalases turn
+        over much more quickly than Ahp. Likely general across aerobes/facultative
+        anaerobes.
+  - subject: oxyr_regulator
+    predicate: regulates
+    object: peroxide_defense_systems
+    description: OxyR regulates peroxide defense systems; most bacteria sense H2O2
+      via OxyR or PerR.
+    evidence:
+    - reference: DOI:10.3389/fimmu.2021.667343
+      notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
+        control peroxide defense systems.
+  - subject: perr_regulator
+    predicate: regulates
+    object: peroxide_defense_systems
+    description: PerR regulates peroxide defense systems; most bacteria sense H2O2
+      via OxyR or PerR.
+    evidence:
+    - reference: DOI:10.3389/fimmu.2021.667343
+      notes: Most bacteria sense H2O2 via OxyR or PerR transcription factors that
+        control peroxide defense systems.
+  - subject: heme_biosynthesis
+    predicate: required for
+    object: catalase
+    description: Heme biosynthesis is required for catalase activation; impaired heme
+      synthesis delays peroxide degradation.
+    evidence:
+    - reference: DOI:10.1111/mmi.12967
+      notes: Ferrochelatase (hemH) function is required for timely induction of catalase
+        (KatG) activity; loss delays H2O2 degradation and growth.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -117,4 +191,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A071MK53×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

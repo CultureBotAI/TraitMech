@@ -45,6 +45,40 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Membrane lipid composition and enzyme repertoire tuned for ambient
       temperatures near common animal host body temperatures.
+  - node_id: decreased_temperature
+    label: decreased temperature
+    node_type: ENVIRONMENTAL_FACTOR
+    description: A drop in ambient temperature toward the lower mesophilic range.
+  - node_id: membrane_bilayer
+    label: membrane bilayer
+    node_type: CELLULAR_LOCALIZATION
+    description: The lipid bilayer of the cell membrane whose physical state depends
+      on temperature.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Lipid remodeling that maintains membrane fluidity across temperatures.
+  - node_id: liquid_crystalline_membrane_state
+    label: liquid-crystalline membrane state
+    node_type: STATE
+    description: Fluid, functional physical state of the membrane bilayer supporting
+      growth.
+  - node_id: mufa_incorporation
+    label: monounsaturated fatty acid incorporation
+    node_type: BIOLOGICAL_PROCESS
+    description: Incorporation of cis-monounsaturated fatty acids into membrane lipids.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Degree of fluidity/disorder of the membrane lipid bilayer.
+  - node_id: chaperone_network
+    label: molecular chaperone network
+    node_type: GENE_OR_PROTEIN
+    description: DnaK/DnaJ, GroEL/GroES, ClpB, HtpG chaperone system.
+  - node_id: proteostasis
+    label: proteostasis
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of protein folding homeostasis during temperature shifts.
   edges:
   - subject: upper_mesophilic_environment
     predicate: engages
@@ -74,6 +108,42 @@ causal_graphs:
       notes: Supports the 30–34 °C optimum as a value within the temperature-optimum
         distribution.
     predicate_id: rdfs:subClassOf
+  - subject: decreased_temperature
+    predicate: rigidifies
+    object: membrane_bilayer
+    description: Cooler conditions rigidify and thicken the membrane bilayer, triggering
+      fluidity-restoring responses.
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      notes: 'Core homeoviscous trigger: "upon temperature decrease the membrane rigidifies
+        and thickens."'
+  - subject: homeoviscous_adaptation
+    predicate: restores
+    object: liquid_crystalline_membrane_state
+    description: Homeoviscous adaptation restores the fluid, liquid-crystalline membrane
+      state across mesophilic temperatures.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: 'General process-level support: "These changes are often referred to
+        as homeoviscous adaptation."'
+  - subject: mufa_incorporation
+    predicate: increases
+    object: membrane_fluidity
+    description: Incorporation of cis-monounsaturated fatty acids increases membrane
+      fluidity at lower temperatures.
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      notes: '"The most common adaptation is the incorporation of monounsaturated
+        fatty acids (MUFA), preferably cis-unsaturated ones."'
+  - subject: chaperone_network
+    predicate: maintains
+    object: proteostasis
+    description: The chaperone network prevents and resolves aggregates, maintaining
+      proteostasis during temperature shifts.
+    evidence:
+    - reference: DOI:10.1007/s12275-023-00031-x
+      notes: 'General proteostasis module: "DnaK-DnaJ, GroEL-GroES, HtpG, ClpB" prevent/resolve
+        aggregates.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.820979+00:00'
   curator: seed_from_metpo
@@ -91,4 +161,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

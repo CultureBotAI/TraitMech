@@ -58,6 +58,40 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
     grounding: UniProtKB:C0LUM8
+  - node_id: rodA_pbp2_complex
+    label: RodA-PBP2 complex
+    node_type: GENE_OR_PROTEIN
+    description: Elongation synthase complex (RodA glycosyltransferase + PBP2 transpeptidase)
+      of the Rod system.
+  - node_id: pbp2_structural_opening
+    label: PBP2 structural opening
+    node_type: MOLECULAR_FUNCTION
+    description: Open/active conformational state of PBP2 that allosterically activates
+      the elongation synthase.
+  - node_id: rodA_polymerization
+    label: RodA polymerization activity
+    node_type: MOLECULAR_FUNCTION
+    description: Glycan-strand polymerizing (glycosyltransferase) activity of RodA.
+  - node_id: pg_crosslinking
+    label: peptidoglycan crosslinking
+    node_type: BIOLOGICAL_PROCESS
+    description: Transpeptidation crosslinking of peptidoglycan strands during sidewall
+      synthesis.
+  - node_id: mreC
+    label: MreC
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic Rod-system component that activates PBP2 by promoting
+      its open conformation.
+  - node_id: elongasome_processivity
+    label: elongasome processivity
+    node_type: BIOLOGICAL_PROCESS
+    description: Processive circumferential movement of MreB-associated elongasomes
+      during sidewall synthesis.
+  - node_id: sidewall_reinforcement
+    label: rod-shaped sidewall reinforcement
+    node_type: BIOLOGICAL_PROCESS
+    description: Mechanical reinforcement of the cylindrical sidewall via long circumferential
+      glycan hoops.
   edges:
   - subject: mreB
     predicate: enables
@@ -105,6 +139,57 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1205
       snippet: FtsZ collaborates with penicillin binding proteins
       notes: Supports FtsZ-PBP collaboration in bacterial cell-shape generation.
+  - subject: rodA_pbp2_complex
+    predicate: positively regulates
+    object: rod_shaped_trait
+    description: The active elongation synthase complex supports proper rod-shaped
+      morphology during growth.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Structural opening couples RodA glycan polymerization and PBP2 crosslinking,
+        a coupling essential in vivo for rod-shaped growth.
+  - subject: pbp2_structural_opening
+    predicate: activates
+    object: rodA_polymerization
+    description: Conformational opening of PBP2 allosterically stimulates RodA polymerization.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Structural opening promotes RodA polymerization activity.
+  - subject: pbp2_structural_opening
+    predicate: enables
+    object: pg_crosslinking
+    description: The open state elevates the PBP2 TP domain toward the PG layer, enabling
+      crosslinking.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Opening of PBP2 elevates the TP domain, facilitating crosslinking.
+  - subject: mreC
+    predicate: activates
+    object: rodA_pbp2_complex
+    description: MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the
+      open, catalytically active conformation.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: MreC is implicated as an activator that promotes the open, catalytically
+        active conformation of PBP2.
+  - subject: rodA_polymerization
+    predicate: regulates
+    object: elongasome_processivity
+    description: RodA abundance/activity tunes processive dynamics of MreB-associated
+      elongasomes.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49785-x
+      notes: RodA abundance regulates elongasome processivity, reversal frequency,
+        and pausing.
+  - subject: elongasome_processivity
+    predicate: contributes to
+    object: sidewall_reinforcement
+    description: Processive circumferential synthesis lays long glycan hoops that
+      mechanically reinforce the cylinder.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49785-x
+      notes: Long glycan strands act as barrel-hoop-like reinforcing structures of
+        the rod sidewall.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893421+00:00'
   curator: seed_from_metpo
@@ -170,4 +255,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

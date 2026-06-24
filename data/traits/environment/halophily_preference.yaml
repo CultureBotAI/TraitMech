@@ -61,6 +61,41 @@ causal_graphs:
     label: compatible-solute transport
     node_type: MOLECULAR_FUNCTION
     description: Uptake systems importing osmoprotectants from the environment.
+  - node_id: na_h_antiporter
+    label: Na+/H+ antiporter
+    node_type: GENE_OR_PROTEIN
+    description: Secondary transporter that expels cytoplasmic sodium ions using the
+      proton electrochemical gradient.
+  - node_id: proton_electrochemical_gradient
+    label: proton electrochemical gradient
+    node_type: CHEMICAL
+    description: Transmembrane proton motive force used as a driving force for ion
+      transport.
+  - node_id: sodium_ion
+    label: sodium ion
+    node_type: CHEMICAL
+    description: Cytoplasmic sodium ion that must be excluded to relieve toxicity
+      under high salinity.
+  - node_id: acidified_proteome
+    label: acidified proteome
+    node_type: QUALITY
+    description: Proteome enriched in surface acidic residues, characteristic of salt-in
+      halophiles.
+  - node_id: protein_solubility
+    label: protein solubility in hypersaline conditions
+    node_type: QUALITY
+    description: Maintenance of protein solubility via hydrated cation networks coordinated
+      by acidic surface residues.
+  - node_id: mechanosensitive_channels
+    label: mechanosensitive channels
+    node_type: GENE_OR_PROTEIN
+    description: Membrane channels acting as safety valves that open during osmotic
+      downshock.
+  - node_id: solute_efflux
+    label: rapid solute efflux
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid release of ions and organic solutes during sudden downward
+      osmotic shock.
   edges:
   - subject: environmental_salinity
     predicate: regulates
@@ -121,6 +156,64 @@ causal_graphs:
       snippet: balance external osmotic pressure
       notes: Review supports compatible solutes as osmolytes for osmotic balance.
     predicate_id: METPO:2007407
+  - subject: osmotic_stress
+    predicate: induces
+    object: na_h_antiporter
+    description: Osmotic stress drives sodium exclusion via Na+/H+ antiporters.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Sodium ions are expelled from the cytoplasm, usually with the help of
+        Na+/H+ antiporters (review, broad across haloarchaea).
+  - subject: proton_electrochemical_gradient
+    predicate: regulates
+    object: na_h_antiporter
+    description: The proton electrochemical gradient drives Na+/H+ antiporter activity.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Na+/H+ antiporter uses the electrochemical proton gradient as a driving
+        force.
+  - subject: na_h_antiporter
+    predicate: exports
+    object: sodium_ion
+    description: Na+/H+ antiporter expels cytoplasmic sodium to relieve salt stress.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Sodium is excluded from the cytoplasm with the help of an Na+/H+ antiporter.
+  - subject: environmental_salinity
+    predicate: regulates
+    object: acidified_proteome
+    description: High salinity favors a proteome with increased surface acidic residues.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Microorganisms employing the salt-in strategy exhibit an acidified proteome
+        essential for protein solubility under hypersaline conditions.
+  - subject: acidified_proteome
+    predicate: promotes
+    object: protein_solubility
+    description: Surface acidic residues coordinate hydrated cations and keep proteins
+      soluble in hypersaline cytoplasm.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: The high number of negative surface charges coordinates a network of
+        hydrated cations and keeps the protein in solution.
+  - subject: osmotic_stress
+    predicate: regulates
+    object: mechanosensitive_channels
+    description: Osmotic downshock activates mechanosensitive channels that act as
+      safety valves.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Msc channels serve as safety valves, allowing rapid release of ions and
+        organic solutes during sudden downward osmotic shocks (broad across halophiles).
+  - subject: mechanosensitive_channels
+    predicate: enables
+    object: solute_efflux
+    description: Mechanosensitive channels mediate rapid efflux of ions and organic
+      solutes during osmotic downshock.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12081738
+      notes: Mechanosensitive channels allow the rapid release of ions and organic
+        solutes in case of sudden downward osmotic shocks.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.865794+00:00'
   curator: seed_from_metpo
@@ -192,4 +285,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000208×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

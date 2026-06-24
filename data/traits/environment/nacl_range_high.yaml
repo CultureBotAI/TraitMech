@@ -45,6 +45,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular ion-accumulation strategy enabling growth at hypersaline
       NaCl.
+  - node_id: high_external_nacl
+    label: high external NaCl / hypersaline brine
+    node_type: ENVIRONMENTAL_FACTOR
+    description: High extracellular NaCl concentration characteristic of hypersaline
+      brines.
+  - node_id: intracellular_potassium
+    label: intracellular K+
+    node_type: CHEMICAL
+    description: High intracellular potassium(1+) accumulated by the salt-in strategy.
+  - node_id: acidic_proteome
+    label: acidic proteome
+    node_type: QUALITY
+    description: Proteome enriched in acidic amino acids (Glu/Asp) giving negatively
+      charged surfaces.
+  - node_id: acidic_amino_acid_enrichment
+    label: acidic amino acid enrichment (Asp/Glu)
+    node_type: BIOLOGICAL_PROCESS
+    description: Enrichment of aspartate and glutamate residues in intracellular proteins.
+  - node_id: protein_function_high_ionic
+    label: protein function at very high ionic strength
+    node_type: MOLECULAR_FUNCTION
+    description: Maintenance of protein functionality under molar intracellular ionic
+      strength.
+  - node_id: compatible_solutes
+    label: intracellular compatible solutes
+    node_type: CHEMICAL
+    description: Organic osmolytes accumulated intracellularly to balance osmotic
+      stress.
+  - node_id: protein_stabilization
+    label: protein stabilization under salt stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Stabilization of proteins/enzymes under salt/osmotic stress.
   edges:
   - subject: salt_in_physiology
     predicate: produces
@@ -65,6 +97,50 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the >8% range as a value within the NaCl-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: high_external_nacl
+    predicate: induces
+    object: intracellular_potassium
+    description: High external NaCl induces molar intracellular K+ accumulation (salt-in
+      strategy).
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: Canonical salt-in strategy accumulates molar cytoplasmic K+ (up to 4M)
+        in hypersaline systems.
+  - subject: salt_in_physiology
+    predicate: results in
+    object: acidic_proteome
+    description: Salt-in physiology drives proteome acidification via enrichment in
+      acidic amino acids.
+    evidence:
+    - reference: DOI:10.1038/s41559-024-02505-6
+      notes: K+ accumulation accompanied by proteome acidification through Glu/Asp
+        enrichment.
+  - subject: acidic_amino_acid_enrichment
+    predicate: contributes to
+    object: protein_function_high_ionic
+    description: Asp/Glu enrichment produces negatively charged surfaces enabling
+      protein function at high ionic strength.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy026
+      notes: Salt-in proteins more hydrophilic and enriched in acidic residues, enabling
+        functionality at very high ionic strength.
+  - subject: salt_in_physiology
+    predicate: depends on
+    object: intracellular_potassium
+    description: Salt-in extreme-halophile physiology depends on high intracellular
+      K+ (proteins misfold below ~2.2 M).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy026
+      notes: Cellular vitality of salt-in organisms dependent on high intracellular
+        K+; proteins misfold when K+ falls below ~2.2 M.
+  - subject: compatible_solutes
+    predicate: stabilizes
+    object: protein_stabilization
+    description: Intracellular compatible solutes stabilize proteins/enzymes under
+      salt stress.
+    evidence:
+    - reference: DOI:10.1007/978-3-030-18975-4_4
+      notes: Osmolytes act as protein stabilizers/chaperones under salt stress.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.837512+00:00'
   curator: seed_from_metpo
@@ -82,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

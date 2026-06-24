@@ -107,12 +107,101 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-4">
+            <strong>mer operon (MerA reductase)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>mercury(0)</strong>
+            
+            <p>MerA reduction of Hg(II) yields volatile elemental Hg(0).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12866-024-03391-5</code>
+                
+                <span class="meta">MerA reduces Hg2+ to volatile Hg0, relieving intracellular Hg(II) toxicity.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>MerB (organomercurial lyase)</strong>
+            <span class="edge-predicate">cleaves</span>
+            <strong>organomercurial compound</strong>
+            
+            <p>MerB lyase cleaves C-Hg bonds of organomercurials to release Hg(II) for MerA reduction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.21203/rs.3.rs-3854515/v1</code>
+                
+                <span class="meta">MerB is an organomercury lyase that cleaves methylmercury to Hg2+ and methane.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>MerB (organomercurial lyase)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>mercury(2+) ion</strong>
+            
+            <p>Organomercurial cleavage yields Hg(II), the substrate for MerA reduction.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.21203/rs.3.rs-3854515/v1</code>
+                
+                <span class="meta">C-Hg bond cleavage produces Hg(II) for subsequent MerA reduction.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>MerR (Hg-responsive regulator)</strong>
+            <span class="edge-predicate">senses</span>
+            <strong>mercury(2+) ion</strong>
+            
+            <p>MerR senses Hg(II), acting as a mercury-responsive transcriptional regulator.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.21203/rs.3.rs-3854515/v1</code>
+                
+                <span class="meta">MerR functions as a repressor/activator responsive to Hg2+.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>MerR (Hg-responsive regulator)</strong>
+            <span class="edge-predicate">activates</span>
+            <strong>mer operon transcription</strong>
+            
+            <p>Hg(II)-bound MerR activates transcription of the mer detoxification genes from Pmer.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3389/fbioe.2023.1178680</code>
+                
+                <span class="meta">MerR-mediated activation of Pmer drives mer operon transcription when Hg(II) is present.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -244,6 +333,12 @@
           <time>2026-06-09T14:00:00Z</time> ·
           <strong>CURATED_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added evidence-backed causal graph (mer-operon Hg(II) reduction) with CHEBI node grounding and RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 5 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -603,7 +698,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking mer-operon mercuric reductase to volatilization of Hg(II) into Hg(0).", "edges": [{"description": "Reactive Hg(II) is the toxic challenge the trait counters.", "evidence": [{"notes": "Mercury detoxification sits within the broader prokaryotic metal-resistance machinery.", "reference": "PMID:12829273"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "mercury_ii_ion", "target": "mercury_tolerant_trait"}, {"description": "MerA reduces Hg(II) to volatile, inert Hg(0) vapour.", "evidence": [{"notes": "MerA reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic Hg(0) vapor.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mer_operon", "target": "mercury_reduction"}, {"description": "Reduction to Hg(0) depletes the reactive Hg(II) pool.", "evidence": [{"notes": "Mercury reduction is the basis of mer-mediated resistance.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mercury_reduction", "target": "mercury_ii_ion"}], "evidence_rows": [{"description": "Reactive Hg(II) is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Mercury detoxification sits within the broader prokaryotic metal-resistance machinery.", "reference": "PMID:12829273"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "mercury(2+) ion", "target": "mercury tolerant"}, {"description": "MerA reduces Hg(II) to volatile, inert Hg(0) vapour.", "edge_id": "edge-2", "evidence": [{"notes": "MerA reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic Hg(0) vapor.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mer operon (MerA reductase)", "target": "mercury(II) reduction"}, {"description": "Reduction to Hg(0) depletes the reactive Hg(II) pool.", "edge_id": "edge-3", "evidence": [{"notes": "Mercury reduction is the basis of mer-mediated resistance.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mercury(II) reduction", "target": "mercury(2+) ion"}], "graph_id": "mercury_tolerance_mer_reduction", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Mercuric reductase reducing Hg(II) to volatile Hg(0).", "grounding": null, "id": "mer_operon", "is_orphan": false, "label": "mer operon (MerA reductase)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive ionic mercury accumulating intracellularly.", "grounding": "CHEBI:25195", "id": "mercury_ii_ion", "is_orphan": false, "label": "mercury(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic reduction of Hg(II) to volatile elemental Hg(0).", "grounding": null, "id": "mercury_reduction", "is_orphan": false, "label": "mercury(II) reduction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow in the presence of toxic mercury compounds.", "grounding": "traitmech:000016", "id": "mercury_tolerant_trait", "is_orphan": false, "label": "mercury tolerant", "node_type": "TRAIT", "xrefs": []}], "title": "Mercury tolerance via mer-operon MerA reductase"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking mer-operon mercuric reductase to volatilization of Hg(II) into Hg(0).", "edges": [{"description": "Reactive Hg(II) is the toxic challenge the trait counters.", "evidence": [{"notes": "Mercury detoxification sits within the broader prokaryotic metal-resistance machinery.", "reference": "PMID:12829273"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "mercury_ii_ion", "target": "mercury_tolerant_trait"}, {"description": "MerA reduces Hg(II) to volatile, inert Hg(0) vapour.", "evidence": [{"notes": "MerA reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic Hg(0) vapor.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mer_operon", "target": "mercury_reduction"}, {"description": "Reduction to Hg(0) depletes the reactive Hg(II) pool.", "evidence": [{"notes": "Mercury reduction is the basis of mer-mediated resistance.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mercury_reduction", "target": "mercury_ii_ion"}, {"description": "MerA reduction of Hg(II) yields volatile elemental Hg(0).", "evidence": [{"notes": "MerA reduces Hg2+ to volatile Hg0, relieving intracellular Hg(II) toxicity.", "reference": "DOI:10.1186/s12866-024-03391-5"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "mer_operon", "target": "mercury_zero"}, {"description": "MerB lyase cleaves C-Hg bonds of organomercurials to release Hg(II) for MerA reduction.", "evidence": [{"notes": "MerB is an organomercury lyase that cleaves methylmercury to Hg2+ and methane.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "id": "edge-5", "is_orphan": false, "predicate": "cleaves", "predicate_id": null, "source": "merb_lyase", "target": "organomercurial"}, {"description": "Organomercurial cleavage yields Hg(II), the substrate for MerA reduction.", "evidence": [{"notes": "C-Hg bond cleavage produces Hg(II) for subsequent MerA reduction.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "merb_lyase", "target": "mercury_ii_ion"}, {"description": "MerR senses Hg(II), acting as a mercury-responsive transcriptional regulator.", "evidence": [{"notes": "MerR functions as a repressor/activator responsive to Hg2+.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "id": "edge-7", "is_orphan": false, "predicate": "senses", "predicate_id": null, "source": "merr_sensor", "target": "mercury_ii_ion"}, {"description": "Hg(II)-bound MerR activates transcription of the mer detoxification genes from Pmer.", "evidence": [{"notes": "MerR-mediated activation of Pmer drives mer operon transcription when Hg(II) is present.", "reference": "DOI:10.3389/fbioe.2023.1178680"}], "id": "edge-8", "is_orphan": false, "predicate": "activates", "predicate_id": null, "source": "merr_sensor", "target": "mer_transcription"}], "evidence_rows": [{"description": "Reactive Hg(II) is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Mercury detoxification sits within the broader prokaryotic metal-resistance machinery.", "reference": "PMID:12829273"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "mercury(2+) ion", "target": "mercury tolerant"}, {"description": "MerA reduces Hg(II) to volatile, inert Hg(0) vapour.", "edge_id": "edge-2", "evidence": [{"notes": "MerA reduces reactive ionic Hg(II) to volatile, relatively inert, monoatomic Hg(0) vapor.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "mer operon (MerA reductase)", "target": "mercury(II) reduction"}, {"description": "Reduction to Hg(0) depletes the reactive Hg(II) pool.", "edge_id": "edge-3", "evidence": [{"notes": "Mercury reduction is the basis of mer-mediated resistance.", "reference": "DOI:10.1016/S0168-6445(03)00046-9"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "mercury(II) reduction", "target": "mercury(2+) ion"}, {"description": "MerA reduction of Hg(II) yields volatile elemental Hg(0).", "edge_id": "edge-4", "evidence": [{"notes": "MerA reduces Hg2+ to volatile Hg0, relieving intracellular Hg(II) toxicity.", "reference": "DOI:10.1186/s12866-024-03391-5"}], "predicate": "produces", "predicate_id": null, "source": "mer operon (MerA reductase)", "target": "mercury(0)"}, {"description": "MerB lyase cleaves C-Hg bonds of organomercurials to release Hg(II) for MerA reduction.", "edge_id": "edge-5", "evidence": [{"notes": "MerB is an organomercury lyase that cleaves methylmercury to Hg2+ and methane.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "predicate": "cleaves", "predicate_id": null, "source": "MerB (organomercurial lyase)", "target": "organomercurial compound"}, {"description": "Organomercurial cleavage yields Hg(II), the substrate for MerA reduction.", "edge_id": "edge-6", "evidence": [{"notes": "C-Hg bond cleavage produces Hg(II) for subsequent MerA reduction.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "predicate": "produces", "predicate_id": null, "source": "MerB (organomercurial lyase)", "target": "mercury(2+) ion"}, {"description": "MerR senses Hg(II), acting as a mercury-responsive transcriptional regulator.", "edge_id": "edge-7", "evidence": [{"notes": "MerR functions as a repressor/activator responsive to Hg2+.", "reference": "DOI:10.21203/rs.3.rs-3854515/v1"}], "predicate": "senses", "predicate_id": null, "source": "MerR (Hg-responsive regulator)", "target": "mercury(2+) ion"}, {"description": "Hg(II)-bound MerR activates transcription of the mer detoxification genes from Pmer.", "edge_id": "edge-8", "evidence": [{"notes": "MerR-mediated activation of Pmer drives mer operon transcription when Hg(II) is present.", "reference": "DOI:10.3389/fbioe.2023.1178680"}], "predicate": "activates", "predicate_id": null, "source": "MerR (Hg-responsive regulator)", "target": "mer operon transcription"}], "graph_id": "mercury_tolerance_mer_reduction", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Mercuric reductase reducing Hg(II) to volatile Hg(0).", "grounding": null, "id": "mer_operon", "is_orphan": false, "label": "mer operon (MerA reductase)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#ecfccb", "description": "Transcriptional activation of mer detoxification genes from the Pmer promoter.", "grounding": null, "id": "mer_transcription", "is_orphan": false, "label": "mer operon transcription", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Organomercury lyase cleaving C-Hg bonds of organomercurials to release Hg(II).", "grounding": null, "id": "merb_lyase", "is_orphan": false, "label": "MerB (organomercurial lyase)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive ionic mercury accumulating intracellularly.", "grounding": "CHEBI:25195", "id": "mercury_ii_ion", "is_orphan": false, "label": "mercury(2+) ion", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic reduction of Hg(II) to volatile elemental Hg(0).", "grounding": null, "id": "mercury_reduction", "is_orphan": false, "label": "mercury(II) reduction", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow in the presence of toxic mercury compounds.", "grounding": "traitmech:000016", "id": "mercury_tolerant_trait", "is_orphan": false, "label": "mercury tolerant", "node_type": "TRAIT", "xrefs": []}, {"color": "#fef3c7", "description": "Volatile, relatively inert elemental mercury Hg(0).", "grounding": null, "id": "mercury_zero", "is_orphan": false, "label": "mercury(0)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Mercury-responsive transcription factor controlling mer operon induction.", "grounding": null, "id": "merr_sensor", "is_orphan": false, "label": "MerR (Hg-responsive regulator)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Organic mercury compounds such as methylmercury.", "grounding": null, "id": "organomercurial", "is_orphan": false, "label": "organomercurial compound", "node_type": "CHEMICAL", "xrefs": []}], "title": "Mercury tolerance via mer-operon MerA reductase"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -614,7 +709,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

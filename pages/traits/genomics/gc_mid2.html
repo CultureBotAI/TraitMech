@@ -90,12 +90,118 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>homologous recombination</strong>
+            <span class="edge-predicate">positively influences</span>
+            <strong>moderate GC-biased gene conversion</strong>
+            
+            <p>Recombination increases fixation of AT-&gt;GC mutations via GC-biased gene conversion.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/011023</code>
+                
+                <span class="meta">gBGC: recombination tends to increase fixation of AT-&gt;GC mutations.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>mutation bias toward AT</strong>
+            <span class="edge-predicate">negatively influences</span>
+            <strong>GC mid2</strong>
+            
+            <p>Universal AT-biased mutation opposes maintenance of mid-high genomic GC.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1101/011023</code>
+                
+                <span class="meta">Universal excess of G/C-&gt;A/T mutations; mutation universally biased towards AT.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>cytosine deamination</strong>
+            <span class="edge-predicate">positively influences</span>
+            <strong>mutation bias toward AT</strong>
+            
+            <p>Cytosine deamination (C-&gt;T) drives A+T enrichment.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.63635/mrj.v1i4.188</code>
+                
+                <span class="meta">Cytosine deamination (C-&gt;T) drives A+T enrichment.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>guanine oxidation / 8-oxoG damage</strong>
+            <span class="edge-predicate">positively influences</span>
+            <strong>mutation bias toward AT</strong>
+            
+            <p>Guanine oxidation to 8-oxo-guanine (G-&gt;T) contributes to AT-biased composition.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.63635/mrj.v1i4.188</code>
+                
+                <span class="meta">Guanine oxidation to 8-oxo-guanine (G-&gt;T).</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-7">
+            <strong>DNA repair efficiency</strong>
+            <span class="edge-predicate">influences</span>
+            <strong>GC mid2</strong>
+            
+            <p>Variation in repair efficiency affects fixation of changes and long-term G+C content.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.63635/mrj.v1i4.188</code>
+                
+                <span class="meta">Variations in DNA repair efficiency influence fixation and thus long-term G+C content.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-8">
+            <strong>sequencing/assembly GC bias</strong>
+            <span class="edge-predicate">can distort measurement of</span>
+            <strong>GC mid2</strong>
+            
+            <p>Assembly conditions can bias observed GC% in a direction dependent on true GC%.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1186/s12864-023-09910-4</code>
+                
+                <span class="meta">In low-GC genomes factors inflate assembly GC; in high-GC genomes they decrease it.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +339,12 @@
           <time>2026-05-20T03:35:30Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2000202×1, rdfs:subClassOf×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 6 evidence-backed generic edges (6 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +704,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking moderate GC-biased gene conversion to a GC content of ~57.0\u201366.3% (the threshold encoded by the METPO synonym GC_57.0_66.3 on this record).", "edges": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate_gbgc", "target": "gc_mid2_trait"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_mid2_trait", "target": "gc_content"}], "evidence_rows": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate GC-biased gene conversion", "target": "GC mid2"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC mid2", "target": "GC content"}], "graph_id": "gc_mid2_mid_high_gc_bin", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content ~57.0\u201366.3% (per METPO synonym GC_57.0_66.3).", "grounding": "METPO:1000431", "id": "gc_mid2_trait", "is_orphan": false, "label": "GC mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated GC-favoring activity sufficient to elevate GC content into the mid-high range.", "grounding": null, "id": "moderate_gbgc", "is_orphan": false, "label": "moderate GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid2 (METPO 57.0\u201366.3%) mid-high GC bin"}];
+  var graphs = [{"description": "DOI-backed graph linking moderate GC-biased gene conversion to a GC content of ~57.0\u201366.3% (the threshold encoded by the METPO synonym GC_57.0_66.3 on this record).", "edges": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate_gbgc", "target": "gc_mid2_trait"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gc_mid2_trait", "target": "gc_content"}, {"description": "Recombination increases fixation of AT-\u003eGC mutations via GC-biased gene conversion.", "evidence": [{"notes": "gBGC: recombination tends to increase fixation of AT-\u003eGC mutations.", "reference": "DOI:10.1101/011023"}], "id": "edge-3", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "homologous_recombination", "target": "moderate_gbgc"}, {"description": "Universal AT-biased mutation opposes maintenance of mid-high genomic GC.", "evidence": [{"notes": "Universal excess of G/C-\u003eA/T mutations; mutation universally biased towards AT.", "reference": "DOI:10.1101/011023"}], "id": "edge-4", "is_orphan": false, "predicate": "negatively influences", "predicate_id": null, "source": "mutation_bias_at", "target": "gc_mid2_trait"}, {"description": "Cytosine deamination (C-\u003eT) drives A+T enrichment.", "evidence": [{"notes": "Cytosine deamination (C-\u003eT) drives A+T enrichment.", "reference": "DOI:10.63635/mrj.v1i4.188"}], "id": "edge-5", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "cytosine_deamination", "target": "mutation_bias_at"}, {"description": "Guanine oxidation to 8-oxo-guanine (G-\u003eT) contributes to AT-biased composition.", "evidence": [{"notes": "Guanine oxidation to 8-oxo-guanine (G-\u003eT).", "reference": "DOI:10.63635/mrj.v1i4.188"}], "id": "edge-6", "is_orphan": false, "predicate": "positively influences", "predicate_id": null, "source": "guanine_oxidation", "target": "mutation_bias_at"}, {"description": "Variation in repair efficiency affects fixation of changes and long-term G+C content.", "evidence": [{"notes": "Variations in DNA repair efficiency influence fixation and thus long-term G+C content.", "reference": "DOI:10.63635/mrj.v1i4.188"}], "id": "edge-7", "is_orphan": false, "predicate": "influences", "predicate_id": null, "source": "dna_repair_efficiency", "target": "gc_mid2_trait"}, {"description": "Assembly conditions can bias observed GC% in a direction dependent on true GC%.", "evidence": [{"notes": "In low-GC genomes factors inflate assembly GC; in high-GC genomes they decrease it.", "reference": "DOI:10.1186/s12864-023-09910-4"}], "id": "edge-8", "is_orphan": false, "predicate": "can distort measurement of", "predicate_id": null, "source": "assembly_gc_bias", "target": "gc_mid2_trait"}], "evidence_rows": [{"description": "Moderate GC-biased gene conversion yields mid-high genome-wide GC composition.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GC-biased gene conversion as the driver of mid-high GC bins.", "reference": "DOI:10.1186/1471-2148-10-374", "snippet": "GC-biased gene conversion"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "moderate GC-biased gene conversion", "target": "GC mid2"}, {"description": "GC mid2 is a quantitative bin of the GC-content phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 57.0\u201366.3% bin as a value within the GC-content distribution.", "reference": "DOI:10.1038/nrg2358", "snippet": "GC content"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "GC mid2", "target": "GC content"}, {"description": "Recombination increases fixation of AT-\u003eGC mutations via GC-biased gene conversion.", "edge_id": "edge-3", "evidence": [{"notes": "gBGC: recombination tends to increase fixation of AT-\u003eGC mutations.", "reference": "DOI:10.1101/011023"}], "predicate": "positively influences", "predicate_id": null, "source": "homologous recombination", "target": "moderate GC-biased gene conversion"}, {"description": "Universal AT-biased mutation opposes maintenance of mid-high genomic GC.", "edge_id": "edge-4", "evidence": [{"notes": "Universal excess of G/C-\u003eA/T mutations; mutation universally biased towards AT.", "reference": "DOI:10.1101/011023"}], "predicate": "negatively influences", "predicate_id": null, "source": "mutation bias toward AT", "target": "GC mid2"}, {"description": "Cytosine deamination (C-\u003eT) drives A+T enrichment.", "edge_id": "edge-5", "evidence": [{"notes": "Cytosine deamination (C-\u003eT) drives A+T enrichment.", "reference": "DOI:10.63635/mrj.v1i4.188"}], "predicate": "positively influences", "predicate_id": null, "source": "cytosine deamination", "target": "mutation bias toward AT"}, {"description": "Guanine oxidation to 8-oxo-guanine (G-\u003eT) contributes to AT-biased composition.", "edge_id": "edge-6", "evidence": [{"notes": "Guanine oxidation to 8-oxo-guanine (G-\u003eT).", "reference": "DOI:10.63635/mrj.v1i4.188"}], "predicate": "positively influences", "predicate_id": null, "source": "guanine oxidation / 8-oxoG damage", "target": "mutation bias toward AT"}, {"description": "Variation in repair efficiency affects fixation of changes and long-term G+C content.", "edge_id": "edge-7", "evidence": [{"notes": "Variations in DNA repair efficiency influence fixation and thus long-term G+C content.", "reference": "DOI:10.63635/mrj.v1i4.188"}], "predicate": "influences", "predicate_id": null, "source": "DNA repair efficiency", "target": "GC mid2"}, {"description": "Assembly conditions can bias observed GC% in a direction dependent on true GC%.", "edge_id": "edge-8", "evidence": [{"notes": "In low-GC genomes factors inflate assembly GC; in high-GC genomes they decrease it.", "reference": "DOI:10.1186/s12864-023-09910-4"}], "predicate": "can distort measurement of", "predicate_id": null, "source": "sequencing/assembly GC bias", "target": "GC mid2"}], "graph_id": "gc_mid2_mid_high_gc_bin", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Technical bias where observed assembly GC shifts with true GC%, depth, and error rate.", "grounding": null, "id": "assembly_gc_bias", "is_orphan": false, "label": "sequencing/assembly GC bias", "node_type": "EXPERIMENTAL_FACTOR", "xrefs": []}, {"color": "#ecfccb", "description": "Spontaneous/chemically promoted C-\u003eT transition source contributing to AT enrichment.", "grounding": null, "id": "cytosine_deamination", "is_orphan": false, "label": "cytosine deamination", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Efficiency/specificity of repair pathways affecting which mutational biases are fixed.", "grounding": null, "id": "dna_repair_efficiency", "is_orphan": false, "label": "DNA repair efficiency", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Percentage of guanine and cytosine nucleotides in genomic DNA.", "grounding": "METPO:1000127", "id": "gc_content", "is_orphan": false, "label": "GC content", "node_type": "TRAIT", "xrefs": []}, {"color": "#dbeafe", "description": "GC content ~57.0\u201366.3% (per METPO synonym GC_57.0_66.3).", "grounding": "METPO:1000431", "id": "gc_mid2_trait", "is_orphan": false, "label": "GC mid2", "node_type": "TRAIT", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidative lesion process yielding G-\u003eT/C-\u003eA transversions and compositional bias.", "grounding": null, "id": "guanine_oxidation", "is_orphan": false, "label": "guanine oxidation / 8-oxoG damage", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Template-directed exchange/repair pathway that drives GC-biased gene conversion.", "grounding": null, "id": "homologous_recombination", "is_orphan": false, "label": "homologous recombination", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination-associated GC-favoring activity sufficient to elevate GC content into the mid-high range.", "grounding": null, "id": "moderate_gbgc", "is_orphan": false, "label": "moderate GC-biased gene conversion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Universal excess of G/C-\u003eA/T mutations in bacteria opposing high genomic GC.", "grounding": null, "id": "mutation_bias_at", "is_orphan": false, "label": "mutation bias toward AT", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}], "title": "GC-mid2 (METPO 57.0\u201366.3%) mid-high GC bin"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +715,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

@@ -41,6 +41,70 @@ causal_graphs:
     label: warm-mesophile adaptation
     node_type: BIOLOGICAL_PROCESS
     description: Membrane and enzyme repertoires tuned for warm host-body temperatures.
+  - node_id: fab_branchpoint_valve
+    label: FabI/FabB fatty-acid branchpoint valve
+    node_type: BIOLOGICAL_PROCESS
+    description: Temperature-sensitive metabolic valve at the fatty-acid branchpoint
+      reallocating flux between saturated and unsaturated synthesis via FabI and FabB.
+  - node_id: homeoviscous_adaptation
+    label: homeoviscous adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Compensatory adjustment of membrane lipid composition to maintain
+      optimal fluidity across temperatures.
+  - node_id: fab_c10_competition
+    label: FabA/FabI/FabB competition for C10:1 pool
+    node_type: BIOLOGICAL_PROCESS
+    description: FabA, FabI and FabB compete for a common C10:1 acyl-ACP pool, shifting
+      flux between saturated and unsaturated fatty acids.
+  - node_id: membrane_lipid_composition
+    label: membrane lipid composition
+    node_type: QUALITY
+    description: Saturated/unsaturated phospholipid makeup of the cell membrane.
+  - node_id: membrane_fluidity_restoration
+    label: membrane fluidity restoration
+    node_type: BIOLOGICAL_PROCESS
+    description: Restoration of optimal membrane fluidity within a single generation
+      after a temperature shock via the valve and transcriptional feedback.
+  - node_id: growth_after_temperature_shock
+    label: growth after temperature shock
+    node_type: BIOLOGICAL_PROCESS
+    description: Continued growth following a rapid change in ambient temperature.
+  - node_id: heat_stress
+    label: heat stress
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Elevated ambient temperature near or above the warm-mesophile upper
+      growth limit.
+  - node_id: protein_unfolding_aggregation
+    label: protein unfolding and aggregation
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of native protein structure and formation of aggregates caused
+      by high temperature.
+  - node_id: mesophile_growth_impairment
+    label: impaired mesophile growth
+    node_type: BIOLOGICAL_PROCESS
+    description: Reduction of growth in warm-mesophiles unless protein-damage is compensated.
+  - node_id: membrane_fluidity
+    label: membrane fluidity
+    node_type: QUALITY
+    description: Physical fluidity of the lipid bilayer, increased by high temperature.
+  - node_id: compensatory_adaptation
+    label: compensatory membrane adaptation
+    node_type: BIOLOGICAL_PROCESS
+    description: Adaptive response required to counter temperature-driven membrane
+      fluidity changes.
+  - node_id: rpoh_regulon
+    label: sigma-32 (RpoH) heat-shock regulon
+    node_type: BIOLOGICAL_PROCESS
+    description: Heat-shock regulon driven by the alternative sigma factor sigma-32/RpoH.
+  - node_id: chaperone_systems
+    label: DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems
+    node_type: GENE_OR_PROTEIN
+    description: Protective heat-shock chaperone systems that refold stress-damaged
+      proteins.
+  - node_id: heat_stress_protection
+    label: protection against heat stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular protection against heat-induced protein damage.
   edges:
   - subject: warm_mesophile_adaptation
     predicate: enables
@@ -61,6 +125,87 @@ causal_graphs:
       snippet: adapted to environments of high temperature
       notes: Supports the 34–40 °C range as a value within the temperature-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: fab_branchpoint_valve
+    predicate: enables
+    object: homeoviscous_adaptation
+    description: The FabI/FabB branchpoint valve reallocates flux between saturated
+      and unsaturated fatty acid synthesis, enabling homeoviscous adaptation.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      notes: A temperature-sensitive metabolic valve at the fatty-acid branchpoint
+        reallocates flux between saturated and unsaturated fatty acid synthesis via
+        FabI and FabB.
+  - subject: fab_c10_competition
+    predicate: regulates
+    object: membrane_lipid_composition
+    description: Competition of FabA/FabI/FabB for the common C10:1 pool shifts flux
+      between saturated and unsaturated fatty acids, changing membrane lipid composition.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      notes: FabA, FabI and FabB compete for a common C10:1 pool forming a metabolic
+        valve that shifts flux between saturated and unsaturated fatty acids.
+  - subject: membrane_fluidity_restoration
+    predicate: enables
+    object: growth_after_temperature_shock
+    description: Valve plus transcriptional feedback restores optimal membrane fluidity
+      within a single generation, supporting growth after a temperature shock.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-53677-5
+      notes: Restores optimal membrane fluidity within a single generation after a
+        temperature shock.
+  - subject: heat_stress
+    predicate: causes
+    object: protein_unfolding_aggregation
+    description: High temperatures cause protein unfolding and aggregation.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09266-9
+      notes: High temperatures cause a suite of problems for cells, including protein
+        unfolding and aggregation.
+  - subject: protein_unfolding_aggregation
+    predicate: causes
+    object: mesophile_growth_impairment
+    description: Protein unfolding and aggregation impairs mesophile growth unless
+      compensated.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09266-9
+      notes: General mechanistic background applicable to the warm-mesophile upper
+        range; protein damage impairs growth unless compensated.
+  - subject: heat_stress
+    predicate: causes
+    object: membrane_fluidity
+    description: High temperatures increase membrane fluidity, requiring compensatory
+      adaptation.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09266-9
+      notes: High temperatures cause a suite of problems for cells, including increased
+        membrane fluidity.
+  - subject: membrane_fluidity
+    predicate: requires
+    object: compensatory_adaptation
+    description: Temperature-driven increase in membrane fluidity requires compensatory
+      adaptation.
+    evidence:
+    - reference: DOI:10.1186/s12864-023-09266-9
+      notes: Increased membrane fluidity at high temperature requires compensatory
+        adaptation to maintain function.
+  - subject: rpoh_regulon
+    predicate: induces
+    object: chaperone_systems
+    description: The sigma-32/RpoH regulon induces the DnaK/DnaJ/GrpE and GroES/GroEL
+      chaperone systems.
+    evidence:
+    - reference: DOI:10.1128/mbio.03105-23
+      notes: The alternative sigma factor sigma-32 (RpoH) drives protective heat shock
+        proteins including the DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems.
+  - subject: chaperone_systems
+    predicate: enables
+    object: heat_stress_protection
+    description: The DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems protect against
+      heat stress.
+    evidence:
+    - reference: DOI:10.1128/mbio.03105-23
+      notes: 'Canonical heat-response: chaperone systems refold stress-damaged proteins
+        to protect against heat stress.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.825319+00:00'
   curator: seed_from_metpo
@@ -78,4 +223,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (14 new nodes) from the deep-research
+    report.
   llm_assisted: true

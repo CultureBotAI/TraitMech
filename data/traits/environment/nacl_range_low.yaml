@@ -44,6 +44,43 @@ causal_graphs:
     label: limited high-salt tolerance
     node_type: BIOLOGICAL_PROCESS
     description: Reduced capacity to maintain osmotic balance above ~1% NaCl.
+  - node_id: nacl_concentration
+    label: NaCl concentration
+    node_type: ENVIRONMENTAL_FACTOR
+    description: External sodium chloride concentration in the environment.
+  - node_id: hyperosmotic_stress
+    label: hyperosmotic stress
+    node_type: BIOLOGICAL_PROCESS
+    description: Cellular stress from elevated external osmolarity (osmotic upshift).
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis or import of neutral osmolytes to balance cytoplasmic osmolarity.
+  - node_id: hypoosmotic_shock
+    label: hypoosmotic shock
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Rapid drop in external osmolarity causing turgor increase.
+  - node_id: mechanosensitive_channels
+    label: mechanosensitive channels MscL/MscS
+    node_type: GENE_OR_PROTEIN
+    description: Tension-gated channels (MscL/MscS) that vent solutes to prevent lysis.
+  - node_id: c_di_amp
+    label: cyclic di-AMP
+    node_type: CHEMICAL
+    description: Second messenger that regulates potassium and osmolyte transport.
+  - node_id: opu_solute_importers
+    label: OpuA/OpuC compatible-solute importers
+    node_type: GENE_OR_PROTEIN
+    description: ABC-type transporters that import compatible solutes like glycine
+      betaine.
+  - node_id: choline_uptake
+    label: choline uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Import of external choline used as a glycine betaine precursor.
+  - node_id: glycine_betaine_synthesis
+    label: glycine betaine biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    description: Synthesis of the compatible solute glycine betaine.
   edges:
   - subject: limited_high_salt_tolerance
     predicate: produces
@@ -63,6 +100,48 @@ causal_graphs:
       snippet: salinity range
       notes: Supports low NaCl range as a value within the NaCl-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: nacl_concentration
+    predicate: causes
+    object: hyperosmotic_stress
+    description: Increased external NaCl concentration causes hyperosmotic stress.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Hyperosmotic upshift elicits rapid K+ import as an emergency response;
+        general bacterial osmotic-stress edge.
+  - subject: hyperosmotic_stress
+    predicate: induces
+    object: compatible_solute_accumulation
+    description: Hyperosmotic stress induces accumulation of compatible solutes.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: After K+ import, cells synthesize or import compatible solutes and export
+        K+ to reduce cytoplasmic ionic strength.
+  - subject: hypoosmotic_shock
+    predicate: opens
+    object: mechanosensitive_channels
+    description: Hypoosmotic shock opens mechanosensitive channels MscL/MscS to prevent
+      rupture.
+    evidence:
+    - reference: DOI:10.1093/femsml/uqad020
+      notes: Hypoosmotic shock triggers transient opening of mechanosensitive channels
+        (MscL/MscS) to prevent turgor-driven cell rupture; broad across bacteria.
+  - subject: c_di_amp
+    predicate: inhibits
+    object: opu_solute_importers
+    description: c-di-AMP binds and inhibits OpuA/OpuC compatible-solute importers.
+    evidence:
+    - reference: DOI:10.1128/mmbr.00181-23
+      notes: c-di-AMP binds CBS-containing importers (OpuA/OpuC) and negatively regulates
+        their transport activity.
+  - subject: choline_uptake
+    predicate: enables
+    object: glycine_betaine_synthesis
+    description: Choline uptake enables synthesis of glycine betaine, a key compatible
+      solute.
+    evidence:
+    - reference: DOI:10.1126/sciadv.ado6229
+      notes: BetT mediates uptake of external choline used to synthesize glycine betaine,
+        a key compatible solute in hyperosmotic environments.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.835809+00:00'
   curator: seed_from_metpo
@@ -80,4 +159,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

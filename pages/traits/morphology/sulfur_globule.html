@@ -90,12 +90,84 @@
             </ul>
           </li>
           
+          <li id="pathograph-1-edge-3">
+            <strong>sulfide:quinone oxidoreductase (SQR)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>sulfane sulfur</strong>
+            
+            <p>SQR-catalyzed oxidation of sulfide generates sulfane sulfur intermediates.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">Initial oxidation of sulfide occurs under the action of SQR, producing sulfane sulfur; generalizes broadly to intracellular sulfur oxidizers.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-4">
+            <strong>sulfide:quinone oxidoreductase (SQR)</strong>
+            <span class="edge-predicate">produces</span>
+            <strong>polysulfide (H2Sn)</strong>
+            
+            <p>SQR oxidizes sulfide to short-chain inorganic polysulfide (H2Sn, n&gt;=2).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.01941-21</code>
+                
+                <span class="meta">SQR oxidized H2S into short-chain inorganic polysulfide (H2Sn, n &gt;= 2); broad sulfur-chemistry mechanism.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-5">
+            <strong>polysulfide (H2Sn)</strong>
+            <span class="edge-predicate">precursor of</span>
+            <strong>sulfur globule</strong>
+            
+            <p>Polysulfide/sulfane sulfur spontaneously generates S8 that aggregates into sulfur globules.</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.1128/aem.01941-21</code>
+                
+                <span class="meta">SQR oxidized H2S to H2Sn, which spontaneously generated S8; S8 aggregated into sulfur globules.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li id="pathograph-1-edge-6">
+            <strong>persulfide dioxygenase (PDO)</strong>
+            <span class="edge-predicate">oxidizes</span>
+            <strong>sulfite</strong>
+            
+            <p>PDO oxidizes glutathione persulfide (GSSH) to sulfite (GSSH + O2 + H2O -&gt; GSH + SO3^2- + 2H+).</p>
+            <ul>
+              
+              <li>
+                <code>DOI:10.3390/ijms252010962</code>
+                
+                <span class="meta">PDO acts on GSSH: GSSH + O2 + H2O -&gt; GSH + SO3^2- + 2H+; well-defined enzymatic edge.</span>
+              </li>
+              
+            </ul>
+          </li>
+          
         </ul>
       </div>
       
     </div>
     
   </section>
+  
+
+  
+
   
 
   <section class="grid">
@@ -233,6 +305,12 @@
           <time>2026-06-14T05:51:46Z</time> ·
           <strong>GROUND_CAUSAL_NODES</strong> · claude
           <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (CHEBI:26833×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-23T00:00:00Z</time> ·
+          <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added 4 evidence-backed generic edges (5 new nodes) from the deep-research report.</p>
         </li>
         
       </ol>
@@ -592,7 +670,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking oxidative sulfur metabolism to deposition of elemental sulfur as intracellular/periplasmic globules.", "edges": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative_sulfur_metabolism", "target": "elemental_sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental_sulfur", "target": "sulfur_globule_trait"}], "evidence_rows": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative sulfur metabolism", "target": "elemental sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental sulfur", "target": "sulfur globule"}], "graph_id": "sulfur_globule_sulfur_oxidation_intermediate", "issues": [], "nodes": [{"color": "#fef3c7", "description": "S0 stored as a globule intermediate.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).", "grounding": null, "id": "oxidative_sulfur_metabolism", "is_orphan": false, "label": "oxidative sulfur metabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular / periplasmic inclusion of elemental sulfur.", "grounding": "traitmech:000069", "id": "sulfur_globule_trait", "is_orphan": false, "label": "sulfur globule", "node_type": "TRAIT", "xrefs": []}], "title": "Sulfur globules store elemental sulfur during oxidative sulfur metabolism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking oxidative sulfur metabolism to deposition of elemental sulfur as intracellular/periplasmic globules.", "edges": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative_sulfur_metabolism", "target": "elemental_sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental_sulfur", "target": "sulfur_globule_trait"}, {"description": "SQR-catalyzed oxidation of sulfide generates sulfane sulfur intermediates.", "evidence": [{"notes": "Initial oxidation of sulfide occurs under the action of SQR, producing sulfane sulfur; generalizes broadly to intracellular sulfur oxidizers.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-3", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "sqr", "target": "sulfane_sulfur"}, {"description": "SQR oxidizes sulfide to short-chain inorganic polysulfide (H2Sn, n\u003e=2).", "evidence": [{"notes": "SQR oxidized H2S into short-chain inorganic polysulfide (H2Sn, n \u003e= 2); broad sulfur-chemistry mechanism.", "reference": "DOI:10.1128/aem.01941-21"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": null, "source": "sqr", "target": "polysulfide"}, {"description": "Polysulfide/sulfane sulfur spontaneously generates S8 that aggregates into sulfur globules.", "evidence": [{"notes": "SQR oxidized H2S to H2Sn, which spontaneously generated S8; S8 aggregated into sulfur globules.", "reference": "DOI:10.1128/aem.01941-21"}], "id": "edge-5", "is_orphan": false, "predicate": "precursor of", "predicate_id": null, "source": "polysulfide", "target": "sulfur_globule_trait"}, {"description": "PDO oxidizes glutathione persulfide (GSSH) to sulfite (GSSH + O2 + H2O -\u003e GSH + SO3^2- + 2H+).", "evidence": [{"notes": "PDO acts on GSSH: GSSH + O2 + H2O -\u003e GSH + SO3^2- + 2H+; well-defined enzymatic edge.", "reference": "DOI:10.3390/ijms252010962"}], "id": "edge-6", "is_orphan": false, "predicate": "oxidizes", "predicate_id": null, "source": "persulfide_dioxygenase", "target": "sulfite"}], "evidence_rows": [{"description": "Oxidation of reduced sulfur compounds generates elemental sulfur as an intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Frigaard \u0026 Dahl describe sulfur globules as sulfur-storage intermediates formed during oxidative sulfur metabolism.", "reference": "DOI:10.1016/S0065-2911(08)00002-7"}], "predicate": "produces", "predicate_id": "METPO:2000202", "source": "oxidative sulfur metabolism", "target": "elemental sulfur"}, {"description": "The deposited elemental sulfur forms a globule inclusion.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include sulfur globules among bacterial intracellular storage inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "elemental sulfur", "target": "sulfur globule"}, {"description": "SQR-catalyzed oxidation of sulfide generates sulfane sulfur intermediates.", "edge_id": "edge-3", "evidence": [{"notes": "Initial oxidation of sulfide occurs under the action of SQR, producing sulfane sulfur; generalizes broadly to intracellular sulfur oxidizers.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "produces", "predicate_id": null, "source": "sulfide:quinone oxidoreductase (SQR)", "target": "sulfane sulfur"}, {"description": "SQR oxidizes sulfide to short-chain inorganic polysulfide (H2Sn, n\u003e=2).", "edge_id": "edge-4", "evidence": [{"notes": "SQR oxidized H2S into short-chain inorganic polysulfide (H2Sn, n \u003e= 2); broad sulfur-chemistry mechanism.", "reference": "DOI:10.1128/aem.01941-21"}], "predicate": "produces", "predicate_id": null, "source": "sulfide:quinone oxidoreductase (SQR)", "target": "polysulfide (H2Sn)"}, {"description": "Polysulfide/sulfane sulfur spontaneously generates S8 that aggregates into sulfur globules.", "edge_id": "edge-5", "evidence": [{"notes": "SQR oxidized H2S to H2Sn, which spontaneously generated S8; S8 aggregated into sulfur globules.", "reference": "DOI:10.1128/aem.01941-21"}], "predicate": "precursor of", "predicate_id": null, "source": "polysulfide (H2Sn)", "target": "sulfur globule"}, {"description": "PDO oxidizes glutathione persulfide (GSSH) to sulfite (GSSH + O2 + H2O -\u003e GSH + SO3^2- + 2H+).", "edge_id": "edge-6", "evidence": [{"notes": "PDO acts on GSSH: GSSH + O2 + H2O -\u003e GSH + SO3^2- + 2H+; well-defined enzymatic edge.", "reference": "DOI:10.3390/ijms252010962"}], "predicate": "oxidizes", "predicate_id": null, "source": "persulfide dioxygenase (PDO)", "target": "sulfite"}], "graph_id": "sulfur_globule_sulfur_oxidation_intermediate", "issues": [], "nodes": [{"color": "#fef3c7", "description": "S0 stored as a globule intermediate.", "grounding": "CHEBI:26833", "id": "elemental_sulfur", "is_orphan": false, "label": "elemental sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of reduced sulfur compounds (e.g. sulfide, thiosulfate).", "grounding": null, "id": "oxidative_sulfur_metabolism", "is_orphan": false, "label": "oxidative sulfur metabolism", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme oxidizing glutathione persulfide (GSSH) to sulfite.", "grounding": null, "id": "persulfide_dioxygenase", "is_orphan": false, "label": "persulfide dioxygenase (PDO)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Short-chain inorganic polysulfide intermediate of sulfide oxidation.", "grounding": null, "id": "polysulfide", "is_orphan": false, "label": "polysulfide (H2Sn)", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#f3e8ff", "description": "Flavoenzyme that oxidizes sulfide, initiating intracellular sulfur oxidation.", "grounding": null, "id": "sqr", "is_orphan": false, "label": "sulfide:quinone oxidoreductase (SQR)", "node_type": "GENE_OR_PROTEIN", "xrefs": []}, {"color": "#fef3c7", "description": "Reactive zero-valent sulfur species produced during sulfide oxidation.", "grounding": null, "id": "sulfane_sulfur", "is_orphan": false, "label": "sulfane sulfur", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#fef3c7", "description": "Oxidation product of glutathione persulfide via PDO.", "grounding": null, "id": "sulfite", "is_orphan": false, "label": "sulfite", "node_type": "CHEMICAL", "xrefs": []}, {"color": "#dbeafe", "description": "Intracellular / periplasmic inclusion of elemental sulfur.", "grounding": "traitmech:000069", "id": "sulfur_globule_trait", "is_orphan": false, "label": "sulfur globule", "node_type": "TRAIT", "xrefs": []}], "title": "Sulfur globules store elemental sulfur during oxidative sulfur metabolism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -603,7 +681,7 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-17 04:10 UTC from
+    Built 2026-06-24 00:09 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
     · embedding coverage 98.3%

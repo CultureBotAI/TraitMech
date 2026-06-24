@@ -1,9 +1,9 @@
 identifier: traitmech:000035
 label: anoxygenic photosynthesis
-definition: A phototrophic metabolism that uses light energy with a single
-  photosystem and bacteriochlorophyll, using electron donors other than water
-  (e.g. H2S, H2, Fe(II), organics) and therefore not evolving oxygen. Characteristic
-  of purple and green sulfur bacteria, Chloroflexi, and heliobacteria.
+definition: A phototrophic metabolism that uses light energy with a single photosystem
+  and bacteriochlorophyll, using electron donors other than water (e.g. H2S, H2, Fe(II),
+  organics) and therefore not evolving oxygen. Characteristic of purple and green
+  sulfur bacteria, Chloroflexi, and heliobacteria.
 definition_source: DOI:10.1016/j.tim.2006.09.001
 trait_category: METABOLISM
 term_kind: CLASS
@@ -19,14 +19,14 @@ evidence:
   notes: Bryant & Frigaard describe anoxygenic photosynthesis across five prokaryotic
     phyla using bacteriochlorophyll and a single photosystem without O2 evolution.
 - reference: DOI:10.3389/fmicb.2024.1417714
-  notes: Review of anoxygenic photosynthesis in green sulfur bacteria supports
-    sulfide as electron donor and the absence of oxygen production.
+  notes: Review of anoxygenic photosynthesis in green sulfur bacteria supports sulfide
+    as electron donor and the absence of oxygen production.
 causal_graphs:
 - graph_id: anoxygenic_photosynthesis_sulfide_donor
   title: Anoxygenic photosynthesis uses non-water electron donors
   description: Evidence-backed causal sketch linking a single bacteriochlorophyll
-    photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to
-    photosynthetic electron flow without O2 evolution.
+    photosystem and non-water electron donors (sulfide, H2, Fe(II), organics) to photosynthetic
+    electron flow without O2 evolution.
   nodes:
   - node_id: anoxygenic_photosynthesis_trait
     label: anoxygenic photosynthesis
@@ -43,7 +43,23 @@ causal_graphs:
     label: photosynthetic electron transport
     node_type: PATHWAY
     grounding: GO:0009767
-    description: Single-photosystem electron transport powering anoxygenic
+    description: Single-photosystem electron transport powering anoxygenic photosynthesis.
+  - node_id: bacteriochlorophyll
+    label: bacteriochlorophyll
+    node_type: CHEMICAL
+    description: Light-harvesting pigment of anoxygenic phototrophs.
+  - node_id: light_energy
+    label: light energy
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Light input driving photochemistry in anoxygenic photosynthesis.
+  - node_id: type_i_reaction_center
+    label: Type I reaction center
+    node_type: GENE_OR_PROTEIN
+    description: Homodimeric Type I reaction-center photosystem of anoxygenic phototrophs.
+  - node_id: elemental_sulfur
+    label: elemental sulfur (S0)
+    node_type: CHEMICAL
+    description: Oxidized sulfur product from sulfide oxidation during anoxygenic
       photosynthesis.
   edges:
   - subject: sulfide
@@ -59,24 +75,75 @@ causal_graphs:
   - subject: photosynthetic_etc
     predicate: enables
     object: anoxygenic_photosynthesis_trait
-    description: Bacteriochlorophyll-based electron flow realizes anoxygenic
-      photosynthesis.
+    description: Bacteriochlorophyll-based electron flow realizes anoxygenic photosynthesis.
     evidence:
     - reference: DOI:10.1016/j.tim.2006.09.001
-      notes: Bryant & Frigaard describe anoxygenic photosynthesis across five
-        prokaryotic phyla using bacteriochlorophyll and a single photosystem.
+      notes: Bryant & Frigaard describe anoxygenic photosynthesis across five prokaryotic
+        phyla using bacteriochlorophyll and a single photosystem.
     predicate_id: RO:0002327
+  - subject: bacteriochlorophyll
+    predicate: absorbs
+    object: light_energy
+    description: Bacteriochlorophyll harvests light energy to drive single-photosystem
+      photochemistry.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2006.09.001
+      notes: 'Bryant & Frigaard: anoxygenic photosynthesis uses bacteriochlorophyll
+        and a single photosystem to capture light energy.'
+  - subject: light_energy
+    predicate: powers
+    object: photosynthetic_etc
+    description: Absorbed light energy drives photosynthetic electron transport through
+      the single photosystem.
+    evidence:
+    - reference: DOI:10.1016/j.tim.2006.09.001
+      notes: Light energy captured by bacteriochlorophyll powers single-photosystem
+        electron flow in anoxygenic phototrophs.
+  - subject: type_i_reaction_center
+    predicate: enables
+    object: anoxygenic_photosynthesis_trait
+    description: A homodimeric Type I reaction-center photosystem mediates anoxygenic
+      photosynthesis across diverse phyla.
+    evidence:
+    - reference: DOI:10.3390/biom14030311
+      notes: 'Niederman: diverse homodimeric Type I reaction-center photosystems underpin
+        anoxygenic phototrophic bacteria; complemented by Tsuji et al. DOI:10.1038/s41586-024-07180-y
+        showing Chloroflexota use a Type I RC.'
+  - subject: type_i_reaction_center
+    predicate: part of
+    object: photosynthetic_etc
+    description: The Type I reaction center is the photochemical core of the single-photosystem
+      electron transport chain.
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07180-y
+      notes: 'Tsuji et al.: an anoxygenic phototroph of the Chloroflexota uses a Type
+        I reaction centre for photosynthetic electron transport.'
+  - subject: sulfide
+    predicate: oxidized to
+    object: elemental_sulfur
+    description: Sulfide donated to the photosystem is oxidized to elemental sulfur
+      (S0) during anoxygenic photosynthesis.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1417714
+      notes: 'Kushkevych et al.: H2S serves as electron donor and is oxidized to S0
+        in green/purple sulfur bacteria anoxygenic photosynthesis.'
 curation_history:
 - timestamp: '2026-05-30T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate METABOLISM trait (anoxygenic photosynthesis) from
-    literature research to fill the phototrophy gap.
+  changes: Proposed candidate METABOLISM trait (anoxygenic photosynthesis) from literature
+    research to fill the phototrophy gap.
   llm_assisted: true
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (sulfide-driven anoxygenic
-    photosynthesis) with CHEBI/GO node groundings and RO/METPO predicate
-    groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (sulfide-driven anoxygenic photosynthesis)
+    with CHEBI/GO node groundings and RO/METPO predicate groundings; promoted PROPOSED
+    to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (4 new nodes) from the deep-research
+    report.
   llm_assisted: true

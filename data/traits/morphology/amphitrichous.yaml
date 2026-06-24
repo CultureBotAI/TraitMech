@@ -17,8 +17,8 @@ evidence:
 causal_graphs:
 - graph_id: amphitrichous_bipolar_flagella
   title: Amphitrichous flagellation — bipolar flagella
-  description: Evidence-backed causal sketch linking bacterial flagella at both
-    poles to the amphitrichous arrangement.
+  description: Evidence-backed causal sketch linking bacterial flagella at both poles
+    to the amphitrichous arrangement.
   nodes:
   - node_id: amphitrichous_trait
     label: amphitrichous
@@ -34,6 +34,41 @@ causal_graphs:
     label: bipolar placement
     node_type: QUALITY
     description: Flagella positioned at both poles of the cell.
+  - node_id: flhf_gtpase
+    label: FlhF
+    node_type: GENE_OR_PROTEIN
+    description: SRP-type GTPase that positions and recruits flagellar building blocks
+      to the cell pole.
+  - node_id: flhg_atpase
+    label: FlhG
+    node_type: GENE_OR_PROTEIN
+    description: MinD/ParA-family ATPase that regulates FlhF activity and polar flagellar
+      number.
+  - node_id: flig_protein
+    label: FliG
+    node_type: GENE_OR_PROTEIN
+    description: Flagellar C-ring switch protein engaged early by FlhF during assembly.
+  - node_id: flif_msring
+    label: FliF (MS-ring)
+    node_type: GENE_OR_PROTEIN
+    description: Transmembrane MS-ring forming protein, an early flagellar assembly
+      intermediate.
+  - node_id: fipa_protein
+    label: FipA
+    node_type: GENE_OR_PROTEIN
+    description: Membrane protein that facilitates polar recruitment of FlhF.
+  - node_id: cell_pole
+    label: cell pole
+    node_type: CELLULAR_LOCALIZATION
+    description: Polar membrane region where flagellar assembly is nucleated.
+  - node_id: flhf_polar_localization
+    label: FlhF polar localization
+    node_type: BIOLOGICAL_PROCESS
+    description: Recruitment and confinement of FlhF to the cell pole.
+  - node_id: polar_flagellar_number
+    label: polar flagellar number
+    node_type: QUALITY
+    description: Number of flagella formed at the cell pole.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -41,8 +76,8 @@ causal_graphs:
     description: Flagella at both cell poles define the amphitrichous arrangement.
     evidence:
     - reference: DOI:10.1093/femsre/fuv034
-      notes: Schuhmacher et al. describe bipolar (amphitrichous) flagellation
-        governed by FlhF/FlhG.
+      notes: Schuhmacher et al. describe bipolar (amphitrichous) flagellation governed
+        by FlhF/FlhG.
     predicate_id: METPO:2007500
   - subject: amphitrichous_trait
     predicate: associated with
@@ -50,20 +85,85 @@ causal_graphs:
     description: The amphitrichous pattern places flagella at both poles.
     evidence:
     - reference: DOI:10.3390/biom9070279
-      notes: Flagellum review supports polar flagellar filaments as locomotory
-        organelles.
+      notes: Flagellum review supports polar flagellar filaments as locomotory organelles.
     predicate_id: biolink:associated_with
+  - subject: flhf_gtpase
+    predicate: binds
+    object: flig_protein
+    description: FlhF specifically interacts with the polar-system FliG to initiate
+      assembly.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: FlhF exhibited a strong interaction with FliG and specifically interacts
+        with FliG from the polar flagellar system.
+  - subject: flig_protein
+    predicate: binds
+    object: flif_msring
+    description: FlhF-bound FliG captures FliF, promoting MS-ring formation at the
+      pole.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-50274-4
+      notes: When bound to FlhF, FliG was able to interact with the cytoplasmic domain
+        of the MS-ring forming protein FliF.
+  - subject: flhf_gtpase
+    predicate: localizes to
+    object: cell_pole
+    description: GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar
+      assembly.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: GTP-bound dimeric FlhF localizes to the cell pole where it recruits the
+        initial flagellar building blocks.
+  - subject: fipa_protein
+    predicate: directly interacts with
+    object: flhf_gtpase
+    description: FipA directly interacts with FlhF and facilitates its polar recruitment.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: In all three species, FipA directly interacts with FlhF and facilitates
+        its recruitment to the membrane at the cell pole.
+  - subject: fipa_protein
+    predicate: promotes
+    object: flhf_polar_localization
+    description: Loss of FipA significantly decreases polar localization of FlhF.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: In the absence of FipA, polar localization of FlhF was significantly
+        decreased in all three species.
+  - subject: flhg_atpase
+    predicate: stimulates GTPase activity of
+    object: flhf_gtpase
+    description: ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling
+      its polar dynamics.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: The ATP-bound FlhG dimer can interact with the GTP-bound FlhF dimer,
+        thereby stimulating its GTPase activity.
+  - subject: flhg_atpase
+    predicate: restricts
+    object: polar_flagellar_number
+    description: FlhG links flagella synthesis with transcription and restricts polar
+      flagellar number.
+    evidence:
+    - reference: DOI:10.7554/eLife.93004.3
+      notes: FlhG links flagella synthesis with transcription regulation and effectively
+        restricts the number of polar flagella that are formed.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate MORPHOLOGY trait (amphitrichous flagellation);
-    sub-variant of flagellar arrangement.
+  changes: Proposed candidate MORPHOLOGY trait (amphitrichous flagellation); sub-variant
+    of flagellar arrangement.
   llm_assisted: true
 - timestamp: '2026-06-09T15:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (bipolar flagella) with GO node
-    grounding and METPO/biolink predicate groundings; promoted PROPOSED to
-    REVIEWED.
+  changes: Added evidence-backed causal graph (bipolar flagella) with GO node grounding
+    and METPO/biolink predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

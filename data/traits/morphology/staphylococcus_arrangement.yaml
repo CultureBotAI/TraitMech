@@ -1,8 +1,8 @@
 identifier: traitmech:000118
 label: staphylococcus arrangement
 definition: A cell arrangement in which dividing cocci form irregular three-dimensional
-  grape-like clusters because division planes occur in multiple, non-orthogonal
-  orientations and daughter cells remain attached.
+  grape-like clusters because division planes occur in multiple, non-orthogonal orientations
+  and daughter cells remain attached.
 definition_source: DOI:10.1128/MMBR.00001-06
 trait_category: MORPHOLOGY
 term_kind: CLASS
@@ -15,17 +15,16 @@ synonyms:
   source: DOI:10.1128/MMBR.00001-06
 evidence:
 - reference: DOI:10.1128/MMBR.00001-06
-  notes: Young's review treats clustered coccal arrangement as a division-plane-
-    determined heritable morphology.
+  notes: Young's review treats clustered coccal arrangement as a division-plane- determined
+    heritable morphology.
 - reference: DOI:10.1038/ncomms4842
-  notes: Division-plane orientation and daughter-cell separation govern formation of
-    three-dimensional coccal clusters.
+  notes: Division-plane orientation and daughter-cell separation govern formation
+    of three-dimensional coccal clusters.
 causal_graphs:
 - graph_id: staphylococcus_irregular_division_cluster
   title: Staphylococcus arrangement via multi-plane non-orthogonal division
-  description: Evidence-backed causal sketch linking non-orthogonal multi-plane
-    division and incomplete daughter-cell separation to irregular grape-like
-    coccal clusters.
+  description: Evidence-backed causal sketch linking non-orthogonal multi-plane division
+    and incomplete daughter-cell separation to irregular grape-like coccal clusters.
   nodes:
   - node_id: staphylococcus_trait
     label: staphylococcus arrangement
@@ -40,18 +39,41 @@ causal_graphs:
   - node_id: multiplane_nonorthogonal_division
     label: multi-plane non-orthogonal division
     node_type: QUALITY
-    description: Successive division planes oriented in multiple non-orthogonal
-      directions.
+    description: Successive division planes oriented in multiple non-orthogonal directions.
+  - node_id: facz
+    label: FacZ
+    node_type: GENE_OR_PROTEIN
+    description: S. aureus division-site placement factor that prevents aberrant Z-ring
+      placement.
+  - node_id: gpsb
+    label: GpsB
+    node_type: GENE_OR_PROTEIN
+    description: Conserved cell-division regulator that promotes lateral interactions
+      between FtsZ filaments.
+  - node_id: ftsz
+    label: FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Tubulin-like central divisome protein forming the cytokinetic Z-ring.
+  - node_id: ftsz_ring
+    label: FtsZ Z-ring
+    node_type: CELLULAR_LOCALIZATION
+    description: Dynamic treadmilling FtsZ polymer ring that establishes the division
+      site.
+  - node_id: divisome_pg_synthesis
+    label: divisome peptidoglycan synthesis at division site
+    node_type: BIOLOGICAL_PROCESS
+    description: Septal peptidoglycan synthesis machinery organized at the division
+      site.
   edges:
   - subject: multiplane_nonorthogonal_division
     predicate: causes
     object: staphylococcus_trait
-    description: Multi-plane non-orthogonal division with incomplete separation
-      generates 3D coccal clusters.
+    description: Multi-plane non-orthogonal division with incomplete separation generates
+      3D coccal clusters.
     evidence:
     - reference: DOI:10.1038/ncomms4842
-      notes: Division-plane orientation and daughter-cell separation govern
-        formation of three-dimensional coccal clusters.
+      notes: Division-plane orientation and daughter-cell separation govern formation
+        of three-dimensional coccal clusters.
     predicate_id: biolink:causes
   - subject: cell_division
     predicate: enables
@@ -59,9 +81,52 @@ causal_graphs:
     description: Bacterial cell division underlies coccal cluster formation.
     evidence:
     - reference: DOI:10.1128/MMBR.00001-06
-      notes: Young treats clustered coccal arrangement as a division-plane-
-        determined heritable morphology.
+      notes: Young treats clustered coccal arrangement as a division-plane- determined
+        heritable morphology.
     predicate_id: RO:0002327
+  - subject: facz
+    predicate: prevents aberrant placement of
+    object: ftsz_ring
+    description: FacZ prevents aberrant membrane invaginations and multiple/mispositioned
+      FtsZ cytokinetic rings.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01607-y
+      notes: '"Inactivation of FacZ produced aberrant membrane invaginations and multiple
+        FtsZ cytokinetic rings"; peer-reviewed S. aureus phenotype.'
+  - subject: facz
+    predicate: interacts with
+    object: gpsb
+    description: FacZ directly interacts with the division regulator GpsB.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01607-y
+      notes: '"FacZ interacts directly with GpsB both in vitro and in vivo"; direct
+        biochemical and cellular interaction.'
+  - subject: facz
+    predicate: antagonizes
+    object: gpsb
+    description: FacZ antagonizes GpsB to prevent spurious Z-ring formation and aberrant
+      envelope invaginations.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01607-y
+      notes: Authors propose FacZ antagonizes GpsB to prevent spurious Z-ring formation;
+        peer-reviewed proposed model.
+  - subject: gpsb
+    predicate: promotes lateral interactions between
+    object: ftsz
+    description: GpsB promotes lateral interactions between FtsZ filaments.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01607-y
+      notes: '"GpsB itself interacts with FtsZ and promotes lateral interactions between
+        FtsZ filaments."'
+  - subject: ftsz_ring
+    predicate: organizes
+    object: divisome_pg_synthesis
+    description: Treadmilling FtsZ Z-ring organizes the divisome peptidoglycan synthesis
+      machinery at the division site.
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01607-y
+      notes: '"the septum is built by the divisome organized by treadmilling FtsZ
+        polymers that form a dynamic Z-ring to establish the division site."'
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -73,6 +138,12 @@ curation_history:
   curator: claude
   action: CURATED_CAUSAL_GRAPH
   changes: Added evidence-backed causal graph (multi-plane non-orthogonal division
-    → cluster) with GO node grounding and RO/biolink predicate groundings;
-    promoted PROPOSED to REVIEWED.
+    → cluster) with GO node grounding and RO/biolink predicate groundings; promoted
+    PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (5 new nodes) from the deep-research
+    report.
   llm_assisted: true

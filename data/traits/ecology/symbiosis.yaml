@@ -1,8 +1,8 @@
 identifier: traitmech:000040
 label: symbiosis
-definition: An ecological lifestyle in which a microorganism lives in persistent
-  physical association with a host or partner organism. It encompasses mutualism,
-  commensalism, and parasitism, which form an evolutionary continuum.
+definition: An ecological lifestyle in which a microorganism lives in persistent physical
+  association with a host or partner organism. It encompasses mutualism, commensalism,
+  and parasitism, which form an evolutionary continuum.
 definition_source: DOI:10.1073/pnas.1218525110
 trait_category: ECOLOGY
 term_kind: CLASS
@@ -15,17 +15,17 @@ synonyms:
   source: DOI:10.1073/pnas.1218525110
 evidence:
 - reference: DOI:10.1073/pnas.1218525110
-  notes: McFall-Ngai et al., "Animals in a bacterial world", supports persistent
-    host-microbe association (symbiosis) as a pervasive microbial lifestyle; parent
-    of the mutualism/commensalism/parasitism sub-variants.
+  notes: McFall-Ngai et al., "Animals in a bacterial world", supports persistent host-microbe
+    association (symbiosis) as a pervasive microbial lifestyle; parent of the mutualism/commensalism/parasitism
+    sub-variants.
 - reference: DOI:10.1038/s41579-021-00550-7
   notes: Drew et al. frame symbioses as a parasite-mutualist continuum, supporting
     symbiosis as the umbrella lifestyle for these interaction modes.
 causal_graphs:
 - graph_id: symbiosis_host_interaction
   title: Symbiosis as persistent host-microbe interaction
-  description: Evidence-backed causal sketch linking host-microbe interaction to
-    persistent symbiotic association along the parasite-mutualist continuum.
+  description: Evidence-backed causal sketch linking host-microbe interaction to persistent
+    symbiotic association along the parasite-mutualist continuum.
   nodes:
   - node_id: symbiosis_trait
     label: symbiosis
@@ -35,14 +35,61 @@ causal_graphs:
   - node_id: host_organism
     label: host organism
     node_type: ENVIRONMENTAL_FACTOR
-    description: Eukaryotic or microbial partner with which the focal microbe
-      persistently interacts.
+    description: Eukaryotic or microbial partner with which the focal microbe persistently
+      interacts.
   - node_id: symbiotic_interaction
     label: biological process involved in symbiotic interaction
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0044403
-    description: Persistent biological interaction between organisms living
-      together.
+    description: Persistent biological interaction between organisms living together.
+  - node_id: host_metabolites
+    label: host metabolites / exudates
+    node_type: CHEMICAL
+    description: Host-produced primary and specialized metabolites that act as chemoattractants
+      and nutrients.
+  - node_id: chemotaxis_machinery
+    label: chemotaxis machinery
+    node_type: PATHWAY
+    description: Bacterial chemosensing and chemotaxis system that senses and follows
+      host-derived gradients.
+  - node_id: host_colonization
+    label: host colonization
+    node_type: BIOLOGICAL_PROCESS
+    description: Establishment of bacteria on or within host tissues, broadly required
+      across mutualists and pathogens.
+  - node_id: biofilm_formation
+    label: biofilm formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Aggregated surface-associated bacterial community that protects from
+      host stresses and supports persistence.
+  - node_id: o_antigen
+    label: O-antigen
+    node_type: CHEMICAL
+    description: LPS O-antigen polysaccharide that cloaks MAMPs at the cell envelope.
+  - node_id: immune_evasion
+    label: immune evasion
+    node_type: BIOLOGICAL_PROCESS
+    description: Avoidance of host innate immune detection during host association.
+  - node_id: host_cues
+    label: host-associated cues
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Host-niche signals such as iron, acidic pH, cationic peptides, divalent
+      metals, and oxygen depletion.
+  - node_id: two_component_systems
+    label: two-component systems
+    node_type: PATHWAY
+    description: Sensor-regulator signaling systems that detect host-associated cues
+      and trigger gene regulatory programs.
+  - node_id: outer_membrane_modification
+    label: outer-membrane modification
+    node_type: BIOLOGICAL_PROCESS
+    description: Remodeling of the bacterial cell envelope in response to host-associated
+      cues.
+  - node_id: adhesins
+    label: adhesins
+    node_type: GENE_OR_PROTEIN
+    description: Bacterial surface adhesins binding host receptors, a prerequisite
+      for long-term colonization.
   edges:
   - subject: host_organism
     predicate: causes
@@ -51,8 +98,8 @@ causal_graphs:
       interaction.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
-      notes: McFall-Ngai et al. document host-microbe association as a pervasive
-        feature of animal biology.
+      notes: McFall-Ngai et al. document host-microbe association as a pervasive feature
+        of animal biology.
     predicate_id: biolink:causes
   - subject: symbiotic_interaction
     predicate: enables
@@ -60,9 +107,94 @@ causal_graphs:
     description: Sustained symbiotic interaction realizes the symbiotic lifestyle.
     evidence:
     - reference: DOI:10.1038/s41579-021-00550-7
-      notes: Drew et al. frame symbioses as a parasite-mutualist continuum of
-        persistent interactions.
+      notes: Drew et al. frame symbioses as a parasite-mutualist continuum of persistent
+        interactions.
     predicate_id: RO:0002327
+  - subject: host_metabolites
+    predicate: sensed by
+    object: chemotaxis_machinery
+    description: Host-produced metabolites diffuse to create concentration gradients
+      sensed by bacterial chemotaxis machinery.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: Host-produced metabolites act as chemoattractants; diffusion creates
+        concentration gradients that bacteria sense and follow. Broad cross-system
+        review (Wiesmann et al. 2023).
+  - subject: chemotaxis_machinery
+    predicate: promotes
+    object: host_colonization
+    description: Chemotaxis and motility direct bacteria toward host surfaces, promoting
+      colonization across lifestyles.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: Chemotaxis and motility are broadly required across mutualists and pathogens;
+        general edge spanning pathogenic, commensal, and mutualist lifestyles.
+  - subject: adhesins
+    predicate: required for
+    object: host_colonization
+    description: Binding of bacterial adhesins to host receptors is a prerequisite
+      for long-term host colonization.
+    evidence:
+    - reference: DOI:10.3390/microorganisms12051026
+      notes: Binding of bacterial adhesins to host receptors is a prerequisite for
+        the long-term colonization of bacteria; broad colonization review (Lin et
+        al. 2024). Curated as a general adhesin node per report warning.
+  - subject: biofilm_formation
+    predicate: supports
+    object: symbiotic_interaction
+    description: Biofilm formation protects bacteria from host-secreted antimicrobials
+      and stresses, supporting persistent host association.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: After colonization, biofilm formation protects bacteria from host-secreted
+        antimicrobial peptides and other stresses, supporting persistence. Strong
+        conserved persistence edge.
+  - subject: o_antigen
+    predicate: contributes to
+    object: immune_evasion
+    description: O-antigen presence contributes to immune evasion, partly by cloaking
+      MAMPs from host recognition.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: O-antigen presence contributes to immune evasion, partly by cloaking
+        MAMPs; strong envelope-modification edge across host systems.
+  - subject: immune_evasion
+    predicate: promotes
+    object: host_colonization
+    description: Evading host innate immune detection enables sustained colonization.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: Loss of O-antigen induces TLR4 activation and ROS bursts, impairing colonization;
+        conversely immune evasion supports colonization (Wiesmann et al. 2023).
+  - subject: host_cues
+    predicate: sensed by
+    object: two_component_systems
+    description: Two-component systems sense host-associated cues such as iron, acidic
+      pH, cationic peptides, and oxygen depletion.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: Two-component systems sense host-associated cues (iron, acidic pH, cationic
+        peptides, divalent metals, oxygen depletion). Strong regulatory edge with
+        generic node.
+  - subject: two_component_systems
+    predicate: triggers
+    object: outer_membrane_modification
+    description: Two-component systems trigger gene regulatory programs leading to
+      outer-membrane modification and biofilm formation.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: TCSs trigger gene regulatory programs that causally lead to specialized
+        metabolism, outer-membrane modification, and biofilm formation. High-level
+        mechanistic umbrella edge.
+  - subject: two_component_systems
+    predicate: triggers
+    object: biofilm_formation
+    description: Two-component system signaling promotes biofilm formation as part
+      of host-cue-triggered programs.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuac048
+      notes: TCSs trigger gene regulatory programs that causally lead to outer-membrane
+        modification and biofilm formation.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -77,4 +209,10 @@ curation_history:
   changes: Added evidence-backed causal graph (host-microbe symbiotic interaction)
     with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
     to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 9 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

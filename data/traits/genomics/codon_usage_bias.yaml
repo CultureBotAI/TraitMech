@@ -38,6 +38,20 @@ causal_graphs:
     label: gene expression level
     node_type: QUALITY
     description: Steady-state protein output per gene.
+  - node_id: trna_abundance
+    label: tRNA abundance
+    node_type: QUALITY
+    description: Cellular pool / gene copy number of tRNAs available for decoding
+      codons.
+  - node_id: mrna_5prime_secondary_structure
+    label: 5' mRNA secondary structure
+    node_type: QUALITY
+    description: Strength of RNA folding near the translation start site.
+  - node_id: translation_initiation
+    label: translation initiation
+    node_type: BIOLOGICAL_PROCESS
+    description: Ribosome assembly and start-codon recognition that begins protein
+      synthesis.
   edges:
   - subject: codon_bias_trait
     predicate: regulates
@@ -53,15 +67,54 @@ causal_graphs:
     description: Codon bias is strongest in highly expressed genes.
     evidence:
     - reference: DOI:10.1146/annurev.genet.42.110807.091442
-      notes: Hershberg & Petrov review translational selection on codon bias
-        correlating with expression level.
+      notes: Hershberg & Petrov review translational selection on codon bias correlating
+        with expression level.
     predicate_id: biolink:associated_with
+  - subject: gene_expression_level
+    predicate: strengthens selection for
+    object: codon_bias_trait
+    description: Selection on synonymous codons scales with protein production; highly
+      expressed genes show stronger codon preferences.
+    evidence:
+    - reference: DOI:10.1146/annurev.genet.42.110807.091442
+      notes: 'Hershberg & Petrov: codon bias correlates most strongly with gene expression
+        level.'
+    - reference: DOI:10.32942/x2802v
+      notes: 'Cope et al.: codon-specific selection scales with per-gene protein production
+        rate (ROC-SEMPPR).'
+  - subject: trna_abundance
+    predicate: influences
+    object: codon_bias_trait
+    description: Synonymous codons decoded by more abundant tRNAs tend to be more
+      adapted and often preferred.
+    evidence:
+    - reference: DOI:10.1038/nrg2899
+      notes: Plotkin & Kudla define tAI from relative tRNA gene copy numbers; the
+        more abundant the decoding tRNA, the more adapted the codon.
+  - subject: mrna_5prime_secondary_structure
+    predicate: inhibits
+    object: translation_initiation
+    description: Start-region RNA folding can limit ribosome access and dominate expression
+      effects of synonymous codons.
+    evidence:
+    - reference: DOI:10.1038/nrg2899
+      notes: 'Plotkin & Kudla: 5'' structure generally disadvantageous; GFP expression
+        in E. coli strongly inhibited when 5'' folding energy below ~-10 kcal/mol
+        (RBS/SD/start-codon occlusion).'
+  - subject: translation_initiation
+    predicate: part of
+    object: translation
+    description: Initiation is the first stage of translation.
+    evidence:
+    - reference: DOI:10.1038/nrg2899
+      notes: Plotkin & Kudla discuss translation initiation as a major mechanism linking
+        5' sequence features to expression.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
   action: PROPOSED_FROM_RESEARCH
-  changes: Proposed candidate GENOMICS trait (codon usage bias) from literature
-    research to fill the genome-sequence-composition gap.
+  changes: Proposed candidate GENOMICS trait (codon usage bias) from literature research
+    to fill the genome-sequence-composition gap.
   llm_assisted: true
 - timestamp: '2026-06-08T14:00:00Z'
   curator: claude
@@ -69,4 +122,10 @@ curation_history:
   changes: Added evidence-backed causal graph (codon bias / translation efficiency)
     with GO node grounding and RO/biolink predicate groundings; promoted PROPOSED
     to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 4 evidence-backed generic edges (3 new nodes) from the deep-research
+    report.
   llm_assisted: true

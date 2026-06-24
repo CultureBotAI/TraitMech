@@ -73,6 +73,47 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16526
     description: Oxidized C1 product of methane metabolism.
+  - node_id: copper
+    label: copper
+    node_type: CHEMICAL
+    description: Copper availability acts as a regulatory and cofactor lever in methanotrophy.
+  - node_id: particulate_methane_monooxygenase
+    label: particulate methane monooxygenase (pMMO)
+    node_type: GENE_OR_PROTEIN
+    description: Membrane-bound copper-containing methane monooxygenase complex.
+  - node_id: soluble_methane_monooxygenase
+    label: soluble methane monooxygenase (sMMO)
+    node_type: GENE_OR_PROTEIN
+    description: Cytoplasmic iron-containing methane monooxygenase, expressed under
+      low copper.
+  - node_id: pmocab_operon
+    label: pmoCAB operon
+    node_type: GENE_OR_PROTEIN
+    description: Operon encoding the pMMO subunits PmoA, PmoB and PmoC.
+  - node_id: pmmo_subunits
+    label: PmoA/PmoB/PmoC subunits
+    node_type: GENE_OR_PROTEIN
+    description: Structural subunits of the particulate methane monooxygenase complex.
+  - node_id: mmoxyz_genes
+    label: mmoXYZ genes
+    node_type: GENE_OR_PROTEIN
+    description: Genes encoding the soluble MMO hydroxylase (MMOH) subunits.
+  - node_id: mmoh_subunits
+    label: MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)
+    node_type: GENE_OR_PROTEIN
+    description: Hydroxylase subunits of soluble methane monooxygenase.
+  - node_id: methanobactin
+    label: methanobactin
+    node_type: CHEMICAL
+    description: Ribosomally synthesized copper-chelating chalkophore.
+  - node_id: cuprous_ion
+    label: Cu(I)
+    node_type: CHEMICAL
+    description: Cuprous ion bound with high affinity by methanobactin.
+  - node_id: copper_acquisition
+    label: copper acquisition
+    node_type: BIOLOGICAL_PROCESS
+    description: Uptake of copper required for pMMO function.
   edges:
   - subject: methanotrophic_trait
     predicate: uses substrate
@@ -145,6 +186,61 @@ causal_graphs:
       notes: Supports methane oxidation in the methane-carbon dioxide cycle; graph
         focuses on aerobic methanotrophy.
     predicate_id: METPO:2000202
+  - subject: copper
+    predicate: positively regulates
+    object: particulate_methane_monooxygenase
+    description: High copper favors pMMO expression (the copper switch).
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      notes: high copper favors pMMO and represses sMMO
+  - subject: copper
+    predicate: negatively regulates
+    object: soluble_methane_monooxygenase
+    description: High copper represses sMMO; low copper favors sMMO (the copper switch).
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      notes: high copper favors pMMO and represses sMMO; low copper/biomass favors
+        sMMO
+  - subject: pmocab_operon
+    predicate: encodes
+    object: pmmo_subunits
+    description: pmoCAB operon encodes the PmoA, PmoB and PmoC subunits of pMMO.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      notes: pMMO ... composed of subunits PmoA, PmoB, and PmoC, encoded by the pmoCAB
+        operon
+  - subject: mmoxyz_genes
+    predicate: encodes
+    object: mmoh_subunits
+    description: mmoXYZ genes encode the MMOH alpha/beta/gamma hydroxylase subunits
+      of sMMO.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      notes: MMOH is a dimer of heterotrimers encoded by the mmoXYZ genes
+  - subject: methanobactin
+    predicate: binds
+    object: cuprous_ion
+    description: Methanobactin binds Cu(I) with high affinity.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.3c00727
+      notes: Mbns are ribosomally synthesized ... that bind Cu(I) with particularly
+        high affinity
+  - subject: methanobactin
+    predicate: enables
+    object: copper_acquisition
+    description: Methanobactin-mediated copper chelation enables copper uptake.
+    evidence:
+    - reference: DOI:10.1039/D3CY00737E
+      notes: some methanotrophs produce methanobactin (high affinity for Cu(I)) for
+        copper collection
+  - subject: copper_acquisition
+    predicate: promotes
+    object: particulate_methane_monooxygenase
+    description: Copper acquisition supplies the cofactor required for pMMO activity.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.3c00727
+      notes: As a required cofactor for pMMO activity ... copper is central to methanotroph
+        physiology
 curation_history:
 - timestamp: '2026-05-05T01:35:46.876493+00:00'
   curator: seed_from_metpo
@@ -198,4 +294,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0019649×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (10 new nodes) from the deep-research
+    report.
   llm_assisted: true

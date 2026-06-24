@@ -41,6 +41,41 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Mutational bias favoring AT base pairs that lowers genome-wide GC
       content.
+  - node_id: cytosine_deamination
+    label: Cytosine deamination
+    node_type: BIOLOGICAL_PROCESS
+    description: Spontaneous conversion of cytosine to uracil, read as thymine at
+      replication, causing GC-eroding G->A transitions.
+  - node_id: udg_loss
+    label: Loss of uracil-DNA glycosylase (UDG family)
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of UDG-family base-excision repair activity, leaving deaminated
+      cytosine (uracil) unrepaired.
+  - node_id: ber_glycosylase_loss
+    label: Loss of BER glycosylases (Tag/AlkA/MPG/Nei)
+    node_type: BIOLOGICAL_PROCESS
+    description: Concerted loss of base-excision-repair glycosylases removing defenses
+      against GC-eroding small-base lesions.
+  - node_id: mutt_loss
+    label: Loss of MutT nucleotide-pool sanitization
+    node_type: BIOLOGICAL_PROCESS
+    description: Loss of MutT-family dNTP-pool sanitizing activity, contributing to
+      mutational dysregulation.
+  - node_id: hypermutator_state
+    label: Hypermutator phenotype
+    node_type: STATE
+    description: Elevated genome-wide mutation rate with GC-eroding mutation spectra
+      arising from repair-gene loss.
+  - node_id: gc3_at_enrichment
+    label: Third-codon-position AT enrichment
+    node_type: BIOLOGICAL_PROCESS
+    description: Preferential substitution of synonymous third codon positions toward
+      AT-rich nucleotides.
+  - node_id: purifying_selection_bgc
+    label: Purifying selection and biased gene conversion
+    node_type: BIOLOGICAL_PROCESS
+    description: Selection and GC-biased gene conversion that counteract AT mutation
+      bias and resist GC decline.
   edges:
   - subject: at_mutation_bias
     predicate: produces
@@ -60,6 +95,71 @@ causal_graphs:
       snippet: GC content
       notes: Supports the ≤42.65% bin as a value within the GC-content distribution.
     predicate_id: rdfs:subClassOf
+  - subject: cytosine_deamination
+    predicate: contributes to
+    object: gc_high_trait
+    description: Cytosine deamination drives AT-enriching G->A transitions lowering
+      genome-wide GC.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Spontaneous cytosine deamination produces unrepaired uracil read as thymine,
+        causing G->A transitions (pages 6-7).
+  - subject: udg_loss
+    predicate: causally promotes
+    object: gc_high_trait
+    description: Loss of UDG repair leaves deaminated cytosine unrepaired, promoting
+      GC erosion.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Absence of DNA glycosylases compromises repair of deaminated cytosine
+        (uracil), causing G->A transitions (pages 6-7).
+  - subject: ber_glycosylase_loss
+    predicate: causally promotes
+    object: gc_high_trait
+    description: Concerted loss of BER glycosylases biases mutation spectra toward
+      GC-eroding changes.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Concerted loss of Tag/AlkA/MPG, UDG, Nei, MutT removed defenses against
+        small-base lesions; mutation spectra biased toward GC-eroding changes (pages
+        8-9).
+  - subject: mutt_loss
+    predicate: causally promotes
+    object: gc_high_trait
+    description: Loss of MutT nucleotide-pool sanitization contributes to GC-eroding
+      mutational dysregulation.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Concerted loss of sanitizing enzymes including MutT removed defenses;
+        analogues showed mutation spectra biased toward GC-eroding changes (pages
+        8-9).
+  - subject: hypermutator_state
+    predicate: causally promotes
+    object: gc_high_trait
+    description: Hypermutator state provides a mechanistic path to genome-wide AT
+      enrichment.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Mutator phenotypes (10- to 1e4-fold) with GC-eroding mutation spectra
+        provide a mechanistic path to AT-enrichment (pages 8-9).
+  - subject: gc3_at_enrichment
+    predicate: contributes to
+    object: gc_high_trait
+    description: AT-rich substitution at third codon positions is a principal driver
+      of decreased GC.
+    evidence:
+    - reference: DOI:10.1038/s41467-026-71228-y
+      notes: Substitution of third codon positions with AT-rich nucleotides identified
+        as a principal driver of decreased GC (pages 9-10).
+  - subject: purifying_selection_bgc
+    predicate: opposes
+    object: gc_high_trait
+    description: Purifying selection and biased gene conversion counteract AT bias,
+      resisting GC decline.
+    evidence:
+    - reference: DOI:10.63635/mrj.v1i4.188
+      notes: Purifying selection and biased gene conversion can counteract AT bias
+        (pages 3-5).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818260+00:00'
   curator: seed_from_metpo
@@ -78,4 +178,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -49,6 +49,55 @@ causal_graphs:
     label: mature spore body
     node_type: ORGANELLE
     description: Differentiated spore structure with cortex, coat, and core.
+  - node_id: spo0a_phosphorylation
+    label: Spo0A phosphorylation
+    node_type: MOLECULAR_FUNCTION
+    description: Phosphorylation/activation of the master regulator Spo0A.
+  - node_id: sporulation_initiation
+    label: sporulation initiation
+    node_type: BIOLOGICAL_PROCESS
+    description: Entry into the sporulation differentiation program.
+  - node_id: starvation
+    label: starvation
+    node_type: ENVIRONMENTAL_FACTOR
+    description: Nutrient deprivation that triggers sporulation.
+  - node_id: spoiva_protein
+    label: SpoIVA
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein that anchors coat material to the spore surface.
+  - node_id: spovm_protein
+    label: SpoVM
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for spore coat encasement.
+  - node_id: spovid_protein
+    label: SpoVID
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for spore coat encasement.
+  - node_id: spore_encasement
+    label: spore encasement
+    node_type: BIOLOGICAL_PROCESS
+    description: Morphological transition forming a full coat shell that encases the
+      forespore.
+  - node_id: cote_protein
+    label: CotE
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for outer coat assembly.
+  - node_id: outer_coat
+    label: outer coat
+    node_type: CELLULAR_LOCALIZATION
+    description: Outer layer of the multilayered spore coat.
+  - node_id: safa_protein
+    label: SafA
+    node_type: GENE_OR_PROTEIN
+    description: Morphogenetic protein required for inner coat assembly.
+  - node_id: inner_coat
+    label: inner coat
+    node_type: CELLULAR_LOCALIZATION
+    description: Inner layer of the multilayered spore coat.
+  - node_id: spore_coat_surface
+    label: spore coat
+    node_type: CELLULAR_LOCALIZATION
+    description: Multilayered spore coat anchored to the outer forespore membrane.
   edges:
   - subject: forespore_engulfment
     predicate: establishes
@@ -92,6 +141,72 @@ causal_graphs:
       snippet: highly resistant dormant cell type known as the spore
       notes: Supports the trait endpoint.
     predicate_id: METPO:2007400
+  - subject: spo0a_phosphorylation
+    predicate: positively regulates
+    object: sporulation_initiation
+    description: Phosphorylation of the master regulator Spo0A initiates sporulation.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adq0791
+      notes: Spo0A is the master regulator governing entry into sporulation; sporulation
+        initiates upon phosphorylation of Spo0A (generalized across endospore formers).
+  - subject: starvation
+    predicate: positively regulates
+    object: sporulation_initiation
+    description: Starvation triggers entry into the sporulation differentiation program.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adq0791
+      notes: Starvation triggers bacterial spore formation, a committed differentiation
+        program.
+  - subject: sporulation_initiation
+    predicate: leads to
+    object: forespore_engulfment
+    description: Sporulation initiation leads to forespore engulfment.
+    evidence:
+    - reference: DOI:10.1126/sciadv.adq0791
+      notes: Sporulation is a committed differentiation program proceeding through
+        forespore engulfment.
+  - subject: spoiva_protein
+    predicate: anchors
+    object: spore_coat_surface
+    description: SpoIVA anchors/tethers coat material to the spore surface (outer
+      forespore membrane).
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: SpoIVA functions to anchor coat material to the spore surface; required
+        to tether the coat to the outer forespore membrane (conserved role).
+  - subject: spovm_protein
+    predicate: required for
+    object: spore_encasement
+    description: SpoVM is required for the morphological transition that encases the
+      forespore.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: SpoVM and SpoVID are required for the morphological transition from a
+        single scaffold cap to a full spherical shell that encases the forespore.
+  - subject: spovid_protein
+    predicate: required for
+    object: spore_encasement
+    description: SpoVID is required for spore encasement; mutants block formation
+      of a full coat shell.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: SpoVID is explicitly required for spore encasement; spoVID mutants block
+        formation of a full coat shell.
+  - subject: cote_protein
+    predicate: required for assembly of
+    object: outer_coat
+    description: CotE is required for assembly of the spore outer coat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: SafA is necessary for inner coat assembly and CotE for outer coat assembly.
+  - subject: safa_protein
+    predicate: required for assembly of
+    object: inner_coat
+    description: SafA is required for assembly of the spore inner coat.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2921
+      notes: SafA is necessary for inner coat assembly; SafA and CotE are respectively
+        required for the deposition of the inner and outer coat.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.893996+00:00'
   curator: seed_from_metpo
@@ -116,4 +231,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007400×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (12 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -39,6 +39,50 @@ causal_graphs:
     label: pressure-tolerance breadth
     node_type: QUALITY
     description: Width of the hydrostatic-pressure interval over which growth is sustained.
+  - node_id: membrane_fluidity_maintenance
+    label: membrane fluidity maintenance under high pressure
+    node_type: BIOLOGICAL_PROCESS
+    description: Maintenance of adequate membrane fluidity against pressure-induced
+      lipid compression.
+  - node_id: membrane_fluidity_loss
+    label: loss of membrane fluidity at high pressure
+    node_type: BIOLOGICAL_PROCESS
+    description: Pressure-induced reduction of membrane fluidity that impairs membrane
+      function.
+  - node_id: unsaturated_fatty_acid_production
+    label: unsaturated fatty acid production
+    node_type: BIOLOGICAL_PROCESS
+    description: Biosynthesis/desaturation generating unsaturated acyl chains that
+      counter pressure-induced membrane ordering.
+  - node_id: ribosome_dissociation
+    label: pressure-induced ribosome dissociation
+    node_type: BIOLOGICAL_PROCESS
+    description: High-pressure dissociation of ribosomes suppressing translation and
+      growth.
+  - node_id: compatible_solutes
+    label: intracellular osmolytes / compatible solutes
+    node_type: CHEMICAL
+    description: Cosolutes/osmolytes that stabilize protein structure under high hydrostatic
+      pressure.
+  - node_id: protein_stabilization_under_pressure
+    label: protein stabilization under pressure
+    node_type: BIOLOGICAL_PROCESS
+    description: Reinforcement of protein structure against pressure-induced perturbation.
+  - node_id: nuo_complex_i
+    label: nuo NADH dehydrogenase I complex
+    node_type: GENE_OR_PROTEIN
+    description: Proton-translocating NADH dehydrogenase I (Complex I) operon enriched
+      in piezophiles.
+  - node_id: high_pressure_energy_conservation
+    label: high-pressure respiratory energy conservation
+    node_type: BIOLOGICAL_PROCESS
+    description: Respiratory-chain energy conservation supporting growth under high
+      hydrostatic pressure.
+  - node_id: min_max_growth_pressure_bounds
+    label: minimum and maximum growth pressure bounds
+    node_type: QUALITY
+    description: Lower and upper hydrostatic-pressure limits of growth whose difference
+      defines the delta.
   edges:
   - subject: hydrostatic_pressure
     predicate: defines
@@ -59,6 +103,80 @@ causal_graphs:
       notes: The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa)
         illustrates the breadth this phenotype records.
     predicate_id: biolink:associated_with
+  - subject: unsaturated_fatty_acid_production
+    predicate: enables
+    object: membrane_fluidity_maintenance
+    description: Unsaturated acyl-chain production/desaturation sustains membrane
+      fluidity under high hydrostatic pressure.
+    evidence:
+    - reference: DOI:10.1186/s12864-020-07102-y
+      notes: All piezophiles encode a delta-9 acyl-phospholipid desaturase; unsaturated
+        chains allow better adaptation to higher pressures (general HHP mechanism).
+    - reference: DOI:10.1021/acs.chemrev.3c00432
+      notes: Membrane fluidity adjustment is a core pressure-adaptation node.
+  - subject: hydrostatic_pressure
+    predicate: causes
+    object: membrane_fluidity_loss
+    description: High hydrostatic pressure compresses membranes and reduces fluidity.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1293928
+      notes: High pressure causes loss of membrane fluidity (cross-taxa physiological
+        mechanism).
+  - subject: membrane_fluidity_loss
+    predicate: restricts
+    object: pressure_tolerance_breadth
+    description: Loss of membrane fluidity limits growth at the upper pressure bound,
+      narrowing the supported range.
+    evidence:
+    - reference: DOI:10.1038/s43247-023-01045-4
+      notes: Reduced membrane fluidity under HHP coincides with cessation of respiration/degradation,
+        restricting the upper growth bound.
+  - subject: hydrostatic_pressure
+    predicate: causes
+    object: ribosome_dissociation
+    description: High pressure induces ribosome dissociation, suppressing translation
+      and growth.
+    evidence:
+    - reference: DOI:10.1038/s43247-023-01045-4
+      notes: High pressure causes ribosome dissociation; translation/replication become
+        dysfunctional, preventing growth and division.
+  - subject: ribosome_dissociation
+    predicate: restricts
+    object: pressure_tolerance_breadth
+    description: Translation failure from ribosome dissociation limits the growth-supporting
+      pressure range.
+    evidence:
+    - reference: DOI:10.1038/s43247-023-01045-4
+      notes: Ribosome dissociation preventing growth and division narrows the pressure
+        range over which growth is sustained.
+  - subject: compatible_solutes
+    predicate: enables
+    object: protein_stabilization_under_pressure
+    description: Intracellular osmolytes/cosolutes reinforce protein structure under
+      high hydrostatic pressure.
+    evidence:
+    - reference: DOI:10.1021/acs.chemrev.3c00432
+      notes: Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular
+        function under HHP (general mechanism).
+  - subject: nuo_complex_i
+    predicate: supports
+    object: high_pressure_energy_conservation
+    description: The nuo NADH dehydrogenase I complex supports respiratory energy
+      conservation enabling growth under high pressure.
+    evidence:
+    - reference: DOI:10.1186/s12864-020-07102-y
+      notes: nuo dehydrogenase operons present in piezophiles; respiratory-chain composition
+        modulates pressure tolerance, a candidate contributor to wider high-pressure
+        growth support.
+  - subject: min_max_growth_pressure_bounds
+    predicate: defines
+    object: pressure_delta_trait
+    description: The minimum and maximum growth-pressure limits define the breadth
+      (max minus min) recorded by the delta.
+    evidence:
+    - reference: DOI:10.1186/s12864-020-07102-y
+      notes: Range-bound examples (e.g., MTCD1 80-140 MPa => delta = 60 MPa) show
+        min/max bounds defining the pressure-delta breadth descriptor.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -78,4 +196,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (PATO:0001025×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 8 evidence-backed generic edges (9 new nodes) from the deep-research
+    report.
   llm_assisted: true

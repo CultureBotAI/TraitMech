@@ -51,6 +51,43 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
     grounding: UniProtKB:C0LUM8
+  - node_id: peptidoglycan_cell_wall
+    label: peptidoglycan cell wall
+    node_type: CELLULAR_LOCALIZATION
+    description: Peptidoglycan sacculus that protects against osmotic lysis and determines
+      cell shape.
+  - node_id: rodA_pbp2_synthase
+    label: RodA-PBP2 synthase (Rod complex)
+    node_type: GENE_OR_PROTEIN
+    description: Essential elongasome peptidoglycan synthase responsible for bacterial
+      elongation.
+  - node_id: bacterial_elongation
+    label: bacterial cell elongation
+    node_type: BIOLOGICAL_PROCESS
+    description: Lengthwise growth of the rod-shaped cell driven by elongasome synthesis.
+  - node_id: circumferential_glycan_insertion
+    label: circumferential glycan strand insertion
+    node_type: BIOLOGICAL_PROCESS
+    description: Elongasome-mediated insertion of long glycan strands as barrel-hoop-like
+      reinforcing structures.
+  - node_id: moenomycin
+    label: moenomycin
+    node_type: CHEMICAL
+    description: Antibiotic that inhibits class A penicillin-binding proteins (PG
+      glycosyltransferases).
+  - node_id: class_a_pbps
+    label: class A penicillin-binding proteins
+    node_type: GENE_OR_PROTEIN
+    description: Class A PBPs (aPBPs), a family of peptidoglycan synthases.
+  - node_id: rodZ
+    label: RodZ
+    node_type: GENE_OR_PROTEIN
+    description: Membrane protein broadly implicated in rod-shape maintenance.
+  - node_id: spherical_morphology
+    label: spherical cell morphology
+    node_type: TRAIT
+    description: Coccus-like spherical cell shape, the phenotype arising from loss
+      of rod-shape determinants.
   edges:
   - subject: mreB
     predicate: enables
@@ -99,6 +136,48 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro1205
       snippet: FtsZ collaborates with penicillin binding proteins
       notes: Supports FtsZ-PBP collaboration in bacterial cell-shape generation.
+  - subject: peptidoglycan_cell_wall
+    predicate: determines
+    object: bacillus_shaped_trait
+    description: The peptidoglycan cell wall protects against osmotic lysis and determines
+      cell shape.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: PG protects bacteria against osmotic lysis and determines cell shape.
+  - subject: rodA_pbp2_synthase
+    predicate: required for
+    object: bacterial_elongation
+    description: RodA-PBP2 is the essential synthase responsible for bacterial elongation.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: RodA-PBP2 is an essential synthase responsible for bacterial elongation.
+  - subject: circumferential_glycan_insertion
+    predicate: gives rise to
+    object: bacillus_shaped_trait
+    description: Elongasome inserts long glycan strands as barrel-hoop reinforcement,
+      giving rise to a rod-shaped cell.
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49785-x
+      notes: Inserts long glycan strands acting as barrel-hoop-like reinforcing structures,
+        thereby giving rise to a rod-shaped cell.
+  - subject: moenomycin
+    predicate: inhibits
+    object: class_a_pbps
+    description: Moenomycin inhibits class A penicillin-binding proteins, a family
+      of PG synthases.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-41082-3
+      notes: Moenomycin inhibits a family of PG synthases known as Class-A penicillin-binding
+        proteins.
+  - subject: rodZ
+    predicate: causally upstream of, negative effect
+    object: spherical_morphology
+    description: Loss of RodZ causes cells to become spherical, indicating RodZ maintains
+      rod shape.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1400434
+      notes: ' delta-rodZ cells were spherical (WT cells are rod-shaped); RodZ broadly
+        implicated in rod maintenance.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.885522+00:00'
   curator: seed_from_metpo
@@ -159,4 +238,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 5 evidence-backed generic edges (8 new nodes) from the deep-research
+    report.
   llm_assisted: true

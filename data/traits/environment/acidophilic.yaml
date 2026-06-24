@@ -53,6 +53,40 @@ causal_graphs:
     label: reversed membrane potential
     node_type: BIOLOGICAL_PROCESS
     description: Positive-inside membrane potential reducing proton influx.
+  - node_id: primary_proton_pumps
+    label: primary proton pumps
+    node_type: GENE_OR_PROTEIN
+    description: Proton-pumping respiratory chain complexes that actively translocate
+      protons.
+  - node_id: proton_coupled_atpases
+    label: proton-coupled ATPases
+    node_type: GENE_OR_PROTEIN
+    description: ATP-driven primary pumps that actively transport protons across the
+      membrane.
+  - node_id: cation_pumping
+    label: pumping K+ and Na+ into cytoplasm
+    node_type: BIOLOGICAL_PROCESS
+    description: Active uptake of K+ and Na+ that reduces proton influx by electrostatic
+      repulsion.
+  - node_id: hopanoid_and_membrane_proteins
+    label: hopanoid lipids and membrane proteins (Omp40, PspA)
+    node_type: CELLULAR_LOCALIZATION
+    description: Structural membrane adaptations (hopanoid lipids, Omp40, PspA) used
+      for proton exclusion.
+  - node_id: proton_exclusion
+    label: proton exclusion
+    node_type: BIOLOGICAL_PROCESS
+    description: Exclusion of protons from the cytoplasm via membrane adaptations.
+  - node_id: bipolar_tetraether_lipids
+    label: bipolar tetraether lipids (GDNT/GDGT)
+    node_type: CHEMICAL
+    description: Archaeal monolayer-forming tetraether membrane lipids reducing passive
+      proton permeability.
+  - node_id: low_passive_proton_permeability
+    label: low passive proton permeability
+    node_type: QUALITY
+    description: A low passive proton permeability allowing maintenance of near-neutral
+      intracellular pH.
   edges:
   - subject: acidic_external_ph
     predicate: selects for
@@ -99,6 +133,58 @@ causal_graphs:
       snippet: maintain a cytoplasmic pH of approximately 6.0
       notes: Supports cytoplasmic pH homeostasis during growth at low external pH.
     predicate_id: RO:0002327
+  - subject: primary_proton_pumps
+    predicate: catalyzes active transport of
+    object: proton
+    description: Primary proton pumps such as respiratory-chain complexes actively
+      export protons, contributing to pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: primary proton pumps such as the proton-pumping respiratory chain complexes
+  - subject: proton_coupled_atpases
+    predicate: catalyzes active transport of
+    object: proton
+    description: Proton-coupled ATPases actively transport protons across the membrane.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: Such transporters include primary proton pumps such as proton-coupled
+        ATPases
+  - subject: acidic_external_ph
+    predicate: selects for
+    object: cytoplasmic_ph_homeostasis
+    description: Low external pH / acid challenge imposes the demands of cytoplasmic
+      pH homeostasis, a unifying principle of bacterial pH homeostasis.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      notes: A major unifying principle of bacterial pH homeostasis... the demands
+        of pH homeostasis
+  - subject: cation_pumping
+    predicate: reduces influx of
+    object: proton
+    description: Pumping K+ and Na+ into the cytoplasm reduces proton influx by electrostatic
+      repulsion.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: can pump cations such as K+ and Na+ into the cytoplasm to reduce the
+        influx of protons by electrostatic repulsion
+  - subject: hopanoid_and_membrane_proteins
+    predicate: enables
+    object: proton_exclusion
+    description: Hopanoid lipids and membrane proteins (Omp40, PspA) are structural
+      adaptations used for proton exclusion.
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70019
+      notes: hopanoid lipids... or membrane proteins such as Omp40 and PspA, are structural
+        adaptations used for proton exclusion
+  - subject: bipolar_tetraether_lipids
+    predicate: maintains
+    object: low_passive_proton_permeability
+    description: Bipolar tetraether lipids maintain a low passive proton permeability,
+      enabling a near-neutral intracellular pH.
+    evidence:
+    - reference: DOI:10.3389/frbis.2023.1338019
+      notes: As such, a low passive proton permeability and a near neutral intracellular
+        pH can be maintained
 curation_history:
 - timestamp: '2026-05-05T01:35:46.938355+00:00'
   curator: seed_from_metpo
@@ -152,4 +238,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

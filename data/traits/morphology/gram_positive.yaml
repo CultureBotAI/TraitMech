@@ -56,6 +56,39 @@ causal_graphs:
     label: alcohol decolorization
     node_type: EXPERIMENTAL_FACTOR
     description: Gram stain step that removes dye complex from Gram-negative cells.
+  - node_id: iodine_mordant
+    label: iodine mordant
+    node_type: CHEMICAL
+    description: Iodine added during Gram staining that acts as a mordant binding
+      crystal violet.
+  - node_id: cv_iodine_complex_formation
+    label: crystal violet-iodine complex formation
+    node_type: BIOLOGICAL_PROCESS
+    description: Formation of large crystal violet-iodine complexes within the cell
+      during Gram staining.
+  - node_id: peptidoglycan_mesh_low_porosity
+    label: peptidoglycan mesh low porosity
+    node_type: QUALITY
+    description: Low physical porosity of the thick peptidoglycan mesh that traps
+      the dye complex.
+  - node_id: d_alanine_esters
+    label: D-alanine esters on teichoic acids
+    node_type: CHEMICAL
+    description: D-alanine ester modifications on teichoic acids that neutralize phosphate
+      negative charge.
+  - node_id: teichoic_acid_negative_charge
+    label: teichoic-acid negative charge
+    node_type: QUALITY
+    description: Anionic phosphate-rich negative charge contributed by teichoic acids.
+  - node_id: d_alanylation_teichoic_acids
+    label: D-alanylation of teichoic acids
+    node_type: BIOLOGICAL_PROCESS
+    description: Modification of wall and lipoteichoic acids with D-alanine esters.
+  - node_id: positively_charged_cell_surface
+    label: positively charged cell surface
+    node_type: QUALITY
+    description: More positively charged Gram-positive cell surface resulting from
+      D-alanylation.
   edges:
   - subject: thick_peptidoglycan_cell_wall
     predicate: retains
@@ -107,6 +140,58 @@ causal_graphs:
       snippet: crystal violet-iodine complex
       notes: Supports the dye complex as the chemical basis of staining.
     predicate_id: METPO:2000202
+  - subject: iodine_mordant
+    predicate: causes
+    object: cv_iodine_complex_formation
+    description: Iodine acts as a mordant, interacting with crystal violet to form
+      large complexes.
+    evidence:
+    - reference: DOI:10.52403/ijrr.20230934
+      notes: When iodine is added, it interacts with CV+ to form large complexes.
+  - subject: cv_iodine_complex_formation
+    predicate: produces
+    object: crystal_violet_iodine_complex
+    description: Formation of the crystal violet-iodine complex retained within the
+      peptidoglycan mesh.
+    evidence:
+    - reference: DOI:10.1038/s42003-026-10072-8
+      notes: The Gram stain relies on retention of crystal violet-iodine complexes
+        within the peptidoglycan mesh.
+  - subject: peptidoglycan_mesh_low_porosity
+    predicate: increases
+    object: crystal_violet_iodine_complex
+    description: Low-porosity thick peptidoglycan walls trap and retain the dye complex.
+    evidence:
+    - reference: DOI:10.1038/s42003-026-10072-8
+      notes: Crystal violet-iodine retention depends on the physical porosity of the
+        peptidoglycan mesh; thick, low-porosity walls can trap the complex.
+  - subject: d_alanine_esters
+    predicate: neutralizes
+    object: teichoic_acid_negative_charge
+    description: D-alanine esters neutralize the phosphate-rich negative charge of
+      teichoic acids.
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01411-0
+      notes: These polymers are commonly modified with D-alanine esters that neutralize
+        phosphate-rich negative charge.
+  - subject: d_alanylation_teichoic_acids
+    predicate: increases
+    object: positively_charged_cell_surface
+    description: D-alanylation of both teichoic acid types leads to a more positively
+      charged cell surface.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuaa064
+      notes: D-alanylation of both teichoic acid types leads to a more positively
+        charged cell surface.
+  - subject: wall_teichoic_acids
+    predicate: influences
+    object: positively_charged_cell_surface
+    description: Wall teichoic acids and their anionic/cationic balance affect cell-surface
+      charge.
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-092412-155620
+      notes: WTAs anionic/cationic balance affects cell-surface charge and antimicrobial
+        interactions.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.902486+00:00'
   curator: seed_from_metpo
@@ -142,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:28640×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

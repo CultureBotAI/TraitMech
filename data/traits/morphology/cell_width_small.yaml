@@ -41,6 +41,32 @@ causal_graphs:
     label: Rod-complex peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
     description: MreB-organized lateral peptidoglycan assembly.
+  - node_id: mrec_protein
+    label: MreC
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic Rod-complex protein that favors the open, active PBP2
+      state.
+  - node_id: roda_pbp2_open
+    label: RodA-PBP2 open conformation
+    node_type: STATE
+    description: Activated open conformation of the SEDS-bPBP RodA-PBP2 synthase complex.
+  - node_id: pg_polymerization_crosslinking
+    label: peptidoglycan polymerization and crosslinking
+    node_type: BIOLOGICAL_PROCESS
+    description: Glycan strand polymerization and peptide crosslinking output of the
+      Rod complex.
+  - node_id: rod_diameter_control
+    label: rod width/diameter control
+    node_type: CAPACITY
+    description: Maintenance of a stable steady-state rod diameter (width set-point).
+  - node_id: pg_hydrolase_activity
+    label: peptidoglycan hydrolase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Cell-wall hydrolase/autolysin activity that cleaves peptidoglycan.
+  - node_id: magnesium_ion
+    label: Mg2+
+    node_type: CHEMICAL
+    description: Magnesium ion, an environmental modifier of cell-wall hydrolase activity.
   edges:
   - subject: mreb_cytoskeleton
     predicate: enables
@@ -69,6 +95,57 @@ causal_graphs:
       snippet: MreB-directed peptidoglycan synthesis
       notes: Supports small width as a value within the regulated cell-width distribution.
     predicate_id: rdfs:subClassOf
+  - subject: mrec_protein
+    predicate: activates
+    object: roda_pbp2_open
+    description: MreC favors the open, active conformation of the RodA-PBP2 synthase.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: MreC favors the open, active PBP2 state; PBP2 suppressor alleles bypass
+        defective MreC and increase polymerization activity (conserved Rod complex).
+  - subject: roda_pbp2_open
+    predicate: increases
+    object: pg_polymerization_crosslinking
+    description: The open RodA-PBP2 state couples activation of polymerization and
+      crosslinking.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Structural opening couples activation of polymerization and crosslinking;
+        open-state mutants show stronger polymerization (conserved SEDS-bPBP systems).
+  - subject: pg_polymerization_crosslinking
+    predicate: contributes to
+    object: rod_complex_pg
+    description: PG polymerization and crosslinking constitute the Rod-complex synthetic
+      output.
+    evidence:
+    - reference: DOI:10.1038/s41467-023-39037-9
+      notes: Open-state activation links RodA-PBP2 conformation to peptidoglycan synthetic
+        output of the Rod complex.
+  - subject: mreb_cytoskeleton
+    predicate: required for
+    object: rod_diameter_control
+    description: MreB is a key determinant of rod shape and steady-state diameter/width
+      control.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: MreB is a key determinant of rod shape and diameter; perturbing MreB
+        changes steady-state diameter and width control (broad, foundational).
+  - subject: rod_diameter_control
+    predicate: produces
+    object: cell_width_small_trait
+    description: Stable diameter control maintains the narrow rod radius set-point.
+    evidence:
+    - reference: DOI:10.1016/j.cell.2018.02.050
+      notes: Width/diameter control governs the steady-state rod radius producing
+        the narrow width phenotype.
+  - subject: magnesium_ion
+    predicate: inhibits
+    object: pg_hydrolase_activity
+    description: Exogenous Mg2+ inhibits autolysins/cell-wall hydrolases.
+    evidence:
+    - reference: DOI:10.1038/s41598-021-04294-5
+      notes: Exogenous Mg2+ inhibits autolysins/CW hydrolases and compensates increased
+        DL-endopeptidase activity (clearest environmental modifier edge).
 curation_history:
 - timestamp: '2026-05-05T01:35:46.921682+00:00'
   curator: seed_from_metpo
@@ -98,4 +175,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

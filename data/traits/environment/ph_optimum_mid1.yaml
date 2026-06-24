@@ -49,6 +49,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Modest demand on proton extrusion and cytoplasmic buffering near
       a near-neutral cytoplasmic pH.
+  - node_id: f0f1_atpase
+    label: F0F1-ATPase
+    node_type: GENE_OR_PROTEIN
+    description: F-type ATP synthase/ATPase functioning as a proton pump.
+  - node_id: proton
+    label: proton (H+)
+    node_type: CHEMICAL
+    description: Hydrogen ion (H+), the determinant of pH.
+  - node_id: amino_acid_decarboxylation
+    label: amino-acid decarboxylation pathways
+    node_type: PATHWAY
+    description: Glutamate/lysine/arginine decarboxylase pathways that consume cytoplasmic
+      protons.
+  - node_id: gad_gaba_pathway
+    label: glutamate decarboxylation / GABA pathway
+    node_type: PATHWAY
+    description: Glutamate decarboxylase / GABA shunt pathway consuming intracellular
+      H+.
+  - node_id: ammonia
+    label: ammonia (NH3)
+    node_type: CHEMICAL
+    description: Ammonia, a base that scavenges protons.
+  - node_id: ammonium
+    label: ammonium (NH4+)
+    node_type: CHEMICAL
+    description: Ammonium ion formed when ammonia binds a proton.
   edges:
   - subject: near_neutral_external_ph
     predicate: imposes
@@ -78,6 +104,56 @@ causal_graphs:
       snippet: proton motive force
       notes: Supports a near-neutral optimum as a value within the pH-optimum distribution.
     predicate_id: rdfs:subClassOf
+  - subject: f0f1_atpase
+    predicate: exports
+    object: proton
+    description: The F0F1-ATPase actively exports protons to maintain cytoplasmic
+      pH.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1011927
+      notes: actively exporting protons via proton pumps such as the F0F1-ATPase;
+        classic pH-homeostasis mechanism.
+  - subject: amino_acid_decarboxylation
+    predicate: consumes
+    object: proton
+    description: Amino-acid decarboxylation pathways consume cytoplasmic protons,
+      supporting pH homeostasis.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1011927
+      notes: consume protons through amino-acid decarboxylation pathways (glutamate,
+        lysine, arginine); general acid-resistance edge.
+  - subject: gad_gaba_pathway
+    predicate: consumes
+    object: proton
+    description: The glutamate decarboxylation / GABA pathway consumes intracellular
+      H+.
+    evidence:
+    - reference: DOI:10.1128/aem.00569-24
+      notes: glutamate-based systems and the GABA metabolic pathway consume H+.
+  - subject: ammonia
+    predicate: binds
+    object: proton
+    description: Ammonia binds free protons, buffering against acidification.
+    evidence:
+    - reference: DOI:10.1128/aem.00569-24
+      notes: generated NH3 bind with intracellular free H+ to form NH4+; direct acid-buffering
+        chemistry, generalizable.
+  - subject: ammonia
+    predicate: forms
+    object: ammonium
+    description: Ammonia combines with a proton to form ammonium, sequestering acid.
+    evidence:
+    - reference: DOI:10.1128/aem.00569-24
+      notes: generated NH3 bind with intracellular free H+ to form NH4+.
+  - subject: f0f1_atpase
+    predicate: contributes to
+    object: minimal_ph_homeostasis_load
+    description: Proton export by the F0F1-ATPase keeps the cytoplasmic-pH gradient
+      small near neutral, contributing to minimal homeostasis load.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1011927
+      notes: Proton pumping via F0F1-ATPase maintains cytosolic pH; near-neutral external
+        pH minimizes the pumping demand.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.827192+00:00'
   curator: seed_from_metpo
@@ -107,4 +183,10 @@ curation_history:
   action: FIX_NODE_GROUNDING_CURIE
   changes: Overwrote 1 pH causal-node grounding(s) to corrected PATO CURIEs (phase-2;
     verified vs OAK).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true

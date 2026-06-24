@@ -44,6 +44,37 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Strong compatible-solute and ion-balance capacity sustaining growth
       at saline-lake / salt-marsh NaCl levels.
+  - node_id: ectABC_operon
+    label: ectABC operon
+    node_type: GENE_OR_PROTEIN
+    description: Gene cluster (ectA, ectB, ectC) encoding the ectoine biosynthesis
+      pathway.
+  - node_id: ectoine
+    label: ectoine
+    node_type: CHEMICAL
+    description: Compatible solute / osmoprotectant accumulated under salt stress.
+  - node_id: na_k_ion_uptake
+    label: Na+ and K+ ion uptake
+    node_type: BIOLOGICAL_PROCESS
+    description: Rapid uptake of sodium and potassium ions following NaCl upshift.
+  - node_id: osmotic_pressure_balance
+    label: osmotic pressure balance
+    node_type: BIOLOGICAL_PROCESS
+    description: Balancing of intracellular osmotic pressure after a NaCl upshift.
+  - node_id: glutamate_glutamine_pools
+    label: intracellular glutamate/glutamine pools
+    node_type: CHEMICAL
+    description: Elevated glutamate and glutamine amino-acid pools providing early
+      osmotic buffering.
+  - node_id: betAB_pathway
+    label: BetA/BetB pathway
+    node_type: GENE_OR_PROTEIN
+    description: Choline dehydrogenase (BetA) and betaine aldehyde dehydrogenase (BetB)
+      converting choline to glycine betaine.
+  - node_id: glycine_betaine
+    label: glycine betaine
+    node_type: CHEMICAL
+    description: Compatible solute synthesized from choline; osmoprotectant.
   edges:
   - subject: robust_osmoadaptive_tolerance
     predicate: produces
@@ -63,6 +94,65 @@ causal_graphs:
       snippet: salinity range
       notes: Supports the 3–8% range as a value within the NaCl-range distribution.
     predicate_id: rdfs:subClassOf
+  - subject: ectABC_operon
+    predicate: enables biosynthesis of
+    object: ectoine
+    description: The ectABC operon encodes the conserved ectoine biosynthesis pathway.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: ectoine biosynthesis relies on ectABC; repeatedly supported across taxa.
+  - subject: ectoine
+    predicate: positively contributes to
+    object: nacl_range_mid2_trait
+    description: Ectoine accumulation supports sustained growth/tolerance at 6-8%
+      NaCl.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: Within tolerable range (1-8% NaCl shock) ectoine rapidly becomes the
+        dominant osmoprotectant.
+  - subject: na_k_ion_uptake
+    predicate: rapidly balances
+    object: osmotic_pressure_balance
+    description: Uptake of Na+ and K+ ions rapidly balances osmotic pressure after
+      NaCl upshift.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: Cells urgently balanced surging osmotic pressure by uptaking sodium and
+        potassium ions.
+  - subject: osmotic_pressure_balance
+    predicate: contributes to
+    object: robust_osmoadaptive_tolerance
+    description: Balancing osmotic pressure underpins robust osmoadaptive tolerance.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: Rapid ion-flux osmotic balancing is part of the osmoadaptive response
+        sustaining growth.
+  - subject: glutamate_glutamine_pools
+    predicate: provides early osmotic buffering for
+    object: robust_osmoadaptive_tolerance
+    description: Increased glutamate/glutamine pools provide early osmotic buffering
+      during NaCl shock.
+    evidence:
+    - reference: DOI:10.1186/s12934-024-02358-5
+      notes: Augmenting intracellular amino acid pools, particularly glutamate and
+        glutamine, buffers early osmotic stress.
+  - subject: betAB_pathway
+    predicate: enables biosynthesis of
+    object: glycine_betaine
+    description: BetA and BetB convert choline to glycine betaine, a compatible solute.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Choline to glycine betaine via BetA and BetB; conserved across moderate
+        halophiles.
+  - subject: glycine_betaine
+    predicate: positively contributes to
+    object: robust_osmoadaptive_tolerance
+    description: Glycine betaine acts as a compatible solute supporting osmoadaptive
+      tolerance.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1192059
+      notes: Glycine betaine biosynthesis/uptake supports compatible-solute-based
+        osmoadaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.836940+00:00'
   curator: seed_from_metpo
@@ -80,4 +170,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 7 evidence-backed generic edges (7 new nodes) from the deep-research
+    report.
   llm_assisted: true

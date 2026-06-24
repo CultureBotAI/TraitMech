@@ -1,8 +1,8 @@
 identifier: traitmech:000110
 label: biopolymer degradation
-definition: A metabolism in which an organism secretes enzymes to depolymerize
-  recalcitrant biopolymers (such as cellulose, hemicellulose, chitin, and lignin)
-  into assimilable units for growth.
+definition: A metabolism in which an organism secretes enzymes to depolymerize recalcitrant
+  biopolymers (such as cellulose, hemicellulose, chitin, and lignin) into assimilable
+  units for growth.
 definition_source: DOI:10.1016/j.cbpa.2015.10.018
 trait_category: METABOLISM
 term_kind: CLASS
@@ -15,24 +15,24 @@ synonyms:
   source: DOI:10.1016/j.cbpa.2015.10.018
 evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
-  notes: Cragg et al. review lignocellulose degradation mechanisms across the tree of
-    life, using complementary enzymes to deconstruct plant biopolymers; parent of the
-    polymer-specific sub-variants.
+  notes: Cragg et al. review lignocellulose degradation mechanisms across the tree
+    of life, using complementary enzymes to deconstruct plant biopolymers; parent
+    of the polymer-specific sub-variants.
 - reference: DOI:10.1128/MMBR.66.3.506-577.2002
-  notes: Lynd et al. review microbial utilization of cellulose, the archetypal
-    biopolymer-degradation process.
+  notes: Lynd et al. review microbial utilization of cellulose, the archetypal biopolymer-degradation
+    process.
 causal_graphs:
 - graph_id: biopolymer_degradation_extracellular_hydrolysis
   title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly
-  description: Evidence-backed causal sketch linking secreted depolymerizing
-    enzymes to liberation of assimilable units from recalcitrant biopolymers.
+  description: Evidence-backed causal sketch linking secreted depolymerizing enzymes
+    to liberation of assimilable units from recalcitrant biopolymers.
   nodes:
   - node_id: biopolymer_degradation_trait
     label: biopolymer degradation
     node_type: TRAIT
     grounding: traitmech:000110
-    description: Secreted enzymatic depolymerization of biopolymers (cellulose,
-      chitin, lignin, etc.).
+    description: Secreted enzymatic depolymerization of biopolymers (cellulose, chitin,
+      lignin, etc.).
   - node_id: extracellular_enzymes
     label: secreted depolymerizing enzymes
     node_type: GENE_OR_PROTEIN
@@ -41,6 +41,51 @@ causal_graphs:
     label: assimilable mono- and oligosaccharides
     node_type: CHEMICAL
     description: Sugars, peptides, and oligomers released for uptake.
+  - node_id: endoglucanase
+    label: endoglucanase
+    node_type: GENE_OR_PROTEIN
+    description: Glycoside hydrolase cleaving internal beta-1,4 linkages in cellulose.
+  - node_id: cello_oligosaccharides
+    label: cello-oligosaccharides
+    node_type: CHEMICAL
+    description: Soluble cellulose-derived oligomers produced by endoglucanase action.
+  - node_id: beta_glucosidase
+    label: beta-glucosidase
+    node_type: GENE_OR_PROTEIN
+    description: Hydrolase converting cellobiose/oligosaccharides to glucose.
+  - node_id: glucose
+    label: glucose
+    node_type: CHEMICAL
+    description: Assimilable monosaccharide released by terminal saccharification.
+  - node_id: susc_transporter
+    label: SusC-like TonB-dependent transporter
+    node_type: GENE_OR_PROTEIN
+    description: Outer-membrane TonB-dependent transporter importing oligosaccharides
+      into the periplasm.
+  - node_id: oligosaccharides
+    label: oligosaccharides
+    node_type: CHEMICAL
+    description: Oligomeric breakdown products captured at the cell surface and imported.
+  - node_id: periplasmic_gh3
+    label: periplasmic GH3 hydrolase
+    node_type: GENE_OR_PROTEIN
+    description: Periplasmic glycosyl hydrolase converting imported oligomers to monosaccharides.
+  - node_id: endochitinase
+    label: endo-chitinase
+    node_type: GENE_OR_PROTEIN
+    description: Enzyme cleaving internally within the beta-1,4-GlcNAc chitin polymer.
+  - node_id: chitooligosaccharides
+    label: chitooligosaccharides
+    node_type: CHEMICAL
+    description: Chitin-derived oligomers produced by endo-chitinase action.
+  - node_id: lignin_oxidative_enzymes
+    label: lignin-oxidizing redox enzymes (LiP/MnP/VP/laccase/DyP)
+    node_type: GENE_OR_PROTEIN
+    description: Secreted oxidoreductases that oxidatively attack lignin.
+  - node_id: lignin
+    label: lignin
+    node_type: CHEMICAL
+    description: Recalcitrant aromatic plant biopolymer.
   edges:
   - subject: extracellular_enzymes
     predicate: enables
@@ -48,8 +93,8 @@ causal_graphs:
     description: Secreted enzymes drive extracellular biopolymer breakdown.
     evidence:
     - reference: DOI:10.1016/j.cbpa.2015.10.018
-      notes: Cragg et al. review the complementary enzymes used to deconstruct
-        plant biopolymers across the tree of life.
+      notes: Cragg et al. review the complementary enzymes used to deconstruct plant
+        biopolymers across the tree of life.
     predicate_id: RO:0002327
   - subject: biopolymer_degradation_trait
     predicate: produces
@@ -60,6 +105,59 @@ causal_graphs:
       notes: Lynd et al. review microbial cellulose utilization as the archetypal
         biopolymer-degradation process.
     predicate_id: METPO:2000202
+  - subject: endoglucanase
+    predicate: cleaves
+    object: cello_oligosaccharides
+    description: Endoglucanases hydrolyze internal beta-1,4 bonds in cellulose to
+      release cello-oligosaccharides.
+    evidence:
+    - reference: DOI:10.1101/2024.11.06.622210
+      notes: 'Hsin 2024: "Endoglucanases ... cleave internal beta-1,4 linkages" (strong,
+        general).'
+  - subject: beta_glucosidase
+    predicate: converts
+    object: glucose
+    description: Beta-glucosidases convert cellobiose/oligosaccharides to glucose
+      (terminal saccharification).
+    evidence:
+    - reference: DOI:10.1101/2024.11.06.622210
+      notes: 'Hsin 2024: "beta-glucosidases ... convert cellobiose/oligosaccharides
+        to glucose" (strong, general).'
+  - subject: susc_transporter
+    predicate: imports
+    object: oligosaccharides
+    description: SusC-like TonB-dependent transporter imports oligosaccharides across
+      the outer membrane into the periplasm.
+    evidence:
+    - reference: DOI:10.1128/mbio.02599-23
+      notes: 'Wong 2024: "SusC is a TonB-dependent transporter that imports maltooligosaccharides
+        into the periplasm" (strong).'
+  - subject: periplasmic_gh3
+    predicate: converts
+    object: glucose
+    description: Periplasmic GH3 hydrolases depolymerize imported oligomers to glucose
+      after uptake.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1393588
+      notes: 'Kalenborn 2024: "conversion of oligomeric laminarin to glucose in the
+        periplasm can be catalyzed by ... glycosyl hydrolases" (strong).'
+  - subject: endochitinase
+    predicate: depolymerizes
+    object: chitooligosaccharides
+    description: Endo-chitinases cleave internally within chitin to produce chitooligosaccharides.
+    evidence:
+    - reference: DOI:10.1128/spectrum.00886-24
+      notes: 'Meunier 2024: "endo-chitinases EC 3.2.1.14 cleaving internally to produce
+        multimers" (strong).'
+  - subject: lignin_oxidative_enzymes
+    predicate: depolymerizes
+    object: lignin
+    description: Secreted oxidative redox enzymes (LiP/MnP/VP/laccase/DyP) depolymerize
+      lignin.
+    evidence:
+    - reference: DOI:10.1101/2024.11.06.622210
+      notes: 'Hsin 2024: "white-rot species deploy multiple oxidative enzymes (DyPs,
+        LCMOs, LiP, MnP, LaC, VP)".'
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -70,6 +168,12 @@ curation_history:
 - timestamp: '2026-06-10T14:00:00Z'
   curator: claude
   action: CURATED_CAUSAL_GRAPH
-  changes: Added evidence-backed causal graph (biopolymer-degradation axis) with
-    RO/METPO predicate groundings; promoted PROPOSED to REVIEWED.
+  changes: Added evidence-backed causal graph (biopolymer-degradation axis) with RO/METPO
+    predicate groundings; promoted PROPOSED to REVIEWED.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (11 new nodes) from the deep-research
+    report.
   llm_assisted: true

@@ -50,6 +50,30 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:16134
     description: Product that raises local pH.
+  - node_id: hydroxide
+    label: hydroxide
+    node_type: CHEMICAL
+    description: Hydroxide ion produced by urea hydrolysis, raising local pH.
+  - node_id: carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    description: CO2 product of urea hydrolysis; feeds carbonate chemistry.
+  - node_id: ph_quality
+    label: pH
+    node_type: QUALITY
+    description: Local pH, increased by urease-driven alkalinization.
+  - node_id: carbonic_anhydrase_function
+    label: carbonic anhydrase activity
+    node_type: MOLECULAR_FUNCTION
+    description: Hydration of CO2 to bicarbonate.
+  - node_id: bicarbonate
+    label: bicarbonate
+    node_type: CHEMICAL
+    description: Bicarbonate produced from CO2 hydration by carbonic anhydrase.
+  - node_id: calcium_carbonate_precipitation
+    label: calcium carbonate precipitation
+    node_type: BIOLOGICAL_PROCESS
+    description: Precipitation of CaCO3 mineral, influenced by buffering chemistry.
   edges:
   - subject: urease
     predicate: enables
@@ -85,6 +109,51 @@ causal_graphs:
       notes: Urease activity (urea-to-ammonia hydrolysis raising local pH) is the
         assayable phenotype used to score urease-positive organisms.
     predicate_id: METPO:2007400
+  - subject: urease_function
+    predicate: produces
+    object: hydroxide
+    description: Urea hydrolysis produces hydroxide, mechanistically explaining alkalinization.
+    evidence:
+    - reference: DOI:10.24263/2304-974x-2024-13-2-10
+      notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
+  - subject: urease_function
+    predicate: produces
+    object: carbon_dioxide
+    description: Urea hydrolysis produces carbon dioxide.
+    evidence:
+    - reference: DOI:10.24263/2304-974x-2024-13-2-10
+      notes: (NH2)2CO + 2H2O + urease -> 2 NH4+ + 2 OH- + CO2 + urease.
+  - subject: urease_function
+    predicate: increases
+    object: ph_quality
+    description: Urea hydrolysis (NH4+/OH- production) increases local pH, the basis
+      of the urease test color change.
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c06617
+      notes: Urea hydrolysis produces NH4+ and OH-, causing a pH increase.
+  - subject: carbon_dioxide
+    predicate: is substrate of
+    object: carbonic_anhydrase_function
+    description: CO2 from urea hydrolysis is hydrated by carbonic anhydrase.
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c06617
+      notes: Hydration of CO2 to HCO3- by carbonic anhydrase.
+  - subject: carbonic_anhydrase_function
+    predicate: increases
+    object: bicarbonate
+    description: Carbonic anhydrase hydrates CO2, increasing bicarbonate.
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c06617
+      notes: Increase in [HCO3-] following the hydration of CO2 to HCO3- by CA.
+  - subject: carbonic_anhydrase_function
+    predicate: affects
+    object: calcium_carbonate_precipitation
+    description: CA-driven buffering enhances solubility trapping and affects the
+      CaCO3 phase formed.
+    evidence:
+    - reference: DOI:10.1021/acs.est.3c06617
+      notes: CA physiologically promotes buffering, which enhances solubility trapping
+        and affects the phase of the CaCO3 mineral formed.
 curation_history:
 - timestamp: '2026-06-04T00:00:00Z'
   curator: claude
@@ -108,7 +177,13 @@ curation_history:
 - timestamp: '2026-06-16T00:00:00Z'
   curator: claude
   action: FIX_ORPHAN_NODE
-  changes: Connected the previously-orphaned urease_activity_trait node via a
-    'manifests as' (METPO:2007400) edge from urease_function, so the molecular
-    function links to the observable trait.
+  changes: Connected the previously-orphaned urease_activity_trait node via a 'manifests
+    as' (METPO:2007400) edge from urease_function, so the molecular function links
+    to the observable trait.
+  llm_assisted: true
+- timestamp: '2026-06-23T00:00:00Z'
+  curator: claude
+  action: ENRICH_CAUSAL_GRAPH
+  changes: Added 6 evidence-backed generic edges (6 new nodes) from the deep-research
+    report.
   llm_assisted: true
