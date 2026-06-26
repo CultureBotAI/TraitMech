@@ -18,6 +18,11 @@ evidence:
   snippet: coordinated action of multiple proteins relaxes peptidoglycan crosslinking
   notes: Supports a mechanistic basis for helical bacterial cell curvature and twist
     in Helicobacter pylori.
+canonical_examples:
+- taxon_id: NCBITaxon:210
+  taxon_label: Helicobacter pylori
+  note: "Textbook helical bacterium; helical shape aids gastric mucus colonisation."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6597387/
 causal_graphs:
 - graph_id: helical_shaped_pg_relaxation
   title: Helical-shape peptidoglycan relaxation mechanism

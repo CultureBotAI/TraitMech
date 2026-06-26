@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review places the reductive acetyl-CoA (Wood-Ljungdahl) pathway among
     the recognized autotrophic carbon-fixation pathways.
+canonical_examples:
+- taxon_id: NCBITaxon:1525
+  taxon_label: Neomoorella thermoacetica
+  note: "Model acetogen used to elucidate the reductive acetyl-CoA / Wood-Ljungdahl pathway (formerly Moorella/Clostridium thermoaceticum)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2575129/
 causal_graphs:
 - graph_id: wood_ljungdahl_reductive_acetyl_coa
   title: Wood-Ljungdahl pathway reduces 2 CO2 to acetyl-CoA

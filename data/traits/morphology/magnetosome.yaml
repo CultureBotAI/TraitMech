@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro842
   notes: Bazylinski & Frankel, "Magnetosome formation in prokaryotes", describe magnetosomes
     and the magnetotactic lifestyle they enable.
+canonical_examples:
+- taxon_id: NCBITaxon:431944
+  taxon_label: Magnetospirillum gryphiswaldense MSR-1
+  note: "Primary model for magnetosome biosynthesis (mamAB operon; MamK/MamJ-organised magnetite chains for magnetotaxis). AMB-1 (NCBITaxon:342108) is a co-equal model."
+  reference: DOI:10.1038/s41579-025-01234-2
 causal_graphs:
 - graph_id: magnetosome_magnetotaxis
   title: Magnetosome chains enable magnetotactic navigation

@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1007/s11157-025-09719-5
   notes: Review of DNRA vs denitrification supports DNRA's competitive advantage and
     nitrogen-retaining role under nitrate-limited conditions.
+canonical_examples:
+- taxon_id: NCBITaxon:844
+  taxon_label: Wolinella succinogenes
+  note: "Model organism for respiratory dissimilatory nitrate/nitrite reduction to ammonium (DNRA)."
+  reference: PMID:14500908
 causal_graphs:
 - graph_id: dnra_nitrate_to_ammonium
   title: DNRA reduces nitrate to ammonium, conserving fixed nitrogen

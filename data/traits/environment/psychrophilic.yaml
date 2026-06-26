@@ -15,6 +15,11 @@ evidence:
 - reference: PMID:28919459
   snippet: psychrophilic Arctic bacterium Psychrobacter sp. DAB_AL43B
   notes: 'Organism example: Psychrobacter sp. DAB_AL43B is described as psychrophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:167879
+  taxon_label: Colwellia psychrerythraea 34H
+  note: "Model marine psychrophile; active growth at and below 0 C."
+  reference: PMID:16043709
 causal_graphs:
 - graph_id: psychrophilic_cold_adaptation
   title: Psychrophilic cold-adaptation mechanism

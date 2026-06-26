@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1093/femsre/fuw029
   notes: Herrero, Stavans & Flores describe heterocysts within the multicellular filament
     of heterocyst-forming cyanobacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:103690
+  taxon_label: Nostoc sp. PCC 7120
+  note: "Model heterocyst-forming cyanobacterium (also classified as Anabaena sp. PCC 7120); heterocysts are the N2-fixing cells. Trichormus (Anabaena) variabilis ATCC 29413 is an alternative model."
+  reference: PMID:11759840
 causal_graphs:
 - graph_id: heterocyst_microoxic_nitrogen_fixation
   title: Heterocyst differentiation creates a microoxic interior for N2 fixation

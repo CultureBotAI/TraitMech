@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.165
   notes: Miller & Bassler review quorum sensing across bacteria and its regulatory
     logic.
+canonical_examples:
+- taxon_id: NCBITaxon:668
+  taxon_label: Aliivibrio fischeri
+  note: "Where quorum sensing was discovered (LuxI/LuxR autoinduction of bioluminescence); the founding QS model. Vibrio harveyi is a parallel model."
+  reference: DOI:10.1128/jb.00035-24
 causal_graphs:
 - graph_id: quorum_sensing_autoinducer
   title: Autoinducer-mediated quorum sensing

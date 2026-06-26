@@ -24,6 +24,11 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert, "Beyond the Calvin cycle", supports multiple autotrophic
     carbon-fixation pathways operating among ocean microorganisms.
+canonical_examples:
+- taxon_id: NCBITaxon:106590
+  taxon_label: Cupriavidus necator
+  note: "Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on H2+CO2 (strain H16)."
+  reference: PMID:16964242
 causal_graphs:
 - graph_id: carbon_fixation_co2_assimilation
   title: Autotrophic carbon fixation assimilates CO2 into organic carbon

@@ -17,6 +17,11 @@ evidence:
 - reference: PMID:9758852
   snippet: moderately halophilic bacterium Halomonas elongata
   notes: 'Organism example: Halomonas elongata is described as moderately halophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:2746
+  taxon_label: Halomonas elongata
+  note: "Well-established moderately halophilic gammaproteobacterium (ectoine model; type strain DSM 2581)."
+  reference: PMID:20849449
 causal_graphs:
 - graph_id: moderate_halophile_compatible_solutes
   title: Moderate halophile compatible-solute mechanism

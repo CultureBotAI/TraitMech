@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review situates the 3HP/4HB cycle among the six recognized autotrophic
     carbon-fixation pathways.
+canonical_examples:
+- taxon_id: NCBITaxon:43687
+  taxon_label: Metallosphaera sedula
+  note: "Thermoacidophilic crenarchaeon where the 3-hydroxypropionate/4-hydroxybutyrate CO2-fixation cycle was characterized."
+  reference: PMID:18079405
 causal_graphs:
 - graph_id: three_hp_four_hb_sulfolobales
   title: 3HP/4HB cycle fixes bicarbonate in aerobic Crenarchaeota

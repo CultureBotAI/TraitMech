@@ -21,6 +21,11 @@ evidence:
 - reference: PMID:32660383
   snippet: Endospore formation in Bacillus subtilis
   notes: 'Organism example: Bacillus subtilis is described as endospore-forming.'
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "Model endospore former and the paradigm for sporulation (strain 168)."
+  reference: PMID:22091839
 causal_graphs:
 - graph_id: spore_forming_endospore_assembly
   title: Spore-forming endospore assembly mechanism

@@ -29,6 +29,11 @@ evidence:
     and complexes
   notes: 'Organism example: Cupriavidus metallidurans is the model metallophilic bacterium
     tolerating many toxic metals via dedicated resistance gene clusters.'
+canonical_examples:
+- taxon_id: NCBITaxon:119219
+  taxon_label: Cupriavidus metallidurans
+  note: "Paradigm heavy-metal-resistance bacterium (strain CH34; plasmid-borne metal-efflux determinants)."
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: metal_tolerance_efflux_detoxification
   title: Metal tolerance via active efflux of heavy-metal ions

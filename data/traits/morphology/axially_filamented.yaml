@@ -17,6 +17,11 @@ evidence:
 - reference: DOI:10.3390/biom10040550
   snippet: flagella are hidden within the periplasmic space
   notes: Supports axial/periplasmic flagella as the defining motility structure.
+canonical_examples:
+- taxon_id: NCBITaxon:173
+  taxon_label: Leptospira interrogans
+  note: "Spirochete with axial filaments (periplasmic endoflagella within the periplasm driving corkscrew motility)."
+  reference: PMID:32157997
 causal_graphs:
 - graph_id: axially_filamented_periplasmic_flagella
   title: Axial filament periplasmic flagella mechanism

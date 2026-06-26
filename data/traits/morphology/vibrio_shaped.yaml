@@ -21,6 +21,11 @@ evidence:
   snippet: V. cholerae has a characteristic curved rod morphology
   notes: Supports vibrio/comma morphology and a source-backed curvature mechanism
     in Vibrio cholerae.
+canonical_examples:
+- taxon_id: NCBITaxon:666
+  taxon_label: Vibrio cholerae
+  note: "Comma-shaped (curved-rod) vibrio; cholera agent and the canonical Vibrio."
+  reference: PMID:28086090
 causal_graphs:
 - graph_id: vibrio_shaped_crvA_curvature
   title: Vibrio-shape CrvA curvature mechanism

@@ -21,6 +21,11 @@ evidence:
   notes: Yeates et al. describe protein-based organelles in bacteria (carboxysomes
     and related microcompartments), including the carboxysome shell and its encapsulated
     enzymes.
+canonical_examples:
+- taxon_id: NCBITaxon:32046
+  taxon_label: Synechococcus elongatus
+  note: "Model for beta-carboxysomes (cyanobacterial CO2-fixing microcompartments; strain PCC 7942). Halothiobacillus neapolitanus is the alpha-carboxysome model."
+  reference: DOI:10.1128/mmbr.00061-12
 causal_graphs:
 - graph_id: carboxysome_co2_concentrating
   title: Carboxysome encapsulates RuBisCO to concentrate CO2 for carbon fixation

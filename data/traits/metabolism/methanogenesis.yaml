@@ -28,6 +28,11 @@ evidence:
 - reference: DOI:10.1021/acs.biochem.9b00164
   snippet: catalyzes the reversible reduction of methyl-coenzyme M
   notes: Supports methyl-coenzyme M reductase as the terminal methane-forming enzyme.
+canonical_examples:
+- taxon_id: NCBITaxon:2190
+  taxon_label: Methanocaldococcus jannaschii
+  note: "Archetypal hydrogenotrophic methanogen (4 H2 + CO2 -> CH4 + 2 H2O); first archaeal genome sequenced."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6616113/
 causal_graphs:
 - graph_id: methanogenesis_c1_reduction
   title: Methanogenesis C1 reduction mechanism

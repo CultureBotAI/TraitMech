@@ -18,6 +18,11 @@ evidence:
   snippet: Separation of daughter cells during bacterial cell division
   notes: Supports diplococcus-like paired morphology as linked to septal cross-wall
     splitting and daughter-cell separation.
+canonical_examples:
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: "Lancet-shaped diplococcus (paired cocci); the pneumococcus."
+  reference: PMID:34779760
 causal_graphs:
 - graph_id: diplococcus_shaped_septal_separation
   title: Diplococcus paired-cell separation mechanism

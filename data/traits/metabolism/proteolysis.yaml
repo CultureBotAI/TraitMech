@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1093/femsre/fuab046
   notes: Review of Bacillus proteases covers extracellular protease activities and
     their functions.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "Model secretor of extracellular proteases (subtilisin); paradigm for bacterial proteolysis."
+  reference: PMID:34410368
 causal_graphs:
 - graph_id: proteolysis_extracellular_protease
   title: Proteolysis hydrolyzes extracellular proteins to amino acids

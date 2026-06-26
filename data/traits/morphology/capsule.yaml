@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1146/annurev.biochem.75.103004.142545
   notes: Whitfield reviews biosynthesis and assembly of capsular polysaccharides in
     Escherichia coli.
+canonical_examples:
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  note: "Textbook polysaccharide-capsule producer; capsule is a defining virulence factor."
+  reference: PMID:27715471
 causal_graphs:
 - graph_id: capsule_polysaccharide_protection
   title: Capsule polysaccharide layer mediates adhesion and immune evasion

@@ -19,6 +19,11 @@ evidence:
     target alteration, drug inactivation, reduced uptake).
 - reference: DOI:10.1038/s41579-022-00820-y
   notes: Updated review revisits molecular mechanisms of antibiotic resistance.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "Iconic antibiotic-resistance organism (MRSA; methicillin/multidrug resistance)."
+  reference: PMID:11418146
 causal_graphs:
 - graph_id: antibiotic_resistance_mechanisms
   title: Mechanisms of antibiotic resistance

@@ -20,6 +20,11 @@ evidence:
   snippet: cell shape is genetically determined
   notes: Cell-shape review supports anisotropic envelope growth as the basis for non-round
     cell geometries.
+canonical_examples:
+- taxon_id: NCBITaxon:293091
+  taxon_label: Haloquadratum walsbyi
+  note: "Universally cited square/rectangular flat-celled archaeon (2-5 um wide x 0.1-0.2 um thick); dominant in hypersaline salterns."
+  reference: DOI:10.1371/journal.pone.0018653
 causal_graphs:
 - graph_id: square_shaped_planar_anisotropic_growth
   title: Square-shape planar anisotropic envelope growth

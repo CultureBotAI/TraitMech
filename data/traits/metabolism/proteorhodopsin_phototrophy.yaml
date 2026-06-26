@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1038/35081051
   notes: Béjà et al., "Proteorhodopsin phototrophy in the ocean", supports proteorhodopsin
     as a widespread, spectrally tuned light-energy capture system in marine bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:313590
+  taxon_label: Dokdonia sp. MED134
+  note: "Canonical proteorhodopsin phototroph: light stimulates growth under oligotrophic conditions (retinal-inhibition causally proven). Ca. Pelagibacter ubique uses PR for starvation maintenance."
+  reference: PMID:17215843
 causal_graphs:
 - graph_id: proteorhodopsin_light_driven_proton_pump
   title: Proteorhodopsin pumps protons under illumination, generating PMF

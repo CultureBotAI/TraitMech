@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1128/AEM.67.7.2873-2882.2001
   notes: Friedrich et al. describe a common mechanism for bacterial oxidation of reduced
     inorganic sulfur compounds (the Sox system).
+canonical_examples:
+- taxon_id: NCBITaxon:36861
+  taxon_label: Thiobacillus denitrificans
+  note: "Obligately chemolithoautotrophic sulfur-compound oxidizer with a sequenced genome anchoring sulfur-oxidation pathways. Beggiatoa is a historic morphological exemplar."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1367237/
 causal_graphs:
 - graph_id: sulfur_oxidation_sox
   title: Lithotrophic sulfur oxidation to sulfate

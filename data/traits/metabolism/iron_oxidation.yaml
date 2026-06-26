@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1099/mic.0.045344-0
   notes: Hedrich, Schlomann & Johnson review the iron-oxidizing proteobacteria and
     their energy metabolism.
+canonical_examples:
+- taxon_id: NCBITaxon:180
+  taxon_label: Leptospirillum ferrooxidans
+  note: "Acidophilic Fe(II) oxidiser (bioleaching/AMD). Gallionella ferruginea is the neutrophilic stalk-forming Fe oxidiser."
+  reference: PMID:22815442
 causal_graphs:
 - graph_id: iron_oxidation_ferrous_to_ferric
   title: Ferrous iron oxidation for energy

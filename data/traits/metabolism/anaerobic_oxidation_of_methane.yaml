@@ -24,6 +24,11 @@ evidence:
 - reference: DOI:10.3389/fmars.2025.1609892
   notes: Review of AOM in marine sediments supports sulfate- and metal-coupled anaerobic
     methane oxidation as a major methane sink.
+canonical_examples:
+- taxon_id: NCBITaxon:1392998
+  taxon_label: Candidatus Methanoperedens nitratireducens
+  note: "Canonical nitrate-dependent ANME archaeon performing anaerobic oxidation of methane (ANME-2d). Candidatus taxon (no validly published name)."
+  reference: https://pubmed.ncbi.nlm.nih.gov/36635574/
 causal_graphs:
 - graph_id: aom_anme_sulfate_consortium
   title: AOM couples methane oxidation to sulfate reduction in ANME-SRB consortia

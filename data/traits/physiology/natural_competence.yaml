@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1038/s41579-021-00650-4
   notes: Review of horizontal gene transfer supports natural transformation as a major
     route of bacterial DNA acquisition.
+canonical_examples:
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: "Where natural genetic transformation was discovered (Griffith 1928; Avery 1944). Bacillus subtilis is the competence-regulation (ComK) model."
+  reference: PMID:25445643
 causal_graphs:
 - graph_id: natural_competence_dna_uptake
   title: Competence-driven DNA uptake and transformation

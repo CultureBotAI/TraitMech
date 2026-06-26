@@ -24,6 +24,11 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     metals as terminal electron acceptors in anaerobic respiration.
+canonical_examples:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  note: "Model dissimilatory metal reducer; respires Fe(III)/Mn(IV) via extracellular electron transfer and conductive pili (type strain PCA)."
+  reference: PMID:14671304
 causal_graphs:
 - graph_id: metal_reduction_anaerobic_respiration
   title: Dissimilatory metal reduction couples organic oxidation to metal respiration

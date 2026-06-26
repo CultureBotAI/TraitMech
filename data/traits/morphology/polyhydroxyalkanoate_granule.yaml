@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include storage granules such as PHA bodies among bacterial
     intracellular organelles.
+canonical_examples:
+- taxon_id: NCBITaxon:106590
+  taxon_label: Cupriavidus necator
+  note: "Model PHA/PHB accumulator (strain H16; formerly Ralstonia eutropha / Alcaligenes eutrophus)."
+  reference: PMID:16964242
 causal_graphs:
 - graph_id: pha_granule_carbon_energy_storage
   title: PHA granules store carbon and energy as polyhydroxyalkanoate

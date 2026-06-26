@@ -16,6 +16,11 @@ evidence:
   snippet: oxidize sulfide in deeper sediments
   notes: Study supports electrogenic sulfur oxidation with sulfide oxidation and oxygen
     reduction zones.
+canonical_examples:
+- taxon_id: NCBITaxon:1859128
+  taxon_label: Candidatus Electrothrix
+  note: "Marine cable bacteria conducting electrons over centimetre distances along filaments (long-distance electron transport)."
+  reference: PMID:27324572
 causal_graphs:
 - graph_id: cable_bacteria_long_distance_electron_transport
   title: Cable bacteria long-distance electron transport

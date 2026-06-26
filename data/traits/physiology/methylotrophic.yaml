@@ -23,6 +23,11 @@ evidence:
   snippet: methanol utilization in methylotrophy
   notes: Review supports methanol oxidation and formaldehyde assimilation as central
     methylotrophy mechanisms.
+canonical_examples:
+- taxon_id: NCBITaxon:408
+  taxon_label: Methylorubrum extorquens
+  note: "Model facultative methylotroph (formerly Methylobacterium extorquens; strain AM1)."
+  reference: PMID:12730156
 causal_graphs:
 - graph_id: methylotrophic_methanol_assimilation
   title: Methanol-based methylotrophy mechanism

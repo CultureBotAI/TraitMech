@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1073/pnas.1218525110
   notes: McFall-Ngai et al. support the gut as a major site of host-associated microbial
     communities across animals.
+canonical_examples:
+- taxon_id: NCBITaxon:818
+  taxon_label: Bacteroides thetaiotaomicron
+  note: "Canonical human-gut-symbiont model (polysaccharide utilisation loci)."
+  reference: PMID:12663928
 causal_graphs:
 - graph_id: gut_associated_microbiota_metabolism
   title: Gut-associated lifestyle in the gastrointestinal microbiota

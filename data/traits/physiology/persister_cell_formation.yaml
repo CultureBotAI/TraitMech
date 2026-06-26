@@ -18,6 +18,11 @@ evidence:
   notes: Lewis reviews persister cells as dormant variants highly tolerant to antibiotics.
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links persister-cell dormancy to the recalcitrance of chronic infections.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "Paradigm for antibiotic-tolerant persister-cell formation (dormant subpopulation; hipA/toxin-antitoxin studies)."
+  reference: PMID:6348026
 causal_graphs:
 - graph_id: persister_dormancy_tolerance
   title: Persister dormancy and antibiotic tolerance

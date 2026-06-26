@@ -22,6 +22,11 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: 'Organism example: Colwellia marinimaniae MTCD1 grows only at high pressure
     (80-140 MPa) and does not grow near atmospheric pressure.'
+canonical_examples:
+- taxon_id: NCBITaxon:1513592
+  taxon_label: Colwellia marinimaniae
+  note: "Most piezophilic organism described; optimum ~120 MPa (Mariana Trench). Photobacterium profundum SS9 is the classic genetic model."
+  reference: https://pubmed.ncbi.nlm.nih.gov/27902293/
 causal_graphs:
 - graph_id: obligate_piezophily_high_pressure_requirement
   title: 'Obligate piezophily: growth requires elevated hydrostatic pressure'

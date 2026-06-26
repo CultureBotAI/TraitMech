@@ -18,6 +18,11 @@ evidence:
     flotation structures in bacteria and archaea.
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include gas vesicles among bacterial intracellular organelles.
+canonical_examples:
+- taxon_id: NCBITaxon:1126
+  taxon_label: Microcystis aeruginosa
+  note: "Gas-vacuolate bloom-forming cyanobacterium; Anabaena/Dolichospermum flos-aquae is the classic Walsby gas-vesicle research model."
+  reference: PMID:15060038
 causal_graphs:
 - graph_id: gas_vesicle_buoyancy
   title: Gas vesicles provide buoyancy and water-column positioning

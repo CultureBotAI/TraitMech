@@ -22,6 +22,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer supports decomposer/saprotrophic activity as a key function of soil
     microbial communities.
+canonical_examples:
+- taxon_id: NCBITaxon:1902
+  taxon_label: Streptomyces coelicolor
+  note: "Model saprotrophic soil decomposer; secretes hydrolases degrading dead organic matter."
+  reference: PMID:12000953
 causal_graphs:
 - graph_id: saprotrophy_decomposition_cycling
   title: Saprotrophy decomposes dead organic matter and drives nutrient cycling

@@ -27,6 +27,11 @@ evidence:
     and oxidizing agents
   notes: 'Organism example: Deinococcus radiodurans is desiccation-tolerant, sharing
     DNA-repair machinery with its radiation tolerance.'
+canonical_examples:
+- taxon_id: NCBITaxon:54298
+  taxon_label: Chroococcidiopsis
+  note: "Extremely desiccation- and radiation-tolerant cyanobacterium from deserts and endolithic habitats."
+  reference: PMID:34122375
 causal_graphs:
 - graph_id: desiccation_anhydrobiosis_repair
   title: Desiccation tolerance via anhydrobiosis and DNA-damage repair

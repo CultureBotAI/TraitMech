@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1038/s41579-020-0413-0
   notes: Greening & Lithgow include polyphosphate bodies among bacterial intracellular
     inclusions.
+canonical_examples:
+- taxon_id: NCBITaxon:29405
+  taxon_label: Microlunatus phosphovorus
+  note: "Model polyphosphate-accumulating organism (volutin granules; enhanced biological phosphorus removal)."
+  reference: PMID:22923697
 causal_graphs:
 - graph_id: polyphosphate_granule_storage
   title: Polyphosphate granules store phosphate and energy as inorganic polyP

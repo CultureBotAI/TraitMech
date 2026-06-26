@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1111/1462-2920.13171
   notes: Pérez et al. survey predatory bacteria, their hunting strategies, prey ranges,
     and genome characteristics.
+canonical_examples:
+- taxon_id: NCBITaxon:959
+  taxon_label: Bdellovibrio bacteriovorus
+  note: "Model predatory bacterium; invades the periplasm of Gram-negative prey (strain HD100)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1913455/
 causal_graphs:
 - graph_id: predatory_bacterium_prey_killing
   title: Predatory bacteria kill and consume other bacteria

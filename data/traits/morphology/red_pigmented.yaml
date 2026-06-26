@@ -17,6 +17,11 @@ evidence:
   snippet: red-pigmented prodiginines
   notes: Supports red microbial pigmentation as a prodiginine-associated color phenotype
     in representative bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  note: "Classic red-pigmented bacterium (prodigiosin); historical model for bacterial pigmentation."
+  reference: PMID:18805986
 causal_graphs:
 - graph_id: red_pigmented_prodiginine_pathway
   title: Red pigmentation prodiginine mechanism

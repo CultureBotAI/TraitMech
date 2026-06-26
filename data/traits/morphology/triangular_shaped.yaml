@@ -21,6 +21,11 @@ evidence:
   snippet: archaeal cell shape
   notes: Archaeal cell-shape review supports unusual flat polygonal cells in halophilic
     archaea.
+canonical_examples:
+- taxon_id: NCBITaxon:29282
+  taxon_label: Haloarcula japonica
+  note: "Flat triangular/disc-shaped halophilic archaeon; textbook example of non-rod/coccus cell geometry."
+  reference: DOI:10.1016/S0723-2020(11)80165-7
 causal_graphs:
 - graph_id: triangular_shaped_planar_polygonal_growth
   title: Triangular-shape planar polygonal envelope growth

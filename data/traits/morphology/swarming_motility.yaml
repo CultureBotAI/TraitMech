@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.57.030502.091014
   notes: Harshey, "Bacterial motility on a surface", places swarming among the surface-motility
     modes of bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:584
+  taxon_label: Proteus mirabilis
+  note: "Historical/diagnostic swarming model (bulls-eye colonies; hyper-flagellated swarmer cells)."
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10671106/
 causal_graphs:
 - graph_id: swarming_hyperflagellation_surfactant
   title: Swarming motility via hyperflagellation and surfactant secretion

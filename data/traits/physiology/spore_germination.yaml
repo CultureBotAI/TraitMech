@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro2504
   notes: Lennon & Jones frame germination as resuscitation from the dormant seed-bank
     state.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "Model for endospore germination (germinant receptors, cortex hydrolysis; strain 168)."
+  reference: PMID:39772627
 causal_graphs:
 - graph_id: spore_germination_germinant_trigger
   title: Germinant-triggered spore germination

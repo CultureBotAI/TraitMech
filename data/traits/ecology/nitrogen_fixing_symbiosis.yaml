@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro2990
   notes: Oldroyd, "Speak, friend, and enter", supports the symbiotic signalling that
     establishes beneficial nitrogen-fixing plant-microbe associations.
+canonical_examples:
+- taxon_id: NCBITaxon:382
+  taxon_label: Sinorhizobium meliloti
+  note: "Model rhizobium-legume symbiont (alfalfa / Medicago); strain 1021 (NCBITaxon:266834) is the most-studied reference."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3164228/
 causal_graphs:
 - graph_id: rhizobia_legume_n2_fixation
   title: Rhizobia–legume root-nodule N2-fixing mutualism

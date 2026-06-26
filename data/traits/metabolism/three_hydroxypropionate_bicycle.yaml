@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert include the 3-hydroxypropionate pathway among autotrophic
     carbon-fixation strategies.
+canonical_examples:
+- taxon_id: NCBITaxon:1108
+  taxon_label: Chloroflexus aurantiacus
+  note: "Where the 3-hydroxypropionate bicycle of autotrophic CO2 fixation was discovered (filamentous anoxygenic phototroph)."
+  reference: PMID:19955419
 causal_graphs:
 - graph_id: three_hp_bicycle_chloroflexus
   title: 3-hydroxypropionate bicycle fixes bicarbonate in Chloroflexus

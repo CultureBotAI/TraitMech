@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/s41579-021-00550-7
   notes: Drew et al. support facultative shifts toward parasitism/pathogenicity along
     the parasite-mutualist continuum, the basis of opportunistic disease.
+canonical_examples:
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  note: "Archetypal opportunistic nosocomial pathogen (multidrug-resistant; infects immunocompromised hosts)."
+  reference: PMID:22546906
 causal_graphs:
 - graph_id: opportunistic_pathogen_context_dependent_virulence
   title: Opportunistic pathogenesis under compromised host defense

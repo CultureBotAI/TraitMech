@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1196/annals.1419.015
   snippet: convert carbon dioxide and CO into acetyl-CoA
   notes: Supports acetyl-CoA formation from CO2 and CO in acetogens.
+canonical_examples:
+- taxon_id: NCBITaxon:1525
+  taxon_label: Neomoorella thermoacetica
+  note: "THE model acetogen used to elucidate the Wood-Ljungdahl pathway (formerly Moorella/Clostridium thermoaceticum). Acetobacterium woodii is the modern bioenergetics model."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4599090/
 causal_graphs:
 - graph_id: acetogenesis_wood_ljungdahl
   title: Acetogenesis Wood-Ljungdahl mechanism

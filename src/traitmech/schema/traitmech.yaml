@@ -116,6 +116,20 @@ classes:
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
 
+      canonical_examples:
+        description: >-
+          Canonical exemplar organisms for this trait — the textbook /
+          reference taxa a curator would point to as "this trait, archetypally".
+          Each example carries an NCBITaxon CURIE, the organism name, an
+          optional role note, and an optional citation. Distinct from the
+          causal graphs (which model *how* the trait works, taxon-agnostically):
+          these answer *who* canonically exhibits it. Curation-sourced — there is
+          no trait→taxon edge table upstream — so each example should be
+          backed by a reference where practical.
+        multivalued: true
+        inlined_as_list: true
+        range: CanonicalExample
+
       replaces:
         description: >-
           dcterms:replaces — CURIEs of records that this trait
@@ -260,6 +274,32 @@ classes:
         description: Verbatim quote from the source supporting the trait claim.
         range: string
       notes:
+        range: string
+
+  CanonicalExample:
+    description: >-
+      A canonical exemplar organism for a trait — a reference taxon that
+      archetypally exhibits the trait. Curation-sourced; back with a citation
+      where practical (compare EvidenceItem).
+    attributes:
+      taxon_id:
+        description: NCBITaxon CURIE for the exemplar organism (e.g. NCBITaxon:1423).
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Scientific name of the exemplar organism (e.g. Bacillus subtilis).
+        required: true
+        range: string
+      note:
+        description: >-
+          Why this organism is canonical for the trait (e.g. "model rod-shaped
+          Gram-positive", "type strain for acidophily studies").
+        range: string
+      reference:
+        description: >-
+          IAO:0000119-style citation supporting the exemplar claim
+          (PMID:..., DOI:..., or an opaque URL). Optional but recommended.
         range: string
 
   CausalGraph:

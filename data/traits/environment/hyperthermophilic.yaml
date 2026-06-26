@@ -19,6 +19,11 @@ evidence:
 - reference: PMID:9348040
   snippet: hyperthermophilic archaeon, Pyrococcus furiosus
   notes: 'Organism example: Pyrococcus furiosus is described as hyperthermophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:2261
+  taxon_label: Pyrococcus furiosus
+  note: "Model hyperthermophilic archaeon (growth optimum ~100 C)."
+  reference: DOI:10.1007/BF00413027
 causal_graphs:
 - graph_id: hyperthermophilic_thermostability
   title: Hyperthermophilic thermostability mechanism

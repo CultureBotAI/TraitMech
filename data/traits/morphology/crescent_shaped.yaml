@@ -18,6 +18,11 @@ evidence:
   snippet: required for the vibrioid and helical shapes of Caulobacter
   notes: Supports crescentin as a bacterial cytoskeletal determinant of curved Caulobacter
     cell shape.
+canonical_examples:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: "Curved/crescent (vibrioid) cell; classic strain CB15, long called Caulobacter crescentus."
+  reference: PMID:19383443
 causal_graphs:
 - graph_id: crescent_shaped_crescentin_curvature
   title: Crescent-shape crescentin curvature mechanism

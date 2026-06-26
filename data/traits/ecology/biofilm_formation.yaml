@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/s41579-019-0162-0
   notes: Flemming & Wuertz support the global ubiquity of the biofilm lifestyle across
     microbial habitats.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: "Model biofilm former; paradigm for biofilm development and dispersal."
+  reference: PMID:35335624
 causal_graphs:
 - graph_id: biofilm_eps_matrix_community
   title: Biofilm formation builds a matrix-enclosed surface community

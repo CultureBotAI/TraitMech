@@ -27,6 +27,11 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini, "Iron and manganese in anaerobic respiration", supports
     Fe(III) and Mn(IV) as terminal electron acceptors competitive with nitrate.
+canonical_examples:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  note: "Textbook Fe(III)-reducer; oxidizes acetate coupled to metal reduction (type strain PCA)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC201883/
 causal_graphs:
 - graph_id: dir_ferric_iron_respiration
   title: Dissimilatory iron reduction respires Fe(III) to Fe(II)

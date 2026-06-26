@@ -24,6 +24,11 @@ evidence:
 - reference: PMID:19747126
   snippet: Staphylococcus aureus is a facultative, Gram-positive coccus
   notes: 'Organism example: Staphylococcus aureus is described as coccus-shaped.'
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "Textbook spherical coccus (grape-like clusters); a model Gram-positive, second only to E. coli in study volume."
+  reference: https://journals.asm.org/doi/10.1128/jb.00106-25
 causal_graphs:
 - graph_id: coccus_shaped_septal_growth
   title: Coccus-shape septal growth mechanism

@@ -24,6 +24,11 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert support the Calvin cycle as the most common/widespread CO2-fixation
     pathway, including among marine cyanobacteria and proteobacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:106590
+  taxon_label: Cupriavidus necator
+  note: "Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on H2+CO2 (strain H16)."
+  reference: PMID:16964242
 causal_graphs:
 - graph_id: cbb_rubisco_co2_fixation
   title: Calvin-Benson-Bassham cycle fixes CO2 via RuBisCO

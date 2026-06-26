@@ -27,6 +27,11 @@ evidence:
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert document the rTCA cycle in chemolithoautotrophs and green
     sulfur bacteria in marine systems.
+canonical_examples:
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: "Green sulfur bacterium fixing CO2 via the reductive TCA cycle (rTCA first shown in Chlorobia)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2998096/
 causal_graphs:
 - graph_id: rtca_reverse_tricarboxylic_acid_co2_fixation
   title: Reductive TCA cycle runs the TCA cycle in reverse to fix CO2

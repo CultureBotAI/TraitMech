@@ -24,6 +24,11 @@ evidence:
   snippet: spirillar types
   notes: Supports spiral/spirillar morphology as a recognized bacterial cell-shape
     class within broader bacterial morphology diversity.
+canonical_examples:
+- taxon_id: NCBITaxon:1085
+  taxon_label: Rhodospirillum rubrum
+  note: "Classic spiral (helically twisted) bacterium; purple non-sulfur photosynthesis model."
+  reference: PMID:21886856
 causal_graphs:
 - graph_id: spiral_shaped_curvature_mechanisms
   title: Spiral-shape curvature and cell-wall mechanism

@@ -23,6 +23,11 @@ evidence:
   snippet: resistant to irreversible inactivation at high temperatures
   notes: Thermostable-protein review supports extreme protein and membrane stability
     as the basis of hyperthermophile physiology.
+canonical_examples:
+- taxon_id: NCBITaxon:54252
+  taxon_label: Pyrolobus fumarii
+  note: "Highest optimal growth temperature known (106 C; range 90-113 C); cannot grow below 90 C."
+  reference: DOI:10.1007/s007920050010
 causal_graphs:
 - graph_id: extreme_hyperthermophilic_archaeal_adaptation
   title: Extreme-hyperthermophilic archaeal heat-adaptation mechanism

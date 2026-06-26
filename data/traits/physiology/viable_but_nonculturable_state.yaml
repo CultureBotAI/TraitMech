@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro2504
   notes: Lennon & Jones frame the VBNC state within the broader microbial dormancy
     seed-bank concept.
+canonical_examples:
+- taxon_id: NCBITaxon:672
+  taxon_label: Vibrio vulnificus
+  note: "Canonical exemplar of the viable-but-nonculturable (VBNC) state."
+  reference: PMID:7618874
 causal_graphs:
 - graph_id: vbnc_stress_induced_dormancy
   title: Stress-induced viable-but-nonculturable state

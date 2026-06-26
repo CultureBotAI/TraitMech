@@ -20,6 +20,11 @@ evidence:
   snippet: Fusobacterium nucleatum
   notes: Fusobacterium-genome review supports fusiform morphology in the Fusobacterium
     genus.
+canonical_examples:
+- taxon_id: NCBITaxon:851
+  taxon_label: Fusobacterium nucleatum
+  note: "Spindle/fusiform (tapered-end) rod; model oral anaerobe."
+  reference: https://www.ncbi.nlm.nih.gov/books/NBK8438/
 causal_graphs:
 - graph_id: fusiform_shaped_tapered_polar_growth
   title: Fusiform-shape tapered polar growth

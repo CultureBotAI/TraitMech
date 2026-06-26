@@ -19,6 +19,11 @@ evidence:
     that hydrolyze urea to ammonia and carbon dioxide.
 - reference: DOI:10.1128/mr.53.1.85-108.1989
   notes: Mobley & Hausinger review the significance and regulation of microbial ureases.
+canonical_examples:
+- taxon_id: NCBITaxon:1474
+  taxon_label: Sporosarcina pasteurii
+  note: "Most-used organism for microbially induced calcite precipitation; copious constitutive urease (formerly Bacillus pasteurii)."
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6979283/
 causal_graphs:
 - graph_id: urease_activity_urea_hydrolysis
   title: Urease-catalyzed urea hydrolysis
