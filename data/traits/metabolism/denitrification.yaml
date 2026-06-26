@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2018.9
   notes: Kuypers et al. place denitrification as a nitrogen-loss branch of the microbial
     nitrogen-cycling network.
+canonical_examples:
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: "Classic complete denitrifier (NO3->NO2->NO->N2O->N2 via nar/nir/nor/nos); free-living model of the respiratory chain."
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12848317/
 causal_graphs:
 - graph_id: denitrification_stepwise_nitrate_to_n2
   title: Denitrification reduces nitrate stepwise to N2

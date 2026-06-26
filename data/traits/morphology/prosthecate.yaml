@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1128/MMBR.00040-09
   notes: Curtis & Brun's review of Caulobacter development supports the stalk as a
     regulated developmental appendage.
+canonical_examples:
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: "Model stalked (prosthecate) bacterium and asymmetric-division paradigm; classic strain CB15, long called Caulobacter crescentus."
+  reference: PMID:16980487
 causal_graphs:
 - graph_id: prosthecate_stalk_nutrient_uptake
   title: Prostheca / stalk extends nutrient-uptake surface

@@ -20,6 +20,11 @@ evidence:
 - reference: PMID:7826009
   notes: Nealson & Saffarini review iron and manganese in anaerobic respiration as
     terminal electron acceptors.
+canonical_examples:
+- taxon_id: NCBITaxon:70863
+  taxon_label: Shewanella oneidensis
+  note: "Model dissimilatory metal reducer (strain MR-1 = Manganese Reducer 1); respires Mn(IV)/Fe(III) via extracellular electron transfer."
+  reference: PMID:12368813
 causal_graphs:
 - graph_id: dmr_mn_oxide_respiration
   title: Dissimilatory manganese reduction respires Mn(IV) to Mn(II)

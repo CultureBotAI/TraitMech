@@ -24,6 +24,11 @@ evidence:
   snippet: polar growth of Streptomyces
   notes: Supports filamentous Streptomyces morphology as a polar-growth cell-shape
     system.
+canonical_examples:
+- taxon_id: NCBITaxon:1021
+  taxon_label: Beggiatoa
+  note: "Classic filamentous (multicellular trichome) sulfur bacterium; the organism in which gliding filaments were first described."
+  reference: PMID:17760503
 causal_graphs:
 - graph_id: filament_shaped_streptomyces_polar_growth
   title: Filament-shape Streptomyces polar growth mechanism

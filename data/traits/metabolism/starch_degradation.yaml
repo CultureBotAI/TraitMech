@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1093/nar/gkt1178
   notes: The CAZy database review classifies the glycoside hydrolases (including amylases)
     that microorganisms use to degrade starch and other polysaccharides.
+canonical_examples:
+- taxon_id: NCBITaxon:1402
+  taxon_label: Bacillus licheniformis
+  note: "Industrial amylase producer; model for extracellular starch hydrolysis."
+  reference: DOI:10.1186/gb-2004-5-10-r77
 causal_graphs:
 - graph_id: starch_degradation_amylase
   title: Starch degradation hydrolyzes amylose/amylopectin to glucose

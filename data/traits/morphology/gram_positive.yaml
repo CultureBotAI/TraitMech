@@ -22,6 +22,11 @@ evidence:
 - reference: PMID:16950365
   snippet: Staphylococcus aureus is a gram-positive bacterium
   notes: 'Organism example: Staphylococcus aureus is described as Gram-positive.'
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "Model Gram-positive (thick peptidoglycan, no outer membrane); strain 168 is the workhorse."
+  reference: PMID:9384377
 causal_graphs:
 - graph_id: gram_positive_cell_wall_retention
   title: Gram-positive cell-wall dye retention mechanism

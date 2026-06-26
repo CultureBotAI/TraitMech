@@ -14,6 +14,11 @@ evidence:
   snippet: Interspecies electron transfer is a key process
   notes: Review supports hydrogen/formate-mediated electron transfer in syntrophic
     communities.
+canonical_examples:
+- taxon_id: NCBITaxon:863
+  taxon_label: Syntrophomonas wolfei
+  note: "Type species of Syntrophomonas; original syntrophic fatty-acid oxidiser (coculture with Methanospirillum hungatei)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC243852/
 causal_graphs:
 - graph_id: syntrophy_interspecies_electron_transfer
   title: Syntrophy interspecies electron transfer mechanism

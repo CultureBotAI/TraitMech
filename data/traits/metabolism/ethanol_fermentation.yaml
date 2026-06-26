@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
   notes: Review of fermentative energy conservation supports ethanol as an NADH-reoxidizing
     fermentation end product.
+canonical_examples:
+- taxon_id: NCBITaxon:542
+  taxon_label: Zymomonas mobilis
+  note: "Canonical bacterial ethanologen (Entner-Doudoroff route to ethanol)."
+  reference: PMID:27629544
 causal_graphs:
 - graph_id: ethanol_fermentation_pyruvate_to_ethanol
   title: Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2

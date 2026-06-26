@@ -19,6 +19,11 @@ evidence:
 - reference: PMID:39189748
   snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
   notes: 'Organism example: Clostridioides difficile is described as strictly anaerobic.'
+canonical_examples:
+- taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  note: "Aerotolerant obligate anaerobe; abundant gut anaerobe model. Clostridium spp. are alternative strict-anaerobe exemplars."
+  reference: PMID:14749831
 causal_graphs:
 - graph_id: strict_anaerobe_oxygen_sensitivity
   title: Strict anaerobe oxygen-sensitivity mechanism

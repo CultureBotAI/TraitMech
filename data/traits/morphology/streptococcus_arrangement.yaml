@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Daughter-cell separation during division determines whether cocci stay attached
     in chains versus separating.
+canonical_examples:
+- taxon_id: NCBITaxon:1314
+  taxon_label: Streptococcus pyogenes
+  note: "Chains of cocci (streptococcal arrangement) from division in a single plane."
+  reference: https://www.ncbi.nlm.nih.gov/books/NBK7611/
 causal_graphs:
 - graph_id: streptococcus_parallel_division_chain
   title: Streptococcus arrangement via parallel division and incomplete separation

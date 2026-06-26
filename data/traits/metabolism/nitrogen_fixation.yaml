@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro954
   notes: Dixon & Kahn review the genetic regulation of biological nitrogen fixation
     and nitrogenase.
+canonical_examples:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: "Preferred model free-living aerobic diazotroph; fixes N2 at high O2 via respiratory protection."
+  reference: DOI:10.1128/mbio.02593-21
 causal_graphs:
 - graph_id: nitrogen_fixation_nitrogenase
   title: Nitrogenase-catalyzed dinitrogen reduction

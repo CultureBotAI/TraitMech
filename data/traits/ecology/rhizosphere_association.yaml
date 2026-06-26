@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.87
   notes: Fierer supports the rhizosphere as a high-activity subset of the broader
     soil microbiome.
+canonical_examples:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  note: "Canonical rhizosphere-colonising / biocontrol model."
+  reference: PMID:11701873
 causal_graphs:
 - graph_id: rhizosphere_root_exudate
   title: Root exudates structure the rhizosphere microbial habitat

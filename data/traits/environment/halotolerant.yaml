@@ -16,6 +16,11 @@ evidence:
 - reference: PMID:27621824
   snippet: Halomonas massiliensis sp. nov., a new halotolerant bacterium
   notes: 'Organism example: Halomonas massiliensis is described as halotolerant.'
+canonical_examples:
+- taxon_id: NCBITaxon:1570
+  taxon_label: Halobacillus halophilus
+  note: "Model halotolerant/moderately halophilic bacterium (chloride-dependent osmoadaptation). Staphylococcus aureus is the classic salt-tolerant clinical exemplar."
+  reference: PMID:18442383
 causal_graphs:
 - graph_id: halotolerant_salt_stress_response
   title: Halotolerant salt-stress response mechanism

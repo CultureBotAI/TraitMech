@@ -27,6 +27,11 @@ evidence:
   snippet: prosthecate bacteria
   notes: Prosthecate-bacteria review supports star-shaped morphology in Stella/Ancalomicrobium
     and related stalked lineages.
+canonical_examples:
+- taxon_id: NCBITaxon:1123295
+  taxon_label: Stella vacuolata DSM 5901 = ATCC 43931
+  note: "Six-pointed star-shaped (flat, multi-pointed) prosthecate bacterium; genus Stella is the textbook star morphology."
+  reference: PMID:31395645
 causal_graphs:
 - graph_id: star_shaped_multiple_prosthecae
   title: Star-shape multiple prosthecae extension

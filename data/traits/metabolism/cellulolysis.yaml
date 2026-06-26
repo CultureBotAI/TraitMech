@@ -22,6 +22,11 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. place cellulose deconstruction within lignocellulose degradation
     across diverse organisms.
+canonical_examples:
+- taxon_id: NCBITaxon:1515
+  taxon_label: Acetivibrio thermocellus
+  note: "Thermophilic anaerobe secreting the paradigm cellulosome (formerly Clostridium thermocellum). Ruminococcus is the mesophilic rumen model."
+  reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8951355/
 causal_graphs:
 - graph_id: cellulolysis_cellulase_systems
   title: Cellulolysis hydrolyzes cellulose to glucose

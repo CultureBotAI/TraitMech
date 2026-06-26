@@ -16,6 +16,11 @@ evidence:
   snippet: presence of the enzyme CO dehydrogenase
   notes: Review supports CODH and CO-insensitive respiratory-chain features in aerobic
     carboxydotrophs.
+canonical_examples:
+- taxon_id: NCBITaxon:129958
+  taxon_label: Carboxydothermus hydrogenoformans
+  note: "Thermophilic hydrogenogenic CO oxidiser (CO + H2O -> CO2 + H2). Afipia/Oligotropha carboxidovorans is the aerobic CO-oxidiser model."
+  reference: PMID:16311624
 causal_graphs:
 - graph_id: carboxydotrophic_co_oxidation
   title: Carboxydotrophic carbon monoxide oxidation mechanism

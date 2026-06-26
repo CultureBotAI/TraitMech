@@ -27,6 +27,11 @@ evidence:
 - reference: DOI:10.1126/science.1170701
   snippet: cell-wall-deficient L-forms
   notes: L-form review supports pleomorphism in wall-deficient or wall-less cells.
+canonical_examples:
+- taxon_id: NCBITaxon:2093
+  taxon_label: Mycoplasma
+  note: "Cell-wall-less, pleomorphic bacteria; the textbook genus for variable cell shape."
+  reference: PMID:9841667
 causal_graphs:
 - graph_id: pleomorphic_shaped_relaxed_shape_control
   title: Pleomorphic-shape relaxed shape control

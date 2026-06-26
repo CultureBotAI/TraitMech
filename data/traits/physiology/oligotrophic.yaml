@@ -29,6 +29,11 @@ evidence:
   notes: 'Organism example: Pelagibacter ubique HTCC1062 (SAR11 clade) is the archetypal
     oligotrophic marine bacterium with a streamlined genome adapted to nutrient-poor
     open-ocean conditions (Giovannoni et al. 2005, Science).'
+canonical_examples:
+- taxon_id: NCBITaxon:335992
+  taxon_label: Candidatus Pelagibacter ubique HTCC1062
+  note: "Cosmopolitan genome-streamlined marine heterotroph (SAR11); ~25% of ocean microbial cells; textbook oligotroph."
+  reference: PMID:16109880
 causal_graphs:
 - graph_id: oligotrophic_low_nutrient_efficiency
   title: Oligotrophic low-nutrient efficiency strategy

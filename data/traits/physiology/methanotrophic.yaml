@@ -18,6 +18,11 @@ evidence:
   snippet: convert methane to methanol using methane monooxygenase
   notes: Review supports methane monooxygenase as the first aerobic methanotrophy
     step.
+canonical_examples:
+- taxon_id: NCBITaxon:414
+  taxon_label: Methylococcus capsulatus
+  note: "Model aerobic methanotroph (gammaproteobacterial; particulate and soluble methane monooxygenase); strain Bath."
+  reference: PMID:15383840
 causal_graphs:
 - graph_id: methanotrophic_methane_oxidation
   title: Aerobic methanotrophic methane oxidation mechanism

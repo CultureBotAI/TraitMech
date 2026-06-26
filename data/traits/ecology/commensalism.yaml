@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1073/pnas.1218525110
   notes: McFall-Ngai et al. support commensal colonization as a major class of host-associated
     microbial lifestyles.
+canonical_examples:
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  note: "Archetypal human skin commensal."
+  reference: PMID:33180890
 causal_graphs:
 - graph_id: commensalism_neutral_host
   title: Commensalism benefits microbe without affecting host fitness

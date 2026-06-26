@@ -17,6 +17,10 @@ evidence:
   snippet: red, pink, orange, and yellow pigmentation in bacteria
   notes: Supports yellow microbial pigmentation as a carotenoid-associated bacterial
     color phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:339
+  taxon_label: Xanthomonas campestris
+  note: "Yellow-pigmented (xanthomonadin) phytopathogen; the namesake xanthous bacterium."
 causal_graphs:
 - graph_id: yellow_pigmented_carotenoid_color
   title: Yellow pigmentation carotenoid mechanism

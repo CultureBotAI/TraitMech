@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.1126/science.1149976
   notes: Berg et al.'s archaeal carbon-fixation work establishes the 4-hydroxybutyrate
     chemistry shared by this cycle in Crenarchaeota.
+canonical_examples:
+- taxon_id: NCBITaxon:160233
+  taxon_label: Ignicoccus hospitalis
+  note: "Hyperthermophilic crenarchaeon in which the dicarboxylate/4-hydroxybutyrate autotrophic CO2-fixation cycle was discovered."
+  reference: PMID:18511565
 causal_graphs:
 - graph_id: dc_four_hb_anaerobic_archaeal_co2_fixation
   title: DC/4HB cycle fixes CO2 in anaerobic Crenarchaeota

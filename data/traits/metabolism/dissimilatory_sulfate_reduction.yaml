@@ -19,6 +19,11 @@ evidence:
     sulfide in anoxic habitats.
 - reference: DOI:10.3389/fmicb.2011.00081
   notes: Plugge et al. review the metabolic flexibility of sulfate-reducing bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:882
+  taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
+  note: "Model dissimilatory sulfate reducer (formerly Desulfovibrio vulgaris Hildenborough)."
+  reference: PMID:15077118
 causal_graphs:
 - graph_id: sulfate_reduction_to_sulfide
   title: Dissimilatory sulfate reduction respires sulfate to sulfide

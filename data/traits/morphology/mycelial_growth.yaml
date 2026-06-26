@@ -23,6 +23,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro3178
   notes: Claessen et al. treat filamentous/mycelial growth as a bacterial solution
     to multicellularity.
+canonical_examples:
+- taxon_id: NCBITaxon:1902
+  taxon_label: Streptomyces coelicolor
+  note: "Model filamentous/mycelial actinomycete; antibiotic-producing developmental model."
+  reference: DOI:10.1038/nrmicro1968
 causal_graphs:
 - graph_id: mycelial_branching_hyphal_growth
   title: Branching hyphal growth produces a bacterial mycelium

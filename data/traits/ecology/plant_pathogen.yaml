@@ -16,6 +16,11 @@ evidence:
   snippet: cell-wall-degrading enzymes
   notes: Plant-pathogen review supports secreted plant-cell-wall-degrading enzymes
     as essential virulence factors of bacterial phytopathogens.
+canonical_examples:
+- taxon_id: NCBITaxon:317
+  taxon_label: Pseudomonas syringae
+  note: "Model bacterial plant pathogen (Type III secretion, effector biology). Agrobacterium tumefaciens is the classic crown-gall/genetic-tool exemplar."
+  reference: PMID:29479077
 causal_graphs:
 - graph_id: plant_pathogen_t3ss_effector_program
   title: Plant-pathogen T3SS-effector and wall-degradation program

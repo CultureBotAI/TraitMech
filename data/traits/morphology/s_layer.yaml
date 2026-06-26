@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/s41579-025-01258-8
   notes: Review of assembly, architecture and functional roles of microbial surface
     layers supports the S-layer as a defined cell-surface structure.
+canonical_examples:
+- taxon_id: NCBITaxon:1422
+  taxon_label: Geobacillus stearothermophilus
+  note: "Long-standing model for crystalline bacterial surface-layer (S-layer) structure and assembly."
+  reference: DOI:10.1111/1574-6976.12063
 causal_graphs:
 - graph_id: s_layer_2d_protein_array
   title: S-layer crystalline (glyco)protein surface array

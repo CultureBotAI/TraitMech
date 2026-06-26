@@ -19,6 +19,11 @@ evidence:
   snippet: periplasmic flagella ... confer in part its flat-wave morphology
   notes: Supports spirochete morphology as a cell-cylinder and periplasmic-flagella
     interaction.
+canonical_examples:
+- taxon_id: NCBITaxon:160
+  taxon_label: Treponema pallidum
+  note: "Syphilis spirochete; textbook flat-wave spirochete morphology with periplasmic flagella. Leptospira/Borrelia are alternative spirochete exemplars."
+  reference: DOI:10.1128/jb.01031-09
 causal_graphs:
 - graph_id: spirochete_shaped_periplasmic_flagella
   title: Spirochete-shape periplasmic flagella mechanism

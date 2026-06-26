@@ -18,6 +18,11 @@ evidence:
 - reference: PMID:11790755
   snippet: A cytochrome in an extremely halophilic archaeon, Haloferax volcanii
   notes: 'Organism example: Haloferax volcanii is described as extremely halophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:2242
+  taxon_label: Halobacterium salinarum
+  note: "Classic extreme-halophile model requiring near-saturating NaCl; twin lab strains NRC-1 (NCBITaxon:64091) and R1 (NCBITaxon:478009)."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10264941/
 causal_graphs:
 - graph_id: extreme_halophile_salt_in_acidic_proteome
   title: Extreme halophile salt-in and acidic-proteome mechanism

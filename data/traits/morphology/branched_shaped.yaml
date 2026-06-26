@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1016/j.mib.2012.10.012
   snippet: Streptomyces grow by tip extension and through the initiation of new branches
   notes: Supports branched morphology as a Streptomyces hyphal growth phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1681
+  taxon_label: Bifidobacterium bifidum
+  note: "Y-shaped / branched (bifid) cell morphology; model gut commensal actinobacterium."
+  reference: PMID:20805404
 causal_graphs:
 - graph_id: branched_shaped_streptomyces_branching
   title: Branched-shape Streptomyces branch-site mechanism

@@ -27,6 +27,11 @@ evidence:
     and oxidizing agents
   notes: 'Organism example: Deinococcus radiodurans tolerates ionizing radiation,
     UV radiation, and desiccation.'
+canonical_examples:
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "Most radiation-resistant model organism; survives >15 kGy acute gamma (type strain R1)."
+  reference: https://pubmed.ncbi.nlm.nih.gov/11238985/
 causal_graphs:
 - graph_id: radiotolerance_repair_antioxidant
   title: Radiotolerance via DNA repair and Mn-antioxidant proteome protection

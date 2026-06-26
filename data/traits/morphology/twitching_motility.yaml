@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.57.030502.091014
   notes: Harshey, "Bacterial motility on a surface", places twitching among the distinct
     surface-translocation strategies of bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: "Canonical type-IV-pilus twitching-motility model. Neisseria gonorrhoeae is a parallel model."
+  reference: PMID:22746331
 causal_graphs:
 - graph_id: twitching_type_iv_pilus_retraction
   title: Twitching motility via type IV pilus extension and retraction

@@ -22,6 +22,11 @@ evidence:
   snippet: M. tuberculosis is an obligate aerobe
   notes: 'Organism example: Mycobacterium tuberculosis is described as obligately
     aerobic.'
+canonical_examples:
+- taxon_id: NCBITaxon:1270
+  taxon_label: Micrococcus luteus
+  note: "Textbook strict aerobe (respiratory metabolism only)."
+  reference: PMID:19948807
 causal_graphs:
 - graph_id: obligate_aerobe_oxygen_respiration
   title: Obligate aerobe oxygen-dependent respiration mechanism

@@ -14,6 +14,11 @@ evidence:
     flagellation patterns governed by FlhF/FlhG.
 - reference: DOI:10.3390/biom9070279
   notes: Flagellum review supports polar flagellar filaments as locomotory organelles.
+canonical_examples:
+- taxon_id: NCBITaxon:968
+  taxon_label: Spirillum volutans
+  note: "Large spiral bacterium with amphitrichous flagellar tufts (bipolar flagellar bundles)."
+  reference: PMID:16561638
 causal_graphs:
 - graph_id: amphitrichous_bipolar_flagella
   title: Amphitrichous flagellation — bipolar flagella

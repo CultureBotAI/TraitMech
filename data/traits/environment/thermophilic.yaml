@@ -15,6 +15,11 @@ evidence:
 - reference: PMID:24058645
   snippet: Geobacillus stearothermophilus is a gram-positive, thermophilic bacterium
   notes: 'Organism example: Geobacillus stearothermophilus is described as thermophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  note: "Model thermophile (~65-72 C); Taq relative and structural-biology workhorse."
+  reference: DOI:10.1007/s00792-009-0226-6
 causal_graphs:
 - graph_id: thermophilic_heat_adaptation
   title: Thermophilic heat-adaptation mechanism

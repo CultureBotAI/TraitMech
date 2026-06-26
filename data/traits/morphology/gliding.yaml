@@ -12,6 +12,11 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.49
   snippet: move actively over surfaces
   notes: Supports gliding as active surface movement without flagella.
+canonical_examples:
+- taxon_id: NCBITaxon:34
+  taxon_label: Myxococcus xanthus
+  note: "Primary model for bacterial gliding motility and multicellular development. Flavobacterium johnsoniae is a secondary model."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC103748/
 causal_graphs:
 - graph_id: gliding_surface_motility
   title: Gliding surface motility mechanism

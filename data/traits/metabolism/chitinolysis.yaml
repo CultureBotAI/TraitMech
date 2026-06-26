@@ -21,6 +21,11 @@ evidence:
     strategies.
 - reference: DOI:10.1080/07388550601168223
   notes: Bhattacharya et al. review the properties and potential of bacterial chitinases.
+canonical_examples:
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  note: "Textbook chitinolytic system (ChiA/ChiB/ChiC1 plus the CBP21 LPMO that founded the lytic polysaccharide monooxygenase field)."
+  reference: PMID:23398882
 causal_graphs:
 - graph_id: chitinolysis_chitinase
   title: Chitinolysis hydrolyzes chitin to N-acetylglucosamine

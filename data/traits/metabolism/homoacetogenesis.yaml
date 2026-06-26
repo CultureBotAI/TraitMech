@@ -22,6 +22,11 @@ evidence:
 - reference: DOI:10.1016/j.bbapap.2008.08.012
   snippet: Wood-Ljungdahl Pathway of CO2 Fixation
   notes: Review supports acetogens using the Wood-Ljungdahl pathway for CO2 fixation.
+canonical_examples:
+- taxon_id: NCBITaxon:33952
+  taxon_label: Acetobacterium woodii
+  note: "Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway (Rnf bioenergetics model)."
+  reference: PMID:22479398
 causal_graphs:
 - graph_id: homoacetogenesis_wood_ljungdahl_acetate
   title: Homoacetogenesis Wood-Ljungdahl acetate mechanism

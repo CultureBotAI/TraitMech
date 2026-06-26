@@ -19,6 +19,11 @@ evidence:
     enter and exit dormancy; parent of VBNC and persister sub-variants.
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links dormancy to persister-cell survival and infectious disease.
+canonical_examples:
+- taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  note: "Paradigm of bacterial dormancy/non-replicating persistence (latent infection; DosR regulon)."
+  reference: PMID:8675308
 causal_graphs:
 - graph_id: dormancy_seed_bank
   title: Reversible dormancy and resuscitation

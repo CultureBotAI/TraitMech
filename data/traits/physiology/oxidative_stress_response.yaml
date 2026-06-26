@@ -16,6 +16,11 @@ evidence:
 - reference: DOI:10.1007/s00018-003-3206-5
   notes: Chelikani, Fita & Loewen support catalases as core enzymes of the oxidative-stress
     defense.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "Paradigm of the bacterial oxidative-stress response (OxyR and SoxRS regulons)."
+  reference: PMID:22381957
 causal_graphs:
 - graph_id: oxidative_stress_response_ros_defense
   title: Defense against reactive oxygen species

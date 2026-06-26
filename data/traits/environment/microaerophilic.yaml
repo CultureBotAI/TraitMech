@@ -22,6 +22,11 @@ evidence:
 - reference: PMID:26284041
   snippet: C. jejuni is a microaerophilic, fastidious bacterium
   notes: 'Organism example: Campylobacter jejuni is described as microaerophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:197
+  taxon_label: Campylobacter jejuni
+  note: "Canonical microaerophile (requires reduced O2, ~5-10%)."
+  reference: PMID:26284041
 causal_graphs:
 - graph_id: microaerophile_low_oxygen_respiration
   title: Microaerophilic low-oxygen respiration mechanism

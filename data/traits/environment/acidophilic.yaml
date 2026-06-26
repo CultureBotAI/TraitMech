@@ -19,6 +19,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: growing at pH 1.0-3.0
   notes: Supports acidophilic growth at strongly acidic external pH.
+canonical_examples:
+- taxon_id: NCBITaxon:46632
+  taxon_label: Picrophilus oshimae
+  note: "Among the most extreme acidophiles known - growth optimum ~pH 0.7, grows near pH 0; co-canonical with P. torridus."
+  reference: DOI:10.1073/pnas.0401356101
 causal_graphs:
 - graph_id: acidophilic_ph_homeostasis
   title: Acidophilic pH homeostasis mechanism

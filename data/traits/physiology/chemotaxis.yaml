@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro2505
   notes: Porter, Wadhams & Armitage review signal processing in complex chemotaxis
     pathways.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "Paradigm of bacterial chemotaxis (flagellar run-and-tumble; Che two-component signalling)."
+  reference: PMID:15573139
 causal_graphs:
 - graph_id: chemotaxis_gradient_response
   title: Gradient-guided chemotactic movement

@@ -20,6 +20,11 @@ evidence:
   snippet: growth-supporting reductant and energy source
   notes: Review supports inorganic reductants as energy sources for chemolithotrophic
     growth.
+canonical_examples:
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  note: "Archetypal iron/sulfur chemolithoautotroph; bioleaching model organism."
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2754497/
 causal_graphs:
 - graph_id: chemolithoautotrophic_energy_and_fixation
   title: Chemolithoautotrophic energy and CO2 fixation

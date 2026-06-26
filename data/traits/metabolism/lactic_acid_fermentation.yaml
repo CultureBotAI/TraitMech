@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.3390/molecules31020333
   notes: Review of classical food fermentations describes the lactic-acid pathway
     and lactic acid bacteria as its agents.
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: "Canonical homolactic fermenter and dairy model organism."
+  reference: PMID:17307855
 causal_graphs:
 - graph_id: lactic_acid_fermentation_lactate
   title: Lactic acid fermentation converts sugars to lactate

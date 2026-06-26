@@ -19,6 +19,11 @@ evidence:
   snippet: elemental sulfur disproportionation
   notes: Study supports elemental sulfur disproportionation in acidophilic microbial
     metabolism.
+canonical_examples:
+- taxon_id: NCBITaxon:65555
+  taxon_label: Desulfocapsa sulfexigens
+  note: "Model for inorganic-sulfur disproportionation (S0/thiosulfate/sulfite to sulfate + sulfide as sole energy source)."
+  reference: PMID:23961312
 causal_graphs:
 - graph_id: sulfur_disproportionation_redox_split
   title: Sulfur disproportionation redox split

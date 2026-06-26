@@ -21,6 +21,11 @@ evidence:
 - reference: DOI:10.3389/fmicb.2024.1417714
   notes: Review of anoxygenic photosynthesis in green sulfur bacteria supports sulfide
     as electron donor and the absence of oxygen production.
+canonical_examples:
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: "Textbook purple-bacterial (Type II) anoxygenic phototroph (formerly Rhodobacter sphaeroides). Chlorobaculum tepidum is the green-sulfur (Type I) model."
+  reference: DOI:10.1023/A:1006350405674
 causal_graphs:
 - graph_id: anoxygenic_photosynthesis_sulfide_donor
   title: Anoxygenic photosynthesis uses non-water electron donors

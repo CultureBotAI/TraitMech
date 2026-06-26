@@ -17,6 +17,11 @@ evidence:
 - reference: DOI:10.1146/annurev-earth-060313-054810
   notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports water-oxidizing,
     oxygen-evolving photosynthesis as a distinct, cyanobacterial innovation.
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: "Default model unicellular cyanobacterium for oxygenic photosynthesis; first phototroph genome-sequenced."
+  reference: PMID:16228363
 causal_graphs:
 - graph_id: oxygenic_photosynthesis_water_splitting
   title: Oxygenic photosynthesis splits water and releases O2

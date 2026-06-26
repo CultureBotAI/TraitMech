@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2017.171
   notes: Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules,
     an example of the endosymbiotic lifestyle.
+canonical_examples:
+- taxon_id: NCBITaxon:9
+  taxon_label: Buchnera aphidicola
+  note: "Textbook obligate insect nutritional endosymbiont (aphid bacteriocytes; maternally transmitted)."
+  reference: https://www.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.001127
 causal_graphs:
 - graph_id: endosymbiosis_intracellular_genome_reduction
   title: Intracellular endosymbiosis drives extreme genome reduction
