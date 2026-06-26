@@ -18,6 +18,11 @@ evidence:
   notes: Plotkin & Kudla review the causes and consequences of synonymous codon bias.
 - reference: DOI:10.1146/annurev.genet.42.110807.091442
   notes: Hershberg & Petrov review selection on codon bias across genomes.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "Reference organism for codon usage bias (translational selection on synonymous codons in highly expressed genes)."
+  reference: PMID:6175758
 causal_graphs:
 - graph_id: codon_bias_translation_efficiency
   title: Codon usage bias shapes translation efficiency and gene expression

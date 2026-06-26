@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1073/pnas.0707522105
   notes: Mendell et al. document extreme polyploidy (tens of thousands of genome copies)
     in the large bacterium Epulopiscium.
+canonical_examples:
+- taxon_id: NCBITaxon:354
+  taxon_label: Azotobacter vinelandii
+  note: "Model of bacterial polyploidy (accumulates up to ~100 genome copies per cell in stationary phase)."
+  reference: PMID:8021173
 causal_graphs:
 - graph_id: ploidy_repair_survival
   title: Polyploidy supports DNA repair and long-term survival

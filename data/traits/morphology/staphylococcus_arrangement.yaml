@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Division-plane orientation and daughter-cell separation govern formation
     of three-dimensional coccal clusters.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "Namesake of the staphylococcal arrangement (grape-like irregular clusters from division in multiple planes)."
+  reference: PMID:845124
 causal_graphs:
 - graph_id: staphylococcus_irregular_division_cluster
   title: Staphylococcus arrangement via multi-plane non-orthogonal division

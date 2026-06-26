@@ -20,6 +20,11 @@ evidence:
 - reference: DOI:10.1016/j.molcel.2014.03.011
   notes: Barrangou & Marraffini review CRISPR-Cas as prokaryotic adaptive immunity
     against invading genetic elements.
+canonical_examples:
+- taxon_id: NCBITaxon:1308
+  taxon_label: Streptococcus thermophilus
+  note: "Organism in which CRISPR-Cas adaptive immunity was experimentally demonstrated (Barrangou et al. 2007); dairy model for CRISPR biology."
+  reference: PMID:17379808
 causal_graphs:
 - graph_id: crispr_adaptive_immunity
   title: CRISPR-Cas adaptive immunity against invading nucleic acids

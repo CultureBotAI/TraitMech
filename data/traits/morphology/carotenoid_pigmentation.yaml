@@ -16,6 +16,11 @@ evidence:
 - reference: DOI:10.1080/1040841X.2025.2526423
   snippet: Carotenoids are isoprenoid pigments
   notes: Supports carotenoid pigmentation as a bacterial isoprenoid-pigment phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "Golden carotenoid pigmentation (staphyloxanthin); well-studied bacterial carotenoid and virulence factor."
+  reference: PMID:16009720
 causal_graphs:
 - graph_id: carotenoid_pigmentation_crt_pathway
   title: Carotenoid pigmentation crt-pathway mechanism
