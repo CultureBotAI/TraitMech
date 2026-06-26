@@ -39,6 +39,7 @@ causal_graphs:
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and initiates polar flagellar assembly.
+    grounding: UniProtKB:A0A656AC42
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -48,21 +49,25 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein recruited during basal-body assembly.
+    grounding: UniProtKB:A0A016XEK1
   - node_id: flif_protein
     label: FliF
     node_type: GENE_OR_PROTEIN
     description: MS-ring protein forming the membrane base of the flagellar basal
       body.
+    grounding: UniProtKB:A0A0H2X1L8
   - node_id: fipa_protein
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane-localized polar landmark/licensing factor required for normal
       polar flagellar synthesis.
+    grounding: UniProtKB:A0A023UGD7
   - node_id: flhg_protein
     label: FlhG
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that regulates flagellar number by stimulating FlhF
       GTPase activity.
+    grounding: UniProtKB:Q2N2M1
   - node_id: flagellar_number
     label: flagellar number
     node_type: QUALITY
@@ -160,4 +165,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0060187×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A656AC42×1, UniProtKB:A0A016XEK1×1, UniProtKB:A0A0H2X1L8×1, UniProtKB:A0A023UGD7×1,
+    UniProtKB:Q2N2M1×1).
   llm_assisted: true

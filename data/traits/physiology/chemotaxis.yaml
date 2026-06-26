@@ -54,6 +54,7 @@ causal_graphs:
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Histidine autokinase whose activity is modulated by chemoreceptors.
+    grounding: UniProtKB:G0HQV3
   - node_id: chea_autophosphorylation
     label: CheA autophosphorylation
     node_type: MOLECULAR_FUNCTION
@@ -63,11 +64,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Response regulator that, when phosphorylated, controls flagellar
       motor switching.
+    grounding: UniProtKB:A0A2X5A7X5
   - node_id: cheb
     label: CheB methylesterase
     node_type: GENE_OR_PROTEIN
     description: Phospho-regulated methylesterase that demethylates chemoreceptors
       during adaptation.
+    grounding: UniProtKB:A0A100WWV3
   - node_id: cher
     label: CheR methyltransferase
     node_type: GENE_OR_PROTEIN
@@ -198,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:G0HQV3×1, UniProtKB:A0A2X5A7X5×1, UniProtKB:A0A100WWV3×1).
   llm_assisted: true

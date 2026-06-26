@@ -93,6 +93,7 @@ causal_graphs:
     label: FtsH protease
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent membrane protease that controls RpoH protein levels.
+    grounding: UniProtKB:A0A0D7UY21
   edges:
   - subject: warm_environment
     predicate: engages
@@ -219,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A0D7UY21×1).
   llm_assisted: true

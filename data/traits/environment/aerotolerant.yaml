@@ -69,10 +69,12 @@ causal_graphs:
     label: rubrerythrin
     node_type: GENE_OR_PROTEIN
     description: Non-heme iron protein that scavenges low levels of hydrogen peroxide.
+    grounding: UniProtKB:A0A016EEI2
   - node_id: nadh_peroxidase
     label: NADH peroxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing hydrogen peroxide to water using NADH.
+    grounding: UniProtKB:A0A031WCC0
   - node_id: nadph_peroxidase
     label: NADPH peroxidase
     node_type: GENE_OR_PROTEIN
@@ -224,4 +226,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16240×1, GO:0033355×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A016EEI2×1, UniProtKB:A0A031WCC0×1).
   llm_assisted: true

@@ -63,6 +63,7 @@ causal_graphs:
     label: cytochrome cd1 nitrite reductase NirS
     node_type: GENE_OR_PROTEIN
     description: Cytochrome cd1 nitrite reductase reducing nitrite to nitric oxide.
+    grounding: UniProtKB:I0HLW6
   - node_id: nitrite_reduction_to_no
     label: nitrite reduction to nitric oxide
     node_type: BIOLOGICAL_PROCESS
@@ -80,6 +81,7 @@ causal_graphs:
     label: nitrous oxide reductase NosZ
     node_type: GENE_OR_PROTEIN
     description: Nitrous oxide reductase (nosZ) reducing N2O to N2, terminal step.
+    grounding: UniProtKB:Q30PN7
   - node_id: n2o_reduction_to_n2
     label: nitrous oxide reduction to dinitrogen
     node_type: BIOLOGICAL_PROCESS
@@ -199,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×4, biolink:causes×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:I0HLW6×1, UniProtKB:Q30PN7×1).
   llm_assisted: true

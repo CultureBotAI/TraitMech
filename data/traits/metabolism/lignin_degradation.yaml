@@ -42,11 +42,13 @@ causal_graphs:
     label: laccase
     node_type: GENE_OR_PROTEIN
     description: Multi-copper oxidase (EC 1.10.3.2) acting on lignin and using mediators.
+    grounding: UniProtKB:A0A072TFX8
   - node_id: dyp_peroxidase
     label: DyP-type peroxidase
     node_type: GENE_OR_PROTEIN
     description: Dye-decolorizing peroxidase (EC 1.11.1.19) contributing to lignin
       depolymerization.
+    grounding: UniProtKB:A0A024E2S9
   - node_id: manganese_peroxidase
     label: manganese peroxidase
     node_type: GENE_OR_PROTEIN
@@ -55,6 +57,7 @@ causal_graphs:
     label: lignin peroxidase
     node_type: GENE_OR_PROTEIN
     description: Lignin peroxidase (EC 1.11.1.14) cleaving lignin interunit bonds.
+    grounding: UniProtKB:A0A0H3L9R0
   - node_id: lignin_depolymerization
     label: lignin depolymerization
     node_type: BIOLOGICAL_PROCESS
@@ -191,4 +194,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:29035×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A072TFX8×1, UniProtKB:A0A024E2S9×1, UniProtKB:A0A0H3L9R0×1).
   llm_assisted: true

@@ -60,6 +60,7 @@ causal_graphs:
     label: SulA
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.
+    grounding: UniProtKB:H8YHZ0
   - node_id: ftsz_zring
     label: FtsZ Z-ring
     node_type: BIOLOGICAL_PROCESS
@@ -163,4 +164,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009432×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:H8YHZ0×1).
   llm_assisted: true

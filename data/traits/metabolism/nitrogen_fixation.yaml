@@ -61,6 +61,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Low-potential electron carriers that donate electrons to the nitrogenase
       Fe-protein (NifH).
+    grounding: UniProtKB:A0A7Y9D8L6
   - node_id: nifh_fe_protein
     label: NifH (Fe-protein)
     node_type: GENE_OR_PROTEIN
@@ -205,4 +206,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A7Y9D8L6×1).
   llm_assisted: true

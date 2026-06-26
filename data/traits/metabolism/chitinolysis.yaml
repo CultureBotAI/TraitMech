@@ -68,6 +68,7 @@ causal_graphs:
     label: beta-N-acetylglucosaminidase
     node_type: GENE_OR_PROTEIN
     description: Hydrolyzes chitooligosaccharides/chitobiose to GlcNAc monomers.
+    grounding: UniProtKB:A0A086GXI9
   - node_id: lpmo
     label: lytic polysaccharide monooxygenase (LPMO; AA10)
     node_type: GENE_OR_PROTEIN
@@ -153,4 +154,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17029×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A086GXI9×1).
   llm_assisted: true

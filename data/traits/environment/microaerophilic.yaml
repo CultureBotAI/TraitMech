@@ -59,6 +59,7 @@ causal_graphs:
     label: cytochrome bd ubiquinol oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity quinol oxidase widespread in low-oxygen-adapted bacteria.
+    grounding: UniProtKB:A0A0N0XA94
   - node_id: low_oxygen_respiration
     label: respiration under low oxygen
     node_type: BIOLOGICAL_PROCESS
@@ -250,4 +251,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16240×1, CHEBI:26523×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:17Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A0N0XA94×1).
   llm_assisted: true

@@ -64,6 +64,7 @@ causal_graphs:
     label: RpoS (sigma S)
     node_type: GENE_OR_PROTEIN
     description: General-stress-response sigma factor (sigma S / sigma 38).
+    grounding: UniProtKB:A0A010TBV5
   - node_id: general_stress_resistance
     label: general stress resistance
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +73,7 @@ causal_graphs:
     label: Hfq
     node_type: GENE_OR_PROTEIN
     description: RNA chaperone enabling sRNA-dependent translational regulation.
+    grounding: UniProtKB:A0A3B9B147
   edges:
   - subject: environmental_stress
     predicate: causes
@@ -179,4 +181,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×2, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A010TBV5×1, UniProtKB:A0A3B9B147×1).
   llm_assisted: true

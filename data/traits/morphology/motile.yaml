@@ -78,11 +78,13 @@ causal_graphs:
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Autophosphorylating chemotaxis histidine kinase.
+    grounding: UniProtKB:G0HQV3
   - node_id: chey_response_regulator
     label: CheY response regulator
     node_type: GENE_OR_PROTEIN
     description: Response regulator that, when phosphorylated, binds the flagellar
       switch.
+    grounding: UniProtKB:A0A2X5A7X5
   - node_id: flagellar_c_ring
     label: flagellar C-ring switch complex
     node_type: GENE_OR_PROTEIN
@@ -369,4 +371,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0043107×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:G0HQV3×1, UniProtKB:A0A2X5A7X5×1).
   llm_assisted: true

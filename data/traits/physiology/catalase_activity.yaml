@@ -61,11 +61,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Peroxide-sensing transcriptional regulator activated by hydrogen
       peroxide.
+    grounding: UniProtKB:A0A9P2M4N5
   - node_id: perr_regulator
     label: PerR
     node_type: GENE_OR_PROTEIN
     description: Fe-dependent peroxide-sensing transcriptional repressor inactivated
       by hydrogen peroxide.
+    grounding: UniProtKB:A0A097ASJ8
   - node_id: peroxide_defense_systems
     label: peroxide defense systems
     node_type: BIOLOGICAL_PROCESS
@@ -213,4 +215,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006783×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A9P2M4N5×1, UniProtKB:A0A097ASJ8×1).
   llm_assisted: true

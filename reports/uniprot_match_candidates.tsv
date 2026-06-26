@@ -1,88 +1,627 @@
 label	match_count	representative_curie	representative_name	example_other_curies
-crt enzymes	0			
-photosynthetic reaction center	356			
-czc cation-efflux system	2	UniProtKB:B0VPE1	Component of the czc cation-efflux system (CzcI)	UniProtKB:A0A0B9WKN8
-salinity-adaptation genes	0		(SKIPPED — abstract category)	
-cold-shock proteins	0		(SKIPPED — abstract category)	
-proton export pumps and antiporters	0		(SKIPPED — abstract category)	
+carbonic anhydrase	500	UniProtKB:A0A009PMS8	carbonic anhydrase 	UniProtKB:A0A076N9H2|UniProtKB:A0A085P8E6|UniProtKB:A0A098BVU4|UniProtKB:A0A0E3YRX1|UniProtKB:A0A0H6TVJ0
 na+/h+ antiporters	0			
-sox enzyme system	0			
+f0f1-atpase	256			
+flhg	193	UniProtKB:Q2N2M1	FlhG	UniProtKB:A0A5E4WIF9|UniProtKB:A0A7W9V6Q4|UniProtKB:A0A0S3QSZ8|UniProtKB:A0A1M6EI81
+mrec	500	UniProtKB:A0A1L9R356	Rod shape-determining protein MreC	UniProtKB:A0A0D7LDH6|UniProtKB:A0A0D7LDH6|UniProtKB:A0A1B1B8B6|UniProtKB:A0A1B1B8B6|UniProtKB:A0A1B8PCZ0
+flhf	500	UniProtKB:A0A656AC42	FlhF	UniProtKB:A0A1L7G1H8|UniProtKB:A0A2K9MSW4|UniProtKB:A0A2T6TJQ1|UniProtKB:A0A438Q174|UniProtKB:A0A438T8D6
+flig	500	UniProtKB:A0A016XEK1	Flagellar motor switch protein FliG	UniProtKB:A0A144GU71|UniProtKB:A0A1V0RSA8|UniProtKB:A0A1Y5FGK7|UniProtKB:A0A2L1U1S6|UniProtKB:A0A376FK89
+crt enzymes	0			
+roda	500	UniProtKB:A0A0H2X1V4	RodA	UniProtKB:A0A1A9RNS9|UniProtKB:A0A2T6VIL3|UniProtKB:A0A3G4R073|UniProtKB:A0A4D7B2B0|UniProtKB:A0A5M8VF97
+photosynthetic reaction center	356			
+type iv secretion system	500			
+mrp na+/h+ antiporter complex	0			
+cold-shock proteins	0		(SKIPPED — abstract category)	
+ectabc operon	0			
+proton-pumping respiratory complexes	0			
+nadh dehydrogenase (complex i)	4			
+photosystem ii	212			
+sulfide:quinone oxidoreductase (sqr)	0			
 rod complex	0		(SKIPPED — abstract category)	
+roda-pbp2 complex	0			
+pilb extension atpase	0			
+pilt retraction atpase	0			
+bacterial adhesins	0			
+type iii secretion system	500			
+laccase	424	UniProtKB:A0A072TFX8	Laccase	UniProtKB:A0A2X0UFP6|UniProtKB:B7LVY7|UniProtKB:A0A2I1P5X7|UniProtKB:A0A564VKA6|UniProtKB:A0A3S5BWD6
+arsc arsenate reductase	0			
+salinity-adaptation genes	0		(SKIPPED — abstract category)	
+fatty acid desaturase	500	UniProtKB:A0A031GJU0	Fatty acid desaturase	UniProtKB:A0A0A6DGM7|UniProtKB:A0A0H2V847|UniProtKB:A0A0N9V026|UniProtKB:A0A0P0R4P2|UniProtKB:A0A100WNM3
+proton export pumps and antiporters	0		(SKIPPED — abstract category)	
+f1fo-atp synthase	0			
+cspa cold-shock protein	0			
+dnak chaperone	3			
+trkah k+ uptake system	0			
+pyruvate:ferredoxin oxidoreductase (pfor)	0			
+f1fo-atpase	0			
+cold-adapted enzymes	0			
+ice-binding/antifreeze proteins	0			
+rpoh (sigma-32) heat-shock sigma factor	0			
+type i reaction center	0			
+endoglucanase	500	UniProtKB:A0A060H8L4	Endoglucanase 	UniProtKB:A0A3A7GNN2|UniProtKB:A0A484YH86|UniProtKB:A0A6V7CB32|UniProtKB:A0A839ZHW9|UniProtKB:A0AA88G685
+beta-glucosidase	500	UniProtKB:A0A031JNC1	beta-glucosidase 	UniProtKB:A0A071MGC9|UniProtKB:A0A0A7PK34|UniProtKB:A0A0D0F5F3|UniProtKB:A0A0H3FV37|UniProtKB:A0A0K2MB29
+carboxysomal carbonic anhydrase	0			
+atp citrate lyase (aclab)	0			
+4-hydroxybutyryl-coa dehydratase	106	UniProtKB:A0A017H5F8	4-hydroxybutyryl-CoA dehydratase	UniProtKB:A0A7G6E369|UniProtKB:A0A4D7ATV4|UniProtKB:A0A060HL93|UniProtKB:A0A2U9IH19|UniProtKB:A0A7K4FNH7
+terminal oxidase	500	UniProtKB:A0A2U9ILE5	Aa3-type terminal oxidase	UniProtKB:A0A0H3MIV8|UniProtKB:A0A0Q0C077|UniProtKB:A0A1E3M924|UniProtKB:A0A1L3ZNM1|UniProtKB:A0A220WGT8
+multiheme c-type cytochromes	0			
+sox enzyme system	0			
+persulfide dioxygenase (pdo)	0			
+formate dehydrogenase (fdh)	172			
+fipa	53	UniProtKB:A0A023UGD7	FipA	UniProtKB:A0A4Q2E2A0|UniProtKB:I7HDF3|UniProtKB:A0A482LZT5|UniProtKB:A0A0R8C7D3|UniProtKB:A0A1W6QWX9
+class a penicillin-binding proteins	0			
+rodz	500	UniProtKB:H1XNL6	Protein RodZ	UniProtKB:A0A0D0TLM1|UniProtKB:A0A3V8D5M6|UniProtKB:A0A5H7K1K4|UniProtKB:A0A6N3QKH7|UniProtKB:A0A6X7X9Z1
+sula	500	UniProtKB:H8YHZ0	SulA	UniProtKB:Q57QT2|UniProtKB:A0A1H2F6J5|UniProtKB:A0A609W9D9|UniProtKB:A0A8T9IE89|UniProtKB:A0A077PEL8
 penicillin-binding proteins	3			
 mreb cytoskeleton	0			
+pbp2	34	UniProtKB:A0A2D2D7X6	Penicillin-binding protein PBP2	UniProtKB:Q1ALQ9|UniProtKB:A0A859CZB5|UniProtKB:A0A888W3D2|UniProtKB:A0A0H3CB49|UniProtKB:Q1ALR1
+gpsb	360	UniProtKB:A0A060RK42	Cell cycle protein GpsB (Guiding PBP1-shuttling protein)	UniProtKB:A0A1D9PKQ8|UniProtKB:A0A356VNF5|UniProtKB:S5LJW1|UniProtKB:A0A6G9Q4B0|UniProtKB:A0A7L9VTF4
 ftsz division ring	0			
 curvature scaffold	0			
 gliding motility machinery	0		(SKIPPED — abstract category)	
+polyphosphate kinase (ppk)	3			
 flagellar motor	500			
+chea histidine kinase	6	UniProtKB:G0HQV3	CheA histidine kinase 	UniProtKB:G0HU57|UniProtKB:M0K520|UniProtKB:M0K031|UniProtKB:Q5V0C2
+chey response regulator	1	UniProtKB:A0A2X5A7X5	CheY response regulator 	
+bactofilins	0			
+bactofilin polymers	0			
+peptidoglycan hydrolases	53			
+dissolved inorganic carbon transporter	0			
 metazoan-adapted virulence factors	0			
+complement-regulator-binding surface proteins	0			
+tonb-dependent transporters	0			
+specific virulence traits	0			
+secretory iga	0			
+bacterial glycan-binding proteins	0			
+osmolyte transport and synthesis genes	0			
+cell appendages and adhesins	0			
 human-adapted virulence factors	0			
+leghemoglobin	0			
+nitrogenase complex	0			
 virulence factors	170		(SKIPPED — abstract category)	
 protein secretion systems	0			
 plant-cell-wall-degrading enzymes	0			
-type iii secretion system	500			
 t3ss effector proteins	0			
+apoplastic effectors	0			
+methyl-accepting chemotaxis protein (mcp)	137			
+extracellular exoenzymes	0			
+cellulolytic enzyme system	0			
+carbohydrate-active enzymes (cazymes)	0			
+manganese peroxidase (mnp)	0			
+adhesins	0			
+primary proton pumps	0			
+proton-coupled atpases	0			
+substrate dehydrogenases	0			
+terminal oxidases	0			
+ros-scavenging enzymes	0			
+rubrerythrin	500	UniProtKB:A0A016EEI2	Rubrerythrin	UniProtKB:A0A165L487|UniProtKB:A0A1K1LER7|UniProtKB:A0A1Q2HQW4|UniProtKB:A0A3E2TX45|UniProtKB:A0A414ATZ0
+nadh peroxidase	294	UniProtKB:A0A031WCC0	NADH peroxidase 	UniProtKB:A0A414ADX0|UniProtKB:A0A135YZ18|UniProtKB:A0A8E0I9G0|UniProtKB:A0A0C9PSW7|UniProtKB:A0A174ZFN6
+nadph peroxidase	0			
+atp synthase c-subunit alkaline-adaptive motifs	0			
+antioxidant enzymes (sod/cat/peroxidases)	0			
+respiratory reductases	0			
 ars operon (arsb pump)	0			
+arsr transcriptional repressor	0			
+ars promoter	0			
+arsb arsenite efflux permease	0			
+acr3 arsenite efflux permease	0			
+arsm arsenite s-adenosylmethionine methyltransferase	0			
+metallothionein / thiol-rich metal-binding proteins	0			
+cada p-type (p1b) atpase	0			
 czc/cnr cobalt efflux system	0			
+czccba efflux complex	0			
+czcs/czcr two-component system	0			
+cnr (cnrcbayxht) determinant	0			
+dmef cdf-family exporter	0			
+rcna/yohm co/ni efflux protein	0			
 copper efflux systems (cue/cus/pco/cop)	0			
+periplasmic multicopper oxidase (cueo-type)	0			
+desiccation-related intrinsically disordered proteins	0			
+mechanosensitive channels (msc)	0			
 hyperthermostable proteins	0			
+grsa/grsb gdgt cyclization enzymes	0			
 acidic halophilic proteins	0			
 oxygen-sensing regulation	0			
+cytochrome bd terminal oxidase	4			
+glutamate decarboxylase system	0			
 fnr-type oxygen-responsive regulation	0			
+arcab two-component system	0			
+anaerobic metabolism genes	0			
+aerobic metabolism genes	0			
+cytochrome bd oxidase	127	UniProtKB:Q6L5L4	Cytochrome bd oxidase	UniProtKB:W0E2M0|UniProtKB:A0A5P2A3C4|UniProtKB:A0A426FFM1|UniProtKB:A0A7G7PTR8|UniProtKB:F2G9T7
 fnr oxygen-responsive regulator	0			
+arca/arcab two-component regulator	0			
+k+ uniport system	0			
+mechanosensitive channels	0			
+beta/betb	0			
 thermostable enzymes	0			
 archaeal molecular chaperonins	0			
+archaeal proteins	0			
+gms (gmgt synthase)	0			
 mer operon (mera reductase)	0			
+merb (organomercurial lyase)	0			
+merr (hg-responsive regulator)	0			
 mesophile enzyme repertoire	0			
-metal efflux pump	500	UniProtKB:A0A067YD12	Heavy metal efflux pump	UniProtKB:A0A7W7ZNW6|UniProtKB:I8WLR6|UniProtKB:A0A379IF14|UniProtKB:K1ITB9|UniProtKB:Q0A8U8
+sigma-32 (rpoh)	0			
+heat shock genes	0			
+ars operon	1		(SKIPPED — abstract category)	
 high-affinity terminal oxidase	0			
 cytochrome cbb3 oxidase	28			
+cytochrome bd ubiquinol oxidase	500	UniProtKB:A0A0N0XA94	Cytochrome bd ubiquinol oxidase	UniProtKB:A0A9Q7G429|UniProtKB:B1LSV0|UniProtKB:C7JE81|UniProtKB:D3T1V9|UniProtKB:A0A543Q5U4
+catalase (kata)	0			
+superoxide dismutase (sodb)	0			
+alkyl hydroperoxide reductase (ahpc)	0			
 oxidative stress defense enzymes	0			
+superoxide reductase	130	UniProtKB:A0A090JWT2	Superoxide reductase 	UniProtKB:A0A832T5E5|UniProtKB:A0A1L9C6Q8|UniProtKB:F7YVI0|UniProtKB:A0AA86DY70|UniProtKB:A0AA94HQ10
+rubrerythrin/peroxidase	0			
+ectd (ectoine hydroxylase)	0			
+bcct transporters	0			
+teaabc trap transporter	0			
+mechanosensitive channels (mscl/mscs)	0			
+compatible-solute transporters (opu/prou)	0			
+trkh potassium uptake system	1			
+nhac-family na+/h+ antiporter	0			
+potassium uptake systems	0			
+kdpfabc complex	0			
+potassium uptake system	94			
+k+ uptake systems (trk/ktr/kup/kima)	0			
+opua/opuc compatible-solute transporters	0			
+trk/ktr potassium influx systems	0			
+kima/kup high-affinity k+ uptake transporters	0			
+opua-like compatible-solute importers	0			
+mechanosensitive channels mscl/mscs	0			
+opua/opuc compatible-solute importers	0			
+beta/betb pathway	0			
+f1f0-atpase proton pump	0			
 compatible-solute uptake systems	0			
+k+ uptake system (kdp/kef)	0			
+p-type proton-translocating atpase	0			
+na+/h+ antiporter (nha)	0			
+glutamate decarboxylase system (gad)	0			
 terminal respiratory oxidases	0			
+fe-s cluster enzymes	0			
 proton-coupled atp synthase	0			
-cold-adapted enzymes	0			
+monovalent cation/proton antiporters	0			
+pyruvate formate-lyase (pfl)	0			
+[fefe]-hydrogenase	0			
+f1f0-atp synthase	0			
+opua compatible-solute transporter	0			
+respiratory proton-pumping enzymes	0			
+ybas glutaminase	0			
+proton-translocating f1f0-atpase	0			
+proton-consuming reaction genes	0			
+na+/h+ antiporter genes	0			
+cpa/nha family na+/h+ antiporters	0			
+rnf complex	0			
+branched respiratory chain terminal oxidases	0			
+k+/h+ antiporters	28	UniProtKB:A0A1Z4VR00	Na+/H+ and K+/H+ antiporters	UniProtKB:A0A173VBS1|UniProtKB:Q88D53|UniProtKB:W8PIF7|UniProtKB:A0A174I5X2|UniProtKB:A0A562E332
+f0f1-atp synthase	1			
+f0f1-atpase / atp synthase	0			
+mrpa-g operon	0			
+na+/solute symporters	0			
+h+-atpase proton efflux pump	0			
+cation/proton antiporters	0			
+respiratory proton-pumping complexes	0			
+proton:ion antiporters	0			
+pfa operon	0			
+heat-shock response genes (rpoh, rpoe, dnak, groel)	0			
+nuo nadh dehydrogenase i complex	0			
 antifreeze and ice-binding proteins	0			
+reca recombinase	2			
+ectabc/ectbacd gene cluster	0			
+k+ import systems	0			
+compatible-solute importer opua	0			
 oxygen-sensitive enzymes	0			
+iron-sulfur cluster enzymes	0			
+glycyl radical enzymes	0			
+low-potential energy-metabolism enzymes (pfor/pfl)	0			
+acyl-lipid desaturase (des)	0			
+rpos sigma factor (sigma-s)	0			
+csda dead-box rna helicase	0			
+nucleoid-associated proteins	0			
+small heat shock proteins	0			
+thermosome (group ii chaperonin)	0			
+cold shock proteins	12		(SKIPPED — abstract category)	
+molecular chaperone network	0			
+rna thermometer hairpin	0			
+shine-dalgarno / aug ribosome binding site	0			
+ftsh protease	500	UniProtKB:A0A0D7UY21	Modulator of FtsH protease	UniProtKB:A0AA95CT63|UniProtKB:A0A2X2UZ04|UniProtKB:A0A5I4U2P2|UniProtKB:A0A729JUN0|UniProtKB:A0A737BXE2
+cold shock proteins / rna chaperones	0			
+antifreeze / ice-binding proteins	0			
+rna thermometer	0			
+reverse gyrase (topr/rgy)	0			
+dnak-dnaj chaperone	1	UniProtKB:A0A0C1PL72	ATP-binding subunit of Clp protease and DnaK-DnaJ chaperone (ATP-dependent Clp protease ATP-binding subunit)	
+groel-groes / htpg chaperone	0			
+groel/dnak molecular chaperones	0			
+rna thermometer 5′-utr structure	0			
+heat-shock proteins / chaperones	0			
+desk	240	UniProtKB:A0A067Z5N7	Sensor histidine kinase DesK 	UniProtKB:A0A379BXV1|UniProtKB:A0A380AP05|UniProtKB:A0A7Z9D669|UniProtKB:A0A0F7VXM0|UniProtKB:A0A4R8GKC5
+desr	98	UniProtKB:A0A067Z2X2	Transcriptional regulatory protein DesR	UniProtKB:A0A0U5FJX5|UniProtKB:A0A6V7EYN0|UniProtKB:A0A8E0M9L9|UniProtKB:A0A101DFB6|UniProtKB:A0A564VAS7
+des (acyl-lipid desaturase)	0			
+dnak/dnaj/grpe and groes/groel chaperone systems	0			
+cold-shock proteins (cspa-family)	0			
+molecular chaperones (dnak/groel/groes/clp/tf)	0			
 thermostable proteins	0		(SKIPPED — abstract category)	
 energy-transducing enzymes	0			
+group ii chaperonin (thermosome)	0			
+denatured proteins	0			
 chaperone proteins	1		(SKIPPED — abstract category)	
+rpoe envelope-stress sigma factor	0			
+cpd photolyase	0			
+znta p-type atpase	0			
+zntr merr-family regulator	0			
+czccba rnd efflux complex	0			
 cas proteins	0			
+cas1-cas2 complex	0			
+crrna	404			
+crrna-cas effector complex	0			
+genes with marginal fitness benefit	0			
+integrase/recombinase/transposase mobility module	0			
+type iv secretion system (t4ss)	0			
+relaxase	500	UniProtKB:A0A015YCT3	Relaxase	UniProtKB:A0A0E2H4T7|UniProtKB:A0A0E2LPR7|UniProtKB:A0A1B1BQP0|UniProtKB:A0A1D8JKS3|UniProtKB:A0A1D8JKS3
+type iv coupling protein	0			
+integrase and excisionase	0			
+integron integrase (inti)	1			
+plasmid	500		(SKIPPED — abstract category)	
+prophage	500		(SKIPPED — abstract category)	
+toxin-antitoxin system	500		(SKIPPED — abstract category)	
+plasmid-encoded anti-restriction genes	0			
+ci master repressor	0			
+reca* nucleoprotein filament	0			
+lexa repressor	500	UniProtKB:A0A016XIE2	LexA repressor 	UniProtKB:A0A090IC76|UniProtKB:A0A126SYL4|UniProtKB:A0A154V3R4|UniProtKB:A0A1A9ABL1|UniProtKB:A0A1C3N3P2
+phage-plasmid	5			
+cognate dna methyltransferase	0			
+restriction endonuclease	500	UniProtKB:A0A015ZKG4	Restriction endonuclease	UniProtKB:A0A077NUW8|UniProtKB:A0A085UMT3|UniProtKB:A0A0B5ETT0|UniProtKB:A0A0H4IW12|UniProtKB:A0A109WC40
+type iv restriction enzyme	0			
+plasmid-encoded methylase	0			
+phage-encoded dna methyltransferase	0			
+transposase	500	UniProtKB:A0A023WVD3	Transposase	UniProtKB:A0A023WVK1|UniProtKB:A0A024EH99|UniProtKB:A0A062HK11|UniProtKB:A0A062IB56
+methyl-coenzyme m reductase (mcr)	0			
+denitrification reductases	0			
+respiratory nitrate reductase (narghi)	0			
+nitrous oxide reductase (nosz)	0			
 secreted depolymerizing enzymes	0			
+susc-like tonb-dependent transporter	0			
+periplasmic gh3 hydrolase	0			
+endo-chitinase	4	UniProtKB:Q693B6	Endo-chitinase	UniProtKB:Q8VQN2|UniProtKB:D2AX95|UniProtKB:Q693B8
+lignin-oxidizing redox enzymes (lip/mnp/vp/laccase/dyp)	0			
+cbbr transcriptional regulator	0			
+cbb operon	0			
+cytoplasmic carbonic anhydrase	0			
+ribulose-1,5-bisphosphate carboxylase/oxygenase (rubisco)	0			
 cellulase systems	0			
+cellobiohydrolase / exoglucanase	0			
+scaffoldin	1			
+cohesin domain	189	UniProtKB:A0A174EJP3	Cohesin domain	UniProtKB:A0A4D6H0Z5|UniProtKB:A0A1H6AHH1|UniProtKB:A0A6S6M9E3|UniProtKB:A0A1X9LMG7|UniProtKB:A0A7G9WCZ5
+dockerin domain	338		(SKIPPED — abstract category)	
+cellulolytic / lignocellulose-catabolic genes	0			
 chitinases	0			
+exochitinase / chitobiosidase	0			
+beta-n-acetylglucosaminidase	500	UniProtKB:A0A086GXI9	Beta-N-acetylglucosaminidase	UniProtKB:A0A016A4A7|UniProtKB:A0A2S7AF25|UniProtKB:A0A367FU57|UniProtKB:A0A3E2DM25|UniProtKB:A0A6N2T9A5
+lytic polysaccharide monooxygenase (lpmo; aa10)	0			
+respiratory nitrate reductase narghi	0			
+cytochrome cd1 nitrite reductase nirs	1	UniProtKB:I0HLW6	Cytochrome cd1 nitrite reductase NirS 	
+nitric oxide reductase nor	0			
+nitrous oxide reductase nosz	1	UniProtKB:Q30PN7	Nitrous oxide reductase NosZ 	
+pyruvate synthase (pyruvate:ferredoxin oxidoreductase)	0			
+phosphoenolpyruvate carboxylase	500	UniProtKB:A0A031JWX5	Phosphoenolpyruvate carboxylase	UniProtKB:A0A074NLQ9|UniProtKB:A0A0J6HH68|UniProtKB:A0A0P0BRQ5|UniProtKB:A0A0S4U7C3|UniProtKB:A0A1I7GUT9
+tsda thiosulfate dehydrogenase	0			
+teth tetrathionate hydrolase	0			
+sor sulfur oxygenase reductase	0			
+mtrcab outer-membrane complex	0			
+narghi nitrate reductase	0			
+nrfa cytochrome c nitrite reductase	0			
+narx-narl two-component system	0			
+fnr regulator	0			
+nrf operon	0			
+atp sulfurylase (sat)	0			
+aps reductase aprab	0			
+dsrab with dsrc	0			
+dsrmk(jop) membrane complex	0			
+cytochrome bc1 complex	500			
+cytochrome c	500	UniProtKB:A0A061JR98	Cytochrome C	UniProtKB:A0A023WR82|UniProtKB:A0A059ZWS8|UniProtKB:A0A076P1R1|UniProtKB:A0A081UT26|UniProtKB:A0A086GYN7
+pyruvate decarboxylase	383	UniProtKB:A0A067Z5Y9	pyruvate decarboxylase 	UniProtKB:F8KXU2|UniProtKB:A0A379FFX5|UniProtKB:A0A4V6JHX0|UniProtKB:A0A1L3GDE4|UniProtKB:A0A0F6S239
+alcohol dehydrogenase	500	UniProtKB:A0A022L3Z7	Alcohol dehydrogenase	UniProtKB:A0A0C4WT45|UniProtKB:A0A0D0EN04|UniProtKB:A0A0E3ZC59|UniProtKB:A0A0H2M6K4|UniProtKB:A0A0H3GZU1
+pyruvate:ferredoxin oxidoreductase	500	UniProtKB:A0A075WCC3	Pyruvate:ferredoxin oxidoreductase 	UniProtKB:A0A2Z5SMC3|UniProtKB:A0A7Y9A122|UniProtKB:B5Y9E1|UniProtKB:A0A6B4JIZ6|UniProtKB:Q8TZ57
+ferredoxin:nad+ oxidoreductase	22	UniProtKB:I3R731	Ferredoxin:NAD+ oxidoreductase 	UniProtKB:A0A2V0R349|UniProtKB:A0A2K9NVB7|UniProtKB:A0AA94HTU1|UniProtKB:A0A2V0QGL4|UniProtKB:A0A1M5XVE9
+[fefe] hydrogenase	0			
+formate dehydrogenase	500	UniProtKB:A0A016XII7	Formate dehydrogenase	UniProtKB:A0A0A0HIJ6|UniProtKB:A0A124GAS2|UniProtKB:A0A1C4YP11|UniProtKB:A0A1H3T0X9|UniProtKB:A0A1L9QZY7
+formyl-thf synthetase (fhs)	0			
+acs/codh complex	0			
+membrane energy-conservation module (rnf/ech)	0			
+cyc2	6			
+cbb3-type terminal oxidase	0			
+cytochrome bd-type terminal oxidase	0			
+lactate dehydrogenase	500	UniProtKB:A0A073JRC3	Lactate dehydrogenase	UniProtKB:A0A0H2LWL6|UniProtKB:A0A0Y6RVD2|UniProtKB:A0A101SAW0|UniProtKB:A0A171J9B6
 peroxidases and laccases	0			
-multicopper oxidase	500	UniProtKB:A0A059ZYC2	Multicopper oxidase	UniProtKB:A0A0N9HZ18|UniProtKB:A0A1X4BKQ8|UniProtKB:A0A378AER7|UniProtKB:A0A4P6U2Z3|UniProtKB:A0A514V6G9
-nitrogenase	500	UniProtKB:A0A089HR75	Nitrogenase	UniProtKB:A0A068T2L8|UniProtKB:A0A0F7FBC1|UniProtKB:A0A2P0ZWG3|UniProtKB:A0A2U8DU29|UniProtKB:A0A4U1KVW8
+dyp-type peroxidase	500	UniProtKB:A0A024E2S9	Dyp-type peroxidase	UniProtKB:A0A3P0US03|UniProtKB:A0A5W0VTY9|UniProtKB:A0A6H0FYP4|UniProtKB:A0A7S9LBK4|UniProtKB:A0A846WIE6
+manganese peroxidase	0			
+lignin peroxidase	41	UniProtKB:A0A0H3L9R0	Lignin peroxidase	UniProtKB:X7ZA82|UniProtKB:A0A1V3XDF8|UniProtKB:B2HKP8|UniProtKB:A0A2I7W7U9|UniProtKB:A0A916P8V5
+mcrabg gene cluster	0			
+pyruvate formate lyase (pflb)	0			
+phosphotransacetylase / acetate kinase (pta/acka)	0			
+formate hydrogenlyase complex (fhl)	0			
+ferredoxin/flavodoxin	500	UniProtKB:A0A7Y9D8L6	Ferredoxin/flavodoxin	UniProtKB:A7NPX8|UniProtKB:A8F4Q1|UniProtKB:D0KPK2|UniProtKB:D4H8V8|UniProtKB:Q5LS95
+nifh (fe-protein)	0			
+p-cluster	0			
+femo-cofactor (m-cluster)	0			
 f1fo atp synthase	0			
+complex i / nadh:quinone oxidoreductase (ndh-1)	0			
+succinate dehydrogenase / complex ii	0			
+heme-copper oxidase	78			
+cytochrome b6f complex	20			
+photosystem i	500			
+ferredoxin	500	UniProtKB:A0A009PCQ5	Ferredoxin	UniProtKB:A0A060HS70|UniProtKB:A0A072T5N5|UniProtKB:A0A076LG55|UniProtKB:A0A086GTJ1|UniProtKB:A0A089XLJ0
+ferredoxin-nadp+ reductase	26	UniProtKB:A0A0E2H5I8	Ferredoxin-NADP+ reductase	UniProtKB:A0A512TKT0|UniProtKB:A0A6N4THV2|UniProtKB:A0A4Y1X946|UniProtKB:A0A7G1G4N0
+microbial rhodopsin	0			
+methylmalonyl-coa carboxytransferase	24	UniProtKB:A0A3S9JES8	Methylmalonyl-CoA carboxytransferase	UniProtKB:D9Q932|UniProtKB:A0A3Q9UM14|UniProtKB:A0A0A8S1A8|UniProtKB:A0A068VTF8|UniProtKB:A0A6G7Y4K9
 secreted proteases	0			
-proteorhodopsin	4	UniProtKB:A0A1D7QWW9	Proteorhodopsin	UniProtKB:A0A0J6YLH9|UniProtKB:L7W6K7|UniProtKB:A0A0T5P794
+peptide transport systems (opp/dtpt/dpp)	0			
+intracellular peptidases	0			
+citryl-coa synthetase/lyase route	0			
+2-oxoglutarate:ferredoxin oxidoreductase (ogor/kor)	0			
+respiratory complex i (nadh:quinone oxidoreductase)	0			
 amylases / starch-active glycoside hydrolases	0			
+alpha-glucosidase / glucoamylase	0			
+carbamate kinase (arginine deiminase pathway)	0			
+thiosulfate dehydrogenase (tsda)	0			
+tetrathionate hydrolase (teth)	0			
+formate dehydrogenase complex	0			
+hydrogenase complex	25			
+acetyl-coa carboxylase	500	UniProtKB:A0A059L760	Acetyl-CoA carboxylase	UniProtKB:A0A0H5ACL3|UniProtKB:A0A0N9HTB2|UniProtKB:A0A1G4VLU6|UniProtKB:A0A1Q2HPV5|UniProtKB:A0A1X3CH81
+propionyl-coa carboxylase	500	UniProtKB:A0A024E6S7	Propionyl-CoA carboxylase	UniProtKB:A0A089X548|UniProtKB:A0A1G6PMD6|UniProtKB:A0A1H1S0N1|UniProtKB:A0A2X1CJP0|UniProtKB:A0A2Z3GLP6
+malonyl-coa reductase	1	UniProtKB:Q6QQP7	Malonyl-CoA reductase	
+propionyl-coa synthase	0			
+mmc lyase	0			
+acetyl-coa/propionyl-coa carboxylase	50	UniProtKB:A0A650CEQ7	Acetyl-CoA/propionyl-CoA carboxylase 	UniProtKB:A0A1C5HTD1|UniProtKB:A0A1C5GFZ7|UniProtKB:A0A1C5G595|UniProtKB:A0A1G7E8K5
+formyl-thf synthetase (fts/fhs)	0			
+methyltransferase	500	UniProtKB:A0A0C5IX96	Methyltransferase 	UniProtKB:A0A010SNA9|UniProtKB:A0A023Y0R7|UniProtKB:A0A024LAW8|UniProtKB:A0A059Y978|UniProtKB:A0A060H1N9
+corrinoid iron-sulfur protein (cofesp)	0			
+acetyl-coa synthase (acs)	0			
 xylanase systems	0			
+ce15 glucuronoyl esterases	0			
+flif (ms-ring)	0			
 flagellar basal motor	0			
+flbb periplasmic ring	0			
+flagellar rotor	0			
+stator complex	0			
+roda-pbp2 synthase (rod complex)	0			
 tyrosinase/laccase oxidases	0			
+polyketide synthase (pks)	4	UniProtKB:Q5Y9G5	EryAII acyl transferase domain in polyketide synthase (PKS) (Polyketide synthase modules 3 and 4)	UniProtKB:A0A0U4CTX1|UniProtKB:Q9PBK9|UniProtKB:A0A0U4CDX2
+tyrosinase	500	UniProtKB:A0A023Y3L4	Tyrosinase	UniProtKB:A0A7J0D2V0|UniProtKB:A0A177SND3|UniProtKB:A0A5J6GQB1|UniProtKB:P55023|UniProtKB:A0A516RAC2
+hppd (4-hydroxyphenylpyruvate dioxygenase)	0			
+hmga (homogentisate 1,2-dioxygenase)	0			
 diviva foci	0			
+diviva/scy/filp polarisome	0			
+homogentisate 1,2-dioxygenase	500	UniProtKB:A0A010REZ7	Homogentisate 1,2-dioxygenase (HGDO) 	UniProtKB:A0A0Q0G4T7|UniProtKB:A0A6B8KHV0|UniProtKB:A0A6H0RZ32|UniProtKB:A0A7Z8Y132|UniProtKB:D5BCN7
+wzx flippase	6	UniProtKB:A0A0G3EZQ9	Wzx flippase	UniProtKB:A0A0G3F136|UniProtKB:A0A0G3EWT2|UniProtKB:A0A0G3F1J1|UniProtKB:D2Q640
+wzy polymerase	11			
+wza outer-membrane export protein	0			
+kpsmt abc transporter	0			
+bmc-h/t/p shell proteins	0			
+phytoene synthase	500	UniProtKB:A0A023WN98	Phytoene synthase	UniProtKB:A0A0H2MDC8|UniProtKB:A0A177MDC4|UniProtKB:A0A517Z5L3|UniProtKB:A0A518DGL4|UniProtKB:A0A518DGL4
+phytoene desaturase	500	UniProtKB:A0A060JDC8	Phytoene desaturase	UniProtKB:A0A3P4AW44|UniProtKB:A0A6B8LR90|UniProtKB:A0A6P1W264|UniProtKB:A0AA46PSR3|UniProtKB:F8K0L4
+lycopene cyclases	0			
 ftsz ring (divisome)	0			
+rod complex (elongasome)	0			
+ftsa and zipa (proto-ring tethers)	0			
+ftswi septal pg synthase	0			
+mrec/mred balance	0			
+ftsz abundance	0			
+ftsn	500	UniProtKB:A3RWZ4	FtsN	UniProtKB:A0A0H3AJM8|UniProtKB:A0A2A5Q8A9|UniProtKB:A0A5I5TZC1|UniProtKB:A0AA89RET0|UniProtKB:A0A077P1P3
+ftswi septal pg synthase complex	0			
+ftsz proto-ring (with ftsa/zipa)	0			
+flotillins	0			
+roda-pbp2 core synthase	0			
+rod-complex accessory proteins mrec/mred/rodz	0			
+roda-pbp2 elongasome complex	0			
+mreb cytoskeletal filaments	0			
+mrec-mred balance	0			
+mred	500	UniProtKB:A0A0H2VI68	Cell shape determinant mreD	UniProtKB:A0A0D8IFL4|UniProtKB:A0A0E1DYM6|UniProtKB:A0A0H3AGI2|UniProtKB:A0A1A6GB53|UniProtKB:A0A1Y6HEB3
+class a penicillin-binding proteins (apbps)	0			
+roda/pbp3 elongasome	0			
+ftsz filament properties	0			
+pbp2 (elongasome transpeptidase)	0			
+divisome complex	0			
+carotenoid biosynthesis genes (crt locus)	0			
+mreb cytoskeletal guidance	0			
 pcsb hydrolase system	0			
+septal peptidoglycan hydrolase	0			
+lytr/lcp teichoic acid ligase	0			
+septal peptidoglycan hydrolases (ripa/rpfb)	0			
+divisome (ftsz/pbp2x/ftsw)	0			
+elongasome (pbp2b/roda)	0			
+cgla	11	UniProtKB:A0A0C1K447	Competence protein CglA	UniProtKB:A0A368UDN7|UniProtKB:A0A172QA65|UniProtKB:A0A2Z5TMM2|UniProtKB:A0A2L0D1S8|UniProtKB:A0A7L4WBI0
+flif (ms-ring protein)	0			
 flagellar basal body	500			
 flagellar stator complex	0			
+flagellar type iii secretion system	284			
+flagellar structural subunits	0			
+flih-flii-flij atpase complex	0			
+flid filament cap	0			
+flgk/flgl hook-filament junction	0			
+chey-p	135			
+bactofilin cytoskeleton	0			
+ftsw	500	UniProtKB:A0A0E1R950	Lipid II flippase FtsW	UniProtKB:A0A077P9Q8|UniProtKB:A0A097ICT6|UniProtKB:A0A099D7M2|UniProtKB:A0A0N9XUL1|UniProtKB:A0A179BYQ5
+gvpa	88	UniProtKB:A0A0B5ENA7	Gas vesicle protein GVPa	UniProtKB:D5AR14|UniProtKB:P0A3G1|UniProtKB:A0A829NYJ5|UniProtKB:F4CUD7|UniProtKB:F2NHZ4
+gvpc	29	UniProtKB:A0AA45D9L5	Gas vesicle protein GvpC	UniProtKB:B0R8L6|UniProtKB:K4LGW5|UniProtKB:Q9R461|UniProtKB:F1B5G8|UniProtKB:M1Y0G8
+gvpd	71	UniProtKB:A0A059TSE2	Protein gvpD	UniProtKB:A0A1C5G6R7|UniProtKB:A0A3M0CHN0|UniProtKB:A0A1L9C1R9|UniProtKB:A0A1H6AXZ5|UniProtKB:A0A1I7ALA1
 surface adhesins	0			
 type ix secretion system	500			
+bam complex	0			
+beta-barrel outer membrane proteins	0			
+tol-pal system	500			
 phz operons	0			
+pyoverdine nrps enzymes (pvdl/pvdi/pvdj/pvdd)	0			
 csd shape proteins	0			
+hetr transcriptional regulator	0			
+furc / perr	0			
+pats peptide	0			
+hetn regulator	0			
+gas vesicle gene cluster	0			
+encapsulated metabolic enzymes	0			
+flif	295	UniProtKB:A0A0H2X1L8	FliF	UniProtKB:A0A412ZDM5|UniProtKB:A0AA89VRG4|UniProtKB:A0A1L8ZCJ7|UniProtKB:A0A3B9UNE8|UniProtKB:A0A7X1C7C0
+mamk	0			
+mamab operon	0			
+mamb	1	UniProtKB:A0A6J4ZQS8	Magnetosome protein MamB	
+flif ms-ring protein	0			
+flim/flin c-ring partners	0			
+mota-motb stator complex	0			
+flig rotor protein	0			
+flagellar c-ring switch complex	0			
+archaellum	51		(SKIPPED — abstract category)	
+diviva polarisome	0			
+cgla glycopolymer ligase	0			
+ftsz z-ladder arrays	0			
+sapb / chaplins / rodlins	0			
+flhdc flagellar master operon	0			
+wspr diguanylate cyclase	0			
+absence of spo0a gene	0			
+rap phosphatases	0			
+lycopene beta-cyclase (crty)	0			
+beta-carotene hydroxylase (crtz)	0			
+carotenoid ketolase (crtw)	0			
 mapz/ftsz division-positioning system	0			
 mapz	24			
+ftsw-pbp2x complex	0			
+roda-pbp2b elongasome	0			
+crte/crtb/crti/crty gene set	0			
+hppd 4-hydroxyphenylpyruvate dioxygenase	0			
+hmga homogentisate 1,2-dioxygenase	0			
+photosynthesis gene cluster	0			
+crti-crtb operon	0			
 weak/absent shape-determining cytoskeleton	0			
+pha synthase (phac)	0			
+phasin (phap)	1			
+phar regulator	0			
+phap gene	0			
+pha depolymerase (phaz)	0			
+exopolyphosphatase (ppx)	0			
+stpabcd complex	0			
+prodiginine biosynthetic gene cluster (pig/red)	0			
+pigc ligase	0			
+cpxa/cpxr two-component system	0			
+mreb filaments	0			
+bactofilin-m23 peptidase module	0			
+crva polymer	0			
 s-layer (glyco)protein subunits	0			
+ftsa	500	UniProtKB:A0A1M6DY20	Cell division ATPase FtsA	UniProtKB:A0A071MJ74|UniProtKB:A0A0M4U443|UniProtKB:A0A1C2D4B3|UniProtKB:A0A1W0VM35|UniProtKB:A0A1Z4C014
+peptidoglycan synthetases and hydrolases	0			
+mreb-mediated elongation machinery	0			
+divisome and pbps	0			
+ftsw lipid ii flippase	0			
+flhe	500	UniProtKB:A0A192C731	FlhE	UniProtKB:A0A655BRH5|UniProtKB:Q9AM41|UniProtKB:Q9AM41|UniProtKB:A0A2V4G1T1|UniProtKB:A0A3W0HLV6
+flgv	0			
+spoiid	500	UniProtKB:A0A0M6WLJ0	Sporulation protein SpoIID	UniProtKB:A0A848PIG0|UniProtKB:E3H9Y7|UniProtKB:H1XVA0|UniProtKB:A0A134BRD7|UniProtKB:A0A1D7W0L0
+spoiim	109	UniProtKB:A5N7K0	SpoIIM	UniProtKB:A0A1G8CN94|UniProtKB:A0A1H1XBT6|UniProtKB:A0A385ZUG1|UniProtKB:A0A7W4T840
+spoiip	18	UniProtKB:A0A1S8R940	Stage II sporulation protein SpoIIP	UniProtKB:A0A564T470|UniProtKB:A0A1S8SC30|UniProtKB:A0A2K9E336|UniProtKB:D4M5H8
+phosphorylated spo0a (spo0a~p)	0			
+spo0e-family phosphatases	0			
+spoiva	0			
+spovm	28	UniProtKB:A0A2K8N6W1	Stage V sporulation protein SpoVM	UniProtKB:A0A2U8EB56|UniProtKB:A0A2K9MSK0|UniProtKB:A0A317TQ36|UniProtKB:A0A410M8N6
+spovid	10	UniProtKB:A0A0B5ANC0	Morphogenetic protein associated with SpoVID	UniProtKB:Q812R2|UniProtKB:A0A1G6U166|UniProtKB:A0A4R8GRU6|UniProtKB:A0A562JB76
+cote	19	UniProtKB:D5WPR1	Spore coat protein CotE	UniProtKB:A0A410M898|UniProtKB:A0A345PGM2|UniProtKB:A0A2K8N770|UniProtKB:L0EFH3|UniProtKB:A0A090KS27
+safa	377	UniProtKB:A0A0N1QUA1	SafA	UniProtKB:A0A6L7CT57|UniProtKB:A0A636S893|UniProtKB:D9RZD9|UniProtKB:B9MNV5|UniProtKB:A0A368IJX6
 spo0a phosphorelay	0			
 compartment-specific sigma factors	0			
+spoiiie	500	UniProtKB:A0A100JQQ1	DNA translocase SpoIIIE	UniProtKB:A0A0K2J393|UniProtKB:A0A1H1LCS2|UniProtKB:A0A1H1LM38|UniProtKB:A0A1H1SAU6|UniProtKB:A0A380K7F3
+sigma f	500	UniProtKB:E0J3M3	RNA polymerase, sigma 28 (Sigma F) factor	UniProtKB:A0A097R3C5|UniProtKB:A0A0M0NM10|UniProtKB:A0A0P9YEG5|UniProtKB:A0A2T9IAC7|UniProtKB:A0A5W7RSM8
+sigma e	500	UniProtKB:A0A0C7NZS0	Positive regulator of sigma E	UniProtKB:A9L5N2|UniProtKB:A0A2K9NML7|UniProtKB:G7UQF8|UniProtKB:A0A0H3B166|UniProtKB:A0A1G8IZB5
+sigma g	0			
+sigma k	45	UniProtKB:A0A060N640	Sigma K	UniProtKB:E4TL14|UniProtKB:A0A0T7H2Y8|UniProtKB:C8X7T5|UniProtKB:A0A101E3S1|UniProtKB:H0G3Q6
+s-layer proteins	1		(SKIPPED — abstract category)	
+facz	0			
+baca-lmdc morphogenesis module	0			
+spmx	0			
+pcsb autolysin	0			
+ftsex complex	0			
+cell wall synthase	2			
+ftsz z-ring assembly	0			
+cell wall hydrolases (autolysins)	0			
+pilq secretin	0			
 crva	0			
+crvb	0			
+vadr srna	0			
+crva mrna	0			
+vxrab two-component system	0			
 crtopqmn operon	0			
-drug efflux pump	79	UniProtKB:A3RNR9	Transmembrane drug efflux pump	UniProtKB:A0A0S4TSS6|UniProtKB:A0A2N9DWW2|UniProtKB:A0A3M6AWC4|UniProtKB:A0A0P9ZNE9|UniProtKB:A0A090IJ22
-luciferase	500	UniProtKB:A0A010SSZ8	Luciferase	UniProtKB:A0A076EUL6|UniProtKB:A0A0M8PJT5|UniProtKB:A0A1A2Q4Q4|UniProtKB:A0A1H0UQU6|UniProtKB:A0A1N6CLL5
+sigb (sigma factor b)	0			
+glms	11	UniProtKB:I6LB50	GlmS	UniProtKB:F3BQ65|UniProtKB:A0A0C4WWU5|UniProtKB:S7HU93|UniProtKB:A0A1Z1NUF5
+idsa/crte (ggpp synthase)	0			
+crti (phytoene desaturase)	0			
+crty (lycopene beta-cyclase)	0			
+outer membrane porin	500	UniProtKB:A0A024EG85	Outer membrane porin	UniProtKB:A0A0E1T178|UniProtKB:A0A0Q0DIJ7|UniProtKB:A0A1X1ET04|UniProtKB:A0A346D4I1
+beta-lactamase	500	UniProtKB:A0A059L9H0	Beta-lactamase	UniProtKB:A0A060A0Z4|UniProtKB:A0A081RIC4|UniProtKB:A0A097J9F6|UniProtKB:A0A097R119|UniProtKB:A0A0A0Q9J3
+qrdr mutation in dna gyrase/topoisomerase iv	0			
+co dehydrogenase/acetyl-coa synthase (codh/acs)	0			
+luxg flavin reductase	0			
+luxcde fatty acid reductase complex	0			
+luxi autoinducer synthase	0			
+luxr transcription factor	0			
 co-insensitive terminal oxidase	0			
-catalase	500	UniProtKB:A0A071MK53	Catalase 	UniProtKB:A0A085B3Y9|UniProtKB:A0A088TYY5|UniProtKB:A0A0B5AH80|UniProtKB:A0A174WZX1|UniProtKB:A0A174WZX1
+ni,fe-carbon monoxide dehydrogenase	0			
+cox operon	0			
+coo operon	0			
+cooa	9	UniProtKB:A0A1D7QXJ2	Carbon monoxide-responsive transcriptional activator CooA	UniProtKB:A0A2R4MXA3|UniProtKB:G9XPP1|UniProtKB:C1DIY7|UniProtKB:P72322|UniProtKB:M9YGZ1
+rcom	18	UniProtKB:A0A0D5N3T8	CO-responsive transcriptional regulator RcoM	UniProtKB:Q13YL3|UniProtKB:Q13YL3|UniProtKB:A0A4V1AB68|UniProtKB:A0A174HXV4|UniProtKB:Q13IY4
+oxyr	95	UniProtKB:A0A9P2M4N5	OxyR	UniProtKB:R7KJ70|UniProtKB:A0A0J2G995|UniProtKB:A0A250FC43|UniProtKB:A0A376TPU6|UniProtKB:A0AA89VXK0
+perr	251	UniProtKB:A0A097ASJ8	Transcriptional regulator PerR	UniProtKB:A0A173SHZ6|UniProtKB:A0A837E1L0|UniProtKB:A0A7U7UDX1|UniProtKB:A0A174LW05|UniProtKB:A0A2U0M8A5
+pep-dependent phosphotransferase system (mannitol pts)	0			
+mtld mannitol-1-phosphate dehydrogenase	0			
+organic carbon import system	0			
+chemoreceptor (mcp)	0			
+cheb methylesterase	11	UniProtKB:A0A100WWV3	CheB methylesterase	UniProtKB:A0AA86KJY7|UniProtKB:A0AA88Z9Q9|UniProtKB:A0AA86FL16|UniProtKB:A0AA88Z1P8
+cher methyltransferase	28			
+chez phosphatase	0			
+chew coupling protein	0			
 membrane transporters	19		(SKIPPED — abstract category)	
 rrna operons	0			
-photosystem ii	212			
-urease	500	UniProtKB:A0A090IGX8	Urease	UniProtKB:A0A0A8XL67|UniProtKB:A0A0D5Y6G8|UniProtKB:A0A0P0DSA7|UniProtKB:A0A0R0QZS0|UniProtKB:A0A174G6L0
+outer membrane and secreted proteins	0			
+toxin-antitoxin modules	0			
+ribosome hibernation factors (rmf/hpf/raia)	0			
+resuscitation-promoting factors (rpf)	0			
+membrane-bound (de)hydrogenase	0			
+cytochrome bc1 and nadh dehydrogenase	0			
+carbonic anhydrase and dic transporters	0			
+periplasmic sox system	0			
+conductive pili and c-type cytochromes	0			
+sox multienzyme system	0			
+soeabc sulfite dehydrogenase	0			
+ammonia monooxygenase (amo)	0			
+hydroxylamine oxidoreductase (hao)	17			
+nitrite oxidoreductase (nxr)	0			
+particulate methane monooxygenase (pmmo)	0			
+soluble methane monooxygenase (smmo)	0			
+pmocab operon	0			
+pmoa/pmob/pmoc subunits	0			
+mmoxyz genes	0			
+mmox/mmoy/mmoz (mmoh alpha/beta/gamma)	0			
+3-hexulose-6-phosphate synthase (hps)	3			
+serine-glyoxylate aminotransferase (sgaa/sgt)	0			
+hydroxypyruvate reductase (hpra/hpr)	0			
+formaldehyde dehydrogenase (fld/fdh)	0			
+mxafi methanol dehydrogenase	0			
+type iv competence pilus	0			
+comec	500	UniProtKB:A0A087CUH4	Comec	UniProtKB:A0A1H2ABI6|UniProtKB:A0A2D1KQH7|UniProtKB:A0A2W5KNM1|UniProtKB:A0A380Q6X5|UniProtKB:A0A3E2BZD7
+comea	500	UniProtKB:A0A0H2VI18	ComEA	UniProtKB:A0A0E2AT53|UniProtKB:A0A0J2JHD7|UniProtKB:A0A0U5BEB7|UniProtKB:A0A261FUV8|UniProtKB:A0KNX1
+dpra	500	UniProtKB:A0A1J0LTK6	Competence protein DprA	UniProtKB:A0A167TL03|UniProtKB:A0A1E7NHS1|UniProtKB:A0A2H1I9S1|UniProtKB:A0A2S6AMS4|UniProtKB:A0A323UX10
+reca	500	UniProtKB:A0A023H996	Protein RecA	UniProtKB:A0A0F0QVB9|UniProtKB:A0A0H2LS49|UniProtKB:A0A142G4S0|UniProtKB:A0A150RDF4
+chemotaxis and motility genes	0			
+motility and signal-transduction genes	0			
+carbohydrate acquisition gene abundance	0			
+high-affinity solute-binding proteins	0			
+cytochrome bc1 complex (complex iii)	0			
+family a cytochrome c oxidase	0			
+oxyr transcriptional regulator	0			
+rpos (sigma-s) general stress sigma factor	0			
+inorganic carbon transporter	500			
+photosynthesis gene cluster (pgc)	0			
+atp synthase complex	0			
+rhodopsin	291	UniProtKB:A0A059ZUX4	Rhodopsin	UniProtKB:A0A0F7KGK4|UniProtKB:Q5V5V4|UniProtKB:A0A6B9F027|UniProtKB:G0HSA3|UniProtKB:A0A2D8MAB8
+cognate signal receptor	0			
+quorum-quenching enzyme	1	UniProtKB:G2JHL6	Quorum-quenching protein AidA (Quorum-quenching enzyme) (QQ enzyme)	
+rela/spot homologue enzymes	0			
+rpos (sigma s)	500	UniProtKB:A0A010TBV5	RNA polymerase sigma factor RpoS (Sigma S) (Sigma-38)	UniProtKB:A0A0F4V7X8|UniProtKB:A0A4P7TJ76|UniProtKB:A0A515D047|UniProtKB:A0A0H3AKB4|UniProtKB:A0A5A9CCT4
+hfq	500	UniProtKB:A0A3B9B147	RNA chaperone Hfq	UniProtKB:A0A1B9BUY6|UniProtKB:A0A2V0RH03|UniProtKB:A0A5W8C6T0|UniProtKB:D6IHB0|UniProtKB:A0A2A4HBH4
+rpos sigma factor	0			
 gene product	83		(SKIPPED — abstract category)	

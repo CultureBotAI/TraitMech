@@ -65,6 +65,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme synthesizing tetrahydroxynaphthalene precursor of the DHN-melanin
       pathway.
+    grounding: UniProtKB:Q5Y9G5
   - node_id: dhn_melanin
     label: DHN-melanin (allomelanin)
     node_type: CHEMICAL
@@ -74,6 +75,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Copper-dependent oxidase catalyzing hydroxylation and oxidation steps
       of the DOPA-melanin pathway.
+    grounding: UniProtKB:A0A023Y3L4
   - node_id: hydroxyphenylpyruvate
     label: 4-hydroxyphenylpyruvate
     node_type: CHEMICAL
@@ -255,4 +257,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:36242×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:Q5Y9G5×1, UniProtKB:A0A023Y3L4×1).
   llm_assisted: true

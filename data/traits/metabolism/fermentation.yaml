@@ -71,6 +71,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.2.7.1) oxidatively decarboxylating pyruvate and reducing
       ferredoxin.
+    grounding: UniProtKB:A0A075WCC3
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: CHEMICAL
@@ -81,6 +82,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.18.1.3) transferring electrons from reduced ferredoxin
       to NAD+.
+    grounding: UniProtKB:I3R731
   - node_id: nad_plus
     label: NAD+
     node_type: CHEMICAL
@@ -256,4 +258,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15361×1, CHEBI:17513×1, CHEBI:15846×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A075WCC3×1, UniProtKB:I3R731×1).
   llm_assisted: true

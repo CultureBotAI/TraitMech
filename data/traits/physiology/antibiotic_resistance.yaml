@@ -54,6 +54,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane channel mediating antibiotic influx; loss/modification
       reduces permeability.
+    grounding: UniProtKB:A0A024EG85
   - node_id: antibiotic_influx
     label: antibiotic influx
     node_type: BIOLOGICAL_PROCESS
@@ -63,6 +64,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that hydrolyzes the beta-lactam ring, inactivating beta-lactam
       antibiotics.
+    grounding: UniProtKB:A0A059L9H0
   - node_id: beta_lactam_antibiotic
     label: beta-lactam antibiotic
     node_type: CHEMICAL
@@ -196,4 +198,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000013×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A024EG85×1, UniProtKB:A0A059L9H0×1).
   llm_assisted: true

@@ -77,10 +77,12 @@ causal_graphs:
     label: acetyl-CoA/propionyl-CoA carboxylase
     node_type: GENE_OR_PROTEIN
     description: Primary carboxylase fixing inorganic carbon in the cycle.
+    grounding: UniProtKB:A0A650CEQ7
   - node_id: four_hydroxybutyryl_coa_dehydratase
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
     description: Enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
+    grounding: UniProtKB:A0A017H5F8
   edges:
   - subject: bicarbonate
     predicate: fixed by
@@ -200,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16724×1, CHEBI:28522×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A650CEQ7×1, UniProtKB:A0A017H5F8×1).
   llm_assisted: true

@@ -45,6 +45,7 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Glycoside hydrolase cleaving internal beta-1,4 linkages in cellulose.
+    grounding: UniProtKB:A0A060H8L4
   - node_id: cello_oligosaccharides
     label: cello-oligosaccharides
     node_type: CHEMICAL
@@ -53,6 +54,7 @@ causal_graphs:
     label: beta-glucosidase
     node_type: GENE_OR_PROTEIN
     description: Hydrolase converting cellobiose/oligosaccharides to glucose.
+    grounding: UniProtKB:A0A031JNC1
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -76,6 +78,7 @@ causal_graphs:
     label: endo-chitinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme cleaving internally within the beta-1,4-GlcNAc chitin polymer.
+    grounding: UniProtKB:Q693B6
   - node_id: chitooligosaccharides
     label: chitooligosaccharides
     node_type: CHEMICAL
@@ -198,4 +201,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:50699×1, CHEBI:6457×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A060H8L4×1, UniProtKB:A0A031JNC1×1, UniProtKB:Q693B6×1).
   llm_assisted: true

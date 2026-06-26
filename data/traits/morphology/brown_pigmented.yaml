@@ -63,6 +63,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (HmgA) that degrades homogentisic acid to maleylacetoacetate,
       diverting flux away from pyomelanin.
+    grounding: UniProtKB:A0A010REZ7
   - node_id: maleylacetoacetate
     label: maleylacetoacetate
     node_type: CHEMICAL
@@ -227,4 +228,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:36242×1, CHEBI:137246×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A010REZ7×1).
   llm_assisted: true

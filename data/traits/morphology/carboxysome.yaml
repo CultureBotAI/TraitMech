@@ -60,6 +60,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Carboxysomal enzyme dehydrating bicarbonate to CO2 near RuBisCO.
+    grounding: UniProtKB:A0A009PMS8
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -189,4 +190,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17544×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A009PMS8×1).
   llm_assisted: true

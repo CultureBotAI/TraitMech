@@ -71,6 +71,7 @@ causal_graphs:
     label: SulA
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor that blocks FtsZ polymerization.
+    grounding: UniProtKB:H8YHZ0
   - node_id: ftsz_polymerization
     label: FtsZ polymerization
     node_type: BIOLOGICAL_PROCESS
@@ -89,6 +90,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to
       the cell wall.
+    grounding: UniProtKB:A0A0C1K447
   - node_id: cell_wall_glycopolymer_attachment
     label: cell-wall glycopolymer attachment
     node_type: BIOLOGICAL_PROCESS
@@ -272,4 +274,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×2, RO:0002327×2, RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:H8YHZ0×1, UniProtKB:A0A0C1K447×1).
   llm_assisted: true

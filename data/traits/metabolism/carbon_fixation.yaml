@@ -60,6 +60,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Enzyme accelerating interconversion of CO2 and bicarbonate.
+    grounding: UniProtKB:A0A009PMS8
   - node_id: rubisco
     label: ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)
     node_type: GENE_OR_PROTEIN
@@ -240,4 +241,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17544×1, CHEBI:17513×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A009PMS8×1).
   llm_assisted: true
