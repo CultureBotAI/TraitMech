@@ -52,6 +52,7 @@ causal_graphs:
     label: FtsA
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein tethering the Z ring to the cytoplasmic membrane.
+    grounding: UniProtKB:A0A1M6DY20
   - node_id: cytoplasmic_membrane
     label: cytoplasmic membrane
     node_type: CELLULAR_LOCALIZATION
@@ -201,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0000917×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1M6DY20×1).
   llm_assisted: true

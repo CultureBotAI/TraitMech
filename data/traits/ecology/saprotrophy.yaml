@@ -79,6 +79,7 @@ causal_graphs:
     label: laccase
     node_type: GENE_OR_PROTEIN
     description: Multicopper oxidase that oxidizes lignin and phenolic substrates.
+    grounding: UniProtKB:A0A072TFX8
   - node_id: lignin
     label: lignin
     node_type: CHEMICAL
@@ -211,4 +212,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000013×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A072TFX8×1).
   llm_assisted: true

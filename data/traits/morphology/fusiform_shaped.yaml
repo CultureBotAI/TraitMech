@@ -58,6 +58,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: MreB-associated shape protein modulating MreB localization and elongasome
       assembly.
+    grounding: UniProtKB:H1XNL6
   - node_id: mreb_localization
     label: MreB polymer localization/assembly
     node_type: BIOLOGICAL_PROCESS
@@ -71,19 +72,23 @@ causal_graphs:
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Elongasome component that activates PBP2 and RodA synthesis functions.
+    grounding: UniProtKB:A0A1L9R356
   - node_id: pbp2
     label: PBP2
     node_type: GENE_OR_PROTEIN
     description: Class B PBP in the elongasome coupled to RodA for rod-like wall growth.
+    grounding: UniProtKB:A0A2D2D7X6
   - node_id: roda
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS glycosyltransferase mediating lateral PG incorporation with
       PBP2.
+    grounding: UniProtKB:A0A0H2X1V4
   - node_id: ftsw
     label: FtsW
     node_type: GENE_OR_PROTEIN
     description: SEDS divisome polymerase for septal PG incorporation.
+    grounding: UniProtKB:A0A0E1R950
   - node_id: septal_pg_incorporation
     label: septal peptidoglycan incorporation
     node_type: BIOLOGICAL_PROCESS
@@ -220,4 +225,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A1B1UYY2×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:H1XNL6×1, UniProtKB:A0A1L9R356×1, UniProtKB:A0A2D2D7X6×1, UniProtKB:A0A0H2X1V4×1,
+    UniProtKB:A0A0E1R950×1).
   llm_assisted: true

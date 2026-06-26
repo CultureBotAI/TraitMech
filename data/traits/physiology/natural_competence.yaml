@@ -56,11 +56,13 @@ causal_graphs:
     label: ComEC
     node_type: GENE_OR_PROTEIN
     description: Inner-membrane channel required for DNA uptake into the cytoplasm.
+    grounding: UniProtKB:A0A087CUH4
   - node_id: comea
     label: ComEA
     node_type: GENE_OR_PROTEIN
     description: DNA receptor that binds incoming DNA and mediates transfer toward
       the periplasm.
+    grounding: UniProtKB:A0A0H2VI18
   - node_id: periplasm
     label: periplasm
     node_type: CELLULAR_LOCALIZATION
@@ -71,11 +73,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Competence ssDNA-binding protein that protects incoming DNA and recruits
       RecA.
+    grounding: UniProtKB:A0A1J0LTK6
   - node_id: reca
     label: RecA
     node_type: GENE_OR_PROTEIN
     description: Recombinase that mediates homologous recombination of transforming
       DNA.
+    grounding: UniProtKB:A0A023H996
   - node_id: homologous_recombination
     label: homologous recombination of transforming DNA
     node_type: BIOLOGICAL_PROCESS
@@ -180,4 +184,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042597×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A087CUH4×1, UniProtKB:A0A0H2VI18×1, UniProtKB:A0A1J0LTK6×1, UniProtKB:A0A023H996×1).
   llm_assisted: true

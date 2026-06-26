@@ -51,6 +51,7 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Cellulase that cleaves internal bonds of cellulose chains.
+    grounding: UniProtKB:A0A060H8L4
   - node_id: cellobiohydrolase
     label: cellobiohydrolase / exoglucanase
     node_type: GENE_OR_PROTEIN
@@ -59,6 +60,7 @@ causal_graphs:
     label: beta-glucosidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme hydrolyzing cellobiose to glucose.
+    grounding: UniProtKB:A0A031JNC1
   - node_id: cellobiose
     label: cellobiose
     node_type: CHEMICAL
@@ -76,6 +78,7 @@ causal_graphs:
     label: cohesin domain
     node_type: GENE_OR_PROTEIN
     description: Scaffoldin module that binds dockerin domains.
+    grounding: UniProtKB:A0A174EJP3
   - node_id: dockerin_domain
     label: dockerin domain
     node_type: GENE_OR_PROTEIN
@@ -216,4 +219,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000007×2, METPO:2000013×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A060H8L4×1, UniProtKB:A0A031JNC1×1, UniProtKB:A0A174EJP3×1).
   llm_assisted: true

@@ -60,14 +60,17 @@ causal_graphs:
     label: SpoIID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
+    grounding: UniProtKB:A0A0M6WLJ0
   - node_id: spoIIM
     label: SpoIIM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
+    grounding: UniProtKB:A5N7K0
   - node_id: spoIIP
     label: SpoIIP
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
+    grounding: UniProtKB:A0A1S8R940
   - node_id: forespore_engulfment
     label: forespore engulfment
     node_type: BIOLOGICAL_PROCESS
@@ -244,4 +247,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0031160×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A0M6WLJ0×1, UniProtKB:A5N7K0×1, UniProtKB:A0A1S8R940×1).
   llm_assisted: true

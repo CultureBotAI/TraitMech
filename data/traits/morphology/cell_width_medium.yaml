@@ -56,16 +56,19 @@ causal_graphs:
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Membrane-associated Rod-complex protein that activates PBP2.
+    grounding: UniProtKB:A0A1L9R356
   - node_id: pbp2_protein
     label: PBP2
     node_type: GENE_OR_PROTEIN
     description: Bifunctional class B penicillin-binding protein (transpeptidase)
       of the elongasome.
+    grounding: UniProtKB:A0A2D2D7X6
   - node_id: mred_protein
     label: MreD
     node_type: GENE_OR_PROTEIN
     description: Rod-complex membrane protein that modulates PBP2 activity in balance
       with MreC.
+    grounding: UniProtKB:A0A0H2VI68
   - node_id: apbp_proteins
     label: class A penicillin-binding proteins (aPBPs)
     node_type: GENE_OR_PROTEIN
@@ -199,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1, RO:0002213×1, RO:0002327×1, RO:0002211×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1L9R356×1, UniProtKB:A0A2D2D7X6×1, UniProtKB:A0A0H2VI68×1).
   llm_assisted: true

@@ -89,11 +89,13 @@ causal_graphs:
     label: CooA
     node_type: GENE_OR_PROTEIN
     description: Heme-based CO-sensing transcriptional activator of coo operons.
+    grounding: UniProtKB:A0A1D7QXJ2
   - node_id: rcom_regulator
     label: RcoM
     node_type: GENE_OR_PROTEIN
     description: Heme-dependent high-affinity CO sensor regulating aerobic CO oxidation
       genes.
+    grounding: UniProtKB:A0A0D5N3T8
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
@@ -335,4 +337,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15379×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1D7QXJ2×1, UniProtKB:A0A0D5N3T8×1).
   llm_assisted: true

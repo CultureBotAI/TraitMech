@@ -61,6 +61,7 @@ causal_graphs:
     label: DnaK-DnaJ chaperone
     node_type: GENE_OR_PROTEIN
     description: Hsp70 chaperone system assisting ATP-dependent protein folding.
+    grounding: UniProtKB:A0A0C1PL72
   - node_id: protein_folding
     label: protein folding
     node_type: BIOLOGICAL_PROCESS
@@ -190,4 +191,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006457×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A0C1PL72×1).
   llm_assisted: true

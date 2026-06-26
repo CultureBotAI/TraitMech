@@ -82,6 +82,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-system component that activates PBP2 by promoting
       its open conformation.
+    grounding: UniProtKB:A0A1L9R356
   - node_id: elongasome_processivity
     label: elongasome processivity
     node_type: BIOLOGICAL_PROCESS
@@ -272,4 +273,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002213×2, RO:0002327×1, RO:0002211×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1L9R356×1).
   llm_assisted: true

@@ -84,6 +84,18 @@ SKIP_LABELS = {
     "membrane transporters",
     "gliding motility machinery",
     "rod complex",
+    # Genetic elements / supramolecular structures / multi-gene systems —
+    # not a single protein, so a lone representative UniProt entry misleads
+    # (e.g. "plasmid" -> "Oligoendopeptidase F, plasmid"; "archaellum" ->
+    # one biogenesis ATPase). Added from the 626-residual re-run review.
+    "plasmid",
+    "prophage",
+    "ars operon",
+    "toxin-antitoxin system",
+    "archaellum",
+    "s-layer proteins",
+    "cold shock proteins",
+    "dockerin domain",
 }
 
 

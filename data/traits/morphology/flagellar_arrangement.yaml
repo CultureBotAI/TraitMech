@@ -46,11 +46,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that marks the future flagellar assembly site and
       directs MS-ring protein FliF to the cell pole.
+    grounding: UniProtKB:A0A656AC42
   - node_id: flhg
     label: FlhG
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that stimulates FlhF GTPase activity and limits/positions
       flagellar number.
+    grounding: UniProtKB:Q2N2M1
   - node_id: flif_msring
     label: FliF (MS-ring protein)
     node_type: GENE_OR_PROTEIN
@@ -61,6 +63,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein bound by FlhF and engaging FliF during basal-body
       assembly.
+    grounding: UniProtKB:A0A016XEK1
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -169,4 +172,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0060187×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A656AC42×1, UniProtKB:Q2N2M1×1, UniProtKB:A0A016XEK1×1).
   llm_assisted: true

@@ -46,6 +46,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: EC 6.4.1.2; carboxylates acetyl-CoA to malonyl-CoA using bicarbonate
       and ATP.
+    grounding: UniProtKB:A0A059L760
   - node_id: malonyl_coa
     label: malonyl-CoA
     node_type: CHEMICAL
@@ -55,6 +56,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: EC 6.4.1.3; carboxylates propionyl-CoA to (2S)-methylmalonyl-CoA
       using bicarbonate and ATP.
+    grounding: UniProtKB:A0A024E6S7
   - node_id: methylmalonyl_coa
     label: (2S)-methylmalonyl-CoA
     node_type: CHEMICAL
@@ -64,6 +66,7 @@ causal_graphs:
     label: malonyl-CoA reductase
     node_type: GENE_OR_PROTEIN
     description: EC 1.2.1.75; diagnostic enzyme reducing malonyl-CoA to 3-hydroxypropionate.
+    grounding: UniProtKB:Q6QQP7
   - node_id: three_hydroxypropionate
     label: 3-hydroxypropionate
     node_type: CHEMICAL
@@ -190,4 +193,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16510×1, CHEBI:15539×1, CHEBI:15361×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A059L760×1, UniProtKB:A0A024E6S7×1, UniProtKB:Q6QQP7×1).
   llm_assisted: true

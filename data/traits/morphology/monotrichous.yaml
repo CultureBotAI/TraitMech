@@ -40,11 +40,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that targets and anchors flagellar assembly to the
       cell pole.
+    grounding: UniProtKB:A0A656AC42
   - node_id: flhg_atpase
     label: FlhG
     node_type: GENE_OR_PROTEIN
     description: MinD/ParA-family ATPase that regulates flagellum number and modulates
       FlhF.
+    grounding: UniProtKB:Q2N2M1
   - node_id: polar_flagellum_localization
     label: polar localization of flagellum
     node_type: BIOLOGICAL_PROCESS
@@ -58,6 +60,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein that bridges the MS-ring to motor and chemotaxis
       components.
+    grounding: UniProtKB:A0A016XEK1
   - node_id: flif_msring
     label: FliF MS-ring protein
     node_type: GENE_OR_PROTEIN
@@ -159,4 +162,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 6 evidence-backed generic edges (7 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A656AC42×1, UniProtKB:Q2N2M1×1, UniProtKB:A0A016XEK1×1).
   llm_assisted: true

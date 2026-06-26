@@ -42,6 +42,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Small hydrophobic primary structural protein forming the gas vesicle
       shell.
+    grounding: UniProtKB:A0A0B5ENA7
   - node_id: gas_vesicle_shell
     label: gas vesicle shell
     node_type: CELLULAR_LOCALIZATION
@@ -51,6 +52,7 @@ causal_graphs:
     label: GvpC
     node_type: GENE_OR_PROTEIN
     description: Accessory coat protein that reinforces the gas vesicle shell.
+    grounding: UniProtKB:A0AA45D9L5
   - node_id: hydrophobic_inner_surface
     label: hydrophobic inner shell surface
     node_type: QUALITY
@@ -74,6 +76,7 @@ causal_graphs:
     label: GvpD
     node_type: GENE_OR_PROTEIN
     description: Regulatory protein with an inhibitory effect on gas vesicle formation.
+    grounding: UniProtKB:A0A059TSE2
   - node_id: gas_vesicle_formation
     label: gas vesicle formation
     node_type: BIOLOGICAL_PROCESS
@@ -193,4 +196,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0033172×1, GO:0031412×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A0B5ENA7×1, UniProtKB:A0AA45D9L5×1, UniProtKB:A0A059TSE2×1).
   llm_assisted: true

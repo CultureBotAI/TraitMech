@@ -85,6 +85,7 @@ causal_graphs:
     label: terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: Respiratory enzyme reducing molecular oxygen to water.
+    grounding: UniProtKB:A0A2U9ILE5
   - node_id: oxygen
     label: oxygen
     node_type: CHEMICAL
@@ -261,4 +262,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:24636×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A2U9ILE5×1).
   llm_assisted: true

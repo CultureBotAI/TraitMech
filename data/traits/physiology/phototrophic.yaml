@@ -92,6 +92,7 @@ causal_graphs:
     label: rhodopsin
     node_type: GENE_OR_PROTEIN
     description: Retinal-based light-driven ion-pumping membrane protein used in retinalophototrophy.
+    grounding: UniProtKB:A0A059ZUX4
   - node_id: ion_transport
     label: ion transport across membrane
     node_type: BIOLOGICAL_PROCESS
@@ -265,4 +266,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:23044×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A059ZUX4×1).
   llm_assisted: true

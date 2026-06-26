@@ -81,6 +81,7 @@ causal_graphs:
     label: formate dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing CO2 to formate in the methyl branch.
+    grounding: UniProtKB:A0A016XII7
   - node_id: formyl_thf
     label: formyl-tetrahydrofolate
     node_type: CHEMICAL
@@ -375,4 +376,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A081KVG3×1, UniProtKB:A0A415TT77×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A016XII7×1).
   llm_assisted: true

@@ -67,6 +67,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Magnetosome membrane protein implicated in membrane invagination
       and crystal formation.
+    grounding: UniProtKB:A0A6J4ZQS8
   - node_id: membrane_invagination
     label: magnetosome membrane invagination
     node_type: BIOLOGICAL_PROCESS
@@ -198,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, METPO:2000202×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A6J4ZQS8×1).
   llm_assisted: true

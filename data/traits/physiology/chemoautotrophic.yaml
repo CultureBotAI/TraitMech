@@ -79,6 +79,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting bicarbonate to CO2 inside the carboxysome to feed
       RuBisCO.
+    grounding: UniProtKB:A0A009PMS8
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -333,4 +334,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0031470×1, CHEBI:17544×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:20Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A009PMS8×1).
   llm_assisted: true

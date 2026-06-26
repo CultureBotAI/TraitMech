@@ -51,6 +51,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and
       CO2.
+    grounding: UniProtKB:A0A067Z5Y9
   - node_id: acetaldehyde
     label: acetaldehyde
     node_type: CHEMICAL
@@ -65,6 +66,7 @@ causal_graphs:
     label: alcohol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.
+    grounding: UniProtKB:A0A022L3Z7
   - node_id: nadh
     label: NADH
     node_type: CHEMICAL
@@ -195,4 +197,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15361×1, CHEBI:15343×1, CHEBI:15846×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:18Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A067Z5Y9×1, UniProtKB:A0A022L3Z7×1).
   llm_assisted: true

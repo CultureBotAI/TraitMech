@@ -60,11 +60,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Elongasome scaffolding protein required for peripheral peptidoglycan
       synthesis and elongated cell shape.
+    grounding: UniProtKB:A0A1L9R356
   - node_id: rodA
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS-family peptidoglycan glycosyltransferase of the Rod complex
       driving sidewall/peripheral elongation.
+    grounding: UniProtKB:A0A0H2X1V4
   - node_id: division_site_placement
     label: correct septum placement / division-site marking
     node_type: BIOLOGICAL_PROCESS
@@ -218,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:part_of×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A1L9R356×1, UniProtKB:A0A0H2X1V4×1).
   llm_assisted: true

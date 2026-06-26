@@ -53,6 +53,7 @@ causal_graphs:
     label: phytoene synthase
     node_type: GENE_OR_PROTEIN
     description: CrtB-type enzyme condensing prenyl diphosphate to phytoene.
+    grounding: UniProtKB:A0A023WN98
   - node_id: phytoene
     label: phytoene
     node_type: CHEMICAL
@@ -61,6 +62,7 @@ causal_graphs:
     label: phytoene desaturase
     node_type: GENE_OR_PROTEIN
     description: CrtI-type enzyme desaturating phytoene toward lycopene.
+    grounding: UniProtKB:A0A060JDC8
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -228,4 +230,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15948×1, CHEBI:35163×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:A0A023WN98×1, UniProtKB:A0A060JDC8×1).
   llm_assisted: true

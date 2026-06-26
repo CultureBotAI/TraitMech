@@ -84,6 +84,7 @@ causal_graphs:
     label: RodZ
     node_type: GENE_OR_PROTEIN
     description: Membrane protein broadly implicated in rod-shape maintenance.
+    grounding: UniProtKB:H1XNL6
   - node_id: spherical_morphology
     label: spherical cell morphology
     node_type: TRAIT
@@ -258,4 +259,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:28908×1).
+  llm_assisted: true
+- timestamp: '2026-06-26T07:15:19Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (UniProtKB:H1XNL6×1).
   llm_assisted: true
