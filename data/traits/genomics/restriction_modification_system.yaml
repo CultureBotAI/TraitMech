@@ -19,6 +19,11 @@ evidence:
     and additional cellular functions.
 - reference: DOI:10.3389/fmicb.2015.00528
   notes: Review of restriction-modification systems as engines of genomic diversity.
+canonical_examples:
+- taxon_id: NCBITaxon:727
+  taxon_label: Haemophilus influenzae
+  note: "Source of HindII, the first type II restriction endonuclease characterized; classic restriction-modification model."
+  reference: PMID:5312500
 causal_graphs:
 - graph_id: rm_self_nonself_defense
   title: Restriction-modification distinguishes self from non-self DNA

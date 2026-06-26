@@ -17,6 +17,11 @@ evidence:
 - reference: DOI:10.1146/annurev-cellbio-010521-010834
   snippet: bacterial rod shape formation
   notes: Supports bacillus shape as a rod-like bacterial morphogenesis phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "The namesake bacillus (straight rod); model Gram-positive rod-shaped bacterium."
+  reference: PMID:9384377
 causal_graphs:
 - graph_id: bacillus_shaped_rod_elongation
   title: Bacillus-shape rod elongation mechanism

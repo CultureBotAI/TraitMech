@@ -17,6 +17,11 @@ evidence:
 - reference: DOI:10.1038/s41598-019-38564-0
   snippet: energized by the proton motive force
   notes: Supports proton motive force-driven ATP synthesis by F1Fo ATP synthase.
+canonical_examples:
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: "Free-living model of the mitochondrial-type respiratory chain and oxidative phosphorylation (full set of bacterial respiratory complexes)."
+  reference: PMID:30428155
 causal_graphs:
 - graph_id: oxidative_phosphorylation_chemiosmotic_coupling
   title: Oxidative phosphorylation chemiosmotic coupling
