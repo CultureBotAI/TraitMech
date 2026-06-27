@@ -46,11 +46,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# Newest available kg-microbe-derived deepwalk: 512-D, 2026-04-25, includes
-# 380 METPO CURIEs directly. Source-of-truth for direct-METPO matching.
+# Newest available kg-microbe-derived deepwalk: 512-D, 2026-06-26 (v3),
+# includes METPO CURIEs directly. Source-of-truth for direct-METPO matching.
 DEFAULT_KGM_DEEPWALK = (
     REPO_ROOT.parent / "CommunityMech" / "CommunityMech" / "data" / "embeddings"
-    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v2_2026-04-25_20_44_08.tsv.gz"
+    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz"
 )
 # Fallback: 2024-09-25 200-D file (pre-METPO; only useful for legacy-prefix
 # trait nodes like `cell_shape:bacillus`).

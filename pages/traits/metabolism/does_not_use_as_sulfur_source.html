@@ -87,7 +87,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
         
-        <li><code>METPO:2000047</code> <span class="dim-preview">[+1.469, +1.017, -0.281, -0.053, …]</span></li>
+        <li><code>METPO:2000047</code> <span class="dim-preview">[-1.291, -0.204, -2.374, -0.095, …]</span></li>
         
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -103,19 +103,37 @@
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/uses_as_nitrogen_source.html">uses as nitrogen source</a>
+          <a href="../../traits/metabolism/degrades.html">degrades</a>
           <span class="sim">0.994</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/uses_as_electron_donor.html">uses as electron donor</a>
+          <a href="../../traits/metabolism/does_not_use_in_other_way.html">does not use in other way</a>
           <span class="sim">0.994</span>
         </li>
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/assimilates.html">assimilates</a>
+          <a href="../../traits/metabolism/uses_as_sulfur_source.html">uses as sulfur source</a>
+          <span class="sim">0.994</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/does_not_use_for_anaerobic_growth_with_light.html">does not use for anaerobic growth with light</a>
+          <span class="sim">0.994</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/does_not_use_as_energy_source.html">does not use as energy source</a>
+          <span class="sim">0.994</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/uses_for_anaerobic_growth_in_the_dark.html">uses for anaerobic growth in the dark</a>
           <span class="sim">0.993</span>
         </li>
         
@@ -127,25 +145,7 @@
         
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/degrades.html">degrades</a>
-          <span class="sim">0.993</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/uses_as_electron_acceptor.html">uses as electron acceptor</a>
-          <span class="sim">0.993</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/does_not_use_for_aerobic_catabolization.html">does not use for aerobic catabolization</a>
-          <span class="sim">0.993</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/uses_for_growth.html">uses for growth</a>
+          <a href="../../traits/metabolism/uses_for_anaerobic_growth.html">uses for anaerobic growth</a>
           <span class="sim">0.993</span>
         </li>
         
@@ -229,10 +229,10 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-24 17:28 UTC from
+    Built 2026-06-27 03:01 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 98.3%
+    · embedding coverage 100.0%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>
