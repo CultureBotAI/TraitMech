@@ -235,7 +235,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
         
-        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.373, -2.738, -0.308, -0.415, …]</span></li>
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
         
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -257,43 +257,43 @@
         
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/rrna_operon_copy_number.html">rRNA operon copy number</a>
+          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
           <span class="sim">1.000</span>
         </li>
         
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/prophage.html">prophage</a>
+          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
           <span class="sim">1.000</span>
         </li>
         
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/ploidy.html">ploidy</a>
+          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
           <span class="sim">1.000</span>
         </li>
         
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/plasmid_carriage.html">plasmid carriage</a>
+          <a href="../../traits/genomics/genome_size.html">genome size</a>
           <span class="sim">1.000</span>
         </li>
         
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <span class="sim">1.000</span>
+        </li>
+        
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
           <span class="sim">1.000</span>
         </li>
         
         <li>
           <span class="nn-cat">genomics</span>
           <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
-          <span class="sim">1.000</span>
-        </li>
-        
-        <li>
-          <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/restriction_modification_system.html">restriction-modification system</a>
           <span class="sim">1.000</span>
         </li>
         
@@ -330,6 +330,12 @@
           <time>2026-06-24T17:21:11Z</time> ·
           <strong>GROUND_CAUSAL_PREDICATES</strong> · claude
           <p class="changes">Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (biolink:causes×3, RO:0002327×1).</p>
+        </li>
+        
+        <li>
+          <time>2026-06-26T07:15:18Z</time> ·
+          <strong>GROUND_CAUSAL_NODES</strong> · claude
+          <p class="changes">Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv (UniProtKB:A0A023WVD3×1).</p>
         </li>
         
       </ol>
@@ -689,7 +695,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking TE possession to DNA transposition activity and resulting genome rearrangement and plasticity.", "edges": [{"description": "TEs encode transposases that catalyze transposition.", "evidence": [{"notes": "Siguier et al. review insertion-sequence transposase machinery and activity.", "reference": "DOI:10.1111/1574-6976.12067"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "te_trait", "target": "dna_transposition"}, {"description": "Transposition events generate insertions and rearrangements.", "evidence": [{"notes": "Frost et al. cite transposons among MGEs driving genome evolution.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "dna_transposition", "target": "genome_rearrangement"}, {"description": "The defining effector of a TE is a transposase required for movement.", "evidence": [{"notes": "IS element encodes a single ORF, a DDE-family transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "id": "edge-3", "is_orphan": false, "predicate": "has participant", "predicate_id": null, "source": "te_trait", "target": "transposase"}, {"description": "Transposase activity is causal for element movement/transposition.", "evidence": [{"notes": "tnp26 encodes a transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposase", "target": "dna_transposition"}, {"description": "Element insertion typically generates short flanking target site duplications.", "evidence": [{"notes": "Insertion sequences typically create target site duplications (TSDs) upon insertion (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "te_insertion", "target": "target_site_duplication"}, {"description": "Insertion into a coding region disrupts gene function.", "evidence": [{"notes": "Element movement causes gene disruption (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "te_insertion", "target": "gene_disruption"}, {"description": "Recombination between identical IS copies produces genome rearrangements.", "evidence": [{"notes": "Homologous recombination between identical IS copies can produce genome rearrangements (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "homologous_recombination_is", "target": "genome_rearrangement"}], "evidence_rows": [{"description": "TEs encode transposases that catalyze transposition.", "edge_id": "edge-1", "evidence": [{"notes": "Siguier et al. review insertion-sequence transposase machinery and activity.", "reference": "DOI:10.1111/1574-6976.12067"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposable element", "target": "DNA transposition"}, {"description": "Transposition events generate insertions and rearrangements.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. cite transposons among MGEs driving genome evolution.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "DNA transposition", "target": "genome rearrangement"}, {"description": "The defining effector of a TE is a transposase required for movement.", "edge_id": "edge-3", "evidence": [{"notes": "IS element encodes a single ORF, a DDE-family transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "predicate": "has participant", "predicate_id": null, "source": "transposable element", "target": "transposase"}, {"description": "Transposase activity is causal for element movement/transposition.", "edge_id": "edge-4", "evidence": [{"notes": "tnp26 encodes a transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposase", "target": "DNA transposition"}, {"description": "Element insertion typically generates short flanking target site duplications.", "edge_id": "edge-5", "evidence": [{"notes": "Insertion sequences typically create target site duplications (TSDs) upon insertion (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "transposable element insertion", "target": "target site duplication"}, {"description": "Insertion into a coding region disrupts gene function.", "edge_id": "edge-6", "evidence": [{"notes": "Element movement causes gene disruption (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "transposable element insertion", "target": "gene disruption"}, {"description": "Recombination between identical IS copies produces genome rearrangements.", "edge_id": "edge-7", "evidence": [{"notes": "Homologous recombination between identical IS copies can produce genome rearrangements (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "homologous recombination between IS copies", "target": "genome rearrangement"}], "graph_id": "te_transposition_rearrangement", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Movement of a DNA segment to a new genomic location.", "grounding": "GO:0006313", "id": "dna_transposition", "is_orphan": false, "label": "DNA transposition", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Inactivation of a gene by insertion of a transposable element into it.", "grounding": null, "id": "gene_disruption", "is_orphan": false, "label": "gene disruption", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Insertions, deletions, and inversions of chromosomal segments.", "grounding": null, "id": "genome_rearrangement", "is_orphan": false, "label": "genome rearrangement", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination between identical IS copies at distinct loci.", "grounding": null, "id": "homologous_recombination_is", "is_orphan": false, "label": "homologous recombination between IS copies", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Short direct repeats flanking the element created upon insertion.", "grounding": null, "id": "target_site_duplication", "is_orphan": false, "label": "target site duplication", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Integration of a transposable element at a target genomic site.", "grounding": null, "id": "te_insertion", "is_orphan": false, "label": "transposable element insertion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of insertion sequences or transposons.", "grounding": "traitmech:000092", "id": "te_trait", "is_orphan": false, "label": "transposable element", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "DDE-family enzyme encoded by the element that catalyzes its movement.", "grounding": null, "id": "transposase", "is_orphan": false, "label": "transposase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Transposable elements drive DNA transposition and genome rearrangement"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking TE possession to DNA transposition activity and resulting genome rearrangement and plasticity.", "edges": [{"description": "TEs encode transposases that catalyze transposition.", "evidence": [{"notes": "Siguier et al. review insertion-sequence transposase machinery and activity.", "reference": "DOI:10.1111/1574-6976.12067"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "te_trait", "target": "dna_transposition"}, {"description": "Transposition events generate insertions and rearrangements.", "evidence": [{"notes": "Frost et al. cite transposons among MGEs driving genome evolution.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "dna_transposition", "target": "genome_rearrangement"}, {"description": "The defining effector of a TE is a transposase required for movement.", "evidence": [{"notes": "IS element encodes a single ORF, a DDE-family transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "id": "edge-3", "is_orphan": false, "predicate": "has participant", "predicate_id": null, "source": "te_trait", "target": "transposase"}, {"description": "Transposase activity is causal for element movement/transposition.", "evidence": [{"notes": "tnp26 encodes a transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposase", "target": "dna_transposition"}, {"description": "Element insertion typically generates short flanking target site duplications.", "evidence": [{"notes": "Insertion sequences typically create target site duplications (TSDs) upon insertion (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "te_insertion", "target": "target_site_duplication"}, {"description": "Insertion into a coding region disrupts gene function.", "evidence": [{"notes": "Element movement causes gene disruption (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "te_insertion", "target": "gene_disruption"}, {"description": "Recombination between identical IS copies produces genome rearrangements.", "evidence": [{"notes": "Homologous recombination between identical IS copies can produce genome rearrangements (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "id": "edge-7", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "homologous_recombination_is", "target": "genome_rearrangement"}], "evidence_rows": [{"description": "TEs encode transposases that catalyze transposition.", "edge_id": "edge-1", "evidence": [{"notes": "Siguier et al. review insertion-sequence transposase machinery and activity.", "reference": "DOI:10.1111/1574-6976.12067"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposable element", "target": "DNA transposition"}, {"description": "Transposition events generate insertions and rearrangements.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. cite transposons among MGEs driving genome evolution.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "DNA transposition", "target": "genome rearrangement"}, {"description": "The defining effector of a TE is a transposase required for movement.", "edge_id": "edge-3", "evidence": [{"notes": "IS element encodes a single ORF, a DDE-family transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "predicate": "has participant", "predicate_id": null, "source": "transposable element", "target": "transposase"}, {"description": "Transposase activity is causal for element movement/transposition.", "edge_id": "edge-4", "evidence": [{"notes": "tnp26 encodes a transposase required for movement (Harmer \u0026 Hall 2024).", "reference": "DOI:10.1128/MMBR.00119-22"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "transposase", "target": "DNA transposition"}, {"description": "Element insertion typically generates short flanking target site duplications.", "edge_id": "edge-5", "evidence": [{"notes": "Insertion sequences typically create target site duplications (TSDs) upon insertion (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "transposable element insertion", "target": "target site duplication"}, {"description": "Insertion into a coding region disrupts gene function.", "edge_id": "edge-6", "evidence": [{"notes": "Element movement causes gene disruption (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "transposable element insertion", "target": "gene disruption"}, {"description": "Recombination between identical IS copies produces genome rearrangements.", "edge_id": "edge-7", "evidence": [{"notes": "Homologous recombination between identical IS copies can produce genome rearrangements (Sheng et al. 2023).", "reference": "DOI:10.1038/s41467-023-39964-7"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "homologous recombination between IS copies", "target": "genome rearrangement"}], "graph_id": "te_transposition_rearrangement", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Movement of a DNA segment to a new genomic location.", "grounding": "GO:0006313", "id": "dna_transposition", "is_orphan": false, "label": "DNA transposition", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#ecfccb", "description": "Inactivation of a gene by insertion of a transposable element into it.", "grounding": null, "id": "gene_disruption", "is_orphan": false, "label": "gene disruption", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Insertions, deletions, and inversions of chromosomal segments.", "grounding": null, "id": "genome_rearrangement", "is_orphan": false, "label": "genome rearrangement", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Recombination between identical IS copies at distinct loci.", "grounding": null, "id": "homologous_recombination_is", "is_orphan": false, "label": "homologous recombination between IS copies", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#f3f4f6", "description": "Short direct repeats flanking the element created upon insertion.", "grounding": null, "id": "target_site_duplication", "is_orphan": false, "label": "target site duplication", "node_type": "QUALITY", "xrefs": []}, {"color": "#ecfccb", "description": "Integration of a transposable element at a target genomic site.", "grounding": null, "id": "te_insertion", "is_orphan": false, "label": "transposable element insertion", "node_type": "BIOLOGICAL_PROCESS", "xrefs": []}, {"color": "#dbeafe", "description": "Possession of insertion sequences or transposons.", "grounding": "traitmech:000092", "id": "te_trait", "is_orphan": false, "label": "transposable element", "node_type": "TRAIT", "xrefs": []}, {"color": "#f3e8ff", "description": "DDE-family enzyme encoded by the element that catalyzes its movement.", "grounding": "UniProtKB:A0A023WVD3", "id": "transposase", "is_orphan": false, "label": "transposase", "node_type": "GENE_OR_PROTEIN", "xrefs": []}], "title": "Transposable elements drive DNA transposition and genome rearrangement"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -700,10 +706,10 @@ function renderPathograph(containerId, data) {
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built 2026-06-24 17:28 UTC from
+    Built 2026-06-27 03:01 UTC from
     <a href="https://w3id.org/metpo">METPO 2025-11-25</a>
     · 477 TraitRecords
-    · embedding coverage 98.3%
+    · embedding coverage 100.0%
     (kg-microbe deepwalk 512-D, 2026-04-25)
   </div>
 </footer>

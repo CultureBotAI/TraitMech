@@ -178,7 +178,7 @@ METPO:2000004	builds base from	metabolism	direct_metpo	1	METPO:2000004
 METPO:2000005	builds gas from	metabolism	direct_metpo	1	METPO:2000005
 METPO:1002003	Cable bacteria metabolism	metabolism	direct_metpo	1	METPO:1002003
 traitmech:000020	Calvin-Benson-Bassham cycle	metabolism	parent_proxy	1	METPO:1000060
-METPO:2000103	capable of	metabolism	no_match	0	
+METPO:2000103	capable of	metabolism	direct_metpo	1	METPO:2000103
 traitmech:000019	carbon fixation	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000111	cellulolysis	metabolism	parent_proxy	1	METPO:1000060
 traitmech:000112	chitinolysis	metabolism	parent_proxy	1	METPO:1000060
@@ -461,13 +461,13 @@ traitmech:000078	stress response	physiology	parent_proxy	1	METPO:1000059
 METPO:1000631	trophic type	physiology	direct_metpo	1	METPO:1000631
 traitmech:000077	urease activity	physiology	parent_proxy	1	METPO:1000059
 traitmech:000081	viable but nonculturable state	physiology	parent_proxy	1	METPO:1000059
-METPO:2000060	has maximum observed value	quantitative_property	no_match	0	
-METPO:2000059	has minimum observed value	quantitative_property	no_match	0	
-METPO:2000058	has observed spot value	quantitative_property	no_match	0	
-METPO:2000071	has value	quantitative_property	no_match	0	
-METPO:2000061	has value comments	quantitative_property	no_match	0	
-METPO:2000062	is negative data	quantitative_property	no_match	0	
-METPO:2000063	observation data property	quantitative_property	no_match	0	
+METPO:2000060	has maximum observed value	quantitative_property	direct_metpo	1	METPO:2000060
+METPO:2000059	has minimum observed value	quantitative_property	direct_metpo	1	METPO:2000059
+METPO:2000058	has observed spot value	quantitative_property	direct_metpo	1	METPO:2000058
+METPO:2000071	has value	quantitative_property	direct_metpo	1	METPO:2000071
+METPO:2000061	has value comments	quantitative_property	direct_metpo	1	METPO:2000061
+METPO:2000062	is negative data	quantitative_property	direct_metpo	1	METPO:2000062
+METPO:2000063	observation data property	quantitative_property	direct_metpo	1	METPO:2000063
 METPO:1000630	biological process	upper	direct_metpo	1	METPO:1000630
 METPO:1000526	chemical entity	upper	direct_metpo	1	METPO:1000526
 METPO:1000527	enzyme	upper	direct_metpo	1	METPO:1000527
