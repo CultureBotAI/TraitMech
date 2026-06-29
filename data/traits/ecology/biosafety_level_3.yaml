@@ -26,9 +26,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1773
   taxon_label: Mycobacterium tuberculosis
   note: "BSL-3 pathogen"
+  reference: PMID:9634230
 - taxon_id: NCBITaxon:632
   taxon_label: Yersinia pestis
   note: "BSL-3 pathogen"
+  reference: PMID:11586360
 causal_graphs:
 - graph_id: biosafety_level_3_serious_hazard
   title: BSL-3 serious-hazard classification

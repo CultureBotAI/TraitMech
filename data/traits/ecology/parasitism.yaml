@@ -23,6 +23,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:782
   taxon_label: Rickettsia prowazekii
   note: "Obligate intracellular parasite (epidemic typhus agent); textbook host-dependent intracellular lifestyle."
+  reference: PMID:9823893
 causal_graphs:
 - graph_id: parasitism_host_fitness_cost
   title: Parasitism extracts resources at the host's expense
