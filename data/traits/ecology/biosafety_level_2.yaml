@@ -21,9 +21,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
   note: "BSL-2 pathogen"
+  reference: PMID:23408135
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
   note: "BSL-2 pathogen"
+  reference: PMID:32731970
 causal_graphs:
 - graph_id: biosafety_level_2_moderate_hazard
   title: BSL-2 moderate-hazard classification

@@ -26,9 +26,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
   note: "obligate anaerobe"
+  reference: PMID:18430081
 - taxon_id: NCBITaxon:817
   taxon_label: Bacteroides fragilis
   note: "aerotolerant gut anaerobe"
+  reference: PMID:22778399
 causal_graphs:
 - graph_id: anaerobic_trait_oxygen_exclusion
   title: Anaerobic growth oxygen-exclusion mechanism

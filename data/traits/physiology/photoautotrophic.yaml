@@ -46,9 +46,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
   note: "oxygenic photoautotroph"
+  reference: PMID:23945601
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
   note: "anoxygenic photoautotroph"
+  reference: PMID:12093901
 causal_graphs:
 - graph_id: photoautotrophic_cyanobacterial_carbon_fixation
   title: Photoautotrophic light-powered CO2 fixation

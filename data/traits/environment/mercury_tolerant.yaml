@@ -29,9 +29,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "mer-operon mercury resistance"
+  reference: PMID:21423734
 - taxon_id: NCBITaxon:303
   taxon_label: Pseudomonas putida
   note: "mercury-resistant"
+  reference: PMID:21751007
 causal_graphs:
 - graph_id: mercury_tolerance_mer_reduction
   title: Mercury tolerance via mer-operon MerA reductase

@@ -16,9 +16,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:2242
   taxon_label: Halobacterium salinarum
   note: "extreme halophile"
+  reference: PMID:31797576
 - taxon_id: NCBITaxon:2746
   taxon_label: Halomonas elongata
   note: "moderate halophile"
+  reference: PMID:20849449
 causal_graphs:
 - graph_id: halophilic_osmoadaptation
   title: Halophilic osmoadaptation mechanism

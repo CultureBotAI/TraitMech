@@ -20,9 +20,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1639
   taxon_label: Listeria monocytogenes
   note: "grows at refrigeration temperatures"
+  reference: DOI:10.3389/fmicb.2018.02700
 - taxon_id: NCBITaxon:294
   taxon_label: Pseudomonas fluorescens
   note: "cold-tolerant"
+  reference: PMID:31178851
 causal_graphs:
 - graph_id: psychrotolerant_facultative_cold_adaptation
   title: Psychrotolerant facultative cold-adaptation mechanism

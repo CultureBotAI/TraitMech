@@ -22,12 +22,15 @@ canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: "mixed-acid fermentation"
+  reference: PMID:25152889
 - taxon_id: NCBITaxon:1358
   taxon_label: Lactococcus lactis
   note: "homolactic fermentation"
+  reference: DOI:10.1093/femsre/fuaa033
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
   note: "ABE fermentation"
+  reference: PMID:11466286
 causal_graphs:
 - graph_id: fermentation_redox_energy
   title: Fermentation redox and substrate-level phosphorylation

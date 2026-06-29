@@ -31,9 +31,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1513592
   taxon_label: Colwellia marinimaniae
   note: "most piezophilic organism described"
+  reference: PMID:27902293
 - taxon_id: NCBITaxon:74109
   taxon_label: Photobacterium profundum
   note: "deep-sea piezophile model"
+  reference: PMID:15746425
 causal_graphs:
 - graph_id: piezophilic_hhp_membrane_adaptation
   title: Piezophilic high-pressure preference via membrane lipid adaptation

@@ -24,6 +24,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "zinc-resistance determinants"
+  reference: PMID:33540705
 causal_graphs:
 - graph_id: zinc_tolerance_czc_efflux
   title: Zinc tolerance via czc cation-efflux system

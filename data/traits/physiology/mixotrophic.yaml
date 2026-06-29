@@ -25,9 +25,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1021
   taxon_label: Beggiatoa
   note: "chemolitho/organo mixotroph"
+  reference: PMID:32575621
 - taxon_id: NCBITaxon:266
   taxon_label: Paracoccus denitrificans
   note: "facultative mixotroph"
+  reference: PMID:29946833
 causal_graphs:
 - graph_id: mixotrophic_dual_carbon_energy_use
   title: Mixotrophic dual carbon and energy use

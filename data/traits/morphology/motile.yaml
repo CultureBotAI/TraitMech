@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: "flagellar swimming motility"
+  reference: PMID:32449734
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
   note: "flagellar + pilus motility"
+  reference: PMID:11029417
 causal_graphs:
 - graph_id: motile_energy_dependent_locomotion
   title: Energy-dependent bacterial locomotion

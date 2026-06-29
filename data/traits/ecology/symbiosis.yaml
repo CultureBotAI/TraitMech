@@ -25,9 +25,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:9
   taxon_label: Buchnera aphidicola
   note: "obligate aphid endosymbiont"
+  reference: PMID:19909925
 - taxon_id: NCBITaxon:382
   taxon_label: Sinorhizobium meliloti
   note: "legume root-nodule symbiont"
+  reference: PMID:12620125
 causal_graphs:
 - graph_id: symbiosis_host_interaction
   title: Symbiosis as persistent host-microbe interaction

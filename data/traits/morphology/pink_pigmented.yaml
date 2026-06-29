@@ -20,9 +20,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:408
   taxon_label: Methylorubrum extorquens
   note: "pink-pigmented facultative methylotroph"
+  reference: PMID:29472323
 - taxon_id: NCBITaxon:125216
   taxon_label: Roseomonas
   note: "pink-pigmented"
+  reference: PMID:8308122
 causal_graphs:
 - graph_id: pink_pigmented_carotenoid_color
   title: Pink pigmentation carotenoid mechanism

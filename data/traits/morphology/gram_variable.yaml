@@ -23,9 +23,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1665
   taxon_label: Arthrobacter globiformis
   note: "Gram-variable rod-coccus cycle"
+  reference: PMID:1689718
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
   note: "stains Gram-variable in age"
+  reference: https://www.epa.gov/sites/default/files/2015-09/documents/fra003.pdf
 causal_graphs:
 - graph_id: gram_variable_wall_thinning
   title: Gram-variable peptidoglycan thinning

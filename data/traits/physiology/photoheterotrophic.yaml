@@ -29,9 +29,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1076
   taxon_label: Rhodopseudomonas palustris
   note: "metabolically versatile photoheterotroph"
+  reference: PMID:37556472
 - taxon_id: NCBITaxon:1085
   taxon_label: Rhodospirillum rubrum
   note: "purple non-sulfur photoheterotroph"
+  reference: PMID:34621257
 causal_graphs:
 - graph_id: photoheterotrophic_light_organic_carbon
   title: Photoheterotrophic light-supported organic carbon assimilation

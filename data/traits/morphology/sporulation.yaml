@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
   note: "endospore formation model"
+  reference: PMID:32061128
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
   note: "anaerobic sporulation"
+  reference: PMID:18631379
 causal_graphs:
 - graph_id: sporulation_spo0a_sigma_morphogenesis
   title: Sporulation Spo0A and sigma-factor morphogenesis

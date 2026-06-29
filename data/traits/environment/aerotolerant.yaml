@@ -23,9 +23,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1358
   taxon_label: Lactococcus lactis
   note: "aerotolerant fermenter"
+  reference: PMID:11443085
 - taxon_id: NCBITaxon:1314
   taxon_label: Streptococcus pyogenes
   note: "aerotolerant anaerobe"
+  reference: PMID:10986229
 causal_graphs:
 - graph_id: aerotolerant_anaerobe_ros_defense
   title: Aerotolerant anaerobe ROS-defense mechanism

@@ -19,9 +19,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
   note: "single polar flagellum"
+  reference: PMID:19717600
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
   note: "single polar flagellum (swarmer)"
+  reference: PMID:31010900
 causal_graphs:
 - graph_id: monotrichous_single_polar_flagellum
   title: Monotrichous flagellation — single polar flagellum

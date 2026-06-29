@@ -27,9 +27,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:44001
   taxon_label: Caldicellulosiruptor saccharolyticus
   note: "thermophilic hemicellulose degrader"
+  reference: PMID:18776029
 - taxon_id: NCBITaxon:28116
   taxon_label: Bacteroides ovatus
   note: "gut xylan utiliser"
+  reference: PMID:1444385
 causal_graphs:
 - graph_id: xylan_degradation_xylanase
   title: Xylan degradation hydrolyzes hemicellulose to xylose

@@ -29,6 +29,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
   note: "extreme ionizing-radiation resistance"
+  reference: PMID:10567266
 causal_graphs:
 - graph_id: ionizing_radiation_tolerance_dsb_repair
   title: Ionizing-radiation tolerance via double-strand-break repair

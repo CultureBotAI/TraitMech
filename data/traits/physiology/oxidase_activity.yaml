@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
   note: "cytochrome-c-oxidase positive"
+  reference: PMID:28542449
 - taxon_id: NCBITaxon:485
   taxon_label: Neisseria gonorrhoeae
   note: "oxidase-positive"
+  reference: PMID:20154126
 causal_graphs:
 - graph_id: oxidase_activity_terminal_oxidase
   title: Terminal respiratory oxidase reducing oxygen

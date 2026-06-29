@@ -20,9 +20,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
   note: "animal/zoonotic pathogen"
+  reference: PMID:31190705
 - taxon_id: NCBITaxon:747
   taxon_label: Pasteurella multocida
   note: "animal pathogen"
+  reference: PMID:31484691
 causal_graphs:
 - graph_id: animal_pathogen_metazoan_adaptation
   title: Animal-pathogen metazoan host adaptation

@@ -24,6 +24,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "cadmium efflux resistance"
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: cadmium_tolerance_czc_efflux
   title: Cadmium tolerance via czc cation-efflux system
