@@ -23,6 +23,13 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. include hemicellulose (xylan) degradation within lignocellulose
     breakdown across organisms.
+canonical_examples:
+- taxon_id: NCBITaxon:44001
+  taxon_label: Caldicellulosiruptor saccharolyticus
+  note: "thermophilic hemicellulose degrader"
+- taxon_id: NCBITaxon:28116
+  taxon_label: Bacteroides ovatus
+  note: "gut xylan utiliser"
 causal_graphs:
 - graph_id: xylan_degradation_xylanase
   title: Xylan degradation hydrolyzes hemicellulose to xylose

@@ -16,6 +16,13 @@ evidence:
 - reference: DOI:10.1080/1040841X.2025.2526423
   snippet: red, pink, orange, and yellow pigmentation in bacteria
   notes: Supports pink bacterial pigmentation as a carotenoid-associated color phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:408
+  taxon_label: Methylorubrum extorquens
+  note: "pink-pigmented facultative methylotroph"
+- taxon_id: NCBITaxon:125216
+  taxon_label: Roseomonas
+  note: "pink-pigmented"
 causal_graphs:
 - graph_id: pink_pigmented_carotenoid_color
   title: Pink pigmentation carotenoid mechanism

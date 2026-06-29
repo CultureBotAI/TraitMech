@@ -16,6 +16,13 @@ evidence:
   snippet: secretion systems
   notes: Secretion-systems review supports T3SS/T6SS effector delivery as a major
     mechanism by which bacteria infect animal hosts.
+canonical_examples:
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: "animal/zoonotic pathogen"
+- taxon_id: NCBITaxon:747
+  taxon_label: Pasteurella multocida
+  note: "animal pathogen"
 causal_graphs:
 - graph_id: animal_pathogen_metazoan_adaptation
   title: Animal-pathogen metazoan host adaptation

@@ -22,6 +22,10 @@ evidence:
   snippet: free energy of a redox reaction
   notes: Review supports energy conservation from electron donor oxidation through
     respiratory chains.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "organoheterotroph"
 causal_graphs:
 - graph_id: organoheterotrophic_organic_donor_carbon
   title: Organoheterotrophic organic donor and carbon use

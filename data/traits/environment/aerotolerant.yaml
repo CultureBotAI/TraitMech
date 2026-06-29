@@ -19,6 +19,13 @@ evidence:
 - reference: PMID:38864615
   snippet: this bacterium is relatively aerotolerant and survives limited oxygen exposure
   notes: 'Organism example: Clostridium perfringens is described as aerotolerant.'
+canonical_examples:
+- taxon_id: NCBITaxon:1358
+  taxon_label: Lactococcus lactis
+  note: "aerotolerant fermenter"
+- taxon_id: NCBITaxon:1314
+  taxon_label: Streptococcus pyogenes
+  note: "aerotolerant anaerobe"
 causal_graphs:
 - graph_id: aerotolerant_anaerobe_ros_defense
   title: Aerotolerant anaerobe ROS-defense mechanism

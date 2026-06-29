@@ -15,6 +15,13 @@ evidence:
 - reference: DOI:10.3390/biom9070279
   notes: Flagellum review supports multiple flagellar filaments acting as locomotory
     organelles.
+canonical_examples:
+- taxon_id: NCBITaxon:210
+  taxon_label: Helicobacter pylori
+  note: "polar tuft of flagella"
+- taxon_id: NCBITaxon:968
+  taxon_label: Spirillum volutans
+  note: "bipolar flagellar tufts"
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
   title: Lophotrichous flagellation — polar tuft of flagella

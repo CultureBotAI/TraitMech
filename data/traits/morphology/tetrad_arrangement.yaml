@@ -18,6 +18,13 @@ evidence:
 - reference: DOI:10.1038/ncomms4842
   notes: Two-plane division with incomplete daughter-cell separation yields four-cell
     tetrads.
+canonical_examples:
+- taxon_id: NCBITaxon:1270
+  taxon_label: Micrococcus luteus
+  note: "tetrad/packet cocci"
+- taxon_id: NCBITaxon:1377
+  taxon_label: Aerococcus viridans
+  note: "tetrad-forming coccus"
 causal_graphs:
 - graph_id: tetrad_two_plane_division
   title: Tetrad arrangement via two-plane perpendicular division

@@ -24,6 +24,13 @@ evidence:
     suspension where the metabolism comes to a reversible standstill
   notes: Anhydrobiosis review supports low-water-activity adaptation as the physiological
     context distinguishing xerophilic growth from desiccation survival.
+canonical_examples:
+- taxon_id: NCBITaxon:54298
+  taxon_label: Chroococcidiopsis
+  note: "desiccation/aridity-tolerant cyanobacterium"
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "desiccation tolerant"
 causal_graphs:
 - graph_id: xerophilic_low_water_activity_growth
   title: Xerophilic growth at low water activity

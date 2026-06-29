@@ -21,6 +21,13 @@ evidence:
   snippet: spherical cocci synthesize peptidoglycan only at the division septum
   notes: Supports spherical bacterial morphology as associated with septal peptidoglycan
     synthesis.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "spherical coccus"
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: "near-spherical diplococcus"
 causal_graphs:
 - graph_id: sphere_shaped_septal_peptidoglycan
   title: Spherical shape septal peptidoglycan mechanism

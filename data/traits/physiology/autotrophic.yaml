@@ -32,6 +32,16 @@ evidence:
   notes: 'Organism example: Synechocystis sp. PCC 6803 is a model autotrophic cyanobacterium
     that fixes CO2 via the Calvin-Benson cycle (Kaneko et al. 1996, DNA Res, full
     genome).'
+canonical_examples:
+- taxon_id: NCBITaxon:106590
+  taxon_label: Cupriavidus necator
+  note: "H2/CO2 chemolithoautotroph"
+- taxon_id: NCBITaxon:915
+  taxon_label: Nitrosomonas europaea
+  note: "ammonia-oxidising chemoautotroph"
+- taxon_id: NCBITaxon:32046
+  taxon_label: Synechococcus elongatus
+  note: "photoautotrophic cyanobacterium"
 causal_graphs:
 - graph_id: autotrophic_inorganic_carbon_fixation
   title: Autotrophic inorganic carbon fixation

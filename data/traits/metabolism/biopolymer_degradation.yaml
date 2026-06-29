@@ -21,6 +21,13 @@ evidence:
 - reference: DOI:10.1128/MMBR.66.3.506-577.2002
   notes: Lynd et al. review microbial utilization of cellulose, the archetypal biopolymer-degradation
     process.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "secreted polymer hydrolases"
+- taxon_id: NCBITaxon:1708
+  taxon_label: Cellulomonas fimi
+  note: "cellulose/biopolymer degrader"
 causal_graphs:
 - graph_id: biopolymer_degradation_extracellular_hydrolysis
   title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly

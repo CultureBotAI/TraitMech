@@ -25,6 +25,13 @@ evidence:
     (1 uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates arsenite (As3+)
     to a MIC of 3.5 mM.'
+canonical_examples:
+- taxon_id: NCBITaxon:119219
+  taxon_label: Cupriavidus metallidurans
+  note: "broad heavy-metal/metalloid resistance"
+- taxon_id: NCBITaxon:303
+  taxon_label: Pseudomonas putida
+  note: "metal-tolerant soil bacterium"
 causal_graphs:
 - graph_id: arsenic_tolerance_ars_efflux
   title: Arsenic tolerance via ars-operon arsenite efflux

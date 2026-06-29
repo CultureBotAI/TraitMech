@@ -16,6 +16,13 @@ evidence:
   snippet: decreased membrane fluidity
   notes: Psychrophile review supports cold-end membrane stress as the challenge that
     psychrotolerant facultative adaptation overcomes without full psychrophile dedication.
+canonical_examples:
+- taxon_id: NCBITaxon:1639
+  taxon_label: Listeria monocytogenes
+  note: "grows at refrigeration temperatures"
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  note: "cold-tolerant"
 causal_graphs:
 - graph_id: psychrotolerant_facultative_cold_adaptation
   title: Psychrotolerant facultative cold-adaptation mechanism

@@ -12,6 +12,13 @@ evidence:
 - reference: PMID:17203963
   snippet: aerobic, haloalkaliphilic archaeon Natronomonas pharaonis
   notes: 'Organism example: Natronomonas pharaonis is described as haloalkaliphilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:2257
+  taxon_label: Natronomonas pharaonis
+  note: "soda-lake haloalkaliphile"
+- taxon_id: NCBITaxon:1053
+  taxon_label: Halorhodospira halophila
+  note: "haloalkaliphilic purple sulfur bacterium"
 causal_graphs:
 - graph_id: haloalkaliphilic_salt_alkaline_adaptation
   title: Haloalkaliphilic salt and alkaline-pH adaptation mechanism

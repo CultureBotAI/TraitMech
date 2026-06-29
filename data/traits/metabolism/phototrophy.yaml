@@ -22,6 +22,13 @@ evidence:
 - reference: DOI:10.1126/science.289.5486.1902
   notes: Béjà et al. established retinal-based proteorhodopsin phototrophy as a light-energy
     capture mechanism distinct from chlorophyll-based photosynthesis.
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: "photolithotroph"
+- taxon_id: NCBITaxon:1085
+  taxon_label: Rhodospirillum rubrum
+  note: "photoorganotroph"
 causal_graphs:
 - graph_id: phototrophy_light_energy_capture
   title: Phototrophy captures light as cellular energy

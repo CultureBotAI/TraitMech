@@ -20,6 +20,13 @@ evidence:
   snippet: conversion of a growing cell into a two-cell-chamber sporangium
   notes: Supports sporulation as a developmental morphogenesis process producing a
     spore within a sporangium.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "endospore formation model"
+- taxon_id: NCBITaxon:1488
+  taxon_label: Clostridium acetobutylicum
+  note: "anaerobic sporulation"
 causal_graphs:
 - graph_id: sporulation_spo0a_sigma_morphogenesis
   title: Sporulation Spo0A and sigma-factor morphogenesis

@@ -20,6 +20,13 @@ evidence:
 - reference: DOI:10.1089/ars.2020.8039
   notes: Borisov et al. review cytochrome bd-family terminal oxidases of prokaryotic
     respiratory chains.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: "cytochrome-c-oxidase positive"
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  note: "oxidase-positive"
 causal_graphs:
 - graph_id: oxidase_activity_terminal_oxidase
   title: Terminal respiratory oxidase reducing oxygen

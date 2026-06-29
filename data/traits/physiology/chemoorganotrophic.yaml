@@ -21,6 +21,13 @@ evidence:
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: membrane-bound electron transport chain
   notes: Review supports respiratory-chain energy conservation from redox reactions.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "organic compounds as energy and carbon"
+- taxon_id: NCBITaxon:303
+  taxon_label: Pseudomonas putida
+  note: "versatile chemoorganotroph"
 causal_graphs:
 - graph_id: chemoorganotrophic_organic_oxidation_energy
   title: Chemoorganotrophic organic chemical oxidation

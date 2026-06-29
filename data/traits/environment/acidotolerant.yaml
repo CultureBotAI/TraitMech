@@ -19,6 +19,13 @@ evidence:
   snippet: tolerate and grow at external pH values
   notes: Supports acidotolerance as growth or survival under otherwise stressful external
     pH conditions.
+canonical_examples:
+- taxon_id: NCBITaxon:1579
+  taxon_label: Lactobacillus acidophilus
+  note: "tolerates/produces acid"
+- taxon_id: NCBITaxon:435
+  taxon_label: Acetobacter aceti
+  note: "acetic-acid tolerant"
 causal_graphs:
 - graph_id: acidotolerant_acid_stress_homeostasis
   title: Acidotolerant acid-stress pH homeostasis mechanism

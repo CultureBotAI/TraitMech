@@ -27,6 +27,13 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: 'Organism example: Colwellia marinimaniae strain MTCD1, the most piezophilic
     organism described, grows optimally at 120 MPa.'
+canonical_examples:
+- taxon_id: NCBITaxon:1513592
+  taxon_label: Colwellia marinimaniae
+  note: "most piezophilic organism described"
+- taxon_id: NCBITaxon:74109
+  taxon_label: Photobacterium profundum
+  note: "deep-sea piezophile model"
 causal_graphs:
 - graph_id: piezophilic_hhp_membrane_adaptation
   title: Piezophilic high-pressure preference via membrane lipid adaptation

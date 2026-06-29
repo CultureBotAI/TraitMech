@@ -25,6 +25,10 @@ evidence:
     ratios and bacterial resistance to radiation
   notes: Mechanism support — manganese-mediated oxidative-damage protection underlies
     survival of lethal ionizing-radiation doses.
+canonical_examples:
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "extreme ionizing-radiation resistance"
 causal_graphs:
 - graph_id: ionizing_radiation_tolerance_dsb_repair
   title: Ionizing-radiation tolerance via double-strand-break repair
