@@ -17,6 +17,15 @@ evidence:
   snippet: green colorization of the culture plate
   notes: Supports green/blue-green pigmentation from pyocyanin and fluorescein or
     pyoverdine-like pigments in representative bacteria.
+canonical_examples:
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: "green sulfur bacterium (bacteriochlorophyll/chlorosome)"
+  reference: PMID:12093901
+- taxon_id: NCBITaxon:1108
+  taxon_label: Chloroflexus aurantiacus
+  note: "green non-sulfur bacterium"
+  reference: PMID:21714912
 causal_graphs:
 - graph_id: green_pigmented_pyocyanin_phenazine
   title: Green pigmentation pyocyanin phenazine mechanism

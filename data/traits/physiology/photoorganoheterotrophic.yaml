@@ -20,6 +20,15 @@ evidence:
   snippet: photoorganoheterotrophic
   notes: Review table classifies photoorganoheterotrophy by light with organic electron
     and carbon sources.
+canonical_examples:
+- taxon_id: NCBITaxon:1076
+  taxon_label: Rhodopseudomonas palustris
+  note: "photoorganoheterotroph"
+  reference: PMID:14704707
+- taxon_id: NCBITaxon:1085
+  taxon_label: Rhodospirillum rubrum
+  note: "purple non-sulfur photoorganoheterotroph"
+  reference: PMID:6042358
 causal_graphs:
 - graph_id: photoorganoheterotrophic_light_organic_electrons
   title: Photoorganoheterotrophic light and organic substrate use

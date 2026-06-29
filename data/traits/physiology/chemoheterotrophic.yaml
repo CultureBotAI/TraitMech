@@ -24,6 +24,15 @@ evidence:
   snippet: chemoheterotrophic
   notes: Review table supports chemoheterotrophic use of organic molecules as energy
     and carbon sources.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "chemoorganoheterotroph"
+  reference: PMID:17593909
+- taxon_id: NCBITaxon:303
+  taxon_label: Pseudomonas putida
+  note: "versatile chemoheterotroph"
+  reference: PMID:31657101
 causal_graphs:
 - graph_id: chemoheterotrophic_organic_energy_carbon
   title: Chemoheterotrophic organic energy and carbon metabolism

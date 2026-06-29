@@ -16,6 +16,15 @@ evidence:
   snippet: phosphotransacetylase [PTA], acetate kinase [ACK]
   notes: Review supports acetate kinase and phosphotransacetylase as central acetate-switch
     enzymes.
+canonical_examples:
+- taxon_id: NCBITaxon:1314
+  taxon_label: Streptococcus pyogenes
+  note: "ATP via glycolytic substrate-level phosphorylation"
+  reference: PMID:27442496
+- taxon_id: NCBITaxon:1488
+  taxon_label: Clostridium acetobutylicum
+  note: "fermentative substrate-level phosphorylation"
+  reference: PMID:11466286
 causal_graphs:
 - graph_id: substrate_level_phosphorylation_direct_atp
   title: Substrate-level phosphorylation direct ATP formation

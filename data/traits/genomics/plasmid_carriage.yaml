@@ -19,6 +19,15 @@ evidence:
     plasmids as key vectors of horizontal gene transfer.
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include plasmids among the principal mobile genetic elements.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "F/R plasmid carriage"
+  reference: PMID:36409140
+- taxon_id: NCBITaxon:139
+  taxon_label: Borreliella burgdorferi
+  note: "numerous linear/circular plasmids"
+  reference: PMID:9403685
 causal_graphs:
 - graph_id: plasmid_conjugation_hgt
   title: Plasmid carriage drives conjugative horizontal gene transfer

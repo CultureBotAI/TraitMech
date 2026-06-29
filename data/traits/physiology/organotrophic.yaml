@@ -23,6 +23,15 @@ evidence:
 - reference: DOI:10.1016/j.bbabio.2008.09.008
   snippet: membrane-bound electron transport chain
   notes: Review supports respiratory electron transport as an energy-conserving route.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "organic electron-donor organotroph"
+  reference: PMID:9278503
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "soil organotroph"
+  reference: PMID:9384377
 causal_graphs:
 - graph_id: organotrophic_organic_compound_oxidation
   title: Organotrophic organic compound oxidation

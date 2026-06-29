@@ -20,6 +20,15 @@ evidence:
 - reference: DOI:10.1038/nmicrobiol.2016.160
   notes: Roller, Stoddard & Schmidt link rrn copy number to bacterial growth rate
     and growth efficiency.
+canonical_examples:
+- taxon_id: NCBITaxon:691
+  taxon_label: Vibrio natriegens
+  note: "high rRNA-operon copy number (fast growth)"
+  reference: PMID:23969053
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "seven rRNA operons"
+  reference: PMID:15528533
 causal_graphs:
 - graph_id: rrn_copy_growth_rate
   title: rRNA operon copy number sets ribosome biogenesis and growth rate

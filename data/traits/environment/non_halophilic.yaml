@@ -20,6 +20,15 @@ evidence:
 - reference: PMID:11583854
   snippet: Vibrio cholerae non-O1, a non-halophilic bacterium
   notes: 'Organism example: Vibrio cholerae non-O1 is described as non-halophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "grows without added NaCl"
+  reference: PMC8415458
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "non-halophilic soil bacterium"
+  reference: PMID:9384377
 causal_graphs:
 - graph_id: non_halophilic_salt_stress_response
   title: Non-halophilic salt-stress response mechanism

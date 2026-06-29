@@ -18,6 +18,11 @@ evidence:
   snippet: cell shape is genetically determined
   notes: Cell-shape review supports symmetric tapered shapes as a genetically determined
     outcome of polar wall patterning.
+canonical_examples:
+- taxon_id: NCBITaxon:1488
+  taxon_label: Clostridium acetobutylicum
+  note: "spindle-shaped on sporulation"
+  reference: PMID:16346038
 causal_graphs:
 - graph_id: spindle_shaped_symmetric_taper
   title: Spindle-shape symmetric polar taper

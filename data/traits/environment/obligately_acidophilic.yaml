@@ -17,6 +17,15 @@ evidence:
 - reference: DOI:10.3389/fmicb.2021.822229
   snippet: acidic optimal growth pH
   notes: Supports acidophilic growth as a phenotype defined by acidic optimal pH.
+canonical_examples:
+- taxon_id: NCBITaxon:46632
+  taxon_label: Picrophilus oshimae
+  note: "obligate extreme acidophile (pH ~0.7)"
+  reference: PMID:8522509
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  note: "obligate acidophile (pH ~2)"
+  reference: PMID:31861345
 causal_graphs:
 - graph_id: obligately_acidophilic_ph_homeostasis
   title: Obligate acidophily pH homeostasis mechanism

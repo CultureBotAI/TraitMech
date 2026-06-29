@@ -24,6 +24,15 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   snippet: autotrophic CO2 fixation
   notes: Review supports CO2 fixation as the autotrophic carbon-assimilation process.
+canonical_examples:
+- taxon_id: NCBITaxon:32046
+  taxon_label: Synechococcus elongatus
+  note: "water-splitting photolithoautotroph"
+  reference: PMID:21226929
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: "sulfide-using photolithoautotroph"
+  reference: PMID:12093901
 causal_graphs:
 - graph_id: photolithoautotrophic_light_inorganic_donor_fixation
   title: Photolithoautotrophic light and inorganic-donor mechanism

@@ -16,6 +16,15 @@ evidence:
 - reference: DOI:10.1038/nrmicro.2016.93
   snippet: c-type cytochromes and microbial nanowires
   notes: Review supports extracellular electron-transfer mechanisms.
+canonical_examples:
+- taxon_id: NCBITaxon:35554
+  taxon_label: Geobacter sulfurreducens
+  note: "extracellular electron transfer via pili/cytochromes"
+  reference: DOI:10.1126/science.1088727
+- taxon_id: NCBITaxon:70863
+  taxon_label: Shewanella oneidensis
+  note: "extracellular electron transfer to metals"
+  reference: PMID:12368813
 causal_graphs:
 - graph_id: electron_transfer_redox_carriers
   title: Electron transfer redox carrier mechanism

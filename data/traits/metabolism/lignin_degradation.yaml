@@ -19,6 +19,15 @@ evidence:
 - reference: DOI:10.1016/j.cbpa.2015.10.018
   notes: Cragg et al. cover lignin breakdown as part of lignocellulose degradation
     across the tree of life.
+canonical_examples:
+- taxon_id: NCBITaxon:132919
+  taxon_label: Rhodococcus jostii
+  note: "bacterial lignin degrader (DypB peroxidase)"
+  reference: PMID:21534568
+- taxon_id: NCBITaxon:165695
+  taxon_label: Sphingobium
+  note: "lignin-aromatic catabolism"
+  reference: PMID:22207743
 causal_graphs:
 - graph_id: lignin_degradation_peroxidase_laccase
   title: Lignin degradation breaks down aromatic plant biopolymers via oxidative enzymes
