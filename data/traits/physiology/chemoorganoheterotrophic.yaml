@@ -25,6 +25,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: "organic energy + carbon source"
+  reference: DOI:10.1002/9781118960608.gbm01147
 causal_graphs:
 - graph_id: chemoorganoheterotrophic_organic_energy_carbon
   title: Chemoorganoheterotrophic organic energy and carbon metabolism

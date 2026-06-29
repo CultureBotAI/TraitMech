@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:915
   taxon_label: Nitrosomonas europaea
   note: "ammonia-oxidising chemoautotroph"
+  reference: PMID:12700255
 - taxon_id: NCBITaxon:36861
   taxon_label: Thiobacillus denitrificans
   note: "sulfur-oxidising chemoautotroph"
+  reference: PMID:16452431
 causal_graphs:
 - graph_id: chemoautotrophic_chemical_energy_co2_fixation
   title: Chemoautotrophic chemical-energy CO2 fixation

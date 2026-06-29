@@ -29,9 +29,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
   note: "UV-resistant"
+  reference: PMID:11238985
 - taxon_id: NCBITaxon:54298
   taxon_label: Chroococcidiopsis
   note: "desert UV-tolerant cyanobacterium"
+  reference: PMID:23239185
 causal_graphs:
 - graph_id: uv_tolerance_excision_repair
   title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair

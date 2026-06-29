@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:382
   taxon_label: Sinorhizobium meliloti
   note: "legume N2-fixing mutualist"
+  reference: PMID:22876202
 - taxon_id: NCBITaxon:668
   taxon_label: Aliivibrio fischeri
   note: "squid light-organ mutualist"
+  reference: PMID:10941780
 causal_graphs:
 - graph_id: mutualism_reciprocal_benefit
   title: Mutualism delivers reciprocal benefit to host and microbe

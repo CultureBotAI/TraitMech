@@ -27,9 +27,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:573
   taxon_label: Klebsiella pneumoniae
   note: "non-motile enteric"
+  reference: https://www.ncbi.nlm.nih.gov/books/NBK519004/
 - taxon_id: NCBITaxon:1313
   taxon_label: Streptococcus pneumoniae
   note: "non-motile coccus"
+  reference: PMID:34779760
 causal_graphs:
 - graph_id: non_motile_absent_motility_apparatus
   title: Non-motile absent motility apparatus

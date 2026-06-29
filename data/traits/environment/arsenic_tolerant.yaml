@@ -29,9 +29,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "broad heavy-metal/metalloid resistance"
+  reference: PMID:20463976
 - taxon_id: NCBITaxon:303
   taxon_label: Pseudomonas putida
   note: "metal-tolerant soil bacterium"
+  reference: PMID:25646541
 causal_graphs:
 - graph_id: arsenic_tolerance_ars_efflux
   title: Arsenic tolerance via ars-operon arsenite efflux

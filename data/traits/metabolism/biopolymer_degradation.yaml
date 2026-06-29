@@ -25,9 +25,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
   note: "secreted polymer hydrolases"
+  reference: PMID:35893563
 - taxon_id: NCBITaxon:1708
   taxon_label: Cellulomonas fimi
   note: "cellulose/biopolymer degrader"
+  reference: PMID:23342046
 causal_graphs:
 - graph_id: biopolymer_degradation_extracellular_hydrolysis
   title: Biopolymer degradation depolymerizes recalcitrant biomass extracellularly

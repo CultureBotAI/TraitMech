@@ -25,9 +25,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
   note: "spherical coccus"
+  reference: PMID:40704795
 - taxon_id: NCBITaxon:1313
   taxon_label: Streptococcus pneumoniae
   note: "near-spherical diplococcus"
+  reference: PMID:31172911
 causal_graphs:
 - graph_id: sphere_shaped_septal_peptidoglycan
   title: Spherical shape septal peptidoglycan mechanism

@@ -20,9 +20,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:106590
   taxon_label: Cupriavidus necator
   note: "aerobic H2 oxidiser (Knallgas)"
+  reference: PMID:34723797
 - taxon_id: NCBITaxon:2190
   taxon_label: Methanocaldococcus jannaschii
   note: "hydrogenotrophic methanogen"
+  reference: PMID:31333590
 causal_graphs:
 - graph_id: hydrogenotrophic_hydrogen_oxidation_fixation
   title: Hydrogenotrophic H2 oxidation and CO2 fixation

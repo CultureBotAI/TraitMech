@@ -19,9 +19,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:210
   taxon_label: Helicobacter pylori
   note: "polar tuft of flagella"
+  reference: PMID:30258065
 - taxon_id: NCBITaxon:968
   taxon_label: Spirillum volutans
   note: "bipolar flagellar tufts"
+  reference: PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949)
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
   title: Lophotrichous flagellation — polar tuft of flagella

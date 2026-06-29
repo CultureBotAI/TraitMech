@@ -23,9 +23,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1579
   taxon_label: Lactobacillus acidophilus
   note: "tolerates/produces acid"
+  reference: PMID:15345415
 - taxon_id: NCBITaxon:435
   taxon_label: Acetobacter aceti
   note: "acetic-acid tolerant"
+  reference: PMID:17920150
 causal_graphs:
 - graph_id: acidotolerant_acid_stress_homeostasis
   title: Acidotolerant acid-stress pH homeostasis mechanism

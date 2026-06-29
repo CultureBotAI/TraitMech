@@ -21,9 +21,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
   note: "oxygenic photosynthesis"
+  reference: PMID:16228363
 - taxon_id: NCBITaxon:1063
   taxon_label: Cereibacter sphaeroides
   note: "anoxygenic photosynthesis"
+  reference: PMID:21777427
 causal_graphs:
 - graph_id: photosynthesis_chlorophyll_reaction_center
   title: Chlorophyll-based photosynthesis drives electron flow and CO2 fixation

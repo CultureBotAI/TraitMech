@@ -29,6 +29,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "copper-resistance determinants"
+  reference: PMID:37191542
 causal_graphs:
 - graph_id: copper_tolerance_cop_efflux
   title: Copper tolerance via cop/cue/cus/pco efflux systems

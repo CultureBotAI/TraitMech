@@ -19,9 +19,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
   note: "free-living oligotroph"
+  reference: PMID:11259647
 - taxon_id: NCBITaxon:303
   taxon_label: Pseudomonas putida
   note: "free-living soil bacterium"
+  reference: PMID:15560824
 causal_graphs:
 - graph_id: free_living_environmental_habitat
   title: Free-living lifestyle is independent of host association

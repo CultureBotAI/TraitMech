@@ -24,9 +24,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
   note: "catalase-positive"
+  reference: PMID:17114262
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
   note: "catalase-positive"
+  reference: PMID:15972537
 causal_graphs:
 - graph_id: catalase_activity_h2o2_detoxification
   title: Catalase hydrogen-peroxide detoxification

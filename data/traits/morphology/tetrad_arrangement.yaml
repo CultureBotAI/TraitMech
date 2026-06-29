@@ -22,9 +22,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:1270
   taxon_label: Micrococcus luteus
   note: "tetrad/packet cocci"
+  reference: PMID:2325580
 - taxon_id: NCBITaxon:1377
   taxon_label: Aerococcus viridans
   note: "tetrad-forming coccus"
+  reference: PMID:25919289
 causal_graphs:
 - graph_id: tetrad_two_plane_division
   title: Tetrad arrangement via two-plane perpendicular division

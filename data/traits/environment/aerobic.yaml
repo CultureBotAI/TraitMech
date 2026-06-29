@@ -26,9 +26,11 @@ canonical_examples:
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
   note: "obligate aerobe (respiratory metabolism)"
+  reference: PMID:31597590
 - taxon_id: NCBITaxon:1270
   taxon_label: Micrococcus luteus
   note: "strict aerobe"
+  reference: PMID:19948807
 causal_graphs:
 - graph_id: aerobic_trait_mechanism
   title: Aerobic growth oxygen-use mechanism

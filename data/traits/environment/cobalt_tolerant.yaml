@@ -24,6 +24,7 @@ canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
   note: "cobalt-resistance determinants"
+  reference: PMID:20463976
 causal_graphs:
 - graph_id: cobalt_tolerance_czc_cnr_efflux
   title: Cobalt tolerance via czc/cnr cation-efflux systems
