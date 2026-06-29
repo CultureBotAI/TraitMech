@@ -23,6 +23,11 @@ evidence:
   snippet: capable of growing near neutral pH
   notes: Supports facultative alkaliphiles as alkaline-growing organisms that also
     grow near neutral pH.
+canonical_examples:
+- taxon_id: NCBITaxon:79885
+  taxon_label: Alkalihalophilus pseudofirmus
+  note: "facultative alkaliphile (pH 7.5 to >11)"
+  reference: PMID:21951522
 causal_graphs:
 - graph_id: facultatively_alkaphilic_sodium_cycle_homeostasis
   title: Facultative alkaliphily sodium-cycle pH homeostasis mechanism

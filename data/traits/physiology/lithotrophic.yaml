@@ -25,6 +25,15 @@ evidence:
   snippet: generation of an electrochemical ion gradient
   notes: Review supports respiratory energy conservation through ion gradients and
     ATP synthesis.
+canonical_examples:
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  note: "iron/sulfur lithotroph"
+  reference: PMID:19077236
+- taxon_id: NCBITaxon:915
+  taxon_label: Nitrosomonas europaea
+  note: "ammonia lithotroph"
+  reference: PMID:12700255
 causal_graphs:
 - graph_id: lithotrophic_inorganic_donor_energy
   title: Lithotrophic inorganic-donor energy mechanism

@@ -22,6 +22,15 @@ evidence:
 - reference: DOI:10.1002/bies.1091
   snippet: common in environments with greater nutritional opportunities
   notes: Essay contrasts copiotrophs with oligotrophs in nutrient-rich environments.
+canonical_examples:
+- taxon_id: NCBITaxon:691
+  taxon_label: Vibrio natriegens
+  note: "fast-growing copiotroph"
+  reference: PMID:27571549
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "nutrient-rich copiotroph"
+  reference: PMID:38762599
 causal_graphs:
 - graph_id: copiotrophic_high_nutrient_fast_growth
   title: Copiotrophic high-nutrient rapid-growth strategy

@@ -20,6 +20,15 @@ evidence:
 - reference: DOI:10.1038/ismej.2017.16
   notes: Howard-Varona et al. review lysogeny in nature, the maintenance of temperate
     phage genomes within hosts.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "lambda and other integrated prophages"
+  reference: PMID:21266997
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: "Gifsy/Fels prophages"
+  reference: PMID:29780368
 causal_graphs:
 - graph_id: prophage_lysogeny
   title: Prophage maintenance during lysogeny alters host phenotype

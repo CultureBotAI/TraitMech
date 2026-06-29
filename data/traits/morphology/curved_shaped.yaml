@@ -21,6 +21,15 @@ evidence:
   snippet: curved cells appear to be optimized for motility
   notes: Supports curved cells as a recognized bacterial morphology with possible
     functional associations.
+canonical_examples:
+- taxon_id: NCBITaxon:666
+  taxon_label: Vibrio cholerae
+  note: "comma/curved rod"
+  reference: DOI:10.1111/j.1574-6968.2001.tb10629.x
+- taxon_id: NCBITaxon:155892
+  taxon_label: Caulobacter vibrioides
+  note: "curved (vibrioid) cell"
+  reference: PMID:19383443
 causal_graphs:
 - graph_id: curved_shaped_scaffolded_curvature
   title: Curved-shape scaffolded morphogenesis mechanism

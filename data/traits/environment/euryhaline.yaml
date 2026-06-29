@@ -17,6 +17,15 @@ evidence:
   snippet: due to its strong euryhaline phenotype
   notes: 'Organism example: Chromohalobacter salexigens is described as having a strong
     euryhaline phenotype.'
+canonical_examples:
+- taxon_id: NCBITaxon:666
+  taxon_label: Vibrio cholerae
+  note: "tolerates a broad salinity range"
+  reference: PMID:14532045
+- taxon_id: NCBITaxon:2746
+  taxon_label: Halomonas elongata
+  note: "euryhaline halophile"
+  reference: PMID:35432243
 causal_graphs:
 - graph_id: euryhaline_wide_salinity_tolerance
   title: Euryhaline wide-salinity tolerance mechanism

@@ -24,6 +24,15 @@ evidence:
 - reference: DOI:10.1146/annurev.micro.55.1.485
   snippet: Chemolitho-autotrophic ammonia-oxidizing bacteria
   notes: Review supports ammonia oxidation as a chemolithoautotrophic example.
+canonical_examples:
+- taxon_id: NCBITaxon:915
+  taxon_label: Nitrosomonas europaea
+  note: "ammonia chemolithoautotroph"
+  reference: PMID:12700255
+- taxon_id: NCBITaxon:920
+  taxon_label: Acidithiobacillus ferrooxidans
+  note: "iron/sulfur chemolithoautotroph"
+  reference: PMID:19077236
 causal_graphs:
 - graph_id: chemoautolithotrophic_inorganic_energy_co2_fixation
   title: Chemoautolithotrophic inorganic energy and CO2 fixation

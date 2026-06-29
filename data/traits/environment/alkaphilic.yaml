@@ -25,6 +25,15 @@ evidence:
 - reference: DOI:10.1038/nrmicro2549
   snippet: external pH range of 9.5-11.0
   notes: Supports alkaliphilic growth at strongly alkaline external pH.
+canonical_examples:
+- taxon_id: NCBITaxon:86665
+  taxon_label: Halalkalibacterium halodurans
+  note: "alkaliphile growing at pH >9.5"
+  reference: DOI:10.1093/nar/28.21.4317
+- taxon_id: NCBITaxon:2257
+  taxon_label: Natronomonas pharaonis
+  note: "haloalkaliphilic archaeon"
+  reference: PMID:16169924
 causal_graphs:
 - graph_id: alkaliphilic_na_cycle_homeostasis
   title: Alkaliphilic sodium-cycle pH homeostasis mechanism

@@ -24,6 +24,15 @@ evidence:
   snippet: growth range of 80-140 MPa (optimum, 120 MPa) at 6 degrees C
   notes: Provides the contrasting obligate-piezophile reference point against which
     piezotolerant (atmospheric-capable) growth is defined.
+canonical_examples:
+- taxon_id: NCBITaxon:74109
+  taxon_label: Photobacterium profundum
+  note: "piezotolerant/piezophilic deep-sea bacterium"
+  reference: PMID:15746425
+- taxon_id: NCBITaxon:70863
+  taxon_label: Shewanella oneidensis
+  note: "pressure-tolerant"
+  reference: DOI:10.3389/fmicb.2014.00612
 causal_graphs:
 - graph_id: piezotolerance_pressure_range
   title: 'Piezotolerance: growth across atmospheric and elevated pressures'

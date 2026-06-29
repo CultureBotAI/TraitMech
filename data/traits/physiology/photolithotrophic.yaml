@@ -22,6 +22,15 @@ evidence:
 - reference: DOI:10.3389/fmicb.2017.00323
   snippet: light as an energy source and reduced iron
   notes: Review supports Fe(II) as an inorganic electron donor for photoferrotrophy.
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: "oxygenic photolithotroph"
+  reference: PMID:8905231
+- taxon_id: NCBITaxon:1097
+  taxon_label: Chlorobaculum tepidum
+  note: "anoxygenic photolithotroph"
+  reference: PMID:12093901
 causal_graphs:
 - graph_id: photolithotrophic_inorganic_electron_donors
   title: Photolithotrophic inorganic electron donor photosynthesis

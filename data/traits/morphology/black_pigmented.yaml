@@ -17,6 +17,15 @@ evidence:
   snippet: dark-colored pigment
   notes: Supports black/dark microbial pigmentation as a melanin-associated color
     phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:837
+  taxon_label: Porphyromonas gingivalis
+  note: "black-pigmented anaerobe on blood agar"
+  reference: PMID:26903954
+- taxon_id: NCBITaxon:28132
+  taxon_label: Prevotella melaninogenica
+  note: "black-pigmented anaerobe"
+  reference: DOI:10.1099/00207713-32-4-399
 causal_graphs:
 - graph_id: black_pigmented_melanin_polymer
   title: Black pigmentation melanin polymer mechanism

@@ -20,6 +20,15 @@ evidence:
 - reference: DOI:10.1111/j.1574-6976.2008.00136.x
   notes: Juhas et al. review genomic islands as tools of bacterial horizontal gene
     transfer and evolution.
+canonical_examples:
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: "Salmonella pathogenicity islands (SPI)"
+  reference: PMID:17715824
+- taxon_id: NCBITaxon:666
+  taxon_label: Vibrio cholerae
+  note: "Vibrio pathogenicity island (VPI)"
+  reference: PMID:33123494
 causal_graphs:
 - graph_id: gi_hgt_accessory_function
   title: Genomic islands acquired by HGT carry accessory functions
