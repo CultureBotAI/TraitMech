@@ -16,6 +16,13 @@ evidence:
 - reference: DOI:10.1016/j.bbamem.2005.09.010
   snippet: alkali-tolerant and extremely alkaliphilic bacteria
   notes: Supports alkaline pH tolerance as a microbial pH-homeostasis phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:86665
+  taxon_label: Halalkalibacterium halodurans
+  note: "tolerates high pH (ex-Bacillus halodurans)"
+- taxon_id: NCBITaxon:79885
+  taxon_label: Alkalihalophilus pseudofirmus
+  note: "alkalitolerant"
 causal_graphs:
 - graph_id: alkalotolerant_alkaline_stress_homeostasis
   title: Alkalotolerant alkaline-stress pH homeostasis mechanism

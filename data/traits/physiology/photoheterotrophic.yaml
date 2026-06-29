@@ -25,6 +25,13 @@ evidence:
   snippet: accumulated 25% to 110% more biomass
   notes: Experimental AAP study supports light-enhanced assimilation of supplied organic
     carbon.
+canonical_examples:
+- taxon_id: NCBITaxon:1076
+  taxon_label: Rhodopseudomonas palustris
+  note: "metabolically versatile photoheterotroph"
+- taxon_id: NCBITaxon:1085
+  taxon_label: Rhodospirillum rubrum
+  note: "purple non-sulfur photoheterotroph"
 causal_graphs:
 - graph_id: photoheterotrophic_light_organic_carbon
   title: Photoheterotrophic light-supported organic carbon assimilation

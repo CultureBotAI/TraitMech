@@ -22,6 +22,13 @@ evidence:
 - reference: PMID:22778399
   snippet: obligate anaerobe Bacteroides fragilis
   notes: 'Organism example: Bacteroides fragilis is described as an anaerobic organism.'
+canonical_examples:
+- taxon_id: NCBITaxon:1488
+  taxon_label: Clostridium acetobutylicum
+  note: "obligate anaerobe"
+- taxon_id: NCBITaxon:817
+  taxon_label: Bacteroides fragilis
+  note: "aerotolerant gut anaerobe"
 causal_graphs:
 - graph_id: anaerobic_trait_oxygen_exclusion
   title: Anaerobic growth oxygen-exclusion mechanism

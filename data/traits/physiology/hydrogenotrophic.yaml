@@ -16,6 +16,13 @@ evidence:
 - reference: DOI:10.1128/AEM.02473-10
   snippet: assimilation of CO2
   notes: Review supports CO2 assimilation into cellular carbon in autotrophic metabolism.
+canonical_examples:
+- taxon_id: NCBITaxon:106590
+  taxon_label: Cupriavidus necator
+  note: "aerobic H2 oxidiser (Knallgas)"
+- taxon_id: NCBITaxon:2190
+  taxon_label: Methanocaldococcus jannaschii
+  note: "hydrogenotrophic methanogen"
 causal_graphs:
 - graph_id: hydrogenotrophic_hydrogen_oxidation_fixation
   title: Hydrogenotrophic H2 oxidation and CO2 fixation

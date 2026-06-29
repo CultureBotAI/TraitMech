@@ -16,6 +16,13 @@ evidence:
   snippet: secretion systems
   notes: Secretion-systems review supports effector delivery as a major mechanism
     by which bacteria establish human infection.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "major human pathogen"
+- taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  note: "tuberculosis agent"
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
   title: Human-pathogen Homo sapiens host adaptation

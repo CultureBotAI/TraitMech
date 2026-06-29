@@ -19,6 +19,13 @@ evidence:
   snippet: cell wall structure
   notes: Bacterial cell-wall review supports peptidoglycan thinning and autolysis-mediated
     loss of crystal-violet retention as the basis for gram-variable staining.
+canonical_examples:
+- taxon_id: NCBITaxon:1665
+  taxon_label: Arthrobacter globiformis
+  note: "Gram-variable rod-coccus cycle"
+- taxon_id: NCBITaxon:1488
+  taxon_label: Clostridium acetobutylicum
+  note: "stains Gram-variable in age"
 causal_graphs:
 - graph_id: gram_variable_wall_thinning
   title: Gram-variable peptidoglycan thinning

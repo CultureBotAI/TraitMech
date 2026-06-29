@@ -23,6 +23,13 @@ evidence:
   snippet: secretion systems
   notes: Secretion-systems review supports protein secretion machineries as central
     effectors of host pathogenicity across kingdoms.
+canonical_examples:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: "opportunistic pathogen"
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "host pathogen"
 causal_graphs:
 - graph_id: pathogenic_to_host_virulence_factor_program
   title: Pathogenic-to-host virulence-factor program

@@ -17,6 +17,13 @@ evidence:
   snippet: orange ... pigmentation in bacteria
   notes: Supports orange microbial pigmentation as a bacterial carotenoid-associated
     color phenotype.
+canonical_examples:
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "orange carotenoid colonies"
+- taxon_id: NCBITaxon:1000015
+  taxon_label: Rhodococcus sp. 1.15-VEs
+  note: "orange-pigmented actinobacterium"
 causal_graphs:
 - graph_id: orange_pigmented_carotenoid_accumulation
   title: Orange pigmentation carotenoid mechanism

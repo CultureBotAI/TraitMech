@@ -25,6 +25,13 @@ evidence:
     resistance
   notes: Review support — Deinococcus radiodurans is the reference organism for extreme
     UV and ionizing radiation resistance.
+canonical_examples:
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "UV-resistant"
+- taxon_id: NCBITaxon:54298
+  taxon_label: Chroococcidiopsis
+  note: "desert UV-tolerant cyanobacterium"
 causal_graphs:
 - graph_id: uv_tolerance_excision_repair
   title: UV-radiation tolerance via nucleotide-excision and photoreactivation repair

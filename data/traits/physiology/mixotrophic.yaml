@@ -21,6 +21,13 @@ evidence:
   snippet: combination of modes by which an organism can obtain its energy and carbon
   notes: Perspective supports mixotrophy as combined energy and carbon acquisition
     modes.
+canonical_examples:
+- taxon_id: NCBITaxon:1021
+  taxon_label: Beggiatoa
+  note: "chemolitho/organo mixotroph"
+- taxon_id: NCBITaxon:266
+  taxon_label: Paracoccus denitrificans
+  note: "facultative mixotroph"
 causal_graphs:
 - graph_id: mixotrophic_dual_carbon_energy_use
   title: Mixotrophic dual carbon and energy use

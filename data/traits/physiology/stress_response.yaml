@@ -20,6 +20,13 @@ evidence:
 - reference: DOI:10.1038/nrmicro3032
   notes: Imlay reviews molecular stress-defense mechanisms, exemplifying inducible
     protective responses; parent of the oxidative-stress-response sub-variant.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "general stress response (RpoS)"
+- taxon_id: NCBITaxon:1299
+  taxon_label: Deinococcus radiodurans
+  note: "extreme stress resistance"
 causal_graphs:
 - graph_id: stress_response_induction
   title: Stress-induced protective response

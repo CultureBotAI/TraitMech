@@ -25,6 +25,13 @@ evidence:
     superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins
   notes: Heavy-metal resistance review situates mercury detoxification within the
     broader prokaryotic metal-resistance machinery.
+canonical_examples:
+- taxon_id: NCBITaxon:119219
+  taxon_label: Cupriavidus metallidurans
+  note: "mer-operon mercury resistance"
+- taxon_id: NCBITaxon:303
+  taxon_label: Pseudomonas putida
+  note: "mercury-resistant"
 causal_graphs:
 - graph_id: mercury_tolerance_mer_reduction
   title: Mercury tolerance via mer-operon MerA reductase

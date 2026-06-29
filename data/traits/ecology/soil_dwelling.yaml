@@ -20,6 +20,16 @@ evidence:
 - reference: DOI:10.1038/nrmicro1341
   notes: Martiny et al. support soil communities as biogeographically structured microbial
     habitats.
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "soil bacterium"
+- taxon_id: NCBITaxon:1902
+  taxon_label: Streptomyces coelicolor
+  note: "soil actinomycete"
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  note: "rhizosphere soil bacterium"
 causal_graphs:
 - graph_id: soil_dwelling_biogeochemistry
   title: Soil-dwelling microbes drive terrestrial biogeochemical cycling

@@ -18,6 +18,13 @@ evidence:
   snippet: virulence factors
   notes: Virulence-factor review supports the absence or low expression of virulence
     factors in BSL-1 agents (non-pathogenic to healthy adults).
+canonical_examples:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "BSL-1 non-pathogen"
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "BSL-1 lab strain K-12"
 causal_graphs:
 - graph_id: biosafety_level_1_minimal_hazard
   title: BSL-1 minimal-hazard classification

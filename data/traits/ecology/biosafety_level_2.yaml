@@ -17,6 +17,13 @@ evidence:
   snippet: virulence factors
   notes: Virulence-factor review supports moderate-virulence community-disease pathogens
     (typically with available vaccines or therapies) as BSL-2 agents.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "BSL-2 pathogen"
+- taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  note: "BSL-2 pathogen"
 causal_graphs:
 - graph_id: biosafety_level_2_moderate_hazard
   title: BSL-2 moderate-hazard classification

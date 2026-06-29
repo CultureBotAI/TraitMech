@@ -23,6 +23,13 @@ evidence:
   snippet: flagellum
   notes: Bacterial flagellum review supports the absence or non-expression of the
     flagellar apparatus as the basis for non-motile phenotypes.
+canonical_examples:
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  note: "non-motile enteric"
+- taxon_id: NCBITaxon:1313
+  taxon_label: Streptococcus pneumoniae
+  note: "non-motile coccus"
 causal_graphs:
 - graph_id: non_motile_absent_motility_apparatus
   title: Non-motile absent motility apparatus

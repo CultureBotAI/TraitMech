@@ -16,6 +16,13 @@ evidence:
 - reference: DOI:10.1126/science.1104816
   notes: Bäckhed et al. characterize the host-associated gut microbiota as a dense,
     coevolved community.
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "gut commensal"
+- taxon_id: NCBITaxon:818
+  taxon_label: Bacteroides thetaiotaomicron
+  note: "gut symbiont"
 causal_graphs:
 - graph_id: host_associated_microbiome
   title: Host association establishes persistent host microbiome membership

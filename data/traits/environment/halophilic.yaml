@@ -12,6 +12,13 @@ evidence:
 - reference: PMID:19329623
   snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
   notes: 'Organism example: Salinicoccus albus is described as halophilic.'
+canonical_examples:
+- taxon_id: NCBITaxon:2242
+  taxon_label: Halobacterium salinarum
+  note: "extreme halophile"
+- taxon_id: NCBITaxon:2746
+  taxon_label: Halomonas elongata
+  note: "moderate halophile"
 causal_graphs:
 - graph_id: halophilic_osmoadaptation
   title: Halophilic osmoadaptation mechanism

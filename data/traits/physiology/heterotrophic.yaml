@@ -31,6 +31,13 @@ evidence:
   notes: 'Organism example: Escherichia coli K-12 (MG1655) is the canonical chemoorganoheterotrophic
     model bacterium that grows on diverse organic substrates (Blattner et al. 1997,
     Science, complete genome).'
+canonical_examples:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  note: "organic-carbon heterotroph"
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  note: "soil heterotroph"
 causal_graphs:
 - graph_id: heterotrophic_organic_carbon_assimilation
   title: Heterotrophic organic carbon assimilation

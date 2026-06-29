@@ -20,6 +20,13 @@ evidence:
 - reference: DOI:10.1038/nrmicro3032
   notes: Imlay's oxidative-stress review supports catalase as a key hydrogen-peroxide
     scavenging defense.
+canonical_examples:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  note: "catalase-positive"
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  note: "catalase-positive"
 causal_graphs:
 - graph_id: catalase_activity_h2o2_detoxification
   title: Catalase hydrogen-peroxide detoxification

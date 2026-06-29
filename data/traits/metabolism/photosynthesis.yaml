@@ -17,6 +17,13 @@ evidence:
   notes: Fischer et al., "Evolution of Oxygenic Photosynthesis", supports reaction-center
     photosynthesis as the chlorophyll-based, CO2-fixing branch of phototrophy distinct
     from rhodopsin-based light capture.
+canonical_examples:
+- taxon_id: NCBITaxon:1148
+  taxon_label: Synechocystis sp. PCC 6803
+  note: "oxygenic photosynthesis"
+- taxon_id: NCBITaxon:1063
+  taxon_label: Cereibacter sphaeroides
+  note: "anoxygenic photosynthesis"
 causal_graphs:
 - graph_id: photosynthesis_chlorophyll_reaction_center
   title: Chlorophyll-based photosynthesis drives electron flow and CO2 fixation
