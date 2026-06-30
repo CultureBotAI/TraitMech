@@ -333,9 +333,23 @@ def render_pages(args: argparse.Namespace) -> int:
     )
     (PAGES_DIR / "index.html").write_text(landing)
 
+    # Render record-browser page (category tile grid).
+    browse = env.get_template("browse.html").render(
+        title="Record browser",
+        root="",
+        total_traits=len(traits),
+        embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+        category_counts=category_counts,
+        embedding_per_category=dict(embedding_per_category),
+        metpo_version=metpo_version,
+        generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+    )
+    (PAGES_DIR / "browse.html").write_text(browse)
+
     print(f"Wrote {written} trait pages")
     print(f"Wrote {len(category_lists)} category index pages")
     print("Wrote pages/index.html")
+    print("Wrote pages/browse.html")
     print(f"Coverage: {embedded_count}/{len(traits)} ({_coverage_pct(match_table, len(traits))}%)")
     return 0
 

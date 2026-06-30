@@ -23,11 +23,23 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    Built {{ generated_at }} from
-    <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
-    · {{ total_traits }} TraitRecords
-    · embedding coverage {{ embedding_coverage_pct }}%
-    (kg-microbe deepwalk 512-D, 2026-04-25)
+    <div class="fam"><strong>KG-Microbe Mechs:</strong>
+      <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> ·
+      <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> ·
+      <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> ·
+      <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a>
+    </div>
+    <div class="fam">
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+      <a href="https://w3id.org/metpo">METPO</a>
+    </div>
+    <div>
+      Built {{ generated_at }} from
+      <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
+      · {{ total_traits }} TraitRecords
+      · embedding coverage {{ embedding_coverage_pct }}%
+      (kg-microbe deepwalk 512-D, 2026-04-25)
+    </div>
   </div>
 </footer>
 </body>

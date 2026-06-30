@@ -1,45 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="hero">
+<section class="hero landing-hero">
   <h1>TraitMech</h1>
   <p class="tagline">Microbial ecophysiological trait knowledge base, seeded
     from <a href="https://w3id.org/metpo">METPO</a> and curated incrementally.</p>
-  <div class="counts">
-    <span><strong>{{ total_traits }}</strong> trait records</span>
-    <span><strong>{{ embedded_count }}</strong> with kg-microbe embedding ({{ embedding_coverage_pct }}%)</span>
-    <span><strong>{{ category_counts|length }}</strong> categories</span>
-  </div>
-  <p class="hero-cta"><a class="cta-link" href="umap.html">Explore the trait embedding space →</a></p>
-</section>
-
-<section>
-  <h2>Categories</h2>
-  <div class="grid">
-    {% for cat, n in category_counts.items() %}
-    <a class="card cat-tile" href="category/{{ cat|lower }}.html">
-      <h3>{{ cat }}</h3>
-      <p class="big">{{ n }}</p>
-      <p class="meta">{{ embedding_per_category.get(cat, 0) }} with embedding</p>
-    </a>
-    {% endfor %}
+  <div class="stats">
+    <div class="stat"><b>{{ total_traits }}</b><span>trait records</span></div>
+    <div class="stat"><b>{{ category_counts|length }}</b><span>categories</span></div>
+    <div class="stat"><b>{{ embedding_coverage_pct }}%</b><span>embedded</span></div>
   </div>
 </section>
 
 <section>
-  <h2>About</h2>
-  <p>One YAML per record under <code>data/traits/&lt;category&gt;/&lt;slug&gt;.yaml</code>;
-    each carries a stable <code>METPO:&lt;id&gt;</code> identifier, label,
-    definition, parent traits, synonyms, and an optional curation history.
-    See <a href="https://github.com/CultureBotAI/TraitMech">the GitHub repo</a>
-    for the LinkML schema and seeder.</p>
-  <p><strong>Embedding integration</strong>: each page links to the kg-microbe
-    deepwalk embedding for the matching trait, with the top 8 nearest neighbors
-    by cosine similarity. Coverage is currently {{ embedding_coverage_pct }}%
-    — sourced from kg-microbe's 2026-04-25 deepwalk (512-D, the first to
-    ingest METPO directly). The 8 unmatched records are all DatatypeProperties
-    that the graph encodes as edge attributes rather than entity nodes.</p>
-  <p>The <a href="umap.html">embedding-space scatter</a> projects all
-    {{ embedded_count }} matched traits into 2-D via UMAP, coloured by
-    category and searchable by label or CURIE.</p>
+  <div class="cards">
+    <div class="card landing-card">
+      <div class="ic">&#128270;</div>
+      <h2>Record browser</h2>
+      <p>Browse traits by category — definitions, causal graphs, kg-microbe matches, and nearest neighbors.</p>
+      <a class="btn" href="{{ root }}browse.html">Browse records &rarr;</a>
+    </div>
+    <div class="card landing-card">
+      <div class="ic">&#128506;&#65039;</div>
+      <h2>Embedding browser</h2>
+      <p>Interactive UMAP of the trait embedding space with click-through to records.</p>
+      <a class="btn" href="{{ root }}umap.html">Explore UMAP &rarr;</a>
+    </div>
+    <div class="card landing-card">
+      <div class="ic">&#128187;</div>
+      <h2>GitHub</h2>
+      <p>Source code, data, schema, and the curation workflow.</p>
+      <a class="btn" href="https://github.com/CultureBotAI/TraitMech">View on GitHub &rarr;</a>
+    </div>
+  </div>
 </section>
 {% endblock %}
