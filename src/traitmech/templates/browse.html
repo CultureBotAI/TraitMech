@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Record browser</p>
+  <h1>Record browser</h1>
+  <p class="tagline">Browse {{ total_traits }} trait records across {{ category_counts|length }} categories.
+    Each record carries METPO provenance, causal graphs, kg-microbe matches, and nearest neighbors.</p>
+</header>
+
+<section>
+  <h2>Categories</h2>
+  <div class="grid">
+    {% for cat, n in category_counts.items() %}
+    <a class="card cat-tile" href="{{ root }}category/{{ cat|lower }}.html">
+      <h3>{{ cat }}</h3>
+      <p class="big">{{ n }}</p>
+      <p class="meta">{{ embedding_per_category.get(cat, 0) }} with embedding</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
