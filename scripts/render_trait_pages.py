@@ -44,6 +44,7 @@ TEMPLATES_DIR = REPO_ROOT / "src" / "traitmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 RAW_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
 UMAP_JSON = EMBED_DIR / "trait_umap.json"
+GRAPH_JSON = EMBED_DIR / "trait_graph.json"
 NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
@@ -311,6 +312,28 @@ def render_pages(args: argparse.Namespace) -> int:
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
         (PAGES_DIR / "umap.html").write_text(umap_html)
+
+    # Render sfdp graph-layout page if data exists.
+    if GRAPH_JSON.exists():
+        graph_data_dst = PAGES_DIR / "data" / "trait_graph.json"
+        graph_data_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(GRAPH_JSON, graph_data_dst)
+        import json as _json
+        graph_points = _json.loads(GRAPH_JSON.read_text())
+        cats = sorted({p["category"] for p in graph_points})
+        graph_html = env.get_template("graph.html").render(
+            title="Trait graph layout (sfdp)",
+            root="",
+            data_url="data/trait_graph.json",
+            traits_root="traits/",
+            n_points=len(graph_points),
+            categories=cats,
+            metpo_version=metpo_version,
+            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            total_traits=len(traits),
+            embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+        )
+        (PAGES_DIR / "graph.html").write_text(graph_html)
 
     # Render landing page.
     category_counts = {cat: len(items) for cat, items in sorted(category_lists.items(), key=lambda x: -len(x[1]))}
