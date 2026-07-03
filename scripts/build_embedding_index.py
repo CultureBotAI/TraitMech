@@ -293,17 +293,39 @@ def compute_umap_and_neighbors(
     metpo_records: list[tuple[str, str, list[str], str]],
     match_rows: list[dict[str, str]],
     vectors: dict[str, list[float]],
+    method: str = "pacmap",
 ) -> tuple[list[dict], dict[str, list[dict]]]:
-    """Project the matched-record embeddings to 2-D via UMAP and compute
-    k nearest neighbors per record. Returns (umap_points, nn_per_curie).
+    """Project the matched-record embeddings to 2-D and compute k nearest
+    neighbors per record. Returns (umap_points, nn_per_curie).
+
+    ``method`` selects the 2-D reducer: ``"pacmap"`` (default; PCA-init,
+    fixed seed, L2-normalised rows to mirror cosine geometry) or ``"umap"``
+    (legacy UMAP path). The output JSON keys (umap_x / umap_y) are unchanged
+    regardless of reducer.
 
     Records without an embedding are NOT in the UMAP output (they have no
     coordinates) but still appear in nn_per_curie as []."""
     try:
         import numpy as np
-        import umap as _umap
     except ImportError as e:
-        print(f"  UMAP / numpy not available: {e}; skipping projection", file=sys.stderr)
+        print(f"  numpy not available: {e}; skipping projection", file=sys.stderr)
+        return [], {}
+    if method == "umap":
+        try:
+            import umap as _umap
+        except ImportError as e:
+            print(f"  UMAP not available: {e}; skipping projection", file=sys.stderr)
+            return [], {}
+    elif method == "pacmap":
+        try:
+            import pacmap  # noqa: F401
+            from sklearn.preprocessing import normalize  # noqa: F401
+        except ImportError as e:
+            print(f"  PaCMAP / scikit-learn not available: {e}; skipping projection",
+                  file=sys.stderr)
+            return [], {}
+    else:
+        print(f"  Unknown reducer method {method!r}; skipping projection", file=sys.stderr)
         return [], {}
 
     # Index match table by curie
@@ -325,13 +347,21 @@ def compute_umap_and_neighbors(
         matrix.append(avg)
 
     if len(matrix) < 5:
-        print(f"  Only {len(matrix)} matched embeddings — UMAP skipped", file=sys.stderr)
+        print(f"  Only {len(matrix)} matched embeddings — projection skipped", file=sys.stderr)
         return [], {}
 
     arr = np.array(matrix, dtype=float)
-    print(f"      Running UMAP on {arr.shape[0]} × {arr.shape[1]} matrix")
-    reducer = _umap.UMAP(n_components=2, n_neighbors=min(15, len(matrix) - 1), random_state=42)
-    coords = reducer.fit_transform(arr)
+    if method == "umap":
+        print(f"      Running UMAP on {arr.shape[0]} × {arr.shape[1]} matrix")
+        reducer = _umap.UMAP(
+            n_components=2, n_neighbors=min(15, len(matrix) - 1), random_state=42
+        )
+        coords = reducer.fit_transform(arr)
+    else:  # pacmap (default)
+        from sklearn.preprocessing import normalize
+        print(f"      Running PaCMAP on {arr.shape[0]} × {arr.shape[1]} matrix")
+        X = normalize(arr.astype("float32"))
+        coords = pacmap.PaCMAP(n_components=2, random_state=42).fit_transform(X, init="pca")
 
     # Cosine-style nearest neighbors via L2 normalisation + dot product.
     norms = np.linalg.norm(arr, axis=1, keepdims=True)
@@ -384,6 +414,8 @@ def main() -> int:
     ap.add_argument("--kgm-aliases", type=Path, default=DEFAULT_KGM_ALIASES)
     ap.add_argument("--out-deepwalk", type=Path, default=OUT_DEEPWALK)
     ap.add_argument("--out-match", type=Path, default=OUT_MATCH)
+    ap.add_argument("--method", choices=["pacmap", "umap"], default="pacmap",
+                    help="2-D reducer for the trait projection (default: pacmap)")
     args = ap.parse_args()
 
     src = args.src
@@ -420,9 +452,11 @@ def main() -> int:
     for m, n in sorted(by_method.items(), key=lambda x: -x[1]):
         print(f"        {m:<15} {n}")
 
-    print("[4/4] UMAP projection + nearest neighbors")
+    print(f"[4/4] 2-D projection ({args.method}) + nearest neighbors")
     vectors = load_embedding_vectors(args.out_deepwalk)
-    umap_points, nn_map = compute_umap_and_neighbors(metpo_records, rows, vectors)
+    umap_points, nn_map = compute_umap_and_neighbors(
+        metpo_records, rows, vectors, method=args.method
+    )
     write_json(OUT_UMAP_JSON, umap_points)
     write_json(OUT_NN_JSON, nn_map)
     print(f"      {len(umap_points)} UMAP points → {OUT_UMAP_JSON.name}")
