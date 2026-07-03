@@ -299,9 +299,10 @@ def compute_umap_and_neighbors(
     neighbors per record. Returns (umap_points, nn_per_curie).
 
     ``method`` selects the 2-D reducer: ``"pacmap"`` (default; PCA-init,
-    fixed seed, L2-normalised rows to mirror cosine geometry) or ``"umap"``
-    (legacy UMAP path). The output JSON keys (umap_x / umap_y) are unchanged
-    regardless of reducer.
+    fixed seed, L2-normalised rows to mirror cosine geometry), ``"umap"``
+    (legacy UMAP path), or ``"sfdp"`` (Graphviz force-directed layout of a
+    mutual-kNN graph over the embeddings). The output JSON keys
+    (umap_x / umap_y) are unchanged regardless of reducer.
 
     Records without an embedding are NOT in the UMAP output (they have no
     coordinates) but still appear in nn_per_curie as []."""
@@ -322,6 +323,14 @@ def compute_umap_and_neighbors(
             from sklearn.preprocessing import normalize  # noqa: F401
         except ImportError as e:
             print(f"  PaCMAP / scikit-learn not available: {e}; skipping projection",
+                  file=sys.stderr)
+            return [], {}
+    elif method == "sfdp":
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            from sfdp_layout import sfdp_layout  # noqa: F401
+        except ImportError as e:
+            print(f"  sfdp_layout / scikit-learn not available: {e}; skipping projection",
                   file=sys.stderr)
             return [], {}
     else:
@@ -357,6 +366,9 @@ def compute_umap_and_neighbors(
             n_components=2, n_neighbors=min(15, len(matrix) - 1), random_state=42
         )
         coords = reducer.fit_transform(arr)
+    elif method == "sfdp":
+        print(f"      Running sfdp force-directed layout on {arr.shape[0]} × {arr.shape[1]} matrix")
+        coords = sfdp_layout(arr, k=15, seed=42)
     else:  # pacmap (default)
         from sklearn.preprocessing import normalize
         print(f"      Running PaCMAP on {arr.shape[0]} × {arr.shape[1]} matrix")
@@ -414,7 +426,12 @@ def main() -> int:
     ap.add_argument("--kgm-aliases", type=Path, default=DEFAULT_KGM_ALIASES)
     ap.add_argument("--out-deepwalk", type=Path, default=OUT_DEEPWALK)
     ap.add_argument("--out-match", type=Path, default=OUT_MATCH)
-    ap.add_argument("--method", choices=["pacmap", "umap"], default="pacmap",
+    ap.add_argument("--umap-out", type=Path, default=OUT_UMAP_JSON,
+                    help="output path for the 2-D projection JSON "
+                         "(default: data/embeddings/trait_umap.json). Use a "
+                         "separate path (e.g. trait_graph.json) for --method sfdp "
+                         "so the pacmap default output is not overwritten.")
+    ap.add_argument("--method", choices=["pacmap", "umap", "sfdp"], default="pacmap",
                     help="2-D reducer for the trait projection (default: pacmap)")
     args = ap.parse_args()
 
@@ -457,9 +474,9 @@ def main() -> int:
     umap_points, nn_map = compute_umap_and_neighbors(
         metpo_records, rows, vectors, method=args.method
     )
-    write_json(OUT_UMAP_JSON, umap_points)
+    write_json(args.umap_out, umap_points)
     write_json(OUT_NN_JSON, nn_map)
-    print(f"      {len(umap_points)} UMAP points → {OUT_UMAP_JSON.name}")
+    print(f"      {len(umap_points)} UMAP points → {args.umap_out.name}")
     nn_with_data = sum(1 for v in nn_map.values() if v)
     print(f"      {nn_with_data} traits with ≥1 nearest neighbor → {OUT_NN_JSON.name}")
     return 0
