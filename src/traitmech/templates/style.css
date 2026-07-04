@@ -382,3 +382,71 @@ label.facet-opt .cnt {
 .nn-list li:last-child { border-bottom: none; }
 .nn-list .sim { color: var(--muted); font-family: monospace; font-size: 0.78rem; margin-left: 0.4em; }
 .nn-list .nn-cat { display: inline-block; font-size: 0.72rem; color: var(--muted); padding: 0.1em 0.4em; border-radius: 3px; background: var(--accent-soft); margin-right: 0.3em; }
+
+/* ============================================================
+   Dark theme — additive only; the light look above is untouched.
+   OS preference is the default; an explicit toggle (data-theme on
+   <html>, set by theme-toggle.js) overrides it in both directions.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fg: #efeaea;
+    --muted: #ada4a6;
+    --border: #332d30;
+    --bg: #171417;
+    --card-bg: #211d20;
+    --accent: #ef7377;
+    --accent-soft: #2a1e1f;
+    --code-bg: #0d0b0d;
+  }
+}
+:root[data-theme="dark"] {
+  --fg: #efeaea;
+  --muted: #ada4a6;
+  --border: #332d30;
+  --bg: #171417;
+  --card-bg: #211d20;
+  --accent: #ef7377;
+  --accent-soft: #2a1e1f;
+  --code-bg: #0d0b0d;
+}
+
+/* Hard-coded light colors that the token remap above does not reach.
+   Duplicated across the OS-default media query and the explicit toggle. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-header { background: var(--card-bg); }
+  :root:not([data-theme="light"]) .hero { background: linear-gradient(135deg, #33201f, #171417); }
+  :root:not([data-theme="light"]) .stat { background: rgba(255,255,255,0.05); }
+  :root:not([data-theme="light"]) .cta-link,
+  :root:not([data-theme="light"]) .btn { color: #171417; }
+  :root:not([data-theme="light"]) .rail-links a:hover { color: #171417; }
+  :root:not([data-theme="light"]) .pathograph-container { background: var(--card-bg); }
+  :root:not([data-theme="light"]) .pathograph-legend { background: var(--code-bg); }
+  :root:not([data-theme="light"]) .graph-warning { background: #2a2114; border-color: #5a4a1e; color: #fbbf24; }
+  :root:not([data-theme="light"]) .edge-evidence > ul > li { background: var(--card-bg); border-color: var(--border); }
+  /* d3 scatter (umap/graph): SVG legend text defaults to black; hover halo is dark. */
+  :root:not([data-theme="light"]) #umap-plot svg text { fill: var(--fg); }
+  :root:not([data-theme="light"]) #umap-plot circle:hover { stroke: var(--fg); }
+}
+:root[data-theme="dark"] .site-header { background: var(--card-bg); }
+:root[data-theme="dark"] .hero { background: linear-gradient(135deg, #33201f, #171417); }
+:root[data-theme="dark"] .stat { background: rgba(255,255,255,0.05); }
+:root[data-theme="dark"] .cta-link,
+:root[data-theme="dark"] .btn { color: #171417; }
+:root[data-theme="dark"] .rail-links a:hover { color: #171417; }
+:root[data-theme="dark"] .pathograph-container { background: var(--card-bg); }
+:root[data-theme="dark"] .pathograph-legend { background: var(--code-bg); }
+:root[data-theme="dark"] .graph-warning { background: #2a2114; border-color: #5a4a1e; color: #fbbf24; }
+:root[data-theme="dark"] .edge-evidence > ul > li { background: var(--card-bg); border-color: var(--border); }
+:root[data-theme="dark"] #umap-plot svg text { fill: var(--fg); }
+:root[data-theme="dark"] #umap-plot circle:hover { stroke: var(--fg); }
+
+/* Respect reduced-motion preference site-wide. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
