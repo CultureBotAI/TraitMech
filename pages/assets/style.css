@@ -328,6 +328,54 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 }
 .umap-tooltip .muted { color: #b8c2cc; font-size: 0.78rem; }
 
+/* Facet panel below the plot (live-filters points) */
+.facets {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.facets h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.facet-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+.facet-group {
+  min-width: 180px;
+}
+.facet-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+label.facet-opt {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  padding: 0.12rem 0;
+  cursor: pointer;
+}
+label.facet-opt .cnt {
+  margin-left: auto;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  padding-left: 1rem;
+}
+.facet-showing {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 /* Per-trait nearest-neighbors */
 .nn-list { list-style: none; padding: 0; margin: 0; }
 .nn-list li { padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
