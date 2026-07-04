@@ -26,6 +26,8 @@
 <div id="umap-plot"></div>
 <div id="umap-tooltip" class="umap-tooltip"></div>
 
+<div class="facets" id="facet-panel"></div>
+
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 const TRAITS_ROOT = "{{ traits_root }}";  // e.g. "traits/"
@@ -94,21 +96,62 @@ fetch("{{ data_url }}")
           .text(`${cat} (${points.filter(p => p.category === cat).length})`);
       });
 
-    // Filters
+    // --- Facet panel (below the plot): live-filter points by category ---
+    // Composes with the category dropdown + search above the plot.
+    const activeCategories = new Set(cats);  // all checked initially
+    const facetCat = d => (d.category ?? "") === "" ? "—" : d.category;
+
+    function buildFacets() {
+      const panel = document.getElementById("facet-panel");
+      if (!panel) return;
+      panel.innerHTML = '<h3>Filter points</h3>';
+      const counts = {};
+      points.forEach(d => { const v = facetCat(d); counts[v] = (counts[v] || 0) + 1; });
+      const groups = document.createElement("div");
+      groups.className = "facet-groups";
+      const grp = document.createElement("div");
+      grp.className = "facet-group";
+      grp.innerHTML = '<div class="facet-title">Category</div>';
+      Object.keys(counts).sort().forEach(v => {
+        const lab = document.createElement("label");
+        lab.className = "facet-opt";
+        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${counts[v].toLocaleString()}</span>`;
+        lab.querySelector("input").addEventListener("change", (e) => {
+          if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
+          update();
+        });
+        grp.appendChild(lab);
+      });
+      groups.appendChild(grp);
+      panel.appendChild(groups);
+      const showing = document.createElement("div");
+      showing.className = "facet-showing";
+      showing.innerHTML = `Showing <b id="facet-count">${points.length.toLocaleString()}</b> of ${points.length.toLocaleString()} points`;
+      panel.appendChild(showing);
+    }
+
+    // Filters (category dropdown + search + facet checkboxes all compose)
     function update() {
       const cat = document.getElementById("category-filter").value;
       const q = document.getElementById("search-input").value.toLowerCase().trim();
       let visible = 0;
-      dots.attr("opacity", d => {
-        const ok = (!cat || d.category === cat) &&
-                   (!q || d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q));
-        if (ok) visible++;
-        return ok ? 0.78 : 0.05;
+      dots.each(function(d) {
+        const pass = activeCategories.has(facetCat(d)) &&
+                     (!cat || d.category === cat) &&
+                     (!q || d.label.toLowerCase().includes(q) || d.id.toLowerCase().includes(q));
+        if (pass) visible++;
+        d3.select(this)
+          .style("display", activeCategories.has(facetCat(d)) ? null : "none")
+          .attr("opacity", pass ? 0.78 : 0.05);
       });
       document.getElementById("visible-count").textContent = `${visible} visible`;
+      const fc = document.getElementById("facet-count");
+      if (fc) fc.textContent = points.filter(d => activeCategories.has(facetCat(d))).length.toLocaleString();
     }
     document.getElementById("category-filter").addEventListener("change", update);
     document.getElementById("search-input").addEventListener("input", update);
+    buildFacets();
+    update();
   });
 </script>
 {% endblock %}
