@@ -31,13 +31,7 @@
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-const TRAITS_ROOT = "{{ traits_root }}";  // e.g. "traits/"
-const CATEGORY_DIR = {
-  MORPHOLOGY: "morphology", PHYSIOLOGY: "physiology", ENVIRONMENT: "environment",
-  METABOLISM: "metabolism", GENOMICS: "genomics", ECOLOGY: "ecology",
-  DETECTION: "detection", QUANTITATIVE_PROPERTY: "quantitative_property",
-  OBSERVATION: "observation", UPPER: "upper", OTHER: "other",
-};
+const HREF_BY_ID = {{ href_by_id | safe }};  // id -> authoritative page href (built by renderer)
 
 fetch("{{ data_url }}")
   .then(r => r.json())
@@ -77,9 +71,8 @@ fetch("{{ data_url }}")
       })
       .on("mouseout", () => tooltip.style("display", "none"))
       .on("click", (e, d) => {
-        const dir = CATEGORY_DIR[d.category] || "other";
-        const slug = d.label.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
-        window.location.href = `${TRAITS_ROOT}${dir}/${slug}.html`;
+        const href = HREF_BY_ID[d.id];
+        if (href) window.location.href = href;
       });
 
     // Legend
