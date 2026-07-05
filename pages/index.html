@@ -46,6 +46,41 @@
   footer .fam{margin:.2em 0}
   footer .fam a{margin:0 .45em;white-space:nowrap}
   footer strong{color:var(--ink)}
+
+  /* ---- Dark theme (additive; OS default, overridden by the toggle) ---- */
+  /* --pastel-b doubles as the page/footer ground → map to the neutral dark --bg;
+     --pastel-a is the hero gradient tint → map to heroA so the hero fades to dark. */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --pastel-a:#33201f;
+      --pastel-b:#171417;
+      --accent:#ef7377;
+      --ink:#efeaea;
+      --muted:#ada4a6;
+      --card:#211d20;
+      --line:#332d30;
+    }
+    :root:not([data-theme="light"]) .stat{background:rgba(255,255,255,.05)}
+    :root:not([data-theme="light"]) footer{background:rgba(255,255,255,.05)}
+    :root:not([data-theme="light"]) .btn{color:#171417}
+  }
+  :root[data-theme="dark"]{
+    --pastel-a:#33201f;
+    --pastel-b:#171417;
+    --accent:#ef7377;
+    --ink:#efeaea;
+    --muted:#ada4a6;
+    --card:#211d20;
+    --line:#332d30;
+  }
+  :root[data-theme="dark"] .stat{background:rgba(255,255,255,.05)}
+  :root[data-theme="dark"] footer{background:rgba(255,255,255,.05)}
+  :root[data-theme="dark"] .btn{color:#171417}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+      transition-duration:.01ms!important;scroll-behavior:auto!important;}
+  }
 </style>
 </head>
 <body>
@@ -88,5 +123,6 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>&middot;<a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
   </footer>
+  <script src="theme-toggle.js"></script>
 </body>
 </html>
