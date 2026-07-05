@@ -383,6 +383,19 @@ label.facet-opt .cnt {
 .nn-list .sim { color: var(--muted); font-family: monospace; font-size: 0.78rem; margin-left: 0.4em; }
 .nn-list .nn-cat { display: inline-block; font-size: 0.72rem; color: var(--muted); padding: 0.1em 0.4em; border-radius: 3px; background: var(--accent-soft); margin-right: 0.3em; }
 
+/* Data-table fallback for the embedding scatter/graph pages (a11y: the plot
+   is also available as a keyboard-reachable, screen-reader-friendly table). */
+.data-table-details { margin: 1rem 0 0; }
+.data-table-details > summary { cursor: pointer; font-size: 0.9rem; color: var(--accent); padding: 0.4rem 0; }
+.data-table-details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.data-table-actions { margin: 0.5rem 0; font-size: 0.85rem; }
+.data-table-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; }
+.data-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+.data-table th, .data-table td { text-align: left; padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.data-table thead th { position: sticky; top: 0; background: var(--card-bg); color: var(--fg); z-index: 1; }
+.data-table tbody tr:hover { background: var(--accent-soft); }
+.data-table td.num { font-family: monospace; text-align: right; color: var(--muted); }
+
 /* ============================================================
    Dark theme — additive only; the light look above is untouched.
    OS preference is the default; an explicit toggle (data-theme on

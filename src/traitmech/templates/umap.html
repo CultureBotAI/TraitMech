@@ -28,7 +28,18 @@
 
 <div class="facets" id="facet-panel"></div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
+<details class="data-table-details">
+  <summary>View data as table</summary>
+  <div class="data-table-actions"><a id="csv-download" href="#" download="trait_umap.csv">Download CSV</a></div>
+  <div class="data-table-scroll">
+    <table class="data-table" id="data-table">
+      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</details>
+
+<script src="{{ root }}d3.v7.min.js"></script>
 <script>
 const HREF_BY_ID = {{ href_by_id | safe }};  // id -> authoritative page href (built by renderer)
 
@@ -57,7 +68,7 @@ fetch("{{ data_url }}")
     const dots = g.selectAll("circle").data(points).join("circle")
       .attr("cx", d => x(d.umap_x))
       .attr("cy", d => y(d.umap_y))
-      .attr("r", 4)
+      .attr("r", 5)
       .attr("fill", d => color(d.category))
       .attr("opacity", 0.78)
       .style("cursor", "pointer")
@@ -145,6 +156,34 @@ fetch("{{ data_url }}")
     document.getElementById("search-input").addEventListener("input", update);
     buildFacets();
     update();
+
+    // --- Data-table fallback: same points as the plot, keyboard-reachable ---
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+    function buildDataTable() {
+      const tbody = document.querySelector("#data-table tbody");
+      if (!tbody) return;
+      const rows = points.slice().sort((a, b) => (a.label || "").localeCompare(b.label || ""));
+      tbody.innerHTML = rows.map(d => {
+        const href = HREF_BY_ID[d.id];
+        const label = href
+          ? `<a href="${esc(href)}">${esc(d.label)}</a>` : esc(d.label);
+        return `<tr><td>${label}</td><td>${esc(d.id)}</td><td>${esc(d.category)}</td>` +
+          `<td class="num">${(+d.umap_x).toFixed(3)}</td><td class="num">${(+d.umap_y).toFixed(3)}</td></tr>`;
+      }).join("");
+      // Download CSV of the same data.
+      const csvRows = [["label", "id", "category", "x", "y"]].concat(
+        rows.map(d => [d.label, d.id, d.category, d.umap_x, d.umap_y]));
+      const csv = csvRows.map(r => r.map(v => {
+        const s = String(v == null ? "" : v);
+        return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      }).join(",")).join("\n");
+      const link = document.getElementById("csv-download");
+      if (link) link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+    }
+    buildDataTable();
   });
 </script>
 {% endblock %}
