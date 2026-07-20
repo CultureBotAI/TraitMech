@@ -36,6 +36,12 @@ ignored_prefixes:
   - rdfs               # rdfs:subClassOf etc. — not an ontology term lookup
   - UniProtKB          # representative protein accessions; the label is the
                        # protein name, not a single canonical ontology label
+  - InterPro           # protein-family accessions (IPR…) used to ground
+                       # taxon-agnostic GENE_OR_PROTEIN causal nodes. InterPro
+                       # is an EBI protein-family database, not an OBO ontology,
+                       # so it has no OAK sqlite adapter; the label is the
+                       # family name. Same rationale as UniProtKB above.
+                       # See docs/GROUNDING_POLICY.md.
 
 synonym_scope: exact_related
 

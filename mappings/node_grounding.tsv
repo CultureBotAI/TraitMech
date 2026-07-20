@@ -315,7 +315,7 @@ glms	GENE_OR_PROTEIN	UniProtKB:I6LB50	GlmS	skos:closeMatch	UniProt	high	represen
 beta-lactamase	GENE_OR_PROTEIN	GO:0008800	beta-lactamase activity	skos:closeMatch	GO	high	replaces organism-specific UniProt accession; taxon-agnostic term per docs/GROUNDING_POLICY.md
 cooa	GENE_OR_PROTEIN	UniProtKB:A0A1D7QXJ2	Carbon monoxide-responsive transcriptional activator CooA	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 perr	GENE_OR_PROTEIN	UniProtKB:A0A097ASJ8	Transcriptional regulator PerR	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
-rhodopsin	GENE_OR_PROTEIN	InterPro:IPR001425	curator override	skos:closeMatch	InterPro	high	replaces organism-specific UniProt accession; taxon-agnostic term per docs/GROUNDING_POLICY.md
+rhodopsin	GENE_OR_PROTEIN	InterPro:IPR001425	Archaeal/bacterial/fungal rhodopsins	skos:closeMatch	InterPro	high	curator-selected microbial family: InterPro's plain "Rhodopsin" (IPR000732) is the animal visual opsin
 quorum-quenching enzyme	GENE_OR_PROTEIN	UniProtKB:G2JHL6	Quorum-quenching protein AidA (Quorum-quenching enzyme) (QQ enzyme)	skos:closeMatch	UniProt	high	representative UniProt entry selected via kg-microbe merged-kg_uniprot_nodes.tsv (name-ends-with-label + alphabetic-first CURIE)
 type IV secretion system	GENE_OR_PROTEIN	GO:0043684	type IV secretion system complex	skos:exactMatch	GO	high	taxon-agnostic term, exact label match (docs/GROUNDING_POLICY.md)
 nitrogenase complex	GENE_OR_PROTEIN	GO:0016610	nitrogenase complex	skos:exactMatch	GO	high	taxon-agnostic term, exact label match (docs/GROUNDING_POLICY.md)
