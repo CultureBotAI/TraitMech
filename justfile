@@ -275,7 +275,7 @@ report-label-drift:
 # MIM / CommunityMech / TraitMech Mech repos and must not silently diverge: the
 # validator + its two shared tests. conf/id_label_targets.yaml is deliberately
 # per-repo (different adapters/targets) so it is NOT here.
-VENDORED_IDLABEL_FILES := "scripts/validate_id_label_correspondence.py scripts/chem_formula.py tests/test_id_label_empty_adapter.py tests/test_id_label_unknown_prefix.py tests/test_id_label_plausibility.py"
+VENDORED_IDLABEL_FILES := "scripts/validate_id_label_correspondence.py tests/test_id_label_empty_adapter.py tests/test_id_label_unknown_prefix.py"
 
 # Durability guard: fail if any vendored id-label file drifts from its pinned
 # sha256. CI runs this so an accidental edit to one copy can't silently diverge.
