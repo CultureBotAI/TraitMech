@@ -1,664 +1,667 @@
-label	n_nodes	current_grounding	current_status	proposed_route	proposed_target	swissprot_alt	go_alt	go_label	interpro_alt	interpro_type	curator_decision	note
-Na+/H+ antiporter	8	UniProtKB:A0A068T423	DELETED	InterPro_family	IPR002758	UniProtKB:Q4L4W4	GO:0032417	positive regulation of sodium:proton antiporter activity	IPR002758	family		family-level; verify the family actually matches the label
-RuBisCO	7	UniProtKB:A0A075WF79	DELETED	SwissProt_exemplar	UniProtKB:Q31IK3	UniProtKB:Q31IK3	GO:0046863	ribulose-1,5-bisphosphate carboxylase/oxygenase activator activity	IPR000685	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-MreB	7	UniProtKB:A0A1B1UYY2	DELETED	InterPro_family	IPR004753	UniProtKB:Q01465			IPR004753	family		family-level; verify the family actually matches the label
-ATP synthase	6	UniProtKB:A0A415TT77	DELETED	InterPro_family	IPR000131	UniProtKB:Q971B6	GO:1905273	positive regulation of proton-transporting ATP synthase activity, rotational mechanism	IPR000131	family		family-level; verify the family actually matches the label
-carbonic anhydrase	6	UniProtKB:A0A009PMS8	DELETED	SwissProt_exemplar	UniProtKB:Q5KW03	UniProtKB:Q5KW03	GO:0004089	carbonate dehydratase activity	IPR001148	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-MreC	5	UniProtKB:A0A1L9R356	DELETED	InterPro_family	IPR007221	UniProtKB:P84480			IPR007221	family		family-level; verify the family actually matches the label
-catalase	4	UniProtKB:A0A071MK53	DELETED	InterPro_family	IPR000763	UniProtKB:P14412	GO:1902553	positive regulation of catalase activity	IPR000763	family		family-level; verify the family actually matches the label
-reverse gyrase	4	UniProtKB:A0A088E825	DELETED	InterPro_family	IPR005736	UniProtKB:P74759	GO:0160097	reverse gyrase activity	IPR005736	family		family-level; verify the family actually matches the label
-FlhF	4	UniProtKB:A0A656AC42	DELETED	InterPro_family	IPR020006	UniProtKB:O52908			IPR020006	family		family-level; verify the family actually matches the label
-FliG	4	UniProtKB:A0A016XEK1	DELETED	InterPro_family	IPR000090	UniProtKB:P0ABZ1	GO:0007629	flight behavior	IPR000090	family		family-level; verify the family actually matches the label
-crescentin	3	UniProtKB:A0A2N9AY16	DELETED	NO_CANDIDATE					IPR043652	domain		no automated candidate; needs manual curation
-laccase	2	UniProtKB:A0A072TFX8	DELETED	InterPro_family	IPR017761	UniProtKB:A0A7T1FRB0	GO:0016682	oxidoreductase activity, acting on diphenols and related substances as donors, oxygen as acceptor	IPR017761	family		family-level; verify the family actually matches the label
-superoxide dismutase	2	UniProtKB:A0A009QPW9	DELETED	InterPro_family	IPR001189	UniProtKB:O30563	GO:1901671	positive regulation of superoxide dismutase activity	IPR001189	family		family-level; verify the family actually matches the label
-czc cation-efflux system	2	UniProtKB:B0VPE1	DELETED	CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-fatty acid desaturase	2	UniProtKB:A0A031GJU0	DELETED	SwissProt_exemplar	UniProtKB:Q55231	UniProtKB:Q55231	GO:0016213	acyl-CoA 6-desaturase activity	IPR001522	conserved_site		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-endoglucanase	2	UniProtKB:A0A060H8L4	DELETED	InterPro_family	IPR016282	UniProtKB:A0A023VXA2	GO:0008810	cellulase activity	IPR016282	family		family-level; verify the family actually matches the label
-beta-glucosidase	2	UniProtKB:A0A031JNC1	DELETED	SwissProt_exemplar	UniProtKB:Q46829	UniProtKB:Q46829	GO:0008422	beta-glucosidase activity	IPR005556	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-4-hydroxybutyryl-CoA dehydratase	2	UniProtKB:A0A017H5F8	DELETED	SwissProt_exemplar	UniProtKB:P55792	UniProtKB:P55792	GO:0043721	4-hydroxybutanoyl-CoA dehydratase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-acetate kinase	2	UniProtKB:A0A081KVG3	DELETED	InterPro_family	IPR010424	UniProtKB:A0QQK1	GO:0008776	acetate kinase activity	IPR010424	family		family-level; verify the family actually matches the label
-FipA	2	UniProtKB:A0A023UGD7	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-PBP2	2	UniProtKB:A0A2D2D7X6	DELETED	SwissProt_exemplar	UniProtKB:P0AD65	UniProtKB:P0AD65			IPR032550	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-GpsB	2	UniProtKB:A0A060RK42	DELETED	InterPro_family	IPR011229	UniProtKB:A0AJZ3			IPR011229	family		family-level; verify the family actually matches the label
-PBP2b	2	UniProtKB:A0A892RPK7	DELETED	InterPro_family	IPR047982	UniProtKB:A0A0H2ZQ75			IPR047982	family		family-level; verify the family actually matches the label
-type IV pilus	2	UniProtKB:R6TBR9	DELETED	InterPro_family	IPR005883	UniProtKB:G3XCX3	GO:0044096	type IV pilus	IPR005883	family		family-level; verify the family actually matches the label
-CheA histidine kinase	2	UniProtKB:G0HQV3	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-CheY response regulator	2	UniProtKB:A0A2X5A7X5	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-methanol dehydrogenase	2	UniProtKB:A0A010SCY7	DELETED	InterPro_family	IPR003420	UniProtKB:Q8KP10	GO:0050093	methanol dehydrogenase (NAD+) activity	IPR003420	family		family-level; verify the family actually matches the label
-rubrerythrin	1	UniProtKB:A0A016EEI2	DELETED	SwissProt_exemplar	UniProtKB:P24931	UniProtKB:P24931			IPR003251	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-NADH peroxidase	1	UniProtKB:A0A031WCC0	DELETED	SwissProt_exemplar	UniProtKB:P37062	UniProtKB:P37062	GO:0016692	NADH peroxidase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-metal efflux pump	1	UniProtKB:A0A067YD12	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome bd ubiquinol oxidase	1	UniProtKB:A0A0N0XA94	DELETED	SwissProt_exemplar	UniProtKB:Q2YKD6	UniProtKB:Q2YKD6						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-superoxide reductase	1	UniProtKB:A0A090JWT2	DELETED	InterPro_family	IPR051233	UniProtKB:P82385	GO:0050605	superoxide reductase activity	IPR051233	family		family-level; verify the family actually matches the label
-DnaK-DnaJ chaperone	1	UniProtKB:A0A0C1PL72	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-DesK	1	UniProtKB:A0A067Z5N7	DELETED	SwissProt_exemplar	UniProtKB:O34757	UniProtKB:O34757			IPR056374	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-DesR	1	UniProtKB:A0A067Z2X2	DELETED	SwissProt_exemplar	UniProtKB:O34723	UniProtKB:O34723						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-relaxase	1	UniProtKB:A0A015YCT3	DELETED	SwissProt_exemplar	UniProtKB:P96635	UniProtKB:P96635			IPR011119	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-LexA repressor	1	UniProtKB:A0A016XIE2	DELETED	SwissProt_exemplar	UniProtKB:A0PT76	UniProtKB:A0PT76			IPR006199	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-restriction endonuclease	1	UniProtKB:A0A015ZKG4	DELETED	InterPro_family	IPR004194		GO:0015666	restriction endodeoxyribonuclease activity	IPR004194	family		family-level; verify the family actually matches the label
-transposase	1	UniProtKB:A0A023WVD3	DELETED	InterPro_family	IPR001207	UniProtKB:Q46087	GO:0004803	transposase activity	IPR001207	family		family-level; verify the family actually matches the label
-endo-chitinase	1	UniProtKB:Q693B6	DELETED	REVIEW_GO_SUSPECT	GO:0008843		GO:0008843	endochitinase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-cohesin domain	1	UniProtKB:A0A174EJP3	DELETED	GO_term	GO:1990311		GO:1990311	type-I cohesin domain binding	IPR002102	domain		GO top-hit passed substring check — still verify
-beta-N-acetylglucosaminidase	1	UniProtKB:A0A086GXI9	DELETED	SwissProt_exemplar	UniProtKB:T1WGN1	UniProtKB:T1WGN1	GO:0033925	mannosyl-glycoprotein endo-beta-N-acetylglucosaminidase activity	IPR005201	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-phosphoenolpyruvate carboxylase	1	UniProtKB:A0A031JWX5	DELETED	InterPro_family	IPR007566	UniProtKB:P51060	GO:0008964	phosphoenolpyruvate carboxylase activity	IPR007566	family		family-level; verify the family actually matches the label
-redox protein	1	UniProtKB:A0A076EJF0	DELETED	InterPro_family	IPR012882		GO:1990204	oxidoreductase complex	IPR012882	family		family-level; verify the family actually matches the label
-c-type cytochrome	1	UniProtKB:A0A072TMC1	DELETED	InterPro_family	IPR011885	UniProtKB:O33731	GO:1904960	positive regulation of cytochrome-c oxidase activity	IPR011885	family		family-level; verify the family actually matches the label
-cytochrome c	1	UniProtKB:A0A061JR98	DELETED	SwissProt_exemplar	UniProtKB:P24469	UniProtKB:P24469	CHEBI:18070	cytochrome c	IPR000298	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-pyruvate decarboxylase	1	UniProtKB:A0A067Z5Y9	DELETED	InterPro_family	IPR012110	UniProtKB:P06672	GO:0047432	2,2-dialkylglycine decarboxylase (pyruvate) activity	IPR012110	family		family-level; verify the family actually matches the label
-alcohol dehydrogenase	1	UniProtKB:A0A022L3Z7	DELETED	SwissProt_exemplar	UniProtKB:P39849	UniProtKB:P39849	GO:0004022	alcohol dehydrogenase (NAD+) activity	IPR001670	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-pyruvate:ferredoxin oxidoreductase	1	UniProtKB:A0A075WCC3	DELETED	SwissProt_exemplar	UniProtKB:Q2RMD6	UniProtKB:Q2RMD6	GO:0019164	pyruvate synthase activity	IPR033412	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-formate dehydrogenase	1	UniProtKB:A0A016XII7	DELETED	InterPro_family	IPR006443	UniProtKB:P33160	GO:0008863	formate dehydrogenase (NAD+) activity	IPR006443	family		family-level; verify the family actually matches the label
-lactate dehydrogenase	1	UniProtKB:A0A073JRC3	DELETED	InterPro_family	IPR003767	UniProtKB:P52643	GO:0004458	D-lactate dehydrogenase (cytochrome) activity	IPR003767	family		family-level; verify the family actually matches the label
-DyP-type peroxidase	1	UniProtKB:A0A024E2S9	DELETED	InterPro_family	IPR006314				IPR006314	family		family-level; verify the family actually matches the label
-lignin peroxidase	1	UniProtKB:A0A0H3L9R0	DELETED	REVIEW_GO_SUSPECT	GO:0016690		GO:0016690	diarylpropane peroxidase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-ferredoxin/flavodoxin	1	UniProtKB:A0A7Y9D8L6	DELETED	InterPro_family	IPR050722	UniProtKB:P28901	GO:0008860	ferredoxin-NAD+ reductase activity	IPR050722	family		family-level; verify the family actually matches the label
-ferredoxin	1	UniProtKB:A0A009PCQ5	DELETED	InterPro_family	IPR000813	UniProtKB:P00250	CHEBI:5017	ferredoxin	IPR000813	family		family-level; verify the family actually matches the label
-ferredoxin-NADP+ reductase	1	UniProtKB:A0A0E2H5I8	DELETED	InterPro_family	IPR021163	UniProtKB:Q44549	GO:0004324	ferredoxin-NADP+ reductase activity	IPR021163	family		family-level; verify the family actually matches the label
-methylmalonyl-CoA carboxytransferase	1	UniProtKB:A0A3S9JES8	DELETED	GO_term	GO:0047154		GO:0047154	methylmalonyl-CoA carboxytransferase activity				GO top-hit passed substring check — still verify
-acetyl-CoA carboxylase	1	UniProtKB:A0A059L760	DELETED	InterPro_family	IPR000438	UniProtKB:P29906	GO:0050406	[acetyl-CoA carboxylase]-phosphatase activity	IPR000438	family		family-level; verify the family actually matches the label
-propionyl-CoA carboxylase	1	UniProtKB:A0A024E6S7	DELETED	InterPro_family	IPR058335	UniProtKB:Q3J4E6	GO:0004658	propionyl-CoA carboxylase activity	IPR058335	family		family-level; verify the family actually matches the label
-tyrosinase	1	UniProtKB:A0A023Y3L4	DELETED	SwissProt_exemplar	UniProtKB:A0A261GVB1	UniProtKB:A0A261GVB1	GO:0004503	tyrosinase activity	IPR002227	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-4-hydroxyphenylpyruvate dioxygenase	1	UniProtKB:A0A009PXB6	DELETED	InterPro_family	IPR005956	UniProtKB:Q9S2F4	GO:0003868	4-hydroxyphenylpyruvate dioxygenase activity	IPR005956	family		family-level; verify the family actually matches the label
-homogentisate 1,2-dioxygenase	1	UniProtKB:A0A010REZ7	DELETED	InterPro_family	IPR005708	UniProtKB:Q88E47	GO:0004411	homogentisate 1,2-dioxygenase activity	IPR005708	family		family-level; verify the family actually matches the label
-Wzx flippase	1	UniProtKB:A0A0G3EZQ9	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-phytoene synthase	1	UniProtKB:A0A023WN98	DELETED	InterPro_family	IPR002060	UniProtKB:D5KXJ0	GO:0140630	all-trans-phytoene synthase activity	IPR002060	family		family-level; verify the family actually matches the label
-FtsN	1	UniProtKB:A3RWZ4	DELETED	InterPro_family	IPR011930	UniProtKB:B8GX61			IPR011930	family		family-level; verify the family actually matches the label
-MreD	1	UniProtKB:A0A0H2VI68	DELETED	InterPro_family	IPR007227	UniProtKB:P0ABH6			IPR007227	family		family-level; verify the family actually matches the label
-CglA	1	UniProtKB:A0A0C1K447	DELETED	NO_CANDIDATE					IPR057420	domain		no automated candidate; needs manual curation
-FtsW	1	UniProtKB:A0A0E1R950	DELETED	InterPro_family	IPR001182	UniProtKB:P0ABG4			IPR001182	family		family-level; verify the family actually matches the label
-GvpA	1	UniProtKB:A0A0B5ENA7	DELETED	InterPro_family	IPR000638	UniProtKB:O33397			IPR000638	family		family-level; verify the family actually matches the label
-GvpC	1	UniProtKB:A0AA45D9L5	DELETED	SwissProt_exemplar	UniProtKB:Q8YUS9	UniProtKB:Q8YUS9			IPR002003	repeat		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-GvpD	1	UniProtKB:A0A059TSE2	DELETED	SwissProt_exemplar	UniProtKB:Q02229	UniProtKB:Q02229			IPR009788	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-CcmA	1	UniProtKB:E0X6H3	DELETED	InterPro_family	IPR005895	UniProtKB:P45032			IPR005895	family		family-level; verify the family actually matches the label
-MamB	1	UniProtKB:A0A6J4ZQS8	DELETED	InterPro_family	IPR053436	UniProtKB:W6KHH6			IPR053436	family		family-level; verify the family actually matches the label
-FlhE	1	UniProtKB:A0A192C731	DELETED	InterPro_family	IPR009420	UniProtKB:P76297			IPR009420	family		family-level; verify the family actually matches the label
-SpoIID	1	UniProtKB:A0A0M6WLJ0	DELETED	InterPro_family	IPR013486				IPR013486	family		family-level; verify the family actually matches the label
-SpoIIP	1	UniProtKB:A0A1S8R940	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-SafA	1	UniProtKB:A0A0N1QUA1	DELETED	SwissProt_exemplar	UniProtKB:O32062	UniProtKB:O32062	UBERON:0001363	great saphenous vein	IPR014248	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-SpoIIIE	1	UniProtKB:A0A100JQQ1	DELETED	InterPro_family	IPR050206	UniProtKB:Q9RNV1			IPR050206	family		family-level; verify the family actually matches the label
-sigma F	1	UniProtKB:E0J3M3	DELETED	InterPro_family	IPR000394	UniProtKB:P9WGX7	GO:0016987	sigma factor activity	IPR000394	family		family-level; verify the family actually matches the label
-sigma K	1	UniProtKB:A0A060N640	DELETED	SwissProt_exemplar	UniProtKB:H8EVS9	UniProtKB:H8EVS9	GO:0030119	AP-type membrane coat adaptor complex	IPR018764	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-drug efflux pump	1	UniProtKB:A3RNR9	DELETED	InterPro_family	IPR019702	UniProtKB:P9WJW9	GO:0042910	xenobiotic transmembrane transporter activity	IPR019702	family		family-level; verify the family actually matches the label
-outer membrane porin	1	UniProtKB:A0A024EG85	DELETED	InterPro_family	IPR005318	UniProtKB:P22263	GO:0015288	porin activity	IPR005318	family		family-level; verify the family actually matches the label
-beta-lactamase	1	UniProtKB:A0A059L9H0	DELETED	InterPro_family	IPR000871	UniProtKB:P06548	GO:0008800	beta-lactamase activity	IPR000871	family		family-level; verify the family actually matches the label
-luciferase	1	UniProtKB:A0A010SSZ8	DELETED	InterPro_family	IPR002103	UniProtKB:P0ADV5	GO:0047077	Photinus-luciferin 4-monooxygenase (ATP-hydrolyzing) activity	IPR002103	family		family-level; verify the family actually matches the label
-carbon monoxide dehydrogenase	1	UniProtKB:A0A061JSS8	DELETED	InterPro_family	IPR010419	UniProtKB:O28429	GO:0043885	anaerobic carbon-monoxide dehydrogenase activity	IPR010419	family		family-level; verify the family actually matches the label
-molybdenum hydroxylase	1	UniProtKB:A0A099I9V3	DELETED	NO_CANDIDATE					IPR017695	domain		no automated candidate; needs manual curation
-RcoM	1	UniProtKB:A0A0D5N3T8	DELETED	InterPro_family	IPR005166	UniProtKB:Q2RNI6			IPR005166	family		family-level; verify the family actually matches the label
-OxyR	1	UniProtKB:A0A9P2M4N5	DELETED	InterPro_family	IPR002176	UniProtKB:A9CGX9			IPR002176	family		family-level; verify the family actually matches the label
-ammonia monooxygenase	1	UniProtKB:A0A059V4Z9	DELETED	InterPro_family	IPR003393	UniProtKB:Q04508	GO:0018597	ammonia monooxygenase activity	IPR003393	family		family-level; verify the family actually matches the label
-CheB methylesterase	1	UniProtKB:A0A100WWV3	DELETED	REVIEW_GO_SUSPECT	GO:0008984		GO:0008984	protein-glutamate methylesterase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-methane monooxygenase	1	UniProtKB:A0A0A3YNQ7	DELETED	InterPro_family	IPR003393	UniProtKB:Q53563	GO:0018648	methanesulfonate monooxygenase activity	IPR003393	family		family-level; verify the family actually matches the label
-PQQ-dependent methanol dehydrogenase	1	UniProtKB:A0A4U8YZA6	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-ComEC	1	UniProtKB:A0A087CUH4	DELETED	NO_CANDIDATE					IPR004477	domain		no automated candidate; needs manual curation
-ComEA	1	UniProtKB:A0A0H2VI18	DELETED	NO_CANDIDATE					IPR004509	domain		no automated candidate; needs manual curation
-DprA	1	UniProtKB:A0A1J0LTK6	DELETED	InterPro_family	IPR003488	UniProtKB:Q8DPI7			IPR003488	family		family-level; verify the family actually matches the label
-RecA	1	UniProtKB:A0A023H996	DELETED	InterPro_family	IPR013765	UniProtKB:Q9F407	GO:1990942	mitotic metaphase chromosome recapture	IPR013765	family		family-level; verify the family actually matches the label
-RpoS (sigma S)	1	UniProtKB:A0A010TBV5	DELETED	NO_CANDIDATE								no automated candidate; needs manual curation
-Hfq	1	UniProtKB:A0A3B9B147	DELETED	InterPro_family	IPR005001	UniProtKB:P0A1R0			IPR005001	family		family-level; verify the family actually matches the label
-urease	1	UniProtKB:A0A090IGX8	DELETED	InterPro_family	IPR002019	UniProtKB:O06708	GO:0035550	urease complex	IPR002019	family		family-level; verify the family actually matches the label
-FtsZ	6	UniProtKB:C0LUM8	unreviewed	InterPro_family	IPR000158	UniProtKB:A0A0H3C3S1	GO:2000244	regulation of FtsZ-dependent cytokinesis	IPR000158	family		family-level; verify the family actually matches the label
-Na+/H+ antiporters	5			REVIEW_GO_SUSPECT	GO:0032417		GO:0032417	positive regulation of sodium:proton antiporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-F0F1-ATPase	5			InterPro_family	IPR011744		GO:0046961	proton-transporting ATPase activity, rotational mechanism	IPR011744	family		family-level; verify the family actually matches the label
-FlhG	5	UniProtKB:Q2N2M1	unreviewed	NO_CANDIDATE					IPR033875	domain		no automated candidate; needs manual curation
-Crt enzymes	4			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RodA	4	UniProtKB:A0A0H2X1V4	unreviewed	InterPro_family	IPR001182	UniProtKB:P9WN99			IPR001182	family		family-level; verify the family actually matches the label
-photosynthetic reaction center	4			SwissProt_exemplar	UniProtKB:P51758	UniProtKB:P51758	GO:0030076	light-harvesting complex				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-type IV secretion system	3			CLASS_NODE_DO_NOT_GROUND		UniProtKB:Q2YIT8	GO:0030255	protein secretion by the type IV secretion system	IPR003688	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-Mrp Na+/H+ antiporter complex	3			NO_CANDIDATE								no automated candidate; needs manual curation
-cold-shock proteins	3			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-ectABC operon	3			NO_CANDIDATE								no automated candidate; needs manual curation
-proton-pumping respiratory complexes	3			NO_CANDIDATE								no automated candidate; needs manual curation
-NADH dehydrogenase (Complex I)	3			REVIEW_GO_SUSPECT	GO:0030964		GO:0030964	NADH dehydrogenase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-photosystem II	3			InterPro_family	IPR001056	UniProtKB:P74367	GO:0009523	photosystem II	IPR001056	family		family-level; verify the family actually matches the label
-sulfide:quinone oxidoreductase (SQR)	3			NO_CANDIDATE								no automated candidate; needs manual curation
-Rod complex	3			REVIEW_GO_SUSPECT	GO:7770030		GO:7770030	rod photoreceptor phosphodiesterase 6 complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-RodA-PBP2 complex	3			NO_CANDIDATE								no automated candidate; needs manual curation
-DivIVA	3	UniProtKB:Q1IYG2	unreviewed	InterPro_family	IPR007793	UniProtKB:P71021			IPR007793	family		family-level; verify the family actually matches the label
-PilB extension ATPase	3			NO_CANDIDATE								no automated candidate; needs manual curation
-PilT retraction ATPase	3			NO_CANDIDATE								no automated candidate; needs manual curation
-bacterial adhesins	2			REVIEW_GO_SUSPECT	GO:0097347		GO:0097347	TAM protein secretion complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-type III secretion system	2			CLASS_NODE_DO_NOT_GROUND		UniProtKB:O84944	GO:0030254	protein secretion by the type III secretion system	IPR001712	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cation/proton antiporter	2	UniProtKB:A0A0H3JRG4	unreviewed	SwissProt_exemplar	UniProtKB:P39830	UniProtKB:P39830	GO:0140968	polyspecific organic cation:proton antiporter activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-ArsC arsenate reductase	2			NO_CANDIDATE								no automated candidate; needs manual curation
-salinity-adaptation genes	2			CLASS_NODE_DO_NOT_GROUND			CL:0005006	ionocyte				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-proton export pumps and antiporters	2			NO_CANDIDATE								no automated candidate; needs manual curation
-F1Fo-ATP synthase	2			REVIEW_GO_SUSPECT	GO:1990677		GO:1990677	mitochondrial inner membrane assembly complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-CspA cold-shock protein	2			NO_CANDIDATE								no automated candidate; needs manual curation
-DnaK chaperone	2			NO_CANDIDATE								no automated candidate; needs manual curation
-TrkAH K+ uptake system	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-pyruvate:ferredoxin oxidoreductase (PFOR)	2			REVIEW_GO_SUSPECT	GO:0019164		GO:0019164	pyruvate synthase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-F1Fo-ATPase	2			REVIEW_GO_SUSPECT	GO:0046962		GO:0046962	sodium-transporting ATPase activity, rotational mechanism				GO top-hit did NOT contain the label — likely wrong, curator must check
-cold-adapted enzymes	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-ice-binding/antifreeze proteins	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RpoH (sigma-32) heat-shock sigma factor	2			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome c oxidase	2	UniProtKB:A0A075NZN5	unreviewed	SwissProt_exemplar	UniProtKB:P98055	UniProtKB:P98055	GO:1904960	positive regulation of cytochrome-c oxidase activity	IPR000298	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-Type I reaction center	2			REVIEW_GO_SUSPECT	GO:0009522		GO:0009522	photosystem I				GO top-hit did NOT contain the label — likely wrong, curator must check
-carboxysomal carbonic anhydrase	2			NO_CANDIDATE								no automated candidate; needs manual curation
-ATP citrate lyase (aclAB)	2			NO_CANDIDATE								no automated candidate; needs manual curation
-terminal oxidase	2	UniProtKB:A0A2U9ILE5	unreviewed	SwissProt_exemplar	UniProtKB:P97224	UniProtKB:P97224	GO:0140647	P450-containing electron transport chain				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-multiheme c-type cytochromes	2			NO_CANDIDATE								no automated candidate; needs manual curation
-proteorhodopsin	2	UniProtKB:A0A1D7QWW9	unreviewed	InterPro_family	IPR017402	UniProtKB:Q9F7P4			IPR017402	family		family-level; verify the family actually matches the label
-Sox enzyme system	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-persulfide dioxygenase (PDO)	2			NO_CANDIDATE								no automated candidate; needs manual curation
-formate dehydrogenase (FDH)	2			REVIEW_GO_SUSPECT	GO:0036397		GO:0036397	formate dehydrogenase (quinone) activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-class A penicillin-binding proteins	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RodZ	2	UniProtKB:H1XNL6	unreviewed	InterPro_family	IPR023690	UniProtKB:A4TMT8			IPR023690	family		family-level; verify the family actually matches the label
-SulA	2	UniProtKB:H8YHZ0	unreviewed	InterPro_family	IPR004596	UniProtKB:A7MFW4			IPR004596	family		family-level; verify the family actually matches the label
-penicillin-binding proteins	2			CLASS_NODE_DO_NOT_GROUND			GO:0008955	peptidoglycan glycosyltransferase activity				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-MreB cytoskeleton	2			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsZ division ring	2			NO_CANDIDATE								no automated candidate; needs manual curation
-curvature scaffold	2			NO_CANDIDATE								no automated candidate; needs manual curation
-gliding motility machinery	2			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-polyphosphate kinase (Ppk)	2			NO_CANDIDATE								no automated candidate; needs manual curation
-flagellar motor	2			InterPro_family	IPR000090	UniProtKB:P35539	GO:0071945	regulation of bacterial-type flagellum-dependent cell motility by regulation of motor speed	IPR000090	family		family-level; verify the family actually matches the label
-bactofilins	2			NO_CANDIDATE								no automated candidate; needs manual curation
-bactofilin polymers	2			NO_CANDIDATE								no automated candidate; needs manual curation
-peptidoglycan hydrolases	2			NO_CANDIDATE								no automated candidate; needs manual curation
-dissolved inorganic carbon transporter	2			NO_CANDIDATE								no automated candidate; needs manual curation
-metazoan-adapted virulence factors	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-complement-regulator-binding surface proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0002430	complement receptor mediated signaling pathway				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-TonB-dependent transporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-specific virulence traits	1			NO_CANDIDATE								no automated candidate; needs manual curation
-secretory IgA	1			GO_term	GO:0071751		GO:0071751	secretory IgA immunoglobulin complex				GO top-hit passed substring check — still verify
-bacterial glycan-binding proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-osmolyte transport and synthesis genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cell appendages and adhesins	1			NO_CANDIDATE								no automated candidate; needs manual curation
-human-adapted virulence factors	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-leghemoglobin	1			GO_term	GO:0015043		GO:0015043	leghemoglobin reductase [NAD(P)H] activity				GO top-hit passed substring check — still verify
-nitrogenase complex	1			GO_term	GO:0016610		GO:0016610	nitrogenase complex				GO top-hit passed substring check — still verify
-virulence factors	1			CLASS_NODE_DO_NOT_GROUND		UniProtKB:P0A4H2	GO:0097720	calcineurin-mediated signaling	IPR050909	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-protein secretion systems	1			CLASS_NODE_DO_NOT_GROUND			GO:0046819	protein secretion by the type V secretion system				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-plant-cell-wall-degrading enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-T3SS effector proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-apoplastic effectors	1			NO_CANDIDATE								no automated candidate; needs manual curation
-methyl-accepting chemotaxis protein (MCP)	1			REVIEW_GO_SUSPECT	GO:0008983		GO:0008983	protein-glutamate O-methyltransferase activity	IPR004089	domain		GO top-hit did NOT contain the label — likely wrong, curator must check
-extracellular exoenzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cellulolytic enzyme system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-carbohydrate-active enzymes (CAZymes)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-manganese peroxidase (MnP)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-adhesins	1			REVIEW_GO_SUSPECT	GO:0071980		GO:0071980	cell surface adhesin-mediated gliding motility				GO top-hit did NOT contain the label — likely wrong, curator must check
-primary proton pumps	1			NO_CANDIDATE								no automated candidate; needs manual curation
-proton-coupled ATPases	1			REVIEW_GO_SUSPECT	GO:0016469		GO:0016469	proton-transporting two-sector ATPase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-substrate dehydrogenases	1			REVIEW_GO_SUSPECT	GO:0004471		GO:0004471	malate dehydrogenase (decarboxylating) (NAD+) activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-terminal oxidases	1			REVIEW_GO_SUSPECT	GO:0140647		GO:0140647	P450-containing electron transport chain				GO top-hit did NOT contain the label — likely wrong, curator must check
-ROS-scavenging enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-NADPH peroxidase	1			GO_term	GO:0050137		GO:0050137	NADPH peroxidase activity				GO top-hit passed substring check — still verify
-ATP synthase c-subunit alkaline-adaptive motifs	1			NO_CANDIDATE								no automated candidate; needs manual curation
-antioxidant enzymes (Sod/Cat/peroxidases)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-respiratory reductases	1			REVIEW_GO_SUSPECT	GO:0009389		GO:0009389	dimethyl sulfoxide reductase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-ars operon (ArsB pump)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ArsR transcriptional repressor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ars promoter	1			REVIEW_GO_SUSPECT	GO:0070888		GO:0070888	E-box binding				GO top-hit did NOT contain the label — likely wrong, curator must check
-ArsB arsenite efflux permease	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Acr3 arsenite efflux permease	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ArsM arsenite S-adenosylmethionine methyltransferase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-metallothionein / thiol-rich metal-binding proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-CadA P-type (P1B) ATPase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-czc/cnr cobalt efflux system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-CzcCBA efflux complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CzcS/CzcR two-component system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cnr (cnrCBAYXHT) determinant	1			NO_CANDIDATE								no automated candidate; needs manual curation
-DmeF CDF-family exporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RcnA/YohM Co/Ni efflux protein	1			NO_CANDIDATE								no automated candidate; needs manual curation
-copper efflux systems (cue/cus/pco/cop)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-periplasmic multicopper oxidase (CueO-type)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-desiccation-related intrinsically disordered proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-mechanosensitive channels (Msc)	1			REVIEW_GO_SUSPECT	GO:0043854		GO:0043854	cyclic nucleotide-gated mechanosensitive monoatomic ion channel activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-hyperthermostable proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-GrsA/GrsB GDGT cyclization enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-acidic halophilic proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-oxygen-sensing regulation	1			REVIEW_GO_SUSPECT	CL:1000223		CL:1000223	pulmonary neuroendocrine cell				GO top-hit did NOT contain the label — likely wrong, curator must check
-cytochrome bd terminal oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-glutamate decarboxylase system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-FNR-type oxygen-responsive regulation	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ArcAB two-component system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-anaerobic metabolism genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0018886	anaerobic carbon tetrachloride metabolic process				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-aerobic metabolism genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0019410	aerobic respiration, using carbon monoxide as electron donor				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cytochrome bd oxidase	1	UniProtKB:Q6L5L4	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-FNR oxygen-responsive regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ArcA/ArcAB two-component regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-K+ uniport system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-mechanosensitive channels	1			REVIEW_GO_SUSPECT	GO:0043854		GO:0043854	cyclic nucleotide-gated mechanosensitive monoatomic ion channel activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-betA/betB	1			REVIEW_GO_SUSPECT	GO:0008802		GO:0008802	betaine-aldehyde dehydrogenase (NAD+) activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-thermostable enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-archaeal molecular chaperonins	1			NO_CANDIDATE								no automated candidate; needs manual curation
-archaeal proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:1990490	archaeal proton-transporting A-type ATPase complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-Gms (GMGT synthase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-mer operon (MerA reductase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MerB (organomercurial lyase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MerR (Hg-responsive regulator)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-mesophile enzyme repertoire	1			NO_CANDIDATE								no automated candidate; needs manual curation
-sigma-32 (RpoH)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-heat shock genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0035080	heat shock-mediated polytene chromosome puffing				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-ars operon	1			REVIEW_GO_SUSPECT	GO:0010239		GO:0010239	chloroplast mRNA processing				GO top-hit did NOT contain the label — likely wrong, curator must check
-high-affinity terminal oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome cbb3 oxidase	1			REVIEW_GO_SUSPECT	GO:1904960		GO:1904960	positive regulation of cytochrome-c oxidase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-catalase (KatA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-superoxide dismutase (SodB)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-alkyl hydroperoxide reductase (AhpC)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-oxidative stress defense enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-rubrerythrin/peroxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-EctD (ectoine hydroxylase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-BCCT transporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-TeaABC TRAP transporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-mechanosensitive channels (MscL/MscS)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-compatible-solute transporters (Opu/ProU)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-TrkH potassium uptake system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-NhaC-family Na+/H+ antiporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-potassium uptake systems	1			CLASS_NODE_DO_NOT_GROUND			GO:0031004	potassium ion-transporting ATPase complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-KdpFABC complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-potassium uptake system	1			CLASS_NODE_DO_NOT_GROUND			GO:0031004	potassium ion-transporting ATPase complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-K+ uptake systems (Trk/Ktr/Kup/KimA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-OpuA/OpuC compatible-solute transporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Trk/Ktr potassium influx systems	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-KimA/Kup high-affinity K+ uptake transporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-OpuA-like compatible-solute importers	1			NO_CANDIDATE								no automated candidate; needs manual curation
-mechanosensitive channels MscL/MscS	1			NO_CANDIDATE								no automated candidate; needs manual curation
-OpuA/OpuC compatible-solute importers	1			NO_CANDIDATE								no automated candidate; needs manual curation
-BetA/BetB pathway	1			NO_CANDIDATE								no automated candidate; needs manual curation
-F1F0-ATPase proton pump	1			NO_CANDIDATE								no automated candidate; needs manual curation
-compatible-solute uptake systems	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-K+ uptake system (Kdp/Kef)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-P-type proton-translocating ATPase	1			REVIEW_GO_SUSPECT	GO:1905273		GO:1905273	positive regulation of proton-transporting ATP synthase activity, rotational mechanism				GO top-hit did NOT contain the label — likely wrong, curator must check
-Na+/H+ antiporter (Nha)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-glutamate decarboxylase system (Gad)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-terminal respiratory oxidases	1			REVIEW_GO_SUSPECT	GO:0008535		GO:0008535	respiratory chain complex IV assembly				GO top-hit did NOT contain the label — likely wrong, curator must check
-Fe-S cluster enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0009375	ferredoxin hydrogenase complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-proton-coupled ATP synthase	1			REVIEW_GO_SUSPECT	GO:0016469		GO:0016469	proton-transporting two-sector ATPase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-monovalent cation/proton antiporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-pyruvate formate-lyase (PFL)	1			REVIEW_GO_SUSPECT	GO:0043365		GO:0043365	[formate-C-acetyltransferase]-activating enzyme activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-[FeFe]-hydrogenase	1			InterPro_family	IPR023860	UniProtKB:Q9X0Z6			IPR023860	family		family-level; verify the family actually matches the label
-F1F0-ATP synthase	1			REVIEW_GO_SUSPECT	GO:1990524		GO:1990524	INA complex	IPR048937	domain		GO top-hit did NOT contain the label — likely wrong, curator must check
-OpuA compatible-solute transporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-respiratory proton-pumping enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-YbaS glutaminase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-proton-translocating F1F0-ATPase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-proton-consuming reaction genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-Na+/H+ antiporter genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-CPA/Nha family Na+/H+ antiporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Rnf complex	1			REVIEW_GO_SUSPECT	GO:0071797		GO:0071797	LUBAC complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-branched respiratory chain terminal oxidases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-K+/H+ antiporters	1	UniProtKB:A0A1Z4VR00	unreviewed	REVIEW_GO_SUSPECT	GO:0015386		GO:0015386	potassium:proton antiporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-F0F1-ATP synthase	1			REVIEW_GO_SUSPECT	GO:0046961		GO:0046961	proton-transporting ATPase activity, rotational mechanism				GO top-hit did NOT contain the label — likely wrong, curator must check
-F0F1-ATPase / ATP synthase	1			REVIEW_GO_SUSPECT	GO:0046961		GO:0046961	proton-transporting ATPase activity, rotational mechanism				GO top-hit did NOT contain the label — likely wrong, curator must check
-mrpA-G operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Na+/solute symporters	1			REVIEW_GO_SUSPECT	GO:0043887		GO:0043887	melibiose:sodium symporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-H+-ATPase proton efflux pump	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cation/proton antiporters	1			REVIEW_GO_SUSPECT	GO:0140968		GO:0140968	polyspecific organic cation:proton antiporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-respiratory proton-pumping complexes	1			NO_CANDIDATE								no automated candidate; needs manual curation
-proton:ion antiporters	1			REVIEW_GO_SUSPECT	GO:0051139		GO:0051139	metal cation:proton antiporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-pfa operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-heat-shock response genes (rpoH, rpoE, dnaK, groEL)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-nuo NADH dehydrogenase I complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-antifreeze and ice-binding proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RecA recombinase	1			REVIEW_GO_SUSPECT	GO:0009009		GO:0009009	site-specific recombinase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-ectABC/ectBACD gene cluster	1			NO_CANDIDATE								no automated candidate; needs manual curation
-K+ import systems	1			CLASS_NODE_DO_NOT_GROUND			UBERON:0001839	bony labyrinth				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-compatible-solute importer OpuA	1			NO_CANDIDATE								no automated candidate; needs manual curation
-oxygen-sensitive enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-iron-sulfur cluster enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0009375	ferredoxin hydrogenase complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-glycyl radical enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0043364	glycyl-radical enzyme activating activity				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-low-potential energy-metabolism enzymes (PFOR/PFL)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-acyl-lipid desaturase (Des)	1			REVIEW_GO_SUSPECT	GO:0102865		GO:0102865	delta6-acyl-lipid desaturase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-RpoS sigma factor (sigma-S)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CsdA DEAD-box RNA helicase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-nucleoid-associated proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0036386	bacterial nucleoid DNA packaging				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-small heat shock proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0097707	ferroptosis				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-thermosome (group II chaperonin)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cold shock proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-molecular chaperone network	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RNA thermometer hairpin	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Shine-Dalgarno / AUG ribosome binding site	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsH protease	1	UniProtKB:A0A0D7UY21	unreviewed	SwissProt_exemplar	UniProtKB:P0ABC7	UniProtKB:P0ABC7						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-cold shock proteins / RNA chaperones	1			NO_CANDIDATE								no automated candidate; needs manual curation
-antifreeze / ice-binding proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RNA thermometer	1			NO_CANDIDATE								no automated candidate; needs manual curation
-reverse gyrase (TopR/rgy)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-GroEL-GroES / HtpG chaperone	1			NO_CANDIDATE								no automated candidate; needs manual curation
-GroEL/DnaK molecular chaperones	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RNA thermometer 5′-UTR structure	1			NO_CANDIDATE								no automated candidate; needs manual curation
-heat-shock proteins / chaperones	1			REVIEW_GO_SUSPECT	GO:0101031		GO:0101031	protein folding chaperone complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-des (acyl-lipid desaturase)	1			REVIEW_GO_SUSPECT	GO:0102865		GO:0102865	delta6-acyl-lipid desaturase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cold-shock proteins (CspA-family)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-molecular chaperones (DnaK/GroEL/GroES/Clp/TF)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-thermostable proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-energy-transducing enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-group II chaperonin (thermosome)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-denatured proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0030164	protein denaturation				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-chaperone proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0051087	protein-folding chaperone binding				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RpoE envelope-stress sigma factor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CPD photolyase	1			SwissProt_exemplar	UniProtKB:A9CJC9	UniProtKB:A9CJC9	GO:0003904	deoxyribodipyrimidine photo-lyase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-ZntA P-type ATPase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ZntR MerR-family regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CzcCBA RND efflux complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Cas proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0051897	positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-Cas1-Cas2 complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-crRNA	1			InterPro_family	IPR010155	UniProtKB:Q746C2	GO:0099048	CRISPR-cas system	IPR010155	family		family-level; verify the family actually matches the label
-crRNA-Cas effector complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-genes with marginal fitness benefit	1			NO_CANDIDATE								no automated candidate; needs manual curation
-integrase/recombinase/transposase mobility module	1			NO_CANDIDATE								no automated candidate; needs manual curation
-type IV secretion system (T4SS)	1			REVIEW_GO_SUSPECT	GO:0043684		GO:0043684	type IV secretion system complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-type IV coupling protein	1			SwissProt_exemplar	UniProtKB:P13464	UniProtKB:P13464	GO:0008564	protein-exporting ATPase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-integrase and excisionase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-integron integrase (IntI)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-plasmid	1			InterPro_family	IPR001668	UniProtKB:P08715	GO:0042150	plasmid recombination	IPR001668	family		family-level; verify the family actually matches the label
-prophage	1			InterPro_family	IPR009634	UniProtKB:P24218	GO:0008979	prophage integrase activity	IPR009634	family		family-level; verify the family actually matches the label
-toxin-antitoxin system	1			CLASS_NODE_DO_NOT_GROUND			GO:0044696	killing by virus of host cell by post-segregational killing	IPR004386	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-plasmid-encoded anti-restriction genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-CI master repressor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RecA* nucleoprotein filament	1			NO_CANDIDATE								no automated candidate; needs manual curation
-phage-plasmid	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cognate DNA methyltransferase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-type IV restriction enzyme	1			REVIEW_GO_SUSPECT	GO:0032067		GO:0032067	type IV site-specific deoxyribonuclease activity	IPR062342	domain		GO top-hit did NOT contain the label — likely wrong, curator must check
-plasmid-encoded methylase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-phage-encoded DNA methyltransferase	1			REVIEW_GO_SUSPECT	GO:0099018		GO:0099018	symbiont-mediated evasion of host restriction-modification system				GO top-hit did NOT contain the label — likely wrong, curator must check
-methyl-coenzyme M reductase (MCR)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-denitrification reductases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-respiratory nitrate reductase (NarGHI)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-nitrous oxide reductase (NosZ)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-secreted depolymerizing enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-SusC-like TonB-dependent transporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-periplasmic GH3 hydrolase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-lignin-oxidizing redox enzymes (LiP/MnP/VP/laccase/DyP)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CbbR transcriptional regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cbb operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytoplasmic carbonic anhydrase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cellulase systems	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cellobiohydrolase / exoglucanase	1			REVIEW_GO_SUSPECT	GO:0016162		GO:0016162	cellulose 1,4-beta-cellobiosidase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-scaffoldin	1			InterPro_family	IPR008768		GO:0043263	cellulosome	IPR008768	family		family-level; verify the family actually matches the label
-dockerin domain	1			GO_term	GO:1990308		GO:1990308	type-I dockerin domain binding	IPR002883	domain		GO top-hit passed substring check — still verify
-cellulolytic / lignocellulose-catabolic genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-chitinases	1			SwissProt_exemplar	UniProtKB:P29115	UniProtKB:P29115	GO:0004568	chitinase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-exochitinase / chitobiosidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-lytic polysaccharide monooxygenase (LPMO; AA10)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-respiratory nitrate reductase NarGHI	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome cd1 nitrite reductase NirS	1	UniProtKB:I0HLW6	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-nitric oxide reductase Nor	1			REVIEW_GO_SUSPECT	GO:0016966		GO:0016966	nitric oxide reductase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-nitrous oxide reductase NosZ	1	UniProtKB:Q30PN7	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-pyruvate synthase (pyruvate:ferredoxin oxidoreductase)	1			REVIEW_GO_SUSPECT	GO:0043805		GO:0043805	indolepyruvate ferredoxin oxidoreductase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-TsdA thiosulfate dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-TetH tetrathionate hydrolase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SOR sulfur oxygenase reductase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MtrCAB outer-membrane complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-NarGHI nitrate reductase	1			REVIEW_GO_SUSPECT	GO:0044799		GO:0044799	NarGHI complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-NrfA cytochrome c nitrite reductase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-NarX-NarL two-component system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-FNR regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-nrf operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ATP sulfurylase (Sat)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-APS reductase AprAB	1			NO_CANDIDATE								no automated candidate; needs manual curation
-DsrAB with DsrC	1			NO_CANDIDATE								no automated candidate; needs manual curation
-DsrMK(JOP) membrane complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome bc1 complex	1			InterPro_family	IPR009152	UniProtKB:P9WP37	GO:0045275	respiratory chain complex III	IPR009152	family		family-level; verify the family actually matches the label
-ferredoxin:NAD+ oxidoreductase	1	UniProtKB:I3R731	unreviewed	REVIEW_GO_SUSPECT	GO:0004324		GO:0004324	ferredoxin-NADP+ reductase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-[FeFe] hydrogenase	1			InterPro_family	IPR027631	UniProtKB:Q9X0Z6			IPR027631	family		family-level; verify the family actually matches the label
-formyl-THF synthetase (Fhs)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ACS/CODH complex	1			REVIEW_GO_SUSPECT	GO:0044672		GO:0044672	acetyl-CoA decarbonylase/synthase-carbon monoxide dehydrogenase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-membrane energy-conservation module (Rnf/Ech)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Cyc2	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cbb3-type terminal oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome bd-type terminal oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-peroxidases and laccases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-manganese peroxidase	1			SwissProt_exemplar	UniProtKB:K7N5M8	UniProtKB:K7N5M8	GO:0016689	manganese peroxidase activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-multicopper oxidase	1	UniProtKB:A0A059ZYC2	unreviewed	SwissProt_exemplar	UniProtKB:I6WZK7	UniProtKB:I6WZK7			IPR001117	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-methyl-coenzyme M reductase	1	UniProtKB:A0A099T5Q9	unreviewed	InterPro_family	IPR003178	UniProtKB:P11567	GO:0050524	coenzyme-B sulfoethylthiotransferase activity	IPR003178	family		family-level; verify the family actually matches the label
-mcrABG gene cluster	1			NO_CANDIDATE								no automated candidate; needs manual curation
-pyruvate formate lyase (PflB)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-phosphotransacetylase / acetate kinase (Pta/AckA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-formate hydrogenlyase complex (FHL)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-nitrogenase	1	UniProtKB:A0A089HR75	unreviewed	SwissProt_exemplar	UniProtKB:A0L6X0	UniProtKB:A0L6X0	GO:0016163	nitrogenase activity	IPR000318	conserved_site		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-NifH (Fe-protein)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-P-cluster	1			REVIEW_GO_SUSPECT	GO:0044573		GO:0044573	nitrogenase P cluster assembly				GO top-hit did NOT contain the label — likely wrong, curator must check
-FeMo-cofactor (M-cluster)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-F1Fo ATP synthase	1			REVIEW_GO_SUSPECT	GO:1990677		GO:1990677	mitochondrial inner membrane assembly complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-Complex I / NADH:quinone oxidoreductase (NDH-1)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-succinate dehydrogenase / Complex II	1			REVIEW_GO_SUSPECT	GO:0045273		GO:0045273	respiratory chain complex II (succinate dehydrogenase)				GO top-hit did NOT contain the label — likely wrong, curator must check
-heme-copper oxidase	1			InterPro_family	IPR033943	UniProtKB:Q9YDX4			IPR033943	family		family-level; verify the family actually matches the label
-cytochrome b6f complex	1			GO_term	GO:0009512		GO:0009512	cytochrome b6f complex				GO top-hit passed substring check — still verify
-photosystem I	1			InterPro_family	IPR000549	UniProtKB:A5GL35	GO:0009522	photosystem I	IPR000549	family		family-level; verify the family actually matches the label
-microbial rhodopsin	1			NO_CANDIDATE								no automated candidate; needs manual curation
-secreted proteases	1			REVIEW_GO_SUSPECT	GO:0033375		GO:0033375	protease localization to T cell secretory granule				GO top-hit did NOT contain the label — likely wrong, curator must check
-peptide transport systems (Opp/DtpT/Dpp)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-intracellular peptidases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-citryl-CoA synthetase/lyase route	1			NO_CANDIDATE								no automated candidate; needs manual curation
-2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-respiratory Complex I (NADH:quinone oxidoreductase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-amylases / starch-active glycoside hydrolases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-alpha-glucosidase / glucoamylase	1			REVIEW_GO_SUSPECT	GO:0004339		GO:0004339	glucan 1,4-alpha-glucosidase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-carbamate kinase (arginine deiminase pathway)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-thiosulfate dehydrogenase (TsdA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-tetrathionate hydrolase (TetH)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-formate dehydrogenase complex	1			GO_term	GO:0009326		GO:0009326	formate dehydrogenase complex				GO top-hit passed substring check — still verify
-hydrogenase complex	1			InterPro_family	IPR006256		GO:0044569	[Ni-Fe] hydrogenase complex	IPR006256	family		family-level; verify the family actually matches the label
-malonyl-CoA reductase	1	UniProtKB:Q6QQP7	unreviewed	SwissProt_exemplar	UniProtKB:A4YEN2	UniProtKB:A4YEN2						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-propionyl-CoA synthase	1			REVIEW_GO_SUSPECT	GO:0018491		GO:0018491	2-oxobutyrate synthase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-MMC lyase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-acetyl-CoA/propionyl-CoA carboxylase	1	UniProtKB:A0A650CEQ7	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-formyl-THF synthetase (FTS/Fhs)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-methyltransferase	1	UniProtKB:A0A0C5IX96	unreviewed	InterPro_family	IPR000176	UniProtKB:O93658	GO:0003838	sterol 24-C-methyltransferase activity	IPR000176	family		family-level; verify the family actually matches the label
-corrinoid iron-sulfur protein (CoFeSP)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-acetyl-CoA synthase (ACS)	1			REVIEW_GO_SUSPECT	GO:0043884		GO:0043884	CO-methylating acetyl-CoA synthase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-xylanase systems	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-CE15 glucuronoyl esterases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FliF (MS-ring)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flagellar basal motor	1			REVIEW_GO_SUSPECT	GO:0009429		GO:0009429	bacterial-type flagellum basal body, proximal rod				GO top-hit did NOT contain the label — likely wrong, curator must check
-FlbB periplasmic ring	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flagellar rotor	1			REVIEW_GO_SUSPECT	GO:0009433		GO:0009433	bacterial-type flagellum basal body, C ring				GO top-hit did NOT contain the label — likely wrong, curator must check
-stator complex	1			GO_term	GO:0120101		GO:0120101	bacterial-type flagellum stator complex				GO top-hit passed substring check — still verify
-RodA-PBP2 synthase (Rod complex)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-tyrosinase/laccase oxidases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-polyketide synthase (PKS)	1	UniProtKB:Q5Y9G5	unreviewed	REVIEW_GO_SUSPECT	GO:0034082		GO:0034082	type II polyketide synthase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-HppD (4-hydroxyphenylpyruvate dioxygenase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-HmgA (homogentisate 1,2-dioxygenase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-DivIVA foci	1			NO_CANDIDATE								no automated candidate; needs manual curation
-DivIVA/Scy/FilP polarisome	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Wzy polymerase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Wza outer-membrane export protein	1			NO_CANDIDATE								no automated candidate; needs manual curation
-KpsMT ABC transporter	1			NO_CANDIDATE								no automated candidate; needs manual curation
-BMC-H/T/P shell proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-phytoene desaturase	1	UniProtKB:A0A060JDC8	unreviewed	InterPro_family	IPR014102	UniProtKB:P54979			IPR014102	family		family-level; verify the family actually matches the label
-lycopene cyclases	1			REVIEW_GO_SUSPECT	GO:0045435		GO:0045435	lycopene epsilon cyclase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-FtsZ ring (divisome)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Rod complex (elongasome)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsA and ZipA (proto-ring tethers)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsWI septal PG synthase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MreC/MreD balance	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsZ abundance	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsWI septal PG synthase complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsZ proto-ring (with FtsA/ZipA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flotillins	1			REVIEW_GO_SUSPECT	GO:0016600		GO:0016600	flotillin complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-RodA-PBP2 core synthase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Rod-complex accessory proteins MreC/MreD/RodZ	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RodA-PBP2 elongasome complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MreB cytoskeletal filaments	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MreC-MreD balance	1			NO_CANDIDATE								no automated candidate; needs manual curation
-class A penicillin-binding proteins (aPBPs)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RodA/PBP3 elongasome	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsZ filament properties	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PBP2 (elongasome transpeptidase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-divisome complex	1			GO_term	GO:1990586		GO:1990586	divisome complex				GO top-hit passed substring check — still verify
-carotenoid biosynthesis genes (crt locus)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MreB cytoskeletal guidance	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PcsB hydrolase system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-septal peptidoglycan hydrolase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-LytR/LCP teichoic acid ligase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-septal peptidoglycan hydrolases (RipA/RpfB)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-divisome (FtsZ/PBP2x/FtsW)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-elongasome (PBP2b/RodA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Scy	1	UniProtKB:A0A191V3Q4	unreviewed	InterPro_family	IPR004235		GO:0099050	vesicle scission	IPR004235	family		family-level; verify the family actually matches the label
-FliF (MS-ring protein)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flagellar basal body	1			SwissProt_exemplar	UniProtKB:P33977	UniProtKB:P33977	GO:0009431	bacterial-type flagellum basal body, MS ring	IPR001444	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-flagellar stator complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor				GO top-hit did NOT contain the label — likely wrong, curator must check
-flagellar type III secretion system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-flagellar structural subunits	1			REVIEW_GO_SUSPECT	GO:0036156		GO:0036156	inner dynein arm				GO top-hit did NOT contain the label — likely wrong, curator must check
-FliH-FliI-FliJ ATPase complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FliD filament cap	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FlgK/FlgL hook-filament junction	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CheY-P	1			InterPro_family	IPR038756	UniProtKB:Q9X006			IPR038756	family		family-level; verify the family actually matches the label
-bactofilin cytoskeleton	1			NO_CANDIDATE								no automated candidate; needs manual curation
-surface adhesins	1			REVIEW_GO_SUSPECT	GO:0071980		GO:0071980	cell surface adhesin-mediated gliding motility				GO top-hit did NOT contain the label — likely wrong, curator must check
-type IX secretion system	1			CLASS_NODE_DO_NOT_GROUND			GO:0160303	protein secretion by the type IX secretion system	IPR019847	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-BAM complex	1			REVIEW_GO_SUSPECT	GO:1990063		GO:1990063	Bam protein complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-beta-barrel outer membrane proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:7770063	beta barrel protein insertion into mitochondrial outer membrane				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-Tol-Pal system	1			CLASS_NODE_DO_NOT_GROUND		UniProtKB:P0A855			IPR014161	family		functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-phz operons	1			NO_CANDIDATE								no automated candidate; needs manual curation
-pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Csd shape proteins	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-HetR transcriptional regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FurC / PerR	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PatS peptide	1			REVIEW_GO_SUSPECT	GO:0002486		GO:0002486	antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway, TAP-independent				GO top-hit did NOT contain the label — likely wrong, curator must check
-HetN regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-gas vesicle gene cluster	1			NO_CANDIDATE								no automated candidate; needs manual curation
-encapsulated metabolic enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-FliF	1	UniProtKB:A0A0H2X1L8	unreviewed	InterPro_family	IPR000067	UniProtKB:Q8FUS3			IPR000067	family		family-level; verify the family actually matches the label
-MamK	1			InterPro_family	IPR056546	UniProtKB:Q6NE59			IPR056546	family		family-level; verify the family actually matches the label
-mamAB operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FliF MS-ring protein	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FliM/FliN C-ring partners	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MotA-MotB stator complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor				GO top-hit did NOT contain the label — likely wrong, curator must check
-FliG rotor protein	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flagellar C-ring switch complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor				GO top-hit did NOT contain the label — likely wrong, curator must check
-archaellum	1			SwissProt_exemplar	UniProtKB:Q4J9J9	UniProtKB:Q4J9J9	GO:0097589	archaeal-type flagellum	IPR040929	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-DivIVA polarisome	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CglA glycopolymer ligase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsZ Z-ladder arrays	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SapB / chaplins / rodlins	1			NO_CANDIDATE								no automated candidate; needs manual curation
-flhDC flagellar master operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-WspR diguanylate cyclase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-absence of spo0A gene	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Rap phosphatases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-lycopene beta-cyclase (CrtY)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-beta-carotene hydroxylase (CrtZ)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-carotenoid ketolase (CrtW)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MapZ/FtsZ division-positioning system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-MapZ	1			InterPro_family	IPR030858				IPR030858	family		family-level; verify the family actually matches the label
-FtsW-PBP2x complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RodA-PBP2b elongasome	1			NO_CANDIDATE								no automated candidate; needs manual curation
-crtE/crtB/crtI/crtY gene set	1			NO_CANDIDATE								no automated candidate; needs manual curation
-hppD 4-hydroxyphenylpyruvate dioxygenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-hmgA homogentisate 1,2-dioxygenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-photosynthesis gene cluster	1			NO_CANDIDATE								no automated candidate; needs manual curation
-crtI-crtB operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-weak/absent shape-determining cytoskeleton	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PHA synthase (PhaC)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-phasin (PhaP)	1			SwissProt_exemplar	UniProtKB:P73545	UniProtKB:P73545	GO:0070088	polyhydroxyalkanoate granule				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-PhaR regulator	1			REVIEW_GO_SUSPECT	GO:1903745		GO:1903745	negative regulation of nematode pharyngeal pumping				GO top-hit did NOT contain the label — likely wrong, curator must check
-phaP gene	1			REVIEW_GO_SUSPECT	PR:000014717		PR:000014717	protein SET				GO top-hit did NOT contain the label — likely wrong, curator must check
-PHA depolymerase (PhaZ)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-exopolyphosphatase (PPX)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-StpABCD complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-prodiginine biosynthetic gene cluster (Pig/Red)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PigC ligase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CpxA/CpxR two-component system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-MreB filaments	1			NO_CANDIDATE								no automated candidate; needs manual curation
-bactofilin-M23 peptidase module	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CrvA polymer	1			NO_CANDIDATE								no automated candidate; needs manual curation
-S-layer (glyco)protein subunits	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsA	1	UniProtKB:A0A1M6DY20	unreviewed	SwissProt_exemplar	UniProtKB:A0A0H2ZPT5	UniProtKB:A0A0H2ZPT5			IPR003494	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-peptidoglycan synthetases and hydrolases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MreB-mediated elongation machinery	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-divisome and PBPs	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsW lipid II flippase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FlaB	1	UniProtKB:A8WEP6	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-FlgV	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SpoIIM	1	UniProtKB:A5N7K0	unreviewed	InterPro_family	IPR002798				IPR002798	family		family-level; verify the family actually matches the label
-phosphorylated Spo0A (Spo0A~P)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Spo0E-family phosphatases	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SpoIVA	1			SwissProt_exemplar	UniProtKB:Q81SW4	UniProtKB:Q81SW4			IPR046840	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-SpoVM	1	UniProtKB:A0A2K8N6W1	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-SpoVID	1	UniProtKB:A0A0B5ANC0	unreviewed	SwissProt_exemplar	UniProtKB:P37963	UniProtKB:P37963			IPR048862	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-CotE	1	UniProtKB:D5WPR1	unreviewed	InterPro_family	IPR018901	UniProtKB:P14016			IPR018901	family		family-level; verify the family actually matches the label
-Spo0A phosphorelay	1			NO_CANDIDATE								no automated candidate; needs manual curation
-compartment-specific sigma factors	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-sigma E	1	UniProtKB:A0A0C7NZS0	unreviewed	InterPro_family	IPR048186	UniProtKB:D0ZSY9	GO:0034245	mitochondrial DNA-directed RNA polymerase complex	IPR048186	family		family-level; verify the family actually matches the label
-sigma G	1			SwissProt_exemplar	UniProtKB:P33658	UniProtKB:P33658	GO:0016989	sigma factor antagonist activity				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-S-layer proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0045232	S-layer organization				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-FacZ	1			NO_CANDIDATE								no automated candidate; needs manual curation
-BacA-LmdC morphogenesis module	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SpmX	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PcsB autolysin	1			NO_CANDIDATE								no automated candidate; needs manual curation
-FtsEX complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cell wall synthase	1			SwissProt_exemplar	UniProtKB:A0A0H2ZMF9	UniProtKB:A0A0H2ZMF9	GO:0044567	primary cell wall cellulose synthase complex				reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-FtsZ Z-ring assembly	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cell wall hydrolases (autolysins)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PilQ secretin	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CrvA	1			InterPro_family	IPR058915				IPR058915	family		family-level; verify the family actually matches the label
-CrvB	1			NO_CANDIDATE								no automated candidate; needs manual curation
-VadR sRNA	1			NO_CANDIDATE								no automated candidate; needs manual curation
-crvA mRNA	1			NO_CANDIDATE								no automated candidate; needs manual curation
-VxrAB two-component system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-crtOPQMN operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-SigB (sigma factor B)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-GlmS	1	UniProtKB:I6LB50	unreviewed	InterPro_family	IPR006394				IPR006394	family		family-level; verify the family actually matches the label
-IdsA/CrtE (GGPP synthase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CrtI (phytoene desaturase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CrtY (lycopene beta-cyclase)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-QRDR mutation in DNA gyrase/topoisomerase IV	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CO dehydrogenase/acetyl-CoA synthase (CODH/ACS)	1			REVIEW_GO_SUSPECT	GO:0044672		GO:0044672	acetyl-CoA decarbonylase/synthase-carbon monoxide dehydrogenase complex				GO top-hit did NOT contain the label — likely wrong, curator must check
-LuxG flavin reductase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-LuxCDE fatty acid reductase complex	1			NO_CANDIDATE								no automated candidate; needs manual curation
-LuxI autoinducer synthase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-LuxR transcription factor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CO-insensitive terminal oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Ni,Fe-carbon monoxide dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cox operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-coo operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CooA	1	UniProtKB:A0A1D7QXJ2	unreviewed	NO_CANDIDATE								no automated candidate; needs manual curation
-PerR	1	UniProtKB:A0A097ASJ8	unreviewed	SwissProt_exemplar	UniProtKB:Q57083	UniProtKB:Q57083						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-PEP-dependent phosphotransferase system (mannitol PTS)	1			REVIEW_GO_SUSPECT	GO:0022872		GO:0022872	protein-N(PI)-phosphohistidine-mannitol phosphotransferase system transmembrane transporter activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-mtlD mannitol-1-phosphate dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-organic carbon import system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-chemoreceptor (MCP)	1			REVIEW_GO_SUSPECT	PR:000024025		PR:000024025	methyl-accepting chemotaxis protein IV				GO top-hit did NOT contain the label — likely wrong, curator must check
-CheR methyltransferase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CheZ phosphatase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-CheW coupling protein	1			NO_CANDIDATE								no automated candidate; needs manual curation
-membrane transporters	1			REVIEW_GO_SUSPECT	GO:1902312		GO:1902312	negative regulation of copper ion transmembrane transport				GO top-hit did NOT contain the label — likely wrong, curator must check
-rRNA operons	1			NO_CANDIDATE								no automated candidate; needs manual curation
-outer membrane and secreted proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0030256	type I protein secretion system complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-toxin-antitoxin modules	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ribosome hibernation factors (RMF/HPF/RaiA)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-resuscitation-promoting factors (Rpf)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-hydrogenase	1	UniProtKB:A0A059XQG3	unreviewed	SwissProt_exemplar	UniProtKB:P29166	UniProtKB:P29166	GO:0008901	ferredoxin hydrogenase activity	IPR000262	domain		reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-membrane-bound (de)hydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-cytochrome bc1 and NADH dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-carbonic anhydrase and DIC transporters	1			NO_CANDIDATE								no automated candidate; needs manual curation
-periplasmic Sox system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-conductive pili and c-type cytochromes	1			NO_CANDIDATE								no automated candidate; needs manual curation
-Sox multienzyme system	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-SoeABC sulfite dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ammonia monooxygenase (AMO)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-hydroxylamine oxidoreductase (HAO)	1			REVIEW_GO_SUSPECT	GO:0047991		GO:0047991	hydroxylamine oxidase activity				GO top-hit did NOT contain the label — likely wrong, curator must check
-nitrite oxidoreductase (NXR)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-particulate methane monooxygenase (pMMO)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-soluble methane monooxygenase (sMMO)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-pmoCAB operon	1			NO_CANDIDATE								no automated candidate; needs manual curation
-PmoA/PmoB/PmoC subunits	1			NO_CANDIDATE								no automated candidate; needs manual curation
-mmoXYZ genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-3-hexulose-6-phosphate synthase (Hps)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-serine-glyoxylate aminotransferase (SgaA/SGT)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-hydroxypyruvate reductase (HprA/HPR)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-formaldehyde dehydrogenase (Fld/FDH)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-MxaFI methanol dehydrogenase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-type IV competence pilus	1			NO_CANDIDATE								no automated candidate; needs manual curation
-chemotaxis and motility genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-motility and signal-transduction genes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-carbohydrate acquisition gene abundance	1			NO_CANDIDATE								no automated candidate; needs manual curation
-high-affinity solute-binding proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0033573	high-affinity iron permease complex				functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-cytochrome bc1 complex (complex III)	1			REVIEW_GO_SUSPECT	GO:0045275		GO:0045275	respiratory chain complex III				GO top-hit did NOT contain the label — likely wrong, curator must check
-family A cytochrome c oxidase	1			NO_CANDIDATE								no automated candidate; needs manual curation
-OxyR transcriptional regulator	1			NO_CANDIDATE								no automated candidate; needs manual curation
-RpoS (sigma-S) general stress sigma factor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-inorganic carbon transporter	1			InterPro_family	IPR006007	UniProtKB:A0A6L8Q027	GO:0015698	inorganic anion transport	IPR006007	family		family-level; verify the family actually matches the label
-photosynthesis gene cluster (PGC)	1			NO_CANDIDATE								no automated candidate; needs manual curation
-ATP synthase complex	1			GO_term	GO:0045259		GO:0045259	proton-transporting ATP synthase complex				GO top-hit passed substring check — still verify
-rhodopsin	1	UniProtKB:A0A059ZUX4	unreviewed	InterPro_family	IPR000276	UniProtKB:P42196	PR:000001245	rhodopsin	IPR000276	family		family-level; verify the family actually matches the label
-cognate signal receptor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-quorum-quenching enzyme	1	UniProtKB:G2JHL6	reviewed	SwissProt_exemplar	UniProtKB:G2JHL6	UniProtKB:G2JHL6						reviewed bacterial/archaeal entry; use as exemplar instance, pair with taxon
-RelA/SpoT homologue enzymes	1			CLASS_NODE_DO_NOT_GROUND								functional class, not a protein — needs GO BP/MF or split into concrete nodes; never a single accession
-RpoS sigma factor	1			NO_CANDIDATE								no automated candidate; needs manual curation
-gene product	1			InterPro_family	IPR009752	UniProtKB:Q9HVD1	GO:1903799	negative regulation of miRNA processing	IPR009752	family		family-level; verify the family actually matches the label
+label	n_nodes	current_grounding	current_status	route	target	swissprot_alt	go_alt	go_label	interpro_alt	curator_decision	note
+RuBisCO	7	InterPro:IPR033966		APPLIED_IPR	InterPro:IPR033966	UniProtKB:Q31IK3	GO:0046863	ribulose-1,5-bisphosphate carboxylase/oxygenase activator activity	IPR000685		applied in this pass; exact label match
+carbonic anhydrase	6	InterPro:IPR001765		APPLIED_IPR	InterPro:IPR001765	UniProtKB:Q5KW03	GO:0004089	carbonate dehydratase activity	IPR001148		applied in this pass; exact label match
+catalase	4	GO:0004096		APPLIED_GO_MF	GO:0004096	UniProtKB:P14412	GO:1902553	positive regulation of catalase activity	IPR000763		applied in this pass; exact label match
+reverse gyrase	4	GO:0160097		APPLIED_GO_MF	GO:0160097	UniProtKB:P74759	GO:0160097	reverse gyrase activity	IPR005736		applied in this pass; exact label match
+DivIVA	3	UniProtKB:Q1IYG2	unreviewed	APPLIED_IPR	InterPro:IPR007793	UniProtKB:P71021			IPR007793		applied in this pass; exact label match
+photosystem II	3	GO:0009523		APPLIED_GO_CC	GO:0009523	UniProtKB:P74367	GO:0009523	photosystem II	IPR001056		applied in this pass; exact label match
+sulfide:quinone oxidoreductase (SQR)	3	GO:0070224		APPLIED_GO_MF	GO:0070224						applied in this pass; exact label match
+type IV secretion system	3	GO:0043684		APPLIED_GO_CC	GO:0043684	UniProtKB:Q2YIT8	GO:0030255	protein secretion by the type IV secretion system	IPR003688		applied in this pass; exact label match
+acetate kinase	2	GO:0008776		APPLIED_GO_MF	GO:0008776	UniProtKB:A0QQK1	GO:0008776	acetate kinase activity	IPR010424		applied in this pass; exact label match
+beta-glucosidase	2	GO:0008422		APPLIED_GO_MF	GO:0008422	UniProtKB:Q46829	GO:0008422	beta-glucosidase activity	IPR005556		applied in this pass; exact label match
+cytochrome c oxidase	2	UniProtKB:A0A075NZN5	unreviewed	APPLIED_GO_MF	GO:0004129	UniProtKB:P98055	GO:1904960	positive regulation of cytochrome-c oxidase activity	IPR000298		applied in this pass; exact label match
+fatty acid desaturase	2	InterPro:IPR012171		APPLIED_IPR	InterPro:IPR012171	UniProtKB:Q55231	GO:0016213	acyl-CoA 6-desaturase activity	IPR001522		applied in this pass; exact label match
+laccase	2	InterPro:IPR017761		APPLIED_IPR	InterPro:IPR017761	UniProtKB:A0A7T1FRB0	GO:0016682	oxidoreductase activity, acting on diphenols and related substances as donors, oxygen as acceptor	IPR017761		applied in this pass; exact label match
+proteorhodopsin	2	UniProtKB:A0A1D7QWW9	unreviewed	APPLIED_IPR	InterPro:IPR017402	UniProtKB:Q9F7P4			IPR017402		applied in this pass; exact label match
+superoxide dismutase	2	GO:0004784		APPLIED_GO_MF	GO:0004784	UniProtKB:O30563	GO:1901671	positive regulation of superoxide dismutase activity	IPR001189		applied in this pass; exact label match
+type IV pilus	2	GO:0044096		APPLIED_GO_CC	GO:0044096	UniProtKB:G3XCX3	GO:0044096	type IV pilus	IPR005883		applied in this pass; exact label match
+4-hydroxyphenylpyruvate dioxygenase	1	GO:0003868		APPLIED_GO_MF	GO:0003868	UniProtKB:Q9S2F4	GO:0003868	4-hydroxyphenylpyruvate dioxygenase activity	IPR005956		applied in this pass; exact label match
+LexA repressor	1	InterPro:IPR050077		APPLIED_IPR	InterPro:IPR050077	UniProtKB:A0PT76			IPR006199		applied in this pass; exact label match
+NADH peroxidase	1	GO:0016692		APPLIED_GO_MF	GO:0016692	UniProtKB:P37062	GO:0016692	NADH peroxidase activity			applied in this pass; exact label match
+NADPH peroxidase	1	GO:0050137		APPLIED_GO_MF	GO:0050137		GO:0050137	NADPH peroxidase activity			applied in this pass; exact label match
+acetyl-CoA carboxylase	1	GO:0003989		APPLIED_GO_MF	GO:0003989	UniProtKB:P29906	GO:0050406	[acetyl-CoA carboxylase]-phosphatase activity	IPR000438		applied in this pass; exact label match
+alkyl hydroperoxide reductase (AhpC)	1	GO:0009321		APPLIED_GO_CC	GO:0009321						applied in this pass; exact label match
+ammonia monooxygenase	1	GO:0018597		APPLIED_GO_MF	GO:0018597	UniProtKB:Q04508	GO:0018597	ammonia monooxygenase activity	IPR003393		applied in this pass; exact label match
+ammonia monooxygenase (AMO)	1	GO:0018597		APPLIED_GO_MF	GO:0018597						applied in this pass; exact label match
+beta-N-acetylglucosaminidase	1	GO:0016231		APPLIED_GO_MF	GO:0016231	UniProtKB:T1WGN1	GO:0033925	mannosyl-glycoprotein endo-beta-N-acetylglucosaminidase activity	IPR005201		applied in this pass; exact label match
+beta-lactamase	1	GO:0008800		APPLIED_GO_MF	GO:0008800	UniProtKB:P06548	GO:0008800	beta-lactamase activity	IPR000871		applied in this pass; exact label match
+carbamate kinase (arginine deiminase pathway)	1	GO:0008804		APPLIED_GO_MF	GO:0008804						applied in this pass; exact label match
+catalase (KatA)	1	GO:0004096		APPLIED_GO_MF	GO:0004096						applied in this pass; exact label match
+cytochrome b6f complex	1	GO:0009512		APPLIED_GO_CC	GO:0009512		GO:0009512	cytochrome b6f complex			applied in this pass; exact label match
+divisome (FtsZ/PBP2x/FtsW)	1	GO:1990586		APPLIED_GO_CC	GO:1990586						applied in this pass; exact label match
+divisome complex	1	GO:1990586		APPLIED_GO_CC	GO:1990586		GO:1990586	divisome complex			applied in this pass; exact label match
+exopolyphosphatase (PPX)	1	GO:0004309		APPLIED_GO_MF	GO:0004309						applied in this pass; exact label match
+ferredoxin-NADP+ reductase	1	GO:0004324		APPLIED_GO_MF	GO:0004324	UniProtKB:Q44549	GO:0004324	ferredoxin-NADP+ reductase activity	IPR021163		applied in this pass; exact label match
+formate dehydrogenase	1	GO:0009326		APPLIED_GO_CC	GO:0009326	UniProtKB:P33160	GO:0008863	formate dehydrogenase (NAD+) activity	IPR006443		applied in this pass; exact label match
+formate dehydrogenase (FDH)	1	GO:0009326		APPLIED_GO_CC	GO:0009326		GO:0036397	formate dehydrogenase (quinone) activity			applied in this pass; exact label match
+formate dehydrogenase (Fdh)	1	GO:0009326		APPLIED_GO_CC	GO:0009326		GO:0036397	formate dehydrogenase (quinone) activity			applied in this pass; exact label match
+formate dehydrogenase complex	1	GO:0009326		APPLIED_GO_CC	GO:0009326		GO:0009326	formate dehydrogenase complex			applied in this pass; exact label match
+homogentisate 1,2-dioxygenase	1	GO:0004411		APPLIED_GO_MF	GO:0004411	UniProtKB:Q88E47	GO:0004411	homogentisate 1,2-dioxygenase activity	IPR005708		applied in this pass; exact label match
+hydroxylamine oxidoreductase (HAO)	1	GO:0033740		APPLIED_GO_MF	GO:0033740		GO:0047991	hydroxylamine oxidase activity			applied in this pass; exact label match
+inorganic carbon transporter	1	InterPro:IPR006007		APPLIED_IPR	InterPro:IPR006007	UniProtKB:A0A6L8Q027	GO:0015698	inorganic anion transport	IPR006007		applied in this pass; exact label match
+lactate dehydrogenase	1	GO:0004457		APPLIED_GO_MF	GO:0004457	UniProtKB:P52643	GO:0004458	D-lactate dehydrogenase (cytochrome) activity	IPR003767		applied in this pass; exact label match
+lycopene beta-cyclase (CrtY)	1	GO:0045436		APPLIED_GO_MF	GO:0045436						applied in this pass; exact label match
+manganese peroxidase	1	GO:0016689		APPLIED_GO_MF	GO:0016689	UniProtKB:K7N5M8	GO:0016689	manganese peroxidase activity			applied in this pass; exact label match
+manganese peroxidase (MnP)	1	GO:0016689		APPLIED_GO_MF	GO:0016689						applied in this pass; exact label match
+methane monooxygenase	1	GO:0015050		APPLIED_GO_CC	GO:0015050	UniProtKB:Q53563	GO:0018648	methanesulfonate monooxygenase activity	IPR003393		applied in this pass; exact label match
+methyl-coenzyme M reductase	1	UniProtKB:A0A099T5Q9	unreviewed	APPLIED_GO_CC	GO:0044674	UniProtKB:P11567	GO:0050524	coenzyme-B sulfoethylthiotransferase activity	IPR003178		applied in this pass; exact label match
+methyl-coenzyme M reductase (MCR)	1	GO:0044674		APPLIED_GO_CC	GO:0044674						applied in this pass; exact label match
+methylmalonyl-CoA carboxytransferase	1	GO:0047154		APPLIED_GO_MF	GO:0047154		GO:0047154	methylmalonyl-CoA carboxytransferase activity			applied in this pass; exact label match
+multicopper oxidase	1	UniProtKB:A0A059ZYC2	unreviewed	APPLIED_IPR	InterPro:IPR045087	UniProtKB:I6WZK7			IPR001117		applied in this pass; exact label match
+nitrogenase	1	UniProtKB:A0A089HR75	unreviewed	APPLIED_GO_MF	GO:0016163	UniProtKB:A0L6X0	GO:0016163	nitrogenase activity	IPR000318		applied in this pass; exact label match
+nitrogenase complex	1	GO:0016610		APPLIED_GO_CC	GO:0016610		GO:0016610	nitrogenase complex			applied in this pass; exact label match
+nitrous oxide reductase (NosZ)	1	GO:0050304		APPLIED_GO_MF	GO:0050304						applied in this pass; exact label match
+phosphoenolpyruvate carboxylase	1	GO:0008964		APPLIED_GO_MF	GO:0008964	UniProtKB:P51060	GO:0008964	phosphoenolpyruvate carboxylase activity	IPR007566		applied in this pass; exact label match
+photosystem I	1	GO:0009522		APPLIED_GO_CC	GO:0009522	UniProtKB:A5GL35	GO:0009522	photosystem I	IPR000549		applied in this pass; exact label match
+phytoene desaturase	1	UniProtKB:A0A060JDC8	unreviewed	APPLIED_IPR	InterPro:IPR014102	UniProtKB:P54979			IPR014102		applied in this pass; exact label match
+polyketide synthase (PKS)	1	UniProtKB:Q5Y9G5	unreviewed	APPLIED_GO_MF	GO:0016218		GO:0034082	type II polyketide synthase complex			applied in this pass; exact label match
+polyphosphate kinase (PPK)	1	GO:0008976		APPLIED_GO_MF	GO:0008976						applied in this pass; exact label match
+polyphosphate kinase (Ppk)	1	GO:0008976		APPLIED_GO_MF	GO:0008976						applied in this pass; exact label match
+propionyl-CoA carboxylase	1	GO:0004658		APPLIED_GO_MF	GO:0004658	UniProtKB:Q3J4E6	GO:0004658	propionyl-CoA carboxylase activity	IPR058335		applied in this pass; exact label match
+pyruvate decarboxylase	1	GO:0004737		APPLIED_GO_MF	GO:0004737	UniProtKB:P06672	GO:0047432	2,2-dialkylglycine decarboxylase (pyruvate) activity	IPR012110		applied in this pass; exact label match
+pyruvate synthase (pyruvate:ferredoxin oxidoreductase)	1	GO:0019164		APPLIED_GO_MF	GO:0019164		GO:0043805	indolepyruvate ferredoxin oxidoreductase activity			applied in this pass; exact label match
+reverse gyrase (TopR/rgy)	1	GO:0160097		APPLIED_GO_MF	GO:0160097						applied in this pass; exact label match
+rhodopsin	1	UniProtKB:A0A059ZUX4	unreviewed	APPLIED_OVERRIDE	InterPro:IPR001425	UniProtKB:P42196	PR:000001245	rhodopsin	IPR000276		applied in this pass; exact label match
+rubrerythrin	1	InterPro:IPR052364		APPLIED_IPR	InterPro:IPR052364	UniProtKB:P24931			IPR003251		applied in this pass; exact label match
+superoxide dismutase (SodB)	1	GO:0004784		APPLIED_GO_MF	GO:0004784						applied in this pass; exact label match
+superoxide reductase	1	GO:0050605		APPLIED_GO_MF	GO:0050605	UniProtKB:P82385	GO:0050605	superoxide reductase activity	IPR051233		applied in this pass; exact label match
+thiosulfate dehydrogenase (TsdA)	1	GO:0050338		APPLIED_GO_MF	GO:0050338						applied in this pass; exact label match
+transposase	1	GO:0004803		APPLIED_GO_MF	GO:0004803	UniProtKB:Q46087	GO:0004803	transposase activity	IPR001207		applied in this pass; exact label match
+type IV secretion system (T4SS)	1	GO:0043684		APPLIED_GO_CC	GO:0043684		GO:0043684	type IV secretion system complex			applied in this pass; exact label match
+tyrosinase	1	GO:0004503		APPLIED_GO_MF	GO:0004503	UniProtKB:A0A261GVB1	GO:0004503	tyrosinase activity	IPR002227		applied in this pass; exact label match
+urease	1	GO:0009039		APPLIED_GO_MF	GO:0009039	UniProtKB:O06708	GO:0035550	urease complex	IPR002019		applied in this pass; exact label match
+Na+/H+ antiporter	8			CANDIDATE_InterPro	IPR002758	UniProtKB:Q4L4W4	GO:0032417	positive regulation of sodium:proton antiporter activity	IPR002758		family-level candidate; verify it is not a subunit/domain
+MreB	7			CANDIDATE_InterPro	IPR004753	UniProtKB:Q01465			IPR004753		family-level candidate; verify it is not a subunit/domain
+ATP synthase	6			CANDIDATE_InterPro	IPR000131	UniProtKB:Q971B6	GO:1905273	positive regulation of proton-transporting ATP synthase activity, rotational mechanism	IPR000131		family-level candidate; verify it is not a subunit/domain
+FtsZ	6	UniProtKB:C0LUM8	unreviewed	CANDIDATE_InterPro	IPR000158	UniProtKB:A0A0H3C3S1	GO:2000244	regulation of FtsZ-dependent cytokinesis	IPR000158		family-level candidate; verify it is not a subunit/domain
+F0F1-ATPase	5			CANDIDATE_InterPro	IPR011744		GO:0046961	proton-transporting ATPase activity, rotational mechanism	IPR011744		family-level candidate; verify it is not a subunit/domain
+FlhG	5	UniProtKB:Q2N2M1	unreviewed	CANDIDATE_InterPro	IPR033875				IPR033875		family-level candidate; verify it is not a subunit/domain
+MreC	5			CANDIDATE_InterPro	IPR007221	UniProtKB:P84480			IPR007221		family-level candidate; verify it is not a subunit/domain
+Na+/H+ antiporters	5			REVIEW_GO_SUSPECT	GO:0032417		GO:0032417	positive regulation of sodium:proton antiporter activity			top-hit failed the exactness check — likely wrong
+Crt enzymes	4			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+FlhF	4			CANDIDATE_InterPro	IPR020006	UniProtKB:O52908			IPR020006		family-level candidate; verify it is not a subunit/domain
+FliG	4			CANDIDATE_InterPro	IPR000090	UniProtKB:P0ABZ1	GO:0007629	flight behavior	IPR000090		family-level candidate; verify it is not a subunit/domain
+RodA	4	UniProtKB:A0A0H2X1V4	unreviewed	CANDIDATE_InterPro	IPR001182	UniProtKB:P9WN99			IPR001182		family-level candidate; verify it is not a subunit/domain
+photosynthetic reaction center	4			CANDIDATE_SwissProt	UniProtKB:P51758	UniProtKB:P51758	GO:0030076	light-harvesting complex			reviewed entry; instance-level — pair with a taxon if used
+Mrp Na+/H+ antiporter complex	3			NO_CANDIDATE							no automated candidate; needs manual curation
+PilB extension ATPase	3			NO_CANDIDATE							no automated candidate; needs manual curation
+PilT retraction ATPase	3			NO_CANDIDATE							no automated candidate; needs manual curation
+Rod complex	3			REVIEW_GO_SUSPECT	GO:7770030		GO:7770030	rod photoreceptor phosphodiesterase 6 complex			top-hit failed the exactness check — likely wrong
+RodA-PBP2 complex	3			NO_CANDIDATE							no automated candidate; needs manual curation
+cold-shock proteins	3			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+crescentin	3			CANDIDATE_InterPro	IPR043652				IPR043652		family-level candidate; verify it is not a subunit/domain
+ectABC operon	3			NO_CANDIDATE							no automated candidate; needs manual curation
+proton-pumping respiratory complexes	3			NO_CANDIDATE							no automated candidate; needs manual curation
+4-hydroxybutyryl-CoA dehydratase	2			CANDIDATE_SwissProt	UniProtKB:P55792	UniProtKB:P55792	GO:0043721	4-hydroxybutanoyl-CoA dehydratase activity			reviewed entry; instance-level — pair with a taxon if used
+ATP citrate lyase (aclAB)	2			NO_CANDIDATE							no automated candidate; needs manual curation
+ArsC arsenate reductase	2			NO_CANDIDATE							no automated candidate; needs manual curation
+CheA histidine kinase	2			NO_CANDIDATE							no automated candidate; needs manual curation
+CheY response regulator	2			NO_CANDIDATE							no automated candidate; needs manual curation
+CspA cold-shock protein	2			NO_CANDIDATE							no automated candidate; needs manual curation
+DnaK chaperone	2			NO_CANDIDATE							no automated candidate; needs manual curation
+F1Fo-ATP synthase	2			REVIEW_GO_SUSPECT	GO:1990677		GO:1990677	mitochondrial inner membrane assembly complex			top-hit failed the exactness check — likely wrong
+F1Fo-ATPase	2			REVIEW_GO_SUSPECT	GO:0046962		GO:0046962	sodium-transporting ATPase activity, rotational mechanism			top-hit failed the exactness check — likely wrong
+FipA	2			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ division ring	2			NO_CANDIDATE							no automated candidate; needs manual curation
+GpsB	2			CANDIDATE_InterPro	IPR011229	UniProtKB:A0AJZ3			IPR011229		family-level candidate; verify it is not a subunit/domain
+MreB cytoskeleton	2			NO_CANDIDATE							no automated candidate; needs manual curation
+NADH dehydrogenase (Complex I)	2			MANUAL_REVIEW			GO:0030964	NADH dehydrogenase complex			excluded by curator override
+PBP2	2			CANDIDATE_InterPro	IPR032550	UniProtKB:P0AD65			IPR032550		family-level candidate; verify it is not a subunit/domain
+PBP2b	2			CANDIDATE_InterPro	IPR047982	UniProtKB:A0A0H2ZQ75			IPR047982		family-level candidate; verify it is not a subunit/domain
+RodZ	2	UniProtKB:H1XNL6	unreviewed	CANDIDATE_InterPro	IPR023690	UniProtKB:A4TMT8			IPR023690		family-level candidate; verify it is not a subunit/domain
+RpoH (sigma-32) heat-shock sigma factor	2			NO_CANDIDATE							no automated candidate; needs manual curation
+Sox enzyme system	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+SulA	2	UniProtKB:H8YHZ0	unreviewed	CANDIDATE_InterPro	IPR004596	UniProtKB:A7MFW4			IPR004596		family-level candidate; verify it is not a subunit/domain
+TrkAH K+ uptake system	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+Type I reaction center	2			REVIEW_GO_SUSPECT	GO:0009522		GO:0009522	photosystem I			top-hit failed the exactness check — likely wrong
+bacterial adhesins	2			REVIEW_GO_SUSPECT	GO:0097347		GO:0097347	TAM protein secretion complex			top-hit failed the exactness check — likely wrong
+bactofilin polymers	2			NO_CANDIDATE							no automated candidate; needs manual curation
+bactofilins	2			NO_CANDIDATE							no automated candidate; needs manual curation
+carboxysomal carbonic anhydrase	2			NO_CANDIDATE							no automated candidate; needs manual curation
+cation/proton antiporter	2	UniProtKB:A0A0H3JRG4	unreviewed	CANDIDATE_SwissProt	UniProtKB:P39830	UniProtKB:P39830	GO:0140968	polyspecific organic cation:proton antiporter activity			reviewed entry; instance-level — pair with a taxon if used
+class A penicillin-binding proteins	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+cold-adapted enzymes	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+curvature scaffold	2			NO_CANDIDATE							no automated candidate; needs manual curation
+czc cation-efflux system	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+dissolved inorganic carbon transporter	2			NO_CANDIDATE							no automated candidate; needs manual curation
+endoglucanase	2			CANDIDATE_InterPro	IPR016282	UniProtKB:A0A023VXA2	GO:0008810	cellulase activity	IPR016282		family-level candidate; verify it is not a subunit/domain
+flagellar motor	2			CANDIDATE_InterPro	IPR000090	UniProtKB:P35539	GO:0071945	regulation of bacterial-type flagellum-dependent cell motility by regulation of motor speed	IPR000090		family-level candidate; verify it is not a subunit/domain
+gliding motility machinery	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+ice-binding/antifreeze proteins	2			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+methanol dehydrogenase	2			CANDIDATE_InterPro	IPR003420	UniProtKB:Q8KP10	GO:0050093	methanol dehydrogenase (NAD+) activity	IPR003420		family-level candidate; verify it is not a subunit/domain
+multiheme c-type cytochromes	2			NO_CANDIDATE							no automated candidate; needs manual curation
+penicillin-binding proteins	2			CLASS_NODE_DO_NOT_GROUND			GO:0008955	peptidoglycan glycosyltransferase activity			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+peptidoglycan hydrolases	2			NO_CANDIDATE							no automated candidate; needs manual curation
+persulfide dioxygenase (PDO)	2			NO_CANDIDATE							no automated candidate; needs manual curation
+proton export pumps and antiporters	2			NO_CANDIDATE							no automated candidate; needs manual curation
+pyruvate:ferredoxin oxidoreductase (PFOR)	2			REVIEW_GO_SUSPECT	GO:0019164		GO:0019164	pyruvate synthase activity			top-hit failed the exactness check — likely wrong
+salinity-adaptation genes	2			CLASS_NODE_DO_NOT_GROUND			CL:0005006	ionocyte			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+terminal oxidase	2	UniProtKB:A0A2U9ILE5	unreviewed	CANDIDATE_SwissProt	UniProtKB:P97224	UniProtKB:P97224	GO:0140647	P450-containing electron transport chain			reviewed entry; instance-level — pair with a taxon if used
+type III secretion system	2			CLASS_NODE_DO_NOT_GROUND		UniProtKB:O84944	GO:0030254	protein secretion by the type III secretion system	IPR001712		functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+3-hexulose-6-phosphate synthase (Hps)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ACS/CODH complex	1			REVIEW_GO_SUSPECT	GO:0044672		GO:0044672	acetyl-CoA decarbonylase/synthase-carbon monoxide dehydrogenase complex			top-hit failed the exactness check — likely wrong
+APS reductase AprAB	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ATP sulfurylase (Sat)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ATP synthase c-subunit alkaline-adaptive motifs	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ATP synthase complex	1			REVIEW_GO_SUSPECT	GO:0045259		GO:0045259	proton-transporting ATP synthase complex			top-hit failed the exactness check — likely wrong
+Acr3 arsenite efflux permease	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ArcA/ArcAB two-component regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ArcAB two-component system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+ArsB arsenite efflux permease	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ArsM arsenite S-adenosylmethionine methyltransferase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ArsR transcriptional repressor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+BAM complex	1			REVIEW_GO_SUSPECT	GO:1990063		GO:1990063	Bam protein complex			top-hit failed the exactness check — likely wrong
+BCCT transporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+BMC-H/T/P shell proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+BacA-LmdC morphogenesis module	1			NO_CANDIDATE							no automated candidate; needs manual curation
+BetA/BetB pathway	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CE15 glucuronoyl esterases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CI master repressor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CO dehydrogenase/acetyl-CoA synthase (CODH/ACS)	1			REVIEW_GO_SUSPECT	GO:0044672		GO:0044672	acetyl-CoA decarbonylase/synthase-carbon monoxide dehydrogenase complex			top-hit failed the exactness check — likely wrong
+CO-insensitive terminal oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CPA/Nha family Na+/H+ antiporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CPD photolyase	1			CANDIDATE_SwissProt	UniProtKB:A9CJC9	UniProtKB:A9CJC9	GO:0003904	deoxyribodipyrimidine photo-lyase activity			reviewed entry; instance-level — pair with a taxon if used
+CadA P-type (P1B) ATPase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Cas proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0051897	positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+Cas1-Cas2 complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CbbR transcriptional regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CcmA	1			CANDIDATE_InterPro	IPR005895	UniProtKB:P45032			IPR005895		family-level candidate; verify it is not a subunit/domain
+CglA	1			CANDIDATE_InterPro	IPR057420				IPR057420		family-level candidate; verify it is not a subunit/domain
+CglA glycopolymer ligase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CheB methylesterase	1			REVIEW_GO_SUSPECT	GO:0008984		GO:0008984	protein-glutamate methylesterase activity			top-hit failed the exactness check — likely wrong
+CheR methyltransferase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CheW coupling protein	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CheY-P	1			CANDIDATE_InterPro	IPR038756	UniProtKB:Q9X006			IPR038756		family-level candidate; verify it is not a subunit/domain
+CheZ phosphatase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ComEA	1			CANDIDATE_InterPro	IPR004509				IPR004509		family-level candidate; verify it is not a subunit/domain
+ComEC	1			CANDIDATE_InterPro	IPR004477				IPR004477		family-level candidate; verify it is not a subunit/domain
+Complex I / NADH:quinone oxidoreductase (NDH-1)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CooA	1	UniProtKB:A0A1D7QXJ2	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+CotE	1	UniProtKB:D5WPR1	unreviewed	CANDIDATE_InterPro	IPR018901	UniProtKB:P14016			IPR018901		family-level candidate; verify it is not a subunit/domain
+CpxA/CpxR two-component system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+CrtI (phytoene desaturase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CrtY (lycopene beta-cyclase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CrvA	1			CANDIDATE_InterPro	IPR058915				IPR058915		family-level candidate; verify it is not a subunit/domain
+CrvA polymer	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CrvB	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Csd shape proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+CsdA DEAD-box RNA helicase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Cyc2	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CzcCBA RND efflux complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CzcCBA efflux complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+CzcS/CzcR two-component system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+DesK	1			CANDIDATE_InterPro	IPR056374	UniProtKB:O34757			IPR056374		family-level candidate; verify it is not a subunit/domain
+DesR	1			CANDIDATE_SwissProt	UniProtKB:O34723	UniProtKB:O34723					reviewed entry; instance-level — pair with a taxon if used
+DivIVA foci	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DivIVA polarisome	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DivIVA/Scy/FilP polarisome	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DmeF CDF-family exporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DnaK-DnaJ chaperone	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+DprA	1			CANDIDATE_InterPro	IPR003488	UniProtKB:Q8DPI7			IPR003488		family-level candidate; verify it is not a subunit/domain
+DsrAB with DsrC	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DsrMK(JOP) membrane complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+DyP-type peroxidase	1			CANDIDATE_InterPro	IPR006314				IPR006314		family-level candidate; verify it is not a subunit/domain
+EctD (ectoine hydroxylase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+F0F1-ATP synthase	1			REVIEW_GO_SUSPECT	GO:0046961		GO:0046961	proton-transporting ATPase activity, rotational mechanism			top-hit failed the exactness check — likely wrong
+F0F1-ATPase / ATP synthase	1			REVIEW_GO_SUSPECT	GO:0046961		GO:0046961	proton-transporting ATPase activity, rotational mechanism			top-hit failed the exactness check — likely wrong
+F1F0-ATP synthase	1			CANDIDATE_InterPro	IPR048937		GO:1990524	INA complex	IPR048937		family-level candidate; verify it is not a subunit/domain
+F1F0-ATPase proton pump	1			NO_CANDIDATE							no automated candidate; needs manual curation
+F1Fo ATP synthase	1			REVIEW_GO_SUSPECT	GO:1990677		GO:1990677	mitochondrial inner membrane assembly complex			top-hit failed the exactness check — likely wrong
+FNR oxygen-responsive regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FNR regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FNR-type oxygen-responsive regulation	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FacZ	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Fe-S cluster enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0009375	ferredoxin hydrogenase complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+FeMo-cofactor (M-cluster)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FlaB	1	UniProtKB:A8WEP6	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+FlbB periplasmic ring	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FlgK/FlgL hook-filament junction	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FlgV	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FlhE	1			CANDIDATE_InterPro	IPR009420	UniProtKB:P76297			IPR009420		family-level candidate; verify it is not a subunit/domain
+FliD filament cap	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliF	1	UniProtKB:A0A0H2X1L8	unreviewed	CANDIDATE_InterPro	IPR000067	UniProtKB:Q8FUS3			IPR000067		family-level candidate; verify it is not a subunit/domain
+FliF (MS-ring protein)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliF (MS-ring)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliF MS-ring protein	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliG rotor protein	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliH-FliI-FliJ ATPase complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FliM/FliN C-ring partners	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsA	1	UniProtKB:A0A1M6DY20	unreviewed	CANDIDATE_InterPro	IPR003494	UniProtKB:A0A0H2ZPT5			IPR003494		family-level candidate; verify it is not a subunit/domain
+FtsA and ZipA (proto-ring tethers)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsEX complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsH protease	1	UniProtKB:A0A0D7UY21	unreviewed	CANDIDATE_SwissProt	UniProtKB:P0ABC7	UniProtKB:P0ABC7					reviewed entry; instance-level — pair with a taxon if used
+FtsN	1			CANDIDATE_InterPro	IPR011930	UniProtKB:B8GX61			IPR011930		family-level candidate; verify it is not a subunit/domain
+FtsW	1			CANDIDATE_InterPro	IPR001182	UniProtKB:P0ABG4			IPR001182		family-level candidate; verify it is not a subunit/domain
+FtsW lipid II flippase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsW-PBP2x complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsWI septal PG synthase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsWI septal PG synthase complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ Z-ladder arrays	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ Z-ring assembly	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ abundance	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ filament properties	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ proto-ring (with FtsA/ZipA)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FtsZ ring (divisome)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+FurC / PerR	1			NO_CANDIDATE							no automated candidate; needs manual curation
+GlmS	1	UniProtKB:I6LB50	unreviewed	CANDIDATE_InterPro	IPR006394				IPR006394		family-level candidate; verify it is not a subunit/domain
+Gms (GMGT synthase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+GroEL-GroES / HtpG chaperone	1			NO_CANDIDATE							no automated candidate; needs manual curation
+GroEL/DnaK molecular chaperones	1			NO_CANDIDATE							no automated candidate; needs manual curation
+GrsA/GrsB GDGT cyclization enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+GvpA	1			CANDIDATE_InterPro	IPR000638	UniProtKB:O33397			IPR000638		family-level candidate; verify it is not a subunit/domain
+GvpC	1			CANDIDATE_InterPro	IPR002003	UniProtKB:Q8YUS9			IPR002003		family-level candidate; verify it is not a subunit/domain
+GvpD	1			CANDIDATE_InterPro	IPR009788	UniProtKB:Q02229			IPR009788		family-level candidate; verify it is not a subunit/domain
+H+-ATPase proton efflux pump	1			NO_CANDIDATE							no automated candidate; needs manual curation
+HetN regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+HetR transcriptional regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Hfq	1			CANDIDATE_InterPro	IPR005001	UniProtKB:P0A1R0			IPR005001		family-level candidate; verify it is not a subunit/domain
+HmgA (homogentisate 1,2-dioxygenase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+HppD (4-hydroxyphenylpyruvate dioxygenase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+IdsA/CrtE (GGPP synthase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+K+ import systems	1			CLASS_NODE_DO_NOT_GROUND			UBERON:0001839	bony labyrinth			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+K+ uniport system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+K+ uptake system (Kdp/Kef)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+K+ uptake systems (Trk/Ktr/Kup/KimA)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+K+/H+ antiporters	1	UniProtKB:A0A1Z4VR00	unreviewed	REVIEW_GO_SUSPECT	GO:0015386		GO:0015386	potassium:proton antiporter activity			top-hit failed the exactness check — likely wrong
+KdpFABC complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+KimA/Kup high-affinity K+ uptake transporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+KpsMT ABC transporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+LuxCDE fatty acid reductase complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+LuxG flavin reductase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+LuxI autoinducer synthase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+LuxR transcription factor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+LytR/LCP teichoic acid ligase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MMC lyase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MamB	1			CANDIDATE_InterPro	IPR053436	UniProtKB:W6KHH6			IPR053436		family-level candidate; verify it is not a subunit/domain
+MamK	1			CANDIDATE_InterPro	IPR056546	UniProtKB:Q6NE59			IPR056546		family-level candidate; verify it is not a subunit/domain
+MapZ	1			CANDIDATE_InterPro	IPR030858				IPR030858		family-level candidate; verify it is not a subunit/domain
+MapZ/FtsZ division-positioning system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+MerB (organomercurial lyase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MerR (Hg-responsive regulator)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MmoX/MmoY/MmoZ (MMOH alpha/beta/gamma)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MotA-MotB stator complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor			top-hit failed the exactness check — likely wrong
+MreB cytoskeletal filaments	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MreB cytoskeletal guidance	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MreB filaments	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MreB-mediated elongation machinery	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+MreC-MreD balance	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MreC/MreD balance	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MreD	1			CANDIDATE_InterPro	IPR007227	UniProtKB:P0ABH6			IPR007227		family-level candidate; verify it is not a subunit/domain
+MtrCAB outer-membrane complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+MxaFI methanol dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+NADH dehydrogenase (complex I)	1			MANUAL_REVIEW			GO:0030964	NADH dehydrogenase complex			excluded by curator override
+Na+/H+ antiporter (Nha)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Na+/H+ antiporter genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+Na+/solute symporters	1			REVIEW_GO_SUSPECT	GO:0043887		GO:0043887	melibiose:sodium symporter activity			top-hit failed the exactness check — likely wrong
+NarGHI nitrate reductase	1			REVIEW_GO_SUSPECT	GO:0044799		GO:0044799	NarGHI complex			top-hit failed the exactness check — likely wrong
+NarX-NarL two-component system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+NhaC-family Na+/H+ antiporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Ni,Fe-carbon monoxide dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+NifH (Fe-protein)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+NrfA cytochrome c nitrite reductase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+OpuA compatible-solute transporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+OpuA-like compatible-solute importers	1			NO_CANDIDATE							no automated candidate; needs manual curation
+OpuA/OpuC compatible-solute importers	1			NO_CANDIDATE							no automated candidate; needs manual curation
+OpuA/OpuC compatible-solute transporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+OxyR	1			CANDIDATE_InterPro	IPR002176	UniProtKB:A9CGX9			IPR002176		family-level candidate; verify it is not a subunit/domain
+OxyR transcriptional regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+P-cluster	1			REVIEW_GO_SUSPECT	GO:0044573		GO:0044573	nitrogenase P cluster assembly			top-hit failed the exactness check — likely wrong
+P-type proton-translocating ATPase	1			REVIEW_GO_SUSPECT	GO:1905273		GO:1905273	positive regulation of proton-transporting ATP synthase activity, rotational mechanism			top-hit failed the exactness check — likely wrong
+PBP2 (elongasome transpeptidase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PEP-dependent phosphotransferase system (mannitol PTS)	1			REVIEW_GO_SUSPECT	GO:0022872		GO:0022872	protein-N(PI)-phosphohistidine-mannitol phosphotransferase system transmembrane transporter activity			top-hit failed the exactness check — likely wrong
+PHA depolymerase (PhaZ)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PHA synthase (PhaC)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PQQ-dependent methanol dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PatS peptide	1			REVIEW_GO_SUSPECT	GO:0002486		GO:0002486	antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway, TAP-independent			top-hit failed the exactness check — likely wrong
+PcsB autolysin	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PcsB hydrolase system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+PerR	1	UniProtKB:A0A097ASJ8	unreviewed	CANDIDATE_SwissProt	UniProtKB:Q57083	UniProtKB:Q57083					reviewed entry; instance-level — pair with a taxon if used
+PhaR regulator	1			REVIEW_GO_SUSPECT	GO:1903745		GO:1903745	negative regulation of nematode pharyngeal pumping			top-hit failed the exactness check — likely wrong
+PigC ligase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PilQ secretin	1			NO_CANDIDATE							no automated candidate; needs manual curation
+PmoA/PmoB/PmoC subunits	1			NO_CANDIDATE							no automated candidate; needs manual curation
+QRDR mutation in DNA gyrase/topoisomerase IV	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RNA thermometer	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RNA thermometer 5′-UTR structure	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RNA thermometer hairpin	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ROS-scavenging enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+Rap phosphatases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RcnA/YohM Co/Ni efflux protein	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RcoM	1			CANDIDATE_InterPro	IPR005166	UniProtKB:Q2RNI6			IPR005166		family-level candidate; verify it is not a subunit/domain
+RecA	1			CANDIDATE_InterPro	IPR013765	UniProtKB:Q9F407	GO:1990942	mitotic metaphase chromosome recapture	IPR013765		family-level candidate; verify it is not a subunit/domain
+RecA recombinase	1			REVIEW_GO_SUSPECT	GO:0009009		GO:0009009	site-specific recombinase activity			top-hit failed the exactness check — likely wrong
+RecA* nucleoprotein filament	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RelA/SpoT homologue enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+Rnf complex	1			REVIEW_GO_SUSPECT	GO:0071797		GO:0071797	LUBAC complex			top-hit failed the exactness check — likely wrong
+Rod complex (elongasome)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Rod-complex accessory proteins MreC/MreD/RodZ	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RodA-PBP2 core synthase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RodA-PBP2 elongasome complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RodA-PBP2 synthase (Rod complex)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RodA-PBP2b elongasome	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RodA/PBP3 elongasome	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RpoE envelope-stress sigma factor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RpoS (sigma S)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RpoS (sigma-S) general stress sigma factor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RpoS sigma factor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+RpoS sigma factor (sigma-S)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+S-layer (glyco)protein subunits	1			NO_CANDIDATE							no automated candidate; needs manual curation
+S-layer proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0045232	S-layer organization			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+SOR sulfur oxygenase reductase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SafA	1			CANDIDATE_InterPro	IPR014248	UniProtKB:O32062	UBERON:0001363	great saphenous vein	IPR014248		family-level candidate; verify it is not a subunit/domain
+SapB / chaplins / rodlins	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Scy	1	UniProtKB:A0A191V3Q4	unreviewed	CANDIDATE_InterPro	IPR004235		GO:0099050	vesicle scission	IPR004235		family-level candidate; verify it is not a subunit/domain
+Shine-Dalgarno / AUG ribosome binding site	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SigB (sigma factor B)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SoeABC sulfite dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Sox multienzyme system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+SpmX	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Spo0A phosphorelay	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Spo0E-family phosphatases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SpoIID	1			CANDIDATE_InterPro	IPR013486				IPR013486		family-level candidate; verify it is not a subunit/domain
+SpoIIIE	1			CANDIDATE_InterPro	IPR050206	UniProtKB:Q9RNV1			IPR050206		family-level candidate; verify it is not a subunit/domain
+SpoIIM	1	UniProtKB:A5N7K0	unreviewed	CANDIDATE_InterPro	IPR002798				IPR002798		family-level candidate; verify it is not a subunit/domain
+SpoIIP	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SpoIVA	1			CANDIDATE_InterPro	IPR046840	UniProtKB:Q81SW4			IPR046840		family-level candidate; verify it is not a subunit/domain
+SpoVID	1	UniProtKB:A0A0B5ANC0	unreviewed	CANDIDATE_InterPro	IPR048862	UniProtKB:P37963			IPR048862		family-level candidate; verify it is not a subunit/domain
+SpoVM	1	UniProtKB:A0A2K8N6W1	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+StpABCD complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+SusC-like TonB-dependent transporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+T3SS effector proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+TeaABC TRAP transporter	1			NO_CANDIDATE							no automated candidate; needs manual curation
+TetH tetrathionate hydrolase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Tol-Pal system	1			CLASS_NODE_DO_NOT_GROUND		UniProtKB:P0A855			IPR014161		functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+TonB-dependent transporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Trk/Ktr potassium influx systems	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+TrkH potassium uptake system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+TsdA thiosulfate dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+VadR sRNA	1			NO_CANDIDATE							no automated candidate; needs manual curation
+VxrAB two-component system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+WspR diguanylate cyclase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Wza outer-membrane export protein	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Wzx flippase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+Wzy polymerase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+YbaS glutaminase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ZntA P-type ATPase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ZntR MerR-family regulator	1			NO_CANDIDATE							no automated candidate; needs manual curation
+[FeFe] hydrogenase	1			CANDIDATE_InterPro	IPR027631	UniProtKB:Q9X0Z6			IPR027631		family-level candidate; verify it is not a subunit/domain
+[FeFe]-hydrogenase	1			CANDIDATE_InterPro	IPR023860	UniProtKB:Q9X0Z6			IPR023860		family-level candidate; verify it is not a subunit/domain
+absence of spo0A gene	1			NO_CANDIDATE							no automated candidate; needs manual curation
+acetyl-CoA synthase (ACS)	1			REVIEW_GO_SUSPECT	GO:0043884		GO:0043884	CO-methylating acetyl-CoA synthase activity			top-hit failed the exactness check — likely wrong
+acetyl-CoA/propionyl-CoA carboxylase	1	UniProtKB:A0A650CEQ7	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+acidic halophilic proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+acyl-lipid desaturase (Des)	1			REVIEW_GO_SUSPECT	GO:0102865		GO:0102865	delta6-acyl-lipid desaturase activity			top-hit failed the exactness check — likely wrong
+adhesins	1			REVIEW_GO_SUSPECT	GO:0071980		GO:0071980	cell surface adhesin-mediated gliding motility			top-hit failed the exactness check — likely wrong
+aerobic metabolism genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0019410	aerobic respiration, using carbon monoxide as electron donor			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+alcohol dehydrogenase	1			CANDIDATE_InterPro	IPR001670	UniProtKB:P39849	GO:0004022	alcohol dehydrogenase (NAD+) activity	IPR001670		family-level candidate; verify it is not a subunit/domain
+alpha-glucosidase / glucoamylase	1			REVIEW_GO_SUSPECT	GO:0004339		GO:0004339	glucan 1,4-alpha-glucosidase activity			top-hit failed the exactness check — likely wrong
+amylases / starch-active glycoside hydrolases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+anaerobic metabolism genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0018886	anaerobic carbon tetrachloride metabolic process			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+antifreeze / ice-binding proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+antifreeze and ice-binding proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+antioxidant enzymes (Sod/Cat/peroxidases)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+apoplastic effectors	1			NO_CANDIDATE							no automated candidate; needs manual curation
+archaeal molecular chaperonins	1			NO_CANDIDATE							no automated candidate; needs manual curation
+archaeal proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:1990490	archaeal proton-transporting A-type ATPase complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+archaellum	1			CANDIDATE_InterPro	IPR040929	UniProtKB:Q4J9J9	GO:0097589	archaeal-type flagellum	IPR040929		family-level candidate; verify it is not a subunit/domain
+ars operon	1			REVIEW_GO_SUSPECT	GO:0010239		GO:0010239	chloroplast mRNA processing			top-hit failed the exactness check — likely wrong
+ars operon (ArsB pump)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ars promoter	1			REVIEW_GO_SUSPECT	GO:0070888		GO:0070888	E-box binding			top-hit failed the exactness check — likely wrong
+bacterial glycan-binding proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+bactofilin cytoskeleton	1			NO_CANDIDATE							no automated candidate; needs manual curation
+bactofilin-M23 peptidase module	1			NO_CANDIDATE							no automated candidate; needs manual curation
+betA/betB	1			REVIEW_GO_SUSPECT	GO:0008802		GO:0008802	betaine-aldehyde dehydrogenase (NAD+) activity			top-hit failed the exactness check — likely wrong
+beta-barrel outer membrane proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:7770063	beta barrel protein insertion into mitochondrial outer membrane			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+beta-carotene hydroxylase (CrtZ)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+branched respiratory chain terminal oxidases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+c-type cytochrome	1			CANDIDATE_InterPro	IPR011885	UniProtKB:O33731	GO:1904960	positive regulation of cytochrome-c oxidase activity	IPR011885		family-level candidate; verify it is not a subunit/domain
+carbohydrate acquisition gene abundance	1			NO_CANDIDATE							no automated candidate; needs manual curation
+carbohydrate-active enzymes (CAZymes)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+carbon monoxide dehydrogenase	1			CANDIDATE_InterPro	IPR010419	UniProtKB:O28429	GO:0043885	anaerobic carbon-monoxide dehydrogenase activity	IPR010419		family-level candidate; verify it is not a subunit/domain
+carbonic anhydrase and DIC transporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+carotenoid biosynthesis genes (crt locus)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+carotenoid ketolase (CrtW)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cation/proton antiporters	1			REVIEW_GO_SUSPECT	GO:0140968		GO:0140968	polyspecific organic cation:proton antiporter activity			top-hit failed the exactness check — likely wrong
+cbb operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cbb3-type terminal oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cell appendages and adhesins	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cell wall hydrolases (autolysins)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cell wall synthase	1			CANDIDATE_SwissProt	UniProtKB:A0A0H2ZMF9	UniProtKB:A0A0H2ZMF9	GO:0044567	primary cell wall cellulose synthase complex			reviewed entry; instance-level — pair with a taxon if used
+cellobiohydrolase / exoglucanase	1			REVIEW_GO_SUSPECT	GO:0016162		GO:0016162	cellulose 1,4-beta-cellobiosidase activity			top-hit failed the exactness check — likely wrong
+cellulase systems	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+cellulolytic / lignocellulose-catabolic genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+cellulolytic enzyme system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+chaperone proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0051087	protein-folding chaperone binding			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+chemoreceptor (MCP)	1			REVIEW_GO_SUSPECT	PR:000024025		PR:000024025	methyl-accepting chemotaxis protein IV			top-hit failed the exactness check — likely wrong
+chemotaxis and motility genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+chitinases	1			CANDIDATE_SwissProt	UniProtKB:P29115	UniProtKB:P29115	GO:0004568	chitinase activity			reviewed entry; instance-level — pair with a taxon if used
+citryl-CoA synthetase/lyase route	1			NO_CANDIDATE							no automated candidate; needs manual curation
+class A penicillin-binding proteins (aPBPs)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cnr (cnrCBAYXHT) determinant	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cognate DNA methyltransferase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cognate signal receptor	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cohesin domain	1			CANDIDATE_InterPro	IPR002102		GO:1990311	type-I cohesin domain binding	IPR002102		family-level candidate; verify it is not a subunit/domain
+cold shock proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+cold shock proteins / RNA chaperones	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cold-shock proteins (CspA-family)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+compartment-specific sigma factors	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+compatible-solute importer OpuA	1			NO_CANDIDATE							no automated candidate; needs manual curation
+compatible-solute transporters (Opu/ProU)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+compatible-solute uptake systems	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+complement-regulator-binding surface proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0002430	complement receptor mediated signaling pathway			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+conductive pili and c-type cytochromes	1			NO_CANDIDATE							no automated candidate; needs manual curation
+coo operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+copper efflux systems (cue/cus/pco/cop)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+corrinoid iron-sulfur protein (CoFeSP)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cox operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+crRNA	1			CANDIDATE_InterPro	IPR010155	UniProtKB:Q746C2	GO:0099048	CRISPR-cas system	IPR010155		family-level candidate; verify it is not a subunit/domain
+crRNA-Cas effector complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+crtE/crtB/crtI/crtY gene set	1			NO_CANDIDATE							no automated candidate; needs manual curation
+crtI-crtB operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+crtOPQMN operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+crvA mRNA	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cytochrome bc1 and NADH dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cytochrome bc1 complex	1			CANDIDATE_InterPro	IPR009152	UniProtKB:P9WP37	GO:0045275	respiratory chain complex III	IPR009152		family-level candidate; verify it is not a subunit/domain
+cytochrome bc1 complex (complex III)	1			REVIEW_GO_SUSPECT	GO:0045275		GO:0045275	respiratory chain complex III			top-hit failed the exactness check — likely wrong
+cytochrome bd oxidase	1	UniProtKB:Q6L5L4	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+cytochrome bd terminal oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cytochrome bd ubiquinol oxidase	1			CANDIDATE_SwissProt	UniProtKB:Q2YKD6	UniProtKB:Q2YKD6					reviewed entry; instance-level — pair with a taxon if used
+cytochrome bd-type terminal oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+cytochrome c	1			CANDIDATE_InterPro	IPR000298	UniProtKB:P24469	CHEBI:18070	cytochrome c	IPR000298		family-level candidate; verify it is not a subunit/domain
+cytochrome cbb3 oxidase	1			REVIEW_GO_SUSPECT	GO:1904960		GO:1904960	positive regulation of cytochrome-c oxidase activity			top-hit failed the exactness check — likely wrong
+cytochrome cd1 nitrite reductase NirS	1	UniProtKB:I0HLW6	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+cytoplasmic carbonic anhydrase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+czc/cnr cobalt efflux system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+denatured proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0030164	protein denaturation			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+denitrification reductases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+des (acyl-lipid desaturase)	1			REVIEW_GO_SUSPECT	GO:0102865		GO:0102865	delta6-acyl-lipid desaturase activity			top-hit failed the exactness check — likely wrong
+desiccation-related intrinsically disordered proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+divisome and PBPs	1			NO_CANDIDATE							no automated candidate; needs manual curation
+dockerin domain	1			CANDIDATE_InterPro	IPR002883		GO:1990308	type-I dockerin domain binding	IPR002883		family-level candidate; verify it is not a subunit/domain
+drug efflux pump	1			CANDIDATE_InterPro	IPR019702	UniProtKB:P9WJW9	GO:0042910	xenobiotic transmembrane transporter activity	IPR019702		family-level candidate; verify it is not a subunit/domain
+ectABC/ectBACD gene cluster	1			NO_CANDIDATE							no automated candidate; needs manual curation
+elongasome (PBP2b/RodA)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+encapsulated metabolic enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+endo-chitinase	1			REVIEW_GO_SUSPECT	GO:0008843		GO:0008843	endochitinase activity			top-hit failed the exactness check — likely wrong
+energy-transducing enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+exochitinase / chitobiosidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+extracellular exoenzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+family A cytochrome c oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ferredoxin	1			CANDIDATE_InterPro	IPR000813	UniProtKB:P00250	CHEBI:5017	ferredoxin	IPR000813		family-level candidate; verify it is not a subunit/domain
+ferredoxin/flavodoxin	1			CANDIDATE_InterPro	IPR050722	UniProtKB:P28901	GO:0008860	ferredoxin-NAD+ reductase activity	IPR050722		family-level candidate; verify it is not a subunit/domain
+ferredoxin:NAD+ oxidoreductase	1	UniProtKB:I3R731	unreviewed	REVIEW_GO_SUSPECT	GO:0004324		GO:0004324	ferredoxin-NADP+ reductase activity			top-hit failed the exactness check — likely wrong
+flagellar C-ring switch complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor			top-hit failed the exactness check — likely wrong
+flagellar basal body	1			CANDIDATE_InterPro	IPR001444	UniProtKB:P33977	GO:0009431	bacterial-type flagellum basal body, MS ring	IPR001444		family-level candidate; verify it is not a subunit/domain
+flagellar basal motor	1			REVIEW_GO_SUSPECT	GO:0009429		GO:0009429	bacterial-type flagellum basal body, proximal rod			top-hit failed the exactness check — likely wrong
+flagellar rotor	1			REVIEW_GO_SUSPECT	GO:0009433		GO:0009433	bacterial-type flagellum basal body, C ring			top-hit failed the exactness check — likely wrong
+flagellar stator complex	1			REVIEW_GO_SUSPECT	GO:0120100		GO:0120100	bacterial-type flagellum motor			top-hit failed the exactness check — likely wrong
+flagellar structural subunits	1			REVIEW_GO_SUSPECT	GO:0036156		GO:0036156	inner dynein arm			top-hit failed the exactness check — likely wrong
+flagellar type III secretion system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+flhDC flagellar master operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+flotillins	1			REVIEW_GO_SUSPECT	GO:0016600		GO:0016600	flotillin complex			top-hit failed the exactness check — likely wrong
+formaldehyde dehydrogenase (Fld/FDH)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+formate hydrogenlyase complex (FHL)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+formyl-THF synthetase (FTS/Fhs)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+formyl-THF synthetase (Fhs)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+gas vesicle gene cluster	1			NO_CANDIDATE							no automated candidate; needs manual curation
+gene product	1			CANDIDATE_InterPro	IPR009752	UniProtKB:Q9HVD1	GO:1903799	negative regulation of miRNA processing	IPR009752		family-level candidate; verify it is not a subunit/domain
+genes with marginal fitness benefit	1			NO_CANDIDATE							no automated candidate; needs manual curation
+glutamate decarboxylase system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+glutamate decarboxylase system (Gad)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+glycyl radical enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0043364	glycyl-radical enzyme activating activity			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+group II chaperonin (thermosome)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+heat shock genes	1			CLASS_NODE_DO_NOT_GROUND			GO:0035080	heat shock-mediated polytene chromosome puffing			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+heat-shock proteins / chaperones	1			REVIEW_GO_SUSPECT	GO:0101031		GO:0101031	protein folding chaperone complex			top-hit failed the exactness check — likely wrong
+heat-shock response genes (rpoH, rpoE, dnaK, groEL)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+heme-copper oxidase	1			CANDIDATE_InterPro	IPR033943	UniProtKB:Q9YDX4			IPR033943		family-level candidate; verify it is not a subunit/domain
+high-affinity solute-binding proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0033573	high-affinity iron permease complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+high-affinity terminal oxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+hmgA homogentisate 1,2-dioxygenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+hppD 4-hydroxyphenylpyruvate dioxygenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+human-adapted virulence factors	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+hydrogenase	1	UniProtKB:A0A059XQG3	unreviewed	CANDIDATE_InterPro	IPR000262	UniProtKB:P29166	GO:0008901	ferredoxin hydrogenase activity	IPR000262		family-level candidate; verify it is not a subunit/domain
+hydrogenase complex	1			CANDIDATE_InterPro	IPR006256		GO:0044569	[Ni-Fe] hydrogenase complex	IPR006256		family-level candidate; verify it is not a subunit/domain
+hydroxypyruvate reductase (HprA/HPR)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+hyperthermostable proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+integrase and excisionase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+integrase/recombinase/transposase mobility module	1			NO_CANDIDATE							no automated candidate; needs manual curation
+integron integrase (IntI)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+intracellular peptidases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+iron-sulfur cluster enzymes	1			CLASS_NODE_DO_NOT_GROUND			GO:0009375	ferredoxin hydrogenase complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+leghemoglobin	1			REVIEW_GO_SUSPECT	GO:0015043		GO:0015043	leghemoglobin reductase [NAD(P)H] activity			top-hit failed the exactness check — likely wrong
+lignin peroxidase	1			REVIEW_GO_SUSPECT	GO:0016690		GO:0016690	diarylpropane peroxidase activity			top-hit failed the exactness check — likely wrong
+lignin-oxidizing redox enzymes (LiP/MnP/VP/laccase/DyP)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+low-potential energy-metabolism enzymes (PFOR/PFL)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+luciferase	1			CANDIDATE_InterPro	IPR002103	UniProtKB:P0ADV5	GO:0047077	Photinus-luciferin 4-monooxygenase (ATP-hydrolyzing) activity	IPR002103		family-level candidate; verify it is not a subunit/domain
+lycopene cyclases	1			REVIEW_GO_SUSPECT	GO:0045435		GO:0045435	lycopene epsilon cyclase activity			top-hit failed the exactness check — likely wrong
+lytic polysaccharide monooxygenase (LPMO; AA10)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+malonyl-CoA reductase	1	UniProtKB:Q6QQP7	unreviewed	CANDIDATE_SwissProt	UniProtKB:A4YEN2	UniProtKB:A4YEN2					reviewed entry; instance-level — pair with a taxon if used
+mamAB operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mcrABG gene cluster	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mechanosensitive channels	1			REVIEW_GO_SUSPECT	GO:0043854		GO:0043854	cyclic nucleotide-gated mechanosensitive monoatomic ion channel activity			top-hit failed the exactness check — likely wrong
+mechanosensitive channels (Msc)	1			REVIEW_GO_SUSPECT	GO:0043854		GO:0043854	cyclic nucleotide-gated mechanosensitive monoatomic ion channel activity			top-hit failed the exactness check — likely wrong
+mechanosensitive channels (MscL/MscS)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mechanosensitive channels MscL/MscS	1			NO_CANDIDATE							no automated candidate; needs manual curation
+membrane energy-conservation module (Rnf/Ech)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+membrane transporters	1			REVIEW_GO_SUSPECT	GO:1902312		GO:1902312	negative regulation of copper ion transmembrane transport			top-hit failed the exactness check — likely wrong
+membrane-bound (de)hydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mer operon (MerA reductase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mesophile enzyme repertoire	1			NO_CANDIDATE							no automated candidate; needs manual curation
+metal efflux pump	1			NO_CANDIDATE							no automated candidate; needs manual curation
+metallothionein / thiol-rich metal-binding proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+metazoan-adapted virulence factors	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+methyl-accepting chemotaxis protein (MCP)	1			MANUAL_REVIEW			GO:0008983	protein-glutamate O-methyltransferase activity	IPR004089		excluded by curator override
+methyltransferase	1	UniProtKB:A0A0C5IX96	unreviewed	CANDIDATE_InterPro	IPR000176	UniProtKB:O93658	GO:0003838	sterol 24-C-methyltransferase activity	IPR000176		family-level candidate; verify it is not a subunit/domain
+microbial rhodopsin	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mmoXYZ genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+molecular chaperone network	1			NO_CANDIDATE							no automated candidate; needs manual curation
+molecular chaperones (DnaK/GroEL/GroES/Clp/TF)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+molybdenum hydroxylase	1			CANDIDATE_InterPro	IPR017695				IPR017695		family-level candidate; verify it is not a subunit/domain
+monovalent cation/proton antiporters	1			NO_CANDIDATE							no automated candidate; needs manual curation
+motility and signal-transduction genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+mrpA-G operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+mtlD mannitol-1-phosphate dehydrogenase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+nitric oxide reductase Nor	1			REVIEW_GO_SUSPECT	GO:0016966		GO:0016966	nitric oxide reductase activity			top-hit failed the exactness check — likely wrong
+nitrite oxidoreductase (NXR)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+nitrous oxide reductase NosZ	1	UniProtKB:Q30PN7	unreviewed	NO_CANDIDATE							no automated candidate; needs manual curation
+nrf operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+nucleoid-associated proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0036386	bacterial nucleoid DNA packaging			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+nuo NADH dehydrogenase I complex	1			NO_CANDIDATE							no automated candidate; needs manual curation
+organic carbon import system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+osmolyte transport and synthesis genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+outer membrane and secreted proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0030256	type I protein secretion system complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+outer membrane porin	1			CANDIDATE_InterPro	IPR005318	UniProtKB:P22263	GO:0015288	porin activity	IPR005318		family-level candidate; verify it is not a subunit/domain
+oxidative stress defense enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+oxygen-sensing regulation	1			REVIEW_GO_SUSPECT	CL:1000223		CL:1000223	pulmonary neuroendocrine cell			top-hit failed the exactness check — likely wrong
+oxygen-sensitive enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+particulate methane monooxygenase (pMMO)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+peptide transport systems (Opp/DtpT/Dpp)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+peptidoglycan synthetases and hydrolases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+periplasmic GH3 hydrolase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+periplasmic Sox system	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+periplasmic multicopper oxidase (CueO-type)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+peroxidases and laccases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+pfa operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+phaP gene	1			REVIEW_GO_SUSPECT	PR:000014717		PR:000014717	protein SET			top-hit failed the exactness check — likely wrong
+phage-encoded DNA methyltransferase	1			REVIEW_GO_SUSPECT	GO:0099018		GO:0099018	symbiont-mediated evasion of host restriction-modification system			top-hit failed the exactness check — likely wrong
+phage-plasmid	1			NO_CANDIDATE							no automated candidate; needs manual curation
+phasin (PhaP)	1			CANDIDATE_SwissProt	UniProtKB:P73545	UniProtKB:P73545	GO:0070088	polyhydroxyalkanoate granule			reviewed entry; instance-level — pair with a taxon if used
+phosphorylated Spo0A (Spo0A~P)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+phosphotransacetylase / acetate kinase (Pta/AckA)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+photosynthesis gene cluster	1			NO_CANDIDATE							no automated candidate; needs manual curation
+photosynthesis gene cluster (PGC)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+phytoene synthase	1			CANDIDATE_InterPro	IPR002060	UniProtKB:D5KXJ0	GO:0140630	all-trans-phytoene synthase activity	IPR002060		family-level candidate; verify it is not a subunit/domain
+phz operons	1			NO_CANDIDATE							no automated candidate; needs manual curation
+plant-cell-wall-degrading enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+plasmid	1			CANDIDATE_InterPro	IPR001668	UniProtKB:P08715	GO:0042150	plasmid recombination	IPR001668		family-level candidate; verify it is not a subunit/domain
+plasmid-encoded anti-restriction genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+plasmid-encoded methylase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+pmoCAB operon	1			NO_CANDIDATE							no automated candidate; needs manual curation
+potassium uptake system	1			CLASS_NODE_DO_NOT_GROUND			GO:0031004	potassium ion-transporting ATPase complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+potassium uptake systems	1			CLASS_NODE_DO_NOT_GROUND			GO:0031004	potassium ion-transporting ATPase complex			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+primary proton pumps	1			NO_CANDIDATE							no automated candidate; needs manual curation
+prodiginine biosynthetic gene cluster (Pig/Red)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+prophage	1			CANDIDATE_InterPro	IPR009634	UniProtKB:P24218	GO:0008979	prophage integrase activity	IPR009634		family-level candidate; verify it is not a subunit/domain
+propionyl-CoA synthase	1			REVIEW_GO_SUSPECT	GO:0018491		GO:0018491	2-oxobutyrate synthase activity			top-hit failed the exactness check — likely wrong
+protein secretion systems	1			CLASS_NODE_DO_NOT_GROUND			GO:0046819	protein secretion by the type V secretion system			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+proton-consuming reaction genes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+proton-coupled ATP synthase	1			REVIEW_GO_SUSPECT	GO:0016469		GO:0016469	proton-transporting two-sector ATPase complex			top-hit failed the exactness check — likely wrong
+proton-coupled ATPases	1			REVIEW_GO_SUSPECT	GO:0016469		GO:0016469	proton-transporting two-sector ATPase complex			top-hit failed the exactness check — likely wrong
+proton-translocating F1F0-ATPase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+proton:ion antiporters	1			REVIEW_GO_SUSPECT	GO:0051139		GO:0051139	metal cation:proton antiporter activity			top-hit failed the exactness check — likely wrong
+pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+pyruvate formate lyase (PflB)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+pyruvate formate-lyase (PFL)	1			REVIEW_GO_SUSPECT	GO:0043365		GO:0043365	[formate-C-acetyltransferase]-activating enzyme activity			top-hit failed the exactness check — likely wrong
+pyruvate:ferredoxin oxidoreductase	1			CANDIDATE_InterPro	IPR033412	UniProtKB:Q2RMD6	GO:0019164	pyruvate synthase activity	IPR033412		family-level candidate; verify it is not a subunit/domain
+quorum-quenching enzyme	1	UniProtKB:G2JHL6	reviewed	CANDIDATE_SwissProt	UniProtKB:G2JHL6	UniProtKB:G2JHL6					reviewed entry; instance-level — pair with a taxon if used
+rRNA operons	1			NO_CANDIDATE							no automated candidate; needs manual curation
+redox protein	1			CANDIDATE_InterPro	IPR012882		GO:1990204	oxidoreductase complex	IPR012882		family-level candidate; verify it is not a subunit/domain
+relaxase	1			CANDIDATE_InterPro	IPR011119	UniProtKB:P96635			IPR011119		family-level candidate; verify it is not a subunit/domain
+respiratory Complex I (NADH:quinone oxidoreductase)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+respiratory nitrate reductase (NarGHI)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+respiratory nitrate reductase NarGHI	1			NO_CANDIDATE							no automated candidate; needs manual curation
+respiratory proton-pumping complexes	1			NO_CANDIDATE							no automated candidate; needs manual curation
+respiratory proton-pumping enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+respiratory reductases	1			REVIEW_GO_SUSPECT	GO:0009389		GO:0009389	dimethyl sulfoxide reductase activity			top-hit failed the exactness check — likely wrong
+restriction endonuclease	1			CANDIDATE_InterPro	IPR004194		GO:0015666	restriction endodeoxyribonuclease activity	IPR004194		family-level candidate; verify it is not a subunit/domain
+resuscitation-promoting factors (Rpf)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ribosome hibernation factors (RMF/HPF/RaiA)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+rubrerythrin/peroxidase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+scaffoldin	1			CANDIDATE_InterPro	IPR008768		GO:0043263	cellulosome	IPR008768		family-level candidate; verify it is not a subunit/domain
+secreted depolymerizing enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+secreted proteases	1			REVIEW_GO_SUSPECT	GO:0033375		GO:0033375	protease localization to T cell secretory granule			top-hit failed the exactness check — likely wrong
+secretory IgA	1			REVIEW_GO_SUSPECT	GO:0071751		GO:0071751	secretory IgA immunoglobulin complex			top-hit failed the exactness check — likely wrong
+septal peptidoglycan hydrolase	1			NO_CANDIDATE							no automated candidate; needs manual curation
+septal peptidoglycan hydrolases (RipA/RpfB)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+serine-glyoxylate aminotransferase (SgaA/SGT)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+sigma E	1	UniProtKB:A0A0C7NZS0	unreviewed	CANDIDATE_InterPro	IPR048186	UniProtKB:D0ZSY9	GO:0034245	mitochondrial DNA-directed RNA polymerase complex	IPR048186		family-level candidate; verify it is not a subunit/domain
+sigma F	1			CANDIDATE_InterPro	IPR000394	UniProtKB:P9WGX7	GO:0016987	sigma factor activity	IPR000394		family-level candidate; verify it is not a subunit/domain
+sigma G	1			CANDIDATE_SwissProt	UniProtKB:P33658	UniProtKB:P33658	GO:0016989	sigma factor antagonist activity			reviewed entry; instance-level — pair with a taxon if used
+sigma K	1			CANDIDATE_InterPro	IPR018764	UniProtKB:H8EVS9	GO:0030119	AP-type membrane coat adaptor complex	IPR018764		family-level candidate; verify it is not a subunit/domain
+sigma-32 (RpoH)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+small heat shock proteins	1			CLASS_NODE_DO_NOT_GROUND			GO:0097707	ferroptosis			functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+soluble methane monooxygenase (sMMO)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+specific virulence traits	1			NO_CANDIDATE							no automated candidate; needs manual curation
+stator complex	1			REVIEW_GO_SUSPECT	GO:0120101		GO:0120101	bacterial-type flagellum stator complex			top-hit failed the exactness check — likely wrong
+substrate dehydrogenases	1			REVIEW_GO_SUSPECT	GO:0004471		GO:0004471	malate dehydrogenase (decarboxylating) (NAD+) activity			top-hit failed the exactness check — likely wrong
+succinate dehydrogenase / Complex II	1			REVIEW_GO_SUSPECT	GO:0045273		GO:0045273	respiratory chain complex II (succinate dehydrogenase)			top-hit failed the exactness check — likely wrong
+surface adhesins	1			REVIEW_GO_SUSPECT	GO:0071980		GO:0071980	cell surface adhesin-mediated gliding motility			top-hit failed the exactness check — likely wrong
+terminal oxidases	1			REVIEW_GO_SUSPECT	GO:0140647		GO:0140647	P450-containing electron transport chain			top-hit failed the exactness check — likely wrong
+terminal respiratory oxidases	1			REVIEW_GO_SUSPECT	GO:0008535		GO:0008535	respiratory chain complex IV assembly			top-hit failed the exactness check — likely wrong
+tetrathionate hydrolase (TetH)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+thermosome (group II chaperonin)	1			NO_CANDIDATE							no automated candidate; needs manual curation
+thermostable enzymes	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+thermostable proteins	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+toxin-antitoxin modules	1			NO_CANDIDATE							no automated candidate; needs manual curation
+toxin-antitoxin system	1			CLASS_NODE_DO_NOT_GROUND			GO:0044696	killing by virus of host cell by post-segregational killing	IPR004386		functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+type IV competence pilus	1			NO_CANDIDATE							no automated candidate; needs manual curation
+type IV coupling protein	1			CANDIDATE_SwissProt	UniProtKB:P13464	UniProtKB:P13464	GO:0008564	protein-exporting ATPase activity			reviewed entry; instance-level — pair with a taxon if used
+type IV restriction enzyme	1			CANDIDATE_InterPro	IPR062342		GO:0032067	type IV site-specific deoxyribonuclease activity	IPR062342		family-level candidate; verify it is not a subunit/domain
+type IX secretion system	1			CLASS_NODE_DO_NOT_GROUND			GO:0160303	protein secretion by the type IX secretion system	IPR019847		functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+tyrosinase/laccase oxidases	1			NO_CANDIDATE							no automated candidate; needs manual curation
+virulence factors	1			CLASS_NODE_DO_NOT_GROUND		UniProtKB:P0A4H2	GO:0097720	calcineurin-mediated signaling	IPR050909		functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession
+weak/absent shape-determining cytoskeleton	1			NO_CANDIDATE							no automated candidate; needs manual curation
+xylanase systems	1			CLASS_NODE_DO_NOT_GROUND							functional class, not a protein — GO BP/MF or split into concrete nodes; never a single accession

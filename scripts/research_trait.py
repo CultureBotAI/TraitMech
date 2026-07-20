@@ -119,8 +119,16 @@ PROVIDER_ALIASES = {"edison": "falcon"}
 
 
 def resolve_provider(provider: str) -> str:
-    """Map a user-facing provider name to a deep-research-client provider."""
-    return PROVIDER_ALIASES.get(provider.lower(), provider)
+    """Map a user-facing provider name to a deep-research-client provider.
+
+    Canonicalises to lower case on both hit and miss. Returning the caller's
+    original casing on a miss would send `Falcon` to a client that only accepts
+    `falcon`, and — because run_trait_graph_audit builds output filenames from
+    this result — would look for `-deep-research-Falcon.md`, re-queueing (and
+    re-paying for) every trait on a case-sensitive filesystem.
+    """
+    key = provider.lower()
+    return PROVIDER_ALIASES.get(key, key)
 
 
 def provider_args(provider: str) -> list[str]:

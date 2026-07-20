@@ -48,6 +48,12 @@ MANIFEST = REPO_ROOT / "reports" / "trait_graph_audit_manifest.tsv"
 # resume detection) in the established `-deep-research-falcon.md` namespace.
 DEFAULT_PROVIDER = "edison"
 
+# `--extra dev` is REQUIRED: deep-research-client lives in the dev optional-
+# dependency group, and a plain `uv run` re-syncs the venv without it, deleting
+# the binary the child needs. Omitting it makes every call in the sweep fail
+# with a bare exit 1. Mirrors the justfile's `research-trait` recipe.
+SPAWN = ["uv", "run", "--extra", "dev", "python", "scripts/research_trait.py"]
+
 
 def target_traits() -> list[tuple[str, str, str]]:
     """Return (category, slug, label) for REVIEWED CLASS traits with a graph."""
@@ -116,8 +122,7 @@ def main() -> int:
 
     if args.dry_run:
         for i, (cat, slug, label) in enumerate(pending, 1):
-            cmd = ["uv", "run", "python", "scripts/research_trait.py",
-                   "--provider", provider, "--category", cat, "--slug", slug]
+            cmd = SPAWN + ["--provider", provider, "--category", cat, "--slug", slug]
             print(f"[{i}/{len(pending)}] {cat}/{slug}  ({label})")
             print("   " + " ".join(cmd))
         mf.close()
@@ -135,15 +140,19 @@ def main() -> int:
             idx = counts["started"]
         if args.sleep:
             time.sleep(args.sleep * ((idx - 1) % max(args.workers, 1)))
-        cmd = ["uv", "run", "python", "scripts/research_trait.py",
-               "--provider", provider, "--category", cat, "--slug", slug]
+        cmd = SPAWN + ["--provider", provider, "--category", cat, "--slug", slug]
         print(f"[start {idx}/{total}] {cat}/{slug}  ({label})", file=sys.stderr)
         try:
+            # Capture rather than discard: a swallowed stderr turns every
+            # failure into an undiagnosable `fail:1` in the manifest.
             subprocess.run(cmd, check=True, cwd=REPO_ROOT,
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                           stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
             status, ok = "ok", True
         except subprocess.CalledProcessError as e:
+            tail = (e.stderr or "").strip().splitlines()
             status, ok = f"fail:{e.returncode}", False
+            if tail:
+                print(f"       {cat}/{slug}: {tail[-1][:200]}", file=sys.stderr)
         with lock:
             counts["ok" if ok else "fail"] += 1
             w.writerow([cat, slug, status,

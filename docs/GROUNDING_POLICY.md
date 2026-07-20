@@ -12,7 +12,7 @@ review of how comparable resources ground protein entities.
 
 ## 1. What the audit found
 
-817 `GENE_OR_PROTEIN` nodes across 353 causal graphs, 663 distinct labels.
+817 `GENE_OR_PROTEIN` nodes across 353 causal graphs, 666 distinct labels.
 
 | | count | share |
 |---|---:|---:|
@@ -48,7 +48,7 @@ heuristic — it is grounding a *family/function* node to a *protein instance*
 identifier, then picking that instance from the unreviewed pool.
 
 A re-run of the same idea against current APIs reproduces the failure. Over
-all 663 labels, the GO top-hit does not even contain the node label as a
+all 666 labels, the GO top-hit does not even contain the node label as a
 substring in **72%** of cases:
 
 | label | GO top-hit | |
@@ -182,21 +182,19 @@ None of these are applied yet.
 1. **Retract the 162 dead groundings** — demote to label-only rather than
    leaving CURIEs that resolve to nothing. Affects 101 files. *Needs
    approval: it edits curated records.*
-2. **Re-ground from `mappings/uniprot_regrounding_candidates.tsv`**, which
-   has one row per distinct label with a proposed route and a blank
-   `curator_decision` column. Current distribution:
+2. **Re-ground from `mappings/uniprot_regrounding_candidates.tsv`**, one row
+   per distinct label (all 666) with a route and a blank `curator_decision`
+   column. `APPLIED_*` rows are already in the corpus; the rest are backlog:
 
-   | proposed route | labels |
+   | route | labels |
    |---|---:|
-   | `NO_CANDIDATE` — manual curation needed | 342 |
-   | `CLASS_NODE_DO_NOT_GROUND` | 95 |
-   | `InterPro_family` | 92 |
-   | `REVIEW_GO_SUSPECT` — top-hit failed the substring check | 77 |
-   | `SwissProt_exemplar` | 45 |
-   | `GO_term` | 12 |
-
-   121 of the 138 currently-grounded labels have a candidate replacement;
-   the rest need manual work.
+   | `NO_CANDIDATE` — manual curation needed | 321 |
+   | `CLASS_NODE_DO_NOT_GROUND` | 94 |
+   | `CANDIDATE_InterPro` | 89 |
+   | `REVIEW_GO_SUSPECT` — top-hit failed the exactness check | 72 |
+   | `APPLIED_GO_MF` / `APPLIED_GO_CC` / `APPLIED_IPR` / `APPLIED_OVERRIDE` | 42 / 17 / 11 / 1 |
+   | `CANDIDATE_SwissProt` | 16 |
+   | `MANUAL_REVIEW` — ambiguous, curator override | 3 |
 3. **Add genome accessions** to the 312 existing `canonical_examples`
    entries, via the UniProt → NCBI chain in §3.
 
@@ -221,7 +219,7 @@ All verified working during the audit:
 - **GTDB** (`gtdb-api.ecogenomic.org`) — `/genome/{acc}/taxon-history` gives
   the per-release lineage used in §3.
 
-Serial querying of three APIs across 663 labels takes ~4 hours; at 8-way
+Serial querying of three APIs across 666 labels takes ~4 hours; at 8-way
 concurrency it is ~4 minutes, with no rate-limiting observed. Pin the UniProt
 release in any re-grounding run and re-check resolvability afterwards, since
 the TrEMBL reduction is executing now.

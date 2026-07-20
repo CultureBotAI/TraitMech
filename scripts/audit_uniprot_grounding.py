@@ -143,10 +143,19 @@ def main() -> int:
                 }
             )
 
-    ungrounded = len(nodes) - len(grounded)
+    # "Ungrounded" means no `grounding` at all. Deriving it as
+    # len(nodes) - len(grounded) would count every GO/InterPro-grounded node as
+    # ungrounded, and the error grows with each re-grounding pass.
+    by_prefix: dict[str, int] = defaultdict(int)
+    for _, _, node in nodes:
+        grounding = node.get("grounding") or ""
+        by_prefix[grounding.split(":", 1)[0] if grounding else "(ungrounded)"] += 1
+
     print(f"GENE_OR_PROTEIN nodes: {len(nodes)}")
-    print(f"  ungrounded (label only): {ungrounded}")
-    print(f"  UniProtKB-grounded:      {len(grounded)}  ({len(files_per_accession)} unique accessions)")
+    print(f"  ungrounded (label only): {by_prefix['(ungrounded)']}")
+    for prefix in sorted(p for p in by_prefix if p != "(ungrounded)"):
+        print(f"  {prefix + '-grounded:':24s} {by_prefix[prefix]}")
+    print(f"  UniProtKB unique accessions: {len(files_per_accession)}")
     for status in sorted(tally):
         print(f"    {status:12s} {tally[status]}")
     reused = sum(1 for files in files_per_accession.values() if len(files) > 1)

@@ -103,9 +103,14 @@ def test_provider_defaults_to_edison():
     assert args.provider == DEFAULT_PROVIDER == "edison"
 
 
-def test_edison_output_filename_stays_in_falcon_namespace(tmp_path):
+def test_edison_output_filename_stays_in_falcon_namespace(tmp_path, capsys):
     """Resolving the alias late would strand results in a new filename namespace
-    and make the 10 already-researched traits look pending again."""
+    and make the 10 already-researched traits look pending again.
+
+    Asserts on the emitted path, not the return code: --dry-run returns 0 no
+    matter which filename was built, so a return-code check cannot detect the
+    regression this test exists to catch.
+    """
     from research_trait import main as research_main
 
     rc = research_main([
@@ -113,3 +118,6 @@ def test_edison_output_filename_stays_in_falcon_namespace(tmp_path):
         "--research-dir", str(tmp_path), "--dry-run",
     ])
     assert rc == 0
+    out = capsys.readouterr().out
+    assert "autotrophic-deep-research-falcon.md" in out
+    assert "-deep-research-edison.md" not in out

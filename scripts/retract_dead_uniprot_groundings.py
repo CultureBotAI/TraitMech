@@ -51,15 +51,29 @@ CURATION_ACTION = "RETRACT_DEAD_UNIPROT_GROUNDINGS"
 PREFIX = "UniProtKB:"
 
 
-def is_deleted(accession: str, delay: float) -> bool | None:
-    """True if UniProt reports the accession as Inactive. None on lookup failure."""
+def classify(accession: str, delay: float) -> tuple[str, str]:
+    """Return (status, replacement) for one accession.
+
+    UniProt marks BOTH deleted and merged accessions `Inactive`, so entryType
+    alone is not enough: a merged entry carries `mergeDemergeTo`, the live
+    replacement. Retracting those would throw away information UniProt hands us
+    directly, so only DELETED is retractable here.
+
+    status is one of: live, deleted, merged, error.
+    """
     time.sleep(delay)
     try:
         with urllib.request.urlopen(API.format(acc=accession), timeout=30) as resp:
-            return json.load(resp).get("entryType") == "Inactive"
+            data = json.load(resp)
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
         print(f"  WARN: could not resolve {accession}: {exc}", file=sys.stderr)
-        return None
+        return "error", ""
+    if data.get("entryType") != "Inactive":
+        return "live", ""
+    reason = data.get("inactiveReason", {}) or {}
+    replacement = ",".join(reason.get("mergeDemergeTo", []) or [])
+    kind = (reason.get("inactiveReasonType") or "").upper()
+    return ("merged", replacement) if kind == "MERGED" else ("deleted", replacement)
 
 
 def gene_nodes(doc: dict):
@@ -91,8 +105,17 @@ def main() -> int:
                 accessions.add(grounding[len(PREFIX):])
 
     print(f"resolving {len(accessions)} distinct accessions against UniProt ...")
-    dead = {acc for acc in sorted(accessions) if is_deleted(acc, args.delay)}
-    print(f"  {len(dead)} deleted, {len(accessions) - len(dead)} still live\n")
+    status = {acc: classify(acc, args.delay) for acc in sorted(accessions)}
+    dead = {acc for acc, (kind, _) in status.items() if kind == "deleted"}
+    merged = {acc: repl for acc, (kind, repl) in status.items() if kind == "merged"}
+    errors = sorted(acc for acc, (kind, _) in status.items() if kind == "error")
+    live = len(accessions) - len(dead) - len(merged) - len(errors)
+    print(f"  {len(dead)} deleted, {len(merged)} merged, {live} live, "
+          f"{len(errors)} unresolved\n")
+    for acc, repl in sorted(merged.items()):
+        print(f"  MERGED (left in place, needs curator): {acc} -> {repl or '?'}")
+    if merged:
+        print()
 
     tally = Counter()
     changed_files = 0
@@ -134,6 +157,13 @@ def main() -> int:
     print(f"\n{verb} {tally['nodes']} grounding(s) across {changed_files} file(s)")
     if not args.apply:
         print("dry-run — pass --apply to write")
+    if errors:
+        # Exiting 0 here would make a UniProt outage look identical to a clean
+        # pass: "0 deleted", nothing retracted, success.
+        print(f"\nERROR: {len(errors)} accession(s) could not be resolved "
+              f"({', '.join(errors[:5])}{'...' if len(errors) > 5 else ''}); "
+              "results are incomplete.", file=sys.stderr)
+        return 1
     return 0
 
 
