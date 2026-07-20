@@ -24,7 +24,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:32046
   taxon_label: Synechococcus elongatus
-  note: "Model for beta-carboxysomes (cyanobacterial CO2-fixing microcompartments; strain PCC 7942). Halothiobacillus neapolitanus is the alpha-carboxysome model."
+  note: Model for beta-carboxysomes (cyanobacterial CO2-fixing microcompartments;
+    strain PCC 7942). Halothiobacillus neapolitanus is the alpha-carboxysome model.
   reference: DOI:10.1128/mmbr.00061-12
 causal_graphs:
 - graph_id: carboxysome_co2_concentrating
@@ -60,7 +61,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Carboxysomal enzyme dehydrating bicarbonate to CO2 near RuBisCO.
-    grounding: UniProtKB:A0A009PMS8
+    grounding: InterPro:IPR001765
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -196,4 +197,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PMS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR001765×1).
   llm_assisted: true

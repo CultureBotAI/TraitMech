@@ -29,11 +29,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:915
   taxon_label: Nitrosomonas europaea
-  note: "ammonia-oxidising chemolithotroph"
+  note: ammonia-oxidising chemolithotroph
   reference: PMID:12700255
 - taxon_id: NCBITaxon:36861
   taxon_label: Thiobacillus denitrificans
-  note: "sulfur-oxidising chemolithotroph"
+  note: sulfur-oxidising chemolithotroph
   reference: PMID:16452431
 causal_graphs:
 - graph_id: chemolithotrophic_inorganic_oxidation
@@ -59,7 +59,7 @@ causal_graphs:
     label: ammonia monooxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme initiating aerobic ammonia oxidation.
-    grounding: UniProtKB:A0A059V4Z9
+    grounding: GO:0018597
   - node_id: hydroxylamine
     label: hydroxylamine
     node_type: CHEMICAL
@@ -276,4 +276,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:17045×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0018597×1).
   llm_assisted: true

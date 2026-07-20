@@ -20,11 +20,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
-  note: "orange carotenoid colonies"
+  note: orange carotenoid colonies
   reference: PMID:39119139
 - taxon_id: NCBITaxon:1830
   taxon_label: Rhodococcus ruber
-  note: "orange-red carotenoid-pigmented actinobacterium"
+  note: orange-red carotenoid-pigmented actinobacterium
   reference: DOI:10.1016/j.cej.2025.160950
 causal_graphs:
 - graph_id: orange_pigmented_carotenoid_accumulation
@@ -64,6 +64,7 @@ causal_graphs:
     label: lycopene beta-cyclase (CrtY)
     node_type: GENE_OR_PROTEIN
     description: Lycopene cyclase converting lycopene toward beta-carotene in bacteria.
+    grounding: GO:0045436
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -268,4 +269,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15948×1, CHEBI:17579×1, CHEBI:27547×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0045436×1).
   llm_assisted: true

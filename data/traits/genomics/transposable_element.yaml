@@ -26,11 +26,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "insertion sequences and Tn transposons"
+  note: insertion sequences and Tn transposons
   reference: PMID:21224843
 - taxon_id: NCBITaxon:303
   taxon_label: Pseudomonas putida
-  note: "catabolic transposons"
+  note: catabolic transposons
   reference: PMID:16352819
 causal_graphs:
 - graph_id: te_transposition_rearrangement
@@ -56,7 +56,7 @@ causal_graphs:
     label: transposase
     node_type: GENE_OR_PROTEIN
     description: DDE-family enzyme encoded by the element that catalyzes its movement.
-    grounding: UniProtKB:A0A023WVD3
+    grounding: GO:0004803
   - node_id: te_insertion
     label: transposable element insertion
     node_type: BIOLOGICAL_PROCESS
@@ -165,4 +165,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A023WVD3×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004803×1).
   llm_assisted: true

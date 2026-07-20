@@ -15,11 +15,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:2242
   taxon_label: Halobacterium salinarum
-  note: "extreme halophile"
+  note: extreme halophile
   reference: PMID:31797576
 - taxon_id: NCBITaxon:2746
   taxon_label: Halomonas elongata
-  note: "moderate halophile"
+  note: moderate halophile
   reference: PMID:20849449
 causal_graphs:
 - graph_id: halophilic_osmoadaptation
@@ -62,7 +62,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane antiporter that exports sodium from the cytoplasm in exchange
       for protons.
-    grounding: UniProtKB:A0A068T423
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
@@ -293,4 +292,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:29101×1, CHEBI:29103×1, CHEBI:27592×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

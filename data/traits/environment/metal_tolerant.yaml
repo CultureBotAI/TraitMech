@@ -32,7 +32,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
-  note: "Paradigm heavy-metal-resistance bacterium (strain CH34; plasmid-borne metal-efflux determinants)."
+  note: Paradigm heavy-metal-resistance bacterium (strain CH34; plasmid-borne metal-efflux
+    determinants).
   reference: PMID:20463976
 causal_graphs:
 - graph_id: metal_tolerance_efflux_detoxification
@@ -54,7 +55,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators
       exporting metals.
-    grounding: UniProtKB:A0A067YD12
   - node_id: metal_ion_export
     label: metal ion transmembrane export
     node_type: BIOLOGICAL_PROCESS
@@ -187,4 +187,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1, rdfs:subClassOf×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

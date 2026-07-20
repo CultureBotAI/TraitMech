@@ -21,7 +21,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:2242
   taxon_label: Halobacterium salinarum
-  note: "Classic extreme-halophile model requiring near-saturating NaCl; twin lab strains NRC-1 (NCBITaxon:64091) and R1 (NCBITaxon:478009)."
+  note: Classic extreme-halophile model requiring near-saturating NaCl; twin lab strains
+    NRC-1 (NCBITaxon:64091) and R1 (NCBITaxon:478009).
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10264941/
 causal_graphs:
 - graph_id: extreme_halophile_salt_in_acidic_proteome
@@ -61,7 +62,6 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Membrane transporter mediating sodium exclusion in exchange for protons.
-    grounding: UniProtKB:A0A068T423
   - node_id: sodium_efflux
     label: sodium efflux
     node_type: BIOLOGICAL_PROCESS
@@ -235,4 +235,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006970×1, UniProtKB:A0A068T423×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

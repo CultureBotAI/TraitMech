@@ -19,7 +19,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:129958
   taxon_label: Carboxydothermus hydrogenoformans
-  note: "Thermophilic hydrogenogenic CO oxidiser (CO + H2O -> CO2 + H2). Afipia/Oligotropha carboxidovorans is the aerobic CO-oxidiser model."
+  note: Thermophilic hydrogenogenic CO oxidiser (CO + H2O -> CO2 + H2). Afipia/Oligotropha
+    carboxidovorans is the aerobic CO-oxidiser model.
   reference: PMID:16311624
 causal_graphs:
 - graph_id: carboxydotrophic_co_oxidation
@@ -41,12 +42,10 @@ causal_graphs:
     label: carbon monoxide dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: CODH enzyme oxidizing carbon monoxide.
-    grounding: UniProtKB:A0A061JSS8
   - node_id: molybdenum_hydroxylase
     label: molybdenum hydroxylase
     node_type: GENE_OR_PROTEIN
     description: Aerobic CODH enzyme class described for CO oxidizers.
-    grounding: UniProtKB:A0A099I9V3
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -100,12 +99,10 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Heme-dependent high-affinity CO sensor regulating aerobic CO oxidation
       genes.
-    grounding: UniProtKB:A0A0D5N3T8
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion motive force.
-    grounding: UniProtKB:A0A415TT77
   - node_id: dioxygen
     label: dioxygen
     node_type: CHEMICAL
@@ -348,4 +345,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A1D7QXJ2×1, UniProtKB:A0A0D5N3T8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 4 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

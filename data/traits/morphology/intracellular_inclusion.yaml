@@ -58,6 +58,7 @@ causal_graphs:
     label: polyphosphate kinase (Ppk)
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing polyphosphate synthesis.
+    grounding: GO:0008976
   - node_id: polyphosphate_granule
     label: polyphosphate granule
     node_type: CELLULAR_LOCALIZATION
@@ -197,4 +198,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0070088×1, GO:0031411×1, GO:0019418×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0008976×1).
   llm_assisted: true

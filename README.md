@@ -106,14 +106,19 @@ TraitMech/
 ## Deep Research
 
 TraitMech mirrors DisMech's `deep-research-client` workflow for agentic
-curation support. Use Falcon/FutureHouse research reports as source-finding
+curation support. Use Edison (Falcon) research reports as source-finding
 inputs, then manually curate only DOI-backed claims into TraitRecord YAML.
 
+`edison` is the default provider — a TraitMech alias for `deep-research-client`'s
+`falcon`, the Edison Scientific research agent. The client has no provider
+literally named `edison`; see `.claude/skills/research-causal-graphs/SKILL.md`.
+
 ```bash
-export EDISON_API_KEY=...        # or FUTUREHOUSE_API_KEY; the wrapper maps it
+export EDISON_API_KEY=...        # Edison platform credential; also what falcon needs
 just research-provider falcon
-just research-trait falcon physiology autotrophic
-just research-trait falcon physiology autotrophic --dry-run
+just research-trait physiology autotrophic            # Edison (default provider)
+just research-trait physiology autotrophic --dry-run
+just research-trait physiology autotrophic --provider openai   # override
 ```
 
 Reports are written under `research/traits/<category>/` with separate citation

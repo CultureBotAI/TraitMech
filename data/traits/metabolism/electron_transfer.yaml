@@ -19,11 +19,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:35554
   taxon_label: Geobacter sulfurreducens
-  note: "extracellular electron transfer via pili/cytochromes"
+  note: extracellular electron transfer via pili/cytochromes
   reference: DOI:10.1126/science.1088727
 - taxon_id: NCBITaxon:70863
   taxon_label: Shewanella oneidensis
-  note: "extracellular electron transfer to metals"
+  note: extracellular electron transfer to metals
   reference: PMID:12368813
 causal_graphs:
 - graph_id: electron_transfer_redox_carriers
@@ -49,12 +49,10 @@ causal_graphs:
     label: redox protein
     node_type: GENE_OR_PROTEIN
     description: Protein carrier mediating electron transfer.
-    grounding: UniProtKB:A0A076EJF0
   - node_id: cytochrome
     label: c-type cytochrome
     node_type: GENE_OR_PROTEIN
     description: Heme-containing electron-transfer protein.
-    grounding: UniProtKB:A0A072TMC1
   - node_id: membrane_electron_transport_chain
     label: membrane electron transport chain
     node_type: PATHWAY
@@ -100,7 +98,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Mobile electron carrier shuttling electrons from bc1 to the terminal
       oxidase.
-    grounding: UniProtKB:A0A061JR98
   - node_id: terminal_oxidase
     label: terminal oxidase
     node_type: GENE_OR_PROTEIN
@@ -299,4 +296,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A061JR98×1, UniProtKB:A0A2U9ILE5×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

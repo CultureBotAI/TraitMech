@@ -64,7 +64,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme introducing double bonds into membrane acyl chains, increasing
       unsaturation in cold.
-    grounding: UniProtKB:A0A031GJU0
+    grounding: InterPro:IPR012171
   - node_id: exopolysaccharides
     label: extracellular polymeric substances (EPS)
     node_type: CHEMICAL
@@ -281,4 +281,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A031GJU0×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR012171×1).
   llm_assisted: true

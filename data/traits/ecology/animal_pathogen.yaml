@@ -19,11 +19,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
-  note: "animal/zoonotic pathogen"
+  note: animal/zoonotic pathogen
   reference: PMID:31190705
 - taxon_id: NCBITaxon:747
   taxon_label: Pasteurella multocida
-  note: "animal pathogen"
+  note: animal pathogen
   reference: PMID:31484691
 causal_graphs:
 - graph_id: animal_pathogen_metazoan_adaptation
@@ -83,6 +83,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Versatile nanomachine translocating effector proteins or toxins into
       target cells.
+    grounding: GO:0043684
   - node_id: effector_translocation_t4ss
     label: effector/toxin translocation into target cells
     node_type: BIOLOGICAL_PROCESS
@@ -307,6 +308,12 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 10 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×10).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:51Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0043684×1).
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0

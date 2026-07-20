@@ -55,7 +55,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Thermophile topoisomerase that introduces positive supercoils into
       DNA.
-    grounding: UniProtKB:A0A088E825
+    grounding: GO:0160097
   - node_id: positive_dna_supercoiling
     label: positive DNA supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -236,4 +236,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A088E825×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0160097×1).
   llm_assisted: true

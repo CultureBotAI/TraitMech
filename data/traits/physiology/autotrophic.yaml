@@ -35,15 +35,15 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:106590
   taxon_label: Cupriavidus necator
-  note: "H2/CO2 chemolithoautotroph"
+  note: H2/CO2 chemolithoautotroph
   reference: PMID:16964242
 - taxon_id: NCBITaxon:915
   taxon_label: Nitrosomonas europaea
-  note: "ammonia-oxidising chemoautotroph"
+  note: ammonia-oxidising chemoautotroph
   reference: PMID:12700255
 - taxon_id: NCBITaxon:32046
   taxon_label: Synechococcus elongatus
-  note: "photoautotrophic cyanobacterium"
+  note: photoautotrophic cyanobacterium
   reference: PMID:25633131
 causal_graphs:
 - graph_id: autotrophic_inorganic_carbon_fixation
@@ -84,7 +84,7 @@ causal_graphs:
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
-    grounding: UniProtKB:A0A075WF79
+    grounding: InterPro:IPR033966
   - node_id: precursor_metabolites
     label: precursor metabolites
     node_type: CHEMICAL
@@ -116,7 +116,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Enzyme interconverting bicarbonate and CO2, supplying CO2 to RuBisCO.
-    grounding: UniProtKB:A0A009PMS8
+    grounding: InterPro:IPR001765
   - node_id: wood_ljungdahl_pathway
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
@@ -406,4 +406,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PMS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR033966×1, InterPro:IPR001765×1).
   llm_assisted: true

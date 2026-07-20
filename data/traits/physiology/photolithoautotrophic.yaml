@@ -27,11 +27,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:32046
   taxon_label: Synechococcus elongatus
-  note: "water-splitting photolithoautotroph"
+  note: water-splitting photolithoautotroph
   reference: PMID:21226929
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
-  note: "sulfide-using photolithoautotroph"
+  note: sulfide-using photolithoautotroph
   reference: PMID:12093901
 causal_graphs:
 - graph_id: photolithoautotrophic_light_inorganic_donor_fixation
@@ -98,7 +98,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Enzyme interconverting CO2 and bicarbonate for inorganic carbon supply.
-    grounding: UniProtKB:A0A009PMS8
+    grounding: InterPro:IPR001765
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -109,12 +109,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transporter importing dissolved inorganic carbon species into the
       cell.
+    grounding: InterPro:IPR006007
   - node_id: rubisco
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key autotrophic
       carboxylase.
-    grounding: UniProtKB:A0A075WF79
+    grounding: InterPro:IPR033966
   edges:
   - subject: photolithoautotrophic_trait
     predicate: uses energy source
@@ -349,4 +350,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PMS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR001765×1, InterPro:IPR006007×1, InterPro:IPR033966×1).
   llm_assisted: true

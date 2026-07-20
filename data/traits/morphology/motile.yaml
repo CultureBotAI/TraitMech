@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "flagellar swimming motility"
+  note: flagellar swimming motility
   reference: PMID:32449734
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
-  note: "flagellar + pilus motility"
+  note: flagellar + pilus motility
   reference: PMID:11029417
 causal_graphs:
 - graph_id: motile_energy_dependent_locomotion
@@ -57,7 +57,7 @@ causal_graphs:
     label: type IV pilus
     node_type: GENE_OR_PROTEIN
     description: Pilus machinery that extends, adheres, and retracts.
-    grounding: UniProtKB:R6TBR9
+    grounding: GO:0044096
   - node_id: chemotaxis_signaling
     label: chemotaxis signaling
     node_type: BIOLOGICAL_PROCESS
@@ -87,13 +87,11 @@ causal_graphs:
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Autophosphorylating chemotaxis histidine kinase.
-    grounding: UniProtKB:G0HQV3
   - node_id: chey_response_regulator
     label: CheY response regulator
     node_type: GENE_OR_PROTEIN
     description: Response regulator that, when phosphorylated, binds the flagellar
       switch.
-    grounding: UniProtKB:A0A2X5A7X5
   - node_id: flagellar_c_ring
     label: flagellar C-ring switch complex
     node_type: GENE_OR_PROTEIN
@@ -386,4 +384,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:G0HQV3×1, UniProtKB:A0A2X5A7X5×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0044096×1).
   llm_assisted: true

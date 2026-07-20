@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "lambda and other integrated prophages"
+  note: lambda and other integrated prophages
   reference: PMID:21266997
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
-  note: "Gifsy/Fels prophages"
+  note: Gifsy/Fels prophages
   reference: PMID:29780368
 causal_graphs:
 - graph_id: prophage_lysogeny
@@ -81,7 +81,7 @@ causal_graphs:
     label: LexA repressor
     node_type: GENE_OR_PROTEIN
     description: Host SOS master repressor inactivated by RecA*-stimulated autoproteolysis.
-    grounding: UniProtKB:A0A016XIE2
+    grounding: InterPro:IPR050077
   - node_id: prophage_induction
     label: prophage induction
     node_type: BIOLOGICAL_PROCESS
@@ -218,4 +218,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A016XIE2×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR050077×1).
   llm_assisted: true

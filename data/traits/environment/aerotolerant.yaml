@@ -22,11 +22,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1358
   taxon_label: Lactococcus lactis
-  note: "aerotolerant fermenter"
+  note: aerotolerant fermenter
   reference: PMID:11443085
 - taxon_id: NCBITaxon:1314
   taxon_label: Streptococcus pyogenes
-  note: "aerotolerant anaerobe"
+  note: aerotolerant anaerobe
   reference: PMID:10986229
 causal_graphs:
 - graph_id: aerotolerant_anaerobe_ros_defense
@@ -53,7 +53,7 @@ causal_graphs:
     label: superoxide dismutase
     node_type: GENE_OR_PROTEIN
     description: Enzyme associated with detoxification of superoxide stress.
-    grounding: UniProtKB:A0A009QPW9
+    grounding: GO:0004784
   - node_id: anaerobic_growth
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
@@ -73,21 +73,22 @@ causal_graphs:
     label: catalase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that degrades hydrogen peroxide rapidly at higher concentrations.
-    grounding: UniProtKB:A0A071MK53
+    grounding: GO:0004096
   - node_id: rubrerythrin
     label: rubrerythrin
     node_type: GENE_OR_PROTEIN
     description: Non-heme iron protein that scavenges low levels of hydrogen peroxide.
-    grounding: UniProtKB:A0A016EEI2
+    grounding: InterPro:IPR052364
   - node_id: nadh_peroxidase
     label: NADH peroxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing hydrogen peroxide to water using NADH.
-    grounding: UniProtKB:A0A031WCC0
+    grounding: GO:0016692
   - node_id: nadph_peroxidase
     label: NADPH peroxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing hydrogen peroxide to water using NADPH.
+    grounding: GO:0050137
   edges:
   - subject: aerotolerant_trait
     predicate: includes
@@ -241,4 +242,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A016EEI2×1, UniProtKB:A0A031WCC0×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 4 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004784×1, GO:0004096×1, InterPro:IPR052364×1, GO:0016692×1, GO:0050137×1).
   llm_assisted: true

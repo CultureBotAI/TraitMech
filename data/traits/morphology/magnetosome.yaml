@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:431944
   taxon_label: Magnetospirillum gryphiswaldense MSR-1
-  note: "Primary model for magnetosome biosynthesis (mamAB operon; MamK/MamJ-organised magnetite chains for magnetotaxis). AMB-1 (NCBITaxon:342108) is a co-equal model."
+  note: Primary model for magnetosome biosynthesis (mamAB operon; MamK/MamJ-organised
+    magnetite chains for magnetotaxis). AMB-1 (NCBITaxon:342108) is a co-equal model.
   reference: DOI:10.1038/s41579-025-01234-2
 causal_graphs:
 - graph_id: magnetosome_magnetotaxis
@@ -72,7 +73,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Magnetosome membrane protein implicated in membrane invagination
       and crystal formation.
-    grounding: UniProtKB:A0A6J4ZQS8
   - node_id: membrane_invagination
     label: magnetosome membrane invagination
     node_type: BIOLOGICAL_PROCESS
@@ -210,4 +210,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A6J4ZQS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

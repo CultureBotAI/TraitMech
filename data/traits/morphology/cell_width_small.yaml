@@ -46,7 +46,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-complex protein that favors the open, active PBP2
       state.
-    grounding: UniProtKB:A0A1L9R356
   - node_id: roda_pbp2_open
     label: RodA-PBP2 open conformation
     node_type: STATE
@@ -206,4 +205,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A1L9R356×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

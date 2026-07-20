@@ -1,0 +1,60 @@
+file	graph_id	node_id	label	accession	status	uniprot_name	organism	replacement	reused_in_n_files
+data/traits/environment/alkalotolerant.yaml	alkalotolerant_alkaline_stress_homeostasis	cation_proton_antiporter	cation/proton antiporter	A0A0H3JRG4	unreviewed	Cation/proton antiporter	Escherichia coli O157:H7		2
+data/traits/environment/facultatively_aerobic.yaml	facultative_aerobe_oxygen_flexible_growth	cytochrome_bd_oxidase	cytochrome bd oxidase	Q6L5L4	unreviewed	Cytochrome bd oxidase	Acidithiobacillus ferrooxidans		1
+data/traits/environment/neutrophilic.yaml	neutrophilic_neutral_ph_homeostasis	cation_proton_antiporter	cation/proton antiporter	A0A0H3JRG4	unreviewed	Cation/proton antiporter	Escherichia coli O157:H7		2
+data/traits/environment/ph_optimum_mid2.yaml	ph_optimum_mid2_alkaline_tolerant_setpoint	k_h_antiporters	K+/H+ antiporters	A0A1Z4VR00	unreviewed	Na+/H+ and K+/H+ antiporters	Thiohalobacter thiocyanaticus		1
+data/traits/environment/temperature_optimum_mid4.yaml	temperature_optimum_mid4_warm_mesophile	ftsh_protease	FtsH protease	A0A0D7UY21	unreviewed	Uncharacterized protein	Vreelandella aquamarina		1
+data/traits/metabolism/aerobic_respiration.yaml	aerobic_respiration_terminal_oxidase	cytochrome_c_oxidase	cytochrome c oxidase	A0A075NZN5	unreviewed	Cytochrome C oxidase	Alteromonas australica		2
+data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2	nirs	cytochrome cd1 nitrite reductase NirS	I0HLW6	unreviewed	Nitrite reductase	Rubrivivax gelatinosus (strain NBRC 100245 / IL144)		1
+data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2	nosz	nitrous oxide reductase NosZ	Q30PN7	unreviewed	Nitrous oxide reductase NosZ	Sulfurimonas denitrificans (strain ATCC 33889 / DSM 1251)		1
+data/traits/metabolism/electron_transfer.yaml	electron_transfer_redox_carriers	terminal_oxidase	terminal oxidase	A0A2U9ILE5	unreviewed	Aa3-type terminal oxidase	Acidianus sulfidivorans JP7		2
+data/traits/metabolism/fermentation.yaml	fermentation_redox_energy	fnor	ferredoxin:NAD+ oxidoreductase	I3R731	unreviewed	Ferredoxin:NAD+ oxidoreductase	Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)		1
+data/traits/metabolism/manganese_oxidation.yaml	manganese_oxidation_multicopper_oxidase	multicopper_oxidase	multicopper oxidase	A0A059ZYC2	unreviewed	Multicopper oxidase	Acidithiobacillus caldus (strain ATCC 51756 / DSM 8584 / KU)		1
+data/traits/metabolism/methanogenesis.yaml	methanogenesis_c1_reduction	methyl_coenzyme_m_reductase	methyl-coenzyme M reductase	A0A099T5Q9	unreviewed	Methyl-coenzyme M reductase	Methanococcoides methylutens		1
+data/traits/metabolism/nitrogen_fixation.yaml	nitrogen_fixation_nitrogenase	nitrogenase	nitrogenase	A0A089HR75	unreviewed	Nitrogenase	Paenibacillus durus		1
+data/traits/metabolism/oxidative_phosphorylation.yaml	oxidative_phosphorylation_chemiosmotic_coupling	terminal_oxidase	terminal oxidase	A0A2U9ILE5	unreviewed	Aa3-type terminal oxidase	Acidianus sulfidivorans JP7		2
+data/traits/metabolism/proteorhodopsin_phototrophy.yaml	proteorhodopsin_light_driven_proton_pump	proteorhodopsin	proteorhodopsin	A0A1D7QWW9	unreviewed	Proteorhodopsin	Salisediminibacterium beveridgei		2
+data/traits/metabolism/three_hydroxypropionate_bicycle.yaml	three_hp_bicycle_chloroflexus	malonyl_coa_reductase	malonyl-CoA reductase	Q6QQP7	unreviewed	Malonyl-CoA reductase	Chloroflexus aurantiacus		1
+data/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle.yaml	three_hp_four_hb_sulfolobales	acetyl_propionyl_coa_carboxylase	acetyl-CoA/propionyl-CoA carboxylase	A0A650CEQ7	unreviewed	Methylmalonyl-CoA carboxyltransferase	Sulfurisphaera ohwakuensis		1
+data/traits/metabolism/wood_ljungdahl_pathway.yaml	wood_ljungdahl_reductive_acetyl_coa	methyltransferase	methyltransferase	A0A0C5IX96	unreviewed	Methyltransferase	Rugosibacter aromaticivorans		1
+data/traits/morphology/amphitrichous.yaml	amphitrichous_bipolar_flagella	flhg_atpase	FlhG	Q2N2M1	unreviewed	FlhG	Aeromonas hydrophila		5
+data/traits/morphology/bacillus_shaped.yaml	bacillus_shaped_rod_elongation	ftsZ	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/bacillus_shaped.yaml	bacillus_shaped_rod_elongation	rodZ	RodZ	H1XNL6	unreviewed	Cytoskeleton protein RodZ-like C-terminal domain-containing protein	Caldithrix abyssi (strain DSM 13497 / VKM B-2286 / LF13)		2
+data/traits/morphology/black_pigmented.yaml	black_pigmented_melanin_polymer	polyketide_synthase	polyketide synthase (PKS)	Q5Y9G5	unreviewed	EryAII acyl transferase domain in polyketide synthase (PKS)	Aeromicrobium erythreum		1
+data/traits/morphology/carotenoid_pigmentation.yaml	carotenoid_pigmentation_crt_pathway	phytoene_desaturase	phytoene desaturase	A0A060JDC8	unreviewed	Phytoene desaturase	Rhodoluna lacicola		1
+data/traits/morphology/cell_length_large.yaml	cell_length_large_division_delay	sula_protein	SulA	H8YHZ0	unreviewed	Cell division inhibitor-related protein, SulA-like protein	Simiduia agarivorans (strain DSM 21679 / JCM 13881 / BCRC 17597 / SA1)		2
+data/traits/morphology/cell_length_large.yaml	cell_length_large_division_delay	ftsz_protein	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/cell_shape.yaml	cell_shape_peptidoglycan_cytoskeleton	ftsZ	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/ellipsoidal.yaml	ellipsoidal_ovococcal_elongation	divIVA	DivIVA	Q1IYG2	unreviewed	DivIVA	Deinococcus geothermalis (strain DSM 11300 / CIP 105573 / AG-3a)		3
+data/traits/morphology/filament_shaped.yaml	filament_shaped_streptomyces_polar_growth	divIVA	DivIVA	Q1IYG2	unreviewed	DivIVA	Deinococcus geothermalis (strain DSM 11300 / CIP 105573 / AG-3a)		3
+data/traits/morphology/filament_shaped.yaml	filament_shaped_streptomyces_polar_growth	scy	Scy	A0A191V3Q4	unreviewed	Polarized growth protein Scy	Streptomyces parvulus		1
+data/traits/morphology/filament_shaped.yaml	filament_shaped_streptomyces_polar_growth	sula	SulA	H8YHZ0	unreviewed	Cell division inhibitor-related protein, SulA-like protein	Simiduia agarivorans (strain DSM 21679 / JCM 13881 / BCRC 17597 / SA1)		2
+data/traits/morphology/flagellar_arrangement.yaml	flagellar_arrangement_flhf_flhg	flhg	FlhG	Q2N2M1	unreviewed	FlhG	Aeromonas hydrophila		5
+data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth	rodz	RodZ	H1XNL6	unreviewed	Cytoskeleton protein RodZ-like C-terminal domain-containing protein	Caldithrix abyssi (strain DSM 13497 / VKM B-2286 / LF13)		2
+data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth	roda	RodA	A0A0H2X1V4	unreviewed	Cell wall polymerase	Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)		4
+data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft	flif_protein	FliF	A0A0H2X1L8	unreviewed	FliF	Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)		1
+data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft	flhg_protein	FlhG	Q2N2M1	unreviewed	FlhG	Aeromonas hydrophila		5
+data/traits/morphology/monotrichous.yaml	monotrichous_single_polar_flagellum	flhg_atpase	FlhG	Q2N2M1	unreviewed	FlhG	Aeromonas hydrophila		5
+data/traits/morphology/oval_shaped.yaml	oval_shaped_ovococcal_pg_synthesis	rodA	RodA	A0A0H2X1V4	unreviewed	Cell wall polymerase	Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)		4
+data/traits/morphology/ovoid_shaped.yaml	ovoid_shaped_midcell_pg_assembly	divIVA	DivIVA	Q1IYG2	unreviewed	DivIVA	Deinococcus geothermalis (strain DSM 11300 / CIP 105573 / AG-3a)		3
+data/traits/morphology/peritrichous.yaml	peritrichous_surface_distributed_flagella	flhg_regulator	FlhG	Q2N2M1	unreviewed	FlhG	Aeromonas hydrophila		5
+data/traits/morphology/prosthecate.yaml	prosthecate_stalk_nutrient_uptake	roda	RodA	A0A0H2X1V4	unreviewed	Cell wall polymerase	Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)		4
+data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan	ftsZ	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_packet	ftsz_protein	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/sarcina_arrangement.yaml	sarcina_three_plane_division_packet	ftsa_protein	FtsA	A0A1M6DY20	unreviewed	Cell division ATPase FtsA	Pseudobutyrivibrio xylanivorans DSM 14809		1
+data/traits/morphology/spirochete_shaped.yaml	spirochete_shaped_periplasmic_flagella	flaB	FlaB	A8WEP6	unreviewed	FlaB	Vibrio harveyi		1
+data/traits/morphology/spore_forming.yaml	spore_forming_endospore_assembly	spoIIM	SpoIIM	A5N7K0	unreviewed	SpoIIM	Clostridium kluyveri (strain ATCC 8527 / DSM 555 / NBRC 12016 / NCIMB 10680 / K1)		1
+data/traits/morphology/spore_shaped.yaml	spore_shaped_endospore_layers	spovm_protein	SpoVM	A0A2K8N6W1	unreviewed	Stage V sporulation protein SpoVM	Kyrpidia spormannii		1
+data/traits/morphology/spore_shaped.yaml	spore_shaped_endospore_layers	spovid_protein	SpoVID	A0A0B5ANC0	unreviewed	Morphogenetic protein associated with SpoVID	Jeotgalibacillus malaysiensis		1
+data/traits/morphology/spore_shaped.yaml	spore_shaped_endospore_layers	cote_protein	CotE	D5WPR1	unreviewed	Spore coat protein CotE	Kyrpidia tusciae (strain DSM 2912 / NBRC 15312 / T2)		1
+data/traits/morphology/sporulation.yaml	sporulation_spo0a_sigma_morphogenesis	sigma_e	sigma E	A0A0C7NZS0	unreviewed	Positive regulator of sigma E	Defluviitoga tunisiensis		1
+data/traits/morphology/staphylococcus_arrangement.yaml	staphylococcus_irregular_division_cluster	ftsz	FtsZ	C0LUM8	unreviewed	FtsZ	Lacticaseibacillus casei		6
+data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth	roda	RodA	A0A0H2X1V4	unreviewed	Cell wall polymerase	Chlamydia trachomatis serovar A (strain ATCC VR-571B / DSM 19440 / HAR-13)		4
+data/traits/morphology/white_pigmented.yaml	white_pigmented_low_chromophore	glmS	GlmS	I6LB50	unreviewed	GlmS	Escherichia coli		1
+data/traits/physiology/carboxydotrophic.yaml	carboxydotrophic_co_oxidation	cooa_regulator	CooA	A0A1D7QXJ2	unreviewed	Carbon monoxide-responsive transcriptional activator CooA	Salisediminibacterium beveridgei		1
+data/traits/physiology/catalase_activity.yaml	catalase_activity_h2o2_detoxification	perr_regulator	PerR	A0A097ASJ8	unreviewed	Transcriptional regulator PerR	Thermoanaerobacter kivui		1
+data/traits/physiology/hydrogenotrophic.yaml	hydrogenotrophic_hydrogen_oxidation_fixation	hydrogenase	hydrogenase	A0A059XQG3	unreviewed	Hydrogenase	Leptospirillum ferriphilum YSK		1
+data/traits/physiology/oxidase_activity.yaml	oxidase_activity_terminal_oxidase	cytochrome_c_oxidase	cytochrome c oxidase	A0A075NZN5	unreviewed	Cytochrome C oxidase	Alteromonas australica		2
+data/traits/physiology/photoheterotrophic.yaml	photoheterotrophic_light_organic_carbon	proteorhodopsin	proteorhodopsin	A0A1D7QWW9	unreviewed	Proteorhodopsin	Salisediminibacterium beveridgei		2
+data/traits/physiology/phototrophic.yaml	phototrophic_light_energy_capture	rhodopsin	rhodopsin	A0A059ZUX4	unreviewed	Rhodopsin	Acidithiobacillus caldus (strain ATCC 51756 / DSM 8584 / KU)		1
+data/traits/physiology/quorum_sensing.yaml	quorum_sensing_autoinducer	quorum_quenching_enzyme	quorum-quenching enzyme	G2JHL6	reviewed	Quorum-quenching protein AidA	Acinetobacter baumannii (strain MDR-ZJ06)		1

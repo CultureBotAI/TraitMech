@@ -54,6 +54,22 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Resolve every UniProtKB grounding on GENE_OR_PROTEIN causal nodes against
+# the UniProt REST API; classify reviewed / unreviewed / deleted and flag
+# accessions reused across trait files. Emits
+# reports/uniprot_grounding_audit.tsv; exits 1 on any deleted accession.
+# Network-dependent, so it is not part of `just qc`.
+# See docs/GROUNDING_POLICY.md.
+audit-uniprot *args:
+    uv run python scripts/audit_uniprot_grounding.py {{args}}
+
+# Retract UniProtKB groundings whose accessions UniProt has DELETED, demoting
+# those nodes to label-only. MERGED accessions are reported, not retracted --
+# they carry a live replacement a curator should apply. Dry-run by default.
+# See docs/GROUNDING_POLICY.md.
+retract-dead-groundings *args:
+    uv run python scripts/retract_dead_uniprot_groundings.py {{args}}
+
 # Verify a METPO ROBOT-template proposal cohort under proposals/.
 # Runs column-count, header, parent integrity, subset tag, and scope-A/C
 # coverage checks. See .claude/skills/metpo-proposal/SKILL.md.
@@ -146,18 +162,47 @@ knowledge-gap-scan *args:
 research_dir := "research"
 templates_dir := "templates"
 
-# Deep research on a trait using a specified provider.
-# Examples:
-#   just research-trait falcon physiology autotrophic
-#   just research-trait falcon environment aerobic --dry-run
-research-trait provider category slug *args="":
+# Deep research on a trait.
+# Provider defaults to `edison` in scripts/research_trait.py (an alias for
+# deep-research-client's `falcon`, the Edison research agent). Override by
+# passing --provider through as a trailing arg.
+#   just research-trait physiology autotrophic                    # Edison
+#   just research-trait environment aerobic --dry-run
+#   just research-trait environment aerobic --provider openai
+research-trait category slug *args="":
     uv run --extra dev python scripts/research_trait.py \
-      --provider {{provider}} \
       --category {{category}} \
       --slug {{slug}} \
       --template {{templates_dir}}/trait_causal_graph_research.md \
       --research-dir {{research_dir}} \
       {{args}}
+
+# Edison Scientific deep research (PaperQA3) for one trait record, driven through
+# the edison-client SDK rather than deep-research-client. Unlike `research-trait`
+# this exposes Edison's job selection and captures full provenance sidecars
+# (-response.json, -citations.md, -agent-state.json, -files.json, -meta.yaml).
+# target = category/slug, a bare slug (must be unique), or a YAML path.
+#   just research-trait-edison physiology/autotrophic --dry-run
+#   just research-trait-edison autotrophic --job literature-high
+research-trait-edison target *args="":
+    uv run --extra dev python scripts/research_trait_edison.py \
+      --target {{target}} \
+      --template {{templates_dir}}/trait_causal_graph_research.md \
+      --out-dir {{research_dir}}/traits \
+      {{args}}
+
+# Same, over a JSON list of targets ("category/slug" strings or objects).
+#   just research-trait-edison-batch queue.json --limit 5 --dry-run
+research-trait-edison-batch batch *args="":
+    uv run --extra dev python scripts/research_trait_edison.py \
+      --batch {{batch}} \
+      --template {{templates_dir}}/trait_causal_graph_research.md \
+      --out-dir {{research_dir}}/traits \
+      {{args}}
+
+# Retroactively backfill Edison provenance sidecars for past runs (no re-billing).
+enrich-edison-response *args="":
+    uv run --extra dev python scripts/enrich_edison_response.py {{args}}
 
 # List available deep-research-client providers.
 research-providers:
@@ -230,7 +275,7 @@ report-label-drift:
 # MIM / CommunityMech / TraitMech Mech repos and must not silently diverge: the
 # validator + its two shared tests. conf/id_label_targets.yaml is deliberately
 # per-repo (different adapters/targets) so it is NOT here.
-VENDORED_IDLABEL_FILES := "scripts/validate_id_label_correspondence.py tests/test_id_label_empty_adapter.py tests/test_id_label_unknown_prefix.py"
+VENDORED_IDLABEL_FILES := "scripts/validate_id_label_correspondence.py scripts/chem_formula.py tests/test_id_label_empty_adapter.py tests/test_id_label_unknown_prefix.py tests/test_id_label_plausibility.py"
 
 # Durability guard: fail if any vendored id-label file drifts from its pinned
 # sha256. CI runs this so an accidental edit to one copy can't silently diverge.

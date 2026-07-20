@@ -21,7 +21,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:414
   taxon_label: Methylococcus capsulatus
-  note: "Model aerobic methanotroph (gammaproteobacterial; particulate and soluble methane monooxygenase); strain Bath."
+  note: Model aerobic methanotroph (gammaproteobacterial; particulate and soluble
+    methane monooxygenase); strain Bath.
   reference: PMID:15383840
 causal_graphs:
 - graph_id: methanotrophic_methane_oxidation
@@ -48,7 +49,7 @@ causal_graphs:
     label: methane monooxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme family catalyzing the first methane oxidation step.
-    grounding: UniProtKB:A0A0A3YNQ7
+    grounding: GO:0015050
   - node_id: intracellular_membrane
     label: intracellular membrane
     node_type: CELLULAR_LOCALIZATION
@@ -63,7 +64,6 @@ causal_graphs:
     label: methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing methanol to formaldehyde.
-    grounding: UniProtKB:A0A010SCY7
   - node_id: formaldehyde
     label: formaldehyde
     node_type: CHEMICAL
@@ -323,4 +323,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0031090×1, CHEBI:222862×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0015050×1).
   llm_assisted: true

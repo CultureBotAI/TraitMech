@@ -24,7 +24,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:160233
   taxon_label: Ignicoccus hospitalis
-  note: "Hyperthermophilic crenarchaeon in which the dicarboxylate/4-hydroxybutyrate autotrophic CO2-fixation cycle was discovered."
+  note: Hyperthermophilic crenarchaeon in which the dicarboxylate/4-hydroxybutyrate
+    autotrophic CO2-fixation cycle was discovered.
   reference: PMID:18511565
 causal_graphs:
 - graph_id: dc_four_hb_anaerobic_archaeal_co2_fixation
@@ -62,11 +63,12 @@ causal_graphs:
     label: pyruvate synthase (pyruvate:ferredoxin oxidoreductase)
     node_type: GENE_OR_PROTEIN
     description: Reductively carboxylates acetyl-CoA to pyruvate using CO2.
+    grounding: GO:0019164
   - node_id: pep_carboxylase
     label: phosphoenolpyruvate carboxylase
     node_type: GENE_OR_PROTEIN
     description: Carboxylates PEP to oxaloacetate using bicarbonate.
-    grounding: UniProtKB:A0A031JWX5
+    grounding: GO:0008964
   - node_id: acetyl_coa
     label: acetyl-CoA
     node_type: CHEMICAL
@@ -94,7 +96,6 @@ causal_graphs:
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
     description: Hallmark radical enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
-    grounding: UniProtKB:A0A017H5F8
   - node_id: crotonyl_coa
     label: crotonyl-CoA
     node_type: CHEMICAL
@@ -246,4 +247,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A031JWX5×1, UniProtKB:A0A017H5F8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0019164×1, GO:0008964×1).
   llm_assisted: true

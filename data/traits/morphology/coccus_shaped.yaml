@@ -27,7 +27,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "Textbook spherical coccus (grape-like clusters); a model Gram-positive, second only to E. coli in study volume."
+  note: Textbook spherical coccus (grape-like clusters); a model Gram-positive, second
+    only to E. coli in study volume.
   reference: https://journals.asm.org/doi/10.1128/jb.00106-25
 causal_graphs:
 - graph_id: coccus_shaped_septal_growth
@@ -67,6 +68,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Multiprotein cell-division machinery coordinating septal peptidoglycan
       synthesis in cocci.
+    grounding: GO:1990586
   - node_id: orthogonal_division_planes
     label: orthogonal division planes
     node_type: BIOLOGICAL_PROCESS
@@ -215,4 +217,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:associated_with×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:1990586×1).
   llm_assisted: true

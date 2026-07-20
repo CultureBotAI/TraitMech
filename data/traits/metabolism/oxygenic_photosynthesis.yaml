@@ -20,7 +20,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
-  note: "Default model unicellular cyanobacterium for oxygenic photosynthesis; first phototroph genome-sequenced."
+  note: Default model unicellular cyanobacterium for oxygenic photosynthesis; first
+    phototroph genome-sequenced.
   reference: PMID:16228363
 causal_graphs:
 - graph_id: oxygenic_photosynthesis_water_splitting
@@ -52,6 +53,7 @@ causal_graphs:
     label: photosystem II
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that catalyzes light-driven water oxidation.
+    grounding: GO:0009523
   - node_id: plastoquinone_pool
     label: plastoquinone/plastoquinol pool
     node_type: CHEMICAL
@@ -60,21 +62,22 @@ causal_graphs:
     label: cytochrome b6f complex
     node_type: GENE_OR_PROTEIN
     description: Electron transfer complex linking PSII/plastoquinol to PSI.
+    grounding: GO:0009512
   - node_id: photosystem_i
     label: photosystem I
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that oxidizes plastocyanin/cyt c6 and reduces
       ferredoxin.
+    grounding: GO:0009522
   - node_id: ferredoxin
     label: ferredoxin
     node_type: GENE_OR_PROTEIN
     description: Iron-sulfur electron carrier reduced by PSI.
-    grounding: UniProtKB:A0A009PCQ5
   - node_id: fnr
     label: ferredoxin-NADP+ reductase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing NADP+ to NADPH using ferredoxin-derived electrons.
-    grounding: UniProtKB:A0A0E2H5I8
+    grounding: GO:0004324
   - node_id: nadph
     label: NADPH
     node_type: CHEMICAL
@@ -216,4 +219,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PCQ5×1, UniProtKB:A0A0E2H5I8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009523×1, GO:0009512×1, GO:0009522×1, GO:0004324×1).
   llm_assisted: true

@@ -18,11 +18,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:210
   taxon_label: Helicobacter pylori
-  note: "polar tuft of flagella"
+  note: polar tuft of flagella
   reference: PMID:30258065
 - taxon_id: NCBITaxon:968
   taxon_label: Spirillum volutans
-  note: "bipolar flagellar tufts"
+  note: bipolar flagellar tufts
   reference: PMID:16561638 (DOI:10.1128/jb.57.1.111-118.1949)
 causal_graphs:
 - graph_id: lophotrichous_polar_tuft
@@ -48,7 +48,6 @@ causal_graphs:
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and initiates polar flagellar assembly.
-    grounding: UniProtKB:A0A656AC42
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -58,7 +57,6 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein recruited during basal-body assembly.
-    grounding: UniProtKB:A0A016XEK1
   - node_id: flif_protein
     label: FliF
     node_type: GENE_OR_PROTEIN
@@ -70,7 +68,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-localized polar landmark/licensing factor required for normal
       polar flagellar synthesis.
-    grounding: UniProtKB:A0A023UGD7
   - node_id: flhg_protein
     label: FlhG
     node_type: GENE_OR_PROTEIN
@@ -181,4 +178,10 @@ curation_history:
   changes: Grounded 5 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A656AC42×1, UniProtKB:A0A016XEK1×1, UniProtKB:A0A0H2X1L8×1, UniProtKB:A0A023UGD7×1,
     UniProtKB:Q2N2M1×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

@@ -26,7 +26,9 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:2257
   taxon_label: Natronomonas pharaonis
-  note: "Soda-lake haloalkaliphilic archaeon (pH optimum ~8.5, alkaline tolerance to ~pH 11). Halalkalibacterium halodurans C-125 (ex-Bacillus halodurans) is the classic non-halophilic obligate alkaliphile."
+  note: Soda-lake haloalkaliphilic archaeon (pH optimum ~8.5, alkaline tolerance to
+    ~pH 11). Halalkalibacterium halodurans C-125 (ex-Bacillus halodurans) is the classic
+    non-halophilic obligate alkaliphile.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1240075/
 causal_graphs:
 - graph_id: obligately_alkaphilic_sodium_cycle_homeostasis
@@ -60,7 +62,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging sodium ions and protons during alkaline pH
       homeostasis.
-    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -313,4 +314,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, RO:0002213×1, biolink:causes×1, RO:0002212×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

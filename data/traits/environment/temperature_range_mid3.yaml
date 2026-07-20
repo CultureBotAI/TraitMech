@@ -55,12 +55,10 @@ causal_graphs:
     label: DesK
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound histidine kinase that senses membrane order/thickness.
-    grounding: UniProtKB:A0A067Z5N7
   - node_id: desr
     label: DesR
     node_type: GENE_OR_PROTEIN
     description: Response regulator activated by DesK to control des transcription.
-    grounding: UniProtKB:A0A067Z2X2
   - node_id: phospho_desr
     label: phosphorylated DesR
     node_type: STATE
@@ -201,4 +199,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A067Z5N7×1, UniProtKB:A0A067Z2X2×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

@@ -22,7 +22,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:2261
   taxon_label: Pyrococcus furiosus
-  note: "Model hyperthermophilic archaeon (growth optimum ~100 C)."
+  note: Model hyperthermophilic archaeon (growth optimum ~100 C).
   reference: DOI:10.1007/BF00413027
 causal_graphs:
 - graph_id: hyperthermophilic_thermostability
@@ -51,7 +51,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Topoisomerase associated with hyperthermophiles and positive DNA
       supercoiling.
-    grounding: UniProtKB:A0A088E825
+    grounding: GO:0160097
   - node_id: molecular_chaperonins
     label: archaeal molecular chaperonins
     node_type: GENE_OR_PROTEIN
@@ -275,4 +275,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:193595×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0160097×1).
   llm_assisted: true

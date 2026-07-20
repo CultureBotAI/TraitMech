@@ -17,7 +17,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:968
   taxon_label: Spirillum volutans
-  note: "Large spiral bacterium with amphitrichous flagellar tufts (bipolar flagellar bundles)."
+  note: Large spiral bacterium with amphitrichous flagellar tufts (bipolar flagellar
+    bundles).
   reference: PMID:16561638
 causal_graphs:
 - graph_id: amphitrichous_bipolar_flagella
@@ -44,7 +45,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and recruits flagellar building blocks
       to the cell pole.
-    grounding: UniProtKB:A0A656AC42
   - node_id: flhg_atpase
     label: FlhG
     node_type: GENE_OR_PROTEIN
@@ -55,7 +55,6 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein engaged early by FlhF during assembly.
-    grounding: UniProtKB:A0A016XEK1
   - node_id: flif_msring
     label: FliF (MS-ring)
     node_type: GENE_OR_PROTEIN
@@ -65,7 +64,6 @@ causal_graphs:
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane protein that facilitates polar recruitment of FlhF.
-    grounding: UniProtKB:A0A023UGD7
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -196,4 +194,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A656AC42×1, UniProtKB:Q2N2M1×1, UniProtKB:A0A016XEK1×1, UniProtKB:A0A023UGD7×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

@@ -17,7 +17,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:863
   taxon_label: Syntrophomonas wolfei
-  note: "Type species of Syntrophomonas; original syntrophic fatty-acid oxidiser (coculture with Methanospirillum hungatei)."
+  note: Type species of Syntrophomonas; original syntrophic fatty-acid oxidiser (coculture
+    with Methanospirillum hungatei).
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC243852/
 causal_graphs:
 - graph_id: syntrophy_interspecies_electron_transfer
@@ -78,6 +79,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme complex producing/consuming formate in syntrophic formate
       transfer.
+    grounding: GO:0009326
   - node_id: hydrogenase_complex
     label: hydrogenase complex
     node_type: GENE_OR_PROTEIN
@@ -278,4 +280,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009326×1).
   llm_assisted: true

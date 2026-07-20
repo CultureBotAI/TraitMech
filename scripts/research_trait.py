@@ -100,6 +100,37 @@ def template_vars(doc: dict[str, Any], category_slug: str, trait_slug: str) -> d
     }
 
 
+DEFAULT_PROVIDER = "edison"
+
+# Friendly provider aliases → the name `deep-research-client` actually accepts.
+#
+# "Edison" is the platform; `falcon` is its research agent, and the agent name is
+# what the client exposes (`deep-research-client providers` lists perplexity,
+# openai, falcon, asta, consensus, mock, cyberian, openscientist — there is no
+# `edison`). The `edison_client` SDK targets api.platform.edisonscientific.com and
+# names every job `job-futurehouse-*`, i.e. Edison Scientific and FutureHouse are
+# one platform, and the client documents falcon's credential as EDISON_API_KEY.
+#
+# Aliasing lets callers say "edison" — the platform they think in — without
+# teaching the client a provider it does not have. Resolve BEFORE computing output
+# filenames so results stay in the established `-deep-research-falcon.md` namespace
+# and previously-researched traits still count as done.
+PROVIDER_ALIASES = {"edison": "falcon"}
+
+
+def resolve_provider(provider: str) -> str:
+    """Map a user-facing provider name to a deep-research-client provider.
+
+    Canonicalises to lower case on both hit and miss. Returning the caller's
+    original casing on a miss would send `Falcon` to a client that only accepts
+    `falcon`, and — because run_trait_graph_audit builds output filenames from
+    this result — would look for `-deep-research-Falcon.md`, re-queueing (and
+    re-paying for) every trait on a case-sensitive filesystem.
+    """
+    key = provider.lower()
+    return PROVIDER_ALIASES.get(key, key)
+
+
 def provider_args(provider: str) -> list[str]:
     """Mirror DisMech's cborg shortcut while allowing named providers such as falcon."""
     if provider == "cborg":
@@ -159,7 +190,12 @@ def build_command(
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--provider", required=True, help="deep-research-client provider, e.g. falcon")
+    parser.add_argument(
+        "--provider",
+        default=DEFAULT_PROVIDER,
+        help=f"provider or alias (default: {DEFAULT_PROVIDER}, the Edison research "
+             "agent, which resolves to deep-research-client's `falcon`)",
+    )
     parser.add_argument("--category", required=True, help="Trait category directory, e.g. physiology")
     parser.add_argument("--slug", required=True, help="Trait YAML slug without .yaml")
     parser.add_argument("--template", type=Path, default=DEFAULT_TEMPLATE)
@@ -177,16 +213,19 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    # Resolve "edison" -> "falcon" up front so the client call, the credential
+    # lookup, and the output filename all agree on one name.
+    provider = resolve_provider(args.provider)
     category_slug = args.category.lower()
     trait_file = resolve_trait_file(category_slug, args.slug)
     doc = load_trait(trait_file)
 
     output_dir = args.research_dir / "traits" / category_slug
-    output_file = output_dir / f"{args.slug}-deep-research-{args.provider}.md"
+    output_file = output_dir / f"{args.slug}-deep-research-{provider}.md"
     citations_file = output_file.with_suffix(output_file.suffix + ".citations.md")
     variables = template_vars(doc, category_slug, args.slug)
     command = build_command(
-        provider=args.provider,
+        provider=provider,
         template=args.template,
         output_file=output_file,
         citations_file=citations_file,
@@ -195,13 +234,13 @@ def main(argv: list[str] | None = None) -> int:
         client_command=args.client_command,
     )
 
-    print(f"Researching: {variables['trait_label']} ({args.provider}) -> {output_file}")
+    print(f"Researching: {variables['trait_label']} ({provider}) -> {output_file}")
     if args.dry_run:
         print(shlex.join(command))
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    subprocess.run(command, check=True, env=research_env(args.provider))
+    subprocess.run(command, check=True, env=research_env(provider))
     return 0
 
 

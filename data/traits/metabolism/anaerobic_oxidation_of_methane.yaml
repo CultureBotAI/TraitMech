@@ -27,7 +27,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1392998
   taxon_label: Candidatus Methanoperedens nitratireducens
-  note: "Canonical nitrate-dependent ANME archaeon performing anaerobic oxidation of methane (ANME-2d). Candidatus taxon (no validly published name)."
+  note: Canonical nitrate-dependent ANME archaeon performing anaerobic oxidation of
+    methane (ANME-2d). Candidatus taxon (no validly published name).
   reference: https://pubmed.ncbi.nlm.nih.gov/36635574/
 causal_graphs:
 - graph_id: aom_anme_sulfate_consortium
@@ -61,6 +62,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that activates methane (to methyl-S-CoM) as the initial step
       of AOM.
+    grounding: GO:0044674
   - node_id: diet
     label: direct interspecies electron transfer (DIET)
     node_type: BIOLOGICAL_PROCESS
@@ -173,4 +175,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0044674×1).
   llm_assisted: true

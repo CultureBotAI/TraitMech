@@ -24,7 +24,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:615
   taxon_label: Serratia marcescens
-  note: "Textbook chitinolytic system (ChiA/ChiB/ChiC1 plus the CBP21 LPMO that founded the lytic polysaccharide monooxygenase field)."
+  note: Textbook chitinolytic system (ChiA/ChiB/ChiC1 plus the CBP21 LPMO that founded
+    the lytic polysaccharide monooxygenase field).
   reference: PMID:23398882
 causal_graphs:
 - graph_id: chitinolysis_chitinase
@@ -68,7 +69,7 @@ causal_graphs:
     label: beta-N-acetylglucosaminidase
     node_type: GENE_OR_PROTEIN
     description: Hydrolyzes chitooligosaccharides/chitobiose to GlcNAc monomers.
-    grounding: UniProtKB:A0A086GXI9
+    grounding: GO:0016231
   - node_id: lpmo
     label: lytic polysaccharide monooxygenase (LPMO; AA10)
     node_type: GENE_OR_PROTEIN
@@ -160,4 +161,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A086GXI9×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0016231×1).
   llm_assisted: true

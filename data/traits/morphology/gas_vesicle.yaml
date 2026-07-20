@@ -21,7 +21,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1126
   taxon_label: Microcystis aeruginosa
-  note: "Gas-vacuolate bloom-forming cyanobacterium; Anabaena/Dolichospermum flos-aquae is the classic Walsby gas-vesicle research model."
+  note: Gas-vacuolate bloom-forming cyanobacterium; Anabaena/Dolichospermum flos-aquae
+    is the classic Walsby gas-vesicle research model.
   reference: PMID:15060038
 causal_graphs:
 - graph_id: gas_vesicle_buoyancy
@@ -47,7 +48,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Small hydrophobic primary structural protein forming the gas vesicle
       shell.
-    grounding: UniProtKB:A0A0B5ENA7
   - node_id: gas_vesicle_shell
     label: gas vesicle shell
     node_type: CELLULAR_LOCALIZATION
@@ -57,7 +57,6 @@ causal_graphs:
     label: GvpC
     node_type: GENE_OR_PROTEIN
     description: Accessory coat protein that reinforces the gas vesicle shell.
-    grounding: UniProtKB:A0AA45D9L5
   - node_id: hydrophobic_inner_surface
     label: hydrophobic inner shell surface
     node_type: QUALITY
@@ -81,7 +80,6 @@ causal_graphs:
     label: GvpD
     node_type: GENE_OR_PROTEIN
     description: Regulatory protein with an inhibitory effect on gas vesicle formation.
-    grounding: UniProtKB:A0A059TSE2
   - node_id: gas_vesicle_formation
     label: gas vesicle formation
     node_type: BIOLOGICAL_PROCESS
@@ -207,4 +205,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0B5ENA7×1, UniProtKB:A0AA45D9L5×1, UniProtKB:A0A059TSE2×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true
