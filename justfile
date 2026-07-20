@@ -155,13 +155,15 @@ knowledge-gap-scan *args:
 research_dir := "research"
 templates_dir := "templates"
 
-# Deep research on a trait using a specified provider.
-# Examples:
-#   just research-trait falcon physiology autotrophic
-#   just research-trait falcon environment aerobic --dry-run
-research-trait provider category slug *args="":
+# Deep research on a trait.
+# Provider defaults to `edison` in scripts/research_trait.py (an alias for
+# deep-research-client's `falcon`, the Edison research agent). Override by
+# passing --provider through as a trailing arg.
+#   just research-trait physiology autotrophic                    # Edison
+#   just research-trait environment aerobic --dry-run
+#   just research-trait environment aerobic --provider openai
+research-trait category slug *args="":
     uv run --extra dev python scripts/research_trait.py \
-      --provider {{provider}} \
       --category {{category}} \
       --slug {{slug}} \
       --template {{templates_dir}}/trait_causal_graph_research.md \

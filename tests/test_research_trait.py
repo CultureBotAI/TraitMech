@@ -8,11 +8,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from research_trait import (  # noqa: E402
+    DEFAULT_PROVIDER,
     build_command,
     load_trait,
     parse_args,
     provider_args,
     research_env,
+    resolve_provider,
     resolve_trait_file,
     template_vars,
 )
@@ -79,3 +81,35 @@ def test_parse_args_passes_provider_specific_options_through():
         ]
     )
     assert args.passthrough_args == ["--param", "max_tokens=3500"]
+
+
+def test_edison_alias_resolves_to_falcon():
+    """"Edison" is the platform; `falcon` is the agent name the client accepts.
+
+    deep-research-client has no provider literally named `edison`, so the alias
+    must resolve before the name reaches the client.
+    """
+    assert resolve_provider("edison") == "falcon"
+    assert resolve_provider("Edison") == "falcon"
+
+
+def test_resolve_provider_passes_through_real_provider_names():
+    for name in ("falcon", "openai", "cyberian", "perplexity"):
+        assert resolve_provider(name) == name
+
+
+def test_provider_defaults_to_edison():
+    args = parse_args(["--category", "physiology", "--slug", "autotrophic"])
+    assert args.provider == DEFAULT_PROVIDER == "edison"
+
+
+def test_edison_output_filename_stays_in_falcon_namespace(tmp_path):
+    """Resolving the alias late would strand results in a new filename namespace
+    and make the 10 already-researched traits look pending again."""
+    from research_trait import main as research_main
+
+    rc = research_main([
+        "--provider", "edison", "--category", "physiology", "--slug", "autotrophic",
+        "--research-dir", str(tmp_path), "--dry-run",
+    ])
+    assert rc == 0

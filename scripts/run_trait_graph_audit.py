@@ -35,12 +35,18 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import yaml
+from research_trait import resolve_provider
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 RESEARCH_DIR = REPO_ROOT / "research" / "traits"
 MANIFEST = REPO_ROOT / "reports" / "trait_graph_audit_manifest.tsv"
-PROVIDER = "falcon"
+# Default deep-research provider. "edison" is a TraitMech-side alias resolved by
+# research_trait.resolve_provider() to deep-research-client's `falcon` — Falcon is
+# the Edison Scientific platform's research agent, and the client has no provider
+# literally named `edison`. Resolving here too keeps output filenames (and hence
+# resume detection) in the established `-deep-research-falcon.md` namespace.
+DEFAULT_PROVIDER = "edison"
 
 
 def target_traits() -> list[tuple[str, str, str]]:
@@ -58,8 +64,8 @@ def target_traits() -> list[tuple[str, str, str]]:
     return out
 
 
-def output_path(category: str, slug: str) -> Path:
-    return RESEARCH_DIR / category / f"{slug}-deep-research-{PROVIDER}.md"
+def output_path(category: str, slug: str, provider: str = DEFAULT_PROVIDER) -> Path:
+    return RESEARCH_DIR / category / f"{slug}-deep-research-{resolve_provider(provider)}.md"
 
 
 def main() -> int:
@@ -69,7 +75,11 @@ def main() -> int:
     ap.add_argument("--sleep", type=float, default=2.0, help="seconds to stagger worker launches")
     ap.add_argument("--workers", type=int, default=1, help="concurrent deep-research-client calls")
     ap.add_argument("--category", default="", help="restrict to one category")
+    ap.add_argument("--provider", default=DEFAULT_PROVIDER,
+                    help=f"provider or alias (default: {DEFAULT_PROVIDER}, the Edison "
+                         "research agent, resolved to deep-research-client's `falcon`)")
     args = ap.parse_args()
+    provider = args.provider
 
     # The Edison platform credential is provisioned as EDISON_PLATFORM_API_KEY
     # (the name the edison_client SDK reads), but this harness's preflight and the
@@ -86,7 +96,11 @@ def main() -> int:
     targets = target_traits()
     if args.category:
         targets = [t for t in targets if t[0] == args.category.lower()]
-    pending = [(c, s, l) for c, s, l in targets if not output_path(c, s).exists()]
+    pending = [
+        (cat, slug, label)
+        for cat, slug, label in targets
+        if not output_path(cat, slug, provider).exists()
+    ]
     done_already = len(targets) - len(pending)
     print(f"targets: {len(targets)}  already-researched: {done_already}  pending: {len(pending)}", file=sys.stderr)
     if args.limit:
@@ -103,7 +117,7 @@ def main() -> int:
     if args.dry_run:
         for i, (cat, slug, label) in enumerate(pending, 1):
             cmd = ["uv", "run", "python", "scripts/research_trait.py",
-                   "--provider", PROVIDER, "--category", cat, "--slug", slug]
+                   "--provider", provider, "--category", cat, "--slug", slug]
             print(f"[{i}/{len(pending)}] {cat}/{slug}  ({label})")
             print("   " + " ".join(cmd))
         mf.close()
@@ -122,7 +136,7 @@ def main() -> int:
         if args.sleep:
             time.sleep(args.sleep * ((idx - 1) % max(args.workers, 1)))
         cmd = ["uv", "run", "python", "scripts/research_trait.py",
-               "--provider", PROVIDER, "--category", cat, "--slug", slug]
+               "--provider", provider, "--category", cat, "--slug", slug]
         print(f"[start {idx}/{total}] {cat}/{slug}  ({label})", file=sys.stderr)
         try:
             subprocess.run(cmd, check=True, cwd=REPO_ROOT,
@@ -133,7 +147,7 @@ def main() -> int:
         with lock:
             counts["ok" if ok else "fail"] += 1
             w.writerow([cat, slug, status,
-                        str(output_path(cat, slug).relative_to(REPO_ROOT)) if ok else ""])
+                        str(output_path(cat, slug, provider).relative_to(REPO_ROOT)) if ok else ""])
             mf.flush()
             done = counts["ok"] + counts["fail"]
             print(f"[done {done}/{total}] {cat}/{slug}  -> {status}  "
