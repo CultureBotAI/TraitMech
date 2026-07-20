@@ -25,7 +25,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1515
   taxon_label: Acetivibrio thermocellus
-  note: "Thermophilic anaerobe secreting the paradigm cellulosome (formerly Clostridium thermocellum). Ruminococcus is the mesophilic rumen model."
+  note: Thermophilic anaerobe secreting the paradigm cellulosome (formerly Clostridium
+    thermocellum). Ruminococcus is the mesophilic rumen model.
   reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8951355/
 causal_graphs:
 - graph_id: cellulolysis_cellulase_systems
@@ -56,7 +57,6 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Cellulase that cleaves internal bonds of cellulose chains.
-    grounding: UniProtKB:A0A060H8L4
   - node_id: cellobiohydrolase
     label: cellobiohydrolase / exoglucanase
     node_type: GENE_OR_PROTEIN
@@ -65,7 +65,7 @@ causal_graphs:
     label: beta-glucosidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme hydrolyzing cellobiose to glucose.
-    grounding: UniProtKB:A0A031JNC1
+    grounding: GO:0008422
   - node_id: cellobiose
     label: cellobiose
     node_type: CHEMICAL
@@ -83,7 +83,6 @@ causal_graphs:
     label: cohesin domain
     node_type: GENE_OR_PROTEIN
     description: Scaffoldin module that binds dockerin domains.
-    grounding: UniProtKB:A0A174EJP3
   - node_id: dockerin_domain
     label: dockerin domain
     node_type: GENE_OR_PROTEIN
@@ -230,4 +229,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A060H8L4×1, UniProtKB:A0A031JNC1×1, UniProtKB:A0A174EJP3×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0008422×1).
   llm_assisted: true

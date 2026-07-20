@@ -28,11 +28,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:86665
   taxon_label: Halalkalibacterium halodurans
-  note: "alkaliphile growing at pH >9.5"
+  note: alkaliphile growing at pH >9.5
   reference: DOI:10.1093/nar/28.21.4317
 - taxon_id: NCBITaxon:2257
   taxon_label: Natronomonas pharaonis
-  note: "haloalkaliphilic archaeon"
+  note: haloalkaliphilic archaeon
   reference: PMID:16169924
 causal_graphs:
 - graph_id: alkaliphilic_na_cycle_homeostasis
@@ -64,7 +64,6 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Secondary transporter exchanging sodium and protons.
-    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -263,4 +262,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002327×3, RO:0002213×1, RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

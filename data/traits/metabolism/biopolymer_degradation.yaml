@@ -24,11 +24,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
-  note: "secreted polymer hydrolases"
+  note: secreted polymer hydrolases
   reference: PMID:35893563
 - taxon_id: NCBITaxon:1708
   taxon_label: Cellulomonas fimi
-  note: "cellulose/biopolymer degrader"
+  note: cellulose/biopolymer degrader
   reference: PMID:23342046
 causal_graphs:
 - graph_id: biopolymer_degradation_extracellular_hydrolysis
@@ -54,7 +54,6 @@ causal_graphs:
     label: endoglucanase
     node_type: GENE_OR_PROTEIN
     description: Glycoside hydrolase cleaving internal beta-1,4 linkages in cellulose.
-    grounding: UniProtKB:A0A060H8L4
   - node_id: cello_oligosaccharides
     label: cello-oligosaccharides
     node_type: CHEMICAL
@@ -63,7 +62,7 @@ causal_graphs:
     label: beta-glucosidase
     node_type: GENE_OR_PROTEIN
     description: Hydrolase converting cellobiose/oligosaccharides to glucose.
-    grounding: UniProtKB:A0A031JNC1
+    grounding: GO:0008422
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -87,7 +86,6 @@ causal_graphs:
     label: endo-chitinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme cleaving internally within the beta-1,4-GlcNAc chitin polymer.
-    grounding: UniProtKB:Q693B6
   - node_id: chitooligosaccharides
     label: chitooligosaccharides
     node_type: CHEMICAL
@@ -216,4 +214,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A060H8L4×1, UniProtKB:A0A031JNC1×1, UniProtKB:Q693B6×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0008422×1).
   llm_assisted: true

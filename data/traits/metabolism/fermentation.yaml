@@ -21,15 +21,15 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "mixed-acid fermentation"
+  note: mixed-acid fermentation
   reference: PMID:25152889
 - taxon_id: NCBITaxon:1358
   taxon_label: Lactococcus lactis
-  note: "homolactic fermentation"
+  note: homolactic fermentation
   reference: DOI:10.1093/femsre/fuaa033
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
-  note: "ABE fermentation"
+  note: ABE fermentation
   reference: PMID:11466286
 causal_graphs:
 - graph_id: fermentation_redox_energy
@@ -84,7 +84,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.2.7.1) oxidatively decarboxylating pyruvate and reducing
       ferredoxin.
-    grounding: UniProtKB:A0A075WCC3
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: CHEMICAL
@@ -115,7 +114,6 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion-motive force.
-    grounding: UniProtKB:A0A415TT77
   edges:
   - subject: fermentation_trait
     predicate: uses
@@ -277,4 +275,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A075WCC3×1, UniProtKB:I3R731×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

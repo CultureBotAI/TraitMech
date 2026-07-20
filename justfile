@@ -54,6 +54,15 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Resolve every UniProtKB grounding on GENE_OR_PROTEIN causal nodes against
+# the UniProt REST API; classify reviewed / unreviewed / deleted and flag
+# accessions reused across trait files. Emits
+# reports/uniprot_grounding_audit.tsv; exits 1 on any deleted accession.
+# Network-dependent, so it is not part of `just qc`.
+# See docs/GROUNDING_POLICY.md.
+audit-uniprot *args:
+    uv run python scripts/audit_uniprot_grounding.py {{args}}
+
 # Verify a METPO ROBOT-template proposal cohort under proposals/.
 # Runs column-count, header, parent integrity, subset tag, and scope-A/C
 # coverage checks. See .claude/skills/metpo-proposal/SKILL.md.

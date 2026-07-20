@@ -23,7 +23,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:920
   taxon_label: Acidithiobacillus ferrooxidans
-  note: "Archetypal iron/sulfur chemolithoautotroph; bioleaching model organism."
+  note: Archetypal iron/sulfur chemolithoautotroph; bioleaching model organism.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2754497/
 causal_graphs:
 - graph_id: chemolithoautotrophic_energy_and_fixation
@@ -82,13 +82,13 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, the carboxylating
       enzyme of the CBB cycle.
-    grounding: UniProtKB:A0A075WF79
+    grounding: InterPro:IPR033966
   - node_id: carbonic_anhydrase
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Enzyme interconverting CO2 and bicarbonate to facilitate dissolved
       inorganic carbon fixation.
-    grounding: UniProtKB:A0A009PMS8
+    grounding: InterPro:IPR001765
   - node_id: dic_transporter
     label: dissolved inorganic carbon transporter
     node_type: GENE_OR_PROTEIN
@@ -323,4 +323,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PMS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR033966×1, InterPro:IPR001765×1).
   llm_assisted: true

@@ -100,6 +100,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Key enzyme catalyzing oxidation/detoxification of sulfide in lithotrophic
       sulfur oxidizers.
+    grounding: GO:0070224
   - node_id: thiosulfate
     label: thiosulfate
     node_type: CHEMICAL
@@ -344,4 +345,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15138×1, CHEBI:16094×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0070224×1).
   llm_assisted: true

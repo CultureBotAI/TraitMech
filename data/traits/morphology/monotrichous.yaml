@@ -18,11 +18,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
-  note: "single polar flagellum"
+  note: single polar flagellum
   reference: PMID:19717600
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
-  note: "single polar flagellum (swarmer)"
+  note: single polar flagellum (swarmer)
   reference: PMID:31010900
 causal_graphs:
 - graph_id: monotrichous_single_polar_flagellum
@@ -49,7 +49,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that targets and anchors flagellar assembly to the
       cell pole.
-    grounding: UniProtKB:A0A656AC42
   - node_id: flhg_atpase
     label: FlhG
     node_type: GENE_OR_PROTEIN
@@ -69,7 +68,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: C-ring switch protein that bridges the MS-ring to motor and chemotaxis
       components.
-    grounding: UniProtKB:A0A016XEK1
   - node_id: flif_msring
     label: FliF MS-ring protein
     node_type: GENE_OR_PROTEIN
@@ -177,4 +175,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A656AC42×1, UniProtKB:Q2N2M1×1, UniProtKB:A0A016XEK1×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

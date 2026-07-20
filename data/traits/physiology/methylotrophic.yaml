@@ -26,7 +26,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:408
   taxon_label: Methylorubrum extorquens
-  note: "Model facultative methylotroph (formerly Methylobacterium extorquens; strain AM1)."
+  note: Model facultative methylotroph (formerly Methylobacterium extorquens; strain
+    AM1).
   reference: PMID:12730156
 causal_graphs:
 - graph_id: methylotrophic_methanol_assimilation
@@ -48,12 +49,10 @@ causal_graphs:
     label: methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Primary enzyme oxidizing methanol in methylotrophy.
-    grounding: UniProtKB:A0A010SCY7
   - node_id: pqq_dependent_mdh
     label: PQQ-dependent methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Periplasmic methanol dehydrogenase class in Gram-negative methylotrophs.
-    grounding: UniProtKB:A0A4U8YZA6
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -102,6 +101,7 @@ causal_graphs:
     label: formate dehydrogenase (Fdh)
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing formate to CO2 in the dissimilatory branch.
+    grounding: GO:0009326
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -316,4 +316,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16526×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009326×1).
   llm_assisted: true

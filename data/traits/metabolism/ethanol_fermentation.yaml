@@ -23,7 +23,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:542
   taxon_label: Zymomonas mobilis
-  note: "Canonical bacterial ethanologen (Entner-Doudoroff route to ethanol)."
+  note: Canonical bacterial ethanologen (Entner-Doudoroff route to ethanol).
   reference: PMID:27629544
 causal_graphs:
 - graph_id: ethanol_fermentation_pyruvate_to_ethanol
@@ -56,7 +56,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and
       CO2.
-    grounding: UniProtKB:A0A067Z5Y9
+    grounding: GO:0004737
   - node_id: acetaldehyde
     label: acetaldehyde
     node_type: CHEMICAL
@@ -71,7 +71,6 @@ causal_graphs:
     label: alcohol dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.
-    grounding: UniProtKB:A0A022L3Z7
   - node_id: nadh
     label: NADH
     node_type: CHEMICAL
@@ -208,4 +207,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A067Z5Y9×1, UniProtKB:A0A022L3Z7×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004737×1).
   llm_assisted: true

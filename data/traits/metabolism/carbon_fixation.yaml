@@ -27,7 +27,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:106590
   taxon_label: Cupriavidus necator
-  note: "Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on H2+CO2 (strain H16)."
+  note: Model chemolithoautotroph fixing CO2 via the Calvin-Benson-Bassham cycle on
+    H2+CO2 (strain H16).
   reference: PMID:16964242
 causal_graphs:
 - graph_id: carbon_fixation_co2_assimilation
@@ -60,7 +61,7 @@ causal_graphs:
     label: carbonic anhydrase
     node_type: GENE_OR_PROTEIN
     description: Enzyme accelerating interconversion of CO2 and bicarbonate.
-    grounding: UniProtKB:A0A009PMS8
+    grounding: InterPro:IPR001765
   - node_id: rubisco
     label: ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)
     node_type: GENE_OR_PROTEIN
@@ -247,4 +248,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A009PMS8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR001765×1).
   llm_assisted: true

@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:43687
   taxon_label: Metallosphaera sedula
-  note: "Thermoacidophilic crenarchaeon where the 3-hydroxypropionate/4-hydroxybutyrate CO2-fixation cycle was characterized."
+  note: Thermoacidophilic crenarchaeon where the 3-hydroxypropionate/4-hydroxybutyrate
+    CO2-fixation cycle was characterized.
   reference: PMID:18079405
 causal_graphs:
 - graph_id: three_hp_four_hb_sulfolobales
@@ -82,7 +83,6 @@ causal_graphs:
     label: 4-hydroxybutyryl-CoA dehydratase
     node_type: GENE_OR_PROTEIN
     description: Enzyme dehydrating 4-hydroxybutyryl-CoA to crotonyl-CoA.
-    grounding: UniProtKB:A0A017H5F8
   edges:
   - subject: bicarbonate
     predicate: fixed by
@@ -208,4 +208,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A650CEQ7×1, UniProtKB:A0A017H5F8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

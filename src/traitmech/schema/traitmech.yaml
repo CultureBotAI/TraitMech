@@ -32,6 +32,9 @@ prefixes:
   KEGG: https://www.kegg.jp/entry/
   MetaCyc: https://biocyc.org/META/NEW-IMAGE?object=
   UniProtKB: https://www.uniprot.org/uniprotkb/
+  # Protein families/domains — the taxon-agnostic grounding for causal-graph
+  # GENE_OR_PROTEIN nodes that name a family rather than one organism's protein.
+  InterPro: https://www.ebi.ac.uk/interpro/entry/InterPro/
   NCBIGene: https://www.ncbi.nlm.nih.gov/gene/
   # Taxonomy
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_

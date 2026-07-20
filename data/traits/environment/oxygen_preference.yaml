@@ -85,7 +85,7 @@ causal_graphs:
     label: catalase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that degrades hydrogen peroxide to water and oxygen.
-    grounding: UniProtKB:A0A071MK53
+    grounding: GO:0004096
   - node_id: hydrogen_peroxide
     label: hydrogen peroxide
     node_type: CHEMICAL
@@ -95,7 +95,7 @@ causal_graphs:
     label: superoxide dismutase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that dismutates superoxide; key oxidative-stress defense.
-    grounding: UniProtKB:A0A009QPW9
+    grounding: GO:0004784
   - node_id: oxygen_tolerance
     label: oxygen tolerance
     node_type: CAPACITY
@@ -265,4 +265,16 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000007×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004096×1, GO:0004784×1).
   llm_assisted: true

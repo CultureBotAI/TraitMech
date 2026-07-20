@@ -24,7 +24,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
-  note: "Model endospore former and the paradigm for sporulation (strain 168)."
+  note: Model endospore former and the paradigm for sporulation (strain 168).
   reference: PMID:22091839
 causal_graphs:
 - graph_id: spore_forming_endospore_assembly
@@ -65,7 +65,6 @@ causal_graphs:
     label: SpoIID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
-    grounding: UniProtKB:A0A0M6WLJ0
   - node_id: spoIIM
     label: SpoIIM
     node_type: GENE_OR_PROTEIN
@@ -75,7 +74,6 @@ causal_graphs:
     label: SpoIIP
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
-    grounding: UniProtKB:A0A1S8R940
   - node_id: forespore_engulfment
     label: forespore engulfment
     node_type: BIOLOGICAL_PROCESS
@@ -258,4 +256,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0M6WLJ0×1, UniProtKB:A5N7K0×1, UniProtKB:A0A1S8R940×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

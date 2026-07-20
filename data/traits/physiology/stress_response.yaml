@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "general stress response (RpoS)"
+  note: general stress response (RpoS)
   reference: PMID:38411096
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
-  note: "extreme stress resistance"
+  note: extreme stress resistance
   reference: PMID:30339218
 causal_graphs:
 - graph_id: stress_response_induction
@@ -73,7 +73,6 @@ causal_graphs:
     label: RpoS (sigma S)
     node_type: GENE_OR_PROTEIN
     description: General-stress-response sigma factor (sigma S / sigma 38).
-    grounding: UniProtKB:A0A010TBV5
   - node_id: general_stress_resistance
     label: general stress resistance
     node_type: BIOLOGICAL_PROCESS
@@ -82,7 +81,6 @@ causal_graphs:
     label: Hfq
     node_type: GENE_OR_PROTEIN
     description: RNA chaperone enabling sRNA-dependent translational regulation.
-    grounding: UniProtKB:A0A3B9B147
   edges:
   - subject: environmental_stress
     predicate: causes
@@ -196,4 +194,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A010TBV5×1, UniProtKB:A0A3B9B147×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

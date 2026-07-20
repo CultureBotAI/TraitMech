@@ -26,7 +26,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:29405
   taxon_label: Microlunatus phosphovorus
-  note: "Model polyphosphate-accumulating organism (volutin granules; enhanced biological phosphorus removal)."
+  note: Model polyphosphate-accumulating organism (volutin granules; enhanced biological
+    phosphorus removal).
   reference: PMID:22923697
 causal_graphs:
 - graph_id: polyphosphate_granule_storage
@@ -51,10 +52,12 @@ causal_graphs:
     label: polyphosphate kinase (PPK)
     node_type: GENE_OR_PROTEIN
     description: Enzyme that synthesizes inorganic polyphosphate from ATP.
+    grounding: GO:0008976
   - node_id: ppx
     label: exopolyphosphatase (PPX)
     node_type: GENE_OR_PROTEIN
     description: Enzyme that degrades inorganic polyphosphate.
+    grounding: GO:0004309
   - node_id: divalent_cations
     label: divalent cations
     node_type: CHEMICAL
@@ -147,4 +150,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000007×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0008976×1, GO:0004309×1).
   llm_assisted: true

@@ -28,11 +28,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1299
   taxon_label: Deinococcus radiodurans
-  note: "UV-resistant"
+  note: UV-resistant
   reference: PMID:11238985
 - taxon_id: NCBITaxon:54298
   taxon_label: Chroococcidiopsis
-  note: "desert UV-tolerant cyanobacterium"
+  note: desert UV-tolerant cyanobacterium
   reference: PMID:23239185
 causal_graphs:
 - graph_id: uv_tolerance_excision_repair
@@ -77,7 +77,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antioxidant enzyme detoxifying reactive oxygen species generated
       by UV.
-    grounding: UniProtKB:A0A071MK53
+    grounding: GO:0004096
   - node_id: reactive_oxygen_species
     label: reactive oxygen species
     node_type: CHEMICAL
@@ -212,4 +212,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:26523×1, CHEBI:35738×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004096×1).
   llm_assisted: true

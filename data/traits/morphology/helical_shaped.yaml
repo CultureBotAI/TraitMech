@@ -21,7 +21,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:210
   taxon_label: Helicobacter pylori
-  note: "Textbook helical bacterium; helical shape aids gastric mucus colonisation."
+  note: Textbook helical bacterium; helical shape aids gastric mucus colonisation.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6597387/
 causal_graphs:
 - graph_id: helical_shaped_pg_relaxation
@@ -42,7 +42,6 @@ causal_graphs:
     label: CcmA
     node_type: GENE_OR_PROTEIN
     description: Bactofilin-like protein implicated in H. pylori helical shape.
-    grounding: UniProtKB:E0X6H3
   - node_id: peptidoglycan_crosslink_relaxation
     label: peptidoglycan crosslink relaxation
     node_type: BIOLOGICAL_PROCESS
@@ -203,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 4 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (biolink:causes×2, RO:0002213×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

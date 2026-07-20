@@ -19,11 +19,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "major human pathogen"
+  note: major human pathogen
   reference: PMID:30209034
 - taxon_id: NCBITaxon:1773
   taxon_label: Mycobacterium tuberculosis
-  note: "tuberculosis agent"
+  note: tuberculosis agent
   reference: PMID:40588584
 causal_graphs:
 - graph_id: human_pathogen_anthropoid_adaptation
@@ -58,6 +58,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Multiprotein machine translocating protein effectors and toxins into
       host cells.
+    grounding: GO:0043684
   - node_id: host_cell_manipulation
     label: host cell manipulation
     node_type: BIOLOGICAL_PROCESS
@@ -276,4 +277,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042710×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0043684×1).
   llm_assisted: true

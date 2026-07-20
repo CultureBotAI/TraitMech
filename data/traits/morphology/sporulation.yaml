@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1423
   taxon_label: Bacillus subtilis
-  note: "endospore formation model"
+  note: endospore formation model
   reference: PMID:32061128
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
-  note: "anaerobic sporulation"
+  note: anaerobic sporulation
   reference: PMID:18631379
 causal_graphs:
 - graph_id: sporulation_spo0a_sigma_morphogenesis
@@ -75,7 +75,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: DNA translocase that pumps the chromosome into the forespore during
       sporulation.
-    grounding: UniProtKB:A0A100JQQ1
   - node_id: chromosome_translocation
     label: chromosome translocation
     node_type: BIOLOGICAL_PROCESS
@@ -94,7 +93,6 @@ causal_graphs:
     label: sigma F
     node_type: GENE_OR_PROTEIN
     description: First compartment-specific sigma factor activated in the forespore.
-    grounding: UniProtKB:E0J3M3
   - node_id: sigma_e
     label: sigma E
     node_type: GENE_OR_PROTEIN
@@ -108,7 +106,6 @@ causal_graphs:
     label: sigma K
     node_type: GENE_OR_PROTEIN
     description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
-    grounding: UniProtKB:A0A060N640
   - node_id: spore_dna_protection
     label: spore DNA protection
     node_type: BIOLOGICAL_PROCESS
@@ -304,4 +301,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 4 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A100JQQ1×1, UniProtKB:E0J3M3×1, UniProtKB:A0A0C7NZS0×1, UniProtKB:A0A060N640×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

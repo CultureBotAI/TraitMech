@@ -24,11 +24,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1021
   taxon_label: Beggiatoa
-  note: "chemolitho/organo mixotroph"
+  note: chemolitho/organo mixotroph
   reference: PMID:32575621
 - taxon_id: NCBITaxon:266
   taxon_label: Paracoccus denitrificans
-  note: "facultative mixotroph"
+  note: facultative mixotroph
   reference: PMID:29946833
 causal_graphs:
 - graph_id: mixotrophic_dual_carbon_energy_use
@@ -88,7 +88,7 @@ causal_graphs:
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Ribulose-1,5-bisphosphate carboxylase/oxygenase, key CBB enzyme.
-    grounding: UniProtKB:A0A075WF79
+    grounding: InterPro:IPR033966
   - node_id: cbb_cycle
     label: Calvin-Benson-Bassham cycle
     node_type: PATHWAY
@@ -289,4 +289,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006754×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR033966×1).
   llm_assisted: true

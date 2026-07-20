@@ -25,11 +25,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
-  note: "photolithotroph"
+  note: photolithotroph
   reference: PMID:23945601
 - taxon_id: NCBITaxon:1085
   taxon_label: Rhodospirillum rubrum
-  note: "photoorganotroph"
+  note: photoorganotroph
   reference: PMID:21886856
 causal_graphs:
 - graph_id: phototrophy_light_energy_capture
@@ -71,6 +71,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Light-driven water-oxidizing complex initiating photosynthetic electron
       transport.
+    grounding: GO:0009523
   - node_id: photosynthetic_electron_transport
     label: photosynthetic electron transport chain
     node_type: BIOLOGICAL_PROCESS
@@ -213,4 +214,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006754×1, GO:0009767×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009523×1).
   llm_assisted: true

@@ -23,7 +23,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
-  note: "cadmium efflux resistance"
+  note: cadmium efflux resistance
   reference: PMID:20463976
 causal_graphs:
 - graph_id: cadmium_tolerance_czc_efflux
@@ -45,7 +45,6 @@ causal_graphs:
     label: czc cation-efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.
-    grounding: UniProtKB:B0VPE1
   - node_id: cadmium_export
     label: cadmium ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -169,4 +168,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:29105×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

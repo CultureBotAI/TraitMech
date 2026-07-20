@@ -21,7 +21,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
-  note: "Curved/crescent (vibrioid) cell; classic strain CB15, long called Caulobacter crescentus."
+  note: Curved/crescent (vibrioid) cell; classic strain CB15, long called Caulobacter
+    crescentus.
   reference: PMID:19383443
 causal_graphs:
 - graph_id: crescent_shaped_crescentin_curvature
@@ -39,7 +40,6 @@ causal_graphs:
     label: crescentin
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like cytoskeletal protein encoded by creS.
-    grounding: UniProtKB:A0A2N9AY16
   - node_id: inner_cell_curvature
     label: inner cell curvature
     node_type: CELLULAR_LOCALIZATION
@@ -195,4 +195,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1, METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

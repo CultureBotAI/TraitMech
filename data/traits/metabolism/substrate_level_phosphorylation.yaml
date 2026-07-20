@@ -19,11 +19,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1314
   taxon_label: Streptococcus pyogenes
-  note: "ATP via glycolytic substrate-level phosphorylation"
+  note: ATP via glycolytic substrate-level phosphorylation
   reference: PMID:27442496
 - taxon_id: NCBITaxon:1488
   taxon_label: Clostridium acetobutylicum
-  note: "fermentative substrate-level phosphorylation"
+  note: fermentative substrate-level phosphorylation
   reference: PMID:11466286
 causal_graphs:
 - graph_id: substrate_level_phosphorylation_direct_atp
@@ -68,7 +68,7 @@ causal_graphs:
     label: acetate kinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme that converts acetyl phosphate and ADP to acetate and ATP.
-    grounding: UniProtKB:A0A081KVG3
+    grounding: GO:0008776
   - node_id: acetate
     label: acetate
     node_type: CHEMICAL
@@ -94,6 +94,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carbamate kinase of the arginine deiminase pathway that generates
       ATP by SLP.
+    grounding: GO:0008804
   edges:
   - subject: substrate_level_phosphorylation_trait
     predicate: occurs in
@@ -244,4 +245,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006113×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0008776×1, GO:0008804×1).
   llm_assisted: true

@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "catalase-positive"
+  note: catalase-positive
   reference: PMID:17114262
 - taxon_id: NCBITaxon:287
   taxon_label: Pseudomonas aeruginosa
-  note: "catalase-positive"
+  note: catalase-positive
   reference: PMID:15972537
 causal_graphs:
 - graph_id: catalase_activity_h2o2_detoxification
@@ -44,7 +44,7 @@ causal_graphs:
     label: catalase
     node_type: GENE_OR_PROTEIN
     description: Heme enzyme that dismutates hydrogen peroxide.
-    grounding: UniProtKB:A0A071MK53
+    grounding: GO:0004096
   - node_id: catalase_function
     label: catalase activity
     node_type: MOLECULAR_FUNCTION
@@ -70,7 +70,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Peroxide-sensing transcriptional regulator activated by hydrogen
       peroxide.
-    grounding: UniProtKB:A0A9P2M4N5
   - node_id: perr_regulator
     label: PerR
     node_type: GENE_OR_PROTEIN
@@ -230,4 +229,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A9P2M4N5×1, UniProtKB:A0A097ASJ8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004096×1).
   llm_assisted: true

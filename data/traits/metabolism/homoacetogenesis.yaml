@@ -25,7 +25,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:33952
   taxon_label: Acetobacterium woodii
-  note: "Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway (Rnf bioenergetics model)."
+  note: Model homoacetogen; reduces CO2 to acetate via the Wood-Ljungdahl pathway
+    (Rnf bioenergetics model).
   reference: PMID:22479398
 causal_graphs:
 - graph_id: homoacetogenesis_wood_ljungdahl_acetate
@@ -86,7 +87,7 @@ causal_graphs:
     label: formate dehydrogenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing CO2 to formate in the methyl branch.
-    grounding: UniProtKB:A0A016XII7
+    grounding: GO:0009326
   - node_id: formyl_thf
     label: formyl-tetrahydrofolate
     node_type: CHEMICAL
@@ -113,7 +114,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme generating ATP by substrate-level phosphorylation during acetate
       formation.
-    grounding: UniProtKB:A0A081KVG3
+    grounding: GO:0008776
   - node_id: substrate_level_phosphorylation
     label: substrate-level phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -131,7 +132,6 @@ causal_graphs:
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane enzyme using the ion gradient to synthesize ATP.
-    grounding: UniProtKB:A0A415TT77
   edges:
   - subject: homoacetogenesis_trait
     predicate: occurs in
@@ -387,4 +387,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A016XII7×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 3 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009326×1, GO:0008776×1).
   llm_assisted: true

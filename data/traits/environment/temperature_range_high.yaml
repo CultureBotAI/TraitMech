@@ -49,6 +49,7 @@ causal_graphs:
     label: reverse gyrase (TopR/rgy)
     node_type: GENE_OR_PROTEIN
     description: Topoisomerase that introduces positive supercoils into DNA in thermophiles.
+    grounding: GO:0160097
   - node_id: positive_dna_supercoiling
     label: positive DNA supercoiling
     node_type: QUALITY
@@ -61,7 +62,6 @@ causal_graphs:
     label: DnaK-DnaJ chaperone
     node_type: GENE_OR_PROTEIN
     description: Hsp70 chaperone system assisting ATP-dependent protein folding.
-    grounding: UniProtKB:A0A0C1PL72
   - node_id: protein_folding
     label: protein folding
     node_type: BIOLOGICAL_PROCESS
@@ -197,4 +197,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0C1PL72×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0160097×1).
   llm_assisted: true

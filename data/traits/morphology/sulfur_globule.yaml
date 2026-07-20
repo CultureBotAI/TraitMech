@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:90373
   taxon_label: Thiomargarita namibiensis
-  note: "Giant sulfur bacterium storing conspicuous intracellular sulfur globules. Beggiatoa is a co-canonical exemplar."
+  note: Giant sulfur bacterium storing conspicuous intracellular sulfur globules.
+    Beggiatoa is a co-canonical exemplar.
   reference: PMID:10205058
 causal_graphs:
 - graph_id: sulfur_globule_sulfur_oxidation_intermediate
@@ -50,6 +51,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Flavoenzyme that oxidizes sulfide, initiating intracellular sulfur
       oxidation.
+    grounding: GO:0070224
   - node_id: sulfane_sulfur
     label: sulfane sulfur
     node_type: CHEMICAL
@@ -155,4 +157,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×2, METPO:2000016×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:55Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0070224×1).
   llm_assisted: true

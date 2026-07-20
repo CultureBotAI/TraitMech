@@ -26,7 +26,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:79885
   taxon_label: Alkalihalophilus pseudofirmus
-  note: "facultative alkaliphile (pH 7.5 to >11)"
+  note: facultative alkaliphile (pH 7.5 to >11)
   reference: PMID:21951522
 causal_graphs:
 - graph_id: facultatively_alkaphilic_sodium_cycle_homeostasis
@@ -66,7 +66,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging sodium ions and protons during alkaline pH
       homeostasis.
-    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -269,4 +268,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

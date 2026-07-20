@@ -23,7 +23,9 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:36861
   taxon_label: Thiobacillus denitrificans
-  note: "Obligately chemolithoautotrophic sulfur-compound oxidizer with a sequenced genome anchoring sulfur-oxidation pathways. Beggiatoa is a historic morphological exemplar."
+  note: Obligately chemolithoautotrophic sulfur-compound oxidizer with a sequenced
+    genome anchoring sulfur-oxidation pathways. Beggiatoa is a historic morphological
+    exemplar.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1367237/
 causal_graphs:
 - graph_id: sulfur_oxidation_sox
@@ -54,6 +56,7 @@ causal_graphs:
     label: sulfide:quinone oxidoreductase (SQR)
     node_type: GENE_OR_PROTEIN
     description: Membrane flavoprotein oxidizing sulfide to sulfane sulfur/polysulfide.
+    grounding: GO:0070224
   - node_id: sulfane_sulfur
     label: sulfane sulfur
     node_type: CHEMICAL
@@ -81,6 +84,7 @@ causal_graphs:
     label: thiosulfate dehydrogenase (TsdA)
     node_type: GENE_OR_PROTEIN
     description: Oxidizes thiosulfate to tetrathionate.
+    grounding: GO:0050338
   - node_id: tetrathionate
     label: tetrathionate
     node_type: CHEMICAL
@@ -216,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 8 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000016×5, METPO:2000202×3).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:54Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0070224×1, GO:0050338×1).
   llm_assisted: true

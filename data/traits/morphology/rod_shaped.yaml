@@ -26,7 +26,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "Textbook rod (bacillus); the universal Gram-negative model bacterium."
+  note: Textbook rod (bacillus); the universal Gram-negative model bacterium.
   reference: PMID:21501250
 causal_graphs:
 - graph_id: rod_shaped_mreB_peptidoglycan
@@ -43,7 +43,6 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
-    grounding: UniProtKB:A0A1B1UYY2
   - node_id: rod_complex
     label: Rod complex
     node_type: GENE_OR_PROTEIN
@@ -87,7 +86,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-system component that activates PBP2 by promoting
       its open conformation.
-    grounding: UniProtKB:A0A1L9R356
   - node_id: elongasome_processivity
     label: elongasome processivity
     node_type: BIOLOGICAL_PROCESS
@@ -284,4 +282,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A1L9R356×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

@@ -51,7 +51,6 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in rod-shape determination.
-    grounding: UniProtKB:A0A1B1UYY2
   - node_id: ftsZ
     label: FtsZ
     node_type: GENE_OR_PROTEIN
@@ -62,7 +61,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like protein required for curved rod shape
       in Caulobacter.
-    grounding: UniProtKB:A0A2N9AY16
   - node_id: rod_complex
     label: Rod complex (elongasome)
     node_type: PATHWAY
@@ -270,4 +268,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002211×1, RO:0002212×1, RO:0002213×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

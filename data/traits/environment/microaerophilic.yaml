@@ -25,7 +25,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:197
   taxon_label: Campylobacter jejuni
-  note: "Canonical microaerophile (requires reduced O2, ~5-10%)."
+  note: Canonical microaerophile (requires reduced O2, ~5-10%).
   reference: PMID:26284041
 causal_graphs:
 - graph_id: microaerophile_low_oxygen_respiration
@@ -59,7 +59,6 @@ causal_graphs:
     label: cytochrome bd ubiquinol oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity quinol oxidase widespread in low-oxygen-adapted bacteria.
-    grounding: UniProtKB:A0A0N0XA94
   - node_id: low_oxygen_respiration
     label: respiration under low oxygen
     node_type: BIOLOGICAL_PROCESS
@@ -76,6 +75,7 @@ causal_graphs:
     label: catalase (KatA)
     node_type: GENE_OR_PROTEIN
     description: Enzyme that detoxifies hydrogen peroxide.
+    grounding: GO:0004096
   - node_id: hydrogen_peroxide
     label: hydrogen peroxide
     node_type: CHEMICAL
@@ -85,6 +85,7 @@ causal_graphs:
     label: superoxide dismutase (SodB)
     node_type: GENE_OR_PROTEIN
     description: Enzyme protecting against reactive oxygen species.
+    grounding: GO:0004784
   - node_id: reactive_oxygen_species
     label: reactive oxygen species
     node_type: CHEMICAL
@@ -94,6 +95,7 @@ causal_graphs:
     label: alkyl hydroperoxide reductase (AhpC)
     node_type: GENE_OR_PROTEIN
     description: Predominant H2O2 scavenger at low oxygen.
+    grounding: GO:0009321
   edges:
   - subject: microoxic_environment
     predicate: enables
@@ -257,4 +259,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0N0XA94×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0004096×1, GO:0004784×1, GO:0009321×1).
   llm_assisted: true

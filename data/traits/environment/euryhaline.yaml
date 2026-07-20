@@ -20,11 +20,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
-  note: "tolerates a broad salinity range"
+  note: tolerates a broad salinity range
   reference: PMID:14532045
 - taxon_id: NCBITaxon:2746
   taxon_label: Halomonas elongata
-  note: "euryhaline halophile"
+  note: euryhaline halophile
   reference: PMID:35432243
 causal_graphs:
 - graph_id: euryhaline_wide_salinity_tolerance
@@ -102,7 +102,6 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Antiporter that expels sodium ions from the cytoplasm.
-    grounding: UniProtKB:A0A068T423
   - node_id: cytoplasmic_sodium
     label: cytoplasmic sodium ions
     node_type: CHEMICAL
@@ -338,4 +337,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0031456×1, GO:0019491×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

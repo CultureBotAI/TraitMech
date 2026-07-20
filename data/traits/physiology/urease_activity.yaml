@@ -22,7 +22,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1474
   taxon_label: Sporosarcina pasteurii
-  note: "Most-used organism for microbially induced calcite precipitation; copious constitutive urease (formerly Bacillus pasteurii)."
+  note: Most-used organism for microbially induced calcite precipitation; copious
+    constitutive urease (formerly Bacillus pasteurii).
   reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6979283/
 causal_graphs:
 - graph_id: urease_activity_urea_hydrolysis
@@ -39,7 +40,7 @@ causal_graphs:
     label: urease
     node_type: GENE_OR_PROTEIN
     description: Nickel metalloenzyme hydrolyzing urea.
-    grounding: UniProtKB:A0A090IGX8
+    grounding: GO:0009039
   - node_id: urease_function
     label: urease activity
     node_type: MOLECULAR_FUNCTION
@@ -217,4 +218,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 3 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:16234×1, GO:0004089×1, CHEBI:17544×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009039×1).
   llm_assisted: true

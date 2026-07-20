@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:668
   taxon_label: Aliivibrio fischeri
-  note: "Model bioluminescent bacterium (lux operon); Euprymna squid light-organ symbiont and quorum-sensing paradigm."
+  note: Model bioluminescent bacterium (lux operon); Euprymna squid light-organ symbiont
+    and quorum-sensing paradigm.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3759917/
 causal_graphs:
 - graph_id: bioluminescence_luciferase
@@ -40,7 +41,6 @@ causal_graphs:
     label: luciferase
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing the light-emitting reaction.
-    grounding: UniProtKB:A0A010SSZ8
   - node_id: bioluminescence_process
     label: bioluminescence
     node_type: BIOLOGICAL_PROCESS
@@ -229,4 +229,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×2, biolink:catalyzes×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

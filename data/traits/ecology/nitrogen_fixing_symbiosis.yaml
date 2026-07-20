@@ -26,7 +26,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:382
   taxon_label: Sinorhizobium meliloti
-  note: "Model rhizobium-legume symbiont (alfalfa / Medicago); strain 1021 (NCBITaxon:266834) is the most-studied reference."
+  note: Model rhizobium-legume symbiont (alfalfa / Medicago); strain 1021 (NCBITaxon:266834)
+    is the most-studied reference.
   reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3164228/
 causal_graphs:
 - graph_id: rhizobia_legume_n2_fixation
@@ -73,6 +74,7 @@ causal_graphs:
     label: nitrogenase complex
     node_type: GENE_OR_PROTEIN
     description: Bacterial enzyme complex catalyzing reduction of N2 to NH3.
+    grounding: GO:0016610
   - node_id: organic_acids
     label: organic acids
     node_type: CHEMICAL
@@ -200,4 +202,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:64709×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0016610×1).
   llm_assisted: true

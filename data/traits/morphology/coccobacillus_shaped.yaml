@@ -20,7 +20,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:727
   taxon_label: Haemophilus influenzae
-  note: "Textbook coccobacillus (short oval rod); first free-living organism to have its genome sequenced."
+  note: Textbook coccobacillus (short oval rod); first free-living organism to have
+    its genome sequenced.
   reference: PMID:7542800
 causal_graphs:
 - graph_id: coccobacillus_shaped_short_rod_morphogenesis
@@ -39,7 +40,6 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in cell-shape
       control.
-    grounding: UniProtKB:A0A1B1UYY2
   - node_id: peptidoglycan_synthesis
     label: peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -66,7 +66,6 @@ causal_graphs:
     label: GpsB
     node_type: GENE_OR_PROTEIN
     description: Cell-cycle regulator coordinating peptidoglycan synthase localization.
-    grounding: UniProtKB:A0A060RK42
   - node_id: pbp2_localization
     label: PBP2 localization
     node_type: CELLULAR_LOCALIZATION
@@ -245,4 +244,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A060RK42×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
   llm_assisted: true

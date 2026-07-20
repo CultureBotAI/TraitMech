@@ -23,11 +23,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:28901
   taxon_label: Salmonella enterica
-  note: "Salmonella pathogenicity islands (SPI)"
+  note: Salmonella pathogenicity islands (SPI)
   reference: PMID:17715824
 - taxon_id: NCBITaxon:666
   taxon_label: Vibrio cholerae
-  note: "Vibrio pathogenicity island (VPI)"
+  note: Vibrio pathogenicity island (VPI)
   reference: PMID:33123494
 causal_graphs:
 - graph_id: gi_hgt_accessory_function
@@ -69,6 +69,7 @@ causal_graphs:
     label: type IV secretion system (T4SS)
     node_type: GENE_OR_PROTEIN
     description: Secretion apparatus that mediates conjugative DNA transfer.
+    grounding: GO:0043684
   - node_id: integrative_mobilizable_element
     label: integrative mobilizable element (IME)
     node_type: BIOLOGICAL_PROCESS
@@ -149,4 +150,10 @@ curation_history:
   action: ENRICH_CAUSAL_GRAPH
   changes: Added 4 evidence-backed generic edges (5 new nodes) from the deep-research
     report.
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:53Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0043684×1).
   llm_assisted: true

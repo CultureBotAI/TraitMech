@@ -45,11 +45,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1148
   taxon_label: Synechocystis sp. PCC 6803
-  note: "oxygenic photoautotroph"
+  note: oxygenic photoautotroph
   reference: PMID:23945601
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
-  note: "anoxygenic photoautotroph"
+  note: anoxygenic photoautotroph
   reference: PMID:12093901
 causal_graphs:
 - graph_id: photoautotrophic_cyanobacterial_carbon_fixation
@@ -71,6 +71,7 @@ causal_graphs:
     label: photosystem II
     node_type: GENE_OR_PROTEIN
     description: Oxygenic photosystem that extracts electrons from water in cyanobacteria.
+    grounding: GO:0009523
   - node_id: water
     label: water
     node_type: CHEMICAL
@@ -104,7 +105,7 @@ causal_graphs:
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
-    grounding: UniProtKB:A0A075WF79
+    grounding: InterPro:IPR033966
   - node_id: biomass
     label: biomass
     node_type: CHEMICAL
@@ -321,4 +322,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0031470×1, CHEBI:17544×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:12Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:56Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (GO:0009523×1, InterPro:IPR033966×1).
   llm_assisted: true

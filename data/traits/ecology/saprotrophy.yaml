@@ -25,7 +25,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1902
   taxon_label: Streptomyces coelicolor
-  note: "Model saprotrophic soil decomposer; secretes hydrolases degrading dead organic matter."
+  note: Model saprotrophic soil decomposer; secretes hydrolases degrading dead organic
+    matter.
   reference: PMID:12000953
 causal_graphs:
 - graph_id: saprotrophy_decomposition_cycling
@@ -84,7 +85,7 @@ causal_graphs:
     label: laccase
     node_type: GENE_OR_PROTEIN
     description: Multicopper oxidase that oxidizes lignin and phenolic substrates.
-    grounding: UniProtKB:A0A072TFX8
+    grounding: InterPro:IPR017761
   - node_id: lignin
     label: lignin
     node_type: CHEMICAL
@@ -94,6 +95,7 @@ causal_graphs:
     label: manganese peroxidase (MnP)
     node_type: GENE_OR_PROTEIN
     description: H2O2-dependent fungal ligninolytic peroxidase.
+    grounding: GO:0016689
   - node_id: lignocellulolytic_gene_expression
     label: lignocellulolytic gene expression
     node_type: BIOLOGICAL_PROCESS
@@ -223,4 +225,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A072TFX8×1).
+  llm_assisted: true
+- timestamp: '2026-07-20T04:21:11Z'
+  curator: claude
+  action: RETRACT_DEAD_UNIPROT_GROUNDINGS
+  changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
+    nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-07-20T04:23:52Z'
+  curator: claude
+  action: GROUND_CAUSAL_NODES
+  changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
+    (InterPro:IPR017761×1, GO:0016689×1).
   llm_assisted: true
