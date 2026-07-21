@@ -65,19 +65,27 @@ def test_real_justfile_passes(capsys):
     assert "All justfile-referenced scripts/tests are tracked." in capsys.readouterr().out
 
 
+# Deliberately non-existent paths. An earlier version of this test used the
+# real filenames from the two incidents, which passed only while those files
+# were uncommitted -- committing them inverted the assertion and broke the
+# suite. A fixture asserting a file is untracked must name one that can never
+# become tracked, or it encodes a snapshot of the working tree.
+_ABSENT_SCRIPT = "scripts/__absent_for_test__.py"
+_ABSENT_TEST = "tests/__absent_for_test__.py"
+
+
 @pytest.mark.parametrize(
     "body, offender",
     [
-        # Incident 1: recipes for scripts that were never committed.
+        # Shape of incident 1: a recipe invoking a script that is not committed.
         (
-            "research-trait-edison target *args=\"\":\n"
-            "    uv run --extra dev python scripts/research_trait_edison.py\n",
-            "scripts/research_trait_edison.py",
+            f'some-recipe target *args="":\n    uv run python {_ABSENT_SCRIPT}\n',
+            _ABSENT_SCRIPT,
         ),
-        # Incident 2: a just variable listing an uncommitted file.
+        # Shape of incident 2: a just *variable* listing an uncommitted file.
         (
-            'VENDORED_IDLABEL_FILES := "scripts/chem_formula.py"\n',
-            "scripts/chem_formula.py",
+            f'VENDORED_IDLABEL_FILES := "{_ABSENT_TEST}"\n',
+            _ABSENT_TEST,
         ),
     ],
 )
@@ -86,3 +94,10 @@ def test_detects_untracked_reference(tmp_path, capsys, body, offender):
     fake.write_text(body)
     assert main(["--justfile", str(fake)]) == 1
     assert offender in capsys.readouterr().out
+
+
+def test_absent_fixtures_really_are_absent():
+    """Guard the guard: if someone ever creates these, the tests above go silently
+    green-for-the-wrong-reason, which is how the original version broke."""
+    for path in (_ABSENT_SCRIPT, _ABSENT_TEST):
+        assert not (Path(__file__).resolve().parent.parent / path).exists()
