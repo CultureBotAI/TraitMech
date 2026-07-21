@@ -54,6 +54,14 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Fail if the justfile names a scripts//tests/ Python file that is not tracked
+# in git. A recipe only fails when invoked, so a reference to an uncommitted
+# script is invisible to every other gate and surfaces at a colleague's
+# terminal on a clean checkout. Twice caused by `git add justfile` sweeping up
+# someone else's working-tree edits.
+audit-justfile-paths *args:
+    uv run python scripts/audit_justfile_paths.py {{args}}
+
 # Resolve every UniProtKB grounding on GENE_OR_PROTEIN causal nodes against
 # the UniProt REST API; classify reviewed / unreviewed / deleted and flag
 # accessions reused across trait files. Emits
@@ -228,7 +236,7 @@ check: lint test
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: validate-strict audit-schema audit-writers audit-proposals audit-graphs
+qc: validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
