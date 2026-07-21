@@ -11,6 +11,10 @@ htmlcov/
 .venv/
 venv/
 .env
+# Variants too (.env.local, .env.bak-*, editor swap copies): these hold the same
+# credential as .env, and `.env` alone does not match them.
+.env.*
+!.env.example
 
 # Build artifacts
 dist/
