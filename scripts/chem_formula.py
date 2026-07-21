@@ -59,6 +59,19 @@ _HYDRATE_TAIL_RE = re.compile(
 )
 _HYDRATE_DOT_RE = re.compile(r"^(.*?)\.\s*(\d*)\s*H2O$", re.IGNORECASE)
 
+# A hydrate whose multiplier is a VARIABLE ("VOSO4·xH2O", "MnSO4 x n H2O") --
+# the count is unknown, so guessing 1 would be a fabricated multiset. The
+# spaced form already returned None; the contiguous form silently guessed,
+# giving two answers for the same meaning. None = "cannot judge".
+# Two readings of a trailing "x":
+#   "MnSO4 x H2O"  -- x is the SEPARATOR, count implied 1 (a monohydrate)
+#   "VOSO4·xH2O"   -- the separator is the dot, so x is the MULTIPLIER, unknown
+# Only the second is variable. "n" is never a separator, so a bare n before H2O
+# is always variable.
+_VARIABLE_HYDRATE_RE = re.compile(
+    r"(?:[·.・*]\s*x|(?<![A-Za-z0-9])n)\s*H2\s*O\s*$", re.IGNORECASE
+)
+
 
 def looks_like_formula(name: str) -> bool:
     """True when a label reads as a chemical formula rather than prose.
@@ -88,6 +101,8 @@ def parse_formula(text: str) -> dict[str, int] | None:
     if not text:
         return None
     s = _OXSTATE_RE.sub("", text.strip())
+    if _VARIABLE_HYDRATE_RE.search(s):
+        return None
     counts: dict[str, int] = {}
 
     def add(elem: str, n: int) -> None:
@@ -98,7 +113,12 @@ def parse_formula(text: str) -> dict[str, int] | None:
         n = int(m.group(1) or 1)
         add("H", 2 * n)
         add("O", n)
-        s = s[: m.start()].strip()
+        # Strip a separator dot left behind by forms like "CuSO4 . 5H2O" and
+        # "Na2MoO4. 2H2O", where the whitespace matched above but the actual
+        # separator is the dot. Without this the core is "CuSO4 ." and fails to
+        # parse -- these labels parsed correctly before whitespace was accepted
+        # as a separator, so leaving it would be a regression.
+        s = s[: m.start()].strip().rstrip(".·・")
     m = _HYDRATE_DOT_RE.match(s)
     if m:
         n = int(m.group(2) or 1)
