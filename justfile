@@ -177,33 +177,6 @@ research-trait category slug *args="":
       --research-dir {{research_dir}} \
       {{args}}
 
-# Edison Scientific deep research (PaperQA3) for one trait record, driven through
-# the edison-client SDK rather than deep-research-client. Unlike `research-trait`
-# this exposes Edison's job selection and captures full provenance sidecars
-# (-response.json, -citations.md, -agent-state.json, -files.json, -meta.yaml).
-# target = category/slug, a bare slug (must be unique), or a YAML path.
-#   just research-trait-edison physiology/autotrophic --dry-run
-#   just research-trait-edison autotrophic --job literature-high
-research-trait-edison target *args="":
-    uv run --extra dev python scripts/research_trait_edison.py \
-      --target {{target}} \
-      --template {{templates_dir}}/trait_causal_graph_research.md \
-      --out-dir {{research_dir}}/traits \
-      {{args}}
-
-# Same, over a JSON list of targets ("category/slug" strings or objects).
-#   just research-trait-edison-batch queue.json --limit 5 --dry-run
-research-trait-edison-batch batch *args="":
-    uv run --extra dev python scripts/research_trait_edison.py \
-      --batch {{batch}} \
-      --template {{templates_dir}}/trait_causal_graph_research.md \
-      --out-dir {{research_dir}}/traits \
-      {{args}}
-
-# Retroactively backfill Edison provenance sidecars for past runs (no re-billing).
-enrich-edison-response *args="":
-    uv run --extra dev python scripts/enrich_edison_response.py {{args}}
-
 # List available deep-research-client providers.
 research-providers:
     uv run --extra dev deep-research-client providers

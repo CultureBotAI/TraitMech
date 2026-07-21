@@ -115,6 +115,15 @@ DEFAULT_PROVIDER = "edison"
 # teaching the client a provider it does not have. Resolve BEFORE computing output
 # filenames so results stay in the established `-deep-research-falcon.md` namespace
 # and previously-researched traits still count as done.
+#
+# SCOPE: this reaches Edison *through deep-research-client*, so it inherits that
+# client's surface and nothing more — one research call, a markdown answer, and a
+# citations sidecar. It exposes no Edison job selection (PaperQA3 vs its
+# high-read variant vs precedent vs synthesis) and captures no run provenance
+# (task id, cost, status, agent state). Driving the edison-client SDK directly is
+# a separate concern and belongs in its own entry point; do not grow those
+# features here, because they do not exist in deep-research-client to pass
+# through.
 PROVIDER_ALIASES = {"edison": "falcon"}
 
 
