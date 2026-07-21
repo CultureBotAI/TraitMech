@@ -47,7 +47,16 @@ _ELEM_RE = re.compile(r"(" + "|".join(sorted(ELEMENTS, key=len, reverse=True)) +
 # Roman-numeral oxidation states: "Fe(III)PO4" — strip before element parsing,
 # otherwise "III" parses as iodine ×3.
 _OXSTATE_RE = re.compile(r"\((?:I{1,3}|IV|V|VI{0,3}|IX|X)\)", re.IGNORECASE)
-_HYDRATE_TAIL_RE = re.compile(r"[x·・*]\s*(\d*)\s*H2\s*O\s*$", re.IGNORECASE)
+# The separator is optional: "MgSO4 7H2O" is as common a rendering as
+# "MgSO4 x 7H2O". Without whitespace as a separator the space was stripped and
+# the multiplier absorbed into the preceding element -- "CaCl2 2H2O" parsed to
+# Cl:22, which then produced a false SUBSCRIPTS_LOST on a correct label.
+# "R" NOT followed by the lowercase letter of an R-prefixed element symbol.
+_GENERIC_R_RE = re.compile(r"R(?![abefghnu])")
+
+_HYDRATE_TAIL_RE = re.compile(
+    r"(?:[x·・*]|\s)\s*(\d*)\s*H2\s*O\s*$", re.IGNORECASE
+)
 _HYDRATE_DOT_RE = re.compile(r"^(.*?)\.\s*(\d*)\s*H2O$", re.IGNORECASE)
 
 
@@ -130,7 +139,11 @@ def parse_ontology_formula(formula: str) -> dict[str, int] | None:
     carrying an ``R`` group or ``*`` are unparseable by design (generic
     structures) and yield None.
     """
-    if not formula or "R" in formula or "*" in formula:
+    # A bare "R" is a generic substituent placeholder, but a substring test also
+    # matches the R of real element symbols (Rb, Ru, Rh, Re, Ra, Rn), which
+    # dropped the formula check for e.g. rubidium chloride and left the label
+    # falling through to a false IMPLAUSIBLE_LABEL.
+    if not formula or _GENERIC_R_RE.search(formula) or "*" in formula:
         return None
     total: dict[str, int] = {}
     for part in formula.split("."):

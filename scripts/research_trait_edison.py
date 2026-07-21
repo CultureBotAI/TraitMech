@@ -125,7 +125,10 @@ def resolve_trait_target(target: str) -> tuple[Path, str, str]:
     # category/slug
     if "/" in raw:
         category, _, slug = raw.partition("/")
-        return rt.resolve_trait_file(category, slug.removesuffix(".yaml")), category.lower(), slug
+        # Strip once, up front: returning the raw slug here leaked ".yaml" into
+        # the output filenames and into trait_slug in the rendered (paid) query.
+        slug = slug.removesuffix(".yaml")
+        return rt.resolve_trait_file(category, slug), category.lower(), slug
 
     # bare slug — search every category
     slug = raw.removesuffix(".yaml")

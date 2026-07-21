@@ -128,25 +128,43 @@ def enrich_one(client: Any, meta_path: Path, *, force: bool, dry_run: bool) -> d
     if primary is None:
         return {"path": str(meta_path), "status": "fetch-failed", "wrote": []}
 
-    # Re-derive answer body and write the .md if missing
+    skipped: list[str] = []
+
+    # Re-derive answer body and write the .md if missing.
     answer = getattr(primary, "answer", None)
     formatted_answer = getattr(primary, "formatted_answer", None)
+    body = formatted_answer or answer
+    answer_path = out_dir / f"{stem}.md"
     if missing["answer_md"]:
-        body = formatted_answer or answer or "(no answer field on this job's response type)"
-        (out_dir / f"{stem}.md").write_text(body)
-        wrote.append("answer_md")
+        if body:
+            answer_path.write_text(body)
+            wrote.append("answer_md")
+        elif not answer_path.exists():
+            # Nothing to write and nothing there: leave a marker so the gap is
+            # visible rather than silently absent.
+            answer_path.write_text("(no answer field on this job's response type)")
+            wrote.append("answer_md")
+        else:
+            # The re-fetched response carries no answer -- some job types have
+            # response classes without one. The existing .md is the deliverable
+            # the credits bought; overwriting it with a placeholder would be
+            # irrecoverable, so --force must not reach it.
+            skipped.append("answer_md (kept existing; refetch had no answer)")
 
     if missing["response_json"]:
-        merged: dict[str, Any] = {}
-        if normal is not None:
-            merged["response"] = ec._safe_model_dump(normal)  # pylint: disable=protected-access
-        if verbose is not None:
-            merged["verbose"] = ec._safe_model_dump(verbose)  # pylint: disable=protected-access
+        # Same shape as _edison_capture.capture_full_response: the response
+        # dump at top level. Emitting {"response":…, "verbose":…} here meant a
+        # downstream reader had to handle two schemas depending on which code
+        # path last touched the file. Verbose extras go in a reserved key.
+        primary_dump = ec._safe_model_dump(normal if normal is not None else verbose)  # pylint: disable=protected-access
+        merged: dict[str, Any] = dict(primary_dump or {})
+        if verbose is not None and normal is not None:
+            merged["_verbose"] = ec._safe_model_dump(verbose)  # pylint: disable=protected-access
         (out_dir / f"{stem}-response.json").write_text(json.dumps(merged, indent=2, default=str))
         wrote.append("response_json")
 
-    if missing["citations_md"]:
-        citations = ec.parse_citations(formatted_answer or answer)
+    if missing["citations_md"] and (body or not (out_dir / f"{stem}-citations.md").exists()):
+        citations = ec.parse_citations(body)
         query = str(meta.get("query") or "")
         (out_dir / f"{stem}-citations.md").write_text(
             ec.render_citations_md(citations, query=query)
@@ -210,11 +228,13 @@ def enrich_one(client: Any, meta_path: Path, *, force: bool, dry_run: bool) -> d
         "has_answer_reasoning": bool(getattr(primary, "answer_reasoning", None)),
         "answer_reasoning_chars": len(getattr(primary, "answer_reasoning", "") or ""),
         "citations_parsed": len(ec.parse_citations(formatted_answer or answer)),
-        "sidecar_files": ec._existing_sidecars(out_dir, stem),  # pylint: disable=protected-access
+        "sidecar_files": ec._existing_sidecars(out_dir, stem, set(wrote)),  # pylint: disable=protected-access
         "artifacts_fetched": [a for a in artifacts_manifest if a.get("status") == "fetched"],
         "artifacts_skipped": [a for a in artifacts_manifest if a.get("status") != "fetched"],
         "enriched_at": ec._to_iso(datetime.now(timezone.utc)),
     }
+    if skipped:
+        updates["enrich_skipped"] = skipped
     # Preserve existing query_sha256, but stamp it in if missing.
     if not meta.get("query_sha256") and meta.get("query"):
         updates["query_sha256"] = ec.query_sha256(str(meta["query"]))
