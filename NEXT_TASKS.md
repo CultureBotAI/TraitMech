@@ -25,17 +25,24 @@ further action unless a newer deepwalk lands.
 
 ## 2. id↔label validator — ADOPTED + ENFORCING (Phase 2) — DONE
 
-TraitMech joined the Mech group — the byte-identical pin is now a **4-repo
-invariant** (CultureMech / MIM / CommunityMech / TraitMech). Vendored
-byte-identical (sha256 matches all three siblings):
-`scripts/validate_id_label_correspondence.py` + the two shared tests +
-`scripts/.validate_id_label_correspondence.sha256` pin.
+TraitMech joined the Mech group — the byte-identical vendoring is now a **4-repo
+invariant** (CultureMech / MIM / CommunityMech / TraitMech): the validator + the
+three shared tests + `chem_formula.py`.
 `conf/id_label_targets.yaml` targets the two ontology grounding tables
 (`mappings/node_grounding.tsv`, `mappings/predicate_grounding.tsv`) with
 CHEBI/GO/ENVO/PATO/RO adapters; METPO/traitmech/biolink/rdfs/UniProtKB are
-ignored prefixes. Recipes: `validate-products`, `report-label-drift`,
-`verify-validator-pin`, `refresh-validator-pin`. CI workflow
-`label-correspondence.yaml`: pin guard + `validate-products` both **blocking**.
+ignored prefixes. Recipes: `validate-products`, `report-label-drift`. CI workflow
+`label-correspondence.yaml`: `vendored-sync` drift check + `validate-products`
+both **blocking**.
+
+Update (2026-07-21): the self-generated sha256 pin was **retired** (Phase 2 step
+2d). It only compared a copy to a hash from the *same* repo, so all four could
+pass while diverged. The `vendored-sync` job now runs `scripts/check_vendored_sync.sh`,
+which diffs the vendored files against `CultureBotAI/CultureMech@<scripts/.vendored_canon_ref>`
+— the reference lives in another repo, so a one-copy edit fails CI. Deleted:
+`verify-/refresh-validator-pin`, the `VENDORED_IDLABEL_FILES` manifest, and
+`scripts/.validate_id_label_correspondence.sha256`. Propagation: PR into the hub →
+merge → bump `.vendored_canon_ref` here. `schema-pin` is a separate set, unaffected.
 
 The 15 pre-existing MISMATCHES found at adoption were all wrong CURIEs in
 `mappings/node_grounding.tsv` (e.g. `PATO:0000383` is "female", not "decreased

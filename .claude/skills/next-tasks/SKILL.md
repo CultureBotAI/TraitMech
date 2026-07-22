@@ -105,13 +105,16 @@ citations validate, verify it locally.
 
 ## Notes & limitations
 
-- `scripts/validate_id_label_correspondence.py` and `scripts/chem_formula.py` are
-  vendored **byte-identical** across the four Mech repos behind a sha256 pin.
-  `just verify-validator-pin` only checks *this* repo's copy against its own pin
-  — it passes even when the four copies have diverged. Compare md5s across repos
-  before assuming they're in sync. TraitMech has originated cross-repo fixes
-  before (the `id(adapter)` cache-reuse fix), so check which direction a sync
-  should flow rather than assuming this copy is behind.
+- `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, and the
+  three `tests/test_id_label_*.py` files are vendored **byte-identical** across the
+  four Mech repos. The old self-generated sha256 pin was retired (it compared a copy
+  to a hash from the *same* repo, so all four could pass while diverged). Drift is now
+  caught by the `vendored-sync` CI job (`scripts/check_vendored_sync.sh`), which diffs
+  these files against `CultureBotAI/CultureMech@<scripts/.vendored_canon_ref>`. To
+  propagate a change: PR into that hub → merge → bump `.vendored_canon_ref` here.
+  TraitMech has originated cross-repo fixes before (the `id(adapter)` cache-reuse
+  fix), so a change may need to flow *out* to the hub, not just in — land it in
+  CultureMech first, then re-pin the ref everywhere.
 - `.claude/` is gitignored here — a new skill or command needs `git add -f`.
 - Without `gh` or a network, reconcile from `git log` alone and say so.
 
