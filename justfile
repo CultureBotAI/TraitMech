@@ -223,26 +223,13 @@ research-provider provider:
 # Composite: refresh METPO → seed → build embeddings → render pages.
 gen-site: seed-apply build-embeddings gen-pages
 
-# Durability guard for the shared LinkML module (Discussion + Dataset), vendored
-# byte-identical across the Mech repos — see culturebotai-claw#7.
-SHARED_SCHEMA_MODULE := "src/traitmech/schema/mech_shared.yaml"
-verify-schema-pin:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    if command -v sha256sum >/dev/null 2>&1; then
-        sha256sum -c src/traitmech/schema/.mech_shared.sha256
-    else
-        shasum -a 256 -c src/traitmech/schema/.mech_shared.sha256
-    fi
-
-# Intentional sync only: re-pin after a deliberate, all-repos byte-identical update.
-refresh-schema-pin:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    f={{SHARED_SCHEMA_MODULE}}
-    if command -v sha256sum >/dev/null 2>&1; then h=$(sha256sum "$f" | cut -d' ' -f1); else h=$(shasum -a 256 "$f" | cut -d' ' -f1); fi
-    printf '%s  %s\n' "$h" "$f" > src/traitmech/schema/.mech_shared.sha256
-    echo "re-pinned $f to $h"
+# NOTE: the shared LinkML module (mech_shared.yaml) is vendored byte-identical
+# across the Mech repos (package-namespaced path per repo). Its self-generated
+# sha256 pin (verify-/refresh-schema-pin) was retired — same self-referential
+# flaw as the id-label pin. It is now covered by the shared-reference drift check
+# (scripts/check_vendored_sync.sh diffs src/*/schema/mech_shared.yaml against the
+# hub's copy at CultureBotAI/CultureMech@<scripts/.vendored_canon_ref>) plus the
+# hub's nightly vendored-fleet-audit.yml.
 
 # Run tests with coverage
 test:
