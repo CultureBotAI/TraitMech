@@ -5,7 +5,7 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-06-15.
+Last reconciled: 2026-07-22.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -52,6 +52,40 @@ temperature"); corrected to the right CURIEs (verified vs OAK) and the trait-YAM
 "radiation emitting intensity quality"). Gate now reports 113 OK_CANONICAL +
 2 OK_SYNONYM + 1 OK_EXCEPTION, 0 errors.
 
+Update (2026-07-22): more vendored-file fixes landed through the hub-and-spoke
+model, and the canonical *source* is being moved off CultureMech into claw.
+- **`chem_formula.py` fixes** (TraitMech #174, propagated to all four): hydrate
+  separators (`CaCl2 2H2O`, `CuSO4 . 5H2O`) and R-prefixed elements
+  (`ClRb`/`RuCl3` no longer misread as generic R-groups). Validated byte-for-byte
+  against CultureMech's 23,129 real ingredient labels — zero regressions.
+- **Plausibility-gate CCCP fix** (hub CultureMech#110 → spokes TraitMech #178 /
+  MIM #155 / CommunityMech #241): an exact match to a term's own label/synonym
+  now short-circuits before the formula check, so an abbreviation that IS the
+  canonical label (`CCCP` on CHEBI:3259, formula C9H5ClN4) is no longer flagged
+  IMPLAUSIBLE_LABEL. Found by enabling the gate over MIM's corpus.
+- **Plausibility gate ENABLED in MIM** (#155) — its ingredient labels are
+  formulas like CultureMech's. TraitMech's own gate stays OFF by design (its
+  groundings are GO/CHEBI/PATO with prose labels; enabling it surfaces nothing).
+
+**IN PROGRESS — canonical source CultureMech → claw (cross-Mech; blocked on a
+human action).** Rationale: CultureMech (a data repo) was the hub only by
+accident; the shared tooling belongs in claw (the coordination repo), so no Mech
+is privileged. Done: **`culturebotai-claw#18` merged** — `shared/idlabel/` now
+holds the one canonical copy (validator + `chem_formula` + 3 tests, byte-identical
+to all four Mechs at convergence) with a README, MANIFEST, and an `id-label-canon`
+CI job. Remaining (ready, not started): repoint each Mech's
+`scripts/check_vendored_sync.sh` `CANON_REPO` → `CultureBotAI/culturebotai-claw`
+with a `shared/idlabel/` path prefix, and set each `scripts/.vendored_canon_ref`
+to a claw commit (currently `1ad5d40`); **CultureMech gains a `.vendored_canon_ref`
+and becomes a peer spoke.** File content does not change — pure source relocation.
+**BLOCKER: claw is private**, and the sync uses tokenless `raw.githubusercontent`
+which 404s on private repos (works today only because CultureMech is public). The
+agreed fix is to make claw public (history scanned clean of secrets 2026-07-22);
+once public, run the four repoints (via worktrees, mech-CI-validated). Also
+converge `check_vendored_sync.sh` itself — it had drifted in CommunityMech. Note:
+claw Actions are currently failing account-wide (exhausted private-repo runner
+minutes); going public clears that too.
+
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
 All categories are promoted: the corpus is **427 REVIEWED + 50 DEPRECATED,
@@ -78,17 +112,17 @@ remains.
   placeholder `1007xxx`/`2007xxx` for real CURIEs in `data/raw/metpo.owl` +
   groundings, re-seed).
 
-## Adopt DisMech knowledge-gaps + datasets + QC dashboard (claw#7)
+## Adopt DisMech knowledge-gaps + datasets + QC dashboard (claw#7) — DONE (by 2026-07-22)
 
-Coordinated cross-Mech adoption of DisMech's domain-general features. Full plan,
-locked decisions, and DisMech schema references live in culturebotai-claw#7 (the
-shared, pinned LinkML module is authored once and vendored across all four Mechs).
-This repo's slice:
-- Knowledge gaps — add a `discussions` slot (broad `Discussion` supertype; `kind`
-  incl. KNOWLEDGE_GAP / OPEN_QUESTION / CONTROVERSY / CURATION_TODO) to
-  `TraitRecord`, imported from the shared module; bind `attaches_to` anchors to
-  `causal_graphs#…` (pairs naturally with the existing evidence-backed causal
-  edges). Wire a `knowledge-gap-scan` recipe over the existing Edison harness.
-- Datasets — add the canonical shared `Dataset` slot (TraitMech models none today).
-- QC dashboard — adopt the generalized dashboard from Phase 3 (TraitMech currently
-  has only TSV/MD reports, no rendered dashboard).
+Coordinated cross-Mech adoption of DisMech's domain-general features (plan + locked
+decisions in culturebotai-claw#7). All three of this repo's slices shipped:
+- **Knowledge gaps** — `Discussion` supertype + `DiscussionKindEnum` in
+  `src/traitmech/schema/mech_shared.yaml`; `discussions:` slot on `TraitRecord`
+  (`traitmech.yaml:243`); `knowledge-gap-scan` recipe in the justfile over the
+  Edison harness; **10 trait files already carry `discussions`**.
+- **Datasets** — `datasets:` slot (`range: Dataset`) on `TraitRecord`
+  (`traitmech.yaml:251`).
+- **QC dashboard** — `gen-qc-dashboard` recipe rendering `dashboard/index.html`
+  + `coverage.png`.
+
+No further TraitMech work here. Any remaining coordination is cross-Mech in claw#7.
