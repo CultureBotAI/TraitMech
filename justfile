@@ -48,9 +48,15 @@ audit-writers *args:
 audit-proposals *args:
     uv run python scripts/audit_proposals.py {{args}}
 
-# Structural-integrity audit of causal graphs: flag dangling edges (subject/
-# object not a declared node) and orphan nodes (declared but unreferenced).
-# Emits reports/causal_graph_audit.tsv; exits 1 on any defect.
+# Structural-integrity audit of causal graphs: dangling edges (subject/object
+# not a declared node), orphan nodes (declared but unreferenced), graphs with
+# no TRAIT node, and nodes unreachable from the TRAIT node (an island rather
+# than one mechanism). Emits reports/causal_graph_audit.tsv.
+# Ratchets against conf/causal_graph_audit_baseline.tsv: the 1314 pre-existing
+# UNREACHABLE_FROM_TRAIT findings are frozen and never fail, but any NEW finding
+# exits 1 — so the corpus cannot get more fragmented than it is today.
+# Regenerate the baseline with `--write-baseline` (only when the change is
+# intended). Burn it down, then tighten to `just audit-graphs --fail-on any`.
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
