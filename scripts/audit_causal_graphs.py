@@ -173,11 +173,41 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
 
 
 def _key(row: dict[str, str]) -> tuple[str, str, str, str]:
-    """Baseline identity. Only the node_id fragment of ``detail`` is used, so
-    editing a still-broken node's label does not silently un-suppress it."""
+    """Baseline identity: (file, graph, defect, discriminator).
+
+    The discriminator is the leading fragment of ``detail`` — ``node_id=...``
+    for node-shaped findings, ``subject=...``/``object=...`` for edge-shaped
+    ones. Taking only the leading fragment means editing a still-broken node's
+    *label* does not silently un-suppress it, while keeping distinct nodes and
+    distinct dangling edges on distinct keys. Falling back to "" here would
+    collapse every DANGLING_EDGE in a graph onto one key, so baselining one
+    would suppress the rest.
+    """
     detail = row.get("detail", "")
-    node = detail.split(" ", 1)[0] if detail.startswith("node_id=") else ""
+    node = detail.split(" ", 1)[0] if detail else ""
     return (row["file"], row["graph_id"], row["defect"], node)
+
+
+def partition(
+    findings: list[dict[str, str]],
+    baseline: set[tuple[str, str, str, str]],
+    fail_on: str,
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    """Split ``findings`` into (not-in-baseline, blocking) for a ``--fail-on``.
+
+    Kept separate from ``main`` so the exit-code contract is unit-testable: a
+    regression here silently disarms the gate, which is exactly how the first
+    cut of this check shipped without actually ratcheting.
+    """
+    new = [r for r in findings if _key(r) not in baseline]
+    if fail_on == "any":
+        # Strictest: ignore the baseline entirely. Use once the backlog is gone.
+        blocking = list(findings)
+    elif fail_on == "error":
+        blocking = [r for r in new if r["severity"] == ERROR]
+    else:  # "new" — the ratchet: never regress past the frozen baseline.
+        blocking = list(new)
+    return new, blocking
 
 
 def load_baseline(path: Path) -> set[tuple[str, str, str, str]]:
@@ -196,7 +226,8 @@ def main() -> int:
     ap.add_argument("--no-baseline", action="store_true",
                     help="Ignore the baseline file; report everything.")
     ap.add_argument("--write-baseline", action="store_true",
-                    help="Freeze current findings into --baseline and exit 0.")
+                    help="Freeze current WARN findings into --baseline and exit 0. "
+                         "Refuses if any ERROR-severity finding exists.")
     ap.add_argument("--fail-on", choices=["new", "error", "any"], default="new",
                     help="new (default): any finding not in the baseline fails — a "
                          "true ratchet. error: only new ERROR-severity findings fail, "
@@ -213,25 +244,31 @@ def main() -> int:
         w.writerows(findings)
 
     if args.write_baseline:
+        # The baseline parks the known WARN backlog so the check can run
+        # non-blocking. It is NOT a suppression channel for structural errors:
+        # freezing an ERROR here would keep the gate green forever after.
+        errors = [r for r in findings if r["severity"] == ERROR]
+        if errors:
+            print(f"Refusing to write baseline: {len(errors)} ERROR-severity "
+                  f"finding(s) present. Fix these first — the baseline is for "
+                  f"the WARN backlog only.", file=sys.stderr)
+            for r in errors[:20]:
+                print(f"  {r['defect']}  {r['file']} [{r['graph_id']}]  "
+                      f"{r['detail']}", file=sys.stderr)
+            return 1
+        warns = [r for r in findings if r["severity"] != ERROR]
         args.baseline.parent.mkdir(parents=True, exist_ok=True)
         with args.baseline.open("w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=FIELDNAMES, delimiter="\t",
                                lineterminator="\n")
             w.writeheader()
-            w.writerows(findings)
-        print(f"Wrote baseline: {args.baseline} ({len(findings)} finding(s))",
+            w.writerows(warns)
+        print(f"Wrote baseline: {args.baseline} ({len(warns)} finding(s))",
               file=sys.stderr)
         return 0
 
     baseline = set() if args.no_baseline else load_baseline(args.baseline)
-    new = [r for r in findings if _key(r) not in baseline]
-    if args.fail_on == "any":
-        # Strictest: ignore the baseline entirely. Use once the backlog is gone.
-        blocking = list(findings)
-    elif args.fail_on == "error":
-        blocking = [r for r in new if r["severity"] == ERROR]
-    else:  # "new" — the ratchet: never regress past the frozen baseline.
-        blocking = list(new)
+    new, blocking = partition(findings, baseline, args.fail_on)
 
     by_defect: dict[str, int] = {}
     for r in findings:

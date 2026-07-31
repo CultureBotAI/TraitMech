@@ -14,6 +14,7 @@ newly-introduced one is not.
 
 from __future__ import annotations
 
+import subprocess
 import sys
 import textwrap
 from pathlib import Path
@@ -21,7 +22,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from audit_causal_graphs import SEVERITY, _key, audit  # noqa: E402
+from audit_causal_graphs import (  # noqa: E402
+    ERROR,
+    SEVERITY,
+    _key,
+    audit,
+    partition,
+)
 
 
 def _write(tmp_path: Path, name: str, body: str) -> Path:
@@ -173,3 +180,103 @@ def test_severity_assigned(tmp_path):
     for f in audit(d):
         assert f["severity"] in {"ERROR", "WARN"}
         assert f["severity"] == SEVERITY[f["defect"]]
+
+
+# --- the ratchet's blocking contract (issue #186) ---------------------------
+#
+# The first cut of this check defaulted --fail-on to "error", so a newly
+# introduced WARN island was reported and then ignored: the ratchet did not
+# ratchet. These lock the exit-code contract for each mode.
+
+
+def test_ratchet_blocks_new_warn_findings(tmp_path):
+    """Default mode: a new WARN island blocks even though it is not an ERROR."""
+    d = _write(tmp_path, "island.yaml", ISLAND)
+    findings = audit(d)
+    new, blocking = partition(findings, baseline=set(), fail_on="new")
+    assert len(new) == 2
+    assert len(blocking) == 2
+    assert all(r["severity"] != ERROR for r in blocking)
+
+
+def test_ratchet_passes_when_everything_is_baselined(tmp_path):
+    d = _write(tmp_path, "island.yaml", ISLAND)
+    findings = audit(d)
+    frozen = {_key(f) for f in findings}
+    new, blocking = partition(findings, baseline=frozen, fail_on="new")
+    assert new == []
+    assert blocking == []
+
+
+def test_fail_on_error_does_not_block_new_warns(tmp_path):
+    """The documented looser mode: report new fragmentation, do not fail on it."""
+    d = _write(tmp_path, "island.yaml", ISLAND)
+    findings = audit(d)
+    new, blocking = partition(findings, baseline=set(), fail_on="error")
+    assert len(new) == 2
+    assert blocking == []
+
+
+def test_fail_on_any_ignores_the_baseline(tmp_path):
+    """Post-burndown mode: baselined findings stop being forgiven."""
+    d = _write(tmp_path, "island.yaml", ISLAND)
+    findings = audit(d)
+    frozen = {_key(f) for f in findings}
+    _new, blocking = partition(findings, baseline=frozen, fail_on="any")
+    assert len(blocking) == len(findings) == 2
+
+
+TWO_DANGLING = """\
+identifier: traitmech:000007
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: a, label: A, node_type: TRAIT}
+  edges:
+  - {subject: a, predicate: produces, object: ghost1}
+  - {subject: a, predicate: produces, object: ghost2}
+"""
+
+
+def test_dangling_edges_get_distinct_baseline_keys(tmp_path):
+    """Issue #187: baselining one dangling edge must not suppress the others."""
+    d = _write(tmp_path, "twodangling.yaml", TWO_DANGLING)
+    dangling = [f for f in audit(d) if f["defect"] == "DANGLING_EDGE"]
+    assert len(dangling) == 2
+    assert len({_key(f) for f in dangling}) == 2
+
+    frozen = {_key(dangling[0])}
+    new, _blocking = partition(dangling, baseline=frozen, fail_on="new")
+    assert [_key(r) for r in new] == [_key(dangling[1])]
+
+
+def _run_cli(traits_dir, out, baseline, *extra):
+    return subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "audit_causal_graphs.py"),
+         "--traits-dir", str(traits_dir), "--out", str(out),
+         "--baseline", str(baseline), *extra],
+        capture_output=True, text=True,
+    )
+
+
+def test_write_baseline_refuses_to_freeze_errors(tmp_path):
+    """Issue #188: the baseline parks the WARN backlog, not structural errors."""
+    d = _write(tmp_path, "twodangling.yaml", TWO_DANGLING)
+    baseline = tmp_path / "baseline.tsv"
+    r = _run_cli(d, tmp_path / "out.tsv", baseline, "--write-baseline")
+    assert r.returncode == 1
+    assert "Refusing to write baseline" in r.stderr
+    assert not baseline.exists()
+
+
+def test_write_baseline_freezes_warns_then_passes(tmp_path):
+    d = _write(tmp_path, "island.yaml", ISLAND)
+    baseline = tmp_path / "baseline.tsv"
+    out = tmp_path / "out.tsv"
+
+    assert _run_cli(d, out, baseline).returncode == 1  # new island blocks
+    assert _run_cli(d, out, baseline, "--write-baseline").returncode == 0
+    assert baseline.exists()
+    assert _run_cli(d, out, baseline).returncode == 0  # now forgiven
+    assert _run_cli(d, out, baseline, "--fail-on", "any").returncode == 1
