@@ -197,7 +197,7 @@ If a writer audit row shows `validates_before_write=no` or `appends_curation_his
 - `reports/pipeline_gap_audit.md` — writer audit with safeguard table.
 - Existing complementary skills:
   - `schema-gap-analysis` — the lightweight version of this skill; ~5 min total.
-- Cross-Mech framework + new-Mech bootstrap template: [claw/.claude/skills/schema-gap-analysis](https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/skill.md)
+- Cross-Mech framework + new-Mech bootstrap template: [claw/.claude/skills/schema-gap-analysis](https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/SKILL.md)
 
 ## One-liner runbook
 

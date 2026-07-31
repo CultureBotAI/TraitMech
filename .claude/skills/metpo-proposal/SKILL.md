@@ -28,7 +28,7 @@ Up to four artifacts are produced under `proposals/<cohort-name>/`:
 | `proposal.md` | Reviewer narrative: scope, hierarchy decisions, predicate rationale, verification, upstream path |
 
 **Run from `TraitMech/` directory.** Cross-Mech references:
-- CultureMech/CommunityMech analogue: `CommunityMech/.claude/skills/metpo-proposal/skill.md` and reference cohort `proposals/metpo_communitymech_v1/`.
+- CultureMech/CommunityMech analogue: `CommunityMech/.claude/skills/metpo-proposal/SKILL.md` and reference cohort `proposals/metpo_communitymech_v1/`.
 - Upstream contract: `kg-microbe/.claude/skills/metpo-proposal/SKILL.md` — the canonical METPO-side rules (Aristotelian definitions, citation forms, family-aware ID slotting, paired predicate convention).
 
 ---

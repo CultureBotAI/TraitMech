@@ -10,7 +10,7 @@ version: 2.1.0
 # Schema gap analysis (TraitMech)
 
 The conceptual framework — why three axes, error-class heuristics, common anti-patterns — lives once at the cross-Mech version in claw:
-https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/skill.md
+https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/SKILL.md
 
 This file is the TraitMech-specific operational version. Every command below runs as-is.
 
@@ -120,4 +120,4 @@ TraitMech's corpus passes cleanly. Re-run this skill after:
 - Seeder (the only writer; initial trait creation from METPO): `scripts/seed_from_metpo.py`
 - Causal-graph template helper (reads `causal_graphs:`; doesn't write YAML): `scripts/trait_causal_graph.py`
 - Page renderer (consumes validated YAML, doesn't write it): `scripts/render_trait_pages.py`
-- Cross-Mech framework + new-Mech bootstrap template: [claw/.claude/skills/schema-gap-analysis](https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/skill.md)
+- Cross-Mech framework + new-Mech bootstrap template: [claw/.claude/skills/schema-gap-analysis](https://github.com/CultureBotAI/culturebotai-claw/blob/main/.claude/skills/schema-gap-analysis/SKILL.md)
