@@ -70,9 +70,10 @@ causal_graphs:
     label: cellobiose
     node_type: CHEMICAL
     description: Glucose disaccharide intermediate of cellulose hydrolysis.
+    grounding: CHEBI:17057
   - node_id: cellulosome
     label: cellulosome
-    node_type: CELLULAR_LOCALIZATION
+    node_type: GENE_OR_PROTEIN
     description: Multienzyme complex built on scaffoldins for cellulose degradation.
     grounding: GO:0043263
   - node_id: scaffoldin
@@ -181,6 +182,89 @@ causal_graphs:
     - reference: DOI:10.1093/jambio/lxac002
       notes: CcpA recognizing CRE sites to prevent transcription of lignocellulose-catabolic
         genes when glucose-derived signals are high.
+  - subject: cellulose
+    predicate: is hydrolyzed to
+    object: cellobiose
+    description: Cellulose depolymerization yields cellobiose as the principal soluble
+      disaccharide product, completing the substrate-to-product cascade.
+    evidence:
+    - reference: DOI:10.1111/j.1742-4658.2010.07585.x
+      snippet: cleave off cellobiose
+      notes: Substrate-product step of the catalytic cascade; cellobiose is the dominant
+        but not the only soluble product (cellodextrins of higher DP also occur).
+    predicate_id: METPO:2000013
+  - subject: cellobiohydrolase
+    predicate: produces
+    object: cellobiose
+    description: Cellobiohydrolase processively releases cellobiose from cellulose
+      chain ends.
+    evidence:
+    - reference: DOI:10.1128/aem.01742-24
+      snippet: GH48, GH6 with CBM2 domains … release glucose and cellobiose from chain
+        ends
+      notes: Enzyme-product edge that links the chain-end-acting cellulases to the
+        downstream beta-glucosidase step. Exact product ratio is enzyme-dependent.
+    predicate_id: METPO:2000202
+  - subject: endoglucanase
+    predicate: part of
+    object: cellulase
+    description: Endoglucanase is a component activity of the concerted cellulase
+      system.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      snippet: Complete degradation of cellulose to glucose requires concerted action
+        of cellobiohydrolases, endoglucanases and beta-glucosidases.
+      notes: Establishes the three component activities as members of one cellulase
+        system rather than independent actors.
+    predicate_id: biolink:part_of
+  - subject: cellobiohydrolase
+    predicate: part of
+    object: cellulase
+    description: Cellobiohydrolase/exoglucanase is a component activity of the concerted
+      cellulase system.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      snippet: Complete degradation of cellulose to glucose requires concerted action
+        of cellobiohydrolases, endoglucanases and beta-glucosidases.
+      notes: Establishes the three component activities as members of one cellulase
+        system rather than independent actors.
+    predicate_id: biolink:part_of
+  - subject: beta_glucosidase
+    predicate: part of
+    object: cellulase
+    description: Beta-glucosidase is a component activity of the concerted cellulase
+      system.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      snippet: Complete degradation of cellulose to glucose requires concerted action
+        of cellobiohydrolases, endoglucanases and beta-glucosidases.
+      notes: Establishes the three component activities as members of one cellulase
+        system rather than independent actors.
+    predicate_id: biolink:part_of
+  - subject: cellulosome
+    predicate: enables
+    object: cellulolysis_trait
+    description: Cellulosomes are one of the alternative cellulase-system architectures
+      that confer cellulolysis; they are taxonomically restricted, not universal.
+    evidence:
+    - reference: DOI:10.1128/MMBR.66.3.506-577.2002
+      snippet: complexed cellulase systems
+      notes: Lynd et al. distinguish noncomplexed (free-enzyme) from complexed (cellulosomal)
+        systems as alternative implementations of cellulose utilization. Cellulosomes
+        occur only in restricted lineages; this edge must not be read as a requirement.
+    predicate_id: RO:0002327
+  - subject: cellulolytic_genes
+    predicate: encodes
+    object: cellulase
+    description: Cellulolytic genes encode the cellulase system, linking the catabolite-repression
+      branch to the catalytic machinery it regulates.
+    evidence:
+    - reference: DOI:10.1093/jambio/lxac002
+      snippet: transcription of lignocellulose-catabolic genes
+      notes: Connects the regulatory branch to the enzymes whose expression is repressed.
+        The gene-set node remains broader than cellulose-specific; see curation note
+        on replacing it with a taxon-specific operon.
+    predicate_id: biolink:encodes
 curation_history:
 - timestamp: '2026-06-08T00:00:00Z'
   curator: claude
@@ -241,4 +325,17 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0008422×1).
+  llm_assisted: true
+- timestamp: '2026-07-30T00:00:00Z'
+  curator: claude
+  action: CONNECT_CAUSAL_GRAPH
+  changes: 'Deep-research audit (Edison/PaperQA3 + Codex) found the graph split into
+    4 disconnected components with 9 of 14 nodes unreachable from the trait node.
+    Added 7 evidence-backed edges to merge them into one connected graph: cellulose→cellobiose,
+    cellobiohydrolase→cellobiose, endoglucanase/cellobiohydrolase/beta_glucosidase
+    part_of cellulase, cellulosome→enables→trait, cellulolytic_genes→encodes→cellulase.
+    Grounded cellobiose (CHEBI:17057). Retyped cellulosome CELLULAR_LOCALIZATION→GENE_OR_PROTEIN
+    (a complex, not a location; GO:0043263 grounding retained). Deferred to a follow-up
+    pass: LPMO/CBM/transport/phosphorolysis branches, splitting cellobiohydrolase by
+    chain end, and replacing the generic CCR edge with taxon-specific cip-cel evidence.'
   llm_assisted: true
