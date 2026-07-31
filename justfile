@@ -2,6 +2,29 @@
 
 set dotenv-load := true
 
+# Binds recipe arguments to "$@" in shebang recipes so multi-word arguments keep
+# their quoting. Needed by `new-history`, whose --summary/--details are prose;
+# plain `{{args}}` interpolation splits them on whitespace. No existing recipe
+# uses $1/$@, so enabling this changes nothing else.
+set positional-arguments := true
+
+# Shared tooling lives in the culturebotai-claw checkout. Override CLAW_SRC when
+# claw is not the default sibling directory — CI checks it out elsewhere.
+claw_src := env_var_or_default("CLAW_SRC", "../culturebotai-claw/src")
+claw_root := parent_directory(claw_src)
+
+# Fail loudly when a shared claw module is missing, rather than running on and
+# producing an empty or wrong result. A skip-when-missing variant of this check is
+# exactly what let the vendored-sync job pass while verifying nothing (#182).
+_require-claw module:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [ ! -d "{{claw_src}}/{{module}}" ]; then
+      echo "error: shared module '{{module}}' not found under '{{claw_src}}'." >&2
+      echo "Set CLAW_SRC to the src/ directory of a culturebotai-claw checkout." >&2
+      exit 1
+    fi
+
 default:
     @just --list --unsorted
 
@@ -152,24 +175,72 @@ refresh-metpo:
 # ../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz
 # (latest available) and ../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv.
 build-embeddings:
-    /opt/homebrew/bin/python3.13 scripts/build_embedding_index.py
+    uv run python scripts/build_embedding_index.py
 
 # Render per-trait HTML pages + category indexes + landing into pages/.
 gen-pages *args:
-    /opt/homebrew/bin/python3.13 scripts/render_trait_pages.py {{args}}
+    uv run python scripts/render_trait_pages.py {{args}}
 
 # QC coverage dashboard (shared kg_microbe_qc generator in culturebotai-claw).
 # Reads conf/qc_config.yaml; writes dashboard/index.html + coverage.png.
-gen-qc-dashboard:
-    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+gen-qc-dashboard: (_require-claw "kg_microbe_qc")
+    PYTHONPATH={{claw_src}} uv run python \
       -m kg_microbe_qc --config conf/qc_config.yaml --output dashboard
 
 # Knowledge-gap scan (Europe PMC, free) via shared kg_microbe_kgscan in claw.
 # Dry-run by default → reports/knowledge_gap_scan.{json,md}. Pass `--apply` (and
 # e.g. --limit/--min-score) to seed Discussion(kind=KNOWLEDGE_GAP) into records.
-knowledge-gap-scan *args:
-    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
-      -m kg_microbe_kgscan --config conf/kgscan_config.yaml {{args}}
+knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
+    PYTHONPATH={{claw_src}} uv run python -m kg_microbe_kgscan \
+      --config conf/kgscan_config.yaml {{args}}
+
+# ============== Curation history (append-only provenance) ==============
+# Records which model, using which tool, changed what, why, and under which
+# issue. One file per session per target under history/; never edited after
+# write. See history/README.md. Schema + scaffolder live in claw.
+
+# Scaffold a history record. Prints the path as its last stdout line.
+#   just new-history --kind record --slug cellulolysis \
+#     --target-root data/traits/metabolism --event EDIT --outcome changed \
+#     --summary "..." --details "..." --model <model-id>
+new-history *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    claw_src="${CLAW_SRC:-../culturebotai-claw/src}"
+    if [ ! -d "$claw_src/kg_microbe_history" ]; then
+      echo "new-history: kg_microbe_history not found under '$claw_src'." >&2
+      echo "Set CLAW_SRC to the src/ directory of a culturebotai-claw checkout." >&2
+      exit 1
+    fi
+    # "$@" not {{args}} — see `set positional-arguments` at the top of this file.
+    PYTHONPATH="$claw_src" python3 -m kg_microbe_history new "$@"
+
+# Validate one history record, or a directory of them. Uses the VENDORED schema,
+# so this works with no claw checkout — same as CI.
+validate-history target="history":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    target="{{target}}"
+    if [ -z "$target" ]; then
+      echo "validate-history: empty target. Pass a record path or a directory." >&2
+      exit 2
+    fi
+    if [ ! -e "$target" ]; then
+      echo "validate-history: '$target' does not exist." >&2
+      exit 2
+    fi
+    if [ -d "$target" ]; then
+      if [ -z "$(find "$target" -name '*.yaml' -print -quit)" ]; then
+        echo "No history records under '$target'."
+        exit 0
+      fi
+      find "$target" -name '*.yaml' -print0 \
+        | xargs -0 uv run linkml-validate \
+            --schema src/traitmech/schema/history.yaml --target-class HistoryRecord
+    else
+      uv run linkml-validate \
+        --schema src/traitmech/schema/history.yaml --target-class HistoryRecord "$target"
+    fi
 
 # ============== Deep Research ==============
 
@@ -283,6 +354,6 @@ report-label-drift:
 
 # Discussions / knowledge-gap browser (shared kg_microbe_discussions in claw).
 # Writes app/discussions/{index.html,data.js} from every record's discussions.
-gen-discussions-data:
-    PYTHONPATH=../culturebotai-claw/src /opt/homebrew/bin/python3.13 \
+gen-discussions-data: (_require-claw "kg_microbe_discussions")
+    PYTHONPATH={{claw_src}} uv run python \
       -m kg_microbe_discussions --config conf/discussions_config.yaml --output app/discussions
