@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: history/README.md
+  slug: curation-history
+session:
+  id: 2026-07-31T172630Z-claude-code-f672fa
+  timestamp: '2026-07-31T17:26:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5
+    agent_tool: claude-code
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - justfile
+  - history
+  summary: Adopt the append-only curation-history layer
+  details: 'Wired TraitMech as the first consumer of the shared history layer ported from
+    monarch-initiative/dismech. Added new-history and validate-history recipes (both resolve
+    the shared library via CLAW_SRC and fail loudly when it is missing), history/README.md,
+    and ''set positional-arguments := true'' so prose --summary/--details survive just''s
+    argument interpolation. Schema and scaffolder live in culturebotai-claw at shared/history/history.yaml
+    and src/kg_microbe_history/. Verified: scaffold, linkml validation, the empty-target guard,
+    and the no-clobber guard. Deliberately did NOT backfill a record for the uncommitted cellulolysis.yaml
+    curation in this tree — that work was done by a different session and inventing provenance
+    for it would defeat the point of the layer.'

@@ -5,10 +5,12 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-07-30. Open issues: **#151** only (web design review —
-2 residual front-end items, section 6). No open PRs. Everything merged in this
-repo through **#182** (2026-07-22), plus the claw-side architecture decisions
-through 2026-07-25, is reflected below.
+Last reconciled: 2026-07-31. Open issues: **#151** (web design review — 2 residual
+front-end items, section 6), **#183** (causal-graph fragmentation — detection has
+since landed, the backfill is what remains, section 5) and **#184** (the
+`vendored-sync` job does not fire for most files it checks, section 2). No open
+PRs. Everything merged in this repo through **#182** (2026-07-22), plus the
+claw-side architecture decisions through 2026-07-25, is reflected below.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -122,6 +124,26 @@ CommunityMech, TraitMech) pin the same `scripts/.vendored_canon_ref`
 = `6be694f3d6308ac0f4c2e0dcf196e2ff73f6468f` against `CultureBotAI/CultureMech`.
 The 4-repo vendored invariant is healthy.
 
+**But the guard has a hole at PR time — #184, filed 2026-07-30.** The
+`vendored-sync` job sits behind a `paths:` filter that is narrower than the list
+of files it checks, so a PR touching only the unlisted ones never fires it. Of the
+six files `check_vendored_sync.sh` compares, only
+`scripts/validate_id_label_correspondence.py` is in `trigger_paths`;
+`scripts/chem_formula.py`, the three `tests/test_id_label_*.py` files and
+`src/traitmech/schema/mech_shared.yaml` are all outside it. **This repo is the
+worst of the three spokes** — MIM and CommunityMech at least glob
+`src/<pkg>/schema/**`, which covers their `mech_shared.yaml`; TraitMech lists no
+`src/**` path at all, so editing a file that is byte-identical across all four
+Mechs does not trigger the check here.
+
+Severity is bounded: CultureMech's nightly fleet audit still catches divergence
+within a day, so the failure mode is a vendored edit merging green and drift
+surfacing next morning against `main`, not silent corruption. MIM#160 and
+CommunityMech#280 are the same defect; worth one cross-Mech sweep
+(`cross-mech-sync`) rather than three PRs. Distinct from CommunityMech#278, which
+is about *what* is compared — the checker itself has no canonical copy in the hub
+— where these three are about *when* the comparison runs.
+
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
 All categories are promoted: the corpus is **427 REVIEWED + 50 DEPRECATED,
@@ -156,7 +178,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity — DETECTION DONE; BACKFILL PENDING (corpus-wide)
+## 5. Causal-graph connectivity (#183) — DETECTION DONE; BACKFILL PENDING (corpus-wide)
 
 **The `audit-graphs` gate does not catch graph fragmentation.**
 `scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
@@ -196,6 +218,12 @@ Two pieces of work, independent:
    edge needs a reference and a snippet like the existing ones. Work it trait by
    trait; each trait fixed should shrink the baseline, which is regenerated
    deliberately with `just audit-graphs --write-baseline`.
+
+Tracked as **#183**, filed 2026-07-30 when the fragmentation was measured from the
+hub. The issue was written before the detector landed, so its "add a connectivity
+check" half is already satisfied by item 1 above — including the design question it
+posed (one-component versus reachable-from-trait), which was answered in favour of
+the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
 **Progress: 1 of 220 traits done.** `data/traits/metabolism/cellulolysis.yaml`
 was the first instance of (2) and where the problem was found. A deep-research
