@@ -40,9 +40,14 @@ just new-history --kind record --slug cellulolysis \
   --details "What was done, what evidence was used, how it was validated."
 ```
 
-Omit `--details` and you get a TODO placeholder to edit before committing. The
-command prints the record path as its final stdout line, so scripts can capture
-it.
+Omit `--details` and you get a TODO placeholder to edit before committing —
+`just validate-history` **fails** while it is still there, so an unfilled record
+cannot slip through. The command prints the record path as its final stdout line,
+so scripts can capture it.
+
+`--kind record` and `--kind schema` can derive the target path from `--slug` plus
+`--target-root`. Every other kind needs an explicit `--path`, because only those
+two are reliably `.yaml`.
 
 Then validate and stage:
 
