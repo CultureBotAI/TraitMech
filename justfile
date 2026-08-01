@@ -213,7 +213,10 @@ new-history *args:
       exit 1
     fi
     # "$@" not {{args}} — see `set positional-arguments` at the top of this file.
-    PYTHONPATH="$claw_src" python3 -m kg_microbe_history new "$@"
+    # `uv run python`, not `python3`: bare python3 is whatever the machine puts
+    # first on PATH (miniforge here, not the project venv), which is the same
+    # undeclared-interpreter problem the Homebrew paths had.
+    PYTHONPATH="$claw_src" uv run python -m kg_microbe_history new "$@"
 
 # Validate one history record, or a directory of them. Uses the VENDORED schema,
 # so this works with no claw checkout — same as CI.

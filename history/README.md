@@ -86,8 +86,19 @@ Two copies, on purpose:
 
 - **Canonical**: `culturebotai-claw/shared/history/history.yaml`, with the
   scaffolder at `culturebotai-claw/src/kg_microbe_history/`.
-- **Vendored here**: `src/traitmech/schema/history.yaml`, byte-identical
-  (md5 `394bea53f42f2eafbc12a9809aa1bdf8`).
+- **Vendored here**: `src/traitmech/schema/history.yaml`, byte-identical.
+
+Check that identity rather than trusting this file — with a claw checkout:
+
+```bash
+diff "${CLAW_SRC:-../culturebotai-claw/src}/../shared/history/history.yaml" \
+     src/traitmech/schema/history.yaml && echo "in sync"
+```
+
+An earlier draft of this README recorded the md5 inline. It went stale one commit
+later, when the schema gained a field and the hash was not updated — which is the
+argument against writing a hash into prose at all: nothing recomputes it, so it
+decays into a confident false negative. A runnable command cannot go stale.
 
 The vendored copy exists so validation has **no dependency on claw**, which is
 private — a public repo's CI cannot check it out without a token. `just
@@ -99,6 +110,8 @@ Only `just new-history` needs claw, via `CLAW_SRC` (default:
 curation records has claw checked out.
 
 Changing the schema means changing the canonical copy and re-vendoring here — the
-same hub-and-spoke rule as `mech_shared.yaml`. This copy is not yet on the
-automated vendored-fleet drift check; add it there when the other Mechs adopt the
-layer.
+same hub-and-spoke rule as `mech_shared.yaml`. This copy is **not** on the
+automated vendored-fleet drift check, so nothing enforces that rule yet: tracked
+in #191, which also covers why appending it to `check_vendored_sync.sh` is not
+straightforward (the canonical copy lives in claw, which is private, and the
+existing check fetches over tokenless `raw.githubusercontent`).
