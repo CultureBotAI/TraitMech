@@ -102,9 +102,19 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           show_full_output: true
+        # NOTE: `gh api` is deliberately absent from --allowedTools below. It is a
+        # general HTTP client for the API, so allowlisting it would permit anything
+        # the token can do — including submitting an approving review, which
+        # `permissions:` grants and which is one of the two reasons this agent is
+        # comment-only (#195). `gh pr view/list/diff/checks --json` covers
+        # everything the shepherd legitimately needs.
+        #
+        # This comment lives OUT here rather than inside `claude_args:`. That is a
+        # literal block scalar passed straight through as CLI arguments, so a `#`
+        # line in it would be handed to the binary as an argument, not ignored.
           claude_args: |
             --model ${{ steps.model.outputs.model }}
-            --allowedTools "Bash(gh pr list:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh api:*),Bash(git log:*),Bash(git diff:*),Bash(gh pr comment:*),Read,Grep,Glob"
+            --allowedTools "Bash(gh pr list:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(git log:*),Bash(git diff:*),Bash(gh pr comment:*),Read,Grep,Glob"
           prompt: |
             REPO: ${{ github.repository }}
             DRY_RUN: ${{ inputs.dry_run }}
