@@ -24,7 +24,11 @@ Checks:
                       this script is what keeps its own guarantee true.
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
-                      exist.
+                      exist. Links inside fenced code blocks or inline code
+                      spans are prose *about* links and are not checked (#202).
+  UNTERMINATED_FENCE  a code fence that is opened and never closed. Everything
+                      after it would go unchecked, so this is reported rather
+                      than silently shrinking coverage.
 
 Usage:
     python scripts/pr_sanity.py
@@ -52,6 +56,17 @@ CONFLICT_RE = re.compile(r"^(<{7}|>{7})(\s|$)")
 MD_LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 
 SKIP_LINK_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#")
+
+# A fenced block opens on 3+ backticks or tildes, indented at most 3 spaces
+# (4+ would be an indented code block). It closes on a fence of the SAME
+# character, AT LEAST as long, and carrying no info string. The length rule is
+# what lets a ````-fence contain a ```-fence, which is how one documents fenced
+# markdown at all — see this repo's own #202.
+FENCE_RE = re.compile(r"^(?P<indent> {0,3})(?P<fence>`{3,}|~{3,})(?P<info>.*)$")
+
+# An inline code span: matching runs of backticks on one line. `[x](y.md)`
+# inside one is prose about a link, not a link.
+INLINE_CODE_RE = re.compile(r"(`+)(?:(?!\1).)*?\1")
 
 # Text extensions worth scanning for conflict markers. Everything else (images,
 # lockfiles, vendored data dumps) is skipped for speed.
@@ -180,6 +195,43 @@ def _within(candidate: Path, root: Path) -> bool:
         return False
 
 
+def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
+    """Split ``text`` into (lineno, line) pairs outside fenced code blocks.
+
+    Returns those pairs plus the line number of an unterminated opening fence,
+    or None. That second value matters: an unclosed fence makes every following
+    line invisible to the checks, so silently returning a short list would turn
+    a typo into "the rest of this file is no longer verified" — the failure this
+    whole script exists to prevent. The caller reports it.
+
+    Inline code spans are blanked rather than dropped so column positions and
+    surrounding prose on the same line are still scanned.
+    """
+    out: list[tuple[int, str]] = []
+    fence_char: str | None = None
+    fence_len = 0
+    opened_at: int | None = None
+
+    for lineno, line in enumerate(text.splitlines(), 1):
+        m = FENCE_RE.match(line)
+        if fence_char is None:
+            if m:
+                fence_char = m.group("fence")[0]
+                fence_len = len(m.group("fence"))
+                opened_at = lineno
+                continue
+            out.append((lineno, INLINE_CODE_RE.sub("", line)))
+        else:
+            # Closing fence: same char, at least as long, and no info string.
+            if (m and m.group("fence")[0] == fence_char
+                    and len(m.group("fence")) >= fence_len
+                    and not m.group("info").strip()):
+                fence_char = None
+                fence_len = 0
+                opened_at = None
+    return out, opened_at
+
+
 def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     for path in files:
@@ -189,7 +241,15 @@ def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
-        for lineno, line in enumerate(text.splitlines(), 1):
+        scannable, unterminated = prose_lines(text)
+        if unterminated is not None:
+            findings.append({
+                "check": "UNTERMINATED_FENCE",
+                "file": f"{path.relative_to(root)}:{unterminated}",
+                "detail": ("code fence opened here is never closed, so every "
+                           "later line in this file goes unchecked"),
+            })
+        for lineno, line in scannable:
             for target in MD_LINK_RE.findall(line):
                 if target.startswith(SKIP_LINK_PREFIXES):
                     continue

@@ -21,6 +21,7 @@ from pr_sanity import (  # noqa: E402
     check_conflict_markers,
     check_markdown_links,
     check_workflows,
+    prose_lines,
     sanity,
 )
 
@@ -213,6 +214,66 @@ def test_within_handles_relative_candidates(tmp_path):
     assert _within(Path("docs/x.md"), Path("."))
     assert _within(root / "docs/x.md", root)
     assert not _within(Path("../outside/x.md"), Path("."))
+
+
+# --- fenced code blocks (#202) ---------------------------------------------
+
+
+def _links_kept(text: str) -> list[str]:
+    lines, _ = prose_lines(text)
+    return [line.strip() for _, line in lines if "](" in line]
+
+
+def test_link_inside_a_fence_is_ignored_and_prose_links_survive():
+    kept = _links_kept("[a](x.md)\n```\n[b](y.md)\n```\n[c](z.md)\n")
+    assert kept == ["[a](x.md)", "[c](z.md)"]
+
+
+def test_longer_fence_contains_a_shorter_one():
+    """A ````-fence is how one documents a ```-fence. A 3-backtick line must
+    not close a 4-backtick block, or the example's contents leak out as prose."""
+    kept = _links_kept("````markdown\n```\n[in](y.md)\n```\n````\n[out](z.md)\n")
+    assert kept == ["[out](z.md)"]
+
+
+def test_tilde_fences_and_indented_fences():
+    assert _links_kept("~~~\n[in](y.md)\n~~~\n[out](z.md)\n") == ["[out](z.md)"]
+    # A fence indented under a list item still opens a block.
+    assert _links_kept("- item:\n  ```\n  [in](y.md)\n  ```\n[out](z.md)\n") \
+        == ["[out](z.md)"]
+
+
+def test_backtick_fence_is_not_closed_by_a_tilde_fence():
+    kept = _links_kept("```\n~~~\n[still-in](y.md)\n```\n[out](z.md)\n")
+    assert kept == ["[out](z.md)"]
+
+
+def test_inline_code_span_is_not_a_link():
+    kept = _links_kept("use `[x](y.md)` here [real](z.md)\n")
+    assert kept == ["use  here [real](z.md)"]
+
+
+def test_unterminated_fence_is_reported_not_silently_swallowed(tmp_path):
+    """An unclosed fence hides every later line. Shrinking coverage quietly is
+    the failure this whole script exists to prevent, so it must be loud."""
+    lines, unterminated = prose_lines("[a](x.md)\n```\n[never](y.md)\n")
+    assert unterminated == 2
+    assert [line for _, line in lines if "](" in line] == ["[a](x.md)"]
+
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("```\n[never](nope.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] \
+        == ["UNTERMINATED_FENCE"]
+
+
+def test_broken_link_in_a_fence_does_not_fire(tmp_path):
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("```markdown\n[example](totally/missing.md)\n```\n")
+    _commit(root)
+    assert check_markdown_links([md], root) == []
 
 
 def test_root_relative_link_resolves_from_repo_root(tmp_path):
