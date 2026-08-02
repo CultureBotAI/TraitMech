@@ -5,12 +5,15 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-07-31. Open issues: **#151** (web design review — 2 residual
+Last reconciled: 2026-08-01. Open issues: **#151** (web design review — 2 residual
 front-end items, section 6), **#183** (causal-graph fragmentation — detection has
-since landed, the backfill is what remains, section 5) and **#184** (the
-`vendored-sync` job does not fire for most files it checks, section 2). No open
-PRs. Everything merged in this repo through **#182** (2026-07-22), plus the
-claw-side architecture decisions through 2026-07-25, is reflected below.
+landed, the backfill is what remains, section 5), **#191**/**#192**/**#193** (from
+the #190 review — no drift check on the vendored history schema, the claw guard
+implemented twice, the dashboard's embedded timestamp), and **#197**/**#198**/**#199**
+(from the #196 review — hub-availability coupling, the same paths-filter gap in the
+sibling repos, concurrency scoping; all section 2). **#184** is closed by #196.
+Open PR: **#196**. Everything merged in this repo through **#190** (2026-07-31),
+plus the claw-side architecture decisions through 2026-07-25, is reflected below.
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -124,24 +127,34 @@ CommunityMech, TraitMech) pin the same `scripts/.vendored_canon_ref`
 = `6be694f3d6308ac0f4c2e0dcf196e2ff73f6468f` against `CultureBotAI/CultureMech`.
 The 4-repo vendored invariant is healthy.
 
-**But the guard has a hole at PR time — #184, filed 2026-07-30.** The
-`vendored-sync` job sits behind a `paths:` filter that is narrower than the list
-of files it checks, so a PR touching only the unlisted ones never fires it. Of the
-six files `check_vendored_sync.sh` compares, only
-`scripts/validate_id_label_correspondence.py` is in `trigger_paths`;
-`scripts/chem_formula.py`, the three `tests/test_id_label_*.py` files and
-`src/traitmech/schema/mech_shared.yaml` are all outside it. **This repo is the
-worst of the three spokes** — MIM and CommunityMech at least glob
-`src/<pkg>/schema/**`, which covers their `mech_shared.yaml`; TraitMech lists no
-`src/**` path at all, so editing a file that is byte-identical across all four
-Mechs does not trigger the check here.
+**The PR-time hole (#184) is FIXED here — #196.** The `vendored-sync` job sat
+behind a `paths:` filter narrower than the list of files it checks: of the six
+`check_vendored_sync.sh` compares, only
+`scripts/validate_id_label_correspondence.py` was in `trigger_paths`. Nor were
+`scripts/check_vendored_sync.sh` or `scripts/.vendored_canon_ref`, so editing the
+checker or reverting the pin fired nothing — **#182 rewrote the checker and
+changed the pin without this job running once**, and the workflow had not run at
+all between 2026-07-22 and #196.
 
-Severity is bounded: CultureMech's nightly fleet audit still catches divergence
-within a day, so the failure mode is a vendored edit merging green and drift
-surfacing next morning against `main`, not silent corruption. MIM#160 and
-CommunityMech#280 are the same defect; worth one cross-Mech sweep
-(`cross-mech-sync`) rather than three PRs. Distinct from CommunityMech#278, which
-is about *what* is compared — the checker itself has no canonical copy in the hub
+The cause was a 7s bash+curl job sharing a filter with a ~2min OAK-backed one.
+#184's suggested fix — derive the filter from the checker's `FILES` array — is
+**not implementable**: GitHub evaluates `paths:` from static YAML before
+checkout, so it cannot read the repo. #196 therefore moved `vendored-sync` to its
+own workflow with no filter at all, plus a 3-attempt retry (in the workflow, not
+in `check_vendored_sync.sh`, which has no canonical copy in the hub to diff
+against — CommunityMech#278).
+
+**Still open, fleet-wide: #198.** Verifying #184 showed the gap is not
+TraitMech-specific. CultureMech and CommunityMech also omit `chem_formula.py` and
+all three `tests/test_id_label_*.py` — their `src/<pkg>/schema/**` glob covers
+only `mech_shared.yaml`. So every repo readable on 2026-08-01 has a four-file
+hole; TraitMech had a fifth, now closed. MIM is unverified (`gh api` 404s on its
+workflow file). MIM#160 and CommunityMech#280 are the same defect; worth one
+cross-Mech sweep (`cross-mech-sync`) with #196 as the reference implementation,
+rather than three PRs. Also open from #196's review: **#197** (running on every
+PR couples all PRs to CultureMech's availability). Distinct from
+CommunityMech#278, which is about *what* is compared — the checker itself has no
+canonical copy in the hub
 — where these three are about *when* the comparison runs.
 
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
