@@ -9,9 +9,13 @@ name: label-correspondence
 # `exceptions:` allow-list in conf/id_label_targets.yaml. The drift report is
 # still generated and uploaded as a triage artifact even when the gate passes.
 #
-# The vendored-sync job below is also blocking: it is fast and dependency-free,
-# and guards the cross-repo byte-identical vendoring of the validator + tests via
-# a shared-reference diff against the canonical hub (not a self-generated pin).
+# The vendored-sync job used to live here and inherited the `paths:` filter
+# below, which is scoped to this workflow's expensive OAK-backed check. That
+# filter listed only 1 of the 6 files the drift checker compares, so the guard
+# almost never fired (#184). It now has its own workflow — .github/workflows/
+# vendored-sync.yaml — with no paths filter, because at ~4s there is nothing to
+# save by filtering it. The filter below is correct for THIS job, which takes
+# ~88s and needs uv + a cached OAK ontology download.
 
 on:
   pull_request:
@@ -29,22 +33,6 @@ permissions:
   contents: read
 
 jobs:
-  # Cross-repo durability guard: the validator is vendored byte-identical across
-  # the Mech repos, so fail fast if this copy drifts from the canonical hub's copy.
-  # Fast and dependency-free (no uv / OAK), so it blocks even though the drift
-  # report below is non-blocking.
-  vendored-sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      # Shared-reference drift check: fetch the vendored files from the canonical
-      # hub (CultureMech) at the pinned commit in scripts/.vendored_canon_ref and
-      # diff. Unlike the old self-generated sha256 pin, the reference lives in
-      # another repo, so a local edit to a vendored copy now fails CI. Fast and
-      # dependency-free (bash + curl), so it blocks before any uv/OAK setup.
-      - name: Verify vendored files match canonical hub
-        run: bash scripts/check_vendored_sync.sh
-
   label-correspondence:
     runs-on: ubuntu-latest
     steps:
