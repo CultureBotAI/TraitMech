@@ -114,6 +114,13 @@ def test_pull_request_with_empty_paths_list_counts_as_unfiltered(tmp_path):
     assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
 
 
+def test_missing_workflows_dir_is_a_finding_not_a_skip(tmp_path):
+    """A deleted CI directory must fail, not pass quietly. An early `return []`
+    here would make `just qc` green on a repo with no CI at all."""
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    assert "NO_UNFILTERED_CI" in _checks(check_workflows(tmp_path))
+
+
 def test_real_repo_satisfies_the_invariant():
     """Guards the live repo: if the last unfiltered workflow gains a paths
     filter, this fails rather than silently reducing coverage."""

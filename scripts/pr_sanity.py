@@ -71,7 +71,13 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     wf_dir = root / WORKFLOW_DIR
     if not wf_dir.is_dir():
-        return findings
+        # Not "nothing to check" — no workflows means no unfiltered CI, which is
+        # the invariant failing in its most complete form. Returning [] here
+        # would make `just qc` pass on a repo whose CI had been deleted.
+        return [{
+            "check": "NO_UNFILTERED_CI", "file": str(WORKFLOW_DIR),
+            "detail": "no .github/workflows directory — nothing runs on any PR",
+        }]
 
     unfiltered: list[str] = []
     for path in sorted(wf_dir.iterdir()):
