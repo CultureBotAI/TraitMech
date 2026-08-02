@@ -1,0 +1,58 @@
+name: pr-sanity
+
+# Cheap repo-wide checks on EVERY pull request.
+#
+# DELIBERATELY NO `paths:` FILTER — same reasoning as vendored-sync.yaml (#184),
+# but this one is about the change in front of it rather than vendored files.
+# Before #196 every workflow here was filtered, so a PR touching only `docs/**`,
+# `README.md`, or a brand-new workflow file ran NOTHING: `gh pr checks` printed
+# "no checks", which reads like "nothing to verify" and means "nothing was
+# verified". PR #194 is a real instance (#200).
+#
+# vendored-sync gave the repo a floor — every PR now gets at least one check —
+# but it verifies vendored files, not the diff. This verifies the diff.
+#
+# The job must stay cheap enough that nobody is ever tempted to put it behind a
+# filter, because that is the failure it exists to prevent. It is stdlib +
+# PyYAML, no network, ~0.5s locally.
+#
+# One check is self-referential on purpose: NO_UNFILTERED_CI fails if no
+# workflow triggers on pull_request without a paths filter. If someone later
+# adds a filter to the last unfiltered workflow, this fails loudly instead of
+# silently returning the repo to "some PRs run nothing".
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-sanity-${{ github.ref }}
+  # PRs only: on main, cancelling would leave the earlier commit unverified.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  pr-sanity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: extractions/setup-just@v3
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Repo sanity checks
+        run: just pr-sanity

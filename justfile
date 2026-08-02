@@ -55,6 +55,13 @@ validate-all *args:
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 
+# Cheap repo-wide checks that run on EVERY PR, including ones that touch only
+# docs/ or a new workflow file and so match no other workflow's paths: filter
+# (#200). Workflow YAML validity, the "at least one unfiltered workflow"
+# invariant, merge-conflict markers, and relative Markdown links. ~0.5s.
+pr-sanity *args:
+    uv run python scripts/pr_sanity.py {{args}}
+
 # Programmatic schema-quality probes (orphan enums, missing identifiers,
 # untyped string slots, etc.). Output to stdout — pipe to a report.
 audit-schema:
@@ -330,7 +337,7 @@ check: lint test
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths
+qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
