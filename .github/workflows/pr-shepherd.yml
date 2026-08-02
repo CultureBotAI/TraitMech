@@ -109,12 +109,20 @@ jobs:
         # comment-only (#195). `gh pr view/list/diff/checks --json` covers
         # everything the shepherd legitimately needs.
         #
+        # `Bash(gh pr comment:*)` is granted ONLY when dry_run is false. The prompt
+        # also says to post nothing in a dry run, but an instruction is not a
+        # constraint — and this agent reads untrusted PR diffs, which is where
+        # instruction-level limits are weakest. dry_run defaults to true, so the
+        # safest mode should be the one where the capability is simply absent.
+        # Same reasoning as excluding `gh api`: make it impossible, not forbidden
+        # (#204).
+        #
         # This comment lives OUT here rather than inside `claude_args:`. That is a
         # literal block scalar passed straight through as CLI arguments, so a `#`
         # line in it would be handed to the binary as an argument, not ignored.
           claude_args: |
             --model ${{ steps.model.outputs.model }}
-            --allowedTools "Bash(gh pr list:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(git log:*),Bash(git diff:*),Bash(gh pr comment:*),Read,Grep,Glob"
+            --allowedTools "Bash(gh pr list:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(git log:*),Bash(git diff:*),Read,Grep,Glob${{ inputs.dry_run == 'false' && ',Bash(gh pr comment:*)' || '' }}"
           prompt: |
             REPO: ${{ github.repository }}
             DRY_RUN: ${{ inputs.dry_run }}
@@ -145,7 +153,9 @@ jobs:
             Until that is fixed, commenting is the only safe action.
 
             If DRY_RUN is "true", post NOTHING. Report your assessment as your
-            final message only.
+            final message only. In that mode the comment tool is not granted to
+            you at all, so this is a description of what you can do, not a rule
+            you are being trusted to follow.
 
             ## Choosing
 
