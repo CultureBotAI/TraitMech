@@ -18,8 +18,8 @@ name: vendored-sync
 # repo. Any hand-maintained list therefore has to be kept in sync with the
 # checker by hand, which is precisely the drift this guard exists to prevent.
 # Running unconditionally removes the failure class instead of re-syncing two
-# lists. The job takes ~4s (bash + curl, no uv/OAK), so there is nothing to
-# save by filtering: the 88s label-correspondence job keeps its filter.
+# lists. The job takes ~7s (bash + curl, no uv/OAK), so there is nothing to
+# save by filtering: the ~2min label-correspondence job keeps its filter.
 
 on:
   pull_request:
@@ -32,7 +32,10 @@ permissions:
 
 concurrency:
   group: vendored-sync-${{ github.ref }}
-  cancel-in-progress: true
+  # PRs only: superseded runs on a branch are waste. On main, cancelling would
+  # leave the earlier commit with no verdict, and the point of running there is
+  # one verdict per commit (#199).
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   vendored-sync:

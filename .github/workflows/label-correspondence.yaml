@@ -13,9 +13,9 @@ name: label-correspondence
 # below, which is scoped to this workflow's expensive OAK-backed check. That
 # filter listed only 1 of the 6 files the drift checker compares, so the guard
 # almost never fired (#184). It now has its own workflow — .github/workflows/
-# vendored-sync.yaml — with no paths filter, because at ~4s there is nothing to
+# vendored-sync.yaml — with no paths filter, because at ~7s there is nothing to
 # save by filtering it. The filter below is correct for THIS job, which takes
-# ~88s and needs uv + a cached OAK ontology download.
+# ~2min and needs uv + a cached OAK ontology download.
 
 on:
   pull_request:
