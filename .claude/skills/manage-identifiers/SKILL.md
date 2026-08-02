@@ -173,5 +173,5 @@ grep -rh "^identifier:" data/traits/ \
 
 - Schema: `src/traitmech/schema/traitmech.yaml` — `TraitRecord.identifier` slot.
 - Seeder: `scripts/seed_from_metpo.py` — the canonical METPO → YAML pipeline.
-- Audit skills: [`schema-gap-analysis`](../schema-gap-analysis/skill.md) (quick check) and [`audit-schema-gaps`](../audit-schema-gaps/SKILL.md) (deep audit). Both run `linkml-validate` over `data/traits/` and will surface any malformed identifier as `pattern_mismatch` or `missing_required` errors.
+- Audit skills: [`schema-gap-analysis`](../schema-gap-analysis/SKILL.md) (quick check) and [`audit-schema-gaps`](../audit-schema-gaps/SKILL.md) (deep audit). Both run `linkml-validate` over `data/traits/` and will surface any malformed identifier as `pattern_mismatch` or `missing_required` errors.
 - Cross-Mech reference (for repos that *do* mint their own IDs): [CultureMech's manage-identifiers](https://github.com/CultureBotAI/CultureMech/blob/main/.claude/skills/manage-identifiers/SKILL.md) — covers single-file collection, multi-file collection, registry workflows, and batch ID assignment.
