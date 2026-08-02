@@ -175,6 +175,46 @@ def test_resolving_link_and_anchor_and_url_are_clean(tmp_path):
     assert check_markdown_links([md], root) == []
 
 
+def test_links_escaping_the_repo_are_skipped(tmp_path):
+    """README points at sibling fleet checkouts (../CultureMech). Whether those
+    resolve depends on what is cloned next door, so checking them makes the
+    result machine-dependent — they passed locally and failed on the runner."""
+    root = _repo(tmp_path)
+    md = root / "README.md"
+    md.write_text("[sibling](../CultureMech) and [deep](../../elsewhere/x.md)\n")
+    _commit(root)
+    assert check_markdown_links([md], root) == []
+
+
+def test_case_only_mismatch_is_flagged_even_on_case_insensitive_fs(tmp_path):
+    """`skill.md` vs `SKILL.md` resolves on macOS and not on Linux. A plain
+    exists() therefore passes locally and fails in CI — which is how a stale
+    lowercase link survived the SKILL.md rename in #190."""
+    root = _repo(tmp_path)
+    (root / "docs").mkdir()
+    (root / "docs/SKILL.md").write_text("hi\n")
+    md = root / "a.md"
+    md.write_text("[wrong case](docs/skill.md)\n")
+    _commit(root)
+    findings = check_markdown_links([md], root)
+    assert [f["check"] for f in findings] == ["BROKEN_LINK"]
+
+    md.write_text("[right case](docs/SKILL.md)\n")
+    assert check_markdown_links([md], root) == []
+
+
+def test_within_handles_relative_candidates(tmp_path):
+    """A relative candidate compared against an absolute root always raises
+    ValueError, which would classify every in-repo link as external and make
+    the link check silently vacuous."""
+    from pr_sanity import _within
+
+    root = _repo(tmp_path)
+    assert _within(Path("docs/x.md"), Path("."))
+    assert _within(root / "docs/x.md", root)
+    assert not _within(Path("../outside/x.md"), Path("."))
+
+
 def test_root_relative_link_resolves_from_repo_root(tmp_path):
     root = _repo(tmp_path)
     (root / "docs").mkdir()

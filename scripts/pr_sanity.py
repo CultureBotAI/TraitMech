@@ -33,6 +33,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import subprocess
 import sys
@@ -145,6 +146,40 @@ def check_conflict_markers(files: list[Path], root: Path) -> list[dict[str, str]
     return findings
 
 
+def _exists_exact(candidate: Path) -> bool:
+    """``candidate.exists()``, but case-exact even on a case-insensitive
+    filesystem.
+
+    macOS resolves ``skill.md`` to a file named ``SKILL.md``; Linux does not. A
+    plain ``exists()`` therefore passes locally and fails in CI — which is
+    exactly how a stale lowercase link survived the SKILL.md rename in #190
+    until this check first ran on a runner. Comparing the final component
+    against the real directory listing makes the result the same on both.
+    """
+    if not candidate.exists():
+        return False
+    try:
+        return candidate.name in os.listdir(candidate.parent)
+    except OSError:
+        return False
+
+
+def _within(candidate: Path, root: Path) -> bool:
+    """True if ``candidate`` is inside ``root``.
+
+    Both sides go through ``abspath``, which normalises ``..`` lexically without
+    requiring the path to exist — the targets being classified are often missing,
+    which is the whole point. Both sides matter: comparing a relative candidate
+    against an absolute root always raises ValueError, which would silently
+    classify every in-repo link as external and make the link check vacuous.
+    """
+    try:
+        Path(os.path.abspath(candidate)).relative_to(Path(os.path.abspath(root)))
+        return True
+    except ValueError:
+        return False
+
+
 def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     for path in files:
@@ -164,7 +199,15 @@ def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
                     continue
                 resolved = (root / bare[1:]) if bare.startswith("/") \
                     else (path.parent / bare)
-                if not resolved.exists():
+                # Links that escape the repo (README's ../CultureMech, the
+                # skills' ../../../../kg-microbe/...) point at sibling fleet
+                # checkouts. Whether they resolve depends on what happens to be
+                # cloned next door, so checking them makes the result depend on
+                # the machine: they pass locally and fail on a CI runner. Out of
+                # scope — this verifies links *within* the repo.
+                if not _within(resolved, root):
+                    continue
+                if not _exists_exact(resolved):
                     findings.append({
                         "check": "BROKEN_LINK",
                         "file": f"{path.relative_to(root)}:{lineno}",
