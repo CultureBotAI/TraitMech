@@ -5,12 +5,17 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-02. **No open PRs.** Everything merged in this repo
-through **#210** (2026-08-03) — which now includes the whole CI/agent-workflow
-thread (#194, #196, #201, #206, #207, #210, section 7) that was absent from this
-file — plus the claw-side architecture decisions through 2026-07-25.
+Last reconciled: 2026-08-02. Everything merged in this repo through **#210**
+(2026-08-03) — which now includes the whole CI/agent-workflow thread (#194, #196,
+#201, #206, #207, #210, section 7) that was absent from this file — plus the
+claw-side architecture decisions through 2026-07-25.
 
-Open issues, 13 of them — the last two filed by this reconcile:
+Open PRs: **this one** (#213), and **#216** — the #215 fix, green and approved.
+Merge #216 first: until it lands, no PR in this repo gets a Claude review, this
+one included.
+
+Open issues, 14 of them — the last three filed by this reconcile and by #216's
+own review:
 
 | # | what | section |
 |---|---|---|
@@ -25,8 +30,9 @@ Open issues, 13 of them — the last two filed by this reconcile:
 | #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
 | #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them | 9 |
-| #215 | **`claude-code-review` cancels itself — no PR has been reviewed since #210 merged** | 7 |
+| #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them — **blocks the section 9 loop** | 9 |
+| #215 | `claude-code-review` cancels itself — **fix open in #216**, merge to close | 7 |
+| #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
 
 Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
 **#202** (by #207), **#204** (by #206).
@@ -350,19 +356,52 @@ surface. What landed, 2026-08-02/03:
   `github.token` would silently restore the self-approval hole the split exists
   to close, and would look identical in the logs.
 
-**#215 is the exception to "none of this blocks anything" — fix it first.**
-`claude-code-review.yml` posts a progress comment as it works; that comment fires
-`issue_comment: created`, which lands in the *same* workflow-level concurrency
-group (`claude-review-<PR>`) and, with `cancel-in-progress: true`, cancels the
-run that posted it. Concurrency is evaluated **before** the job's `if:`, so the
-no-op comment run kills the real one. It was green on `feat/claude-code-review`
-only because `issue_comment` workflows run from the *default branch's* copy of
-the file, which did not exist until #210 merged — a merge-activated regression
-that no pre-merge CI could have seen. Fix: move `concurrency:` onto the job, so a
-job skipped by `if:` never joins the group. Check `pr-shepherd.yml` for the same
-shape before it gets a comment trigger. Third concurrency-scoping bug here after
-#199 and #196's review — worth a workflow-authoring convention, not a fourth
-issue.
+**#215 was the exception to "none of this blocks anything" — FIXED in #216
+(open, approved, awaiting merge).** `claude-code-review.yml` posts a progress
+comment as it works; that comment fired `issue_comment: created`, which landed in
+the *same* workflow-level concurrency group (`claude-review-<PR>` — the `||`
+chain falls through to `github.event.issue.number` for the same PR) and, with
+`cancel-in-progress: true`, cancelled the run that had just posted it. The comment
+run then skipped itself on the job's `if:`, having done nothing. Every review,
+every PR, since #210 merged.
+
+It was green on `feat/claude-code-review` only because `issue_comment` workflows
+run from the *default branch's* copy of the file, and `main` had no
+`claude-code-review.yml` until #210 landed — a merge-activated regression no
+pre-merge CI could have seen.
+
+**The fix is not the obvious one.** Moving `concurrency:` onto the job — the
+first thing to try, on the theory that a job skipped by `if:` never joins the
+group — is *probably* right but rests on behaviour GitHub does not document:
+the workflow-syntax reference describes `jobs.<job_id>.concurrency` without ever
+saying how it interacts with a false `if:`. What #216 ships instead makes the
+invariant structural, holding under any evaluation order:
+
+```yaml
+group: claude-review-${{ …pr number… }}-${{ github.event_name == 'pull_request' && 'push' || github.run_id }}
+```
+
+Only `pull_request` runs share a key, so rapid pushes to one PR still collapse —
+the only thing the group was ever for. Every comment and dispatch run gets
+`github.run_id`, unique per run, so it can neither cancel nor be cancelled. (The
+block did also move onto the job, but that is placement, not protection.) Keying
+merely by `github.event_name` is *not* sufficient: it fixes the push path while
+leaving `/review` runs sharing one key with every other comment on the PR,
+including ones the agent posts itself via the allowlisted `gh pr comment`.
+
+Verified, not just argued: before, both `pull_request` runs on #213 were cancelled
+seconds after a `culturebot-reviewer` comment; after, both pushes to #216 gave
+`pull_request → success` with the `issue_comment` runs skipping harmlessly
+alongside.
+
+`pr-shepherd.yml` was checked and is unaffected — `workflow_dispatch` only,
+`cancel-in-progress: false`, no comment trigger. `claude-code-review.yml` is the
+only workflow in the repo with an `issue_comment` trigger.
+
+Third concurrency-scoping bug here after #199 and #196's review, which did become
+a fourth issue after all: **#217**, for the workflow-authoring conventions page
+that has nowhere to live (`docs/` has no such page, and this is fleet knowledge
+that belongs upstream rather than copied four times).
 
 **The other pending items are small, independent and fully specified**, each
 verifiable by CI, none blocking anything:
@@ -376,6 +415,7 @@ verifiable by CI, none blocking anything:
 | #191 | vendored `history.yaml` has no drift check vs claw canonical | |
 | #192 | justfile claw-module guard implemented twice | |
 | #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
+| #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
 
 ## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
 
