@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  path: data/traits/morphology/dumbbell_shaped.yaml
+  slug: dumbbell_shaped
+session:
+  id: 2026-08-03T230903Z-claude-code-90a277
+  timestamp: '2026-08-03T23:09:03Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+events:
+- type: EDIT
+  outcome: changed
+  summary: Retype v_shaped_daughters from TRAIT to QUALITY
+  details: 'The causal graph dumbbell_shaped_snapping_division splits into two components,
+    and both contained a node typed TRAIT, so UNREACHABLE_FROM_TRAIT reported it clean while
+    7 of its 11 nodes had no path to dumbbell_shaped_trait (issue 220). v_shaped_daughters
+    is the morphological outcome of snapping division, not a trait this record asserts: no
+    v_shaped trait record exists and the node carries no grounding, unlike genuine cross-trait
+    links such as nacl_delta on nacl_delta_high. Morphology graphs use QUALITY for shape outcomes
+    (rod shape, non-spherical morphology, cell curvature); STATE is reserved for conditions.
+    After the retype the existing check correctly reports those 7 nodes, and the new FRAGMENTED_GRAPH
+    check reports the split independently of node typing.'
