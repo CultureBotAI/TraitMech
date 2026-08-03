@@ -10,6 +10,12 @@ on:
       - "justfile"
       - "pyproject.toml"
       - ".github/workflows/qc.yaml"
+      # `audit-derived-reports` (#214) compares the tracked reports against a
+      # fresh generation, so a PR that edits one directly has to be checked too.
+      # The common staleness path — corpus moves, report is not regenerated — is
+      # already covered by data/traits/**, but a filter narrower than what the
+      # job verifies is how #184 and #200 happened.
+      - "reports/**"
   push:
     branches: [main]
   workflow_dispatch:
