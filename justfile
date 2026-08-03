@@ -352,9 +352,12 @@ check: lint test
 # clears the failure immediately, instead of only after you commit — the HEAD
 # variant tells you to fix something and then keeps failing when you have.
 #
-# Not covered here: reports/causal_graph_audit.tsv, because `audit-graphs`
-# regenerates it during this same `qc` run. If that ever stops being true it
-# belongs in this list.
+# Not covered here: reports/causal_graph_audit.tsv. `audit-graphs` rewrites it
+# earlier in this same `qc` run, so a stale committed copy is silently corrected
+# in the working tree — corrected, but never reported. Regenerating is not
+# checking, and a `just qc` that quietly leaves an uncommitted change is a
+# weaker guarantee than this recipe gives. Tracked separately rather than
+# widened here; see #223.
 audit-derived-reports:
     #!/usr/bin/env bash
     set -euo pipefail
