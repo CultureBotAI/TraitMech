@@ -53,38 +53,41 @@ jobs:
         )
       }}
 
-    # TWO CHANGES, BOTH FOR #215: on the job rather than the workflow, and keyed
-    # by event.
+    # CANCELLATION IS FOR PUSHES AND NOTHING ELSE (#215).
     #
     # The bug: `track_progress` makes claude-code-action post a progress comment
     # as it works. That comment fires `issue_comment: created`, which resolved to
     # the SAME group key — the `||` chain falls through to
     # `github.event.issue.number` for the same PR — and `cancel-in-progress` then
     # killed the run that had just posted it. Every review, every PR. The comment
-    # run cancelled the real one and then skipped itself on the `if:` below,
+    # run cancelled the real one and then skipped itself on the `if:` above,
     # having done nothing at all.
     #
-    # Keying by `github.event_name` is the part that is *provably* sufficient:
-    # comment runs and pull_request runs can no longer land in one group, whatever
-    # the evaluation order.
+    # Collapsing rapid pushes to one PR is the ONLY thing this group was ever
+    # for, so only `pull_request` runs share a key. Everything else — every
+    # comment, every dispatch — gets `github.run_id`, which is unique per run, so
+    # it can neither cancel nor be cancelled.
     #
-    # Moving it to the job is the part that is merely *right*: a job skipped by
-    # `if:` should never acquire the group. GitHub's workflow-syntax reference
-    # documents `jobs.<job_id>.concurrency` but says nothing about how it
-    # interacts with a false `if:`, so this is not something to rely on alone —
-    # hence the belt and the braces.
+    # That is deliberately structural rather than conditional. Keying merely by
+    # `github.event_name` fixes the push path but leaves `/review` runs sharing
+    # one key with every other comment on the PR, including ones this agent posts
+    # itself (`gh pr comment` is allowlisted below). Whether that bites depends on
+    # whether a job skipped by `if:` acquires a job-level group — and GitHub's
+    # workflow-syntax reference documents `jobs.<job_id>.concurrency` without ever
+    # saying. Not a thing to build on: this is the third concurrency bug in this
+    # fleet after #199 and #196's review. The invariant here holds under any
+    # evaluation order.
     #
-    # What the group is for still works: two pushes to one PR collapse to the
-    # last. The one behaviour given up is a `/review` comment superseding a push
-    # review already in flight; that now runs alongside, which is the cheaper
-    # mistake.
+    # The block sits on the job rather than the workflow because that is where it
+    # belongs, not because anything depends on it. With unique keys off the push
+    # path, placement is now style.
     #
     # None of this was visible before #210 merged. `issue_comment` workflows
     # always run from the DEFAULT BRANCH's copy of the file, and `main` had no
     # claude-code-review.yml while the feature branch was in review — so the
     # cancelling trigger did not exist until the moment it landed.
     concurrency:
-      group: claude-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}-${{ github.event_name }}
+      group: claude-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}-${{ github.event_name == 'pull_request' && 'push' || github.run_id }}
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
