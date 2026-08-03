@@ -70,6 +70,35 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check out the PR head
+        # actions/checkout gives the DEFAULT BRANCH on issue_comment and
+        # workflow_dispatch — only the pull_request event yields a PR ref. Without
+        # this the agent would read `main` through Read/Grep/Glob while reviewing
+        # the PR's diff through `gh pr diff`, and confidently report additions as
+        # missing (#211).
+        #
+        # Run on every trigger, so the agent always reviews the HEAD commit — what
+        # the author actually wrote — rather than the synthetic merge commit.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr checkout ${{ env.PR_NUMBER }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install just and sync the project
+        # `just` and `uv` do not ship on ubuntu-latest. Without them the two most
+        # valuable allowlisted tools — `just validate-history` and
+        # `just audit-graphs` — fail with command-not-found, and the agent either
+        # skips its best checks or reports the infrastructure error as a finding
+        # about the PR (#211).
+        run: |
+          set -euo pipefail
+          uv tool install rust-just
+          uv sync
+
       - name: Generate culturebot-reviewer token
         id: reviewer-token
         # Reviews are posted as the reviewer App, NOT as github-actions. That is
