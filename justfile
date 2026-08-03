@@ -399,6 +399,7 @@ audit-derived-reports:
         # making the remediation block below unreachable in exactly the case
         # it exists for.
         { diff -u "reports/$f" "$tmp/$f" | sed -n '1,20p' >&2; } || true
+        stale_grounding=1
         fail=1
       fi
     done
@@ -424,6 +425,15 @@ audit-derived-reports:
     else
       echo "  STALE reports/$cga — the COMMITTED copy is not what audit-graphs produces:" >&2
       { diff -u "$tmp/committed_$cga" "$tmp/$cga" | sed -n '1,20p' >&2; } || true
+      # Print the generator's own output here too, not only on missing output.
+      # audit() silently `continue`s past a trait YAML that fails safe_load
+      # (audit_causal_graphs.py:106-108) — no counter, no row — so an
+      # unparseable file drops its findings from the fresh copy and this reads
+      # as a stale COMMITTED report when the committed report was fine. Same
+      # care the generate() helper above takes: the message must not assert a
+      # cause the evidence does not establish.
+      echo "  --- audit-graphs output for this run ---" >&2
+      sed -n '1,15p' "$tmp/gen.log" >&2 || true
       stale_cga=1
       fail=1
     fi
@@ -431,8 +441,12 @@ audit-derived-reports:
     if [ "$fail" -ne 0 ]; then
       echo "" >&2
       echo "derived reports are stale (#214, #223). Regenerate and commit them:" >&2
-      echo "  uv run python scripts/ground_causal_predicates.py" >&2
-      echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      # Guarded so a cga-only failure does not send the curator to run two
+      # grounding scripts that have nothing to do with what failed.
+      if [ "${stale_grounding:-0}" -eq 1 ]; then
+        echo "  uv run python scripts/ground_causal_predicates.py" >&2
+        echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      fi
       if [ "${stale_cga:-0}" -eq 1 ]; then
         # Single-quoted on purpose: backticks inside a double-quoted echo are
         # command substitution, and this string names a command.
