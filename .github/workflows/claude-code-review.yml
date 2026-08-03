@@ -63,10 +63,15 @@ jobs:
     # run cancelled the real one and then skipped itself on the `if:` above,
     # having done nothing at all.
     #
-    # Collapsing rapid pushes to one PR is the ONLY thing this group was ever
-    # for, so only `pull_request` runs share a key. Everything else — every
-    # comment, every dispatch — gets `github.run_id`, which is unique per run, so
-    # it can neither cancel nor be cancelled.
+    # Collapsing rapid pushes to one PR is the only thing this group is now for,
+    # so only `pull_request` runs share a key. Everything else — every comment,
+    # every dispatch — gets `github.run_id`, which is unique per run, so it can
+    # neither cancel nor be cancelled.
+    #
+    # That is a narrowing, not a restoration. The original key spanned all three
+    # triggers, which also let a `/review` supersede a review already in flight;
+    # that is deliberately given up here. Two reviews running at once is a far
+    # cheaper failure than the one this replaced — no review running at all.
     #
     # That is deliberately structural rather than conditional. Keying merely by
     # `github.event_name` fixes the push path but leaves `/review` runs sharing
