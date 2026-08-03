@@ -5,15 +5,29 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-01. Open issues: **#151** (web design review — 2 residual
-front-end items, section 6), **#183** (causal-graph fragmentation — detection has
-landed, the backfill is what remains, section 5), **#191**/**#192**/**#193** (from
-the #190 review — no drift check on the vendored history schema, the claw guard
-implemented twice, the dashboard's embedded timestamp), and **#197**/**#198**/**#199**
-(from the #196 review — hub-availability coupling, the same paths-filter gap in the
-sibling repos, concurrency scoping; all section 2). **#184** is closed by #196.
-Open PR: **#196**. Everything merged in this repo through **#190** (2026-07-31),
-plus the claw-side architecture decisions through 2026-07-25, is reflected below.
+Last reconciled: 2026-08-02. **No open PRs.** Everything merged in this repo
+through **#210** (2026-08-03) — which now includes the whole CI/agent-workflow
+thread (#194, #196, #201, #206, #207, #210, section 7) that was absent from this
+file — plus the claw-side architecture decisions through 2026-07-25.
+
+Open issues, 11 of them:
+
+| # | what | section |
+|---|---|---|
+| #151 | web design review — 2 residual front-end items | 6 |
+| #183 | causal-graph fragmentation — detection landed, **backfill is what remains** | 5 |
+| #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
+| #192 | justfile: the claw-module guard is implemented twice | 7 |
+| #193 | QC dashboard embeds a generation timestamp, so staleness can't be rechecked | 7 |
+| #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
+| #198 | **cross-Mech**: paths filter omits `chem_formula.py` + the 3 id_label tests in *every* repo | 2 |
+| #203 | three major versions of `astral-sh/setup-uv` across workflows (v3/v5/v7) | 7 |
+| #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
+| #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
+| #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
+
+Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
+**#202** (by #207), **#204** (by #206).
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -166,11 +180,29 @@ remains.
 
 ## 4. METPO upstream round-trip (BLOCKED on upstream) + residual floor
 
-- Causal-graph grounding now stands at **predicates 85% (1094/1284)** and
-  **nodes 62% (1024/1643)**. The remaining residual is non-ontological
-  graph-narrative phrases (adaptation states, composite descriptors) and vague
-  verbs — these are NOT ontology concepts and should stay as free-text node/edge
-  labels, not be force-matched or proposed. This is the quality floor.
+- **Corrected 2026-08-02 — the old "predicates 85% (1094/1284) / nodes 62%
+  (1024/1643)" figures do not reproduce under any metric and should not be
+  quoted.** The repo's own scripts are ground truth; re-run them for the current
+  number rather than trusting this file:
+
+  ```
+  uv run python scripts/ground_causal_predicates.py   # dry-run; writes reports/predicate_grounding_residual.tsv
+  uv run python scripts/ground_causal_nodes.py        # dry-run; writes reports/node_grounding_residual.tsv
+  ```
+
+  As of 2026-08-02, over 477 YAMLs: **predicates 2128/3402 edges grounded (63%)**,
+  residual 1274 edges across 572 distinct labels; **nodes 1461/4136 grounded
+  (35%)**, residual 2675 across 2318 distinct (label, type) keys.
+- **The "this is the quality floor" claim was also too generous.** Much of the
+  residual genuinely is non-ontological graph narrative (adaptation states,
+  composite descriptors) that should stay free-text — but not all of it. The
+  frequency-ranked residual has **exact-label RO matches that were simply never
+  added to `mappings/predicate_grounding.tsv`**, while their *paraphrases* were:
+  `promotes` → RO:0002213 is mapped, but the literal label `positively regulates`
+  (37 edges) is not; `inhibits` → RO:0002212 is mapped, but `negatively
+  regulates` (16 edges) is not; `causally upstream of` (13 edges) is the literal
+  RO:0002411 label. So the top of the residual is cheap, high-confidence,
+  CI-verifiable work, and only the tail is the floor. See section 9.
 - Genuinely-novel recurring concepts have been proposed: electron-transfer
   predicates ([v6](proposals/metpo_traitmech_v6/)) and 2 causal-mechanism
   classes ([v7](proposals/metpo_traitmech_v7/): salt-in strategy, reductive
@@ -238,7 +270,17 @@ check" half is already satisfied by item 1 above — including the design questi
 posed (one-component versus reachable-from-trait), which was answered in favour of
 the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
-**Progress: 1 of 220 traits done.** `data/traits/metabolism/cellulolysis.yaml`
+**Progress, re-measured 2026-08-02: 220 fragmented graphs remain, across 220 of
+the 477 trait files.** Corpus totals are unchanged (353 graphs, 4136 nodes,
+1264 nodes = 31% outside their graph's largest component), and
+`conf/causal_graph_audit_baseline.tsv` still freezes **1314** findings. Note
+that `cellulolysis.yaml` now verifies as a **single component**, so the fix did
+land — the "1 of 220 done" framing in the previous revision of this file was
+wrong arithmetic, not lost work: 220 is the count of what is *still* fragmented,
+not the count before the fix. By category: environment 85, morphology 47,
+metabolism 31, physiology 27, ecology 18, genomics 11, upper 1.
+
+`data/traits/metabolism/cellulolysis.yaml`
 was the first instance of (2) and where the problem was found. A deep-research
 audit (Edison/PaperQA3 + Codex, independently converging) found that graph split
 into 4 components with 9 of 14 nodes unreachable from the trait node. The fix
@@ -269,8 +311,105 @@ remain open, both on the graph view:
 - **Redundant double category filter** — a dropdown above the plot and checkboxes
   below, with different semantics. Consolidate to one control.
 
-This is the only open issue in the repo. It is tracked in the cross-Mech design
-umbrella in culturebotai-claw.
+It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
+previous revision of this file called #151 "the only open issue in the repo" —
+that has not been true since 2026-07-30; see the header table.)
+
+## 7. CI + agent-workflow thread — SHIPPED; 7 small review issues PENDING
+
+This whole thread post-dates the last reconcile and was previously unlogged here.
+TraitMech is the fleet **pilot** for agent workflows because it is the smallest
+surface. What landed, 2026-08-02/03:
+
+- **#194 `pr-shepherd`** — the fleet's first agent workflow, deliberately
+  **comment-only**. Two things fail *silently* until a writer/reviewer App split
+  exists: pushes made with the built-in `GITHUB_TOKEN` do not trigger workflows
+  (so an agent-pushed fix shows green because nothing evaluated it), and a single
+  identity can approve its own work. Merging/pushing/editing/approving are
+  refused in the prompt *and* withheld at the harness level via `--allowedTools`.
+  No `schedule:` trigger, deliberately.
+- **#206** — `dry_run` (the default) was enforced only by a prompt instruction
+  while `Bash(gh pr comment:*)` was granted unconditionally. Now the tool is
+  withheld in dry runs: capability, not persuasion, in an agent that reads
+  untrusted PR diffs by design.
+- **#201 `pr-sanity`** — before it, a PR touching only `docs/**`, `README.md`,
+  `NEXT_TASKS.md`, or a *new workflow file* matched no `paths:` filter and ran
+  **nothing**; `gh pr checks` prints `no checks`, which reads as "nothing to
+  verify" but means "nothing was verified". #194 was a live instance. Runs
+  unfiltered on every PR.
+- **#207** — `pr-sanity`'s link check scanned line-by-line with no notion of
+  fenced code, so a link written as an *example* inside a fence counted as a real
+  link. Zero findings in the corpus today; the bug would have bitten the first
+  person to document a link pattern.
+- **#210** — adopted DisMech's Claude code-review workflow. **First workflow to
+  use the `culturebot-reviewer` App**, which holds `contents: read` +
+  `pull_requests: write` and so physically cannot change what it reviews. The
+  token step has **no `continue-on-error`** on purpose: DisMech's fallback to
+  `github.token` would silently restore the self-approval hole the split exists
+  to close, and would look identical in the logs.
+
+**Pending — seven small, independent, fully-specified issues**, each verifiable
+by CI, none blocking anything:
+
+| # | fix | note |
+|---|---|---|
+| #203 | unify `astral-sh/setup-uv` (v3 ×4, v5, v7) | needs a version decision, then mechanical |
+| #205 | declare PyYAML for `pr-shepherd`'s model-resolution step | same shape as #190's `matplotlib` gap |
+| #208 | skip 4-space-indented code blocks in the link check | no impact today; narrower than #202 was |
+| #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
+| #191 | vendored `history.yaml` has no drift check vs claw canonical | |
+| #192 | justfile claw-module guard implemented twice | |
+| #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
+
+## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
+
+`reports/trait_graph_audit_manifest.tsv` (362 rows, last written 2026-07-20)
+records a **completed** sweep: **353 ok, 8 fail**. But `research/` is in
+`.gitignore` (line 42, "large, regenerable"), nothing under it is tracked, and
+only **11 traits' reports survive on this checkout**:
+
+```
+$ find research/traits -name '*-deep-research-falcon.md' | wc -l
+11
+$ uv run python scripts/run_trait_graph_audit.py --dry-run | tail -1
+[342/342] upper/quality  (quality)
+```
+
+Resume detection in `scripts/run_trait_graph_audit.py` is **file-existence
+based**, so from this checkout the sweep looks 3% done and would re-run — and
+re-bill — 342 Edison calls that already succeeded once.
+
+**Decide before running anything paid.** Either the reports exist on another
+machine and should be recovered, or `.gitignore`'s "regenerable" premise needs
+revisiting for outputs that cost money to regenerate (commit them, or push them
+to shared storage with the manifest as the index). Until then, treat the
+manifest's 353 `ok` rows as a record of spend, not as available input, and honour
+the canary rule: one real trait end-to-end before any fan-out.
+
+## 9. Predicate/node grounding backfill — PENDING, and cheaper than section 4 implied
+
+Follows from the section 4 correction. The frequency-ranked residual in
+`reports/predicate_grounding_residual.tsv` opens with labels that are *exact* RO
+labels whose paraphrases are already mapped in
+`mappings/predicate_grounding.tsv`:
+
+| residual label | edges | almost certainly | already mapped as |
+|---|--:|---|---|
+| `positively regulates` | 37 | RO:0002213 | `promotes` → RO:0002213 |
+| `negatively regulates` | 16 | RO:0002212 | `inhibits`/`suppresses`/`prevents` → RO:0002212 |
+| `causally upstream of` | 13 | RO:0002411 | — |
+
+Below those sit judgement calls (`supports` 37, `induces` 34, `required for` 30,
+`drives` 29, `maintains` 29, `mediates` 27) and then the genuine free-text floor.
+Node side, the head of the residual is similar: `proton motive force` ×16,
+`compatible solute accumulation` ×12, `Na+/H+ antiporter` ×8, `ATP` ×6.
+
+Each mapping row is verified by the existing **blocking** `label-correspondence`
+gate (`just validate-products`), which checks the CURIE's label against OAK — so
+a wrong CURIE fails CI rather than landing silently. Apply with
+`scripts/ground_causal_predicates.py --apply` / `ground_causal_nodes.py --apply`.
+Where no ontology term fits, the actionable form is `metpo-proposal`, not a
+force-match — the section 4 floor still stands for the tail.
 
 ## Adopt DisMech knowledge-gaps + datasets + QC dashboard (claw#7) — DONE (by 2026-07-22)
 
