@@ -122,6 +122,11 @@ Do not pause for routine judgement calls. Make them and say what you assumed.
   `data/traits/` needs an in-file `curation_history` entry (reuse an existing
   `action` value) *and* a record under `history/` via `just new-history`.
   `just validate-history` must pass.
+  `new-history` needs a `culturebotai-claw` checkout — a sibling directory, or
+  `CLAW_SRC` pointing at its `src/` — and fails loudly without one. That is a
+  local dependency to satisfy, **not** the "needs a sibling repo" pause
+  condition below: nothing in claw is being changed. `validate-history` uses
+  the vendored schema and works with no checkout at all.
 - **Never `@`-mention** anyone in a commit, PR, issue, or comment.
 
 ## Traps that have cost real time here
@@ -136,7 +141,12 @@ Do not pause for routine judgement calls. Make them and say what you assumed.
   difference and aborts the recipe mid-loop. Guard with `|| true`.
 - **YAML plain scalars**: a space followed by `#` starts a comment, so `#220`
   in an unquoted value truncates it. Quote such strings.
-- **GitHub concurrency is evaluated before a job's `if:`**, so a run that skips
-  every job still cancels what is in its group.
+- **A workflow run that skips every job can still cancel what is in its
+  concurrency group** — observed directly in #215, where the review agent's own
+  progress comment killed the run that posted it. Note what is *not* known: the
+  evaluation order of `concurrency` versus a job's `if:` is undocumented, and
+  `claude-code-review.yml` says so and was deliberately made correct under
+  either order. Fix such bugs structurally (a group key that cannot collide),
+  not by reasoning about the ordering.
 - **Generated pages/dashboards embed timestamps**, so regenerating them churns
   hundreds of files. Do not sweep that into an unrelated PR (#193, #228).
