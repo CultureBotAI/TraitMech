@@ -25,10 +25,6 @@ on:
         required: true
         type: number
 
-concurrency:
-  group: claude-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}
-  cancel-in-progress: true
-
 jobs:
   claude-review:
     # Three gates, each closing a different hole:
@@ -56,6 +52,41 @@ jobs:
           contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
         )
       }}
+
+    # TWO CHANGES, BOTH FOR #215: on the job rather than the workflow, and keyed
+    # by event.
+    #
+    # The bug: `track_progress` makes claude-code-action post a progress comment
+    # as it works. That comment fires `issue_comment: created`, which resolved to
+    # the SAME group key — the `||` chain falls through to
+    # `github.event.issue.number` for the same PR — and `cancel-in-progress` then
+    # killed the run that had just posted it. Every review, every PR. The comment
+    # run cancelled the real one and then skipped itself on the `if:` below,
+    # having done nothing at all.
+    #
+    # Keying by `github.event_name` is the part that is *provably* sufficient:
+    # comment runs and pull_request runs can no longer land in one group, whatever
+    # the evaluation order.
+    #
+    # Moving it to the job is the part that is merely *right*: a job skipped by
+    # `if:` should never acquire the group. GitHub's workflow-syntax reference
+    # documents `jobs.<job_id>.concurrency` but says nothing about how it
+    # interacts with a false `if:`, so this is not something to rely on alone —
+    # hence the belt and the braces.
+    #
+    # What the group is for still works: two pushes to one PR collapse to the
+    # last. The one behaviour given up is a `/review` comment superseding a push
+    # review already in flight; that now runs alongside, which is the cheaper
+    # mistake.
+    #
+    # None of this was visible before #210 merged. `issue_comment` workflows
+    # always run from the DEFAULT BRANCH's copy of the file, and `main` had no
+    # claude-code-review.yml while the feature branch was in review — so the
+    # cancelling trigger did not exist until the moment it landed.
+    concurrency:
+      group: claude-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}-${{ github.event_name }}
+      cancel-in-progress: true
+
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
