@@ -12,6 +12,11 @@ structural defects the schema cannot catch:
                           disconnected node).                       [ERROR]
   NO_TRAIT_NODE           a graph with no ``node_type: TRAIT`` node, so there
                           is nothing to anchor reachability to.     [ERROR]
+  FRAGMENTED_GRAPH        a graph that splits into several disconnected
+                          components. Catches what UNREACHABLE_FROM_TRAIT cannot:
+                          a split where each side happens to contain a node typed
+                          TRAIT, so every node reaches *a* trait but not the one
+                          the record is about (#220).
   UNREACHABLE_FROM_TRAIT  a node that IS referenced by some edge, but sits in
                           an island with no undirected path back to any TRAIT
                           node. The graph is several disjoint fragments rather
@@ -39,7 +44,7 @@ Writes ``reports/causal_graph_audit.tsv``. Exit code is governed by
 
   new    (default) any finding NOT in the baseline fails. Baselined findings
          never fail regardless of severity. This is the ratchet: the corpus
-         cannot get more fragmented than it is today, but today's 1314
+         cannot get more fragmented than it is today, but today's 1541
          findings do not block.
   error  only new ERROR-severity findings fail. New fragmentation is still
          reported, but non-blocking — use if the ratchet proves too noisy.
@@ -81,6 +86,7 @@ SEVERITY = {
     "ORPHAN_NODE": ERROR,
     "NO_TRAIT_NODE": ERROR,
     "UNREACHABLE_FROM_TRAIT": WARN,
+    "FRAGMENTED_GRAPH": WARN,
 }
 
 FIELDNAMES = ["file", "graph_id", "defect", "severity", "detail"]
@@ -97,6 +103,25 @@ def _reachable(seeds: list[str], adjacency: dict[str, set[str]]) -> set[str]:
         seen.add(node)
         queue.extend(adjacency[node] - seen)
     return seen
+
+
+def _components(node_set: set[str], adjacency: dict[str, set[str]]) -> list[set[str]]:
+    """Undirected connected components, largest first.
+
+    Anchor-free by design — it asks "is this one graph?" without needing to know
+    which node the record is about, which is what makes it immune to the two
+    ways UNREACHABLE_FROM_TRAIT can be fooled (several TRAIT nodes, or a trait
+    node whose id does not follow the `<slug>_trait` convention).
+    """
+    seen: set[str] = set()
+    out: list[set[str]] = []
+    for node in sorted(n for n in node_set if n is not None):
+        if node in seen:
+            continue
+        component = _reachable([node], adjacency)
+        seen |= component
+        out.append(component)
+    return sorted(out, key=len, reverse=True)
 
 
 def audit(traits_dir: Path) -> list[dict[str, str]]:
@@ -168,6 +193,47 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
                     "detail": (f"node_id={nid!r} label={n.get('label')!r} "
                                f"type={n.get('node_type')} — in an island with no path to "
                                f"{'/'.join(trait_nodes)}"),
+                })
+
+            # UNREACHABLE_FROM_TRAIT anchors on ANY node typed TRAIT, and that is
+            # correct: 85 of 353 graphs legitimately carry more than one, because
+            # a record links its parent and child traits as nodes
+            # (`bsl1_trait` + `biosafety_level`, `nacl_delta_high_trait` +
+            # `nacl_delta`). But it means a graph splitting into components that
+            # EACH contain a TRAIT node reports clean — every node reaches *a*
+            # trait, just not the one the record is about (#220).
+            #
+            # Anchoring on the record's own trait node instead was the obvious
+            # alternative and does not work: `<slug>_trait` holds for 297 graphs
+            # and not for the other 56, which use abbreviated ids
+            # (`bsl1_trait` for biosafety_level_1, `predatory_trait` for
+            # predatory_bacterium). Counting components needs no anchor at all,
+            # so it cannot be fooled by either naming or typing.
+            # Computed over edge-referenced nodes only. A zero-edge node is its
+            # own component, but ORPHAN_NODE already reports it as an ERROR with
+            # a clearer remedy — counting it here would raise a second finding
+            # for one defect, which is the same reason UNREACHABLE_FROM_TRAIT
+            # skips unreferenced nodes above.
+            components = _components(node_set & referenced, adjacency)
+            if len(components) > 1:
+                sizes = ", ".join(str(len(c)) for c in components)
+                # Detail MUST lead with the component count, because `_key` takes
+                # the leading whitespace-delimited token as the baseline
+                # discriminator. Leading with the node count instead made the
+                # ratchet fail open in both directions on the 220 graphs this
+                # baselines: 3 components -> 4 keeps the node count, so real
+                # backsliding stayed suppressed; while adding a node inside an
+                # already-connected component changed the key and blocked a PR
+                # whose fragmentation was unchanged — the ordinary shape of
+                # #183's backfill. This is the first WARN-severity whole-graph
+                # defect, so it is the first time the discriminator has had to be
+                # anything but a node_id.
+                findings.append({
+                    "file": rel, "graph_id": gid, "defect": "FRAGMENTED_GRAPH",
+                    "severity": SEVERITY["FRAGMENTED_GRAPH"],
+                    "detail": (f"components={len(components)} of {len(nodes)} node(s) "
+                               f"(sizes: {sizes}) — one record, several unrelated "
+                               "mechanisms"),
                 })
     return findings
 

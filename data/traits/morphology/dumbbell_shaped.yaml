@@ -67,7 +67,7 @@ causal_graphs:
       snap.
   - node_id: v_shaped_daughters
     label: V-shaped attached daughters
-    node_type: TRAIT
+    node_type: QUALITY
     description: Angular V-shaped arrangement of partially attached daughter cells
       from snapping division.
   - node_id: septal_hydrolases
@@ -207,4 +207,16 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0000920×1).
+  llm_assisted: true
+- timestamp: '2026-08-03T22:40:00Z'
+  curator: claude
+  action: RETYPE_CAUSAL_NODES
+  changes: 'Retyped causal node v_shaped_daughters (V-shaped attached daughters) from
+    TRAIT to QUALITY. It is the morphological outcome of snapping division, not a trait
+    this record asserts: there is no v_shaped trait record and it carries no grounding,
+    unlike the genuine cross-trait links elsewhere in the corpus (nacl_delta on
+    nacl_delta_high). Morphology graphs use QUALITY for shape outcomes (rod shape,
+    non-spherical morphology, cell curvature); STATE is reserved for conditions.
+    Surfaced by issue 220: the second TRAIT node made this graph 7-node component
+    reachable-from-a-trait, hiding it from UNREACHABLE_FROM_TRAIT.'
   llm_assisted: true
