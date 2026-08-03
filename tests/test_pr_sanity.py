@@ -11,6 +11,8 @@ from __future__ import annotations
 import subprocess
 import sys
 import textwrap
+
+import yaml
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -20,6 +22,7 @@ from pr_sanity import (  # noqa: E402
     CONFLICT_RE,
     check_conflict_markers,
     check_markdown_links,
+    check_workflow_concurrency,
     check_workflows,
     prose_lines,
     sanity,
@@ -316,3 +319,141 @@ def test_cli_exit_codes(tmp_path):
                          capture_output=True, text=True)
     assert bad.returncode == 1
     assert "BROKEN_LINK" in bad.stderr
+
+
+# --- CONCURRENCY_SHARED_ACROSS_TRIGGERS (#218) -------------------------------
+#
+# The bug this guards against (#215) was invisible for a subtle reason: GitHub
+# evaluates `concurrency` at the RUN level, before a job's `if:`. A run that
+# skips every job still joins the group and still cancels what is in it. These
+# assert the real historical defect fires, and that every legitimate shape the
+# repo actually uses stays quiet — a lint that flagged those would be turned off
+# within a week.
+
+def _conc(doc_text):
+    doc = yaml.safe_load(textwrap.dedent(doc_text))
+    return check_workflow_concurrency("wf.yaml", doc, doc.get("on", doc.get(True)))
+
+
+JOBS = "jobs: {a: {runs-on: ubuntu-latest}}"
+
+
+def test_the_actual_215_configuration_is_flagged():
+    """The pre-#216 claude-code-review.yml, verbatim in shape."""
+    found = _conc(f"""
+        on:
+          pull_request: {{types: [opened, synchronize]}}
+          issue_comment: {{types: [created]}}
+        concurrency:
+          group: claude-review-${{{{ github.event.pull_request.number || github.event.issue.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+    assert "issue_comment" in found[0]["detail"]
+
+
+def test_group_keyed_by_event_name_is_clean():
+    """The #216 fix."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}-${{{{ github.event_name == 'pull_request' && 'push' || github.run_id }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_conditional_cancel_in_progress_is_clean():
+    """vendored-sync.yaml's shape: cancellation itself is gated on the event."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          schedule: [{{cron: "0 3 * * *"}}]
+        concurrency:
+          group: v-${{{{ github.ref }}}}
+          cancel-in-progress: ${{{{ github.event_name == 'pull_request' }}}}
+        {JOBS}
+    """) == []
+
+
+def test_no_cancellation_is_clean():
+    """Sharing a group only queues; without cancellation there is no hazard."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: shared
+          cancel-in-progress: false
+        {JOBS}
+    """) == []
+
+
+def test_push_alongside_pull_request_does_not_trip_it():
+    """curation-history.yaml's shape — must not false-positive.
+
+    A pull_request run and a push run get different `github.ref`
+    (refs/pull/N/merge vs refs/heads/X), so a ref-keyed group already separates
+    them. Flagging this would be the noise that gets the whole check disabled.
+    """
+    assert _conc(f"""
+        on:
+          pull_request:
+          push: {{branches: [main]}}
+          workflow_dispatch:
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_job_level_concurrency_is_checked_too():
+    """#216 moved the block onto the job; the hazard moves with it."""
+    doc = yaml.safe_load(textwrap.dedent("""
+        on:
+          pull_request:
+          issue_comment:
+        jobs:
+          a:
+            runs-on: ubuntu-latest
+            concurrency:
+              group: shared-${{ github.event.issue.number }}
+              cancel-in-progress: true
+    """))
+    found = check_workflow_concurrency("wf.yaml", doc, doc.get("on", doc.get(True)))
+    assert len(found) == 1
+    assert "job `a`" in found[0]["detail"]
+
+
+def test_string_shorthand_concurrency_is_clean():
+    """`concurrency: name` defaults cancel-in-progress to false."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency: just-a-name
+        {JOBS}
+    """) == []
+
+
+def test_without_pull_request_it_does_not_apply():
+    assert _conc(f"""
+        on:
+          issue_comment:
+          schedule: [{{cron: "0 3 * * *"}}]
+        concurrency:
+          group: shared
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_real_repo_has_no_shared_cancelling_group():
+    """Regression guard on the repo itself, not just on fixtures."""
+    found = [f for f in check_workflows(REPO_ROOT)
+             if f["check"] == "CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+    assert found == [], found
