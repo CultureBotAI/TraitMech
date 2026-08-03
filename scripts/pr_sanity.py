@@ -22,6 +22,15 @@ Checks:
                       the last unfiltered workflow ever gains a filter, some PRs
                       go back to being unverified. Self-referential on purpose —
                       this script is what keeps its own guarantee true.
+  CONCURRENCY_SHARED_ACROSS_TRIGGERS
+                      a cancelling concurrency group shared between
+                      ``pull_request`` and a trigger that fires against the same
+                      PR without a push (``issue_comment`` and friends).
+                      Concurrency is evaluated before a job's ``if:``, so a run
+                      that skips every job still cancels one that is working —
+                      which is how the review workflow cancelled itself on every
+                      PR (#215). Third bug of this shape after #199 and #196's
+                      review, hence a gate rather than a convention (#218).
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
                       exist. Links inside fenced code blocks or inline code
@@ -46,6 +55,36 @@ from pathlib import Path
 import yaml
 
 WORKFLOW_DIR = Path(".github/workflows")
+
+# Triggers that resolve to the SAME pull request as a `pull_request` run, so
+# they can land in a group keyed on the PR — which is what made #215 possible:
+# the progress comment's `issue_comment` run reached the same PR number through
+# the group's `||` chain.
+#
+# `push` and `schedule` are deliberately absent, and for the same reason: their
+# `github.ref` is a branch, never `refs/pull/N/merge`, and they carry no PR
+# context to key on. A ref-keyed cancelling group — `curation-history.yaml` — is
+# safe with them and flagging it would be a day-one false positive. They can
+# only collide under a constant group key, and that is equally true of `push`,
+# so singling out `schedule` would be an asymmetry with no basis.
+TRIGGERS_ON_THE_SAME_PR = (
+    "issue_comment",
+    "pull_request_review",
+    "pull_request_review_comment",
+    # Same PR, not a push — it satisfies the rule exactly. Unused in this repo
+    # today, which is the only reason it was not obvious.
+    "pull_request_target",
+)
+
+# `github.event_name == 'x'` / `!= 'x'` inside a cancel-in-progress expression.
+# Polarity matters: `== 'pull_request'` confines cancellation to push runs and
+# is a fix, while `== 'issue_comment'` confines it to comment runs and is #215.
+EVENT_NAME_EQ = re.compile(r"github\.event_name\s*==\s*['\"]([^'\"]+)['\"]")
+EVENT_NAME_NE = re.compile(r"github\.event_name\s*!=\s*['\"]([^'\"]+)['\"]")
+
+# In the group key, either of these is enough to separate runs of different
+# triggers.
+CONCURRENCY_DISCRIMINATORS = ("github.run_id", "github.event_name")
 
 # Only the unambiguous markers. A bare "=======" is a legitimate Markdown setext
 # heading underline, so matching it would false-positive on ordinary prose.
@@ -81,6 +120,126 @@ def tracked_files(root: Path) -> list[Path]:
         ["git", "ls-files", "-z"], cwd=root, capture_output=True, text=True, check=True
     ).stdout
     return [root / p for p in out.split("\0") if p]
+
+
+def trigger_names(triggers: object) -> set[str]:
+    """Normalise ``on:`` to a set of trigger names.
+
+    ``on:`` accepts a mapping, a list (``on: [pull_request, issue_comment]``) or
+    a bare string. The shorthands are rare here but perfectly valid, and a check
+    that quietly does nothing on them would be the same "green because nothing
+    evaluated it" failure this file exists to prevent.
+    """
+    if isinstance(triggers, dict):
+        return {str(k) for k in triggers}
+    if isinstance(triggers, list):
+        return {str(t) for t in triggers}
+    if isinstance(triggers, str):
+        return {triggers}
+    return set()
+
+
+def concurrency_blocks(doc: dict) -> list[tuple[str, dict]]:
+    """Every concurrency block in a workflow, workflow-level and per job.
+
+    A plain-string ``concurrency: foo`` is the shorthand for a group with
+    cancel-in-progress defaulting to false, so it can never cancel anything and
+    is not returned.
+    """
+    out: list[tuple[str, dict]] = []
+    if isinstance(doc.get("concurrency"), dict):
+        out.append(("workflow-level", doc["concurrency"]))
+    jobs = doc.get("jobs")
+    if isinstance(jobs, dict):
+        for name, job in jobs.items():
+            if isinstance(job, dict) and isinstance(job.get("concurrency"), dict):
+                out.append((f"job `{name}`", job["concurrency"]))
+    return out
+
+
+def can_cancel(block: dict) -> bool:
+    """Can this block's cancel-in-progress ever evaluate true?"""
+    cancel = block.get("cancel-in-progress")
+    if cancel is None or cancel is False:
+        return False
+    # `true`, or an expression we cannot evaluate here — assume it can fire.
+    return True
+
+
+def discriminates_by_event(block: dict, others: list[str]) -> bool:
+    """Does this block keep runs of different triggers out of one group?
+
+    Two shapes qualify, and both are in use in this repo:
+      * the group key varies by event or run — `claude-code-review.yml`;
+      * cancellation itself is conditioned on the event, so a comment-triggered
+        run cancels nothing — `vendored-sync.yaml`, `pr-sanity.yaml`.
+
+    The second is checked on POLARITY, not on whether `github.event_name` is
+    mentioned. Both of these mention it and only one is a fix:
+
+        cancel-in-progress: ${{ github.event_name == 'pull_request' }}   # fix
+        cancel-in-progress: ${{ github.event_name == 'issue_comment' }}  # #215
+
+    The second confines cancellation to comment runs, which is the bug stated
+    as a condition. So an equality has to select events that are *not* the
+    colliding ones, and an inequality has to exclude one that is.
+    """
+    if any(d in str(block.get("group", "")) for d in CONCURRENCY_DISCRIMINATORS):
+        return True
+    cancel = block.get("cancel-in-progress")
+    if not isinstance(cancel, str):
+        return False
+    colliding = set(others)
+    equals = set(EVENT_NAME_EQ.findall(cancel))
+    not_equals = set(EVENT_NAME_NE.findall(cancel))
+    if equals and not (equals & colliding):
+        return True
+    # EVERY colliding trigger has to be excluded, not just one. With both
+    # `issue_comment` and `pull_request_review` on the workflow,
+    # `!= 'issue_comment'` still leaves review runs cancelling in the group.
+    return bool(colliding) and colliding.issubset(not_equals)
+
+
+def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[dict[str, str]]:
+    """Flag a cancelling concurrency group shared across triggers (#215, #218).
+
+    GitHub evaluates ``concurrency`` at the RUN level, before a job's ``if:``.
+    So a run that will skip every job still joins the group and still cancels
+    whatever is in it. That is how `claude-code-review` killed itself on every
+    PR: the progress comment it posted fired ``issue_comment``, which resolved
+    through the group's ``||`` chain to the same PR number as the in-flight
+    ``pull_request`` run, and cancel-in-progress did the rest.
+
+    Heuristic by nature — this reads a template string and cannot prove the key
+    really varies. It would have caught #215, and it is the third bug of this
+    shape in the fleet after #199 and #196's review, so a cheap approximation
+    beats the docs page that keeps not getting written.
+    """
+    names = trigger_names(triggers)
+    if "pull_request" not in names:
+        return []
+    others = [t for t in TRIGGERS_ON_THE_SAME_PR if t in names]
+    if not others:
+        return []
+
+    findings: list[dict[str, str]] = []
+    for where, block in concurrency_blocks(doc):
+        if not can_cancel(block) or discriminates_by_event(block, others):
+            continue
+        findings.append({
+            "check": "CONCURRENCY_SHARED_ACROSS_TRIGGERS",
+            "file": rel,
+            "detail": (
+                f"{where} concurrency group "
+                f"{block.get('group', '(unset)')!r} can cancel in progress and "
+                f"is shared with {', '.join(others)}, which fire against the "
+                "same PR without a push. Concurrency is evaluated before a "
+                "job's `if:`, so a run that skips everything still cancels one "
+                "that is working (#215). Key the group by github.event_name or "
+                "github.run_id, or condition cancel-in-progress on the event."
+            ),
+        })
+    return findings
 
 
 def check_workflows(root: Path) -> list[dict[str, str]]:
@@ -127,10 +286,16 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
                 "check": "WORKFLOW_INVALID", "file": rel, "detail": "no `jobs:`",
             })
             continue
-        if isinstance(triggers, dict) and "pull_request" in triggers:
-            pr = triggers["pull_request"]
+        # The list/string `on:` shorthands carry no `paths:`, so they are
+        # unfiltered by construction. The old `isinstance(triggers, dict)` guard
+        # skipped them, which would have under-counted the very invariant this
+        # check exists to keep true.
+        if "pull_request" in trigger_names(triggers):
+            pr = triggers.get("pull_request") if isinstance(triggers, dict) else None
             if pr is None or (isinstance(pr, dict) and not pr.get("paths")):
                 unfiltered.append(rel)
+
+        findings.extend(check_workflow_concurrency(rel, doc, triggers))
 
     if not unfiltered:
         findings.append({

@@ -13,6 +13,8 @@ import sys
 import textwrap
 from pathlib import Path
 
+import yaml
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
@@ -20,6 +22,7 @@ from pr_sanity import (  # noqa: E402
     CONFLICT_RE,
     check_conflict_markers,
     check_markdown_links,
+    check_workflow_concurrency,
     check_workflows,
     prose_lines,
     sanity,
@@ -316,3 +319,275 @@ def test_cli_exit_codes(tmp_path):
                          capture_output=True, text=True)
     assert bad.returncode == 1
     assert "BROKEN_LINK" in bad.stderr
+
+
+# --- CONCURRENCY_SHARED_ACROSS_TRIGGERS (#218) -------------------------------
+#
+# The bug this guards against (#215) was invisible for a subtle reason: GitHub
+# evaluates `concurrency` at the RUN level, before a job's `if:`. A run that
+# skips every job still joins the group and still cancels what is in it. These
+# assert the real historical defect fires, and that every legitimate shape the
+# repo actually uses stays quiet — a lint that flagged those would be turned off
+# within a week.
+
+def _conc(doc_text):
+    doc = yaml.safe_load(textwrap.dedent(doc_text))
+    return check_workflow_concurrency("wf.yaml", doc, doc.get("on", doc.get(True)))
+
+
+JOBS = "jobs: {a: {runs-on: ubuntu-latest}}"
+
+
+def test_the_actual_215_configuration_is_flagged():
+    """The pre-#216 claude-code-review.yml, verbatim in shape."""
+    found = _conc(f"""
+        on:
+          pull_request: {{types: [opened, synchronize]}}
+          issue_comment: {{types: [created]}}
+        concurrency:
+          group: claude-review-${{{{ github.event.pull_request.number || github.event.issue.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+    assert "issue_comment" in found[0]["detail"]
+
+
+def test_group_keyed_by_event_name_is_clean():
+    """The #216 fix."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}-${{{{ github.event_name == 'pull_request' && 'push' || github.run_id }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_conditional_cancel_in_progress_is_clean():
+    """vendored-sync.yaml's shape: cancellation itself is gated on the event."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: v-${{{{ github.ref }}}}
+          cancel-in-progress: ${{{{ github.event_name == 'pull_request' }}}}
+        {JOBS}
+    """) == []
+
+
+def test_cancel_expression_pointing_the_wrong_way_is_flagged():
+    """`github.event_name` present, but separating the wrong thing.
+
+    `!= 'push'` leaves pull_request and issue_comment both cancelling in one
+    group — #215 verbatim — so merely mentioning github.event_name must not be
+    enough to read as fixed.
+    """
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'push' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_cancel_expression_excluding_the_colliding_trigger_is_clean():
+    """The other valid shape: name the trigger being kept out."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' }}}}
+        {JOBS}
+    """) == []
+
+
+def test_schedule_alongside_pull_request_does_not_trip_it():
+    """A scheduled run's ref is a branch, never refs/pull/N/merge.
+
+    Same property that exempts `push`, so flagging this would be the day-one
+    false positive on a ref-keyed group — one trigger over from the shape the
+    push test already covers.
+    """
+    assert _conc(f"""
+        on:
+          pull_request:
+          schedule: [{{cron: "0 3 * * *"}}]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_list_shorthand_on_is_not_a_blind_spot():
+    """`on: [pull_request, issue_comment]` is valid and must still be checked.
+
+    The dict-only guard silently returned no findings here, which is the same
+    "nothing evaluated it" failure the whole script exists to prevent.
+    """
+    found = _conc(f"""
+        on: [pull_request, issue_comment]
+        concurrency:
+          group: shared-${{{{ github.event.issue.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_list_shorthand_counts_as_unfiltered_ci(tmp_path):
+    """The same shorthand blind spot in NO_UNFILTERED_CI: no `paths:` is possible."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(
+        "name: x\non: [pull_request]\njobs:\n  a:\n    runs-on: ubuntu-latest\n"
+        "    steps: [{run: \"true\"}]\n"
+    )
+    _commit(root)
+    assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
+
+
+def test_no_cancellation_is_clean():
+    """Sharing a group only queues; without cancellation there is no hazard."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: shared
+          cancel-in-progress: false
+        {JOBS}
+    """) == []
+
+
+def test_push_alongside_pull_request_does_not_trip_it():
+    """curation-history.yaml's shape — must not false-positive.
+
+    A pull_request run and a push run get different `github.ref`
+    (refs/pull/N/merge vs refs/heads/X), so a ref-keyed group already separates
+    them. Flagging this would be the noise that gets the whole check disabled.
+    """
+    assert _conc(f"""
+        on:
+          pull_request:
+          push: {{branches: [main]}}
+          workflow_dispatch:
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_job_level_concurrency_is_checked_too():
+    """#216 moved the block onto the job; the hazard moves with it."""
+    doc = yaml.safe_load(textwrap.dedent("""
+        on:
+          pull_request:
+          issue_comment:
+        jobs:
+          a:
+            runs-on: ubuntu-latest
+            concurrency:
+              group: shared-${{ github.event.issue.number }}
+              cancel-in-progress: true
+    """))
+    found = check_workflow_concurrency("wf.yaml", doc, doc.get("on", doc.get(True)))
+    assert len(found) == 1
+    assert "job `a`" in found[0]["detail"]
+
+
+def test_string_shorthand_concurrency_is_clean():
+    """`concurrency: name` defaults cancel-in-progress to false."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency: just-a-name
+        {JOBS}
+    """) == []
+
+
+def test_without_pull_request_it_does_not_apply():
+    assert _conc(f"""
+        on:
+          issue_comment:
+          schedule: [{{cron: "0 3 * * *"}}]
+        concurrency:
+          group: shared
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_real_repo_has_no_shared_cancelling_group():
+    """Regression guard on the repo itself, not just on fixtures."""
+    found = [f for f in check_workflows(REPO_ROOT)
+             if f["check"] == "CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+    assert found == [], found
+
+
+def test_cancel_expression_confined_to_the_colliding_trigger_is_flagged():
+    """`== 'issue_comment'` mentions github.event_name and is #215 stated as a
+    condition: cancellation happens ONLY on comment runs, which is precisely the
+    run that must not cancel."""
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name == 'issue_comment' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_pull_request_target_counts_as_the_same_pr():
+    found = _conc(f"""
+        on:
+          pull_request:
+          pull_request_target:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_excluding_only_one_of_two_colliders_is_flagged():
+    """`!= 'issue_comment'` leaves pull_request_review runs cancelling."""
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+          pull_request_review:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_excluding_every_collider_is_clean():
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+          pull_request_review:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' && github.event_name != 'pull_request_review' }}}}
+        {JOBS}
+    """) == []
