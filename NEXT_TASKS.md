@@ -393,11 +393,15 @@ Follows from the section 4 correction. The frequency-ranked residual in
 labels whose paraphrases are already mapped in
 `mappings/predicate_grounding.tsv`:
 
-| residual label | edges | almost certainly | already mapped as |
+| residual label | edges | is the exact OAK label of | already mapped as |
 |---|--:|---|---|
 | `positively regulates` | 37 | RO:0002213 | `promotes` → RO:0002213 |
 | `negatively regulates` | 16 | RO:0002212 | `inhibits`/`suppresses`/`prevents` → RO:0002212 |
 | `causally upstream of` | 13 | RO:0002411 | — |
+
+All three were checked against OAK on 2026-08-02 (`get_adapter("sqlite:obo:ro")`,
+`.label()`) and match exactly — this is not an eyeball guess. The paraphrase got
+mapped and the canonical label did not, which is why they are still residual.
 
 Below those sit judgement calls (`supports` 37, `induces` 34, `required for` 30,
 `drives` 29, `maintains` 29, `mediates` 27) and then the genuine free-text floor.
