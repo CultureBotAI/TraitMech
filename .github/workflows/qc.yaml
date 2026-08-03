@@ -10,6 +10,18 @@ on:
       - "justfile"
       - "pyproject.toml"
       - ".github/workflows/qc.yaml"
+      # `audit-derived-reports` (#214) compares the tracked reports against a
+      # fresh generation, so every input to that generation has to trigger it.
+      # A filter narrower than what the job verifies is how #184 and #200
+      # happened.
+      #   reports/**  — the artefact itself, edited directly
+      #   mappings/** — the OTHER input. The residual is a function of the
+      #                 corpus AND the grounding tables, so adding a row to
+      #                 mappings/predicate_grounding.tsv shrinks the residual.
+      #                 That is the single most common way these reports go
+      #                 stale, because it is exactly the section 9 workflow.
+      - "reports/**"
+      - "mappings/**"
   push:
     branches: [main]
   workflow_dispatch:
