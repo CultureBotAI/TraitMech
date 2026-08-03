@@ -14,8 +14,8 @@ Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
 this PR is the first one it reviews post-merge — which is the real test of that
 fix, since every check before it ran on a branch carrying its own copy.
 
-Open issues, 14 of them — the last four filed by this reconcile and by #216's
-own review:
+Open issues, 15 of them — the last five filed by this reconcile and by the #216 /
+#213 reviews:
 
 | # | what | section |
 |---|---|---|
@@ -33,6 +33,7 @@ own review:
 | #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them — **blocks the section 9 loop** | 9 |
 | #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
 | #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
+| #220 | `audit-graphs` is blind to a graph splitting into two **trait-bearing** components | 5 |
 
 Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
 **#202** (by #207), **#204** (by #206), **#215** (by #216).
@@ -231,7 +232,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION DONE; BACKFILL PENDING (corpus-wide)
+## 5. Causal-graph connectivity (#183) — DETECTION MOSTLY DONE (#220); BACKFILL PENDING (corpus-wide)
 
 **The `audit-graphs` gate does not catch graph fragmentation.**
 `scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
@@ -278,15 +279,28 @@ check" half is already satisfied by item 1 above — including the design questi
 posed (one-component versus reachable-from-trait), which was answered in favour of
 the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
-**Progress, re-measured 2026-08-02: 220 fragmented graphs remain, across 220 of
-the 477 trait files.** Corpus totals are unchanged (353 graphs, 4136 nodes,
-1264 nodes = 31% outside their graph's largest component), and
-`conf/causal_graph_audit_baseline.tsv` still freezes **1314** findings. Note
-that `cellulolysis.yaml` now verifies as a **single component**, so the fix did
-land — the "1 of 220 done" framing in the previous revision of this file was
-wrong arithmetic, not lost work: 220 is the count of what is *still* fragmented,
-not the count before the fix. By category: environment 85, morphology 47,
-metabolism 31, physiology 27, ecology 18, genomics 11, upper 1.
+**Progress, re-measured 2026-08-03.** Two numbers circulate here and they are
+*not* the same measurement — quote whichever you mean, and say which:
+
+| measure | value | source |
+|---|--:|---|
+| graphs with >1 connected component (undirected) | **220** files | recompute from `causal_graphs` |
+| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **219** files | `conf/causal_graph_audit_baseline.tsv` |
+| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's unit) | **1314** | same file |
+| nodes outside their graph's largest component | **1264** (31% of 4136) | recompute |
+
+Corpus totals are unchanged: 353 graphs, 4136 nodes. Per-category fragmented
+files: environment 85, **morphology 47**, metabolism 31, physiology 27,
+ecology 18, genomics 11, upper 1 — the baseline has morphology **46**, and that
+one-file gap is real, not arithmetic: see **#220**. `morphology/dumbbell_shaped.yaml`
+splits into two components that *each* contain a node typed `TRAIT`, so every node
+reaches *a* trait node and the audit reports it clean while 7 of its 11 nodes have
+no path to the trait the record is about.
+
+`cellulolysis.yaml` now verifies as a **single component**, so the #185 fix did
+land — the "1 of 220 done" framing in an earlier revision of this file was wrong
+arithmetic, not lost work: 220 is what is *still* fragmented, not the count before
+the fix.
 
 `data/traits/metabolism/cellulolysis.yaml`
 was the first instance of (2) and where the problem was found. A deep-research
@@ -434,10 +448,16 @@ verifiable by CI, none blocking anything:
 
 ## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
 
-`reports/trait_graph_audit_manifest.tsv` (362 rows, last written 2026-07-20)
-records a **completed** sweep: **353 ok, 8 fail**. But `research/` is in
-`.gitignore` (line 42, "large, regenerable"), nothing under it is tracked, and
-only **11 traits' reports survive on this checkout**:
+`reports/trait_graph_audit_manifest.tsv` (361 data rows, last written 2026-07-20)
+records a sweep that **fully succeeded**: 353 distinct traits, every one `ok`.
+The 8 `fail:1` rows are not 8 unfinished traits — each is a `(category, slug)`
+that also appears as `ok`, i.e. a retry that then worked. Verified by set
+difference: `fail − ok` is empty, so there are **zero outstanding failures**.
+That makes the loss below worse, not better: nothing here is a partial run that
+was going to need redoing anyway.
+
+But `research/` is in `.gitignore` (line 42, "large, regenerable"), nothing under
+it is tracked, and only **11 traits' reports survive on this checkout**:
 
 ```
 $ find research/traits -name '*-deep-research-falcon.md' | wc -l
