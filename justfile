@@ -423,6 +423,9 @@ audit-derived-reports:
     fi
     if ! git show "HEAD:reports/$cga" > "$tmp/committed_$cga" 2>/dev/null; then
       echo "  MISSING reports/$cga is not in git at HEAD" >&2
+      # Same reason as the grounding MISSING branch: same remediation, so the
+      # same flag, or the case with nothing committed prints no instructions.
+      stale_cga=1
       fail=1
     elif diff -q "$tmp/committed_$cga" "$tmp/$cga" >/dev/null; then
       echo "  OK    reports/$cga (vs git)"
