@@ -5,16 +5,16 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-02. Everything merged in this repo through **#210**
+Last reconciled: 2026-08-03. Everything merged in this repo through **#216**
 (2026-08-03) — which now includes the whole CI/agent-workflow thread (#194, #196,
-#201, #206, #207, #210, section 7) that was absent from this file — plus the
+#201, #206, #207, #210, #216, section 7) that was absent from this file — plus the
 claw-side architecture decisions through 2026-07-25.
 
-Open PRs: **this one** (#213), and **#216** — the #215 fix, green and approved.
-Merge #216 first: until it lands, no PR in this repo gets a Claude review, this
-one included.
+Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
+this PR is the first one it reviews post-merge — which is the real test of that
+fix, since every check before it ran on a branch carrying its own copy.
 
-Open issues, 14 of them — the last three filed by this reconcile and by #216's
+Open issues, 14 of them — the last four filed by this reconcile and by #216's
 own review:
 
 | # | what | section |
@@ -31,11 +31,11 @@ own review:
 | #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
 | #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them — **blocks the section 9 loop** | 9 |
-| #215 | `claude-code-review` cancels itself — **fix open in #216**, merge to close | 7 |
 | #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
+| #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
 
 Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
-**#202** (by #207), **#204** (by #206).
+**#202** (by #207), **#204** (by #206), **#215** (by #216).
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -356,8 +356,8 @@ surface. What landed, 2026-08-02/03:
   `github.token` would silently restore the self-approval hole the split exists
   to close, and would look identical in the logs.
 
-**#215 was the exception to "none of this blocks anything" — FIXED in #216
-(open, approved, awaiting merge).** `claude-code-review.yml` posts a progress
+**#215 was the exception to "none of this blocks anything" — FIXED and merged in
+#216 (2026-08-03).** `claude-code-review.yml` posts a progress
 comment as it works; that comment fired `issue_comment: created`, which landed in
 the *same* workflow-level concurrency group (`claude-review-<PR>` — the `||`
 chain falls through to `github.event.issue.number` for the same PR) and, with
@@ -381,27 +381,41 @@ invariant structural, holding under any evaluation order:
 group: claude-review-${{ …pr number… }}-${{ github.event_name == 'pull_request' && 'push' || github.run_id }}
 ```
 
-Only `pull_request` runs share a key, so rapid pushes to one PR still collapse —
-the only thing the group was ever for. Every comment and dispatch run gets
-`github.run_id`, unique per run, so it can neither cancel nor be cancelled. (The
-block did also move onto the job, but that is placement, not protection.) Keying
-merely by `github.event_name` is *not* sufficient: it fixes the push path while
-leaving `/review` runs sharing one key with every other comment on the PR,
-including ones the agent posts itself via the allowlisted `gh pr comment`.
+Only `pull_request` runs share a key, so rapid pushes to one PR still collapse.
+Every comment and dispatch run gets `github.run_id`, unique per run, so it can
+neither cancel nor be cancelled. (The block did also move onto the job, but that
+is placement, not protection.) Keying merely by `github.event_name` is *not*
+sufficient: it fixes the push path while leaving `/review` runs sharing one key
+with every other comment on the PR, including ones the agent posts itself via the
+allowlisted `gh pr comment`.
+
+**This is a narrowing, not a restoration** — the original key spanned all three
+triggers, so it also let a `/review` supersede a review already in flight, and
+that is given up deliberately. Two reviews at once is a far cheaper failure than
+the one it replaced: no review at all.
 
 Verified, not just argued: before, both `pull_request` runs on #213 were cancelled
 seconds after a `culturebot-reviewer` comment; after, both pushes to #216 gave
 `pull_request → success` with the `issue_comment` runs skipping harmlessly
-alongside.
+alongside. **Still unproven at the time of writing:** every one of those checks
+ran on a branch carrying its own copy of the fix. `issue_comment` runs use
+`main`'s copy, so the first genuine post-merge test is this PR.
 
 `pr-shepherd.yml` was checked and is unaffected — `workflow_dispatch` only,
 `cancel-in-progress: false`, no comment trigger. `claude-code-review.yml` is the
 only workflow in the repo with an `issue_comment` trigger.
 
-Third concurrency-scoping bug here after #199 and #196's review, which did become
-a fourth issue after all: **#217**, for the workflow-authoring conventions page
-that has nowhere to live (`docs/` has no such page, and this is fleet knowledge
-that belongs upstream rather than copied four times).
+Third concurrency-scoping bug here after #199 and #196's review, which produced
+two follow-ups rather than none: **#217** for the workflow-authoring conventions
+page that has nowhere to live (`docs/` has no such page, and this is fleet
+knowledge that belongs upstream rather than copied four times), and **#218** to
+*enforce* the rule instead of only documenting it. #218 is the stronger of the
+two — a docs page does not fail CI, and #215 got in past a reviewer who had
+already fixed this class of bug twice. `pr_sanity.check_workflows` already parses
+every workflow's triggers, so the guard drops in beside the existing
+`NO_UNFILTERED_CI` check: a workflow with both `pull_request` and an
+independently-firing trigger must key its concurrency group by `github.run_id`
+or `github.event_name`.
 
 **The other pending items are small, independent and fully specified**, each
 verifiable by CI, none blocking anything:
@@ -416,6 +430,7 @@ verifiable by CI, none blocking anything:
 | #192 | justfile claw-module guard implemented twice | |
 | #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
 | #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
+| #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
 
 ## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
 
