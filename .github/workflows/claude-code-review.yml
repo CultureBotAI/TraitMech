@@ -33,9 +33,11 @@ jobs:
   claude-review:
     # Three gates, each closing a different hole:
     #
-    #  * fork PRs are excluded. `pull_request` does not expose secrets to forks,
-    #    so the run would fail confusingly rather than review anything. Use the
-    #    manual dispatch for those.
+    #  * fork PRs are excluded here for `pull_request` as a cheap early exit.
+    #    The REAL guard is the "Refuse fork PRs" step below, which covers all
+    #    three triggers — this expression does not gate issue_comment or
+    #    workflow_dispatch (#212). Fork PRs cannot be reviewed by this workflow
+    #    at all; do not route them through the manual dispatch.
     #  * `/review` comments only count from OWNER / MEMBER / COLLABORATOR.
     #    Without that, anyone who can comment could spend our tokens at will, and
     #    a comment body is attacker-controlled text this agent then reads.
@@ -69,6 +71,27 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Refuse fork PRs
+        # THE FORK GUARD FOR ALL THREE TRIGGERS. The job's `if:` only gates
+        # `pull_request`; issue_comment and workflow_dispatch had none, and once
+        # the next step began checking out PR head content and running `uv sync`
+        # and the repo's `just` recipes, that meant executing fork-controlled code
+        # in a job holding CLAUDE_CODE_OAUTH_TOKEN and a reviewer App token (#212).
+        #
+        # This runs BEFORE any fork content reaches the disk. Fork PRs simply
+        # cannot be reviewed here — reviewing untrusted code in a privileged job
+        # is not something to make convenient.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cross=$(gh pr view "$PR_NUMBER" --json isCrossRepository --jq .isCrossRepository)
+          if [ "$cross" != "false" ]; then
+            echo "::error title=Fork PR::PR #$PR_NUMBER comes from a fork. This workflow executes repository code (uv sync, just recipes) with privileged tokens, so it will not run against fork content."
+            exit 1
+          fi
+          echo "PR #$PR_NUMBER is same-repo; proceeding."
 
       - name: Check out the PR head
         # actions/checkout gives the DEFAULT BRANCH on issue_comment and
@@ -147,8 +170,9 @@ jobs:
             REPO: ${{ github.repository }}
             PR NUMBER: ${{ env.PR_NUMBER }}
 
-            Review this pull request. Read CLAUDE.md first for the repository's
-            conventions.
+            Review this pull request. Read README.md and anything relevant under
+            docs/ for the repository's conventions. (This repo has no CLAUDE.md;
+            do not go looking for one.)
 
             ## What matters here
 
@@ -168,7 +192,7 @@ jobs:
             - **Curation history.** A change to `data/traits/**` should come with a
               record under `history/`. Its absence is advisory, not blocking, so
               mention it without treating it as a defect.
-            - **Schema conformance**, and the repo conventions in CLAUDE.md.
+            - **Schema conformance**, and the conventions in README.md / docs/.
 
             ## Severity, and be honest about it
 
@@ -254,11 +278,16 @@ jobs:
               print(f"Claude review completed cleanly: {stats}")
               sys.exit(0)
 
-          reason = str(r.get("error") or "").strip()
+          # The log entries carry subtype / is_error / errors — there is no
+          # `error` key, so keying solely on r["error"] left the usage-limit
+          # branch firing only by luck of the substring match (#212). Look at
+          # every field that actually exists.
+          reason = str(r.get("error") or r.get("subtype") or "").strip()
           detail = str(r.get("result") or "").strip()
-          haystack = f"{reason} {detail}".lower()
+          errors = " ".join(str(e) for e in (r.get("errors") or []))
+          haystack = f"{reason} {detail} {errors}".lower()
 
-          if reason == "rate_limit" or "usage limit" in haystack or "weekly limit" in haystack:
+          if "rate_limit" in haystack or "usage limit" in haystack or "weekly limit" in haystack:
               msg = ("Claude USAGE LIMIT reached — NO review ran. This is an account-quota "
                      "issue on CLAUDE_CODE_OAUTH_TOKEN, NOT a problem with this PR. It also "
                      "silently affects every other agent workflow in the org. Fix: wait for "
