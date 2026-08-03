@@ -352,12 +352,15 @@ check: lint test
 # clears the failure immediately, instead of only after you commit — the HEAD
 # variant tells you to fix something and then keeps failing when you have.
 #
-# Not covered here: reports/causal_graph_audit.tsv. `audit-graphs` rewrites it
-# earlier in this same `qc` run, so a stale committed copy is silently corrected
-# in the working tree — corrected, but never reported. Regenerating is not
-# checking, and a `just qc` that quietly leaves an uncommitted change is a
-# weaker guarantee than this recipe gives. Tracked separately rather than
-# widened here; see #223.
+# reports/causal_graph_audit.tsv is checked too, but AGAINST GIT rather than the
+# working tree, and the difference is forced (#223). `audit-graphs` rewrites that
+# file earlier in this same `qc` run, so by the time this recipe executes the
+# working-tree copy is guaranteed fresh and comparing it would always pass while
+# a stale committed copy sailed through. Confirmed by appending a bogus row and
+# running what qc runs: audit-graphs overwrote it, exited 0, said nothing.
+#
+# The two comparison bases are not a style choice — they follow from whether
+# anything else in the run mutates the file.
 audit-derived-reports:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -383,6 +386,10 @@ audit-derived-reports:
     for f in predicate_grounding_residual.tsv node_grounding_residual.tsv; do
       if [ ! -f "reports/$f" ]; then
         echo "  MISSING reports/$f — the generator produced it, the repo has no copy" >&2
+        # Same remediation as STALE — regenerate and commit — so this branch has
+        # to raise the same flag, or the one failure mode with NO committed file
+        # is the one that prints no instructions.
+        stale_grounding=1
         fail=1
         continue
       fi
@@ -396,14 +403,70 @@ audit-derived-reports:
         # making the remediation block below unreachable in exactly the case
         # it exists for.
         { diff -u "reports/$f" "$tmp/$f" | sed -n '1,20p' >&2; } || true
+        stale_grounding=1
         fail=1
       fi
     done
+    # --- causal_graph_audit.tsv, compared against git (#223) -----------------
+    # This generator's exit code is its RATCHET VERDICT (--fail-on new), not a
+    # generation error, and `audit-graphs` already owns that verdict earlier in
+    # this same qc run. Judging staleness on it would conflate "the corpus got
+    # more fragmented" with "the committed report is out of date". So the status
+    # is deliberately ignored and only missing output is fatal.
+    cga=causal_graph_audit.tsv
+    uv run python scripts/audit_causal_graphs.py --out "$tmp/$cga" \
+      > "$tmp/gen.log" 2>&1 || true
+    if [ ! -s "$tmp/$cga" ]; then
+      echo "ERROR: audit_causal_graphs.py produced no report. Its output:" >&2
+      cat "$tmp/gen.log" >&2
+      exit 1
+    fi
+    if ! git show "HEAD:reports/$cga" > "$tmp/committed_$cga" 2>/dev/null; then
+      echo "  MISSING reports/$cga is not in git at HEAD" >&2
+      # Same reason as the grounding MISSING branch: same remediation, so the
+      # same flag, or the case with nothing committed prints no instructions.
+      stale_cga=1
+      fail=1
+    elif diff -q "$tmp/committed_$cga" "$tmp/$cga" >/dev/null; then
+      echo "  OK    reports/$cga (vs git)"
+    else
+      echo "  STALE reports/$cga — the COMMITTED copy is not what audit-graphs produces:" >&2
+      { diff -u "$tmp/committed_$cga" "$tmp/$cga" | sed -n '1,20p' >&2; } || true
+      # Print the generator's own output here too, not only on missing output.
+      # audit() silently `continue`s past a trait YAML that fails safe_load
+      # (audit_causal_graphs.py:106-108) — no counter, no row — so an
+      # unparseable file drops its findings from the fresh copy and this reads
+      # as a stale COMMITTED report when the committed report was fine. Same
+      # care the generate() helper above takes: the message must not assert a
+      # cause the evidence does not establish.
+      echo "  --- audit-graphs output for this run ---" >&2
+      sed -n '1,15p' "$tmp/gen.log" >&2 || true
+      stale_cga=1
+      fail=1
+    fi
+
     if [ "$fail" -ne 0 ]; then
       echo "" >&2
-      echo "derived reports are stale (#214). Regenerate and commit them:" >&2
-      echo "  uv run python scripts/ground_causal_predicates.py" >&2
-      echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      echo "derived reports are stale (#214, #223). Regenerate and commit them:" >&2
+      # Guarded so a cga-only failure does not send the curator to run two
+      # grounding scripts that have nothing to do with what failed.
+      if [ "${stale_grounding:-0}" -eq 1 ]; then
+        echo "  uv run python scripts/ground_causal_predicates.py" >&2
+        echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      fi
+      if [ "${stale_cga:-0}" -eq 1 ]; then
+        # Names the command rather than asserting the run: under `just qc`,
+        # audit-graphs has already refreshed the working-tree copy and this is a
+        # no-op, but standalone `just audit-derived-reports` refreshed nothing
+        # and a bare `git add reports/` would stage nothing and fail identically
+        # next time.
+        #
+        # Single-quoted on purpose: backticks inside a double-quoted echo are
+        # command substitution, and this string names a command.
+        echo '  # causal_graph_audit.tsv is regenerated by `just audit-graphs`' >&2
+        echo '  # (already run if you got here via `just qc`), then committed.' >&2
+        echo '  just audit-graphs' >&2
+      fi
       echo "  git add reports/" >&2
       exit 1
     fi
