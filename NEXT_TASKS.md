@@ -5,15 +5,39 @@ update this file as work is started/finished — move done items out, add new
 deferrals here. Keep the cross-Mech items in sync with the sibling repos'
 `NEXT_TASKS.md` (CultureMech / MIM / CommunityMech).
 
-Last reconciled: 2026-08-01. Open issues: **#151** (web design review — 2 residual
-front-end items, section 6), **#183** (causal-graph fragmentation — detection has
-landed, the backfill is what remains, section 5), **#191**/**#192**/**#193** (from
-the #190 review — no drift check on the vendored history schema, the claw guard
-implemented twice, the dashboard's embedded timestamp), and **#197**/**#198**/**#199**
-(from the #196 review — hub-availability coupling, the same paths-filter gap in the
-sibling repos, concurrency scoping; all section 2). **#184** is closed by #196.
-Open PR: **#196**. Everything merged in this repo through **#190** (2026-07-31),
-plus the claw-side architecture decisions through 2026-07-25, is reflected below.
+Last reconciled: 2026-08-03. Everything merged in this repo through **#216**
+(2026-08-03) — which now includes the whole CI/agent-workflow thread (#194, #196,
+#201, #206, #207, #210, #216, section 7) that was absent from this file — plus the
+claw-side architecture decisions through 2026-07-25.
+
+Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
+this PR is the first one it reviews post-merge — which is the real test of that
+fix, since every check before it ran on a branch carrying its own copy.
+
+Open issues, 15 of them — four of them (#214, #217, #218, #220) filed by this
+reconcile and by the #216 / #213 reviews; #215 came from the same pass and is
+already closed, on the line below the table:
+
+| # | what | section |
+|---|---|---|
+| #151 | web design review — 2 residual front-end items | 6 |
+| #183 | causal-graph fragmentation — detection landed, **backfill is what remains** | 5 |
+| #191 | vendored `history.yaml` has no drift check against claw's canonical copy | 7 |
+| #192 | justfile: the claw-module guard is implemented twice | 7 |
+| #193 | QC dashboard embeds a generation timestamp, so staleness can't be rechecked | 7 |
+| #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
+| #198 | **cross-Mech**: spokes now fixed — only the CultureMech `label-correspondence` half may remain | 2 |
+| #203 | three major versions of `astral-sh/setup-uv` across workflows (v3/v5/v7) | 7 |
+| #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
+| #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
+| #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
+| #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them — **blocks the section 9 loop** | 9 |
+| #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
+| #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
+| #220 | `audit-graphs` is blind to a graph splitting into two **trait-bearing** components | 5 |
+
+Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
+**#202** (by #207), **#204** (by #206), **#215** (by #216).
 
 ## 1. Embedding coverage — DONE (98.3%); residual is legitimately absent
 
@@ -144,18 +168,36 @@ own workflow with no filter at all, plus a 3-attempt retry (in the workflow, not
 in `check_vendored_sync.sh`, which has no canonical copy in the hub to diff
 against — CommunityMech#278).
 
-**Still open, fleet-wide: #198.** Verifying #184 showed the gap is not
-TraitMech-specific. CultureMech and CommunityMech also omit `chem_formula.py` and
-all three `tests/test_id_label_*.py` — their `src/<pkg>/schema/**` glob covers
-only `mech_shared.yaml`. So every repo readable on 2026-08-01 has a four-file
-hole; TraitMech had a fifth, now closed. MIM is unverified (`gh api` 404s on its
-workflow file). MIM#160 and CommunityMech#280 are the same defect; worth one
-cross-Mech sweep (`cross-mech-sync`) with #196 as the reference implementation,
-rather than three PRs. Also open from #196's review: **#197** (running on every
-PR couples all PRs to CultureMech's availability). Distinct from
-CommunityMech#278, which is about *what* is compared — the checker itself has no
-canonical copy in the hub
-— where these three are about *when* the comparison runs.
+**#198 — the cross-Mech sweep HAS LANDED in the spokes; re-checked 2026-08-03.**
+The previous revision of this file called this "still open, fleet-wide" and
+described a sweep as pending. It happened. Verified against the sibling repos
+rather than from memory:
+
+| repo | issue | state | workflow |
+|---|---|---|---|
+| MediaIngredientMech | #160 | **closed** (PR #166 merged) | `vendored-sync.yaml`, `# DELIBERATELY NO paths: FILTER` |
+| CommunityMech | #280 | **closed** (PR #302 merged) | same, byte-comparable |
+| CommunityMech | #278 | **closed** | — |
+
+Both spokes now carry the unfiltered `vendored-sync.yaml` that #196 pioneered
+here, and both use `cancel-in-progress: ${{ github.event_name == 'pull_request' }}`
+— the #199 fix. So the "every repo has a four-file hole" framing is out of date.
+
+**What may remain is narrower and is a different workflow.** #198's body also
+named CultureMech, but CultureMech is the hub: it has no `vendored-sync.yaml` and
+no `check_vendored_sync.sh` at all (its workflows are `chebi-consistency`,
+`curation-history`, `generate-pages`, `label-correspondence`, `tests`,
+`validate-strict`, `weekly-compliance`). Its `label-correspondence.yaml` still
+carries `paths: &trigger_paths` with `src/culturemech/schema/**`, so the original
+observation — that `chem_formula.py` and the three `tests/test_id_label_*.py` do
+not appear in that glob — has not been checked against whether `tests.yaml`
+covers them by another route. **That, and only that, is what #198 should still
+track.** Left open deliberately with the evidence posted to the issue.
+
+Also open from #196's review: **#197** (running on every PR couples all PRs to
+CultureMech's availability). Distinct from the closed CommunityMech#278, which
+was about *what* is compared — the checker itself has no canonical copy in the
+hub — where #197 is about *when* the comparison runs.
 
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
@@ -166,11 +208,37 @@ remains.
 
 ## 4. METPO upstream round-trip (BLOCKED on upstream) + residual floor
 
-- Causal-graph grounding now stands at **predicates 85% (1094/1284)** and
-  **nodes 62% (1024/1643)**. The remaining residual is non-ontological
-  graph-narrative phrases (adaptation states, composite descriptors) and vague
-  verbs — these are NOT ontology concepts and should stay as free-text node/edge
-  labels, not be force-matched or proposed. This is the quality floor.
+- **Corrected 2026-08-02 — the old "predicates 85% (1094/1284) / nodes 62%
+  (1024/1643)" figures do not reproduce under any metric and should not be
+  quoted.** The repo's own scripts are ground truth; re-run them for the current
+  number rather than trusting this file:
+
+  ```
+  uv run python scripts/ground_causal_predicates.py   # dry-run; writes reports/predicate_grounding_residual.tsv
+  uv run python scripts/ground_causal_nodes.py        # dry-run; writes reports/node_grounding_residual.tsv
+  ```
+
+  As of 2026-08-02, over 477 YAMLs: **predicates 2128/3402 edges grounded (63%)**,
+  residual 1274 edges across 572 distinct labels; **nodes 1461/4136 grounded
+  (35%)**, residual 2675 across 2318 distinct (label, type) keys.
+
+  Those two figures come from **running** the scripts. The **committed**
+  `reports/node_grounding_residual.tsv` disagrees by exactly one row — 2319 keys
+  summing to 2676 — because it still lists `cellobiose`, grounded to `CHEBI:17057`
+  back in #185. The fresh numbers are the correct ones (1461 + 2675 = 4136 nodes;
+  1461 + 2676 does not close). This is **#214 demonstrating itself**: trust the
+  script over the checked-in report, and regenerate before using either as a work
+  queue. The predicate report happens to be current and reproduces exactly.
+- **The "this is the quality floor" claim was also too generous.** Much of the
+  residual genuinely is non-ontological graph narrative (adaptation states,
+  composite descriptors) that should stay free-text — but not all of it. The
+  frequency-ranked residual has **exact-label RO matches that were simply never
+  added to `mappings/predicate_grounding.tsv`**, while their *paraphrases* were:
+  `promotes` → RO:0002213 is mapped, but the literal label `positively regulates`
+  (37 edges) is not; `inhibits` → RO:0002212 is mapped, but `negatively
+  regulates` (16 edges) is not; `causally upstream of` (13 edges) is the literal
+  RO:0002411 label. So the top of the residual is cheap, high-confidence,
+  CI-verifiable work, and only the tail is the floor. See section 9.
 - Genuinely-novel recurring concepts have been proposed: electron-transfer
   predicates ([v6](proposals/metpo_traitmech_v6/)) and 2 causal-mechanism
   classes ([v7](proposals/metpo_traitmech_v7/): salt-in strategy, reductive
@@ -191,7 +259,7 @@ remains.
   v1 placeholder block (`1007400`), so sequential minting will eventually collide
   with the placeholders.
 
-## 5. Causal-graph connectivity (#183) — DETECTION DONE; BACKFILL PENDING (corpus-wide)
+## 5. Causal-graph connectivity (#183) — DETECTION MOSTLY DONE (#220); BACKFILL PENDING (corpus-wide)
 
 **The `audit-graphs` gate does not catch graph fragmentation.**
 `scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
@@ -238,7 +306,30 @@ check" half is already satisfied by item 1 above — including the design questi
 posed (one-component versus reachable-from-trait), which was answered in favour of
 the stronger reachability invariant. What #183 still tracks is item 2, the backfill.
 
-**Progress: 1 of 220 traits done.** `data/traits/metabolism/cellulolysis.yaml`
+**Progress, re-measured 2026-08-03.** Two numbers circulate here and they are
+*not* the same measurement — quote whichever you mean, and say which:
+
+| measure | value | source |
+|---|--:|---|
+| graphs with >1 connected component (undirected) | **220** files | recompute from `causal_graphs` |
+| files with ≥1 `UNREACHABLE_FROM_TRAIT` finding | **219** files | `conf/causal_graph_audit_baseline.tsv` |
+| `UNREACHABLE_FROM_TRAIT` findings (the ratchet's unit) | **1314** | same file |
+| nodes outside their graph's largest component | **1264** (31% of 4136) | recompute |
+
+Corpus totals are unchanged: 353 graphs, 4136 nodes. Per-category fragmented
+files: environment 85, **morphology 47**, metabolism 31, physiology 27,
+ecology 18, genomics 11, upper 1 — the baseline has morphology **46**, and that
+one-file gap is real, not arithmetic: see **#220**. `morphology/dumbbell_shaped.yaml`
+splits into two components that *each* contain a node typed `TRAIT`, so every node
+reaches *a* trait node and the audit reports it clean while 7 of its 11 nodes have
+no path to the trait the record is about.
+
+`cellulolysis.yaml` now verifies as a **single component**, so the #185 fix did
+land — the "1 of 220 done" framing in an earlier revision of this file was wrong
+arithmetic, not lost work: 220 is what is *still* fragmented, not the count before
+the fix.
+
+`data/traits/metabolism/cellulolysis.yaml`
 was the first instance of (2) and where the problem was found. A deep-research
 audit (Edison/PaperQA3 + Codex, independently converging) found that graph split
 into 4 components with 9 of 14 nodes unreachable from the trait node. The fix
@@ -269,8 +360,188 @@ remain open, both on the graph view:
 - **Redundant double category filter** — a dropdown above the plot and checkboxes
   below, with different semantics. Consolidate to one control.
 
-This is the only open issue in the repo. It is tracked in the cross-Mech design
-umbrella in culturebotai-claw.
+It is tracked in the cross-Mech design umbrella in culturebotai-claw. (The
+previous revision of this file called #151 "the only open issue in the repo" —
+that has not been true since 2026-07-30; see the header table.)
+
+## 7. CI + agent-workflow thread — SHIPPED; 7 small review issues PENDING
+
+This whole thread post-dates the last reconcile and was previously unlogged here.
+TraitMech is the fleet **pilot** for agent workflows because it is the smallest
+surface. What landed, 2026-08-02/03:
+
+- **#194 `pr-shepherd`** — the fleet's first agent workflow, deliberately
+  **comment-only**. Two things fail *silently* until a writer/reviewer App split
+  exists: pushes made with the built-in `GITHUB_TOKEN` do not trigger workflows
+  (so an agent-pushed fix shows green because nothing evaluated it), and a single
+  identity can approve its own work. Merging/pushing/editing/approving are
+  refused in the prompt *and* withheld at the harness level via `--allowedTools`.
+  No `schedule:` trigger, deliberately.
+- **#206** — `dry_run` (the default) was enforced only by a prompt instruction
+  while `Bash(gh pr comment:*)` was granted unconditionally. Now the tool is
+  withheld in dry runs: capability, not persuasion, in an agent that reads
+  untrusted PR diffs by design.
+- **#201 `pr-sanity`** — before it, a PR touching only `docs/**`, `README.md`,
+  `NEXT_TASKS.md`, or a *new workflow file* matched no `paths:` filter and ran
+  **nothing**; `gh pr checks` prints `no checks`, which reads as "nothing to
+  verify" but means "nothing was verified". #194 was a live instance. Runs
+  unfiltered on every PR.
+- **#207** — `pr-sanity`'s link check scanned line-by-line with no notion of
+  fenced code, so a link written as an *example* inside a fence counted as a real
+  link. Zero findings in the corpus today; the bug would have bitten the first
+  person to document a link pattern.
+- **#210** — adopted DisMech's Claude code-review workflow. **First workflow to
+  use the `culturebot-reviewer` App**, which holds `contents: read` +
+  `pull_requests: write` and so physically cannot change what it reviews. The
+  token step has **no `continue-on-error`** on purpose: DisMech's fallback to
+  `github.token` would silently restore the self-approval hole the split exists
+  to close, and would look identical in the logs.
+
+**#215 was the exception to "none of this blocks anything" — FIXED and merged in
+#216 (2026-08-03).** `claude-code-review.yml` posts a progress
+comment as it works; that comment fired `issue_comment: created`, which landed in
+the *same* workflow-level concurrency group (`claude-review-<PR>` — the `||`
+chain falls through to `github.event.issue.number` for the same PR) and, with
+`cancel-in-progress: true`, cancelled the run that had just posted it. The comment
+run then skipped itself on the job's `if:`, having done nothing. Every review,
+every PR, since #210 merged.
+
+It was green on `feat/claude-code-review` only because `issue_comment` workflows
+run from the *default branch's* copy of the file, and `main` had no
+`claude-code-review.yml` until #210 landed — a merge-activated regression no
+pre-merge CI could have seen.
+
+**The fix is not the obvious one.** Moving `concurrency:` onto the job — the
+first thing to try, on the theory that a job skipped by `if:` never joins the
+group — is *probably* right but rests on behaviour GitHub does not document:
+the workflow-syntax reference describes `jobs.<job_id>.concurrency` without ever
+saying how it interacts with a false `if:`. What #216 ships instead makes the
+invariant structural, holding under any evaluation order:
+
+```yaml
+group: claude-review-${{ …pr number… }}-${{ github.event_name == 'pull_request' && 'push' || github.run_id }}
+```
+
+Only `pull_request` runs share a key, so rapid pushes to one PR still collapse.
+Every comment and dispatch run gets `github.run_id`, unique per run, so it can
+neither cancel nor be cancelled. (The block did also move onto the job, but that
+is placement, not protection.) Keying merely by `github.event_name` is *not*
+sufficient: it fixes the push path while leaving `/review` runs sharing one key
+with every other comment on the PR, including ones the agent posts itself via the
+allowlisted `gh pr comment`.
+
+**This is a narrowing, not a restoration** — the original key spanned all three
+triggers, so it also let a `/review` supersede a review already in flight, and
+that is given up deliberately. Two reviews at once is a far cheaper failure than
+the one it replaced: no review at all.
+
+Verified, not just argued: before, both `pull_request` runs on #213 were cancelled
+seconds after a `culturebot-reviewer` comment; after, both pushes to #216 gave
+`pull_request → success` with the `issue_comment` runs skipping harmlessly
+alongside. **Still unproven at the time of writing:** every one of those checks
+ran on a branch carrying its own copy of the fix. `issue_comment` runs use
+`main`'s copy, so the first genuine post-merge test is this PR.
+
+`pr-shepherd.yml` was checked and is unaffected — `workflow_dispatch` only,
+`cancel-in-progress: false`, no comment trigger. `claude-code-review.yml` is the
+only workflow in the repo with an `issue_comment` trigger.
+
+Third concurrency-scoping bug here after #199 and #196's review, which produced
+two follow-ups rather than none: **#217** for the workflow-authoring conventions
+page that has nowhere to live (`docs/` has no such page, and this is fleet
+knowledge that belongs upstream rather than copied four times), and **#218** to
+*enforce* the rule instead of only documenting it. #218 is the stronger of the
+two — a docs page does not fail CI, and #215 got in past a reviewer who had
+already fixed this class of bug twice. `pr_sanity.check_workflows` already parses
+every workflow's triggers, so the guard drops in beside the existing
+`NO_UNFILTERED_CI` check: a workflow with both `pull_request` and an
+independently-firing trigger must key its concurrency group by `github.run_id`
+or `github.event_name`.
+
+**The other pending items are small, independent and fully specified**, each
+verifiable by CI, none blocking anything:
+
+| # | fix | note |
+|---|---|---|
+| #203 | unify `astral-sh/setup-uv` (v3 ×4, v5, v7) | needs a version decision, then mechanical |
+| #205 | declare PyYAML for `pr-shepherd`'s model-resolution step | same shape as #190's `matplotlib` gap |
+| #208 | skip 4-space-indented code blocks in the link check | no impact today; narrower than #202 was |
+| #209 | `vendored-sync.yaml` is triplicated across spokes, unguarded | hub has no copy to diff against — same hole as CommunityMech#278 |
+| #191 | vendored `history.yaml` has no drift check vs claw canonical | |
+| #192 | justfile claw-module guard implemented twice | |
+| #193 | QC dashboard embeds a timestamp, defeating regenerate-to-check-staleness | |
+| #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
+| #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
+
+## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
+
+`reports/trait_graph_audit_manifest.tsv` (361 data rows, last written 2026-07-20)
+records a sweep that **fully succeeded**: 353 distinct traits, every one `ok`.
+The 8 `fail:1` rows are not 8 unfinished traits — each is a `(category, slug)`
+that also appears as `ok`, i.e. a retry that then worked. Verified by set
+difference: `fail − ok` is empty, so there are **zero outstanding failures**.
+That makes the loss below worse, not better: nothing here is a partial run that
+was going to need redoing anyway.
+
+But `research/` is in `.gitignore` (line 42, "large, regenerable"), nothing under
+it is tracked, and only **11 traits' reports survive on the checkout this was
+written from**:
+
+```
+$ find research/traits -name '*-deep-research-falcon.md' | wc -l
+11
+$ uv run python scripts/run_trait_graph_audit.py --dry-run | tail -1
+[342/342] upper/quality  (quality)
+```
+
+**11 is the generous reading, and it is machine-local.** On a fresh clone
+`research/traits` does not exist at all, so that `find` errors and the count is
+**0** — 353 traits' worth of paid output, none of it recoverable from the
+repository by anyone else. Whatever survives does so only on whichever machine
+happened to run the sweep.
+
+Resume detection in `scripts/run_trait_graph_audit.py` is **file-existence
+based**, so from this checkout the sweep looks 3% done and would re-run — and
+re-bill — 342 Edison calls that already succeeded once.
+
+**Decide before running anything paid.** Either the reports exist on another
+machine and should be recovered, or `.gitignore`'s "regenerable" premise needs
+revisiting for outputs that cost money to regenerate (commit them, or push them
+to shared storage with the manifest as the index). Until then, treat the
+manifest's 353 `ok` rows as a record of spend, not as available input, and honour
+the canary rule: one real trait end-to-end before any fan-out.
+
+## 9. Predicate/node grounding backfill — PENDING, and cheaper than section 4 implied
+
+Follows from the section 4 correction. The frequency-ranked residual in
+`reports/predicate_grounding_residual.tsv` opens with labels that are *exact* RO
+labels whose paraphrases are already mapped in
+`mappings/predicate_grounding.tsv`:
+
+| residual label | edges | is the exact OAK label of | already mapped as |
+|---|--:|---|---|
+| `positively regulates` | 37 | RO:0002213 | `promotes` → RO:0002213 |
+| `negatively regulates` | 16 | RO:0002212 | `inhibits`/`suppresses`/`prevents` → RO:0002212 |
+| `causally upstream of` | 13 | RO:0002411 | — |
+
+All three were checked against OAK on 2026-08-02 (`get_adapter("sqlite:obo:ro")`,
+`.label()`) and match exactly — this is not an eyeball guess. The paraphrase got
+mapped and the canonical label did not, which is why they are still residual.
+
+Below those sit judgement calls (`supports` 37, `induces` 34, `required for` 30,
+`drives` 29, `maintains` 29, `mediates` 27) and then the genuine free-text floor.
+Node side, the head of the residual is similar: `proton motive force` ×16,
+`compatible solute accumulation` ×12, `Na+/H+ antiporter` ×8, `ATP` ×6.
+
+Each mapping row is verified by the existing **blocking** `label-correspondence`
+gate (`just validate-products`), which checks the CURIE's label against OAK — so
+a wrong CURIE fails CI rather than landing silently. Apply with
+`scripts/ground_causal_predicates.py --apply` / `ground_causal_nodes.py --apply`.
+**Caveat (#214):** the residual TSVs are tracked but nothing regenerates them, so
+they lag the corpus — `cellobiose` still appeared as ungrounded weeks after #185
+grounded it. Regenerate before trusting the ranking as a work queue.
+Where no ontology term fits, the actionable form is `metpo-proposal`, not a
+force-match — the section 4 floor still stands for the tail.
 
 ## Adopt DisMech knowledge-gaps + datasets + QC dashboard (claw#7) — DONE (by 2026-07-22)
 
