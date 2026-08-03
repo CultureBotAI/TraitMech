@@ -352,12 +352,15 @@ check: lint test
 # clears the failure immediately, instead of only after you commit — the HEAD
 # variant tells you to fix something and then keeps failing when you have.
 #
-# Not covered here: reports/causal_graph_audit.tsv. `audit-graphs` rewrites it
-# earlier in this same `qc` run, so a stale committed copy is silently corrected
-# in the working tree — corrected, but never reported. Regenerating is not
-# checking, and a `just qc` that quietly leaves an uncommitted change is a
-# weaker guarantee than this recipe gives. Tracked separately rather than
-# widened here; see #223.
+# reports/causal_graph_audit.tsv is checked too, but AGAINST GIT rather than the
+# working tree, and the difference is forced (#223). `audit-graphs` rewrites that
+# file earlier in this same `qc` run, so by the time this recipe executes the
+# working-tree copy is guaranteed fresh and comparing it would always pass while
+# a stale committed copy sailed through. Confirmed by appending a bogus row and
+# running what qc runs: audit-graphs overwrote it, exited 0, said nothing.
+#
+# The two comparison bases are not a style choice — they follow from whether
+# anything else in the run mutates the file.
 audit-derived-reports:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -399,11 +402,43 @@ audit-derived-reports:
         fail=1
       fi
     done
+    # --- causal_graph_audit.tsv, compared against git (#223) -----------------
+    # This generator's exit code is its RATCHET VERDICT (--fail-on new), not a
+    # generation error, and `audit-graphs` already owns that verdict earlier in
+    # this same qc run. Judging staleness on it would conflate "the corpus got
+    # more fragmented" with "the committed report is out of date". So the status
+    # is deliberately ignored and only missing output is fatal.
+    cga=causal_graph_audit.tsv
+    uv run python scripts/audit_causal_graphs.py --out "$tmp/$cga" \
+      > "$tmp/gen.log" 2>&1 || true
+    if [ ! -s "$tmp/$cga" ]; then
+      echo "ERROR: audit_causal_graphs.py produced no report. Its output:" >&2
+      cat "$tmp/gen.log" >&2
+      exit 1
+    fi
+    if ! git show "HEAD:reports/$cga" > "$tmp/committed_$cga" 2>/dev/null; then
+      echo "  MISSING reports/$cga is not in git at HEAD" >&2
+      fail=1
+    elif diff -q "$tmp/committed_$cga" "$tmp/$cga" >/dev/null; then
+      echo "  OK    reports/$cga (vs git)"
+    else
+      echo "  STALE reports/$cga — the COMMITTED copy is not what audit-graphs produces:" >&2
+      { diff -u "$tmp/committed_$cga" "$tmp/$cga" | sed -n '1,20p' >&2; } || true
+      stale_cga=1
+      fail=1
+    fi
+
     if [ "$fail" -ne 0 ]; then
       echo "" >&2
-      echo "derived reports are stale (#214). Regenerate and commit them:" >&2
+      echo "derived reports are stale (#214, #223). Regenerate and commit them:" >&2
       echo "  uv run python scripts/ground_causal_predicates.py" >&2
       echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      if [ "${stale_cga:-0}" -eq 1 ]; then
+        # Single-quoted on purpose: backticks inside a double-quoted echo are
+        # command substitution, and this string names a command.
+        echo '  # causal_graph_audit.tsv: `just audit-graphs` earlier in this run' >&2
+        echo '  # has ALREADY refreshed the working-tree copy — just commit it.' >&2
+      fi
       echo "  git add reports/" >&2
       exit 1
     fi
