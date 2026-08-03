@@ -25,7 +25,7 @@ Open issues, 15 of them — the last five filed by this reconcile and by the #21
 | #192 | justfile: the claw-module guard is implemented twice | 7 |
 | #193 | QC dashboard embeds a generation timestamp, so staleness can't be rechecked | 7 |
 | #197 | `vendored-sync` couples every PR to CultureMech's availability | 2 |
-| #198 | **cross-Mech**: paths filter omits `chem_formula.py` + the 3 id_label tests in *every* repo | 2 |
+| #198 | **cross-Mech**: spokes now fixed — only the CultureMech `label-correspondence` half may remain | 2 |
 | #203 | three major versions of `astral-sh/setup-uv` across workflows (v3/v5/v7) | 7 |
 | #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
 | #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
@@ -167,18 +167,36 @@ own workflow with no filter at all, plus a 3-attempt retry (in the workflow, not
 in `check_vendored_sync.sh`, which has no canonical copy in the hub to diff
 against — CommunityMech#278).
 
-**Still open, fleet-wide: #198.** Verifying #184 showed the gap is not
-TraitMech-specific. CultureMech and CommunityMech also omit `chem_formula.py` and
-all three `tests/test_id_label_*.py` — their `src/<pkg>/schema/**` glob covers
-only `mech_shared.yaml`. So every repo readable on 2026-08-01 has a four-file
-hole; TraitMech had a fifth, now closed. MIM is unverified (`gh api` 404s on its
-workflow file). MIM#160 and CommunityMech#280 are the same defect; worth one
-cross-Mech sweep (`cross-mech-sync`) with #196 as the reference implementation,
-rather than three PRs. Also open from #196's review: **#197** (running on every
-PR couples all PRs to CultureMech's availability). Distinct from
-CommunityMech#278, which is about *what* is compared — the checker itself has no
-canonical copy in the hub
-— where these three are about *when* the comparison runs.
+**#198 — the cross-Mech sweep HAS LANDED in the spokes; re-checked 2026-08-03.**
+The previous revision of this file called this "still open, fleet-wide" and
+described a sweep as pending. It happened. Verified against the sibling repos
+rather than from memory:
+
+| repo | issue | state | workflow |
+|---|---|---|---|
+| MediaIngredientMech | #160 | **closed** (PR #166 merged) | `vendored-sync.yaml`, `# DELIBERATELY NO paths: FILTER` |
+| CommunityMech | #280 | **closed** (PR #302 merged) | same, byte-comparable |
+| CommunityMech | #278 | **closed** | — |
+
+Both spokes now carry the unfiltered `vendored-sync.yaml` that #196 pioneered
+here, and both use `cancel-in-progress: ${{ github.event_name == 'pull_request' }}`
+— the #199 fix. So the "every repo has a four-file hole" framing is out of date.
+
+**What may remain is narrower and is a different workflow.** #198's body also
+named CultureMech, but CultureMech is the hub: it has no `vendored-sync.yaml` and
+no `check_vendored_sync.sh` at all (its workflows are `chebi-consistency`,
+`curation-history`, `generate-pages`, `label-correspondence`, `tests`,
+`validate-strict`, `weekly-compliance`). Its `label-correspondence.yaml` still
+carries `paths: &trigger_paths` with `src/culturemech/schema/**`, so the original
+observation — that `chem_formula.py` and the three `tests/test_id_label_*.py` do
+not appear in that glob — has not been checked against whether `tests.yaml`
+covers them by another route. **That, and only that, is what #198 should still
+track.** Left open deliberately with the evidence posted to the issue.
+
+Also open from #196's review: **#197** (running on every PR couples all PRs to
+CultureMech's availability). Distinct from the closed CommunityMech#278, which
+was about *what* is compared — the checker itself has no canonical copy in the
+hub — where #197 is about *when* the comparison runs.
 
 ## 3. Trait promotion PROPOSED -> REVIEWED — DONE
 
