@@ -1,0 +1,307 @@
+name: Claude Code Review
+
+# Adopted from monarch-initiative/dismech. TraitMech is the pilot, matching
+# pr-shepherd.
+#
+# This is the first workflow to use the culturebot-reviewer App, and the reason
+# that App exists: it holds `contents: read` and `pull_requests: write`, so it can
+# submit a review but physically cannot change what it is reviewing. Review by the
+# same identity that wrote the change is not review.
+#
+# NOT MANAGED BY cron-profiles.yaml, and that is a real gap worth stating rather
+# than hiding: the kill switch only rewrites `schedule:` blocks, and this is
+# event-triggered. To stop it you disable the workflow in the Actions tab or
+# revert it. See docs/AGENT_IDENTITY.md.
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number to review"
+        required: true
+        type: number
+
+concurrency:
+  group: claude-review-${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}
+  cancel-in-progress: true
+
+jobs:
+  claude-review:
+    # Three gates, each closing a different hole:
+    #
+    #  * fork PRs are excluded here for `pull_request` as a cheap early exit.
+    #    The REAL guard is the "Refuse fork PRs" step below, which covers all
+    #    three triggers — this expression does not gate issue_comment or
+    #    workflow_dispatch (#212). Fork PRs cannot be reviewed by this workflow
+    #    at all; do not route them through the manual dispatch.
+    #  * `/review` comments only count from OWNER / MEMBER / COLLABORATOR.
+    #    Without that, anyone who can comment could spend our tokens at will, and
+    #    a comment body is attacker-controlled text this agent then reads.
+    #  * comment triggers must be on a PR, not a plain issue.
+    if: >-
+      ${{
+        (
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        ) ||
+        github.event_name == 'workflow_dispatch' ||
+        (
+          github.event_name == 'issue_comment' &&
+          github.event.issue.pull_request != null &&
+          github.event.comment.body == '/review' &&
+          contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+        )
+      }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+
+    env:
+      PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number || github.event.inputs.pr_number }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Refuse fork PRs
+        # THE FORK GUARD FOR ALL THREE TRIGGERS. The job's `if:` only gates
+        # `pull_request`; issue_comment and workflow_dispatch had none, and once
+        # the next step began checking out PR head content and running `uv sync`
+        # and the repo's `just` recipes, that meant executing fork-controlled code
+        # in a job holding CLAUDE_CODE_OAUTH_TOKEN and a reviewer App token (#212).
+        #
+        # This runs BEFORE any fork content reaches the disk. Fork PRs simply
+        # cannot be reviewed here — reviewing untrusted code in a privileged job
+        # is not something to make convenient.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cross=$(gh pr view "$PR_NUMBER" --json isCrossRepository --jq .isCrossRepository)
+          if [ "$cross" != "false" ]; then
+            echo "::error title=Fork PR::PR #$PR_NUMBER comes from a fork. This workflow executes repository code (uv sync, just recipes) with privileged tokens, so it will not run against fork content."
+            exit 1
+          fi
+          echo "PR #$PR_NUMBER is same-repo; proceeding."
+
+      - name: Check out the PR head
+        # actions/checkout gives the DEFAULT BRANCH on issue_comment and
+        # workflow_dispatch — only the pull_request event yields a PR ref. Without
+        # this the agent would read `main` through Read/Grep/Glob while reviewing
+        # the PR's diff through `gh pr diff`, and confidently report additions as
+        # missing (#211).
+        #
+        # Run on every trigger, so the agent always reviews the HEAD commit — what
+        # the author actually wrote — rather than the synthetic merge commit.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr checkout ${{ env.PR_NUMBER }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install just and sync the project
+        # `just` and `uv` do not ship on ubuntu-latest. Without them the two most
+        # valuable allowlisted tools — `just validate-history` and
+        # `just audit-graphs` — fail with command-not-found, and the agent either
+        # skips its best checks or reports the infrastructure error as a finding
+        # about the PR (#211).
+        run: |
+          set -euo pipefail
+          uv tool install rust-just
+          uv sync
+
+      - name: Generate culturebot-reviewer token
+        id: reviewer-token
+        # Reviews are posted as the reviewer App, NOT as github-actions. That is
+        # what makes the writer/reviewer split mean something: an approval from
+        # this identity cannot have come from whatever wrote the branch.
+        #
+        # No continue-on-error. Falling back to github.token would silently
+        # restore the self-approval hole the split exists to close, and it would
+        # look identical in the logs.
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.REVIEWER_APP_ID }}
+          private-key: ${{ secrets.REVIEWER_APP_PRIVATE_KEY }}
+
+      - name: Resolve model from the fleet agent-config
+        id: model
+        run: |
+          set -euo pipefail
+          url=https://raw.githubusercontent.com/CultureBotAI/culturebotai-claw/main/.github/agent-config.yaml
+          curl -fsSL "$url" -o /tmp/agent-config.yaml
+          model=$(python3 -c "
+          import yaml, sys
+          cfg = yaml.safe_load(open('/tmp/agent-config.yaml'))
+          wf = cfg.get('workflows', {}).get('claude-code-review', {})
+          m = wf.get('model') or cfg.get('default_model')
+          if not m:
+              sys.exit('agent-config names no model and has no default_model')
+          print(m)
+          ")
+          echo "model=$model" >> "$GITHUB_OUTPUT"
+          echo "Using model: $model"
+
+      - name: Review
+        id: claude-review
+        uses: anthropics/claude-code-action@44423bdec74b97d67543eb16c110546762c110b2 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ steps.reviewer-token.outputs.token }}
+          track_progress: ${{ github.event_name == 'pull_request' }}
+          # Agent-authored PRs are exactly what this exists to review.
+          allowed_bots: "claude,github-actions,culturebot-agent"
+          claude_args: |
+            --model ${{ steps.model.outputs.model }}
+            --allowedTools "Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr comment:*),Bash(gh pr review:*),Bash(git log:*),Bash(git diff:*),Bash(just validate-history:*),Bash(just audit-graphs:*),Read,Grep,Glob"
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ env.PR_NUMBER }}
+
+            Review this pull request. Read README.md and anything relevant under
+            docs/ for the repository's conventions. (This repo has no CLAUDE.md;
+            do not go looking for one.)
+
+            ## What matters here
+
+            TraitMech is a microbial trait knowledge base. Weight the review
+            accordingly:
+
+            - **Ontology grounding.** CURIEs must resolve and the label must match
+              the term. A plausible-looking wrong CURIE is the most damaging thing
+              that gets past review — `PATO:0000383` is "female", not "decreased
+              temperature", and that mistake shipped once already.
+            - **Evidence integrity.** Every snippet must be a verbatim quote from
+              the cited source. A paraphrase that reads well is worse than an
+              obvious error, because nothing downstream will catch it.
+            - **Causal-graph structure.** Edges must reference declared nodes.
+              Watch for nodes that are connected to something but unreachable from
+              the trait node — the audit ratchets on that (`just audit-graphs`).
+            - **Curation history.** A change to `data/traits/**` should come with a
+              record under `history/`. Its absence is advisory, not blocking, so
+              mention it without treating it as a defect.
+            - **Schema conformance**, and the conventions in README.md / docs/.
+
+            ## Severity, and be honest about it
+
+            - 🔴 CRITICAL — wrong data, an unresolvable or mismatched CURIE, a
+              fabricated citation, a snippet that is not a real quote, or anything
+              that would fail validation.
+            - 🟡 IMPORTANT — a real defect that is not corrupting: a too-general
+              ontology term, a missing required field, a broken cross-reference.
+            - 🔵 SUGGESTION — genuinely optional.
+
+            Do not pad. A short review naming two real problems is worth more than
+            a long one listing ten stylistic preferences, and it is likelier to be
+            acted on. If the change is good, say so briefly and approve it.
+
+            Do not restate what the diff does — the author knows. Say what is
+            wrong with it, or that nothing is.
+
+            ## Verdict
+
+            If there is any 🔴 or 🟡:
+                gh pr review ${{ env.PR_NUMBER }} --request-changes --body "<summary>"
+
+            Otherwise:
+                gh pr review ${{ env.PR_NUMBER }} --approve --body "<summary>"
+
+            You are the reviewer identity and hold no write access to the code, so
+            you cannot fix anything yourself. Do not offer to. Say precisely what
+            needs changing and let the author change it.
+
+      # claude-code-action exits 0 even when the agent run itself errored, which
+      # produces a green check with no review posted — a phantom pass. DisMech was
+      # bitten by this twice: a weekly usage limit on CLAUDE_CODE_OAUTH_TOKEN,
+      # which silently no-ops EVERY agent workflow account-wide, and a --model
+      # pinned to a name that no longer existed.
+      #
+      # This fleet has repeatedly shipped checks that silently did not run
+      # (TraitMech#182, #184, and a nightly job pointed at a nonexistent path
+      # masked by `|| true`). A review bot that fails open would be the same bug
+      # with a bigger blast radius, so inspect the execution log and fail loudly.
+      - name: Verify the review agent actually ran
+        if: always()
+        env:
+          EXECUTION_FILE: ${{ steps.claude-review.outputs.execution_file }}
+        run: |
+          set -euo pipefail
+          file="${EXECUTION_FILE:-}"
+          if [[ -z "$file" || ! -f "$file" ]]; then
+            file="${RUNNER_TEMP}/claude-execution-output.json"
+          fi
+          if [[ ! -f "$file" ]]; then
+            echo "::error title=Claude review failed::No execution log found; the review agent did not run."
+            exit 1
+          fi
+          python3 - "$file" <<'PY'
+          import json, os, sys
+
+          def summary(md):
+              path = os.environ.get("GITHUB_STEP_SUMMARY")
+              if path:
+                  with open(path, "a", encoding="utf-8") as fh:
+                      fh.write(md + "\n")
+
+          raw = open(sys.argv[1], encoding="utf-8").read().strip()
+          try:
+              events = json.loads(raw)
+              if not isinstance(events, list):
+                  events = [events]
+          except json.JSONDecodeError:
+              events = [json.loads(line) for line in raw.splitlines() if line.strip()]
+
+          results = [e for e in events if isinstance(e, dict) and e.get("type") == "result"]
+          if not results:
+              print("::error title=Claude review failed::No result event in the execution "
+                    "log; the agent did not complete.")
+              summary("### Claude review failed\nNo result event — the agent did not complete.")
+              sys.exit(1)
+
+          r = results[-1]
+          stats = (f"num_turns={r.get('num_turns')} cost=${r.get('total_cost_usd')} "
+                   f"subtype={r.get('subtype')}")
+
+          if not r.get("is_error"):
+              print(f"Claude review completed cleanly: {stats}")
+              sys.exit(0)
+
+          # The log entries carry subtype / is_error / errors — there is no
+          # `error` key, so keying solely on r["error"] left the usage-limit
+          # branch firing only by luck of the substring match (#212). Look at
+          # every field that actually exists.
+          reason = str(r.get("error") or r.get("subtype") or "").strip()
+          detail = str(r.get("result") or "").strip()
+          errors = " ".join(str(e) for e in (r.get("errors") or []))
+          haystack = f"{reason} {detail} {errors}".lower()
+
+          if "rate_limit" in haystack or "usage limit" in haystack or "weekly limit" in haystack:
+              msg = ("Claude USAGE LIMIT reached — NO review ran. This is an account-quota "
+                     "issue on CLAUDE_CODE_OAUTH_TOKEN, NOT a problem with this PR. It also "
+                     "silently affects every other agent workflow in the org. Fix: wait for "
+                     "the reset, rotate the token to an account with headroom, or set "
+                     "ANTHROPIC_API_KEY for pay-per-use. Re-run this check afterward.")
+              print(f"::error title=Claude review skipped: usage limit::{msg}")
+              summary("### Claude review skipped — usage limit reached\n\n" + msg)
+              sys.exit(1)
+
+          msg = (f"Review agent errored (is_error=true); NO review was posted. "
+                 f"error={reason!r} detail={detail!r} {stats}. Common causes: an "
+                 "invalid or retired --model, a bad CLAUDE_CODE_OAUTH_TOKEN, or an "
+                 "aborted run.")
+          print(f"::error title=Claude review errored::{msg}")
+          summary("### Claude review errored\n\n" + msg)
+          sys.exit(1)
+          PY
