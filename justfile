@@ -360,12 +360,16 @@ audit-derived-reports:
     set -euo pipefail
     tmp="$(mktemp -d)"
     trap 'rm -rf "$tmp"' EXIT
-    # Generator output is captured rather than discarded: if one of these fails,
-    # the gate cannot judge staleness at all, and swallowing the traceback would
-    # leave a bare non-zero exit with nothing to act on.
+    # Generator output is captured rather than discarded: swallowing it would
+    # leave a bare non-zero exit with nothing to act on. Note that non-zero here
+    # has two quite different causes — the script can die outright (no TSV, so
+    # staleness is genuinely unknowable), or it can exit 1 having written a
+    # perfectly good TSV because some trait YAML was invalid and skipped
+    # (`files_skipped_invalid`). The captured log distinguishes them; the
+    # message must not assert one of them.
     generate() {
       if ! uv run python "$1" --out "$2" > "$tmp/gen.log" 2>&1; then
-        echo "ERROR: $1 failed — cannot check staleness:" >&2
+        echo "ERROR: $1 exited non-zero — staleness not checked. Its output:" >&2
         cat "$tmp/gen.log" >&2
         exit 1
       fi
