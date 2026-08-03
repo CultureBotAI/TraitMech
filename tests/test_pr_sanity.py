@@ -534,3 +534,32 @@ def test_real_repo_has_no_shared_cancelling_group():
     found = [f for f in check_workflows(REPO_ROOT)
              if f["check"] == "CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
     assert found == [], found
+
+
+def test_cancel_expression_confined_to_the_colliding_trigger_is_flagged():
+    """`== 'issue_comment'` mentions github.event_name and is #215 stated as a
+    condition: cancellation happens ONLY on comment runs, which is precisely the
+    run that must not cancel."""
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name == 'issue_comment' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_pull_request_target_counts_as_the_same_pr():
+    found = _conc(f"""
+        on:
+          pull_request:
+          pull_request_target:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]

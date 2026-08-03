@@ -71,7 +71,16 @@ TRIGGERS_ON_THE_SAME_PR = (
     "issue_comment",
     "pull_request_review",
     "pull_request_review_comment",
+    # Same PR, not a push — it satisfies the rule exactly. Unused in this repo
+    # today, which is the only reason it was not obvious.
+    "pull_request_target",
 )
+
+# `github.event_name == 'x'` / `!= 'x'` inside a cancel-in-progress expression.
+# Polarity matters: `== 'pull_request'` confines cancellation to push runs and
+# is a fix, while `== 'issue_comment'` confines it to comment runs and is #215.
+EVENT_NAME_EQ = re.compile(r"github\.event_name\s*==\s*['\"]([^'\"]+)['\"]")
+EVENT_NAME_NE = re.compile(r"github\.event_name\s*!=\s*['\"]([^'\"]+)['\"]")
 
 # In the group key, either of these is enough to separate runs of different
 # triggers.
@@ -165,18 +174,27 @@ def discriminates_by_event(block: dict, others: list[str]) -> bool:
       * cancellation itself is conditioned on the event, so a comment-triggered
         run cancels nothing — `vendored-sync.yaml`, `pr-sanity.yaml`.
 
-    The second is checked more strictly than "mentions `github.event_name`
-    somewhere", because a mention can point the wrong way:
-    ``cancel-in-progress: ${{ github.event_name != 'push' }}`` is #215 verbatim
-    and would otherwise read as fixed. The expression has to actually name the
-    trigger it is separating — `pull_request`, or the colliding trigger itself.
+    The second is checked on POLARITY, not on whether `github.event_name` is
+    mentioned. Both of these mention it and only one is a fix:
+
+        cancel-in-progress: ${{ github.event_name == 'pull_request' }}   # fix
+        cancel-in-progress: ${{ github.event_name == 'issue_comment' }}  # #215
+
+    The second confines cancellation to comment runs, which is the bug stated
+    as a condition. So an equality has to select events that are *not* the
+    colliding ones, and an inequality has to exclude one that is.
     """
     if any(d in str(block.get("group", "")) for d in CONCURRENCY_DISCRIMINATORS):
         return True
     cancel = block.get("cancel-in-progress")
-    if isinstance(cancel, str) and "github.event_name" in cancel:
-        return "pull_request" in cancel or any(t in cancel for t in others)
-    return False
+    if not isinstance(cancel, str):
+        return False
+    colliding = set(others)
+    equals = set(EVENT_NAME_EQ.findall(cancel))
+    not_equals = set(EVENT_NAME_NE.findall(cancel))
+    if equals and not (equals & colliding):
+        return True
+    return bool(not_equals & colliding)
 
 
 def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[dict[str, str]]:
