@@ -44,7 +44,7 @@ Writes ``reports/causal_graph_audit.tsv``. Exit code is governed by
 
   new    (default) any finding NOT in the baseline fails. Baselined findings
          never fail regardless of severity. This is the ratchet: the corpus
-         cannot get more fragmented than it is today, but today's 1314
+         cannot get more fragmented than it is today, but today's 1541
          findings do not block.
   error  only new ERROR-severity findings fail. New fragmentation is still
          reported, but non-blocking — use if the ratchet proves too noisy.
@@ -217,12 +217,23 @@ def audit(traits_dir: Path) -> list[dict[str, str]]:
             components = _components(node_set & referenced, adjacency)
             if len(components) > 1:
                 sizes = ", ".join(str(len(c)) for c in components)
+                # Detail MUST lead with the component count, because `_key` takes
+                # the leading whitespace-delimited token as the baseline
+                # discriminator. Leading with the node count instead made the
+                # ratchet fail open in both directions on the 220 graphs this
+                # baselines: 3 components -> 4 keeps the node count, so real
+                # backsliding stayed suppressed; while adding a node inside an
+                # already-connected component changed the key and blocked a PR
+                # whose fragmentation was unchanged — the ordinary shape of
+                # #183's backfill. This is the first WARN-severity whole-graph
+                # defect, so it is the first time the discriminator has had to be
+                # anything but a node_id.
                 findings.append({
                     "file": rel, "graph_id": gid, "defect": "FRAGMENTED_GRAPH",
                     "severity": SEVERITY["FRAGMENTED_GRAPH"],
-                    "detail": (f"{len(nodes)} node(s) in {len(components)} disconnected "
-                               f"components (sizes: {sizes}) — one record, several "
-                               "unrelated mechanisms"),
+                    "detail": (f"components={len(components)} of {len(nodes)} node(s) "
+                               f"(sizes: {sizes}) — one record, several unrelated "
+                               "mechanisms"),
                 })
     return findings
 

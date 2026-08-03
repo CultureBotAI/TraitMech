@@ -318,7 +318,7 @@ def test_two_trait_bearing_components_flagged(tmp_path):
     findings = audit(d)
     frag = [f for f in findings if f["defect"] == "FRAGMENTED_GRAPH"]
     assert len(frag) == 1
-    assert "2 disconnected components" in frag[0]["detail"]
+    assert frag[0]["detail"].startswith("components=2 ")
     assert "sizes: 3, 2" in frag[0]["detail"]
 
 
@@ -364,3 +364,96 @@ def test_fragmented_graph_severity_is_warn(tmp_path):
     """WARN, like UNREACHABLE_FROM_TRAIT: 220 graphs are fragmented today, so
     ERROR would be un-landable under --fail-on error."""
     assert SEVERITY["FRAGMENTED_GRAPH"] == "WARN"
+
+
+# The baseline discriminator is the leading token of `detail` (see _key), so
+# what that token carries decides whether the ratchet works. For
+# FRAGMENTED_GRAPH it has to be the component count: leading with the node count
+# let a baselined graph go from 3 components to 4 without changing its key.
+
+FRAG_3_COMPONENTS = """\
+identifier: traitmech:000011
+label: t
+causal_graphs:
+- graph_id: g
+  nodes:
+  - {node_id: a, label: A, node_type: TRAIT}
+  - {node_id: b, label: B, node_type: CHEMICAL}
+  - {node_id: c, label: C, node_type: CHEMICAL}
+  - {node_id: d, label: D, node_type: CHEMICAL}
+  - {node_id: e, label: E, node_type: CHEMICAL}
+  - {node_id: f, label: F, node_type: CHEMICAL}
+  edges:
+  - {subject: a, predicate: produces, object: b}
+  - {subject: c, predicate: produces, object: d}
+  - {subject: e, predicate: produces, object: f}
+"""
+
+# Same six nodes, but the c-d bridge is gone: c and d each stand alone, so the
+# graph goes 3 components -> 4 with the node count unchanged.
+FRAG_4_COMPONENTS = FRAG_3_COMPONENTS.replace(
+    "  - {subject: c, predicate: produces, object: d}\n", "")
+
+# 3 components still, but one extra node inside an existing component — the
+# ordinary shape of #183's evidence backfill.
+FRAG_3_COMPONENTS_EXTRA_NODE = FRAG_3_COMPONENTS.replace(
+    "  edges:",
+    "  - {node_id: g2, label: G, node_type: CHEMICAL}\n  edges:",
+).replace(
+    "  - {subject: e, predicate: produces, object: f}\n",
+    "  - {subject: e, predicate: produces, object: f}\n"
+    "  - {subject: a, predicate: produces, object: g2}\n")
+
+
+def _frag_finding(tmp_path, body):
+    """Audit `body` at a FIXED path and return its FRAGMENTED_GRAPH finding.
+
+    Same path every time on purpose: `_key` includes the file and graph_id, so
+    fixtures in different temp dirs would differ by path and these tests would
+    pass without ever exercising the discriminator they exist to pin.
+    """
+    d = _write(tmp_path, "g.yaml", body)
+    frag = [f for f in audit(d) if f["defect"] == "FRAGMENTED_GRAPH"]
+    assert len(frag) == 1, frag
+    return frag[0]
+
+
+def test_more_components_changes_the_baseline_key(tmp_path):
+    """Losing a bridging edge must un-suppress a baselined fragmented graph.
+
+    Node count is identical across these two, so a node-count discriminator
+    keeps the key stable and the regression stays silent — the ratchet failing
+    open exactly where it is supposed to bite.
+    """
+    three = _key(_frag_finding(tmp_path, FRAG_3_COMPONENTS))
+    four = _key(_frag_finding(tmp_path, FRAG_4_COMPONENTS))
+    assert three != four
+    assert three[:3] == four[:3], "only the discriminator may differ"
+
+
+def test_adding_a_node_does_not_change_the_baseline_key(tmp_path):
+    """The other direction: growing an already-fragmented graph must not block.
+
+    Component count is unchanged, so a baselined finding stays baselined and
+    #183's backfill does not trip `--fail-on new` for standing fragmentation.
+    """
+    before = _key(_frag_finding(tmp_path, FRAG_3_COMPONENTS))
+    after = _key(_frag_finding(tmp_path, FRAG_3_COMPONENTS_EXTRA_NODE))
+    assert before == after
+
+
+def test_ratchet_catches_worsening_fragmentation_end_to_end(tmp_path):
+    """The property the two key tests protect, through partition()."""
+    frozen = {_key(_frag_finding(tmp_path, FRAG_3_COMPONENTS))}
+    d = _write(tmp_path, "g.yaml", FRAG_4_COMPONENTS)
+    new, blocking = partition(audit(d), baseline=frozen, fail_on="new")
+    assert any(f["defect"] == "FRAGMENTED_GRAPH" for f in new)
+    assert any(f["defect"] == "FRAGMENTED_GRAPH" for f in blocking)
+
+
+def test_ratchet_stays_quiet_when_only_a_node_was_added(tmp_path):
+    """Same harness, opposite direction — no FRAGMENTED_GRAPH in `new`."""
+    frozen = {_key(f) for f in audit(_write(tmp_path, "g.yaml", FRAG_3_COMPONENTS))}
+    d = _write(tmp_path, "g.yaml", FRAG_3_COMPONENTS_EXTRA_NODE)
+    new, _blocking = partition(audit(d), baseline=frozen, fail_on="new")
+    assert not any(f["defect"] == "FRAGMENTED_GRAPH" for f in new)

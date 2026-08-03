@@ -10,6 +10,11 @@ session:
   - type: ai_agent
     name: claude-code
     model: claude-opus-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/220
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/227
 events:
 - type: EDIT
   outcome: changed
