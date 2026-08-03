@@ -14,8 +14,9 @@ Open PRs: **this one** (#213). #216 merged, so `claude-review` works again and
 this PR is the first one it reviews post-merge — which is the real test of that
 fix, since every check before it ran on a branch carrying its own copy.
 
-Open issues, 15 of them — the last five filed by this reconcile and by the #216 /
-#213 reviews:
+Open issues, 15 of them — four of them (#214, #217, #218, #220) filed by this
+reconcile and by the #216 / #213 reviews; #215 came from the same pass and is
+already closed, on the line below the table:
 
 | # | what | section |
 |---|---|---|
@@ -220,6 +221,14 @@ remains.
   As of 2026-08-02, over 477 YAMLs: **predicates 2128/3402 edges grounded (63%)**,
   residual 1274 edges across 572 distinct labels; **nodes 1461/4136 grounded
   (35%)**, residual 2675 across 2318 distinct (label, type) keys.
+
+  Those two figures come from **running** the scripts. The **committed**
+  `reports/node_grounding_residual.tsv` disagrees by exactly one row — 2319 keys
+  summing to 2676 — because it still lists `cellobiose`, grounded to `CHEBI:17057`
+  back in #185. The fresh numbers are the correct ones (1461 + 2675 = 4136 nodes;
+  1461 + 2676 does not close). This is **#214 demonstrating itself**: trust the
+  script over the checked-in report, and regenerate before using either as a work
+  queue. The predicate report happens to be current and reproduces exactly.
 - **The "this is the quality floor" claim was also too generous.** Much of the
   residual genuinely is non-ontological graph narrative (adaptation states,
   composite descriptors) that should stay free-text — but not all of it. The
@@ -475,7 +484,8 @@ That makes the loss below worse, not better: nothing here is a partial run that
 was going to need redoing anyway.
 
 But `research/` is in `.gitignore` (line 42, "large, regenerable"), nothing under
-it is tracked, and only **11 traits' reports survive on this checkout**:
+it is tracked, and only **11 traits' reports survive on the checkout this was
+written from**:
 
 ```
 $ find research/traits -name '*-deep-research-falcon.md' | wc -l
@@ -483,6 +493,12 @@ $ find research/traits -name '*-deep-research-falcon.md' | wc -l
 $ uv run python scripts/run_trait_graph_audit.py --dry-run | tail -1
 [342/342] upper/quality  (quality)
 ```
+
+**11 is the generous reading, and it is machine-local.** On a fresh clone
+`research/traits` does not exist at all, so that `find` errors and the count is
+**0** — 353 traits' worth of paid output, none of it recoverable from the
+repository by anyone else. Whatever survives does so only on whichever machine
+happened to run the sweep.
 
 Resume detection in `scripts/run_trait_graph_audit.py` is **file-existence
 based**, so from this checkout the sweep looks 3% done and would re-run — and
