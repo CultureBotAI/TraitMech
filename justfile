@@ -360,10 +360,18 @@ audit-derived-reports:
     set -euo pipefail
     tmp="$(mktemp -d)"
     trap 'rm -rf "$tmp"' EXIT
-    uv run python scripts/ground_causal_predicates.py \
-      --out "$tmp/predicate_grounding_residual.tsv" >/dev/null 2>&1
-    uv run python scripts/ground_causal_nodes.py \
-      --out "$tmp/node_grounding_residual.tsv" >/dev/null 2>&1
+    # Generator output is captured rather than discarded: if one of these fails,
+    # the gate cannot judge staleness at all, and swallowing the traceback would
+    # leave a bare non-zero exit with nothing to act on.
+    generate() {
+      if ! uv run python "$1" --out "$2" > "$tmp/gen.log" 2>&1; then
+        echo "ERROR: $1 failed — cannot check staleness:" >&2
+        cat "$tmp/gen.log" >&2
+        exit 1
+      fi
+    }
+    generate scripts/ground_causal_predicates.py "$tmp/predicate_grounding_residual.tsv"
+    generate scripts/ground_causal_nodes.py "$tmp/node_grounding_residual.tsv"
     fail=0
     for f in predicate_grounding_residual.tsv node_grounding_residual.tsv; do
       if [ ! -f "reports/$f" ]; then
@@ -375,7 +383,12 @@ audit-derived-reports:
         echo "  OK    reports/$f"
       else
         echo "  STALE reports/$f — not what the generator produces:" >&2
-        diff -u "reports/$f" "$tmp/$f" | sed -n '1,20p' >&2
+        # `|| true` is load-bearing: diff exits 1 on a difference, pipefail
+        # propagates that through the pipeline, and `set -e` would abort the
+        # recipe HERE — skipping `fail=1`, skipping the second report, and
+        # making the remediation block below unreachable in exactly the case
+        # it exists for.
+        { diff -u "reports/$f" "$tmp/$f" | sed -n '1,20p' >&2; } || true
         fail=1
       fi
     done
