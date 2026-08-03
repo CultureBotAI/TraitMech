@@ -11,9 +11,9 @@ from __future__ import annotations
 import subprocess
 import sys
 import textwrap
+from pathlib import Path
 
 import yaml
-from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
@@ -371,12 +371,89 @@ def test_conditional_cancel_in_progress_is_clean():
     assert _conc(f"""
         on:
           pull_request:
-          schedule: [{{cron: "0 3 * * *"}}]
+          issue_comment:
         concurrency:
           group: v-${{{{ github.ref }}}}
           cancel-in-progress: ${{{{ github.event_name == 'pull_request' }}}}
         {JOBS}
     """) == []
+
+
+def test_cancel_expression_pointing_the_wrong_way_is_flagged():
+    """`github.event_name` present, but separating the wrong thing.
+
+    `!= 'push'` leaves pull_request and issue_comment both cancelling in one
+    group — #215 verbatim — so merely mentioning github.event_name must not be
+    enough to read as fixed.
+    """
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'push' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_cancel_expression_excluding_the_colliding_trigger_is_clean():
+    """The other valid shape: name the trigger being kept out."""
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' }}}}
+        {JOBS}
+    """) == []
+
+
+def test_schedule_alongside_pull_request_does_not_trip_it():
+    """A scheduled run's ref is a branch, never refs/pull/N/merge.
+
+    Same property that exempts `push`, so flagging this would be the day-one
+    false positive on a ref-keyed group — one trigger over from the shape the
+    push test already covers.
+    """
+    assert _conc(f"""
+        on:
+          pull_request:
+          schedule: [{{cron: "0 3 * * *"}}]
+        concurrency:
+          group: ch-${{{{ github.ref }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """) == []
+
+
+def test_list_shorthand_on_is_not_a_blind_spot():
+    """`on: [pull_request, issue_comment]` is valid and must still be checked.
+
+    The dict-only guard silently returned no findings here, which is the same
+    "nothing evaluated it" failure the whole script exists to prevent.
+    """
+    found = _conc(f"""
+        on: [pull_request, issue_comment]
+        concurrency:
+          group: shared-${{{{ github.event.issue.number }}}}
+          cancel-in-progress: true
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_list_shorthand_counts_as_unfiltered_ci(tmp_path):
+    """The same shorthand blind spot in NO_UNFILTERED_CI: no `paths:` is possible."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(
+        "name: x\non: [pull_request]\njobs:\n  a:\n    runs-on: ubuntu-latest\n"
+        "    steps: [{run: \"true\"}]\n"
+    )
+    _commit(root)
+    assert "NO_UNFILTERED_CI" not in _checks(check_workflows(root))
 
 
 def test_no_cancellation_is_clean():

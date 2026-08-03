@@ -56,21 +56,25 @@ import yaml
 
 WORKFLOW_DIR = Path(".github/workflows")
 
-# Triggers that fire against the SAME pull request without anyone pushing to it.
-# `push` is deliberately absent: a pull_request run and a push run get different
-# `github.ref` values (refs/pull/N/merge vs refs/heads/X), so the common
-# ref-keyed group already separates them. These do not have that protection —
-# an issue_comment run resolves to the same PR number as the pull_request run it
-# would cancel.
-TRIGGERS_WITHOUT_A_PUSH = (
+# Triggers that resolve to the SAME pull request as a `pull_request` run, so
+# they can land in a group keyed on the PR — which is what made #215 possible:
+# the progress comment's `issue_comment` run reached the same PR number through
+# the group's `||` chain.
+#
+# `push` and `schedule` are deliberately absent, and for the same reason: their
+# `github.ref` is a branch, never `refs/pull/N/merge`, and they carry no PR
+# context to key on. A ref-keyed cancelling group — `curation-history.yaml` — is
+# safe with them and flagging it would be a day-one false positive. They can
+# only collide under a constant group key, and that is equally true of `push`,
+# so singling out `schedule` would be an asymmetry with no basis.
+TRIGGERS_ON_THE_SAME_PR = (
     "issue_comment",
     "pull_request_review",
     "pull_request_review_comment",
-    "schedule",
 )
 
-# Either of these in the group key (or in a conditional cancel-in-progress) is
-# enough to keep a no-op run out of a working run's group.
+# In the group key, either of these is enough to separate runs of different
+# triggers.
 CONCURRENCY_DISCRIMINATORS = ("github.run_id", "github.event_name")
 
 # Only the unambiguous markers. A bare "=======" is a legitimate Markdown setext
@@ -109,6 +113,23 @@ def tracked_files(root: Path) -> list[Path]:
     return [root / p for p in out.split("\0") if p]
 
 
+def trigger_names(triggers: object) -> set[str]:
+    """Normalise ``on:`` to a set of trigger names.
+
+    ``on:`` accepts a mapping, a list (``on: [pull_request, issue_comment]``) or
+    a bare string. The shorthands are rare here but perfectly valid, and a check
+    that quietly does nothing on them would be the same "green because nothing
+    evaluated it" failure this file exists to prevent.
+    """
+    if isinstance(triggers, dict):
+        return {str(k) for k in triggers}
+    if isinstance(triggers, list):
+        return {str(t) for t in triggers}
+    if isinstance(triggers, str):
+        return {triggers}
+    return set()
+
+
 def concurrency_blocks(doc: dict) -> list[tuple[str, dict]]:
     """Every concurrency block in a workflow, workflow-level and per job.
 
@@ -136,19 +157,26 @@ def can_cancel(block: dict) -> bool:
     return True
 
 
-def discriminates_by_event(block: dict) -> bool:
+def discriminates_by_event(block: dict, others: list[str]) -> bool:
     """Does this block keep runs of different triggers out of one group?
 
     Two shapes qualify, and both are in use in this repo:
       * the group key varies by event or run — `claude-code-review.yml`;
       * cancellation itself is conditioned on the event, so a comment-triggered
         run cancels nothing — `vendored-sync.yaml`, `pr-sanity.yaml`.
+
+    The second is checked more strictly than "mentions `github.event_name`
+    somewhere", because a mention can point the wrong way:
+    ``cancel-in-progress: ${{ github.event_name != 'push' }}`` is #215 verbatim
+    and would otherwise read as fixed. The expression has to actually name the
+    trigger it is separating — `pull_request`, or the colliding trigger itself.
     """
-    text = str(block.get("group", ""))
+    if any(d in str(block.get("group", "")) for d in CONCURRENCY_DISCRIMINATORS):
+        return True
     cancel = block.get("cancel-in-progress")
-    if isinstance(cancel, str):
-        text += " " + cancel
-    return any(d in text for d in CONCURRENCY_DISCRIMINATORS)
+    if isinstance(cancel, str) and "github.event_name" in cancel:
+        return "pull_request" in cancel or any(t in cancel for t in others)
+    return False
 
 
 def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[dict[str, str]]:
@@ -166,15 +194,16 @@ def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[di
     shape in the fleet after #199 and #196's review, so a cheap approximation
     beats the docs page that keeps not getting written.
     """
-    if not isinstance(triggers, dict) or "pull_request" not in triggers:
+    names = trigger_names(triggers)
+    if "pull_request" not in names:
         return []
-    others = [t for t in TRIGGERS_WITHOUT_A_PUSH if t in triggers]
+    others = [t for t in TRIGGERS_ON_THE_SAME_PR if t in names]
     if not others:
         return []
 
     findings: list[dict[str, str]] = []
     for where, block in concurrency_blocks(doc):
-        if not can_cancel(block) or discriminates_by_event(block):
+        if not can_cancel(block) or discriminates_by_event(block, others):
             continue
         findings.append({
             "check": "CONCURRENCY_SHARED_ACROSS_TRIGGERS",
@@ -236,8 +265,12 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
                 "check": "WORKFLOW_INVALID", "file": rel, "detail": "no `jobs:`",
             })
             continue
-        if isinstance(triggers, dict) and "pull_request" in triggers:
-            pr = triggers["pull_request"]
+        # The list/string `on:` shorthands carry no `paths:`, so they are
+        # unfiltered by construction. The old `isinstance(triggers, dict)` guard
+        # skipped them, which would have under-counted the very invariant this
+        # check exists to keep true.
+        if "pull_request" in trigger_names(triggers):
+            pr = triggers.get("pull_request") if isinstance(triggers, dict) else None
             if pr is None or (isinstance(pr, dict) and not pr.get("paths")):
                 unfiltered.append(rel)
 
