@@ -386,6 +386,10 @@ audit-derived-reports:
     for f in predicate_grounding_residual.tsv node_grounding_residual.tsv; do
       if [ ! -f "reports/$f" ]; then
         echo "  MISSING reports/$f — the generator produced it, the repo has no copy" >&2
+        # Same remediation as STALE — regenerate and commit — so this branch has
+        # to raise the same flag, or the one failure mode with NO committed file
+        # is the one that prints no instructions.
+        stale_grounding=1
         fail=1
         continue
       fi
