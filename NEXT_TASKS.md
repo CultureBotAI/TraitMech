@@ -10,7 +10,7 @@ through **#210** (2026-08-03) — which now includes the whole CI/agent-workflow
 thread (#194, #196, #201, #206, #207, #210, section 7) that was absent from this
 file — plus the claw-side architecture decisions through 2026-07-25.
 
-Open issues, 11 of them:
+Open issues, 13 of them — the last two filed by this reconcile:
 
 | # | what | section |
 |---|---|---|
@@ -25,6 +25,8 @@ Open issues, 11 of them:
 | #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
 | #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
+| #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them | 9 |
+| #215 | **`claude-code-review` cancels itself — no PR has been reviewed since #210 merged** | 7 |
 
 Closed since the last reconcile: **#184** (by #196), **#199**, **#200** (by #201),
 **#202** (by #207), **#204** (by #206).
@@ -348,8 +350,22 @@ surface. What landed, 2026-08-02/03:
   `github.token` would silently restore the self-approval hole the split exists
   to close, and would look identical in the logs.
 
-**Pending — seven small, independent, fully-specified issues**, each verifiable
-by CI, none blocking anything:
+**#215 is the exception to "none of this blocks anything" — fix it first.**
+`claude-code-review.yml` posts a progress comment as it works; that comment fires
+`issue_comment: created`, which lands in the *same* workflow-level concurrency
+group (`claude-review-<PR>`) and, with `cancel-in-progress: true`, cancels the
+run that posted it. Concurrency is evaluated **before** the job's `if:`, so the
+no-op comment run kills the real one. It was green on `feat/claude-code-review`
+only because `issue_comment` workflows run from the *default branch's* copy of
+the file, which did not exist until #210 merged — a merge-activated regression
+that no pre-merge CI could have seen. Fix: move `concurrency:` onto the job, so a
+job skipped by `if:` never joins the group. Check `pr-shepherd.yml` for the same
+shape before it gets a comment trigger. Third concurrency-scoping bug here after
+#199 and #196's review — worth a workflow-authoring convention, not a fourth
+issue.
+
+**The other pending items are small, independent and fully specified**, each
+verifiable by CI, none blocking anything:
 
 | # | fix | note |
 |---|---|---|
@@ -412,6 +428,9 @@ Each mapping row is verified by the existing **blocking** `label-correspondence`
 gate (`just validate-products`), which checks the CURIE's label against OAK — so
 a wrong CURIE fails CI rather than landing silently. Apply with
 `scripts/ground_causal_predicates.py --apply` / `ground_causal_nodes.py --apply`.
+**Caveat (#214):** the residual TSVs are tracked but nothing regenerates them, so
+they lag the corpus — `cellobiose` still appeared as ungrounded weeks after #185
+grounded it. Regenerate before trusting the ranking as a work queue.
 Where no ontology term fits, the actionable form is `metpo-proposal`, not a
 force-match — the section 4 floor still stands for the tail.
 
