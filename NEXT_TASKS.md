@@ -31,7 +31,7 @@ already closed, on the line below the table:
 | #205 | `pr-shepherd` model resolution imports an undeclared PyYAML from system python | 7 |
 | #208 | `pr-sanity` still scans 4-space-indented code blocks for links | 7 |
 | #209 | `vendored-sync.yaml` is a fourth de-facto shared file with no drift protection | 7 |
-| #214 | grounding residual reports drift from the corpus, nothing regenerates or checks them — **blocks the section 9 loop** | 9 |
+| #214 | grounding residual reports drift with nothing to catch it — **fix open, `audit-derived-reports`** | 9 |
 | #217 | no workflow-authoring conventions page, so concurrency lessons keep being relearned | 7 |
 | #218 | `pr-sanity` should *enforce* the concurrency rule #217 only documents | 7 |
 | #220 | `audit-graphs` is blind to a graph splitting into two **trait-bearing** components | 5 |
@@ -222,13 +222,16 @@ remains.
   residual 1274 edges across 572 distinct labels; **nodes 1461/4136 grounded
   (35%)**, residual 2675 across 2318 distinct (label, type) keys.
 
-  Those two figures come from **running** the scripts. The **committed**
-  `reports/node_grounding_residual.tsv` disagrees by exactly one row — 2319 keys
-  summing to 2676 — because it still lists `cellobiose`, grounded to `CHEBI:17057`
-  back in #185. The fresh numbers are the correct ones (1461 + 2675 = 4136 nodes;
-  1461 + 2676 does not close). This is **#214 demonstrating itself**: trust the
-  script over the checked-in report, and regenerate before using either as a work
-  queue. The predicate report happens to be current and reproduces exactly.
+  These reproduce from the committed reports as of this revision. They did not
+  before: `reports/node_grounding_residual.tsv` was stale by exactly one row —
+  2319 keys summing to 2676 — because it still listed `cellobiose`, grounded to
+  `CHEBI:17057` back in #185. The fresh figures are the ones that close
+  (1461 + 2675 = 4136 nodes; 1461 + 2676 does not).
+
+  **#214 is fixed**: `just audit-derived-reports` regenerates both TSVs into a
+  temp dir and fails if either differs from the tracked copy, and it runs as part
+  of `just qc`. So the reports can no longer drift silently, and reading the
+  numbers no longer dirties a tracked file.
 - **The "this is the quality floor" claim was also too generous.** Much of the
   residual genuinely is non-ontological graph narrative (adaptation states,
   composite descriptors) that should stay free-text — but not all of it. The
@@ -537,9 +540,11 @@ Each mapping row is verified by the existing **blocking** `label-correspondence`
 gate (`just validate-products`), which checks the CURIE's label against OAK — so
 a wrong CURIE fails CI rather than landing silently. Apply with
 `scripts/ground_causal_predicates.py --apply` / `ground_causal_nodes.py --apply`.
-**Caveat (#214):** the residual TSVs are tracked but nothing regenerates them, so
-they lag the corpus — `cellobiose` still appeared as ungrounded weeks after #185
-grounded it. Regenerate before trusting the ranking as a work queue.
+**The queue is now trustworthy (#214, fixed).** The residual TSVs used to lag the
+corpus with nothing to catch it — `cellobiose` still appeared as ungrounded weeks
+after #185 grounded it. `just audit-derived-reports` now regenerates both and
+fails if the tracked copies differ, and it runs inside `just qc`, so the ranking
+can be taken at face value rather than regenerated defensively first.
 Where no ontology term fits, the actionable form is `metpo-proposal`, not a
 force-match — the section 4 floor still stands for the tail.
 

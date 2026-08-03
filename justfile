@@ -334,10 +334,65 @@ lint:
 
 check: lint test
 
+# Fail when a tracked derived report no longer matches what its generator
+# produces (#214). These two TSVs are the *work queue* for the grounding backlog
+# — section 9 of NEXT_TASKS ranks labels by residual count off them — so a stale
+# copy silently sends work at labels that are already grounded. That is not
+# hypothetical: `cellobiose` sat in the committed node report for weeks after
+# #185 grounded it to CHEBI:17057, and the report only disagreed by that one row,
+# which is exactly the size of error nobody notices.
+#
+# Generates into a temp dir and never touches reports/ — the old habit of
+# running the script just to read the numbers, and thereby dirtying a tracked
+# file, is the other half of #214.
+#
+# Compares against the WORKING TREE rather than `git show HEAD:`. In CI the two
+# are the same thing, so the invariant enforced there is exactly "the committed
+# copy is current". Locally, comparing the working tree means regenerating
+# clears the failure immediately, instead of only after you commit — the HEAD
+# variant tells you to fix something and then keeps failing when you have.
+#
+# Not covered here: reports/causal_graph_audit.tsv, because `audit-graphs`
+# regenerates it during this same `qc` run. If that ever stops being true it
+# belongs in this list.
+audit-derived-reports:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    tmp="$(mktemp -d)"
+    trap 'rm -rf "$tmp"' EXIT
+    uv run python scripts/ground_causal_predicates.py \
+      --out "$tmp/predicate_grounding_residual.tsv" >/dev/null 2>&1
+    uv run python scripts/ground_causal_nodes.py \
+      --out "$tmp/node_grounding_residual.tsv" >/dev/null 2>&1
+    fail=0
+    for f in predicate_grounding_residual.tsv node_grounding_residual.tsv; do
+      if [ ! -f "reports/$f" ]; then
+        echo "  MISSING reports/$f — the generator produced it, the repo has no copy" >&2
+        fail=1
+        continue
+      fi
+      if diff -q "reports/$f" "$tmp/$f" >/dev/null; then
+        echo "  OK    reports/$f"
+      else
+        echo "  STALE reports/$f — not what the generator produces:" >&2
+        diff -u "reports/$f" "$tmp/$f" | sed -n '1,20p' >&2
+        fail=1
+      fi
+    done
+    if [ "$fail" -ne 0 ]; then
+      echo "" >&2
+      echo "derived reports are stale (#214). Regenerate and commit them:" >&2
+      echo "  uv run python scripts/ground_causal_predicates.py" >&2
+      echo "  uv run python scripts/ground_causal_nodes.py" >&2
+      echo "  git add reports/" >&2
+      exit 1
+    fi
+    echo "=== derived reports: all current ==="
+
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths
+qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths audit-derived-reports
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
