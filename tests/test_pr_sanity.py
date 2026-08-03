@@ -563,3 +563,31 @@ def test_pull_request_target_counts_as_the_same_pr():
         {JOBS}
     """)
     assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_excluding_only_one_of_two_colliders_is_flagged():
+    """`!= 'issue_comment'` leaves pull_request_review runs cancelling."""
+    found = _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+          pull_request_review:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' }}}}
+        {JOBS}
+    """)
+    assert [f["check"] for f in found] == ["CONCURRENCY_SHARED_ACROSS_TRIGGERS"]
+
+
+def test_excluding_every_collider_is_clean():
+    assert _conc(f"""
+        on:
+          pull_request:
+          issue_comment:
+          pull_request_review:
+        concurrency:
+          group: r-${{{{ github.event.pull_request.number }}}}
+          cancel-in-progress: ${{{{ github.event_name != 'issue_comment' && github.event_name != 'pull_request_review' }}}}
+        {JOBS}
+    """) == []

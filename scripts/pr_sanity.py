@@ -194,7 +194,10 @@ def discriminates_by_event(block: dict, others: list[str]) -> bool:
     not_equals = set(EVENT_NAME_NE.findall(cancel))
     if equals and not (equals & colliding):
         return True
-    return bool(not_equals & colliding)
+    # EVERY colliding trigger has to be excluded, not just one. With both
+    # `issue_comment` and `pull_request_review` on the workflow,
+    # `!= 'issue_comment'` still leaves review runs cancelling in the group.
+    return bool(colliding) and colliding.issubset(not_equals)
 
 
 def check_workflow_concurrency(rel: str, doc: dict, triggers: object) -> list[dict[str, str]]:
