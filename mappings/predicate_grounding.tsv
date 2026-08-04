@@ -96,3 +96,5 @@ hydrolyzes	METPO:2000013	hydrolyzes	skos:exactMatch	METPO	high	exact label match
 disproportionates	METPO:2000200	disproportionates	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 2 edges
 does not produce	METPO:2000222	does not produce	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 1 edges
 transports	METPO:2000207	transports	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 1 edges
+positively regulates	RO:0002213	positively regulates	skos:exactMatch	RO	high	exact label match against RO; the corpus paraphrase "promotes" already maps here as a closeMatch, so the canonical label was the one left ungrounded
+negatively regulates	RO:0002212	negatively regulates	skos:exactMatch	RO	high	exact label match against RO; paired-positive at RO:0002213. Paraphrases inhibits/suppresses/prevents already map here as closeMatch

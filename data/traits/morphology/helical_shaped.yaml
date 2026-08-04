@@ -151,6 +151,7 @@ causal_graphs:
     - reference: DOI:10.1371/journal.ppat.1002602
       notes: pgp1 deletion converts helical cells to rod-shaped cells, i.e., loss
         of helical shape.
+    predicate_id: RO:0002212
   - subject: pg_crosslink_hydrolysis
     predicate: enables
     object: helical_curvature_twist
@@ -208,4 +209,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

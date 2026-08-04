@@ -23,7 +23,9 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:103690
   taxon_label: Nostoc sp. PCC 7120
-  note: "Model heterocyst-forming cyanobacterium (also classified as Anabaena sp. PCC 7120); heterocysts are the N2-fixing cells. Trichormus (Anabaena) variabilis ATCC 29413 is an alternative model."
+  note: Model heterocyst-forming cyanobacterium (also classified as Anabaena sp. PCC
+    7120); heterocysts are the N2-fixing cells. Trichormus (Anabaena) variabilis ATCC
+    29413 is an alternative model.
   reference: PMID:11759840
 causal_graphs:
 - graph_id: heterocyst_microoxic_nitrogen_fixation
@@ -128,6 +130,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1371/journal.pone.0289761
       notes: '"hetR, the master regulator of heterocyst development".'
+    predicate_id: RO:0002213
   - subject: furc_perr
     predicate: binds promoter of
     object: hetr_promoter
@@ -172,6 +175,7 @@ causal_graphs:
     - reference: DOI:10.1101/2023.10.04.560878
       notes: '"inactivation of one of the genes patS and hetN" caused the Mch (multiple
         contiguous heterocyst) phenotype.'
+    predicate_id: RO:0002212
   - subject: hetn_regulator
     predicate: negatively regulates
     object: het_diff_process
@@ -180,6 +184,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1101/2023.10.04.560878
       notes: '"inactivation of one of the genes patS and hetN" caused the Mch phenotype.'
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -211,4 +216,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0043158×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×2, RO:0002213×1).
   llm_assisted: true

@@ -200,6 +200,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1039/D3CY00737E
       notes: high copper favors pMMO and represses sMMO
+    predicate_id: RO:0002213
   - subject: copper
     predicate: negatively regulates
     object: soluble_methane_monooxygenase
@@ -208,6 +209,7 @@ causal_graphs:
     - reference: DOI:10.1039/D3CY00737E
       notes: high copper favors pMMO and represses sMMO; low copper/biomass favors
         sMMO
+    predicate_id: RO:0002212
   - subject: pmocab_operon
     predicate: encodes
     object: pmmo_subunits
@@ -335,4 +337,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0015050×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1, RO:0002212×1).
   llm_assisted: true

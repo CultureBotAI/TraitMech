@@ -23,7 +23,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:294
   taxon_label: Pseudomonas fluorescens
-  note: "Canonical rhizosphere-colonising / biocontrol model."
+  note: Canonical rhizosphere-colonising / biocontrol model.
   reference: PMID:11701873
 causal_graphs:
 - graph_id: rhizosphere_root_exudate
@@ -101,6 +101,7 @@ causal_graphs:
     - reference: DOI:10.3389/fpls.2024.1491495
       notes: Bacteria use transmembrane chemoreceptors (MCPs) to sense diverse root
         exudates.
+    predicate_id: RO:0002213
   - subject: che_signaling
     predicate: positively regulates
     object: flagellar_motility
@@ -109,6 +110,7 @@ causal_graphs:
     - reference: DOI:10.3389/fpls.2024.1491495
       notes: Phosphorylated CheY interacts with motility proteins, mediating bacterial
         movement.
+    predicate_id: RO:0002213
   - subject: bacterial_chemotaxis
     predicate: enables
     object: root_colonization
@@ -126,6 +128,7 @@ causal_graphs:
     - reference: DOI:10.1093/femsre/fuad066
       notes: Disruption of chemotaxis or flagellin synthesis led to a 100-fold decrease
         in root colonization efficiency.
+    predicate_id: RO:0002213
   - subject: root_exudates
     predicate: positively regulates
     object: biofilm_formation
@@ -134,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.3389/fpls.2024.1491495
       notes: Root exudates serve as carbon sources that are prerequisites for biofilm
         formation.
+    predicate_id: RO:0002213
   - subject: biofilm_formation
     predicate: positively regulates
     object: rhizosphere_trait
@@ -142,6 +146,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/biology13020095
       notes: Biofilms provide nutrient-rich microenvironments and protection.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -172,4 +177,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0042710×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 5 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×5).
   llm_assisted: true

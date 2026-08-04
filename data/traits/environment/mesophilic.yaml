@@ -19,7 +19,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "Canonical mesophile and universal model organism (optimum ~37 C)."
+  note: Canonical mesophile and universal model organism (optimum ~37 C).
   reference: DOI:10.1021/acsomega.2c04786
 causal_graphs:
 - graph_id: mesophilic_homoviscous_adaptation
@@ -190,6 +190,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: RpoH is controlled by DnaK chaperone sequestration; canonical negative
         regulation in Gram-negative bacteria.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.857659+00:00'
   curator: seed_from_metpo
@@ -273,4 +274,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:27208×1, GO:0006412×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:12Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

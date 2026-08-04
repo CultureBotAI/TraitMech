@@ -138,6 +138,7 @@ causal_graphs:
     - reference: DOI:10.1016/j.isci.2024.108818
       notes: (p)ppGpp positively regulates RpoS by transcriptional activation and
         by inhibiting RpoS proteolysis.
+    predicate_id: RO:0002213
   - subject: rpos
     predicate: induces
     object: general_stress_resistance
@@ -200,4 +201,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

@@ -184,6 +184,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: DnaK binds and retains RpoH until heat-denatured proteins displace it.
+    predicate_id: RO:0002212
   - subject: ftsh_protease
     predicate: controls abundance of
     object: rpoh_sigma_factor
@@ -226,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:A0A0D7UY21×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

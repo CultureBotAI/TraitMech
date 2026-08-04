@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:180
   taxon_label: Leptospirillum ferrooxidans
-  note: "Acidophilic Fe(II) oxidiser (bioleaching/AMD). Gallionella ferruginea is the neutrophilic stalk-forming Fe oxidiser."
+  note: Acidophilic Fe(II) oxidiser (bioleaching/AMD). Gallionella ferruginea is the
+    neutrophilic stalk-forming Fe oxidiser.
   reference: PMID:22815442
 causal_graphs:
 - graph_id: iron_oxidation_ferrous_to_ferric
@@ -142,6 +143,7 @@ causal_graphs:
     - reference: DOI:10.1128/mSystems.00038-23
       notes: '"they bind to hemes, inhibiting the activity of cytochromes, and also
         directly oxidize Fe(II), thus competing with enzymatic iron oxidation".'
+    predicate_id: RO:0002212
   - subject: multiheme_cytochromes
     predicate: enables
     object: extracellular_electron_transfer
@@ -177,4 +179,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000016×1, RO:0002327×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

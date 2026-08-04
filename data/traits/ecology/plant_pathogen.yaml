@@ -19,7 +19,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:317
   taxon_label: Pseudomonas syringae
-  note: "Model bacterial plant pathogen (Type III secretion, effector biology). Agrobacterium tumefaciens is the classic crown-gall/genetic-tool exemplar."
+  note: Model bacterial plant pathogen (Type III secretion, effector biology). Agrobacterium
+    tumefaciens is the classic crown-gall/genetic-tool exemplar.
   reference: PMID:29479077
 causal_graphs:
 - graph_id: plant_pathogen_t3ss_effector_program
@@ -159,6 +160,7 @@ causal_graphs:
     - reference: DOI:10.3390/plants12112207
       notes: QS is required for cooperative biofilm formation and regulates toxins,
         enzymes, EPS, and virulence factors.
+    predicate_id: RO:0002213
   - subject: quorum_sensing
     predicate: positively regulates
     object: eps_production
@@ -168,6 +170,7 @@ causal_graphs:
     - reference: DOI:10.3390/plants12112207
       notes: EPS such as amylovoran, levan, xanthan, stewartan, and cellulose are
         often regulated by intracellular c-di-GMP and QS.
+    predicate_id: RO:0002213
   - subject: eps_production
     predicate: enables
     object: biofilm_formation
@@ -282,4 +285,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000007×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:11Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true

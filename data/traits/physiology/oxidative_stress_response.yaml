@@ -19,7 +19,7 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "Paradigm of the bacterial oxidative-stress response (OxyR and SoxRS regulons)."
+  note: Paradigm of the bacterial oxidative-stress response (OxyR and SoxRS regulons).
   reference: PMID:22381957
 causal_graphs:
 - graph_id: oxidative_stress_response_ros_defense
@@ -83,6 +83,7 @@ causal_graphs:
     - reference: DOI:10.1099/mic.0.001481
       notes: OxyR is widely conserved in bacteria and activates transcription of a
         set of genes that influence cellular defence against oxidative stress.
+    predicate_id: RO:0002213
   - subject: rpos_sigma_factor
     predicate: positively regulates
     object: oxidative_stress_process
@@ -92,6 +93,7 @@ causal_graphs:
     - reference: DOI:10.1128/mmbr.00151-22
       notes: Cells devoid of RpoS are sensitive to oxidative stress; the RpoS regulon
         includes oxidative-stress genes (dps, catalases, sodA, osmC).
+    predicate_id: RO:0002213
   - subject: thioredoxin_system
     predicate: contributes to
     object: oxidative_stress_process
@@ -126,4 +128,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (RO:0002326×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true

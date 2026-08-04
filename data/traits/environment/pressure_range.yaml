@@ -109,6 +109,7 @@ causal_graphs:
     - reference: DOI:10.3389/fmolb.2022.1058381
       notes: Mutants with reduced C18:1 could not withstand high pressure; unsaturation
         counters pressure ordering.
+    predicate_id: RO:0002213
   - subject: membrane_fluidity_hhp
     predicate: expands
     object: pressure_range_trait
@@ -172,4 +173,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006636×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:266
   taxon_label: Paracoccus denitrificans
-  note: "Classic complete denitrifier (NO3->NO2->NO->N2O->N2 via nar/nir/nor/nos); free-living model of the respiratory chain."
+  note: Classic complete denitrifier (NO3->NO2->NO->N2O->N2 via nar/nir/nor/nos);
+    free-living model of the respiratory chain.
   reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12848317/
 causal_graphs:
 - graph_id: denitrification_stepwise_nitrate_to_n2
@@ -166,6 +167,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1038/s41467-024-51688-w
       notes: O2 acts as a superordinate repressor of denitrification.
+    predicate_id: RO:0002212
   - subject: denitrification_modularity
     predicate: causes
     object: transient_intermediate_accumulation
@@ -207,4 +209,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:I0HLW6×1, UniProtKB:Q30PN7×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:14Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

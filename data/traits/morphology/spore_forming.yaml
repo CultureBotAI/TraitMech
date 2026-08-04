@@ -191,6 +191,7 @@ causal_graphs:
     - reference: DOI:10.3390/microbiolres14020035
       notes: A second negative control is provided by Spo0E-family Spo0A-specific
         phosphatases.
+    predicate_id: RO:0002212
 curation_history:
 - timestamp: '2026-05-05T01:35:46.917323+00:00'
   curator: seed_from_metpo
@@ -262,4 +263,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:15Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

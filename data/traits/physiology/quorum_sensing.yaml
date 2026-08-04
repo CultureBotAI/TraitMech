@@ -23,7 +23,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:668
   taxon_label: Aliivibrio fischeri
-  note: "Where quorum sensing was discovered (LuxI/LuxR autoinduction of bioluminescence); the founding QS model. Vibrio harveyi is a parallel model."
+  note: Where quorum sensing was discovered (LuxI/LuxR autoinduction of bioluminescence);
+    the founding QS model. Vibrio harveyi is a parallel model.
   reference: DOI:10.1128/jb.00035-24
 causal_graphs:
 - graph_id: quorum_sensing_autoinducer
@@ -102,6 +103,7 @@ causal_graphs:
     - reference: DOI:10.3390/ijms25052655
       notes: AHL-LuxR complex recognises the lux box of luxI to promote luxI transcription,
         described as a positive feedback loop central to autoinduction.
+    predicate_id: RO:0002213
   - subject: quorum_quenching_enzyme
     predicate: inactivates
     object: autoinducer
@@ -156,4 +158,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:G2JHL6×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:16Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

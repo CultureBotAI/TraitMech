@@ -115,6 +115,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-024-02602-y
       notes: The expression of groEL, dnaKJ, grpE, and clpB were regulated by the
         sigma factor RpoH, whose deletion led to heat sensitivity.
+    predicate_id: RO:0002213
   - subject: heat_shock_chaperone_expression
     predicate: enables
     object: heat_shock_response
@@ -144,6 +145,7 @@ causal_graphs:
     - reference: DOI:10.1007/s12275-023-00031-x
       notes: Activated RpoE induces heat-shock proteins, periplasmic proteases (HtrA,
         DegP), and genes for membrane protein folding and LPS biosynthesis.
+    predicate_id: RO:0002213
   - subject: unsaturated_fa_biosynthesis
     predicate: contributes to
     object: thermotolerant_trait
@@ -163,6 +165,7 @@ causal_graphs:
     - reference: DOI:10.1186/s40694-023-00168-9
       notes: Accumulation of mannitol and trehalose as the main compatible solutes
         is a key factor for heat resistance.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.860266+00:00'
   curator: seed_from_metpo
@@ -239,4 +242,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0006636×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T03:08:13Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3).
   llm_assisted: true
