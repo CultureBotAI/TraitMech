@@ -2,7 +2,7 @@
 
 ## Target Trait
 - **Trait label:** {trait_label}
-- **METPO identifier:** {trait_identifier}
+- **Trait identifier (already a CURIE — quote it verbatim, do not prefix it):** {trait_identifier}
 - **Trait category:** {trait_category}
 - **Term kind:** {term_kind}
 - **Mapping status:** {mapping_status}

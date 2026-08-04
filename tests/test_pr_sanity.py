@@ -687,3 +687,28 @@ def test_list_body_resumes_after_a_code_block_inside_the_item():
     """The threshold must survive a block: 6 spaces is code, 4 is body again."""
     pairs, _ = prose_lines("- item\n\n      code\n\n    body [x](nope.md)\n")
     assert any("nope.md" in line for _, line in pairs)
+
+
+def test_uri_schemes_are_skipped_not_treated_as_paths(tmp_path):
+    """Tracking research/ brought in Edison's `artifact:` refs and broke CI.
+
+    A scheme rule replaced the old http/https/mailto/tel allowlist, which had to
+    grow every time a new one appeared.
+    """
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text(
+        "[a](artifact:artifact-02)\n[b](doi:10.1/x)\n[c](https://e.com/x)\n"
+        "[d](mailto:x@e.com)\n[e](#anchor)\n"
+    )
+    _commit(root)
+    assert check_markdown_links([md], root) == []
+
+
+def test_a_relative_path_is_still_checked_alongside_schemes(tmp_path):
+    """The scheme rule must not swallow ordinary broken relative links."""
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("[ok](artifact:x)\n[bad](does/not/exist.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]

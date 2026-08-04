@@ -1,362 +1,377 @@
-category	slug	status	output
-ecology	animal_pathogen	ok	research/traits/ecology/animal_pathogen-deep-research-falcon.md
-ecology	biofilm_formation	fail:1	
-ecology	biosafety_level	fail:1	
-ecology	biosafety_level_1	fail:1	
-ecology	biosafety_level_2	fail:1	
-ecology	biosafety_level_3	fail:1	
-ecology	biosafety_level_4	fail:1	
-ecology	biosafety_level_5	fail:1	
-ecology	biofilm_formation	ok	research/traits/ecology/biofilm_formation-deep-research-falcon.md
-ecology	biosafety_level	ok	research/traits/ecology/biosafety_level-deep-research-falcon.md
-ecology	biosafety_level_2	ok	research/traits/ecology/biosafety_level_2-deep-research-falcon.md
-ecology	biosafety_level_1	ok	research/traits/ecology/biosafety_level_1-deep-research-falcon.md
-ecology	biosafety_level_5	ok	research/traits/ecology/biosafety_level_5-deep-research-falcon.md
-ecology	biosafety_level_4	ok	research/traits/ecology/biosafety_level_4-deep-research-falcon.md
-ecology	commensalism	ok	research/traits/ecology/commensalism-deep-research-falcon.md
-ecology	biosafety_level_3	ok	research/traits/ecology/biosafety_level_3-deep-research-falcon.md
-ecology	free_living	ok	research/traits/ecology/free_living-deep-research-falcon.md
-ecology	endosymbiosis	ok	research/traits/ecology/endosymbiosis-deep-research-falcon.md
-ecology	host_associated	ok	research/traits/ecology/host_associated-deep-research-falcon.md
-ecology	gut_associated	ok	research/traits/ecology/gut_associated-deep-research-falcon.md
-ecology	parasitism	ok	research/traits/ecology/parasitism-deep-research-falcon.md
-ecology	human_pathogen	ok	research/traits/ecology/human_pathogen-deep-research-falcon.md
-ecology	mutualism	ok	research/traits/ecology/mutualism-deep-research-falcon.md
-ecology	habitat_association	ok	research/traits/ecology/habitat_association-deep-research-falcon.md
-ecology	nitrogen_fixing_symbiosis	ok	research/traits/ecology/nitrogen_fixing_symbiosis-deep-research-falcon.md
-ecology	opportunistic_pathogen	ok	research/traits/ecology/opportunistic_pathogen-deep-research-falcon.md
-ecology	pathogenic_to_host	ok	research/traits/ecology/pathogenic_to_host-deep-research-falcon.md
-ecology	plant_pathogen	ok	research/traits/ecology/plant_pathogen-deep-research-falcon.md
-ecology	rhizosphere_association	ok	research/traits/ecology/rhizosphere_association-deep-research-falcon.md
-ecology	symbiosis	ok	research/traits/ecology/symbiosis-deep-research-falcon.md
-ecology	saprotrophy	ok	research/traits/ecology/saprotrophy-deep-research-falcon.md
-ecology	soil_dwelling	ok	research/traits/ecology/soil_dwelling-deep-research-falcon.md
-ecology	predatory_bacterium	ok	research/traits/ecology/predatory_bacterium-deep-research-falcon.md
-environment	acidotolerant	ok	research/traits/environment/acidotolerant-deep-research-falcon.md
-environment	aerotolerant	ok	research/traits/environment/aerotolerant-deep-research-falcon.md
-environment	acidophilic	ok	research/traits/environment/acidophilic-deep-research-falcon.md
-environment	aerobic	ok	research/traits/environment/aerobic-deep-research-falcon.md
-environment	alkaphilic	ok	research/traits/environment/alkaphilic-deep-research-falcon.md
-environment	anaerobic	ok	research/traits/environment/anaerobic-deep-research-falcon.md
-environment	arsenic_tolerant	ok	research/traits/environment/arsenic_tolerant-deep-research-falcon.md
-environment	cobalt_tolerant	ok	research/traits/environment/cobalt_tolerant-deep-research-falcon.md
-environment	cadmium_tolerant	ok	research/traits/environment/cadmium_tolerant-deep-research-falcon.md
-environment	alkalotolerant	ok	research/traits/environment/alkalotolerant-deep-research-falcon.md
-environment	copper_tolerant	ok	research/traits/environment/copper_tolerant-deep-research-falcon.md
-environment	euryhaline	ok	research/traits/environment/euryhaline-deep-research-falcon.md
-environment	facultative_oxygen_preference	ok	research/traits/environment/facultative_oxygen_preference-deep-research-falcon.md
-environment	extreme_hyperthermophilic	ok	research/traits/environment/extreme_hyperthermophilic-deep-research-falcon.md
-environment	extremely_halophilic	ok	research/traits/environment/extremely_halophilic-deep-research-falcon.md
-environment	delta_phenotype_with_numerical_limits	ok	research/traits/environment/delta_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	desiccation_tolerant	ok	research/traits/environment/desiccation_tolerant-deep-research-falcon.md
-environment	facultatively_acidophilic	ok	research/traits/environment/facultatively_acidophilic-deep-research-falcon.md
-environment	haloalkaliphilic	ok	research/traits/environment/haloalkaliphilic-deep-research-falcon.md
-environment	facultatively_aerobic	ok	research/traits/environment/facultatively_aerobic-deep-research-falcon.md
-environment	facultatively_anaerobic	ok	research/traits/environment/facultatively_anaerobic-deep-research-falcon.md
-environment	facultatively_alkaphilic	ok	research/traits/environment/facultatively_alkaphilic-deep-research-falcon.md
-environment	growth_range_phenotype_with_numerical_limits	ok	research/traits/environment/growth_range_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	facultative_psychrophilic	ok	research/traits/environment/facultative_psychrophilic-deep-research-falcon.md
-environment	hyperthermophilic	ok	research/traits/environment/hyperthermophilic-deep-research-falcon.md
-environment	mercury_tolerant	ok	research/traits/environment/mercury_tolerant-deep-research-falcon.md
-environment	ionizing_radiation_tolerant	ok	research/traits/environment/ionizing_radiation_tolerant-deep-research-falcon.md
-environment	halophilic	ok	research/traits/environment/halophilic-deep-research-falcon.md
-environment	halotolerant	ok	research/traits/environment/halotolerant-deep-research-falcon.md
-environment	mesophilic	ok	research/traits/environment/mesophilic-deep-research-falcon.md
-environment	metal_tolerant	ok	research/traits/environment/metal_tolerant-deep-research-falcon.md
-environment	halophily_preference	ok	research/traits/environment/halophily_preference-deep-research-falcon.md
-environment	microaerotolerant	ok	research/traits/environment/microaerotolerant-deep-research-falcon.md
-environment	microaerophilic	ok	research/traits/environment/microaerophilic-deep-research-falcon.md
-environment	nacl_delta	ok	research/traits/environment/nacl_delta-deep-research-falcon.md
-environment	moderately_halophilic	ok	research/traits/environment/moderately_halophilic-deep-research-falcon.md
-environment	nacl_delta_high	ok	research/traits/environment/nacl_delta_high-deep-research-falcon.md
-environment	nacl_delta_low	ok	research/traits/environment/nacl_delta_low-deep-research-falcon.md
-environment	nacl_optimum_high	ok	research/traits/environment/nacl_optimum_high-deep-research-falcon.md
-environment	nacl_delta_mid1	ok	research/traits/environment/nacl_delta_mid1-deep-research-falcon.md
-environment	nacl_delta_mid2	ok	research/traits/environment/nacl_delta_mid2-deep-research-falcon.md
-environment	nacl_optimum	ok	research/traits/environment/nacl_optimum-deep-research-falcon.md
-environment	nacl_optimum_mid1	ok	research/traits/environment/nacl_optimum_mid1-deep-research-falcon.md
-environment	nacl_range	ok	research/traits/environment/nacl_range-deep-research-falcon.md
-environment	nacl_optimum_mid2	fail:1	
-environment	nacl_optimum_low	ok	research/traits/environment/nacl_optimum_low-deep-research-falcon.md
-environment	nacl_range_high	ok	research/traits/environment/nacl_range_high-deep-research-falcon.md
-environment	nacl_range_mid1	ok	research/traits/environment/nacl_range_mid1-deep-research-falcon.md
-environment	neutrophilic	ok	research/traits/environment/neutrophilic-deep-research-falcon.md
-environment	nacl_range_mid2	ok	research/traits/environment/nacl_range_mid2-deep-research-falcon.md
-environment	obligately_acidophilic	ok	research/traits/environment/obligately_acidophilic-deep-research-falcon.md
-environment	non_halophilic	ok	research/traits/environment/non_halophilic-deep-research-falcon.md
-environment	nacl_range_low	ok	research/traits/environment/nacl_range_low-deep-research-falcon.md
-environment	obligately_alkaphilic	ok	research/traits/environment/obligately_alkaphilic-deep-research-falcon.md
-environment	obligately_aerobic	ok	research/traits/environment/obligately_aerobic-deep-research-falcon.md
-environment	optimum_phenotype_with_numerical_limits	ok	research/traits/environment/optimum_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	obligately_anaerobic	ok	research/traits/environment/obligately_anaerobic-deep-research-falcon.md
-environment	obligately_piezophilic	ok	research/traits/environment/obligately_piezophilic-deep-research-falcon.md
-environment	oxygen_preference	ok	research/traits/environment/oxygen_preference-deep-research-falcon.md
-environment	ph_delta_high	ok	research/traits/environment/ph_delta_high-deep-research-falcon.md
-environment	ph_delta	ok	research/traits/environment/ph_delta-deep-research-falcon.md
-environment	ph_delta_mid3	ok	research/traits/environment/ph_delta_mid3-deep-research-falcon.md
-environment	ph_delta_low	ok	research/traits/environment/ph_delta_low-deep-research-falcon.md
-environment	ph_delta_mid2	ok	research/traits/environment/ph_delta_mid2-deep-research-falcon.md
-environment	ph_delta_mid1	ok	research/traits/environment/ph_delta_mid1-deep-research-falcon.md
-environment	ph_growth_preference	ok	research/traits/environment/ph_growth_preference-deep-research-falcon.md
-environment	ph_delta_very_low	ok	research/traits/environment/ph_delta_very_low-deep-research-falcon.md
-environment	ph_optimum	ok	research/traits/environment/ph_optimum-deep-research-falcon.md
-environment	ph_optimum_mid2	ok	research/traits/environment/ph_optimum_mid2-deep-research-falcon.md
-environment	ph_optimum_mid1	ok	research/traits/environment/ph_optimum_mid1-deep-research-falcon.md
-environment	ph_phenotype_with_numerical_limits	ok	research/traits/environment/ph_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	ph_range	ok	research/traits/environment/ph_range-deep-research-falcon.md
-environment	ph_range_low	ok	research/traits/environment/ph_range_low-deep-research-falcon.md
-environment	ph_optimum_low	ok	research/traits/environment/ph_optimum_low-deep-research-falcon.md
-environment	ph_optimum_high	ok	research/traits/environment/ph_optimum_high-deep-research-falcon.md
-environment	ph_range_high	ok	research/traits/environment/ph_range_high-deep-research-falcon.md
-environment	ph_range_very_low	ok	research/traits/environment/ph_range_very_low-deep-research-falcon.md
-environment	piezophilic	ok	research/traits/environment/piezophilic-deep-research-falcon.md
-environment	piezotolerant	ok	research/traits/environment/piezotolerant-deep-research-falcon.md
-environment	ph_range_mid2	ok	research/traits/environment/ph_range_mid2-deep-research-falcon.md
-environment	ph_range_mid1	ok	research/traits/environment/ph_range_mid1-deep-research-falcon.md
-environment	ph_range_mid3	ok	research/traits/environment/ph_range_mid3-deep-research-falcon.md
-environment	pressure_optimum	ok	research/traits/environment/pressure_optimum-deep-research-falcon.md
-environment	psychrotolerant	ok	research/traits/environment/psychrotolerant-deep-research-falcon.md
-environment	pressure_delta	ok	research/traits/environment/pressure_delta-deep-research-falcon.md
-environment	radiotolerant	ok	research/traits/environment/radiotolerant-deep-research-falcon.md
-environment	psychrophilic	ok	research/traits/environment/psychrophilic-deep-research-falcon.md
-environment	pressure_range	ok	research/traits/environment/pressure_range-deep-research-falcon.md
-environment	temperature_delta_high	ok	research/traits/environment/temperature_delta_high-deep-research-falcon.md
-environment	temperature_delta	ok	research/traits/environment/temperature_delta-deep-research-falcon.md
-environment	salinity_phenotype_with_numerical_limits	ok	research/traits/environment/salinity_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	slightly_halophilic	ok	research/traits/environment/slightly_halophilic-deep-research-falcon.md
-environment	strictly_anaerobic	ok	research/traits/environment/strictly_anaerobic-deep-research-falcon.md
-environment	stenohaline	ok	research/traits/environment/stenohaline-deep-research-falcon.md
-environment	temperature_delta_low	ok	research/traits/environment/temperature_delta_low-deep-research-falcon.md
-environment	temperature_delta_mid1	ok	research/traits/environment/temperature_delta_mid1-deep-research-falcon.md
-environment	temperature_delta_mid2	ok	research/traits/environment/temperature_delta_mid2-deep-research-falcon.md
-environment	temperature_optimum	ok	research/traits/environment/temperature_optimum-deep-research-falcon.md
-environment	temperature_optimum_high	ok	research/traits/environment/temperature_optimum_high-deep-research-falcon.md
-environment	temperature_optimum_low	ok	research/traits/environment/temperature_optimum_low-deep-research-falcon.md
-environment	temperature_optimum_mid3	ok	research/traits/environment/temperature_optimum_mid3-deep-research-falcon.md
-environment	temperature_delta_very_low	ok	research/traits/environment/temperature_delta_very_low-deep-research-falcon.md
-environment	temperature_optimum_mid1	ok	research/traits/environment/temperature_optimum_mid1-deep-research-falcon.md
-environment	temperature_optimum_mid2	ok	research/traits/environment/temperature_optimum_mid2-deep-research-falcon.md
-environment	temperature_optimum_very_low	ok	research/traits/environment/temperature_optimum_very_low-deep-research-falcon.md
-environment	temperature_preference	ok	research/traits/environment/temperature_preference-deep-research-falcon.md
-environment	temperature_range	ok	research/traits/environment/temperature_range-deep-research-falcon.md
-environment	temperature_phenotype_with_numerical_limits	ok	research/traits/environment/temperature_phenotype_with_numerical_limits-deep-research-falcon.md
-environment	temperature_range_high	ok	research/traits/environment/temperature_range_high-deep-research-falcon.md
-environment	temperature_optimum_mid4	ok	research/traits/environment/temperature_optimum_mid4-deep-research-falcon.md
-environment	temperature_range_low	ok	research/traits/environment/temperature_range_low-deep-research-falcon.md
-environment	temperature_range_mid2	ok	research/traits/environment/temperature_range_mid2-deep-research-falcon.md
-environment	temperature_range_mid1	ok	research/traits/environment/temperature_range_mid1-deep-research-falcon.md
-environment	temperature_range_very_low	ok	research/traits/environment/temperature_range_very_low-deep-research-falcon.md
-environment	thermophilic	ok	research/traits/environment/thermophilic-deep-research-falcon.md
-environment	temperature_range_mid3	ok	research/traits/environment/temperature_range_mid3-deep-research-falcon.md
-environment	uv_radiation_tolerant	ok	research/traits/environment/uv_radiation_tolerant-deep-research-falcon.md
-environment	temperature_range_mid4	ok	research/traits/environment/temperature_range_mid4-deep-research-falcon.md
-environment	thermotolerant	ok	research/traits/environment/thermotolerant-deep-research-falcon.md
-environment	zinc_tolerant	ok	research/traits/environment/zinc_tolerant-deep-research-falcon.md
-environment	xerophilic	ok	research/traits/environment/xerophilic-deep-research-falcon.md
-genomics	gc_content	ok	research/traits/genomics/gc_content-deep-research-falcon.md
-genomics	crispr_cas_system	ok	research/traits/genomics/crispr_cas_system-deep-research-falcon.md
-genomics	gc_high	ok	research/traits/genomics/gc_high-deep-research-falcon.md
-genomics	gc_low	ok	research/traits/genomics/gc_low-deep-research-falcon.md
-genomics	codon_usage_bias	ok	research/traits/genomics/codon_usage_bias-deep-research-falcon.md
-genomics	genome_streamlining	ok	research/traits/genomics/genome_streamlining-deep-research-falcon.md
-genomics	gc_mid1	ok	research/traits/genomics/gc_mid1-deep-research-falcon.md
-genomics	genomic_island	ok	research/traits/genomics/genomic_island-deep-research-falcon.md
-genomics	genome_size	ok	research/traits/genomics/genome_size-deep-research-falcon.md
-genomics	gc_skew	ok	research/traits/genomics/gc_skew-deep-research-falcon.md
-genomics	gc_mid2	ok	research/traits/genomics/gc_mid2-deep-research-falcon.md
-genomics	pangenome_openness	ok	research/traits/genomics/pangenome_openness-deep-research-falcon.md
-genomics	plasmid_carriage	ok	research/traits/genomics/plasmid_carriage-deep-research-falcon.md
-genomics	ploidy	ok	research/traits/genomics/ploidy-deep-research-falcon.md
-genomics	restriction_modification_system	ok	research/traits/genomics/restriction_modification_system-deep-research-falcon.md
-genomics	prophage	ok	research/traits/genomics/prophage-deep-research-falcon.md
-genomics	mobile_genetic_element	ok	research/traits/genomics/mobile_genetic_element-deep-research-falcon.md
-metabolism	acetogenesis	ok	research/traits/metabolism/acetogenesis-deep-research-falcon.md
-metabolism	anaerobic_oxidation_of_methane	ok	research/traits/metabolism/anaerobic_oxidation_of_methane-deep-research-falcon.md
-genomics	transposable_element	ok	research/traits/genomics/transposable_element-deep-research-falcon.md
-metabolism	aerobic_respiration	ok	research/traits/metabolism/aerobic_respiration-deep-research-falcon.md
-genomics	rrna_operon_copy_number	ok	research/traits/genomics/rrna_operon_copy_number-deep-research-falcon.md
-metabolism	anaerobic_respiration	ok	research/traits/metabolism/anaerobic_respiration-deep-research-falcon.md
-metabolism	cable_bacteria_metabolism	ok	research/traits/metabolism/cable_bacteria_metabolism-deep-research-falcon.md
-metabolism	biopolymer_degradation	ok	research/traits/metabolism/biopolymer_degradation-deep-research-falcon.md
-metabolism	calvin_benson_bassham_cycle	ok	research/traits/metabolism/calvin_benson_bassham_cycle-deep-research-falcon.md
-metabolism	chitinolysis	ok	research/traits/metabolism/chitinolysis-deep-research-falcon.md
-metabolism	anoxygenic_photosynthesis	ok	research/traits/metabolism/anoxygenic_photosynthesis-deep-research-falcon.md
-metabolism	carbon_fixation	ok	research/traits/metabolism/carbon_fixation-deep-research-falcon.md
-metabolism	cellulolysis	ok	research/traits/metabolism/cellulolysis-deep-research-falcon.md
-metabolism	dicarboxylate_four_hydroxybutyrate_cycle	ok	research/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle-deep-research-falcon.md
-metabolism	denitrification	ok	research/traits/metabolism/denitrification-deep-research-falcon.md
-metabolism	dissimilatory_nitrate_reduction_to_ammonium	ok	research/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium-deep-research-falcon.md
-metabolism	disproportionation	ok	research/traits/metabolism/disproportionation-deep-research-falcon.md
-metabolism	dissimilatory_iron_reduction	ok	research/traits/metabolism/dissimilatory_iron_reduction-deep-research-falcon.md
-metabolism	dissimilatory_metal_reduction	ok	research/traits/metabolism/dissimilatory_metal_reduction-deep-research-falcon.md
-metabolism	dissimilatory_manganese_reduction	ok	research/traits/metabolism/dissimilatory_manganese_reduction-deep-research-falcon.md
-metabolism	ethanol_fermentation	ok	research/traits/metabolism/ethanol_fermentation-deep-research-falcon.md
-metabolism	fermentative_hydrogen_production	ok	research/traits/metabolism/fermentative_hydrogen_production-deep-research-falcon.md
-metabolism	homoacetogenesis	ok	research/traits/metabolism/homoacetogenesis-deep-research-falcon.md
-metabolism	electron_transfer	ok	research/traits/metabolism/electron_transfer-deep-research-falcon.md
-metabolism	dissimilatory_sulfate_reduction	ok	research/traits/metabolism/dissimilatory_sulfate_reduction-deep-research-falcon.md
-metabolism	fermentation	ok	research/traits/metabolism/fermentation-deep-research-falcon.md
-metabolism	lactic_acid_fermentation	ok	research/traits/metabolism/lactic_acid_fermentation-deep-research-falcon.md
-metabolism	manganese_oxidation	ok	research/traits/metabolism/manganese_oxidation-deep-research-falcon.md
-metabolism	metabolism	ok	research/traits/metabolism/metabolism-deep-research-falcon.md
-metabolism	iron_oxidation	ok	research/traits/metabolism/iron_oxidation-deep-research-falcon.md
-metabolism	lignin_degradation	ok	research/traits/metabolism/lignin_degradation-deep-research-falcon.md
-metabolism	mixed_acid_fermentation	ok	research/traits/metabolism/mixed_acid_fermentation-deep-research-falcon.md
-metabolism	methanogenesis	ok	research/traits/metabolism/methanogenesis-deep-research-falcon.md
-metabolism	oxygenic_photosynthesis	ok	research/traits/metabolism/oxygenic_photosynthesis-deep-research-falcon.md
-metabolism	oxidative_phosphorylation	ok	research/traits/metabolism/oxidative_phosphorylation-deep-research-falcon.md
-metabolism	photosynthesis	ok	research/traits/metabolism/photosynthesis-deep-research-falcon.md
-metabolism	nitrogen_fixation	ok	research/traits/metabolism/nitrogen_fixation-deep-research-falcon.md
-metabolism	propionic_acid_fermentation	ok	research/traits/metabolism/propionic_acid_fermentation-deep-research-falcon.md
-metabolism	phototrophy	ok	research/traits/metabolism/phototrophy-deep-research-falcon.md
-metabolism	proteolysis	ok	research/traits/metabolism/proteolysis-deep-research-falcon.md
-metabolism	proteorhodopsin_phototrophy	ok	research/traits/metabolism/proteorhodopsin_phototrophy-deep-research-falcon.md
-metabolism	reductive_tca_cycle	ok	research/traits/metabolism/reductive_tca_cycle-deep-research-falcon.md
-metabolism	respiration	ok	research/traits/metabolism/respiration-deep-research-falcon.md
-metabolism	substrate_level_phosphorylation	ok	research/traits/metabolism/substrate_level_phosphorylation-deep-research-falcon.md
-metabolism	starch_degradation	ok	research/traits/metabolism/starch_degradation-deep-research-falcon.md
-metabolism	three_hydroxypropionate_bicycle	ok	research/traits/metabolism/three_hydroxypropionate_bicycle-deep-research-falcon.md
-metabolism	sulfur_oxidation	ok	research/traits/metabolism/sulfur_oxidation-deep-research-falcon.md
-metabolism	syntrophy	ok	research/traits/metabolism/syntrophy-deep-research-falcon.md
-metabolism	three_hydroxypropionate_four_hydroxybutyrate_cycle	ok	research/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle-deep-research-falcon.md
-metabolism	wood_ljungdahl_pathway	ok	research/traits/metabolism/wood_ljungdahl_pathway-deep-research-falcon.md
-morphology	axially_filamented	ok	research/traits/morphology/axially_filamented-deep-research-falcon.md
-metabolism	xylan_degradation	ok	research/traits/metabolism/xylan_degradation-deep-research-falcon.md
-morphology	bacillus_shaped	ok	research/traits/morphology/bacillus_shaped-deep-research-falcon.md
-morphology	amphitrichous	ok	research/traits/morphology/amphitrichous-deep-research-falcon.md
-morphology	branched_shaped	ok	research/traits/morphology/branched_shaped-deep-research-falcon.md
-morphology	brown_pigmented	ok	research/traits/morphology/brown_pigmented-deep-research-falcon.md
-morphology	black_pigmented	ok	research/traits/morphology/black_pigmented-deep-research-falcon.md
-morphology	carboxysome	ok	research/traits/morphology/carboxysome-deep-research-falcon.md
-morphology	capsule	ok	research/traits/morphology/capsule-deep-research-falcon.md
-morphology	carotenoid_pigmentation	ok	research/traits/morphology/carotenoid_pigmentation-deep-research-falcon.md
-morphology	cell_length_medium	ok	research/traits/morphology/cell_length_medium-deep-research-falcon.md
-morphology	cell_length_large	ok	research/traits/morphology/cell_length_large-deep-research-falcon.md
-morphology	cell_width	ok	research/traits/morphology/cell_width-deep-research-falcon.md
-morphology	cell_length_very_small	ok	research/traits/morphology/cell_length_very_small-deep-research-falcon.md
-morphology	cell_length_small	ok	research/traits/morphology/cell_length_small-deep-research-falcon.md
-morphology	cell_length	ok	research/traits/morphology/cell_length-deep-research-falcon.md
-morphology	coccobacillus_shaped	ok	research/traits/morphology/coccobacillus_shaped-deep-research-falcon.md
-morphology	cell_shape	ok	research/traits/morphology/cell_shape-deep-research-falcon.md
-morphology	cell_width_large	ok	research/traits/morphology/cell_width_large-deep-research-falcon.md
-morphology	cell_width_medium	ok	research/traits/morphology/cell_width_medium-deep-research-falcon.md
-morphology	cell_width_small	ok	research/traits/morphology/cell_width_small-deep-research-falcon.md
-morphology	cell_width_very_small	ok	research/traits/morphology/cell_width_very_small-deep-research-falcon.md
-morphology	crescent_shaped	ok	research/traits/morphology/crescent_shaped-deep-research-falcon.md
-morphology	coccus_shaped	ok	research/traits/morphology/coccus_shaped-deep-research-falcon.md
-morphology	cream_pigmented	ok	research/traits/morphology/cream_pigmented-deep-research-falcon.md
-morphology	curved_shaped	ok	research/traits/morphology/curved_shaped-deep-research-falcon.md
-morphology	disc_shaped	ok	research/traits/morphology/disc_shaped-deep-research-falcon.md
-morphology	diplococcus_shaped	ok	research/traits/morphology/diplococcus_shaped-deep-research-falcon.md
-morphology	filament_shaped	ok	research/traits/morphology/filament_shaped-deep-research-falcon.md
-morphology	flagellar_arrangement	ok	research/traits/morphology/flagellar_arrangement-deep-research-falcon.md
-morphology	dumbbell_shaped	ok	research/traits/morphology/dumbbell_shaped-deep-research-falcon.md
-morphology	flask_shaped	ok	research/traits/morphology/flask_shaped-deep-research-falcon.md
-morphology	flagellated	ok	research/traits/morphology/flagellated-deep-research-falcon.md
-morphology	gas_vesicle	ok	research/traits/morphology/gas_vesicle-deep-research-falcon.md
-morphology	ellipsoidal	ok	research/traits/morphology/ellipsoidal-deep-research-falcon.md
-morphology	gram_variable	ok	research/traits/morphology/gram_variable-deep-research-falcon.md
-morphology	gram_positive	ok	research/traits/morphology/gram_positive-deep-research-falcon.md
-morphology	fusiform_shaped	ok	research/traits/morphology/fusiform_shaped-deep-research-falcon.md
-morphology	gram_negative	ok	research/traits/morphology/gram_negative-deep-research-falcon.md
-morphology	gliding	ok	research/traits/morphology/gliding-deep-research-falcon.md
-morphology	green_pigmented	ok	research/traits/morphology/green_pigmented-deep-research-falcon.md
-morphology	gram_stain	ok	research/traits/morphology/gram_stain-deep-research-falcon.md
-morphology	heterocyst	ok	research/traits/morphology/heterocyst-deep-research-falcon.md
-morphology	helical_shaped	ok	research/traits/morphology/helical_shaped-deep-research-falcon.md
-morphology	monotrichous	ok	research/traits/morphology/monotrichous-deep-research-falcon.md
-morphology	irregular_shaped	ok	research/traits/morphology/irregular_shaped-deep-research-falcon.md
-morphology	lophotrichous	ok	research/traits/morphology/lophotrichous-deep-research-falcon.md
-morphology	motile	ok	research/traits/morphology/motile-deep-research-falcon.md
-morphology	magnetosome	ok	research/traits/morphology/magnetosome-deep-research-falcon.md
-morphology	intracellular_inclusion	ok	research/traits/morphology/intracellular_inclusion-deep-research-falcon.md
-morphology	non_spore_forming	ok	research/traits/morphology/non_spore_forming-deep-research-falcon.md
-morphology	non_motile	ok	research/traits/morphology/non_motile-deep-research-falcon.md
-morphology	motility	ok	research/traits/morphology/motility-deep-research-falcon.md
-morphology	mycelial_growth	ok	research/traits/morphology/mycelial_growth-deep-research-falcon.md
-morphology	oval_shaped	ok	research/traits/morphology/oval_shaped-deep-research-falcon.md
-morphology	orange_pigmented	ok	research/traits/morphology/orange_pigmented-deep-research-falcon.md
-morphology	ovoid_shaped	ok	research/traits/morphology/ovoid_shaped-deep-research-falcon.md
-morphology	peritrichous	ok	research/traits/morphology/peritrichous-deep-research-falcon.md
-morphology	pleomorphic_shaped	ok	research/traits/morphology/pleomorphic_shaped-deep-research-falcon.md
-morphology	pink_pigmented	ok	research/traits/morphology/pink_pigmented-deep-research-falcon.md
-morphology	polyhydroxyalkanoate_granule	ok	research/traits/morphology/polyhydroxyalkanoate_granule-deep-research-falcon.md
-morphology	pigmentation	ok	research/traits/morphology/pigmentation-deep-research-falcon.md
-morphology	prosthecate	ok	research/traits/morphology/prosthecate-deep-research-falcon.md
-morphology	polyphosphate_granule	ok	research/traits/morphology/polyphosphate_granule-deep-research-falcon.md
-morphology	rod_shaped	ok	research/traits/morphology/rod_shaped-deep-research-falcon.md
-morphology	ring_shaped	ok	research/traits/morphology/ring_shaped-deep-research-falcon.md
-morphology	sarcina_arrangement	ok	research/traits/morphology/sarcina_arrangement-deep-research-falcon.md
-morphology	sphere_shaped	ok	research/traits/morphology/sphere_shaped-deep-research-falcon.md
-morphology	s_layer	ok	research/traits/morphology/s_layer-deep-research-falcon.md
-morphology	red_pigmented	ok	research/traits/morphology/red_pigmented-deep-research-falcon.md
-morphology	spore_forming	ok	research/traits/morphology/spore_forming-deep-research-falcon.md
-morphology	spiral_shaped	ok	research/traits/morphology/spiral_shaped-deep-research-falcon.md
-morphology	spirochete_shaped	ok	research/traits/morphology/spirochete_shaped-deep-research-falcon.md
-morphology	spore_shaped	ok	research/traits/morphology/spore_shaped-deep-research-falcon.md
-morphology	spindle_shaped	ok	research/traits/morphology/spindle_shaped-deep-research-falcon.md
-morphology	staphylococcus_arrangement	ok	research/traits/morphology/staphylococcus_arrangement-deep-research-falcon.md
-morphology	sulfur_globule	ok	research/traits/morphology/sulfur_globule-deep-research-falcon.md
-morphology	sporulation	ok	research/traits/morphology/sporulation-deep-research-falcon.md
-morphology	streptococcus_arrangement	ok	research/traits/morphology/streptococcus_arrangement-deep-research-falcon.md
-morphology	star_shaped	ok	research/traits/morphology/star_shaped-deep-research-falcon.md
-morphology	square_shaped	ok	research/traits/morphology/square_shaped-deep-research-falcon.md
-morphology	tailed_shaped	ok	research/traits/morphology/tailed_shaped-deep-research-falcon.md
-morphology	swarming_motility	ok	research/traits/morphology/swarming_motility-deep-research-falcon.md
-morphology	tetrad_arrangement	ok	research/traits/morphology/tetrad_arrangement-deep-research-falcon.md
-morphology	twitching_motility	ok	research/traits/morphology/twitching_motility-deep-research-falcon.md
-morphology	vibrio_shaped	ok	research/traits/morphology/vibrio_shaped-deep-research-falcon.md
-morphology	triangular_shaped	ok	research/traits/morphology/triangular_shaped-deep-research-falcon.md
-morphology	white_pigmented	ok	research/traits/morphology/white_pigmented-deep-research-falcon.md
-physiology	carboxydotrophic	ok	research/traits/physiology/carboxydotrophic-deep-research-falcon.md
-morphology	yellow_pigmented	ok	research/traits/morphology/yellow_pigmented-deep-research-falcon.md
-physiology	antibiotic_resistance	ok	research/traits/physiology/antibiotic_resistance-deep-research-falcon.md
-physiology	catalase_activity	ok	research/traits/physiology/catalase_activity-deep-research-falcon.md
-physiology	autotrophic	ok	research/traits/physiology/autotrophic-deep-research-falcon.md
-physiology	bioluminescence	ok	research/traits/physiology/bioluminescence-deep-research-falcon.md
-physiology	chemoautolithotrophic	ok	research/traits/physiology/chemoautolithotrophic-deep-research-falcon.md
-physiology	chemoautotrophic	ok	research/traits/physiology/chemoautotrophic-deep-research-falcon.md
-physiology	chemolithoautotrophic	ok	research/traits/physiology/chemolithoautotrophic-deep-research-falcon.md
-physiology	chemolithoheterotrophic	ok	research/traits/physiology/chemolithoheterotrophic-deep-research-falcon.md
-physiology	chemoheterotrophic	ok	research/traits/physiology/chemoheterotrophic-deep-research-falcon.md
-physiology	chemoorganoheterotrophic	ok	research/traits/physiology/chemoorganoheterotrophic-deep-research-falcon.md
-physiology	chemolithotrophic	ok	research/traits/physiology/chemolithotrophic-deep-research-falcon.md
-physiology	chemotaxis	ok	research/traits/physiology/chemotaxis-deep-research-falcon.md
-physiology	copiotrophic	ok	research/traits/physiology/copiotrophic-deep-research-falcon.md
-physiology	chemoorganotrophic	ok	research/traits/physiology/chemoorganotrophic-deep-research-falcon.md
-physiology	dormancy	ok	research/traits/physiology/dormancy-deep-research-falcon.md
-physiology	chemotrophic	ok	research/traits/physiology/chemotrophic-deep-research-falcon.md
-physiology	hydrogenotrophic	ok	research/traits/physiology/hydrogenotrophic-deep-research-falcon.md
-physiology	lithoautotrophic	ok	research/traits/physiology/lithoautotrophic-deep-research-falcon.md
-physiology	lithoheterotrophic	ok	research/traits/physiology/lithoheterotrophic-deep-research-falcon.md
-physiology	heterotrophic	ok	research/traits/physiology/heterotrophic-deep-research-falcon.md
-physiology	methanotrophic	ok	research/traits/physiology/methanotrophic-deep-research-falcon.md
-physiology	natural_competence	ok	research/traits/physiology/natural_competence-deep-research-falcon.md
-physiology	mixotrophic	ok	research/traits/physiology/mixotrophic-deep-research-falcon.md
-physiology	lithotrophic	ok	research/traits/physiology/lithotrophic-deep-research-falcon.md
-physiology	nutrient_adaptation	ok	research/traits/physiology/nutrient_adaptation-deep-research-falcon.md
-physiology	organoheterotrophic	ok	research/traits/physiology/organoheterotrophic-deep-research-falcon.md
-physiology	oligotrophic	ok	research/traits/physiology/oligotrophic-deep-research-falcon.md
-physiology	oxidase_activity	ok	research/traits/physiology/oxidase_activity-deep-research-falcon.md
-physiology	methylotrophic	ok	research/traits/physiology/methylotrophic-deep-research-falcon.md
-physiology	organotrophic	ok	research/traits/physiology/organotrophic-deep-research-falcon.md
-physiology	oxidative_stress_response	ok	research/traits/physiology/oxidative_stress_response-deep-research-falcon.md
-physiology	persister_cell_formation	ok	research/traits/physiology/persister_cell_formation-deep-research-falcon.md
-physiology	photolithotrophic	ok	research/traits/physiology/photolithotrophic-deep-research-falcon.md
-physiology	photoheterotrophic	ok	research/traits/physiology/photoheterotrophic-deep-research-falcon.md
-physiology	photoorganoheterotrophic	ok	research/traits/physiology/photoorganoheterotrophic-deep-research-falcon.md
-physiology	photolithoautotrophic	ok	research/traits/physiology/photolithoautotrophic-deep-research-falcon.md
-physiology	photoautotrophic	ok	research/traits/physiology/photoautotrophic-deep-research-falcon.md
-physiology	phototrophic	ok	research/traits/physiology/phototrophic-deep-research-falcon.md
-physiology	urease_activity	ok	research/traits/physiology/urease_activity-deep-research-falcon.md
-physiology	spore_germination	ok	research/traits/physiology/spore_germination-deep-research-falcon.md
-physiology	stress_response	ok	research/traits/physiology/stress_response-deep-research-falcon.md
-physiology	viable_but_nonculturable_state	ok	research/traits/physiology/viable_but_nonculturable_state-deep-research-falcon.md
-physiology	trophic_type	ok	research/traits/physiology/trophic_type-deep-research-falcon.md
-upper	material_entity	ok	research/traits/upper/material_entity-deep-research-falcon.md
-physiology	quorum_sensing	ok	research/traits/physiology/quorum_sensing-deep-research-falcon.md
-upper	biological_process	ok	research/traits/upper/biological_process-deep-research-falcon.md
-upper	observation	ok	research/traits/upper/observation-deep-research-falcon.md
-upper	phenotype	ok	research/traits/upper/phenotype-deep-research-falcon.md
-upper	quality	ok	research/traits/upper/quality-deep-research-falcon.md
-environment	nacl_optimum_mid2	ok	research/traits/environment/nacl_optimum_mid2-deep-research-falcon.md
+run_id	category	slug	status	output
+2026-07-20T000000Z	ecology	animal_pathogen	ok	research/traits/ecology/animal_pathogen-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biofilm_formation	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level_1	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level_2	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level_3	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level_4	fail:1	
+2026-07-20T000000Z	ecology	biosafety_level_5	fail:1	
+2026-07-20T000000Z	ecology	biofilm_formation	ok	research/traits/ecology/biofilm_formation-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level	ok	research/traits/ecology/biosafety_level-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level_2	ok	research/traits/ecology/biosafety_level_2-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level_1	ok	research/traits/ecology/biosafety_level_1-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level_5	ok	research/traits/ecology/biosafety_level_5-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level_4	ok	research/traits/ecology/biosafety_level_4-deep-research-falcon.md
+2026-07-20T000000Z	ecology	commensalism	ok	research/traits/ecology/commensalism-deep-research-falcon.md
+2026-07-20T000000Z	ecology	biosafety_level_3	ok	research/traits/ecology/biosafety_level_3-deep-research-falcon.md
+2026-07-20T000000Z	ecology	free_living	ok	research/traits/ecology/free_living-deep-research-falcon.md
+2026-07-20T000000Z	ecology	endosymbiosis	ok	research/traits/ecology/endosymbiosis-deep-research-falcon.md
+2026-07-20T000000Z	ecology	host_associated	ok	research/traits/ecology/host_associated-deep-research-falcon.md
+2026-07-20T000000Z	ecology	gut_associated	ok	research/traits/ecology/gut_associated-deep-research-falcon.md
+2026-07-20T000000Z	ecology	parasitism	ok	research/traits/ecology/parasitism-deep-research-falcon.md
+2026-07-20T000000Z	ecology	human_pathogen	ok	research/traits/ecology/human_pathogen-deep-research-falcon.md
+2026-07-20T000000Z	ecology	mutualism	ok	research/traits/ecology/mutualism-deep-research-falcon.md
+2026-07-20T000000Z	ecology	habitat_association	ok	research/traits/ecology/habitat_association-deep-research-falcon.md
+2026-07-20T000000Z	ecology	nitrogen_fixing_symbiosis	ok	research/traits/ecology/nitrogen_fixing_symbiosis-deep-research-falcon.md
+2026-07-20T000000Z	ecology	opportunistic_pathogen	ok	research/traits/ecology/opportunistic_pathogen-deep-research-falcon.md
+2026-07-20T000000Z	ecology	pathogenic_to_host	ok	research/traits/ecology/pathogenic_to_host-deep-research-falcon.md
+2026-07-20T000000Z	ecology	plant_pathogen	ok	research/traits/ecology/plant_pathogen-deep-research-falcon.md
+2026-07-20T000000Z	ecology	rhizosphere_association	ok	research/traits/ecology/rhizosphere_association-deep-research-falcon.md
+2026-07-20T000000Z	ecology	symbiosis	ok	research/traits/ecology/symbiosis-deep-research-falcon.md
+2026-07-20T000000Z	ecology	saprotrophy	ok	research/traits/ecology/saprotrophy-deep-research-falcon.md
+2026-07-20T000000Z	ecology	soil_dwelling	ok	research/traits/ecology/soil_dwelling-deep-research-falcon.md
+2026-07-20T000000Z	ecology	predatory_bacterium	ok	research/traits/ecology/predatory_bacterium-deep-research-falcon.md
+2026-07-20T000000Z	environment	acidotolerant	ok	research/traits/environment/acidotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	aerotolerant	ok	research/traits/environment/aerotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	acidophilic	ok	research/traits/environment/acidophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	aerobic	ok	research/traits/environment/aerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	alkaphilic	ok	research/traits/environment/alkaphilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	anaerobic	ok	research/traits/environment/anaerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	arsenic_tolerant	ok	research/traits/environment/arsenic_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	cobalt_tolerant	ok	research/traits/environment/cobalt_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	cadmium_tolerant	ok	research/traits/environment/cadmium_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	alkalotolerant	ok	research/traits/environment/alkalotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	copper_tolerant	ok	research/traits/environment/copper_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	euryhaline	ok	research/traits/environment/euryhaline-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultative_oxygen_preference	ok	research/traits/environment/facultative_oxygen_preference-deep-research-falcon.md
+2026-07-20T000000Z	environment	extreme_hyperthermophilic	ok	research/traits/environment/extreme_hyperthermophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	extremely_halophilic	ok	research/traits/environment/extremely_halophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	delta_phenotype_with_numerical_limits	ok	research/traits/environment/delta_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	desiccation_tolerant	ok	research/traits/environment/desiccation_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultatively_acidophilic	ok	research/traits/environment/facultatively_acidophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	haloalkaliphilic	ok	research/traits/environment/haloalkaliphilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultatively_aerobic	ok	research/traits/environment/facultatively_aerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultatively_anaerobic	ok	research/traits/environment/facultatively_anaerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultatively_alkaphilic	ok	research/traits/environment/facultatively_alkaphilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	growth_range_phenotype_with_numerical_limits	ok	research/traits/environment/growth_range_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	facultative_psychrophilic	ok	research/traits/environment/facultative_psychrophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	hyperthermophilic	ok	research/traits/environment/hyperthermophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	mercury_tolerant	ok	research/traits/environment/mercury_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	ionizing_radiation_tolerant	ok	research/traits/environment/ionizing_radiation_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	halophilic	ok	research/traits/environment/halophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	halotolerant	ok	research/traits/environment/halotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	mesophilic	ok	research/traits/environment/mesophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	metal_tolerant	ok	research/traits/environment/metal_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	halophily_preference	ok	research/traits/environment/halophily_preference-deep-research-falcon.md
+2026-07-20T000000Z	environment	microaerotolerant	ok	research/traits/environment/microaerotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	microaerophilic	ok	research/traits/environment/microaerophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_delta	ok	research/traits/environment/nacl_delta-deep-research-falcon.md
+2026-07-20T000000Z	environment	moderately_halophilic	ok	research/traits/environment/moderately_halophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_delta_high	ok	research/traits/environment/nacl_delta_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_delta_low	ok	research/traits/environment/nacl_delta_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_optimum_high	ok	research/traits/environment/nacl_optimum_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_delta_mid1	ok	research/traits/environment/nacl_delta_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_delta_mid2	ok	research/traits/environment/nacl_delta_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_optimum	ok	research/traits/environment/nacl_optimum-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_optimum_mid1	ok	research/traits/environment/nacl_optimum_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_range	ok	research/traits/environment/nacl_range-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_optimum_mid2	fail:1	
+2026-07-20T000000Z	environment	nacl_optimum_low	ok	research/traits/environment/nacl_optimum_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_range_high	ok	research/traits/environment/nacl_range_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_range_mid1	ok	research/traits/environment/nacl_range_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	neutrophilic	ok	research/traits/environment/neutrophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_range_mid2	ok	research/traits/environment/nacl_range_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	obligately_acidophilic	ok	research/traits/environment/obligately_acidophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	non_halophilic	ok	research/traits/environment/non_halophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_range_low	ok	research/traits/environment/nacl_range_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	obligately_alkaphilic	ok	research/traits/environment/obligately_alkaphilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	obligately_aerobic	ok	research/traits/environment/obligately_aerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	optimum_phenotype_with_numerical_limits	ok	research/traits/environment/optimum_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	obligately_anaerobic	ok	research/traits/environment/obligately_anaerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	obligately_piezophilic	ok	research/traits/environment/obligately_piezophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	oxygen_preference	ok	research/traits/environment/oxygen_preference-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_high	ok	research/traits/environment/ph_delta_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta	ok	research/traits/environment/ph_delta-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_mid3	ok	research/traits/environment/ph_delta_mid3-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_low	ok	research/traits/environment/ph_delta_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_mid2	ok	research/traits/environment/ph_delta_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_mid1	ok	research/traits/environment/ph_delta_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_growth_preference	ok	research/traits/environment/ph_growth_preference-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_delta_very_low	ok	research/traits/environment/ph_delta_very_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_optimum	ok	research/traits/environment/ph_optimum-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_optimum_mid2	ok	research/traits/environment/ph_optimum_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_optimum_mid1	ok	research/traits/environment/ph_optimum_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_phenotype_with_numerical_limits	ok	research/traits/environment/ph_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range	ok	research/traits/environment/ph_range-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_low	ok	research/traits/environment/ph_range_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_optimum_low	ok	research/traits/environment/ph_optimum_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_optimum_high	ok	research/traits/environment/ph_optimum_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_high	ok	research/traits/environment/ph_range_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_very_low	ok	research/traits/environment/ph_range_very_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	piezophilic	ok	research/traits/environment/piezophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	piezotolerant	ok	research/traits/environment/piezotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_mid2	ok	research/traits/environment/ph_range_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_mid1	ok	research/traits/environment/ph_range_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	ph_range_mid3	ok	research/traits/environment/ph_range_mid3-deep-research-falcon.md
+2026-07-20T000000Z	environment	pressure_optimum	ok	research/traits/environment/pressure_optimum-deep-research-falcon.md
+2026-07-20T000000Z	environment	psychrotolerant	ok	research/traits/environment/psychrotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	pressure_delta	ok	research/traits/environment/pressure_delta-deep-research-falcon.md
+2026-07-20T000000Z	environment	radiotolerant	ok	research/traits/environment/radiotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	psychrophilic	ok	research/traits/environment/psychrophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	pressure_range	ok	research/traits/environment/pressure_range-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta_high	ok	research/traits/environment/temperature_delta_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta	ok	research/traits/environment/temperature_delta-deep-research-falcon.md
+2026-07-20T000000Z	environment	salinity_phenotype_with_numerical_limits	ok	research/traits/environment/salinity_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	slightly_halophilic	ok	research/traits/environment/slightly_halophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	strictly_anaerobic	ok	research/traits/environment/strictly_anaerobic-deep-research-falcon.md
+2026-07-20T000000Z	environment	stenohaline	ok	research/traits/environment/stenohaline-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta_low	ok	research/traits/environment/temperature_delta_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta_mid1	ok	research/traits/environment/temperature_delta_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta_mid2	ok	research/traits/environment/temperature_delta_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum	ok	research/traits/environment/temperature_optimum-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_high	ok	research/traits/environment/temperature_optimum_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_low	ok	research/traits/environment/temperature_optimum_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_mid3	ok	research/traits/environment/temperature_optimum_mid3-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_delta_very_low	ok	research/traits/environment/temperature_delta_very_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_mid1	ok	research/traits/environment/temperature_optimum_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_mid2	ok	research/traits/environment/temperature_optimum_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_very_low	ok	research/traits/environment/temperature_optimum_very_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_preference	ok	research/traits/environment/temperature_preference-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range	ok	research/traits/environment/temperature_range-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_phenotype_with_numerical_limits	ok	research/traits/environment/temperature_phenotype_with_numerical_limits-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_high	ok	research/traits/environment/temperature_range_high-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_optimum_mid4	ok	research/traits/environment/temperature_optimum_mid4-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_low	ok	research/traits/environment/temperature_range_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_mid2	ok	research/traits/environment/temperature_range_mid2-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_mid1	ok	research/traits/environment/temperature_range_mid1-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_very_low	ok	research/traits/environment/temperature_range_very_low-deep-research-falcon.md
+2026-07-20T000000Z	environment	thermophilic	ok	research/traits/environment/thermophilic-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_mid3	ok	research/traits/environment/temperature_range_mid3-deep-research-falcon.md
+2026-07-20T000000Z	environment	uv_radiation_tolerant	ok	research/traits/environment/uv_radiation_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	temperature_range_mid4	ok	research/traits/environment/temperature_range_mid4-deep-research-falcon.md
+2026-07-20T000000Z	environment	thermotolerant	ok	research/traits/environment/thermotolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	zinc_tolerant	ok	research/traits/environment/zinc_tolerant-deep-research-falcon.md
+2026-07-20T000000Z	environment	xerophilic	ok	research/traits/environment/xerophilic-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_content	ok	research/traits/genomics/gc_content-deep-research-falcon.md
+2026-07-20T000000Z	genomics	crispr_cas_system	ok	research/traits/genomics/crispr_cas_system-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_high	ok	research/traits/genomics/gc_high-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_low	ok	research/traits/genomics/gc_low-deep-research-falcon.md
+2026-07-20T000000Z	genomics	codon_usage_bias	ok	research/traits/genomics/codon_usage_bias-deep-research-falcon.md
+2026-07-20T000000Z	genomics	genome_streamlining	ok	research/traits/genomics/genome_streamlining-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_mid1	ok	research/traits/genomics/gc_mid1-deep-research-falcon.md
+2026-07-20T000000Z	genomics	genomic_island	ok	research/traits/genomics/genomic_island-deep-research-falcon.md
+2026-07-20T000000Z	genomics	genome_size	ok	research/traits/genomics/genome_size-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_skew	ok	research/traits/genomics/gc_skew-deep-research-falcon.md
+2026-07-20T000000Z	genomics	gc_mid2	ok	research/traits/genomics/gc_mid2-deep-research-falcon.md
+2026-07-20T000000Z	genomics	pangenome_openness	ok	research/traits/genomics/pangenome_openness-deep-research-falcon.md
+2026-07-20T000000Z	genomics	plasmid_carriage	ok	research/traits/genomics/plasmid_carriage-deep-research-falcon.md
+2026-07-20T000000Z	genomics	ploidy	ok	research/traits/genomics/ploidy-deep-research-falcon.md
+2026-07-20T000000Z	genomics	restriction_modification_system	ok	research/traits/genomics/restriction_modification_system-deep-research-falcon.md
+2026-07-20T000000Z	genomics	prophage	ok	research/traits/genomics/prophage-deep-research-falcon.md
+2026-07-20T000000Z	genomics	mobile_genetic_element	ok	research/traits/genomics/mobile_genetic_element-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	acetogenesis	ok	research/traits/metabolism/acetogenesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	anaerobic_oxidation_of_methane	ok	research/traits/metabolism/anaerobic_oxidation_of_methane-deep-research-falcon.md
+2026-07-20T000000Z	genomics	transposable_element	ok	research/traits/genomics/transposable_element-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	aerobic_respiration	ok	research/traits/metabolism/aerobic_respiration-deep-research-falcon.md
+2026-07-20T000000Z	genomics	rrna_operon_copy_number	ok	research/traits/genomics/rrna_operon_copy_number-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	anaerobic_respiration	ok	research/traits/metabolism/anaerobic_respiration-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	cable_bacteria_metabolism	ok	research/traits/metabolism/cable_bacteria_metabolism-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	biopolymer_degradation	ok	research/traits/metabolism/biopolymer_degradation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	calvin_benson_bassham_cycle	ok	research/traits/metabolism/calvin_benson_bassham_cycle-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	chitinolysis	ok	research/traits/metabolism/chitinolysis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	anoxygenic_photosynthesis	ok	research/traits/metabolism/anoxygenic_photosynthesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	carbon_fixation	ok	research/traits/metabolism/carbon_fixation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	cellulolysis	ok	research/traits/metabolism/cellulolysis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dicarboxylate_four_hydroxybutyrate_cycle	ok	research/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	denitrification	ok	research/traits/metabolism/denitrification-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dissimilatory_nitrate_reduction_to_ammonium	ok	research/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	disproportionation	ok	research/traits/metabolism/disproportionation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dissimilatory_iron_reduction	ok	research/traits/metabolism/dissimilatory_iron_reduction-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dissimilatory_metal_reduction	ok	research/traits/metabolism/dissimilatory_metal_reduction-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dissimilatory_manganese_reduction	ok	research/traits/metabolism/dissimilatory_manganese_reduction-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	ethanol_fermentation	ok	research/traits/metabolism/ethanol_fermentation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	fermentative_hydrogen_production	ok	research/traits/metabolism/fermentative_hydrogen_production-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	homoacetogenesis	ok	research/traits/metabolism/homoacetogenesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	electron_transfer	ok	research/traits/metabolism/electron_transfer-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	dissimilatory_sulfate_reduction	ok	research/traits/metabolism/dissimilatory_sulfate_reduction-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	fermentation	ok	research/traits/metabolism/fermentation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	lactic_acid_fermentation	ok	research/traits/metabolism/lactic_acid_fermentation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	manganese_oxidation	ok	research/traits/metabolism/manganese_oxidation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	metabolism	ok	research/traits/metabolism/metabolism-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	iron_oxidation	ok	research/traits/metabolism/iron_oxidation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	lignin_degradation	ok	research/traits/metabolism/lignin_degradation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	mixed_acid_fermentation	ok	research/traits/metabolism/mixed_acid_fermentation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	methanogenesis	ok	research/traits/metabolism/methanogenesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	oxygenic_photosynthesis	ok	research/traits/metabolism/oxygenic_photosynthesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	oxidative_phosphorylation	ok	research/traits/metabolism/oxidative_phosphorylation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	photosynthesis	ok	research/traits/metabolism/photosynthesis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	nitrogen_fixation	ok	research/traits/metabolism/nitrogen_fixation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	propionic_acid_fermentation	ok	research/traits/metabolism/propionic_acid_fermentation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	phototrophy	ok	research/traits/metabolism/phototrophy-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	proteolysis	ok	research/traits/metabolism/proteolysis-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	proteorhodopsin_phototrophy	ok	research/traits/metabolism/proteorhodopsin_phototrophy-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	reductive_tca_cycle	ok	research/traits/metabolism/reductive_tca_cycle-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	respiration	ok	research/traits/metabolism/respiration-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	substrate_level_phosphorylation	ok	research/traits/metabolism/substrate_level_phosphorylation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	starch_degradation	ok	research/traits/metabolism/starch_degradation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	three_hydroxypropionate_bicycle	ok	research/traits/metabolism/three_hydroxypropionate_bicycle-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	sulfur_oxidation	ok	research/traits/metabolism/sulfur_oxidation-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	syntrophy	ok	research/traits/metabolism/syntrophy-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	three_hydroxypropionate_four_hydroxybutyrate_cycle	ok	research/traits/metabolism/three_hydroxypropionate_four_hydroxybutyrate_cycle-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	wood_ljungdahl_pathway	ok	research/traits/metabolism/wood_ljungdahl_pathway-deep-research-falcon.md
+2026-07-20T000000Z	morphology	axially_filamented	ok	research/traits/morphology/axially_filamented-deep-research-falcon.md
+2026-07-20T000000Z	metabolism	xylan_degradation	ok	research/traits/metabolism/xylan_degradation-deep-research-falcon.md
+2026-07-20T000000Z	morphology	bacillus_shaped	ok	research/traits/morphology/bacillus_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	amphitrichous	ok	research/traits/morphology/amphitrichous-deep-research-falcon.md
+2026-07-20T000000Z	morphology	branched_shaped	ok	research/traits/morphology/branched_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	brown_pigmented	ok	research/traits/morphology/brown_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	black_pigmented	ok	research/traits/morphology/black_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	carboxysome	ok	research/traits/morphology/carboxysome-deep-research-falcon.md
+2026-07-20T000000Z	morphology	capsule	ok	research/traits/morphology/capsule-deep-research-falcon.md
+2026-07-20T000000Z	morphology	carotenoid_pigmentation	ok	research/traits/morphology/carotenoid_pigmentation-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_length_medium	ok	research/traits/morphology/cell_length_medium-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_length_large	ok	research/traits/morphology/cell_length_large-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_width	ok	research/traits/morphology/cell_width-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_length_very_small	ok	research/traits/morphology/cell_length_very_small-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_length_small	ok	research/traits/morphology/cell_length_small-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_length	ok	research/traits/morphology/cell_length-deep-research-falcon.md
+2026-07-20T000000Z	morphology	coccobacillus_shaped	ok	research/traits/morphology/coccobacillus_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_shape	ok	research/traits/morphology/cell_shape-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_width_large	ok	research/traits/morphology/cell_width_large-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_width_medium	ok	research/traits/morphology/cell_width_medium-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_width_small	ok	research/traits/morphology/cell_width_small-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cell_width_very_small	ok	research/traits/morphology/cell_width_very_small-deep-research-falcon.md
+2026-07-20T000000Z	morphology	crescent_shaped	ok	research/traits/morphology/crescent_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	coccus_shaped	ok	research/traits/morphology/coccus_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	cream_pigmented	ok	research/traits/morphology/cream_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	curved_shaped	ok	research/traits/morphology/curved_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	disc_shaped	ok	research/traits/morphology/disc_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	diplococcus_shaped	ok	research/traits/morphology/diplococcus_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	filament_shaped	ok	research/traits/morphology/filament_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	flagellar_arrangement	ok	research/traits/morphology/flagellar_arrangement-deep-research-falcon.md
+2026-07-20T000000Z	morphology	dumbbell_shaped	ok	research/traits/morphology/dumbbell_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	flask_shaped	ok	research/traits/morphology/flask_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	flagellated	ok	research/traits/morphology/flagellated-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gas_vesicle	ok	research/traits/morphology/gas_vesicle-deep-research-falcon.md
+2026-07-20T000000Z	morphology	ellipsoidal	ok	research/traits/morphology/ellipsoidal-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gram_variable	ok	research/traits/morphology/gram_variable-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gram_positive	ok	research/traits/morphology/gram_positive-deep-research-falcon.md
+2026-07-20T000000Z	morphology	fusiform_shaped	ok	research/traits/morphology/fusiform_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gram_negative	ok	research/traits/morphology/gram_negative-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gliding	ok	research/traits/morphology/gliding-deep-research-falcon.md
+2026-07-20T000000Z	morphology	green_pigmented	ok	research/traits/morphology/green_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	gram_stain	ok	research/traits/morphology/gram_stain-deep-research-falcon.md
+2026-07-20T000000Z	morphology	heterocyst	ok	research/traits/morphology/heterocyst-deep-research-falcon.md
+2026-07-20T000000Z	morphology	helical_shaped	ok	research/traits/morphology/helical_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	monotrichous	ok	research/traits/morphology/monotrichous-deep-research-falcon.md
+2026-07-20T000000Z	morphology	irregular_shaped	ok	research/traits/morphology/irregular_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	lophotrichous	ok	research/traits/morphology/lophotrichous-deep-research-falcon.md
+2026-07-20T000000Z	morphology	motile	ok	research/traits/morphology/motile-deep-research-falcon.md
+2026-07-20T000000Z	morphology	magnetosome	ok	research/traits/morphology/magnetosome-deep-research-falcon.md
+2026-07-20T000000Z	morphology	intracellular_inclusion	ok	research/traits/morphology/intracellular_inclusion-deep-research-falcon.md
+2026-07-20T000000Z	morphology	non_spore_forming	ok	research/traits/morphology/non_spore_forming-deep-research-falcon.md
+2026-07-20T000000Z	morphology	non_motile	ok	research/traits/morphology/non_motile-deep-research-falcon.md
+2026-07-20T000000Z	morphology	motility	ok	research/traits/morphology/motility-deep-research-falcon.md
+2026-07-20T000000Z	morphology	mycelial_growth	ok	research/traits/morphology/mycelial_growth-deep-research-falcon.md
+2026-07-20T000000Z	morphology	oval_shaped	ok	research/traits/morphology/oval_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	orange_pigmented	ok	research/traits/morphology/orange_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	ovoid_shaped	ok	research/traits/morphology/ovoid_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	peritrichous	ok	research/traits/morphology/peritrichous-deep-research-falcon.md
+2026-07-20T000000Z	morphology	pleomorphic_shaped	ok	research/traits/morphology/pleomorphic_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	pink_pigmented	ok	research/traits/morphology/pink_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	polyhydroxyalkanoate_granule	ok	research/traits/morphology/polyhydroxyalkanoate_granule-deep-research-falcon.md
+2026-07-20T000000Z	morphology	pigmentation	ok	research/traits/morphology/pigmentation-deep-research-falcon.md
+2026-07-20T000000Z	morphology	prosthecate	ok	research/traits/morphology/prosthecate-deep-research-falcon.md
+2026-07-20T000000Z	morphology	polyphosphate_granule	ok	research/traits/morphology/polyphosphate_granule-deep-research-falcon.md
+2026-07-20T000000Z	morphology	rod_shaped	ok	research/traits/morphology/rod_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	ring_shaped	ok	research/traits/morphology/ring_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	sarcina_arrangement	ok	research/traits/morphology/sarcina_arrangement-deep-research-falcon.md
+2026-07-20T000000Z	morphology	sphere_shaped	ok	research/traits/morphology/sphere_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	s_layer	ok	research/traits/morphology/s_layer-deep-research-falcon.md
+2026-07-20T000000Z	morphology	red_pigmented	ok	research/traits/morphology/red_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	morphology	spore_forming	ok	research/traits/morphology/spore_forming-deep-research-falcon.md
+2026-07-20T000000Z	morphology	spiral_shaped	ok	research/traits/morphology/spiral_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	spirochete_shaped	ok	research/traits/morphology/spirochete_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	spore_shaped	ok	research/traits/morphology/spore_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	spindle_shaped	ok	research/traits/morphology/spindle_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	staphylococcus_arrangement	ok	research/traits/morphology/staphylococcus_arrangement-deep-research-falcon.md
+2026-07-20T000000Z	morphology	sulfur_globule	ok	research/traits/morphology/sulfur_globule-deep-research-falcon.md
+2026-07-20T000000Z	morphology	sporulation	ok	research/traits/morphology/sporulation-deep-research-falcon.md
+2026-07-20T000000Z	morphology	streptococcus_arrangement	ok	research/traits/morphology/streptococcus_arrangement-deep-research-falcon.md
+2026-07-20T000000Z	morphology	star_shaped	ok	research/traits/morphology/star_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	square_shaped	ok	research/traits/morphology/square_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	tailed_shaped	ok	research/traits/morphology/tailed_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	swarming_motility	ok	research/traits/morphology/swarming_motility-deep-research-falcon.md
+2026-07-20T000000Z	morphology	tetrad_arrangement	ok	research/traits/morphology/tetrad_arrangement-deep-research-falcon.md
+2026-07-20T000000Z	morphology	twitching_motility	ok	research/traits/morphology/twitching_motility-deep-research-falcon.md
+2026-07-20T000000Z	morphology	vibrio_shaped	ok	research/traits/morphology/vibrio_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	triangular_shaped	ok	research/traits/morphology/triangular_shaped-deep-research-falcon.md
+2026-07-20T000000Z	morphology	white_pigmented	ok	research/traits/morphology/white_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	physiology	carboxydotrophic	ok	research/traits/physiology/carboxydotrophic-deep-research-falcon.md
+2026-07-20T000000Z	morphology	yellow_pigmented	ok	research/traits/morphology/yellow_pigmented-deep-research-falcon.md
+2026-07-20T000000Z	physiology	antibiotic_resistance	ok	research/traits/physiology/antibiotic_resistance-deep-research-falcon.md
+2026-07-20T000000Z	physiology	catalase_activity	ok	research/traits/physiology/catalase_activity-deep-research-falcon.md
+2026-07-20T000000Z	physiology	autotrophic	ok	research/traits/physiology/autotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	bioluminescence	ok	research/traits/physiology/bioluminescence-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemoautolithotrophic	ok	research/traits/physiology/chemoautolithotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemoautotrophic	ok	research/traits/physiology/chemoautotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemolithoautotrophic	ok	research/traits/physiology/chemolithoautotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemolithoheterotrophic	ok	research/traits/physiology/chemolithoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemoheterotrophic	ok	research/traits/physiology/chemoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemoorganoheterotrophic	ok	research/traits/physiology/chemoorganoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemolithotrophic	ok	research/traits/physiology/chemolithotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemotaxis	ok	research/traits/physiology/chemotaxis-deep-research-falcon.md
+2026-07-20T000000Z	physiology	copiotrophic	ok	research/traits/physiology/copiotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemoorganotrophic	ok	research/traits/physiology/chemoorganotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	dormancy	ok	research/traits/physiology/dormancy-deep-research-falcon.md
+2026-07-20T000000Z	physiology	chemotrophic	ok	research/traits/physiology/chemotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	hydrogenotrophic	ok	research/traits/physiology/hydrogenotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	lithoautotrophic	ok	research/traits/physiology/lithoautotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	lithoheterotrophic	ok	research/traits/physiology/lithoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	heterotrophic	ok	research/traits/physiology/heterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	methanotrophic	ok	research/traits/physiology/methanotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	natural_competence	ok	research/traits/physiology/natural_competence-deep-research-falcon.md
+2026-07-20T000000Z	physiology	mixotrophic	ok	research/traits/physiology/mixotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	lithotrophic	ok	research/traits/physiology/lithotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	nutrient_adaptation	ok	research/traits/physiology/nutrient_adaptation-deep-research-falcon.md
+2026-07-20T000000Z	physiology	organoheterotrophic	ok	research/traits/physiology/organoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	oligotrophic	ok	research/traits/physiology/oligotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	oxidase_activity	ok	research/traits/physiology/oxidase_activity-deep-research-falcon.md
+2026-07-20T000000Z	physiology	methylotrophic	ok	research/traits/physiology/methylotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	organotrophic	ok	research/traits/physiology/organotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	oxidative_stress_response	ok	research/traits/physiology/oxidative_stress_response-deep-research-falcon.md
+2026-07-20T000000Z	physiology	persister_cell_formation	ok	research/traits/physiology/persister_cell_formation-deep-research-falcon.md
+2026-07-20T000000Z	physiology	photolithotrophic	ok	research/traits/physiology/photolithotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	photoheterotrophic	ok	research/traits/physiology/photoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	photoorganoheterotrophic	ok	research/traits/physiology/photoorganoheterotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	photolithoautotrophic	ok	research/traits/physiology/photolithoautotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	photoautotrophic	ok	research/traits/physiology/photoautotrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	phototrophic	ok	research/traits/physiology/phototrophic-deep-research-falcon.md
+2026-07-20T000000Z	physiology	urease_activity	ok	research/traits/physiology/urease_activity-deep-research-falcon.md
+2026-07-20T000000Z	physiology	spore_germination	ok	research/traits/physiology/spore_germination-deep-research-falcon.md
+2026-07-20T000000Z	physiology	stress_response	ok	research/traits/physiology/stress_response-deep-research-falcon.md
+2026-07-20T000000Z	physiology	viable_but_nonculturable_state	ok	research/traits/physiology/viable_but_nonculturable_state-deep-research-falcon.md
+2026-07-20T000000Z	physiology	trophic_type	ok	research/traits/physiology/trophic_type-deep-research-falcon.md
+2026-07-20T000000Z	upper	material_entity	ok	research/traits/upper/material_entity-deep-research-falcon.md
+2026-07-20T000000Z	physiology	quorum_sensing	ok	research/traits/physiology/quorum_sensing-deep-research-falcon.md
+2026-07-20T000000Z	upper	biological_process	ok	research/traits/upper/biological_process-deep-research-falcon.md
+2026-07-20T000000Z	upper	observation	ok	research/traits/upper/observation-deep-research-falcon.md
+2026-07-20T000000Z	upper	phenotype	ok	research/traits/upper/phenotype-deep-research-falcon.md
+2026-07-20T000000Z	upper	quality	ok	research/traits/upper/quality-deep-research-falcon.md
+2026-07-20T000000Z	environment	nacl_optimum_mid2	ok	research/traits/environment/nacl_optimum_mid2-deep-research-falcon.md
+2026-08-04T000000Z	ecology	animal_pathogen	ok	research/traits/ecology/animal_pathogen-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biosafety_level	ok	research/traits/ecology/biosafety_level-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biosafety_level_1	ok	research/traits/ecology/biosafety_level_1-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biofilm_formation	ok	research/traits/ecology/biofilm_formation-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biosafety_level_5	ok	research/traits/ecology/biosafety_level_5-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biosafety_level_3	ok	research/traits/ecology/biosafety_level_3-deep-research-falcon.md
+2026-08-04T000000Z	ecology	commensalism	ok	research/traits/ecology/commensalism-deep-research-falcon.md
+2026-08-04T000000Z	ecology	biosafety_level_2	ok	research/traits/ecology/biosafety_level_2-deep-research-falcon.md
+2026-08-04T061322Z	ecology	endosymbiosis	ok	research/traits/ecology/endosymbiosis-deep-research-falcon.md
+2026-08-04T061322Z	ecology	biosafety_level_4	ok	research/traits/ecology/biosafety_level_4-deep-research-falcon.md
+2026-08-04T061322Z	ecology	gut_associated	ok	research/traits/ecology/gut_associated-deep-research-falcon.md
+2026-08-04T061322Z	ecology	free_living	ok	research/traits/ecology/free_living-deep-research-falcon.md
+2026-08-04T061322Z	ecology	habitat_association	ok	research/traits/ecology/habitat_association-deep-research-falcon.md
+2026-08-04T061322Z	ecology	host_associated	ok	research/traits/ecology/host_associated-deep-research-falcon.md
+2026-08-04T061322Z	ecology	mutualism	ok	research/traits/ecology/mutualism-deep-research-falcon.md

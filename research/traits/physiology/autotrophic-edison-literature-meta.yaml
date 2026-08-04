@@ -1,0 +1,60 @@
+slug: autotrophic
+trait_category: physiology
+trait_path: data/traits/physiology/autotrophic.yaml
+trait_identifier: METPO:1000632
+job: LITERATURE
+job_id: job-futurehouse-paperqa3
+label: ''
+template_path: templates/trait_causal_graph_research.md
+template_vars:
+  trait_label: autotrophic
+  trait_identifier: METPO:1000632
+  trait_category: PHYSIOLOGY
+  trait_category_slug: physiology
+  trait_slug: autotrophic
+  term_kind: CLASS
+  mapping_status: REVIEWED
+  definition: A trophic type in which an organism produces organic compounds from inorganic carbon sources
+    (primarily carbon dioxide or bicarbonate) using energy from light (photoautotrophy) or from the oxidation
+    of inorganic compounds (chemoautotrophy).
+  parent_traits: METPO:1000631
+  synonyms: TT_autotroph, autotroph, autotrophy
+  evidence_summary: 'DOI:10.1038/nrmicro.2016.130: require only CO2 as a carbon source (Review defines
+    autotrophic organisms by CO2 use as carbon source for growth.) | DOI:10.1128/AEM.02473-10: autotrophic
+    CO2 fixation (Minireview supports Calvin-Benson and other microbial CO2-fixation pathways.) | PMID:8590279:
+    Synechocystis sp. strain PCC6803 (Organism example: Synechocystis sp. PCC 6803 is a model autotrophic
+    cyanobacterium that fixes CO2 via the Calvin-Benson cycle (Kaneko et al. 1996, DNA Res, full genome).)'
+  causal_graph_summary: 'autotrophic_inorganic_carbon_fixation: 18 nodes, 17 edges'
+query_chars: 2929
+query: "# Microbial Trait Causal Graph Research Template\n\n## Target Trait\n- **Trait label:** autotrophic\n\
+  - **METPO identifier:** METPO:1000632\n- **Trait category:** PHYSIOLOGY\n- **Term kind:** CLASS\n- **Mapping\
+  \ status:** REVIEWED\n- **Definition:** A trophic type in which an organism produces organic compounds\
+  \ from inorganic carbon sources (primarily carbon dioxide or bicarbonate) using energy from light (photoautotrophy)\
+  \ or from the oxidation of inorganic compounds (chemoautotrophy).\n- **Parent traits:** METPO:1000631\n\
+  - **Synonyms:** TT_autotroph, autotroph, autotrophy\n- **Existing evidence:** DOI:10.1038/nrmicro.2016.130:\
+  \ require only CO2 as a carbon source (Review defines autotrophic organisms by CO2 use as carbon source\
+  \ for growth.) | DOI:10.1128/AEM.02473-10: autotrophic CO2 fixation (Minireview supports Calvin-Benson\
+  \ and other microbial CO2-fixation pathways.) | PMID:8590279: Synechocystis sp. strain PCC6803 (Organism\
+  \ example: Synechocystis sp. PCC 6803 is a model autotrophic cyanobacterium that fixes CO2 via the Calvin-Benson\
+  \ cycle (Kaneko et al. 1996, DNA Res, full genome).)\n- **Existing causal graph summary:** autotrophic_inorganic_carbon_fixation:\
+  \ 18 nodes, 17 edges\n\n## Research Objective\n\nResearch the microbial trait **autotrophic** as a candidate\
+  \ TraitMech causal graph.\nFocus on source-backed mechanistic entities and causal edges that can be\
+  \ curated into\n`data/traits/physiology/autotrophic.yaml`.\n\n## Required Findings\n\n### 1. Trait Scope\n\
+  - Clarify what phenotype, physiological capacity, environmental preference, or assay-observed\n  property\
+  \ the trait represents.\n- Identify boundary cases and distinguish the trait from nearby traits.\n\n\
+  ### 2. Causal Graph Entities\n- Pathways and metabolic modules.\n- Environmental factors and experimental\
+  \ factors.\n- Genes, proteins, enzymes, transporters, and complexes.\n- Chemicals, electron donors,\
+  \ electron acceptors, nutrients, metabolites, and inhibitors.\n- Organelles, cellular localizations,\
+  \ molecular functions, and biological processes.\n\n### 3. Evidence-Backed Edges\n- Propose causal edges\
+  \ as subject-predicate-object triples.\n- For every proposed edge, provide a reference, a short supporting\
+  \ quote/snippet, and notes\n  explaining how the source supports the edge.\n- Prefer DOI references.\
+  \ Use PMID only when a DOI is not available.\n- Mark weak, taxon-specific, assay-specific, or inferred\
+  \ claims as uncertain.\n\n### 4. Ontology Grounding\n- Suggest CURIEs where available: METPO, GO, CHEBI,\
+  \ ENVO, NCBITaxon, EC, UniProt, Rhea,\n  KEGG, MetaCyc, or other stable identifiers.\n- Do not invent\
+  \ identifiers. Label-only candidate nodes are acceptable when grounding is unclear.\n\n## Output Format\n\
+  \nReturn a curation-focused report with:\n- A short scope summary.\n- Candidate nodes grouped by type.\n\
+  - Candidate causal edges in a table with reference, snippet, and notes.\n- DOI-first bibliography.\n\
+  - Warnings for claims that should not yet be curated into TraitMech.\n"
+submitted_at: '2026-07-21T01:35:12.097540+00:00'
+status: dry-run
+query_sha256: f960f27f103639da46dd3957dbcd39ca20e32b8a7a05553a8bf6f047bdfb7b30

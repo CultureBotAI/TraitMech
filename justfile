@@ -293,6 +293,25 @@ research-trait-edison-batch batch *args="":
 enrich-edison-response *args="":
     uv run --extra dev python scripts/enrich_edison_response.py {{args}}
 
+# Batch Edison sweep over every REVIEWED CLASS trait that has a causal graph.
+# Resumable (skips traits whose report exists), fail-soft, paced, and appends to
+# reports/trait_graph_audit_manifest.tsv.
+#
+# THIS RECIPE EXISTS FOR THE CREDENTIALS, not for convenience. scripts/
+# research_trait.py has no load_dotenv, so a run launched outside `just` sees no
+# EDISON_API_KEY and every call in the sweep fails instantly — the script says so
+# in its own comment. `set dotenv-load := true` at the top of this file is what
+# injects the per-repo .env, so the sweep must be launched through here.
+#
+# PAID: one deep-research call per trait, ~7.5 min each at --workers 1. Canary
+# with --limit 1 and check the artifact is on disk and non-empty before any
+# fan-out; the exit code alone will not tell you.
+#   just trait-graph-sweep --dry-run
+#   just trait-graph-sweep --limit 1
+#   just trait-graph-sweep --workers 4
+trait-graph-sweep *args="":
+    uv run --extra dev python scripts/run_trait_graph_audit.py {{args}}
+
 # List available deep-research-client providers.
 research-providers:
     uv run --extra dev deep-research-client providers

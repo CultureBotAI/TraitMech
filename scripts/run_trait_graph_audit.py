@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime as _dt
 import os
 import subprocess
 import sys
@@ -77,6 +78,9 @@ def output_path(category: str, slug: str, provider: str = DEFAULT_PROVIDER) -> P
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--verify", action="store_true",
+                    help="check every ok row's artifact exists; exit 1 if any is "
+                         "missing. No calls, no cost.")
     ap.add_argument("--limit", type=int, default=0, help="cap number of NEW calls (0 = all)")
     ap.add_argument("--sleep", type=float, default=2.0, help="seconds to stagger worker launches")
     ap.add_argument("--workers", type=int, default=1, help="concurrent deep-research-client calls")
@@ -95,7 +99,12 @@ def main() -> int:
     if not os.environ.get("EDISON_API_KEY") and os.environ.get("EDISON_PLATFORM_API_KEY"):
         os.environ["EDISON_API_KEY"] = os.environ["EDISON_PLATFORM_API_KEY"]
 
-    if not args.dry_run and not (os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
+    # --verify and --dry-run make no calls, so neither should need a credential.
+    # Gating the integrity check behind the key would make it unrunnable on a
+    # fresh clone and in CI — the two places most likely to notice that an `ok`
+    # row has no artifact.
+    if not (args.dry_run or args.verify) and not (
+            os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
         print("ERROR: EDISON_API_KEY / FUTUREHOUSE_API_KEY unset — set it or use --dry-run.", file=sys.stderr)
         return 2
 
@@ -113,12 +122,44 @@ def main() -> int:
         pending = pending[: args.limit]
         print(f"  (limited to {len(pending)} this run)", file=sys.stderr)
 
+    if args.verify:
+        # The manifest is a spend record, so an `ok` row whose artifact is gone
+        # is the one failure mode that matters: it says a call was paid for and
+        # cannot be resumed into, because resume keys on the file existing.
+        # 342 rows were in that state before research/ was tracked, and four
+        # more were created by deleting reports the running sweep had already
+        # passed. Relying on someone remembering is how the first 342 were lost.
+        missing = []
+        with MANIFEST.open() as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                if row.get("status") != "ok":
+                    continue
+                out = (row.get("output") or "").strip()
+                if out and not (REPO_ROOT / out).exists():
+                    missing.append((row.get("run_id", "?"), out))
+        print(f"manifest ok rows with a missing artifact: {len(missing)}",
+              file=sys.stderr)
+        for run_id, out in missing[:20]:
+            print(f"  {run_id}  {out}", file=sys.stderr)
+        if len(missing) > 20:
+            print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
+        return 1 if missing else 0
+
+    # One id for every row this invocation writes. The manifest is append-only
+    # and a trait can legitimately appear more than once — a failure and its
+    # retry, or a re-run after the artifacts were lost — and without this there
+    # is no field distinguishing those. `biofilm_formation` carried three
+    # indistinguishable rows before this existed, so "what was billed, when"
+    # was the one question the spend record could not answer about itself.
+    run_id = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+    print(f"run_id: {run_id}", file=sys.stderr)
+
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     new = not MANIFEST.exists()
     mf = MANIFEST.open("a", newline="")
     w = csv.writer(mf, delimiter="\t", lineterminator="\n")
     if new:
-        w.writerow(["category", "slug", "status", "output"])
+        w.writerow(["run_id", "category", "slug", "status", "output"])
 
     if args.dry_run:
         for i, (cat, slug, label) in enumerate(pending, 1):
@@ -155,7 +196,7 @@ def main() -> int:
                 print(f"       {cat}/{slug}: {tail[-1][:200]}", file=sys.stderr)
         with lock:
             counts["ok" if ok else "fail"] += 1
-            w.writerow([cat, slug, status,
+            w.writerow([run_id, cat, slug, status,
                         str(output_path(cat, slug, provider).relative_to(REPO_ROOT)) if ok else ""])
             mf.flush()
             done = counts["ok"] + counts["fail"]
