@@ -38,5 +38,8 @@ src/traitmech/schema/traitmech_dataclasses.py
 # ~500 KB each, dominated by re-serialized metpo.owl).
 reports/robot/
 
-# Edison deep-research reports — large, regenerable via scripts/run_trait_graph_audit.py (needs EDISON_API_KEY)
-research/
+# research/ is TRACKED. It was ignored as "large, regenerable" until the second
+# half of that turned out to be the expensive half: 342 of 353 reports were lost
+# because nothing outside one machine held them, and the manifest recorded 353
+# successes against 11 surviving files. Regenerating costs a paid Edison call
+# per trait (~7.5 min each), so these are provenance, not build output.
