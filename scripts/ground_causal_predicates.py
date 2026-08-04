@@ -50,7 +50,19 @@ TARGET_CLASS = "TraitRecord"
 CURATION_ACTION = "GROUND_CAUSAL_PREDICATES"
 
 
-def _types(raw: str | None) -> frozenset[str] | None:
+def _node_type_values(schema_path: Path) -> frozenset[str]:
+    """Permissible CausalNodeTypeEnum values, read from the schema.
+
+    Read rather than hardcoded so a schema change cannot leave this file
+    silently disagreeing with it.
+    """
+    doc = yaml.safe_load(schema_path.read_text())
+    pv = (doc.get("enums", {}).get("CausalNodeTypeEnum", {}) or {}).get(
+        "permissible_values", {}) or {}
+    return frozenset(pv)
+
+
+def _types(raw: str | None, valid: frozenset[str] | None = None) -> frozenset[str] | None:
     """Parse a ``subject_types``/``object_types`` cell.
 
     ``*`` or empty means "any node type" and returns None. Anything else is a
@@ -59,7 +71,17 @@ def _types(raw: str | None) -> frozenset[str] | None:
     cell = (raw or "*").strip()
     if not cell or cell == "*":
         return None
-    return frozenset(t.strip() for t in cell.split("|") if t.strip())
+    names = frozenset(t.strip() for t in cell.split("|") if t.strip())
+    if valid is not None:
+        unknown = sorted(names - valid)
+        if unknown:
+            # A typo here would silently block every edge the row could ground,
+            # or none of them — a constraint nobody can see is worse than no
+            # constraint, so this is fatal rather than a warning.
+            raise ValueError(
+                f"unknown CausalNodeTypeEnum value(s) in mapping: {', '.join(unknown)}"
+            )
+    return names
 
 
 def load_mapping(path: Path) -> dict[str, tuple[str, str, frozenset | None, frozenset | None]]:
@@ -78,7 +100,8 @@ def load_mapping(path: Path) -> dict[str, tuple[str, str, frozenset | None, froz
     """
     if not path.exists():
         raise FileNotFoundError(f"mapping file not found: {path}")
-    out: dict[str, tuple[str, str]] = {}
+    valid = _node_type_values(SCHEMA_PATH) if SCHEMA_PATH.exists() else None
+    out: dict[str, tuple[str, str, frozenset | None, frozenset | None]] = {}
     with path.open() as fh:
         reader = csv.DictReader(fh, delimiter="\t")
         for row in reader:
@@ -92,8 +115,8 @@ def load_mapping(path: Path) -> dict[str, tuple[str, str, frozenset | None, froz
                     f"mapping conflict for label {label!r}: {out[label][0]} vs {curie}"
                 )
             out[label] = (curie, source,
-                          _types(row.get("subject_types")),
-                          _types(row.get("object_types")))
+                          _types(row.get("subject_types"), valid),
+                          _types(row.get("object_types"), valid))
     return out
 
 
@@ -221,9 +244,21 @@ def main() -> int:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", newline="") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
-        w.writerow(["predicate_label", "edge_count", "example_files"])
+        # `status` and `blocked_by` exist because the TSV is the durable work
+        # queue — the stderr summary scrolls away. Without them a curator reads
+        # "causally upstream of, 13" and tries to map it again, which is
+        # precisely the mistake the constraint just prevented (#236).
+        w.writerow(["predicate_label", "edge_count", "status", "blocked_by",
+                    "example_files"])
+        blocked_labels = {shape.split(" (")[0] for shape in blocked_total}
         for label, n in residual_total.most_common():
-            w.writerow([label, n, "|".join(residual_examples[label])])
+            is_blocked = label in blocked_labels
+            w.writerow([
+                label, n,
+                "blocked_by_node_type" if is_blocked else "unmapped",
+                mapping[label][0] if is_blocked else "",
+                "|".join(residual_examples[label]),
+            ])
 
     print("", file=sys.stderr)
     print("=== ground-predicates summary ===", file=sys.stderr)

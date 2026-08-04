@@ -218,3 +218,18 @@ def test_load_mapping_parses_type_columns(tmp_path):
                             frozenset({"PATHWAY"}))
     # `*` and empty both mean "any", so old rows keep working unchanged.
     assert m["loose"] == ("RO:0002327", "RO", None, None)
+
+
+def test_unknown_node_type_name_is_fatal(tmp_path):
+    """A typo in the constraint would silently block everything or nothing.
+
+    A constraint nobody can see is worse than no constraint, so an unknown
+    CausalNodeTypeEnum value raises rather than warning.
+    """
+    p = tmp_path / "m.tsv"
+    _write_tsv(p, [
+        "label\ttarget_curie\ttarget_label\tsource\tconfidence\tsubject_types\tobject_types\tnotes",
+        "x\tRO:1\tx\tRO\thigh\tBIOLOGICAL_PROCES\t*\t",
+    ])
+    with pytest.raises(ValueError, match="BIOLOGICAL_PROCES"):
+        load_mapping(p)
