@@ -477,12 +477,20 @@ audit-derived-reports:
     # this names the collision rather than silently producing a confusing
     # STALE. If the research block is ever wanted in committed pages, the fix
     # is to exclude it from the comparison, not to weaken the gate.
-    # Checks the RENDERED side as well as the committed one. The collision
-    # arises on a curator's machine, where research/ exists: the fresh render
-    # grows a block the committed page lacks. Testing only the committed side
-    # would miss exactly that direction and leave a bare, confusing STALE.
-    if grep -rlq 'class="research-md"' "$pages_tmp" pages/traits 2>/dev/null; then
-      echo "  ERROR pages/ carries a research block, which is rendered from" >&2
+    # Checks the RENDERED side as well as the committed one, and names whichever
+    # fired. The collision arises on a curator's machine, where research/ exists
+    # and the fresh render grows a block the committed page lacks — so testing
+    # only the committed side would miss the very direction this guards, and
+    # reporting "pages/ carries" in that case would name the wrong side.
+    research_side=""
+    grep -rlq 'class="research-md"' "$pages_tmp" 2>/dev/null \
+      && research_side="the fresh render"
+    if grep -rlq 'class="research-md"' pages/traits 2>/dev/null; then
+      [ -n "$research_side" ] && research_side="$research_side and pages/" \
+        || research_side="pages/"
+    fi
+    if [ -n "$research_side" ]; then
+      echo "  ERROR $research_side carries a research block, rendered from" >&2
       echo "        gitignored research/ and cannot be reproduced in CI (#230)." >&2
       stale_pages=1
       fail=1
