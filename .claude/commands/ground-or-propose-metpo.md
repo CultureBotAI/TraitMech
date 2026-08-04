@@ -66,10 +66,16 @@ A large share of the head is mechanical. Ground these directly; **do not** spend
 
 - **Generic causal/regulatory predicates → RO** (the relation closure). Map the obvious
   ones straight to RO and record `skos:exactMatch`/`closeMatch` with `source: RO`.
-  **These are all processual relations** — RO defines them over occurrents — so
-  give each one `subject_types`/`object_types` in the mapping rather than
-  leaving `*`/`*`. `causally upstream of` is absent from this list precisely
-  because its label matched exactly and its edges did not (#235, #236):
+  **Write `subject_types`/`object_types` for each one rather than leaving
+  `*`/`*`, and read the relation's own domain and range to decide what they
+  are** — they differ across this list, so there is no blanket rule:
+  the regulation and causal relations (`RO:0002211/2/3`, `RO:0002418`,
+  `RO:0002629/30`) are defined over **occurrents**; `enables` (RO:0002327) is
+  *"c enables p iff c is capable of p"*, so material entity → process;
+  `produces` (RO:0003000) is defined *"where a and b are material entities"*;
+  `part of`/`has part` (BFO) are deliberately domain-neutral.
+  `causally upstream of` is absent from this list precisely because its label
+  matched exactly and its edges did not (#235, #236):
   `positively regulates`→`RO:0002213`, `negatively regulates`→`RO:0002212`,
   `regulates`→`RO:0002211`, `causally upstream of or within`→`RO:0002418`,
   `directly positively regulates`→`RO:0002629`,
