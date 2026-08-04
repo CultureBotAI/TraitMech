@@ -176,6 +176,18 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 }
 .research-card { border-left: 4px solid var(--accent); }
 
+/* The report is provider output, not curated content, and its suggested CURIEs
+   are measurably unreliable (#243) — so the caveat has to read as a warning
+   rather than as more grey metadata under the source link. */
+.research-card .research-caveat {
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.75rem 0 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 /* DisMech-style causal pathographs on trait pages */
 .causal-graphs { margin: 1.25rem 0; }
 .causal-graph-card { margin-bottom: 1rem; }

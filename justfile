@@ -490,30 +490,24 @@ audit-derived-reports:
       fail=1
       pages_diff=""
     else
-    # The renderer reads research/traits/ (render_trait_pages.py) to embed a
-    # research block, and research/ is GITIGNORED — it exists on a curator's
-    # machine and never in CI. A committed research-bearing page is therefore
-    # unreproducible by a fresh render and would wedge this gate permanently:
-    # `just gen-pages` fixes it locally and CI re-breaks it on every push.
-    # Nothing is affected today (no page under pages/traits/ carries one), so
-    # this names the collision rather than silently producing a confusing
-    # STALE. If the research block is ever wanted in committed pages, the fix
-    # is to exclude it from the comparison, not to weaken the gate.
-    # Checks the RENDERED side as well as the committed one, and names whichever
-    # fired. The collision arises on a curator's machine, where research/ exists
-    # and the fresh render grows a block the committed page lacks — so testing
-    # only the committed side would miss the very direction this guards, and
-    # reporting "pages/ carries" in that case would name the wrong side.
-    research_side=""
-    grep -rlq 'class="research-md"' "$pages_tmp" 2>/dev/null \
-      && research_side="the fresh render"
-    if grep -rlq 'class="research-md"' pages/traits 2>/dev/null; then
-      [ -n "$research_side" ] && research_side="$research_side and pages/" \
-        || research_side="pages/"
-    fi
-    if [ -n "$research_side" ]; then
-      echo "  ERROR $research_side carries a research block, rendered from" >&2
-      echo "        gitignored research/ and cannot be reproduced in CI (#230)." >&2
+    # This used to reject any research block outright, because the renderer
+    # reads research/traits/ and research/ was GITIGNORED: a committed
+    # research-bearing page could not be reproduced by CI's fresh render, so it
+    # would wedge this gate permanently — `just gen-pages` fixes it locally and
+    # CI re-breaks it on every push. #230 listed the ways out: stop committing
+    # such pages, exclude the block from the comparison, or track the research
+    # inputs. #240/#241 took the third — 353 reports are now tracked — which is
+    # what let #233 render the block at all.
+    #
+    # So the collision is gone, and what remains is its precondition. If
+    # research/ were ever gitignored again, the two sides would diverge exactly
+    # as before, and the failure would surface as an unexplained 353-file STALE
+    # rather than as a cause. Guard the premise instead of the symptom.
+    if grep -rlq 'class="research-md"' "$pages_tmp" pages/traits 2>/dev/null \
+       && [ -z "$(git ls-files research/traits | head -1)" ]; then
+      echo "  ERROR a research block is rendered, but research/traits is not" >&2
+      echo "        tracked — CI renders no block and pages/ can never match" >&2
+      echo "        (#230, #233). Track research/ or drop the block." >&2
       stale_pages=1
       fail=1
     fi
