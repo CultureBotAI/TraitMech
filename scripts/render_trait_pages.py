@@ -84,6 +84,65 @@ def load_traits() -> list[tuple[Path, dict]]:
     return out
 
 
+def corpus_timestamp(traits: list[tuple[Path, dict]]) -> str:
+    """The latest ``curation_history`` timestamp across all records.
+
+    Deliberately NOT ``datetime.now()``. A wall-clock stamp made every page
+    differ on every run, so ``pages/`` could not be checked by regenerating and
+    diffing — the technique that guards the grounding residuals (#214) and the
+    causal-graph audit (#223). With no way to check, it drifted silently: 119
+    pages were stale by four weeks before anyone noticed (#228).
+
+    It is also the more useful answer. A reader wants to know "current as of
+    what corpus state?", and the wall-clock time of the last ``just gen-pages``
+    invocation does not tell them that — a rebuild with no data change moved it
+    forward, and a data change with no rebuild did not.
+
+    Falls back to the empty string rather than to the clock: no timestamps means
+    no defensible claim about currency, and inventing one would restore exactly
+    the nondeterminism this removes.
+    """
+    latest: datetime | None = None
+    for _path, doc in traits:
+        for entry in (doc.get("curation_history") or []):
+            parsed = _as_utc(entry.get("timestamp"))
+            if parsed is None:
+                continue
+            if latest is None or parsed > latest:
+                latest = parsed
+    return latest.strftime("%Y-%m-%d %H:%M UTC") if latest else ""
+
+
+def _as_utc(raw: object) -> datetime | None:
+    """Coerce a curation_history timestamp to an aware UTC datetime.
+
+    Handles both YAML shapes, which is not optional: PyYAML resolves an
+    *unquoted* ISO timestamp to a ``datetime`` and a quoted one to ``str``. All
+    3341 timestamps in the corpus are currently quoted, but nothing enforces
+    that — so accepting only ``str`` would silently drop any record a curator or
+    writer script emitted unquoted, and the page stamp would go stale or
+    backwards with no signal. Silent zero is the failure mode this whole thread
+    keeps finding (#214, #223, #228).
+
+    Strings mix offsets and the 'Z' suffix ('...+00:00', '...-07:00', '...Z'),
+    so they are normalised before parsing. Everything is compared in UTC —
+    otherwise "latest" would depend on which offset a curator's machine used.
+    Naive values are assumed UTC rather than discarded.
+    """
+    if isinstance(raw, datetime):
+        parsed = raw
+    elif isinstance(raw, str):
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    else:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
 def load_match_table() -> dict[str, dict]:
     """Return {METPO CURIE → match-row dict}."""
     out: dict[str, dict] = {}
@@ -146,6 +205,8 @@ def render_pages(args: argparse.Namespace) -> int:
     metpo_version = load_metpo_version(RAW_OWL)
     traits = load_traits()
     match_table = load_match_table()
+    # One value for every page in the run, derived from the data (#228).
+    corpus_stamp = corpus_timestamp(traits)
 
     if args.dry_run:
         print(f"[dry-run] {len(traits)} traits; {sum(1 for v in match_table.values() if v['n_kgm_nodes'] > 0)} matched")
@@ -259,7 +320,7 @@ def render_pages(args: argparse.Namespace) -> int:
             yaml_blob_url=f"{GH_BLOB_BASE}/{yaml_rel}",
             yaml_raw_url=f"{GH_RAW_BASE}/{yaml_rel}",
             yaml_edit_url=f"{GH_EDIT_BASE}/{yaml_rel}",
-            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            generated_at=corpus_stamp,
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
@@ -285,7 +346,7 @@ def render_pages(args: argparse.Namespace) -> int:
             category=cat,
             traits=items,
             metpo_version=metpo_version,
-            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            generated_at=corpus_stamp,
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
@@ -308,7 +369,7 @@ def render_pages(args: argparse.Namespace) -> int:
             n_points=len(umap_points),
             categories=cats,
             metpo_version=metpo_version,
-            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            generated_at=corpus_stamp,
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
@@ -331,7 +392,7 @@ def render_pages(args: argparse.Namespace) -> int:
             n_points=len(graph_points),
             categories=cats,
             metpo_version=metpo_version,
-            generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+            generated_at=corpus_stamp,
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
@@ -354,7 +415,7 @@ def render_pages(args: argparse.Namespace) -> int:
         category_counts=category_counts,
         embedding_per_category=dict(embedding_per_category),
         metpo_version=metpo_version,
-        generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        generated_at=corpus_stamp,
     )
     (PAGES_DIR / "index.html").write_text(landing)
 
@@ -367,7 +428,7 @@ def render_pages(args: argparse.Namespace) -> int:
         category_counts=category_counts,
         embedding_per_category=dict(embedding_per_category),
         metpo_version=metpo_version,
-        generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        generated_at=corpus_stamp,
     )
     (PAGES_DIR / "browse.html").write_text(browse)
 

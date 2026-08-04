@@ -35,7 +35,7 @@
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Built {{ generated_at }} from
+      {% if generated_at %}Corpus as of {{ generated_at }} from{% else %}Built from{% endif %}
       <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
       · {{ total_traits }} TraitRecords
       · embedding coverage {{ embedding_coverage_pct }}%
