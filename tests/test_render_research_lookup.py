@@ -145,3 +145,39 @@ def test_every_tracked_report_yields_a_substantial_answer():
         if len([line for line in research_answer(p.read_text()) if line.strip()]) < 20
     ]
     assert thin == [], f"reports whose answer did not survive the trim: {thin}"
+
+
+def test_the_prompt_marker_appears_exactly_twice_in_every_sweep_report():
+    """The trim anchors on the second marker; a layout change must be loud.
+
+    If a future provider layout echoes the prompt a different number of times,
+    or a report's answer quotes the instruction line, the preview boundary moves
+    silently. Assert the shape the trim depends on rather than only asserting
+    that something survived it (#255).
+    """
+    reports = sorted(
+        (REPO_ROOT / "research" / "traits").rglob("*-deep-research-falcon.md")
+    )
+    assert len(reports) >= 353
+    off = {
+        p.name: p.read_text().count(RESEARCH_PROMPT_TAIL)
+        for p in reports
+        if p.read_text().count(RESEARCH_PROMPT_TAIL) != 2
+    }
+    assert off == {}, f"reports not echoing the prompt exactly twice: {off}"
+
+
+def test_a_quoted_marker_in_the_answer_does_not_truncate_it():
+    """The asymmetry #255 is about: boilerplate is survivable, lost findings are not."""
+    text = (
+        "---\np: f\n---\n"
+        f"# Template\n- {RESEARCH_PROMPT_TAIL}.\n"
+        f"# Template\n- {RESEARCH_PROMPT_TAIL}.\n"
+        "\n# The answer\n\nFirst finding.\n"
+        f"We note the instruction to log {RESEARCH_PROMPT_TAIL}.\n"
+        "Last finding.\n"
+    )
+    body = research_answer(text)
+    assert body[0] == "# The answer"
+    assert "First finding." in body
+    assert "Last finding." in body

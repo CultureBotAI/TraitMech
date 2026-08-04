@@ -265,9 +265,15 @@ def research_answer(text: str) -> list[str]:
             if line.strip() == "---":
                 lines = lines[i + 1:]
                 break
+    # The prompt is echoed exactly twice, so the second marker is the boundary.
+    # Anchoring on the LAST one instead would be identical today and fails
+    # unsafely: a report whose answer quotes the instruction line — reports do
+    # discuss what should not be curated — would be cut mid-answer, silently
+    # dropping findings. Overshooting the other way only leaves some boilerplate
+    # in the preview (#255).
     marks = [i for i, line in enumerate(lines) if RESEARCH_PROMPT_TAIL in line]
     if marks:
-        lines = lines[marks[-1] + 1:]
+        lines = lines[marks[min(1, len(marks) - 1)] + 1:]
     while lines and not lines[0].strip():
         lines.pop(0)
     return lines

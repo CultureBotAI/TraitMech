@@ -176,17 +176,12 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 }
 .research-card { border-left: 4px solid var(--accent); }
 
-/* The report is provider output, not curated content, and its suggested CURIEs
-   are measurably unreliable (#243) — so the caveat has to read as a warning
-   rather than as more grey metadata under the source link. */
-.research-card .research-caveat {
-  background: var(--accent-soft);
-  border-radius: 4px;
-  padding: 0.6rem 0.9rem;
-  margin: 0.75rem 0 0 0;
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
+/* The research caveat reuses .graph-warning rather than defining its own tint.
+   A bespoke rule using --accent-soft looked like ordinary chrome — that variable
+   is already the background of table headers, hover rows and .research-card
+   itself — and would have needed its own dark-mode override to maintain (#256).
+   .graph-warning is the established warning idiom on this page and carries
+   both theme branches. */
 
 /* DisMech-style causal pathographs on trait pages */
 .causal-graphs { margin: 1.25rem 0; }

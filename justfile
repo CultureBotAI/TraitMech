@@ -503,13 +503,28 @@ audit-derived-reports:
     # research/ were ever gitignored again, the two sides would diverge exactly
     # as before, and the failure would surface as an unexplained 353-file STALE
     # rather than as a cause. Guard the premise instead of the symptom.
-    if grep -rlq 'class="research-md"' "$pages_tmp" pages/traits 2>/dev/null \
-       && [ -z "$(git ls-files research/traits | head -1)" ]; then
-      echo "  ERROR a research block is rendered, but research/traits is not" >&2
-      echo "        tracked — CI renders no block and pages/ can never match" >&2
-      echo "        (#230, #233). Track research/ or drop the block." >&2
-      stale_pages=1
-      fail=1
+    #
+    # Two ways the premise breaks, with different remedies, so they are reported
+    # separately. Testing only "is the directory tracked" would miss the second
+    # and reachable one: a curator generates a report, renders, and commits
+    # pages/ without committing the report. Locally both sides see it and qc
+    # passes; in CI the fresh render has no block and pages/ does (#257).
+    if grep -rlq 'class="research-md"' "$pages_tmp" pages/traits 2>/dev/null; then
+      untracked_research="$(git ls-files --others --exclude-standard research/traits 2>/dev/null | head -3)"
+      if [ -z "$(git ls-files research/traits | head -1)" ]; then
+        echo "  ERROR a research block is rendered, but research/traits is not" >&2
+        echo "        tracked — CI renders no block and pages/ can never match" >&2
+        echo "        (#230, #233). Track research/ or drop the block." >&2
+        stale_pages=1
+        fail=1
+      elif [ -n "$untracked_research" ]; then
+        echo "  ERROR a research block is rendered from reports that are not" >&2
+        echo "        committed, so CI cannot reproduce it (#257):" >&2
+        echo "$untracked_research" | sed 's/^/          /' >&2
+        echo "  git add research/" >&2
+        stale_pages=1
+        fail=1
+      fi
     fi
     # Excusing these two from the diff is not the same as tolerating their
     # absence: the renderer never emits them, so nothing else would notice if
