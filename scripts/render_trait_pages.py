@@ -195,6 +195,12 @@ def load_node_dim_preview(needed_nodes: set[str]) -> dict[str, str]:
 
 
 def render_pages(args: argparse.Namespace) -> int:
+    # Output root is a parameter, not the module constant, so the staleness gate
+    # can render into a temp dir and diff (#230). Checking must never dirty the
+    # tree — that is half of what #214 was about — and this function wipes and
+    # recreates its output root, so pointing it at pages/ to verify pages/ would
+    # destroy the very thing being compared.
+    pages_dir = args.out or PAGES_DIR
     if not TEMPLATES_DIR.exists():
         print(f"templates missing: {TEMPLATES_DIR}", file=sys.stderr)
         return 2
@@ -213,13 +219,13 @@ def render_pages(args: argparse.Namespace) -> int:
         return 0
 
     # Wipe output dir for a clean build.
-    if PAGES_DIR.exists() and args.clean:
-        shutil.rmtree(PAGES_DIR)
+    if pages_dir.exists() and args.clean:
+        shutil.rmtree(pages_dir)
 
-    PAGES_DIR.mkdir(parents=True, exist_ok=True)
-    (PAGES_DIR / "category").mkdir(exist_ok=True)
-    (PAGES_DIR / "assets").mkdir(exist_ok=True)
-    shutil.copyfile(TEMPLATES_DIR / "style.css", PAGES_DIR / "assets" / "style.css")
+    pages_dir.mkdir(parents=True, exist_ok=True)
+    (pages_dir / "category").mkdir(exist_ok=True)
+    (pages_dir / "assets").mkdir(exist_ok=True)
+    shutil.copyfile(TEMPLATES_DIR / "style.css", pages_dir / "assets" / "style.css")
 
     # Build category, slug, parent indexes.
     by_curie: dict[str, dict] = {curie: doc for path, doc in traits if (curie := doc.get("identifier"))}
@@ -262,7 +268,7 @@ def render_pages(args: argparse.Namespace) -> int:
         category_dir = rel.parts[0]
         slug = path.stem
         page = f"traits/{category_dir}/{slug}.html"
-        out_path = PAGES_DIR / "traits" / category_dir / f"{slug}.html"
+        out_path = pages_dir / "traits" / category_dir / f"{slug}.html"
         out_path.parent.mkdir(parents=True, exist_ok=True)
         curie = doc.get("identifier", "")
         match = match_table.get(curie, {"n_kgm_nodes": 0, "kgm_nodes": [], "match_method": "no_match"})
@@ -339,7 +345,7 @@ def render_pages(args: argparse.Namespace) -> int:
     # Render category index pages.
     for cat, items in category_lists.items():
         items.sort(key=lambda x: x["label"])
-        out_path = PAGES_DIR / "category" / f"{cat.lower()}.html"
+        out_path = pages_dir / "category" / f"{cat.lower()}.html"
         page_html = env.get_template("category.html").render(
             title=cat,
             root="../",
@@ -354,7 +360,7 @@ def render_pages(args: argparse.Namespace) -> int:
 
     # Render UMAP page if data exists.
     if UMAP_JSON.exists():
-        umap_data_dst = PAGES_DIR / "data" / "trait_umap.json"
+        umap_data_dst = pages_dir / "data" / "trait_umap.json"
         umap_data_dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(UMAP_JSON, umap_data_dst)
         import json as _json
@@ -373,11 +379,11 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        (PAGES_DIR / "umap.html").write_text(umap_html)
+        (pages_dir / "umap.html").write_text(umap_html)
 
     # Render sfdp graph-layout page if data exists.
     if GRAPH_JSON.exists():
-        graph_data_dst = PAGES_DIR / "data" / "trait_graph.json"
+        graph_data_dst = pages_dir / "data" / "trait_graph.json"
         graph_data_dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(GRAPH_JSON, graph_data_dst)
         import json as _json
@@ -396,7 +402,7 @@ def render_pages(args: argparse.Namespace) -> int:
             total_traits=len(traits),
             embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
         )
-        (PAGES_DIR / "graph.html").write_text(graph_html)
+        (pages_dir / "graph.html").write_text(graph_html)
 
     # Render landing page.
     category_counts = {cat: len(items) for cat, items in sorted(category_lists.items(), key=lambda x: -len(x[1]))}
@@ -417,7 +423,7 @@ def render_pages(args: argparse.Namespace) -> int:
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
     )
-    (PAGES_DIR / "index.html").write_text(landing)
+    (pages_dir / "index.html").write_text(landing)
 
     # Render record-browser page (category tile grid).
     browse = env.get_template("browse.html").render(
@@ -430,7 +436,7 @@ def render_pages(args: argparse.Namespace) -> int:
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
     )
-    (PAGES_DIR / "browse.html").write_text(browse)
+    (pages_dir / "browse.html").write_text(browse)
 
     print(f"Wrote {written} trait pages")
     print(f"Wrote {len(category_lists)} category index pages")
@@ -453,6 +459,9 @@ def main() -> int:
                     help="report counts without writing pages/")
     ap.add_argument("--clean", action="store_true",
                     help="remove pages/ before rendering")
+    ap.add_argument("--out", type=Path, default=None,
+                    help="output root (default: pages/); used by the staleness "
+                         "gate to render into a temp dir")
     return render_pages(ap.parse_args())
 
 

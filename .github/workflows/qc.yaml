@@ -22,6 +22,18 @@ on:
       #                 stale, because it is exactly the section 9 workflow.
       - "reports/**"
       - "mappings/**"
+      # pages/ joined the gate in #230. Both its inputs have to trigger too:
+      # the pages themselves, and the templates — a one-line template edit
+      # changes all 489 rendered files, so leaving it out would be the widest
+      # possible version of the filter-narrower-than-the-job bug (#184, #200).
+      - "pages/**"
+      - "src/traitmech/templates/**"
+      # The renderer's other two tracked inputs. Both change what it emits, so
+      # both must trigger the job that compares its output: the embedding
+      # tables feed the match/UMAP/graph sections, and metpo.owl supplies the
+      # version string in every page footer.
+      - "data/embeddings/**"
+      - "data/raw/metpo.owl"
   push:
     branches: [main]
   workflow_dispatch:

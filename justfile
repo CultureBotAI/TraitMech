@@ -445,6 +445,139 @@ audit-derived-reports:
       fail=1
     fi
 
+    # --- pages/, compared against the working tree (#230) --------------------
+    # Only checkable at all since #228 made the renderer deterministic; before
+    # that a fresh build differed from every committed page on the timestamp
+    # alone. Rendered into the temp dir via --out, never into pages/ — this
+    # generator wipes and recreates its output root, so pointing it at pages/
+    # to verify pages/ would destroy what is being compared.
+    #
+    # Working tree, not `git show HEAD:` — nothing else in a qc run rewrites
+    # pages/, which is the property that forced the other basis for
+    # causal_graph_audit.tsv.
+    pages_tmp="$tmp/pages"
+    if ! uv run python scripts/render_trait_pages.py --out "$pages_tmp" \
+         > "$tmp/gen.log" 2>&1; then
+      echo "ERROR: render_trait_pages.py failed — pages staleness not checked:" >&2
+      cat "$tmp/gen.log" >&2
+      exit 1
+    fi
+    if [ ! -d pages ]; then
+      echo "  MISSING pages/ — the renderer produced output, the repo has none" >&2
+      stale_pages=1
+      # Regenerating IS part of the fix here — gen-pages recreates the directory
+      # — so unlike the orphan case this branch should say so.
+      regen_pages=1
+      # But not the WHOLE fix: the hand-vendored assets went with the directory
+      # and gen-pages never emits them, so `git add pages/` alone would stage
+      # their deletion. The per-asset loop below only runs when pages/ exists,
+      # so name them here. The restore line prints above the git add, which is
+      # the ordering that makes this safe to follow top to bottom.
+      lost_assets=" pages/d3.v7.min.js pages/theme-toggle.js"
+      fail=1
+      pages_diff=""
+    else
+    # The renderer reads research/traits/ (render_trait_pages.py) to embed a
+    # research block, and research/ is GITIGNORED — it exists on a curator's
+    # machine and never in CI. A committed research-bearing page is therefore
+    # unreproducible by a fresh render and would wedge this gate permanently:
+    # `just gen-pages` fixes it locally and CI re-breaks it on every push.
+    # Nothing is affected today (no page under pages/traits/ carries one), so
+    # this names the collision rather than silently producing a confusing
+    # STALE. If the research block is ever wanted in committed pages, the fix
+    # is to exclude it from the comparison, not to weaken the gate.
+    # Checks the RENDERED side as well as the committed one, and names whichever
+    # fired. The collision arises on a curator's machine, where research/ exists
+    # and the fresh render grows a block the committed page lacks — so testing
+    # only the committed side would miss the very direction this guards, and
+    # reporting "pages/ carries" in that case would name the wrong side.
+    research_side=""
+    grep -rlq 'class="research-md"' "$pages_tmp" 2>/dev/null \
+      && research_side="the fresh render"
+    if grep -rlq 'class="research-md"' pages/traits 2>/dev/null; then
+      [ -n "$research_side" ] && research_side="$research_side and pages/" \
+        || research_side="pages/"
+    fi
+    if [ -n "$research_side" ]; then
+      echo "  ERROR $research_side carries a research block, rendered from" >&2
+      echo "        gitignored research/ and cannot be reproduced in CI (#230)." >&2
+      stale_pages=1
+      fail=1
+    fi
+    # Excusing these two from the diff is not the same as tolerating their
+    # absence: the renderer never emits them, so nothing else would notice if
+    # they were deleted, and umap.html/graph.html break without d3. Require
+    # them explicitly rather than only exempting them.
+    for asset in d3.v7.min.js theme-toggle.js; do
+      if [ ! -f "pages/$asset" ]; then
+        echo "  MISSING pages/$asset — hand-vendored, never regenerated" >&2
+        # NOT stale_pages: that flag's remediation is `just gen-pages` then
+        # `git add pages/`, and neither restores this — gen-pages does not emit
+        # it, and `git add` would stage the deletion and make the loss
+        # permanent. Restoring from git is the only fix.
+        lost_assets="${lost_assets:-} pages/$asset"
+        fail=1
+      fi
+    done
+    # Only those two are excused by NAME. Dropping the whole `Only in pages`
+    # direction would also hide an orphan — a page for a trait that was deleted
+    # or renamed, which `just gen-pages` does not sweep because it does not pass
+    # --clean by default.
+    # diff exits 0 (same), 1 (differences) or >1 (error). `|| true` alone folded
+    # an ERROR into an empty result, which then read as OK — the same fail-open
+    # both sibling blocks treat as fatal. Capture the status instead.
+    set +e
+    pages_raw="$(diff -rq "$pages_tmp" pages)"
+    diff_rc=$?
+    set -e
+    if [ "$diff_rc" -gt 1 ]; then
+      echo "  ERROR diff failed on pages/ (exit $diff_rc) — staleness not checked" >&2
+      exit 1
+    fi
+    if [ -z "$pages_raw" ]; then
+      pages_diff=""
+    else
+      pages_diff="$(printf '%s\n' "$pages_raw" \
+        | grep -vE '^Only in pages: (d3\.v7\.min\.js|theme-toggle\.js)$' || true)"
+    fi
+    fi
+    if [ -n "$pages_diff" ]; then
+      echo "  STALE pages/ — not what render_trait_pages.py produces:" >&2
+      printf '%s\n' "$pages_diff" | sed -n '1,15p' >&2
+      n=$(printf '%s\n' "$pages_diff" | wc -l | tr -d ' ')
+      echo "  ($n path(s) differ)" >&2
+      # An "Only in pages" line is an ORPHAN — a page whose trait YAML was
+      # deleted or renamed. `just gen-pages` cannot clear it (it overwrites and
+      # never deletes, since --clean is not the default), so recommending it
+      # would loop: regenerate, `git add` stages nothing, next run fails
+      # identically. `--clean` is worse, not better: it rmtree's pages/, and the
+      # `git add pages/` printed below would then stage the deletion of both
+      # hand-vendored assets. Name the orphans and say `git rm`.
+      orphans="$(printf '%s\n' "$pages_diff" | sed -nE 's|^Only in (pages[^:]*): (.*)$|\1/\2|p' || true)"
+      # Only recommend regenerating if something other than an orphan differs.
+      #
+      # `grep -v`, NOT `grep -qv`: -q exits on the first matching line, and with
+      # pipefail the resulting SIGPIPE on printf became the pipeline's status,
+      # short-circuiting the `&&` so regen_pages stayed unset. The flagship case
+      # is exactly where it bites — a template edit makes all 505 pages differ,
+      # ~66 KB of diff text against a 64 KB pipe capacity, so printf blocks
+      # while grep is already exiting. The curator then saw STALE with no
+      # remediation at all, because orphans and lost_assets are empty too.
+      # Reading the whole stream removes the race rather than widening it.
+      non_orphan="$(printf '%s\n' "$pages_diff" | grep -v '^Only in pages' || true)"
+      [ -n "$non_orphan" ] && regen_pages=1
+      stale_pages=1
+      fail=1
+    elif [ "${stale_pages:-0}" -eq 0 ] && [ -z "${lost_assets:-}" ]; then
+      # Every way this block can fail has to be represented here, or "OK pages/"
+      # prints underneath the line that just said otherwise. Both conditions are
+      # load-bearing: stale_pages covers the absent-pages/ and research-block
+      # branches, lost_assets covers a deleted vendored asset — which
+      # deliberately does NOT set stale_pages, because its remediation is a
+      # restore rather than a regenerate.
+      echo "  OK    pages/"
+    fi
+
     if [ "$fail" -ne 0 ]; then
       echo "" >&2
       echo "derived reports are stale (#214, #223). Regenerate and commit them:" >&2
@@ -467,7 +600,27 @@ audit-derived-reports:
         echo '  # (already run if you got here via `just qc`), then committed.' >&2
         echo '  just audit-graphs' >&2
       fi
-      echo "  git add reports/" >&2
+      # Only when regenerating can actually fix it — an orphan-only failure is
+      # cleared by git rm, and gen-pages would loop.
+      if [ "${regen_pages:-0}" -eq 1 ]; then
+        echo '  just gen-pages' >&2
+      fi
+      if [ -n "${orphans:-}" ]; then
+        echo "  git rm$(printf ' %s' $orphans)" >&2
+      fi
+      if [ -n "${lost_assets:-}" ]; then
+        echo "  git checkout --${lost_assets}" >&2
+      fi
+      # Name the directory that actually changed. A pages-only failure told the
+      # curator to `git add reports/`, which stages nothing and fails the same
+      # way next run.
+      paths=""
+      [ "${stale_grounding:-0}" -eq 1 ] && paths="reports/"
+      [ "${stale_cga:-0}" -eq 1 ] && paths="reports/"
+      [ "${regen_pages:-0}" -eq 1 ] && paths="$paths pages/"
+      # Only when something is actually stageable — an asset-only failure has
+      # no paths, and a bare `git add` is not a command anyone can run.
+      [ -n "$paths" ] && echo "  git add$(printf ' %s' $paths)" >&2
       exit 1
     fi
     echo "=== derived reports: all current ==="
