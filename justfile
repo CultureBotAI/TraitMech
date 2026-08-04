@@ -524,10 +524,13 @@ audit-derived-reports:
       echo "  ($n path(s) differ)" >&2
       stale_pages=1
       fail=1
-    elif [ "${stale_pages:-0}" -eq 0 ]; then
-      # Guarded: the MISSING and research-block branches above already reported
-      # and set the flag, and an "OK pages/" printed underneath either of them
-      # contradicts the line before it.
+    elif [ "${stale_pages:-0}" -eq 0 ] && [ -z "${lost_assets:-}" ]; then
+      # Every way this block can fail has to be represented here, or "OK pages/"
+      # prints underneath the line that just said otherwise. Both conditions are
+      # load-bearing: stale_pages covers the absent-pages/ and research-block
+      # branches, lost_assets covers a deleted vendored asset — which
+      # deliberately does NOT set stale_pages, because its remediation is a
+      # restore rather than a regenerate.
       echo "  OK    pages/"
     fi
 
