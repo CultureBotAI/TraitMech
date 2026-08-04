@@ -555,7 +555,17 @@ audit-derived-reports:
       # hand-vendored assets. Name the orphans and say `git rm`.
       orphans="$(printf '%s\n' "$pages_diff" | sed -nE 's|^Only in (pages[^:]*): (.*)$|\1/\2|p' || true)"
       # Only recommend regenerating if something other than an orphan differs.
-      printf '%s\n' "$pages_diff" | grep -qv '^Only in pages' && regen_pages=1
+      #
+      # `grep -v`, NOT `grep -qv`: -q exits on the first matching line, and with
+      # pipefail the resulting SIGPIPE on printf became the pipeline's status,
+      # short-circuiting the `&&` so regen_pages stayed unset. The flagship case
+      # is exactly where it bites — a template edit makes all 505 pages differ,
+      # ~66 KB of diff text against a 64 KB pipe capacity, so printf blocks
+      # while grep is already exiting. The curator then saw STALE with no
+      # remediation at all, because orphans and lost_assets are empty too.
+      # Reading the whole stream removes the race rather than widening it.
+      non_orphan="$(printf '%s\n' "$pages_diff" | grep -v '^Only in pages' || true)"
+      [ -n "$non_orphan" ] && regen_pages=1
       stale_pages=1
       fail=1
     elif [ "${stale_pages:-0}" -eq 0 ] && [ -z "${lost_assets:-}" ]; then
