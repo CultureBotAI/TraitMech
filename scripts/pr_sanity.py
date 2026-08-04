@@ -104,6 +104,12 @@ SKIP_LINK_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#")
 # markdown at all — see this repo's own #202.
 FENCE_RE = re.compile(r"^(?P<indent> {0,3})(?P<fence>`{3,}|~{3,})(?P<info>.*)$")
 
+# A list marker, with the column its content starts at. Indented code is
+# measured RELATIVE to that column: inside `- item`, content begins at 2, so a
+# code block needs 6 spaces, not 4. Without this a list continuation paragraph
+# indented 4 reads as code and its links go unchecked (#208 review).
+LIST_MARKER_RE = re.compile(r"^(?P<indent> *)(?P<marker>[-*+]|\d{1,9}[.)])(?P<space> +)")
+
 # An inline code span: matching runs of backticks on one line. `[x](y.md)`
 # inside one is prose about a link, not a link.
 INLINE_CODE_RE = re.compile(r"(`+)(?:(?!\1).)*?\1")
@@ -373,21 +379,28 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
     Inline code spans are blanked rather than dropped so column positions and
     surrounding prose on the same line are still scanned.
 
-    Indented code blocks (4+ spaces after a blank line) are skipped too (#208).
-    The blank-line requirement is what makes this safe: CommonMark says an
-    indented block cannot interrupt a paragraph, so ordinary wrapped prose and
-    list continuations stay in scope. Known limitation: a deeply-indented
-    *nested list item* opening after a blank line reads as code here and its
-    links go unchecked. No line in the corpus is affected — 0 of the tracked
-    .md files have a 4+-indented line containing a link — so this trades a
-    theoretical false positive for a theoretical false negative, and the
-    blank-line rule keeps the latter rare. Tabs are not treated as indentation.
+    Indented code blocks are skipped too (#208), under two conditions that
+    together keep prose in scope:
+
+    * They may only open after a blank line. CommonMark forbids an indented
+      block from interrupting a paragraph, so wrapped prose stays scanned.
+    * Indentation is measured RELATIVE to the innermost open list item. Inside
+      ``- item`` content begins at column 2, so code needs 6 spaces; a
+      continuation paragraph indented 4 is prose and stays scanned. Measuring
+      absolutely silently dropped every such paragraph — a coverage loss, which
+      is worse than the false positive being fixed.
+
+    Known limitations, both deliberate: tabs are not treated as indentation,
+    and list tracking is a single innermost column rather than a container
+    stack, so exotic nesting can still misjudge the threshold.
     """
     out: list[tuple[int, str]] = []
     fence_char: str | None = None
     fence_len = 0
     opened_at: int | None = None
     in_indented = False
+    # Content column of the innermost open list item; 0 when not in a list.
+    list_col = 0
     # Start of document behaves like "after a blank line" — an indented block
     # may open there.
     prev_blank = True
@@ -400,9 +413,23 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
                 fence_len = len(m.group("fence"))
                 opened_at = lineno
                 prev_blank = False
+                # FENCE_RE caps indent at 3, so any fence line has already
+                # dedented out of an indented block; clearing here keeps the
+                # state from being stale across the fenced region regardless.
+                in_indented = False
                 continue
             blank = not line.strip()
-            indented = not blank and (len(line) - len(line.lstrip(" "))) >= 4
+            col = len(line) - len(line.lstrip(" "))
+            if not blank:
+                lm = LIST_MARKER_RE.match(line)
+                if lm:
+                    # Content column of the innermost open list item.
+                    list_col = len(lm.group("indent")) + len(lm.group("marker")) \
+                        + len(lm.group("space"))
+                elif col == 0:
+                    # Back at the margin and not a marker: the list is closed.
+                    list_col = 0
+            indented = not blank and col >= list_col + 4
             if in_indented:
                 # Blank lines belong to the block; only a dedented non-blank
                 # line closes it.

@@ -620,12 +620,36 @@ def test_indentation_without_a_blank_line_is_still_prose(tmp_path):
 
 
 def test_list_continuation_keeps_its_links_checked(tmp_path):
-    """The regression that would matter: list bodies are indented prose."""
+    """The regression that would matter: list bodies are indented prose.
+
+    Uses the 4-space, blank-line-separated form on purpose. The lazy two-space
+    form passes for two independent reasons — under 4 columns AND no preceding
+    blank line — so it pins neither condition and hid this exact bug.
+    """
     root = _repo(tmp_path)
     md = root / "a.md"
-    md.write_text("- item\n  more [x](does/not/exist.md)\n")
+    md.write_text("- item\n\n    body [x](does/not/exist.md)\n")
     _commit(root)
     assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+def test_ordered_list_continuation_keeps_its_links_checked(tmp_path):
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("1. step\n\n    body [x](does/not/exist.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+def test_code_block_inside_a_list_is_still_skipped():
+    """Relative measurement cuts both ways: 6 spaces under `- item` IS code."""
+    pairs, _ = prose_lines("- item\n\n      [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_list_closes_at_the_margin_so_later_code_is_skipped():
+    pairs, _ = prose_lines("- item\n\nprose\n\n    [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
 
 
 def test_blank_line_inside_an_indented_block_does_not_end_it():
