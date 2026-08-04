@@ -638,10 +638,19 @@ audit-derived-reports:
     fi
     echo "=== derived reports: all current ==="
 
+# Integrity gate for the tracked sweep artifacts: every manifest `ok` row's
+# report is on disk, and no artifact carries a malformed CURIE. Deliberately
+# credential-free and network-free (see run_trait_graph_audit.py --verify), so it
+# runs on a fresh clone and in CI — the two places where a lost artifact is
+# actually noticed. Plain `uv run`, no `--extra dev`: --verify makes no calls and
+# so does not need deep-research-client.
+audit-research-artifacts:
+    uv run python scripts/run_trait_graph_audit.py --verify
+
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths audit-derived-reports
+qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

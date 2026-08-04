@@ -28,6 +28,7 @@ import argparse
 import csv
 import datetime as _dt
 import os
+import re
 import subprocess
 import sys
 import threading
@@ -73,6 +74,46 @@ def target_traits() -> list[tuple[str, str, str]]:
 
 def output_path(category: str, slug: str, provider: str = DEFAULT_PROVIDER) -> Path:
     return RESEARCH_DIR / category / f"{slug}-deep-research-{resolve_provider(provider)}.md"
+
+
+# CURIE shapes that are always wrong in a research artifact. These are cheap
+# textual checks, not ontology lookups — whether `GO:0009860` is the RIGHT id for
+# the label beside it is a different (and much larger) question, tracked in #243.
+_CURIE_PREFIXES = "GO|CHEBI|ENVO|PATO|RO|UBERON|CL|NCBITaxon|METPO"
+MALFORMED_CURIE_PATTERNS: tuple[tuple[str, "re.Pattern[str]"], ...] = (
+    # `METPO:METPO:1000059`. The template asks the provider to quote an already-
+    # prefixed identifier verbatim, and four reports came back having prefixed it
+    # again anyway. A fifth (nitrogen_fixing_symbiosis) was generated while the
+    # manual grep for these was running, so the grep missed it and it needed a
+    # third paid pass — which is why this lives in the tree rather than in a
+    # shell history.
+    ("double prefix",
+     re.compile(r"\b([A-Za-z][A-Za-z0-9_]{1,15}):\1:[A-Za-z0-9_]+", re.IGNORECASE)),
+    # `go:0009860` — CURIE prefixes are case-sensitive and no consumer lowercases.
+    ("lowercase prefix", re.compile(rf"\b(?:{_CURIE_PREFIXES})\b:\d{{4,}}", re.IGNORECASE)),
+    # `GO_0009860`: the OBO underscore form used where a CURIE was expected. The
+    # negative lookbehind spares the same string inside a real PURL
+    # (http://purl.obolibrary.org/obo/GO_0009860), which is legitimate.
+    ("underscore form", re.compile(rf"(?<![/\w])(?:{_CURIE_PREFIXES})_\d{{4,}}\b")),
+)
+
+
+def scan_malformed_curies(paths: list[Path]) -> list[tuple[Path, int, str, str]]:
+    """Return (path, line_no, pattern_name, matched_text) for every bad CURIE."""
+    bad: list[tuple[Path, int, str, str]] = []
+    for path in paths:
+        for line_no, line in enumerate(path.read_text().splitlines(), 1):
+            for name, pattern in MALFORMED_CURIE_PATTERNS:
+                for match in pattern.finditer(line):
+                    text = match.group(0)
+                    # The lowercase-prefix pattern is case-insensitive so it can
+                    # find the bad casing at all; drop the correctly-cased hits it
+                    # necessarily also matches.
+                    if name == "lowercase prefix" and text.split(":")[0] in (
+                            _CURIE_PREFIXES.split("|")):
+                        continue
+                    bad.append((path, line_no, name, text))
+    return bad
 
 
 def main() -> int:
@@ -143,7 +184,21 @@ def main() -> int:
             print(f"  {run_id}  {out}", file=sys.stderr)
         if len(missing) > 20:
             print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
-        return 1 if missing else 0
+
+        # Scanned over reports AND their citation sidecars: the sidecar echoes
+        # the rendered prompt, so a bad identifier in the trait's own front
+        # matter shows up there too.
+        artifacts = sorted(RESEARCH_DIR.rglob("*.md"))
+        bad_curies = scan_malformed_curies(artifacts)
+        print(f"reports carrying a malformed CURIE: {len(bad_curies)} "
+              f"(scanned {len(artifacts)} artifacts)", file=sys.stderr)
+        for path, line_no, name, text in bad_curies[:20]:
+            rel = path.relative_to(REPO_ROOT)
+            print(f"  {rel}:{line_no}  {name}: {text}", file=sys.stderr)
+        if len(bad_curies) > 20:
+            print(f"  ... and {len(bad_curies) - 20} more", file=sys.stderr)
+
+        return 1 if (missing or bad_curies) else 0
 
     # One id for every row this invocation writes. The manifest is append-only
     # and a trait can legitimately appear more than once — a failure and its
