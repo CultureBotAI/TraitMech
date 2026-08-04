@@ -228,7 +228,7 @@ curation_history:
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004784×1, GO:0004096×1).
   llm_assisted: true
-- timestamp: '2026-08-04T02:57:21Z'
+- timestamp: '2026-08-04T03:08:12Z'
   curator: claude
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv

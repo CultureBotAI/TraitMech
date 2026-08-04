@@ -9,6 +9,7 @@ stabilizes	19	data/traits/environment/delta_phenotype_with_numerical_limits.yaml
 converts	19	data/traits/environment/metal_tolerant.yaml|data/traits/environment/moderately_halophilic.yaml|data/traits/metabolism/biopolymer_degradation.yaml
 protects against	15	data/traits/environment/anaerobic.yaml|data/traits/environment/extreme_hyperthermophilic.yaml|data/traits/environment/facultative_psychrophilic.yaml
 requires	13	data/traits/ecology/biosafety_level_4.yaml|data/traits/environment/growth_range_phenotype_with_numerical_limits.yaml|data/traits/environment/nacl_optimum_high.yaml
+causally upstream of	13	data/traits/metabolism/propionic_acid_fermentation.yaml|data/traits/metabolism/three_hydroxypropionate_bicycle.yaml|data/traits/morphology/sphere_shaped.yaml
 is converted to	11	data/traits/ecology/saprotrophy.yaml|data/traits/environment/metal_tolerant.yaml|data/traits/metabolism/acetogenesis.yaml
 binds	11	data/traits/environment/nacl_delta_mid2.yaml|data/traits/environment/ph_optimum_mid1.yaml|data/traits/morphology/amphitrichous.yaml
 represses	10	data/traits/ecology/saprotrophy.yaml|data/traits/environment/arsenic_tolerant.yaml|data/traits/environment/facultative_oxygen_preference.yaml

@@ -98,4 +98,3 @@ does not produce	METPO:2000222	does not produce	skos:exactMatch	METPO	high	exact
 transports	METPO:2000207	transports	skos:exactMatch	METPO	high	exact label match to existing METPO predicate (enriched-corpus pass); 1 edges
 positively regulates	RO:0002213	positively regulates	skos:exactMatch	RO	high	exact label match against RO; the corpus paraphrase "promotes" already maps here as a closeMatch, so the canonical label was the one left ungrounded
 negatively regulates	RO:0002212	negatively regulates	skos:exactMatch	RO	high	exact label match against RO; paired-positive at RO:0002213. Paraphrases inhibits/suppresses/prevents already map here as closeMatch
-causally upstream of	RO:0002411	causally upstream of	skos:exactMatch	RO	high	exact label match against RO; no paraphrase of this one was mapped either
