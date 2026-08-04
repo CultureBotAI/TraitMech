@@ -28,6 +28,12 @@ on:
       # possible version of the filter-narrower-than-the-job bug (#184, #200).
       - "pages/**"
       - "src/traitmech/templates/**"
+      # The renderer's other two tracked inputs. Both change what it emits, so
+      # both must trigger the job that compares its output: the embedding
+      # tables feed the match/UMAP/graph sections, and metpo.owl supplies the
+      # version string in every page footer.
+      - "data/embeddings/**"
+      - "data/raw/metpo.owl"
   push:
     branches: [main]
   workflow_dispatch:

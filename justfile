@@ -462,12 +462,34 @@ audit-derived-reports:
       cat "$tmp/gen.log" >&2
       exit 1
     fi
-    # `Only in pages` is filtered deliberately: pages/ also carries hand-vendored
-    # assets the renderer never emits (d3.v7.min.js from #150, theme-toggle.js
-    # from #149), so a symmetric diff would fail forever. The other direction is
-    # kept — `Only in <tmp>` means a generated page is MISSING from pages/,
-    # which is staleness of the worst kind.
-    pages_diff="$(diff -rq "$pages_tmp" pages 2>/dev/null | grep -v '^Only in pages' || true)"
+    if [ ! -d pages ]; then
+      echo "  MISSING pages/ — the renderer produced output, the repo has none" >&2
+      stale_pages=1
+      fail=1
+      pages_diff=""
+    else
+    # The renderer reads research/traits/ (render_trait_pages.py) to embed a
+    # research block, and research/ is GITIGNORED — it exists on a curator's
+    # machine and never in CI. A committed research-bearing page is therefore
+    # unreproducible by a fresh render and would wedge this gate permanently:
+    # `just gen-pages` fixes it locally and CI re-breaks it on every push.
+    # Nothing is affected today (no page under pages/traits/ carries one), so
+    # this names the collision rather than silently producing a confusing
+    # STALE. If the research block is ever wanted in committed pages, the fix
+    # is to exclude it from the comparison, not to weaken the gate.
+    if grep -rlq 'class="research-md"' pages/traits 2>/dev/null; then
+      echo "  ERROR pages/ carries a research block, which is rendered from" >&2
+      echo "        gitignored research/ and cannot be reproduced in CI (#230)." >&2
+      stale_pages=1
+      fail=1
+    fi
+    # Only the two hand-vendored assets are excused by NAME. Dropping the whole
+    # `Only in pages` direction would also hide an orphan — a page for a trait
+    # that was deleted or renamed, which `just gen-pages` does not sweep because
+    # it does not pass --clean by default.
+    pages_diff="$(diff -rq "$pages_tmp" pages \
+      | grep -vE '^Only in pages: (d3\.v7\.min\.js|theme-toggle\.js)$' || true)"
+    fi
     if [ -n "$pages_diff" ]; then
       echo "  STALE pages/ — not what render_trait_pages.py produces:" >&2
       printf '%s\n' "$pages_diff" | sed -n '1,15p' >&2
@@ -475,7 +497,10 @@ audit-derived-reports:
       echo "  ($n path(s) differ)" >&2
       stale_pages=1
       fail=1
-    else
+    elif [ "${stale_pages:-0}" -eq 0 ]; then
+      # Guarded: the MISSING and research-block branches above already reported
+      # and set the flag, and an "OK pages/" printed underneath either of them
+      # contradicts the line before it.
       echo "  OK    pages/"
     fi
 
@@ -504,7 +529,14 @@ audit-derived-reports:
       if [ "${stale_pages:-0}" -eq 1 ]; then
         echo '  just gen-pages' >&2
       fi
-      echo "  git add reports/" >&2
+      # Name the directory that actually changed. A pages-only failure told the
+      # curator to `git add reports/`, which stages nothing and fails the same
+      # way next run.
+      paths=""
+      [ "${stale_grounding:-0}" -eq 1 ] && paths="reports/"
+      [ "${stale_cga:-0}" -eq 1 ] && paths="reports/"
+      [ "${stale_pages:-0}" -eq 1 ] && paths="$paths pages/"
+      echo "  git add$(printf ' %s' $paths)" >&2
       exit 1
     fi
     echo "=== derived reports: all current ==="
