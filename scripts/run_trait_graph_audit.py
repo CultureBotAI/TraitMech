@@ -99,7 +99,12 @@ def main() -> int:
     if not os.environ.get("EDISON_API_KEY") and os.environ.get("EDISON_PLATFORM_API_KEY"):
         os.environ["EDISON_API_KEY"] = os.environ["EDISON_PLATFORM_API_KEY"]
 
-    if not args.dry_run and not (os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
+    # --verify and --dry-run make no calls, so neither should need a credential.
+    # Gating the integrity check behind the key would make it unrunnable on a
+    # fresh clone and in CI — the two places most likely to notice that an `ok`
+    # row has no artifact.
+    if not (args.dry_run or args.verify) and not (
+            os.environ.get("EDISON_API_KEY") or os.environ.get("FUTUREHOUSE_API_KEY")):
         print("ERROR: EDISON_API_KEY / FUTUREHOUSE_API_KEY unset — set it or use --dry-run.", file=sys.stderr)
         return 2
 
@@ -116,15 +121,6 @@ def main() -> int:
     if args.limit:
         pending = pending[: args.limit]
         print(f"  (limited to {len(pending)} this run)", file=sys.stderr)
-
-    # One id for every row this invocation writes. The manifest is append-only
-    # and a trait can legitimately appear more than once — a failure and its
-    # retry, or a re-run after the artifacts were lost — and without this there
-    # is no field distinguishing those. `biofilm_formation` carried three
-    # indistinguishable rows before this existed, so "what was billed, when"
-    # was the one question the spend record could not answer about itself.
-    run_id = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
-    print(f"run_id: {run_id}", file=sys.stderr)
 
     if args.verify:
         # The manifest is a spend record, so an `ok` row whose artifact is gone
@@ -148,6 +144,15 @@ def main() -> int:
         if len(missing) > 20:
             print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
         return 1 if missing else 0
+
+    # One id for every row this invocation writes. The manifest is append-only
+    # and a trait can legitimately appear more than once — a failure and its
+    # retry, or a re-run after the artifacts were lost — and without this there
+    # is no field distinguishing those. `biofilm_formation` carried three
+    # indistinguishable rows before this existed, so "what was billed, when"
+    # was the one question the spend record could not answer about itself.
+    run_id = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+    print(f"run_id: {run_id}", file=sys.stderr)
 
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     new = not MANIFEST.exists()
