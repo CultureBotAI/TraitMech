@@ -41,6 +41,13 @@ def _scan(tmp_path: Path, text: str):
     ("candidate grounding Chebi:15378", "lowercase prefix"),
     # The OBO underscore form used where a CURIE was expected.
     ("candidate grounding GO_0009860", "underscore form"),
+    # Short local ids. The corpus carries 65 of these across 42 files, so a
+    # four-digit floor would have made the gate blind to the malformed forms of
+    # the taxon ids the reports use most (#251).
+    ("organism ncbitaxon:562", "lowercase prefix"),
+    ("organism NCBITaxon_562", "underscore form"),
+    ("organism ncbitaxon:2", "lowercase prefix"),
+    ("chemical CHEBI_422", "underscore form"),
 ])
 def test_malformed_shapes_are_caught(tmp_path, line, expected):
     hits = _scan(tmp_path, line)
@@ -63,8 +70,12 @@ def test_malformed_shapes_are_caught(tmp_path, line, expected):
     "see <http://purl.obolibrary.org/obo/CHEBI_15378>",
     # Prose colons that are not CURIEs at all.
     "Note: note: this is a repeated word, not a prefix, and has no id",
-    # A short numeric suffix is a section number or a time, not an identifier.
-    "GO:12 and step 3_2024 are not identifiers",
+    # Short local ids are real (NCBITaxon:562), so the patterns carry no digit
+    # floor. What keeps prose out is the prefix list, not the digit count:
+    # neither of these has an ontology prefix, at any length.
+    "see step 3_2024 and section 4:17 for the assay",
+    # Correctly-cased short CURIEs stay clean, same as the long ones.
+    "NCBITaxon:562 and NCBITaxon:2 and CHEBI:422",
 ])
 def test_well_formed_content_is_not_flagged(tmp_path, line):
     assert _scan(tmp_path, line) == []

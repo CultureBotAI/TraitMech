@@ -90,11 +90,17 @@ MALFORMED_CURIE_PATTERNS: tuple[tuple[str, "re.Pattern[str]"], ...] = (
     ("double prefix",
      re.compile(r"\b([A-Za-z][A-Za-z0-9_]{1,15}):\1:[A-Za-z0-9_]+", re.IGNORECASE)),
     # `go:0009860` — CURIE prefixes are case-sensitive and no consumer lowercases.
-    ("lowercase prefix", re.compile(rf"\b(?:{_CURIE_PREFIXES})\b:\d{{4,}}", re.IGNORECASE)),
+    ("lowercase prefix", re.compile(rf"\b(?:{_CURIE_PREFIXES})\b:\d+", re.IGNORECASE)),
     # `GO_0009860`: the OBO underscore form used where a CURIE was expected. The
     # negative lookbehind spares the same string inside a real PURL
     # (http://purl.obolibrary.org/obo/GO_0009860), which is legitimate.
-    ("underscore form", re.compile(rf"(?<![/\w])(?:{_CURIE_PREFIXES})_\d{{4,}}\b")),
+    ("underscore form", re.compile(rf"(?<![/\w])(?:{_CURIE_PREFIXES})_\d+\b")),
+    # `\d+` rather than `\d{4,}`: local ids in these ontologies are not all long.
+    # The corpus carries 65 one-to-three-digit CURIEs across 42 files —
+    # `NCBITaxon:562`, `NCBITaxon:2`, `CHEBI:422` — and a digit floor would hide
+    # every lowercased or underscored form of them. The floor is also
+    # unnecessary: both patterns pin the prefix to the list above, so prose like
+    # `step 3_2024` cannot reach them at any digit count.
 )
 
 
@@ -190,8 +196,13 @@ def main() -> int:
         # matter shows up there too.
         artifacts = sorted(RESEARCH_DIR.rglob("*.md"))
         bad_curies = scan_malformed_curies(artifacts)
-        print(f"reports carrying a malformed CURIE: {len(bad_curies)} "
-              f"(scanned {len(artifacts)} artifacts)", file=sys.stderr)
+        # Reported per-report, because that is how the invariant is phrased —
+        # one report with two bad CURIEs is one report, not two. The match count
+        # rides alongside so the number of lines to fix is still visible.
+        bad_files = {path for path, _, _, _ in bad_curies}
+        print(f"reports carrying a malformed CURIE: {len(bad_files)} "
+              f"({len(bad_curies)} matches; scanned {len(artifacts)} artifacts)",
+              file=sys.stderr)
         for path, line_no, name, text in bad_curies[:20]:
             rel = path.relative_to(REPO_ROOT)
             print(f"  {rel}:{line_no}  {name}: {text}", file=sys.stderr)

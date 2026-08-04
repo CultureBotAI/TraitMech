@@ -8,6 +8,9 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - ".github/workflows/pytest.yaml"
+      # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
+      # research/traits/ directly, so an artifact-only PR has to run it (#250).
+      - "research/**"
   push:
     branches: [main]
     paths:
@@ -16,6 +19,9 @@ on:
       - "tests/**"
       - "pyproject.toml"
       - ".github/workflows/pytest.yaml"
+      # test_run_trait_graph_audit.py::test_the_tracked_corpus_is_clean reads
+      # research/traits/ directly, so an artifact-only PR has to run it (#250).
+      - "research/**"
   workflow_dispatch:
 
 jobs:
