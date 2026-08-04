@@ -105,23 +105,42 @@ def corpus_timestamp(traits: list[tuple[Path, dict]]) -> str:
     latest: datetime | None = None
     for _path, doc in traits:
         for entry in (doc.get("curation_history") or []):
-            raw = entry.get("timestamp")
-            if not isinstance(raw, str):
+            parsed = _as_utc(entry.get("timestamp"))
+            if parsed is None:
                 continue
-            try:
-                # Corpus timestamps mix offsets and the 'Z' suffix
-                # ('...+00:00', '...-07:00', '...Z'), so normalise before
-                # parsing and compare in UTC — otherwise "latest" would depend
-                # on which offset a curator's machine happened to use.
-                parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
-            except ValueError:
-                continue
-            if parsed.tzinfo is None:
-                parsed = parsed.replace(tzinfo=timezone.utc)
-            parsed = parsed.astimezone(timezone.utc)
             if latest is None or parsed > latest:
                 latest = parsed
     return latest.strftime("%Y-%m-%d %H:%M UTC") if latest else ""
+
+
+def _as_utc(raw: object) -> datetime | None:
+    """Coerce a curation_history timestamp to an aware UTC datetime.
+
+    Handles both YAML shapes, which is not optional: PyYAML resolves an
+    *unquoted* ISO timestamp to a ``datetime`` and a quoted one to ``str``. All
+    3341 timestamps in the corpus are currently quoted, but nothing enforces
+    that — so accepting only ``str`` would silently drop any record a curator or
+    writer script emitted unquoted, and the page stamp would go stale or
+    backwards with no signal. Silent zero is the failure mode this whole thread
+    keeps finding (#214, #223, #228).
+
+    Strings mix offsets and the 'Z' suffix ('...+00:00', '...-07:00', '...Z'),
+    so they are normalised before parsing. Everything is compared in UTC —
+    otherwise "latest" would depend on which offset a curator's machine used.
+    Naive values are assumed UTC rather than discarded.
+    """
+    if isinstance(raw, datetime):
+        parsed = raw
+    elif isinstance(raw, str):
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    else:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
 
 
 def load_match_table() -> dict[str, dict]:
