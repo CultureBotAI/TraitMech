@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime as _dt
 import os
 import subprocess
 import sys
@@ -113,12 +114,21 @@ def main() -> int:
         pending = pending[: args.limit]
         print(f"  (limited to {len(pending)} this run)", file=sys.stderr)
 
+    # One id for every row this invocation writes. The manifest is append-only
+    # and a trait can legitimately appear more than once — a failure and its
+    # retry, or a re-run after the artifacts were lost — and without this there
+    # is no field distinguishing those. `biofilm_formation` carried three
+    # indistinguishable rows before this existed, so "what was billed, when"
+    # was the one question the spend record could not answer about itself.
+    run_id = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+    print(f"run_id: {run_id}", file=sys.stderr)
+
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     new = not MANIFEST.exists()
     mf = MANIFEST.open("a", newline="")
     w = csv.writer(mf, delimiter="\t", lineterminator="\n")
     if new:
-        w.writerow(["category", "slug", "status", "output"])
+        w.writerow(["run_id", "category", "slug", "status", "output"])
 
     if args.dry_run:
         for i, (cat, slug, label) in enumerate(pending, 1):
@@ -155,7 +165,7 @@ def main() -> int:
                 print(f"       {cat}/{slug}: {tail[-1][:200]}", file=sys.stderr)
         with lock:
             counts["ok" if ok else "fail"] += 1
-            w.writerow([cat, slug, status,
+            w.writerow([run_id, cat, slug, status,
                         str(output_path(cat, slug, provider).relative_to(REPO_ROOT)) if ok else ""])
             mf.flush()
             done = counts["ok"] + counts["fail"]
