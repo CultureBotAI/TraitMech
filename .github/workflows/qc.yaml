@@ -22,6 +22,12 @@ on:
       #                 stale, because it is exactly the section 9 workflow.
       - "reports/**"
       - "mappings/**"
+      # pages/ joined the gate in #230. Both its inputs have to trigger too:
+      # the pages themselves, and the templates — a one-line template edit
+      # changes all 489 rendered files, so leaving it out would be the widest
+      # possible version of the filter-narrower-than-the-job bug (#184, #200).
+      - "pages/**"
+      - "src/traitmech/templates/**"
   push:
     branches: [main]
   workflow_dispatch:
