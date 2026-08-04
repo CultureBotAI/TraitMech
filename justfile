@@ -502,7 +502,11 @@ audit-derived-reports:
     for asset in d3.v7.min.js theme-toggle.js; do
       if [ ! -f "pages/$asset" ]; then
         echo "  MISSING pages/$asset — hand-vendored, never regenerated" >&2
-        stale_pages=1
+        # NOT stale_pages: that flag's remediation is `just gen-pages` then
+        # `git add pages/`, and neither restores this — gen-pages does not emit
+        # it, and `git add` would stage the deletion and make the loss
+        # permanent. Restoring from git is the only fix.
+        lost_assets="${lost_assets:-} pages/$asset"
         fail=1
       fi
     done
@@ -552,6 +556,9 @@ audit-derived-reports:
       if [ "${stale_pages:-0}" -eq 1 ]; then
         echo '  just gen-pages' >&2
       fi
+      if [ -n "${lost_assets:-}" ]; then
+        echo "  git checkout --${lost_assets}" >&2
+      fi
       # Name the directory that actually changed. A pages-only failure told the
       # curator to `git add reports/`, which stages nothing and fails the same
       # way next run.
@@ -559,7 +566,9 @@ audit-derived-reports:
       [ "${stale_grounding:-0}" -eq 1 ] && paths="reports/"
       [ "${stale_cga:-0}" -eq 1 ] && paths="reports/"
       [ "${stale_pages:-0}" -eq 1 ] && paths="$paths pages/"
-      echo "  git add$(printf ' %s' $paths)" >&2
+      # Only when something is actually stageable — an asset-only failure has
+      # no paths, and a bare `git add` is not a command anyone can run.
+      [ -n "$paths" ] && echo "  git add$(printf ' %s' $paths)" >&2
       exit 1
     fi
     echo "=== derived reports: all current ==="
