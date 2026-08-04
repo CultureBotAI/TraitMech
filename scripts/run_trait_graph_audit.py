@@ -78,6 +78,9 @@ def output_path(category: str, slug: str, provider: str = DEFAULT_PROVIDER) -> P
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--verify", action="store_true",
+                    help="check every ok row's artifact exists; exit 1 if any is "
+                         "missing. No calls, no cost.")
     ap.add_argument("--limit", type=int, default=0, help="cap number of NEW calls (0 = all)")
     ap.add_argument("--sleep", type=float, default=2.0, help="seconds to stagger worker launches")
     ap.add_argument("--workers", type=int, default=1, help="concurrent deep-research-client calls")
@@ -122,6 +125,29 @@ def main() -> int:
     # was the one question the spend record could not answer about itself.
     run_id = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
     print(f"run_id: {run_id}", file=sys.stderr)
+
+    if args.verify:
+        # The manifest is a spend record, so an `ok` row whose artifact is gone
+        # is the one failure mode that matters: it says a call was paid for and
+        # cannot be resumed into, because resume keys on the file existing.
+        # 342 rows were in that state before research/ was tracked, and four
+        # more were created by deleting reports the running sweep had already
+        # passed. Relying on someone remembering is how the first 342 were lost.
+        missing = []
+        with MANIFEST.open() as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                if row.get("status") != "ok":
+                    continue
+                out = (row.get("output") or "").strip()
+                if out and not (REPO_ROOT / out).exists():
+                    missing.append((row.get("run_id", "?"), out))
+        print(f"manifest ok rows with a missing artifact: {len(missing)}",
+              file=sys.stderr)
+        for run_id, out in missing[:20]:
+            print(f"  {run_id}  {out}", file=sys.stderr)
+        if len(missing) > 20:
+            print(f"  ... and {len(missing) - 20} more", file=sys.stderr)
+        return 1 if missing else 0
 
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     new = not MANIFEST.exists()

@@ -502,14 +502,29 @@ one real unit produced a 50,846-byte report plus citations, `cached: false`, 57
 references, and a manifest row; 452s wall clock, so ~11 h for 341 at
 `--workers 4`.
 
-**Known transitional inconsistency, stated rather than hidden.** The manifest is
-append-only and predates the tracking change, so it currently carries 366 rows,
-9 duplicate `(category, slug)` keys from retries, and **337 `ok` rows whose file
-is not yet in the tree**. That count falls to 0 as the sweep completes; the
-manifest is deliberately not patched into fake agreement in the meantime,
-because the record of what was billed is the one thing worth keeping accurate.
-Cost per call is not captured anywhere — `duration_seconds` is, but no USD
-figure — which is worth adding before this is ever repeated.
+**Transitional inconsistency, now machine-detectable rather than remembered.**
+The manifest is append-only and predates the tracking change, so many `ok` rows
+still point at artifacts that are not yet back in the tree. `just
+trait-graph-sweep --verify` reports exactly that set and exits 1 — free, no
+calls — and the count falls to 0 as the sweep completes:
+
+```
+$ just trait-graph-sweep --verify
+manifest ok rows with a missing artifact: 331
+```
+
+It is deliberately not patched into fake agreement, because the record of what
+was billed is the one thing the manifest is good for. Rows carry a `run_id` so
+a retry, a re-bill and the original are distinguishable — `biofilm_formation`
+had three indistinguishable rows before that column existed.
+
+Four of the 331 are a different case: reports deleted on purpose because the
+template induced a malformed CURIE, after the running sweep had already passed
+them. They need a second pass once the current one finishes; `--verify` is what
+makes that a check rather than a note someone has to remember.
+
+Cost per call is captured nowhere — `duration_seconds` is, but no USD figure —
+which is worth adding before this is ever repeated.
 
 ## 9. Predicate/node grounding backfill — PENDING, and cheaper than section 4 implied
 
