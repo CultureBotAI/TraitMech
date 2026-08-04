@@ -95,7 +95,16 @@ CONFLICT_RE = re.compile(r"^(<{7}|>{7})(\s|$)")
 # broken relative path is worth flagging too.
 MD_LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 
-SKIP_LINK_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#")
+# Only a same-document anchor is skipped by prefix; everything else with a URI
+# scheme is skipped by SCHEME_RE below.
+SKIP_LINK_PREFIXES = ("#",)
+
+# An RFC 3986 scheme. Replaces the old allowlist of http/https/mailto/tel, which
+# had to grow every time a new one appeared — tracking research/ brought in
+# Edison's `artifact:artifact-02` refs and broke CI on links that were never
+# repo paths. Measured before changing it: across every tracked .md, this skips
+# exactly those two links and nothing else that was previously checked.
+SCHEME_RE = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.\-]*:")
 
 # A fenced block opens on 3+ backticks or tildes, indented at most 3 spaces
 # (4+ would be an indented code block). It closes on a fence of the SAME
@@ -478,7 +487,7 @@ def check_markdown_links(files: list[Path], root: Path) -> list[dict[str, str]]:
             })
         for lineno, line in scannable:
             for target in MD_LINK_RE.findall(line):
-                if target.startswith(SKIP_LINK_PREFIXES):
+                if target.startswith(SKIP_LINK_PREFIXES) or SCHEME_RE.match(target):
                     continue
                 # Strip any #fragment; we only assert the file exists.
                 bare = target.split("#", 1)[0]
