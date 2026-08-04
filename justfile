@@ -477,7 +477,11 @@ audit-derived-reports:
     # this names the collision rather than silently producing a confusing
     # STALE. If the research block is ever wanted in committed pages, the fix
     # is to exclude it from the comparison, not to weaken the gate.
-    if grep -rlq 'class="research-md"' pages/traits 2>/dev/null; then
+    # Checks the RENDERED side as well as the committed one. The collision
+    # arises on a curator's machine, where research/ exists: the fresh render
+    # grows a block the committed page lacks. Testing only the committed side
+    # would miss exactly that direction and leave a bare, confusing STALE.
+    if grep -rlq 'class="research-md"' "$pages_tmp" pages/traits 2>/dev/null; then
       echo "  ERROR pages/ carries a research block, which is rendered from" >&2
       echo "        gitignored research/ and cannot be reproduced in CI (#230)." >&2
       stale_pages=1
