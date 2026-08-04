@@ -210,20 +210,14 @@ knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
 #   just new-history --kind record --slug cellulolysis \
 #     --target-root data/traits/metabolism --event EDIT --outcome changed \
 #     --summary "..." --details "..." --model <model-id>
-new-history *args:
+new-history *args: (_require-claw "kg_microbe_history")
     #!/usr/bin/env bash
     set -euo pipefail
-    claw_src="${CLAW_SRC:-../culturebotai-claw/src}"
-    if [ ! -d "$claw_src/kg_microbe_history" ]; then
-      echo "new-history: kg_microbe_history not found under '$claw_src'." >&2
-      echo "Set CLAW_SRC to the src/ directory of a culturebotai-claw checkout." >&2
-      exit 1
-    fi
     # "$@" not {{args}} — see `set positional-arguments` at the top of this file.
     # `uv run python`, not `python3`: bare python3 is whatever the machine puts
     # first on PATH (miniforge here, not the project venv), which is the same
     # undeclared-interpreter problem the Homebrew paths had.
-    PYTHONPATH="$claw_src" uv run python -m kg_microbe_history new "$@"
+    PYTHONPATH="{{claw_src}}" uv run python -m kg_microbe_history new "$@"
 
 # Validate one history record, or a directory of them. Uses the VENDORED schema,
 # so this works with no claw checkout — same as CI.
