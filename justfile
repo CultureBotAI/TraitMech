@@ -495,10 +495,21 @@ audit-derived-reports:
       stale_pages=1
       fail=1
     fi
-    # Only the two hand-vendored assets are excused by NAME. Dropping the whole
-    # `Only in pages` direction would also hide an orphan — a page for a trait
-    # that was deleted or renamed, which `just gen-pages` does not sweep because
-    # it does not pass --clean by default.
+    # Excusing these two from the diff is not the same as tolerating their
+    # absence: the renderer never emits them, so nothing else would notice if
+    # they were deleted, and umap.html/graph.html break without d3. Require
+    # them explicitly rather than only exempting them.
+    for asset in d3.v7.min.js theme-toggle.js; do
+      if [ ! -f "pages/$asset" ]; then
+        echo "  MISSING pages/$asset — hand-vendored, never regenerated" >&2
+        stale_pages=1
+        fail=1
+      fi
+    done
+    # Only those two are excused by NAME. Dropping the whole `Only in pages`
+    # direction would also hide an orphan — a page for a trait that was deleted
+    # or renamed, which `just gen-pages` does not sweep because it does not pass
+    # --clean by default.
     pages_diff="$(diff -rq "$pages_tmp" pages \
       | grep -vE '^Only in pages: (d3\.v7\.min\.js|theme-toggle\.js)$' || true)"
     fi
