@@ -18,8 +18,9 @@ edge/node count ≥ 2; skip the freq-1 long tail). Examples:
 The residual is large and skewed: a small head of high-frequency terms carries most
 of the coverage. Re-read the live counts each run; as of the last pass:
 - Predicates: ~190 labels at freq ≥ 2 (top: `supports`, `positively regulates`,
-  `induces`, `required for`, `drives`, `maintains`, `mediates`, `negatively regulates`,
-  `causally upstream of`, `converts`).
+  `induces`, `required for`, `drives`, `maintains`, `mediates`, `converts`).
+  `positively regulates`/`negatively regulates` were grounded in #235;
+  `causally upstream of` is deliberately withheld — see the skip rule below.
 - Nodes: ~215 labels at freq ≥ 2, dominated by `BIOLOGICAL_PROCESS` and
   `GENE_OR_PROTEIN`, then `CHEMICAL`, `ENVIRONMENTAL_FACTOR`, `QUALITY`.
 
@@ -29,9 +30,14 @@ remainder. Work the head first — it buys the most coverage per unit effort.
 
 ## Inputs (read these)
 - **Residual to work:**
-  - Predicates: `reports/predicate_grounding_residual.tsv` (cols: `predicate_label`, `edge_count`, `example_files`).
+  - Predicates: `reports/predicate_grounding_residual.tsv` (cols: `predicate_label`,
+    `edge_count`, `status`, `blocked_by`, `example_files`).
   - Nodes: `reports/node_grounding_residual.tsv` (cols: `node_label`, `node_type`, `node_count`, `example_files`).
   Filter to the requested scope + min-freq; rank by frequency (highest first).
+  **Skip every row whose `status` is `blocked_by_node_type`.** Those are not
+  ungrounded for lack of a CURIE — `blocked_by` names it. The CURIE is withheld
+  because the edges' node types fall outside the relation's declared domain and
+  range, so re-mapping the label re-introduces the error rather than fixing it.
 - **Context/evidence per term:** the trait's Edison report at
   `research/traits/<category>/<slug>-deep-research-falcon.md` (the `example_files` point you to the trait),
   and the trait YAML `data/traits/<category>/<slug>.yaml` (how the term is actually used in the graph).
@@ -59,10 +65,20 @@ A large share of the head is mechanical. Ground these directly; **do not** spend
 `/deep-research` call on them:
 
 - **Generic causal/regulatory predicates → RO** (the relation closure). Map the obvious
-  ones straight to RO and record `skos:exactMatch`/`closeMatch` with `source: RO`:
+  ones straight to RO and record `skos:exactMatch`/`closeMatch` with `source: RO`.
+  **Write `subject_types`/`object_types` for each one rather than leaving
+  `*`/`*`, and read the relation's own domain and range to decide what they
+  are** — they differ across this list, so there is no blanket rule:
+  the regulation and causal relations (`RO:0002211/2/3`, `RO:0002418`,
+  `RO:0002629/30`) are defined over **occurrents**; `enables` (RO:0002327) is
+  *"c enables p iff c is capable of p"*, so material entity → process;
+  `produces` (RO:0003000) is defined *"where a and b are material entities"*;
+  `part of`/`has part` (BFO) are deliberately domain-neutral.
+  `causally upstream of` is absent from this list precisely because its label
+  matched exactly and its edges did not (#235, #236):
   `positively regulates`→`RO:0002213`, `negatively regulates`→`RO:0002212`,
-  `regulates`→`RO:0002211`, `causally upstream of`→`RO:0002411`,
-  `causally upstream of or within`→`RO:0002418`, `directly positively regulates`→`RO:0002629`,
+  `regulates`→`RO:0002211`, `causally upstream of or within`→`RO:0002418`,
+  `directly positively regulates`→`RO:0002629`,
   `directly negatively regulates`→`RO:0002630`, `enables`→`RO:0002327`, `part of`→`BFO:0000050`,
   `has part`→`BFO:0000051`, `produces`→`RO:0003000`, `is converted to`/`converts`→ check
   `RO:0002233`/`RO:0002234` (has input/output) vs a SO/ChEBI transformation relation.

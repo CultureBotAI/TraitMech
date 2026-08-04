@@ -525,20 +525,32 @@ labels whose paraphrases are already mapped in
 |---|--:|---|---|
 | `positively regulates` | 37 | RO:0002213 | `promotes` → RO:0002213 |
 | `negatively regulates` | 16 | RO:0002212 | `inhibits`/`suppresses`/`prevents` → RO:0002212 |
-| `causally upstream of` | 13 | RO:0002411 | — |
+| ~~`causally upstream of`~~ | ~~13~~ | ~~RO:0002411~~ | **WRONG — see below** |
 
-All three were checked against OAK on 2026-08-02 (`get_adapter("sqlite:obo:ro")`,
-`.label()`) and match exactly — this is not an eyeball guess. The paraphrase got
-mapped and the canonical label did not, which is why they are still residual.
+The first two shipped in #235 (53 edges). The third **did not, and is the more
+important entry**: `causally upstream of` is the exact OAK label of RO:0002411
+and was still wrong. RO defines the relation over occurrents, while all 13
+corpus edges connect material entities (6 `CHEMICAL→CHEMICAL`,
+6 `GENE_OR_PROTEIN→CHEMICAL`, 1 `GENE_OR_PROTEIN→CAPACITY`). An exact label
+match is **not** sufficient to ground a predicate.
 
 Below those sit judgement calls (`supports` 37, `induces` 34, `required for` 30,
 `drives` 29, `maintains` 29, `mediates` 27) and then the genuine free-text floor.
 Node side, the head of the residual is similar: `proton motive force` ×16,
 `compatible solute accumulation` ×12, `Na+/H+ antiporter` ×8, `ATP` ×6.
 
-Each mapping row is verified by the existing **blocking** `label-correspondence`
-gate (`just validate-products`), which checks the CURIE's label against OAK — so
-a wrong CURIE fails CI rather than landing silently. Apply with
+**Do not treat `label-correspondence` as making this loop safe.** It compares an
+`(id, label)` pair against the ontology and nothing else — it has no view of the
+edge a CURIE lands on, and `predicate_id` is an unbound string in the schema, so
+nothing in `just qc` checks domain or range. That is exactly how the RO:0002411
+mapping passed every gate while being wrong.
+
+What does check it is the `subject_types`/`object_types` columns on
+`mappings/predicate_grounding.tsv`, enforced by `ground_causal_predicates.py`
+(#236): an edge outside a row's declared node types is refused, stays in the
+residual, and is reported as `blocked_by_node_type` in the residual TSV. Rows
+left at `*`/`*` are unconstrained, so a new mapping is only as safe as the
+constraint written beside it. Apply with
 `scripts/ground_causal_predicates.py --apply` / `ground_causal_nodes.py --apply`.
 **The queue is now trustworthy (#214, fixed).** The residual TSVs used to lag the
 corpus with nothing to catch it — `cellobiose` still appeared as ungrounded weeks
