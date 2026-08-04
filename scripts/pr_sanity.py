@@ -33,8 +33,9 @@ Checks:
                       review, hence a gate rather than a convention (#218).
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
-                      exist. Links inside fenced code blocks or inline code
-                      spans are prose *about* links and are not checked (#202).
+                      exist. Links inside fenced code blocks, indented code
+                      blocks, or inline code spans are prose *about* links and
+                      are not checked (#202, #208).
   UNTERMINATED_FENCE  a code fence that is opened and never closed. Everything
                       after it would go unchecked, so this is reported rather
                       than silently shrinking coverage.
@@ -371,11 +372,25 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
 
     Inline code spans are blanked rather than dropped so column positions and
     surrounding prose on the same line are still scanned.
+
+    Indented code blocks (4+ spaces after a blank line) are skipped too (#208).
+    The blank-line requirement is what makes this safe: CommonMark says an
+    indented block cannot interrupt a paragraph, so ordinary wrapped prose and
+    list continuations stay in scope. Known limitation: a deeply-indented
+    *nested list item* opening after a blank line reads as code here and its
+    links go unchecked. No line in the corpus is affected — 0 of the tracked
+    .md files have a 4+-indented line containing a link — so this trades a
+    theoretical false positive for a theoretical false negative, and the
+    blank-line rule keeps the latter rare. Tabs are not treated as indentation.
     """
     out: list[tuple[int, str]] = []
     fence_char: str | None = None
     fence_len = 0
     opened_at: int | None = None
+    in_indented = False
+    # Start of document behaves like "after a blank line" — an indented block
+    # may open there.
+    prev_blank = True
 
     for lineno, line in enumerate(text.splitlines(), 1):
         m = FENCE_RE.match(line)
@@ -384,8 +399,25 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
                 fence_char = m.group("fence")[0]
                 fence_len = len(m.group("fence"))
                 opened_at = lineno
+                prev_blank = False
+                continue
+            blank = not line.strip()
+            indented = not blank and (len(line) - len(line.lstrip(" "))) >= 4
+            if in_indented:
+                # Blank lines belong to the block; only a dedented non-blank
+                # line closes it.
+                if blank or indented:
+                    continue
+                in_indented = False
+            elif indented and prev_blank:
+                # CommonMark: an indented code block cannot interrupt a
+                # paragraph, so it only opens after a blank line. Requiring
+                # that is what keeps ordinary wrapped prose out of it.
+                in_indented = True
+                prev_blank = False
                 continue
             out.append((lineno, INLINE_CODE_RE.sub("", line)))
+            prev_blank = blank
         else:
             # Closing fence: same char, at least as long, and no info string.
             if (m and m.group("fence")[0] == fence_char
