@@ -69,6 +69,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Only needed to parse the fleet agent-config below, but that is enough:
+      # the alternative is a bare `python3` whose PyYAML is whatever the runner
+      # image happens to ship (#205). v7 matches every other workflow here
+      # (#203) and is the newest major tag the action publishes.
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
       - name: Resolve model from the fleet agent-config
         id: model
         # Reads culturebotai-claw/.github/agent-config.yaml so the model lives in
@@ -82,7 +91,12 @@ jobs:
           set -euo pipefail
           url=https://raw.githubusercontent.com/CultureBotAI/culturebotai-claw/main/.github/agent-config.yaml
           curl -fsSL "$url" -o /tmp/agent-config.yaml
-          model=$(python3 -c "
+          # `uv run --no-project --with pyyaml`, not bare python3: nothing here
+          # installs PyYAML, and the ubuntu-latest image happening to ship it in
+          # its system interpreter is an image detail, not a contract (#205).
+          # --no-project keeps uv from syncing this repo's whole dependency set
+          # just to parse one small YAML file.
+          model=$(uv run --no-project --with pyyaml python -c "
           import yaml, sys
           cfg = yaml.safe_load(open('/tmp/agent-config.yaml'))
           wf = cfg.get('workflows', {}).get('pr-shepherd', {})
