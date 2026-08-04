@@ -38,8 +38,8 @@ def test_load_mapping_basic(tmp_path):
     ])
     m = load_mapping(p)
     assert m == {
-        "enables": ("RO:0002327", "RO"),
-        "causes": ("biolink:causes", "biolink"),
+        "enables": ("RO:0002327", "RO", None, None),
+        "causes": ("biolink:causes", "biolink", None, None),
     }
 
 
@@ -52,7 +52,7 @@ def test_load_mapping_skips_incomplete_rows(tmp_path):
         "causes\tbiolink:causes\tcauses\tbiolink\thigh\t",
     ])
     m = load_mapping(p)
-    assert m == {"causes": ("biolink:causes", "biolink")}
+    assert m == {"causes": ("biolink:causes", "biolink", None, None)}
 
 
 def test_load_mapping_conflict_raises(tmp_path):
@@ -83,8 +83,8 @@ def test_ground_edges_basic():
         {"subject": "a", "predicate": "enables", "object": "b"},
         {"subject": "c", "predicate": "causes", "object": "d"},
     ])
-    grounded, per_curie, residual = ground_edges_in_doc(
-        doc, {"enables": ("RO:0002327", "RO"), "causes": ("biolink:causes", "biolink")}
+    grounded, per_curie, residual, _blocked = ground_edges_in_doc(
+        doc, {"enables": ("RO:0002327", "RO", None, None), "causes": ("biolink:causes", "biolink", None, None)}
     )
     assert grounded == 2
     assert per_curie == Counter({"RO:0002327": 1, "biolink:causes": 1})
@@ -101,7 +101,7 @@ def test_ground_edges_skips_existing_predicate_id():
          "predicate_id": "RO:9999999"},
         {"subject": "c", "predicate": "enables", "object": "d"},  # ungrounded
     ])
-    grounded, per_curie, _ = ground_edges_in_doc(doc, {"enables": ("RO:0002327", "RO")})
+    grounded, per_curie, _, _blocked = ground_edges_in_doc(doc, {"enables": ("RO:0002327", "RO", None, None)})
     assert grounded == 1, "only the empty predicate_id should be filled"
     edges = doc["causal_graphs"][0]["edges"]
     assert edges[0]["predicate_id"] == "RO:9999999", "existing CURIE not overwritten"
@@ -110,9 +110,9 @@ def test_ground_edges_skips_existing_predicate_id():
 
 def test_ground_edges_idempotent_second_pass():
     doc = _doc_with_edges([{"subject": "a", "predicate": "enables", "object": "b"}])
-    mapping = {"enables": ("RO:0002327", "RO")}
+    mapping = {"enables": ("RO:0002327", "RO", None, None)}
     ground_edges_in_doc(doc, mapping)
-    grounded2, per2, residual2 = ground_edges_in_doc(doc, mapping)
+    grounded2, per2, residual2, _blocked2 = ground_edges_in_doc(doc, mapping)
     assert grounded2 == 0
     assert per2 == Counter()
     assert residual2 == Counter()
@@ -123,7 +123,7 @@ def test_ground_edges_residual_unmapped():
         {"subject": "a", "predicate": "supports", "object": "b"},
         {"subject": "c", "predicate": "manifests as", "object": "d"},
     ])
-    grounded, _, residual = ground_edges_in_doc(doc, {})
+    grounded, _, residual, _blocked = ground_edges_in_doc(doc, {})
     assert grounded == 0
     assert residual == Counter({"supports": 1, "manifests as": 1})
 
@@ -133,6 +133,88 @@ def test_ground_edges_skips_edges_without_predicate():
         {"subject": "a", "object": "b"},  # no predicate at all
         {"subject": "c", "predicate": "", "object": "d"},  # empty
     ])
-    grounded, _, residual = ground_edges_in_doc(doc, {"enables": ("RO:0002327", "RO")})
+    grounded, _, residual, _blocked = ground_edges_in_doc(doc, {"enables": ("RO:0002327", "RO", None, None)})
     assert grounded == 0
     assert residual == Counter()
+
+
+# ---------------------------------------------------- node-type constraints (#236)
+#
+# An exact label match is not sufficient to ground a predicate. `causally
+# upstream of` IS the label of RO:0002411, and every corpus edge carrying it
+# connects material entities — which RO's definition over occurrents forbids.
+# The id↔label gate cannot see that: it compares a CURIE to its label and never
+# looks at the edge. So the constraint lives beside the mapping and is enforced
+# here (#235 is the mistake this exists to prevent).
+
+PROC = frozenset({"BIOLOGICAL_PROCESS", "PATHWAY", "MOLECULAR_FUNCTION"})
+
+
+def _typed_doc(s_type: str, o_type: str, predicate: str = "causally upstream of") -> dict:
+    return {"causal_graphs": [{
+        "nodes": [{"node_id": "a", "node_type": s_type},
+                  {"node_id": "b", "node_type": o_type}],
+        "edges": [{"subject": "a", "predicate": predicate, "object": "b"}],
+    }]}
+
+
+def test_edge_outside_the_declared_types_is_not_grounded():
+    doc = _typed_doc("CHEMICAL", "CHEMICAL")
+    grounded, _per, residual, blocked = ground_edges_in_doc(
+        doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
+    assert grounded == 0
+    assert "predicate_id" not in doc["causal_graphs"][0]["edges"][0]
+    assert blocked == Counter({"causally upstream of (CHEMICAL->CHEMICAL)": 1})
+    # Stays in the residual: a wrong grounding is worse than a missing one.
+    assert residual == Counter({"causally upstream of": 1})
+
+
+def test_edge_inside_the_declared_types_is_grounded():
+    doc = _typed_doc("BIOLOGICAL_PROCESS", "PATHWAY")
+    grounded, per_curie, residual, blocked = ground_edges_in_doc(
+        doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
+    assert grounded == 1
+    assert per_curie == Counter({"RO:0002411": 1})
+    assert residual == Counter() and blocked == Counter()
+
+
+def test_object_type_alone_can_block():
+    doc = _typed_doc("BIOLOGICAL_PROCESS", "CHEMICAL")
+    grounded, _per, _res, blocked = ground_edges_in_doc(
+        doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
+    assert grounded == 0
+    assert "BIOLOGICAL_PROCESS->CHEMICAL" in next(iter(blocked))
+
+
+def test_unconstrained_mapping_still_grounds_anything():
+    """`*`/None must stay permissive — 99 existing rows rely on it."""
+    doc = _typed_doc("CHEMICAL", "CAPACITY", predicate="enables")
+    grounded, _per, _res, blocked = ground_edges_in_doc(
+        doc, {"enables": ("RO:0002327", "RO", None, None)})
+    assert grounded == 1 and blocked == Counter()
+
+
+def test_missing_node_type_is_blocked_by_a_constraint():
+    """A node with no declared type cannot be shown to satisfy the domain."""
+    doc = {"causal_graphs": [{
+        "nodes": [{"node_id": "a"}, {"node_id": "b"}],
+        "edges": [{"subject": "a", "predicate": "causally upstream of", "object": "b"}],
+    }]}
+    grounded, _per, _res, blocked = ground_edges_in_doc(
+        doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
+    assert grounded == 0 and sum(blocked.values()) == 1
+
+
+def test_load_mapping_parses_type_columns(tmp_path):
+    p = tmp_path / "m.tsv"
+    _write_tsv(p, [
+        "label\ttarget_curie\ttarget_label\tsource\tconfidence\tsubject_types\tobject_types\tnotes",
+        "upstream\tRO:0002411\tcausally upstream of\tRO\thigh\tBIOLOGICAL_PROCESS|PATHWAY\tPATHWAY\t",
+        "loose\tRO:0002327\tenables\tRO\thigh\t*\t\t",
+    ])
+    m = load_mapping(p)
+    assert m["upstream"] == ("RO:0002411", "RO",
+                            frozenset({"BIOLOGICAL_PROCESS", "PATHWAY"}),
+                            frozenset({"PATHWAY"}))
+    # `*` and empty both mean "any", so old rows keep working unchanged.
+    assert m["loose"] == ("RO:0002327", "RO", None, None)

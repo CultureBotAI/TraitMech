@@ -50,11 +50,31 @@ TARGET_CLASS = "TraitRecord"
 CURATION_ACTION = "GROUND_CAUSAL_PREDICATES"
 
 
-def load_mapping(path: Path) -> dict[str, tuple[str, str]]:
+def _types(raw: str | None) -> frozenset[str] | None:
+    """Parse a ``subject_types``/``object_types`` cell.
+
+    ``*`` or empty means "any node type" and returns None. Anything else is a
+    ``|``-separated set of CausalNodeTypeEnum names.
+    """
+    cell = (raw or "*").strip()
+    if not cell or cell == "*":
+        return None
+    return frozenset(t.strip() for t in cell.split("|") if t.strip())
+
+
+def load_mapping(path: Path) -> dict[str, tuple[str, str, frozenset | None, frozenset | None]]:
     """Read the curated label→CURIE mapping TSV.
 
-    Returns ``{label: (target_curie, source)}``. Skips rows with missing
-    label/CURIE so a half-curated row can't quietly enable a bad mapping.
+    Returns ``{label: (target_curie, source, subject_types, object_types)}``.
+    Skips rows with missing label/CURIE so a half-curated row can't quietly
+    enable a bad mapping.
+
+    The type columns are what make a grounding checkable at all. An exact label
+    match is not sufficient: `causally upstream of` IS the label of RO:0002411
+    and every corpus edge carrying it connects material entities, which RO's
+    definition over occurrents forbids (#235). The id↔label gate cannot see
+    that — it compares a CURIE to its label and never looks at the edge — so
+    the constraint has to live beside the mapping and be enforced here (#236).
     """
     if not path.exists():
         raise FileNotFoundError(f"mapping file not found: {path}")
@@ -71,22 +91,30 @@ def load_mapping(path: Path) -> dict[str, tuple[str, str]]:
                 raise ValueError(
                     f"mapping conflict for label {label!r}: {out[label][0]} vs {curie}"
                 )
-            out[label] = (curie, source)
+            out[label] = (curie, source,
+                          _types(row.get("subject_types")),
+                          _types(row.get("object_types")))
     return out
 
 
 def ground_edges_in_doc(
     doc: dict[str, Any],
-    mapping: dict[str, tuple[str, str]],
-) -> tuple[int, Counter, Counter]:
+    mapping: dict[str, tuple[str, str, frozenset | None, frozenset | None]],
+) -> tuple[int, Counter, Counter, Counter]:
     """Mutate ``doc`` in place, grounding empty predicate_ids.
 
-    Returns ``(grounded_count, per_curie_counter, residual_counter)``.
+    Returns ``(grounded_count, per_curie, residual, blocked)``. ``blocked``
+    counts edges whose label IS mapped but whose node types fall outside the
+    mapping's declared domain/range — they stay ungrounded and stay in the
+    residual, because a wrong grounding is worse than a missing one.
     """
     grounded = 0
     per_curie: Counter = Counter()
     residual: Counter = Counter()
+    blocked: Counter = Counter()
     for graph in (doc.get("causal_graphs") or []):
+        node_type = {n.get("node_id"): n.get("node_type")
+                     for n in (graph.get("nodes") or [])}
         for edge in (graph.get("edges") or []):
             pred = (edge.get("predicate") or "").strip()
             if not pred:
@@ -95,13 +123,20 @@ def ground_edges_in_doc(
             if existing:
                 continue
             if pred in mapping:
-                curie, _src = mapping[pred]
+                curie, _src, subj_ok, obj_ok = mapping[pred]
+                s_type = node_type.get(edge.get("subject"))
+                o_type = node_type.get(edge.get("object"))
+                if ((subj_ok is not None and s_type not in subj_ok)
+                        or (obj_ok is not None and o_type not in obj_ok)):
+                    blocked[f"{pred} ({s_type}->{o_type})"] += 1
+                    residual[pred] += 1
+                    continue
                 edge["predicate_id"] = curie
                 grounded += 1
                 per_curie[curie] += 1
             else:
                 residual[pred] += 1
-    return grounded, per_curie, residual
+    return grounded, per_curie, residual, blocked
 
 
 def main() -> int:
@@ -127,6 +162,7 @@ def main() -> int:
     edges_grounded_total = 0
     per_curie_total: Counter = Counter()
     residual_total: Counter = Counter()
+    blocked_total: Counter = Counter()
     residual_examples: dict[str, list[str]] = defaultdict(list)
 
     for path in files:
@@ -138,7 +174,8 @@ def main() -> int:
         if not isinstance(doc, dict):
             continue
 
-        grounded, per_curie, residual = ground_edges_in_doc(doc, mapping)
+        grounded, per_curie, residual, blocked = ground_edges_in_doc(doc, mapping)
+        blocked_total.update(blocked)
         for label, n in residual.items():
             residual_total[label] += n
             if len(residual_examples[label]) < 3:
@@ -197,6 +234,15 @@ def main() -> int:
     print(f"  edges grounded:      {edges_grounded_total}", file=sys.stderr)
     print(f"  residual edges:      {sum(residual_total.values())} across {len(residual_total)} distinct labels", file=sys.stderr)
     print(f"  residual TSV:        {args.out}", file=sys.stderr)
+    if blocked_total:
+        # Reported separately from the plain residual: these labels ARE mapped,
+        # and are ungrounded only because the edge's node types fall outside the
+        # mapping's declared domain/range. Folding them into the residual would
+        # read as "no CURIE known", which is the opposite of the situation.
+        print(f"  blocked by node-type constraint: {sum(blocked_total.values())}",
+              file=sys.stderr)
+        for shape, n in blocked_total.most_common(10):
+            print(f"    {shape:60s} {n:>5d}", file=sys.stderr)
     if per_curie_total:
         print("  by target CURIE:", file=sys.stderr)
         for curie, n in per_curie_total.most_common():
