@@ -465,6 +465,9 @@ audit-derived-reports:
     if [ ! -d pages ]; then
       echo "  MISSING pages/ — the renderer produced output, the repo has none" >&2
       stale_pages=1
+      # Regenerating IS the fix here — gen-pages recreates the directory — so
+      # unlike the orphan case this branch should say so.
+      regen_pages=1
       fail=1
       pages_diff=""
     else
@@ -514,14 +517,39 @@ audit-derived-reports:
     # direction would also hide an orphan — a page for a trait that was deleted
     # or renamed, which `just gen-pages` does not sweep because it does not pass
     # --clean by default.
-    pages_diff="$(diff -rq "$pages_tmp" pages \
-      | grep -vE '^Only in pages: (d3\.v7\.min\.js|theme-toggle\.js)$' || true)"
+    # diff exits 0 (same), 1 (differences) or >1 (error). `|| true` alone folded
+    # an ERROR into an empty result, which then read as OK — the same fail-open
+    # both sibling blocks treat as fatal. Capture the status instead.
+    set +e
+    pages_raw="$(diff -rq "$pages_tmp" pages)"
+    diff_rc=$?
+    set -e
+    if [ "$diff_rc" -gt 1 ]; then
+      echo "  ERROR diff failed on pages/ (exit $diff_rc) — staleness not checked" >&2
+      exit 1
+    fi
+    if [ -z "$pages_raw" ]; then
+      pages_diff=""
+    else
+      pages_diff="$(printf '%s\n' "$pages_raw" \
+        | grep -vE '^Only in pages: (d3\.v7\.min\.js|theme-toggle\.js)$' || true)"
+    fi
     fi
     if [ -n "$pages_diff" ]; then
       echo "  STALE pages/ — not what render_trait_pages.py produces:" >&2
       printf '%s\n' "$pages_diff" | sed -n '1,15p' >&2
       n=$(printf '%s\n' "$pages_diff" | wc -l | tr -d ' ')
       echo "  ($n path(s) differ)" >&2
+      # An "Only in pages" line is an ORPHAN — a page whose trait YAML was
+      # deleted or renamed. `just gen-pages` cannot clear it (it overwrites and
+      # never deletes, since --clean is not the default), so recommending it
+      # would loop: regenerate, `git add` stages nothing, next run fails
+      # identically. `--clean` is worse, not better: it rmtree's pages/, and the
+      # `git add pages/` printed below would then stage the deletion of both
+      # hand-vendored assets. Name the orphans and say `git rm`.
+      orphans="$(printf '%s\n' "$pages_diff" | sed -nE 's|^Only in (pages[^:]*): (.*)$|\1/\2|p' || true)"
+      # Only recommend regenerating if something other than an orphan differs.
+      printf '%s\n' "$pages_diff" | grep -qv '^Only in pages' && regen_pages=1
       stale_pages=1
       fail=1
     elif [ "${stale_pages:-0}" -eq 0 ] && [ -z "${lost_assets:-}" ]; then
@@ -556,8 +584,13 @@ audit-derived-reports:
         echo '  # (already run if you got here via `just qc`), then committed.' >&2
         echo '  just audit-graphs' >&2
       fi
-      if [ "${stale_pages:-0}" -eq 1 ]; then
+      # Only when regenerating can actually fix it — an orphan-only failure is
+      # cleared by git rm, and gen-pages would loop.
+      if [ "${regen_pages:-0}" -eq 1 ]; then
         echo '  just gen-pages' >&2
+      fi
+      if [ -n "${orphans:-}" ]; then
+        echo "  git rm$(printf ' %s' $orphans)" >&2
       fi
       if [ -n "${lost_assets:-}" ]; then
         echo "  git checkout --${lost_assets}" >&2
@@ -568,7 +601,7 @@ audit-derived-reports:
       paths=""
       [ "${stale_grounding:-0}" -eq 1 ] && paths="reports/"
       [ "${stale_cga:-0}" -eq 1 ] && paths="reports/"
-      [ "${stale_pages:-0}" -eq 1 ] && paths="$paths pages/"
+      [ "${regen_pages:-0}" -eq 1 ] && paths="$paths pages/"
       # Only when something is actually stageable — an asset-only failure has
       # no paths, and a bare `git add` is not a command anyone can run.
       [ -n "$paths" ] && echo "  git add$(printf ' %s' $paths)" >&2
