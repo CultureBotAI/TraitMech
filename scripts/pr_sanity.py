@@ -420,15 +420,6 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
                 continue
             blank = not line.strip()
             col = len(line) - len(line.lstrip(" "))
-            if not blank:
-                lm = LIST_MARKER_RE.match(line)
-                if lm:
-                    # Content column of the innermost open list item.
-                    list_col = len(lm.group("indent")) + len(lm.group("marker")) \
-                        + len(lm.group("space"))
-                elif col == 0:
-                    # Back at the margin and not a marker: the list is closed.
-                    list_col = 0
             indented = not blank and col >= list_col + 4
             if in_indented:
                 # Blank lines belong to the block; only a dedented non-blank
@@ -443,6 +434,18 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
                 in_indented = True
                 prev_blank = False
                 continue
+            # Only now — the line is prose. Updating list_col any earlier let a
+            # bullet-shaped line INSIDE a code block move the threshold, which
+            # reopened the very false positive this skip exists to close.
+            if not blank:
+                lm = LIST_MARKER_RE.match(line)
+                if lm:
+                    # Content column of the innermost open list item.
+                    list_col = len(lm.group("indent")) + len(lm.group("marker")) \
+                        + len(lm.group("space"))
+                elif col == 0:
+                    # Back at the margin and not a marker: the list is closed.
+                    list_col = 0
             out.append((lineno, INLINE_CODE_RE.sub("", line)))
             prev_blank = blank
         else:

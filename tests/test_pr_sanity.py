@@ -665,3 +665,25 @@ def test_dedenting_ends_the_indented_block():
 def test_indented_block_at_start_of_document():
     pairs, _ = prose_lines("    [x](nope.md)\n")
     assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_bullet_shaped_line_inside_a_code_block_is_still_code():
+    """List tracking must not run on lines that are code.
+
+    Updating `list_col` before the in_indented branch let a bullet-shaped line
+    inside a block move the threshold, which un-skipped the rest of the block —
+    reopening the exact false positive #208 exists to close.
+    """
+    pairs, _ = prose_lines("Example:\n\n    - bullet in code\n    [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_code_block_whose_only_line_looks_like_a_bullet():
+    pairs, _ = prose_lines("Example:\n\n    - [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_list_body_resumes_after_a_code_block_inside_the_item():
+    """The threshold must survive a block: 6 spaces is code, 4 is body again."""
+    pairs, _ = prose_lines("- item\n\n      code\n\n    body [x](nope.md)\n")
+    assert any("nope.md" in line for _, line in pairs)
