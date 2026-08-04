@@ -34,6 +34,13 @@ on:
       # version string in every page footer.
       - "data/embeddings/**"
       - "data/raw/metpo.owl"
+      # research/ joined the gate in #242, via audit-research-artifacts: it
+      # checks every manifest `ok` row's artifact is present and that no
+      # artifact carries a malformed CURIE. Without this line the job cannot
+      # fire on a PR that adds only research artifacts — which is the shape of
+      # every sweep batch, and the shape the gate exists for. Same
+      # filter-narrower-than-the-job bug as #184 and #200 (#250).
+      - "research/**"
   push:
     branches: [main]
   workflow_dispatch:
