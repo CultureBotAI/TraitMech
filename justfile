@@ -465,9 +465,15 @@ audit-derived-reports:
     if [ ! -d pages ]; then
       echo "  MISSING pages/ — the renderer produced output, the repo has none" >&2
       stale_pages=1
-      # Regenerating IS the fix here — gen-pages recreates the directory — so
-      # unlike the orphan case this branch should say so.
+      # Regenerating IS part of the fix here — gen-pages recreates the directory
+      # — so unlike the orphan case this branch should say so.
       regen_pages=1
+      # But not the WHOLE fix: the hand-vendored assets went with the directory
+      # and gen-pages never emits them, so `git add pages/` alone would stage
+      # their deletion. The per-asset loop below only runs when pages/ exists,
+      # so name them here. The restore line prints above the git add, which is
+      # the ordering that makes this safe to follow top to bottom.
+      lost_assets=" pages/d3.v7.min.js pages/theme-toggle.js"
       fail=1
       pages_diff=""
     else
