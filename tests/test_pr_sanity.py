@@ -591,3 +591,99 @@ def test_excluding_every_collider_is_clean():
           cancel-in-progress: ${{{{ github.event_name != 'issue_comment' && github.event_name != 'pull_request_review' }}}}
         {JOBS}
     """) == []
+
+
+# --- indented code blocks (#208) ---------------------------------------------
+#
+# The blank-line requirement is the whole safety argument: CommonMark says an
+# indented code block cannot interrupt a paragraph, so requiring one keeps
+# wrapped prose and list continuations in scope. Both directions are asserted
+# because skipping too much here is a silent COVERAGE loss, which is worse than
+# the false positive it fixes.
+
+def test_indented_code_block_is_not_scanned(tmp_path):
+    root = _repo(tmp_path)
+    (root / "target.md").write_text("hi\n")
+    md = root / "a.md"
+    md.write_text("Example:\n\n    [x](does/not/exist.md)\n\nback to prose.\n")
+    _commit(root)
+    assert check_markdown_links([md], root) == []
+
+
+def test_indentation_without_a_blank_line_is_still_prose(tmp_path):
+    """An indented block cannot interrupt a paragraph, so this is wrapped text."""
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("Some prose\n    [x](does/not/exist.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+def test_list_continuation_keeps_its_links_checked(tmp_path):
+    """The regression that would matter: list bodies are indented prose.
+
+    Uses the 4-space, blank-line-separated form on purpose. The lazy two-space
+    form passes for two independent reasons — under 4 columns AND no preceding
+    blank line — so it pins neither condition and hid this exact bug.
+    """
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("- item\n\n    body [x](does/not/exist.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+def test_ordered_list_continuation_keeps_its_links_checked(tmp_path):
+    root = _repo(tmp_path)
+    md = root / "a.md"
+    md.write_text("1. step\n\n    body [x](does/not/exist.md)\n")
+    _commit(root)
+    assert [f["check"] for f in check_markdown_links([md], root)] == ["BROKEN_LINK"]
+
+
+def test_code_block_inside_a_list_is_still_skipped():
+    """Relative measurement cuts both ways: 6 spaces under `- item` IS code."""
+    pairs, _ = prose_lines("- item\n\n      [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_list_closes_at_the_margin_so_later_code_is_skipped():
+    pairs, _ = prose_lines("- item\n\nprose\n\n    [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_blank_line_inside_an_indented_block_does_not_end_it():
+    pairs, _ = prose_lines("Ex:\n\n    code\n\n    [x](nope.md)\n\nend\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_dedenting_ends_the_indented_block():
+    pairs, _ = prose_lines("Ex:\n\n    code\n\n[x](nope.md)\n")
+    assert any("nope.md" in line for _, line in pairs)
+
+
+def test_indented_block_at_start_of_document():
+    pairs, _ = prose_lines("    [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_bullet_shaped_line_inside_a_code_block_is_still_code():
+    """List tracking must not run on lines that are code.
+
+    Updating `list_col` before the in_indented branch let a bullet-shaped line
+    inside a block move the threshold, which un-skipped the rest of the block —
+    reopening the exact false positive #208 exists to close.
+    """
+    pairs, _ = prose_lines("Example:\n\n    - bullet in code\n    [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_code_block_whose_only_line_looks_like_a_bullet():
+    pairs, _ = prose_lines("Example:\n\n    - [x](nope.md)\n")
+    assert not any("nope.md" in line for _, line in pairs)
+
+
+def test_list_body_resumes_after_a_code_block_inside_the_item():
+    """The threshold must survive a block: 6 spaces is code, 4 is body again."""
+    pairs, _ = prose_lines("- item\n\n      code\n\n    body [x](nope.md)\n")
+    assert any("nope.md" in line for _, line in pairs)

@@ -33,8 +33,9 @@ Checks:
                       review, hence a gate rather than a convention (#218).
   CONFLICT_MARKER     an unresolved merge-conflict marker in a tracked file.
   BROKEN_LINK         a relative Markdown link pointing at a path that does not
-                      exist. Links inside fenced code blocks or inline code
-                      spans are prose *about* links and are not checked (#202).
+                      exist. Links inside fenced code blocks, indented code
+                      blocks, or inline code spans are prose *about* links and
+                      are not checked (#202, #208).
   UNTERMINATED_FENCE  a code fence that is opened and never closed. Everything
                       after it would go unchecked, so this is reported rather
                       than silently shrinking coverage.
@@ -102,6 +103,12 @@ SKIP_LINK_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#")
 # what lets a ````-fence contain a ```-fence, which is how one documents fenced
 # markdown at all — see this repo's own #202.
 FENCE_RE = re.compile(r"^(?P<indent> {0,3})(?P<fence>`{3,}|~{3,})(?P<info>.*)$")
+
+# A list marker, with the column its content starts at. Indented code is
+# measured RELATIVE to that column: inside `- item`, content begins at 2, so a
+# code block needs 6 spaces, not 4. Without this a list continuation paragraph
+# indented 4 reads as code and its links go unchecked (#208 review).
+LIST_MARKER_RE = re.compile(r"^(?P<indent> *)(?P<marker>[-*+]|\d{1,9}[.)])(?P<space> +)")
 
 # An inline code span: matching runs of backticks on one line. `[x](y.md)`
 # inside one is prose about a link, not a link.
@@ -371,11 +378,32 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
 
     Inline code spans are blanked rather than dropped so column positions and
     surrounding prose on the same line are still scanned.
+
+    Indented code blocks are skipped too (#208), under two conditions that
+    together keep prose in scope:
+
+    * They may only open after a blank line. CommonMark forbids an indented
+      block from interrupting a paragraph, so wrapped prose stays scanned.
+    * Indentation is measured RELATIVE to the innermost open list item. Inside
+      ``- item`` content begins at column 2, so code needs 6 spaces; a
+      continuation paragraph indented 4 is prose and stays scanned. Measuring
+      absolutely silently dropped every such paragraph — a coverage loss, which
+      is worse than the false positive being fixed.
+
+    Known limitations, both deliberate: tabs are not treated as indentation,
+    and list tracking is a single innermost column rather than a container
+    stack, so exotic nesting can still misjudge the threshold.
     """
     out: list[tuple[int, str]] = []
     fence_char: str | None = None
     fence_len = 0
     opened_at: int | None = None
+    in_indented = False
+    # Content column of the innermost open list item; 0 when not in a list.
+    list_col = 0
+    # Start of document behaves like "after a blank line" — an indented block
+    # may open there.
+    prev_blank = True
 
     for lineno, line in enumerate(text.splitlines(), 1):
         m = FENCE_RE.match(line)
@@ -384,8 +412,42 @@ def prose_lines(text: str) -> tuple[list[tuple[int, str]], int | None]:
                 fence_char = m.group("fence")[0]
                 fence_len = len(m.group("fence"))
                 opened_at = lineno
+                prev_blank = False
+                # FENCE_RE caps indent at 3, so any fence line has already
+                # dedented out of an indented block; clearing here keeps the
+                # state from being stale across the fenced region regardless.
+                in_indented = False
                 continue
+            blank = not line.strip()
+            col = len(line) - len(line.lstrip(" "))
+            indented = not blank and col >= list_col + 4
+            if in_indented:
+                # Blank lines belong to the block; only a dedented non-blank
+                # line closes it.
+                if blank or indented:
+                    continue
+                in_indented = False
+            elif indented and prev_blank:
+                # CommonMark: an indented code block cannot interrupt a
+                # paragraph, so it only opens after a blank line. Requiring
+                # that is what keeps ordinary wrapped prose out of it.
+                in_indented = True
+                prev_blank = False
+                continue
+            # Only now — the line is prose. Updating list_col any earlier let a
+            # bullet-shaped line INSIDE a code block move the threshold, which
+            # reopened the very false positive this skip exists to close.
+            if not blank:
+                lm = LIST_MARKER_RE.match(line)
+                if lm:
+                    # Content column of the innermost open list item.
+                    list_col = len(lm.group("indent")) + len(lm.group("marker")) \
+                        + len(lm.group("space"))
+                elif col == 0:
+                    # Back at the margin and not a marker: the list is closed.
+                    list_col = 0
             out.append((lineno, INLINE_CODE_RE.sub("", line)))
+            prev_blank = blank
         else:
             # Closing fence: same char, at least as long, and no info string.
             if (m and m.group("fence")[0] == fence_char
