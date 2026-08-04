@@ -164,7 +164,7 @@ def test_edge_outside_the_declared_types_is_not_grounded():
         doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
     assert grounded == 0
     assert "predicate_id" not in doc["causal_graphs"][0]["edges"][0]
-    assert blocked == Counter({"causally upstream of (CHEMICAL->CHEMICAL)": 1})
+    assert blocked == Counter({("causally upstream of", "CHEMICAL->CHEMICAL"): 1})
     # Stays in the residual: a wrong grounding is worse than a missing one.
     assert residual == Counter({"causally upstream of": 1})
 
@@ -178,12 +178,25 @@ def test_edge_inside_the_declared_types_is_grounded():
     assert residual == Counter() and blocked == Counter()
 
 
+def test_blocked_key_survives_a_label_containing_a_parenthesis():
+    """`positively influences (saturating)` is a real corpus label.
+
+    Recovering the label by splitting the display string on " (" would truncate
+    it to `positively influences`, so the residual TSV would mark the WRONG row
+    blocked and leave the real one reading `unmapped`.
+    """
+    doc = _typed_doc("CHEMICAL", "CHEMICAL", predicate="positively influences (saturating)")
+    _g, _p, _r, blocked = ground_edges_in_doc(
+        doc, {"positively influences (saturating)": ("RO:9", "RO", PROC, PROC)})
+    assert next(iter(blocked))[0] == "positively influences (saturating)"
+
+
 def test_object_type_alone_can_block():
     doc = _typed_doc("BIOLOGICAL_PROCESS", "CHEMICAL")
     grounded, _per, _res, blocked = ground_edges_in_doc(
         doc, {"causally upstream of": ("RO:0002411", "RO", PROC, PROC)})
     assert grounded == 0
-    assert "BIOLOGICAL_PROCESS->CHEMICAL" in next(iter(blocked))
+    assert next(iter(blocked)) == ("causally upstream of", "BIOLOGICAL_PROCESS->CHEMICAL")
 
 
 def test_unconstrained_mapping_still_grounds_anything():

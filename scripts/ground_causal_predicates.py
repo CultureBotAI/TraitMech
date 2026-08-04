@@ -151,7 +151,11 @@ def ground_edges_in_doc(
                 o_type = node_type.get(edge.get("object"))
                 if ((subj_ok is not None and s_type not in subj_ok)
                         or (obj_ok is not None and o_type not in obj_ok)):
-                    blocked[f"{pred} ({s_type}->{o_type})"] += 1
+                    # Keyed by (label, shape) rather than a rendered string:
+                    # recovering the label by splitting on " (" breaks on labels
+                    # that contain it, and the corpus has one —
+                    # `positively influences (saturating)`.
+                    blocked[(pred, f"{s_type}->{o_type}")] += 1
                     residual[pred] += 1
                     continue
                 edge["predicate_id"] = curie
@@ -250,7 +254,7 @@ def main() -> int:
         # precisely the mistake the constraint just prevented (#236).
         w.writerow(["predicate_label", "edge_count", "status", "blocked_by",
                     "example_files"])
-        blocked_labels = {shape.split(" (")[0] for shape in blocked_total}
+        blocked_labels = {label for label, _shape in blocked_total}
         for label, n in residual_total.most_common():
             is_blocked = label in blocked_labels
             w.writerow([
@@ -276,8 +280,8 @@ def main() -> int:
         # read as "no CURIE known", which is the opposite of the situation.
         print(f"  blocked by node-type constraint: {sum(blocked_total.values())}",
               file=sys.stderr)
-        for shape, n in blocked_total.most_common(10):
-            print(f"    {shape:60s} {n:>5d}", file=sys.stderr)
+        for (label, shape), n in blocked_total.most_common(10):
+            print(f"    {label} ({shape})".ljust(60) + f"{n:>5d}", file=sys.stderr)
     if per_curie_total:
         print("  by target CURIE:", file=sys.stderr)
         for curie, n in per_curie_total.most_common():
