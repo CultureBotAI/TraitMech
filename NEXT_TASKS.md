@@ -476,43 +476,40 @@ verifiable by CI, none blocking anything:
 | #217 | write down the workflow-authoring conventions | needs a home first — fleet knowledge, probably CultureMech or claw, not a fourth copy here |
 | #218 | enforce the concurrency rule in `pr-sanity` | the stronger half of #217; `check_workflows` already parses triggers |
 
-## 8. ⚠️ The paid Edison research sweep completed, but its output is GONE
+## 8. The paid Edison sweep's output was lost — now tracked, and being re-run
 
-`reports/trait_graph_audit_manifest.tsv` (361 data rows, last written 2026-07-20)
-records a sweep that **fully succeeded**: 353 distinct traits, every one `ok`.
+`reports/trait_graph_audit_manifest.tsv` recorded a 2026-07-20 sweep that
+**fully succeeded**: 353 distinct traits, every one `ok`.
 The 8 `fail:1` rows are not 8 unfinished traits — each is a `(category, slug)`
 that also appears as `ok`, i.e. a retry that then worked. Verified by set
 difference: `fail − ok` is empty, so there are **zero outstanding failures**.
 That makes the loss below worse, not better: nothing here is a partial run that
 was going to need redoing anyway.
 
-But `research/` is in `.gitignore` (line 42, "large, regenerable"), nothing under
-it is tracked, and only **11 traits' reports survive on the checkout this was
-written from**:
+**RESOLVED as of 2026-08-04 — `research/` is now tracked (#240).** It had been
+ignored as "large, regenerable", and the second half of that was the expensive
+half: 342 of 353 reports existed only on one machine, so the manifest recorded
+353 successes against 11 surviving files. The artifacts are provenance, not
+build output, and are committed.
 
-```
-$ find research/traits -name '*-deep-research-falcon.md' | wc -l
-11
-$ uv run python scripts/run_trait_graph_audit.py --dry-run | tail -1
-[342/342] upper/quality  (quality)
-```
+The re-run was authorised and is under way, launched through the new
+`just trait-graph-sweep` recipe. That recipe exists for the credentials, not
+for convenience: `scripts/research_trait.py` has no `load_dotenv`, so a sweep
+started outside `just` sees no `EDISON_API_KEY` and every call fails instantly.
 
-**11 is the generous reading, and it is machine-local.** On a fresh clone
-`research/traits` does not exist at all, so that `find` errors and the count is
-**0** — 353 traits' worth of paid output, none of it recoverable from the
-repository by anyone else. Whatever survives does so only on whichever machine
-happened to run the sweep.
+Canaried before fan-out and checked on side effects rather than the exit code —
+one real unit produced a 50,846-byte report plus citations, `cached: false`, 57
+references, and a manifest row; 452s wall clock, so ~11 h for 341 at
+`--workers 4`.
 
-Resume detection in `scripts/run_trait_graph_audit.py` is **file-existence
-based**, so from this checkout the sweep looks 3% done and would re-run — and
-re-bill — 342 Edison calls that already succeeded once.
-
-**Decide before running anything paid.** Either the reports exist on another
-machine and should be recovered, or `.gitignore`'s "regenerable" premise needs
-revisiting for outputs that cost money to regenerate (commit them, or push them
-to shared storage with the manifest as the index). Until then, treat the
-manifest's 353 `ok` rows as a record of spend, not as available input, and honour
-the canary rule: one real trait end-to-end before any fan-out.
+**Known transitional inconsistency, stated rather than hidden.** The manifest is
+append-only and predates the tracking change, so it currently carries 366 rows,
+9 duplicate `(category, slug)` keys from retries, and **337 `ok` rows whose file
+is not yet in the tree**. That count falls to 0 as the sweep completes; the
+manifest is deliberately not patched into fake agreement in the meantime,
+because the record of what was billed is the one thing worth keeping accurate.
+Cost per call is not captured anywhere — `duration_seconds` is, but no USD
+figure — which is worth adding before this is ever repeated.
 
 ## 9. Predicate/node grounding backfill — PENDING, and cheaper than section 4 implied
 
