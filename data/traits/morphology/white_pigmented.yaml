@@ -164,6 +164,7 @@ causal_graphs:
     - reference: DOI:10.1128/mbio.00346-24
       notes: SigB positively regulates genes involved in staphyloxanthin synthesis;
         disruptive sigB mutations give white colonies.
+    predicate_id: RO:0002213
   - subject: glmS
     predicate: positively regulates
     object: sigB
@@ -173,6 +174,7 @@ causal_graphs:
     - reference: DOI:10.1080/21505594.2024.2352476
       notes: GlmS directly upregulates sigB transcription (dual-luciferase and EMSA
         promoter binding); glmS knockout reduces sigB and golden pigment.
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.946745+00:00'
   curator: seed_from_metpo
@@ -244,4 +246,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (UniProtKB:I6LB50×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true

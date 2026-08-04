@@ -171,6 +171,7 @@ causal_graphs:
     - reference: DOI:10.1042/bsr20221664
       notes: '"MapZ and LocZ are reported as proteins that mark division sites and
         ensure correct septum placement, respectively".'
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.891705+00:00'
   curator: seed_from_metpo
@@ -230,4 +231,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

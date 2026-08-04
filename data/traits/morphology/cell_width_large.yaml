@@ -130,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: '"Structural opening couples the activation of polymerization and crosslinking
         and is essential in vivo."'
+    predicate_id: RO:0002213
   - subject: roda_pbp2_complex
     predicate: mediates
     object: sidewall_pg_insertion
@@ -219,4 +220,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:27692×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

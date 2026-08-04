@@ -24,7 +24,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:584
   taxon_label: Proteus mirabilis
-  note: "Historical/diagnostic swarming model (bulls-eye colonies; hyper-flagellated swarmer cells)."
+  note: Historical/diagnostic swarming model (bulls-eye colonies; hyper-flagellated
+    swarmer cells).
   reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10671106/
 causal_graphs:
 - graph_id: swarming_hyperflagellation_surfactant
@@ -96,6 +97,7 @@ causal_graphs:
     - reference: DOI:10.1063/5.0128140
       notes: 'Bru et al. 2023 review: QS regulates HAA and rhamnolipid production
         needed for swarm development.'
+    predicate_id: RO:0002213
   - subject: surfactant
     predicate: positively regulates
     object: swarm_expansion
@@ -105,6 +107,7 @@ causal_graphs:
     - reference: DOI:10.1063/5.0128140
       notes: 'Bru et al. 2023: mutants defective in rhamnolipid production are deficient
         in swarm expansion and fail to form tendrils.'
+    predicate_id: RO:0002213
   - subject: bacterial_flagellum
     predicate: positively regulates
     object: swarm_expansion
@@ -114,6 +117,7 @@ causal_graphs:
     - reference: DOI:10.1063/5.0128140
       notes: 'Bru et al. 2023: two activities are essential for forming dendritic
         swarms - surfactant production and flagellar activity.'
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -139,4 +143,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0009372×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×3).
   llm_assisted: true

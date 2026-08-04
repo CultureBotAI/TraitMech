@@ -24,11 +24,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1280
   taxon_label: Staphylococcus aureus
-  note: "spherical coccus"
+  note: spherical coccus
   reference: PMID:40704795
 - taxon_id: NCBITaxon:1313
   taxon_label: Streptococcus pneumoniae
-  note: "near-spherical diplococcus"
+  note: near-spherical diplococcus
   reference: PMID:31172911
 causal_graphs:
 - graph_id: sphere_shaped_septal_peptidoglycan
@@ -140,6 +140,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro3088
       notes: loss of the MreB cytoskeleton is the main factor that prevents cocci
         from elongating into rods
+    predicate_id: RO:0002411
   - subject: elongation_capacity
     predicate: reduced in
     object: sphere_shaped_trait
@@ -242,4 +243,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:27692×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002411×1).
   llm_assisted: true

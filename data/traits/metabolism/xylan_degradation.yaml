@@ -26,11 +26,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:44001
   taxon_label: Caldicellulosiruptor saccharolyticus
-  note: "thermophilic hemicellulose degrader"
+  note: thermophilic hemicellulose degrader
   reference: PMID:18776029
 - taxon_id: NCBITaxon:28116
   taxon_label: Bacteroides ovatus
-  note: "gut xylan utiliser"
+  note: gut xylan utiliser
   reference: PMID:1444385
 causal_graphs:
 - graph_id: xylan_degradation_xylanase
@@ -114,6 +114,7 @@ causal_graphs:
       notes: 'Pentari et al. 2025: CE15 glucuronoyl esterases increased saccharification
         by xylanases (57-61 uM xylose equivalents) on pretreated lignocellulose; accessory-enzyme
         synergy edge.'
+    predicate_id: RO:0002213
   - subject: glucuronoyl_esterase
     predicate: produces
     object: aldouronic_acids
@@ -154,4 +155,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2000202×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

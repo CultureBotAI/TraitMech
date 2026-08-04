@@ -19,7 +19,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
-  note: "Textbook mixed-acid fermenter (lactate, acetate, succinate, formate, ethanol, H2/CO2)."
+  note: Textbook mixed-acid fermenter (lactate, acetate, succinate, formate, ethanol,
+    H2/CO2).
   reference: PMID:25152889
 causal_graphs:
 - graph_id: mixed_acid_fermentation_enterobacterial
@@ -175,6 +176,7 @@ causal_graphs:
     - reference: DOI:10.35812/cellulosechemtechnol.2024.58.90
       notes: The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under
         acidic conditions into H2 and CO2.
+    predicate_id: RO:0002213
   - subject: molecular_oxygen
     predicate: inhibits
     object: hydrogen
@@ -241,4 +243,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:15361×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

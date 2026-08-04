@@ -168,6 +168,7 @@ causal_graphs:
     - reference: DOI:10.1093/ismeco/ycae081
       notes: Oligotroph genomes had energy-intensive functions like chemotaxis and
         motility under-represented.
+    predicate_id: RO:0002212
   - subject: copiotrophic_phenotype
     predicate: positively regulates
     object: motility_signaling_genes
@@ -177,6 +178,7 @@ causal_graphs:
     - reference: DOI:10.1073/pnas.0903507106
       notes: Copiotrophs are enriched in genes for motility and sensing and signal
         transduction.
+    predicate_id: RO:0002213
   - subject: rrn_copy_number
     predicate: positively correlates with
     object: maximum_growth_potential
@@ -249,4 +251,10 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007401×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:25Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1, RO:0002213×1).
   llm_assisted: true

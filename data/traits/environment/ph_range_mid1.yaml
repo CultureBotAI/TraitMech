@@ -130,6 +130,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: 'Krulwich et al. 2011: under acid challenge E. coli up-regulates proton-pumping
         respiratory complexes and down-regulates ATP synthase.'
+    predicate_id: RO:0002213
   - subject: respiratory_proton_pumping
     predicate: enables
     object: baseline_ph_homeostasis
@@ -149,6 +150,7 @@ causal_graphs:
     - reference: DOI:10.1038/nrmicro2549
       notes: 'Krulwich et al. 2011: under alkaline stress cells activate inward proton
         transport via cation/proton antiporters and increase ATP synthase expression.'
+    predicate_id: RO:0002213
 curation_history:
 - timestamp: '2026-05-05T01:35:46.830444+00:00'
   curator: seed_from_metpo
@@ -184,4 +186,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0051453×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:22Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true

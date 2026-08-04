@@ -30,7 +30,8 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:54298
   taxon_label: Chroococcidiopsis
-  note: "Extremely desiccation- and radiation-tolerant cyanobacterium from deserts and endolithic habitats."
+  note: Extremely desiccation- and radiation-tolerant cyanobacterium from deserts
+    and endolithic habitats.
   reference: PMID:34122375
 causal_graphs:
 - graph_id: desiccation_anhydrobiosis_repair
@@ -161,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1021/acs.chemrev.2c00659
       notes: Desiccation-tolerant organisms upregulate superoxide dismutase as conserved
         oxidative-stress defense.
+    predicate_id: RO:0002212
   - subject: catalase_activity
     predicate: negatively regulates
     object: oxidative_stress
@@ -169,6 +171,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1021/acs.chemrev.2c00659
       notes: Desiccation-tolerant organisms upregulate catalases for ROS detoxification.
+    predicate_id: RO:0002212
   - subject: chaperone_activity
     predicate: negatively regulates
     object: protein_aggregation
@@ -178,6 +181,7 @@ causal_graphs:
     - reference: DOI:10.1007/s00203-023-03683-w
       notes: Heat shock proteins bind denatured proteins, preventing aggregation and
         aiding repair on rehydration.
+    predicate_id: RO:0002212
   - subject: desiccation_idps
     predicate: synergizes with
     object: trehalose
@@ -223,4 +227,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0004784×1, GO:0004096×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:21Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 3 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×3).
   llm_assisted: true

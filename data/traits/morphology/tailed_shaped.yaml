@@ -137,6 +137,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.7554/eLife.86577
       notes: Recruited cell wall synthase contributes to stalk elongation.
+    predicate_id: RO:0002213
   - subject: mreb
     predicate: required for
     object: stalk_outgrowth
@@ -227,4 +228,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

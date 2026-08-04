@@ -20,11 +20,11 @@ evidence:
 canonical_examples:
 - taxon_id: NCBITaxon:1097
   taxon_label: Chlorobaculum tepidum
-  note: "green sulfur bacterium (bacteriochlorophyll/chlorosome)"
+  note: green sulfur bacterium (bacteriochlorophyll/chlorosome)
   reference: PMID:12093901
 - taxon_id: NCBITaxon:1108
   taxon_label: Chloroflexus aurantiacus
-  note: "green non-sulfur bacterium"
+  note: green non-sulfur bacterium
   reference: PMID:21714912
 causal_graphs:
 - graph_id: green_pigmented_pyocyanin_phenazine
@@ -152,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1186/s12934-023-02122-1
       notes: Quorum sensing controls pyocyanin synthesis; AHL and PQS autoinducers
         and LasR-LasI/RhlR-RhlI systems activate pyocyanin expression.
+    predicate_id: RO:0002213
   - subject: pyocyanin_redox_ph
     predicate: modifies
     object: visible_green_color
@@ -248,4 +249,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (CHEBI:29748×1, GO:0009372×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

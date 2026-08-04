@@ -152,6 +152,7 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-023-39037-9
       notes: Structural opening couples RodA glycan polymerization and PBP2 crosslinking,
         a coupling essential in vivo for rod-shaped growth.
+    predicate_id: RO:0002213
   - subject: pbp2_structural_opening
     predicate: activates
     object: rodA_polymerization
@@ -288,4 +289,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 2 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×1).
   llm_assisted: true

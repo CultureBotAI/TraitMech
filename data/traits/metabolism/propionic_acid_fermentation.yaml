@@ -137,6 +137,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: Pyruvate is carboxylated to oxaloacetate by methylmalonyl-CoA carboxytransferase
         in a biotin-dependent reaction.
+    predicate_id: RO:0002411
   - subject: biotin
     predicate: cofactor for
     object: mmc_carboxytransferase
@@ -153,6 +154,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: Oxaloacetate is reduced to malate in the reductive branch leading toward
         succinate.
+    predicate_id: RO:0002411
   - subject: malate
     predicate: causally upstream of
     object: fumarate
@@ -160,6 +162,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/molecules31020333
       notes: Malate is dehydrated to fumarate in the Wood-Werkman route.
+    predicate_id: RO:0002411
   - subject: fumarate
     predicate: causally upstream of
     object: succinate
@@ -167,6 +170,7 @@ causal_graphs:
     evidence:
     - reference: DOI:10.3390/molecules31020333
       notes: Fumarate is reduced to succinate en route to propionate formation.
+    predicate_id: RO:0002411
   - subject: succinyl_coa
     predicate: causally upstream of
     object: methylmalonyl_coa
@@ -175,6 +179,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: The pathway proceeds through succinyl-CoA and methylmalonyl-CoA intermediates
         during propionate formation.
+    predicate_id: RO:0002411
   - subject: propionyl_coa
     predicate: causally upstream of
     object: propionate
@@ -183,6 +188,7 @@ causal_graphs:
     - reference: DOI:10.3390/molecules31020333
       notes: Propionyl-CoA is finally converted to propionic acid or propionate by
         a CoA-transferase.
+    predicate_id: RO:0002411
   - subject: propionic_acid_fermentation_trait
     predicate: has byproduct
     object: acetate
@@ -245,4 +251,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0047154×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 6 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002411×6).
   llm_assisted: true

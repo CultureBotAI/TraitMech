@@ -129,6 +129,7 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.02473-10
       notes: Restricted to organisms growing under anoxic conditions due to oxygen
         sensitivity of key enzymes and electron carriers.
+    predicate_id: RO:0002212
   - subject: carbon_dioxide
     predicate: is cosubstrate for
     object: pyruvate_synthase
@@ -259,4 +260,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 2 causal-node grounding field(s) via mappings/node_grounding.tsv
     (GO:0019164×1, GO:0008964×1).
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:23Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002212×1).
   llm_assisted: true

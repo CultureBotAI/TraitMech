@@ -153,6 +153,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.adq0791
       notes: Spo0A is the master regulator governing entry into sporulation; sporulation
         initiates upon phosphorylation of Spo0A (generalized across endospore formers).
+    predicate_id: RO:0002213
   - subject: starvation
     predicate: positively regulates
     object: sporulation_initiation
@@ -161,6 +162,7 @@ causal_graphs:
     - reference: DOI:10.1126/sciadv.adq0791
       notes: Starvation triggers bacterial spore formation, a committed differentiation
         program.
+    predicate_id: RO:0002213
   - subject: sporulation_initiation
     predicate: leads to
     object: forespore_engulfment
@@ -259,4 +261,10 @@ curation_history:
   action: RETRACT_DEAD_UNIPROT_GROUNDINGS
   changes: Retracted 1 UniProtKB grounding(s) whose accessions are deleted from UniProt;
     nodes demoted to label-only pending re-grounding (docs/GROUNDING_POLICY.md)
+  llm_assisted: true
+- timestamp: '2026-08-04T02:57:24Z'
+  curator: claude
+  action: GROUND_CAUSAL_PREDICATES
+  changes: Grounded 2 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
+    (RO:0002213×2).
   llm_assisted: true
