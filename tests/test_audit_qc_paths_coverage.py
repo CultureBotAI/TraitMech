@@ -116,6 +116,21 @@ def test_the_real_repo_satisfies_its_own_gate():
         + ", ".join(f["path"] for f in findings))
 
 
+def test_the_real_read_set_does_not_shrink():
+    """A ratchet, because `findings == []` is also satisfied by inferring less.
+
+    `conf` is contributed by exactly two scripts, both of which also read data/
+    and reports/ — so moving only their conf constants to a shared helper leaves
+    every script non-silent and the union non-empty, and `conf/**` could then be
+    deleted from the filter with the gate still green (#288).
+    """
+    audit(REPO_ROOT)
+    required = {"conf", "data", "justfile", "mappings", "pages", "reports",
+                "research", "scripts", "src"}
+    missing = required - AUDIT_READ_SET
+    assert not missing, f"read-set shrank, so the gate now infers less: {sorted(missing)}"
+
+
 # --- liveness: a blind gate must not read as a clean one (#286) --------------
 
 
@@ -128,11 +143,34 @@ def test_a_missing_qc_chain_raises_rather_than_passing(tmp_path):
         audit(root)
 
 
-def test_an_empty_read_set_raises_rather_than_passing(tmp_path, monkeypatch):
-    """The #252 blind spot returns if the constants move to a shared helper."""
+def test_a_script_contributing_nothing_raises_rather_than_passing(tmp_path, monkeypatch):
+    """Per-script liveness. Stubbing every read hits this branch, not the union
+    one — the previous version of this test claimed the union branch while
+    exercising this, because both messages contain "no readable paths" (#288)."""
     root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
     monkeypatch.setattr(aqp, "paths_read", lambda script, root: set())
-    with pytest.raises(BlindGate, match="no readable paths"):
+    with pytest.raises(BlindGate, match="were not examined at all"):
+        audit(root)
+
+
+def test_one_blind_script_among_many_still_raises(tmp_path, monkeypatch):
+    """The case the union check missed: conf comes from two scripts that also
+    read data/ and reports/, so moving only their conf constants leaves the
+    union large and every script non-silent (#288)."""
+    root = _repo(tmp_path, filter_paths=["data/**", "conf/**"],
+                 script_reads=["data/traits"])
+    (root / "scripts/other.py").write_text(
+        'REPO_ROOT = 1\nX = REPO_ROOT / "conf"\n')
+    (root / "conf").mkdir(exist_ok=True)
+    jf = root / "justfile"
+    jf.write_text(jf.read_text().replace(
+        "qc: audit-thing",
+        "audit-other:\n    uv run python scripts/other.py\n\n"
+        "qc: audit-thing audit-other"))
+    real = aqp.paths_read
+    monkeypatch.setattr(aqp, "paths_read",
+                        lambda script, r: set() if script.name == "other.py" else real(script, r))
+    with pytest.raises(BlindGate, match="scripts/other.py"):
         audit(root)
 
 
@@ -153,6 +191,14 @@ def test_a_recipe_name_is_matched_exactly_not_by_prefix():
 
 
 def test_the_real_justfile_resolves_check_to_itself():
-    """The live instance from the #285 review, pinned against the real file."""
-    text = (REPO_ROOT / "justfile").read_text()
-    assert "biolink" not in recipe_body(text, "check")
+    """The live instance from the #285 review, pinned against the real file.
+
+    `check: lint test` is dependency-only, so its body is legitimately empty —
+    which is the point. Before the exact-match fix, prefix matching returned
+    `check-biolink-coverage`'s body instead, and an empty result is the correct
+    answer that the bug replaced with a wrong non-empty one. Asserting emptiness
+    rather than merely the absence of "biolink" makes this fail if the match
+    ever wanders to any other recipe, not just that one.
+    """
+    body = recipe_body((REPO_ROOT / "justfile").read_text(), "check")
+    assert body.strip() == "", f"recipe_body('check') matched another recipe: {body[:80]!r}"

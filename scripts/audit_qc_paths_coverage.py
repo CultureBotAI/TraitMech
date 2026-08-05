@@ -48,9 +48,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 JUSTFILE = REPO_ROOT / "justfile"
 QC_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "qc.yaml"
 
-# Read by the runner itself or by uv, not by a qc recipe, so their absence from
-# the filter is not the bug this looks for.
-IGNORED_TOPS = {"pyproject.toml", "uv.lock", ".github", ".venv"}
+# Entries whose absence from the filter would not be the bug this looks for.
+# Deliberately small, and note `.github` is NOT among them: pr_sanity reads
+# .github/workflows, and the filter covers it via .github/workflows/qc.yaml, so
+# it is genuinely read and genuinely covered rather than exempted.
+IGNORED_TOPS = {"uv.lock", ".venv"}
 
 # The read-set from the last audit() call, so main() can print what was actually
 # inferred. A gate that prints only "0 findings" cannot be told apart from one
@@ -80,28 +82,53 @@ def scripts_invoked(body: str) -> list[str]:
 
 
 def paths_read(script: Path, root: Path) -> set[str]:
-    """Top-level repo entries a script names via a REPO_ROOT constant.
+    """Top-level repo entries a script names as a path constant.
 
-    Filtered to entries that actually exist. The regex cannot tell code from
-    prose, and this script's own docstring contains a literal
-    `REPO_ROOT / "..."` as illustration — which it duly flagged as an uncovered
-    directory named `...` on the first run. An entry absent from the tree is
-    also not a tracked input that could need a filter line.
+    Parsed with `ast`, not matched with a regex. A regex cannot tell code from
+    prose, and this file proved it twice: its docstring's illustrative
+    `REPO_ROOT / "..."` was reported as an uncovered directory named `...`, and
+    then the comment explaining the two idioms contributed `data` and `src` from
+    its own explanatory text — which would have made this script permanently
+    incapable of tripping the silent check no matter what happened to its real
+    constants (#288).
+
+    Two shapes, because the chain uses both:
+      REPO_ROOT / "data" / "traits"        (absolute)
+      Path("src/traitmech/schema/…")       (repo-relative)
     """
+    import ast
+
+    literals: list[str] = []
+    try:
+        tree = ast.parse(script.read_text())
+    except SyntaxError:
+        return set()
+
+    for node in ast.walk(tree):
+        # Path("a/b")
+        if (isinstance(node, ast.Call) and isinstance(node.func, ast.Name)
+                and node.func.id == "Path" and node.args
+                and isinstance(node.args[0], ast.Constant)
+                and isinstance(node.args[0].value, str)):
+            literals.append(node.args[0].value)
+        # REPO_ROOT / "a" — and for the chain REPO_ROOT / "src" / "traitmech" /
+        # "templates", ONLY "src". Requiring node.left to be REPO_ROOT itself
+        # rather than walking down the nesting is the whole point: collecting
+        # every segment made "templates" look like a top-level read, and the
+        # tracked top-level templates/ directory made that false positive
+        # indistinguishable from a real finding.
+        if (isinstance(node, ast.BinOp) and isinstance(node.op, ast.Div)
+                and isinstance(node.left, ast.Name)
+                and node.left.id.lstrip("_") == "REPO_ROOT"
+                and isinstance(node.right, ast.Constant)
+                and isinstance(node.right.value, str)):
+            literals.append(node.right.value)
+
     tops: set[str] = set()
-    text = script.read_text()
-    # Two idioms, because the chain uses both: an absolute REPO_ROOT / "data",
-    # and a repo-relative Path("src/traitmech/schema/traitmech.yaml"). Matching
-    # only the first left pr_sanity, audit_schema and audit_writers contributing
-    # nothing at all — three of eleven recipes silently unexamined, which is the
-    # per-script blindness #286 is about (#288).
-    literals = re.findall(r'REPO_ROOT\s*/\s*"([^"]+)"', text)
-    literals += re.findall(r'Path\(\s*"([^"]+)"\s*\)', text)
     for literal in literals:
         top = literal.split("/")[0]
-        if top and not top.startswith(".") or top in {".github"}:
-            if (root / top).exists():
-                tops.add(top)
+        if top and (root / top).exists():
+            tops.add(top)
     return tops
 
 
