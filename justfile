@@ -675,7 +675,8 @@ validate-products:
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
 
 # Baseline (non-failing): do the CURIEs SUGGESTED in the deep-research reports
-# mean what those reports say they mean? Writes
+# mean what those reports say they mean? Writes a ranked backlog to
+# reports/research_grounding_backlog.tsv and every occurrence to
 # reports/research_grounding_drift.tsv (#243).
 #
 # Deliberately NOT in `qc`. The reports are provider output that nobody will
@@ -684,7 +685,17 @@ validate-products:
 # heuristic, so some findings are judgement calls. The BLOCKING gate stays where
 # the curated data is — `validate-products` over mappings/*.tsv, which is where
 # these suggestions land if a curator accepts one.
-audit-research-groundings *args:
+# Named report-*, not audit-*: every audit-* recipe here is a `qc` member, so
+# that prefix reads as a gate this deliberately isn't — the sibling non-gating
+# baseline is report-label-drift.
+#
+# NOT wired into audit-derived-reports, unlike the other tracked reports under
+# reports/. Regenerating needs OAK semsql databases, which means network on a
+# cold cache, and audit-derived-reports must stay runnable offline. The cost is
+# real and is the failure that recipe's own comment describes — a derived
+# artifact drifting unwatched — so the report stamps its own vintage and counts
+# into reports/research_grounding_backlog.tsv rather than relying on memory.
+report-research-groundings *args:
     uv run python scripts/audit_research_groundings.py {{args}}
 
 # Baseline (non-failing): id↔label drift report across the grounding tables to

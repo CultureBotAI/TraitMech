@@ -120,3 +120,45 @@ def test_a_lexical_variant_scores_above_a_wholesale_mismatch():
     assert variant > wrong
     assert similarity("10-formyl-tetrahydrofolate",
                       ["10-formyltetrahydrofolic acid"]) > wrong
+
+
+# --- regressions from the #260 review -----------------------------------
+
+def test_adapter_failure_is_not_reported_as_a_missing_id():
+    """A broken toolchain must not read as a catastrophic corpus finding (#262)."""
+    from audit_research_groundings import ADAPTER_ERROR
+    assert classify("ectoine", "| row |", ADAPTER_ERROR)[0] == "ADAPTER_ERROR"
+    assert classify("ectoine", "| row |", None)[0] == "UNRESOLVED"
+
+
+def test_lowercase_prefixes_resolve_to_the_same_bucket_as_uppercase():
+    """`doi:10...` sent 25 truncated citation fragments into the backlog (#261)."""
+    from audit_research_groundings import _ADAPTERS_CF, _NO_ADAPTER_CF
+    for prefix in ("doi", "DOI", "metpo", "METPO", "NCBITaxon", "ncbitaxon"):
+        assert prefix.casefold() in _NO_ADAPTER_CF
+    for prefix in ("go", "GO", "chebi", "CHEBI"):
+        assert prefix.casefold() in _ADAPTERS_CF
+
+
+def test_obsolete_outranks_drift_in_triage_order():
+    """OBSOLETE scored 1.0 and an ascending sort buried all 39 of them (#264)."""
+    from audit_research_groundings import VERDICT_RANK
+    assert VERDICT_RANK["ADAPTER_ERROR"] < VERDICT_RANK["UNRESOLVED"]
+    assert VERDICT_RANK["UNRESOLVED"] < VERDICT_RANK["OBSOLETE"]
+    assert VERDICT_RANK["OBSOLETE"] < VERDICT_RANK["DRIFT"]
+    # The score must not re-bury it: an obsolete term's label often MATCHES.
+    assert classify("pathogenesis", "| row |",
+                    _resolved("obsolete pathogenesis", obsolete=True))[2] == 0.0
+
+
+def test_the_backlog_artifact_exists_and_is_ranked():
+    """The deliverable is the file, not the console summary (#263)."""
+    backlog = REPO_ROOT / "reports" / "research_grounding_backlog.tsv"
+    assert backlog.exists(), "run `just report-research-groundings`"
+    lines = [ln for ln in backlog.read_text().splitlines() if ln and not ln.startswith("#")]
+    header, rows = lines[0].split("\t"), [ln.split("\t") for ln in lines[1:]]
+    assert header[:2] == ["verdict", "curie"]
+    assert rows, "backlog is empty"
+    from audit_research_groundings import VERDICT_RANK
+    ranks = [VERDICT_RANK.get(r[0], 9) for r in rows]
+    assert ranks == sorted(ranks), "backlog is not ranked by verdict"

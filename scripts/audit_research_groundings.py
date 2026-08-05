@@ -11,7 +11,8 @@ body* (#243). These tables are what a curator copies from when grounding causal
 nodes, and since #233/#253 they are also rendered onto trait pages.
 
 REPORT, NOT A GATE. It exits 0 whatever it finds, and is deliberately not in
-`just qc`. Two reasons:
+`just qc` (nor in audit-derived-reports, which must stay offline-runnable).
+Two reasons:
 
   * The reports are provider output. Nobody is going to hand-edit 353 of them,
     so failing a build on their contents would gate work on data no one intends
@@ -31,7 +32,7 @@ vocabulary is mirrored where it makes sense (adapters, canonical-or-synonym
 policy) so the two read alike.
 
 Usage:
-    just audit-research-groundings
+    just report-research-groundings
     python scripts/audit_research_groundings.py --limit 1     # canary
 """
 from __future__ import annotations
@@ -45,6 +46,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RESEARCH_DIR = REPO_ROOT / "research" / "traits"
 REPORT_TSV = REPO_ROOT / "reports" / "research_grounding_drift.tsv"
+BACKLOG_TSV = REPO_ROOT / "reports" / "research_grounding_backlog.tsv"
+
+# Sentinel distinguishing "the lookup could not run" from "the id is absent".
+ADAPTER_ERROR = object()
 
 # Prefixes with an OAK sqlite adapter. Mirrors conf/id_label_targets.yaml, minus
 # RO — the reports suggest node groundings, not predicates.
@@ -62,6 +67,13 @@ ADAPTERS = {
 # conf/id_label_targets.yaml draws.
 NO_ADAPTER = {"METPO", "traitmech", "NCBITaxon", "UniProtKB", "InterPro",
               "EC", "KEGG", "MetaCyc", "Rhea", "PMID", "DOI", "PDB", "Pfam"}
+
+# Both lookups are casefolded. The reports spell prefixes inconsistently —
+# `metpo:1000650` and `doi:10.1371/...` both occur — and a case-sensitive test
+# sent 25 truncated `doi:10` fragments into UNKNOWN_PREFIX, inflating the
+# backlog with evidence citations that are not groundings at all (#261).
+_ADAPTERS_CF = {k.casefold(): v for k, v in ADAPTERS.items()}
+_NO_ADAPTER_CF = {p.casefold() for p in NO_ADAPTER}
 
 # Letters and underscores only in the prefix, deliberately. Allowing digits
 # swept up fatty-acid shorthand — `C16:0`, `C18:1` — as 78 bogus UNKNOWN_PREFIX
@@ -124,27 +136,70 @@ class Ontologies:
     def _adapter(self, prefix: str):
         if prefix not in self._adapters:
             from oaklib import get_adapter
-            self._adapters[prefix] = get_adapter(ADAPTERS[prefix])
+            self._adapters[prefix] = get_adapter(_ADAPTERS_CF[prefix.casefold()])
         return self._adapters[prefix]
 
-    def lookup(self, curie: str) -> tuple[str, list[str], bool] | None:
-        """Return (canonical_label, synonyms, obsolete), or None if unresolved."""
+    def lookup(self, curie: str):
+        """Return (canonical_label, synonyms, obsolete), None, or ADAPTER_ERROR.
+
+        None means the adapter opened and the id is genuinely absent.
+        ADAPTER_ERROR means the lookup could not be performed at all — a failed
+        semsql download, an empty sqlite stub, an OAK change. Conflating them
+        would let a broken toolchain rewrite the committed TSV to ~1200
+        "not in the ontology" rows and exit 0, which reads as a catastrophic
+        finding about the corpus rather than a broken tool (#262). The vendored
+        validator draws the same distinction for the same reason.
+        """
         if curie in self._cache:
             return self._cache[curie]
-        prefix = curie.split(":", 1)[0]
-        result: tuple[str, list[str], bool] | None = None
+        prefix = curie.split(":", 1)[0].casefold()
+        result = None
         try:
             adapter = self._adapter(prefix)
+        except Exception:
+            self._cache[curie] = ADAPTER_ERROR
+            return ADAPTER_ERROR
+        try:
             label = adapter.label(curie)
             if label:
                 synonyms = [s for s in (adapter.entity_aliases(curie) or []) if s]
-                result = (label, synonyms, label.lower().startswith("obsolete"))
+                result = (label, synonyms, self._deprecated(adapter, curie, label))
         except Exception:
-            # A missing or broken adapter must not abort a 600-pair run; the
-            # pair is reported as unresolved, which is the honest verdict.
-            result = None
+            result = ADAPTER_ERROR
         self._cache[curie] = result
         return result
+
+    @staticmethod
+    def _deprecated(adapter, curie: str, label: str) -> bool:
+        """Prefer OAK's deprecation flag over the label-prefix convention.
+
+        `obsolete ...` is a GO/OBO labelling habit, not a guarantee — CHEBI
+        deprecates without relabelling, so a label-only test scores an obsolete
+        CHEBI id as OK_LABEL (#264). The string check stays as a fallback for
+        adapters that do not expose the flag.
+        """
+        try:
+            meta = adapter.entity_metadata_map(curie) or {}
+            flag = meta.get("deprecated") or meta.get("owl:deprecated")
+            if isinstance(flag, list):
+                flag = flag[0] if flag else None
+            if flag is not None:
+                return str(flag).lower() in ("true", "1")
+        except Exception:
+            pass
+        return label.lower().startswith("obsolete")
+
+
+# Triage order. A verdict is a kind of finding, not a degree of one, so ranking
+# by verdict first stops the 39 OBSOLETE findings — including GO:0009405, the
+# case a label check cannot see — from sorting below every DRIFT (#264).
+VERDICT_RANK = {
+    "ADAPTER_ERROR": 0,   # the tool is broken; nothing below is trustworthy
+    "UNRESOLVED": 1,      # the id does not exist
+    "OBSOLETE": 2,        # the id is deprecated
+    "DRIFT": 3,           # the id exists and means something else
+    "UNKNOWN_PREFIX": 4,  # outside the grounding policy
+}
 
 
 def _collapse(text: str) -> str:
@@ -176,15 +231,21 @@ def similarity(claimed: str, names: list[str]) -> float:
 
 def classify(claimed: str, row: str, resolved) -> tuple[str, str, float]:
     """Return (verdict, canonical_label, similarity)."""
+    if resolved is ADAPTER_ERROR:
+        return "ADAPTER_ERROR", "", 0.0
     if resolved is None:
         return "UNRESOLVED", "", 0.0
     canonical, synonyms, obsolete = resolved
     raw_names = [n for n in [canonical, *synonyms] if n]
     names = [normalize(n) for n in raw_names]
     if obsolete:
-        return "OBSOLETE", canonical, 1.0
+        # Similarity is meaningless here — the label often MATCHES, which is
+        # exactly why a label-only check misses it. Ordering is by verdict
+        # first (see VERDICT_RANK), so this value never buries the finding.
+        return "OBSOLETE", canonical, 0.0
     if any(n and (n == claimed or n in claimed or claimed in n) for n in names):
         return "OK_LABEL", canonical, 1.0
+
     # The report may name the term correctly while using it as a comparison —
     # `| symbiosome | GO:0043663 (host cell part) is too broad | …`. Saying what
     # the id means, anywhere in the row, is not a mis-grounding.
@@ -199,7 +260,10 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0,
                     help="only scan the first N reports (0 = all); use 1 to canary")
     ap.add_argument("--report", default=str(REPORT_TSV),
-                    help=f"output TSV (default: {REPORT_TSV.relative_to(REPO_ROOT)})")
+                    help=f"per-occurrence TSV (default: {REPORT_TSV.relative_to(REPO_ROOT)})")
+    ap.add_argument("--backlog", default=str(BACKLOG_TSV),
+                    help=f"ranked, deduplicated backlog TSV "
+                         f"(default: {BACKLOG_TSV.relative_to(REPO_ROOT)})")
     args = ap.parse_args()
 
     reports = [
@@ -220,9 +284,9 @@ def main() -> int:
     for path in reports:
         rel = path.relative_to(REPO_ROOT).as_posix()
         for line_no, claimed, curie, row in table_pairs(path.read_text()):
-            prefix = curie.split(":", 1)[0]
-            if prefix not in ADAPTERS:
-                if prefix not in NO_ADAPTER:
+            prefix = curie.split(":", 1)[0].casefold()
+            if prefix not in _ADAPTERS_CF:
+                if prefix not in _NO_ADAPTER_CF:
                     # An unrecognised prefix is a typo or a new ontology, and
                     # either way wants a human — not silence.
                     counts["UNKNOWN_PREFIX"] = counts.get("UNKNOWN_PREFIX", 0) + 1
@@ -244,17 +308,16 @@ def main() -> int:
                 "verdict": verdict, "similarity": f"{score:.2f}", "row": row,
             })
 
-    actionable = [r for r in rows
-                  if r["verdict"] in ("DRIFT", "OBSOLETE", "UNRESOLVED", "UNKNOWN_PREFIX")]
-    # Sorted worst-first and deduplicated by (curie, claimed_label): the same
-    # bad suggestion recurs across reports, and a curator fixes it once.
-    # Least-similar first, so a wholesale mis-grounding leads and a lexical
-    # variant of the right term trails. Deduplicated by (curie, claimed_label):
-    # the same suggestion recurs across reports and is fixed once.
+    actionable = [r for r in rows if r["verdict"] in VERDICT_RANK]
+    # Ranked by verdict, then least-similar first within a verdict, so a
+    # wholesale mis-grounding leads and a lexical variant of the right term
+    # trails. Deduplicated: the same suggestion recurs across reports and a
+    # curator decides it once, so the backlog carries an occurrence count
+    # rather than one line per site.
     distinct = sorted(
         {(r["curie"], r["claimed_label"], r["ontology_label"], r["verdict"],
           r["similarity"]) for r in actionable},
-        key=lambda t: (float(t[4]), t[0], t[1]),
+        key=lambda t: (VERDICT_RANK.get(t[3], 9), float(t[4]), t[0], t[1]),
     )
 
     out_path = Path(args.report)
@@ -267,10 +330,39 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(rows)
 
+    checked = sum(n for v, n in counts.items() if v != "UNKNOWN_PREFIX")
+
+    # The backlog is the deliverable: ranked, deduplicated, one line per thing a
+    # curator has to decide. Writing it only to stdout left the 490-item list
+    # nowhere on disk, and nobody triages from a console scrollback (#263). The
+    # full per-occurrence dump stays in the other file, for locating every site
+    # of a suggestion once it has been judged.
+    backlog_path = Path(args.backlog)
+    backlog_path.parent.mkdir(parents=True, exist_ok=True)
+    occurrences: dict[tuple[str, str], int] = {}
+    for r in actionable:
+        key = (r["curie"], r["claimed_label"])
+        occurrences[key] = occurrences.get(key, 0) + 1
+    with backlog_path.open("w", newline="") as fh:
+        # A vintage line, because this report is not wired into
+        # audit-derived-reports and so nothing else will notice it going stale.
+        # Corpus counts rather than a wall-clock timestamp: a date would change
+        # on every regeneration and make the file churn, whereas these move only
+        # when the inputs or the findings actually do.
+        fh.write(f"# generated by scripts/audit_research_groundings.py from "
+                 f"{len(reports)} reports; {checked} pairs checked; "
+                 f"{len(distinct)} distinct findings\n")
+        writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        writer.writerow(["verdict", "curie", "claimed_label", "ontology_label",
+                         "similarity", "occurrences"])
+        for curie, claimed, canonical, verdict, score in distinct:
+            writer.writerow([verdict, curie, claimed, canonical, score,
+                             occurrences.get((curie, claimed), 1)])
+
     print(f"=== research grounding drift ({len(reports)} reports) ===")
-    print(f"  checkable (id, label) pairs: {sum(counts.values())}")
+    print(f"  (id, label) pairs checked against an ontology: {checked}")
     for verdict in ("OK_LABEL", "OK_IN_ROW", "DRIFT", "OBSOLETE",
-                    "UNRESOLVED", "UNKNOWN_PREFIX"):
+                    "UNRESOLVED", "ADAPTER_ERROR", "UNKNOWN_PREFIX"):
         if counts.get(verdict):
             print(f"    {verdict:<15} {counts[verdict]:>5}")
     if skipped_prefixes:
@@ -283,7 +375,12 @@ def main() -> int:
               + (f"  [{score}]" if verdict == "DRIFT" else ""))
     if len(distinct) > 15:
         print(f"    ... and {len(distinct) - 15} more")
-    print(f"  TSV: {out_path}")
+    if counts.get("ADAPTER_ERROR"):
+        print("  WARNING: ontology lookups failed for "
+              f"{counts['ADAPTER_ERROR']} pairs — treat every verdict below as "
+              "provisional and check the OAK semsql downloads.", file=sys.stderr)
+    print(f"  backlog TSV:     {backlog_path}")
+    print(f"  all occurrences: {out_path}")
     # Always 0: see the module docstring. The blocking gate is validate-products,
     # over the curated tables these suggestions feed into.
     return 0
