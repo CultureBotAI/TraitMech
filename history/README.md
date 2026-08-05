@@ -46,8 +46,11 @@ cannot slip through. The command prints the record path as its final stdout line
 so scripts can capture it.
 
 `--kind record` and `--kind schema` can derive the target path from `--slug` plus
-`--target-root`. Every other kind needs an explicit `--path`, because only those
-two are reliably `.yaml`.
+`--target-root`. Every other kind should pass an explicit `--path`, because only
+those two are reliably `.yaml` — mappings are `.sssom.tsv`, reports `.md`,
+infrastructure a justfile or workflow. Neither scaffolder *enforces* that: both
+will derive `<target-root>/<slug>.yaml` for any kind, so passing `--target-root`
+with `--kind mapping` silently yields a target path that does not exist.
 
 Then validate and stage:
 
@@ -105,9 +108,44 @@ private — a public repo's CI cannot check it out without a token. `just
 validate-history` and the `curation-history` workflow both use the local copy and
 work with no claw checkout at all.
 
-Only `just new-history` needs claw, via `CLAW_SRC` (default:
-`../culturebotai-claw/src`). That is a dev-time scaffolder, and anyone writing
-curation records has claw checked out.
+`just new-history` **prefers** claw, via `CLAW_SRC` (default:
+`../culturebotai-claw/src`), and falls back to
+`scripts/new_history_record.py` when there is no checkout there. Claw stays the
+canonical scaffolder so the record shape does not drift across the four Mech
+repos; the fallback exists because the alternative to a slightly-divergent
+record is no record at all.
+
+That fallback was added in #296, after the #294 backfill wrote two records by
+hand. The prompt for it is worth keeping: this file previously asserted that
+"anyone writing curation records has claw checked out", which is an assumption
+rather than a guarantee — it does not hold for a fresh clone, for CI (claw is
+private), or for a contributor outside the fleet. It also did not hold in
+practice for the reason you would expect: the recipe was *gated* on claw, so it
+was easier to hand-write than to find out whether the gate would pass.
+
+The two scaffolders take the **same arguments** and produce byte-identical
+records apart from the id's hash suffix and one deliberate difference: a bare
+`--issue 296` becomes a full URL here, because the schema declares those
+`range: uri` and every committed record carries URLs, whereas claw passes the
+string through. Check that parity rather than trusting this paragraph:
+
+```bash
+# Exercise a non-`record` kind too: the layout is history/<kind-dir>/<slug>/,
+# and a fallback that hardcodes `records/` writes to the wrong place while still
+# validating, because the schema does not constrain the path.
+ARGS=(--kind infrastructure --slug curation-history --path docs/x.md \
+      --sections causal_graphs,grounding \
+      --summary "parity" --details "check" --issue 296)
+PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" \
+  uv run python -m kg_microbe_history new "${ARGS[@]}" --history-root /tmp/h_claw
+uv run python scripts/new_history_record.py "${ARGS[@]}" --history-root /tmp/h_local
+diff <(cat /tmp/h_claw/*/*/*.yaml) <(cat /tmp/h_local/*/*/*.yaml)
+```
+
+Omitting `--details` writes claw's placeholder **byte-for-byte**, so the record
+fails `just validate-history` until you replace it — which is the promise two
+paragraphs up, and which a near-miss wording would quietly break, since the
+schema pattern is a negative lookahead on that exact string.
 
 Changing the schema means changing the canonical copy and re-vendoring here — the
 same hub-and-spoke rule as `mech_shared.yaml`. This copy is **not** on the
