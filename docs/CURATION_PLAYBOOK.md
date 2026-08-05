@@ -149,7 +149,7 @@ causal-graph reuse that is wrong.
 `mappings/predicate_grounding.tsv` is `NONE`, so
 `ground_causal_predicates.py` refuses to ground them onto any edge
 and reports them as `blocked_by_node_type` (#295). The other 64
-predicates in this family are not yet gated — see #299.
+predicates in this family are not yet gated — see #301.
 
 ## File-level structure
 
