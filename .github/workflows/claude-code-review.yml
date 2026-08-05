@@ -40,34 +40,54 @@ jobs:
     #    a comment body is attacker-controlled text this agent then reads.
     #  * comment triggers must be on a PR, not a plain issue.
     #  * Dependabot-triggered runs are skipped, because they CANNOT work (#293).
-    #    GitHub gives `pull_request` runs from `dependabot[bot]` a restricted
-    #    token and no access to repository secrets, so the very first step,
-    #    `actions/create-github-app-token`, dies on
-    #    `Input required and not supplied: app-id`. The result was a permanent
-    #    red check on every dependency PR that said nothing about the bump — a
-    #    red that trains people to ignore reds.
+    #    GitHub gives `pull_request` runs from `dependabot[bot]` a read-only
+    #    token and no access to Actions secrets, so
+    #    `actions/create-github-app-token` dies on
+    #    `Input required and not supplied: app-id`. Note that is the FIFTH step,
+    #    not the first: the run does a full `gh pr checkout`, `uv tool install`
+    #    and `uv sync` before it fails. The result was a permanent red check on
+    #    every dependency PR that said nothing about the bump — a red that
+    #    trains people to ignore reds.
     #
-    #    A job skipped by an `if:` reports **Success**, not "absent" — GitHub
-    #    only leaves checks Pending when the WORKFLOW is filtered out by
-    #    path/branch/message. So the check still appears on Dependabot PRs; it
-    #    just stops being red. That is also what makes this safe if
-    #    claude-review is ever a required check: a conditional skip satisfies
-    #    branch protection, where a filtered-out workflow would block it.
-    #    It does NOT mean dependency PRs go unreviewable: comment
-    #    `/review` on one. That run is triggered by the commenter, not by
-    #    Dependabot, so it gets secrets and reviews normally. Gate on
-    #    `github.actor` rather than the PR author precisely because actor is what
-    #    determines whether secrets exist — a human pushing to a Dependabot
-    #    branch makes the run privileged again, and it should review.
+    #    A job skipped by an `if:` is NOT absent from the check list. GitHub
+    #    leaves checks Pending only when the WORKFLOW is filtered out by
+    #    path/branch/message; a skipped JOB reports a conclusion of `skipped`
+    #    (grey), which branch protection accepts as satisfying a required check.
+    #    So verify this by looking for grey-instead-of-red, not for the check
+    #    disappearing.
     #
-    #    `pull_request_target` is the other way to get secrets here and is
-    #    DELIBERATELY NOT USED. This job checks out PR head content and runs
-    #    `uv sync` and the repo's `just` recipes while holding
-    #    CLAUDE_CODE_OAUTH_TOKEN and a reviewer App token. `pull_request_target`
-    #    would execute exactly that against PR-controlled code with secrets
-    #    attached — the hazard the "Refuse fork PRs" step below exists to
-    #    prevent, reintroduced by another door. Dependabot PRs edit
-    #    `.github/workflows/**` by their nature, which makes it worse, not safer.
+    #    That branch-protection behaviour is an ACCEPTED TRADEOFF, not a safety
+    #    property — say it plainly, because "Verify the check ran, not that it
+    #    was green" (#182/#184/#215) is the doctrine this bends. If
+    #    claude-review is ever made required, this makes a required review check
+    #    auto-satisfy on the one PR class that received no review. That is
+    #    tolerable only because the seven functional gates DO run on Dependabot
+    #    PRs and do cover them. (`main` has no branch protection today —
+    #    `gh api repos/:owner/:repo/branches/main/protection` returns 404 — so
+    #    this is latent, not live.)
+    #
+    #    Dependency PRs do not become unreviewable: comment `/review`, or use
+    #    the `workflow_dispatch` input above. Neither is Dependabot-triggered,
+    #    so both get secrets. Gate on `github.actor` rather than the PR author
+    #    precisely because actor is what determines whether secrets exist — a
+    #    human pushing to a Dependabot branch makes the run privileged again and
+    #    it should review, whereas `pull_request.user.login` stays
+    #    `dependabot[bot]` forever. Re-running a failed Dependabot run does NOT
+    #    help: GitHub keeps the restrictions "even if the workflow is re-run by
+    #    a different actor".
+    #
+    #    THERE IS EXACTLY ONE WAY to give this job secrets on a Dependabot run,
+    #    and it is not `pull_request_target`. GitHub applies the same read-only
+    #    token and secret denial to `pull_request_target` when the PR was
+    #    created by Dependabot, so that door is already welded shut — `app-id`
+    #    would still be empty. The one mechanism that WOULD work is putting the
+    #    credentials in Dependabot secrets, a separate store the `secrets`
+    #    context resolves against on these runs. Deliberately not done: on
+    #    `pull_request` the workflow that executes comes from the PR, and this
+    #    repo's dependabot.yml enables only the `github-actions` ecosystem, so a
+    #    Dependabot PR's entire content is a change to which action SHAs this
+    #    job runs. Handing it the reviewer App key means an unreviewed,
+    #    freshly-bumped action executes holding it.
     if: >-
       ${{
         (

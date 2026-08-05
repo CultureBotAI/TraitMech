@@ -114,47 +114,63 @@ zero forever without anyone noticing.
 
 ## Dependabot runs have no secrets — skip, do not fail
 
-A `pull_request` run whose `github.actor` is `dependabot[bot]` gets a restricted
-token and **no access to repository secrets**. Any job that needs one dies at
-its first secret-consuming step; `claude-review` died on
+A `pull_request` run whose `github.actor` is `dependabot[bot]` gets a
+**read-only `GITHUB_TOKEN`** and **no access to Actions secrets**. Any job
+needing either dies at its first step that consumes one; `claude-review` died on
 `actions/create-github-app-token` with `Input required and not supplied: app-id`
-on all five PRs that `.github/dependabot.yml` opened (#293).
+on all five PRs `.github/dependabot.yml` opened (#293). Note the read-only token
+half: a future workflow needing `pull-requests: write` on `pull_request` breaks
+the same way even if it uses no secrets at all.
 
-That is not a signal about the bump. It is a permanent red on the class of PR
-*least* likely to be read carefully — a red that trains people to ignore reds,
-which is the failure in "Verify the check ran" above wearing the other colour.
+That failure is not a signal about the bump. It is a permanent red on the class
+of PR *least* likely to be read carefully — a red that trains people to ignore
+reds, which is the failure in "Verify the check ran" above wearing the other
+colour.
 
 Gate such jobs on `github.actor != 'dependabot[bot]'`. Gate on `github.actor`,
-not on the PR author: actor is what determines whether secrets exist, so a
-human pushing to a Dependabot branch correctly re-enables the job.
+not on `github.event.pull_request.user.login`: actor is what determines whether
+secrets exist. A human pushing to a Dependabot branch correctly re-enables the
+job, whereas the PR author stays `dependabot[bot]` forever. **Re-running does
+not help** — GitHub keeps the restrictions "even if the workflow is re-run by a
+different actor", so "Re-run failed jobs" is not a workaround.
 
-**A conditionally-skipped job reports Success, not "absent".** This is the one
-place the previous section's instinct misleads. GitHub leaves checks *Pending*
-only when the **workflow** is filtered out by `paths:`/branch/commit-message; a
-**job** skipped by its own `if:` reports **Success**. So the check still shows
-up — it stops being red, it does not disappear. Two consequences:
+**A skipped job is not an absent check.** GitHub leaves checks *Pending* only
+when the **workflow** is filtered out by `paths:`/branch/commit-message; a
+**job** skipped by its own `if:` completes with conclusion `skipped` (grey).
+Verify this kind of change by looking for *grey instead of red*, not for the
+check disappearing — expecting it to vanish reads a working change as a failure.
 
-- Verify this kind of change by looking for *green/skipped instead of red*, not
-  for the check vanishing. Expecting it to vanish reads a working change as a
-  failure.
-- If the check is ever branch-protection-required, a conditional skip still
-  satisfies it. Filtering the whole workflow out would not — it would block the
-  merge on a permanently Pending check. That asymmetry is why the gate belongs
-  on the job, not on the trigger.
+Branch protection accepts `skipped` as satisfying a required check. Treat that
+as an **accepted tradeoff, not a safety property**: if such a job is ever made
+required, this makes a required check auto-satisfy on the one PR class that got
+no review — precisely the false-green the section above warns about. It is
+tolerable here only because the other seven gates *do* run on Dependabot PRs and
+do cover them. State the tradeoff wherever you copy this pattern.
 
-Skipping does not make these PRs unreviewable — comment `/review`. That run is
-triggered by the commenter, so it has secrets and behaves normally.
+Skipping does not make these PRs unreviewable. Comment `/review`, or use
+`workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both
+get secrets. `/review` has a second advantage worth knowing: `issue_comment`
+runs execute the **default branch's** copy of the workflow (see "Triggers that
+run from the default branch" above), so it uses `main`'s pinned action SHAs
+rather than the bumped ones under review.
 
-There are two ways to give a Dependabot run secrets, and both are refused here:
+**There is exactly one way to give a Dependabot run secrets, and
+`pull_request_target` is not it.** GitHub applies the same read-only token and
+secret denial to `pull_request_target` when the PR was created by Dependabot, so
+that route fails identically — it is not a hazard to be resisted so much as a
+door already welded shut. The one mechanism that *does* work is **Dependabot
+secrets**, a separate store the `secrets` context resolves against on these runs
+(which is why `app-id` arrived *empty* rather than denied).
 
-- **Dependabot secrets.** The `secrets` context on a Dependabot run resolves
-  against a separate store, which is why `app-id` arrived *empty* rather than
-  denied. Putting the App credentials there would make the job run. Don't: on
-  `pull_request` the workflow that executes is **PR head's**, and a Dependabot
-  PR's entire content is a change to which action SHAs this job runs. That
-  hands the reviewer App private key to a freshly-bumped, unreviewed action.
-- **`pull_request_target`.** Runs with secrets against PR-controlled content,
-  so any job that checks out PR head and executes repository code — `uv sync`,
-  `just` recipes — hands those secrets to that code. Same hazard the "Refuse
-  fork PRs" guard in `claude-code-review.yml` exists to prevent, by another
-  door.
+Don't use it. On `pull_request` the workflow that executes comes from the PR
+itself, and where `dependabot.yml` enables the `github-actions` ecosystem — as
+this repo's does — a Dependabot PR's entire content is a change to which action
+SHAs the job runs. Populating Dependabot secrets hands those credentials to an
+unreviewed, freshly-bumped action.
+
+The same caution applies to the `/review` escape hatch the moment a `uv` or
+`pip` ecosystem is added to `dependabot.yml`: that job runs `uv sync` and the
+branch's `just` recipes while holding the OAuth and App tokens. Today the branch
+diff is confined to `.github/workflows/**`, which those commands never execute,
+so the exposure is theoretical — but it is the same hazard class, and it stops
+being theoretical then.
