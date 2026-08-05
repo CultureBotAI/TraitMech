@@ -43,9 +43,9 @@ jobs:
     #    GitHub gives `pull_request` runs from `dependabot[bot]` a read-only
     #    token and no access to Actions secrets, so
     #    `actions/create-github-app-token` dies on
-    #    `Input required and not supplied: app-id`. Note that is the FIFTH step,
-    #    not the first: the run does a full `gh pr checkout`, `uv tool install`
-    #    and `uv sync` before it fails. The result was a permanent red check on
+    #    `Input required and not supplied: app-id`. Note that is step 7, not the
+    #    first: the run does a full `gh pr checkout`, `uv tool install` and
+    #    `uv sync` before it fails. The result was a permanent red check on
     #    every dependency PR that said nothing about the bump — a red that
     #    trains people to ignore reds.
     #
@@ -76,15 +76,27 @@ jobs:
     #    help: GitHub keeps the restrictions "even if the workflow is re-run by
     #    a different actor".
     #
-    #    THERE IS EXACTLY ONE WAY to give this job secrets on a Dependabot run,
-    #    and it is not `pull_request_target`. GitHub applies the same read-only
-    #    token and secret denial to `pull_request_target` when the PR was
-    #    created by Dependabot, so that door is already welded shut — `app-id`
-    #    would still be empty. The one mechanism that WOULD work is putting the
-    #    credentials in Dependabot secrets, a separate store the `secrets`
-    #    context resolves against on these runs. Deliberately not done: on
-    #    `pull_request` the workflow that executes comes from the PR, and this
-    #    repo's dependabot.yml enables only the `github-actions` ecosystem, so a
+    #    Two known ways exist to get secrets onto a Dependabot run. Do not
+    #    enumerate them as a closed set — reject each on its own merits:
+    #
+    #    `pull_request_target` — NOT inert, and not to be used here. GitHub's
+    #    read-only/no-secrets restriction on it applies when the PR's BASE REF
+    #    was created by Dependabot (a Dependabot PR stacked on a Dependabot
+    #    branch). An ordinary Dependabot PR onto `main` under
+    #    `pull_request_target` DOES get a writable token and Actions secrets —
+    #    which is why it is a named privilege-escalation pattern, not a dead
+    #    end. The reason to refuse it is the live one: this job runs
+    #    `gh pr checkout` and then `uv sync` and the branch's `just` recipes
+    #    while holding CLAUDE_CODE_OAUTH_TOKEN and the reviewer App key, so
+    #    `pull_request_target` would execute PR-controlled code with secrets
+    #    attached — the hazard the "Refuse fork PRs" step below exists for
+    #    (#212), through a different door.
+    #
+    #    Dependabot secrets — a separate store the `secrets` context resolves
+    #    against on these runs, which is why `app-id` arrived empty rather than
+    #    denied. Populating it would make the job run. Don't: on `pull_request`
+    #    the workflow that executes comes from the PR, and this repo's
+    #    dependabot.yml enables only the `github-actions` ecosystem, so a
     #    Dependabot PR's entire content is a change to which action SHAs this
     #    job runs. Handing it the reviewer App key means an unreviewed,
     #    freshly-bumped action executes holding it.
