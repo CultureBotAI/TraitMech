@@ -12,10 +12,15 @@ import sys
 import textwrap
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
+import audit_qc_paths_coverage as aqp  # noqa: E402
 from audit_qc_paths_coverage import (  # noqa: E402
+    AUDIT_READ_SET,
+    BlindGate,
     audit,
     filter_tops,
     qc_chain,
@@ -109,3 +114,45 @@ def test_the_real_repo_satisfies_its_own_gate():
     assert findings == [], (
         "qc reads a directory qc.yaml's filter omits: "
         + ", ".join(f["path"] for f in findings))
+
+
+# --- liveness: a blind gate must not read as a clean one (#286) --------------
+
+
+def test_a_missing_qc_chain_raises_rather_than_passing(tmp_path):
+    """`qc *args:` or a rename yields no chain — which must not look like success."""
+    root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
+    jf = root / "justfile"
+    jf.write_text(jf.read_text().replace("qc: audit-thing", "qc *args: audit-thing"))
+    with pytest.raises(BlindGate, match="no `qc:` dependency chain"):
+        audit(root)
+
+
+def test_an_empty_read_set_raises_rather_than_passing(tmp_path, monkeypatch):
+    """The #252 blind spot returns if the constants move to a shared helper."""
+    root = _repo(tmp_path, filter_paths=["data/**"], script_reads=["data/traits"])
+    monkeypatch.setattr(aqp, "paths_read", lambda script, root: set())
+    with pytest.raises(BlindGate, match="no readable paths"):
+        audit(root)
+
+
+def test_the_read_set_is_published_for_the_success_message(tmp_path):
+    """"0 findings" alone cannot be told from "inspected nothing"."""
+    root = _repo(tmp_path, filter_paths=["data/**", "conf/**"],
+                 script_reads=["data/traits", "conf"])
+    assert audit(root) == []
+    assert {"data", "conf"} <= AUDIT_READ_SET
+
+
+def test_a_recipe_name_is_matched_exactly_not_by_prefix():
+    """recipe_body("check") used to return check-biolink-coverage's body (#287)."""
+    text = "check-other:\n    run wrong\n\ncheck:\n    run right\n"
+    body = recipe_body(text, "check")
+    assert "run right" in body
+    assert "run wrong" not in body
+
+
+def test_the_real_justfile_resolves_check_to_itself():
+    """The live instance from the #285 review, pinned against the real file."""
+    text = (REPO_ROOT / "justfile").read_text()
+    assert "biolink" not in recipe_body(text, "check")

@@ -52,6 +52,11 @@ QC_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "qc.yaml"
 # the filter is not the bug this looks for.
 IGNORED_TOPS = {"pyproject.toml", "uv.lock", ".github", ".venv"}
 
+# The read-set from the last audit() call, so main() can print what was actually
+# inferred. A gate that prints only "0 findings" cannot be told apart from one
+# that inspected nothing (#286).
+AUDIT_READ_SET: set[str] = set()
+
 
 def qc_chain(justfile_text: str) -> list[str]:
     """Recipe names in the `qc:` dependency list."""
@@ -60,7 +65,12 @@ def qc_chain(justfile_text: str) -> list[str]:
 
 
 def recipe_body(justfile_text: str, name: str) -> str:
-    match = re.search(rf"^{re.escape(name)}[^\n:]*:.*?\n((?:[ \t].*\n|\n)*)",
+    # The lookahead makes the name exact. Without it the pattern prefix-matches
+    # and re.search takes the first hit in file order, so recipe_body("check")
+    # returned check-biolink-coverage's body — harmless only because `check` is
+    # not in the qc chain, and a fault the moment a recipe extends the name of
+    # one that is (#287).
+    match = re.search(rf"^{re.escape(name)}(?=[ \t:])[^\n:]*:.*?\n((?:[ \t].*\n|\n)*)",
                       justfile_text, re.M)
     return match.group(1) if match else ""
 
@@ -98,22 +108,50 @@ def filter_tops(workflow_text: str) -> set[str]:
     return {str(p).split("/")[0].replace("**", "").strip() or "/" for p in patterns}
 
 
+class BlindGate(RuntimeError):
+    """The audit could not inspect anything, so a clean result means nothing.
+
+    Raised rather than returned because every caller — main(), the tests, `just
+    qc` — would otherwise read an empty finding list as success. This gate
+    guards a bug that has recurred four times; one that passes while blind is
+    worse than none, which is the rule docs/WORKFLOW_CONVENTIONS.md states and
+    #286 caught this violating.
+    """
+
+
 def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
     justfile_text = (root / "justfile").read_text()
     workflow = root / ".github" / "workflows" / "qc.yaml"
     covered = filter_tops(workflow.read_text())
 
+    chain = qc_chain(justfile_text)
+    if not chain:
+        raise BlindGate(
+            "no `qc:` dependency chain found in the justfile — the recipe may "
+            "have been renamed or given arguments, and this audit inspected "
+            "nothing")
+
     findings: list[dict[str, str]] = []
     seen: dict[str, set[str]] = {}
-    for recipe in qc_chain(justfile_text):
+    read_set: set[str] = set()
+    for recipe in chain:
         for rel in scripts_invoked(recipe_body(justfile_text, recipe)):
             script = root / rel
             if not script.exists():
                 continue
             for top in paths_read(script, root):
+                read_set.add(top)
                 if top in IGNORED_TOPS or top in covered:
                     continue
                 seen.setdefault(top, set()).add(f"{recipe} → {rel}")
+
+    if not read_set:
+        raise BlindGate(
+            f"the qc chain ({len(chain)} recipes) yielded no readable paths — "
+            "REPO_ROOT constants may have moved into a shared helper, in which "
+            "case this audit is blind rather than satisfied")
+    AUDIT_READ_SET.clear()
+    AUDIT_READ_SET.update(read_set)
     for top, readers in sorted(seen.items()):
         findings.append({
             "path": top,
@@ -130,8 +168,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--root", type=Path, default=REPO_ROOT)
     args = ap.parse_args(argv)
 
-    findings = audit(args.root)
     print("=== qc paths-filter coverage ===")
+    try:
+        findings = audit(args.root)
+    except BlindGate as exc:
+        print(f"  ERROR this audit inspected nothing: {exc}", file=sys.stderr)
+        return 1
+    print(f"  inferred read-set: {', '.join(sorted(AUDIT_READ_SET))}")
     print(f"  uncovered directories read by the qc chain: {len(findings)}")
     for row in findings:
         print(f"  ! {row['path']}  (read by {row['readers']})", file=sys.stderr)
