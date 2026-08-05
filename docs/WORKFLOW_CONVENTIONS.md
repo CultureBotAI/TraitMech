@@ -168,6 +168,13 @@ Everything above two gates is a bonus that depends on the bump's blast radius.
 State it that way wherever you copy this pattern; "seven gates cover it" would
 be false on a #277-shaped PR.
 
+One caveat this creates: `pr-sanity`'s `NO_UNFILTERED_CI` decides "unfiltered"
+from a workflow's `on:` block alone and never looks at job-level `if:`, so a
+workflow gated this way still counts toward that invariant while no longer
+running for the gated class. Harmless while `pr-sanity` and `vendored-sync` are
+themselves unfiltered; it would become a false-green the day either gained a
+`paths:` filter. Tracked in #307.
+
 Skipping does not make these PRs unreviewable. Comment `/review`, or use
 `workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both
 get secrets. `/review` has a second advantage worth knowing: `issue_comment`
