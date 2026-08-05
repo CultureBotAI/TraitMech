@@ -46,8 +46,11 @@ cannot slip through. The command prints the record path as its final stdout line
 so scripts can capture it.
 
 `--kind record` and `--kind schema` can derive the target path from `--slug` plus
-`--target-root`. Every other kind needs an explicit `--path`, because only those
-two are reliably `.yaml`.
+`--target-root`. Every other kind should pass an explicit `--path`, because only
+those two are reliably `.yaml` — mappings are `.sssom.tsv`, reports `.md`,
+infrastructure a justfile or workflow. Neither scaffolder *enforces* that: both
+will derive `<target-root>/<slug>.yaml` for any kind, so passing `--target-root`
+with `--kind mapping` silently yields a target path that does not exist.
 
 Then validate and stage:
 
@@ -131,6 +134,7 @@ string through. Check that parity rather than trusting this paragraph:
 # and a fallback that hardcodes `records/` writes to the wrong place while still
 # validating, because the schema does not constrain the path.
 ARGS=(--kind infrastructure --slug curation-history --path docs/x.md \
+      --sections causal_graphs,grounding \
       --summary "parity" --details "check" --issue 296)
 PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" \
   uv run python -m kg_microbe_history new "${ARGS[@]}" --history-root /tmp/h_claw

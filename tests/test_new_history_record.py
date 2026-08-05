@@ -27,7 +27,15 @@ from new_history_record import (  # noqa: E402
     session_id,
 )
 
-KINDS_FROM_SCHEMA = {"record", "schema", "mapping", "report", "infrastructure", "other"}
+def _kinds_from_schema() -> set[str]:
+    """Parsed, not hand-copied.
+
+    The previous version compared two hardcoded sets, so it could not notice the
+    schema growing a kind — and the risk this guards is a KeyError at write time
+    for a kind with no directory (#296 review).
+    """
+    schema = yaml.safe_load((REPO_ROOT / "src/traitmech/schema/history.yaml").read_text())
+    return set(schema["enums"]["HistoryTargetKindEnum"]["permissible_values"])
 
 BASE = ["--kind", "record", "--slug", "cellulolysis",
         "--target-root", "data/traits/metabolism",
@@ -54,9 +62,17 @@ def test_the_record_lands_under_its_kind_directory(tmp_path):
     assert written.parent.name == "curation-history"
 
 
-def test_every_kind_has_a_directory():
+def test_every_kind_in_the_schema_has_a_directory():
     """A missing entry would KeyError at write time rather than at parse time."""
-    assert set(KIND_DIRS) == set(KINDS_FROM_SCHEMA)
+    assert set(KIND_DIRS) == _kinds_from_schema()
+
+
+def test_kind_directories_match_claw():
+    """Copied from claw's scaffold.py, not inferred — the pluralisation is uneven
+    (mappings/reports but schema/other), which is why guessing was wrong."""
+    assert KIND_DIRS == {"record": "records", "schema": "schema",
+                         "mapping": "mappings", "report": "reports",
+                         "infrastructure": "infrastructure", "other": "other"}
 
 
 def test_no_scratch_file_survives(tmp_path):
@@ -200,3 +216,23 @@ def test_the_committed_records_still_validate():
          "--target-class", "HistoryRecord", *map(str, records)],
         cwd=REPO_ROOT, capture_output=True, text=True)
     assert result.returncode == 0, result.stdout or result.stderr
+
+
+def test_sections_sits_between_outcome_and_summary(tmp_path):
+    """Schema declaration order, and the order of the one committed record that
+    carries it. history/README's headline example passes --sections, so getting
+    this wrong put the DOCUMENTED invocation on the divergent path (#296)."""
+    _, path = _run(tmp_path, "--sections", "causal_graphs, grounding")
+    event = yaml.safe_load(path.read_text())["events"][0]
+    assert list(event.keys()) == ["type", "outcome", "sections", "summary", "details"]
+    assert event["sections"] == ["causal_graphs", "grounding"]
+
+
+def test_the_placeholder_path_still_validates_everything_else(tmp_path):
+    """Skipping validation wholesale let `--timestamp nonsense` write a record
+    and exit 0. A copy with `details` substituted is validated instead."""
+    with pytest.raises(SystemExit, match="failed validation"):
+        main(["--kind", "record", "--slug", "x",
+              "--target-root", "data/traits/metabolism", "--summary", "s",
+              "--history-root", str(tmp_path), "--timestamp", "nonsense"])
+    assert list(tmp_path.rglob("*.yaml")) == []

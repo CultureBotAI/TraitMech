@@ -40,6 +40,11 @@ HISTORY_ROOT = REPO_ROOT / "history"
 # everything — history/infrastructure/curation-history/ is a live example. The
 # schema does not constrain the path, so writing to the wrong directory
 # validates clean and nothing downstream notices (#296 review).
+#
+# COPIED FROM claw's kg_microbe_history/scaffold.py KIND_DIRS, not inferred. The
+# pluralisation is genuinely uneven (mappings/reports but schema/other), which is
+# exactly why guessing it was the wrong move — and confirmed empirically by
+# scaffolding all six kinds through claw and listing the directories.
 KIND_DIRS = {"record": "records", "schema": "schema", "mapping": "mappings",
              "report": "reports", "infrastructure": "infrastructure",
              "other": "other"}
@@ -113,6 +118,13 @@ def build(args: argparse.Namespace, timestamp: str) -> tuple[dict, Path]:
         "events": [{
             "type": args.event,
             "outcome": args.outcome,
+            # `sections` sits between outcome and summary: that is the schema's
+            # declaration order and the order of the one committed record that
+            # carries it. Appending it after `details` instead put the documented
+            # invocation (history/README's headline example passes --sections) on
+            # the divergent path.
+            **({"sections": [x.strip() for x in args.sections.split(",") if x.strip()]}
+               if args.sections else {}),
             "summary": args.summary,
             # Claw writes a placeholder rather than refusing, because a record is
             # scaffolded then edited. Matching it exactly, so the record FAILS
@@ -123,8 +135,6 @@ def build(args: argparse.Namespace, timestamp: str) -> tuple[dict, Path]:
     }
     if args.slug:
         record["target"]["slug"] = args.slug
-    if args.sections:
-        record["events"][0]["sections"] = [x.strip() for x in args.sections.split(",") if x.strip()]
     links: dict = {}
     if args.issue:
         links["issues"] = [_link(i, "issues") for i in args.issue]
@@ -218,17 +228,36 @@ def main(argv: list[str] | None = None) -> int:
     # entire policy is append-only (#296 review).
     # Keeps the .yaml suffix: linkml-validate picks its loader from the
     # extension and refuses a .tmp outright.
+    # Keeps the .yaml suffix: linkml-validate picks its loader from the
+    # extension and refuses a .tmp outright.
     scratch = out_path.with_name(f".{out_path.stem}.scratch.yaml")
-    scratch.write_text(text)
-    if args.details:
-        validate(scratch)
-    else:
-        # The placeholder is SUPPOSED to fail the schema until edited, so
-        # validating here would delete the very record the caller asked for.
-        print("note: --details omitted, so a placeholder was written. "
-              "`just validate-history` will fail until you replace it.",
-              file=sys.stderr)
-    scratch.replace(out_path)
+    try:
+        scratch.write_text(text)
+        if args.details:
+            validate(scratch)
+        else:
+            # The placeholder is SUPPOSED to fail the schema until edited, so
+            # validating it directly would delete the record the caller asked
+            # for. Validate a COPY with `details` substituted instead, so every
+            # other field is still checked — otherwise `--timestamp nonsense`
+            # writes a malformed record and exits 0 on this path.
+            probe = dict(record)
+            probe["events"] = [{**record["events"][0], "details": "placeholder probe"}]
+            probe_path = out_path.with_name(f".{out_path.stem}.probe.yaml")
+            try:
+                probe_path.write_text(yaml.safe_dump(probe, sort_keys=False,
+                                                     allow_unicode=True, width=88))
+                validate(probe_path)
+            finally:
+                probe_path.unlink(missing_ok=True)
+            print("note: --details omitted, so a placeholder was written. "
+                  "`just validate-history` will fail until you replace it.",
+                  file=sys.stderr)
+        scratch.replace(out_path)
+    finally:
+        # A validation failure raises out of here, and an orphaned scratch file
+        # in an append-only directory is its own small mess.
+        scratch.unlink(missing_ok=True)
     # Path last on stdout, which is the contract `just new-history` documents.
     # Repo-relative when it can be, absolute otherwise: --history-root may point
     # outside the repo (the parity harness does), and relative_to() raises there.
