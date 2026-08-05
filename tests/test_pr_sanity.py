@@ -774,3 +774,35 @@ def test_local_and_container_uses_are_exempt(tmp_path, ref):
 def test_the_real_workflows_are_all_pinned():
     """The gate is only a gate if the tree it guards actually satisfies it."""
     assert check_action_pins(REPO_ROOT) == []
+
+
+def test_a_local_composite_action_is_scanned_too(tmp_path):
+    """The ./ exemption is only safe if in-repo actions are checked (#276)."""
+    root = _repo(tmp_path)
+    _wf_with_uses(root, f"./.github/actions/local # composite")
+    composite = root / ".github/actions/local"
+    composite.mkdir(parents=True)
+    (composite / "action.yml").write_text(textwrap.dedent("""\
+        name: local
+        runs:
+          using: composite
+          steps:
+            - uses: actions/checkout@v4
+        """))
+    findings = check_action_pins(root)
+    assert _checks(findings) == {"ACTION_UNPINNED"}
+    assert findings[0]["file"].startswith(".github/actions/local/action.yml")
+
+
+def test_a_pinned_composite_action_is_clean(tmp_path):
+    root = _repo(tmp_path)
+    composite = root / ".github/actions/local"
+    composite.mkdir(parents=True)
+    (composite / "action.yml").write_text(textwrap.dedent(f"""\
+        name: local
+        runs:
+          using: composite
+          steps:
+            - uses: actions/checkout@{SHA} # v4.4.0
+        """))
+    assert check_action_pins(root) == []

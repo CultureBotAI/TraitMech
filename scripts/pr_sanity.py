@@ -287,14 +287,29 @@ def _action_refs(text: str):
             yield line_no, match.group(1).strip("'\"")
 
 
+def _pinnable_files(root: Path) -> list[Path]:
+    """Workflows, plus local composite actions.
+
+    A `./` ref is exempted below because it resolves inside this repo — which is
+    only a safe exemption if this repo is also checked. A composite at
+    .github/actions/foo/action.yml carrying `uses: actions/checkout@v4` would
+    otherwise be invisible to the gate (#276).
+    """
+    paths: list[Path] = []
+    wf_dir = root / WORKFLOW_DIR
+    if wf_dir.is_dir():
+        paths += [p for p in sorted(wf_dir.iterdir())
+                  if p.suffix in {".yml", ".yaml"}]
+    actions_dir = root / ".github" / "actions"
+    if actions_dir.is_dir():
+        paths += sorted(p for p in actions_dir.rglob("action.y*ml")
+                        if p.suffix in {".yml", ".yaml"})
+    return paths
+
+
 def check_action_pins(root: Path) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
-    wf_dir = root / WORKFLOW_DIR
-    if not wf_dir.is_dir():
-        return findings
-    for path in sorted(wf_dir.iterdir()):
-        if path.suffix not in {".yml", ".yaml"}:
-            continue
+    for path in _pinnable_files(root):
         rel = str(path.relative_to(root))
         for line_no, ref in _action_refs(path.read_text()):
             # Local composites and container actions carry no upstream to pin:
