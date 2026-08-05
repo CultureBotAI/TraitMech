@@ -104,6 +104,14 @@ audit-graphs *args:
 audit-snippets *args:
     uv run python scripts/audit_evidence_snippets.py {{args}}
 
+# Fail when a directory the `qc` chain reads is missing from qc.yaml's paths
+# filter. Fourth instance of that bug (#184, #200, #250, #252) — every earlier
+# one was caught by review rather than CI. Derives the read-set from the chain
+# itself (justfile -> scripts -> REPO_ROOT constants) rather than from a
+# declaration, since a declaration is one more thing to forget the same way.
+audit-qc-paths:
+    uv run python scripts/audit_qc_paths_coverage.py
+
 # Fail if the justfile names a scripts//tests/ Python file that is not tracked
 # in git. A recipe only fails when invoked, so a reference to an uncommitted
 # script is invisible to every other gate and surfaces at a colleague's
@@ -677,7 +685,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-snippets audit-justfile-paths audit-derived-reports audit-research-artifacts
+qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-snippets audit-justfile-paths audit-qc-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 
