@@ -152,8 +152,21 @@ Branch protection accepts `skipped` as satisfying a required check. Treat that
 as an **accepted tradeoff, not a safety property**: if such a job is ever made
 required, this makes a required check auto-satisfy on the one PR class that got
 no review — precisely the false-green the section above warns about. It is
-tolerable here only because the other seven gates *do* run on Dependabot PRs and
-do cover them. State the tradeoff wherever you copy this pattern.
+tolerable here because of what still runs — but be precise about that, because
+"the other gates cover it" is weaker than it sounds. Most workflows carry
+`paths:` filters naming only their own file, so how many gates run on a
+Dependabot PR is a function of *which action got bumped*: observed coverage
+across #277-#281 ranged from **two** functional gates (#277, bumping
+`claude-code-action`, which appears in only two workflow files) to **seven**
+(#281, bumping `actions/checkout`, which appears in nearly all of them).
+
+The floor is `pr-sanity` and `vendored-sync`, the only two with no `paths:`
+filter — and that floor is the reassuring part: **`pr-sanity` is the gate that
+enforces SHA pinning** (see "Action pinning" above), so the check that actually
+validates *this* class of change is exactly the one immune to the filters.
+Everything above two gates is a bonus that depends on the bump's blast radius.
+State it that way wherever you copy this pattern; "seven gates cover it" would
+be false on a #277-shaped PR.
 
 Skipping does not make these PRs unreviewable. Comment `/review`, or use
 `workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both

@@ -61,8 +61,14 @@ jobs:
     #    was green" (#182/#184/#215) is the doctrine this bends. If
     #    claude-review is ever made required, this makes a required review check
     #    auto-satisfy on the one PR class that received no review. That is
-    #    tolerable only because the seven functional gates DO run on Dependabot
-    #    PRs and do cover them. (`main` has no branch protection today —
+    #    tolerable because of what still runs — but say that precisely: most
+    #    workflows carry `paths:` filters naming only their own file, so gate
+    #    coverage on a Dependabot PR depends on WHICH action was bumped. Across
+    #    #277-#281 it ranged from two functional gates (#277) to seven (#281).
+    #    The floor is `pr-sanity` and `vendored-sync`, the only two unfiltered —
+    #    and `pr-sanity` is the one enforcing SHA pinning, so the gate that
+    #    validates this class of change is the one immune to the filters.
+    #    (`main` has no branch protection today —
     #    `gh api repos/:owner/:repo/branches/main/protection` returns 404 — so
     #    this is latent, not live.)
     #
