@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:00:37.611594'
 end_time: '2026-08-04T10:10:10.533596'
 duration_seconds: 572.92
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: spore shaped
   trait_identifier: METPO:1000682

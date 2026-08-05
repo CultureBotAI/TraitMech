@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T14:55:47.012635'
 end_time: '2026-08-04T15:09:41.623927'
 duration_seconds: 834.61
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: vibrio shaped
   trait_identifier: METPO:1000686

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:50:07.518256'
 end_time: '2026-08-03T23:57:55.701900'
 duration_seconds: 468.18
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: symbiosis
   trait_identifier: traitmech:000040

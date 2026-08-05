@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:38:06.902716'
 end_time: '2026-08-04T02:48:16.470982'
 duration_seconds: 609.57
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pH optimum low
   trait_identifier: METPO:1000455

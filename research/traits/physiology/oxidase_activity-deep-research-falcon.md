@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:42:11.179075'
 end_time: '2026-08-04T11:51:40.176899'
 duration_seconds: 569.0
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: oxidase activity
   trait_identifier: traitmech:000076

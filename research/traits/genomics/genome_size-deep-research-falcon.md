@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:56:21.983431'
 end_time: '2026-08-04T05:04:23.183425'
 duration_seconds: 481.2
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: genome size
   trait_identifier: traitmech:000098

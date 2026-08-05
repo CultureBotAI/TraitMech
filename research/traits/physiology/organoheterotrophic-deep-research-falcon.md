@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:33:59.415404'
 end_time: '2026-08-04T11:44:10.374019'
 duration_seconds: 610.96
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: organoheterotrophic
   trait_identifier: METPO:1000664

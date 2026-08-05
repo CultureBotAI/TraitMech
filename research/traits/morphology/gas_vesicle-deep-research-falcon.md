@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:28:43.737297'
 end_time: '2026-08-04T08:35:28.141821'
 duration_seconds: 404.4
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: gas vesicle
   trait_identifier: traitmech:000070

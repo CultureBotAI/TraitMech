@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:31:34.891754'
 end_time: '2026-08-04T00:42:41.224134'
 duration_seconds: 666.33
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: facultative oxygen preference
   trait_identifier: METPO:1000612

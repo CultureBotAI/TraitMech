@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:01:11.067510'
 end_time: '2026-08-04T00:08:59.745475'
 duration_seconds: 468.68
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: alkaphilic
   trait_identifier: METPO:1003002

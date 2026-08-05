@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:42:48.104925'
 end_time: '2026-08-04T05:50:33.508473'
 duration_seconds: 465.4
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: denitrification
   trait_identifier: traitmech:000104

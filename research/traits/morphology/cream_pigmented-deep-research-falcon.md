@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:59:30.158501'
 end_time: '2026-08-04T08:08:05.648611'
 duration_seconds: 515.49
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: cream pigmented
   trait_identifier: METPO:1003024

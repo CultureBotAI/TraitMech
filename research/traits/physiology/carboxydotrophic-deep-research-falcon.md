@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:41:37.246194'
 end_time: '2026-08-04T10:47:45.838424'
 duration_seconds: 368.59
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: carboxydotrophic
   trait_identifier: METPO:1000633

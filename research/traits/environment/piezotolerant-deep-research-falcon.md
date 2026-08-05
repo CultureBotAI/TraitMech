@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:03:32.900679'
 end_time: '2026-08-04T03:14:48.132540'
 duration_seconds: 675.23
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: piezotolerant
   trait_identifier: traitmech:000003

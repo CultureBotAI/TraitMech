@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:33:38.920787'
 end_time: '2026-08-04T04:41:17.795510'
 duration_seconds: 458.87
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: xerophilic
   trait_identifier: traitmech:000011

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:37:25.183070'
 end_time: '2026-08-04T09:47:47.705591'
 duration_seconds: 622.52
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: polyphosphate granule
   trait_identifier: traitmech:000068

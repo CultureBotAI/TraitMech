@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:47:49.786247'
 end_time: '2026-08-04T10:54:26.013790'
 duration_seconds: 396.23
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: chemoautotrophic
   trait_identifier: METPO:1000635

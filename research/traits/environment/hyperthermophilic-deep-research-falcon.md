@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:57:22.643008'
 end_time: '2026-08-04T01:07:17.619797'
 duration_seconds: 594.98
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: hyperthermophilic
   trait_identifier: METPO:1000617

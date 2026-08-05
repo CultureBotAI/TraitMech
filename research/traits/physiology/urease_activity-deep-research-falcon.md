@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:05:52.321922'
 end_time: '2026-08-04T12:12:38.225087'
 duration_seconds: 405.9
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: urease activity
   trait_identifier: traitmech:000077

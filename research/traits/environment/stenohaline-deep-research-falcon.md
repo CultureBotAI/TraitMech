@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:22:59.240655'
 end_time: '2026-08-04T03:30:59.240790'
 duration_seconds: 480.0
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: stenohaline
   trait_identifier: METPO:1000626

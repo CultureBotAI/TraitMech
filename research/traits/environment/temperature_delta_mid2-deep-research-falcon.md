@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:38:11.045933'
 end_time: '2026-08-04T03:47:29.002791'
 duration_seconds: 557.96
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature delta mid2
   trait_identifier: METPO:1000486

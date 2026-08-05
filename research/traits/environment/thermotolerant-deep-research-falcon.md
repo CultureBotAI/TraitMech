@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:32:03.193399'
 end_time: '2026-08-04T04:41:42.699174'
 duration_seconds: 579.51
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: thermotolerant
   trait_identifier: METPO:1000619

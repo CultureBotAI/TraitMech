@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:28:39.025797'
 end_time: '2026-08-04T07:38:23.297539'
 duration_seconds: 584.27
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: cell length
   trait_identifier: METPO:1000881

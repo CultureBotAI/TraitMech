@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:01:43.881001'
 end_time: '2026-08-04T12:22:00.077465'
 duration_seconds: 1216.2
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: stress response
   trait_identifier: traitmech:000078

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:07:21.508935'
 end_time: '2026-08-04T01:17:15.844463'
 duration_seconds: 594.34
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: metal tolerant
   trait_identifier: traitmech:000012

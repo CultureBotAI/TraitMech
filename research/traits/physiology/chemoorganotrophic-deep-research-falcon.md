@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:56:46.874164'
 end_time: '2026-08-04T11:05:22.669003'
 duration_seconds: 515.79
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: chemoorganotrophic
   trait_identifier: METPO:1000663

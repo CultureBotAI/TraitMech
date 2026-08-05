@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T14:46:58.091221'
 end_time: '2026-08-04T14:55:38.832362'
 duration_seconds: 520.74
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: endosymbiosis
   trait_identifier: traitmech:000045

@@ -166,6 +166,24 @@ def research_env(provider: str) -> dict[str, str]:
     return env
 
 
+def _repo_relative(path: Path) -> str:
+    """Render ``path`` relative to the repo root when it lives inside it.
+
+    deep-research-client copies whatever ``--template`` string it is given
+    straight into each report's ``template_file:`` front matter. Passing an
+    absolute path baked one machine's home directory into 342 tracked reports
+    (#248) — a value that is wrong for every reader but one. The command is run
+    with ``cwd=REPO_ROOT`` so the relative form still resolves.
+
+    Falls back to the absolute path for a template outside the repo, which has
+    no repo-relative form to record.
+    """
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def build_command(
     *,
     provider: str,
@@ -180,7 +198,7 @@ def build_command(
         client_command,
         "research",
         "--template",
-        str(template),
+        _repo_relative(template),
     ]
     for key, value in variables.items():
         command.extend(["--var", f"{key}={value}"])
@@ -249,7 +267,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    subprocess.run(command, check=True, env=research_env(provider))
+    # cwd is pinned so the repo-relative --template above resolves no matter
+    # where the script was invoked from.
+    subprocess.run(command, check=True, env=research_env(provider), cwd=REPO_ROOT)
     return 0
 
 

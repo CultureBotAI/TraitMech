@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T01:34:12.481770'
 end_time: '2026-08-04T01:41:03.221284'
 duration_seconds: 410.74
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: NaCl optimum
   trait_identifier: METPO:1000333

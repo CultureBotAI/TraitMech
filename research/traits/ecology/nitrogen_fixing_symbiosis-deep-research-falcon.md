@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T15:20:46.824629'
 end_time: '2026-08-04T15:27:53.627339'
 duration_seconds: 426.8
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: nitrogen-fixing symbiosis
   trait_identifier: traitmech:000044

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T03:25:46.614232'
 end_time: '2026-08-04T03:35:58.300637'
 duration_seconds: 611.69
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: strictly anaerobic
   trait_identifier: METPO:1000611

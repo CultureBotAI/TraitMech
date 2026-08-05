@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:27:20.856569'
 end_time: '2026-08-04T06:34:58.082235'
 duration_seconds: 457.23
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: metabolism
   trait_identifier: METPO:1000060

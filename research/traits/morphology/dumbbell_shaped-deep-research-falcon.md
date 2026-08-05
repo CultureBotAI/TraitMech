@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:11:29.121456'
 end_time: '2026-08-04T08:28:41.614494'
 duration_seconds: 1032.49
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: dumbbell shaped
   trait_identifier: METPO:1000672

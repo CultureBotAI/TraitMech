@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:36:10.096040'
 end_time: '2026-08-03T23:43:47.719851'
 duration_seconds: 457.62
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: plant pathogen
   trait_identifier: METPO:1004003

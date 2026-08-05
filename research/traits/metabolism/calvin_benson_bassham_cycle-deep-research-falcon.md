@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:39:37.626358'
 end_time: '2026-08-04T05:50:05.129995'
 duration_seconds: 627.5
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: Calvin-Benson-Bassham cycle
   trait_identifier: traitmech:000020

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:28:45.943970'
 end_time: '2026-08-04T00:35:10.189174'
 duration_seconds: 384.25
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: extremely halophilic
   trait_identifier: METPO:1000628

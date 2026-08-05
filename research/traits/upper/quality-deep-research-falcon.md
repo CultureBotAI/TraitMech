@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T12:22:04.482989'
 end_time: '2026-08-04T12:30:00.824209'
 duration_seconds: 476.34
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: quality
   trait_identifier: METPO:1000188

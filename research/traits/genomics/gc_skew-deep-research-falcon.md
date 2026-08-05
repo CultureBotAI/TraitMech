@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:51:37.624424'
 end_time: '2026-08-04T04:59:28.615838'
 duration_seconds: 470.99
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: GC skew
   trait_identifier: traitmech:000097

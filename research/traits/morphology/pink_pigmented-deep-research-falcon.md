@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:31:49.095420'
 end_time: '2026-08-04T09:37:58.683741'
 duration_seconds: 369.59
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pink pigmented
   trait_identifier: METPO:1003027

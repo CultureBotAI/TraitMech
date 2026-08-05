@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:58:58.075960'
 end_time: '2026-08-04T06:08:25.439295'
 duration_seconds: 567.36
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: dissimilatory nitrate reduction to ammonium
   trait_identifier: traitmech:000030

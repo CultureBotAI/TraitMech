@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T04:14:00.360282'
 end_time: '2026-08-04T04:24:22.828778'
 duration_seconds: 622.47
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: temperature range high
   trait_identifier: METPO:1000454

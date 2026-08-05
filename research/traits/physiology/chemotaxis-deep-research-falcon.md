@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:59:58.748207'
 end_time: '2026-08-04T11:10:35.854481'
 duration_seconds: 637.11
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: chemotaxis
   trait_identifier: traitmech:000086

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:32:40.197908'
 end_time: '2026-08-04T11:42:08.351033'
 duration_seconds: 568.15
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: oligotrophic
   trait_identifier: METPO:1000654

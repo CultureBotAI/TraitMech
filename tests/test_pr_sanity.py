@@ -19,7 +19,8 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from pr_sanity import (  # noqa: E402
+from pr_sanity import (
+    check_absolute_repo_paths,  # noqa: E402
     CONFLICT_RE,
     check_conflict_markers,
     check_markdown_links,
@@ -268,6 +269,32 @@ def test_real_repo_workflows_all_carry_the_pointer():
     missing = [f["file"] for f in check_workflows(REPO_ROOT)
                if f["check"] == "MISSING_CONVENTIONS_POINTER"]
     assert missing == []
+
+
+def test_absolute_repo_path_flagged(tmp_path):
+    """#248: an absolute path inside the repo is correct for one machine."""
+    root = _repo(tmp_path)
+    (root / ".github/workflows/a.yaml").write_text(UNFILTERED_WF)
+    (root / "note.md").write_text(f"template_file: {root}/templates/x.md\n")
+    _commit(root)
+    findings = check_absolute_repo_paths([root / "note.md"], root)
+    assert [f["check"] for f in findings] == ["ABSOLUTE_REPO_PATH"]
+    assert findings[0]["file"] == "note.md:1"
+
+
+def test_repo_relative_path_is_clean(tmp_path):
+    root = _repo(tmp_path)
+    (root / "note.md").write_text("template_file: templates/x.md\n")
+    assert check_absolute_repo_paths([root / "note.md"], root) == []
+
+
+def test_a_sibling_checkout_path_is_not_flagged(tmp_path):
+    """Keyed on this repo's root, not a generic /Users/ pattern: a sibling
+    path has no repo-relative form and is a different problem (#310)."""
+    root = _repo(tmp_path)
+    sibling = root.parent / "OtherMech" / "mappings" / "x.tsv"
+    (root / "note.md").write_text(f"see {sibling}\n")
+    assert check_absolute_repo_paths([root / "note.md"], root) == []
 
 
 # --- conflict markers -------------------------------------------------------

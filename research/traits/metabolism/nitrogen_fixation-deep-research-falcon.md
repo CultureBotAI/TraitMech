@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T06:34:22.085225'
 end_time: '2026-08-04T06:43:13.992513'
 duration_seconds: 531.91
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: nitrogen fixation
   trait_identifier: traitmech:000103

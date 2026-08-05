@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:51:23.259584'
 end_time: '2026-08-04T00:58:40.701605'
 duration_seconds: 437.44
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: halophily preference
   trait_identifier: METPO:1000629

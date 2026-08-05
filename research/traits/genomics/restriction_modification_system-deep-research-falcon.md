@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:15:18.547717'
 end_time: '2026-08-04T05:24:00.934895'
 duration_seconds: 522.39
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: restriction-modification system
   trait_identifier: traitmech:000095

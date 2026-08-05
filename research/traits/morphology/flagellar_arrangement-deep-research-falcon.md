@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T08:17:57.516364'
 end_time: '2026-08-04T08:25:38.405873'
 duration_seconds: 460.89
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: flagellar arrangement
   trait_identifier: traitmech:000056

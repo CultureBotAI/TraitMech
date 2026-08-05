@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:46:01.096538'
 end_time: '2026-08-04T10:03:16.258287'
 duration_seconds: 1035.16
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: rod shaped
   trait_identifier: METPO:1000681

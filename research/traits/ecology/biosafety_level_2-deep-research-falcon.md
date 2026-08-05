@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T22:47:37.776675'
 end_time: '2026-08-03T23:08:35.940705'
 duration_seconds: 1258.16
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: biosafety level 2
   trait_identifier: METPO:1001103

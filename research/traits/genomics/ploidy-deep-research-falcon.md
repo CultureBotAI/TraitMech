@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:14:47.479480'
 end_time: '2026-08-04T05:24:06.655815'
 duration_seconds: 559.18
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: ploidy
   trait_identifier: traitmech:000100

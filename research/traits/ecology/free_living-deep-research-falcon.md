@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T14:47:00.145552'
 end_time: '2026-08-04T14:53:35.202116'
 duration_seconds: 395.06
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: free-living
   trait_identifier: traitmech:000048

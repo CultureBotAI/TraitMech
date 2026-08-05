@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T11:54:14.491331'
 end_time: '2026-08-04T12:01:37.850679'
 duration_seconds: 443.36
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: photolithotrophic
   trait_identifier: METPO:1000658

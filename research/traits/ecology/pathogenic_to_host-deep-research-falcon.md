@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-03T23:35:09.222646'
 end_time: '2026-08-03T23:47:02.173815'
 duration_seconds: 712.95
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pathogenic to host
   trait_identifier: METPO:1004000

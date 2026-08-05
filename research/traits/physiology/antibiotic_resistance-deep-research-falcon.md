@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:30:42.985905'
 end_time: '2026-08-04T10:41:31.308462'
 duration_seconds: 648.32
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: antibiotic resistance
   trait_identifier: traitmech:000088

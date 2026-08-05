@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T00:14:25.900046'
 end_time: '2026-08-04T00:39:31.808199'
 duration_seconds: 1505.91
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: copper tolerant
   trait_identifier: traitmech:000018

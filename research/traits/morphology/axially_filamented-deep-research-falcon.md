@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T07:15:05.377633'
 end_time: '2026-08-04T07:23:53.100901'
 duration_seconds: 527.72
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: axially filamented
   trait_identifier: METPO:1000705

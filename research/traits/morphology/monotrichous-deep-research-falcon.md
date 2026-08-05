@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:00:14.237117'
 end_time: '2026-08-04T09:08:31.747316'
 duration_seconds: 497.51
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: monotrichous
   trait_identifier: traitmech:000057

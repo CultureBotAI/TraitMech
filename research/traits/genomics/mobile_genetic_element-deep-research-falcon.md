@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T05:02:08.817061'
 end_time: '2026-08-04T05:15:14.420380'
 duration_seconds: 785.6
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: mobile genetic element
   trait_identifier: traitmech:000089

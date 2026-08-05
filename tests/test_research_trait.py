@@ -60,6 +60,37 @@ def test_build_command_for_falcon_research():
     assert command[-2:] == ["--max-cost", "1"]
 
 
+def test_build_command_makes_an_absolute_template_repo_relative():
+    """#248: deep-research-client copies --template verbatim into every
+    report's `template_file:` front matter, so an absolute path baked one
+    machine's home directory into 342 tracked reports."""
+    from research_trait import REPO_ROOT
+
+    command = build_command(
+        provider="falcon",
+        template=REPO_ROOT / "templates" / "trait_causal_graph_research.md",
+        output_file=Path("out.md"),
+        citations_file=Path("out.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    assert command[3] == "templates/trait_causal_graph_research.md"
+    assert not command[3].startswith("/")
+
+
+def test_build_command_keeps_a_template_outside_the_repo_absolute():
+    """There is no repo-relative form to record, so the absolute path stands."""
+    command = build_command(
+        provider="falcon",
+        template=Path("/tmp/elsewhere/custom.md"),
+        output_file=Path("out.md"),
+        citations_file=Path("out.md.citations.md"),
+        variables={},
+        passthrough_args=[],
+    )
+    assert command[3] == "/tmp/elsewhere/custom.md"
+
+
 def test_research_env_maps_futurehouse_key_to_edison(monkeypatch):
     monkeypatch.delenv("EDISON_API_KEY", raising=False)
     monkeypatch.setenv("FUTUREHOUSE_API_KEY", "test-key")

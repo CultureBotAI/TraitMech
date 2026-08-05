@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T10:36:51.359474'
 end_time: '2026-08-04T10:43:45.581308'
 duration_seconds: 414.22
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: bioluminescence
   trait_identifier: traitmech:000085

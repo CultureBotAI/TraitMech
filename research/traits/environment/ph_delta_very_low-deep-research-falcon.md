@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:29:14.008658'
 end_time: '2026-08-04T02:38:00.840507'
 duration_seconds: 526.83
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pH delta very low
   trait_identifier: METPO:1000473

@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T02:24:07.341335'
 end_time: '2026-08-04T02:33:52.274491'
 duration_seconds: 584.93
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: pH delta mid2
   trait_identifier: METPO:1000476

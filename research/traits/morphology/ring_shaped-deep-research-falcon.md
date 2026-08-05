@@ -5,7 +5,7 @@ cached: false
 start_time: '2026-08-04T09:43:45.644432'
 end_time: '2026-08-04T09:53:32.594870'
 duration_seconds: 586.95
-template_file: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/TraitMech/templates/trait_causal_graph_research.md
+template_file: templates/trait_causal_graph_research.md
 template_variables:
   trait_label: ring shaped
   trait_identifier: METPO:1000680
