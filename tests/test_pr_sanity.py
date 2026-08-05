@@ -168,6 +168,14 @@ def test_real_repo_satisfies_the_invariant():
     assert "NO_UNFILTERED_CI" not in _checks(check_workflows(REPO_ROOT))
 
 
+def test_real_repo_workflows_all_carry_the_pointer():
+    """Guards the live repo: a workflow added without the pointer fails here
+    as well as in CI, so the drift #275 found cannot recur silently."""
+    missing = [f["file"] for f in check_workflows(REPO_ROOT)
+               if f["check"] == "MISSING_CONVENTIONS_POINTER"]
+    assert missing == []
+
+
 # --- conflict markers -------------------------------------------------------
 
 

@@ -366,7 +366,7 @@ def check_workflows(root: Path) -> list[dict[str, str]]:
             continue
         rel = str(path.relative_to(root))
         text = path.read_text()
-        if CONVENTIONS_POINTER not in text.split("\n", 1)[0]:
+        if text.split("\n", 1)[0].strip() != f"# {CONVENTIONS_POINTER}":
             findings.append({
                 "check": "MISSING_CONVENTIONS_POINTER", "file": rel,
                 "detail": (f"first line is not `# {CONVENTIONS_POINTER}` — an "
