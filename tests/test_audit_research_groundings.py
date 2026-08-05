@@ -162,3 +162,41 @@ def test_the_backlog_artifact_exists_and_is_ranked():
     from audit_research_groundings import VERDICT_RANK
     ranks = [VERDICT_RANK.get(r[0], 9) for r in rows]
     assert ranks == sorted(ranks), "backlog is not ranked by verdict"
+
+
+def test_an_empty_adapter_is_an_error_not_1200_missing_ids():
+    """A 0-byte semsql opens cleanly and labels nothing — the #265 case."""
+    from audit_research_groundings import ADAPTER_ERROR, Ontologies
+
+    class EmptyAdapter:
+        def entities(self):
+            return iter(())
+
+        def label(self, curie):
+            return None
+
+    pool = Ontologies()
+    pool._adapters["go"] = EmptyAdapter()
+    assert pool.lookup("GO:0009860") is ADAPTER_ERROR
+
+
+def test_a_probe_that_raises_is_not_treated_as_empty():
+    """A partially-migrated live ontology must not be masked as a benign stub."""
+    from audit_research_groundings import Ontologies
+
+    class BrokenProbe:
+        def entities(self):
+            raise RuntimeError("no such table: node")
+
+        def label(self, curie):
+            return "pollen tube growth"
+
+        def entity_aliases(self, curie):
+            return []
+
+        def entity_metadata_map(self, curie):
+            return {}
+
+    pool = Ontologies()
+    pool._adapters["go"] = BrokenProbe()
+    assert pool.lookup("GO:0009860")[0] == "pollen tube growth"

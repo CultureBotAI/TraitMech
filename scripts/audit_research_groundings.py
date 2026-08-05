@@ -132,6 +132,7 @@ class Ontologies:
     def __init__(self) -> None:
         self._adapters: dict[str, object] = {}
         self._cache: dict[str, tuple[str, list[str], bool] | None] = {}
+        self._empty: dict[str, bool] = {}
 
     def _adapter(self, prefix: str):
         if prefix not in self._adapters:
@@ -159,6 +160,9 @@ class Ontologies:
         except Exception:
             self._cache[curie] = ADAPTER_ERROR
             return ADAPTER_ERROR
+        if self._is_empty(prefix, adapter):
+            self._cache[curie] = ADAPTER_ERROR
+            return ADAPTER_ERROR
         try:
             label = adapter.label(curie)
             if label:
@@ -168,6 +172,34 @@ class Ontologies:
             result = ADAPTER_ERROR
         self._cache[curie] = result
         return result
+
+    def _is_empty(self, prefix: str, adapter) -> bool:
+        """True if the adapter opened but holds no terms — a 0-byte sqlite.
+
+        This is the case an exception handler alone misses, and the one that
+        matters most: a stub opens cleanly and returns None for every label, so
+        every pair would fall through to UNRESOLVED and the committed backlog
+        would silently become ~1200 "not in the ontology" rows (#265).
+
+        Peeks one entity rather than counting, and caches per prefix. A probe
+        that RAISES is not treated as empty — a partially-migrated live ontology
+        fails the same way, and calling that empty would hide real findings.
+        Same reasoning as AdapterPool._is_empty in the vendored validator.
+        """
+        if prefix in self._empty:
+            return self._empty[prefix]
+        try:
+            empty = next(iter(adapter.entities()), None) is None
+        except Exception as exc:
+            print(f"  ! emptiness probe failed for {prefix}: {exc}",
+                  file=sys.stderr)
+            empty = False
+        if empty:
+            print(f"  ! {prefix}: adapter opened but holds no terms — every "
+                  "lookup for this prefix is ADAPTER_ERROR, not a finding",
+                  file=sys.stderr)
+        self._empty[prefix] = empty
+        return empty
 
     @staticmethod
     def _deprecated(adapter, curie: str, label: str) -> bool:
