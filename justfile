@@ -90,6 +90,20 @@ audit-proposals *args:
 audit-graphs *args:
     uv run python scripts/audit_causal_graphs.py {{args}}
 
+# Structural audit of evidence snippets: EvidenceItem.snippet is specified as a
+# VERBATIM quote and docs/CURATION_PLAYBOOK.md sharpens that to contiguous, no
+# ellipsis, no paraphrase, diversified across edges — and until #247 nothing
+# checked any of it. Flags elliptical, unsupportive, reused and missing
+# snippets, plus snippets echoing this trait's own research report.
+#
+# Same ratchet as audit-graphs: conf/evidence_snippet_baseline.tsv freezes
+# today's backlog and only NEW findings fail, so it lands green while #183's
+# backfill (thousands of new snippets) cannot make it worse. Regenerate the
+# baseline with `--write-baseline` after an intended burn-down, then tighten to
+# `just audit-snippets --fail-on any`.
+audit-snippets *args:
+    uv run python scripts/audit_evidence_snippets.py {{args}}
+
 # Fail if the justfile names a scripts//tests/ Python file that is not tracked
 # in git. A recipe only fails when invoked, so a reference to an uncommitted
 # script is invisible to every other gate and surfaces at a colleague's
@@ -663,7 +677,7 @@ audit-research-artifacts:
 # Composite QC: strict closed-schema validation + schema-quality probes +
 # writers audit + proposal citation bar. Mirrors the qc target in
 # MediaIngredientMech / CultureMech.
-qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-justfile-paths audit-derived-reports audit-research-artifacts
+qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-graphs audit-snippets audit-justfile-paths audit-derived-reports audit-research-artifacts
 
 # --- id↔label correspondence gate (vendored byte-identical across the Mech repos) ---
 

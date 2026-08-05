@@ -281,6 +281,56 @@ use spaces (`combines with`, not `combines_with`).
   claim — not a paraphrase of the snippet, but the reasoning
   linking quote to edge.
 
+#### A deep-research report is not a snippet source (#247)
+
+The reports under `research/traits/` carry an evidence column that
+reads exactly like a `snippet:`, and pasting it is the obvious way to
+work through #183's backfill. Do not. Nine reports state outright that
+their evidence text *"closely paraphrases or quotes"* the source — so
+which of the two you are copying is unknowable without opening the
+paper, and a paraphrase in `snippet:` quietly converts an
+anti-hallucination control into decoration.
+
+The rule, which keeps everything the reports are genuinely good for:
+
+- **`snippet:` requires opening the source.** It is a contiguous span
+  copied from the paper, and nothing else earns that field.
+- **The report's evidence text belongs in `notes:`**, which is where
+  reasoning about a source is supposed to live and has no verbatim
+  requirement.
+- **The report's reference is reusable as-is** — a DOI is a DOI. What
+  does not transfer is the quote.
+
+`just audit-snippets` flags a snippet that also appears in its own
+trait's research report (`ECHOES_RESEARCH_REPORT`). It is a prompt to
+check, not a verdict: a report may quote the same sentence you did. It
+already discounts the two ways a report can echo *you* — the front
+matter and the `evidence_summary` fed into the prompt — so a finding
+means the text is in the provider's own answer and was never handed to
+it.
+
+#### What the audit enforces
+
+`just audit-snippets` runs in `qc` as a ratchet against
+`conf/evidence_snippet_baseline.tsv`: today's 2,737 findings never
+fail, anything new exits 1. The corpus cannot get worse while the
+backlog is worked.
+
+| defect | what it means |
+|---|---|
+| `ELLIPTICAL_SNIPPET` | contains `...` or `…`, so it is stitched, not contiguous |
+| `UNSUPPORTIVE_SNIPPET` | too short to support any specific claim (`host`, `toxins`) |
+| `REUSED_SNIPPET` | one snippet on 3+ edges of a graph — the low-diversity problem above |
+| `MISSING_SNIPPET` | a reference with no quote at all |
+| `ECHOES_RESEARCH_REPORT` | also in this trait's report answer — verify against the source |
+
+The standing backlog is worth knowing before you start: **2,586 of
+4,089 evidence items (63%) carry no snippet at all**, almost all of
+them on causal-graph edges. `snippet:` is schema-optional, so those
+are valid records — they simply assert a mechanism on a bare DOI.
+Burning that down is the same job as #183's backfill, on the same
+edges.
+
 ## Curation history
 
 Append a `CurationEvent` for each significant change. Action vocabulary
