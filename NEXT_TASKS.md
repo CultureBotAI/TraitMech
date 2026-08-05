@@ -15,7 +15,7 @@ reports suggest are resolved against OAK (#260), evidence snippets are audited
 
 Open PRs: **none**.
 
-Open issues, 17. Eight of the fifteen listed at the last reconcile are now closed
+Open issues, 18. Eight of the fifteen listed at the last reconcile are now closed
 (#192, #193, #203, #205, #208, #214, #218, #220); the newly-filed ones nearly all
 come from the reviews of the five PRs above, which is the review loop working as
 intended.
@@ -39,6 +39,7 @@ intended.
 | #270 | snippet baseline keys on an array index, so improving the corpus can fail `qc` | 10 |
 | #275 | conventions page duplicates the workflow header comments it restates | 7 |
 | #283 | this file's reconciles touch headers but not the section bodies they label | — |
+| #284 | `audit_causal_graphs.py` cites a worked example its own data contradicts | 5 |
 
 **Recommended next: #252.** It is the third recurrence of one bug class (#184,
 #200, #250), the machinery to gate it is now fresh from #272's `ACTION_UNPINNED`
@@ -275,13 +276,13 @@ remains.
 
 ## 5. Causal-graph connectivity (#183) — DETECTION DONE (#185, #227); BACKFILL 1 of 220
 
-**The `audit-graphs` gate does not catch graph fragmentation.**
-`scripts/audit_causal_graphs.py` flags `DANGLING_EDGE` (an edge naming a node that
-does not exist) and `ORPHAN_NODE` (a node no edge references at all). Neither
-fires when every node has at least one edge but the graph still splits into
-several mutually unreachable components — which is the common case, because a
-node picks up an edge to a neighbour long before it is wired back to the trait
-node.
+**The gap this section opened with, for the record: `audit-graphs` used to miss
+fragmentation entirely.** It flagged `DANGLING_EDGE` (an edge naming a node that
+does not exist) and `ORPHAN_NODE` (a node no edge references at all), and
+neither fires when every node has at least one edge but the graph still splits
+into mutually unreachable components — the common case, because a node picks up
+an edge to a neighbour long before it is wired back to the trait node. #185 and
+#227 closed that; the detection half is done.
 
 Measured over the corpus on 2026-07-30 (353 causal graphs, 4136 nodes):
 **220 graphs (62%) have more than one connected component**, and **1264 nodes
@@ -291,13 +292,15 @@ generated environment/physiology traits — e.g.
 `physiology/methanotrophic.yaml` (20 nodes, 5 components),
 `morphology/black_pigmented.yaml` (18 nodes, 6 components) — each with 11–12
 nodes unreachable from the main body. This is a content gap (missing edges), not
-a schema defect, so nothing currently reports it.
+a schema defect — which is why the original audit was blind to it, and why
+closing it needed a new defect class rather than a schema fix.
 
 Two pieces of work, independent:
 
 1. ~~**Add a connectivity defect to the audit.**~~ **DONE** — `audit-graphs` now
    emits `UNREACHABLE_FROM_TRAIT` (a node with edges but no undirected path to a
-   `TRAIT` node) and `NO_TRAIT_NODE`. The invariant chosen was the stronger
+   `TRAIT` node), `FRAGMENTED_GRAPH` (#227 — a graph in several components at
+   all, whatever each component contains) and `NO_TRAIT_NODE`. The invariant chosen was the stronger
    "every node reachable from the trait node", and reachability is **undirected**
    because curated predicates legitimately mix direction
    (`cellulase -enables-> trait` points inward, `trait -produces-> glucose`
@@ -335,12 +338,20 @@ Corpus totals unchanged: 353 graphs, 4136 nodes. Per-category `FRAGMENTED_GRAPH`
 environment 85, morphology 47, metabolism 31, physiology 27, ecology 18,
 genomics 11, upper 1.
 
-**#220 is closed** (#227): `FRAGMENTED_GRAPH` now detects a graph splitting into
-several components even when each component contains its own `TRAIT` node — the
-`morphology/dumbbell_shaped.yaml` case, where every node reaches *a* trait node
-so reachability alone reported it clean, while 7 of its 11 nodes had no path to
-the trait the record is actually about. That is why the two counts above now
-agree at 220 where they previously differed by one.
+**#220 is closed** (#227). `FRAGMENTED_GRAPH` counts components directly rather
+than inferring them from reachability, which closes a blind spot reachability
+has by construction: a graph splitting into components that *each* contain a
+`TRAIT` node satisfies "every node reaches a trait node" while still being two
+disconnected arguments.
+
+Stated abstractly on purpose — **no record in the corpus exhibits that shape
+today.** A sweep for graphs that are fragmented, carry more than one `TRAIT`
+node, and have zero `UNREACHABLE_FROM_TRAIT` rows returns 0, and the two
+measures above cover the identical 220 files. Earlier revisions of this section
+cited `morphology/dumbbell_shaped.yaml` as the worked case; that record declares
+exactly one `TRAIT` node and carries 7 `UNREACHABLE_FROM_TRAIT` rows, so
+reachability catches it perfectly well. The wrong example came from
+`scripts/audit_causal_graphs.py`'s own comment and is tracked in **#284**.
 
 **Backfill progress: 1 of 220.** `data/traits/metabolism/cellulolysis.yaml` is
 the worked example — 4 components, 9 of 14 nodes unreachable, repaired with 7
@@ -442,27 +453,32 @@ the one it replaced: no review at all.
 Verified, not just argued: before, both `pull_request` runs on #213 were cancelled
 seconds after a `culturebot-reviewer` comment; after, both pushes to #216 gave
 `pull_request → success` with the `issue_comment` runs skipping harmlessly
-alongside. **Still unproven at the time of writing:** every one of those checks
-ran on a branch carrying its own copy of the fix. `issue_comment` runs use
-`main`'s copy, so the first genuine post-merge test is this PR.
+alongside. **Now proven post-merge**, which it was not when this was written:
+every check then had run on a branch carrying its own copy of the fix, and
+`issue_comment` runs use `main`'s copy. Since #216 merged, `claude-review` has
+run to completion on every PR through #282 without cancelling itself.
 
 `pr-shepherd.yml` was checked and is unaffected — `workflow_dispatch` only,
 `cancel-in-progress: false`, no comment trigger. `claude-code-review.yml` is the
 only workflow in the repo with an `issue_comment` trigger.
 
 Third concurrency-scoping bug here after #199 and #196's review, which produced
-two follow-ups rather than none: **#217** for the workflow-authoring conventions
-page that has nowhere to live (`docs/` has no such page, and this is fleet
-knowledge that belongs upstream rather than copied four times), and **#218** to
-*enforce* the rule instead of only documenting it. #218 is the stronger of the
-two — a docs page does not fail CI, and #215 got in past a reviewer who had
-already fixed this class of bug twice. `pr_sanity.check_workflows` already parses
-every workflow's triggers, so the guard drops in beside the existing
-`NO_UNFILTERED_CI` check: a workflow with both `pull_request` and an
-independently-firing trigger must key its concurrency group by `github.run_id`
-or `github.event_name`.
+two follow-ups. **Both have since landed.** #218 shipped in #225 —
+`pr_sanity.py` now emits `CONCURRENCY_SHARED_ACROSS_TRIGGERS`, so the rule fails
+CI rather than only being written down, which mattered because #215 got past a
+reviewer who had already fixed this class of bug twice. #217's page shipped in
+#272 as `docs/WORKFLOW_CONVENTIONS.md`, carrying the concurrency lessons plus
+the action-pinning policy and its own `ACTION_UNPINNED` gate.
 
-**The other pending items are small, independent and fully specified**, each
+**#217 stays open for one question only: where the page lives.** It is fleet
+knowledge shared by all four Mech repos, and the copy that landed is
+TraitMech-local — so it is either consolidated into CultureMech or claw with the
+spokes linking to it, or it becomes the fourth copy #209 warns about. **#275** is
+the same argument at file scope: the page restates header comments still sitting
+in `pr-sanity.yaml`, `vendored-sync.yaml` and friends, which now cross-link to it
+but were not consolidated into it.
+
+The other pending items are small, independent and fully specified**, each
 verifiable by CI, none blocking anything:
 
 | # | fix | note |
@@ -484,7 +500,7 @@ and the conventions page landed in **#272**, which also added the
 
 `reports/trait_graph_audit_manifest.tsv` recorded a 2026-07-20 sweep that
 **fully succeeded**: 353 distinct traits, every one `ok`.
-The 8 `fail:1` rows are not 8 unfinished traits — each is a `(category, slug)`
+The 13 `fail:1` rows are not 13 unfinished traits — each is a `(category, slug)`
 that also appears as `ok`, i.e. a retry that then worked. Verified by set
 difference: `fail − ok` is empty, so there are **zero outstanding failures**.
 That makes the loss below worse, not better: nothing here is a partial run that
