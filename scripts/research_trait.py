@@ -175,13 +175,17 @@ def _repo_relative(path: Path) -> str:
     (#248) — a value that is wrong for every reader but one. The command is run
     with ``cwd=REPO_ROOT`` so the relative form still resolves.
 
-    Falls back to the absolute path for a template outside the repo, which has
-    no repo-relative form to record.
+    Falls back to the RESOLVED absolute path for a template outside the repo:
+    it has no repo-relative form to record, and returning the caller's relative
+    string would be actively wrong now that the child runs at ``REPO_ROOT`` —
+    ``../elsewhere/x.md`` would re-anchor to the repo root and read the wrong
+    file. Resolving happens against the parent's cwd, which is what the caller
+    meant.
     """
     try:
         return str(path.resolve().relative_to(REPO_ROOT))
     except ValueError:
-        return str(path)
+        return str(path.resolve())
 
 
 def build_command(
@@ -205,10 +209,13 @@ def build_command(
     command.extend(provider_args(provider))
     command.extend(
         [
+            # Resolved for the same reason as the template above: the child runs
+            # at REPO_ROOT, so a relative --research-dir would have the parent
+            # create one directory and the child write into another.
             "--output",
-            str(output_file),
+            str(output_file.resolve()),
             "--separate-citations",
-            str(citations_file),
+            str(citations_file.resolve()),
         ]
     )
     command.extend(passthrough_args)

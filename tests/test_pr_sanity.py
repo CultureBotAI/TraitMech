@@ -19,9 +19,9 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from pr_sanity import (
-    check_absolute_repo_paths,  # noqa: E402
+from pr_sanity import (  # noqa: E402
     CONFLICT_RE,
+    check_absolute_repo_paths,
     check_conflict_markers,
     check_markdown_links,
     check_action_pins,
@@ -943,7 +943,7 @@ def test_the_real_workflows_are_all_pinned():
 def test_a_local_composite_action_is_scanned_too(tmp_path):
     """The ./ exemption is only safe if in-repo actions are checked (#276)."""
     root = _repo(tmp_path)
-    _wf_with_uses(root, f"./.github/actions/local # composite")
+    _wf_with_uses(root, "./.github/actions/local # composite")
     composite = root / ".github/actions/local"
     composite.mkdir(parents=True)
     (composite / "action.yml").write_text(textwrap.dedent("""\
