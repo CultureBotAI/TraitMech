@@ -90,11 +90,18 @@ def paths_read(script: Path, root: Path) -> set[str]:
     """
     tops: set[str] = set()
     text = script.read_text()
-    # REPO_ROOT / "data" / "traits"  and  REPO_ROOT / "reports/x.tsv"
-    for literal in re.findall(r'REPO_ROOT\s*/\s*"([^"]+)"', text):
+    # Two idioms, because the chain uses both: an absolute REPO_ROOT / "data",
+    # and a repo-relative Path("src/traitmech/schema/traitmech.yaml"). Matching
+    # only the first left pr_sanity, audit_schema and audit_writers contributing
+    # nothing at all — three of eleven recipes silently unexamined, which is the
+    # per-script blindness #286 is about (#288).
+    literals = re.findall(r'REPO_ROOT\s*/\s*"([^"]+)"', text)
+    literals += re.findall(r'Path\(\s*"([^"]+)"\s*\)', text)
+    for literal in literals:
         top = literal.split("/")[0]
-        if (root / top).exists():
-            tops.add(top)
+        if top and not top.startswith(".") or top in {".github"}:
+            if (root / top).exists():
+                tops.add(top)
     return tops
 
 
@@ -134,22 +141,34 @@ def audit(root: Path = REPO_ROOT) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     seen: dict[str, set[str]] = {}
     read_set: set[str] = set()
+    silent: set[str] = set()
     for recipe in chain:
         for rel in scripts_invoked(recipe_body(justfile_text, recipe)):
             script = root / rel
             if not script.exists():
                 continue
-            for top in paths_read(script, root):
+            script_reads = paths_read(script, root)
+            if not script_reads:
+                silent.add(rel)
+            for top in script_reads:
                 read_set.add(top)
                 if top in IGNORED_TOPS or top in covered:
                     continue
                 seen.setdefault(top, set()).add(f"{recipe} → {rel}")
 
+    # Per-script, not just the union. Testing only the union means the check
+    # fires when EVERY script goes blind, while its own message describes one
+    # script's constants moving to a shared helper — the case it would miss
+    # (#288). A script contributing nothing is unexamined, not clean.
+    if silent:
+        raise BlindGate(
+            "these qc-chain scripts yielded no readable paths, so they were not "
+            "examined at all: " + ", ".join(sorted(silent))
+            + ". Their path constants may have moved into a shared helper, in "
+            "which case this audit is blind rather than satisfied.")
     if not read_set:
         raise BlindGate(
-            f"the qc chain ({len(chain)} recipes) yielded no readable paths — "
-            "REPO_ROOT constants may have moved into a shared helper, in which "
-            "case this audit is blind rather than satisfied")
+            f"the qc chain ({len(chain)} recipes) yielded no readable paths")
     AUDIT_READ_SET.clear()
     AUDIT_READ_SET.update(read_set)
     for top, readers in sorted(seen.items()):
