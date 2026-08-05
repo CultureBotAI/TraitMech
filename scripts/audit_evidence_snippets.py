@@ -323,6 +323,12 @@ def _magnitude_key(row: dict[str, str]) -> tuple[str, str, str, str] | None:
     smaller of an uneven pair grow up to the larger unnoticed —
     `trophic_type_classification_axes:*` already carries two rows. The snippet
     itself is the discriminator (#291).
+
+    Cost of that choice, tracked in #292: editing the shared snippet's TEXT
+    produces an unseen key, so its baselined magnitude reads as 0 and any count
+    beats it — a reworded quote is reported as new when nothing got worse.
+    Falling back to the graph's per-key max would fix that and restore the
+    sheltering this key exists to remove, so it fails closed instead.
     """
     if row.get("defect") not in MAGNITUDE_DEFECTS:
         return None
