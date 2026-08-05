@@ -572,23 +572,24 @@ def iter_tabular(
     # Keep any pair whose id column exists; a missing label column is allowed
     # so an id present without its label still gets an EMPTY_LABEL verdict
     # rather than being silently dropped.
-    usable = [(i, l) for (i, l) in pairs if i in field_set]
+    usable = [(id_col, label_col) for (id_col, label_col) in pairs
+              if id_col in field_set]
     # RISK (fixed): a configured pair whose ID or LABEL column is absent must
     # NOT vanish silently. When the file has data rows, emit a MISSING_COLUMN
     # ERROR finding per absent column so an enforce run FAILS instead of
     # passing while checking nothing. (Still also warn to stderr for context.)
     if rows:
-        for (i, l) in pairs:
-            missing = [c for c in (i, l) if c not in field_set]
+        for (id_col, label_col) in pairs:
+            missing = [c for c in (id_col, label_col) if c not in field_set]
             if missing:
                 print(
                     f"  ! {_safe_rel(path)}: configured id/label pair "
-                    f"[{i}/{l}] — missing column(s) {missing}; "
+                    f"[{id_col}/{label_col}] — missing column(s) {missing}; "
                     f"present columns: {sorted(field_set)}",
                     file=sys.stderr,
                 )
                 yield (
-                    f"columns [{i}/{l}]",
+                    f"columns [{id_col}/{label_col}]",
                     f"missing:{','.join(missing)}",
                     f"present:{sorted(field_set)}",
                     False,

@@ -33,5 +33,7 @@ def sfdp_layout(matrix, k=15, seed=42, sfdp_bin="sfdp"):
     for ln in out.stdout.splitlines():
         if ln.startswith("node "):
             p = ln.split()
-            idx = int(p[1]); xy[idx, 0] = float(p[2]); xy[idx, 1] = float(p[3])
+            idx = int(p[1])
+            xy[idx, 0] = float(p[2])
+            xy[idx, 1] = float(p[3])
     return xy
