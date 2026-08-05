@@ -203,10 +203,16 @@ def test_a_short_snippet_does_not_match_by_coincidence(tmp_path, monkeypatch):
 
 def test_the_committed_baseline_matches_the_corpus():
     """The ratchet is only a ratchet if the frozen set is current."""
-    from audit_evidence_snippets import DEFAULT_BASELINE, _key, load_baseline
+    from audit_evidence_snippets import DEFAULT_BASELINE, compare, load_baseline
     baseline = load_baseline(DEFAULT_BASELINE)
-    assert baseline, "baseline is empty — run `just audit-snippets --write-baseline`"
-    new = [r for r in audit() if _key(r) not in baseline]
+    assert baseline.counts, "baseline is empty — run `just audit-snippets --write-baseline`"
+    # compare(), not key membership: `_key(r) not in baseline.counts` would
+    # check presence only, ignoring both the occurrence count and the
+    # REUSED_SNIPPET magnitude, so a third snippet-less reference or a graph
+    # growing from 5 shared snippets to 50 would fail `just qc` while this test
+    # passed. This is the only test comparing the committed baseline to the live
+    # corpus, so it has to assert what qc enforces (#291).
+    new = compare(audit(), baseline)
     assert new == [], f"{len(new)} findings are not baselined, e.g. {new[:2]}"
 
 
@@ -269,26 +275,26 @@ def test_the_key_still_separates_files_locators_and_defects():
 
 
 def test_fewer_occurrences_than_baselined_is_an_improvement():
-    from audit_evidence_snippets import compare
+    from audit_evidence_snippets import Baseline, compare
     rows = [_row("f.yaml", "evidence[0]", "MISSING_SNIPPET")]
-    baseline = {("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}
+    baseline = Baseline({("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}, {})
     assert compare(rows, baseline) == []
 
 
 def test_one_more_occurrence_than_baselined_is_new():
     """The false negative a set-membership key would have introduced: a THIRD
     missing snippet matching a baselined pair and passing silently (#270)."""
-    from audit_evidence_snippets import compare
+    from audit_evidence_snippets import Baseline, compare
     rows = [_row("f.yaml", f"evidence[{i}]", "MISSING_SNIPPET") for i in range(3)]
-    baseline = {("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}
+    baseline = Baseline({("f.yaml", "evidence[]", "MISSING_SNIPPET"): 2}, {})
     new = compare(rows, baseline)
     assert len(new) == 1
 
 
 def test_an_unbaselined_key_is_new():
-    from audit_evidence_snippets import compare
+    from audit_evidence_snippets import Baseline, compare
     rows = [_row("f.yaml", "evidence[0]", "ELLIPTICAL_SNIPPET")]
-    assert len(compare(rows, {})) == 1
+    assert len(compare(rows, Baseline({}, {}))) == 1
 
 
 # --- magnitude ratchet for aggregate defects (#291) ----------------------
@@ -301,22 +307,16 @@ def _reused(n, graph="g1:*", file="f.yaml"):
 def test_a_worse_reused_count_is_new_despite_the_same_key():
     """REUSED_SNIPPET has no index and carries its magnitude in detail, so
     dropping detail from the key let 3 -> 9 pass as one unchanged finding."""
-    import audit_evidence_snippets as aes
-    from audit_evidence_snippets import _key, compare
-    baseline = {_key(_reused(3)): 1}
-    aes.BASELINE_MAGNITUDE.clear()
-    aes.BASELINE_MAGNITUDE[_key(_reused(3))] = 3
+    from audit_evidence_snippets import Baseline, _key, _magnitude_key, compare
+    baseline = Baseline({_key(_reused(3)): 1}, {_magnitude_key(_reused(3)): 3})
     assert len(compare([_reused(9)], baseline)) == 1
 
 
 def test_a_better_reused_count_still_passes():
     """The rot #270 fixed, from the other side: a count in the KEY would make
     3 -> 2 an unbaselined finding and fail on an improvement."""
-    import audit_evidence_snippets as aes
-    from audit_evidence_snippets import _key, compare
-    baseline = {_key(_reused(3)): 1}
-    aes.BASELINE_MAGNITUDE.clear()
-    aes.BASELINE_MAGNITUDE[_key(_reused(3))] = 3
+    from audit_evidence_snippets import Baseline, _key, _magnitude_key, compare
+    baseline = Baseline({_key(_reused(3)): 1}, {_magnitude_key(_reused(3)): 3})
     assert compare([_reused(2)], baseline) == []
     assert compare([_reused(3)], baseline) == []
 
@@ -332,9 +332,25 @@ def test_a_character_count_is_not_ratcheted():
 
 def test_the_real_baseline_records_reused_magnitudes():
     """Guards the wiring: a baseline read without magnitudes silently disarms."""
-    import audit_evidence_snippets as aes
     from audit_evidence_snippets import DEFAULT_BASELINE, load_baseline
-    load_baseline(DEFAULT_BASELINE)
-    magnitudes = [v for v in aes.BASELINE_MAGNITUDE.values() if v]
+    magnitudes = [v for v in load_baseline(DEFAULT_BASELINE).magnitudes.values() if v]
     assert magnitudes, "no REUSED_SNIPPET magnitudes captured from the baseline"
     assert max(magnitudes) >= 3
+
+
+def test_two_reused_snippets_in_one_graph_get_separate_magnitudes():
+    """`{graph_id}:*` means every reused snippet in a graph shares a _key(), so
+    a per-key max would let the smaller of an uneven pair grow to the larger
+    unnoticed — trophic_type_classification_axes already carries two (#291)."""
+    from audit_evidence_snippets import Baseline, _key, _magnitude_key, compare
+    a = _row("f.yaml", "g1:*", "REUSED_SNIPPET",
+             "3 evidence items share one snippet: 'carbon source'")
+    b = _row("f.yaml", "g1:*", "REUSED_SNIPPET",
+             "8 evidence items share one snippet: 'energy source'")
+    assert _key(a) == _key(b)
+    assert _magnitude_key(a) != _magnitude_key(b)
+    baseline = Baseline({_key(a): 2},
+                        {_magnitude_key(a): 3, _magnitude_key(b): 8})
+    worse_a = dict(a, detail="7 evidence items share one snippet: 'carbon source'")
+    assert len(compare([worse_a, b], baseline)) == 1, \
+        "the smaller snippet grew to below the larger's magnitude and passed"

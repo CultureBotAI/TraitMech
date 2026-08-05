@@ -32,9 +32,15 @@ ECHOES_RESEARCH_REPORT  the snippet also appears in this trait's own research
                         this audit exists to catch, so it asks for a check
                         against the source rather than asserting a defect.
 
-Baseline ratchet, same shape as audit_causal_graphs.py: pre-existing findings
-are frozen in ``conf/evidence_snippet_baseline.tsv`` and never fail; anything
-new exits 1.
+Baseline ratchet: pre-existing findings are frozen in
+``conf/evidence_snippet_baseline.tsv`` and never fail; anything new exits 1.
+
+NOT the same shape as audit_causal_graphs.py, which is set membership on a
+4-tuple carrying the locator index and a detail fragment. That shape rotted here
+(#270): the index renumbers when an evidence item is deleted, so an improvement
+read as a new finding. This keys without the index and compares OCCURRENCE
+COUNTS, plus a magnitude ratchet for REUSED_SNIPPET, whose locator has no index
+and whose severity lives in its detail (#291).
 
 Usage:
     just audit-snippets
@@ -48,6 +54,7 @@ import csv
 import re
 import sys
 from pathlib import Path
+from typing import NamedTuple
 
 import yaml
 
@@ -308,8 +315,19 @@ def _key(row: dict[str, str]) -> tuple[str, str, str]:
 # ratcheting it would flag a snippet growing from 6 chars to 10 as a regression.
 MAGNITUDE_DEFECTS = {"REUSED_SNIPPET"}
 
-# Worst magnitude accepted per key, populated by load_baseline().
-BASELINE_MAGNITUDE: dict[tuple[str, str, str], int] = {}
+def _magnitude_key(row: dict[str, str]) -> tuple[str, str, str, str] | None:
+    """Identity for a magnitude, or None where magnitude is not ratcheted.
+
+    REUSED_SNIPPET's locator is `{graph_id}:*`, so every reused snippet in one
+    graph shares a _key(). Keying the magnitude on the graph alone would let the
+    smaller of an uneven pair grow up to the larger unnoticed —
+    `trophic_type_classification_axes:*` already carries two rows. The snippet
+    itself is the discriminator (#291).
+    """
+    if row.get("defect") not in MAGNITUDE_DEFECTS:
+        return None
+    match = re.search(r"share one snippet: (.+)$", row.get("detail", ""))
+    return (*_key(row), match.group(1) if match else "")
 
 
 def _magnitude(row: dict[str, str]) -> int:
@@ -327,7 +345,19 @@ def _magnitude(row: dict[str, str]) -> int:
     return int(match.group(1)) if match else 0
 
 
-def load_baseline(path: Path) -> dict[tuple[str, str, str], int]:
+class Baseline(NamedTuple):
+    """What the frozen backlog accepted: how many, and how bad.
+
+    Both maps travel together rather than one being a module global, so
+    compare() is a pure function of its arguments and the tests exercise the
+    magnitude branch by constructing a Baseline instead of poking a global.
+    """
+
+    counts: dict[tuple[str, str, str], int]
+    magnitudes: dict[tuple[str, str, str, str], int]
+
+
+def load_baseline(path: Path) -> Baseline:
     """Baselined occurrences per key.
 
     A count, not a set. Keying without the index means `evidence[0]` and
@@ -337,33 +367,42 @@ def load_baseline(path: Path) -> dict[tuple[str, str, str], int]:
     count says "two of these were accepted"; a third is new.
     """
     counts: dict[tuple[str, str, str], int] = {}
-    BASELINE_MAGNITUDE.clear()
+    magnitudes: dict[tuple[str, str, str, str], int] = {}
     if not path.exists():
-        return counts
+        return Baseline(counts, magnitudes)
     with path.open() as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
             key = _key(row)
             counts[key] = counts.get(key, 0) + 1
-            magnitude = _magnitude(row)
-            if magnitude > BASELINE_MAGNITUDE.get(key, 0):
-                BASELINE_MAGNITUDE[key] = magnitude
-    return counts
+            mkey = _magnitude_key(row)
+            if mkey is not None:
+                magnitudes[mkey] = max(magnitudes.get(mkey, 0), _magnitude(row))
+    return Baseline(counts, magnitudes)
 
 
 def compare(findings: list[dict[str, str]],
-            baseline: dict[tuple[str, str, str], int]) -> list[dict[str, str]]:
-    """Findings in excess of what the baseline accepted, per key.
+            baseline: Baseline) -> list[dict[str, str]]:
+    """Findings in excess of what the baseline accepted.
 
-    Fewer occurrences than baselined is an improvement and passes; more is new.
+    Two ways to exceed it: more occurrences at a key than were frozen, or an
+    aggregate finding whose magnitude is worse than the frozen one. Fewer
+    occurrences, or a smaller magnitude, is an improvement and passes.
+
+    Note which ROW is reported for a count excess: findings are walked in audit
+    order and the ones PAST the baselined count are marked, so the row named is
+    the last at that key rather than the one that is new. Adding a snippet-less
+    reference at evidence[0] points a curator at evidence[2]. The exit code is
+    right and a count-based key cannot do better — the occurrences are
+    interchangeable by construction.
     """
     seen: dict[tuple[str, str, str], int] = {}
     new: list[dict[str, str]] = []
     for row in findings:
         key = _key(row)
         seen[key] = seen.get(key, 0) + 1
-        if seen[key] > baseline.get(key, 0):
+        if seen[key] > baseline.counts.get(key, 0):
             new.append(row)
-        elif _magnitude(row) > BASELINE_MAGNITUDE.get(key, 0):
+        elif _magnitude(row) > baseline.magnitudes.get(_magnitude_key(row), 0):
             # Same key, same occurrence count, but worse — a graph going from 3
             # shared snippets to 9 is one REUSED_SNIPPET finding either way
             # (#291).
