@@ -160,10 +160,12 @@ across #277-#281 ranged from **two** functional gates (#277, bumping
 `claude-code-action`, which appears in only two workflow files) to **seven**
 (#281, bumping `actions/checkout`, which appears in nearly all of them).
 
-The floor is `pr-sanity` and `vendored-sync`, the only two with no `paths:`
-filter — and that floor is the reassuring part: **`pr-sanity` is the gate that
-enforces SHA pinning** (see "Action pinning" above), so the check that actually
-validates *this* class of change is exactly the one immune to the filters.
+The floor is `pr-sanity` and `vendored-sync` — the only two *functional gates*
+with no `paths:` filter (`claude-code-review.yml` is unfiltered too, which is
+exactly why the caveat below exists). That floor is the reassuring part:
+**`pr-sanity` is the gate that enforces SHA pinning** (see "Action pinning"
+above), so the check that actually validates *this* class of change is exactly
+the one immune to the filters.
 Everything above two gates is a bonus that depends on the bump's blast radius.
 State it that way wherever you copy this pattern; "seven gates cover it" would
 be false on a #277-shaped PR.
@@ -172,8 +174,13 @@ One caveat this creates: `pr-sanity`'s `NO_UNFILTERED_CI` decides "unfiltered"
 from a workflow's `on:` block alone and never looks at job-level `if:`, so a
 workflow gated this way still counts toward that invariant while no longer
 running for the gated class. Harmless while `pr-sanity` and `vendored-sync` are
-themselves unfiltered; it would become a false-green the day either gained a
-`paths:` filter. Tracked in #307.
+themselves unfiltered; `NO_UNFILTERED_CI` fires only when *nothing* is
+unfiltered, so it would take **both** of them gaining a `paths:` filter to
+produce the false-green — at which point `claude-code-review.yml` alone would
+hold the invariant up while running on nothing. (If only `pr-sanity` gained
+one, that is a real loss — the SHA-pinning gate would stop covering exactly
+this PR class — but it is a coverage loss, not a `NO_UNFILTERED_CI`
+false-green.) Tracked in #307.
 
 Skipping does not make these PRs unreviewable. Comment `/review`, or use
 `workflow_dispatch` with the PR number. Neither is Dependabot-triggered, so both

@@ -65,8 +65,9 @@ jobs:
     #    workflows carry `paths:` filters naming only their own file, so gate
     #    coverage on a Dependabot PR depends on WHICH action was bumped. Across
     #    #277-#281 it ranged from two functional gates (#277) to seven (#281).
-    #    The floor is `pr-sanity` and `vendored-sync`, the only two unfiltered —
-    #    and `pr-sanity` is the one enforcing SHA pinning, so the gate that
+    #    The floor is `pr-sanity` and `vendored-sync` — the only two FUNCTIONAL
+    #    GATES without a `paths:` filter (this workflow is unfiltered too) — and
+    #    `pr-sanity` is the one enforcing SHA pinning, so the gate that
     #    validates this class of change is the one immune to the filters.
     #    (`main` has no branch protection today —
     #    `gh api repos/:owner/:repo/branches/main/protection` returns 404 — so
