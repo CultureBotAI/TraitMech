@@ -105,9 +105,35 @@ private — a public repo's CI cannot check it out without a token. `just
 validate-history` and the `curation-history` workflow both use the local copy and
 work with no claw checkout at all.
 
-Only `just new-history` needs claw, via `CLAW_SRC` (default:
-`../culturebotai-claw/src`). That is a dev-time scaffolder, and anyone writing
-curation records has claw checked out.
+`just new-history` **prefers** claw, via `CLAW_SRC` (default:
+`../culturebotai-claw/src`), and falls back to
+`scripts/new_history_record.py` when there is no checkout there. Claw stays the
+canonical scaffolder so the record shape does not drift across the four Mech
+repos; the fallback exists because the alternative to a slightly-divergent
+record is no record at all.
+
+That fallback was added in #296, after the #294 backfill wrote two records by
+hand. The prompt for it is worth keeping: this file previously asserted that
+"anyone writing curation records has claw checked out", which is an assumption
+rather than a guarantee — it does not hold for a fresh clone, for CI (claw is
+private), or for a contributor outside the fleet. It also did not hold in
+practice for the reason you would expect: the recipe was *gated* on claw, so it
+was easier to hand-write than to find out whether the gate would pass.
+
+The two scaffolders take the **same arguments** and produce byte-identical
+records apart from the id's hash suffix and one deliberate difference: a bare
+`--issue 296` becomes a full URL here, because the schema declares those
+`range: uri` and every committed record carries URLs, whereas claw passes the
+string through. Check that parity rather than trusting this paragraph:
+
+```bash
+ARGS=(--kind record --slug cellulolysis --target-root data/traits/metabolism \
+      --summary "parity" --details "check" --issue 296)
+PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" \
+  uv run python -m kg_microbe_history new "${ARGS[@]}" --history-root /tmp/h_claw
+uv run python scripts/new_history_record.py "${ARGS[@]}" --history-root /tmp/h_local
+diff <(cat /tmp/h_claw/*/*.yaml) <(cat /tmp/h_local/*/*.yaml)
+```
 
 Changing the schema means changing the canonical copy and re-vendoring here — the
 same hub-and-spoke rule as `mech_shared.yaml`. This copy is **not** on the
