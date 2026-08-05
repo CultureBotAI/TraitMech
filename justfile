@@ -674,6 +674,19 @@ qc: pr-sanity validate-strict audit-schema audit-writers audit-proposals audit-g
 validate-products:
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml
 
+# Baseline (non-failing): do the CURIEs SUGGESTED in the deep-research reports
+# mean what those reports say they mean? Writes
+# reports/research_grounding_drift.tsv (#243).
+#
+# Deliberately NOT in `qc`. The reports are provider output that nobody will
+# hand-edit 353 of, so failing a build on their contents would gate work on data
+# no one intends to correct in place; and the extraction from prose tables is
+# heuristic, so some findings are judgement calls. The BLOCKING gate stays where
+# the curated data is — `validate-products` over mappings/*.tsv, which is where
+# these suggestions land if a curator accepts one.
+audit-research-groundings *args:
+    uv run python scripts/audit_research_groundings.py {{args}}
+
 # Baseline (non-failing): id↔label drift report across the grounding tables to
 # reports/label_drift.tsv. Used by CI to publish a triage artifact.
 report-label-drift:
