@@ -105,15 +105,15 @@ causal_graphs:
     description: DIC transporters and carbonic anhydrase enzymes that supply inorganic
       carbon to fixation.
   edges:
-  - subject: lithoautotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithoautotrophy uses inorganic compounds as electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: lithoautotrophic_trait
+    description: Inorganic compounds serve as the electron donors for lithoautotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: inorganic atoms or molecules as a growth-supporting reductant
       notes: Supports inorganic electron donors for lithotrophic growth.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: inorganic_electron_donor
     predicate: enables
     object: respiratory_energy_conservation

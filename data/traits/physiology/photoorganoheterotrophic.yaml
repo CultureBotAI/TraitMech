@@ -119,16 +119,17 @@ causal_graphs:
       snippet: use of light
       notes: Supports light as the energy source in photoheterotrophy categories.
     predicate_id: METPO:2000010
-  - subject: photoorganoheterotrophic_trait
-    predicate: uses electron donor
-    object: organic_compound
-    description: The organotrophic component uses organic molecules as electron donors.
+  - subject: organic_compound
+    predicate: enables
+    object: photoorganoheterotrophic_trait
+    description: Organic molecules serve as the electron donors for the organotrophic
+      component.
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
       notes: Supports organic molecules as the electron source in photoorganoheterotrophic
         growth.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: photoorganoheterotrophic_trait
     predicate: uses carbon source
     object: organic_compound

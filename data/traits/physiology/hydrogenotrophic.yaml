@@ -102,15 +102,15 @@ causal_graphs:
     description: Differential O2 sensitivity that constrains which hydrogenase classes
       are usable.
   edges:
-  - subject: hydrogenotrophic_trait
-    predicate: uses electron donor
-    object: molecular_hydrogen
-    description: Hydrogenotrophy uses molecular hydrogen as an electron donor.
+  - subject: molecular_hydrogen
+    predicate: enables
+    object: hydrogenotrophic_trait
+    description: Molecular hydrogen serves as the electron donor for hydrogenotrophy.
     evidence:
     - reference: DOI:10.21775/cimb.006.159
       snippet: oxidation of hydrogen gas
       notes: Supports H2 oxidation as a microbial energy process.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: hydrogenase
     predicate: oxidizes
     object: molecular_hydrogen

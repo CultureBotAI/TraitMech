@@ -132,16 +132,17 @@ causal_graphs:
     description: Oxidation of reduced sulfur compounds for energy conservation.
     grounding: GO:0019417
   edges:
-  - subject: lithotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithotrophic organisms use inorganic compounds as electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: lithotrophic_trait
+    description: Inorganic compounds serve as the electron donors lithotrophic organisms
+      use.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: inorganic atoms or molecules as a growth-supporting reductant
       notes: Supports inorganic electron donors as the defining lithotrophic substrate
         class.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: hydrogen
     predicate: example of
     object: inorganic_electron_donor

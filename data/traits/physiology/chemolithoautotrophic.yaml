@@ -100,15 +100,16 @@ causal_graphs:
     description: Pool of CO2 and bicarbonate supplied to autotrophic carbon-fixation
       pathways.
   edges:
-  - subject: chemolithoautotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Chemolithoautotrophs obtain energy from inorganic electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: chemolithoautotrophic_trait
+    description: Inorganic electron donors supply the energy chemolithoautotrophs
+      conserve.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: growth-supporting reductant and energy source
       notes: Supports inorganic reductants as energy sources.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: inorganic_electron_donor
     predicate: feeds electrons into
     object: electron_transport_chain

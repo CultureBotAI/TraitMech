@@ -92,16 +92,16 @@ causal_graphs:
     description: Respiratory complex III transferring electrons from quinol to cytochrome
       c.
   edges:
-  - subject: organoheterotrophic_trait
-    predicate: uses electron donor
-    object: organic_compound
-    description: Organoheterotrophy uses organic compounds as electron donors.
+  - subject: organic_compound
+    predicate: enables
+    object: organoheterotrophic_trait
+    description: Organic compounds serve as the electron donors for organoheterotrophy.
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
       notes: Supports organic molecules as electron sources in organoheterotrophic
         categories.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: organoheterotrophic_trait
     predicate: uses carbon source
     object: organic_compound

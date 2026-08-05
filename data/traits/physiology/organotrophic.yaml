@@ -90,15 +90,15 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Availability of organic carbon substrates in the environment.
   edges:
-  - subject: organotrophic_trait
-    predicate: uses electron donor
-    object: organic_compound
-    description: Organotrophy uses organic compounds as electron donors.
+  - subject: organic_compound
+    predicate: enables
+    object: organotrophic_trait
+    description: Organic compounds serve as the electron donors for organotrophy.
     evidence:
     - reference: DOI:10.1016/B978-012373944-5.00083-3
       snippet: incorporation of a compound into biomass
       notes: Supports use and assimilation of organic compounds in microbial growth.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: glucose
     predicate: example of
     object: organic_compound

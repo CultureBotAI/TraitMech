@@ -107,15 +107,49 @@ records:
   documented rather than a gap — leave `xrefs:` unset on records
   without a confident match.
 
-Edges inside *other* TraitRecords' causal graphs can use these
-relations as predicates pointing at CHEMICAL nodes:
+### Do not use these predicates inside causal graphs
+
+Every one of these relations is `rdfs:subPropertyOf METPO:2000001`
+("organism interacts with chemical"), whose `rdfs:domain` is
+`METPO:1000525` (microbe). Domain is an *inference* rule, not a
+check: writing
+
+```yaml
+# WRONG — entails that <some_trait> IS a microbe
+- subject: <some_trait>
+  predicate: uses carbon source        # METPO:2000006
+  object: glucose
+```
+
+makes a reasoner conclude the trait node is an organism. Nothing in
+`just qc` catches it, because `predicate_id` is an unbound string.
+
+`CausalNodeTypeEnum` has no organism member — causal-graph nodes are
+deliberately taxon-agnostic — so **no causal-graph edge can satisfy
+that domain**. Put the chemical in subject position and use the
+relation the corpus already uses for this shape, `RO:0002327`
+(`enables`), keeping the donor/acceptor/source role in the node
+label and the edge description:
 
 ```yaml
 edges:
-- subject: <some_trait>
-  predicate: uses as carbon source     # METPO:2000006
-  object: glucose                      # CHEMICAL node grounded to CHEBI:17234
+- subject: glucose                     # CHEMICAL grounded to CHEBI:17234
+  predicate: enables                   # RO:0002327
+  object: <some_trait>
+  description: Glucose serves as the carbon source for <trait>.
 ```
+
+The organism-subject form stays valid at the *assertion* site —
+`<organism> METPO:2000006 CHEBI:17234` — which is exactly what the
+OBJECT_PROPERTY records' `domain:` describes. It is only the
+causal-graph reuse that is wrong.
+
+`uses electron donor` (`METPO:2000009`) and `uses electron acceptor`
+(`METPO:2000008`) are gated on this: their `subject_types` in
+`mappings/predicate_grounding.tsv` is `NONE`, so
+`ground_causal_predicates.py` refuses to ground them onto any edge
+and reports them as `blocked_by_node_type` (#295). The other 64
+predicates in this family are not yet gated — see #299.
 
 ## File-level structure
 

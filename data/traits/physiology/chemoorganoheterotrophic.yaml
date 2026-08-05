@@ -104,15 +104,15 @@ causal_graphs:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... energy source
       notes: Supports organic molecules as energy sources in chemoorganoheterotrophy.
-  - subject: chemoorganoheterotrophic_trait
-    predicate: uses electron donor
-    object: organic_molecule
-    description: Organic molecules serve as electron sources.
+  - subject: organic_molecule
+    predicate: enables
+    object: chemoorganoheterotrophic_trait
+    description: Organic molecules serve as the electron donors for chemoorganoheterotrophy.
     evidence:
     - reference: DOI:10.1021/acsomega.3c02205
       snippet: organic molecules ... electron source
       notes: Supports organic molecules as electron sources in chemoorganoheterotrophy.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: chemoorganoheterotrophic_trait
     predicate: uses carbon source
     object: organic_molecule

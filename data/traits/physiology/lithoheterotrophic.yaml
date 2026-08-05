@@ -120,16 +120,16 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Cell-to-cell electron conduction via conductive pili and c-type cytochromes.
   edges:
-  - subject: lithoheterotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithoheterotrophy uses inorganic compounds as energy-generating electron
-      donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: lithoheterotrophic_trait
+    description: Inorganic compounds serve as the energy-generating electron donors
+      for lithoheterotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical oxidation as lithotrophic energy metabolism.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_electron_donor

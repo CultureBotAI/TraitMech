@@ -94,16 +94,15 @@ causal_graphs:
     node_type: TRAIT
     description: Trophic type using organic compounds as energy and carbon source.
   edges:
-  - subject: chemoautolithotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Chemoautolithotrophy uses inorganic chemical electron donors for
-      energy.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: chemoautolithotrophic_trait
+    description: Inorganic chemical electron donors supply the energy for chemoautolithotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports lithotrophic oxidation of inorganic substrates.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: ammonia
     predicate: example of
     object: inorganic_electron_donor

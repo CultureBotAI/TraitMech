@@ -109,16 +109,15 @@ causal_graphs:
     description: Amino acid and carboxylic acid import systems mediating organic carbon
       uptake.
   edges:
-  - subject: chemolithoheterotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_chemical_donor
-    description: Chemolithoheterotrophy uses inorganic chemical compounds as electron
-      donors.
+  - subject: inorganic_chemical_donor
+    predicate: enables
+    object: chemolithoheterotrophic_trait
+    description: Inorganic chemical compounds serve as the electron donors for chemolithoheterotrophy.
     evidence:
     - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
       snippet: oxidize inorganic atoms or molecules
       notes: Supports inorganic chemical donors in chemolithotrophic metabolism.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: ferrous_iron
     predicate: example of
     object: inorganic_chemical_donor

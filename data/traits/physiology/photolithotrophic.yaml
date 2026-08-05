@@ -113,15 +113,16 @@ causal_graphs:
       snippet: light as an energy source
       notes: Supports light as the energy source for photoferrotrophic photolithotrophy.
     predicate_id: METPO:2000010
-  - subject: photolithotrophic_trait
-    predicate: uses electron donor
-    object: inorganic_electron_donor
-    description: Lithotrophic phototrophs use inorganic electron donors.
+  - subject: inorganic_electron_donor
+    predicate: enables
+    object: photolithotrophic_trait
+    description: Inorganic electron donors supply the electrons lithotrophic phototrophs
+      use.
     evidence:
     - reference: DOI:10.3390/antiox10060829
       snippet: oxidizes reduced sulfur compounds
       notes: Supports inorganic reduced sulfur compounds as electron donors.
-    predicate_id: METPO:2000009
+    predicate_id: RO:0002327
   - subject: hydrogen_sulfide
     predicate: example of
     object: inorganic_electron_donor
